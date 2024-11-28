@@ -1,0 +1,10 @@
+title: TADS 3 Resources
+description: The most powerful and flexible interactive fiction authoring tool, built for programmers.
+incremental: true
+markdown: Pandoc
+plugins:
+  - jekyll-pandoc
+domain: tads-intfic.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://tads-intfic.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /resources/
+theme: minima

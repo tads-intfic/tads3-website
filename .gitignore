@@ -1,3 +1,6 @@
 obj/
 bin/
-
+tads3-website/
+assets
+_site/assets
+Gemfile.lock

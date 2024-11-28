@@ -1,0 +1,50 @@
+libraries:
+  - title: Adv3
+    description: The default TADS 3 library. Pretty complex, but has a lot of fidelity and powerful features.
+    resources:
+      - title: 
+        author: 
+        description: 
+        url: 
+      - title: 
+        author: 
+        description: 
+        url: 
+      - title: 
+        author: 
+        description: 
+        url: 
+      - title: 
+        author: 
+        description: 
+        url: 
+  - title: Adv3Lite
+    description: A TADS 3 library by Eric Eve, based off Adv3, but removing a lot of the more niche features of Adv3 and using simpler syntax.
+    resources:
+      - title: 
+        author: 
+        description: 
+        url: 
+      - title: 
+        author: 
+        description: 
+        url: 
+      - title: 
+        author: 
+        description: 
+        url: 
+      - title: 
+        author: 
+        description: 
+        url: 
+  - title: TADS 3 system
+    description: Pure TADS 3 references, not specific to any library.
+    resources:
+      - title: TADS 3 System Manual
+        author: Michael Roberts
+        description: This book is a reference to the TADS 3 language and the T3 VM, including the standard intrinsic functions and classes. It covers the language and VM features in depth, so it's the place to go when you need to find the details on the system.  
+        url: https://www.tads.org/t3doc/doc/sysman/cover.htm
+      - title: Introduction to HTML TADS
+        author: Michael Roberts
+        description: A brief introduction to HTML TADS, a text adventure interpreter based on TADS. 
+        url: https://www.tads.org/t3doc/doc/htmltads/intro.htm
