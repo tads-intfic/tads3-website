@@ -33,7 +33,7 @@ libraries:
       - title: Adv3 Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code.
-        url: /resources/docs/adv3/index.html
+        url: /resources/docs/adv3/adv3index.html
       - title: 
         author: 
         description: 
@@ -47,7 +47,7 @@ libraries:
       - title: adv3Lite Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code. The library source code is also provided as links.
-        url: /resources/docs/adv3Lite/index.html
+        url: /resources/docs/adv3Lite/adv3liteindex.html
       - title: 
         author: 
         description: 
