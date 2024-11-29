@@ -11,7 +11,7 @@ libraries:
         type: TADS 3 & Adv3
         author: Eric Eve
         description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and library.
-        url: /resources/quickrefs
+        url: /quickrefs
       - title: adv3Lite Wiki
         type: adv3Lite
         author: Eric Eve
@@ -29,11 +29,11 @@ libraries:
         type: TADS 3
         author: Eric Eve
         description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and Adv3 library.
-        url: /resources/quickrefs
+        url: /quickrefs
       - title: Adv3 Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code.
-        url: /resources/docs/adv3/adv3index.html
+        url: /docs/adv3/adv3index.html
       - title: 
         author: 
         description: 
@@ -47,7 +47,7 @@ libraries:
       - title: adv3Lite Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code. The library source code is also provided as links.
-        url: /resources/docs/adv3Lite/adv3liteindex.html
+        url: /docs/adv3Lite/adv3liteindex.html
       - title: 
         author: 
         description: 
@@ -71,14 +71,14 @@ libraries:
 quickrefs:
   - name: TLangRef.pdf
     description: A quick reference for the TADS 3 language itself
-    url: /resources/assets/docs/quickrefs/T3LangRef.pdf
+    url: /assets/docs/quickrefs/T3LangRef.pdf
   - name: TemplatesQRef.pdf
     description: A Templates Quick Reference
-    url: /resources/assets/docs/quickrefs/TemplatesQRef.PDF
+    url: /assets/docs/quickrefs/TemplatesQRef.PDF
   - name: DynamicCharactersQuickRef.pdf
     description: A Dynamic Actors Quick Reference (for creating NPCs)
-    url: /resources/assets/docs/quickrefs/
+    url: /assets/docs/quickrefs/
   - name: ActionMessages.pdf
     description: An Action Messages Quick Reference to help you find the message properties you need to override to customise responses quickly and easily.
-    url: /resources/assets/docs/quickrefs/ActionMessages.PDF
+    url: /assets/docs/quickrefs/ActionMessages.PDF
   
