@@ -30,10 +30,10 @@ libraries:
         author: Eric Eve
         description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and Adv3 library.
         url: /resources/quickrefs
-      - title: 
-        author: 
-        description: 
-        url: 
+      - title: Adv3 Periplus
+        author: Jim Nelson
+        description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code.
+        url: /resources/docs/adv3/index.html
       - title: 
         author: 
         description: 
@@ -45,9 +45,9 @@ libraries:
         author: Eric Eve
         description: This GitHub wiki aims to give users and potential users of adv3Lite the information they need to decide whether adv3Lite may be for them. There are links to adv3Lite installation and setup, a sample game, and a short primer on some coding concepts needed for adv3Lite.
       - title: adv3Lite Periplus
-        author: 
-        description: 
-        url: 
+        author: Jim Nelson
+        description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code. The library source code is also provided as links.
+        url: /resources/docs/adv3Lite/index.html
       - title: 
         author: 
         description: 
@@ -70,7 +70,7 @@ libraries:
 
 quickrefs:
   - name: TLangRef.pdf
-    description: A quick reference for the TADS 3 language
+    description: A quick reference for the TADS 3 language itself
     url: /resources/assets/docs/quickrefs/T3LangRef.pdf
   - name: TemplatesQRef.pdf
     description: A Templates Quick Reference
