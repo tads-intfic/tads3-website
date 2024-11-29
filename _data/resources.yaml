@@ -1,7 +1,35 @@
 libraries:
+  - title: Beginners
+    description: These are resources to get you up and running with TADS 3. They will repeat in the more comprehensive resources as well.
+    resources:
+      - title: TADS 3 Quickstart
+        type: TADS 3 & Adv3
+        author: Eric Eve
+        description: This brief guide contains instructions for installing the TADS 3 workbench system and compiling a basic game. It also has explanation of the other documentation that exists, including guidance on where to go next, and a sample game newcomers can experiment with if they want to dive straight it.
+        url: https://www.tads.org/t3doc/doc/t3QuickStart.htm
+      - title: Quick reference charts
+        type: TADS 3 & Adv3
+        author: Eric Eve
+        description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and library.
+        url: /resources/quickrefs
+      - title: adv3Lite Wiki
+        type: adv3Lite
+        author: Eric Eve
+        description: This GitHub wiki aims to give users and potential users of adv3Lite the information they need to decide whether adv3Lite may be for them. There are links to adv3Lite installation and setup, a sample game, and a short primer on some coding concepts needed for adv3Lite.
+        url: https://github.com/EricEve/adv3lite/wiki/Learning-adv3Lite
+
   - title: Adv3
-    description: The default TADS 3 library. Pretty complex, but has a lot of fidelity and powerful features.
+    description: Adv3 is the default TADS 3 library. It's rather complex, but has a lot of fidelity and powerful features.
     resources:
+      - title: TADS 3 Quickstart
+        author: Eric Eve
+        description: This brief guide contains instructions for installing the TADS 3 workbench system and compiling a basic game. It also has explanation of the other documentation that exists, including guidance on where to go next, and a sample game newcomers can experiment with if they want to dive straight it.
+        url: https://www.tads.org/t3doc/doc/t3QuickStart.htm
+      - title: Quick reference charts
+        type: TADS 3
+        author: Eric Eve
+        description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and Adv3 library.
+        url: /resources/quickrefs
       - title: 
         author: 
         description: 
@@ -10,18 +38,13 @@ libraries:
         author: 
         description: 
         url: 
-      - title: 
-        author: 
-        description: 
-        url: 
-      - title: 
-        author: 
-        description: 
-        url: 
-  - title: Adv3Lite
-    description: A TADS 3 library by Eric Eve, based off Adv3, but removing a lot of the more niche features of Adv3 and using simpler syntax.
+  - title: adv3Lite
+    description: adv3Lite is a TADS 3 library based off Adv3, but it removes a lot of the more niche features of Adv3 and uses simpler syntax. It is written and maintained by Eric Eve.
     resources:
-      - title: 
+      - title: adv3Lite Wiki
+        author: Eric Eve
+        description: This GitHub wiki aims to give users and potential users of adv3Lite the information they need to decide whether adv3Lite may be for them. There are links to adv3Lite installation and setup, a sample game, and a short primer on some coding concepts needed for adv3Lite.
+      - title: adv3Lite Periplus
         author: 
         description: 
         url: 
@@ -33,12 +56,8 @@ libraries:
         author: 
         description: 
         url: 
-      - title: 
-        author: 
-        description: 
-        url: 
-  - title: TADS 3 system
-    description: Pure TADS 3 references, not specific to any library.
+  - title: the TADS 3 language
+    description: These are references for the TADS 3 programming language itself, not specific to any library like Adv3 or Adv3Lite.
     resources:
       - title: TADS 3 System Manual
         author: Michael Roberts
@@ -48,3 +67,18 @@ libraries:
         author: Michael Roberts
         description: A brief introduction to HTML TADS, a text adventure interpreter based on TADS. 
         url: https://www.tads.org/t3doc/doc/htmltads/intro.htm
+
+quickrefs:
+  - name: TLangRef.pdf
+    description: A quick reference for the TADS 3 language
+    url: /resources/assets/docs/quickrefs/T3LangRef.pdf
+  - name: TemplatesQRef.pdf
+    description: A Templates Quick Reference
+    url: /resources/assets/docs/quickrefs/TemplatesQRef.PDF
+  - name: DynamicCharactersQuickRef.pdf
+    description: A Dynamic Actors Quick Reference (for creating NPCs)
+    url: /resources/assets/docs/quickrefs/
+  - name: ActionMessages.pdf
+    description: An Action Messages Quick Reference to help you find the message properties you need to override to customise responses quickly and easily.
+    url: /resources/assets/docs/quickrefs/ActionMessages.PDF
+  
