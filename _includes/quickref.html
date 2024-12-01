@@ -1,0 +1,5 @@
+{% for ref in site.data.resources.quickrefs %}
+<ul>
+    <li><a href="{{ref.url}}"><b>{{ref.name}}</b></a> - {{ref.description}}</li>
+</ul>
+{% endfor %}

@@ -1,0 +1,6 @@
+-D LANGUAGE=english
+-D MESSAGESTYLE=neu
+-Fy obj
+-Fo obj
+-lib system
+-lib adv3Lite/adv3Lite

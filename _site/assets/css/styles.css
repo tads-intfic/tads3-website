@@ -1,0 +1,1038 @@
+:root {
+    --purple: #4e004e;
+    --gray: #484848;
+    --overlay: #eeeeee33;
+    --orange: #BD5200;
+    --bright-orange: #c77400;
+    --off-white: #fdfdfd;
+}
+
+/*font*/
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-Regular.woff2);
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-Light.woff2);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-RegularItalic.woff2);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-Bold.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-BoldItalic.woff2);
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-SemiBold.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-SemiBoldItalic.woff2);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-ExtraBold.woff2);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-Black.woff2);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../fonts/Metropolis-BlackItalic.woff2);
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*basics*/
+
+html {
+    margin: 0;
+    background-color: var(--off-white);
+}
+
+body {
+    line-height: 1.5em;
+    font-family: Metropolis;
+    font-size: 14pt;
+    font-weight: 300;
+    margin: 0;
+}
+
+header {
+    /* flexbox */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    /* style */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    margin: 0 0;
+}
+
+header > span {
+    flex-grow: 1;
+    height: 45px;
+    padding-left: 15px;
+}
+
+header > span > a {
+    font-size: 25pt;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 35pt;
+}
+
+@media (min-width: 700px) {
+    header > span > a {
+        font-size: 35pt;
+    }
+}
+
+header > span > a:hover {
+    color: #dddddd;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-grow: 9;
+    align-items: center;
+}
+
+.nav-element {
+    height: 30pt;
+    line-height: 30pt;
+    display: inline-block;
+    font-weight: 500;
+    color: white;
+    margin-right: 15px;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.nav-element:hover {
+    color: #ddd;
+    text-shadow: 2px 2px 7px black;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    height: 30pt;
+    padding: 15px;
+    text-align: center;
+    line-height: 30pt;
+    margin: 15px;
+    backdrop-filter: blur(2px);
+}
+
+.button:hover {
+    color: #ddd;
+    box-shadow: 0px 0px 13px #eeeeee33;
+}
+
+.centered {
+    text-align: center;
+    margin: 15px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    color: var(--purple);
+}
+
+h3 {
+    color: var(--gray);
+}
+
+li {
+    margin: 1em 0;
+}
+
+em, i {
+    font-weight: 500;
+    color: var(--orange);
+}
+
+/* ids to make sure that footer stays at bottom*/
+
+#content {
+    min-height: calc(100vh - 50px);
+    max-width: 65rem;
+    margin: auto;
+}
+
+footer {
+    height: 50px;
+    background: #eee;
+    text-align: center;
+    padding: 15px;
+}
+
+/*extra*/
+
+* {
+    transition: all 0.2s
+}
+
+.important {
+    border-radius: 15px;
+    background: var(--overlay);
+}
+
+.important:hover {
+    background: #dddddd33;
+    color: #ddd;
+    text-shadow: none;
+    box-shadow: 0px 0px 13px #555;
+}
+
+
+
+.jumbotron {
+    padding: 15px;
+    min-height: 340pt;
+    background: rgb(var(--purple));
+    background-image: linear-gradient(112deg, rgba(var(--purple), 0.8) 0%, rgba(82,16,66,0.8) 52%, rgba(var(--orange), 0.8) 100%), url(../images/map.jpg);
+    background-attachment: fixed;
+    background-position: 0% 0%;
+    background-size: cover;
+    color: var(--gray);
+}
+
+.jumbotron > h1 {
+    color: white;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.jumbotron > p {
+    max-width: 35ch;
+    text-align: center;
+    margin: auto auto;
+    padding: 25px;
+    text-shadow: 2px 2px 7px black;
+    font-size: 18pt;
+}
+
+.columns {
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.columns > li {
+    display: flex;
+    flex-shrink: 5;
+    flex-direction: column;
+    flex: 1 0;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.columns > li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.cards {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    min-height: 250pt;
+    padding: 20px;
+    background: rgba(var(--purple), 0.9);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+}
+
+@media (max-width: 700px) {
+    .card {
+        flex: 0 0 80%;
+    }
+}
+
+.card:not(:last-child) {
+    margin-right: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 65ch;
+}
+
+
+
+section#install {
+    background-color: #eee;
+    min-height: 600px;
+    margin-top: 0px;
+    padding: 45px;
+}
+
+section#learn {
+    min-height: 800px;
+    margin-top: 0px;
+    padding: 45px;
+}
+
+section#faq {
+    background-color: #eee;
+    min-height: 800px;
+    margin-top: 0px;
+    padding: 45px;
+}
+
+section#showcase {
+    margin-top: 0px;
+    padding: 45px;
+}
+
+
+.menu-button-container {
+    display: none;
+    height: 30pt;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 14pt;
+    }
+    .jumbotron {
+        background-position: 45% -100%;
+    }
+    .menu-button-container {
+        display: flex;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        margin-top: 75pt;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle ~ nav .nav-element {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ nav .nav-element {
+        height: 45pt;
+        line-height: 45pt;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle ~ #spacer {
+        height: 0pt;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ #spacer {
+        height: 250pt;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .nav-element {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        backdrop-filter: blur(2px);
+        background-color: #11111133;
+        border-radius: 0px;
+        text-shadow: 2px 2px 8px black;
+    }
+    .important {
+        background-color: var(--overlay);
+    }
+    .nav-element:active {
+        color: #eee;
+        background-color: #11111155;
+        backdrop-filter: blur(8px);
+    }
+}
+
+.icon {
+    filter: invert(100%);
+    width: 20pt;
+    height: 20pt;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+
+#what-interp, #what-comp, #what-ed {
+    color: rgba(var(--purple));
+    filter: brightness(600%);
+}
+
+.marketing-icon {
+    display: block;
+    height: 45pt;
+    width: 45pt;
+    margin: 0 auto;
+    filter: invert(7%) sepia(37%) saturate(7114%) hue-rotate(289deg) brightness(101%) contrast(109%);
+}
+
+.feature-top {
+    height: 110pt;
+}
+
+.timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Timeline-Card container */
+.timeline-card {
+    position: relative;
+    max-width: 400px;
+}
+
+/* setting padding based on even or odd */
+.timeline-card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+.timeline-card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.timeline-card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid rgb(225, 142, 25);
+}
+
+/* Setting the border of top, bottom, left */
+.timeline-card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 400px) {
+    .timeline-card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+}
+
+/* Setting the border of top, bottom, right */
+.timeline-card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first timeline-card */
+.timeline-card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last timeline-card  and it's odd */
+.timeline-card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last timeline-card  and it's even */
+.timeline-card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Timeline-Information about the timeline */
+.timeline-info {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #400040;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 0px 13px #555;
+}
+
+/* Timeline-Title of the timeline-card */
+.timeline-title {
+    color: rgb(225, 142, 25);
+    position: relative;
+    text-align: left;
+}
+
+/* Timeline dot  */
+.timeline-title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid rgb(225, 142, 25);
+}
+
+/* text right if the timeline-card is even  */
+.timeline-card:nth-child(even) > .timeline-info > .timeline-title {
+    text-align: right;
+}
+
+/* setting dot to the left if the timeline-card is odd */
+.timeline-card:nth-child(odd) > .timeline-info > .timeline-title::before {
+    left: -62px;
+}
+
+/* setting dot to the right if the timeline-card is odd */
+.timeline-card:nth-child(even) > .timeline-info > .timeline-title::before {
+    right: -62px;
+}
+
+
+
+
+.code-pen {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+pre::-webkit-scrollbar {
+    display: none;
+}
+
+em > a {
+    color: inherit;
+}
+
+.download-button {
+    display: block;
+    width: fit-content;
+    border-radius: 15px;
+    background: #400040;
+    padding: 25px;
+    padding-left: 15px;
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.download-button:hover {
+    box-shadow: 0px 0px 13px #555;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
+}
+
+@media (max-width: 700px) {
+    .side-by-side {
+        flex-direction: column;
+    }
+}
+.side-by-side > div {
+    flex: 1;
+}
+.side-by-side > div:not(:last-child) {
+    margin-right: 5px;
+}
+
+@keyframes tonext {
+    75% {
+        left: 0;
+    }
+    95% {
+        left: 100%;
+    }
+    98% {
+        left: 100%;
+    }
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes tostart {
+    75% {
+        left: 0;
+    }
+    95% {
+        left: -300%;
+    }
+    98% {
+        left: -300%;
+    }
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: center;
+    }
+}
+
+.carousel * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+}
+
+.carousel *::-webkit-scrollbar {
+    width: 0;
+}
+
+.carousel *::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carousel *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+.carousel * {
+    -ms-overflow-style: none;
+}
+
+.carousel ol, .carousel li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 15px #0006);
+    perspective: 100px;
+}
+
+@media (max-width: 700px) {
+    .carousel {
+        height: 600pt;
+        width: 120%;
+        left: -10%;
+    }
+}
+
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    border-radius: 15px;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #400040;
+    counter-increment: item;
+}
+
+.carousel__slide:nth-child(even) {
+    background-color: rgb(225, 142, 25);
+}
+
+.carousel__snapper {
+
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (hover: hover) {
+    .carousel__slide:last-child .carousel__snapper {
+        animation-name: tostart, snap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+        animation-name: none;
+    }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+    animation-name: none;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+    display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+}
+
+@media (max-width: 700px) {
+    .carousel::before,
+    .carousel::after,
+    .carousel__prev,
+    .carousel__next {
+        top: 300pt;
+    }
+}
+
+.carousel::before,
+.carousel__prev {
+    left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+    right: -1rem;
+}
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+.carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.gameplate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.gamecard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 15px;
+    height: 150pt;
+    z-index: 100;
+    margin: 30pt;
+}
+
+@media (max-width: 700px) {
+    .gamecard {
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+}
+
+.gameblurb {
+    color: white;
+    z-index: 100;
+    overflow: scroll;
+    background-color: #11111133;
+    margin: 0 30pt;
+    padding: 15pt;
+    margin-bottom: 30pt;
+    border-radius: 15px;
+}
+
+.gamecard img {
+    display: inline-block;
+    border-radius: 15px;
+    margin-right: 30pt;
+    object-fit: fill;
+    width: 150pt;
+    height: 150pt;
+}
+
+.gamecard h3 {
+    text-align: left;
+    font-size: 25pt;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.gamescreenshot {
+    pointer-events: none;
+    margin: 0 0;
+    padding: 0 0;
+    border: none;
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    filter: blur(8px);
+}
+
+.gamecard a {
+    text-decoration: inherit;
+    color: inherit;
+    display: inline;
+}
+
+.gamecard p {
+    margin: 0;
+    padding: 0;
+}
+
+.awards {
+    color: white;
+    font-size: 12pt;
+}
+
+.awards ul {
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+.awards li {
+    line-height: 1em;
+}
+
+.awards li::before {
+    content: '';
+    padding-top: 0px;
+    height: 20pt;
+    width: 20pt;
+
+    display: inline-block;
+    position: relative;
+    top: 5pt;
+    background-size: contain;
+    background-image: url(../images/laurel-crown-svgrepo-com.svg);
+    margin-right: 5px;
+    filter: invert(100%);
+}
+
+.terminal-command, .terminal-prompt {
+    white-space: nowrap;
+    padding: 0.125em 1em;
+    background-color: #404040;
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.25em;
+    font-size: 14pt;
+}
+
+.terminal-prompt {
+    user-select: none;
+    color: #808080;
+    padding: 0;
+}
+.terminal-prompt::after {
+    content: ' ';
+}
+
+.keypress-wrapper {
+    white-space: nowrap;
+}
+
+.keypress-icon {
+    padding: 0.125em 0.35em;
+    border-color: #C0C0C0;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bolder;
+    border-radius: 0.5em;
+    font-size: 14pt;
+}
+
+.user-quote {
+    padding: 0.5em 1em;
+    border-color: #C0C0C0;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0.5em;
+}

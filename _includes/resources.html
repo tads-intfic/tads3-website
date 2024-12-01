@@ -1,0 +1,18 @@
+{% for library in site.data.resources.libraries %}
+<section>
+<h2>Resources for {{library.title}}</h2>
+{{library.description}}
+    {% for resource in library.resources %}
+        {% if resource.title %}
+        <section>
+        <h3>{{ resource.title }} {% if resource.type %} <i>- for {{resource.type}}</i> {% endif %}
+        <i>by {{ resource.author }}</i></h3>
+
+        {{resource.description}}
+
+        <a href="{{resource.url}}">Link to {{resource.title}}.</a>
+        </section>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</section>

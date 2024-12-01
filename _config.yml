@@ -3,5 +3,5 @@ description: The most powerful and flexible interactive fiction authoring tool, 
 incremental: true
 domain: tads-intfic.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://tads-intfic.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /
+baseurl: /tads3-website
 layout: default

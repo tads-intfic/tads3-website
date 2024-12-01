@@ -1,6 +1,3 @@
 obj/
 bin/
-
-assets
-_site/assets
 Gemfile.lock
