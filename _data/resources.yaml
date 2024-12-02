@@ -1,6 +1,6 @@
 libraries:
   - title: Beginners
-    description: These are resources to get you up and running with TADS 3. They will repeat in the more comprehensive resources as well.
+    description: These are resources to get you up and running with TADS 3. They may repeat in the more comprehensive resources as well.
     resources:
       - title: TADS 3 Quickstart
         type: TADS 3 & Adv3
@@ -11,13 +11,16 @@ libraries:
         type: TADS 3 & Adv3
         author: Eric Eve
         description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and library.
-        url: /tads3-website/quickrefs
+        url: /quickrefs
       - title: adv3Lite Wiki
         type: adv3Lite
         author: Eric Eve
         description: This GitHub wiki aims to give users and potential users of adv3Lite the information they need to decide whether adv3Lite may be for them. There are links to adv3Lite installation and setup, a sample game, and a short primer on some coding concepts needed for adv3Lite.
         url: https://github.com/EricEve/adv3lite/wiki/Learning-adv3Lite
-
+      - title: Interactive Fiction Forum community
+        type: All of TADS 3
+        description: The Intfiction.org forum is a place for fans and authors of interactive fiction to gather. It has a category for TADS 3 discussion where you can discuss the language and both current libraries, and ask for help from experienced TADS 3 authors and programmers.
+        url: https://intfiction.org/c/authoring/tads/
   - title: Adv3
     description: Adv3 is the default TADS 3 library. It's rather complex, but has a lot of fidelity and powerful features.
     resources:
@@ -26,14 +29,13 @@ libraries:
         description: This brief guide contains instructions for installing the TADS 3 workbench system and compiling a basic game. It also has explanation of the other documentation that exists, including guidance on where to go next, and a sample game newcomers can experiment with if they want to dive straight it.
         url: https://www.tads.org/t3doc/doc/t3QuickStart.htm
       - title: Quick reference charts
-        type: TADS 3
         author: Eric Eve
         description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and Adv3 library.
-        url: /tads3-website/quickrefs
+        url: /quickrefs
       - title: Adv3 Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code.
-        url: /tads3-website/docs/adv3/adv3index.html
+        url: /docs/adv3/adv3index.html
       - title: 
         author: 
         description: 
@@ -48,7 +50,7 @@ libraries:
       - title: adv3Lite Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code. The library source code is also provided as links.
-        url: /tads3-website/docs/adv3Lite/adv3liteindex.html
+        url: /docs/adv3Lite/adv3liteindex.html
       - title: 
         author: 
         description: 
@@ -72,14 +74,14 @@ libraries:
 quickrefs:
   - name: TLangRef.pdf
     description: A quick reference for the TADS 3 language itself
-    url: /tads3-website/assets/quickrefs/T3LangRef.pdf
+    url: /assets/quickrefs/T3LangRef.pdf
   - name: TemplatesQref.pdf
     description: A Templates Quick Reference
-    url: /tads3-website/assets/quickrefs/TemplatesQref.PDF
+    url: /assets/quickrefs/TemplatesQref.PDF
   - name: DynamicCharacterQuickRef.pdf
     description: A Dynamic Actors Quick Reference (for creating NPCs)
-    url: /tads3-website/assets/quickrefs/DynamicCharacterQuickRef.PDF
+    url: /assets/quickrefs/DynamicCharacterQuickRef.PDF
   - name: ActionMessages.pdf
     description: An Action Messages Quick Reference to help you find the message properties you need to override to customise responses quickly and easily.
-    url: /tads3-website/assets/quickrefs/ActionMessages.PDF
+    url: /assets/quickrefs/ActionMessages.PDF
   
