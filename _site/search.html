@@ -6,7 +6,7 @@
     <meta property="og:type" content="website">
     <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css"
-                           href="assets/css/styles.css">
+                           href="/assets/css/styles.css">
     <title>Search Results</title>
     <meta property="og:title" content=
     "Search Results">
@@ -28,11 +28,51 @@
   // Template to generate the JSON to search
   window.store = {
     
+      "": {
+        "title": "TADS 3 Resources",
+        "content": "\n\nTADS 3 resources\nTADS 3 is a powerful programming language used to write and program parser interactive fiction games. This is a temporary landing page to aggregate TADS 3 resources in one spot. This site will be built out over time.\n\nFor now, this page assumes you know what Interactive Fiction and parsers are.\n\n{% include resources.html %}\n",
+        "url": "/"
+      }
+      ,
+    
+      "docs-periplusindex-html": {
+        "title": "TADS 3 Periplus",
+        "content": "  TADS 3 periplus: library reference organized by topic\n  \n    adv3\n    adv3Lite\n  \n",
+        "url": "/docs/periplusindex.html"
+      }
+      ,
+    
+      "quickrefs-html": {
+        "title": "Adv3 Quick References",
+        "content": "\nAdv3 Quick Reference documents\nBy Eric Eve\nThe sheer scope and scale of the Adv3 library can seem a bit overwhelming at first. One way to help make it a bit more manageable is to summarise some of the essential information in Quick Reference charts. A collection of four such charts (in PDF format, designed for printing out) are hosted here. Every document here, except the first, describes Adv3 functionality.\n\nThe Quick Reference charts provided are:\n{% include quickref.html %}\n",
+        "url": "/quickrefs.html"
+      }
+      ,
+    
+      "search-html": {
+        "title": "Search Results",
+        "content": "\n\n\n\n\n\n\n\n\n",
+        "url": "/search.html"
+      }
+      ,
+    
+      "assets-css-style-css": {
+        "title": "",
+        "content": "@import \"jekyll-theme-primer\";\n",
+        "url": "/assets/css/style.css"
+      }
+      
+    ,
+     <!-- Add .html files -->
+     
+    
+    
   };
+        console.log('Content:', window.store['docs-adv3lite-libref-object-yall-html'] );
 </script>
 
 <!-- Import lunr.js from unpkg.com -->
-<script src="/assets/js/lunr.min.js" type="text/javascript"></script>
+<script src="/assets/js/lunr.js" type="text/javascript"></script>
 
 <!-- Custom search script which we will create below -->
 <script src="/assets/js/search.js" type="text/javascript"></script>
