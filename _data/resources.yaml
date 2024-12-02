@@ -73,9 +73,9 @@ quickrefs:
   - name: TLangRef.pdf
     description: A quick reference for the TADS 3 language itself
     url: /tads3-website/assets/quickrefs/T3LangRef.pdf
-  - name: TemplatesQRef.pdf
+  - name: TemplatesQref.pdf
     description: A Templates Quick Reference
-    url: /tads3-website/assets/quickrefs/TemplatesQRef.PDF
+    url: /tads3-website/assets/quickrefs/TemplatesQref.PDF
   - name: DynamicCharacterQuickRef.pdf
     description: A Dynamic Actors Quick Reference (for creating NPCs)
     url: /tads3-website/assets/quickrefs/DynamicCharacterQuickRef.PDF
