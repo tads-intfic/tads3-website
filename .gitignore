@@ -3,3 +3,6 @@ bin/
 Gemfile.lock
 package-lock.json
 node_modules
+docs/adv3/*/
+
+_site/docs/adv3/*/
