@@ -13,7 +13,8 @@ Right now I am looking for help with these three things in order of priority.
 ## To aggregate existing resources
 My preference is that you open an issue using the Resource contribution template and fill out the information according to the `.yaml` structure of the [`resources.yaml` file](./_data/resources.yaml). *You **can** add more than one resource at a time!*
 ```yaml
-- title: 
+- title:
+  type: 
   author:
   description:
   url:
