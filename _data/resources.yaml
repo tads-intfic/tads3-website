@@ -1,6 +1,6 @@
 libraries:
   - title: Beginners
-    description: These are resources to get you up and running with TADS 3. They may repeat in the more comprehensive resources as well.
+    description: These are resources to get you up and running with TADS 3. They are repeated in the more comprehensive resources as well.
     resources:
       - title: TADS 3 Quickstart
         type: TADS 3 & Adv3
@@ -22,7 +22,7 @@ libraries:
         description: The Intfiction.org forum is a place for fans and authors of interactive fiction to gather. It has a category for TADS 3 discussion where you can discuss the language and both current libraries, and ask for help from experienced TADS 3 authors and programmers.
         url: https://intfiction.org/c/authoring/tads/
   - title: Adv3
-    description: Adv3 is the default TADS 3 library. It's rather complex, but has a lot of fidelity and powerful features.
+    description: Adv3 is the default TADS 3 library, and is packaged with it when you install TADS 3. It's rather complex, but has a lot of fidelity and powerful features.
     resources:
       - title: TADS 3 Quickstart
         author: Eric Eve
@@ -36,21 +36,41 @@ libraries:
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code.
         url: /docs/adv3/adv3index.html
-      - title: 
-        author: 
-        description: 
-        url: 
+      - title: Example Games
+        type: Adv3 & adv3Lite
+        author: Eric Eve
+        description: A set of ten short games illustrating how to use various parts of the library in both adv3 and adv3Lite.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/Examples/exercises.htm
+      - title: Cloak of Darkness
+        type: Adv3 & adv3Lite 
+        author: Eric Eve
+        description: Cloak of Darkness is an example game that has been implemented across multiple interactive fiction languages to demonstrate how the same features can be implemented in different systems. This is a link to implementations of the Cloak of Darkness game in adv3Lite and adv3.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/cloak.htm
   - title: adv3Lite
-    description: adv3Lite is a TADS 3 library based off Adv3, but it removes a lot of the more niche features of Adv3 and uses simpler syntax. It is written and maintained by Eric Eve.
+    description: adv3Lite is a TADS 3 library based off Adv3, written and maintained by Eric Eve. It aims to provide a library that's easier to use than the Adv3 library, but which is almost as powerful and expressive. Adv3Lite misses out the bits that most games don't really need (like postures, room parts, and multiple light levels) while adding in some other bits that are often more useful (like scenes and regions, "borrowed" from Inform 7). Adv3Lite also cuts down drastically on the complexity of the Adv3 class hierarchy while maintaining much of their functionality.
     resources:
       - title: adv3Lite Wiki
         author: Eric Eve
         description: This GitHub wiki aims to give users and potential users of adv3Lite the information they need to decide whether adv3Lite may be for them. There are links to adv3Lite installation and setup, a sample game, and a short primer on some coding concepts needed for adv3Lite.
         url: https://github.com/EricEve/adv3lite/wiki/Learning-adv3Lite
+      - title: Further information about adv3Lite
+        author: Eric Eve
+        description: The original home page of adv3Lite, giving a description of what it's for, how if differs from adv3, and links to various useful resources.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.htm
       - title: adv3Lite Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code. The library source code is also provided as links.
         url: /docs/adv3Lite/adv3liteindex.html
+      - title: Example Games
+        type: Adv3 & adv3Lite
+        author: Eric Eve
+        description: A set of ten short games illustrating how to use various parts of the library in both adv3 and adv3Lite.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/Examples/exercises.htm
+      - title: Cloak of Darkness
+        type: Adv3 & adv3Lite 
+        author: Eric Eve
+        description: Cloak of Darkness is an example game that has been implemented across multiple interactive fiction languages to demonstrate how the same features can be implemented in different systems. This is a link to implementations of the Cloak of Darkness game in adv3Lite and adv3.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/cloak.htm
       - title: 
         author: 
         description: 
@@ -59,7 +79,7 @@ libraries:
         author: 
         description: 
         url: 
-  - title: the TADS 3 language
+  - title: TADS 3 language
     description: These are references for the TADS 3 programming language itself, not specific to any library like Adv3 or Adv3Lite.
     resources:
       - title: TADS 3 System Manual
@@ -84,4 +104,3 @@ quickrefs:
   - name: ActionMessages.pdf
     description: An Action Messages Quick Reference to help you find the message properties you need to override to customise responses quickly and easily.
     url: /assets/quickrefs/ActionMessages.PDF
-  

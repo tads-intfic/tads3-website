@@ -35,9 +35,9 @@ I tried to put front matter into all the static files using [Front Matter defaul
 Alternatively we'll turn to bare JavaScript search bars...
 
 ## Updating the peripluses
-The peripluses are generated from the source code comments and existing documentation for Adv3 and adv3Lite.
+The peripluses are generated from links to the existing documentation for Adv3 and adv3Lite.
 
-Currently the adv3Lite periplus is referencing version 1.5, and adv3Lite is, as of Dec 2024, on version 2.1.1. The adv3Lite periplus on this site should use the newest version. (I'm not sure if this is possible, but what if we eventually got it to a state where it directly references the adv3Lite repository's most recent releases as Eric Eve updates it...?)
+Currently the adv3Lite periplus is referencing version 1.5, and adv3Lite is, as of Dec 2024, on version 2.1.1. The adv3Lite periplus on this site should reference the newest version. (I'm not sure if this is possible, but what if we eventually got it to a state where it directly references the adv3Lite repository's most recent releases as Eric Eve updates it...?)
 
 As well, the Adv3 periplus links directly to the original TADS website documentation, which means the documents are not fulltext searchable--and since Michael Roberts has been MIA for years, it's unknown whether they will remain up and hosted for the foreseeable future. They are fully archived on IFArchive right now, and with the current license they cannot be modified, but I would like to host them on this site as well.
 

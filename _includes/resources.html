@@ -1,6 +1,12 @@
+<section class="button-container">
+    {% for library in site.data.resources.libraries %}
+    <a href="#{{library.title}}" role="button" class="button">{{library.title}}</a>
+    {% endfor %}
+</section>
+
 {% for library in site.data.resources.libraries %}
 <section>
-<h2>Resources for {{library.title}}</h2>
+<h2 id="{{library.title}}">Resources for {{library.title}}</h2>
 <p>{{library.description}}</p>
     {% for resource in library.resources %}
         {% if resource.title %}
@@ -10,9 +16,10 @@
 
         <p>{{resource.description}}</p>
 
-        <p><a href="{{resource.url}}">Link to {{resource.title}}.</a></p>
+        <p><a href="{{resource.url}}" class="button">Link to {{resource.title}}</a></p>
         </section>
         {% endif %}
     {% endfor %}
+<div class="button-container"><a href="#top" role="button" class="button">Back to top</a></div>
 </section>
 {% endfor %}
