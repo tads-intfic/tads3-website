@@ -4,3 +4,16 @@ incremental: true
 domain: tads.dev     # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://tads.dev  # the base hostname and protocol for your site, e.g. http://example.com
 layout: default
+defaults:
+  - scope:
+      path: "docs/*.htm"
+    values:
+      doc: true
+      title: file.name
+      description: file.basename
+  - scope:
+      path: "docs/*.html"
+    values:
+      doc: true
+      title: file.name
+      description: file.basename

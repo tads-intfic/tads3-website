@@ -1,0 +1,61 @@
+[subtime.t]{.title}[file]{.type}
+
+[source file](../source/subtime.t.html)
+
+**Classes**\
+[Summary](#_ClassSummary_)\
+ 
+
+**Objects**\
+[Summary](#_ObjectSummary_)\
+ 
+
+**Functions**\
+[Summary](#_FunctionSummary_)\
+[Details](#_Functions_)
+
+::: fdesc
+SUBTIME EXTENSION
+
+Adapted for use with adv3Lite by Eric Eve; the changes include using the
+Date class rather than the custom format for storing dates and times
+used in MJR\'s original version.
+
+\"Subjective Time\" module. This implements a form of in-game
+time-keeping that attempts to mimic the player\'s subjective experience
+of time passing in the scenario while still allowing for occasional,
+reasonably precise time readings, such as from a wristwatch in the game
+world.
+:::
+
+[]{#_ClassSummary_}
+
+::: mjhd
+[Summary of Classes]{.hdln}  
+:::
+
+` `[`ClockEvent`](../object/ClockEvent.html)`  ` []{#_ObjectSummary_}
+
+::: mjhd
+[Summary of Global Objects]{.hdln}  
+:::
+
+` `[`clockManager`](../object/clockManager.html)`  `
+[]{#FunctionSummary_}
+
+::: mjhd
+[Summary of Global Functions]{.hdln}  
+:::
+
+*(none)* []{#_Functions_}
+
+::: mjhd
+[Global Functions]{.hdln}  
+:::
+
+*(none)*
+
+::: ftr
+Adv3Lite Library Reference Manual\
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+:::

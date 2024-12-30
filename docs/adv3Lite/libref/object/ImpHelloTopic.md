@@ -1,0 +1,154 @@
+[ImpHelloTopic]{.title}[class]{.type}
+
+[actor.t](../file/actor.t.html)\[[3831](../source/actor.t.html#3831)\]
+
+[Superclass\
+Tree](#_SuperClassTree_)
+
+[Subclass\
+Tree](#_SubClassTree_)
+
+[Global\
+Objects](#_ObjectSummary_)
+
+[Property\
+Summary](#_PropSummary_)
+
+[Method\
+Summary](#_MethodSummary_)
+
+[Property\
+Details](#_Properties_)
+
+[Method\
+Details](#_Methods_)
+
+::: fdesc
+An ImpHelloTopic is one that handles an implied greeting; i.e. it is
+used to start a conversation when some other conversational command is
+used before the conversation is underway.
+
+`class `**`ImpHelloTopic`**` :   `[`HelloTopic`](../object/HelloTopic.html)
+:::
+
+[]{#_SuperClassTree_}
+
+::: mjhd
+[Superclass Tree]{.hdln}   (in declaration order)
+:::
+
+**`ImpHelloTopic`**\
+`         `[`HelloTopic`](../object/HelloTopic.html)\
+`                 `[`GreetingTopic`](../object/GreetingTopic.html)\
+`                         `[`MiscTopic`](../object/MiscTopic.html)\
+`                                 `[`ActorTopicEntry`](../object/ActorTopicEntry.html)\
+`                                         `[`ReplaceRedirector`](../object/ReplaceRedirector.html)\
+`                                                 `[`Redirector`](../object/Redirector.html)\
+`                                                         object`\
+`                                         `[`TopicEntry`](../object/TopicEntry.html)\
+`                                                 object`\
+[]{#_SubClassTree_}
+
+::: mjhd
+[Subclass Tree]{.hdln}  
+:::
+
+*(none)* []{#_ObjectSummary_}
+
+::: mjhd
+[Global Objects]{.hdln}  
+:::
+
+*(none)* []{#_PropSummary_}
+
+::: mjhd
+[Summary of Properties]{.hdln}  
+:::
+
+` `[`matchObj`](#matchObj)`  `[`matchScore`](#matchScore)`  `
+
+` `
+
+Inherited from `GreetingTopic` :\
+` `[`changeToState`](../object/GreetingTopic.html#changeToState)`  `[`impliesGreeting`](../object/GreetingTopic.html#impliesGreeting)`  `[`includeInList`](../object/GreetingTopic.html#includeInList)`  `
+
+` `
+
+Inherited from `ActorTopicEntry` :\
+` `[`activated`](../object/ActorTopicEntry.html#activated)`  `[`active`](../object/ActorTopicEntry.html#active)`  `[`autoName`](../object/ActorTopicEntry.html#autoName)`  `[`convKeys`](../object/ActorTopicEntry.html#convKeys)`  `[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)`  `[`getActor`](../object/ActorTopicEntry.html#getActor)`  `[`isConversational`](../object/ActorTopicEntry.html#isConversational)`  `[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)`  `[`listOrder`](../object/ActorTopicEntry.html#listOrder)`  `[`name`](../object/ActorTopicEntry.html#name)`  `[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)`  `[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)`  `
+
+` `
+
+` `
+
+Inherited from `TopicEntry` :\
+` `[`isActive`](../object/TopicEntry.html#isActive)`  `[`matchExactCase`](../object/TopicEntry.html#matchExactCase)`  `[`matchPattern`](../object/TopicEntry.html#matchPattern)`  `[`scoreBoost`](../object/TopicEntry.html#scoreBoost)`  `[`topicMatched`](../object/TopicEntry.html#topicMatched)`  `
+
+[]{#_MethodSummary_}
+
+::: mjhd
+[Summary of Methods]{.hdln}  
+:::
+
+` `
+
+Inherited from `HelloTopic` :\
+` `[`handleTopic`](../object/HelloTopic.html#handleTopic)`  `
+
+` `
+
+Inherited from `MiscTopic` :\
+` `[`matchTopic`](../object/MiscTopic.html#matchTopic)`  `
+
+Inherited from `ActorTopicEntry` :\
+` `[`activate`](../object/ActorTopicEntry.html#activate)`  `[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)`  `[`buildName`](../object/ActorTopicEntry.html#buildName)`  `[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)`  `[`deactivate`](../object/ActorTopicEntry.html#deactivate)`  `[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)`  `[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)`  `[`isReachable`](../object/ActorTopicEntry.html#isReachable)`  `[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)`  `[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)`  `[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)`  `
+
+Inherited from `ReplaceRedirector` :\
+` `[`redirect`](../object/ReplaceRedirector.html#redirect)`  `
+
+Inherited from `Redirector` :\
+` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+
+Inherited from `TopicEntry` :\
+` `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`scoreBooster`](../object/TopicEntry.html#scoreBooster)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+
+[]{#_Properties_}
+
+::: mjhd
+[Properties]{.hdln}  
+:::
+
+[]{#matchObj}
+
+`matchObj`[OVERRIDDEN]{.rem}
+
+[actor.t](../file/actor.t.html)\[[3833](../source/actor.t.html#3833)\]
+
+::: desc
+An ImpHelloTopic matches the impHelloTopicObj only.
+:::
+
+[]{#matchScore}
+
+`matchScore`[OVERRIDDEN]{.rem}
+
+[actor.t](../file/actor.t.html)\[[3840](../source/actor.t.html#3840)\]
+
+::: desc
+We give ImpHelloTopic a higher than usual matchScore so that it\'s used
+in preference to a HelloTopic when both are present to match the
+impHelloTopicObj.
+:::
+
+[]{#_Methods_}
+
+::: mjhd
+[Methods]{.hdln}  
+:::
+
+*(none)*
+
+::: ftr
+Adv3Lite Library Reference Manual\
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+:::

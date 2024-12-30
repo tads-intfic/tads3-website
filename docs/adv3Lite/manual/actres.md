@@ -1,0 +1,1240 @@
+::: topbar
+![](topbar.jpg){border="0"}
+:::
+
+::: nav
+[Table of Contents](toc.htm){.nav} \| [Actions](action.htm){.nav} \>
+Action Results\
+[[*Prev:* Overview](actionoverview.htm){.nav}     [*Next:*
+Messages](message.htm){.nav}     ]{.navnp}
+:::
+
+::: main
+# Action Results
+
+As mentioned at the end of the previous section, the most common way to
+customize the results of actions in the adv3Lite library is to override
+the appropriate methods on the direct object and, where applicable,
+indirect object of the action in question. Each method corresponds to
+one stage of the action. The stages (with a brief explanation of the
+purpose of each) are:
+
+-   [Verify](#verify): helps the parser select the most appropriate
+    objects for this command and determines whether the action can go
+    ahead.
+-   [Pre-conditions](#precond): applies any preconditions relating to
+    carrying out this action on this object.
+-   [Check](#check): determines whether the action can go ahead without
+    affecting the parser\'s choice of object.
+-   [Action](#action): carries out the action if the three previous
+    stages allow it to go ahead.
+-   [Report](#report): displays a report summarizing the effect of the
+    action on all the direct objects involved.
+-   [Remap](#remap): if present, replaces the current object of the
+    action with another object in the same role.
+
+These stages are defined in methods whose name is made up of the name of
+the stage, plus either Dobj (on the direct object of the command) or
+Iobj(on the indirect object of the command) followed by the name of the
+action. For example the method names corresponding to the stages listed
+above on the direct object of a Take action would be called:
+
+-   verifyDobjTake()
+-   preCondDobjTake()
+-   checkDobjTake()
+-   actionDobjTake()
+-   reportDobjTake()
+-   remapDobjTake()
+
+Normally, though, we don\'t use these names explicitly but use the
+**dobjFor** and **iobjFor** propertyset macros to write definitions that
+look like this:
+
+::: code
+    dobjFor(Take)
+    {
+       verify() { ... }
+       preCond() { ... }
+       check() { ... }
+       action() { ... }
+       report() { ... }
+       remap() { ... }
+    }
+
+Note, however, that so far as the TADS 3 compiler is concerned, the two
+ways of defining these methods have exactly the same meaning. We use the
+second method because it\'s usually easier and clearer. Note also that
+we don\'t normally need to define every stage; for most actions on most
+objects it\'s normally sufficient just to define two or three of these
+stages.
+
+We can now proceed to consider each of these stages in more detail.
+
+## [Verify]{#verify}
+
+The Verify stage has two purposes:
+
+1.  To help the parser decide which is the best choice of object for a
+    command (in cases of ambiguity).
+2.  To prevent an action going ahead if it is obviously inappropriate,
+    and in that case to explain why it has been prevented.
+
+This may be alternatively expressed by saying that the job of the verify
+stage is to rule out illogical actions and to help the parser make the
+most logical choice; these two tasks are clearly related, which is why
+they are handled by the same stage.
+
+For example, suppose the player types the command TAKE BALL when there
+are three balls in scope: a small red ball which the player is already
+carrying, a blue plastic ball lying on the ground, and a large
+ornamental stone ball attached to a stone parapet. Which ball is the
+player most likely to have meant? The red ball can\'t currently be
+taken, because the player character is already holding in; the stone
+ball can never be taken, because it\'s fixed to the parapet and would in
+any case be too heavy to lift; so the player must presumably have
+intended the blue ball. In this case the parser would therefore select
+the blue ball and the TAKE action would go ahead.
+
+Now consider the same scenario but without the blue ball; only the red
+ball (held by the player character) and the immovable stone ball are
+present. Which should the parser choose when the player types TAKE BALL?
+You might think that since neither can be taken the parser should simply
+give up and ask the player to disambiguate (i.e. state which ball s/he
+meant), but that is precisely what the verify stage is trying to
+minimize. An alternative approach is to reckon that since the stone ball
+can never be taken, but the red ball could have been taken under
+different circumstances, the red ball is the more logical choice; the
+player could never have imagined that the great stone ball could ever be
+takeable, but it\'s possible s/he forget s/he was already carrying the
+red ball. So in this case ther parser would choose the red ball but
+display a message explaining that it can\'t be taken while it\'s already
+held.
+
+The code to achieve this might (in outline) look something like this:
+
+::: code
+    stoneBall: Thing 'stone ball; huge large ornamental'
+      isFixed = true
+      
+      dobjFor(Take)
+      {  
+         verify() { illogical('The stone ball is firmly fixed to the parapet. '); }
+      }
+    ;
+
+    redBall: Thing 'red ball; small'
+      dobjFor(Take)
+      {
+         verify()
+         {
+           if(isDirectlyIn(gActor))
+             illogicalNow('You are already carrying the red ball. ');
+         }
+      }
+    ;
+:::
+
+Notice the use of the **illogicalNow()** macro here; this means that the
+action might be illogical under certain circumstance --- it\'s illogical
+*now* if the red ball is already directly in (i.e. carried by) the actor
+--- but under other circumstances it might be perfectly logical and the
+action could proceed. (Note, adv3 would use illogicalAlready here, but
+adv3Lite makes no distinction between illogicalAlready and illogicalNow
+and uses illogicalNow for both). This makes it less illogical that some
+things that are always illogical (like taking the great stone ball).
+
+Note also what we mean by *logical* here; we don\'t mean logical
+primarily from the perspective of the game mechanics (what will actually
+work) but logical primarily from the perspective of the player, what the
+player is most likely to expect to work. The intention is to help the
+parser read the player\'s mind when s/he enters an ambiguous command,
+and then, at a second stage, rule out clearly impossible actions.
+
+There really are two stages rolled into one here, for the verify()
+method may actually be run twice during command execution. It is first
+run by the parser when matching objects to the command the player typed.
+The object with the highest score is selected, and only if there\'s a
+tie (as might be the case if both the red ball and the blue ball were
+lying on the ground available to be taken, for example) will the parser
+issue a disambiguation prompt asking the player to state which object
+s/he meant. If the object is selected for the command, the verify
+routine is run a second time by the action to check whether the action
+can proceed with this object, and if it can\'t, the appropriate failure
+message will then be displayed.
+
+The previous paragraph spoke of the object with the highest score. The
+parser calculates the score of an object by calling scoreObjects() on
+the action. It is this routine that uses the verify stage to assign a
+score, assigned according to the *logical rank* the verify stage comes
+up with. The default logical rank (for an empty verify routine which
+does nothing, which means that the action is perfectly okay to proceed)
+is a score of 100. A logical rank of 150 would be a particularly good
+fit for the action proposed. A logical rank of 70 would mean that the
+action was possible with this object but not such a good fit (examining
+an unobtrusive background decoration object, say, when a far more
+prominent match is also available). A logical rank of 50 or less means
+that the action is illogical, the lower the rank meaning the more
+illogical it is.
+
+The adv3Lite library currently just uses the logical rank returned by
+the verify routine as the match score. Note that the Mercury parser,
+which adv3Lite uses, allows for further tweaking of the match score
+through the scoreObject() methods of both the action and the object
+concerned. At the moment the adv3Lite library uses these methods only to
+take the [vocabLikelihood]{.code} into account, but in principle game
+authors could make use of them to make further adjustments or override
+the outcome of the logical ranking altogether (although this is not
+recommended). It is possible that future versions of adv3Lite may take
+advantage of these methods to provide game authors with further hooks to
+adjust the way the score is calculated, so game authors should be aware
+that there may be some adjustments in this area in the future. These
+adjustments will not, however, discuss the basic principles or indeed
+the details of how the verify stage should be used and what it\'s for;
+at most they will may simply provide means for further tweaking.
+
+[]{#verresult}
+
+Verify routines can make use of the following macros to define verify
+results:
+
+-   **logical**: results in a logical rank of 100 and allows the action
+    to go ahead. This is the default and is also what will happen if no
+    other verify result is present (i.e. if the verify() routine is
+    empty or if none of its conditional statements is true).
+-   **logicalRank(*n*)**: results in a logical rank of *n* and allows
+    the action to go ahead. (If you\'re familiar with adv3 please note
+    that there\'s no second parameter in the adv3Lite version of
+    logicalRank).
+-   **illogicalNow(*msg*)**: results in a logical rank of 40 and
+    prevents the action from going ahead. This should be used for
+    actions that are illogical under certain circumstances (e.g. taking
+    an object you\'re already holding) but not others. (If you\'re
+    familiar with adv3 please note that you should use illogicalNow in
+    place of illogicalAlready).
+-   **implausible(*msg*)**: results in a logical rank of 35 and prevents
+    the action from going ahead. This is intended for actions that are
+    illogical, but whose illogicality might not be quite so immediately
+    apparent as is the case with a straightforwardly illogical action.
+-   **illogical(*msg*):** results in a logical rank of 30 and prevents
+    the action from going ahead. Use this for actions that are
+    straightforwardly and obviously illogical, like trying to take a
+    mountain or eat a table.
+-   **illogicalSelf(*msg*):** results in a logical rank of 20 and
+    prevents the action from going ahead. This is intended to rule out
+    actions such as PUT RED BOX IN RED BOX or TAKE ME (and thereby help
+    to disambiguate commands like PUT RED IN RED where just about any
+    object would be a better choice to put in the red box than the red
+    box itself).
+-   **inaccessible(*msg*):** results in a logical rank of 10 and
+    prevents the action from going ahead. This rules out actions for
+    which the object is inaccessible to the actor.
+-   **nonObvious**: results in a logical rank of 30 but allows the
+    action to go ahead provided it isn\'t an implicit action. This can
+    be used, for example, to prevent a player accidentally solving a
+    puzzle by triggering an implicit action.
+-   **dangerous**: results in a logical rank of 90 and allows the action
+    to go ahead provided it isn\'t an implicit action. This can be used,
+    for example, to prevent the player accidentally doing something
+    dangerous (like picking up an obviously booby-trapped object or
+    opening the doors of a cabinet filled with poison gas) inadvertently
+    through an implicit action. It also means that other things being
+    equal, if the parser has to choose between two interpretations of
+    the player\'s command, it will choose the safer one.
+
+Where the *msg* parameter is specified above it in each case refers to
+the message to be displayed to the player to explain why the action
+cannot go ahead (if indeed it can\'t). In the examples given above this
+was shown as a single-quoted string, which is indeed perfectly legal,
+but in the adv3Lite library it is always expressed as a property (e.g.
+cannotTakeMsg) which is a property defined on the object in question.
+Part of the reason for this is to make it easy for game authors to
+customize these refusal messages: if you want something less generic
+than \'The stone ball is fixed in place\' you can simply override the
+cannotTakeMsg property on the stoneBall object; you don\'t have to
+override the entire verifyDobjTake() method. Either way, however, the
+verification macro *must* receive a single-quoted string value, and
+*never* a double-quoted string; both [illogical(\"{I} {can\\\'t} wash
+that.\"} ]{.code}and [cannotWashMsg = \"{I} {can\\\'t} wash
+that.\"]{.code} would be programming errors that can be guaranteed to
+produce strange and unwanted results. (The explanation of the bits in
+curly braces like \'{I} {can\\\'t}\' will be covered later in the
+section on [messages](message.htm)).
+
+Note that your verify routines should contain nothing but one or more of
+the macros listed above and the conditional (if) statement needed to
+define when they apply (and, possibly, some code to calculate local
+variables for use by the conditional statements). In particular verify
+routines should not display anything (via say() statements or
+double-quoted strings) nor should they change the game state.
+
+Note also that it\'s perfectly okay for the logic of your verify routine
+to result in more than one of the logical/illogical macros being
+executed. The library will simply use the one that has the *lowest*
+logical rank (on the assumption that if it is applicable at all, it
+trumps all the rest). The verify result with the lowest logical rank is
+stored in a table, where it can be replaced by a verify result with an
+even lower logical rank, if one is encountered, and where its
+corresponding failure message can be accessed if and when the time comes
+to display it.
+
+[]{#gTentative}
+
+When we\'re writing verify routines for TIActions (such as TakeFrom or
+DigWith) it\'s sometimes useful for the verify routine on one object of
+the action to know what the other object involved in the action will be.
+The library uses the **resolveIobjFirst** property of each TIAction to
+determine which object should be resolved first, generally choosing the
+more helpful order (so that the object that most needs to know what the
+other object will be is resolved second.
+
+Occasionally, though, it can be helpful for both objects\' verify
+routines to know what the other object involved in the action will be
+(as is the case with TakeFrom, for example). In such cases the macros
+**gVerifyDobj** and **gVerifyIobj** should always be used instead of
+gDobj and gIobj (since there\'s always a risk that these won\'t have
+been assigned values yet, leading to potential nil object reference
+run-time errors). The macros gVerifyDobj and gVerifyIobj evaluate to
+gDobj or gIobj respectively if these are non-nil, but otherwise use the
+values of the first item in the gTentativeDobj/gTentativeIobj list.
+
+The macros **gTentativeDobj** and **gTentativeIobj** can also be
+helpful. These produce the lists of objects that the current Command is
+considering as possible direct and indirect objects. They can be used in
+the verify routines of TIActions in place of gDobj and gIobj when it
+would be helpful to know the complete lists of what the other object
+might turn out to be before it has been fully resolved. Note that unlike
+the similarly named macros in adv3, these ones do actually results in
+lists of actual objects, not npMatches or the like.
+
+The macros **gTentativeDobjIn(*lst*)** and **gTentativeIobjIn(*lst*)**
+should normally be used in verify routines to test whether the list
+*lst* has any items in common with gTentativeDobj and gTentativeIobj
+respectively (these macros evaluate to true if so or nil otherwise).
+
+For example, the library defines the following handling of the TakeFrom
+action on the indirect object:
+
+::: code
+    iobjFor(TakeFrom)
+        {
+            preCond = [touchObj]
+            
+            verify()       
+            {          
+                /*We're a poor choice of indirect object if there's nothing in us */
+                if(notionalContents.countWhich({x: !x.isFixed}) == 0)
+                    logicalRank(70);
+                
+                /* 
+                 *   We're also a poor choice if none of the tentative direct
+                 *   objects is in our list of notional contents
+                 */
+                if(gTentativeDobj.overlapsWith(notionalContents) == nil)
+                    logicalRank(80);        
+            
+            }      
+        }
+:::
+
+This could also have been written (with exactly the same meaning and
+effect):
+
+::: code
+    iobjFor(TakeFrom)
+        {
+            preCond = [touchObj]
+            
+            verify()       
+            {          
+                /*We're a poor choice of indirect object if there's nothing in us */
+                if(notionalContents.countWhich({x: !x.isFixed}) == 0)
+                    logicalRank(70);
+                
+                /* 
+                 *   We're also a poor choice if none of the tentative direct
+                 *   objects is in our list of notional contents
+                 */
+                if(gTentativeDobjIn(notionalContents) == nil) //using the macro instead of spelling out what it does
+                    logicalRank(80);        
+            
+            }      
+        }
+:::
+
+Note that the library is set up to minimize the number of verify
+routines you need to override. For example, the action handling for Dig
+and DigWith is defined like this:
+
+::: code
+     /* Most things are not suitable for digging in*/
+        isDiggable = nil
+        
+        dobjFor(Dig)
+        {
+            preCond = [touchObj]
+            verify() 
+            {
+                if(!isDiggable)
+                   illogical(cannotDigMsg); 
+            }
+        }
+        
+        /* Most objects aren't suitable digging instruments */
+        canDigWithMe = nil
+        
+        dobjFor(DigWith)
+        {
+            preCond = [touchObj]
+            verify() 
+            {
+                if(!isDiggable)
+                   illogical(cannotDigMsg); 
+            }
+        }
+            
+        iobjFor(DigWith)
+        {
+            preCond = [objHeld]
+            verify() 
+            { 
+                if(!canDigWithMe)
+                   illogical(cannotDigWithMsg); 
+                
+                if(gDobj == self)
+                    illogicalSelf(cannotDigWithSelfMsg);
+            }
+        }
+        
+        cannotDigMsg = BMsg(cannot dig, '{I} {can\'t} dig there. ')
+        cannotDigWithMsg = BMsg(cannot dig with, '{I} {can\'t} dig anything with
+            {that iobj}. ')
+        cannotDigWithSelfMsg = BMsg(cannot dig with self, '{I} {can\'t} dig {the
+            dobj} with {itself dobj}. ')
+:::
+
+This means that instead of having to override the verify methods of
+things you want to dig or dig with to make the commands possible, you
+can simply define [isDiggable = true]{.code} or [canDigWithMe =
+true]{.code} as appropriate (and preventing using something to dig
+itself is still automatically taken care of). The name pattern isXXXable
+for the direct object and canXXXPrepMe for the indirect object when the
+corresponding actions are XXX and XXXPrep are used fairly consistently,
+as are the names of the corresponding cannotXXXMsg, cannotXXXPrepMsg and
+cannotXXXPrepSelfMsg properties, to make it relatively simple to work
+out which properties you might want to override. The main exceptions are
+the doubling of the final consonant where normal spelling would seem to
+require it for properties like isDiggable and isCuttable, and the use of
+the more idiomatic isEdible in place of isEatable, the use of the
+canXXXPrepMe form where this reads more naturally than isXXXPrepable
+(e.g. canSitOnMe is used in preference to the rather awkward
+isSitOnable). If in doubt you can consult the list given in the [Action
+Reference](actionref.htm) (which may also be useful if you need to check
+the name of the action), but the property names in fact follow a largely
+consistent scheme:
+
+1.  For a two-object (TIAction) action (such as FooPrep) the property
+    controlling success or failure in the verify routine on the direct
+    object is always [isFooable]{.code}, and on the indirect object is
+    always [canFooPrepMe]{.code} (except for PushTravel actions, which
+    are really compound actions combining Pushing and Traveling, and so
+    follow slightly different rules; see below).
+2.  For a single-object (TAction, TopicTAction or LiteralTAction) action
+    the property controlling success of failure in the verify routine of
+    the direct object is always [isFooable]{.code} if the action name
+    does not contain a preposition (such as Take) or
+    [canFooPrepMe]{.code} if the action name does contain a preposition
+    (such as SitOn), provided the preposition would normally precede the
+    direct object (e.g. SIT IN CHAIR). Two apparent exceptions are
+    [canSetMeTo]{.code} and [canTurnMeTo]{.code}, but here the
+    preposition would normally come after the direct object (e.g. TURN
+    DIAL TO 7, not TURN TO DIAL 7); the rule is that the Me in the
+    property name comes where the direct object would come in the
+    corresponding command.
+3.  There are one or two exceptions where it wouldn\'t make sense to
+    define a whole lot of properties for similar actions. The main one
+    of these is the [canPushTravel]{.code} property which allows or
+    disallows the whole set of PushTravel actions on the direct object,
+    and the abbreviated property names on the indirect objects for some
+    PushTravel actions (such as [cannotPushDownMsg]{.code} rather than
+    [cannotPushTravelClimbDownMsg]{.code}, which would be strictly
+    consistent but unpleasantly cumbersome). Since the various
+    PushTravel actions combine pushing with travelling, the verification
+    properties on the indirect object of a PushTravel command are those
+    for travelling via the object; e.g. the indirect object of
+    PushTravelClimbDown checks [canClimbDownMe]{.code}, not
+    [canPushTravelClimbDownMe]{.code}. The other exception is the
+    absence of any properties like [canAskMeAbout]{.code} on Thing,
+    since all conversational commands are ruled out unconditionally on
+    Thing, and all use the common failure message
+    [cannotTalkToMsg]{.code}.
+4.  Apart from the exceptions noted above, most of the message
+    properties follow the scheme already described in the paragraph
+    preceeding this list.
+
+The default values of these properties in the library generally depend
+on what seems to be the most likely common case. Thus, for example, few
+things can be used to burn or cut other things with, and probably most
+game objects won\'t be suitable for burning or cutting, so
+[isBurnable]{.code}, [isCuttable]{.code}, [canBurnWithMe]{.code} and
+[canCutWithMe]{.code} are all nil by default. Conversely, just about
+anything can be the target of a throw, so the default value of
+[canThrowAtMe]{.code} is true, while in general we can throw anything
+that isn\'t fixed in place, so that [isThrowable]{.code} is defined as
+[(!isFixed)]{.code}. This incidentally illustrates that some properties
+define the default value of other properties; [isFixed]{.code} for
+example is used to determine several such properties such as
+[isTakeable]{.code} and [isMoveable]{.code}. Similarly,
+[isCloseable]{.code} is defined as [(isOpenable)]{.code}, since one
+would normally expect something that can be opened to be also something
+than can be closed (a door or a desk drawer, say). If in doubt, consult
+the library code in Thing.t (or, for many common cases, the [Action
+Reference](actionref.htm)) to see how these properties are defined.
+
+Note that changing these other behavioural properties to true doesn\'t
+necessarily make the corresponding action work, in most cases it merely
+allows the action to proceed to the next stage. It\'s up to authors\'
+game code to define what happens when something is dug or cut or
+fastened or whatever, since in general the library can\'t know how you
+want these things to work in your game.
+
+[]{#failturn}
+
+When an action fails at the verify stage, the action is stopped but the
+rest of the turn sequence normally goes ahead, so that, for example, the
+turn counter is incremented, daemons are executed and so on.Some game
+authors may, however, prefer that actions that don\'t take place because
+they\'re clearly illogical, such as TAKE ME or EAT THE HOUSE, shouldn\'t
+count as turns. The Action property **failedActionCountsAsTurn** can be
+overriden to nil, either globally on the Action class, or on individual
+actions, so that failing an action at the verify stage aborts the rest
+of the action processing for that turn (so that the turn counter is not
+advanced, no daemons are executed, and the turn is treated as if it
+didn\'t happen). For example, to make all actions that fail at the
+verify stage not count as a turn we could include the following in our
+game code:
+
+::: code
+     
+     modify Action
+        failedActionCountsAsTurn = nil
+    ;
+:::
+
+\
+
+## [Pre-conditions]{#precond}
+
+In interactive fiction it\'s frequently the case that some condition has
+to obtain in order for some action to go ahead. Before I can take the
+red ball I have to be able to reach it. Before I can put the red ball in
+the blue box I have to be holding the red ball and the blue box has to
+be open. Moreover in such cases it is very tedious for the player to be
+told s/he has to meet the condition before the action can be carried
+out. No player will thank you if you force the following kind of
+interaction on them:
+
+::: cmdline
+    >put red ball in blue box
+    You have to be holding the red ball before you can put it in anything.
+
+    >take red ball
+    Done.
+
+    >put red ball in blue box
+    The blue box must be open before you can put anything in it.
+
+    >open blue box
+    Done.
+
+    >put red ball in blue box
+    Done.
+:::
+
+It would be much better if the parser just went ahead and carried out
+the obvious actions of taking the red ball and opening the blue box
+automatically for the player, instead of annoyingly telling players that
+they need to carry them out themselves.
+
+It would, however, also be a bit tedious for game authors to have to
+code round such problems for every individual case. The solution
+provided by the adv3Lite library (shamelessly copied from the adv3
+library) is to use PreConditions, objects that encapsulate these
+frequently-occurring pre-conditions of carrying out an action and, where
+appropriate, trigger an [implicit action](implicit.htm) to try to meet
+the pre-condition on the player\'s behalf. The PreCondition objects
+currently defined in the adv3Lite library are:
+
+[]{#preconds}
+
+-   **objHeld** This object must be held by the actor before the action
+    can go ahead; if not, the library will attempt an implicit take.
+-   **containerOpen** If this object is a container (i.e. if its
+    contType is In), then it must be open before the action can proceed.
+    If it\'s not open, the library will try an implicit open command. If
+    the object\'s contType is not In then this preCondition has no
+    effect. (It has to be defined this way so that this preCondition can
+    be defined for various actions on Thing in the library).
+-   **objClosed** This object must be closed before the action can go
+    ahead (typically the action concerned will be locking). If not, the
+    library will attempt an implicit close.
+-   **objNotWorn** This object must not be worn when the action takes
+    place (e.g. when dropping the object). It it is currently worn, the
+    library will attempt an implicit doff.
+-   **objVisible** This object must be visible and there must be enough
+    light to see it by (e.g. to examine or read the object). If the
+    condition is not met the library does not attempt to correct it.
+-   **objAudible** This object must be audible to the actor for this
+    action to go ahead. If the condition is not met the library does not
+    attempt to correct it.
+-   **objSmellable** This object must be smellable by the actor for this
+    action to go ahead. If the condition is not met the library does not
+    attempt to correct it.
+-   **objDetached** This object must be detached from any other object
+    before this action can go ahead. If it isn\'t, the library attempts
+    an implicit detach command.
+-   **objUnlocked** The object must be unlocked before the action
+    (typically opening) can go ahead. This PreCondition is used in the
+    library on the dobjFor(Open) of objects whose **autoUnlock**
+    property is true. It is normally only meaningful to use
+    [objUnlocked]{.code} in the dobjFor(Open) preCond list of objects
+    with a lockability of either lockableWithoutKey or lockableWithKey.
+    In the latter case the objUnlocked PreCondition will only attempt to
+    unlock the object if the actor is carrying a key that might
+    plausibly work.
+-   **actorInStagingLocation** The actor must be in this object\'s
+    stagingLocation before the action can proceed. If the condition is
+    not met the library attempts to carry out the appropriate implicit
+    actions (getting in/out/off or on various objects) to bring it
+    about.
+-   **actorOutOfNested** The actor must be in a top level room (out of
+    any nested room) before the action can proceed. If the condition is
+    not met the library attempts to remove the actor from the nested
+    room(s) it\'s it via the appropriate implicit actions.
+-   **travelPermitted** This checks whether travel is permitted by
+    calling the beforeAction notifications for the actor doing the
+    travelling, and in the case of PushTravel, for the object being
+    pushed. This ensures that if travel is ruled out by a relevant
+    object\'s beforeTravel method, the action is halted before, say, any
+    attempt is made to open a door via an implicit action or to check
+    any travel barriers that might be in place (experience suggests that
+    this is generally a better order of events).
+-   **touchObj** The actor must be able to touch this object before the
+    action can proceed. If the condition is not met the library does not
+    attempt to correct it.
+
+The last of these PreConditions is very common. It also has a couple of
+additional complications, in that it queries the verifyReach(obj) and
+checkReach(obj) methods of the object that needs to be touched (the obj
+method in these methods actually refers to the actor whose trying to do
+the touching). verifyReach(obj) can optionally add further verify
+conditions (specified just as for a normal verify method).
+checkReach(obj) can then apply further checks; if checkReach(obj)
+displays anything (presumably a message saying why the object can\'t be
+touched), then the action will not be allowed to go ahead.
+
+This incidentally highlights the point that a PreCondition has a verify
+stage (when it can apply further verify results) and a check stage
+(which is normally the stage at which it would attempt any implicit
+actions, though touchObj is a bit of an exception here).
+
+[]{#precondprop}
+
+To apply PreConditions to objects involved in particular actions we
+simply list the appropriate precondition objects in the appropriate
+**preCond** property, for example:
+
+::: code
+    class Thing: Mentionable
+       ...
+       dobjFor(PutIn)
+       {
+            preCond = [objHeld, objNotWorn]
+            ...
+       }
+       
+       iobjFor(PutIn)
+       {
+           preCond = [containerOpen]
+           ...
+       }
+    ;
+:::
+
+A further example illustrates how the touchObj precondition can be used
+in conjunction with a checkReach() method to prevent an object being
+touched when it\'s too hot:
+
+::: code
+    + cooker: Thing 'cooker;blackened;oven stove top'
+        "Normally, you keep it in pretty good shape (or your cleaner does) but right
+        now it's looking suspiciously blackened, especially round the top. "    
+        
+        isFixed = true
+        isSwitchable = true
+        isOn = true
+        
+        smellDesc = "There's a distinct smell of burning from the cooker. "
+        
+        remapIn: SubComponent
+        {
+            isOpenable = true
+            bulkCapacity = 6
+        }
+        
+        remapOn: SubComponent  {  }
+    ;
+
+
+
+    ++ saucepan: Thing 'saucepan;;pan'
+        "It's absolutely blackened. It was obviously left on the stove too long --
+        perhaps that's what started the fire. "
+       
+        subLocation = &remapOn
+        contType = In
+        
+        temperature = 100
+        
+        temperatureDaemon()
+        {
+            if(location == cooker.remapOn && cooker.isOn && temperature < 100)
+                temperature++;
+            
+            if((location != cooker.remapOn || !cooker.isOn) && temperature > 15)
+                temperature--;
+        }
+        
+        checkReach(obj)
+        {
+            if(temperature > 70)
+            {
+                "The saucepan is <<if temperature > 90>>far <<else if temperature
+                < 80>> just<<end>> too hot to touch!<.p>";            
+            }        
+        }
+        
+        cannotBurnMsg = 'The saucepan\'s quite burnt enough already! '
+    ;
+:::
+
+Occasionally it can be useful to list a PreCondition in the
+[preCond]{.code} property of an Action object, particularly when the
+Action is an IAction and we want the actor to be in a particular state
+before the action can take place. For example the library defines the
+Jump action thus:
+
+::: code
+     DefineIAction(Jump)
+        execAction(cmd)
+        {
+            DMsg(jump, '{I} jump{s/ed} on the spot, fruitlessly. ');
+        }
+        
+        preCond = (gActor.location && gActor.location.getOutToJump ?
+        [actorOutOfNested]: nil)
+    ;
+     
+     
+:::
+
+This ensures that the actor is removed from any nested room it\'s in
+before attempting to JUMP (unless it starts out in a nested room for
+which [getOutToJump]{.code} is nil).
+
+\
+
+## [Check]{#check}
+
+The check stage is used to prevent an action which is not obviously
+illogical to the player. An example might be trying to open a locked
+door (when it may be far from immediately obvious that the door is
+locked). Pragmatically, you would use a check routine to block an action
+when you don\'t want blocking the action to affect the parser\'s choice
+of this object as a good or at least reasonable match for the command
+entered by the player.
+
+Defining a check routine is very straightforward. If the action cannot
+go ahead, you simply display a message saying why it cannot go ahead.
+(adv3 users please note: in an adv3Lite check routine you do not need to
+use the exit macro, or failCheck(), or reportFailure(); indeed you
+should not use any such things here). A check routine should thus
+consist purely of statements that display failure messages to the player
+and conditional statements controlling when they are displayed, e.g.:
+
+::: code
+    partyDress: Thing 'party dress; blue; frock'
+      isWearable = true
+      wornBy = gPlayerChar
+      
+      dobjFor(Doff)
+      {
+         check()
+         {
+            if(!gPlayerChar.isIn(bedroom))
+               "It would be most unbecoming for a young lady to undress outside her 
+                own room. ";
+         }
+      }
+:::
+
+This incidentally illustrates that when customizing objects to respond
+to actions, there\'s no need to repeat the parts already defined by the
+library. The library\'s implementation of dobjFor(Doff) already ensures
+that the object is currently being worn (in its verify routine) and
+already carries out the doffing action in its action routine if the
+action is allowed to go ahead. You only need to override the parts you
+want to customize.
+
+Finally, note that a check() routine should not normally contain
+anything but statements that display failure messages and conditional
+statements that control when they apply. In particular, check() methods
+should not normally change the game state. The first exceptions is that
+it\'s perfectly legitimate for a check method to set a flag to show that
+an action has been attempted. This could be used, for example, to
+trigger a series of hints about how to open a jammed door after the
+player first attempts to open it. The second is that it\'s also
+perfectly okay for a check routine to attempt an implicit action (via
+
+tryImplicitAction(\...)) that might allow the action to go ahead if it
+succeeds (since tryImplicitAction does not immediately display any text
+but stores the implicit action report for later, this won\'t stop the
+action).
+
+[]{#nohalt}Very occasionally, you may wish to display some text from
+with a check routine without having it stop the action. You can do so by
+calling the **noHalt()** function at an appropriate point in your code.
+For example, suppose you want to implement a piece of paper on which the
+player character can write using a WRITE WHATEVER ON PAPER command
+(given that WRITE WHATEVER ON PAPER WITH PEN isn\'t normal IF syntax).
+You may wish the check stage on the piece of paper to check whether the
+player character has a suitable writing implement, perhaps performing an
+implicit take if there\'s otherwise a suitable writing implement to
+hand, and announcing which writing implement the player character is
+using without halting the action in the process. This could be
+implemented thus:
+
+::: code
+    + pieceOfPaper: Thing 'piece of paper'
+        "On it is inscribed <q><<writtenText>></q>. "
+        
+        canWriteOnMe = true
+        
+        writtenText = 'Some random thoughts: '
+        
+        dobjFor(WriteOn) {
+            verify() {}
+            check() 
+            {
+                if (gLiteral == nil)
+                {
+                    "You'll need to say what you want to write. ";
+                    return; //We need to return here otherwise the later call to noHalt() might allow the action to proceed.
+                }
+                
+                local writingImplement = nil;
+                
+                writingImplement = gActor.contents.valWhich({x: x.canWriteWithMe});
+                
+                if(writingImplement == nil)
+                {
+                    writingImplement = Q.scopeList(gActor).toList().valWhich({x: x.canWriteWithMe}); //Note we need to use toList() here
+                    if(writingImplement)
+                    {
+                        if(!tryImplicitAction(Take, writingImplement))
+                            writingImplement = nil;
+                    }
+                }
+                
+                if(writingImplement)
+                    "(with <<writingImplement.theName>>)\n<<noHalt()>>"; //Note the use of noHalt() here
+                else
+                    "You need to be holding a writing implement to do that. ";
+                    
+            }
+            action() 
+            {
+                "You write <q><<gLiteral>></q> on the piece of paper. ";
+                writtenText += (gLiteral + ' ');
+            }
+        }
+    ;
+
+    + blackPen: Thing 'black pen'
+        canWriteWithMe = true   
+    ;
+:::
+
+While we could, in principle, have delayed displaying the \"(with the
+black pen)\" message until the action stage, this would have been
+awkward given that\'s it our check routine that\'s just identified which
+writing implement the player character is using. Using [noHalt()]{.code}
+at this point allows us to display this message without preventing the
+action from going ahead. Another couple of points to note here in
+passing are, first, that the [canWriteWithMe]{.code} property we\'re
+using here isn\'t one defined in the adv3Lite library, but rather a
+custom property we\'re using here to identify possible writing
+implements in a game that may have several; and, second, that since what
+Q.scopeList(actor) returns isn\'t a true list, but rather a ScopeList
+object, we need to convert it to a list (by calling its toList() method)
+in order to be able to use the valWhich() method to indentify a writing
+implement that\'s in scope. Finally, a point to emphasize: noHalt() has
+to be called as [noHalt()]{.code} (with the parentheses); trying to call
+it as [noHalt]{.code} (without the parentheses) won\'t work; it\'s a
+function, not a macro.
+
+\
+
+## [Action]{#action}
+
+The action stage is also perfectly straightforward: it\'s the stage that
+actually carries out the action and changes the game state accordingly,
+(e.g. by moving an object into the player\'s inventory or into a
+container, or opening a box or closing a door). The one complication to
+bear in mind is whether an action method should display anything to the
+player or leave it to the report stage.
+
+In general the action routine should display a message of its own in
+either of the following cases:
+
+1.  The message represents the main point of the action (e.g. reading,
+    examining, or looking under something to see what\'s there.)
+2.  The action has an unusual, unexpected or idiosyncratic outcome: e.g.
+    pushing the red button causes a secret door to open, turning the
+    dial to the right combination causes the safe to open, or taking the
+    golden skull triggers a trap.
+
+Note that if an action routine displays a message, the object won\'t be
+reported on by the report() routine (since in that case the library
+assumes that reporting on the action has been fully covered by the
+message displayed by the action method). If, however, you want to report
+on a supplementary side effect of carrying out some action (e.g. taking
+a mat reveals a note that was previously concealed beneath) you could do
+so by using the **reportAfter(*msg*)** macro, which will cause *msg* to
+be displayed after any output from the report stage. For example:
+
+::: code
+    mat:Thing 'mat; white place; placemat'
+      dobjFor(Take)
+      {
+         action()
+         {
+            if(harryNote.isIn(nil))
+            {
+               harryNote.moveInto(location);
+               reportAfter('Moving the mat reveals a note that was hidden beneath. ' );
+            }
+            inherited();
+         }
+      }
+    ;
+:::
+
+Note that you wouldn\'t have to code this particular example this way,
+since in practice you\'d simply define [hiddenUnder =
+\[harryNote\]]{#code} on the mat object to produce the same effect, but
+the example suffices to illustrate the principle.
+
+There\'s also a **extraReport(*msg*)** macro that can be used by an
+action method to display a piece of introductory text that won\'t
+suppress the default message at the report stage. This probably isn\'t
+needed much but may occasionally needed to provided some piece of
+parentheic information. For example it is used by the library to
+announce which key it has chosen (e.g. (\"(with the brass key)\") in
+response to a LOCK or UNLOCK command:
+
+::: code
+      dobjFor(Lock)
+      {
+         ...
+         action()
+         {
+            if(useKey_ != nil)
+                extraReport(withKeyMsg);
+            else if(lockability == lockableWithKey)
+                askForIobj(LockWith);
+             
+            makeLocked(true);              
+         }
+            
+         report()
+         {
+            DMsg(report lock, okayLockMsg, gActionListStr);
+         }
+      }
+:::
+
+Here the report() phase would still be suppressed, however, if the
+action() method displayed anything else (apart from its
+[extraReport()]{.code} message). For example, if [makeLocked()]{.code}
+were overridden to display some text, the report() phase would not take
+place. (Technical note: what [extraReport()]{.code} if fact does is
+write direct to the output bypassing all filters, so its output isn\'t
+registered by the watchForOutput() method; it could be used elsewhere to
+bypass the normal output filtering, but this is not recommended;
+extraReport() does, however, carry out any message parameter
+substitution required unless its second, optional, paraemeter is given
+as nil).
+
+There are two special methods you can call from an action routine if you
+want to perform another action, either instead of or as part of the
+current action. These methods are called **doInstead()** and
+**doNested()** respectively. Suppose, for example, you wanted putting
+something under the tap to result in its being put in the sink; you
+could do it like this:
+
+::: code
+    tap: Fixture 'tap; silver; faucet'
+      ...
+      iobjFor(PutUnder)
+      {
+         verify() { }
+         action()
+         {
+             doInstead(PutIn, gDobj, sink);
+         }
+      }
+    ;
+:::
+
+You could do the same with replaceAction(), but doInstead() makes it
+easier to synthesize certain kinds of action that are much harder to so
+with replaceAction() or nestedAction(). For example if you want the
+player to ask George about the broken candlestick the first time s/he
+looks at it you could write something like:
+
+::: code
+    candlestick: Thing 'silver candlestick; broken'
+       "It's broken. "
+       
+       dobjFor(Examine)
+       {
+           action()
+           {
+              inherited();
+              if(Q.canTalkTo(me, george) && !georgeAsked)
+              {  
+                  georgeAsked = true;
+                  doNested(AskAbout, george, self);
+              }
+           }
+       }    
+       georgeAsked = nil
+    ;
+:::
+
+This wouldn\'t work with [nestedAction()]{.code} because the AskAbout
+command expects its indirect object to be a ResolvedTopic, not a Thing
+(or Topic); the doNested() method takes care of this complication for
+you by wrapping the indirect object of a TopicTCommand in a
+ResolvedTopic if it isn\'t one already.
+
+Note, however, that it may often be better to call [doInstead()]{.code}
+on a [Doer](doer.htm). See the discussion [there](doer.htm#doerdoes) for
+the full implications.
+
+Note also that when called elsewhere than a Doer, [doInstead()]{.code}
+(or [replaceAction()]{.code}) is rather different in effect from the
+similar seeming [doNested()]{.code} (or [nestedAction()]{.code}).
+[doNested()]{.code} (or [nestedAction()]{.code}) executes one action in
+the course of another and then resumes execution of the first (even if
+it\'s the last statement in an action routine), so that, for example,
+you get the afterAction() processing of the original action.
+[doInstead()]{.code} (or [replaceAction()]{.code}) completely replaces
+the original action with the new one (even if it isn\'t the last
+statement in the action routine), so that, for example, you get the
+afterAction processing of the new, replacement action instead of that of
+the original action.
+
+[]{#actionmacros}
+
+Finally, one other pair of macros that are occasionally useful in an
+action() routine are **askForDobj(*action*)** and
+**askForIobj(*action*)**; these prompt the player for either the direct
+object or indirect object of *action* and then attempt to execute
+*action* with the additional object specified. These would typically be
+used to convert an IAction into a TAction or a TAction into a TIAction.
+For example if you had a patch of sand in which the player character
+could dig with a spade, you could use [askForIobj()]{.code} to make the
+TAction Dig ask for an indirect object for the TIAction DigWith, and
+then (if the player responds with the name of a suitable object) execute
+DigWith with the existing direct object and newly specified indirect
+object:
+
+::: code
+    + sand: Fixture 'patch of sand; deep'
+       "It's not very big, but it looks like it could be quite deep. "
+       
+       isDiggable = true
+       
+       dobjFor(Dig)
+       {
+          action() { askForIobj(DigWith); }
+       }
+      
+       dobjFor(DigWith)
+       {
+         ...
+    ;     
+:::
+
+\
+
+## [Report]{#report}
+
+The report phase is one that adv3Lite adds to the phases used by the
+adv3 library. Its main function is to facilitate the display of a
+grouping or summarizing report for an action that might be performed on
+several objects at once, e.g. TAKE ALL or TAKE BALLS or TAKE PEN, INK
+AND PAPER. Rather than the game responding with a separate report for
+each object, it simply runs the report routine on the *last* object to
+be involved in command, at which point a list of all the affected
+objects is available; the pseudo-global variable **gActionListStr** then
+contains a single-quoted string listing the items in the form \'the pen,
+the ink and the paper\' which can be used in your report, e.g.:
+
+::: code
+    class Thing Mentionable
+      dobjFor(Take)
+      {
+         action()
+         {
+            actionMoveInto(gActor);
+         }
+         
+         report()
+         {
+            "You take <<gActionListStr>>. ";
+         }
+      }
+    ;
+:::
+
+This will result in a report such as \'You take the pen, the ink and the
+paper. \' (Note that there\'s no need to implement this particular
+example in your own code, since the library already does so, albeit in a
+slightly more elaborate form).
+
+It\'s worth emphasizing again that the report routine is only run on the
+*last* of a series of objects involved in any one command (of course
+many commands act on only one object, in which case this is the object
+whose report() method will be executed). You should also note that the
+report() phase is not run at all if either of the following conditions
+is true:
+
+1.  The action is an implicit action.
+2.  There\'s nothing left to report on, either because no objects made
+    it to the action stage, or because the action stage has already
+    reported on the action for every object involved in the command.
+
+There should thus be no danger of a report method generating output like
+\'You take .\'
+
+There may be occasions when you want the list of objects to be reported
+on at the report stage to be the subject of a sentence (e.g. \"The pen,
+the notepad and the blotter fly across the room and land on the
+ground.\") It\'s awkward to use gActionListStr for this, since this is
+simply a string value, and there\'s no practicable way to test whether a
+string value represents a single object or a plurality of objects, which
+is what you need to know to ensure that the verb agrees with the
+subject, and that any pronouns used agree in number with the number of
+items being reported on (E.g. \"You fling the pen northwards and it
+lands on the ground\" versus \"You fling the pen and the notebook
+northwards and they land on the ground.\") To deal with this situation
+you can use the macro **gActionListObj**, which evaluates to an object
+that agrees in number (i.e. is singular or plural) with the number of
+objects being reported on, and whose name property is the same as
+[gActionListStr]{.code} (the object is also treated as qualified, so you
+won\'t get any additional articles if you use its theName property). The
+best way to use gActionListObj is probably to assign it to a variable
+which you can then use in a message parameter substitution, as in the
+following example from the library (for ThrowDir):
+
+::: code
+        report()
+        {
+            local obj = gActionListObj;
+            
+            gMessageParams(obj);
+                
+            DMsg(throw dir, '{I} {throw} {the obj} {1}wards and {he obj} {lands}
+                on the ground. ', gAction.direction.name );
+        }
+:::
+
+Finally, since the report method is designed to give a routine report on
+what may be a group of objects, there\'s usually little point in
+defining it on a particular object as opposed to a class (quite apart
+from anything else, when a command applies to several objects you can\'t
+be sure which object\'s report() method will be used, so you\'d want
+them all to be the same). The only exception might be for an action that
+can only be applied to a single object. In general, then, you\'ll
+normally only want to define or override a report() method in either of
+the following two cases:
+
+1.  Defining the handling for a new action you have implemented
+    yourself.
+2.  Changing the library\'s default behaviour for a class (although even
+    then it might be simpler to create a
+    [CustomMessage](message.htm#custmessage) object to produce the same
+    effect).
+
+\
+
+## [Remap]{#remap}
+
+The Remap stage is used to replace the current object of an action with
+another object in the same role. For example, to remap putting things in
+a desk to putting them into its drawer we could simply write:
+
+::: code
+    desk: Thing 'desk'
+      "It has a single drawer. "
+      iobjFor(PutIn) { remap = drawer  }
+    ;
+:::
+
+Finally, there are situations when you what you want to do is not so
+much to remap one action to another (possibly involving different
+objects) but to have one action behave like another on the same object.
+For this purpose you can use the macros **asDobjFor(*action*)** and
+**asIobjFor(*action*)**, just as in the adv3 library. For example if we
+wanted pulling the drawer always to equate to opening it we\'d write:
+
+::: code
+    drawer: Thing 'drawer'
+      isOpenable = true
+      contType = In
+
+      dobjFor(Pull) asDobjFor(Open)  
+    ;
+:::
+
+As a second example, the adv3Lite library defines the following on the
+SimpleAttachable class to make FASTEN and UNFASTEN behave just like
+ATTACH and DETACH:
+
+::: code
+    class SimpleAttachable: Thing
+      ...
+       /* Treat Fasten and Unfasten as equivalent to Attach and Detach */
+        dobjFor(FastenTo) asDobjFor(AttachTo)
+        iobjFor(FastenTo) asIobjFor(AttachTo)
+        dobjFor(UnfastenFrom) asDobjFor(DetachFrom)
+        iobjFor(UnfastenFrom) asIobjFor(DetachFrom)
+        dobjFor(Unfasten) asDobjFor(Detach)  
+    ;
+:::
+
+\
+
+------------------------------------------------------------------------
+
+::: navb
+*adv3Lite Library Manual*\
+[Table of Contents](toc.htm){.nav} \| [Actions](action.htm){.nav} \>
+Action Results\
+[[*Prev:* Overview](actionoverview.htm){.nav}     [*Next:*
+Messages](message.htm){.nav}     ]{.navnp}
+:::
+:::
+:::

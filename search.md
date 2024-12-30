@@ -9,14 +9,25 @@ url: /search
 <script>
   // Template to generate the JSON to search
   window.store = {
-    {% for page in site.pages %}
+     {% for page in site.pages %}
       "{{ page.url | slugify }}": {
         "title": "{{ page.title | xml_escape }}",
         "content": {{ page.content | strip_html | jsonify }},
         "url": "{{ page.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
-    {% endfor %},    
+    {% endfor %},
+     // add html files
+     {% assign doc_files = site.doc %}
+    {% for file in doc_files %}
+      {% assign file_url = file.name | prepend: site.url %}
+      "{{ file.path | slugify }}": {
+        "title": "{{ file_url }}",
+        "content": {{ file.content | strip_html | jsonify }},
+        "url": "{{ file_url }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
   };
         console.log('Content:', window.store['docs-adv3lite-libref-object-yall-html'] );
 </script>

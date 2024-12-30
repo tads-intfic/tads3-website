@@ -1,0 +1,161 @@
+[commentPreParser]{.title}[object]{.type}
+
+[input.t](../file/input.t.html)\[[749](../source/input.t.html#749)\]
+
+[Superclass\
+Tree](#_SuperClassTree_)
+
+[Property\
+Summary](#_PropSummary_)
+
+[Method\
+Summary](#_MethodSummary_)
+
+[Property\
+Details](#_Properties_)
+
+[Method\
+Details](#_Methods_)
+
+::: fdesc
+The \"comment\" pre-parser. If the command line starts with a special
+prefix string (by default, \"\*\", but this can be changed via our
+commentPrefix property), this pre-parser intercepts the command,
+treating it as a comment from the player and otherwise ignoring the
+entire input line. The main purpose is to give players a way to put
+comments into recorded transcripts, as notes to themselves when later
+reviewing the transcripts or as notes to the author when submitting
+play-testing feedback.
+
+**`commentPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
+:::
+
+[]{#_SuperClassTree_}
+
+::: mjhd
+[Superclass Tree]{.hdln}   (in declaration order)
+:::
+
+**`commentPreParser`**\
+`         `[`StringPreParser`](../object/StringPreParser.html)\
+`                 `[`PreinitObject`](../object/PreinitObject.html)\
+`                         `[`ModuleExecObject`](../object/ModuleExecObject.html)\
+`                                 object`\
+[]{#_PropSummary_}
+
+::: mjhd
+[Summary of Properties]{.hdln}  
+:::
+
+` `[`commentPrefix`](#commentPrefix)`  `[`leadPat`](#leadPat)`  `[`runOrder`](#runOrder)`  `[`warningCount`](#warningCount)`  `
+
+Inherited from `StringPreParser` :\
+` `[`isActive`](../object/StringPreParser.html#isActive)`  `[`regList`](../object/StringPreParser.html#regList)`  `[`regListSorted`](../object/StringPreParser.html#regListSorted)`  `
+
+Inherited from `PreinitObject` :\
+` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+
+Inherited from `ModuleExecObject` :\
+` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+
+[]{#_MethodSummary_}
+
+::: mjhd
+[Summary of Methods]{.hdln}  
+:::
+
+` `[`doParsing`](#doParsing)`  `
+
+Inherited from `StringPreParser` :\
+` `[`construct`](../object/StringPreParser.html#construct)`  `[`execute`](../object/StringPreParser.html#execute)`  `[`registerPreParser`](../object/StringPreParser.html#registerPreParser)`  `[`runAll`](../object/StringPreParser.html#runAll)`  `
+
+` `
+
+Inherited from `ModuleExecObject` :\
+` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+
+[]{#_Properties_}
+
+::: mjhd
+[Properties]{.hdln}  
+:::
+
+[]{#commentPrefix}
+
+`commentPrefix`
+
+[input.t](../file/input.t.html)\[[796](../source/input.t.html#796)\]
+
+::: desc
+The comment prefix. You can change this to any character, or to any
+sequence of characters (longer sequences, such as \'//\', will work
+fine). If a command line starts with this exact string (or starts with
+whitespace followed by this string), we\'ll consider the line to be a
+comment.
+:::
+
+[]{#leadPat}
+
+`leadPat`
+
+[input.t](../file/input.t.html)\[[808](../source/input.t.html#808)\]
+
+::: desc
+The leading-whitespace pattern. We skip any text that matches this
+pattern at the start of a command line before looking for the comment
+prefix.
+
+If you don\'t want to allow leading whitespace before the comment
+prefix, you can simply change this to \'\' - a pattern consisting of an
+empty string always matches zero characters, so it will prevent us from
+skipping any leading charactres in the player\'s input.
+:::
+
+[]{#runOrder}
+
+`runOrder`[OVERRIDDEN]{.rem}
+
+[input.t](../file/input.t.html)\[[825](../source/input.t.html#825)\]
+
+::: desc
+Use a lower execution order than the default, so that we run before most
+other pre-parsers. Most other pre-parsers are written to handle actual
+commands, so it\'s usually just a waste of time to have them look at
+comments at all - and can occasionally be problematic, since the
+free-form text of a comment could confuse a pre-parser that\'s expecting
+a more conventional command format. When the comment pre-parser detects
+a comment, it halts any further processing of the command - so by
+running ahead of other pre-parsers, we\'ll effectively bypass other
+pre-parsers when we detect a comment.
+:::
+
+[]{#warningCount}
+
+`warningCount`
+
+[input.t](../file/input.t.html)\[[811](../source/input.t.html#811)\]
+
+::: desc
+warning count for entering comments without SCRIPT in effect
+:::
+
+[]{#_Methods_}
+
+::: mjhd
+[Methods]{.hdln}  
+:::
+
+[]{#doParsing}
+
+`doParsing (str, which)`[OVERRIDDEN]{.rem}
+
+[input.t](../file/input.t.html)\[[750](../source/input.t.html#750)\]
+
+::: desc
+*no description available*
+:::
+
+::: ftr
+Adv3Lite Library Reference Manual\
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+:::

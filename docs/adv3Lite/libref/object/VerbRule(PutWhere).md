@@ -1,0 +1,152 @@
+[VerbRule(PutWhere)]{.title}[grammar]{.type}
+
+[grammar.t](../file/grammar.t.html)\[[1696](../source/grammar.t.html#1696)\]
+
+[Superclass\
+Tree](#_SuperClassTree_)
+
+[Property\
+Summary](#_PropSummary_)
+
+[Method\
+Summary](#_MethodSummary_)
+
+[Property\
+Details](#_Properties_)
+
+[Method\
+Details](#_Methods_)
+
+::: fdesc
+*no description available*
+
+`VerbRule(PutWhere)      `*`// original source text`*\
+`grammar `**[`VerbRule`](../object/VerbRule.html)`(PutWhere)`**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+:::
+
+[]{#_SuperClassTree_}
+
+::: mjhd
+[Superclass Tree]{.hdln}   (in declaration order)
+:::
+
+**`VerbRule(PutWhere)`**\
+`         `[`VerbProduction`](../object/VerbProduction.html)\
+`                 `[`Production`](../object/Production.html)\
+`                         object`\
+[]{#_PropSummary_}
+
+::: mjhd
+[Summary of Properties]{.hdln}  
+:::
+
+` `[`action`](#action)`  `[`iobjReply`](#iobjReply)`  `[`missingQ`](#missingQ)`  `[`missingRole`](#missingRole)`  `[`priority`](#priority)`  `[`verbPhrase`](#verbPhrase)`  `
+
+Inherited from `VerbProduction` :\
+` `[`isActive`](../object/VerbProduction.html#isActive)`  `
+
+Inherited from `Production` :\
+` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+
+[]{#_MethodSummary_}
+
+::: mjhd
+[Summary of Methods]{.hdln}  
+:::
+
+` `[`answerMissing`](#answerMissing)`  `
+
+Inherited from `VerbProduction` :\
+` `[`build`](../object/VerbProduction.html#build)`  `[`missingRoleProd`](../object/VerbProduction.html#missingRoleProd)`  `[`visitProd`](../object/VerbProduction.html#visitProd)`  `
+
+Inherited from `Production` :\
+` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `
+
+[]{#_Properties_}
+
+::: mjhd
+[Properties]{.hdln}  
+:::
+
+[]{#action}
+
+`action`
+
+[grammar.t](../file/grammar.t.html)\[[1699](../source/grammar.t.html#1699)\]
+
+::: desc
+*no description available*
+:::
+
+[]{#iobjReply}
+
+`iobjReply`
+
+[grammar.t](../file/grammar.t.html)\[[1704](../source/grammar.t.html#1704)\]
+
+::: desc
+*no description available*
+:::
+
+[]{#missingQ}
+
+`missingQ`
+
+[grammar.t](../file/grammar.t.html)\[[1701](../source/grammar.t.html#1701)\]
+
+::: desc
+*no description available*
+:::
+
+[]{#missingRole}
+
+`missingRole`
+
+[grammar.t](../file/grammar.t.html)\[[1703](../source/grammar.t.html#1703)\]
+
+::: desc
+*no description available*
+:::
+
+[]{#priority}
+
+`priority`[OVERRIDDEN]{.rem}
+
+[grammar.t](../file/grammar.t.html)\[[1736](../source/grammar.t.html#1736)\]
+
+::: desc
+found it - use this action
+:::
+
+[]{#verbPhrase}
+
+`verbPhrase`
+
+[grammar.t](../file/grammar.t.html)\[[1700](../source/grammar.t.html#1700)\]
+
+::: desc
+*no description available*
+:::
+
+[]{#_Methods_}
+
+::: mjhd
+[Methods]{.hdln}  
+:::
+
+[]{#answerMissing}
+
+`answerMissing (cmd, np)`[OVERRIDDEN]{.rem}
+
+[grammar.t](../file/grammar.t.html)\[[1711](../source/grammar.t.html#1711)\]
+
+::: desc
+when the player supplies our missing indirect object by answering the
+\"where do you want to put it\" question, we\'ll change the action
+according to the preposition in the indirect object reply
+:::
+
+::: ftr
+Adv3Lite Library Reference Manual\
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+:::
