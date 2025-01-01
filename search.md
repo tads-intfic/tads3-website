@@ -29,7 +29,6 @@ url: /search
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
-        console.log('Content:', window.store['docs-adv3lite-libref-object-yall-html'] );
 </script>
 
 <!-- Import lunr.js from unpkg.com -->
