@@ -64,7 +64,7 @@ the message is to be used.
 
 
 
-[`standardImpCtx`](../object/standardImpCtx.html)[`tryingImpCtx`](../object/tryingImpCtx.html)
+[`standardImpCtx`](../object/standardImpCtx.html) [`tryingImpCtx`](../object/tryingImpCtx.html)
 <span id="_PropSummary_"></span>
 
 
@@ -73,7 +73,7 @@ the message is to be used.
 
 
 
-[`getVerbCtx`](#getVerbCtx)[`isInList`](#isInList)[`isInSublist`](#isInSublist)[`useInfPhrase`](#useInfPhrase)
+[`getVerbCtx`](#getVerbCtx) [`isInList`](#isInList) [`isInSublist`](#isInSublist) [`useInfPhrase`](#useInfPhrase)
 
 <span id="_MethodSummary_"></span>
 

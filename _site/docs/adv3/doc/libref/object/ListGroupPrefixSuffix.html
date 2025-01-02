@@ -46,26 +46,18 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>List Group implementation: simple prefix/suffix lister. Shows a prefix
+message, then shows the list, then shows a suffix message.</p>
 
-List Group implementation: simple prefix/suffix lister. Shows a prefix
-message, then shows the list, then shows a suffix message.
+<p>Note that this is a ListGroupSorted subclass. If our subclass defines a
+compareGroupItems() method, we’ll show the list in the order specified
+by compareGroupItems().</p>
 
-Note that this is a ListGroupSorted subclass. If our subclass defines a
-compareGroupItems() method, we'll show the list in the order specified
-by compareGroupItems().
-
-`class `**`ListGroupPrefixSuffix`**` :   `[`ListGroupSorted`](../object/ListGroupSorted.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ListGroupPrefixSuffix</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ListGroupSorted.html"><code class="language-plaintext highlighter-rouge">ListGroupSorted</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ListGroupPrefixSuffix</code></strong><br />
 <a href="../object/ListGroupSorted.html"><code class="language-plaintext highlighter-rouge">ListGroupSorted</code></a><br />
@@ -73,58 +65,38 @@ by compareGroupItems().
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ListGroupPrefixSuffix</code></strong><br />
 <a href="../object/SuggestionListGroup.html"><code class="language-plaintext highlighter-rouge">SuggestionListGroup</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#groupPrefix"><code class="language-plaintext highlighter-rouge">groupPrefix</code></a><a href="#groupSuffix"><code class="language-plaintext highlighter-rouge">groupSuffix</code></a></p>
+<p><a href="#groupPrefix"><code class="language-plaintext highlighter-rouge">groupPrefix</code></a> <a href="#groupSuffix"><code class="language-plaintext highlighter-rouge">groupSuffix</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ListGroup</code> :<br />
-<a href="../object/ListGroup.html#groupDisplaysSublist"><code class="language-plaintext highlighter-rouge">groupDisplaysSublist</code></a><a href="../object/ListGroup.html#minGroupSize"><code class="language-plaintext highlighter-rouge">minGroupSize</code></a></p>
+<a href="../object/ListGroup.html#groupDisplaysSublist"><code class="language-plaintext highlighter-rouge">groupDisplaysSublist</code></a> <a href="../object/ListGroup.html#minGroupSize"><code class="language-plaintext highlighter-rouge">minGroupSize</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a><a href="#showGroupPrefix"><code class="language-plaintext highlighter-rouge">showGroupPrefix</code></a><a href="#showGroupSuffix"><code class="language-plaintext highlighter-rouge">showGroupSuffix</code></a></p>
+<p><a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a> <a href="#showGroupPrefix"><code class="language-plaintext highlighter-rouge">showGroupPrefix</code></a> <a href="#showGroupSuffix"><code class="language-plaintext highlighter-rouge">showGroupSuffix</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ListGroupSorted</code> :<br />
-<a href="../object/ListGroupSorted.html#compareGroupItems"><code class="language-plaintext highlighter-rouge">compareGroupItems</code></a><a href="../object/ListGroupSorted.html#sortListGroup"><code class="language-plaintext highlighter-rouge">sortListGroup</code></a></p>
+<a href="../object/ListGroupSorted.html#compareGroupItems"><code class="language-plaintext highlighter-rouge">compareGroupItems</code></a> <a href="../object/ListGroupSorted.html#sortListGroup"><code class="language-plaintext highlighter-rouge">sortListGroup</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ListGroup</code> :<br />
-<a href="../object/ListGroup.html#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a><a href="../object/ListGroup.html#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a><a href="../object/ListGroup.html#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a><a href="../object/ListGroup.html#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a><a href="../object/ListGroup.html#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a></p>
+<a href="../object/ListGroup.html#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a> <a href="../object/ListGroup.html#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a> <a href="../object/ListGroup.html#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a> <a href="../object/ListGroup.html#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a> <a href="../object/ListGroup.html#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="groupPrefix"></span></p>
 
@@ -132,17 +104,13 @@ by compareGroupItems().
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2216">2216</a>]</p>
 
-<div class="desc">
-
-The prefix and suffix messages. The showGroupPrefix and showGroupSuffix
+<p>The prefix and suffix messages. The showGroupPrefix and showGroupSuffix
 methods simply show these message properties. We go through this
-two-step procedure for convenience: if the subclass doesn't need the POV
-and list parameters, it's less typing to just override these
+two-step procedure for convenience: if the subclass doesn’t need the POV
+and list parameters, it’s less typing to just override these
 parameterless properties. If the subclass needs to vary the message
-according to the POV or what's in the list, it can override the
-showGroupXxx methods instead.
-
-</div>
+according to the POV or what’s in the list, it can override the
+showGroupXxx methods instead.</p>
 
 <p><span id="groupSuffix"></span></p>
 
@@ -150,19 +118,11 @@ showGroupXxx methods instead.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2217">2217</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="showGroupList"></span></p>
 
@@ -170,11 +130,7 @@ showGroupXxx methods instead.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2179">2179</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="showGroupPrefix"></span></p>
 
@@ -182,11 +138,7 @@ showGroupXxx methods instead.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2202">2202</a>]</p>
 
-<div class="desc">
-
-show the prefix - we just show the groupPrefix message by default
-
-</div>
+<p>show the prefix - we just show the groupPrefix message by default</p>
 
 <p><span id="showGroupSuffix"></span></p>
 
@@ -194,18 +146,11 @@ show the prefix - we just show the groupPrefix message by default
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2205">2205</a>]</p>
 
-<div class="desc">
+<p>show the suffix - we just show the groupSuffix message by default</p>
 
-show the suffix - we just show the groupSuffix message by default
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

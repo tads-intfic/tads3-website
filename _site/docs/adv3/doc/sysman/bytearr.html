@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; ByteArray  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; ByteArray<br />
 <span class="navnp"><a href="bignum.html" class="nav"><em>Prev:</em> BigNumber</a>
     <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="bytearray">ByteArray</h1>
 
@@ -155,307 +147,269 @@ information on the file input/output.</p>
 <p><code class="language-plaintext highlighter-rouge">copyFrom(*sourceArray*, *sourceStartIndex*,
 *destStartIndex*, *length*)</code></p>
 
-<div class="fdef">
+<p>Copies bytes from <em>sourceArray</em>, which must be another ByteArray object.
+Copies bytes starting with the byte in <em>sourceArray</em> indexed by
+<em>sourceStartIndex</em>, and continuing for <em>length</em> bytes; stores the bytes
+in this array starting at the byte indexed by <em>destStartIndex</em>.</p>
 
-Copies bytes from *sourceArray*, which must be another ByteArray object.
-Copies bytes starting with the byte in *sourceArray* indexed by
-*sourceStartIndex*, and continuing for *length* bytes; stores the bytes
-in this array starting at the byte indexed by *destStartIndex*.
-
-This routine is safe to use even if *sourceArray* is the same as the
+<p>This routine is safe to use even if <em>sourceArray</em> is the same as the
 target object, and even if the ranges overlap. When copying bytes
 between overlapping regions of the same array, this routine is careful
-to move the bytes without overwriting any source bytes before they've
-been moved.
+to move the bytes without overwriting any source bytes before they’ve
+been moved.</p>
 
+<p><code class="language-plaintext highlighter-rouge">digestMD5(*startIndex*?, *length*?)</code></p>
 
+<p>Calculates the 128-bit RSA MD5 message digest of the string, returning a
+string of 32 hex digits representing the hash value.</p>
 
-`digestMD5(*startIndex*?, *length*?)`
+<p><em>startIndex</em> gives the starting index for the bytes to hash, and
+<em>length</em> is the number of bytes to hash from the starting point. If
+<em>length</em> is omitted, all bytes from <em>startIndex</em> to the end of the array
+are included in the hash; if <em>startIndex</em> is omitted, the entire array
+is hashed.</p>
 
-<div class="fdef">
-
-Calculates the 128-bit RSA MD5 message digest of the string, returning a
-string of 32 hex digits representing the hash value.
-
-*startIndex* gives the starting index for the bytes to hash, and
-*length* is the number of bytes to hash from the starting point. If
-*length* is omitted, all bytes from *startIndex* to the end of the array
-are included in the hash; if *startIndex* is omitted, the entire array
-is hashed.
-
-MD5 was originally designed for cryptographic applications, but it has
-some known weaknesses and is no longer considered secure. Even so, it's
-still considered a good checksum, and it's widely used for message
-integrity checking. It's also part of several Internet standards (e.g.,
+<p>MD5 was originally designed for cryptographic applications, but it has
+some known weaknesses and is no longer considered secure. Even so, it’s
+still considered a good checksum, and it’s widely used for message
+integrity checking. It’s also part of several Internet standards (e.g.,
 HTTP digest authentication). In an Interactive Fiction context,
-[Babel](http://babel.ifarchive.org/) uses MD5 to generate IFIDs for
-older games. If you're looking for a secure hash, consider SHA-2 (see
-[`sha256()`](#sha256)) instead of MD5.
+<a href="http://babel.ifarchive.org/">Babel</a> uses MD5 to generate IFIDs for
+older games. If you’re looking for a secure hash, consider SHA-2 (see
+<a href="#sha256"><code class="language-plaintext highlighter-rouge">sha256()</code></a>) instead of MD5.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">fillValue(*val*, *startIndex*?, *length*?)</code></p>
 
-`fillValue(*val*, *startIndex*?, *length*?)`
+<p>Stores the value <em>val</em> in each element of the array, starting at index
+<em>startIndex</em> and filling the next <em>length</em> bytes. If <em>startIndex</em> and
+<em>length</em> are missing, <em>val</em> is stored in every element of the array. If
+<em>startIndex</em> is given but length is missing, <em>val</em> is stored in every
+element from <em>startIndex</em> to the end of the array. The value <em>val</em> must
+be an integer in the range 0 to 255.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">length()</code></p>
 
-Stores the value *val* in each element of the array, starting at index
-*startIndex* and filling the next *length* bytes. If *startIndex* and
-*length* are missing, *val* is stored in every element of the array. If
-*startIndex* is given but length is missing, *val* is stored in every
-element from *startIndex* to the end of the array. The value *val* must
-be an integer in the range 0 to 255.
+<p>Returns the number of bytes in the ByteArray. This is the same as the
+size specified when the object was created.</p>
 
-</div>
+<p><span id="mapToString"></span></p>
 
-`length()`
+<p><code class="language-plaintext highlighter-rouge">mapToString(*charset*?, *startIndex*?,
+*length*?)</code></p>
 
-<div class="fdef">
+<p>Maps the bytes in the array to a string.</p>
 
-Returns the number of bytes in the ByteArray. This is the same as the
-size specified when the object was created.
-
-</div>
-
-<span id="mapToString"></span>
-
-`mapToString(*charset*?, *startIndex*?,
-*length*?)`
-
-<div class="fdef">
-
-Maps the bytes in the array to a string.
-
-If *charset* is specified and isn't `nil`, it
-must be either a [CharacterSet](charset.html) object, or a string giving
+<p>If <em>charset</em> is specified and isn’t <code class="language-plaintext highlighter-rouge">nil</code>, it
+must be either a <a href="charset.html">CharacterSet</a> object, or a string giving
 the name of a character set. The method maps the bytes in the array to a
-string using the given character set mapping.
+string using the given character set mapping.</p>
 
-If you specify a string as the *charset* value, the method automatically
+<p>If you specify a string as the <em>charset</em> value, the method automatically
 creates a CharacterSet object for the given character set name. This is
-a little more convenient for one-time conversions, but note that it's
+a little more convenient for one-time conversions, but note that it’s
 more efficient for you to create and re-use a CharacterSet object if
-you're likely to use it more than once.
+you’re likely to use it more than once.</p>
 
-The character set given by *charset* must be known. If the character set
+<p>The character set given by <em>charset</em> must be known. If the character set
 is not known, an UnknownCharSetException is thrown. You can determine if
-the character set is known using the isMappingKnown() method of charset.
+the character set is known using the isMappingKnown() method of charset.</p>
 
-If the *charset* argument is omitted or `nil`,
+<p>If the <em>charset</em> argument is omitted or <code class="language-plaintext highlighter-rouge">nil</code>,
 the bytes are converted to characters by treating them as Unicode
 character codes. This is effectively the same as mapping the bytes as
 Latin-1 characters, since Latin-1 and Unicode have identical character
 codes in the 0-255 range, which is the full range of values that can be
-stored in bytes.
+stored in bytes.</p>
 
-Returns a string with the result of the character mapping. Only the
-bytes starting at index *startIndex* and running for *length* bytes are
-included in the mapping. If *startIndex* and *length* are missing, all
-of the bytes in the array are mapped. If *startIndex* is given but
-*length* is missing, the bytes from *startIndex* to the end of the array
-are included in the mapping.
+<p>Returns a string with the result of the character mapping. Only the
+bytes starting at index <em>startIndex</em> and running for <em>length</em> bytes are
+included in the mapping. If <em>startIndex</em> and <em>length</em> are missing, all
+of the bytes in the array are mapped. If <em>startIndex</em> is given but
+<em>length</em> is missing, the bytes from <em>startIndex</em> to the end of the array
+are included in the mapping.</p>
 
-</div>
+<p><span id="packBytes"></span></p>
 
-<span id="packBytes"></span>
+<p><code class="language-plaintext highlighter-rouge">packBytes(*startIndex*, *format*, ...)</code> /
+<code class="language-plaintext highlighter-rouge">ByteArray.packBytes(*format*, ...)</code></p>
 
-`packBytes(*startIndex*, *format*, ...)` /
-`ByteArray.packBytes(*format*, ...)`
+<p>Converts data values into bytes, according to your format
+specifications, and stores the bytes in an existing or new byte array.</p>
 
-<div class="fdef">
-
-Converts data values into bytes, according to your format
-specifications, and stores the bytes in an existing or new byte array.
-
-There are two ways to call this method: the regular method call version,
+<p>There are two ways to call this method: the regular method call version,
 which you call on an existing ByteArray object; and the static version,
-which you call on the ByteArray class itself.
+which you call on the ByteArray class itself.</p>
 
-**Regular method call version:** This version packs bytes and writes
+<p><strong>Regular method call version:</strong> This version packs bytes and writes
 them into an existing byte array at the given starting index.
 Syntactically, you invoke this version on an existing ByteArray object,
-like this:
+like this:</p>
 
-```
-    local arr = new ByteArray(1000);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local arr = new ByteArray(1000);
     arr.packBytes(1, 'l5', 1, 2, 3, 4, 5);
-```
+</code></pre></div></div>
 
-*startIndex* is the starting index in the byte array for the packed
+<p><em>startIndex</em> is the starting index in the byte array for the packed
 bytes. Bytes are packed starting at this position, continuing for as
-many bytes as needed to pack all of the values in the argument list.
+many bytes as needed to pack all of the values in the argument list.</p>
 
-*format* is the format string, which specifies the binary encoding to
+<p><em>format</em> is the format string, which specifies the binary encoding to
 use for each value to be packed. The remaining arguments are the values
-to be packed, which correspond to items in the format string.
+to be packed, which correspond to items in the format string.</p>
 
-The return value is the number of bytes written to the array. (More
-precisely, it's the difference between the final write position and
-*startIndex*. If you use a positioning code like X or @, you can move
+<p>The return value is the number of bytes written to the array. (More
+precisely, it’s the difference between the final write position and
+<em>startIndex</em>. If you use a positioning code like X or @, you can move
 the write position backwards, which could make the return value smaller
 than the actual number of bytes written.) You can use the returned byte
 count to keep track of the write position for each packing list if
-you're making a series of packBytes calls:
+you’re making a series of packBytes calls:</p>
 
-```
-    local arr = new ByteArray(1000);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local arr = new ByteArray(1000);
     local idx = 1;
     idx += arr.packBytes(idx, 'l5', 1, 2, 3, 4, 5);
     idx += arr.packBytes(idx, 's3', 6, 7, 8);
     idx += arr.packBytes(idx, 'a10', 'done!');
-```
+</code></pre></div></div>
 
-The byte array must be large enough for all of the values packed. An
-exception will be thrown ("error writing file") if the array is too
-small.
+<p>The byte array must be large enough for all of the values packed. An
+exception will be thrown (“error writing file”) if the array is too
+small.</p>
 
-**Static version:** This version packs bytes into a new ByteArray
+<p><strong>Static version:</strong> This version packs bytes into a new ByteArray
 object. The new array will be exactly large enough to hold the packed
 bytes. Syntactically, you invoke this version directly on the ByteArray
-class:
+class:</p>
 
-```
-    local arr = ByteArray.packBytes('l5', 1, 2, 3, 4, 5);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local arr = ByteArray.packBytes('l5', 1, 2, 3, 4, 5);
+</code></pre></div></div>
 
-The static version of the method doesn't take a starting index argument,
+<p>The static version of the method doesn’t take a starting index argument,
 since it always stores the packed bytes at index 1 in the new array.
-This version of the method returns the newly created ByteArray object.
+This version of the method returns the newly created ByteArray object.</p>
 
-See [Byte Packing](pack.html) for more information.
+<p>See <a href="pack.html">Byte Packing</a> for more information.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">readInt(*startIndex*, *format*)</code></p>
 
-`readInt(*startIndex*, *format*)`
+<p>Note: this routine is still supported, but the newer
+<a href="#unpackBytes">unpackBytes</a> method can accomplish the same task, usually
+a lot more conveniently.</p>
 
-<div class="fdef">
-
-Note: this routine is still supported, but the newer
-[unpackBytes](#unpackBytes) method can accomplish the same task, usually
-a lot more conveniently.
-
-Translates bytes from the byte array into an integer value. Reads from
-the byte array starting at the byte given by *startIndex*, and reads the
-number of bytes implied by the format code given by *format,* which also
+<p>Translates bytes from the byte array into an integer value. Reads from
+the byte array starting at the byte given by <em>startIndex</em>, and reads the
+number of bytes implied by the format code given by <em>format,</em> which also
 indicates how the bytes should be interpreted into an integer value. The
 return value is the integer value read and translated from the byte
-array.
+array.</p>
 
-The format code given by format is a bit-wise combination of three
-parts: a size, a byte order, and a signedness:
+<p>The format code given by format is a bit-wise combination of three
+parts: a size, a byte order, and a signedness:</p>
 
-- The size gives the number of bits in the integer; this can be one of
-  the values `FmtSize8`,
-  `FmtSize16`, or
-  `FmtSize32`, indicating 8-bit, 16-bit, and
-  32-bit values, respectively.
-- The byte order can be `FmtBigEndian` or
-  `FmtLittleEndian`. A big-endian value is
-  stored with its most significant byte first, followed by the
-  second-most significant byte, and so on. A little-endian value is
-  stored in the opposite order, with its least significant byte first.
-  The `readInt()` method makes it possible to
-  specify the desired byte ordering because the native byte ordering of
-  different hardware platforms varies, and as a result, the ordering of
-  bytes in data fields in file formats specified by third-party
-  applications can vary. Note that the byte order is irrelevant in the
-  case of 8-bit values, since an 8-bit value requires only one byte in
-  the byte array.
-- The signedness indicates whether the integer is to be interpreted as
-  signed or unsigned; this can be `FmtSigned` or
-  `FmtUnsigned`. Note that the T3 VM doesn't
-  have an unsigned 32-bit datatype, so
-  `FmtUnsigned` isn't meaningful with
-  `FmtSize32`.
+<ul>
+  <li>The size gives the number of bits in the integer; this can be one of
+the values <code class="language-plaintext highlighter-rouge">FmtSize8</code>,
+<code class="language-plaintext highlighter-rouge">FmtSize16</code>, or
+<code class="language-plaintext highlighter-rouge">FmtSize32</code>, indicating 8-bit, 16-bit, and
+32-bit values, respectively.</li>
+  <li>The byte order can be <code class="language-plaintext highlighter-rouge">FmtBigEndian</code> or
+<code class="language-plaintext highlighter-rouge">FmtLittleEndian</code>. A big-endian value is
+stored with its most significant byte first, followed by the
+second-most significant byte, and so on. A little-endian value is
+stored in the opposite order, with its least significant byte first.
+The <code class="language-plaintext highlighter-rouge">readInt()</code> method makes it possible to
+specify the desired byte ordering because the native byte ordering of
+different hardware platforms varies, and as a result, the ordering of
+bytes in data fields in file formats specified by third-party
+applications can vary. Note that the byte order is irrelevant in the
+case of 8-bit values, since an 8-bit value requires only one byte in
+the byte array.</li>
+  <li>The signedness indicates whether the integer is to be interpreted as
+signed or unsigned; this can be <code class="language-plaintext highlighter-rouge">FmtSigned</code> or
+<code class="language-plaintext highlighter-rouge">FmtUnsigned</code>. Note that the T3 VM doesn’t
+have an unsigned 32-bit datatype, so
+<code class="language-plaintext highlighter-rouge">FmtUnsigned</code> isn’t meaningful with
+<code class="language-plaintext highlighter-rouge">FmtSize32</code>.</li>
+</ul>
 
-So, to specify a signed 16-bit value in big-endian byte order, you'd use
-`(FmtSize16 \| FmtSigned \| FmtBigEndian)`.
+<p>So, to specify a signed 16-bit value in big-endian byte order, you’d use
+<code class="language-plaintext highlighter-rouge">(FmtSize16 \| FmtSigned \| FmtBigEndian)</code>.</p>
 
-It's a lot of typing to specify all three parts of a data format, so the
+<p>It’s a lot of typing to specify all three parts of a data format, so the
 byte array system header file defines all of the useful combinations as
-individual macros:
+individual macros:</p>
 
-- `FmtInt8` (signed 8-bit integer)
-- `FmtUInt8` (unsigned 8-bit integer)
-- `FmtInt16LE` (signed 16-bit integer in
-  little-endian byte order)
-- `FmtUInt16LE` (unsigned 16-bit integer in
-  little-endian byte order)
-- `FmtInt16BE` (signed 16-bit integer in
-  big-endian byte order)
-- `FmtUInt16BE` (unsigned 16-bit integer in
-  big-endian byte order)
-- `FmtInt32LE` (signed 32-bit integer in
-  little-endian byte order)
-- `FmtInt32BE` (signed 32-bit integer in
-  big-endian byte order)
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">FmtInt8</code> (signed 8-bit integer)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtUInt8</code> (unsigned 8-bit integer)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtInt16LE</code> (signed 16-bit integer in
+little-endian byte order)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtUInt16LE</code> (unsigned 16-bit integer in
+little-endian byte order)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtInt16BE</code> (signed 16-bit integer in
+big-endian byte order)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtUInt16BE</code> (unsigned 16-bit integer in
+big-endian byte order)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtInt32LE</code> (signed 32-bit integer in
+little-endian byte order)</li>
+  <li><code class="language-plaintext highlighter-rouge">FmtInt32BE</code> (signed 32-bit integer in
+big-endian byte order)</li>
+</ul>
 
-This function simply reads the bytes out of the byte array and
-translates them according to the *format* specification. There is no
+<p>This function simply reads the bytes out of the byte array and
+translates them according to the <em>format</em> specification. There is no
 information in the byte array itself that indicates how the bytes are to
 be interpreted into an integer, so it is up to your program to specify
-the correct format translation. You'll get strange results if you
+the correct format translation. You’ll get strange results if you
 attempt to read values in a format different from the format that was
-used to write them.
+used to write them.</p>
 
-</div>
+<p><span id="sha256"></span></p>
 
-<span id="sha256"></span>
+<p><code class="language-plaintext highlighter-rouge">sha256(*startIndex*?, *length*?)</code></p>
 
-`sha256(*startIndex*?, *length*?)`
-
-<div class="fdef">
-
-Calculates the 256-bit SHA-2 (Secure Hash Algorithm 2) hash of the
+<p>Calculates the 256-bit SHA-2 (Secure Hash Algorithm 2) hash of the
 string, returning a string of 64 hex digits representing the hash value.
-SHA-2 is a standard hash algorithm that's considered (at the time of
-this writing) secure for cryptographic purposes.
+SHA-2 is a standard hash algorithm that’s considered (at the time of
+this writing) secure for cryptographic purposes.</p>
 
-*startIndex* gives the starting index for the bytes to hash, and
-*length* is the number of bytes to hash from the starting point. If
-*length* is omitted, all bytes from *startIndex* to the end of the array
-are included in the hash; if *startIndex* is omitted, the entire array
-is hashed.
+<p><em>startIndex</em> gives the starting index for the bytes to hash, and
+<em>length</em> is the number of bytes to hash from the starting point. If
+<em>length</em> is omitted, all bytes from <em>startIndex</em> to the end of the array
+are included in the hash; if <em>startIndex</em> is omitted, the entire array
+is hashed.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">subarray(*startIndex*, *length*?)</code></p>
 
-`subarray(*startIndex*, *length*?)`
+<p>Returns a new ByteArray consisting of the region of this array starting
+with the byte indexed by <em>startingIndex</em> of the number of bytes given by
+<em>length.</em> If <em>length</em> is not supplied, the new ByteArray consists of all
+of the bytes from <em>startingIndex</em> to the last byte of this array.</p>
 
-<div class="fdef">
+<p><span id="unpackBytes"></span></p>
 
-Returns a new ByteArray consisting of the region of this array starting
-with the byte indexed by *startingIndex* of the number of bytes given by
-*length.* If *length* is not supplied, the new ByteArray consists of all
-of the bytes from *startingIndex* to the last byte of this array.
+<p><code class="language-plaintext highlighter-rouge">unpackBytes(*startIndex*, *format*)</code></p>
 
-</div>
+<p>Unpacks bytes from the array, starting at the given index, translating
+the bytes into values according to the given format string.</p>
 
-<span id="unpackBytes"></span>
+<p><em>startIndex</em> is the starting index in the byte array of the bytes to
+unpack (the first byte is at index 1). <em>format</em> is a byte packer format
+string, specifying the items to be unpacked.</p>
 
-`unpackBytes(*startIndex*, *format*)`
+<p>The return value is a list containing the unpacked values.</p>
 
-<div class="fdef">
-
-Unpacks bytes from the array, starting at the given index, translating
-the bytes into values according to the given format string.
-
-*startIndex* is the starting index in the byte array of the bytes to
-unpack (the first byte is at index 1). *format* is a byte packer format
-string, specifying the items to be unpacked.
-
-The return value is a list containing the unpacked values.
-
-If you need to make a series of unpackBytes() calls, you'll probably
+<p>If you need to make a series of unpackBytes() calls, you’ll probably
 need a way to keep track of the number of bytes unpacked on each call,
 to figure the starting point for the next call. The special format code
-`@?` is designed for this: it returns the byte
+<code class="language-plaintext highlighter-rouge">@?</code> is designed for this: it returns the byte
 offset from the start of the current unpack list. Include
-`@?` as the last value in your format string;
+<code class="language-plaintext highlighter-rouge">@?</code> as the last value in your format string;
 this will return the byte offset as the last element of the returned
 value list. Add this to the previous starting index to get the next
-starting index:
+starting index:</p>
 
-```
-    local idx = 1; // start at the first byte of the array
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local idx = 1; // start at the first byte of the array
     local lst = arr.unpackBytes(idx, 'l5 @?'); // unpack the first batch of values
 
     idx += lst[lst.length()];  // the last value is the number of bytes read
@@ -463,33 +417,29 @@ starting index:
 
     idx += lst[lst.length()];  // advance to the index again
     lst = arry.unpackBytes(idx, 'a10'); // unpack the last batch
-```
+</code></pre></div></div>
 
-See [Byte Packing](pack.html) for more information.
+<p>See <a href="pack.html">Byte Packing</a> for more information.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">writeInt(*startIndex*, *format*, *val*)</code></p>
 
-`writeInt(*startIndex*, *format*, *val*)`
+<p>Note: this routine is still supported, but the newer
+<a href="#packBytes">packBytes</a> method can accomplish the same task, usually a
+lot more conveniently.</p>
 
-<div class="fdef">
-
-Note: this routine is still supported, but the newer
-[packBytes](#packBytes) method can accomplish the same task, usually a
-lot more conveniently.
-
-Translates an integer value into a series of bytes, and writes the bytes
+<p>Translates an integer value into a series of bytes, and writes the bytes
 into the array. The bytes are written starting at the index given by
-*startIndex*. The number of bytes written is the byte size implied by
-the format code given by *format*. The *val* argument gives the integer
-value to be written.
+<em>startIndex</em>. The number of bytes written is the byte size implied by
+the format code given by <em>format</em>. The <em>val</em> argument gives the integer
+value to be written.</p>
 
-The format code in *format* has the same meaning as the format code in
-`readInt()`.
+<p>The format code in <em>format</em> has the same meaning as the format code in
+<code class="language-plaintext highlighter-rouge">readInt()</code>.</p>
 
-Note that this method doesn't perform any range checking on *val*. If
-*val* is outside of the limits that can be represented with the
+<p>Note that this method doesn’t perform any range checking on <em>val</em>. If
+<em>val</em> is outside of the limits that can be represented with the
 specified format code, this method will simply truncate the value stored
-to its low-order portion, discarding any high-order bits that won't fit
+to its low-order portion, discarding any high-order bits that won’t fit
 the format. For example, if you attempt to store 1000 in an unsigned
 8-bit format, the value stored would be 232; we can see this more easily
 by noting that 1000 is 0x3E8 in hexadecimal, so when we truncate this to
@@ -498,41 +448,36 @@ later attempted to read this value back as a signed 8-bit value, the
 result would be even stranger: it would be -24. This is because E8 is
 negative when interpreted as signed, so it would be interpreted as the
 integer 0xFFFFFFE8, which is -24. If you need range checking, your
-program must provide it. Here are the limits of the different types:
+program must provide it. Here are the limits of the different types:</p>
 
-- Signed 8-bit: -128 to +127
-- Unsigned 8-bit: 0 to +255
-- Signed 16-bit: -32768 to +32767
-- Unsigned 16-bit: 0 to +65535
-- Signed 32-bit: -2147483648 to +2147483647
+<ul>
+  <li>Signed 8-bit: -128 to +127</li>
+  <li>Unsigned 8-bit: 0 to +255</li>
+  <li>Signed 16-bit: -32768 to +32767</li>
+  <li>Unsigned 16-bit: 0 to +65535</li>
+  <li>Signed 32-bit: -2147483648 to +2147483647</li>
+</ul>
 
-The capacity of a type doesn't depend on its byte order. Note that there
+<p>The capacity of a type doesn’t depend on its byte order. Note that there
 should be no need for range checking on a 32-bit value, since the T3
-VM's internal integer type itself is a 32-bit signed value and thus
-can't exceed this range to begin with.
+VM’s internal integer type itself is a 32-bit signed value and thus
+can’t exceed this range to begin with.</p>
 
-This method stores only the bytes of the translated integer value. It
-doesn't store any information on the format code used to generate the
+<p>This method stores only the bytes of the translated integer value. It
+doesn’t store any information on the format code used to generate the
 value; this means that if you later want to read the integer value back
 out of the byte array, it will be up to your program to specify the
-correct format code.
-
-</div>
-
-</div>
+correct format code.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; ByteArray  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; ByteArray<br />
 <span class="navnp"><a href="bignum.html" class="nav"><em>Prev:</em> BigNumber</a>
     <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

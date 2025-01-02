@@ -46,70 +46,42 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A WebResourceGroup is a container for WebResource objects. When a server
+<p>A WebResourceGroup is a container for WebResource objects. When a server
 receives a request, it looks in its group list to find the resource
-object that will handle the request.
+object that will handle the request.</p>
 
-`class `**`WebResourceGroup`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">WebResourceGroup</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">WebResourceGroup</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><a href="../object/mainWebGroup.html"><code class="language-plaintext highlighter-rouge">mainWebGroup</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a><a href="#contents"><code class="language-plaintext highlighter-rouge">contents</code></a><a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a><a href="#server"><code class="language-plaintext highlighter-rouge">server</code></a></p>
+<p><a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="#contents"><code class="language-plaintext highlighter-rouge">contents</code></a> <a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a> <a href="#server"><code class="language-plaintext highlighter-rouge">server</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#isGroupFor"><code class="language-plaintext highlighter-rouge">isGroupFor</code></a><a href="#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a></p>
+<p><a href="#isGroupFor"><code class="language-plaintext highlighter-rouge">isGroupFor</code></a> <a href="#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="all"></span></p>
 
@@ -117,11 +89,7 @@ object that will handle the request.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1305">1305</a>]</p>
 
-<div class="desc">
-
-class property: list of all WebResourceGroup objects
-
-</div>
+<p>class property: list of all WebResourceGroup objects</p>
 
 <p><span id="contents"></span></p>
 
@@ -129,11 +97,7 @@ class property: list of all WebResourceGroup objects
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1267">1267</a>]</p>
 
-<div class="desc">
-
-the WebResource objects in the group
-
-</div>
+<p>the WebResource objects in the group</p>
 
 <p><span id="priority"></span></p>
 
@@ -141,13 +105,9 @@ the WebResource objects in the group
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1254">1254</a>]</p>
 
-<div class="desc">
-
-The priority of the group, relative to other groups. If the same server
+<p>The priority of the group, relative to other groups. If the same server
 matches multiple groups, this allows you to designate which group has
-precedence. A higher value means higher priority.
-
-</div>
+precedence. A higher value means higher priority.</p>
 
 <p><span id="server"></span></p>
 
@@ -155,24 +115,16 @@ precedence. A higher value means higher priority.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1264">1264</a>]</p>
 
-<div class="desc">
-
-The HTTPServer object or objects this group is associated with. The
+<p>The HTTPServer object or objects this group is associated with. The
 general event processor uses this to route a request to the appropriate
-resource group, by finding the group that's associated with the server
-that received the request.
+resource group, by finding the group that’s associated with the server
+that received the request.</p>
 
-To associate a group with multiple servers, make this a list.
-
-</div>
+<p>To associate a group with multiple servers, make this a list.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="isGroupFor"></span></p>
 
@@ -180,13 +132,9 @@ To associate a group with multiple servers, make this a list.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1234">1234</a>]</p>
 
-<div class="desc">
-
-Should this group handle the given request? By default, we say yes if
+<p>Should this group handle the given request? By default, we say yes if
 the server that received the request is associated with this group via
-the group's 'server' property.
-
-</div>
+the group’s ‘server’ property.</p>
 
 <p><span id="processRequest"></span></p>
 
@@ -194,19 +142,12 @@ the group's 'server' property.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1274">1274</a>]</p>
 
-<div class="desc">
+<p>Process a request. This looks for the highest priority matching resource
+in the group, then hands the request to that resource for processing.</p>
 
-Process a request. This looks for the highest priority matching resource
-in the group, then hands the request to that resource for processing.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

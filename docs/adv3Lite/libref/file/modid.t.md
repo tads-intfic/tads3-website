@@ -37,7 +37,7 @@ will be able to find all of their ID's.
 
 
 
-[`GameID`](../object/GameID.html)[`GameInfoModuleID`](../object/GameInfoModuleID.html)[`MetadataModuleID`](../object/MetadataModuleID.html)[`ModuleID`](../object/ModuleID.html)
+[`GameID`](../object/GameID.html) [`GameInfoModuleID`](../object/GameInfoModuleID.html) [`MetadataModuleID`](../object/MetadataModuleID.html) [`ModuleID`](../object/ModuleID.html)
 <span id="_ObjectSummary_"></span>
 
 

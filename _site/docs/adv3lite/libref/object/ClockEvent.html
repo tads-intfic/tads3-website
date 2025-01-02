@@ -46,76 +46,48 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Clock-setting plot event. This object represents a plot point that
+<p>Clock-setting plot event. This object represents a plot point that
 occurs at a particular time in the story world. Create one of these for
 each of your plot events. The Clock Manager automatically builds a list
-of all of these objects during pre-initialization, so you don't have to
-explicitly tell the clock manager about these.
+of all of these objects during pre-initialization, so you don’t have to
+explicitly tell the clock manager about these.</p>
 
-Whenever the story reaches one of these events, you should call the
+<p>Whenever the story reaches one of these events, you should call the
 eventReached() method of the event object. This will set the clock time
-to the event's current time, and take note of how long we have until the
-next plot event. \[DEFINED IN SUBTIME EXTENSION\]
+to the event’s current time, and take note of how long we have until the
+next plot event. [DEFINED IN SUBTIME EXTENSION]</p>
 
-`class `**`ClockEvent`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ClockEvent</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ClockEvent</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#eventDate"><code class="language-plaintext highlighter-rouge">eventDate</code></a><a href="#eventTime"><code class="language-plaintext highlighter-rouge">eventTime</code></a><a href="#hasBeenReached"><code class="language-plaintext highlighter-rouge">hasBeenReached</code></a><a href="#reachedWhen"><code class="language-plaintext highlighter-rouge">reachedWhen</code></a><a href="#scaleFactor"><code class="language-plaintext highlighter-rouge">scaleFactor</code></a><a href="#turnsToEvent"><code class="language-plaintext highlighter-rouge">turnsToEvent</code></a></p>
+<p><a href="#eventDate"><code class="language-plaintext highlighter-rouge">eventDate</code></a> <a href="#eventTime"><code class="language-plaintext highlighter-rouge">eventTime</code></a> <a href="#hasBeenReached"><code class="language-plaintext highlighter-rouge">hasBeenReached</code></a> <a href="#reachedWhen"><code class="language-plaintext highlighter-rouge">reachedWhen</code></a> <a href="#scaleFactor"><code class="language-plaintext highlighter-rouge">scaleFactor</code></a> <a href="#turnsToEvent"><code class="language-plaintext highlighter-rouge">turnsToEvent</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#calcScaleFactor"><code class="language-plaintext highlighter-rouge">calcScaleFactor</code></a><a href="#eventReached"><code class="language-plaintext highlighter-rouge">eventReached</code></a><a href="#formatTime"><code class="language-plaintext highlighter-rouge">formatTime</code></a></p>
+<p><a href="#calcScaleFactor"><code class="language-plaintext highlighter-rouge">calcScaleFactor</code></a> <a href="#eventReached"><code class="language-plaintext highlighter-rouge">eventReached</code></a> <a href="#formatTime"><code class="language-plaintext highlighter-rouge">formatTime</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="eventDate"></span></p>
 
@@ -123,11 +95,7 @@ next plot event. \[DEFINED IN SUBTIME EXTENSION\]
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#540">540</a>]</p>
 
-<div class="desc">
-
-This is the eventTime expressed as a Date object
-
-</div>
+<p>This is the eventTime expressed as a Date object</p>
 
 <p><span id="eventTime"></span></p>
 
@@ -135,17 +103,13 @@ This is the eventTime expressed as a Date object
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#537">537</a>]</p>
 
-<div class="desc">
-
-The time at which this event occurs. This is expressed as a list with
+<p>The time at which this event occurs. This is expressed as a list with
 three elements: the day number, the hour (on a 24-hour clock), and the
 minute. The day number is relative to the start of the game - day 1 is
 the first day of the game. So, for example, to express 2:40pm on the
-second day of the game, you'd write \[2,14,40\]. Note that 12 AM is
+second day of the game, you’d write [2,14,40]. Note that 12 AM is
 written as 0 (zero) on a 24-hour clock, so 12:05am on day 1 would be
-\[1,0,5\].
-
-</div>
+[1,0,5].</p>
 
 <p><span id="hasBeenReached"></span></p>
 
@@ -153,13 +117,9 @@ written as 0 (zero) on a 24-hour clock, so 12:05am on day 1 would be
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#618">618</a>]</p>
 
-<div class="desc">
-
-Flag: has this event been reached? This is used internally by the
-library and shouldn't normally be changed in game code. \[SUBTIME
-EXTENSION\]
-
-</div>
+<p>Flag: has this event been reached? This is used internally by the
+library and shouldn’t normally be changed in game code. [SUBTIME
+EXTENSION]</p>
 
 <p><span id="reachedWhen"></span></p>
 
@@ -167,14 +127,10 @@ EXTENSION\]
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#611">611</a>]</p>
 
-<div class="desc">
-
-A condition (or a method that returns true or nil) that causes this
+<p>A condition (or a method that returns true or nil) that causes this
 event to be reached when it becomes true. This provides an alternative
 way of reaching events (instead of calling the eventReached method).
-\[SUBTIME EXTENSION\]
-
-</div>
+[SUBTIME EXTENSION]</p>
 
 <p><span id="scaleFactor"></span></p>
 
@@ -182,20 +138,16 @@ way of reaching events (instead of calling the eventReached method).
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#570">570</a>]</p>
 
-<div class="desc">
-
-This is the number of minutes per hundred turns when we have unlimited
-time until this next event. This number is pretty arbitrary, since we're
-depending so much on the player's uncertainty about just how long things
-take, and also because we'll adjust it anyway when we're running out of
+<p>This is the number of minutes per hundred turns when we have unlimited
+time until this next event. This number is pretty arbitrary, since we’re
+depending so much on the player’s uncertainty about just how long things
+take, and also because we’ll adjust it anyway when we’re running out of
 time before the next event. Even so, you might want to adjust this value
-up or down according to your sense of the pacing of your game.
+up or down according to your sense of the pacing of your game.</p>
 
-Alternatively you can define the turnsToEvent property (see below) and
-the game will calculate an appropriate scaleFactor for you. \[SUBTIME
-EXTENSION\]
-
-</div>
+<p>Alternatively you can define the turnsToEvent property (see below) and
+the game will calculate an appropriate scaleFactor for you. [SUBTIME
+EXTENSION]</p>
 
 <p><span id="turnsToEvent"></span></p>
 
@@ -203,23 +155,15 @@ EXTENSION\]
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#579">579</a>]</p>
 
-<div class="desc">
-
-Optional: if specified this should contain an estimate of the number of
+<p>Optional: if specified this should contain an estimate of the number of
 turns a player is typically likely to take to get to this event from the
 previous one; the game will then calculate an appropriate scaleFactor.
 Alternatively this can be left at nil and the scaleFactor specified
-directly. \[SUBTIME EXTENSION\]
-
-</div>
+directly. [SUBTIME EXTENSION]</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="calcScaleFactor"></span></p>
 
@@ -227,13 +171,9 @@ directly. \[SUBTIME EXTENSION\]
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#586">586</a>]</p>
 
-<div class="desc">
-
-If the turnsToEvent property is not nil and the clockManager has
+<p>If the turnsToEvent property is not nil and the clockManager has
 recorded a previous event, calculate the scaleFactor for this event.
-\[SUBTIME EXTENSION\]
-
-</div>
+[SUBTIME EXTENSION]</p>
 
 <p><span id="eventReached"></span></p>
 
@@ -241,13 +181,9 @@ recorded a previous event, calculate the scaleFactor for this event.
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#551">551</a>]</p>
 
-<div class="desc">
-
-Notify the clock manager that this event has just occurred. This sets
-the game clock to the event's time. The game code must call this method
-when our point in the plot is reached.
-
-</div>
+<p>Notify the clock manager that this event has just occurred. This sets
+the game clock to the event’s time. The game code must call this method
+when our point in the plot is reached.</p>
 
 <p><span id="formatTime"></span></p>
 
@@ -255,18 +191,11 @@ when our point in the plot is reached.
 
 <p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#543">543</a>]</p>
 
-<div class="desc">
+<p>get a formatted version of the event time</p>
 
-get a formatted version of the event time
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

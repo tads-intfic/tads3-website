@@ -56,7 +56,7 @@ TADS GameInfo writer
 
 
 
-[`getGameInfoToday`](#getGameInfoToday)[`writeGameInfo`](#writeGameInfo)
+[`getGameInfoToday`](#getGameInfoToday) [`writeGameInfo`](#writeGameInfo)
 
 <span id="_Properties_"></span>
 

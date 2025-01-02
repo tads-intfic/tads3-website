@@ -21,20 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Messages  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Messages<br />
 <span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
-    <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
-
-</div>
+    <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span></p>
 
 <h1 id="messages">Messages</h1>
 
@@ -142,30 +134,26 @@ for example).</p>
 
 <p>The basic format in which these macros are used is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DMsg(key, msg[, params...])
+BMsg(key, msg[, params...])
+</code></pre></div></div>
 
-    DMsg(key, msg[, params...])
-    BMsg(key, msg[, params...])
-
-
-
-Where <span class="synPar">key</span> is an arbitrary (or rather,
+<p>Where <span class="synPar">key</span> is an arbitrary (or rather,
 user-defined) key to identify the message,
 <span class="synPar">msg</span> is the text of the message as a
 single-quoted string (which may and usually will contain message
-substitution parameters, see below), and <span class="synMark">\[,
-params...\]</span> is an optional list of one or more parameters (up to
-9) corresponding to the placeholders *{1}, {2}, {3}... {9}* in
+substitution parameters, see below), and <span class="synMark">[,
+params…]</span> is an optional list of one or more parameters (up to
+9) corresponding to the placeholders <em>{1}, {2}, {3}… {9}</em> in
 <span class="synPar">msg</span>. The <span class="synPar">key</span>
 value is used to identify the message so that an alternative message
 with the same key value may be used instead if one is defined on an
-active [CustomMessage](#custmessage_idx) object (for which see below).
+active <a href="#custmessage_idx">CustomMessage</a> object (for which see below).
 This may all become a bit clearer with a couple of examples, which we
-shall take from the library's definition of dobjFor(Take) on the Thing
-class:
+shall take from the library’s definition of dobjFor(Take) on the Thing
+class:</p>
 
-`
-    class Thing: Mentionable
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Thing: Mentionable
         ...
 
         dobjFor(Take)    
@@ -222,148 +210,143 @@ class:
             
         ...
     ;    
-`
+</code></pre></div></div>
 
-First note that we define three messages that might be used at the
+<p>First note that we define three messages that might be used at the
 verify stage, cannotTakeMsg, alreadyHeldMsg and cannotTakeMyContainerMsg
 as properties of Thing, so they can be easily overridden by game authors
 (either on the Thing class or on individual objects). Each of these
 three message properties is populated by a BMsg macro that evaluates to
-a single-quoted string. Each of them is given a *key* value relating to
+a single-quoted string. Each of them is given a <em>key</em> value relating to
 the text or purpose of the message (fixed in place, already holding, and
 cannot take my container). Note that these key values are not wrapped in
 quote marks (the BMsg macro takes care of that for us). These key values
-can be used by a [CustomMessage](#custmessage_idx) object to replace the
+can be used by a <a href="#custmessage_idx">CustomMessage</a> object to replace the
 text of these messages with something else, for what the BMsg() and
 DMsg() macros do is first look for an active CustomMessage object that
 defines a message with the corresponding key (such as fixed in place).
-If they can't find one, they use *msg* instead. Since the adv3Lite
-library doesn't define any CustomMessage objects, by default it will use
-the message defined in the *msg* property instead (unless a game author
+If they can’t find one, they use <em>msg</em> instead. Since the adv3Lite
+library doesn’t define any CustomMessage objects, by default it will use
+the message defined in the <em>msg</em> property instead (unless a game author
 overrides it by providing a CustomMessage object that defines the
-message in question).
+message in question).</p>
 
-The module english.t defines a number of [parameter
-substitutions](#parameter) that can be used to fit the message to its
-context. We'll give a full list of these below; for now we'll simply
+<p>The module english.t defines a number of <a href="#parameter">parameter
+substitutions</a> that can be used to fit the message to its
+context. We’ll give a full list of these below; for now we’ll simply
 illustrate the principle by describing how they work in the particular
-examples above.
+examples above.</p>
 
-We'll start with `BMsg(fixed in place, '{The subj
-dobj} {is} fixed in place. ')` In this message '{the subj dobj}'
+<p>We’ll start with <code class="language-plaintext highlighter-rouge">BMsg(fixed in place, '{The subj
+dobj} {is} fixed in place. ')</code> In this message ‘{the subj dobj}’
 will be replaced by the theName of the current direct object in the
 subjective case and {is} will be replaced by the appropriate form of the
-verb "to be" to match the direct object (in English nothing marks the
+verb “to be” to match the direct object (in English nothing marks the
 name of a noun as being in the subjective case, but the message builder
-needs to know that it's the subject of the sentence, so that '{is}' is
-meant to agree with it). This will result in messages like 'The stone
-ball is fixed in place. ' or 'The stone pillars are fixed in place. '
-(if the game is in the present tense) or 'The stone ball was fixed in
-place. ' or 'The stone pillars were fixed in place. ' (if the game is in
-the past tense).
+needs to know that it’s the subject of the sentence, so that ‘{is}’ is
+meant to agree with it). This will result in messages like ‘The stone
+ball is fixed in place. ‘ or ‘The stone pillars are fixed in place. ‘
+(if the game is in the present tense) or ‘The stone ball was fixed in
+place. ‘ or ‘The stone pillars were fixed in place. ‘ (if the game is in
+the past tense).</p>
 
-Next, let's look at `BMsg(already holding, '{I}{\\m}
-already holding {the dobj}. ')` Here '{I}' stands for the actor,
-{\\m} will be replaced with the appropriately contracted form of the
-verb "to be", and {the dobj} will the replaced with the theName property
+<p>Next, let’s look at <code class="language-plaintext highlighter-rouge">BMsg(already holding, '{I}{\\m}
+already holding {the dobj}. ')</code> Here ‘{I}’ stands for the actor,
+{\m} will be replaced with the appropriately contracted form of the
+verb “to be”, and {the dobj} will the replaced with the theName property
 of the direct object, which the message builder will consider to be the
 grammatical object of the sentence. For a second-person game in the
-present tense this may result in message like "You're already holding
-the red ball. " For a first-person game in the past tense it would come
-out as "I was already holding the red ball. "
+present tense this may result in message like “You’re already holding
+the red ball. “ For a first-person game in the past tense it would come
+out as “I was already holding the red ball. “</p>
 
-Now let's consider the slightly more complex
-`BMsg(cannot take my container, '{I} {can\\t} {take}
-{the dobj} while {i}{\\m} {1} {him dobj}. ', objInPrep)`. Here, as
-before, '{I}' becomes the appropriate form of the actor ('I', 'You',
-'He', or whatever the case may be). '{can\\t} then becomes either
-"can\\t" or "could not" depending on whether the game is in the present
-or the past tense. The second '{i}' is again replaced with the
-appropriate pronoun for the actor, but because this time '{i}' is in
-lower-case, the pronoun won't be capitalized (unless it's 'I'). The
-'{1}' will be replaced with the first parameter following the message
-string, in this case objInPrep ('in' or 'on' or whatever the case may
-be). Finally '{him dobj}' will expand to the appropriate objective-case
-pronoun to refer to the direct object (either 'him' or 'them', depending
-on whether the direct object is singular or plural).
+<p>Now let’s consider the slightly more complex
+<code class="language-plaintext highlighter-rouge">BMsg(cannot take my container, '{I} {can\\t} {take}
+{the dobj} while {i}{\\m} {1} {him dobj}. ', objInPrep)</code>. Here, as
+before, ‘{I}’ becomes the appropriate form of the actor (‘I’, ‘You’,
+‘He’, or whatever the case may be). ‘{can\t} then becomes either
+“can\t” or “could not” depending on whether the game is in the present
+or the past tense. The second ‘{i}’ is again replaced with the
+appropriate pronoun for the actor, but because this time ‘{i}’ is in
+lower-case, the pronoun won’t be capitalized (unless it’s ‘I’). The
+‘{1}’ will be replaced with the first parameter following the message
+string, in this case objInPrep (‘in’ or ‘on’ or whatever the case may
+be). Finally ‘{him dobj}’ will expand to the appropriate objective-case
+pronoun to refer to the direct object (either ‘him’ or ‘them’, depending
+on whether the direct object is singular or plural).</p>
 
-Finally, there's the DMsg() macro in the report() method:
-`DMsg(report take, 'Taken. \| {I} {take} {1}. ',
-gActionListStr);` In this case the library uses the DMsg() macro
+<p>Finally, there’s the DMsg() macro in the report() method:
+<code class="language-plaintext highlighter-rouge">DMsg(report take, 'Taken. \| {I} {take} {1}. ',
+gActionListStr);</code> In this case the library uses the DMsg() macro
 to display the message straight away rather than going via a message
-property (a) because there's no point in overriding the report() method
-on individual objects, and (b) because it's easy enough to override a
+property (a) because there’s no point in overriding the report() method
+on individual objects, and (b) because it’s easy enough to override a
 report method on a class should the need arise (or else to define a
 CustomMessage object to do the job). The main feature to note here,
-though, is the vertical bar (\|) in the middle of the message. When this
-is present we're actually defining two messages: the one to the left of
-the bar ('Taken. ') is for use when it should be obvious to the player
+though, is the vertical bar (|) in the middle of the message. When this
+is present we’re actually defining two messages: the one to the left of
+the bar (‘Taken. ‘) is for use when it should be obvious to the player
 what object his/her command referred to (if you type TAKE RED BALL, the
-report 'You take the red ball' could seem just a little pedantic;
-'Taken' will normally suffice). The one to the right of the bar ('{I}
-{take} {1}. ') is for use when it may not be immediately clear to the
-player what his/her command has acted on, e.g. TAKE BALL (when there's
+report ‘You take the red ball’ could seem just a little pedantic;
+‘Taken’ will normally suffice). The one to the right of the bar (‘{I}
+{take} {1}. ‘) is for use when it may not be immediately clear to the
+player what his/her command has acted on, e.g. TAKE BALL (when there’s
 more than one ball in scope), TAKE BALLS (when it there may be several
 balls around) or TAKE ALL (which might pick anything). The general rule
 is that the library uses the longer, fuller form of the message (where
 two messages are defined with a vertical bar like this) either when the
 parser has had to diambiguate (by choosing the highest scoring object
 among two or more candidates) or when it has matched objects to an
-indefinite plural (such as BALLS or ALL). In the message '{I} {take}
-{1}. ', the {I} once again replaced with the pronoun appropriate to the
-actor, {take} becomes the appropriate form the verb "to take" ('take',
-'takes' or 'took'), and the {1} is replaced with the value of
+indefinite plural (such as BALLS or ALL). In the message ‘{I} {take}
+{1}. ‘, the {I} once again replaced with the pronoun appropriate to the
+actor, {take} becomes the appropriate form the verb “to take” (‘take’,
+‘takes’ or ‘took’), and the {1} is replaced with the value of
 gActionListStr, which contains a list of the objects just acted on. The
-DMsg in reportDobjTake() might this generate a transcript like this:
+DMsg in reportDobjTake() might this generate a transcript like this:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take black cube
+Taken.
 
-    &gt;take black cube
-    Taken.
+&gt;take balls
+You take the red ball and the green ball.
 
-    &gt;take balls
-    You take the red ball and the green ball.
+&gt;take blotter and ink
+Taken.
 
-    &gt;take blotter and ink
-    Taken.
+&gt;take fountain
+You take the fountain pen.
 
-    &gt;take fountain
-    You take the fountain pen.
+&gt;take all
+You take the pad of paper, the diary, the half-eaten bar of chocolate, the glass paper-weight and the safety pin.
+</code></pre></div></div>
 
-    &gt;take all
-    You take the pad of paper, the diary, the half-eaten bar of chocolate, the glass paper-weight and the safety pin.
+<h2 id="custommessages-objects"><span id="custmessage_idx">CustomMessages Objects</span></h2>
 
-</div>
+<p>We have already mentioned that messages can be customized by using
+CustomMessages objects. The time has now come to look at how these work.</p>
 
-  
-
-## <span id="custmessage_idx">CustomMessages Objects</span>
-
-We have already mentioned that messages can be customized by using
-CustomMessages objects. The time has now come to look at how these work.
-
-Language extensions and games can use CustomMessages objects to define
+<p>Language extensions and games can use CustomMessages objects to define
 their own custom messages that override the default English messages
-used throughout the library.
+used throughout the library.</p>
 
-Each CustomMessages object can define a list of messages to be
+<p>Each CustomMessages object can define a list of messages to be
 customized. This lets you centrally locate all of your custom messages
 by putting them all in a single object, if you wish. Alternatively, you
 can create separate objects, if you prefer to keep them with some other
 body of code they apply to. In either case, the library gathers them all
-up during preinit.
+up during preinit.</p>
 
-For most purposes the CustomMessages objects you create can be anonymous
+<p>For most purposes the CustomMessages objects you create can be anonymous
 objects; the only reason for giving a CustomMessage object a name would
 be if you wanted to change its properties during the course of a game
-(so that you'd need to be able to refer to the CustomMessage object in
+(so that you’d need to be able to refer to the CustomMessage object in
 your code). The properties you will or may need to define on your
-CustomMessage object are the following:
+CustomMessage object are the following:</p>
 
-**priority**: The priority determines the precedence of a message
+<p><strong>priority</strong>: The priority determines the precedence of a message
 defined in this object, if the same message is defined in more than one
 CustomMessages object. The message with the highest priority is the one
-that's actually displayed. The library defines one standard priority
+that’s actually displayed. The library defines one standard priority
 level: 100 is the priority for language module overrides. Each language
 module would need to provide a translated set of the standard library
 messages, via a CustomMessages object with priority 100. (The default
@@ -371,9 +354,9 @@ English messages defined in-line throughout the library via DMsg() and
 BMsg() macros effectively have a priority of negative infinity, since
 any custom message of any priority overrides a default.) Games will
 generally want to override all library messages, including translations,
-so the default priority is set to 200.
+so the default priority is set to 200.</p>
 
-**active**: Determines whether this customizer is active. If you want to
+<p><strong>active</strong>: Determines whether this customizer is active. If you want to
 change the messages at different points in the course of the game, you
 can use this to turn sets of messages on and off. For example, if your
 game includes narrator changes at certain points, you can create
@@ -381,22 +364,21 @@ separate sets of messages per narrator. By default, we make all
 customizations active, but you can override this to turn selected
 messages on and off as needed. Note that the library consults this every
 time it looks up a message, so you can change the value dynamically, or
-use a method whose return value changes dynamically.
+use a method whose return value changes dynamically.</p>
 
-**messages**: The list of messages being customized. This can contain
-any number of messages; the order isn't important. Each message is
-defined with a Msg() macro: `Msg(id key, 'Message
-text'), ...`. The "id key" is the message ID that the library uses
-in the DMsg() or BMsg() message that you're customizing. (DON'T use
+<p><strong>messages</strong>: The list of messages being customized. This can contain
+any number of messages; the order isn’t important. Each message is
+defined with a Msg() macro: <code class="language-plaintext highlighter-rouge">Msg(id key, 'Message
+text'), ...</code>. The “id key” is the message ID that the library uses
+in the DMsg() or BMsg() message that you’re customizing. (DON’T use
 quotes around the ID key.) The message text is a single-quoted string
 giving the message text. This can contain curly-brace replacement
-parameters.
+parameters.</p>
 
-For example, here's how we might define a CustomMessages object to
-replace the dobjFor(Take) messages we looked at above:
+<p>For example, here’s how we might define a CustomMessages object to
+replace the dobjFor(Take) messages we looked at above:</p>
 
-`
-     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
     CustomMessages
         messages = [
             Msg(report take, 'Snatched. | You grab {1}. '),
@@ -409,44 +391,40 @@ replace the dobjFor(Take) messages we looked at above:
                
         ]
     ;
-`
+</code></pre></div></div>
 
-Note that we can't *change* the parameters used by the message strings
+<p>Note that we can’t <em>change</em> the parameters used by the message strings
 (the ones that {1} and the like refer to) but that we can continue to
-use the ones used in the original DMsg() and BMsg() macros we're
+use the ones used in the original DMsg() and BMsg() macros we’re
 replacing; in fact what the CustomMessages object does is effectively to
-substitute a different *msg* parameter into the DMsg/BMsg(key, msg,
-params...) set-up, leaving the original params in place.
+substitute a different <em>msg</em> parameter into the DMsg/BMsg(key, msg,
+params…) set-up, leaving the original params in place.</p>
 
-While we're on the subject of the numerical parameter substitutions
+<p>While we’re on the subject of the numerical parameter substitutions
 ({1}, {2} and the like) and the parameters they can refer to, up until
-now all the examples we've shown of them have used single-quoted string
-values in the *param* list, but the values can also be numbers (or
+now all the examples we’ve shown of them have used single-quoted string
+values in the <em>param</em> list, but the values can also be numbers (or
 numerical expressions) and objects (in which case the name property is
 used in the substitution). For example, the following is legal if not
-exactly useful:
+exactly useful:</p>
 
-`
-    DMsg(two things, 'The {1} and the {2} are {3} separate objects. ', redBall, blueBall, 1 + 1);
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DMsg(two things, 'The {1} and the {2} are {3} separate objects. ', redBall, blueBall, 1 + 1);
+</code></pre></div></div>
 
-  
+<p>Note that some care needs to be taken with a CustomMessages object
+that’s meant to supply variable messages via embedded expressions. For
+example the following CustomMessages object won’t work as expected:</p>
 
-Note that some care needs to be taken with a CustomMessages object
-that's meant to supply variable messages via embedded expressions. For
-example the following CustomMessages object won't work as expected:
-
-`
-     CustomMessages
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     CustomMessages
         messages = [
-            Msg(not important, '&lt;<one of="">&gt;Leave it alone&lt;<or>&gt;It\'s not worth messing
-                with&lt;<or>&gt;{The cobj} {is} totally unimportant&lt;<shuffled>&gt;. ')
+            Msg(not important, '&lt;&lt;one of&gt;&gt;Leave it alone&lt;&lt;or&gt;&gt;It\'s not worth messing
+                with&lt;&lt;or&gt;&gt;{The cobj} {is} totally unimportant&lt;&lt;shuffled&gt;&gt;. ')
         ]
     ;
      
-`
+</code></pre></div></div>
 
-This is to do with the way the TADS 3 language evaluates embedded
+<p>This is to do with the way the TADS 3 language evaluates embedded
 expressions in single-quoted strings, and with the fact that a
 CustomMessages object stores its data in a LookupTable. As soon as that
 LookUp table is referenced, all its elements are evaluated, and any
@@ -454,530 +432,526 @@ single-quoted strings in the table are then stored as the single-quoted
 string value they come out as at that moment (in this case, as a string
 without any embedded expressions but containing just one of the options.
 The way round this is to wrap the string in an anonymous function, like
-so:
+so:</p>
 
-`
-      
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      
       CustomMessages
         messages = [
-            Msg(not important,{: '&lt;<one of="">&gt;Leave it alone&lt;<or>&gt;It\'s not worth messing
-                with&lt;<or>&gt;{The cobj} {is} totally unimportant&lt;<shuffled>&gt;. ' })
+            Msg(not important,{: '&lt;&lt;one of&gt;&gt;Leave it alone&lt;&lt;or&gt;&gt;It\'s not worth messing
+                with&lt;&lt;or&gt;&gt;{The cobj} {is} totally unimportant&lt;&lt;shuffled&gt;&gt;. ' })
         ]
     ;
       
-`
+</code></pre></div></div>
 
-In fact, the second parameter of any Msg(), BMsg() or DMsg() macro can
+<p>In fact, the second parameter of any Msg(), BMsg() or DMsg() macro can
 always be an anonymous function that returns a single-quoted string
 instead of just a single-quoted string, but this is the kind of occasion
-on which this is most likely to be useful.
+on which this is most likely to be useful.</p>
 
-<span id="findingmsg"></span>
+<p><span id="findingmsg"></span></p>
 
-## Finding Message IDs
+<h2 id="finding-message-ids">Finding Message IDs</h2>
 
-Being able to change the text of messages using a CustomMessages object
+<p>Being able to change the text of messages using a CustomMessages object
 is all very well, but how do you go about finding the message id of the
-message you need to change?
+message you need to change?</p>
 
-One way would be to search all the source files (which is not so bad if
+<p>One way would be to search all the source files (which is not so bad if
 you happen to be using Windows Workbench and can make use of its search
-facilities to search your entire project). This may work, but it's not
-ideal, so adv3Lite now provides a couple of alternatives.
+facilities to search your entire project). This may work, but it’s not
+ideal, so adv3Lite now provides a couple of alternatives.</p>
 
-1.  You can use the Messages tab of the [Library Reference
-    Manual](../libref/index.html). This will bring up alphabetical list
-    of all the message ID's of the DMsg() and BMsg() definitions in the
-    library. Clicking on any of these will bring up a complete list of
-    all the DMsg() and BMsg() definitions in the main panel, which
-    hopefully your browser will allow you to search. These are linked to
-    their definitions in the relevant source code file, to allow you to
-    check the context of their definition.
-2.  You can use the [CSV](tads3lite_msgs.csv) file generated from Jerry
-    Ford's discovery tool. This contains a list of all the BMsg and DMsg
-    definitions which you can sort, search and otherwise play around
-    with in any way you find useful, provided you have a spreadsheet
-    program (such as Excel) that can open .csv files.
+<ol>
+  <li>You can use the Messages tab of the <a href="../libref/index.html">Library Reference
+Manual</a>. This will bring up alphabetical list
+of all the message ID’s of the DMsg() and BMsg() definitions in the
+library. Clicking on any of these will bring up a complete list of
+all the DMsg() and BMsg() definitions in the main panel, which
+hopefully your browser will allow you to search. These are linked to
+their definitions in the relevant source code file, to allow you to
+check the context of their definition.</li>
+  <li>You can use the <a href="tads3lite_msgs.csv">CSV</a> file generated from Jerry
+Ford’s discovery tool. This contains a list of all the BMsg and DMsg
+definitions which you can sort, search and otherwise play around
+with in any way you find useful, provided you have a spreadsheet
+program (such as Excel) that can open .csv files.</li>
+</ol>
 
-  
+<h2 id="message-substitution-parameters"><span id="parameter">Message Substitution Parameters</span></h2>
 
-## <span id="parameter">Message Substitution Parameters</span>
-
-The previous section introduced the point that we can use message
+<p>The previous section introduced the point that we can use message
 substitution parameters in conjunction with the DMsg() and BMsg()
 macros. In fact they can be used anywhere, with the limitation that the
-numerical substitution parameters ({0}...{9}) have no meaning outside a
+numerical substitution parameters ({0}…{9}) have no meaning outside a
 DMsg() or BMsg() macro, since there are no further parameters for them
 to refer to. If you want to use these numerical parameters outside
 BMsg() and DMsg() (i.e. without specifying a key value you have no use
 for) you can use the dmsg() and bmsg() functions, which work like DMsg()
-and BMsg() but don't take the first (key) parameter, e.g.
-`dmsg('You take {1}. ', gActionListStr);`. To
+and BMsg() but don’t take the first (key) parameter, e.g.
+<code class="language-plaintext highlighter-rouge">dmsg('You take {1}. ', gActionListStr);</code>. To
 make full use of the message substitution parameters, however, you have
-to know what they all are, so we shall next provide a list of them all.
+to know what they all are, so we shall next provide a list of them all.</p>
 
-In the following table *obj* can be one of: actor, dobj (the current
+<p>In the following table <em>obj</em> can be one of: actor, dobj (the current
 direct object of the action), iobj (the current indirect object of the
 action), cobj (the current object — direct or indirect — of the action),
 the globalParamName of an object, or a temporary parameter name defined
-with the gMessageParams(obj) macro.
+with the gMessageParams(obj) macro.</p>
 
-**Parameter**
+<p><strong>Parameter</strong></p>
 
-&lt;/div&gt;
+<p><strong>Explanation</strong></p>
 
-**Explanation**
+<p>{i}</p>
 
-{i}
+<p>The actor’s name in the subjective case (‘I’ or ‘you’ for the pc in a
+first or second person game)</p>
 
-The actor's name in the subjective case ('I' or 'you' for the pc in a
-first or second person game)
+<p>{me}</p>
 
-{me}
+<p>The actor’s name in the objective case (‘me’ or ‘you’ for the pc in a
+first or second person game)</p>
 
-The actor's name in the objective case ('me' or 'you' for the pc in a
-first or second person game)
+<p>{my}</p>
 
-{my}
+<p>The possessive pronoun for the actor (‘my’ or ‘your’ for the pc in a
+first or second person game)</p>
 
-The possessive pronoun for the actor ('my' or 'your' for the pc in a
-first or second person game)
+<p>{mine}</p>
 
-{mine}
+<p>The possessive noun for the actor (‘mine’ or ‘yours’ for the pc in a
+first or second person game)</p>
 
-The possessive noun for the actor ('mine' or 'yours' for the pc in a
-first or second person game)
+<p>{myself}</p>
 
-{myself}
+<p>The reflexive pronoun for the actor (e.g. ‘myself’ or ‘yourself’)</p>
 
-The reflexive pronoun for the actor (e.g. 'myself' or 'yourself')
+<p>{we}</p>
 
-{we}
+<p>The actor’s name in the subjective case (‘I’ or ‘you’ for the pc in a
+first or second person game)</p>
 
-The actor's name in the subjective case ('I' or 'you' for the pc in a
-first or second person game)
+<p>{us}</p>
 
-{us}
+<p>The actor’s name in the objective case (‘me’ or ‘you’ for the pc in a
+first or second person game)</p>
 
-The actor's name in the objective case ('me' or 'you' for the pc in a
-first or second person game)
+<p>{our}</p>
 
-{our}
+<p>The possessive pronoun for the actor (‘my’ or ‘your’ for the pc in a
+first or second person game)</p>
 
-The possessive pronoun for the actor ('my' or 'your' for the pc in a
-first or second person game)
+<p>{ours}</p>
 
-{ours}
+<p>The possessive noun for the actor (‘mine’ or ‘yours’ for the pc in a
+first or second person game)</p>
 
-The possessive noun for the actor ('mine' or 'yours' for the pc in a
-first or second person game)
+<p>{ourselves}</p>
 
-{ourselves}
+<p>The reflexive pronoun for the actor (e.g. ‘myself’ or ‘yourself’)</p>
 
-The reflexive pronoun for the actor (e.g. 'myself' or 'yourself')
+<p>{here}</p>
 
-{here}
+<p>If the actor is the PC this translates to ‘here’ for the present tense
+and ‘there’ for any other tense; otherwise it translates to nothing at
+all.</p>
 
-If the actor is the PC this translates to 'here' for the present tense
-and 'there' for any other tense; otherwise it translates to nothing at
-all.
+<p>{then}</p>
 
-{then}
+<p>This translates to ‘now’ for the present tense and ‘then’ for the past.</p>
 
-This translates to 'now' for the present tense and 'then' for the past.
+<p>{now}</p>
 
-{now}
+<p>This translates to ‘now’ for the present tense and nothing otherwise.</p>
 
-This translates to 'now' for the present tense and nothing otherwise.
+<p>{the subj <em>obj</em>}</p>
 
-{the subj *obj*}
+<p>This translates to the theName property of <em>obj</em> and marks <em>obj</em> as the
+subject of the sentence.</p>
 
-This translates to the theName property of *obj* and marks *obj* as the
-subject of the sentence.
+<p>{the <em>obj</em>}</p>
 
-{the *obj*}
+<p>This translates to the theName property of <em>obj</em> and marks <em>obj</em> as the
+object of the sentence.</p>
 
-This translates to the theName property of *obj* and marks *obj* as the
-object of the sentence.
+<p>{the <em>obj’s</em>}</p>
 
-{the *obj's*}
+<p>This translates to the possessive of <em>obj</em> (e.g. “the red ball’s”,
+“Bob’s”).</p>
 
-This translates to the possessive of *obj* (e.g. "the red ball's",
-"Bob's").
+<p>{a subj <em>obj</em>}</p>
 
-{a subj *obj*}
+<p>This translates to the aName property of <em>obj</em> and marks <em>obj</em> as the
+subject of the sentence.</p>
 
-This translates to the aName property of *obj* and marks *obj* as the
-subject of the sentence.
+<p>{an subj <em>obj</em>}</p>
 
-{an subj *obj*}
+<p>This translates to the aName property of <em>obj</em> and marks <em>obj</em> as the
+subject of the sentence.</p>
 
-This translates to the aName property of *obj* and marks *obj* as the
-subject of the sentence.
+<p>{a <em>obj</em>}</p>
 
-{a *obj*}
+<p>This translates to the aName property of <em>obj</em> and marks <em>obj</em> as the
+object of the sentence.</p>
 
-This translates to the aName property of *obj* and marks *obj* as the
-object of the sentence.
+<p>{an <em>obj</em>}</p>
 
-{an *obj*}
+<p>This translates to the aName property of <em>obj</em> and marks <em>obj</em> as the
+object of the sentence.</p>
 
-This translates to the aName property of *obj* and marks *obj* as the
-object of the sentence.
+<p>{in <em>obj</em>}</p>
 
-{in *obj*}
+<p>The objInName of <em>obj</em> (e.g. “in the box” or “on the table”).</p>
 
-The objInName of *obj* (e.g. "in the box" or "on the table").
+<p>{inprep <em>obj</em>}</p>
 
-{inprep *obj*}
+<p>The objInPrep of <em>obj</em> (e.g. “in” or “on”).</p>
 
-The objInPrep of *obj* (e.g. "in" or "on").
+<p>{out <em>obj</em>}</p>
 
-{out *obj*}
+<p>The objOutOfName of <em>obj</em> (e.g. “out of the box” or “off the table”).</p>
 
-The objOutOfName of *obj* (e.g. "out of the box" or "off the table").
+<p>{he <em>obj</em>}</p>
 
-{he *obj*}
+<p>The subjective case pronoun for <em>obj</em> (e.g. ‘he’, ‘she’, ‘it’, or
+‘they’).</p>
 
-The subjective case pronoun for *obj* (e.g. 'he', 'she', 'it', or
-'they').
+<p>{she <em>obj</em>}</p>
 
-{she *obj*}
+<p>The subjective case pronoun for <em>obj</em> (e.g. ‘he’, ‘she’, ‘it’, or
+‘they’).</p>
 
-The subjective case pronoun for *obj* (e.g. 'he', 'she', 'it', or
-'they').
+<p>{him <em>obj</em>}</p>
 
-{him *obj*}
+<p>The objective case pronoun for <em>obj</em> (e.g. ‘him’, ‘her’, ‘it’, or
+‘them’).</p>
 
-The objective case pronoun for *obj* (e.g. 'him', 'her', 'it', or
-'them').
+<p>{her <em>obj</em>}</p>
 
-{her *obj*}
+<p>The possessive pronoun for <em>obj</em> (e.g. ‘his’, ‘her’, ‘its’, or ‘their’).</p>
 
-The possessive pronoun for *obj* (e.g. 'his', 'her', 'its', or 'their').
+<p>{hers <em>obj</em>}</p>
 
-{hers *obj*}
+<p>The possessive noun for <em>obj</em> (e.g. ‘his’, ‘hers’, ‘its’, or ‘theirs’).</p>
 
-The possessive noun for *obj* (e.g. 'his', 'hers', 'its', or 'theirs').
+<p>{herself <em>obj</em>}</p>
 
-{herself *obj*}
+<p>The reflexive pronoun for <em>obj</em> (e.g. ‘himself’, ‘herself’, ‘itself’, or
+‘themselves’).</p>
 
-The reflexive pronoun for *obj* (e.g. 'himself', 'herself', 'itself', or
-'themselves').
+<p>{himself <em>obj</em>}</p>
 
-{himself *obj*}
+<p>The reflexive pronoun for <em>obj</em> (e.g. ‘himself’, ‘herself’, ‘itself’, or
+‘themselves’).</p>
 
-The reflexive pronoun for *obj* (e.g. 'himself', 'herself', 'itself', or
-'themselves').
+<p>{they <em>obj</em>}</p>
 
-{they *obj*}
+<p>The subjective case pronoun for <em>obj</em> (e.g. ‘he’, ‘she’, ‘it’, or
+‘they’).</p>
 
-The subjective case pronoun for *obj* (e.g. 'he', 'she', 'it', or
-'they').
+<p>{them <em>obj</em>}</p>
 
-{them *obj*}
+<p>The objective case pronoun for <em>obj</em> (e.g. ‘him’, ‘her’, ‘it’, or
+‘them’).</p>
 
-The objective case pronoun for *obj* (e.g. 'him', 'her', 'it', or
-'them').
+<p>{their <em>obj</em>}</p>
 
-{their *obj*}
+<p>The possessive pronoun for <em>obj</em> (e.g. ‘his’, ‘her’, ‘its’, or ‘their’).</p>
 
-The possessive pronoun for *obj* (e.g. 'his', 'her', 'its', or 'their').
+<p>{theirs <em>obj</em>}</p>
 
-{theirs *obj*}
+<p>The possessive noun for <em>obj</em> (e.g. ‘his’, ‘hers’, ‘its’, or ‘theirs’).</p>
 
-The possessive noun for *obj* (e.g. 'his', 'hers', 'its', or 'theirs').
+<p>{themselves <em>obj</em>}</p>
 
-{themselves *obj*}
+<p>The reflexive pronoun for <em>obj</em> (e.g. ‘himself’, ‘herself’, ‘itself’, or
+‘themselves’).</p>
 
-The reflexive pronoun for *obj* (e.g. 'himself', 'herself', 'itself', or
-'themselves').
+<p>{itself <em>obj</em>}</p>
 
-{itself *obj*}
+<p>The reflexive pronoun for <em>obj</em> (e.g. ‘himself’, ‘herself’, ‘itself’, or
+‘themselves’).</p>
 
-The reflexive pronoun for *obj* (e.g. 'himself', 'herself', 'itself', or
-'themselves').
+<p>{that subj <em>obj</em>}</p>
 
-{that subj *obj*}
+<p>The demonstrative pronoun for <em>obj</em> as subject (‘that’ or ‘those’).</p>
 
-The demonstrative pronoun for *obj* as subject ('that' or 'those').
+<p>{that <em>obj</em>}</p>
 
-{that *obj*}
+<p>The demonstrative pronoun for <em>obj</em> as object (‘that’ or ‘those’).</p>
 
-The demonstrative pronoun for *obj* as object ('that' or 'those').
+<p>{<a href="#dummy">dummy</a>}</p>
 
-{[dummy](#dummy)}
+<p>Expands to nothing but acts as a singular subject marker for a verb that
+follows to agree with (e.g., ‘There{dummy}{\s} nothing {here}.’)</p>
 
-Expands to nothing but acts as a singular subject marker for a verb that
-follows to agree with (e.g., 'There{dummy}{\\s} nothing {here}.')
+<p>{plural}</p>
 
-{plural}
+<p>Expands to nothing but acts as a plural subject marker for a verb that
+follows to agree with (e.g., ‘There{plural} {is} no people {here}.’)</p>
 
-Expands to nothing but acts as a plural subject marker for a verb that
-follows to agree with (e.g., 'There{plural} {is} no people {here}.')
+<p>{aac}</p>
 
-{aac}
+<p>Expands to nothing but acts as a subject marker agreeing with the actor
+for a verb that follows to agree with (see below).)</p>
 
-Expands to nothing but acts as a subject marker agreeing with the actor
-for a verb that follows to agree with (see below).)
+<p>{prev}</p>
 
-{prev}
+<p>Expands to nothing but acts as a subject marker to make a verb that
+follows agree with a previous list(see <a href="#prev">below</a>)</p>
 
-Expands to nothing but acts as a subject marker to make a verb that
-follows agree with a previous list(see [below](#prev))
+<p>{am}</p>
 
-{am}
+<p>Verb ‘to be’ conjugated to agree in tense and number with the
+immediately preceeding subject (e.g. am, are, is, was, were)</p>
 
-Verb 'to be' conjugated to agree in tense and number with the
-immediately preceeding subject (e.g. am, are, is, was, were)
+<p>{are}</p>
 
-{are}
+<p>Verb ‘to be’ conjugated to agree in tense and number with the
+immediately preceeding subject (e.g. am, are, is, was, were)</p>
 
-Verb 'to be' conjugated to agree in tense and number with the
-immediately preceeding subject (e.g. am, are, is, was, were)
+<p>{is}</p>
 
-{is}
+<p>Verb ‘to be’ conjugated to agree in tense and number with the
+immediately preceeding subject (e.g. am, are, is, was, were)</p>
 
-Verb 'to be' conjugated to agree in tense and number with the
-immediately preceeding subject (e.g. am, are, is, was, were)
+<p>{isn’t}</p>
 
-{isn't}
+<p>Negated verb ‘to be’ contracted and conjugated to agree with the
+immediately preceeding subject (e.g. am not, aren’t, isn’t, wasn’t,
+weren’t)</p>
 
-Negated verb 'to be' contracted and conjugated to agree with the
-immediately preceeding subject (e.g. am not, aren't, isn't, wasn't,
-weren't)
+<p>{amn’t}</p>
 
-{amn't}
+<p>Negated verb ‘to be’ contracted and conjugated to agree with the
+immediately preceeding subject (e.g. am not, aren’t, isn’t, wasn’t,
+weren’t)</p>
 
-Negated verb 'to be' contracted and conjugated to agree with the
-immediately preceeding subject (e.g. am not, aren't, isn't, wasn't,
-weren't)
+<p>{aren’t}</p>
 
-{aren't}
+<p>Negated verb ‘to be’ contracted and conjugated to agree with the
+immediately preceeding subject (e.g. am not, aren’t, isn’t, wasn’t,
+weren’t)</p>
 
-Negated verb 'to be' contracted and conjugated to agree with the
-immediately preceeding subject (e.g. am not, aren't, isn't, wasn't,
-weren't)
+<p>{‘m}</p>
 
-{'m}
+<p>Contracted verb ‘to be’ agreeing with the immediately preceeding subject
+(e.g. ‘m, ‘re, ‘s, was, were)</p>
 
-Contracted verb 'to be' agreeing with the immediately preceeding subject
-(e.g. 'm, 're, 's, was, were)
+<p>{‘re}</p>
 
-{'re}
+<p>Contracted verb ‘to be’ agreeing with the immediately preceeding subject
+(e.g. ‘m, ‘re, ‘s, was, were)</p>
 
-Contracted verb 'to be' agreeing with the immediately preceeding subject
-(e.g. 'm, 're, 's, was, were)
+<p>{‘s}</p>
 
-{'s}
+<p>Contracted verb ‘to be’ agreeing with the immediately preceeding subject
+(e.g. ‘m, ‘re, ‘s, was, were)</p>
 
-Contracted verb 'to be' agreeing with the immediately preceeding subject
-(e.g. 'm, 're, 's, was, were)
+<p>{was}</p>
 
-{was}
+<p>Past verb ‘to be’ agreeing with the immediately preceeding subject (e.g.
+was, had been, will have been)</p>
 
-Past verb 'to be' agreeing with the immediately preceeding subject (e.g.
-was, had been, will have been)
+<p>{were}</p>
 
-{were}
+<p>Past verb ‘to be’ agreeing with the immediately preceeding subject (e.g.
+was, had been, will have been)</p>
 
-Past verb 'to be' agreeing with the immediately preceeding subject (e.g.
-was, had been, will have been)
+<p>{wasn\t}</p>
 
-{wasn\\t}
+<p>Negated past verb ‘to be’ agreeing with the immediately preceeding
+subject (e.g. wasn’t, hadn’t been, won’t have been)</p>
 
-Negated past verb 'to be' agreeing with the immediately preceeding
-subject (e.g. wasn't, hadn't been, won't have been)
+<p>{weren\t}</p>
 
-{weren\\t}
+<p>Negated past verb ‘to be’ agreeing with the immediately preceeding
+subject (e.g. wasn’t, hadn’t been, won’t have been)</p>
 
-Negated past verb 'to be' agreeing with the immediately preceeding
-subject (e.g. wasn't, hadn't been, won't have been)
+<p>{wasnot}</p>
 
-{wasnot}
+<p>Negated past verb ‘to be’ agreeing with the immediately preceeding
+subject (e.g. was not, had not been, will not have been)</p>
 
-Negated past verb 'to be' agreeing with the immediately preceeding
-subject (e.g. was not, had not been, will not have been)
+<p>{werenot}</p>
 
-{werenot}
+<p>Negated past verb ‘to be’ agreeing with the immediately preceeding
+subject (e.g. was not, had not been, will not have been)</p>
 
-Negated past verb 'to be' agreeing with the immediately preceeding
-subject (e.g. was not, had not been, will not have been)
+<p>{\ve}</p>
 
-{\\ve}
+<p>Contracted verb ‘to have’ agreeing with the immediately preceeding
+subject (e.g. I’ve, I’d, you’ll have)</p>
 
-Contracted verb 'to have' agreeing with the immediately preceeding
-subject (e.g. I've, I'd, you'll have)
+<p>{haven\t}</p>
 
-{haven\\t}
+<p>Negated contracted verb ‘to have’ agreeing with the immediately
+preceeding subject (e.g. haven’t, hadn’t, won’t have)</p>
 
-Negated contracted verb 'to have' agreeing with the immediately
-preceeding subject (e.g. haven't, hadn't, won't have)
+<p>{hasn\t}</p>
 
-{hasn\\t}
+<p>Negated contracted verb ‘to have’ agreeing with the immediately
+preceeding subject (e.g. haven’t, hadn’t, won’t have)</p>
 
-Negated contracted verb 'to have' agreeing with the immediately
-preceeding subject (e.g. haven't, hadn't, won't have)
+<p>{don’t <em>verb</em>}</p>
 
-{don't *verb*}
+<p>Contracted do not <em>verb</em>, where <em>verb</em> is an infinitive (e.g. if
+<em>verb</em>=’come’: don’t come, doesn’t come, didn’t come)</p>
 
-Contracted do not *verb*, where *verb* is an infinitive (e.g. if
-*verb*='come': don't come, doesn't come, didn't come)
+<p>{doesn’t <em>verb</em>}</p>
 
-{doesn't *verb*}
+<p>Contracted do not <em>verb</em>, where <em>verb</em> is an infinitive (e.g. if
+<em>verb</em>=’come’: don’t come, doesn’t come, didn’t come)</p>
 
-Contracted do not *verb*, where *verb* is an infinitive (e.g. if
-*verb*='come': don't come, doesn't come, didn't come)
+<p>{do not <em>verb</em>}</p>
 
-{do not *verb*}
+<p>Do not <em>verb</em>, where <em>verb</em> is an infinitive (e.g. if <em>verb</em>=’come’: do
+not come, does not come, did not come)</p>
 
-Do not *verb*, where *verb* is an infinitive (e.g. if *verb*='come': do
-not come, does not come, did not come)
+<p>{does not <em>verb</em>}</p>
 
-{does not *verb*}
+<p>Do not <em>verb</em>, where <em>verb</em> is an infinitive (e.g. if <em>verb</em>=’come’: do
+not come, does not come, did not come)</p>
 
-Do not *verb*, where *verb* is an infinitive (e.g. if *verb*='come': do
-not come, does not come, did not come)
+<p>{can}</p>
 
-{can}
+<p>Appropriate form of can (can or could)</p>
 
-Appropriate form of can (can or could)
+<p>{cannot}</p>
 
-{cannot}
+<p>Appropriate form of can (cannot or could not)</p>
 
-Appropriate form of can (cannot or could not)
+<p>{can’t}</p>
 
-{can't}
+<p>Appropriate form of can (can’t or couldn’t)</p>
 
-Appropriate form of can (can't or couldn't)
+<p>{must <em>verb</em>}</p>
 
-{must *verb*}
+<p>Conjugate must with <em>verb</em>, where <em>verb</em> is an infinitive (e.g. if
+<em>verb</em>=’come’: must come, had to come)</p>
 
-Conjugate must with *verb*, where *verb* is an infinitive (e.g. if
-*verb*='come': must come, had to come)
+<p>{<em>verb</em>}</p>
 
-{*verb*}
+<p>Conjugate <em>verb</em>, where <em>verb</em> can be ‘have’, ‘do’, ‘run’, ‘think’,
+‘take’, ‘hold’, ‘say’ or one of over 200 other irregular verbs.</p>
 
-Conjugate *verb*, where *verb* can be 'have', 'do', 'run', 'think',
-'take', 'hold', 'say' or one of over 200 other irregular verbs.
+<p>{s/d}</p>
 
-{s/d}
+<p>Conjugate verb ending -s/-d (e.g. close{s/d} -&gt; close, closes, closed).</p>
 
-Conjugate verb ending -s/-d (e.g. close{s/d} -\&gt; close, closes, closed).
+<p>{s/ed}</p>
 
-{s/ed}
+<p>Conjugate verb ending -s/-ed (e.g. open{s/ed} -&gt; open, opens, opened).</p>
 
-Conjugate verb ending -s/-ed (e.g. open{s/ed} -\&gt; open, opens, opened).
+<p>{es/ed}</p>
 
-{es/ed}
+<p>Conjugate verb ending -es/-ed (e.g. smash{es/ed} -&gt; smash, smashes,
+smashed).</p>
 
-Conjugate verb ending -es/-ed (e.g. smash{es/ed} -\&gt; smash, smashes,
-smashed).
+<p>{s/?ed}</p>
 
-{s/?ed}
+<p>Conjugate verb ending -s/-ed with final consonant doubled (e.g.
+stop{s/?ed} -&gt; stop, stops, stopped).</p>
 
-Conjugate verb ending -s/-ed with final consonant doubled (e.g.
-stop{s/?ed} -\&gt; stop, stops, stopped).
+<p>{ies/ied}</p>
 
-{ies/ied}
+<p>Conjugate verb ending -y/-ies/-ied (e.g. cr{ies/ied} -&gt; cry, cries,
+cried).</p>
 
-Conjugate verb ending -y/-ies/-ied (e.g. cr{ies/ied} -\&gt; cry, cries,
-cried).
+<p>{lb}</p>
 
-{lb}
+<p>literal left brace {</p>
 
-literal left brace {
+<p>{rb}</p>
 
-{rb}
+<p>literal right brace }</p>
 
-literal right brace }
+<p>{bar}</p>
 
-{bar}
+<p>vertical bar symbol |</p>
 
-vertical bar symbol \|
+<p>{s}</p>
 
-{s}
+<p>expands to ‘s’ if the previous parameter was plural, or nothing
+otherwise.</p>
 
-expands to 's' if the previous parameter was plural, or nothing
-otherwise.
+<p>{es}</p>
 
-{es}
+<p>expands to ‘es’ if the previous parameter was plural, or nothing
+otherwise.</p>
 
-expands to 'es' if the previous parameter was plural, or nothing
-otherwise.
+<p>{ies}</p>
 
-{ies}
+<p>expands to ‘ies’ if the previous parameter was plural, or ‘y’ otherwise.</p>
 
-expands to 'ies' if the previous parameter was plural, or 'y' otherwise.
+<p>{1}…{9}</p>
 
-{1}...{9}
+<p>substitute arguments 1 to 9</p>
 
-substitute arguments 1 to 9
+<p>{# <em>n</em>}</p>
 
-{# *n*}
+<p>spells the number given by integer argument <em>n</em> (1-9)</p>
 
-spells the number given by integer argument *n* (1-9)
+<p>{and <em>n</em>}</p>
 
-{and *n*}
+<p>shows the list given by integer argument n (1-9) as a basic “and” list
+(“x, y, and z”)</p>
 
-shows the list given by integer argument n (1-9) as a basic "and" list
-("x, y, and z")
+<p>{or <em>n</em>}</p>
 
-{or *n*}
+<p>shows the list given by integer argument n (1-9) as a basic “or” list
+(“x, y, or z”)</p>
 
-shows the list given by integer argument n (1-9) as a basic "or" list
-("x, y, or z")
+<p>{<em>a</em>|<em>b</em>}</p>
 
-{*a*\|*b*}
+<p>displays <em>b</em> if the game is in the past tense and <em>a</em> otherwise.</p>
 
-displays *b* if the game is in the past tense and *a* otherwise.
+<p>A couple of these may be made clearer by a couple of examples.
+<code class="language-plaintext highlighter-rouge">dmsg('The available colours are {and 1}', \['red',
+'blue', 'green'\]);</code> would display “The available colours are red,
+blue and green.”. <code class="language-plaintext highlighter-rouge">dmsg('There are {# 1} colour{s}
+available. ', 3); </code>would display “There are three colours
+available. “</p>
 
-A couple of these may be made clearer by a couple of examples.
-`dmsg('The available colours are {and 1}', \['red',
-'blue', 'green'\]);` would display "The available colours are red,
-blue and green.". `dmsg('There are {# 1} colour{s}
-available. ', 3); `would display "There are three colours
-available. "
-
-You'll note that there are several message substitution parameters that
-do exactly the same thing, for example "{I} {take} {the dobj}" has
-exactly the same effect as "{We} {take} {the dobj}" while "{He fred}
-doesn't want to kiss {him mary}" has exactly the same effect as "{They
-fred} doesn't want to kiss {them mary)". In the first example we should
-get something like "You take the wallet" either way, and in the second
-"He doesn't want to kiss her" either way. The variants are supplied so
+<p>You’ll note that there are several message substitution parameters that
+do exactly the same thing, for example “{I} {take} {the dobj}” has
+exactly the same effect as “{We} {take} {the dobj}” while “{He fred}
+doesn’t want to kiss {him mary}” has exactly the same effect as “{They
+fred} doesn’t want to kiss {them mary)”. In the first example we should
+get something like “You take the wallet” either way, and in the second
+“He doesn’t want to kiss her” either way. The variants are supplied so
 that game authors can use whatever feels most natural to them, but the
-advantage of the plural forms ("they", "them", "their", "theirs") is
-that several of the singular ones ("her", "his", "it", "its") are
-potentially ambiguous ("her" could be objective or possessive, while
-"his" and "its" could be the possessive pronoun or the possessive
-adjective, and "it" the subjective or objective case), whereas each of
-"they", "them", "their" and "theirs" can only mean one thing, so by
-using those you don't have to worry about remembering which option the
-library goes for in the ambiguous singular cases. The problem doesn't
-arise in the first person singular ("I", "me", "my", "mine") but some
-authors may prefer to use the first person plural versions ("we", "us",
-"our", "ours") for consistency with "they" etc. (and this is what Inform
-7 does).
+advantage of the plural forms (“they”, “them”, “their”, “theirs”) is
+that several of the singular ones (“her”, “his”, “it”, “its”) are
+potentially ambiguous (“her” could be objective or possessive, while
+“his” and “its” could be the possessive pronoun or the possessive
+adjective, and “it” the subjective or objective case), whereas each of
+“they”, “them”, “their” and “theirs” can only mean one thing, so by
+using those you don’t have to worry about remembering which option the
+library goes for in the ambiguous singular cases. The problem doesn’t
+arise in the first person singular (“I”, “me”, “my”, “mine”) but some
+authors may prefer to use the first person plural versions (“we”, “us”,
+“our”, “ours”) for consistency with “they” etc. (and this is what Inform
+7 does).</p>
 
-The *verb* parameter is generally used like this:
-`DMsg(okay take, '{I} {take} {the dobj}. ')`.
+<p>The <em>verb</em> parameter is generally used like this:
+<code class="language-plaintext highlighter-rouge">DMsg(okay take, '{I} {take} {the dobj}. ')</code>.
 But how do you know which verbs the library defines? You can see them by
 looking at the definition of englishCustomVocab.verbParams in english.t.
-If the verb you need isn't there (and it actually needs to be defined as
+If the verb you need isn’t there (and it actually needs to be defined as
 a parameter instead of plain text) you can add more verbs with a
-[CustomVocab](#custom) object, which is explained in more detail below.
-The library defines most common *irregular* verbs for use in the {verb}
-parameter. For regular verbs, see further below.
+<a href="#custom">CustomVocab</a> object, which is explained in more detail below.
+The library defines most common <em>irregular</em> verbs for use in the {verb}
+parameter. For regular verbs, see further below.</p>
 
-As mentioned above the *obj* parameter can be one of actor, dobj, iobj,
+<p>As mentioned above the <em>obj</em> parameter can be one of actor, dobj, iobj,
 cobj, a globalParamName or a temporary parameter name set using
 gMessageParams(). A globalParamName is simply a string property you can
 define on any Thing and use later as a message parameter to refer to
-that thing, e.g.:
+that thing, e.g.:</p>
 
-`
-    george: Actor 'George; tall thin; man' @hall
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    george: Actor 'George; tall thin; man' @hall
         "He's a tall thin man. "
         isHim = true
            
@@ -987,313 +961,297 @@ that thing, e.g.:
     ...
 
       "{The subj george} {seems} upset with you. ";
-`
+</code></pre></div></div>
 
-In this case there's little advantage in using the globalParamName over
-simply writing "George seems upset with you." But one reason you might
+<p>In this case there’s little advantage in using the globalParamName over
+simply writing “George seems upset with you.” But one reason you might
 want to use the globalParamName here is that George might start out as
-'the tall man' when you first meet him and only become 'George' on
-closer acquaintance; in such a case '{The subj george}' will expand to
-either 'The tall man' or 'George' as appropriate (using the current
-theName property of the george object).
+‘the tall man’ when you first meet him and only become ‘George’ on
+closer acquaintance; in such a case ‘{The subj george}’ will expand to
+either ‘The tall man’ or ‘George’ as appropriate (using the current
+theName property of the george object).</p>
 
-<span id="dummy"></span>
+<p><span id="dummy"></span></p>
 
-The **dummy** tag is used to mark a grammatical subject that appears in
+<p>The <strong>dummy</strong> tag is used to mark a grammatical subject that appears in
 the message to be displayed but is not represented by anything in the
-game, so that there's no further message parameter to attach it to. A
-simple example would be:
+game, so that there’s no further message parameter to attach it to. A
+simple example would be:</p>
 
-`
-     'There{dummy}{\'s} nothing {here}.'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     'There{dummy}{\'s} nothing {here}.'
      
-`
+</code></pre></div></div>
 
-This marks 'There' as the subject of the sentence so that it will come
-out as "There's nothing here" or "There was nothing there" according to
-tense.
+<p>This marks ‘There’ as the subject of the sentence so that it will come
+out as “There’s nothing here” or “There was nothing there” according to
+tense.</p>
 
-For a more complex example, consider the following cases: "Fred knows
-that exercise is good for him" and "Fred knows everything about
-himself", where Fred is an actor that can change (so we might,for
-example, want it to vary to "Freda knows that exercise is good for her"
-or "I know everything about myself"). The trouble is that the routine
-that expands these message substitution parameters isn't smart enough to
+<p>For a more complex example, consider the following cases: “Fred knows
+that exercise is good for him” and “Fred knows everything about
+himself”, where Fred is an actor that can change (so we might,for
+example, want it to vary to “Freda knows that exercise is good for her”
+or “I know everything about myself”). The trouble is that the routine
+that expands these message substitution parameters isn’t smart enough to
 distinguish between the structure of these two sentences unless you help
-it out. So in the first example:
+it out. So in the first example:</p>
 
-`
-    "{He actor} {know} that exercise is good for {him actor}. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{He actor} {know} that exercise is good for {him actor}. ";
+</code></pre></div></div>
 
-The expansion would go wrong because the subject of the verb in the
-subordinate clause is "exercise", but the routine that does the
-expansion can only go by what's been explicitly marked as a subject, and
-the last one marked is "`{He actor}`", so that
-it appears to the library that `{him actor}` is
-the object of "`{He actor} {know}`", which,
-contrary to what we want here, would be expanded to "He knows himself."
-There's nothing in the string "that exercise is good for" that signals
+<p>The expansion would go wrong because the subject of the verb in the
+subordinate clause is “exercise”, but the routine that does the
+expansion can only go by what’s been explicitly marked as a subject, and
+the last one marked is “<code class="language-plaintext highlighter-rouge">{He actor}</code>”, so that
+it appears to the library that <code class="language-plaintext highlighter-rouge">{him actor}</code> is
+the object of “<code class="language-plaintext highlighter-rouge">{He actor} {know}</code>”, which,
+contrary to what we want here, would be expanded to “He knows himself.”
+There’s nothing in the string “that exercise is good for” that signals
 the actual sentence construction to the expansion routine; from the
-software's point of view it's structually identical to:
+software’s point of view it’s structually identical to:</p>
 
-`
-    "{He actor} {know} everything about {him actor}. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{He actor} {know} everything about {him actor}. ";
+</code></pre></div></div>
 
-Where "He knows everything about himself" would be correct. But in the
+<p>Where “He knows everything about himself” would be correct. But in the
 first example we need to tell the game what the actual grammatical
 subject of the subordinate clause is, which we do by marking it with
-`{dummy}`, thus:
+<code class="language-plaintext highlighter-rouge">{dummy}</code>, thus:</p>
 
-`
-    "{He actor} {know} that {dummy}exercise is good for {him actor}. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{He actor} {know} that {dummy}exercise is good for {him actor}. ";
+</code></pre></div></div>
 
-This tells the parameter expansion routine that "exercise" and not
-"actor" is now the subject of "is".
+<p>This tells the parameter expansion routine that “exercise” and not
+“actor” is now the subject of “is”.</p>
 
-Finally, we mentioned that the *obj* parameter could also be a temporary
+<p>Finally, we mentioned that the <em>obj</em> parameter could also be a temporary
 parameter name. The Action method setMessageParam() lets you define such
 a parameter, but for convenience, the library defines the
-**gMessageParams()** macro for setting one or more parameters whose
+<strong>gMessageParams()</strong> macro for setting one or more parameters whose
 names exactly match their local variable names. In other words, if you
-call this macro like this:
+call this macro like this:</p>
 
-`
-     gMessageParams(obj, cont);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     gMessageParams(obj, cont);
      
-`
+</code></pre></div></div>
 
-then you'll get one parameter with the text name 'obj' whose expansion
+<p>then you’ll get one parameter with the text name ‘obj’ whose expansion
 will be the value of the local variable obj, and another with text name
-'cont' whose expansion is the value of the local variable cont.
+‘cont’ whose expansion is the value of the local variable cont.</p>
 
-  
+<h3 id="conjugations-and-tenses"><span id="conjugate_idx">Conjugations and Tenses</span></h3>
 
-### <span id="conjugate_idx">Conjugations and Tenses</span>
-
-Many of the message substitution parameters listed above are designed to
+<p>Many of the message substitution parameters listed above are designed to
 secure agreement betweeb a verb and its grammatical subject, in
 whichever tense the game happens to be. If you need to write code which
-might vary by person and/or tense, you'll typically write messages like:
+might vary by person and/or tense, you’ll typically write messages like:</p>
 
-`
-    "{I} climb{s/ed} over the fence. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{I} climb{s/ed} over the fence. ";
     "{The subj dobj} {breaks} in two. ";
-`
+</code></pre></div></div>
 
-In the first of these strings, "climb" is a regular verb, so we can
-conjugate it by adding {s/ed} to the end. In the second case "breaks" is
-not a regular verb (the past is "broke" not "breaked") so we need to
+<p>In the first of these strings, “climb” is a regular verb, so we can
+conjugate it by adding {s/ed} to the end. In the second case “breaks” is
+not a regular verb (the past is “broke” not “breaked”) so we need to
 surround the entire verb in braces (either {break} or {breaks}, it
-doesn't matter which), so that adv3Lite can look it up in its table of
+doesn’t matter which), so that adv3Lite can look it up in its table of
 irregular verbs. The English-language specific part of the library knows
 over two hundred irregular verbs, so most of the common ones should be
 covered. If you need to conjugate an unusual irregular verb in your game
-that the library doesn't know about, you'll need to define it in a
-[CustomVocab](#custom) object (on which see below).
+that the library doesn’t know about, you’ll need to define it in a
+<a href="#custom">CustomVocab</a> object (on which see below).</p>
 
-Some verbs have both a regular and an irregular form, often with
-different meanings, so if you're using a verb of this sort you need to
+<p>Some verbs have both a regular and an irregular form, often with
+different meanings, so if you’re using a verb of this sort you need to
 choose the message parameter substitution that gives you the form you
-want, e.g.:
+want, e.g.:</p>
 
-`
-    "{I} hang{s/ed} the murderer on the gallows. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{I} hang{s/ed} the murderer on the gallows. ";
     "{I} {hang} the picture on the wall. ";
 
     "{I} {lie} down on the bed. ";
     "{I} lie{s/d} about my age. ";
-`
+</code></pre></div></div>
 
-In either case all six tenses are available (e.g. I hang the murderer on
+<p>In either case all six tenses are available (e.g. I hang the murderer on
 the gallows, I hanged the murderer on the gallows, I have hanged the
 murderer on the gallows, I had hanged the murderer on the gallows, I
 shall hang the murderer on the gallows, I shall have hanged the murderer
-on the gallows), according to the setting of Narrator.tense).
+on the gallows), according to the setting of Narrator.tense).</p>
 
-<span id="regular-idx">Regular verbs</span> are verbs whose past simple
+<p><span id="regular-idx">Regular verbs</span> are verbs whose past simple
 and past participle end in d or ed (e.g. stopped, opened, closed). The
 adv3Lite recognizes five variants of these, which between them take five
-variants of the {s/d} ending:
+variants of the {s/d} ending:</p>
 
-1.  **{s/d}** e.g. close{s/d}, giving \[I\] close, \[he\] closes, \[he\]
-    closed.
-2.  **{s/ed}** e.g. open{s/ed}, giving \[I\] open, \[he\] opens, \[he\]
-    opened.
-3.  **{es/ed}** e.g. cross{es/ed}, giving \[I\] cross, \[he\] crosses,
-    \[he\] crossed.
-4.  **{ies/ies}** e.g. cr(ies/ies}, giving \[I\] cry, \[he\] cries,
-    \[he\] cried.
-5.  **{s/?ed}** e.g. stop{s/?ed}, giving \[I\] stop, \[he\] stops,
-    \[he\] stopped.
+<ol>
+  <li><strong>{s/d}</strong> e.g. close{s/d}, giving [I] close, [he] closes, [he]
+closed.</li>
+  <li><strong>{s/ed}</strong> e.g. open{s/ed}, giving [I] open, [he] opens, [he]
+opened.</li>
+  <li><strong>{es/ed}</strong> e.g. cross{es/ed}, giving [I] cross, [he] crosses,
+[he] crossed.</li>
+  <li><strong>{ies/ies}</strong> e.g. cr(ies/ies}, giving [I] cry, [he] cries,
+[he] cried.</li>
+  <li><strong>{s/?ed}</strong> e.g. stop{s/?ed}, giving [I] stop, [he] stops,
+[he] stopped.</li>
+</ol>
 
-In the last of these, note that we write the parameter substitution
+<p>In the last of these, note that we write the parameter substitution
 string as {s/?ed} not {s/ped}; that is, we use a question mark and leave
-the library to work out which consonant it needs to double.
+the library to work out which consonant it needs to double.</p>
 
-To recap, the rule to follow is this: if the verb you want to conjugate
+<p>To recap, the rule to follow is this: if the verb you want to conjugate
 is regular, use one of the {s/d} type endings to conjugate it (e.g.
-'open{s/ed}'}. If the verb is irregular, surround the complete verb in
-braces to conjugate it (e.g. '{shut}'). A few verbs have both regular
+‘open{s/ed}’}. If the verb is irregular, surround the complete verb in
+braces to conjugate it (e.g. ‘{shut}’). A few verbs have both regular
 and irregular forms, sometimes with different meanings, sometimes with
 the same meaning. In such cases use an {s/d} type ending if you want the
 regular form and surround the complete verb in braces if you want the
-irregular form, for example:
+irregular form, for example:</p>
 
-`
-    "{I} {dive} into the pool. " // past "You dove into the pool", preferred in American English
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{I} {dive} into the pool. " // past "You dove into the pool", preferred in American English
     "{I} dive{s/d} into the pool. " // past "You dived into the pool", preferred in British English
-`
+</code></pre></div></div>
 
-Normally, either form of verb conjugated with a message parameter
+<p>Normally, either form of verb conjugated with a message parameter
 substitution requires a subject, supplied by a previous message
-parameter substitution, to agree with, such as the '{I}' in "{I} {lie}
-down on the bed." Occasionally though you may want to write a message
-that works in more than one tense, but where there's no message
+parameter substitution, to agree with, such as the ‘{I}’ in “{I} {lie}
+down on the bed.” Occasionally though you may want to write a message
+that works in more than one tense, but where there’s no message
 parameter substitution to represent the subject of the verb, for example
-"There is nothing much here/There was nothing much there." This can be
-written:
+“There is nothing much here/There was nothing much there.” This can be
+written:</p>
 
-`
-    "There {is} nothing much {here}. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "There {is} nothing much {here}. ";
      
-`
+</code></pre></div></div>
 
-In such a case, where the message parameter substitution mechanism finds
+<p>In such a case, where the message parameter substitution mechanism finds
 no subject for the verb (in this case, {is}) to agree with, it defaults
-to a third-person singular subject (via the dummy\_ object), so that the
-above statement is equivalent to:
+to a third-person singular subject (via the dummy_ object), so that the
+above statement is equivalent to:</p>
 
-`
-    "There {dummy} {is} nothing much {here}. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "There {dummy} {is} nothing much {here}. ";
      
-`
+</code></pre></div></div>
 
-Where {dummy} explicitly makes the dummy\_ object the subject of the
-sentence (since the dummy\_ object has an empty name, its presence
-doesn't cause any additional text to be displayed). Since the
+<p>Where {dummy} explicitly makes the dummy_ object the subject of the
+sentence (since the dummy_ object has an empty name, its presence
+doesn’t cause any additional text to be displayed). Since the
 English-language message parameter substitution mechanism defaults to
-the dummy\_ object when it can't find a subject, you don't have to
+the dummy_ object when it can’t find a subject, you don’t have to
 specify {dummy} explicitly. If, however, you required a grammatically
 plural subject, you would need to supply it explicitly using {plural}.
-For example, to write a message that comes out as "There are no sausages
+For example, to write a message that comes out as “There are no sausages
 here/There were no sausages there/There have been no sausages here/There
 had been no sausages there/There will be no sausages here/There will
-have been no sausages here" according to tense, you'd need to write:
+have been no sausages here” according to tense, you’d need to write:</p>
 
-`
-    "There {plural} {are} no sausages here. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "There {plural} {are} no sausages here. ";
+</code></pre></div></div>
 
-The **{aac}** parameter substitution can be used to ensure continuing
+<p>The <strong>{aac}</strong> parameter substitution can be used to ensure continuing
 agreement with the subject of sucessive verbs when the subject is the
-actor. Normally this should't be necessary, but should problems occur
-you can use {aac} to secure actor-verb agreement like so:
+actor. Normally this should’t be necessary, but should problems occur
+you can use {aac} to secure actor-verb agreement like so:</p>
 
-`
-    "{I} yell{s/ed} and {aac} drop{s/?ed} my guard and {aac} scream{s/ed}.
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "{I} yell{s/ed} and {aac} drop{s/?ed} my guard and {aac} scream{s/ed}.
+</code></pre></div></div>
 
-If your game is only ever going to switch between the present tense and
+<p>If your game is only ever going to switch between the present tense and
 the past tense (and never going to use any of the others), then you can
 use an alternative way of varying the verb between the present and past
-forms, either long-windedly through the **tSel('present', 'past')**
-macro, or more concisely with the **{present\|past}** message
-substitution, for example:
+forms, either long-windedly through the <strong>tSel(‘present’, ‘past’)</strong>
+macro, or more concisely with the <strong>{present|past}</strong> message
+substitution, for example:</p>
 
-`
-    "There {is|was} nothing much {here}. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "There {is|was} nothing much {here}. ";
     "There {are|were} no sausages {here|there}. ";
-`
+</code></pre></div></div>
 
-One other point to consider is that the special parameter substitutions
-`{don't verb}` and `{must
-verb}` may need the past participle of verb in some tenses
+<p>One other point to consider is that the special parameter substitutions
+<code class="language-plaintext highlighter-rouge">{don't verb}</code> and <code class="language-plaintext highlighter-rouge">{must
+verb}</code> may need the past participle of verb in some tenses
 (Perfect, Past Perfect and Future Perfect). Very few games are likely to
 make use of these tenses in practice, so for the great majority of games
 this is unlikely to be an issue, and in any case the library already
 knows how to form the past participle of most English irregular verbs.
 For regular verbs you can supply the past participle ending in square
-brackets with the `don't` and
-`must` parameter substitutions if you feel you
-need it: e.g. `{don't open\[ed\]}`,
-`{must stop\[?ep\]}` or
-`{don't close\[d\]}`.
+brackets with the <code class="language-plaintext highlighter-rouge">don't</code> and
+<code class="language-plaintext highlighter-rouge">must</code> parameter substitutions if you feel you
+need it: e.g. <code class="language-plaintext highlighter-rouge">{don't open\[ed\]}</code>,
+<code class="language-plaintext highlighter-rouge">{must stop\[?ep\]}</code> or
+<code class="language-plaintext highlighter-rouge">{don't close\[d\]}</code>.</p>
 
-  
-<span id="whentouse"></span>
+<p><span id="whentouse"></span></p>
 
-### When to Use Message Parameter Substitutions
+<h3 id="when-to-use-message-parameter-substitutions">When to Use Message Parameter Substitutions</h3>
 
-In case this is all starting to look just a little complicated, it's
+<p>In case this is all starting to look just a little complicated, it’s
 worth remembering that in game code you may not actually need to use
-message parameter substitutions all that much. They're primarily needed
+message parameter substitutions all that much. They’re primarily needed
 in library code to make sure that standard library messages work with
 whatever tense and objects a game may happen to define. In your own game
-code you'll mainly be able to write straightforward strings like:
+code you’ll mainly be able to write straightforward strings like:</p>
 
-`
-    "You shut the door. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "You shut the door. ";
     "There are no sausages here. "; 
      
-`
+</code></pre></div></div>
 
-You only need to consider using message parameter substitutions where
-your text might vary, either because you don't know what the subject of
+<p>You only need to consider using message parameter substitutions where
+your text might vary, either because you don’t know what the subject of
 a verb is going to be or because your game changes tense. More
 generally, message parameter substitutions are only required in any of
-the following circumstances:
+the following circumstances:</p>
 
-1.  You are writing messages for a library extension, rather than a game
-    (in which case you'd also need to use DMsg() or BMsg()).
-2.  Your game changes tense at least once (e.g. because there's a
-    flash-back in the past tense while most of the game is in the
-    present tense), and some of your messages may appear in either part
-    of the game.
-3.  You are allowing your players to choose which tense or person to
-    play the game in (as, for example, in my game *Shelter from the
-    Storm*), so your messages need to work with more than one tense
-    and/or person.
-4.  You are writing handlers for additional actions defined in your
-    game, or custom responses to built-in actions, and the corresponding
-    messages have to work with varying subjects (such as an actor which
-    could be the player character or an NPC, or with a direct object
-    which could be singular or plural).
-5.  You are customizing library messages via a
-    [CustomMessages](#custmessage_idx) object and you want to ensure
-    that your new messages are sufficiently flexible.
+<ol>
+  <li>You are writing messages for a library extension, rather than a game
+(in which case you’d also need to use DMsg() or BMsg()).</li>
+  <li>Your game changes tense at least once (e.g. because there’s a
+flash-back in the past tense while most of the game is in the
+present tense), and some of your messages may appear in either part
+of the game.</li>
+  <li>You are allowing your players to choose which tense or person to
+play the game in (as, for example, in my game <em>Shelter from the
+Storm</em>), so your messages need to work with more than one tense
+and/or person.</li>
+  <li>You are writing handlers for additional actions defined in your
+game, or custom responses to built-in actions, and the corresponding
+messages have to work with varying subjects (such as an actor which
+could be the player character or an NPC, or with a direct object
+which could be singular or plural).</li>
+  <li>You are customizing library messages via a
+<a href="#custmessage_idx">CustomMessages</a> object and you want to ensure
+that your new messages are sufficiently flexible.</li>
+</ol>
 
-If you're writing a game (rather than a library extension) and your game
+<p>If you’re writing a game (rather than a library extension) and your game
 never changes tense or player-character person (the most common case),
-circumstances 1-3 won't apply.
+circumstances 1-3 won’t apply.</p>
 
-  
+<h3 id="lists-and-prev"><span id="prev">Lists and <em>{prev}</em></span></h3>
 
-### <span id="prev">Lists and *{prev}*</span>
-
-It's sometimes useful to be able to display a list of items in your
+<p>It’s sometimes useful to be able to display a list of items in your
 output text. The basic function the adv3Lite library provides for this
-purpose is **makeListStr(lst, nameProp?, conjunction?)**. The second two
-parameters are optional. The first, *lst*, is the list of items for
-which you want a formatted list. The second, *nameProp*, is the property
+purpose is <strong>makeListStr(lst, nameProp?, conjunction?)</strong>. The second two
+parameters are optional. The first, <em>lst</em>, is the list of items for
+which you want a formatted list. The second, <em>nameProp</em>, is the property
 to use on each item when building the list. The default value is &amp;aName,
-which means you get a list of the form "a duck, a green bottle, and an
-odd boot". If you wanted "the duck, the green bottle, and the odd boot"
-you'd supply &amp;theName as the value of this parameter. The optional
-*conjunction* parameter is a single-quoted string containing the
+which means you get a list of the form “a duck, a green bottle, and an
+odd boot”. If you wanted “the duck, the green bottle, and the odd boot”
+you’d supply &amp;theName as the value of this parameter. The optional
+<em>conjunction</em> parameter is a single-quoted string containing the
 conjunction you want between the last two elements of the list (assuming
-the list has more than one element). The default value is 'and' but you
-could, for example, supply it as 'or'. Whichever way you call it,
+the list has more than one element). The default value is ‘and’ but you
+could, for example, supply it as ‘or’. Whichever way you call it,
 makeListStr() returns a single-quoted string containing the duly
-formatted list.
+formatted list.</p>
 
-For example, suppose we have a pond whose contents are a duck, a green
-bottle and an old boot. Then we could write:
+<p>For example, suppose we have a pond whose contents are a duck, a green
+bottle and an old boot. Then we could write:</p>
 
-`
-    /* lst1 becomes 'a duck, a green bottle and an old boot' */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* lst1 becomes 'a duck, a green bottle and an old boot' */
     local lst1 = makeListStr(pond.contents);
 
     /* lst2 becomes 'the duck, the green bottle and the old boot' */
@@ -1301,87 +1259,78 @@ bottle and an old boot. Then we could write:
 
     /* lst3 becomes 'the duck, the green bottle or the old boot' */
     local lst3 = makeListStr(pond.contents, &amp;theName, 'or');
-`
+</code></pre></div></div>
 
-If we just want the first form embedded in a string, we can use the \&lt;\&lt;
-list of \* \&gt;\&gt; string template, for example.
+<p>If we just want the first form embedded in a string, we can use the &lt;&lt;
+list of * &gt;&gt; string template, for example.</p>
 
-`
-    /* Displays "You see a duck, a green bottle and an old boot in the pond. */
-    "You see &lt;<list of="" pond.contents="">&gt; in the pond. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* Displays "You see a duck, a green bottle and an old boot in the pond. */
+    "You see &lt;&lt;list of pond.contents&gt;&gt; in the pond. ";
+</code></pre></div></div>
 
-If pond.contents were an empty list, then the previous code would output
-"You see nothing in the pond". This may be just what you want, or you
+<p>If pond.contents were an empty list, then the previous code would output
+“You see nothing in the pond”. This may be just what you want, or you
 may want to test that your list has any elements in it (e.g.
-pond.contents.length \&gt; 0) before trying to display your list, e.g.:
+pond.contents.length &gt; 0) before trying to display your list, e.g.:</p>
 
-`
-    "&lt;<if pond.contents.length=""> 0&gt;&gt;You see &lt;<list of="" pond.contents="">&gt; in the pond. 
-     &lt;<else>&gt;The pond seems quite clear of debris.&lt;<end>&gt;&gt; ";     
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "&lt;&lt;if pond.contents.length &gt; 0&gt;&gt;You see &lt;&lt;list of pond.contents&gt;&gt; in the pond. 
+     &lt;&lt;else&gt;&gt;The pond seems quite clear of debris.&lt;&lt;end&gt;&gt;&gt; ";     
+</code></pre></div></div>
 
-This is all very well if you are preceeding your list with a verb phrase
-like "You see" of which the list is the object, but what if you want the
-list to be the subject of a verb, and you don't know how long the list
-will be (so you don't know if the verb needs to be singular or plural in
-form)? For this purpose you can use the *{prev}* tag, which acts as a
-stand-in for the list you've just displayed (whether you use
-makeListStr() or \&lt;\&lt;list of \*\&gt;\&gt;). So for example, you could write:
+<p>This is all very well if you are preceeding your list with a verb phrase
+like “You see” of which the list is the object, but what if you want the
+list to be the subject of a verb, and you don’t know how long the list
+will be (so you don’t know if the verb needs to be singular or plural in
+form)? For this purpose you can use the <em>{prev}</em> tag, which acts as a
+stand-in for the list you’ve just displayed (whether you use
+makeListStr() or &lt;&lt;list of *&gt;&gt;). So for example, you could write:</p>
 
-`
-    /* This gives "A duck, a green bottle and an old boot are floating on the pond." */
-    "\^&lt;<list of="" pond.contents="">&gt; {prev} {is} floating on the pond. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* This gives "A duck, a green bottle and an old boot are floating on the pond." */
+    "\^&lt;&lt;list of pond.contents&gt;&gt; {prev} {is} floating on the pond. ";
 
     /* Don't do this; it'll produce a run-time error! */ 
-    "\^&lt;<list of="" pond.contents="">&gt; {is} floating on the pond. ";
-`
+    "\^&lt;&lt;list of pond.contents&gt;&gt; {is} floating on the pond. ";
+</code></pre></div></div>
 
-Note that you must use the *{prev}* tag here, or the *{is}* tag (or the
-tag for whichever verb you want to use) won't have a subject to agree
+<p>Note that you must use the <em>{prev}</em> tag here, or the <em>{is}</em> tag (or the
+tag for whichever verb you want to use) won’t have a subject to agree
 with, which will result in a run-time error when your game tries to
-display the string. The {prev} tag doesn't output anything at all, it
+display the string. The {prev} tag doesn’t output anything at all, it
 just gives the library a singular or plural dummy noun for the next verb
-to agree with (as appropriate).
+to agree with (as appropriate).</p>
 
-Because this is a relatively common case, with the verb 'to be' you can
-also use the form \&lt;\&lt;list of \* is\&gt;\&gt;, for example:
+<p>Because this is a relatively common case, with the verb ‘to be’ you can
+also use the form &lt;&lt;list of * is&gt;&gt;, for example:</p>
 
-`
-    /* This also gives "A duck, a green bottle and an old boot are floating on the pond." */
-    "\^&lt;<list of="" pond.contents="" is="">&gt; floating on the pond. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* This also gives "A duck, a green bottle and an old boot are floating on the pond." */
+    "\^&lt;&lt;list of pond.contents is&gt;&gt; floating on the pond. ";
+</code></pre></div></div>
 
-This avoids the need to remember to use {prev}, but with any other verb
-you would still need to use it, for example:
+<p>This avoids the need to remember to use {prev}, but with any other verb
+you would still need to use it, for example:</p>
 
-`
-    * This gives "A duck, a green bottle and an old boot sit on the pond." */
-    "\^&lt;<list of="" pond.contents="">&gt; {prev} {sit} on the pond. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    * This gives "A duck, a green bottle and an old boot sit on the pond." */
+    "\^&lt;&lt;list of pond.contents&gt;&gt; {prev} {sit} on the pond. ";
+</code></pre></div></div>
 
-Finally, you may occasionally want the verb to precede the list, as in
-"Floating around on the pond are a duck, a green bottle and an old
-boot." You can do this with the \&lt;\&lt; is list of \* \&gt;\&gt; embedded
-expression (but only for the verb 'to be'), in which case you once again
-don't need to use *{prev}* or another verb tag. For example:
+<p>Finally, you may occasionally want the verb to precede the list, as in
+“Floating around on the pond are a duck, a green bottle and an old
+boot.” You can do this with the &lt;&lt; is list of * &gt;&gt; embedded
+expression (but only for the verb ‘to be’), in which case you once again
+don’t need to use <em>{prev}</em> or another verb tag. For example:</p>
 
-`
-    "Floating around on the pond &lt;<is list="" of="" pond.contents="">&gt;. ";
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "Floating around on the pond &lt;&lt;is list of pond.contents&gt;&gt;. ";
+</code></pre></div></div>
 
-  
+<h3 id="customvocab"><span id="custom">CustomVocab</span></h3>
 
-### <span id="custom">CustomVocab</span>
-
-Although the library defines over two hundred irregular verbs you can
-use for the *verb* parameter, you may occasionally need additional ones.
+<p>Although the library defines over two hundred irregular verbs you can
+use for the <em>verb</em> parameter, you may occasionally need additional ones.
 You can see which ones the library defines by looking at the definition
 of englishCustomVocab.verbParams in english.t. If you need to define
-more you can do so by defining a CustomVocab object like this:
+more you can do so by defining a CustomVocab object like this:</p>
 
-`
-    CustomVocab
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    CustomVocab
         verbParams = 
         [
             'yell/yells/yelled',
@@ -1389,59 +1338,54 @@ more you can do so by defining a CustomVocab object like this:
             'break/breaks/broke/broken'
         ]   
     ;
-`
+</code></pre></div></div>
 
-The **verbParams** property is defined as is a list of strings, using
-the following template: 'infinitive/present3/past/past-participle'. The
-'infinitive' is the 'to' form of the verb (to go, to look, to see), but
-\*without\* the word 'to'. 'present3' is the third-person present form
-(has, goes, sees). 'past' is the past tense form (went, looked, saw).
-'past-participle' is the past participle form; this is optional, and is
+<p>The <strong>verbParams</strong> property is defined as is a list of strings, using
+the following template: ‘infinitive/present3/past/past-participle’. The
+‘infinitive’ is the ‘to’ form of the verb (to go, to look, to see), but
+*without* the word ‘to’. ‘present3’ is the third-person present form
+(has, goes, sees). ‘past’ is the past tense form (went, looked, saw).
+‘past-participle’ is the past participle form; this is optional, and is
 needed only for verbs with distinct past and past participle forms
 (e.g., saw/seen, went/gone). Most regular verbs — those with the past
 formed by adding -ed to the infinitive — have identical past and
-participle forms.
+participle forms.</p>
 
-The other properties you can define on a CustomVocab object are:
+<p>The other properties you can define on a CustomVocab object are:</p>
 
-**irregularPlurals**: Irregular plural list. This is a list of words
-with plurals that can't be inferred from any of the usual spelling
-rules. The entries are in pairs: singular, \[plurals\]. The plurals are
+<p><strong>irregularPlurals</strong>: Irregular plural list. This is a list of words
+with plurals that can’t be inferred from any of the usual spelling
+rules. The entries are in pairs: singular, [plurals]. The plurals are
 given in a list, since some words have more than one valid plural. The
 first plural is the preferred one; the remaining entries are alternates.
-For example the library definition of its irregularPlurals list begins:
+For example the library definition of its irregularPlurals list begins:</p>
 
-`
-    irregularPlurals = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    irregularPlurals = [
             'calf', ['calves', 'calfs'],
             'elf', ['elves', 'elfs'],
             'half', ['halves', 'halfs'],
             'hoof', ['hooves', 'hoofs'],
             'knife', ['knives'],
             ...
-`
+</code></pre></div></div>
 
-**specialAOrAn**: usually the indefinite article is 'a' for a word that
-starts with consonant and 'an' for a word that starts with a vowel, but
-there are a few exceptions. The library lists \['an heir', 'an honest',
-'an honor', 'an hors', 'an hour', 'a one', 'a ouija', 'a unified', 'a
-union', 'a unit', 'a united', 'a unity', 'a universal', 'a university',
-'a universe', 'a unicycle', 'a usage', 'a user'\]. You can define more
+<p><strong>specialAOrAn</strong>: usually the indefinite article is ‘a’ for a word that
+starts with consonant and ‘an’ for a word that starts with a vowel, but
+there are a few exceptions. The library lists [‘an heir’, ‘an honest’,
+‘an honor’, ‘an hors’, ‘an hour’, ‘a one’, ‘a ouija’, ‘a unified’, ‘a
+union’, ‘a unit’, ‘a united’, ‘a unity’, ‘a universal’, ‘a university’,
+‘a universe’, ‘a unicycle’, ‘a usage’, ‘a user’]. You can define more
 of these on a CustomVocab object (following the same format) if you need
-them.
+them.</p>
 
-------------------------------------------------------------------------
+<hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Messages  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Messages<br />
 <span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
-    <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
+    <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span></p>
 
-</div>
-</is></list></list></list></list></end></else></list></if></list></shuffled></or></or></one></shuffled></or></or></one></div>
 
 </main>
 <footer>

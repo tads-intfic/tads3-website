@@ -69,10 +69,10 @@ Basic resolver for indirect objects
 
 
 
-[`whichMessageObject`](#whichMessageObject)[`whichObject`](#whichObject)
+[`whichMessageObject`](#whichMessageObject) [`whichObject`](#whichObject)
 
 Inherited from `Resolver` :  
-[`action_`](../object/Resolver.html#action_)[`actor_`](../object/Resolver.html#actor_)[`equivs_`](../object/Resolver.html#equivs_)[`isGlobalScope`](../object/Resolver.html#isGlobalScope)[`isSubResolver`](../object/Resolver.html#isSubResolver)[`issuer_`](../object/Resolver.html#issuer_)[`scope_`](../object/Resolver.html#scope_)
+[`action_`](../object/Resolver.html#action_) [`actor_`](../object/Resolver.html#actor_) [`equivs_`](../object/Resolver.html#equivs_) [`isGlobalScope`](../object/Resolver.html#isGlobalScope) [`isSubResolver`](../object/Resolver.html#isSubResolver) [`issuer_`](../object/Resolver.html#issuer_) [`scope_`](../object/Resolver.html#scope_)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,10 +82,10 @@ Inherited from `Resolver` :
 
 
 
-[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)
+[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase) [`filterPluralPhrase`](#filterPluralPhrase) [`getAll`](#getAll) [`getAllDefaults`](#getAllDefaults) [`getDefaultObject`](#getDefaultObject)
 
 Inherited from `Resolver` :  
-[`allowAll`](../object/Resolver.html#allowAll)[`cacheScopeList`](../object/Resolver.html#cacheScopeList)[`construct`](../object/Resolver.html#construct)[`filterAll`](../object/Resolver.html#filterAll)[`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents)[`filterPossRank`](../object/Resolver.html#filterPossRank)[`getAction`](../object/Resolver.html#getAction)[`getPossessiveResolver`](../object/Resolver.html#getPossessiveResolver)[`getPronounDefault`](../object/Resolver.html#getPronounDefault)[`getQualifierResolver`](../object/Resolver.html#getQualifierResolver)[`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent)[`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding)[`getScopeList`](../object/Resolver.html#getScopeList)[`getTargetActor`](../object/Resolver.html#getTargetActor)[`matchName`](../object/Resolver.html#matchName)[`objInScope`](../object/Resolver.html#objInScope)[`resetResolver`](../object/Resolver.html#resetResolver)[`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent)[`resolveUnknownNounPhrase`](../object/Resolver.html#resolveUnknownNounPhrase)[`selectIndefinite`](../object/Resolver.html#selectIndefinite)[`withGlobals`](../object/Resolver.html#withGlobals)
+[`allowAll`](../object/Resolver.html#allowAll) [`cacheScopeList`](../object/Resolver.html#cacheScopeList) [`construct`](../object/Resolver.html#construct) [`filterAll`](../object/Resolver.html#filterAll) [`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents) [`filterPossRank`](../object/Resolver.html#filterPossRank) [`getAction`](../object/Resolver.html#getAction) [`getPossessiveResolver`](../object/Resolver.html#getPossessiveResolver) [`getPronounDefault`](../object/Resolver.html#getPronounDefault) [`getQualifierResolver`](../object/Resolver.html#getQualifierResolver) [`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent) [`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding) [`getScopeList`](../object/Resolver.html#getScopeList) [`getTargetActor`](../object/Resolver.html#getTargetActor) [`matchName`](../object/Resolver.html#matchName) [`objInScope`](../object/Resolver.html#objInScope) [`resetResolver`](../object/Resolver.html#resetResolver) [`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent) [`resolveUnknownNounPhrase`](../object/Resolver.html#resolveUnknownNounPhrase) [`selectIndefinite`](../object/Resolver.html#selectIndefinite) [`withGlobals`](../object/Resolver.html#withGlobals)
 
 <span id="_Properties_"></span>
 

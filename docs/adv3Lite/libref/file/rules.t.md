@@ -34,7 +34,7 @@ defined in a TADS 3 game.
 
 
 
-[`Rule`](../object/Rule.html)[`RuleBook`](../object/RuleBook.html)
+[`Rule`](../object/Rule.html) [`RuleBook`](../object/RuleBook.html)
 <span id="_ObjectSummary_"></span>
 
 

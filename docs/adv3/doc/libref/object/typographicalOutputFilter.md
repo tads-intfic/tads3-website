@@ -67,7 +67,7 @@ customize it for local conventions.
 
 
 
-[`abbreviations`](#abbreviations)[`abbrevPat`](#abbrevPat)[`eosPattern`](#eosPattern)
+[`abbreviations`](#abbreviations) [`abbrevPat`](#abbrevPat) [`eosPattern`](#eosPattern)
 
 
 

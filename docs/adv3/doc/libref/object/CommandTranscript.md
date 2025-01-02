@@ -71,7 +71,7 @@ results of the command.
 
 
 
-[`isActive`](#isActive)[`isFailure`](#isFailure)[`iter_`](#iter_)[`reports_`](#reports_)[`transforms_`](#transforms_)
+[`isActive`](#isActive) [`isFailure`](#isFailure) [`iter_`](#iter_) [`reports_`](#reports_) [`transforms_`](#transforms_)
 
 
 
@@ -83,7 +83,7 @@ results of the command.
 
 
 
-[`actionFailed`](#actionFailed)[`activate`](#activate)[`addCommandSep`](#addCommandSep)[`addMarker`](#addMarker)[`addReport`](#addReport)[`announceAmbigActionObject`](#announceAmbigActionObject)[`announceDefaultObject`](#announceDefaultObject)[`announceImplicit`](#announceImplicit)[`announceMultiActionObject`](#announceMultiActionObject)[`announceRemappedAction`](#announceRemappedAction)[`applyTransforms`](#applyTransforms)[`canShowReport`](#canShowReport)[`clearReports`](#clearReports)[`construct`](#construct)[`currentActionHasReport`](#currentActionHasReport)[`deactivate`](#deactivate)[`deleteLastReport`](#deleteLastReport)[`deleteRange`](#deleteRange)[`endDescription`](#endDescription)[`filterText`](#filterText)[`findCurrentActionReport`](#findCurrentActionReport)[`flushForInput`](#flushForInput)[`forEachReport`](#forEachReport)[`getLastReport`](#getLastReport)[`moveRangeAppend`](#moveRangeAppend)[`newIter`](#newIter)[`noteFailure`](#noteFailure)[`showReports`](#showReports)[`summarizeAction`](#summarizeAction)
+[`actionFailed`](#actionFailed) [`activate`](#activate) [`addCommandSep`](#addCommandSep) [`addMarker`](#addMarker) [`addReport`](#addReport) [`announceAmbigActionObject`](#announceAmbigActionObject) [`announceDefaultObject`](#announceDefaultObject) [`announceImplicit`](#announceImplicit) [`announceMultiActionObject`](#announceMultiActionObject) [`announceRemappedAction`](#announceRemappedAction) [`applyTransforms`](#applyTransforms) [`canShowReport`](#canShowReport) [`clearReports`](#clearReports) [`construct`](#construct) [`currentActionHasReport`](#currentActionHasReport) [`deactivate`](#deactivate) [`deleteLastReport`](#deleteLastReport) [`deleteRange`](#deleteRange) [`endDescription`](#endDescription) [`filterText`](#filterText) [`findCurrentActionReport`](#findCurrentActionReport) [`flushForInput`](#flushForInput) [`forEachReport`](#forEachReport) [`getLastReport`](#getLastReport) [`moveRangeAppend`](#moveRangeAppend) [`newIter`](#newIter) [`noteFailure`](#noteFailure) [`showReports`](#showReports) [`summarizeAction`](#summarizeAction)
 
 
 

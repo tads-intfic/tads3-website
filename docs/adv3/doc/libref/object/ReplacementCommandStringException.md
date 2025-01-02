@@ -72,7 +72,7 @@ unparsed tokens on the previous command line should be discarded.
 
 
 
-[`issuingActor_`](#issuingActor_)[`newCommand_`](#newCommand_)[`targetActor_`](#targetActor_)
+[`issuingActor_`](#issuingActor_) [`newCommand_`](#newCommand_) [`targetActor_`](#targetActor_)
 
 
 
@@ -92,7 +92,7 @@ Inherited from `Exception` :
 
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

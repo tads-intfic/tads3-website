@@ -47,36 +47,28 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Transitive Action class - this is an action that takes a direct object.</p>
 
-Transitive Action class - this is an action that takes a direct object.
-
-For simplicity, this object is its own object resolver - we really don't
+<p>For simplicity, this object is its own object resolver - we really don’t
 need a separate resolver object because we have only one object list for
 this verb. (In contrast, an action with both a direct and indirect
 object might need separate resolution rules for the two objects, and
-hence would need separate resolver objects for the two.)
+hence would need separate resolver objects for the two.)</p>
 
-The advantage of implementing the Resolver behavior in this object,
-rather than using a separate object, is that it's less trouble to
+<p>The advantage of implementing the Resolver behavior in this object,
+rather than using a separate object, is that it’s less trouble to
 override object resolution rules - simply override the resolver methods
-in the subclass where you define the grammar rule for the action.
+in the subclass where you define the grammar rule for the action.</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[8421](../source/en_us.t.html#8421)\]:*  
-English-specific additions for single-object verbs.
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8421">8421</a>]:</em><br />
+English-specific additions for single-object verbs.</p>
 
-`class `**`TAction`**` :   `[`Action`](../object/Action.html)[`Resolver`](../object/Resolver.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TAction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a> <a href="../object/Resolver.html"><code class="language-plaintext highlighter-rouge">Resolver</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TAction</code></strong><br />
 <a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a><br />
@@ -86,11 +78,7 @@ English-specific additions for single-object verbs.
 </code>                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TAction</code></strong><br />
 <a href="../object/AttackAction.html"><code class="language-plaintext highlighter-rouge">AttackAction</code></a><br />
@@ -376,57 +364,41 @@ English-specific additions for single-object verbs.
 <a href="../object/predicate(Wear).html"><code class="language-plaintext highlighter-rouge">predicate(Wear)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#actionAllowsAll"><code class="language-plaintext highlighter-rouge">actionAllowsAll</code></a><a href="#actionDobjProp"><code class="language-plaintext highlighter-rouge">actionDobjProp</code></a><a href="#actor_"><code class="language-plaintext highlighter-rouge">actor_</code></a><a href="#askDobjResponseProd"><code class="language-plaintext highlighter-rouge">askDobjResponseProd</code></a><a href="#checkDobjProp"><code class="language-plaintext highlighter-rouge">checkDobjProp</code></a><a href="#dobjCur_"><code class="language-plaintext highlighter-rouge">dobjCur_</code></a><a href="#dobjInfoCur_"><code class="language-plaintext highlighter-rouge">dobjInfoCur_</code></a><a href="#dobjList_"><code class="language-plaintext highlighter-rouge">dobjList_</code></a><a href="#dobjMatch"><code class="language-plaintext highlighter-rouge">dobjMatch</code></a><a href="#dobjResolver_"><code class="language-plaintext highlighter-rouge">dobjResolver_</code></a><a href="#issuer_"><code class="language-plaintext highlighter-rouge">issuer_</code></a><a href="#preCondDobjProp"><code class="language-plaintext highlighter-rouge">preCondDobjProp</code></a><a href="#predicateNounPhrases"><code class="language-plaintext highlighter-rouge">predicateNounPhrases</code></a><a href="#remapDobjProp"><code class="language-plaintext highlighter-rouge">remapDobjProp</code></a><a href="#verDobjProp"><code class="language-plaintext highlighter-rouge">verDobjProp</code></a><a href="#whichMessageObject"><code class="language-plaintext highlighter-rouge">whichMessageObject</code></a></p>
+<p><a href="#actionAllowsAll"><code class="language-plaintext highlighter-rouge">actionAllowsAll</code></a> <a href="#actionDobjProp"><code class="language-plaintext highlighter-rouge">actionDobjProp</code></a> <a href="#actor_"><code class="language-plaintext highlighter-rouge">actor_</code></a> <a href="#askDobjResponseProd"><code class="language-plaintext highlighter-rouge">askDobjResponseProd</code></a> <a href="#checkDobjProp"><code class="language-plaintext highlighter-rouge">checkDobjProp</code></a> <a href="#dobjCur_"><code class="language-plaintext highlighter-rouge">dobjCur_</code></a> <a href="#dobjInfoCur_"><code class="language-plaintext highlighter-rouge">dobjInfoCur_</code></a> <a href="#dobjList_"><code class="language-plaintext highlighter-rouge">dobjList_</code></a> <a href="#dobjMatch"><code class="language-plaintext highlighter-rouge">dobjMatch</code></a> <a href="#dobjResolver_"><code class="language-plaintext highlighter-rouge">dobjResolver_</code></a> <a href="#issuer_"><code class="language-plaintext highlighter-rouge">issuer_</code></a> <a href="#preCondDobjProp"><code class="language-plaintext highlighter-rouge">preCondDobjProp</code></a> <a href="#predicateNounPhrases"><code class="language-plaintext highlighter-rouge">predicateNounPhrases</code></a> <a href="#remapDobjProp"><code class="language-plaintext highlighter-rouge">remapDobjProp</code></a> <a href="#verDobjProp"><code class="language-plaintext highlighter-rouge">verDobjProp</code></a> <a href="#whichMessageObject"><code class="language-plaintext highlighter-rouge">whichMessageObject</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
-<a href="../object/Action.html#actionTime"><code class="language-plaintext highlighter-rouge">actionTime</code></a><a href="../object/Action.html#afterActionMainList"><code class="language-plaintext highlighter-rouge">afterActionMainList</code></a><a href="../object/Action.html#beforeAfterObjs"><code class="language-plaintext highlighter-rouge">beforeAfterObjs</code></a><a href="../object/Action.html#defaultForRecursion"><code class="language-plaintext highlighter-rouge">defaultForRecursion</code></a><a href="../object/Action.html#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a><a href="../object/Action.html#implicitMsg"><code class="language-plaintext highlighter-rouge">implicitMsg</code></a><a href="../object/Action.html#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a><a href="../object/Action.html#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a><a href="../object/Action.html#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a><a href="../object/Action.html#iterationCanceled"><code class="language-plaintext highlighter-rouge">iterationCanceled</code></a><a href="../object/Action.html#originalAction"><code class="language-plaintext highlighter-rouge">originalAction</code></a><a href="../object/Action.html#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a><a href="../object/Action.html#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a><a href="../object/Action.html#pronounOverride"><code class="language-plaintext highlighter-rouge">pronounOverride</code></a><a href="../object/Action.html#remappedFrom"><code class="language-plaintext highlighter-rouge">remappedFrom</code></a><a href="../object/Action.html#showDefaultReports"><code class="language-plaintext highlighter-rouge">showDefaultReports</code></a><a href="../object/Action.html#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a><a href="../object/Action.html#verbFlags"><code class="language-plaintext highlighter-rouge">verbFlags</code></a><a href="../object/Action.html#verifiedOkay"><code class="language-plaintext highlighter-rouge">verifiedOkay</code></a></p>
+<a href="../object/Action.html#actionTime"><code class="language-plaintext highlighter-rouge">actionTime</code></a> <a href="../object/Action.html#afterActionMainList"><code class="language-plaintext highlighter-rouge">afterActionMainList</code></a> <a href="../object/Action.html#beforeAfterObjs"><code class="language-plaintext highlighter-rouge">beforeAfterObjs</code></a> <a href="../object/Action.html#defaultForRecursion"><code class="language-plaintext highlighter-rouge">defaultForRecursion</code></a> <a href="../object/Action.html#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a> <a href="../object/Action.html#implicitMsg"><code class="language-plaintext highlighter-rouge">implicitMsg</code></a> <a href="../object/Action.html#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a> <a href="../object/Action.html#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a> <a href="../object/Action.html#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a> <a href="../object/Action.html#iterationCanceled"><code class="language-plaintext highlighter-rouge">iterationCanceled</code></a> <a href="../object/Action.html#originalAction"><code class="language-plaintext highlighter-rouge">originalAction</code></a> <a href="../object/Action.html#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a> <a href="../object/Action.html#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a> <a href="../object/Action.html#pronounOverride"><code class="language-plaintext highlighter-rouge">pronounOverride</code></a> <a href="../object/Action.html#remappedFrom"><code class="language-plaintext highlighter-rouge">remappedFrom</code></a> <a href="../object/Action.html#showDefaultReports"><code class="language-plaintext highlighter-rouge">showDefaultReports</code></a> <a href="../object/Action.html#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a> <a href="../object/Action.html#verbFlags"><code class="language-plaintext highlighter-rouge">verbFlags</code></a> <a href="../object/Action.html#verifiedOkay"><code class="language-plaintext highlighter-rouge">verifiedOkay</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Resolver</code> :<br />
-<a href="../object/Resolver.html#action_"><code class="language-plaintext highlighter-rouge">action_</code></a><a href="../object/Resolver.html#equivs_"><code class="language-plaintext highlighter-rouge">equivs_</code></a><a href="../object/Resolver.html#isGlobalScope"><code class="language-plaintext highlighter-rouge">isGlobalScope</code></a><a href="../object/Resolver.html#isSubResolver"><code class="language-plaintext highlighter-rouge">isSubResolver</code></a><a href="../object/Resolver.html#scope_"><code class="language-plaintext highlighter-rouge">scope_</code></a><a href="../object/Resolver.html#whichObject"><code class="language-plaintext highlighter-rouge">whichObject</code></a></p>
+<a href="../object/Resolver.html#action_"><code class="language-plaintext highlighter-rouge">action_</code></a> <a href="../object/Resolver.html#equivs_"><code class="language-plaintext highlighter-rouge">equivs_</code></a> <a href="../object/Resolver.html#isGlobalScope"><code class="language-plaintext highlighter-rouge">isGlobalScope</code></a> <a href="../object/Resolver.html#isSubResolver"><code class="language-plaintext highlighter-rouge">isSubResolver</code></a> <a href="../object/Resolver.html#scope_"><code class="language-plaintext highlighter-rouge">scope_</code></a> <a href="../object/Resolver.html#whichObject"><code class="language-plaintext highlighter-rouge">whichObject</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#adjustDefaultObjectPrep"><code class="language-plaintext highlighter-rouge">adjustDefaultObjectPrep</code></a><a href="#announceAllDefaultObjects"><code class="language-plaintext highlighter-rouge">announceAllDefaultObjects</code></a><a href="#announceDefaultObject"><code class="language-plaintext highlighter-rouge">announceDefaultObject</code></a><a href="#canDobjResolveTo"><code class="language-plaintext highlighter-rouge">canDobjResolveTo</code></a><a href="#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a><a href="#checkRemapping"><code class="language-plaintext highlighter-rouge">checkRemapping</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#createDobjResolver"><code class="language-plaintext highlighter-rouge">createDobjResolver</code></a><a href="#createForMissingDobj"><code class="language-plaintext highlighter-rouge">createForMissingDobj</code></a><a href="#createForRetry"><code class="language-plaintext highlighter-rouge">createForRetry</code></a><a href="#doActionMain"><code class="language-plaintext highlighter-rouge">doActionMain</code></a><a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a><a href="#filterAmbiguousDobj"><code class="language-plaintext highlighter-rouge">filterAmbiguousDobj</code></a><a href="#filterPluralDobj"><code class="language-plaintext highlighter-rouge">filterPluralDobj</code></a><a href="#getAllDobj"><code class="language-plaintext highlighter-rouge">getAllDobj</code></a><a href="#getCurrentObjects"><code class="language-plaintext highlighter-rouge">getCurrentObjects</code></a><a href="#getDefaultDobj"><code class="language-plaintext highlighter-rouge">getDefaultDobj</code></a><a href="#getDobj"><code class="language-plaintext highlighter-rouge">getDobj</code></a><a href="#getDobjCount"><code class="language-plaintext highlighter-rouge">getDobjCount</code></a><a href="#getDobjFlags"><code class="language-plaintext highlighter-rouge">getDobjFlags</code></a><a href="#getDobjInfo"><code class="language-plaintext highlighter-rouge">getDobjInfo</code></a><a href="#getDobjResolver"><code class="language-plaintext highlighter-rouge">getDobjResolver</code></a><a href="#getDobjTokens"><code class="language-plaintext highlighter-rouge">getDobjTokens</code></a><a href="#getDobjWords"><code class="language-plaintext highlighter-rouge">getDobjWords</code></a><a href="#getMatchForRole"><code class="language-plaintext highlighter-rouge">getMatchForRole</code></a><a href="#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a><a href="#getObjectForRole"><code class="language-plaintext highlighter-rouge">getObjectForRole</code></a><a href="#getObjResponseProd"><code class="language-plaintext highlighter-rouge">getObjResponseProd</code></a><a href="#getPreCondDescList"><code class="language-plaintext highlighter-rouge">getPreCondDescList</code></a><a href="#getPreCondPropForRole"><code class="language-plaintext highlighter-rouge">getPreCondPropForRole</code></a><a href="#getQuestionInf"><code class="language-plaintext highlighter-rouge">getQuestionInf</code></a><a href="#getRemapPropForRole"><code class="language-plaintext highlighter-rouge">getRemapPropForRole</code></a><a href="#getResolvedDobjList"><code class="language-plaintext highlighter-rouge">getResolvedDobjList</code></a><a href="#getResolvedObjList"><code class="language-plaintext highlighter-rouge">getResolvedObjList</code></a><a href="#getResolveInfo"><code class="language-plaintext highlighter-rouge">getResolveInfo</code></a><a href="#getRoleFromIndex"><code class="language-plaintext highlighter-rouge">getRoleFromIndex</code></a><a href="#getVerbPhrase"><code class="language-plaintext highlighter-rouge">getVerbPhrase</code></a><a href="#getVerbPhrase1"><code class="language-plaintext highlighter-rouge">getVerbPhrase1</code></a><a href="#getVerifyPropForRole"><code class="language-plaintext highlighter-rouge">getVerifyPropForRole</code></a><a href="#initForMissingDobj"><code class="language-plaintext highlighter-rouge">initForMissingDobj</code></a><a href="#initResolver"><code class="language-plaintext highlighter-rouge">initResolver</code></a><a href="#initTentative"><code class="language-plaintext highlighter-rouge">initTentative</code></a><a href="#resetAction"><code class="language-plaintext highlighter-rouge">resetAction</code></a><a href="#resolvedObjectsInScope"><code class="language-plaintext highlighter-rouge">resolvedObjectsInScope</code></a><a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a><a href="#retryWithAmbiguousDobj"><code class="language-plaintext highlighter-rouge">retryWithAmbiguousDobj</code></a><a href="#retryWithMissingDobj"><code class="language-plaintext highlighter-rouge">retryWithMissingDobj</code></a><a href="#setCurrentObjects"><code class="language-plaintext highlighter-rouge">setCurrentObjects</code></a><a href="#setObjectMatches"><code class="language-plaintext highlighter-rouge">setObjectMatches</code></a><a href="#setResolvedDobj"><code class="language-plaintext highlighter-rouge">setResolvedDobj</code></a><a href="#setResolvedObjects"><code class="language-plaintext highlighter-rouge">setResolvedObjects</code></a><a href="#testRetryDefaultDobj"><code class="language-plaintext highlighter-rouge">testRetryDefaultDobj</code></a><a href="#verifyAction"><code class="language-plaintext highlighter-rouge">verifyAction</code></a><a href="#whatObj"><code class="language-plaintext highlighter-rouge">whatObj</code></a></p>
+<p><a href="#adjustDefaultObjectPrep"><code class="language-plaintext highlighter-rouge">adjustDefaultObjectPrep</code></a> <a href="#announceAllDefaultObjects"><code class="language-plaintext highlighter-rouge">announceAllDefaultObjects</code></a> <a href="#announceDefaultObject"><code class="language-plaintext highlighter-rouge">announceDefaultObject</code></a> <a href="#canDobjResolveTo"><code class="language-plaintext highlighter-rouge">canDobjResolveTo</code></a> <a href="#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a> <a href="#checkRemapping"><code class="language-plaintext highlighter-rouge">checkRemapping</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#createDobjResolver"><code class="language-plaintext highlighter-rouge">createDobjResolver</code></a> <a href="#createForMissingDobj"><code class="language-plaintext highlighter-rouge">createForMissingDobj</code></a> <a href="#createForRetry"><code class="language-plaintext highlighter-rouge">createForRetry</code></a> <a href="#doActionMain"><code class="language-plaintext highlighter-rouge">doActionMain</code></a> <a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a> <a href="#filterAmbiguousDobj"><code class="language-plaintext highlighter-rouge">filterAmbiguousDobj</code></a> <a href="#filterPluralDobj"><code class="language-plaintext highlighter-rouge">filterPluralDobj</code></a> <a href="#getAllDobj"><code class="language-plaintext highlighter-rouge">getAllDobj</code></a> <a href="#getCurrentObjects"><code class="language-plaintext highlighter-rouge">getCurrentObjects</code></a> <a href="#getDefaultDobj"><code class="language-plaintext highlighter-rouge">getDefaultDobj</code></a> <a href="#getDobj"><code class="language-plaintext highlighter-rouge">getDobj</code></a> <a href="#getDobjCount"><code class="language-plaintext highlighter-rouge">getDobjCount</code></a> <a href="#getDobjFlags"><code class="language-plaintext highlighter-rouge">getDobjFlags</code></a> <a href="#getDobjInfo"><code class="language-plaintext highlighter-rouge">getDobjInfo</code></a> <a href="#getDobjResolver"><code class="language-plaintext highlighter-rouge">getDobjResolver</code></a> <a href="#getDobjTokens"><code class="language-plaintext highlighter-rouge">getDobjTokens</code></a> <a href="#getDobjWords"><code class="language-plaintext highlighter-rouge">getDobjWords</code></a> <a href="#getMatchForRole"><code class="language-plaintext highlighter-rouge">getMatchForRole</code></a> <a href="#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a> <a href="#getObjectForRole"><code class="language-plaintext highlighter-rouge">getObjectForRole</code></a> <a href="#getObjResponseProd"><code class="language-plaintext highlighter-rouge">getObjResponseProd</code></a> <a href="#getPreCondDescList"><code class="language-plaintext highlighter-rouge">getPreCondDescList</code></a> <a href="#getPreCondPropForRole"><code class="language-plaintext highlighter-rouge">getPreCondPropForRole</code></a> <a href="#getQuestionInf"><code class="language-plaintext highlighter-rouge">getQuestionInf</code></a> <a href="#getRemapPropForRole"><code class="language-plaintext highlighter-rouge">getRemapPropForRole</code></a> <a href="#getResolvedDobjList"><code class="language-plaintext highlighter-rouge">getResolvedDobjList</code></a> <a href="#getResolvedObjList"><code class="language-plaintext highlighter-rouge">getResolvedObjList</code></a> <a href="#getResolveInfo"><code class="language-plaintext highlighter-rouge">getResolveInfo</code></a> <a href="#getRoleFromIndex"><code class="language-plaintext highlighter-rouge">getRoleFromIndex</code></a> <a href="#getVerbPhrase"><code class="language-plaintext highlighter-rouge">getVerbPhrase</code></a> <a href="#getVerbPhrase1"><code class="language-plaintext highlighter-rouge">getVerbPhrase1</code></a> <a href="#getVerifyPropForRole"><code class="language-plaintext highlighter-rouge">getVerifyPropForRole</code></a> <a href="#initForMissingDobj"><code class="language-plaintext highlighter-rouge">initForMissingDobj</code></a> <a href="#initResolver"><code class="language-plaintext highlighter-rouge">initResolver</code></a> <a href="#initTentative"><code class="language-plaintext highlighter-rouge">initTentative</code></a> <a href="#resetAction"><code class="language-plaintext highlighter-rouge">resetAction</code></a> <a href="#resolvedObjectsInScope"><code class="language-plaintext highlighter-rouge">resolvedObjectsInScope</code></a> <a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a> <a href="#retryWithAmbiguousDobj"><code class="language-plaintext highlighter-rouge">retryWithAmbiguousDobj</code></a> <a href="#retryWithMissingDobj"><code class="language-plaintext highlighter-rouge">retryWithMissingDobj</code></a> <a href="#setCurrentObjects"><code class="language-plaintext highlighter-rouge">setCurrentObjects</code></a> <a href="#setObjectMatches"><code class="language-plaintext highlighter-rouge">setObjectMatches</code></a> <a href="#setResolvedDobj"><code class="language-plaintext highlighter-rouge">setResolvedDobj</code></a> <a href="#setResolvedObjects"><code class="language-plaintext highlighter-rouge">setResolvedObjects</code></a> <a href="#testRetryDefaultDobj"><code class="language-plaintext highlighter-rouge">testRetryDefaultDobj</code></a> <a href="#verifyAction"><code class="language-plaintext highlighter-rouge">verifyAction</code></a> <a href="#whatObj"><code class="language-plaintext highlighter-rouge">whatObj</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
-<a href="../object/Action.html#actionOfKind"><code class="language-plaintext highlighter-rouge">actionOfKind</code></a><a href="../object/Action.html#addBeforeAfterObj"><code class="language-plaintext highlighter-rouge">addBeforeAfterObj</code></a><a href="../object/Action.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a><a href="../object/Action.html#afterActionMain"><code class="language-plaintext highlighter-rouge">afterActionMain</code></a><a href="../object/Action.html#announceActionObject"><code class="language-plaintext highlighter-rouge">announceActionObject</code></a><a href="../object/Action.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a><a href="../object/Action.html#beforeActionMain"><code class="language-plaintext highlighter-rouge">beforeActionMain</code></a><a href="../object/Action.html#cacheMultiObjectAnnouncements"><code class="language-plaintext highlighter-rouge">cacheMultiObjectAnnouncements</code></a><a href="../object/Action.html#callAfterActionMain"><code class="language-plaintext highlighter-rouge">callAfterActionMain</code></a><a href="../object/Action.html#callCatchAllProp"><code class="language-plaintext highlighter-rouge">callCatchAllProp</code></a><a href="../object/Action.html#callPreConditions"><code class="language-plaintext highlighter-rouge">callPreConditions</code></a><a href="../object/Action.html#callVerifyPreCond"><code class="language-plaintext highlighter-rouge">callVerifyPreCond</code></a><a href="../object/Action.html#callVerifyProp"><code class="language-plaintext highlighter-rouge">callVerifyProp</code></a><a href="../object/Action.html#cancelIteration"><code class="language-plaintext highlighter-rouge">cancelIteration</code></a><a href="../object/Action.html#checkPreConditions"><code class="language-plaintext highlighter-rouge">checkPreConditions</code></a><a href="../object/Action.html#combineRemappedVerifyResults"><code class="language-plaintext highlighter-rouge">combineRemappedVerifyResults</code></a><a href="../object/Action.html#createActionFrom"><code class="language-plaintext highlighter-rouge">createActionFrom</code></a><a href="../object/Action.html#createActionInstance"><code class="language-plaintext highlighter-rouge">createActionInstance</code></a><a href="../object/Action.html#createTopicQualifierResolver"><code class="language-plaintext highlighter-rouge">createTopicQualifierResolver</code></a><a href="../object/Action.html#doAction"><code class="language-plaintext highlighter-rouge">doAction</code></a><a href="../object/Action.html#doActionOnce"><code class="language-plaintext highlighter-rouge">doActionOnce</code></a><a href="../object/Action.html#filterAmbiguousWithVerify"><code class="language-plaintext highlighter-rouge">filterAmbiguousWithVerify</code></a><a href="../object/Action.html#filterFacets"><code class="language-plaintext highlighter-rouge">filterFacets</code></a><a href="../object/Action.html#filterPluralWithVerify"><code class="language-plaintext highlighter-rouge">filterPluralWithVerify</code></a><a href="../object/Action.html#finishResolveList"><code class="language-plaintext highlighter-rouge">finishResolveList</code></a><a href="../object/Action.html#getAnaphoricBinding"><code class="language-plaintext highlighter-rouge">getAnaphoricBinding</code></a><a href="../object/Action.html#getDefaultWithVerify"><code class="language-plaintext highlighter-rouge">getDefaultWithVerify</code></a><a href="../object/Action.html#getEnteredVerbPhrase"><code class="language-plaintext highlighter-rouge">getEnteredVerbPhrase</code></a><a href="../object/Action.html#getImplicitPhrase"><code class="language-plaintext highlighter-rouge">getImplicitPhrase</code></a><a href="../object/Action.html#getInfPhrase"><code class="language-plaintext highlighter-rouge">getInfPhrase</code></a><a href="../object/Action.html#getNotifyTable"><code class="language-plaintext highlighter-rouge">getNotifyTable</code></a><a href="../object/Action.html#getObjPreCondDescList"><code class="language-plaintext highlighter-rouge">getObjPreCondDescList</code></a><a href="../object/Action.html#getObjPreConditions"><code class="language-plaintext highlighter-rouge">getObjPreConditions</code></a><a href="../object/Action.html#getOriginalAction"><code class="language-plaintext highlighter-rouge">getOriginalAction</code></a><a href="../object/Action.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="../object/Action.html#getOtherObjectRole"><code class="language-plaintext highlighter-rouge">getOtherObjectRole</code></a><a href="../object/Action.html#getParticiplePhrase"><code class="language-plaintext highlighter-rouge">getParticiplePhrase</code></a><a href="../object/Action.html#getPredicate"><code class="language-plaintext highlighter-rouge">getPredicate</code></a><a href="../object/Action.html#getPronounOverride"><code class="language-plaintext highlighter-rouge">getPronounOverride</code></a><a href="../object/Action.html#getRemappedFrom"><code class="language-plaintext highlighter-rouge">getRemappedFrom</code></a><a href="../object/Action.html#getSimpleSynonymRemap"><code class="language-plaintext highlighter-rouge">getSimpleSynonymRemap</code></a><a href="../object/Action.html#getSortedVerifyResults"><code class="language-plaintext highlighter-rouge">getSortedVerifyResults</code></a><a href="../object/Action.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a><a href="../object/Action.html#isNestedIn"><code class="language-plaintext highlighter-rouge">isNestedIn</code></a><a href="../object/Action.html#isPartOf"><code class="language-plaintext highlighter-rouge">isPartOf</code></a><a href="../object/Action.html#isRemapped"><code class="language-plaintext highlighter-rouge">isRemapped</code></a><a href="../object/Action.html#makeResolveInfo"><code class="language-plaintext highlighter-rouge">makeResolveInfo</code></a><a href="../object/Action.html#makeResolveInfoList"><code class="language-plaintext highlighter-rouge">makeResolveInfoList</code></a><a href="../object/Action.html#maybeAnnounceDefaultObject"><code class="language-plaintext highlighter-rouge">maybeAnnounceDefaultObject</code></a><a href="../object/Action.html#maybeAnnounceImplicit"><code class="language-plaintext highlighter-rouge">maybeAnnounceImplicit</code></a><a href="../object/Action.html#maybeAnnounceMultiObject"><code class="language-plaintext highlighter-rouge">maybeAnnounceMultiObject</code></a><a href="../object/Action.html#noMatch"><code class="language-plaintext highlighter-rouge">noMatch</code></a><a href="../object/Action.html#notifyBeforeAfter"><code class="language-plaintext highlighter-rouge">notifyBeforeAfter</code></a><a href="../object/Action.html#objListPronoun"><code class="language-plaintext highlighter-rouge">objListPronoun</code></a><a href="../object/Action.html#preAnnounceActionObject"><code class="language-plaintext highlighter-rouge">preAnnounceActionObject</code></a><a href="../object/Action.html#recalcSenseContext"><code class="language-plaintext highlighter-rouge">recalcSenseContext</code></a><a href="../object/Action.html#repeatAction"><code class="language-plaintext highlighter-rouge">repeatAction</code></a><a href="../object/Action.html#resolveAction"><code class="language-plaintext highlighter-rouge">resolveAction</code></a><a href="../object/Action.html#runBeforeNotifiers"><code class="language-plaintext highlighter-rouge">runBeforeNotifiers</code></a><a href="../object/Action.html#saveActionForAgain"><code class="language-plaintext highlighter-rouge">saveActionForAgain</code></a><a href="../object/Action.html#setImplicit"><code class="language-plaintext highlighter-rouge">setImplicit</code></a><a href="../object/Action.html#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a><a href="../object/Action.html#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a><a href="../object/Action.html#setNested"><code class="language-plaintext highlighter-rouge">setNested</code></a><a href="../object/Action.html#setOriginalAction"><code class="language-plaintext highlighter-rouge">setOriginalAction</code></a><a href="../object/Action.html#setPronounOverride"><code class="language-plaintext highlighter-rouge">setPronounOverride</code></a><a href="../object/Action.html#setRemapped"><code class="language-plaintext highlighter-rouge">setRemapped</code></a><a href="../object/Action.html#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a><a href="../object/Action.html#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a><a href="../object/Action.html#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a><a href="../object/Action.html#verifyHandlersExist"><code class="language-plaintext highlighter-rouge">verifyHandlersExist</code></a><a href="../object/Action.html#whatTranslate"><code class="language-plaintext highlighter-rouge">whatTranslate</code></a><a href="../object/Action.html#withVerifyResults"><code class="language-plaintext highlighter-rouge">withVerifyResults</code></a><a href="../object/Action.html#zeroActionTime"><code class="language-plaintext highlighter-rouge">zeroActionTime</code></a></p>
+<a href="../object/Action.html#actionOfKind"><code class="language-plaintext highlighter-rouge">actionOfKind</code></a> <a href="../object/Action.html#addBeforeAfterObj"><code class="language-plaintext highlighter-rouge">addBeforeAfterObj</code></a> <a href="../object/Action.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="../object/Action.html#afterActionMain"><code class="language-plaintext highlighter-rouge">afterActionMain</code></a> <a href="../object/Action.html#announceActionObject"><code class="language-plaintext highlighter-rouge">announceActionObject</code></a> <a href="../object/Action.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="../object/Action.html#beforeActionMain"><code class="language-plaintext highlighter-rouge">beforeActionMain</code></a> <a href="../object/Action.html#cacheMultiObjectAnnouncements"><code class="language-plaintext highlighter-rouge">cacheMultiObjectAnnouncements</code></a> <a href="../object/Action.html#callAfterActionMain"><code class="language-plaintext highlighter-rouge">callAfterActionMain</code></a> <a href="../object/Action.html#callCatchAllProp"><code class="language-plaintext highlighter-rouge">callCatchAllProp</code></a> <a href="../object/Action.html#callPreConditions"><code class="language-plaintext highlighter-rouge">callPreConditions</code></a> <a href="../object/Action.html#callVerifyPreCond"><code class="language-plaintext highlighter-rouge">callVerifyPreCond</code></a> <a href="../object/Action.html#callVerifyProp"><code class="language-plaintext highlighter-rouge">callVerifyProp</code></a> <a href="../object/Action.html#cancelIteration"><code class="language-plaintext highlighter-rouge">cancelIteration</code></a> <a href="../object/Action.html#checkPreConditions"><code class="language-plaintext highlighter-rouge">checkPreConditions</code></a> <a href="../object/Action.html#combineRemappedVerifyResults"><code class="language-plaintext highlighter-rouge">combineRemappedVerifyResults</code></a> <a href="../object/Action.html#createActionFrom"><code class="language-plaintext highlighter-rouge">createActionFrom</code></a> <a href="../object/Action.html#createActionInstance"><code class="language-plaintext highlighter-rouge">createActionInstance</code></a> <a href="../object/Action.html#createTopicQualifierResolver"><code class="language-plaintext highlighter-rouge">createTopicQualifierResolver</code></a> <a href="../object/Action.html#doAction"><code class="language-plaintext highlighter-rouge">doAction</code></a> <a href="../object/Action.html#doActionOnce"><code class="language-plaintext highlighter-rouge">doActionOnce</code></a> <a href="../object/Action.html#filterAmbiguousWithVerify"><code class="language-plaintext highlighter-rouge">filterAmbiguousWithVerify</code></a> <a href="../object/Action.html#filterFacets"><code class="language-plaintext highlighter-rouge">filterFacets</code></a> <a href="../object/Action.html#filterPluralWithVerify"><code class="language-plaintext highlighter-rouge">filterPluralWithVerify</code></a> <a href="../object/Action.html#finishResolveList"><code class="language-plaintext highlighter-rouge">finishResolveList</code></a> <a href="../object/Action.html#getAnaphoricBinding"><code class="language-plaintext highlighter-rouge">getAnaphoricBinding</code></a> <a href="../object/Action.html#getDefaultWithVerify"><code class="language-plaintext highlighter-rouge">getDefaultWithVerify</code></a> <a href="../object/Action.html#getEnteredVerbPhrase"><code class="language-plaintext highlighter-rouge">getEnteredVerbPhrase</code></a> <a href="../object/Action.html#getImplicitPhrase"><code class="language-plaintext highlighter-rouge">getImplicitPhrase</code></a> <a href="../object/Action.html#getInfPhrase"><code class="language-plaintext highlighter-rouge">getInfPhrase</code></a> <a href="../object/Action.html#getNotifyTable"><code class="language-plaintext highlighter-rouge">getNotifyTable</code></a> <a href="../object/Action.html#getObjPreCondDescList"><code class="language-plaintext highlighter-rouge">getObjPreCondDescList</code></a> <a href="../object/Action.html#getObjPreConditions"><code class="language-plaintext highlighter-rouge">getObjPreConditions</code></a> <a href="../object/Action.html#getOriginalAction"><code class="language-plaintext highlighter-rouge">getOriginalAction</code></a> <a href="../object/Action.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/Action.html#getOtherObjectRole"><code class="language-plaintext highlighter-rouge">getOtherObjectRole</code></a> <a href="../object/Action.html#getParticiplePhrase"><code class="language-plaintext highlighter-rouge">getParticiplePhrase</code></a> <a href="../object/Action.html#getPredicate"><code class="language-plaintext highlighter-rouge">getPredicate</code></a> <a href="../object/Action.html#getPronounOverride"><code class="language-plaintext highlighter-rouge">getPronounOverride</code></a> <a href="../object/Action.html#getRemappedFrom"><code class="language-plaintext highlighter-rouge">getRemappedFrom</code></a> <a href="../object/Action.html#getSimpleSynonymRemap"><code class="language-plaintext highlighter-rouge">getSimpleSynonymRemap</code></a> <a href="../object/Action.html#getSortedVerifyResults"><code class="language-plaintext highlighter-rouge">getSortedVerifyResults</code></a> <a href="../object/Action.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="../object/Action.html#isNestedIn"><code class="language-plaintext highlighter-rouge">isNestedIn</code></a> <a href="../object/Action.html#isPartOf"><code class="language-plaintext highlighter-rouge">isPartOf</code></a> <a href="../object/Action.html#isRemapped"><code class="language-plaintext highlighter-rouge">isRemapped</code></a> <a href="../object/Action.html#makeResolveInfo"><code class="language-plaintext highlighter-rouge">makeResolveInfo</code></a> <a href="../object/Action.html#makeResolveInfoList"><code class="language-plaintext highlighter-rouge">makeResolveInfoList</code></a> <a href="../object/Action.html#maybeAnnounceDefaultObject"><code class="language-plaintext highlighter-rouge">maybeAnnounceDefaultObject</code></a> <a href="../object/Action.html#maybeAnnounceImplicit"><code class="language-plaintext highlighter-rouge">maybeAnnounceImplicit</code></a> <a href="../object/Action.html#maybeAnnounceMultiObject"><code class="language-plaintext highlighter-rouge">maybeAnnounceMultiObject</code></a> <a href="../object/Action.html#noMatch"><code class="language-plaintext highlighter-rouge">noMatch</code></a> <a href="../object/Action.html#notifyBeforeAfter"><code class="language-plaintext highlighter-rouge">notifyBeforeAfter</code></a> <a href="../object/Action.html#objListPronoun"><code class="language-plaintext highlighter-rouge">objListPronoun</code></a> <a href="../object/Action.html#preAnnounceActionObject"><code class="language-plaintext highlighter-rouge">preAnnounceActionObject</code></a> <a href="../object/Action.html#recalcSenseContext"><code class="language-plaintext highlighter-rouge">recalcSenseContext</code></a> <a href="../object/Action.html#repeatAction"><code class="language-plaintext highlighter-rouge">repeatAction</code></a> <a href="../object/Action.html#resolveAction"><code class="language-plaintext highlighter-rouge">resolveAction</code></a> <a href="../object/Action.html#runBeforeNotifiers"><code class="language-plaintext highlighter-rouge">runBeforeNotifiers</code></a> <a href="../object/Action.html#saveActionForAgain"><code class="language-plaintext highlighter-rouge">saveActionForAgain</code></a> <a href="../object/Action.html#setImplicit"><code class="language-plaintext highlighter-rouge">setImplicit</code></a> <a href="../object/Action.html#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a> <a href="../object/Action.html#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a> <a href="../object/Action.html#setNested"><code class="language-plaintext highlighter-rouge">setNested</code></a> <a href="../object/Action.html#setOriginalAction"><code class="language-plaintext highlighter-rouge">setOriginalAction</code></a> <a href="../object/Action.html#setPronounOverride"><code class="language-plaintext highlighter-rouge">setPronounOverride</code></a> <a href="../object/Action.html#setRemapped"><code class="language-plaintext highlighter-rouge">setRemapped</code></a> <a href="../object/Action.html#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a> <a href="../object/Action.html#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a> <a href="../object/Action.html#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a> <a href="../object/Action.html#verifyHandlersExist"><code class="language-plaintext highlighter-rouge">verifyHandlersExist</code></a> <a href="../object/Action.html#whatTranslate"><code class="language-plaintext highlighter-rouge">whatTranslate</code></a> <a href="../object/Action.html#withVerifyResults"><code class="language-plaintext highlighter-rouge">withVerifyResults</code></a> <a href="../object/Action.html#zeroActionTime"><code class="language-plaintext highlighter-rouge">zeroActionTime</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Resolver</code> :<br />
-<a href="../object/Resolver.html#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a><a href="../object/Resolver.html#cacheScopeList"><code class="language-plaintext highlighter-rouge">cacheScopeList</code></a><a href="../object/Resolver.html#filterAll"><code class="language-plaintext highlighter-rouge">filterAll</code></a><a href="../object/Resolver.html#filterAmbiguousEquivalents"><code class="language-plaintext highlighter-rouge">filterAmbiguousEquivalents</code></a><a href="../object/Resolver.html#filterAmbiguousNounPhrase"><code class="language-plaintext highlighter-rouge">filterAmbiguousNounPhrase</code></a><a href="../object/Resolver.html#filterPluralPhrase"><code class="language-plaintext highlighter-rouge">filterPluralPhrase</code></a><a href="../object/Resolver.html#filterPossRank"><code class="language-plaintext highlighter-rouge">filterPossRank</code></a><a href="../object/Resolver.html#getAction"><code class="language-plaintext highlighter-rouge">getAction</code></a><a href="../object/Resolver.html#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a><a href="../object/Resolver.html#getAllDefaults"><code class="language-plaintext highlighter-rouge">getAllDefaults</code></a><a href="../object/Resolver.html#getDefaultObject"><code class="language-plaintext highlighter-rouge">getDefaultObject</code></a><a href="../object/Resolver.html#getPossessiveResolver"><code class="language-plaintext highlighter-rouge">getPossessiveResolver</code></a><a href="../object/Resolver.html#getPronounDefault"><code class="language-plaintext highlighter-rouge">getPronounDefault</code></a><a href="../object/Resolver.html#getQualifierResolver"><code class="language-plaintext highlighter-rouge">getQualifierResolver</code></a><a href="../object/Resolver.html#getRawPronounAntecedent"><code class="language-plaintext highlighter-rouge">getRawPronounAntecedent</code></a><a href="../object/Resolver.html#getReflexiveBinding"><code class="language-plaintext highlighter-rouge">getReflexiveBinding</code></a><a href="../object/Resolver.html#getScopeList"><code class="language-plaintext highlighter-rouge">getScopeList</code></a><a href="../object/Resolver.html#getTargetActor"><code class="language-plaintext highlighter-rouge">getTargetActor</code></a><a href="../object/Resolver.html#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a><a href="../object/Resolver.html#objInScope"><code class="language-plaintext highlighter-rouge">objInScope</code></a><a href="../object/Resolver.html#resetResolver"><code class="language-plaintext highlighter-rouge">resetResolver</code></a><a href="../object/Resolver.html#resolvePronounAntecedent"><code class="language-plaintext highlighter-rouge">resolvePronounAntecedent</code></a><a href="../object/Resolver.html#resolveUnknownNounPhrase"><code class="language-plaintext highlighter-rouge">resolveUnknownNounPhrase</code></a><a href="../object/Resolver.html#selectIndefinite"><code class="language-plaintext highlighter-rouge">selectIndefinite</code></a><a href="../object/Resolver.html#withGlobals"><code class="language-plaintext highlighter-rouge">withGlobals</code></a></p>
+<a href="../object/Resolver.html#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a> <a href="../object/Resolver.html#cacheScopeList"><code class="language-plaintext highlighter-rouge">cacheScopeList</code></a> <a href="../object/Resolver.html#filterAll"><code class="language-plaintext highlighter-rouge">filterAll</code></a> <a href="../object/Resolver.html#filterAmbiguousEquivalents"><code class="language-plaintext highlighter-rouge">filterAmbiguousEquivalents</code></a> <a href="../object/Resolver.html#filterAmbiguousNounPhrase"><code class="language-plaintext highlighter-rouge">filterAmbiguousNounPhrase</code></a> <a href="../object/Resolver.html#filterPluralPhrase"><code class="language-plaintext highlighter-rouge">filterPluralPhrase</code></a> <a href="../object/Resolver.html#filterPossRank"><code class="language-plaintext highlighter-rouge">filterPossRank</code></a> <a href="../object/Resolver.html#getAction"><code class="language-plaintext highlighter-rouge">getAction</code></a> <a href="../object/Resolver.html#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a> <a href="../object/Resolver.html#getAllDefaults"><code class="language-plaintext highlighter-rouge">getAllDefaults</code></a> <a href="../object/Resolver.html#getDefaultObject"><code class="language-plaintext highlighter-rouge">getDefaultObject</code></a> <a href="../object/Resolver.html#getPossessiveResolver"><code class="language-plaintext highlighter-rouge">getPossessiveResolver</code></a> <a href="../object/Resolver.html#getPronounDefault"><code class="language-plaintext highlighter-rouge">getPronounDefault</code></a> <a href="../object/Resolver.html#getQualifierResolver"><code class="language-plaintext highlighter-rouge">getQualifierResolver</code></a> <a href="../object/Resolver.html#getRawPronounAntecedent"><code class="language-plaintext highlighter-rouge">getRawPronounAntecedent</code></a> <a href="../object/Resolver.html#getReflexiveBinding"><code class="language-plaintext highlighter-rouge">getReflexiveBinding</code></a> <a href="../object/Resolver.html#getScopeList"><code class="language-plaintext highlighter-rouge">getScopeList</code></a> <a href="../object/Resolver.html#getTargetActor"><code class="language-plaintext highlighter-rouge">getTargetActor</code></a> <a href="../object/Resolver.html#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a> <a href="../object/Resolver.html#objInScope"><code class="language-plaintext highlighter-rouge">objInScope</code></a> <a href="../object/Resolver.html#resetResolver"><code class="language-plaintext highlighter-rouge">resetResolver</code></a> <a href="../object/Resolver.html#resolvePronounAntecedent"><code class="language-plaintext highlighter-rouge">resolvePronounAntecedent</code></a> <a href="../object/Resolver.html#resolveUnknownNounPhrase"><code class="language-plaintext highlighter-rouge">resolveUnknownNounPhrase</code></a> <a href="../object/Resolver.html#selectIndefinite"><code class="language-plaintext highlighter-rouge">selectIndefinite</code></a> <a href="../object/Resolver.html#withGlobals"><code class="language-plaintext highlighter-rouge">withGlobals</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="actionAllowsAll"></span></p>
 
@@ -434,16 +406,12 @@ English-specific additions for single-object verbs.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3669">3669</a>]</p>
 
-<div class="desc">
+<p>Does this action allow “all” to be used in noun phrases? By default, we
+allow it or not according to a gameMain property.</p>
 
-Does this action allow "all" to be used in noun phrases? By default, we
-allow it or not according to a gameMain property.
-
-Note that the inventory management verbs (TAKE, TAKE FROM, DROP, PUT IN,
-PUT ON) override this to allow "all" to be used, so disallowing "all"
-here (or via gameMain) won't disable "all" for those verbs.
-
-</div>
+<p>Note that the inventory management verbs (TAKE, TAKE FROM, DROP, PUT IN,
+PUT ON) override this to allow “all” to be used, so disallowing “all”
+here (or via gameMain) won’t disable “all” for those verbs.</p>
 
 <p><span id="actionDobjProp"></span></p>
 
@@ -451,11 +419,7 @@ here (or via gameMain) won't disable "all" for those verbs.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3620">3620</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="actor_"></span></p>
 
@@ -463,11 +427,7 @@ here (or via gameMain) won't disable "all" for those verbs.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3786">3786</a>]</p>
 
-<div class="desc">
-
-target actor
-
-</div>
+<p>target actor</p>
 
 <p><span id="askDobjResponseProd"></span></p>
 
@@ -475,18 +435,14 @@ target actor
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3221">3221</a>]</p>
 
-<div class="desc">
-
-The root production to use to parse missing direct object responses. By
+<p>The root production to use to parse missing direct object responses. By
 default, this is nounList, but individual actions can override this as
-appropriate.
+appropriate.</p>
 
-Note that language modules might want to override this to allow for
+<p>Note that language modules might want to override this to allow for
 special responses. For example, in English, some verbs might want to
 override this with a specialized production that allows the appropriate
-preposition in the response.
-
-</div>
+preposition in the response.</p>
 
 <p><span id="checkDobjProp"></span></p>
 
@@ -494,11 +450,7 @@ preposition in the response.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3619">3619</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="dobjCur_"></span></p>
 
@@ -506,14 +458,10 @@ preposition in the response.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3745">3745</a>]</p>
 
-<div class="desc">
-
-The resolved direct object on which we're currently executing the
+<p>The resolved direct object on which we’re currently executing the
 command. To execute the command, we iterate through the direct object
 list, calling the execution sequence for each object in the list. We set
-this to the current object in each iteration.
-
-</div>
+this to the current object in each iteration.</p>
 
 <p><span id="dobjInfoCur_"></span></p>
 
@@ -521,11 +469,7 @@ this to the current object in each iteration.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3748">3748</a>]</p>
 
-<div class="desc">
-
-the full ResolveInfo associated with dobjCur\_
-
-</div>
+<p>the full ResolveInfo associated with dobjCur_</p>
 
 <p><span id="dobjList_"></span></p>
 
@@ -533,11 +477,7 @@ the full ResolveInfo associated with dobjCur\_
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3737">3737</a>]</p>
 
-<div class="desc">
-
-my resolved list of direct objects
-
-</div>
+<p>my resolved list of direct objects</p>
 
 <p><span id="dobjMatch"></span></p>
 
@@ -545,11 +485,7 @@ my resolved list of direct objects
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3734">3734</a>]</p>
 
-<div class="desc">
-
-the predicate must assign the direct object production tree here
-
-</div>
+<p>the predicate must assign the direct object production tree here</p>
 
 <p><span id="dobjResolver_"></span></p>
 
@@ -557,11 +493,7 @@ the predicate must assign the direct object production tree here
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3751">3751</a>]</p>
 
-<div class="desc">
-
-my cached direct object resolver
-
-</div>
+<p>my cached direct object resolver</p>
 
 <p><span id="issuer_"></span></p>
 
@@ -569,11 +501,7 @@ my cached direct object resolver
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3783">3783</a>]</p>
 
-<div class="desc">
-
-issuing actor
-
-</div>
+<p>issuing actor</p>
 
 <p><span id="preCondDobjProp"></span></p>
 
@@ -581,11 +509,7 @@ issuing actor
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3617">3617</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="predicateNounPhrases"></span></p>
 
@@ -593,11 +517,7 @@ issuing actor
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3269">3269</a>]</p>
 
-<div class="desc">
-
-a transitive action has one noun phrase: the direct object
-
-</div>
+<p>a transitive action has one noun phrase: the direct object</p>
 
 <p><span id="remapDobjProp"></span></p>
 
@@ -605,11 +525,7 @@ a transitive action has one noun phrase: the direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3618">3618</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="verDobjProp"></span></p>
 
@@ -617,25 +533,20 @@ a transitive action has one noun phrase: the direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3616">3616</a>]</p>
 
-<div class="desc">
-
-The direct object preconditions, verifier, remapper, check, and action
+<p>The direct object preconditions, verifier, remapper, check, and action
 methods for this action. Each concrete action must define these
-appropriately. By convention, the methods are named like so:
+appropriately. By convention, the methods are named like so:</p>
 
-  
-preconditions: preCondDobjAction  
-verifier: verDobjAction  
-remap: remapDobjAction  
-check: checkDobjAction  
-action: actionDobjAction
+<p>preconditions: preCondDobjAction<br />
+verifier: verDobjAction<br />
+remap: remapDobjAction<br />
+check: checkDobjAction<br />
+action: actionDobjAction</p>
 
-where the 'Action' suffix is replaced by the name of the action. The
+<p>where the ‘Action’ suffix is replaced by the name of the action. The
 DefineTAction macro applies this convention, so in most cases library
 and game authors will never have to create all of those property names
-manually.
-
-</div>
+manually.</p>
 
 <p><span id="whichMessageObject"></span></p>
 
@@ -643,22 +554,14 @@ manually.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3795">3795</a>]</p>
 
-<div class="desc">
-
-By default, our direct object plays the direct object role in generated
+<p>By default, our direct object plays the direct object role in generated
 messages. Subclasses can override this if the resolved object is to play
 a different role. Note that this only affects generated messages; for
-parsing purposes, our object is always in the DirectObject role.
-
-</div>
+parsing purposes, our object is always in the DirectObject role.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="adjustDefaultObjectPrep"></span></p>
 
@@ -666,15 +569,11 @@ parsing purposes, our object is always in the DirectObject role.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8466">8466</a>]</p>
 
-<div class="desc">
-
-Adjust the preposition. In some cases, the verb will want to vary the
+<p>Adjust the preposition. In some cases, the verb will want to vary the
 preposition according to the object. This method can return a custom
 preposition in place of the one in the verbPhrase. By default, we just
 use the fixed preposition from the verbPhrase, which is passed in to us
-in 'prep'.
-
-</div>
+in ‘prep’.</p>
 
 <p><span id="announceAllDefaultObjects"></span></p>
 
@@ -682,11 +581,7 @@ in 'prep'.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8469">8469</a>]</p>
 
-<div class="desc">
-
-announce all defaulted objects
-
-</div>
+<p>announce all defaulted objects</p>
 
 <p><span id="announceDefaultObject"></span></p>
 
@@ -694,11 +589,7 @@ announce all defaulted objects
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8434">8434</a>]</p>
 
-<div class="desc">
-
-announce a default object used with this action
-
-</div>
+<p>announce a default object used with this action</p>
 
 <p><span id="canDobjResolveTo"></span></p>
 
@@ -706,15 +597,11 @@ announce a default object used with this action
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3241">3241</a>]</p>
 
-<div class="desc">
-
-Can the direct object potentially resolve to the given simulation
-object? This only determines if the object is a \*syntactic\* match,
+<p>Can the direct object potentially resolve to the given simulation
+object? This only determines if the object is a *syntactic* match,
 meaning that it can match at a vocabulary and grammar level. This
-doesn't test it for logicalness or check that it's an otherwise valid
-resolution.
-
-</div>
+doesn’t test it for logicalness or check that it’s an otherwise valid
+resolution.</p>
 
 <p><span id="checkAction"></span></p>
 
@@ -722,16 +609,12 @@ resolution.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3555">3555</a>]</p>
 
-<div class="desc">
+<p>Check the command.</p>
 
-Check the command.
-
-For a single-object transitive action, this runs the catch-all 'check'
-properties (the dobjFor(Default) and dobjFor(All) 'check' methods) on
-the direct object, then calls the individual 'check' routine for this
-specific action.
-
-</div>
+<p>For a single-object transitive action, this runs the catch-all ‘check’
+properties (the dobjFor(Default) and dobjFor(All) ‘check’ methods) on
+the direct object, then calls the individual ‘check’ routine for this
+specific action.</p>
 
 <p><span id="checkRemapping"></span></p>
 
@@ -739,11 +622,7 @@ specific action.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3531">3531</a>]</p>
 
-<div class="desc">
-
-Check for remapping
-
-</div>
+<p>Check for remapping</p>
 
 <p><span id="construct"></span></p>
 
@@ -751,11 +630,7 @@ Check for remapping
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3067">3067</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="createDobjResolver"></span></p>
 
@@ -763,13 +638,9 @@ Check for remapping
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3651">3651</a>]</p>
 
-<div class="desc">
-
-Create a resolver for the direct object. By default, we are our own
+<p>Create a resolver for the direct object. By default, we are our own
 resolver. Some actions might want to override this to create and return
-a specialized resolver instance if special resolution rules are needed.
-
-</div>
+a specialized resolver instance if special resolution rules are needed.</p>
 
 <p><span id="createForMissingDobj"></span></p>
 
@@ -777,12 +648,8 @@ a specialized resolver instance if special resolution rules are needed.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3182">3182</a>]</p>
 
-<div class="desc">
-
-Create an instance of this action for retrying a given single-object
-action with a missing direct object.
-
-</div>
+<p>Create an instance of this action for retrying a given single-object
+action with a missing direct object.</p>
 
 <p><span id="createForRetry"></span></p>
 
@@ -790,11 +657,7 @@ action with a missing direct object.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3085">3085</a>]</p>
 
-<div class="desc">
-
-Create an action for retrying an original action with changes.
-
-</div>
+<p>Create an action for retrying an original action with changes.</p>
 
 <p><span id="doActionMain"></span></p>
 
@@ -802,12 +665,8 @@ Create an action for retrying an original action with changes.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3431">3431</a>]</p>
 
-<div class="desc">
-
-Execute the action. We'll run through the execution sequence once for
-each resolved direct object.
-
-</div>
+<p>Execute the action. We’ll run through the execution sequence once for
+each resolved direct object.</p>
 
 <p><span id="execAction"></span></p>
 
@@ -815,11 +674,7 @@ each resolved direct object.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3584">3584</a>]</p>
 
-<div class="desc">
-
-Execute the command.
-
-</div>
+<p>Execute the command.</p>
 
 <p><span id="filterAmbiguousDobj"></span></p>
 
@@ -827,11 +682,7 @@ Execute the command.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3683">3683</a>]</p>
 
-<div class="desc">
-
-filter an ambiguous direct object noun phrase
-
-</div>
+<p>filter an ambiguous direct object noun phrase</p>
 
 <p><span id="filterPluralDobj"></span></p>
 
@@ -839,11 +690,7 @@ filter an ambiguous direct object noun phrase
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3692">3692</a>]</p>
 
-<div class="desc">
-
-filter a plural phrase
-
-</div>
+<p>filter a plural phrase</p>
 
 <p><span id="getAllDobj"></span></p>
 
@@ -851,14 +698,10 @@ filter a plural phrase
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3677">3677</a>]</p>
 
-<div class="desc">
-
-Resolve 'all' for the direct object, given a list of everything in
-scope. By default, we'll simply return everything in scope; some actions
+<p>Resolve ‘all’ for the direct object, given a list of everything in
+scope. By default, we’ll simply return everything in scope; some actions
 might want to override this to return a more specific list of objects
-suitable for 'all'.
-
-</div>
+suitable for ‘all’.</p>
 
 <p><span id="getCurrentObjects"></span></p>
 
@@ -866,12 +709,8 @@ suitable for 'all'.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3484">3484</a>]</p>
 
-<div class="desc">
-
-Get the list of active objects. We have only a direct object, so we'll
-return a list with the current direct object.
-
-</div>
+<p>Get the list of active objects. We have only a direct object, so we’ll
+return a list with the current direct object.</p>
 
 <p><span id="getDefaultDobj"></span></p>
 
@@ -879,11 +718,7 @@ return a list with the current direct object.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3700">3700</a>]</p>
 
-<div class="desc">
-
-get the default direct object
-
-</div>
+<p>get the default direct object</p>
 
 <p><span id="getDobj"></span></p>
 
@@ -891,11 +726,7 @@ get the default direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3708">3708</a>]</p>
 
-<div class="desc">
-
-get the current direct object of the command
-
-</div>
+<p>get the current direct object of the command</p>
 
 <p><span id="getDobjCount"></span></p>
 
@@ -903,11 +734,7 @@ get the current direct object of the command
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3717">3717</a>]</p>
 
-<div class="desc">
-
-get the number of direct objects
-
-</div>
+<p>get the number of direct objects</p>
 
 <p><span id="getDobjFlags"></span></p>
 
@@ -915,11 +742,7 @@ get the number of direct objects
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3714">3714</a>]</p>
 
-<div class="desc">
-
-get the object resolution flags for the direct object
-
-</div>
+<p>get the object resolution flags for the direct object</p>
 
 <p><span id="getDobjInfo"></span></p>
 
@@ -927,11 +750,7 @@ get the object resolution flags for the direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3711">3711</a>]</p>
 
-<div class="desc">
-
-get the full ResolveInfo associated with the current direct object
-
-</div>
+<p>get the full ResolveInfo associated with the current direct object</p>
 
 <p><span id="getDobjResolver"></span></p>
 
@@ -939,16 +758,12 @@ get the full ResolveInfo associated with the current direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3631">3631</a>]</p>
 
-<div class="desc">
-
-Get my direct object resolver. If I don't already have one, create one
-and cache it; if I've already cached one, return it. Note that we cache
+<p>Get my direct object resolver. If I don’t already have one, create one
+and cache it; if I’ve already cached one, return it. Note that we cache
 the resolver because it can sometimes take a bit of work to set one up
 (the scope list can in some cases be complicated to calculate). We use
 the resolver only during the object resolution phase; since game state
-can't change during this phase, it's safe to keep a cached copy.
-
-</div>
+can’t change during this phase, it’s safe to keep a cached copy.</p>
 
 <p><span id="getDobjTokens"></span></p>
 
@@ -956,11 +771,7 @@ can't change during this phase, it's safe to keep a cached copy.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3720">3720</a>]</p>
 
-<div class="desc">
-
-get the original token list of the current direct object phrase
-
-</div>
+<p>get the original token list of the current direct object phrase</p>
 
 <p><span id="getDobjWords"></span></p>
 
@@ -968,11 +779,7 @@ get the original token list of the current direct object phrase
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3727">3727</a>]</p>
 
-<div class="desc">
-
-get the original words (as a list of strings) of the current dobj
-
-</div>
+<p>get the original words (as a list of strings) of the current dobj</p>
 
 <p><span id="getMatchForRole"></span></p>
 
@@ -980,11 +787,7 @@ get the original words (as a list of strings) of the current dobj
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3286">3286</a>]</p>
 
-<div class="desc">
-
-get the match tree for the noun phrase in the given role
-
-</div>
+<p>get the match tree for the noun phrase in the given role</p>
 
 <p><span id="getMessageParam"></span></p>
 
@@ -992,12 +795,8 @@ get the match tree for the noun phrase in the given role
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3413">3413</a>]</p>
 
-<div class="desc">
-
-Get a message parameter object for the action. We define 'dobj' as the
-direct object, in addition to any inherited targets.
-
-</div>
+<p>Get a message parameter object for the action. We define ‘dobj’ as the
+direct object, in addition to any inherited targets.</p>
 
 <p><span id="getObjectForRole"></span></p>
 
@@ -1005,11 +804,7 @@ direct object, in addition to any inherited targets.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3279">3279</a>]</p>
 
-<div class="desc">
-
-get the resolved object in a given role
-
-</div>
+<p>get the resolved object in a given role</p>
 
 <p><span id="getObjResponseProd"></span></p>
 
@@ -1017,11 +812,7 @@ get the resolved object in a given role
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3224">3224</a>]</p>
 
-<div class="desc">
-
-get the missing object response production for a given role
-
-</div>
+<p>get the missing object response production for a given role</p>
 
 <p><span id="getPreCondDescList"></span></p>
 
@@ -1029,11 +820,7 @@ get the missing object response production for a given role
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3469">3469</a>]</p>
 
-<div class="desc">
-
-get the precondition descriptor list for the action
-
-</div>
+<p>get the precondition descriptor list for the action</p>
 
 <p><span id="getPreCondPropForRole"></span></p>
 
@@ -1041,11 +828,7 @@ get the precondition descriptor list for the action
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3299">3299</a>]</p>
 
-<div class="desc">
-
-get the 'preCond' property for a given object role
-
-</div>
+<p>get the ‘preCond’ property for a given object role</p>
 
 <p><span id="getQuestionInf"></span></p>
 
@@ -1053,11 +836,7 @@ get the 'preCond' property for a given object role
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8476">8476</a>]</p>
 
-<div class="desc">
-
-show the verb's basic infinitive form for an interrogative
-
-</div>
+<p>show the verb’s basic infinitive form for an interrogative</p>
 
 <p><span id="getRemapPropForRole"></span></p>
 
@@ -1065,11 +844,7 @@ show the verb's basic infinitive form for an interrogative
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3305">3305</a>]</p>
 
-<div class="desc">
-
-get the 'remap' property for a given object role
-
-</div>
+<p>get the ‘remap’ property for a given object role</p>
 
 <p><span id="getResolvedDobjList"></span></p>
 
@@ -1077,11 +852,7 @@ get the 'remap' property for a given object role
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3351">3351</a>]</p>
 
-<div class="desc">
-
-get the list of resolved direct objects
-
-</div>
+<p>get the list of resolved direct objects</p>
 
 <p><span id="getResolvedObjList"></span></p>
 
@@ -1089,11 +860,7 @@ get the list of resolved direct objects
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3344">3344</a>]</p>
 
-<div class="desc">
-
-get the list of resolved objects in the given role
-
-</div>
+<p>get the list of resolved objects in the given role</p>
 
 <p><span id="getResolveInfo"></span></p>
 
@@ -1101,11 +868,7 @@ get the list of resolved objects in the given role
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3311">3311</a>]</p>
 
-<div class="desc">
-
-get the ResolveInfo for the given object
-
-</div>
+<p>get the ResolveInfo for the given object</p>
 
 <p><span id="getRoleFromIndex"></span></p>
 
@@ -1113,11 +876,7 @@ get the ResolveInfo for the given object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3272">3272</a>]</p>
 
-<div class="desc">
-
-get the role of an object
-
-</div>
+<p>get the role of an object</p>
 
 <p><span id="getVerbPhrase"></span></p>
 
@@ -1125,11 +884,7 @@ get the role of an object
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8492">8492</a>]</p>
 
-<div class="desc">
-
-get the verb phrase in infinitive or participle form
-
-</div>
+<p>get the verb phrase in infinitive or participle form</p>
 
 <p><span id="getVerbPhrase1"></span></p>
 
@@ -1137,18 +892,14 @@ get the verb phrase in infinitive or participle form
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8534">8534</a>]</p>
 
-<div class="desc">
-
-Given the text of the direct object phrase, build the verb phrase for a
+<p>Given the text of the direct object phrase, build the verb phrase for a
 one-object verb. This is a class method that can be used by other kinds
-of verbs (i.e., non-TActions) that use phrasing like a single object.
+of verbs (i.e., non-TActions) that use phrasing like a single object.</p>
 
-'inf' is a flag indicating whether to use the infinitive form (true) or
-the present participle form (nil); 'vp' is the verbPhrase string;
-'dobjText' is the direct object phrase's text; and 'dobjIsPronoun' is
-true if the dobj text is rendered as a pronoun.
-
-</div>
+<p>‘inf’ is a flag indicating whether to use the infinitive form (true) or
+the present participle form (nil); ‘vp’ is the verbPhrase string;
+‘dobjText’ is the direct object phrase’s text; and ‘dobjIsPronoun’ is
+true if the dobj text is rendered as a pronoun.</p>
 
 <p><span id="getVerifyPropForRole"></span></p>
 
@@ -1156,11 +907,7 @@ true if the dobj text is rendered as a pronoun.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3293">3293</a>]</p>
 
-<div class="desc">
-
-get the 'verify' property for a given object role
-
-</div>
+<p>get the ‘verify’ property for a given object role</p>
 
 <p><span id="initForMissingDobj"></span></p>
 
@@ -1168,16 +915,12 @@ get the 'verify' property for a given object role
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3209">3209</a>]</p>
 
-<div class="desc">
-
-Initialize this action in preparation for retrying with a missing direct
+<p>Initialize this action in preparation for retrying with a missing direct
 object. This routine must copy any phrases from the original action that
 have already been resolved. This base TAction implementation obviously
-can't have anything pre-resolved in the original, since the original
+can’t have anything pre-resolved in the original, since the original
 must simply be an IAction. Subclasses must override as appropriate for
-the kinds of base actions from which they can be retried.
-
-</div>
+the kinds of base actions from which they can be retried.</p>
 
 <p><span id="initResolver"></span></p>
 
@@ -1185,11 +928,7 @@ the kinds of base actions from which they can be retried.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3769">3769</a>]</p>
 
-<div class="desc">
-
-Initialize me as a resolver.
-
-</div>
+<p>Initialize me as a resolver.</p>
 
 <p><span id="initTentative"></span></p>
 
@@ -1197,11 +936,7 @@ Initialize me as a resolver.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3520">3520</a>]</p>
 
-<div class="desc">
-
-initialize tentative resolutions for other noun phrases
-
-</div>
+<p>initialize tentative resolutions for other noun phrases</p>
 
 <p><span id="resetAction"></span></p>
 
@@ -1209,11 +944,7 @@ initialize tentative resolutions for other noun phrases
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3073">3073</a>]</p>
 
-<div class="desc">
-
-inherit only the Action constructor
-
-</div>
+<p>inherit only the Action constructor</p>
 
 <p><span id="resolvedObjectsInScope"></span></p>
 
@@ -1221,11 +952,7 @@ inherit only the Action constructor
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3402">3402</a>]</p>
 
-<div class="desc">
-
-check that the resolved objects are in scope
-
-</div>
+<p>check that the resolved objects are in scope</p>
 
 <p><span id="resolveNouns"></span></p>
 
@@ -1233,12 +960,8 @@ check that the resolved objects are in scope
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3253">3253</a>]</p>
 
-<div class="desc">
-
-Resolve objects. This is called at the start of command execution to
-resolve noun phrases in the command to specific objects.
-
-</div>
+<p>Resolve objects. This is called at the start of command execution to
+resolve noun phrases in the command to specific objects.</p>
 
 <p><span id="retryWithAmbiguousDobj"></span></p>
 
@@ -1246,12 +969,8 @@ resolve noun phrases in the command to specific objects.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3138">3138</a>]</p>
 
-<div class="desc">
-
-Retry an action as a single-object action with an ambiguous direct
-object. We'll ask which of the given possible objects is intended.
-
-</div>
+<p>Retry an action as a single-object action with an ambiguous direct
+object. We’ll ask which of the given possible objects is intended.</p>
 
 <p><span id="retryWithMissingDobj"></span></p>
 
@@ -1259,17 +978,13 @@ object. We'll ask which of the given possible objects is intended.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3127">3127</a>]</p>
 
-<div class="desc">
-
-Retry an intransitive action as a single-object action. We'll obtain a
+<p>Retry an intransitive action as a single-object action. We’ll obtain a
 indirect object using the normal means (first looking for a default,
-then prompting the player if we can't find a suitable default). 'orig'
-is the original zero-object action.
+then prompting the player if we can’t find a suitable default). ‘orig’
+is the original zero-object action.</p>
 
-This routine terminates with 'exit' if it doesn't throw some other
-error.
-
-</div>
+<p>This routine terminates with ‘exit’ if it doesn’t throw some other
+error.</p>
 
 <p><span id="setCurrentObjects"></span></p>
 
@@ -1277,11 +992,7 @@ error.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3490">3490</a>]</p>
 
-<div class="desc">
-
-set the current objects
-
-</div>
+<p>set the current objects</p>
 
 <p><span id="setObjectMatches"></span></p>
 
@@ -1289,11 +1000,7 @@ set the current objects
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3389">3389</a>]</p>
 
-<div class="desc">
-
-manually set the unresolved object noun phrase match trees
-
-</div>
+<p>manually set the unresolved object noun phrase match trees</p>
 
 <p><span id="setResolvedDobj"></span></p>
 
@@ -1301,11 +1008,7 @@ manually set the unresolved object noun phrase match trees
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3368">3368</a>]</p>
 
-<div class="desc">
-
-set the resolved direct object
-
-</div>
+<p>set the resolved direct object</p>
 
 <p><span id="setResolvedObjects"></span></p>
 
@@ -1313,11 +1016,7 @@ set the resolved direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3361">3361</a>]</p>
 
-<div class="desc">
-
-manually set the resolved objects - we'll set the direct object
-
-</div>
+<p>manually set the resolved objects - we’ll set the direct object</p>
 
 <p><span id="testRetryDefaultDobj"></span></p>
 
@@ -1325,14 +1024,10 @@ manually set the resolved objects - we'll set the direct object
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3164">3164</a>]</p>
 
-<div class="desc">
-
-Test to see if askForDobj() would find a default direct object. Returns
-true if there's a default, nil if not. If this returns true, then
+<p>Test to see if askForDobj() would find a default direct object. Returns
+true if there’s a default, nil if not. If this returns true, then
 askForDobj() will simply take the default and proceed; otherwise, it
-will have to actually ask the user for the missing information.
-
-</div>
+will have to actually ask the user for the missing information.</p>
 
 <p><span id="verifyAction"></span></p>
 
@@ -1340,11 +1035,7 @@ will have to actually ask the user for the missing information.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3499">3499</a>]</p>
 
-<div class="desc">
-
-Verify the action.
-
-</div>
+<p>Verify the action.</p>
 
 <p><span id="whatObj"></span></p>
 
@@ -1352,18 +1043,11 @@ Verify the action.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8423">8423</a>]</p>
 
-<div class="desc">
+<p>return an interrogative word for an object of the action</p>
 
-return an interrogative word for an object of the action
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

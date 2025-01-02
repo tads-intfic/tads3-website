@@ -75,7 +75,7 @@ typical IF command syntax.
 
 
 
-[`Herself`](../object/Herself.html)[`Himself`](../object/Himself.html)[`Itself`](../object/Itself.html)[`Myself`](../object/Myself.html)[`Ourselves`](../object/Ourselves.html)[`Themselves`](../object/Themselves.html)[`Yourself`](../object/Yourself.html)[`Yourselves`](../object/Yourselves.html)
+[`Herself`](../object/Herself.html) [`Himself`](../object/Himself.html) [`Itself`](../object/Itself.html) [`Myself`](../object/Myself.html) [`Ourselves`](../object/Ourselves.html) [`Themselves`](../object/Themselves.html) [`Yourself`](../object/Yourself.html) [`Yourselves`](../object/Yourselves.html)
 <span id="_PropSummary_"></span>
 
 
@@ -84,10 +84,10 @@ typical IF command syntax.
 
 
 
-[`all`](#all)[`person`](#person)[`pronoun`](#pronoun)
+[`all`](#all) [`person`](#person) [`pronoun`](#pronoun)
 
 Inherited from `Pronoun` :  
-[`aName`](../object/Pronoun.html#aName)[`ante`](../object/Pronoun.html#ante)[`reflexive`](../object/Pronoun.html#reflexive)[`theName`](../object/Pronoun.html#theName)[`theObjName`](../object/Pronoun.html#theObjName)
+[`aName`](../object/Pronoun.html#aName) [`ante`](../object/Pronoun.html#ante) [`reflexive`](../object/Pronoun.html#reflexive) [`theName`](../object/Pronoun.html#theName) [`theObjName`](../object/Pronoun.html#theObjName)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,10 +97,10 @@ Inherited from `Pronoun` :
 
 
 
-[`construct`](#construct)[`resolve`](#resolve)
+[`construct`](#construct) [`resolve`](#resolve)
 
 Inherited from `Pronoun` :  
-[`matchObj`](../object/Pronoun.html#matchObj)[`setAntecedents`](../object/Pronoun.html#setAntecedents)
+[`matchObj`](../object/Pronoun.html#matchObj) [`setAntecedents`](../object/Pronoun.html#setAntecedents)
 
 <span id="_Properties_"></span>
 

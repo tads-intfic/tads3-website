@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="final.html" class="nav">Final Moves</a> \&gt; The Web UI  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="final.html" class="nav">Final Moves</a> &gt; The Web UI<br />
 <span class="navnp"><a href="lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
     <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="the-web-ui">The Web UI</h1>
 
@@ -338,285 +330,281 @@ should group your resources into one or more folders - that is,
 subdirectories of your main project folder for the game. Second, for
 each folder, add an object definition like this to your game:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WebResourceResFile
+   vpath = static new RexPattern('/foldername/')
+; ```
+</code></pre></div></div>
 
-    WebResourceResFile
-       vpath = static new RexPattern('/foldername/')
-    ;
-`
-
-That tells the library to treat anything in the "foldername"
+<p>That tells the library to treat anything in the “foldername”
 subdirectory of the game folder as an HTML resource, allowing the client
-browser to download those files. It's just an ordinary object
+browser to download those files. It’s just an ordinary object
 definition, so you can put it anywhere in your source code that object
 definitions are allowed. If you divide your resources into multiple
 folders, just add a definition like the one above for each folder. (You
-don't have to do this for subfolders, though - the '/foldername/'
-definition will allow files in subfolders of 'foldername'.)
+don’t have to do this for subfolders, though - the ‘/foldername/’
+definition will allow files in subfolders of ‘foldername’.)</p>
 
-## <span id="shutdown">QUIT, disconnect, and program termination</span>
+<h2 id="quit-disconnect-and-program-termination"><span id="shutdown">QUIT, disconnect, and program termination</span></h2>
 
-In the traditional console UI, the way the game program terminates is
+<p>In the traditional console UI, the way the game program terminates is
 fairly straightforward. When the player types QUIT, the Adv3Lite command
 loop exits, which unwinds the call stack until the
-`main()` function returns. This terminates the
+```main()` function returns. This terminates the
 game program, at which point the interpreter program exits to the
 operating system. Alternatively, on GUI versions (such as QTads or HTML
 TADS), the player can end the program by closing the main window. This
 is processed in much the same way as QUIT internally: the interpreter
-sends an "end of file" indication to the command loop, to let it know
-that no more input is forthcoming (as there's no way for the player to
+sends an “end of file” indication to the command loop, to let it know
+that no more input is forthcoming (as there’s no way for the player to
 enter more input without the main window), causing the command loop to
-exit.
+exit.</p>
 
-With the Web UI, things aren't quite as simple. The complication is that
+<p>With the Web UI, things aren’t quite as simple. The complication is that
 the player and the game are on separate computers. At first glance, it
 might seem as though we could take the same approach: if the player
 types QUIT or closes their browser, we should simply let the TADS
-program terminate as usual. But what happens if the player's network
-connection momentarily lapses? We obviously don't want to treat that the
-same way as an intentional disconnection, but it's not always possible
+program terminate as usual. But what happens if the player’s network
+connection momentarily lapses? We obviously don’t want to treat that the
+same way as an intentional disconnection, but it’s not always possible
 to tell the difference with the network protocols involved. And what
 happens if the player presses the Refresh button in their browser? It
-turns out that "Refresh" and "Close Page" are essentially
+turns out that “Refresh” and “Close Page” are essentially
 indistinguishable from the perspective of a Web page. Further, what
-happens if the player types QUIT, but still wants to see what's on the
+happens if the player types QUIT, but still wants to see what’s on the
 page for a while after? If they try to refresh the page after typing
 QUIT, the server - the game program - still has to be running to service
-the request.
+the request.</p>
 
-To handle these various situations, the Web UI has to use a different
-approach to managing its session lifetime. For the Web UI, the program's
-job is larger than merely running the game; it's also acting as a Web
-server. The Web server's lifetime isn't defined by the duration of the
+<p>To handle these various situations, the Web UI has to use a different
+approach to managing its session lifetime. For the Web UI, the program’s
+job is larger than merely running the game; it’s also acting as a Web
+server. The Web server’s lifetime isn’t defined by the duration of the
 game session, but rather by the existence of connected clients: as long
-as there's a client connected, the Web server needs to be available to
-service any new requests from the client.
+as there’s a client connected, the Web server needs to be available to
+service any new requests from the client.</p>
 
-As we mentioned above, the network protocols we use don't tell us with
+<p>As we mentioned above, the network protocols we use don’t tell us with
 certainty whether or not a client is connected. More precisely, they
-don't tell us with certainty that a client is *not* connected. We *can*
+don’t tell us with certainty that a client is <em>not</em> connected. We <em>can</em>
 tell for sure that a client is connected, because if we receive a
 request message, we know that it had to come from a connected client.
-But the absence of any requests doesn't necessarily mean that there are
-no clients; it could simply mean that the client doesn't have any work
+But the absence of any requests doesn’t necessarily mean that there are
+no clients; it could simply mean that the client doesn’t have any work
 for us at the moment, or that the client computer is tied up doing
 something else before it can issue its next request, or that a network
-glitch has temporarily delayed messages from the client.
+glitch has temporarily delayed messages from the client.</p>
 
-The Web UI has a two-pronged approach to dealing with all these
+<p>The Web UI has a two-pronged approach to dealing with all these
 uncertainties. First, the Javascript portion of the UI uses a
 publish/subscribe model to maintain a continuous communication channel
 with the server. The server uses this channel to send periodic
-"keepalive" messages to the client when no other messaging activity is
+“keepalive” messages to the client when no other messaging activity is
 taking place. This ensures that the client and server exchange messages
 with a minimum frequency (about every 90 seconds — frequently enough to
 allow reasonably timely detection of a disconnected client, but rarely
-enough that the extra messages won't affect network performance).
+enough that the extra messages won’t affect network performance).
 Second, the server monitors client sessions for long periods of
-inactivity. When a client doesn't responds to our "keepalive" messages
+inactivity. When a client doesn’t responds to our “keepalive” messages
 for longer than a certain interval (about 60 seconds), we assume that
-the client has disconnected. When we haven't heard from *any* clients
+the client has disconnected. When we haven’t heard from <em>any</em> clients
 for a certain interval (about 120 seconds), we assume that the player
 must be finished with the game. This the point when the program exits
-and the interpreter terminates.
+and the interpreter terminates.</p>
 
-The timeout intervals mentioned above are nothing magical; they're just
+<p>The timeout intervals mentioned above are nothing magical; they’re just
 parameters in the Web UI server code, chosen based on practical
 experience. Detecting a disconnection is inherently probabilistic: we
 can never be certain a client is never coming back, no matter how long
-it's been since we last heard from them, but the longer we go the more
+it’s been since we last heard from them, but the longer we go the more
 likely it becomes that we have a disconnection rather than something
 temporary like a network glitch or client-side CPU bottleneck. The
 practical goal is to choose timeouts that let us shut down the
-server-side program as soon as possible when it's no longer needed (so
-that the server machine resources aren't tied up longer than necessary),
-but no sooner.
+server-side program as soon as possible when it’s no longer needed (so
+that the server machine resources aren’t tied up longer than necessary),
+but no sooner.</p>
 
-Note that when running in [local stand-alone mode](#standalone), some
+<p>Note that when running in <a href="#standalone">local stand-alone mode</a>, some
 interpreters maintain a direct connection to the browser window that
 allows them to detect when the player closes the window. This bypasses
 the timeouts and allows the game program and interpreter to terminate
 immediately when the player closes the browser window. This is possible
-in standalone mode because everything's running on one machine, which
+in standalone mode because everything’s running on one machine, which
 eliminates the uncertainties of the network configuration and allows the
-interpreter to know exactly what's going on with the browser. The
-Windows interpreter provides this feature.
+interpreter to know exactly what’s going on with the browser. The
+Windows interpreter provides this feature.</p>
 
-## <span id="standalone">Local single-machine (stand-alone) testing</span>
+<h2 id="local-single-machine-stand-alone-testing"><span id="standalone">Local single-machine (stand-alone) testing</span></h2>
 
-One of the main reasons to create a Web UI game is that it allows users
+<p>One of the main reasons to create a Web UI game is that it allows users
 to play on the Web, without having to download your game or install
-software. However, Web UI games can *also* be played without a Web
+software. However, Web UI games can <em>also</em> be played without a Web
 server, a browser, or a network connection. Most TADS interpreters let
-you play a Web UI game in "local" mode, also known as standalone mode -
+you play a Web UI game in “local” mode, also known as standalone mode -
 this means that you run the game on a single computer without a Web
-server involved.
+server involved.</p>
 
-You'll probably want to use standalone mode while you're developing and
+<p>You’ll probably want to use standalone mode while you’re developing and
 testing your game, since it would be inconvenient to have to upload your
-game to a server every time you recompile. <span id="debugging"></span>
+game to a server every time you recompile. <span id="debugging"></span></p>
 
-### Debugging with Workbench on Windows
+<h3 id="debugging-with-workbench-on-windows">Debugging with Workbench on Windows</h3>
 
-If you're using Workbench on Windows to develop your game, standalone
+<p>If you’re using Workbench on Windows to develop your game, standalone
 mode is the default way of running. When you use the Go command,
 Workbench automatically runs the game in standalone mode. Everything
 looks just like it does with a traditional console-mode game. The only
 difference is that the game window is actually an embedded Web browser -
-but this is all handled invisibly, so you don't have to worry about
-launching a browser separately or typing a URL or anything like that.
+but this is all handled invisibly, so you don’t have to worry about
+launching a browser separately or typing a URL or anything like that.</p>
 
-As we described [earlier](shutdown), a Web UI game continues running
+<p>As we described <a href="shutdown">earlier</a>, a Web UI game continues running
 even after the player types QUIT, so that it can continue to provide
 HTTP services as long as the client is connected (to allow page
-refreshes, for example). This can be a little strange when you're using
+refreshes, for example). This can be a little strange when you’re using
 the debugger. There are two simple ways to truly terminate the game
 program: you can close the game window, or you can use the Terminate
 Game command in the debugger. Closing the game window triggers a special
 message to the game program that tells it to terminate immediately,
 bypassing the usual timeout intervals that would otherwise keep the game
 running for a while longer. When you use the Terminate Game command,
-this directly ends the game program.
+this directly ends the game program.</p>
 
-## <span id="Adv3WebUsageTips">Adv3LiteWeb usage tips</span>
+<h2 id="adv3liteweb-usage-tips"><span id="Adv3WebUsageTips">Adv3LiteWeb usage tips</span></h2>
 
-When using the Adv3LiteWeb library, there are some additional things you
-should do to make sure your game works correctly.
+<p>When using the Adv3LiteWeb library, there are some additional things you
+should do to make sure your game works correctly.</p>
 
-### Use aHref() for command links
+<h3 id="use-ahref-for-command-links">Use aHref() for command links</h3>
 
-In HTML TADS games, you can use `\&lt;A HREF=xxx\&gt;`
+<p>In HTML TADS games, you can use <code class="language-plaintext highlighter-rouge">\&lt;A HREF=xxx\&gt;</code>
 to create clickable command links. With the Web UI, all HTML is
-displayed by a standard Web browser, so the `\&lt;A
-HREF\&gt;` tag has its standard meaning, which is to create a
-hyperlink to a separate Web page.
+displayed by a standard Web browser, so the <code class="language-plaintext highlighter-rouge">\&lt;A
+HREF\&gt;</code> tag has its standard meaning, which is to create a
+hyperlink to a separate Web page.</p>
 
-To create a command link, use the Adv3LiteWeb function
-`aHref()`:
+<p>To create a command link, use the Adv3LiteWeb function
+<code class="language-plaintext highlighter-rouge">aHref()</code>:</p>
 
-`
-    "To save the game, type &lt;&lt;aHref('SAVE')&gt;&gt;. "
-`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "To save the game, type &lt;&lt;aHref('SAVE')&gt;&gt;. "
+</code></pre></div></div>
 
-You should continue to use `\&lt;A HREF\&gt;` for
+<p>You should continue to use <code class="language-plaintext highlighter-rouge">\&lt;A HREF\&gt;</code> for
 actual hyperlinks, where the link navigates to another Web page rather
 than entering a command, as well as for special links such as
-`mailto:` links.
+<code class="language-plaintext highlighter-rouge">mailto:</code> links.</p>
 
-### Don't use `\&lt;TAB\&gt;`
+<h3 id="dont-use-tab">Don’t use <code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code></h3>
 
-The `\&lt;TAB\&gt;` tag is an HTML TADS extension that
-isn't in standard HTML. Standard Web browsers don't support it.
-Unfortunately, standard HTML doesn't have a simple equivalent of
-`\&lt;TAB\&gt;`, but you can usually achieve similar
-effects using `\&lt;SPAN\&gt;` or
-`\&lt;DIV\&gt;` tags with CSS styling to control
-spacing.
+<p>The <code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> tag is an HTML TADS extension that
+isn’t in standard HTML. Standard Web browsers don’t support it.
+Unfortunately, standard HTML doesn’t have a simple equivalent of
+<code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code>, but you can usually achieve similar
+effects using <code class="language-plaintext highlighter-rouge">\&lt;SPAN\&gt;</code> or
+<code class="language-plaintext highlighter-rouge">\&lt;DIV\&gt;</code> tags with CSS styling to control
+spacing.</p>
 
-### <span id="inputmanager">Use inputManager methods for input</span>
+<h3 id="use-inputmanager-methods-for-input"><span id="inputmanager">Use inputManager methods for input</span></h3>
 
-As we've already mentioned a couple of times, you can't use the
-interpreter's built-in functions for input and output. The built-ins all
-operate directly on the local console, which obviously isn't available
-to a remote user playing on the Web.
+<p>As we’ve already mentioned a couple of times, you can’t use the
+interpreter’s built-in functions for input and output. The built-ins all
+operate directly on the local console, which obviously isn’t available
+to a remote user playing on the Web.</p>
 
-Instead of the interpreter built-ins, always use the
-<span id="inputmgr_idx">inputManager</span> equivalents:
+<p>Instead of the interpreter built-ins, always use the
+<span id="inputmgr_idx">inputManager</span> equivalents:</p>
 
-- inputManager.getInputLine(promptFunc?) (*not* inputLine or
-  inputLineTimeout)
-- inputManager.getKey(promptFunc?) (*not* inputKey)
-- inputManager.getEventOrKey(promptFunc, keyOnly) (*not* inputEvent)
-- inputManager.getInputFile(prompt, dialogType, fileType, flags) (*not*
-  inputFile)
-- inputManager.getInputDialog(icon, prompt, buttons, defaultButton,
-  cancelButton) (*not* inputDialog)
-- inputManager.pauseForMore() (*not* morePrompt)
+<ul>
+  <li>inputManager.getInputLine(promptFunc?) (<em>not</em> inputLine or
+inputLineTimeout)</li>
+  <li>inputManager.getKey(promptFunc?) (<em>not</em> inputKey)</li>
+  <li>inputManager.getEventOrKey(promptFunc, keyOnly) (<em>not</em> inputEvent)</li>
+  <li>inputManager.getInputFile(prompt, dialogType, fileType, flags) (<em>not</em>
+inputFile)</li>
+  <li>inputManager.getInputDialog(icon, prompt, buttons, defaultButton,
+cancelButton) (<em>not</em> inputDialog)</li>
+  <li>inputManager.pauseForMore() (<em>not</em> morePrompt)</li>
+</ul>
 
-The *promptFunc* parameter can be supplied either as an anonymous
+<p>The <em>promptFunc</em> parameter can be supplied either as an anonymous
 function that displays a prompt or simply as a single-quoted string. For
-`getInputLine()` and
-`getKey()` (or their macro equivalents) this
+<code class="language-plaintext highlighter-rouge">getInputLine()</code> and
+<code class="language-plaintext highlighter-rouge">getKey()</code> (or their macro equivalents) this
 parameter can be omitted altogether; you can simply display a prompt
-string before calling the method.
+string before calling the method.</p>
 
-For the most common cases you can use the following macros:
+<p>For the most common cases you can use the following macros:</p>
 
-- **more** expands to
-  `inputManager.pauseForMore()`
-- **input(x)** expands to
-  `inputManager.getInputLine(x)`
-- **waitKey(x)** expands to
-  `inputManager.getKey(x)`
+<ul>
+  <li><strong>more</strong> expands to
+<code class="language-plaintext highlighter-rouge">inputManager.pauseForMore()</code></li>
+  <li><strong>input(x)</strong> expands to
+<code class="language-plaintext highlighter-rouge">inputManager.getInputLine(x)</code></li>
+  <li><strong>waitKey(x)</strong> expands to
+<code class="language-plaintext highlighter-rouge">inputManager.getKey(x)</code></li>
+</ul>
 
-<span id="cls"></span>
+<p><span id="cls"></span></p>
 
-### Use `cls()` instead of `clearScreen()`
+<h3 id="use-cls-instead-of-clearscreen">Use <code class="language-plaintext highlighter-rouge">cls()</code> instead of <code class="language-plaintext highlighter-rouge">clearScreen()</code></h3>
 
-You shouldn't use the built-in function
-`clearScreen()`, just as you shouldn't use any
-other built-in I/O functions. Use `cls()`
+<p>You shouldn’t use the built-in function
+<code class="language-plaintext highlighter-rouge">clearScreen()</code>, just as you shouldn’t use any
+other built-in I/O functions. Use <code class="language-plaintext highlighter-rouge">cls()</code>
 instead - this will work correctly in both Adv3 and Adv3web.
-<span id="nobanner"></span>
+<span id="nobanner"></span></p>
 
-### Don't use the Banner API
+<h3 id="dont-use-the-banner-api">Don’t use the Banner API</h3>
 
-The Banner API isn't supported in Adv3LiteWeb. This includes both the
+<p>The Banner API isn’t supported in Adv3LiteWeb. This includes both the
 low-level banner functions built into the interpreter and the Adv3Lite
-BannerWindow class.
+BannerWindow class.</p>
 
-The Web UI provides similar capabilities, but it uses a new programming
+<p>The Web UI provides similar capabilities, but it uses a new programming
 interface. The new system is much more flexible than the banner API
-because it uses Javascript and CSS in the client. This combination isn't
-limited to the "tiled" model of the banner API - you can create
+because it uses Javascript and CSS in the client. This combination isn’t
+limited to the “tiled” model of the banner API - you can create
 overlapping windows, create transparent windows, move windows
 dynamically, set sizes using font metrics, etc. The new system is so
 different that it makes more sense to work directly with the new
 interfaces, so that you can take better advantage of their new
-capabilities.
+capabilities.</p>
 
-Note that Adv3LiteWeb *does* provide the higher-level components that
+<p>Note that Adv3LiteWeb <em>does</em> provide the higher-level components that
 were built on the banner API in Adv3Lite: the status line, the menu
 system, and the hint system. The Adv3LiteWeb versions of these
 components are built directly on the new Javascript front end instead of
-the banner API. <span id="sound"></span>
+the banner API. <span id="sound"></span></p>
 
-### Sound playback
+<h3 id="sound-playback">Sound playback</h3>
 
-The `\&lt;SOUND\&gt;` tag is an HTML TADS extension
-that's not in standard HTML, so you can't use it for sound playback in
-Web UI games.
+<p>The <code class="language-plaintext highlighter-rouge">\&lt;SOUND\&gt;</code> tag is an HTML TADS extension
+that’s not in standard HTML, so you can’t use it for sound playback in
+Web UI games.</p>
 
-There's currently no support for sound playback in the Web UI library.
+<p>There’s currently no support for sound playback in the Web UI library.
 Mike Roberts plans to add this in the future. For the moment, if you
-need sound playback, you'll have to resort to direct Javascript
-programming. <span id="aboutbox"></span>
+need sound playback, you’ll have to resort to direct Javascript
+programming. <span id="aboutbox"></span></p>
 
-### `\&lt;ABOUTBOX\&gt;`
+<h3 id="aboutbox"><code class="language-plaintext highlighter-rouge">\&lt;ABOUTBOX\&gt;</code></h3>
 
-The `\&lt;ABOUTBOX\&gt;\&gt;` tag is an HTML TADS
-extension, not part of standard HTML. You shouldn't use this tag.
-There's currently no equivalent in the Web UI. However, note that the
+<p>The <code class="language-plaintext highlighter-rouge">\&lt;ABOUTBOX\&gt;\&gt;</code> tag is an HTML TADS
+extension, not part of standard HTML. You shouldn’t use this tag.
+There’s currently no equivalent in the Web UI. However, note that the
 Adv3Lite library only calls
-`gameMain.setAboutBox()` when running in console
-mode, so it's fine to write your `\&lt;ABOUTBOX\&gt;`
-code as usual in that method.
-
-</div>
+<code class="language-plaintext highlighter-rouge">gameMain.setAboutBox()</code> when running in console
+mode, so it’s fine to write your <code class="language-plaintext highlighter-rouge">\&lt;ABOUTBOX\&gt;</code>
+code as usual in that method.</p>
 
 <hr />
 
-<div class="navb">
-
-*Adv3Lite Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="final.html" class="nav">Final Moves</a> \&gt; The Web UI  
+<p><em>Adv3Lite Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="final.html" class="nav">Final Moves</a> &gt; The Web UI<br />
 <span class="navnp"><a href="lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
     <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

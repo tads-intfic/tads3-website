@@ -40,35 +40,27 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The playerHelper is an object that starts a daemon at start of play.
+<p>The playerHelper is an object that starts a daemon at start of play.
 This daemon checks whether the player is making any progress at all, and
 also watches the ratio of commands the parser rejects to the number of
 turns. If this ratio becomes too high (as defined by the errorThreshold
 property) we offer the player a HELP command. If it becomes very low (as
 defined by the ceaseCheckingErrorLevel property) we cease checking (i.e.
-stop the daemon) on the grounds that the player doesn't appear to need
+stop the daemon) on the grounds that the player doesn’t appear to need
 the kind of help we want to offer. We first perform a check after
 firstCheckAfter turns to see if the player is making any progress, and
 then after each errorCheckInterval turns to see if the player is having
-difficulty entering valid commands.
+difficulty entering valid commands.</p>
 
-The idea is to keep offering HELP to an inexperienced player who clearly
+<p>The idea is to keep offering HELP to an inexperienced player who clearly
 needs it, even if the player declined to read any help text at the start
-of the game.
+of the game.</p>
 
-**`playerHelper`**` :   `[`InitObject`](../object/InitObject.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">playerHelper</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/InitObject.html"><code class="language-plaintext highlighter-rouge">InitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">playerHelper</code></strong><br />
 <a href="../object/InitObject.html"><code class="language-plaintext highlighter-rouge">InitObject</code></a><br />
@@ -76,11 +68,7 @@ of the game.
 `                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#ceaseCheckingErrorLevel"><code class="language-plaintext highlighter-rouge">ceaseCheckingErrorLevel</code></a>  <a href="#errorCheckInterval"><code class="language-plaintext highlighter-rouge">errorCheckInterval</code></a>  <a href="#errorCount"><code class="language-plaintext highlighter-rouge">errorCount</code></a>  <a href="#errorDaemonID"><code class="language-plaintext highlighter-rouge">errorDaemonID</code></a>  <a href="#errorThreshold"><code class="language-plaintext highlighter-rouge">errorThreshold</code></a>  <a href="#firstCheckAfter"><code class="language-plaintext highlighter-rouge">firstCheckAfter</code></a>  <a href="#firstCheckMsg"><code class="language-plaintext highlighter-rouge">firstCheckMsg</code></a>  <a href="#startLocation"><code class="language-plaintext highlighter-rouge">startLocation</code></a>  `</p>
 
@@ -89,11 +77,7 @@ of the game.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#errorCheck"><code class="language-plaintext highlighter-rouge">errorCheck</code></a>  <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a>  <a href="#firstCheck"><code class="language-plaintext highlighter-rouge">firstCheck</code></a>  <a href="#firstCheckCriterion"><code class="language-plaintext highlighter-rouge">firstCheckCriterion</code></a>  <a href="#offerHelp"><code class="language-plaintext highlighter-rouge">offerHelp</code></a>  <a href="#startErrorDaemon"><code class="language-plaintext highlighter-rouge">startErrorDaemon</code></a>  <a href="#stopErrorDaemon"><code class="language-plaintext highlighter-rouge">stopErrorDaemon</code></a>  `</p>
 
@@ -102,11 +86,7 @@ of the game.
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="ceaseCheckingErrorLevel"></span></p>
 
@@ -114,15 +94,11 @@ of the game.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#204">204</a>]</p>
 
-<div class="desc">
-
-The proportion of rejected commands to turns, expressed as a percentage,
+<p>The proportion of rejected commands to turns, expressed as a percentage,
 below which we stop checking for errors. The default is 5 (in other
-words if less than 5 per cent of the player's commands are being
-rejected, the player presumably knows what s/he's doing, so we don't
-need to keep checking)
-
-</div>
+words if less than 5 per cent of the player’s commands are being
+rejected, the player presumably knows what s/he’s doing, so we don’t
+need to keep checking)</p>
 
 <p><span id="errorCheckInterval"></span></p>
 
@@ -130,12 +106,8 @@ need to keep checking)
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#188">188</a>]</p>
 
-<div class="desc">
-
-The number of turns between each check on whether the player is entering
-too many erroneous commands.
-
-</div>
+<p>The number of turns between each check on whether the player is entering
+too many erroneous commands.</p>
 
 <p><span id="errorCount"></span></p>
 
@@ -143,12 +115,8 @@ too many erroneous commands.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#317">317</a>]</p>
 
-<div class="desc">
-
-For internal use only: the number of badly formed commands the player
-has entered.
-
-</div>
+<p>For internal use only: the number of badly formed commands the player
+has entered.</p>
 
 <p><span id="errorDaemonID"></span></p>
 
@@ -156,12 +124,8 @@ has entered.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#311">311</a>]</p>
 
-<div class="desc">
-
-For internal use only: the ID of the currently running error check
-Daemon (if there is one)
-
-</div>
+<p>For internal use only: the ID of the currently running error check
+Daemon (if there is one)</p>
 
 <p><span id="errorThreshold"></span></p>
 
@@ -169,13 +133,9 @@ Daemon (if there is one)
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#195">195</a>]</p>
 
-<div class="desc">
-
-The proportion of rejected commands to turns (i.e. accepted commands)
+<p>The proportion of rejected commands to turns (i.e. accepted commands)
 that will trigger an offer of help. We express this number as a
-percentage.
-
-</div>
+percentage.</p>
 
 <p><span id="firstCheckAfter"></span></p>
 
@@ -183,12 +143,8 @@ percentage.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#174">174</a>]</p>
 
-<div class="desc">
-
-The number of turns that must elapse before we test the
-firstCheckCriterion to see if the player appears to be stuck.
-
-</div>
+<p>The number of turns that must elapse before we test the
+firstCheckCriterion to see if the player appears to be stuck.</p>
 
 <p><span id="firstCheckMsg"></span></p>
 
@@ -196,12 +152,8 @@ firstCheckCriterion to see if the player appears to be stuck.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#180">180</a>]</p>
 
-<div class="desc">
-
-The message to display if the player seems to be stuck at the start of
-the game.
-
-</div>
+<p>The message to display if the player seems to be stuck at the start of
+the game.</p>
 
 <p><span id="startLocation"></span></p>
 
@@ -209,20 +161,12 @@ the game.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#168">168</a>]</p>
 
-<div class="desc">
-
-The location the playerCharacter starts out in at the beginning of the
-game. It may be useful to know this in the firstCheckCriterion method.
-
-</div>
+<p>The location the playerCharacter starts out in at the beginning of the
+game. It may be useful to know this in the firstCheckCriterion method.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="errorCheck"></span></p>
 
@@ -230,11 +174,7 @@ game. It may be useful to know this in the firstCheckCriterion method.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#251">251</a>]</p>
 
-<div class="desc">
-
-Watch for a high percentage of errors in user input
-
-</div>
+<p>Watch for a high percentage of errors in user input</p>
 
 <p><span id="execute"></span></p>
 
@@ -242,12 +182,8 @@ Watch for a high percentage of errors in user input
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#157">157</a>]</p>
 
-<div class="desc">
-
-Set up the firstCheck() Fuse and note the player character's starting
-location.
-
-</div>
+<p>Set up the firstCheck() Fuse and note the player character’s starting
+location.</p>
 
 <p><span id="firstCheck"></span></p>
 
@@ -255,13 +191,9 @@ location.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#225">225</a>]</p>
 
-<div class="desc">
-
-Check whether the player appears to be making any progress at the start
+<p>Check whether the player appears to be making any progress at the start
 of the game. If not, display a message offering help and start the error
-checking daemon.
-
-</div>
+checking daemon.</p>
 
 <p><span id="firstCheckCriterion"></span></p>
 
@@ -269,17 +201,13 @@ checking daemon.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#215">215</a>]</p>
 
-<div class="desc">
-
-The criterion to apply to see whether the player is making any progress
+<p>The criterion to apply to see whether the player is making any progress
 at the start of the game. This method should return true if the player
-seems to be stuck. By default we simply return nil as there's no way of
-knowing how to measure 'stuckness' for games in general, so specific
+seems to be stuck. By default we simply return nil as there’s no way of
+knowing how to measure ‘stuckness’ for games in general, so specific
 games will need to override this method. A game involved exploration
 might set the condition to gLocation == startLocation (meaning the
-player character hasn't moved) for example.
-
-</div>
+player character hasn’t moved) for example.</p>
 
 <p><span id="offerHelp"></span></p>
 
@@ -287,17 +215,13 @@ player character hasn't moved) for example.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#296">296</a>]</p>
 
-<div class="desc">
-
-The offerHelp() method asks whether the player has played this kind of
+<p>The offerHelp() method asks whether the player has played this kind of
 game before and accepts a Y or N answer. if the answer is NO then it
-goes on to display a message suggesting sources of help.
+goes on to display a message suggesting sources of help.</p>
 
-This method can usefully be called at the end of the
-gameMain.showIntro() method, but it's up to game authors to incluse it
-there if they want it/
-
-</div>
+<p>This method can usefully be called at the end of the
+gameMain.showIntro() method, but it’s up to game authors to incluse it
+there if they want it/</p>
 
 <p><span id="startErrorDaemon"></span></p>
 
@@ -305,12 +229,8 @@ there if they want it/
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#248">248</a>]</p>
 
-<div class="desc">
-
-We've just offered help, so we'll wait another errorCheckInterval turns
-before seeing whether to offer it again.
-
-</div>
+<p>We’ve just offered help, so we’ll wait another errorCheckInterval turns
+before seeing whether to offer it again.</p>
 
 <p><span id="stopErrorDaemon"></span></p>
 
@@ -318,18 +238,11 @@ before seeing whether to offer it again.
 
 <p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#279">279</a>]</p>
 
-<div class="desc">
+<p>Stop the error check daemon from running</p>
 
-Stop the error check daemon from running
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

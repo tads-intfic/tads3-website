@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Topic Groups  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Topic Groups<br />
 <span class="navnp"><a href="specialtopic.html" class="nav"><em>Prev:</em> Special Topics</a>
    
 <a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="topic-groups">Topic Groups</h1>
 
@@ -71,21 +63,20 @@ especially for this purpose.</p>
 convKeys properties can be readily defined through the template.
 Consider the following example:</p>
 
-<p>`
-    + TopicGroup +10 ‘alice-info’
-       isActive = gRevealed(‘alice’)
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TopicGroup +10 'alice-info'
+       isActive = gRevealed('alice')
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ AskTopic @tAlice
-    "&lt;q&gt;Who is this Alice, anyway?&lt;/q&gt;
-     &lt;q&gt;Lots of folk would like to know that,&lt;/q&gt; he replies, scratching his head. "
-;
- 
- 
-++ QueryTopic 'where' 'he heard about alice; did you hear'
-   "&lt;q&gt;Where did you hear about this Alice person?&lt;/q&gt; you enquire. 
-    &lt;q&gt;From the old vicar,&lt;/q&gt; he tells you. "
-; `
+    ++ AskTopic @tAlice
+        "&lt;q&gt;Who is this Alice, anyway?&lt;/q&gt;
+         &lt;q&gt;Lots of folk would like to know that,&lt;/q&gt; he replies, scratching his head. "
+    ;
+     
+     
+    ++ QueryTopic 'where' 'he heard about alice; did you hear'
+       "&lt;q&gt;Where did you hear about this Alice person?&lt;/q&gt; you enquire. 
+        &lt;q&gt;From the old vicar,&lt;/q&gt; he tells you. "
+    ;
 </code></pre></div></div>
 
 <p>This adds the ‘alice-info’ convKey to both the TopicEntries defined
@@ -96,17 +87,14 @@ another when the player types a partial query like WHERE HEAR).</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Topic Groups  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Topic Groups<br />
 <span class="navnp"><a href="specialtopic.html" class="nav"><em>Prev:</em> Special Topics</a>
    
 <a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

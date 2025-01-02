@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; tads-io
-Function Set  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; tads-io
+Function Set<br />
 <span class="navnp"><a href="regex.html" class="nav"><em>Prev:</em> Regular Expressions</a>
     <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
-Set</a>     </span>
-
-</div>
+Set</a>     </span></p>
 
 <h1 id="tads-io-function-set">tads-io Function Set</h1>
 
@@ -79,874 +71,855 @@ section.</p>
 
 <p><code class="language-plaintext highlighter-rouge">bannerClear(*handle*)</code></p>
 
-<div class="fdef">
+<p>Clears the banner’s display. Removes all text from the banner, and moves
+the output position back to the upper left corner of the banner’s
+window.</p>
 
-Clears the banner's display. Removes all text from the banner, and moves
-the output position back to the upper left corner of the banner's
-window.
+<p><code class="language-plaintext highlighter-rouge">bannerCreate(*parent*, *where*, *other*,
+*windowType*, *align*, *size*, *sizeUnits*, *style*)</code></p>
 
+<p>Creates a new banner window with the given parameters.</p>
 
+<p><em>parent</em> is the handle of an existing banner that is to serve as the
+parent of the new banner, or <code class="language-plaintext highlighter-rouge">nil</code> if the new
+banner is to be a child of the main game window. The new banner’s space
+is obtained by splitting the parent window.</p>
 
-`bannerCreate(*parent*, *where*, *other*,
-*windowType*, *align*, *size*, *sizeUnits*, *style*)`
-
-<div class="fdef">
-
-Creates a new banner window with the given parameters.
-
-*parent* is the handle of an existing banner that is to serve as the
-parent of the new banner, or `nil` if the new
-banner is to be a child of the main game window. The new banner's space
-is obtained by splitting the parent window.
-
-*where* and *other* together indicate where the banner goes in the
-parent's list of children, which determines how the new banner is laid
+<p><em>where</em> and <em>other</em> together indicate where the banner goes in the
+parent’s list of children, which determines how the new banner is laid
 out relative to the other children of the same parent (see the screen
-Layout overview above). *where* can be one of the following values:
+Layout overview above). <em>where</em> can be one of the following values:</p>
 
-- `BannerFirst` - indicates that the new banner
-  is the first child of *parent*. *other* is not used in this case.
-- `BannerLast` - indicates that the new banner
-  is the last child of *parent*. *other* is not used.
-- `BannerBefore` - indicates that the new banner
-  should be inserted into the child list immediately before *other*,
-  which must be the handle of an existing child of *parent*.
-- `BannerAfter` - indicates that the new banner
-  should be inserted into the child list immediately after *other*,
-  which must be the handle of an existing child of *parent*.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BannerFirst</code> - indicates that the new banner
+is the first child of <em>parent</em>. <em>other</em> is not used in this case.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerLast</code> - indicates that the new banner
+is the last child of <em>parent</em>. <em>other</em> is not used.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerBefore</code> - indicates that the new banner
+should be inserted into the child list immediately before <em>other</em>,
+which must be the handle of an existing child of <em>parent</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerAfter</code> - indicates that the new banner
+should be inserted into the child list immediately after <em>other</em>,
+which must be the handle of an existing child of <em>parent</em>.</li>
+</ul>
 
-Note that the child list order specified via where and other is not
+<p>Note that the child list order specified via where and other is not
 permanent; it merely determines where the new banner goes in the current
 child list of the given parent. For example, specifying
-`BannerFirst` does not mean that the banner will
+<code class="language-plaintext highlighter-rouge">BannerFirst</code> does not mean that the banner will
 remain the first child forever; it merely puts it at the start of the
 current list. If banner A is created with
-`BannerFirst` specified, and later banner B is
-created with `BannerFirst`, banner A will become
-the second child after B.
+<code class="language-plaintext highlighter-rouge">BannerFirst</code> specified, and later banner B is
+created with <code class="language-plaintext highlighter-rouge">BannerFirst</code>, banner A will become
+the second child after B.</p>
 
-If `BannerBefore` or
-`BannerAfter` is specified, and *other* is not a
+<p>If <code class="language-plaintext highlighter-rouge">BannerBefore</code> or
+<code class="language-plaintext highlighter-rouge">BannerAfter</code> is specified, and <em>other</em> is not a
 valid banner handle or is not a child of the given parent, then the
-system ignores *where* and *other* and inserts the banner as the last
-child of the parent, as though `BannerLast` had
-been specified.
+system ignores <em>where</em> and <em>other</em> and inserts the banner as the last
+child of the parent, as though <code class="language-plaintext highlighter-rouge">BannerLast</code> had
+been specified.</p>
 
-The *windowType* parameter indicates the type of banner to create; this
-is one of the following (see "Banner Types" above for more information):
+<p>The <em>windowType</em> parameter indicates the type of banner to create; this
+is one of the following (see “Banner Types” above for more information):</p>
 
-- `BannerTypeText` - an ordinary text window.
-  This type of window behaves essentially the same way as the main game
-  window; in particular, it interprets HTML to the same extent that the
-  main game window does.
-- `BannerTypeTextGrid` - a "text grid" window,
-  which simulates a character-mode terminal window by displaying a
-  rectangular array of characters.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BannerTypeText</code> - an ordinary text window.
+This type of window behaves essentially the same way as the main game
+window; in particular, it interprets HTML to the same extent that the
+main game window does.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerTypeTextGrid</code> - a “text grid” window,
+which simulates a character-mode terminal window by displaying a
+rectangular array of characters.</li>
+</ul>
 
-The *align* value indicates how the banner's space is carved out of its
-parent's space. This can have one of the following values:
+<p>The <em>align</em> value indicates how the banner’s space is carved out of its
+parent’s space. This can have one of the following values:</p>
 
-- `BannerAlignTop` - the banner goes at the top
-  of the parent's space
-- `BannerAlignBottom` - the banner goes at the
-  bottom of the parent's space
-- `BannerAlignLeft` - the banner goes at the
-  left of the parent's space
-- `BannerAlignRight` - the banner goes at the
-  right of the parent's space
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BannerAlignTop</code> - the banner goes at the top
+of the parent’s space</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerAlignBottom</code> - the banner goes at the
+bottom of the parent’s space</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerAlignLeft</code> - the banner goes at the
+left of the parent’s space</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerAlignRight</code> - the banner goes at the
+right of the parent’s space</li>
+</ul>
 
-The *size* parameter gives the initial size of the banner, the meaning
-of which depends on *sizeUnits*:
+<p>The <em>size</em> parameter gives the initial size of the banner, the meaning
+of which depends on <em>sizeUnits</em>:</p>
 
-- `BannerSizePercent` - the size is a percentage
-  of the parent's space as it is just before carving out this banner.
-  *size* is a value from 0 to 100. The banner will remember that its
-  size is a percentage; whenever the overall display area size changes
-  (for example, whenever the user resizes the main application window
-  for the interpreter), the size of the banner on-screen will be
-  refigured as the same percentage of the new available space.
-- `BannerSizeAbsolute` - the size is given in
-  the "natural units" of the banner, which depend upon the window type:
-  - For a text window (`BannerTypeText`), the
-    size is given in character rows or columns. The size of each
-    character can vary if the window uses a proportional font or can
-    display multiple fonts, so for consistency we define this unit as
-    the size of a "0" character in the window's default (initial) font.
-    To compute the actual pixel size of the window, the system will take
-    into account space needed for interior margins and borders; this
-    ensures that the window will be large enough to show the requested
-    number of rows or columns of text. (Note, however, that a banner of
-    size 0 will not add any internal space, since a zero-sized banner
-    has no screen presence at all.)
-  - For a text grid window
-    (`BannerTypeTextGrid`), the size is given in
-    rows or columns in the grid's fixed-pitch font. As with a text
-    window, the space needed for margins and borders will be added to
-    the requested row/column size.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BannerSizePercent</code> - the size is a percentage
+of the parent’s space as it is just before carving out this banner.
+<em>size</em> is a value from 0 to 100. The banner will remember that its
+size is a percentage; whenever the overall display area size changes
+(for example, whenever the user resizes the main application window
+for the interpreter), the size of the banner on-screen will be
+refigured as the same percentage of the new available space.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerSizeAbsolute</code> - the size is given in
+the “natural units” of the banner, which depend upon the window type:
+    <ul>
+      <li>For a text window (<code class="language-plaintext highlighter-rouge">BannerTypeText</code>), the
+size is given in character rows or columns. The size of each
+character can vary if the window uses a proportional font or can
+display multiple fonts, so for consistency we define this unit as
+the size of a “0” character in the window’s default (initial) font.
+To compute the actual pixel size of the window, the system will take
+into account space needed for interior margins and borders; this
+ensures that the window will be large enough to show the requested
+number of rows or columns of text. (Note, however, that a banner of
+size 0 will not add any internal space, since a zero-sized banner
+has no screen presence at all.)</li>
+      <li>For a text grid window
+(<code class="language-plaintext highlighter-rouge">BannerTypeTextGrid</code>), the size is given in
+rows or columns in the grid’s fixed-pitch font. As with a text
+window, the space needed for margins and borders will be added to
+the requested row/column size.</li>
+    </ul>
+  </li>
+</ul>
 
-*style* is a combination of flag values specifying the desired behavior
+<p><em>style</em> is a combination of flag values specifying the desired behavior
 for the banner. Some of the style flags directly indicate particular
 aspects of the on-screen appearance of the banner; other styles are
-advisory, giving the interpreter some hints about how you're planning to
+advisory, giving the interpreter some hints about how you’re planning to
 use the banner, so that the interpreter can select appearance or
 behavior variations that are appropriate to the current platform. Not
 all interpreters support all styles, so you have to think of the style
 flags as hints to the interpreter about the desired appearance, rather
 than a specification of the actual appearance. After you create the
-banner, you can use `bannerGetInfo()` to
+banner, you can use <code class="language-plaintext highlighter-rouge">bannerGetInfo()</code> to
 retrieve the actual style flags, which will give you some indication of
-how the interpreter treated your request.
+how the interpreter treated your request.</p>
 
-The style flags are:
+<p>The style flags are:</p>
 
-- `BannerStyleBorder` - show the banner with a
-  border, which is to say a line on the banner's inner edge (the edge
-  nearest the main text window: for a
-  `BannerAlignTop` banner, this will be the
-  banner's bottom edge). Most character-mode interpreters do not support
-  this style, because drawing a border would consume an entire character
-  row or column and would thus take up too much space visually.
-- `BannerStyleVScroll` - show the banner with a
-  vertical scrollbar, if the system has scrollbars. Character-mode
-  platforms will usually ignore this flag.
-- `BannerStyleHScroll` - show the banner with a
-  horizontal scrollbar, if possible.
-- `BannerStyleAutoVScroll` - whenever new text
-  is displayed in the banner, and the new text would appear outside of
-  the on-screen boundaries of the banner, scroll the banner's contents
-  vertically to bring the latest text into view. If this style isn't
-  set, the banner won't automatically scroll vertically (if it has a
-  vertical scrollbar, though, the user will be able to scroll it
-  manually).
-- `BannerStyleAutoHScroll` - when new text is
-  displayed in the banner, scroll the banner's contents horizontally if
-  necessary to bring the new text into view.
-- `BannerStyleTabAlign` - the
-  `\&lt;TAB\&gt;` tag is needed for text alignment
-  purposes in the new window. This flag won't change the appearance of
-  the banner in a full HTML interpreter or in most character-mode
-  interpreters, but for text-only interpreters running on GUI systems
-  where proportional fonts are available, this might force the
-  interpreter to use a fixed-pitch font for the banner so that it can
-  use spaces to implement the tab alignment.
-- `BannerStyleMoreMode` - use "more" mode in the
-  banner. This implies the
-  `BannerStyleAutoVScroll` style. In "more"
-  mode, the interpreter pauses whenever new text written to the banner
-  is about to force older text to scroll out of view, to ensure that the
-  user has had a chance to read all of the text before it scrolls away.
-  The exact user interface varies by platform; on most systems, the
-  interpreter displays a prompt message, such as "\[More\]", in the
-  window that's about to overflow, then waits for the user to press a
-  key. This style allows a banner window to be used to display long
-  passages without worrying about whether or not the text will fit in
-  the user's available display area.
-- `BannerStyleHStrut` - makes the banner a
-  "horizontal strut" when
-  `bannerSizeToContents()` is used to set the
-  parent banner's width. If the child banner is a vertical banner (i.e.,
-  it has left or right alignment), the width of the child's contents is
-  added to the width of the parent's contents to determine the overall
-  content width. If the child banner is a horizontal banner (top or
-  bottom alignment), `bannerSizeToContents()`
-  will set the parent's width to the larger of the widths of the
-  parent's or child's contents.
-- `BannerStyleVStrut` - makes the banner a
-  "vertical strut" when `bannerSizeToContents()`
-  is used to set the parent banner's width. This has the same effect on
-  height that `BannerStyleHStrut` has on width.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleBorder</code> - show the banner with a
+border, which is to say a line on the banner’s inner edge (the edge
+nearest the main text window: for a
+<code class="language-plaintext highlighter-rouge">BannerAlignTop</code> banner, this will be the
+banner’s bottom edge). Most character-mode interpreters do not support
+this style, because drawing a border would consume an entire character
+row or column and would thus take up too much space visually.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleVScroll</code> - show the banner with a
+vertical scrollbar, if the system has scrollbars. Character-mode
+platforms will usually ignore this flag.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleHScroll</code> - show the banner with a
+horizontal scrollbar, if possible.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleAutoVScroll</code> - whenever new text
+is displayed in the banner, and the new text would appear outside of
+the on-screen boundaries of the banner, scroll the banner’s contents
+vertically to bring the latest text into view. If this style isn’t
+set, the banner won’t automatically scroll vertically (if it has a
+vertical scrollbar, though, the user will be able to scroll it
+manually).</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleAutoHScroll</code> - when new text is
+displayed in the banner, scroll the banner’s contents horizontally if
+necessary to bring the new text into view.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleTabAlign</code> - the
+<code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> tag is needed for text alignment
+purposes in the new window. This flag won’t change the appearance of
+the banner in a full HTML interpreter or in most character-mode
+interpreters, but for text-only interpreters running on GUI systems
+where proportional fonts are available, this might force the
+interpreter to use a fixed-pitch font for the banner so that it can
+use spaces to implement the tab alignment.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleMoreMode</code> - use “more” mode in the
+banner. This implies the
+<code class="language-plaintext highlighter-rouge">BannerStyleAutoVScroll</code> style. In “more”
+mode, the interpreter pauses whenever new text written to the banner
+is about to force older text to scroll out of view, to ensure that the
+user has had a chance to read all of the text before it scrolls away.
+The exact user interface varies by platform; on most systems, the
+interpreter displays a prompt message, such as “[More]”, in the
+window that’s about to overflow, then waits for the user to press a
+key. This style allows a banner window to be used to display long
+passages without worrying about whether or not the text will fit in
+the user’s available display area.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleHStrut</code> - makes the banner a
+“horizontal strut” when
+<code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code> is used to set the
+parent banner’s width. If the child banner is a vertical banner (i.e.,
+it has left or right alignment), the width of the child’s contents is
+added to the width of the parent’s contents to determine the overall
+content width. If the child banner is a horizontal banner (top or
+bottom alignment), <code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code>
+will set the parent’s width to the larger of the widths of the
+parent’s or child’s contents.</li>
+  <li><code class="language-plaintext highlighter-rouge">BannerStyleVStrut</code> - makes the banner a
+“vertical strut” when <code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code>
+is used to set the parent banner’s width. This has the same effect on
+height that <code class="language-plaintext highlighter-rouge">BannerStyleHStrut</code> has on width.</li>
+</ul>
 
-This function returns a handle to the new banner, or
-`nil` if an error occurs creating the banner.
+<p>This function returns a handle to the new banner, or
+<code class="language-plaintext highlighter-rouge">nil</code> if an error occurs creating the banner.
 The banner handle can be used to operate on the banner in other
-`bannerXxx()` functions.
+<code class="language-plaintext highlighter-rouge">bannerXxx()</code> functions.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">bannerDelete(*handle*)</code></p>
 
-`bannerDelete(*handle*)`
-
-<div class="fdef">
-
-Delete the given banner. This removes the banner from the display, and
+<p>Delete the given banner. This removes the banner from the display, and
 recalculates the layout for all of the other banners remaining on the
 screen. After this function is called, the banner handle becomes invalid
-and must not be used for anything else.
+and must not be used for anything else.</p>
 
-Note that any children of the banner being deleted will immediately
+<p>Note that any children of the banner being deleted will immediately
 become invisible. They will remain valid, so you can continue to pass
 their handles to banner functions, but they will not have any display
 presence. A banner always obtains its display space by splitting its
 parent, so once the parent is gone, a child has no way of obtaining any
-screen space of its own and thus becomes invisible.
+screen space of its own and thus becomes invisible.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">bannerFlush(*handle*)</code></p>
 
-`bannerFlush(*handle*)`
+<p>Flushes the text output buffer for the given banner, immediately
+updating the display with any pending text.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">bannerGetInfo(*banner*)</code></p>
 
-Flushes the text output buffer for the given banner, immediately
-updating the display with any pending text.
+<p>Retrieves information on the banner. This function returns a list of
+values, as follows:</p>
 
-</div>
+<ul>
+  <li>[1] - the window’s alignment type (a
+<code class="language-plaintext highlighter-rouge">BannerAlignXxx</code> value)</li>
+  <li>[2] - the window’s actual style (a bit-wise combination of
+<code class="language-plaintext highlighter-rouge">BannerStyleXxx</code> flags). This can be used to
+determine how the styles originally requested were interpreted by the
+local platform. In some cases, it might be desirable to take some
+special action if a given style flag wasn’t honored; for example, if a
+border was requested but the actual style flags indicate that no
+border is displayed, the program might want to use a different
+background color in the banner to make the banner’s screen area stand
+out from the adjacent window’s.</li>
+  <li>[3] - the height of the banner’s screen area, in text rows. For GUI
+platforms, this is an estimate only, since the size of text can vary
+on these platforms; the estimate will give the number of lines of text
+in the window’s default font that will fit in the window’s height,
+which might be considerably different than the number of lines
+actually displayed.</li>
+  <li>[4] - the width of the banner’s screen area, in text columns. As
+with the height, this is only an estimate on GUI platforms, since the
+banner might use proportionally-spaced characters and might use
+several different fonts; the estimate gives the number of digit 0’s,
+in the window’s default font, that will fit in the window’s width.</li>
+  <li>[5] - the pixel height of the banner. This is meaningful only on GUI
+platforms; on character-mode platforms, this will always be zero.</li>
+  <li>[6] - the pixel width of the banner. This is used on GUI platforms
+only; on character-mode platforms, this will always be zero.</li>
+</ul>
 
-`bannerGetInfo(*banner*)`
+<p><code class="language-plaintext highlighter-rouge">bannerGoTo(*handle*, *row*, *col*)</code></p>
 
-<div class="fdef">
-
-Retrieves information on the banner. This function returns a list of
-values, as follows:
-
-- \[1\] - the window's alignment type (a
-  `BannerAlignXxx` value)
-- \[2\] - the window's actual style (a bit-wise combination of
-  `BannerStyleXxx` flags). This can be used to
-  determine how the styles originally requested were interpreted by the
-  local platform. In some cases, it might be desirable to take some
-  special action if a given style flag wasn't honored; for example, if a
-  border was requested but the actual style flags indicate that no
-  border is displayed, the program might want to use a different
-  background color in the banner to make the banner's screen area stand
-  out from the adjacent window's.
-- \[3\] - the height of the banner's screen area, in text rows. For GUI
-  platforms, this is an estimate only, since the size of text can vary
-  on these platforms; the estimate will give the number of lines of text
-  in the window's default font that will fit in the window's height,
-  which might be considerably different than the number of lines
-  actually displayed.
-- \[4\] - the width of the banner's screen area, in text columns. As
-  with the height, this is only an estimate on GUI platforms, since the
-  banner might use proportionally-spaced characters and might use
-  several different fonts; the estimate gives the number of digit 0's,
-  in the window's default font, that will fit in the window's width.
-- \[5\] - the pixel height of the banner. This is meaningful only on GUI
-  platforms; on character-mode platforms, this will always be zero.
-- \[6\] - the pixel width of the banner. This is used on GUI platforms
-  only; on character-mode platforms, this will always be zero.
-
-</div>
-
-`bannerGoTo(*handle*, *row*, *col*)`
-
-<div class="fdef">
-
-Move the output position in the given text grid banner to the given row
+<p>Move the output position in the given text grid banner to the given row
 and column. Rows and columns are numbered from 1 at the upper left
 corner. This function can be used only in text grid windows; in other
-types of windows, it has no effect.
+types of windows, it has no effect.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">bannerSay(*handle*, ...)</code></p>
 
-`bannerSay(*handle*, ...)`
+<p>Writes one or more text items to the banner. This function treats the
+parameters following <em>handle</em> the same way that
+<code class="language-plaintext highlighter-rouge">tadsSay()</code> does.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">bannerSetScreenColor(*handle*, *color*)</code></p>
 
-Writes one or more text items to the banner. This function treats the
-parameters following *handle* the same way that
-`tadsSay()` does.
-
-</div>
-
-`bannerSetScreenColor(*handle*, *color*)`
-
-<div class="fdef">
-
-Set the background color in the banner. This immediately changes the
-entire window's background to the given color (in other words, this
-doesn't merely affect subsequent text, but also affects everything
+<p>Set the background color in the banner. This immediately changes the
+entire window’s background to the given color (in other words, this
+doesn’t merely affect subsequent text, but also affects everything
 already displayed in the banner). The color values are the same as for
-`bannerSetTextColor()`, except that
-`ColorTransparent` is not meaningful here. This
-function can't be used in ordinary text windows
-(`BannerTypeText`); use the HTML
-`\&lt;BODY BGCOLOR\&gt;` tag instead.
+<code class="language-plaintext highlighter-rouge">bannerSetTextColor()</code>, except that
+<code class="language-plaintext highlighter-rouge">ColorTransparent</code> is not meaningful here. This
+function can’t be used in ordinary text windows
+(<code class="language-plaintext highlighter-rouge">BannerTypeText</code>); use the HTML
+<code class="language-plaintext highlighter-rouge">\&lt;BODY BGCOLOR\&gt;</code> tag instead.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">bannerSetSize(*handle*, *size*, *sizeUnits*,
+*isAdvisory*)</code></p>
 
-`bannerSetSize(*handle*, *size*, *sizeUnits*,
-*isAdvisory*)`
-
-<div class="fdef">
-
-Set the size of the banner. The *size* and *sizeUnits* parameters have
-the same meanings they do in `bannerCreate()`.
-If *isAdvisory* is `true`, it indicates that the
+<p>Set the size of the banner. The <em>size</em> and <em>sizeUnits</em> parameters have
+the same meanings they do in <code class="language-plaintext highlighter-rouge">bannerCreate()</code>.
+If <em>isAdvisory</em> is <code class="language-plaintext highlighter-rouge">true</code>, it indicates that the
 size setting is only an estimate, and that a call to
-`bannerSizeToContents()` will be made later; in
+<code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code> will be made later; in
 this case, the interpreter might simply ignore this estimated size
 setting entirely, to avoid unnecessary redrawing. Platforms that do not
 support contents-based sizing will always set the estimated size, even
-when isAdvisory is true. If *isAdvisory* is
-`nil`, the platform will set the banner size as
-requested; set *isAdvisory* to `nil` when you
+when isAdvisory is true. If <em>isAdvisory</em> is
+<code class="language-plaintext highlighter-rouge">nil</code>, the platform will set the banner size as
+requested; set <em>isAdvisory</em> to <code class="language-plaintext highlighter-rouge">nil</code> when you
 will not follow up with a call to
-`bannerSizeToContents()`.
+<code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">bannerSetTextColor(*handle*, *fg*, *bg*)</code></p>
 
-`bannerSetTextColor(*handle*, *fg*, *bg*)`
-
-<div class="fdef">
-
-Set the text color in the given banner to the given foreground (*fg*)
-and background (*bg*) colors. The new color settings are used for text
+<p>Set the text color in the given banner to the given foreground (<em>fg</em>)
+and background (<em>bg</em>) colors. The new color settings are used for text
 subsequently displayed; any text already displayed is not affected. This
-can't be used in ordinary text windows
-(`BannerTypeText`); use the HTML
-`\&lt;FONT COLOR\&gt;` tag instead.
+can’t be used in ordinary text windows
+(<code class="language-plaintext highlighter-rouge">BannerTypeText</code>); use the HTML
+<code class="language-plaintext highlighter-rouge">\&lt;FONT COLOR\&gt;</code> tag instead.</p>
 
-*fg* and *bg* can have the following values:
+<p><em>fg</em> and <em>bg</em> can have the following values:</p>
 
-- `ColorText` - the default text foreground
-  color (usually a user preference setting)
-- `ColorTextBg` - the default text background
-  color
-- `ColorStatusText` - the default "status line"
-  text color
-- `ColorStatusBg` - the default status line
-  background color
-- `ColorInput` - the default input text color
-- `ColorRGB(*r*, *g*, *b*)`} - the specific
-  color given as with red, green, and blue component values; each
-  component can vary from 0 to 255.
-  `ColorRGB(0,0,0)` is black,
-  `and ColorRGB(255,255,255)` is white.
-- `ColorBlack`,
-  `ColorWhite`,
-  `ColorRed`,
-  `ColorBlue`,
-  `ColorGreen`,
-  `ColorYellow`,
-  `ColorCyan`,
-  `ColorAqua`,
-  `ColorMagenta`,
-  `ColorSilver`,
-  `ColorGray`,
-  `ColorMaroon`,
-  `ColorPurple`,
-  `ColorFuchsia`,
-  `ColorLime`,
-  `ColorOlive`,
-  `ColorNavy`, and
-  `ColorTeal` provide the standard set of
-  HTML-defined colors. These are all convenience macros that simply use
-  `ColorRGB()` with the corresponding HTML RGB
-  values.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ColorText</code> - the default text foreground
+color (usually a user preference setting)</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorTextBg</code> - the default text background
+color</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorStatusText</code> - the default “status line”
+text color</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorStatusBg</code> - the default status line
+background color</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorInput</code> - the default input text color</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorRGB(*r*, *g*, *b*)</code>} - the specific
+color given as with red, green, and blue component values; each
+component can vary from 0 to 255.
+<code class="language-plaintext highlighter-rouge">ColorRGB(0,0,0)</code> is black,
+<code class="language-plaintext highlighter-rouge">and ColorRGB(255,255,255)</code> is white.</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorBlack</code>,
+<code class="language-plaintext highlighter-rouge">ColorWhite</code>,
+<code class="language-plaintext highlighter-rouge">ColorRed</code>,
+<code class="language-plaintext highlighter-rouge">ColorBlue</code>,
+<code class="language-plaintext highlighter-rouge">ColorGreen</code>,
+<code class="language-plaintext highlighter-rouge">ColorYellow</code>,
+<code class="language-plaintext highlighter-rouge">ColorCyan</code>,
+<code class="language-plaintext highlighter-rouge">ColorAqua</code>,
+<code class="language-plaintext highlighter-rouge">ColorMagenta</code>,
+<code class="language-plaintext highlighter-rouge">ColorSilver</code>,
+<code class="language-plaintext highlighter-rouge">ColorGray</code>,
+<code class="language-plaintext highlighter-rouge">ColorMaroon</code>,
+<code class="language-plaintext highlighter-rouge">ColorPurple</code>,
+<code class="language-plaintext highlighter-rouge">ColorFuchsia</code>,
+<code class="language-plaintext highlighter-rouge">ColorLime</code>,
+<code class="language-plaintext highlighter-rouge">ColorOlive</code>,
+<code class="language-plaintext highlighter-rouge">ColorNavy</code>, and
+<code class="language-plaintext highlighter-rouge">ColorTeal</code> provide the standard set of
+HTML-defined colors. These are all convenience macros that simply use
+<code class="language-plaintext highlighter-rouge">ColorRGB()</code> with the corresponding HTML RGB
+values.</li>
+</ul>
 
-In addition, the special value
-`ColorTransparent` can be used for the
+<p>In addition, the special value
+<code class="language-plaintext highlighter-rouge">ColorTransparent</code> can be used for the
 background color. This indicates that the text should be drawn with a
 transparent background, and thus should simply be drawn against the
-banner's current background color.
+banner’s current background color.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">bannerSizeToContents(*handle*)</code></p>
 
-`bannerSizeToContents(*handle*)`
-
-<div class="fdef">
-
-Resizes the given banner based on the current contents of the banner.
-For a top-aligned or bottom-aligned banner, this sets the banner's
+<p>Resizes the given banner based on the current contents of the banner.
+For a top-aligned or bottom-aligned banner, this sets the banner’s
 height so that the banner is just tall enough to show all of the
 contents as currently laid out. For a left-aligned or right-aligned
-banner, this sets the banner's width so that the banner is just wide
-enough to hold the banner's single widest indivisible element (such as a
-single word or a picture). This routine can be used to set the banner's
-size based on the actual size of the contents; it's impossible to know
-the exact size of a banner's contents until you actually display the
+banner, this sets the banner’s width so that the banner is just wide
+enough to hold the banner’s single widest indivisible element (such as a
+single word or a picture). This routine can be used to set the banner’s
+size based on the actual size of the contents; it’s impossible to know
+the exact size of a banner’s contents until you actually display the
 contents, because the sizes of fonts and other display elements vary
 from one machine to another, and can even change on the same machine in
-response to user preference settings and other factors.
+response to user preference settings and other factors.</p>
 
-Note that this routine might not be implemented on all platforms; on
-platforms where it's not implemented, it's legal to call this routine,
+<p>Note that this routine might not be implemented on all platforms; on
+platforms where it’s not implemented, it’s legal to call this routine,
 but the function will have no effect. To ensure that a reasonable size
 is always set regardless of platform, callers should always use
-`bannerSetSize()` to set an approximate size,
-passing `true` for the *isAdvisory* flag, and
-then call `bannerSizeToContents()` to set the
+<code class="language-plaintext highlighter-rouge">bannerSetSize()</code> to set an approximate size,
+passing <code class="language-plaintext highlighter-rouge">true</code> for the <em>isAdvisory</em> flag, and
+then call <code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code> to set the
 exact content-based size. On platforms where
-`bannerSizeToContents()` is supported, this will
+<code class="language-plaintext highlighter-rouge">bannerSizeToContents()</code> is supported, this will
 set the exact content-based size; on other platforms, this will at least
-set the size to a suitable approximation.
+set the size to a suitable approximation.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">clearScreen()</code></p>
 
-`clearScreen()`
-
-<div class="fdef">
-
-Clear the main console window, if possible. The actual effect of this
+<p>Clear the main console window, if possible. The actual effect of this
 function varies by system; some interpreters clear the window, some
 display enough newlines to scroll any existing text off the top of the
-window, and some ignore the call completely.
+window, and some ignore the call completely.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">flushOutput()</code></p>
 
-`flushOutput()`
-
-<div class="fdef">
-
-Immediately flushes text to the output. When you display output using
-`tadsSay()`, the text you write isn't
+<p>Immediately flushes text to the output. When you display output using
+<code class="language-plaintext highlighter-rouge">tadsSay()</code>, the text you write isn’t
 necessarily displayed immediately, because the output formatter
 generally buffers text internally; the exact details of the output
-formatter's internal buffering vary by platform. The
-`flushOutput()` function tells the output
+formatter’s internal buffering vary by platform. The
+<code class="language-plaintext highlighter-rouge">flushOutput()</code> function tells the output
 formatter to display any buffered text immediately. It is never
 necessary to call this function, because the formatter automatically
 flushes its buffers before waiting for user input. It is, however,
 sometimes desirable to be able to display buffered output explicitly;
 for example, if your program is going to perform some computation that
-will take a while, you might want to ensure that the user sees a "please
-wait" message before the long-running computation begins.
+will take a while, you might want to ensure that the user sees a “please
+wait” message before the long-running computation begins.</p>
 
-This function takes no arguments and returns no value.
+<p>This function takes no arguments and returns no value.</p>
 
-</div>
+<p><span id="getLocalCharSet"></span></p>
 
-<span id="getLocalCharSet"></span>
+<p><code class="language-plaintext highlighter-rouge">getLocalCharSet(*which*)</code></p>
 
-`getLocalCharSet(*which*)`
+<p>Returns a string giving the name of the active local character set
+selected by <em>which</em>, which can have one of the following values:</p>
 
-<div class="fdef">
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CharsetDisplay</code> - returns the name of the
+character set displayed on the monitor and read from the keyboard. If
+the interpreter was started with an explicit character set option (the
+“-cs” option in the command-line interpreter, for example), the
+character set name so specified is returned; otherwise, the local
+default display character set name is returned.</li>
+  <li><code class="language-plaintext highlighter-rouge">CharsetFileName</code> - returns the name of the
+character set used in the file system for filenames. In some cases,
+this might differ from the display character set; for example, a
+system might have a global file system character set used by all
+applications, but allow individual terminal or window sessions to use
+separate character sets for the user interface.</li>
+  <li><code class="language-plaintext highlighter-rouge">CharsetFileCont</code> - returns the name of the
+character set typically used for the contents of text files on the
+local system. Note that this is only a default; a particular file
+could be in any character set, determined at the time the file was
+created. However, on most systems, there’s a character set that’s used
+by convention for most text files.</li>
+</ul>
 
-Returns a string giving the name of the active local character set
-selected by *which*, which can have one of the following values:
+<p>If <em>which</em> is not one of the above values, the function returns
+<code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-- `CharsetDisplay` - returns the name of the
-  character set displayed on the monitor and read from the keyboard. If
-  the interpreter was started with an explicit character set option (the
-  "-cs" option in the command-line interpreter, for example), the
-  character set name so specified is returned; otherwise, the local
-  default display character set name is returned.
-- `CharsetFileName` - returns the name of the
-  character set used in the file system for filenames. In some cases,
-  this might differ from the display character set; for example, a
-  system might have a global file system character set used by all
-  applications, but allow individual terminal or window sessions to use
-  separate character sets for the user interface.
-- `CharsetFileCont` - returns the name of the
-  character set typically used for the contents of text files on the
-  local system. Note that this is only a default; a particular file
-  could be in any character set, determined at the time the file was
-  created. However, on most systems, there's a character set that's used
-  by convention for most text files.
+<p>The character set name returned can be used to create a
+<a href="charset.html"><code class="language-plaintext highlighter-rouge">CharacterSet</code></a> object to perform
+character-to-byte and byte-to-character mappings.</p>
 
-If *which* is not one of the above values, the function returns
-`nil`.
+<p><code class="language-plaintext highlighter-rouge">inputDialog(*icon*, *prompt*, *buttons*,
+*defaultButton*, *cancelButton*)</code></p>
 
-The character set name returned can be used to create a
-[`CharacterSet`](charset.html) object to perform
-character-to-byte and byte-to-character mappings.
-
-</div>
-
-`inputDialog(*icon*, *prompt*, *buttons*,
-*defaultButton*, *cancelButton*)`
-
-<div class="fdef">
-
-Displays an "alert box" dialog (also known as a "message box"), and
+<p>Displays an “alert box” dialog (also known as a “message box”), and
 waits for the user to respond. This displays a dialog that includes a
 short message for the user to read, an icon indicating the general
 nature of the condition that gave rise to the dialog (an error, a
 warning, a choice for the user to make, etc.), and a set of push-buttons
 that dismiss the dialog and (in some cases) let the user choose among
-options.
+options.</p>
 
-On GUI systems, this will use a standard system dialog if the OS
+<p>On GUI systems, this will use a standard system dialog if the OS
 provides. On character-mode systems, this will generally not display a
 GUI-style dialog, but will simply display the prompt string and let the
-user type a response.
+user type a response.</p>
 
-*icon* gives the type of icon to show in the dialog, if any; *prompt* is
-the message string to display; *buttons* gives the set of buttons to
-display; *defaultButton* is the index (starting at 1) among the buttons
-of the default button; and *cancelButton* is the index of the
-cancellation button.
+<p><em>icon</em> gives the type of icon to show in the dialog, if any; <em>prompt</em> is
+the message string to display; <em>buttons</em> gives the set of buttons to
+display; <em>defaultButton</em> is the index (starting at 1) among the buttons
+of the default button; and <em>cancelButton</em> is the index of the
+cancellation button.</p>
 
-The *icon* value can be one of the following:
+<p>The <em>icon</em> value can be one of the following:</p>
 
-- `InDlgIconNone` - no icon
-- `InDlgIconWarning` - "warning" icon; indicates
-  a possible problem but not a serious error
-- `InDlgIconInfo` - "information" icon;
-  indicates that the message is for information only, and doesn't
-  indicate an error or warning
-- `InDlgIconQuestion` - "question" icon;
-  indicates that the program is requesting information from the user
-- `InDlgIconError` - "error" icon; indicates
-  that an error has occurred
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">InDlgIconNone</code> - no icon</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgIconWarning</code> - “warning” icon; indicates
+a possible problem but not a serious error</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgIconInfo</code> - “information” icon;
+indicates that the message is for information only, and doesn’t
+indicate an error or warning</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgIconQuestion</code> - “question” icon;
+indicates that the program is requesting information from the user</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgIconError</code> - “error” icon; indicates
+that an error has occurred</li>
+</ul>
 
-The *buttons* value can be one of the constants listed below, to select
-a standard set of buttons:
+<p>The <em>buttons</em> value can be one of the constants listed below, to select
+a standard set of buttons:</p>
 
-- `InDlgOk` - show only an "OK" button
-- `InDlgOkCancel` - show "OK" and "Cancel"
-  buttons
-- `InDlgYesNo` - show "Yes" and "No" buttons
-- `InDlgYesNoCancel` - show "Yes", "No", and
-  "Cancel" buttons
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">InDlgOk</code> - show only an “OK” button</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgOkCancel</code> - show “OK” and “Cancel”
+buttons</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgYesNo</code> - show “Yes” and “No” buttons</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgYesNoCancel</code> - show “Yes”, “No”, and
+“Cancel” buttons</li>
+</ul>
 
-Alternatively, *buttons* can be a list (or a [list-like
-object](opoverload.html#listlike)) specifying a custom set of buttons.
+<p>Alternatively, <em>buttons</em> can be a list (or a <a href="opoverload.html#listlike">list-like
+object</a>) specifying a custom set of buttons.
 Each element of the list is either a string giving a custom label for
-the button, or one of the `InDlgLblXxx` values
+the button, or one of the <code class="language-plaintext highlighter-rouge">InDlgLblXxx</code> values
 listed below to select a standard label. The standard labels should be
 used when possible, as these will be automatically localized; labels
 given explicitly as strings will be used exactly as given. If a list of
 custom button labels is given, the buttons are displayed in the dialog
 in the order of the list (usually left to right, but this could vary
-according to system conventions and localization).
+according to system conventions and localization).</p>
 
-Each custom button label string can incorporate an ampersand
-(`&amp;`). The letter immediately following the
+<p>Each custom button label string can incorporate an ampersand
+(<code class="language-plaintext highlighter-rouge">&amp;</code>). The letter immediately following the
 ampersand, if provided, is used as the keyboard shortcut for the button.
 This is particularly important on character-mode systems, where the
-"dialog" is typically shown merely as a text prompt, and the user
+“dialog” is typically shown merely as a text prompt, and the user
 responds by selecting the letter of the desired option. Typically, you
 should use the first character of a button label as its keyboard
-shortcut, but this obviously won't work when two button labels have the
+shortcut, but this obviously won’t work when two button labels have the
 same first letter; in these cases, you should choose another letter from
 the button label, preferably something like the first letter of the
 second word of the button label, or the first letter of the stressed
-syllable of the most important word of the label.
+syllable of the most important word of the label.</p>
 
-The button label constants are:
+<p>The button label constants are:</p>
 
-- `InDlgLblOk` - "OK" button
-- `InDlgLblCancel` - "Cancel"
-- `InDlgLblYes` - "Yes"
-- `InDlgLblNo` - "No"
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">InDlgLblOk</code> - “OK” button</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgLblCancel</code> - “Cancel”</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgLblYes</code> - “Yes”</li>
+  <li><code class="language-plaintext highlighter-rouge">InDlgLblNo</code> - “No”</li>
+</ul>
 
-The return value is the index among the buttons of the button that the
-user selects to dismiss the dialog. The function doesn't return until
-the user selects one of the buttons.
+<p>The return value is the index among the buttons of the button that the
+user selects to dismiss the dialog. The function doesn’t return until
+the user selects one of the buttons.</p>
 
-If an error occurs, the return value is 0. In most cases, this means
+<p>If an error occurs, the return value is 0. In most cases, this means
 that the user has closed the game window or disconnected the terminal
 session. It can also indicate a resource error, such as the system being
 too low on memory to display the dialog, although this is rare on modern
-systems. (There's no way to distinguish end-of-file and resource errors,
-but that's not too important because in either case the best course of
-action for the game is simply to exit.)
+systems. (There’s no way to distinguish end-of-file and resource errors,
+but that’s not too important because in either case the best course of
+action for the game is simply to exit.)</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">inputEvent(*timeout*?)</code></p>
 
-`inputEvent(*timeout*?)`
+<p>Wait for an event, with the optional <em>timeout</em>, given in milliseconds.
+If the <em>timeout</em> value is omitted or <code class="language-plaintext highlighter-rouge">nil</code>,
+there is no timeout, so the function waits indefinitely for an event.</p>
 
-<div class="fdef">
-
-Wait for an event, with the optional *timeout*, given in milliseconds.
-If the *timeout* value is omitted or `nil`,
-there is no timeout, so the function waits indefinitely for an event.
-
-The function returns when either an event occurs or the timeout expires.
+<p>The function returns when either an event occurs or the timeout expires.
 The return value is a list containing one or more elements. The first
 element of the list is a constant that indicates the type of event that
 occurred; the remaining elements of the list vary according to the event
-type. The event type codes are:
+type. The event type codes are:</p>
 
-- `InEvtKey` - the user pressed a key. The
-  second element of the list is a string giving the key pressed. The
-  string returns varies according to the type of key.
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InEvtKey</code> - the user pressed a key. The
+second element of the list is a string giving the key pressed. The
+string returns varies according to the type of key.</p>
 
-  For a regular character key, this is simply the character. For
-  example, if the user presses the A key with no Shift key or Caps Lock
-  in effect, the returned string is simply
-  `'a'`. If the user holds down the Shift key
-  and presses B, the returned string is `'B'`.
+    <p>For a regular character key, this is simply the character. For
+example, if the user presses the A key with no Shift key or Caps Lock
+in effect, the returned string is simply
+<code class="language-plaintext highlighter-rouge">'a'</code>. If the user holds down the Shift key
+and presses B, the returned string is <code class="language-plaintext highlighter-rouge">'B'</code>.</p>
 
-  For the standard non-printing keys, the corresponding ASCII control
-  character is returned: for the Tab key,
-  `'\t'`; for the Return or Enter key,
-  `'\n'`. Note that
-  `'\n'` is returned for Return or Enter
-  *regardless* of the local system's newline conventions, so you don't
-  have to worry about the different conventions used on different
-  systems.
+    <p>For the standard non-printing keys, the corresponding ASCII control
+character is returned: for the Tab key,
+<code class="language-plaintext highlighter-rouge">'\t'</code>; for the Return or Enter key,
+<code class="language-plaintext highlighter-rouge">'\n'</code>. Note that
+<code class="language-plaintext highlighter-rouge">'\n'</code> is returned for Return or Enter
+<em>regardless</em> of the local system’s newline conventions, so you don’t
+have to worry about the different conventions used on different
+systems.</p>
 
-  For "special" keys - cursor arrows, "F" keys, and the like - the
-  returned string is a portable name for the key. The special key names
-  are assigned by TADS, so they're the same on every system - you don't
-  have to worry about the hardware or OS-specific representations of
-  these keys, because TADS maps the local representation into these
-  universal key names. Special key names are always enclosed in square
-  brackets, so you can easily distinguish them from ordinary character
-  keys. The key names are:
+    <p>For “special” keys - cursor arrows, “F” keys, and the like - the
+returned string is a portable name for the key. The special key names
+are assigned by TADS, so they’re the same on every system - you don’t
+have to worry about the hardware or OS-specific representations of
+these keys, because TADS maps the local representation into these
+universal key names. Special key names are always enclosed in square
+brackets, so you can easily distinguish them from ordinary character
+keys. The key names are:</p>
 
-  `\[alt-a\]`
+    <p><code class="language-plaintext highlighter-rouge">\[alt-a\]</code></p>
 
-  Alt-A (i.e., the "Alt" key plus the letter A); likewise for
-  `\[alt-b\]`,
-  `\[alt-1\]`, etc.
+    <p>Alt-A (i.e., the “Alt” key plus the letter A); likewise for
+<code class="language-plaintext highlighter-rouge">\[alt-b\]</code>,
+<code class="language-plaintext highlighter-rouge">\[alt-1\]</code>, etc.</p>
 
-  `\[ctrl-a\]`
+    <p><code class="language-plaintext highlighter-rouge">\[ctrl-a\]</code></p>
 
-  Ctrl-A (i.e., the "Ctrl" or "Control" key plus the letter A); likewise
-  for `\[ctrl-b\]`,
-  `\[ctrl-c\]`, etc.
+    <p>Ctrl-A (i.e., the “Ctrl” or “Control” key plus the letter A); likewise
+for <code class="language-plaintext highlighter-rouge">\[ctrl-b\]</code>,
+<code class="language-plaintext highlighter-rouge">\[ctrl-c\]</code>, etc.</p>
 
-  `\[esc\]`
+    <p><code class="language-plaintext highlighter-rouge">\[esc\]</code></p>
 
-  the "Escape" or "Esc" key
+    <p>the “Escape” or “Esc” key</p>
 
-  `\[up\]`
+    <p><code class="language-plaintext highlighter-rouge">\[up\]</code></p>
 
-  the "up" cursor arrow
+    <p>the “up” cursor arrow</p>
 
-  `\[down\]`
+    <p><code class="language-plaintext highlighter-rouge">\[down\]</code></p>
 
-  the "down" cursor arrow
+    <p>the “down” cursor arrow</p>
 
-  `\[right\]`
+    <p><code class="language-plaintext highlighter-rouge">\[right\]</code></p>
 
-  the "right" cursor arrow
+    <p>the “right” cursor arrow</p>
 
-  `\[left\]`
+    <p><code class="language-plaintext highlighter-rouge">\[left\]</code></p>
 
-  the "left" cursor arrow
+    <p>the “left” cursor arrow</p>
 
-  `\[home\]`
+    <p><code class="language-plaintext highlighter-rouge">\[home\]</code></p>
 
-  the "Home" key
+    <p>the “Home” key</p>
 
-  `\[end\]`
+    <p><code class="language-plaintext highlighter-rouge">\[end\]</code></p>
 
-  the "End" key
+    <p>the “End” key</p>
 
-  `\[del-word\]`
+    <p><code class="language-plaintext highlighter-rouge">\[del-word\]</code></p>
 
-  the "Delete Word" key
+    <p>the “Delete Word” key</p>
 
-  `\[del-eol\]`
+    <p><code class="language-plaintext highlighter-rouge">\[del-eol\]</code></p>
 
-  the "delete to end of line" key
+    <p>the “delete to end of line” key</p>
 
-  `\[del-line\]`
+    <p><code class="language-plaintext highlighter-rouge">\[del-line\]</code></p>
 
-  the "delete line" key
+    <p>the “delete line” key</p>
 
-  `\[insert\]`
+    <p><code class="language-plaintext highlighter-rouge">\[insert\]</code></p>
 
-  the "Insert" or "Ins" key
+    <p>the “Insert” or “Ins” key</p>
 
-  `\[del\]`
+    <p><code class="language-plaintext highlighter-rouge">\[del\]</code></p>
 
-  the "Delete" or "Del" key
+    <p>the “Delete” or “Del” key</p>
 
-  `\[scroll\]`
+    <p><code class="language-plaintext highlighter-rouge">\[scroll\]</code></p>
 
-  the "scroll lock" key
+    <p>the “scroll lock” key</p>
 
-  `\[page up\]`
+    <p><code class="language-plaintext highlighter-rouge">\[page up\]</code></p>
 
-  the "Page Up" or "Previous Page" key
+    <p>the “Page Up” or “Previous Page” key</p>
 
-  `\[page down\]`
+    <p><code class="language-plaintext highlighter-rouge">\[page down\]</code></p>
 
-  the "Page Down" or "Next Page" key
+    <p>the “Page Down” or “Next Page” key</p>
 
-  `\[top\]`
+    <p><code class="language-plaintext highlighter-rouge">\[top\]</code></p>
 
-  the "Top of Document" key
+    <p>the “Top of Document” key</p>
 
-  `\[bottom\]`
+    <p><code class="language-plaintext highlighter-rouge">\[bottom\]</code></p>
 
-  the "Bottom of Document"
+    <p>the “Bottom of Document”</p>
 
-  `\[f1\]`
+    <p><code class="language-plaintext highlighter-rouge">\[f1\]</code></p>
 
-  function key F1; likewise for `\[f2\]`,
-  `\[f3\]`, etc.
+    <p>function key F1; likewise for <code class="language-plaintext highlighter-rouge">\[f2\]</code>,
+<code class="language-plaintext highlighter-rouge">\[f3\]</code>, etc.</p>
 
-  `\[bksp\]`
+    <p><code class="language-plaintext highlighter-rouge">\[bksp\]</code></p>
 
-  the Backspace key
+    <p>the Backspace key</p>
 
-  `\[word-left\]`
+    <p><code class="language-plaintext highlighter-rouge">\[word-left\]</code></p>
 
-  the "Word Left" or "Previous Word" key
+    <p>the “Word Left” or “Previous Word” key</p>
 
-  `\[word-right\]`
+    <p><code class="language-plaintext highlighter-rouge">\[word-right\]</code></p>
 
-  the "Word Right" or "Next Word" key
+    <p>the “Word Right” or “Next Word” key</p>
 
-  `\[eof\]`
+    <p><code class="language-plaintext highlighter-rouge">\[eof\]</code></p>
 
-  the "End of File" key
+    <p>the “End of File” key</p>
 
-  `\[break\]`
+    <p><code class="language-plaintext highlighter-rouge">\[break\]</code></p>
 
-  the "Break" key
+    <p>the “Break” key</p>
 
-  `\[?\]`
+    <p><code class="language-plaintext highlighter-rouge">\[?\]</code></p>
 
-  any other key
+    <p>any other key</p>
 
-  Note that you can't count on any of the special keys to be available
-  on every machine. Some keyboards simply have no equivalents for some
-  of these keys. Furthermore, even on systems that do have all of these
-  keys, some of them might have special meanings, due to hardware, the
-  operating system, or other software; so a keystroke might be
-  intercepted before it ever reaches
-  `inputEvent()`. For example, certain
-  Ctrl+Letter keys and F-keys have special meanings in the Windows HTML
-  TADS interpreter because they're assigned as menu command keys (also
-  known as "accelerators" or "shortcuts"); Windows intercepts these keys
-  and activates their special meanings before
-  `inputEvent()` has a chance to read them, so
-  they'll never generate events that
-  `inputEvent()` can read.
+    <p>Note that you can’t count on any of the special keys to be available
+on every machine. Some keyboards simply have no equivalents for some
+of these keys. Furthermore, even on systems that do have all of these
+keys, some of them might have special meanings, due to hardware, the
+operating system, or other software; so a keystroke might be
+intercepted before it ever reaches
+<code class="language-plaintext highlighter-rouge">inputEvent()</code>. For example, certain
+Ctrl+Letter keys and F-keys have special meanings in the Windows HTML
+TADS interpreter because they’re assigned as menu command keys (also
+known as “accelerators” or “shortcuts”); Windows intercepts these keys
+and activates their special meanings before
+<code class="language-plaintext highlighter-rouge">inputEvent()</code> has a chance to read them, so
+they’ll never generate events that
+<code class="language-plaintext highlighter-rouge">inputEvent()</code> can read.</p>
 
-  Because you can't count on any given special key to be available to
-  every user, you should avoid hard-wiring these keys into your program.
-  For maximum portability, you should either (a) give users a way of
-  customizing the keyboard layout, so that they can select the special
-  keys that work properly on their keyboards, or (b) provide ordinary
-  letter or number key equivalents for any special keys you use. The
-  menu system module (menusys.t) in the Adv3 library uses the latter
-  approach: it lets the user use the cursor arrow keys to navigate menu
-  screens, but also assigns alphabetic equivalents: "U" for up, "D" for
-  down, "P" for previous menu.
+    <p>Because you can’t count on any given special key to be available to
+every user, you should avoid hard-wiring these keys into your program.
+For maximum portability, you should either (a) give users a way of
+customizing the keyboard layout, so that they can select the special
+keys that work properly on their keyboards, or (b) provide ordinary
+letter or number key equivalents for any special keys you use. The
+menu system module (menusys.t) in the Adv3 library uses the latter
+approach: it lets the user use the cursor arrow keys to navigate menu
+screens, but also assigns alphabetic equivalents: “U” for up, “D” for
+down, “P” for previous menu.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InEvtTimeout</code> - the timeout expired</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InEvtHref</code> - the user clicked on a hyperlink
+(i.e., text or graphics displayed in a window with an HTML
+<code class="language-plaintext highlighter-rouge">\&lt;A HREF=xxx\&gt;\&gt;</code> tag). The second element of
+the list is a string giving the text of the
+<code class="language-plaintext highlighter-rouge">HREF</code> attribute of the hyperlink that was
+clicked.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InEvtNoTimeout</code> - this isn’t an event, but
+rather an error code: it indicates that the platform doesn’t support
+the timeout feature of <code class="language-plaintext highlighter-rouge">inputEvent()</code>. When
+<code class="language-plaintext highlighter-rouge">inputEvent()</code> is called with a timeout value
+on a platform that doesn’t support the timeout feature, the function
+simply returns this result code immediately.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InEvtEof</code> - an “end of file” error has
+occurred. This indicates that the program is in the process of
+terminating. This happens, for example, when the user explicitly
+terminates the interpreter program (by closing its main window in the
+GUI, for example), or when the OS is terminating programs in
+preparation for shutting down the computer. This event type indicates
+that no further input will be available.</p>
+  </li>
+</ul>
 
-- `InEvtTimeout` - the timeout expired
-
-- `InEvtHref` - the user clicked on a hyperlink
-  (i.e., text or graphics displayed in a window with an HTML
-  `\&lt;A HREF=xxx\&gt;\&gt;` tag). The second element of
-  the list is a string giving the text of the
-  `HREF` attribute of the hyperlink that was
-  clicked.
-
-- `InEvtNoTimeout` - this isn't an event, but
-  rather an error code: it indicates that the platform doesn't support
-  the timeout feature of `inputEvent()`. When
-  `inputEvent()` is called with a timeout value
-  on a platform that doesn't support the timeout feature, the function
-  simply returns this result code immediately.
-
-- `InEvtEof` - an "end of file" error has
-  occurred. This indicates that the program is in the process of
-  terminating. This happens, for example, when the user explicitly
-  terminates the interpreter program (by closing its main window in the
-  GUI, for example), or when the OS is terminating programs in
-  preparation for shutting down the computer. This event type indicates
-  that no further input will be available.
-
-Note that new events could be added in the future, so be aware that your
-code might receive events that aren't on this list. It should always be
-safe to simply ignore an event you don't recognize or don't want to
+<p>Note that new events could be added in the future, so be aware that your
+code might receive events that aren’t on this list. It should always be
+safe to simply ignore an event you don’t recognize or don’t want to
 process; the purpose of events is to notify the program that something
 has happened, so the interpreter should always be able to carry on with
 its own processing whether or not your code does anything in response to
-a particular event.
+a particular event.</p>
 
-</div>
+<p><span id="inputFile"></span></p>
 
-<span id="inputFile"></span>
+<p><code class="language-plaintext highlighter-rouge">inputFile(*prompt*, *dialogType*, *fileType*,
+*flags*)</code></p>
 
-`inputFile(*prompt*, *dialogType*, *fileType*,
-*flags*)`
-
-<div class="fdef">
-
-Display a file selector dialog and wait for the user to respond. On GUI
+<p>Display a file selector dialog and wait for the user to respond. On GUI
 systems, this displays a standard system file selector dialog; on
 text-only platforms, this generally just displays the prompt text and
-waits for the user to type a filename.
+waits for the user to type a filename.</p>
 
-*prompt* is the message string to display in the dialog, to let the user
+<p><em>prompt</em> is the message string to display in the dialog, to let the user
 know the purpose of the file selection. On many GUI systems, the
-physical display area allotted for this message is fairly small, so it's
-best to keep it short: "Saved game file" or "Log file," for instance.
-There's usually not any need for a long, detailed message anyway, since
+physical display area allotted for this message is fairly small, so it’s
+best to keep it short: “Saved game file” or “Log file,” for instance.
+There’s usually not any need for a long, detailed message anyway, since
 in most cases the user will already know what the dialog is for simply
 because they just initiated the action that triggered the dialog. For
-example, if the user types SAVE, they'll expect to be asked for a name
-for the saved game.
+example, if the user types SAVE, they’ll expect to be asked for a name
+for the saved game.</p>
 
-*dialogType* is one of the `InFileXxx` constants
+<p><em>dialogType</em> is one of the <code class="language-plaintext highlighter-rouge">InFileXxx</code> constants
 below, specifying whether the request is to select an existing file or
-to specify the name for a new file. *fileType* is one of the
-`FileTypeXxx` constants below, giving the format
+to specify the name for a new file. <em>fileType</em> is one of the
+<code class="language-plaintext highlighter-rouge">FileTypeXxx</code> constants below, giving the format
 of the file being requested; this is used on some systems to filter the
 displayed list of existing files so that only files of the same format
-are included, to reduce clutter.
+are included, to reduce clutter.</p>
 
-*flags* is reserved for future use and should be set to zero.
+<p><em>flags</em> is reserved for future use and should be set to zero.</p>
 
-The constants for *dialogType* are:
+<p>The constants for <em>dialogType</em> are:</p>
 
-- `InFileOpen` - "open" dialog: selects an
-  existing file
-- `InFileSave` - "save" dialog: selects a name
-  for a file to be created
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">InFileOpen</code> - “open” dialog: selects an
+existing file</li>
+  <li><code class="language-plaintext highlighter-rouge">InFileSave</code> - “save” dialog: selects a name
+for a file to be created</li>
+</ul>
 
-The constants for *fileType* are:
+<p>The constants for <em>fileType</em> are:</p>
 
-- `FileTypeLog` - log (transcript) file
-- `FileTypeData` - TADS 2 private binary data
-  format
-- `FileTypeCmd` - command input file
-- `FileTypeText` - text
-- `FileTypeBin` - unknown binary data
-- `FileTypeUnknown` - unknown type
-- `FileTypeT3Image` - TADS 3 image file (i.e., a
-  compiled TADS 3 program, a .t3 file)
-- `FileTypeT3Save` - TADS 3 saved state file
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeLog</code> - log (transcript) file</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeData</code> - TADS 2 private binary data
+format</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeCmd</code> - command input file</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeText</code> - text</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeBin</code> - unknown binary data</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeUnknown</code> - unknown type</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeT3Image</code> - TADS 3 image file (i.e., a
+compiled TADS 3 program, a .t3 file)</li>
+  <li><code class="language-plaintext highlighter-rouge">FileTypeT3Save</code> - TADS 3 saved state file</li>
+</ul>
 
-The return value is a list. The first element is an integer giving the
+<p>The return value is a list. The first element is an integer giving the
 status, and additional elements vary according to the status code. The
-status codes are:
+status codes are:</p>
 
-- `InFileSuccess` indicates that the user
-  successfully selected a file. The following additional elements are in
-  the returned list:
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InFileSuccess</code> indicates that the user
+successfully selected a file. The following additional elements are in
+the returned list:</p>
 
-  - \[2\] = the selected file name, as a [FileName](filename.html) object
-  - \[3\] = `nil` (reserved for future use)
-  - \[4\] = warning message string, or `nil`
+    <ul>
+      <li>[2] = the selected file name, as a <a href="filename.html">FileName</a> object</li>
+      <li>[3] = <code class="language-plaintext highlighter-rouge">nil</code> (reserved for future use)</li>
+      <li>[4] = warning message string, or <code class="language-plaintext highlighter-rouge">nil</code></li>
+    </ul>
 
-  The warning message string in element \[4\] is non-nil only if the
-  file selection was read from a script, *and* the script reader
-  detected a possible error condition for the file name, *and* the
-  script reader didn't display the warning itself. The script reader
-  checks the selection from an Open dialog to make sure the file exists,
-  and checks the selection from a Save dialog to make sure the file
-  *doesn't* already exist (to protect against accidentally overwriting
-  an existing file) and that it's possible to create and write to the
-  file. If any of these tests fail for scripted input, the script reader
-  generates a suitable warning message. In the conventional console UI,
-  the script reader automatically displays these warning messages
-  itself, so games built for the traditional UI don't have to concern
-  themselves with this. However, in the Web UI, it's not possible for
-  the script reader to display these warnings itself, since the script
-  reader doesn't have access to the Web UI communications channels.
-  Instead, it returns the warning text to the caller via this return
-  list element. The caller is responsible for displaying the warning to
-  the user in this case.
+    <p>The warning message string in element [4] is non-nil only if the
+file selection was read from a script, <em>and</em> the script reader
+detected a possible error condition for the file name, <em>and</em> the
+script reader didn’t display the warning itself. The script reader
+checks the selection from an Open dialog to make sure the file exists,
+and checks the selection from a Save dialog to make sure the file
+<em>doesn’t</em> already exist (to protect against accidentally overwriting
+an existing file) and that it’s possible to create and write to the
+file. If any of these tests fail for scripted input, the script reader
+generates a suitable warning message. In the conventional console UI,
+the script reader automatically displays these warning messages
+itself, so games built for the traditional UI don’t have to concern
+themselves with this. However, in the Web UI, it’s not possible for
+the script reader to display these warnings itself, since the script
+reader doesn’t have access to the Web UI communications channels.
+Instead, it returns the warning text to the caller via this return
+list element. The caller is responsible for displaying the warning to
+the user in this case.</p>
 
-  To allow for localization, the error message starts with a two-letter
-  error code, followed by a space, followed by the English text of the
-  message. Localized libraries can replace the message text based on the
-  two-letter error code:
+    <p>To allow for localization, the error message starts with a two-letter
+error code, followed by a space, followed by the English text of the
+message. Localized libraries can replace the message text based on the
+two-letter error code:</p>
 
-  - OV - the script might overwrite an existing file (Save dialog)
-  - WR - the file can't be created/written (Save dialog)
-  - RD - the file doesn't exist (Open dialog)
+    <ul>
+      <li>OV - the script might overwrite an existing file (Save dialog)</li>
+      <li>WR - the file can’t be created/written (Save dialog)</li>
+      <li>RD - the file doesn’t exist (Open dialog)</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InFileFailure</code> indicates a system error of
+some kind showing the dialog. There are no additional return list
+elements.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">InFileCancel</code> indicates that the user
+explicitly canceled the dialog (such as by clicking a “Cancel” button
+in the UI). There are no additional return list elements.</p>
+  </li>
+</ul>
 
-- `InFileFailure` indicates a system error of
-  some kind showing the dialog. There are no additional return list
-  elements.
-
-- `InFileCancel` indicates that the user
-  explicitly canceled the dialog (such as by clicking a "Cancel" button
-  in the UI). There are no additional return list elements.
-
-Files selected with inputFile() are granted special permissions that
-bypass the [file safety](terp.html#file-safety) settings. The program is
+<p>Files selected with inputFile() are granted special permissions that
+bypass the <a href="terp.html#file-safety">file safety</a> settings. The program is
 allowed to read a file selected with an Open dialog, and is allowed to
 write a file selected with a Save dialog, even if the file safety
 settings would normally prohibit access to the same file. The special
@@ -954,148 +927,134 @@ extra permissions are granted because of the direct interaction with the
 user; the user is asked to select a file to read or write, so the act of
 selecting the file expresses an intention to allow that operation. (The
 visual presentation of the dialog is under system control, so the game
-program can't deceive the user about the basic read or write operation
+program can’t deceive the user about the basic read or write operation
 being proposed. It could use the prompt message to lie about the purpose
-of the file access, but it can't lie about the basic nature of the
+of the file access, but it can’t lie about the basic nature of the
 access.) The special permission is stored as an internal attribute of
-the [FileName](filename.html) object returned by inputFile() function, so
+the <a href="filename.html">FileName</a> object returned by inputFile() function, so
 you have to use the actual FileName object returned to exercise the
 special permission. For example, converting the FileName to a string and
 then attempting to open the file via the string will revert to the
-ordinary file safety rules for the file.
+ordinary file safety rules for the file.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">inputKey()</code></p>
 
-`inputKey()`
+<p>Read a keystroke from the user. Waits for the user to press a key, then
+returns a string with the key the user pressed.</p>
 
-<div class="fdef">
-
-Read a keystroke from the user. Waits for the user to press a key, then
-returns a string with the key the user pressed.
-
-This function returns a string indicating which key the user pressed.
+<p>This function returns a string indicating which key the user pressed.
 The key strings have the same meaning as for an
-`InEvtKey` event from
-`inputEvent()`.
+<code class="language-plaintext highlighter-rouge">InEvtKey</code> event from
+<code class="language-plaintext highlighter-rouge">inputEvent()</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">inputLine()</code></p>
 
-`inputLine()`
-
-<div class="fdef">
-
-Read a line of text input from the user. Returns the text of the input
-as a string. (The returned string will **not** contain a newline
-character.) Returns `nil` if an "end of file"
+<p>Read a line of text input from the user. Returns the text of the input
+as a string. (The returned string will <strong>not</strong> contain a newline
+character.) Returns <code class="language-plaintext highlighter-rouge">nil</code> if an “end of file”
 error occurs, which usually indicates that the user has closed the
-interpreter application.
+interpreter application.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">inputLineCancel(*reset*)</code></p>
 
-`inputLineCancel(*reset*)`
-
-<div class="fdef">
-
-Cancels an editing session interrupted by a timeout. This function must
-be called after `inputLineTimeout()` returns the
-`InEvtTimeout` event code if any display input
+<p>Cancels an editing session interrupted by a timeout. This function must
+be called after <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> returns the
+<code class="language-plaintext highlighter-rouge">InEvtTimeout</code> event code if any display input
 or output is to be performed before the next call to
-`inputLineTimeout()`. This function terminates
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>. This function terminates
 the editing session, making any changes to the visual display that would
 have occurred if the user had terminated the command entry by pressing
 the Return key or some equivalent action. For example, this function
 changes the display by starting a new line of text after the line that
-was being edited.
+was being edited.</p>
 
-The *reset* argument indicates whether or not
-`inputLineTimeout()` should forget the editing
-state that was in effect when the timeout occurred. If *reset* is
-`true`, then the next call to
-`inputLineTimeout()` will start with a blank
-input line; if reset is `nil`, then the next
-call to `inputLineTimeout()` will re-display the
+<p>The <em>reset</em> argument indicates whether or not
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> should forget the editing
+state that was in effect when the timeout occurred. If <em>reset</em> is
+<code class="language-plaintext highlighter-rouge">true</code>, then the next call to
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> will start with a blank
+input line; if reset is <code class="language-plaintext highlighter-rouge">nil</code>, then the next
+call to <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> will re-display the
 line of text that was under construction when the timeout occurred, and
 will restore the editing state (cursor position, selected text range,
-and so on) that was in effect.
+and so on) that was in effect.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">inputLineTimeout(*timeout*?)</code></p>
 
-`inputLineTimeout(*timeout*?)`
-
-<div class="fdef">
-
-Read a line of text input from the user, with an optional *timeout*
+<p>Read a line of text input from the user, with an optional <em>timeout</em>
 given in milliseconds. See the section on real-time input
-[below](#rtinput) for examples of how to use this function. If *timeout*
-is missing or is `nil`, there is no time limit
-on the input.
+<a href="#rtinput">below</a> for examples of how to use this function. If <em>timeout</em>
+is missing or is <code class="language-plaintext highlighter-rouge">nil</code>, there is no time limit
+on the input.</p>
 
-This function might not be implemented on every platform, because some
+<p>This function might not be implemented on every platform, because some
 platforms do not have the necessary operating system features to support
 it. If a platform does not support the timeout feature, this function
-will return an `InEvtNoTimeout` pseud-event
-immediately upon invocation if *timeout* is given as a
-non-`nil` value.
+will return an <code class="language-plaintext highlighter-rouge">InEvtNoTimeout</code> pseud-event
+immediately upon invocation if <em>timeout</em> is given as a
+non-<code class="language-plaintext highlighter-rouge">nil</code> value.</p>
 
-The return value is a list, the first element of which gives an event
+<p>The return value is a list, the first element of which gives an event
 code. Additional elements vary according to the event type. The event
-codes are:
+codes are:</p>
 
-- `InEvtEof` - end of file reading the input.
-  This indicates that the application is being terminated or that an
-  error occurred reading the keyboard. The result list has no additional
-  elements.
-- `InEvtLine` - a line of input was successfully
-  read from the keyboard. This event is returned when the user expressly
-  enters the line of text by pressing the Return key or performing some
-  other action that terminates the editing, such as clicking on a
-  hyperlink or selecting a command from a menu. When this event code is
-  returned, the second element of the result list contains a string
-  giving the text entered.
-- `InEvtTimeout` - the timeout interval expired
-  before the user finished editing the line of text. The second element
-  of the result list is a string giving the line of text under
-  construction.
-- `InEvtNoTimeout` - indicates that the timeout
-  feature is not supported on the local system. The timeout feature is
-  not universally supported. The caller will have to use
-  `inputLine()` in this case; real-time input
-  interruptions will not be available.
-- `InEvtEndQuietScript` - indicates that the
-  input reader had been returning text from a "quiet" input script file,
-  such as a script being read using the "-i" option of the command-line
-  interpreter. When a script is read in "quiet" mode, the interpreter
-  suppresses all text display while the script is being processed, so no
-  input or output is displayed on the console. The interpreter returns a
-  specific event for this case because any prompting text previously
-  displayed for this input line will not have been shown, since the
-  quiet mode will have suppressed the prompt text along with any other
-  output; this event allows the caller to re-display the prompt now that
-  script input has ended and regular keyboard input will be resumed, so
-  that the user will see a command-line prompt and thus know that the
-  interpreter is waiting for new input.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">InEvtEof</code> - end of file reading the input.
+This indicates that the application is being terminated or that an
+error occurred reading the keyboard. The result list has no additional
+elements.</li>
+  <li><code class="language-plaintext highlighter-rouge">InEvtLine</code> - a line of input was successfully
+read from the keyboard. This event is returned when the user expressly
+enters the line of text by pressing the Return key or performing some
+other action that terminates the editing, such as clicking on a
+hyperlink or selecting a command from a menu. When this event code is
+returned, the second element of the result list contains a string
+giving the text entered.</li>
+  <li><code class="language-plaintext highlighter-rouge">InEvtTimeout</code> - the timeout interval expired
+before the user finished editing the line of text. The second element
+of the result list is a string giving the line of text under
+construction.</li>
+  <li><code class="language-plaintext highlighter-rouge">InEvtNoTimeout</code> - indicates that the timeout
+feature is not supported on the local system. The timeout feature is
+not universally supported. The caller will have to use
+<code class="language-plaintext highlighter-rouge">inputLine()</code> in this case; real-time input
+interruptions will not be available.</li>
+  <li><code class="language-plaintext highlighter-rouge">InEvtEndQuietScript</code> - indicates that the
+input reader had been returning text from a “quiet” input script file,
+such as a script being read using the “-i” option of the command-line
+interpreter. When a script is read in “quiet” mode, the interpreter
+suppresses all text display while the script is being processed, so no
+input or output is displayed on the console. The interpreter returns a
+specific event for this case because any prompting text previously
+displayed for this input line will not have been shown, since the
+quiet mode will have suppressed the prompt text along with any other
+output; this event allows the caller to re-display the prompt now that
+script input has ended and regular keyboard input will be resumed, so
+that the user will see a command-line prompt and thus know that the
+interpreter is waiting for new input.</li>
+</ul>
 
-When this function returns the `InEvtTimeout`
+<p>When this function returns the <code class="language-plaintext highlighter-rouge">InEvtTimeout</code>
 event code, the caller must not perform any display input or output
 operations in the same window until after calling
-`inputLineCancel()`, with the single exception
-that the caller can call `inputLineTimeout()`
+<code class="language-plaintext highlighter-rouge">inputLineCancel()</code>, with the single exception
+that the caller can call <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>
 again with no intervening call to
-`inputLineCancel()`.
+<code class="language-plaintext highlighter-rouge">inputLineCancel()</code>.</p>
 
-After a timeout occurs, if `inputLineTimeout()`
+<p>After a timeout occurs, if <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>
 is called again with no intervening call to
-`inputLineCancel()`, then
-`inputLineTimeout()` resumes editing the
+<code class="language-plaintext highlighter-rouge">inputLineCancel()</code>, then
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> resumes editing the
 interrupted command line. In this case, there is no visible effect of
-the timeout; from the user's perspective, the timeout never occurred.
+the timeout; from the user’s perspective, the timeout never occurred.
 This allows the program to carry out background operations silently
-while the user edits a command line.
+while the user edits a command line.</p>
 
-If a timeout occurs and `inputLineCancel(nil)`
+<p>If a timeout occurs and <code class="language-plaintext highlighter-rouge">inputLineCancel(nil)</code>
 is subsequently called, then
-`inputLineTimeout()` is called again, the new
-call to `inputLineTimeout()` re-displays the
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> is called again, the new
+call to <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> re-displays the
 command line as it was at the time of interruption, and then allows the
 user to resume editing where they left off. In this case, there is a
 visible change to the display, in that the command line is re-displayed;
@@ -1103,662 +1062,630 @@ however, all of the editing state (cursor position, selected text range,
 history recall position, and so on) is duplicated from the previous
 editing session. So, although the user will see that editing was
 interrupted, the user can continue editing the command line exactly
-where they left off.
+where they left off.</p>
 
-When this function is called without the *timeout* argument, or with
-`nil` as the timeout value, it is similar to
-`inputLine()`, in that it allows the user to
+<p>When this function is called without the <em>timeout</em> argument, or with
+<code class="language-plaintext highlighter-rouge">nil</code> as the timeout value, it is similar to
+<code class="language-plaintext highlighter-rouge">inputLine()</code>, in that it allows the user to
 edit a line of text, with no upper limit on how long to wait until the
 user finishes. However, this function differs from
-`inputLine()` in one important respect: if the
-preceding call to `inputLineTimeout()` ended
+<code class="language-plaintext highlighter-rouge">inputLine()</code> in one important respect: if the
+preceding call to <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> ended
 with the timeout expiring, and no intervening call to
-`inputLineCancel(true)` was made since the
+<code class="language-plaintext highlighter-rouge">inputLineCancel(true)</code> was made since the
 timeout occurred, this function will resume editing of the interrupted
-command line.
+command line.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">logConsoleClose(*handle*)</code></p>
 
-`logConsoleClose(*handle*)`
-
-<div class="fdef">
-
-Closes the given console. This function closes the operating system
+<p>Closes the given console. This function closes the operating system
 file, so no further text can be written to the console after this
-function is called.
+function is called.</p>
 
-</div>
+<p><span id="logConsoleCreate"></span></p>
 
-<span id="logConsoleCreate"></span>
+<p><code class="language-plaintext highlighter-rouge">logConsoleCreate(*filename*, *charset*,
+*width*)</code></p>
 
-`logConsoleCreate(*filename*, *charset*,
-*width*)`
-
-<div class="fdef">
-
-Creates a "log console." A log console is a special system object that
+<p>Creates a “log console.” A log console is a special system object that
 behaves much like the main game window, except that all of the text
 written to a log console is captured in a text file rather than being
-displayed.
+displayed.</p>
 
-*filename* is a string giving the name of the file to write, a
-[FileName](filename.html) object, or a [TemporaryFile](tempfile.html)
+<p><em>filename</em> is a string giving the name of the file to write, a
+<a href="filename.html">FileName</a> object, or a <a href="tempfile.html">TemporaryFile</a>
 object; any existing file with the same name will be overwritten.
-*charset* can be a `CharacterSet` object, a
+<em>charset</em> can be a <code class="language-plaintext highlighter-rouge">CharacterSet</code> object, a
 string giving the name of a character set, or
-`nil` to use the default log file character set.
+<code class="language-plaintext highlighter-rouge">nil</code> to use the default log file character set.
 The text in the log file will be written in the selected character set.
-`width` is the maximum width, in text columns,
+<code class="language-plaintext highlighter-rouge">width</code> is the maximum width, in text columns,
 for the text written to the file; the console will automatically
-word-wrap the written text to this width.
+word-wrap the written text to this width.</p>
 
-The return value is a "handle," which identifies the new console in
+<p>The return value is a “handle,” which identifies the new console in
 calls to other logConsoleXxx functions; if the return value is
-`nil`, the system was unable to create the
-console.
+<code class="language-plaintext highlighter-rouge">nil</code>, the system was unable to create the
+console.</p>
 
-If the given file cannot be created (because the name is invalid, for
-example, or because there's no space on disk), a
-`FileCreationException` is thrown. The "file
-safety" level must allow the operation, otherwise a
-`FileSafetyException` is thrown.
+<p>If the given file cannot be created (because the name is invalid, for
+example, or because there’s no space on disk), a
+<code class="language-plaintext highlighter-rouge">FileCreationException</code> is thrown. The “file
+safety” level must allow the operation, otherwise a
+<code class="language-plaintext highlighter-rouge">FileSafetyException</code> is thrown.</p>
 
-Log consoles are in some ways similar to text files based on the
-`File` intrinsic class. The difference is that
-text written to a `File` object is written
+<p>Log consoles are in some ways similar to text files based on the
+<code class="language-plaintext highlighter-rouge">File</code> intrinsic class. The difference is that
+text written to a <code class="language-plaintext highlighter-rouge">File</code> object is written
 character-for-character exactly as you specify. In contrast, the text
 written to a log console is processed the same way as text displayed to
 the player: HTML markups are processed (although, in a log console, only
 the text-only subset of HTML can be used, regardless of the kind of
 interpreter being used), the text is word-wrapped (to the fixed width
 given when the log console is created), excess whitespace is removed,
-and so on.
+and so on.</p>
 
-Log consoles are also similar to the log files created with
-`setLogFile()`. The only difference is that
-`setLogFile()` can only capture text that is
+<p>Log consoles are also similar to the log files created with
+<code class="language-plaintext highlighter-rouge">setLogFile()</code>. The only difference is that
+<code class="language-plaintext highlighter-rouge">setLogFile()</code> can only capture text that is
 also displayed to the main game window; a log console has no display
 component at all, so you can use a log console to capture text
-exclusively to a file, without also showing it to the user.
+exclusively to a file, without also showing it to the user.</p>
 
-Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
-allow write access to the target file. [FileName](filename.html) objects
-obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
-always accessible.
+<p>Starting in 3.1.1, the <a href="terp.html#file-safety">file safety</a> settings must
+allow write access to the target file. <a href="filename.html">FileName</a> objects
+obtained from <a href="tadsio.html#inputFile">inputFile()</a> “save” dialogs are
+always accessible.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">logConsoleSay(*handle*, ...)</code></p>
 
-`logConsoleSay(*handle*, ...)`
-
-<div class="fdef">
-
-Writes the given arguments to the given log console. This behaves just
-like `tadsSay()`, but writes the text to the
+<p>Writes the given arguments to the given log console. This behaves just
+like <code class="language-plaintext highlighter-rouge">tadsSay()</code>, but writes the text to the
 given log console instead of to the main game window. The handle is a
 log console handle previously returned from
-`logConsoleCreate()`.
+<code class="language-plaintext highlighter-rouge">logConsoleCreate()</code>.</p>
 
-You can also pass the special value
-`MainWindowLogHandle` for *handle*. Doing this
-writes the text to the main game window's transcript file, if any - this
-is the log file that's created by
-`setLogFile(filename, LogTypeTranscript)`. If
-you pass this special handle value when there isn't an active transcript
-for the main game window, the function is simply ignored; it's legal to
-call it in this case, but it will have no effect. (You can't use
-`logConsoleClose()` to close this special
-handle; to close the main game window's log file, you must call
-`setLogFile(nil, LogTypeTranscript)`.)
+<p>You can also pass the special value
+<code class="language-plaintext highlighter-rouge">MainWindowLogHandle</code> for <em>handle</em>. Doing this
+writes the text to the main game window’s transcript file, if any - this
+is the log file that’s created by
+<code class="language-plaintext highlighter-rouge">setLogFile(filename, LogTypeTranscript)</code>. If
+you pass this special handle value when there isn’t an active transcript
+for the main game window, the function is simply ignored; it’s legal to
+call it in this case, but it will have no effect. (You can’t use
+<code class="language-plaintext highlighter-rouge">logConsoleClose()</code> to close this special
+handle; to close the main game window’s log file, you must call
+<code class="language-plaintext highlighter-rouge">setLogFile(nil, LogTypeTranscript)</code>.)</p>
 
-Note that you can also write text to the main game window's transcript -
+<p>Note that you can also write text to the main game window’s transcript -
 without having the text show up in the main window itself - by writing
 the text to the main window and enclosing the text in
-`\&lt;LOG\&gt;...\&lt;/LOG\&gt;` tags. These tags hide the
+<code class="language-plaintext highlighter-rouge">\&lt;LOG\&gt;...\&lt;/LOG\&gt;</code> tags. These tags hide the
 text from the display window, but include it in the transcript file.
-They're the complement of the
-`\&lt;NOLOG\&gt;...\&lt;/NOLOG\&gt;` tags, which you can use
+They’re the complement of the
+<code class="language-plaintext highlighter-rouge">\&lt;NOLOG\&gt;...\&lt;/NOLOG\&gt;</code> tags, which you can use
 to show text in the game window but exclude it from any transcript file.
-The `\&lt;LOG\&gt;...\&lt;/LOG\&gt;` sequence is often a
-better way than `logConsoleSay()` to add text to
+The <code class="language-plaintext highlighter-rouge">\&lt;LOG\&gt;...\&lt;/LOG\&gt;</code> sequence is often a
+better way than <code class="language-plaintext highlighter-rouge">logConsoleSay()</code> to add text to
 the main transcript, since it lets you write the text through the
-library's standard stack of output filters. Calling
-`logConsoleSay(MainWindowLogHandle, val)` is
+library’s standard stack of output filters. Calling
+<code class="language-plaintext highlighter-rouge">logConsoleSay(MainWindowLogHandle, val)</code> is
 best for situations where you specifically want to bypass the normal
 output stream handling for the main game window, and instead go directly
-to the file.
+to the file.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">morePrompt()</code></p>
 
-`morePrompt()`
-
-<div class="fdef">
-
-Display the MORE prompt on the main console window, and wait for the
+<p>Display the MORE prompt on the main console window, and wait for the
 user to respond. This can be used when you want to pause execution and
-wait for the user to acknowledge some output before proceeding.
+wait for the user to acknowledge some output before proceeding.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">resExists(*resname*)</code></p>
 
-`resExists(*resname*)`
-
-<div class="fdef">
-
-Check to see if the given resource can be found. Returns true if the
+<p>Check to see if the given resource can be found. Returns true if the
 resource is present, nil if not. For HTML TADS 3, this looks for an HTML
 resource; text-only TADS 3 interpreters always return
-`nil` for this function, since they don't use
-multi-media resources at all.
+<code class="language-plaintext highlighter-rouge">nil</code> for this function, since they don’t use
+multi-media resources at all.</p>
 
-The resource name *resname* should be specified as a URL-style name
+<p>The resource name <em>resname</em> should be specified as a URL-style name
 string. The interpreter will look for the resource using the same
 searching rules that it uses for normal resource loading; the HTML
 interpreter will thus look for the resource bundled into the image file,
 in any external resource files (image.3r0 through image.3r9), and
 finally in an external file whose name is derived from the URL according
-to local system conventions.
+to local system conventions.</p>
 
-</div>
+<p><span id="setLogFile"></span></p>
 
-<span id="setLogFile"></span>
+<p><code class="language-plaintext highlighter-rouge">setLogFile(*fname*, *logType*?)</code></p>
 
-`setLogFile(*fname*, *logType*?)`
+<p>Log console output to a file, or stop logging.</p>
 
-<div class="fdef">
+<p>If <em>fname</em> is not <code class="language-plaintext highlighter-rouge">nil</code>, this starts logging to
+the specified file. <em>fname</em> can be a string giving the name of the file
+for saving the log, a <a href="filename.html">FileName</a> object, or a
+<a href="tempfile.html">TemporaryFile</a> object. If <em>fname</em> refers to an existing
+file, the existing file will be overwritten by the new log output.</p>
 
-Log console output to a file, or stop logging.
+<p>If <em>fname</em> is <code class="language-plaintext highlighter-rouge">nil</code>, the function turns off the
+specified type of logging, closing the current log file.</p>
 
-If *fname* is not `nil`, this starts logging to
-the specified file. *fname* can be a string giving the name of the file
-for saving the log, a [FileName](filename.html) object, or a
-[TemporaryFile](tempfile.html) object. If *fname* refers to an existing
-file, the existing file will be overwritten by the new log output.
+<p>logType specifies the type of logging to perform:</p>
 
-If *fname* is `nil`, the function turns off the
-specified type of logging, closing the current log file.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LogTypeTranscript</code> - create a transcript. All
+of the text displayed to the main console (including text read via
+command line input) is copied to the file. Any HTML markups are
+processed before the text is written to the file; note, though, that
+the text-only HTML subset is used, regardless of what kind of
+interpreter is running. This is the default log type if the logType
+parameter is omitted.</li>
+  <li><code class="language-plaintext highlighter-rouge">LogTypeCommand</code> - create a command log. Only
+the input commands are copied to the log file. This creates a
+command-line script, suitable for later replay (such as with
+<code class="language-plaintext highlighter-rouge">setScriptFile()</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">LogTypeEvent</code> - create an event script.
+Command lines, keys, hyperlink clicks, dialog button clicks, and file
+dialog selections are captured to the script, which can later be
+replayed (with <code class="language-plaintext highlighter-rouge">setScriptFile()</code>, for
+example).</li>
+</ul>
 
-logType specifies the type of logging to perform:
-
-- `LogTypeTranscript` - create a transcript. All
-  of the text displayed to the main console (including text read via
-  command line input) is copied to the file. Any HTML markups are
-  processed before the text is written to the file; note, though, that
-  the text-only HTML subset is used, regardless of what kind of
-  interpreter is running. This is the default log type if the logType
-  parameter is omitted.
-- `LogTypeCommand` - create a command log. Only
-  the input commands are copied to the log file. This creates a
-  command-line script, suitable for later replay (such as with
-  `setScriptFile()`).
-- `LogTypeEvent` - create an event script.
-  Command lines, keys, hyperlink clicks, dialog button clicks, and file
-  dialog selections are captured to the script, which can later be
-  replayed (with `setScriptFile()`, for
-  example).
-
-The return value is `true` if the operation
-succeeded, `nil` if the file couldn't be opened.
+<p>The return value is <code class="language-plaintext highlighter-rouge">true</code> if the operation
+succeeded, <code class="language-plaintext highlighter-rouge">nil</code> if the file couldn’t be opened.
 Opening a file can fail due to the usual file system errors, such as an
 invalid filename, insufficient disk space, or file permission errors.
-When closing a file (by passing `nil` for
-*fname*), the function always returns `true`.
+When closing a file (by passing <code class="language-plaintext highlighter-rouge">nil</code> for
+<em>fname</em>), the function always returns <code class="language-plaintext highlighter-rouge">true</code>.</p>
 
-You can record a "transcript" and a "script" file simultaneously, but
+<p>You can record a “transcript” and a “script” file simultaneously, but
 only one of each type can be recorded at a time. If you start a new
 transcript file (LogTypeTranscript), any previous transcript will be
 closed. Similarly, if you start a new script file (LogTypeCommand or
 LogTypeScript), any previous script file will be closed. Recordings
-don't nest; starting a new recording simply stops any previous recording
-of the same type.
+don’t nest; starting a new recording simply stops any previous recording
+of the same type.</p>
 
-Refer to [Input Scripts](scripts.html) for more details on scripts,
-including the differences between Command-line and Event scripts.
+<p>Refer to <a href="scripts.html">Input Scripts</a> for more details on scripts,
+including the differences between Command-line and Event scripts.</p>
 
-Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
-allow write access to the target file. [FileName](filename.html) objects
-obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
-always accessible.
+<p>Starting in 3.1.1, the <a href="terp.html#file-safety">file safety</a> settings must
+allow write access to the target file. <a href="filename.html">FileName</a> objects
+obtained from <a href="tadsio.html#inputFile">inputFile()</a> “save” dialogs are
+always accessible.</p>
 
-</div>
+<p><span id="setScriptFile"></span></p>
 
-<span id="setScriptFile"></span>
+<p><code class="language-plaintext highlighter-rouge">setScriptFile(*filename*, *flags*?)</code></p>
 
-`setScriptFile(*filename*, *flags*?)`
+<p>Start reading commands from a script file, or cancel existing script
+input.</p>
 
-<div class="fdef">
+<p>If <em>filename</em> is not <code class="language-plaintext highlighter-rouge">nil</code>, this starts reading
+from the given file. <em>filename</em> can be a string containing the name of a
+file in the local file system, a <a href="filename.html">FileName</a> object, or a
+<a href="tempfile.html">TemporaryFile</a> object.</p>
 
-Start reading commands from a script file, or cancel existing script
-input.
-
-If *filename* is not `nil`, this starts reading
-from the given file. *filename* can be a string containing the name of a
-file in the local file system, a [FileName](filename.html) object, or a
-[TemporaryFile](tempfile.html) object.
-
-If *filename* is `nil`, this cancels input from
+<p>If <em>filename</em> is <code class="language-plaintext highlighter-rouge">nil</code>, this cancels input from
 the current script, as though the end of the file had been reached. If
 the current script file is nested within another script, this returns to
-the enclosing script.
+the enclosing script.</p>
 
-The optional *flags* value lets you specify how to read the script file.
+<p>The optional <em>flags</em> value lets you specify how to read the script file.
 The following values can be combined (with the bitwise OR operator
-"`\|`"):
+“<code class="language-plaintext highlighter-rouge">\|</code>”):</p>
 
-- `ScriptFileQuiet` - do not display any output
-  while reading the script file. If this flag isn't set, the input lines
-  read from the script file and the resulting output will be displayed
-  as though the user had typed the lines of text at the keyboard.
-- `ScriptFileNonstop` - turn off the MORE prompt
-  while reading the script file; output will scroll by without any user
-  intervention. If this flag isn't used, the MORE prompt will be
-  displayed each time the screen fills up with text, and the user will
-  have to acknowledge the prompt before more output will be displayed.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ScriptFileQuiet</code> - do not display any output
+while reading the script file. If this flag isn’t set, the input lines
+read from the script file and the resulting output will be displayed
+as though the user had typed the lines of text at the keyboard.</li>
+  <li><code class="language-plaintext highlighter-rouge">ScriptFileNonstop</code> - turn off the MORE prompt
+while reading the script file; output will scroll by without any user
+intervention. If this flag isn’t used, the MORE prompt will be
+displayed each time the screen fills up with text, and the user will
+have to acknowledge the prompt before more output will be displayed.</li>
+</ul>
 
-If the *flags* argument is omitted, a default value of 0 will be used,
-so none of the flags will be set.
+<p>If the <em>flags</em> argument is omitted, a default value of 0 will be used,
+so none of the flags will be set.</p>
 
-The function returns `true` on success,
-`nil` on error. An error return means that the
-script file doesn't exist or couldn't be opened. The function always
-returns `true` if *filename* is
-`nil`.
+<p>The function returns <code class="language-plaintext highlighter-rouge">true</code> on success,
+<code class="language-plaintext highlighter-rouge">nil</code> on error. An error return means that the
+script file doesn’t exist or couldn’t be opened. The function always
+returns <code class="language-plaintext highlighter-rouge">true</code> if <em>filename</em> is
+<code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-When the interpreter reaches the end of a script file, it automatically
+<p>When the interpreter reaches the end of a script file, it automatically
 closes the file and returns to normal keyboard input, so calling this
-function with *filename* set to `nil` isn't
+function with <em>filename</em> set to <code class="language-plaintext highlighter-rouge">nil</code> isn’t
 necessary unless you want to explicitly interrupt the script before
-reaching the end of the file.
+reaching the end of the file.</p>
 
-Input scripts can be nested. If
-`setScriptFile()` is called with a non-nil
+<p>Input scripts can be nested. If
+<code class="language-plaintext highlighter-rouge">setScriptFile()</code> is called with a non-nil
 filename when a script file is already in effect, the interpreter will
 remember the position in the old script file, then start reading from
 the new script file; upon reaching the end of the new script file, or
-upon an explicit `setScriptFile(nil)` call, the
+upon an explicit <code class="language-plaintext highlighter-rouge">setScriptFile(nil)</code> call, the
 interpreter will resume reading from the old script file. Scripts can be
 nested in this manner to any depth. This allows one script file to
-"include" another, for example.
+“include” another, for example.</p>
 
-See [Script Files](scripts.html) for information on how input scripts are
-interpreted.
+<p>See <a href="scripts.html">Script Files</a> for information on how input scripts are
+interpreted.</p>
 
-**Status queries:** In version 3.0.17 and later, this function can also
+<p><strong>Status queries:</strong> In version 3.0.17 and later, this function can also
 query the current script playback status. To get the status, use
-`setScriptFile(ScriptReqGetStatus)`. If input is
+<code class="language-plaintext highlighter-rouge">setScriptFile(ScriptReqGetStatus)</code>. If input is
 currently being read from the keyboard, the return value is nil. If a
 script is being played back, the return value is an integer giving a
-combination of `ScriptFileXxx` flags describing
+combination of <code class="language-plaintext highlighter-rouge">ScriptFileXxx</code> flags describing
 the playback mode. Note that a return value of 0 (zero) indicates that a
-script **is** being played back, but that none of the mode flags apply.
+script <strong>is</strong> being played back, but that none of the mode flags apply.</p>
 
-In addition to the flags defined above, the flag
-`ScriptFileEvent` is included in the status
+<p>In addition to the flags defined above, the flag
+<code class="language-plaintext highlighter-rouge">ScriptFileEvent</code> is included in the status
 value if the current script is an event script rather than a
 command-line script. Note that this flag is ignored if you include it in
-the 'flags' argument when calling
-`setScriptFile()` to start playback of a new
+the ‘flags’ argument when calling
+<code class="language-plaintext highlighter-rouge">setScriptFile()</code> to start playback of a new
 script; the script reader automatically determines whether the new
 script is an event script or a command-line script by examining the
-file's contents. The purpose of this additional flag is to let you find
-out what the script reader decided about the current script.
+file’s contents. The purpose of this additional flag is to let you find
+out what the script reader decided about the current script.</p>
 
-If you call the function in this form on VM versions prior to 3.0.17,
+<p>If you call the function in this form on VM versions prior to 3.0.17,
 the function will throw a RuntimeError, because earlier implementations
 only accepted a string or nil for the first argument. You can use
 try-catch to handle this situation: if the function throws a
-RuntimeError (with errno\_ == 2019), it means that you're running on a
-version of the VM that doesn't support the function.
+RuntimeError (with errno_ == 2019), it means that you’re running on a
+version of the VM that doesn’t support the function.</p>
 
-Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
-allow read access to the target file. [FileName](filename.html) objects
-obtained from [inputFile()](tadsio.html#inputFile) "open" dialogs are
-always accessible.
+<p>Starting in 3.1.1, the <a href="terp.html#file-safety">file safety</a> settings must
+allow read access to the target file. <a href="filename.html">FileName</a> objects
+obtained from <a href="tadsio.html#inputFile">inputFile()</a> “open” dialogs are
+always accessible.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">statusMode(*mode*)</code></p>
 
-`statusMode(*mode*)`
+<p>Set the “status line mode.” This can be used to control the status line
+in non-HTML mode and for older text-only interpreters that don’t support
+the Banner API. The <em>mode</em> setting controls where text is displayed;
+this can be one of the following:</p>
 
-<div class="fdef">
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">StatModeNormal</code> - text is displayed in the
+main text area</li>
+  <li><code class="language-plaintext highlighter-rouge">StatModeStatus</code> - text is displayed to the
+left portion of the status line</li>
+</ul>
 
-Set the "status line mode." This can be used to control the status line
-in non-HTML mode and for older text-only interpreters that don't support
-the Banner API. The *mode* setting controls where text is displayed;
-this can be one of the following:
-
-- `StatModeNormal` - text is displayed in the
-  main text area
-- `StatModeStatus` - text is displayed to the
-  left portion of the status line
-
-To write to the status line in non-HTML mode and on text-only
+<p>To write to the status line in non-HTML mode and on text-only
 interpreters, set the status mode to
-`StatModeStatus`, write the status line text as
+<code class="language-plaintext highlighter-rouge">StatModeStatus</code>, write the status line text as
 though it were ordinary display output, and finally set the status mode
-back to `StatModeNormal`:
+back to <code class="language-plaintext highlighter-rouge">StatModeNormal</code>:</p>
 
-```
-    statusMode(StatModeStatus);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    statusMode(StatModeStatus);
     "Loud Room";
     statusMode(StatModeNormal);
-```
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">statusRight(*txt*)</code></p>
 
-`statusRight(*txt*)`
-
-<div class="fdef">
-
-Write the text string *txt* to the right half of the status line. This
+<p>Write the text string <em>txt</em> to the right half of the status line. This
 can be used to control the right portion of the status line on older
-text-only interpreters that don't support the Banner API.
+text-only interpreters that don’t support the Banner API.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">systemInfo(*infoType*, ...)</code></p>
 
-`systemInfo(*infoType*, ...)`
+<p>Retrieve information about the TADS 3 application environment. This
+retrieves information on the interpreter and operating system that’s
+running the program.</p>
 
-<div class="fdef">
-
-Retrieve information about the TADS 3 application environment. This
-retrieves information on the interpreter and operating system that's
-running the program.
-
-*infoType* is one of the `SysInfoXxx` constants
+<p><em>infoType</em> is one of the <code class="language-plaintext highlighter-rouge">SysInfoXxx</code> constants
 listed below; it specifies the type of information being requested.
-Additional parameters vary according to the *infoType* value; unless
+Additional parameters vary according to the <em>infoType</em> value; unless
 otherwise specified, no additional parameters are used. The return value
 contains the information requested; the type and meaning vary according
-to the *infoType* code.
+to the <em>infoType</em> code.</p>
 
-This API is designed to allow for future
-`SysTypeXxx` codes to be added in future
-versions, as follows. In particular, it's legal to pass an arbitrary
-integer value for *infoType*; if the interpreter doesn't recognize the
-selector value, it will always return `nil` as
+<p>This API is designed to allow for future
+<code class="language-plaintext highlighter-rouge">SysTypeXxx</code> codes to be added in future
+versions, as follows. In particular, it’s legal to pass an arbitrary
+integer value for <em>infoType</em>; if the interpreter doesn’t recognize the
+selector value, it will always return <code class="language-plaintext highlighter-rouge">nil</code> as
 the result of the function. This allows a newer game to use a recently
 added selector code, and still get meaningful results from an older
 interpreter that was released before that selector code was added.
-Therefore, `nil` is a special return value for
-this function: it always means either that the selector isn't
+Therefore, <code class="language-plaintext highlighter-rouge">nil</code> is a special return value for
+this function: it always means either that the selector isn’t
 recognized, or that the selector is recognized but the feature it asks
-about isn't present; in either case, it tells the caller that the
-feature being queried can't be used.
+about isn’t present; in either case, it tells the caller that the
+feature being queried can’t be used.</p>
 
-The *infoType* codes are:
+<p>The <em>infoType</em> codes are:</p>
 
-- `SysInfoInterpClass` - get the interpreter
-  "class," which indicates the broad capabilities of the interpreter.
-  The following classes are defined:
-  - `SysInfoIClassText` - character-mode
-    text-only interpreter, such as Unix TADS or MS-DOS TADS. These
-    interpreters use a single, fixed-pitch font, cannot display any
-    graphics, and support only the text-only HTML subset.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoInterpClass</code> - get the interpreter
+“class,” which indicates the broad capabilities of the interpreter.
+The following classes are defined:
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">SysInfoIClassText</code> - character-mode
+text-only interpreter, such as Unix TADS or MS-DOS TADS. These
+interpreters use a single, fixed-pitch font, cannot display any
+graphics, and support only the text-only HTML subset.</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">SysInfoIClassTextGUI</code> - GUI text-only
+interpreter, such as WinTADS or MacTADS. These interpreters behave
+essentially the same as character-mode interpreters, but run on
+graphical operating systems and thus might use proportional fonts,
+boldface text, and so on. These interpreters can’t display graphics
+explicitly, but might use some graphics automatically (for drawing
+window borders, for example). These support only the text-only HTML
+subset.</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">SysInfoIClassHTML</code> - a full HTML
+interpreter running on a graphical platform, such as HTML TADS for
+Windows, CocoaTADS for Mac OS X, or QTads for Linux, Unix, and Mac
+OS X. These interpreters can use multiple fonts of varying sizes,
+including proportional fonts, can display graphics and play sounds,
+and recognize the full HTML TADS markup language.</p>
 
-  - `SysInfoIClassTextGUI` - GUI text-only
-    interpreter, such as WinTADS or MacTADS. These interpreters behave
-    essentially the same as character-mode interpreters, but run on
-    graphical operating systems and thus might use proportional fonts,
-    boldface text, and so on. These interpreters can't display graphics
-    explicitly, but might use some graphics automatically (for drawing
-    window borders, for example). These support only the text-only HTML
-    subset.
+        <p>Note that the advent of the Web UI in TADS 3.1 clouds the picture a
+little bit. With the Web UI, the game’s user interface runs in a
+browser that’s separate from the interpreter, and the <em>browser</em>
+always uses HTML even if the interpreter doesn’t. The interpreter
+class indicates the capabilities of the <em>built-in user interface</em> in
+the interpreter, which Web UI games generally don’t use at all. If
+you’re writing for the Web UI, the actual user interface is always a
+browser, and is therefore always HTML capable, regardless of the
+interpreter class. Note that you don’t need to worry about whether
+or not the interpreter supports the Web UI, because this is handled
+at load time: a game that uses the Web UI simply won’t load on an
+interpreter that doesn’t support the Web UI, since that interpreter
+won’t have the necessary intrinsic classes and functions that the
+game requires.</p>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoVersion</code> - get the interpreter version
+information. The return value is a string of the form ‘3.0.10’ giving
+the major, minor, and point-release numbers.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoOsName</code> - get the OS name. This
+returns a string giving a short name for the operating system ‘MSDOS’,
+‘WIN32’, ‘Mac OS’, etc.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoJpeg</code> - can the renderer display JPEG
+images? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPng</code> - can the renderer display PNG
+images? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoWav</code> - can the system play WAVE
+sounds? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMidi</code> - can the system play MIDI
+sounds? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoWavMidiOvl</code> - can the system play WAVE
+and MIDI sounds simultaneously? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoWavOvl</code> - can the system play multiple
+WAVE sounds simultaneously? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPrefImages</code> - do the user’s
+preferences allow images to be displayed? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPrefSounds</code> - do the user’s
+preferences allow sound effects to be played? Returns 1 if so, 0 if
+not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPrefMusic</code> - do the user’s preferences
+allow music to be played? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPrefLinks</code> - do the user’s preferences
+allow hyperlinks to be displayed distinctively (i.e., not as ordinary
+text, but using a special style to indicate that they’re links)?
+Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMpeg</code> - can the system play MPEG
+sounds of any kind? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMpeg1</code> - can the system play MPEG
+layer 1 (MP1) sounds? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMpeg2</code> - can the system play MPEG
+layer 2 (MP2) sounds? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMpeg3</code> - can the system play MPEG
+layer 3 (MP3) sounds? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoLinksHttp</code> - can the system follow
+hyperlinks that use the “http:” scheme? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoLinksFtp</code> - can the system follow
+hyperlinks that use the “ftp:” scheme? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoLinksNews</code> - can the system follow
+hyperlinks that use the “news:” scheme? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoLinksMailto</code> - can the system follow
+hyperlinks that use the “mailto:” scheme? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoLinksTelnet</code> - can the system follow
+hyperlinks that use the “telnet:” scheme? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPngTrans</code> - can the system properly
+display transparent PNG’s overlayed on their backgrounds? Returns 1 if
+so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoPngAlpha</code> - can the system use
+alpha-channel (partial transparency) blending in PNG’s? Returns 1 if
+so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoOgg</code> - can the system play Ogg Vorbis
+sounds? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMng</code> - can the system display MNG
+images? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMngTrans</code> - can the system properly
+display transparent MNG’s overlayed on their backgrounds? Returns 1 if
+so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoMngAlpha</code> - can the system use
+alpha-channel (partial transparency) blending in MNG’s? Returns 1 if
+so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoTextHilite</code> - can the system render
+highlighted text (text in <code class="language-plaintext highlighter-rouge">\&lt;B\&gt;...\&lt;/B\&gt;</code>
+tags) distinctively? Returns 1 if so, 0 if not.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoTextColors</code> - does the system provide
+control text colors (via <code class="language-plaintext highlighter-rouge">\&lt;FONT COLOR=xxx\&gt;</code>
+tags)? Returns one of the following codes indicating the level of
+support provided:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">nil</code> - the
+<code class="language-plaintext highlighter-rouge">SysInfoTextColors</code> code is not recognized
+by the system</li>
+      <li><code class="language-plaintext highlighter-rouge">SysInfoTxcNone</code> - no text color control is
+provided; <code class="language-plaintext highlighter-rouge">\&lt;FONT COLOR\&gt;</code> is ignored</li>
+      <li><code class="language-plaintext highlighter-rouge">SysInfoTxcParam</code> - some or all of the
+parameterized color names <code class="language-plaintext highlighter-rouge">(BGCOLOR</code>,
+<code class="language-plaintext highlighter-rouge">TEXT</code>, <code class="language-plaintext highlighter-rouge">STATUSBG</code>,
+<code class="language-plaintext highlighter-rouge">STATUSTEXT</code>, etc.) can be used with
+<code class="language-plaintext highlighter-rouge">\&lt;FONT COLOR=xxx\&gt;</code>, but specific colors
+will be ignored</li>
+      <li><code class="language-plaintext highlighter-rouge">SysInfoTxcAnsiFg</code> - the ANSI colors (black,
+white, red, green, blue, yellow, cyan, magenta) can be used as
+foreground colors, but background colors cannot be set</li>
+      <li><code class="language-plaintext highlighter-rouge">SysInfoTxcAnsiFgBg</code> - the ANSI colors can
+be used as foreground and background colors.</li>
+      <li><code class="language-plaintext highlighter-rouge">SysInfoTxcRGB</code> - any RGB color can be used
+for foreground and background colors. (This is the code normally
+returned by the HTML interpreters. This doesn’t necessarily indicate
+that the user is running in a 24-bit graphic mode; it simply
+indicates that the system accepts arbitrary RGB colors and will
+display them with the best fidelity possible.)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoBanners</code> - does the system support the
+banner window API?</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoAudioFade</code> - does the system support
+audio fades? This returns nil or 0 if fades aren’t supported at all;
+otherwise it returns an integer giving a bitwise combination of the
+codes <code class="language-plaintext highlighter-rouge">SysInfoFadeMPEG</code>,
+<code class="language-plaintext highlighter-rouge">SysInfoFadeOGG</code>,
+<code class="language-plaintext highlighter-rouge">SysInfoFadeWAV</code>, and
+<code class="language-plaintext highlighter-rouge">SysInfoFadeMIDI</code> indicating which formats can
+be used with audio fades. (Audio fading is an HTML TADS feature,
+accessed through the <code class="language-plaintext highlighter-rouge">\&lt;SOUND\&gt;</code> tag.</li>
+  <li><code class="language-plaintext highlighter-rouge">SysInfoAudioCrossfade</code> - does the system
+support audio cross-fades? This returns nil or 0 if cross-fades aren’t
+supported at all; otherwise it returns an integer giving a bitwise
+combination of codes indicating which formats allow cross-fades. The
+codes have the same meanings as the codes returns for
+<code class="language-plaintext highlighter-rouge">SysInfoAudioFade</code>.</li>
+</ul>
 
-  - `SysInfoIClassHTML` - a full HTML
-    interpreter running on a graphical platform, such as HTML TADS for
-    Windows, CocoaTADS for Mac OS X, or QTads for Linux, Unix, and Mac
-    OS X. These interpreters can use multiple fonts of varying sizes,
-    including proportional fonts, can display graphics and play sounds,
-    and recognize the full HTML TADS markup language.
+<p><span id="tadsSay"></span></p>
 
-    Note that the advent of the Web UI in TADS 3.1 clouds the picture a
-    little bit. With the Web UI, the game's user interface runs in a
-    browser that's separate from the interpreter, and the *browser*
-    always uses HTML even if the interpreter doesn't. The interpreter
-    class indicates the capabilities of the *built-in user interface* in
-    the interpreter, which Web UI games generally don't use at all. If
-    you're writing for the Web UI, the actual user interface is always a
-    browser, and is therefore always HTML capable, regardless of the
-    interpreter class. Note that you don't need to worry about whether
-    or not the interpreter supports the Web UI, because this is handled
-    at load time: a game that uses the Web UI simply won't load on an
-    interpreter that doesn't support the Web UI, since that interpreter
-    won't have the necessary intrinsic classes and functions that the
-    game requires.
-- `SysInfoVersion` - get the interpreter version
-  information. The return value is a string of the form '3.0.10' giving
-  the major, minor, and point-release numbers.
-- `SysInfoOsName` - get the OS name. This
-  returns a string giving a short name for the operating system 'MSDOS',
-  'WIN32', 'Mac OS', etc.
-- `SysInfoJpeg` - can the renderer display JPEG
-  images? Returns 1 if so, 0 if not.
-- `SysInfoPng` - can the renderer display PNG
-  images? Returns 1 if so, 0 if not.
-- `SysInfoWav` - can the system play WAVE
-  sounds? Returns 1 if so, 0 if not.
-- `SysInfoMidi` - can the system play MIDI
-  sounds? Returns 1 if so, 0 if not.
-- `SysInfoWavMidiOvl` - can the system play WAVE
-  and MIDI sounds simultaneously? Returns 1 if so, 0 if not.
-- `SysInfoWavOvl` - can the system play multiple
-  WAVE sounds simultaneously? Returns 1 if so, 0 if not.
-- `SysInfoPrefImages` - do the user's
-  preferences allow images to be displayed? Returns 1 if so, 0 if not.
-- `SysInfoPrefSounds` - do the user's
-  preferences allow sound effects to be played? Returns 1 if so, 0 if
-  not.
-- `SysInfoPrefMusic` - do the user's preferences
-  allow music to be played? Returns 1 if so, 0 if not.
-- `SysInfoPrefLinks` - do the user's preferences
-  allow hyperlinks to be displayed distinctively (i.e., not as ordinary
-  text, but using a special style to indicate that they're links)?
-  Returns 1 if so, 0 if not.
-- `SysInfoMpeg` - can the system play MPEG
-  sounds of any kind? Returns 1 if so, 0 if not.
-- `SysInfoMpeg1` - can the system play MPEG
-  layer 1 (MP1) sounds? Returns 1 if so, 0 if not.
-- `SysInfoMpeg2` - can the system play MPEG
-  layer 2 (MP2) sounds? Returns 1 if so, 0 if not.
-- `SysInfoMpeg3` - can the system play MPEG
-  layer 3 (MP3) sounds? Returns 1 if so, 0 if not.
-- `SysInfoLinksHttp` - can the system follow
-  hyperlinks that use the "http:" scheme? Returns 1 if so, 0 if not.
-- `SysInfoLinksFtp` - can the system follow
-  hyperlinks that use the "ftp:" scheme? Returns 1 if so, 0 if not.
-- `SysInfoLinksNews` - can the system follow
-  hyperlinks that use the "news:" scheme? Returns 1 if so, 0 if not.
-- `SysInfoLinksMailto` - can the system follow
-  hyperlinks that use the "mailto:" scheme? Returns 1 if so, 0 if not.
-- `SysInfoLinksTelnet` - can the system follow
-  hyperlinks that use the "telnet:" scheme? Returns 1 if so, 0 if not.
-- `SysInfoPngTrans` - can the system properly
-  display transparent PNG's overlayed on their backgrounds? Returns 1 if
-  so, 0 if not.
-- `SysInfoPngAlpha` - can the system use
-  alpha-channel (partial transparency) blending in PNG's? Returns 1 if
-  so, 0 if not.
-- `SysInfoOgg` - can the system play Ogg Vorbis
-  sounds? Returns 1 if so, 0 if not.
-- `SysInfoMng` - can the system display MNG
-  images? Returns 1 if so, 0 if not.
-- `SysInfoMngTrans` - can the system properly
-  display transparent MNG's overlayed on their backgrounds? Returns 1 if
-  so, 0 if not.
-- `SysInfoMngAlpha` - can the system use
-  alpha-channel (partial transparency) blending in MNG's? Returns 1 if
-  so, 0 if not.
-- `SysInfoTextHilite` - can the system render
-  highlighted text (text in `\&lt;B\&gt;...\&lt;/B\&gt;`
-  tags) distinctively? Returns 1 if so, 0 if not.
-- `SysInfoTextColors` - does the system provide
-  control text colors (via `\&lt;FONT COLOR=xxx\&gt;`
-  tags)? Returns one of the following codes indicating the level of
-  support provided:
-  - `nil` - the
-    `SysInfoTextColors` code is not recognized
-    by the system
-  - `SysInfoTxcNone` - no text color control is
-    provided; `\&lt;FONT COLOR\&gt;` is ignored
-  - `SysInfoTxcParam` - some or all of the
-    parameterized color names `(BGCOLOR`,
-    `TEXT`, `STATUSBG`,
-    `STATUSTEXT`, etc.) can be used with
-    `\&lt;FONT COLOR=xxx\&gt;`, but specific colors
-    will be ignored
-  - `SysInfoTxcAnsiFg` - the ANSI colors (black,
-    white, red, green, blue, yellow, cyan, magenta) can be used as
-    foreground colors, but background colors cannot be set
-  - `SysInfoTxcAnsiFgBg` - the ANSI colors can
-    be used as foreground and background colors.
-  - `SysInfoTxcRGB` - any RGB color can be used
-    for foreground and background colors. (This is the code normally
-    returned by the HTML interpreters. This doesn't necessarily indicate
-    that the user is running in a 24-bit graphic mode; it simply
-    indicates that the system accepts arbitrary RGB colors and will
-    display them with the best fidelity possible.)
-- `SysInfoBanners` - does the system support the
-  banner window API?
-- `SysInfoAudioFade` - does the system support
-  audio fades? This returns nil or 0 if fades aren't supported at all;
-  otherwise it returns an integer giving a bitwise combination of the
-  codes `SysInfoFadeMPEG`,
-  `SysInfoFadeOGG`,
-  `SysInfoFadeWAV`, and
-  `SysInfoFadeMIDI` indicating which formats can
-  be used with audio fades. (Audio fading is an HTML TADS feature,
-  accessed through the `\&lt;SOUND\&gt;` tag.
-- `SysInfoAudioCrossfade` - does the system
-  support audio cross-fades? This returns nil or 0 if cross-fades aren't
-  supported at all; otherwise it returns an integer giving a bitwise
-  combination of codes indicating which formats allow cross-fades. The
-  codes have the same meanings as the codes returns for
-  `SysInfoAudioFade`.
+<p><code class="language-plaintext highlighter-rouge">tadsSay(*val*, ...)</code></p>
 
-</div>
-
-<span id="tadsSay"></span>
-
-`tadsSay(*val*, ...)`
-
-<div class="fdef">
-
-Display one or more values. Each value is displayed on the console,
+<p>Display one or more values. Each value is displayed on the console,
 starting with the first argument; the displayed values are not separated
 by any spaces or other delimiters. The formatting for each value depends
-upon its type:
+upon its type:</p>
 
-- string: the text of the string is displayed
-- integer: the decimal representation of the number is displayed
-- BigNumber: the number is displayed with the default formatting
-- list or Vector: the elements of the list or Vector are displayed in
-  order, separated by commas
-- nil: nothing is displayed
-- objects with implicit string conversions (e.g., a
-  [ByteArray](bytearr.html) or [Date](date.html) object) are converted to
-  strings using their default string formatting, and the the results are
-  displayed; see the [toString()](tadsgen.html#toString) function
-- any other type is invalid; a run-time error is generated ("invalid
-  type for built-in function")
+<ul>
+  <li>string: the text of the string is displayed</li>
+  <li>integer: the decimal representation of the number is displayed</li>
+  <li>BigNumber: the number is displayed with the default formatting</li>
+  <li>list or Vector: the elements of the list or Vector are displayed in
+order, separated by commas</li>
+  <li>nil: nothing is displayed</li>
+  <li>objects with implicit string conversions (e.g., a
+<a href="bytearr.html">ByteArray</a> or <a href="date.html">Date</a> object) are converted to
+strings using their default string formatting, and the the results are
+displayed; see the <a href="tadsgen.html#toString">toString()</a> function</li>
+  <li>any other type is invalid; a run-time error is generated (“invalid
+type for built-in function”)</li>
+</ul>
 
-The function has no return value.
+<p>The function has no return value.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">timeDelay(*delay*)</code></p>
 
-`timeDelay(*delay*)`
-
-<div class="fdef">
-
-Pause execution for the given number of milliseconds. The precision of
+<p>Pause execution for the given number of milliseconds. The precision of
 system timers varies, so the actual delay might differ somewhat from the
 exact time specified on some systems according to the available hardware
-timer precision.
+timer precision.</p>
 
-</div>
+<h2 id="real-time-input"><span id="rtinput"></span>Real-time input</h2>
 
-## <span id="rtinput"></span>Real-time input
-
-A real-time event is an event that occurs at a particular point in
-"wall-clock" time; for example, an event programmed to occur at 9:00 PM
-is a real-time event, because it's scheduled according to time in the
-real world. It's more typical to schedule a real-time event to occur
+<p>A real-time event is an event that occurs at a particular point in
+“wall-clock” time; for example, an event programmed to occur at 9:00 PM
+is a real-time event, because it’s scheduled according to time in the
+real world. It’s more typical to schedule a real-time event to occur
 after some number of seconds or minutes has elapsed than to schedule one
 for a particular time on the clock on the wall, but elapsed-time events
 are also real-time events, because they depend on the passage of time on
-the clock.
+the clock.</p>
 
-In most programs that take their input from a command line (say, text
+<p>In most programs that take their input from a command line (say, text
 adventure games), reading a command line from the user stops everything
 until the user finishes entering the command by pressing Enter. This is
-known as a "blocking" operation, because the operation blocks the
-program's progress until the command line is finished: the program
+known as a “blocking” operation, because the operation blocks the
+program’s progress until the command line is finished: the program
 simply waits as long as it takes for the user to type the command line
-and press the Enter key. For this reason, command-line programs don't
+and press the Enter key. For this reason, command-line programs don’t
 usually incorporate real-time events, and most programs with real-time
-events don't use command lines.
+events don’t use command lines.</p>
 
-TADS 3 has the ability to mix command-line input and real-time events,
-thanks to the `inputLineTimeout()` function.
-This section describes how to use this feature.
+<p>TADS 3 has the ability to mix command-line input and real-time events,
+thanks to the <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> function.
+This section describes how to use this feature.</p>
 
-Note that the information below applies to the low-level system API. If
-you're using the adv3 library, you won't have to worry about any of
-these details, because adv3's input and output managers work together
+<p>Note that the information below applies to the low-level system API. If
+you’re using the adv3 library, you won’t have to worry about any of
+these details, because adv3’s input and output managers work together
 with its real-time event manager to handle all of this for you
 automatically. With adv3, you simply create real-time event objects
-describing the event timeline, and the library's input manager handles
-everything else.
+describing the event timeline, and the library’s input manager handles
+everything else.</p>
 
-The `inputLineTimeout()` function works a lot
-like the ordinary `inputLine()` function, which
+<p>The <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> function works a lot
+like the ordinary <code class="language-plaintext highlighter-rouge">inputLine()</code> function, which
 reads a line of text from the keyboard and returns a string containing
-the text, but `inputLineTimeout()` has the
+the text, but <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> has the
 additional feature of letting you specify a time limit, called a
-"timeout." A timeout is simply a maximum real-time interval; when the
-interval expires, `inputLineTimeout()` returns,
-even if the user hasn't finished editing the command line. The function
+“timeout.” A timeout is simply a maximum real-time interval; when the
+interval expires, <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> returns,
+even if the user hasn’t finished editing the command line. The function
 returns information that lets you tell whether or not the user finished
 editing the command before the timeout expired. (If the user finished
-entering the command and presses Enter *before* the timeout expires, the
-function returns immediately - the timeout is the *longest* the function
+entering the command and presses Enter <em>before</em> the timeout expires, the
+function returns immediately - the timeout is the <em>longest</em> the function
 will wait to return, but it can return sooner if the user types fast
-enough.)
+enough.)</p>
 
-At the simplest level, you could imagine a game that imposes a time
+<p>At the simplest level, you could imagine a game that imposes a time
 limit for typing certain commands. For example, a sadistic game designer
 might want to design a traditional adventure game maze, with the novel
 twist that the player has to move out of each room within ten seconds of
 real time or face some penalty, such as being moved back to the start of
 the maze. To do this, you could use
-`inputLineTimeout()` with a timeout value of
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> with a timeout value of
 10000 (ten thousand milliseconds equals ten seconds), imposing the
-penalty if the function ever returns with a timeout.
+penalty if the function ever returns with a timeout.</p>
 
-This type of use of `inputLineTimeout()`
-wouldn't win many admirers, but fortunately it's not at all the scenario
+<p>This type of use of <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>
+wouldn’t win many admirers, but fortunately it’s not at all the scenario
 for which this function was designed. In fact, the key feature of the
 function is that it not only allows you to interrupt a command line, but
-also allows you to *resume* an interrupted command line. This is
+also allows you to <em>resume</em> an interrupted command line. This is
 crucial: because you can resume an interrupted command line, you can
 write your program so that it continues to process events in real time,
-even while the user is editing a command; the user's editing and your
+even while the user is editing a command; the user’s editing and your
 real-time events can proceed in parallel, with neither blocking the
-other.
+other.</p>
 
-There are three possible ways to use
-`inputLineTimeout()`.
+<p>There are three possible ways to use
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>.</p>
 
-**Scenario 1: Limited-time input.** This is the real-time-maze scenario
+<p><strong>Scenario 1: Limited-time input.</strong> This is the real-time-maze scenario
 described above, where the program solicits command-line input from the
 user, but only allows the user a limited amount of time to complete the
-input. In this scenario, when the time limit expires, the user's chance
+input. In this scenario, when the time limit expires, the user’s chance
 to enter a command has ended: the program does not allow the user to
-resume editing the command later.
+resume editing the command later.</p>
 
-This is the simplest scenario, because the program unconditionally
+<p>This is the simplest scenario, because the program unconditionally
 cancels the input when it times out. To do this, you simply call the
-function `inputLineCancel()` when a timeout
-occurs. Here's how this looks:
+function <code class="language-plaintext highlighter-rouge">inputLineCancel()</code> when a timeout
+occurs. Here’s how this looks:</p>
 
-```
-    /* read a command, with a 10-second time limit */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* read a command, with a 10-second time limit */
     local result = inputLineTimeout(10000);
     if (result[1] == InEvtTimeout)
     {
@@ -1778,39 +1705,38 @@ occurs. Here's how this looks:
       /* darn, they were fast enough */
       // move to the new location, etc
     }
-```
+</code></pre></div></div>
 
-**Scenario 2: Internal computation only, with resumed editing.**
-Sometimes you'll want to perform some operation at a particular time,
-but the operation won't perform any display operations. For example,
-suppose you're writing a detective game, and you have one character in
-the game who moves around according to a real-time schedule. When you're
-about to read an input line, you can check the character's schedule,
-calculate the delay until the character's next move, and then use that
+<p><strong>Scenario 2: Internal computation only, with resumed editing.</strong>
+Sometimes you’ll want to perform some operation at a particular time,
+but the operation won’t perform any display operations. For example,
+suppose you’re writing a detective game, and you have one character in
+the game who moves around according to a real-time schedule. When you’re
+about to read an input line, you can check the character’s schedule,
+calculate the delay until the character’s next move, and then use that
 delay as the timeout value for
-`inputLineTimeout()`.
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>.</p>
 
-If `inputLineTimeout()` returns a timeout event,
-you'd move your character according to the schedule. Now, suppose the
-character isn't in sight of the player character at any point during the
-scheduled travel. In this case, you wouldn't want to display anything
-about the character's travel: everything happens behind the scenes. So,
+<p>If <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> returns a timeout event,
+you’d move your character according to the schedule. Now, suppose the
+character isn’t in sight of the player character at any point during the
+scheduled travel. In this case, you wouldn’t want to display anything
+about the character’s travel: everything happens behind the scenes. So,
 you need to perform the event in real time, so that the character moves
 to its new location on schedule, but as far as the player is concerned,
-nothing happened.
+nothing happened.</p>
 
-In this case, you'd simply call
-`inputLineTimeout()` again after moving the
+<p>In this case, you’d simply call
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> again after moving the
 character. The function would pick up where it left off, with absolutely
 no effects visible to the player. Nothing on the display changes in this
-case, so the player simply thinks they've been editing the same command
-all along.
+case, so the player simply thinks they’ve been editing the same command
+all along.</p>
 
-The code for this is easy, as long as we can take for granted that we
-know when the character's next move occurs.
+<p>The code for this is easy, as long as we can take for granted that we
+know when the character’s next move occurs.</p>
 
-```
-    /* show the initial prompt */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* show the initial prompt */
     "&gt;";
 
     /* keep looping forever */
@@ -1841,40 +1767,40 @@ know when the character's next move occurs.
 
       }
     }
-```
+</code></pre></div></div>
 
-Note that it's legal to update banner windows during interrupted input.
+<p>Note that it’s legal to update banner windows during interrupted input.
 You could use code just like the example above, substituting banner
-window displays for the `performNextTravel()`
+window displays for the <code class="language-plaintext highlighter-rouge">performNextTravel()</code>
 call. For example, you could keep a running real-time clock in a banner
-window, updating it at each input timeout. As long as you're not
+window, updating it at each input timeout. As long as you’re not
 updating the main window, where the input editing session is taking
-place, it's not necessary to cancel input editing (as described in the
-next scenario).
+place, it’s not necessary to cancel input editing (as described in the
+next scenario).</p>
 
-**Scenario 3: Interruption with a displayed message, then resumed
-editing.** This is the most complex situation, but in many ways the most
+<p><strong>Scenario 3: Interruption with a displayed message, then resumed
+editing.</strong> This is the most complex situation, but in many ways the most
 interesting. In this scenario, we want to tell the user about something
 that happened during the real-time event, but we still want to let the
 user go back to editing the command line after we finish processing the
-event.
+event.</p>
 
-Our detective example above fits this scenario when the traveling actor
+<p>Our detective example above fits this scenario when the traveling actor
 is in sight of the player character, because in this case we want to
 tell the user that the traveling actor has departed or arrived. Once
-we've described the departure or arrival, though, we want to let the
-user continue editing the command, because the interruption doesn't
+we’ve described the departure or arrival, though, we want to let the
+user continue editing the command, because the interruption doesn’t
 necessarily change what they would have typed, and (unlike Scenario 1)
-doesn't take away the user's chance to type a command.
+doesn’t take away the user’s chance to type a command.</p>
 
-In this situation, we have to use the
-`inputLineCancel()` function, passing
-`nil` as the *reset* argument. This function
-tells the system that we are **not** processing Scenario 2; in
-particular, it tells the system that it won't be able to pretend that
+<p>In this situation, we have to use the
+<code class="language-plaintext highlighter-rouge">inputLineCancel()</code> function, passing
+<code class="language-plaintext highlighter-rouge">nil</code> as the <em>reset</em> argument. This function
+tells the system that we are <strong>not</strong> processing Scenario 2; in
+particular, it tells the system that it won’t be able to pretend that
 the interruption never happened. The reason we have to differentiate
 this case from Scenario 2 is that when
-`inputLineTimeout()` returns with a timeout, the
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> returns with a timeout, the
 system optimistically keeps everything on the screen and in memory in a
 state where it could resume editing the same command later. This means
 that any display operations - even something as simple as displaying a
@@ -1883,108 +1809,94 @@ system is holding everything ready for more command line editing. To
 tell the system that we wish to give up our right to resume editing with
 complete transparency, and in exchange receive the right to perform
 other display operations, we use
-`inputLineCancel(nil)`.
+<code class="language-plaintext highlighter-rouge">inputLineCancel(nil)</code>.</p>
 
-Note that we use `nil` for reset argument to
-`inputLineCancel()` in this scenario. This is
+<p>Note that we use <code class="language-plaintext highlighter-rouge">nil</code> for reset argument to
+<code class="language-plaintext highlighter-rouge">inputLineCancel()</code> in this scenario. This is
 because we wish to resume editing the command line later. This might
 seem confusing - if we want to resume editing the command later, why are
 we canceling in the first place? The solution to this seeming
 contradiction is that canceling and resetting are not the same thing.
-Canceling, which is what `inputLineCancel()`
-does regardless of the *reset* argument, simply tells the system to give
+Canceling, which is what <code class="language-plaintext highlighter-rouge">inputLineCancel()</code>
+does regardless of the <em>reset</em> argument, simply tells the system to give
 up hope for transparently resuming editing. Resetting, which only occurs
-when the *reset* argument to `inputLineCancel()`
+when the <em>reset</em> argument to <code class="language-plaintext highlighter-rouge">inputLineCancel()</code>
 is true, tells the system to throw away all information about editing.
 So, when you cancel without resetting, you tell the system that you
-won't transparently resume editing, but that you still wish to resume
-editing later, albeit not transparently.
+won’t transparently resume editing, but that you still wish to resume
+editing later, albeit not transparently.</p>
 
-Here's what this looks like to the user. First, here's the way the
-screen looks when the user is first presented with the command line:
+<p>Here’s what this looks like to the user. First, here’s the way the
+screen looks when the user is first presented with the command line:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What do you, the detective, want to do next?
+&gt;|
+</code></pre></div></div>
 
-    What do you, the detective, want to do next?
-    &gt;|
-
-</div>
-
-(That vertical bar, `\|`, is meant to represent
+<p>(That vertical bar, <code class="language-plaintext highlighter-rouge">\|</code>, is meant to represent
 the cursor, where text the user types is inserted.) Now, the user starts
-typing a command, and the screen looks like this after a bit:
+typing a command, and the screen looks like this after a bit:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What do you, the detective, want to do next?
+&gt;look at the v|
+</code></pre></div></div>
 
-    What do you, the detective, want to do next?
-    &gt;look at the v|
-
-</div>
-
-Now, at this point, our timeout expires, and we discover that it's time
+<p>Now, at this point, our timeout expires, and we discover that it’s time
 to move Miss Marmalade into the same room where the player character is
-located. We call `inputLineCancel(nil)` to tell
+located. We call <code class="language-plaintext highlighter-rouge">inputLineCancel(nil)</code> to tell
 the system that we wish to perform some output operations in lieu of
 resuming editing transparently, then we add our displayed messages.
-Finally, we call `inputLineTimeout()` again to
-resume editing. Here's what the user sees:
+Finally, we call <code class="language-plaintext highlighter-rouge">inputLineTimeout()</code> again to
+resume editing. Here’s what the user sees:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What do you, the detective, want to do next?
+&gt;look at the v
 
-    What do you, the detective, want to do next?
-    &gt;look at the v
+Miss Marmalade enters from the north.  She pretends
+not to see you, busying herself with rummaging for
+something in her purse.
 
-    Miss Marmalade enters from the north.  She pretends
-    not to see you, busying herself with rummaging for
-    something in her purse.
+&gt;look at the v|
+</code></pre></div></div>
 
-    &gt;look at the v|
-
-</div>
-
-Notice that the partially-constructed command line now appears twice on
+<p>Notice that the partially-constructed command line now appears twice on
 the screen - once before the interruption, and again after. The first
-copy is no longer the active command line; it's left on screen only to
-maintain continuity, so that the user isn't startled by the text
+copy is no longer the active command line; it’s left on screen only to
+maintain continuity, so that the user isn’t startled by the text
 suddenly disappearing. After this, we see the text displayed during the
 real-time interruption, and finally we see the new command line, where
-we've reinstated the text the user has entered so far, as well as the
-original cursor position.
+we’ve reinstated the text the user has entered so far, as well as the
+original cursor position.</p>
 
-This is what we mean by "non-transparent" resumption of editing. The
-resumption isn't transparent, in that the user can plainly see on the
+<p>This is what we mean by “non-transparent” resumption of editing. The
+resumption isn’t transparent, in that the user can plainly see on the
 screen that the editing was interrupted. We are nonetheless resuming the
 editing session fairly seamlessly. If the user had their eyes closed,
 they could keep editing the command without knowing that we interrupted
 them, because the text on the line, the cursor position, and all other
 editing state is the same as it was before the interruption; the only
 thing that has changed is that more text is on the screen than when we
-started.
+started.</p>
 
-The code for this case is almost exactly the same as the example code in
+<p>The code for this case is almost exactly the same as the example code in
 Scenario 2, with two changes. First, we must call
-`inputLineCancel(nil)` before we display the
-message about Miss Marmalde moving; we'd put this call just before the
-call to `actor.performNextTravel()`. Second,
-we'd have to re-display the `\&gt;` prompt before
+<code class="language-plaintext highlighter-rouge">inputLineCancel(nil)</code> before we display the
+message about Miss Marmalde moving; we’d put this call just before the
+call to <code class="language-plaintext highlighter-rouge">actor.performNextTravel()</code>. Second,
+we’d have to re-display the <code class="language-plaintext highlighter-rouge">\&gt;</code> prompt before
 we resume editing the command; we could do this before the call to
-`inputLineTimeout()`.
-
-</div>
+<code class="language-plaintext highlighter-rouge">inputLineTimeout()</code>.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; tads-io
-Function Set  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; tads-io
+Function Set<br />
 <span class="navnp"><a href="regex.html" class="nav"><em>Prev:</em> Regular Expressions</a>
     <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
-Set</a>     </span>
+Set</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

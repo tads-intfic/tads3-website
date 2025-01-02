@@ -46,22 +46,14 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>An Attachable is a NearbyAttachable that can be attached to more than
+one thing at a time, like a length of cable connecting two devices.</p>
 
-An Attachable is a NearbyAttachable that can be attached to more than
-one thing at a time, like a length of cable connecting two devices.
-
-`class `**`Attachable`**` :   `[`NearbyAttachable`](../object/NearbyAttachable.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Attachable</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/NearbyAttachable.html"><code class="language-plaintext highlighter-rouge">NearbyAttachable</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Attachable</code></strong><br />
 <a href="../object/NearbyAttachable.html"><code class="language-plaintext highlighter-rouge">NearbyAttachable</code></a><br />
@@ -75,27 +67,15 @@ one thing at a time, like a length of cable connecting two devices.
 </code>                                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#attachedTo"><code class="language-plaintext highlighter-rouge">attachedTo</code></a>  <a href="#attachedToList"><code class="language-plaintext highlighter-rouge">attachedToList</code></a>  <a href="#cannotAttachToMoreMsg"><code class="language-plaintext highlighter-rouge">cannotAttachToMoreMsg</code></a>  <a href="#maxAttachedTo"><code class="language-plaintext highlighter-rouge">maxAttachedTo</code></a>  <a href="#multiPluggable"><code class="language-plaintext highlighter-rouge">multiPluggable</code></a>  `</p>
 
@@ -116,11 +96,7 @@ one thing at a time, like a length of cable connecting two devices.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#allowAttach"><code class="language-plaintext highlighter-rouge">allowAttach</code></a>  <a href="#dobjFor(AttachTo)"><code class="language-plaintext highlighter-rouge">dobjFor(AttachTo)</code></a>  <a href="#isAttachedTo"><code class="language-plaintext highlighter-rouge">isAttachedTo</code></a>  <a href="#makeAttachedTo"><code class="language-plaintext highlighter-rouge">makeAttachedTo</code></a>  <a href="#makeDetachedFrom"><code class="language-plaintext highlighter-rouge">makeDetachedFrom</code></a>  <a href="#reverseConnect"><code class="language-plaintext highlighter-rouge">reverseConnect</code></a>  `</p>
 
@@ -147,11 +123,7 @@ one thing at a time, like a length of cable connecting two devices.
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="attachedTo"></span></p>
 
@@ -159,13 +131,9 @@ one thing at a time, like a length of cable connecting two devices.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#563">563</a>]</p>
 
-<div class="desc">
-
-Strictly speaking, the attachedTo property of an Attachable is a bit
+<p>Strictly speaking, the attachedTo property of an Attachable is a bit
 arbitrary when the Attachable is attached to more than one thing; we
-arbitrarily choose the first thing in its attachedToList.
-
-</div>
+arbitrarily choose the first thing in its attachedToList.</p>
 
 <p><span id="attachedToList"></span></p>
 
@@ -173,12 +141,8 @@ arbitrarily choose the first thing in its attachedToList.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#569">569</a>]</p>
 
-<div class="desc">
-
-The list of things to which I'm attached (as opposed to things attached
-to me).
-
-</div>
+<p>The list of things to which I’m attached (as opposed to things attached
+to me).</p>
 
 <p><span id="cannotAttachToMoreMsg"></span></p>
 
@@ -186,11 +150,7 @@ to me).
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#634">634</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="maxAttachedTo"></span></p>
 
@@ -198,15 +158,11 @@ to me).
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#578">578</a>]</p>
 
-<div class="desc">
-
-The maximum number of things I can be attached to at once. By default
+<p>The maximum number of things I can be attached to at once. By default
 this is 2, since probably the most commonly use for an Attachable is to
 join or link two other things, but this can easily be overridden as
 required. If you want there to be no limit to the number of things I can
-be attached to at once, make maxAttachedTo nil.
-
-</div>
+be attached to at once, make maxAttachedTo nil.</p>
 
 <p><span id="multiPluggable"></span></p>
 
@@ -214,20 +170,12 @@ be attached to at once, make maxAttachedTo nil.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#651">651</a>]</p>
 
-<div class="desc">
-
-By default an Attachable can be plugged into more than one thing at a
-time
-
-</div>
+<p>By default an Attachable can be plugged into more than one thing at a
+time</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="allowAttach"></span></p>
 
@@ -235,13 +183,9 @@ time
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#612">612</a>]</p>
 
-<div class="desc">
-
-We allow attachment to another obj either for the inherited reason (that
+<p>We allow attachment to another obj either for the inherited reason (that
 obh is in my list of allowable attachements) or, if we want to reverse
-the connection with obj, that obj can be attached to us.
-
-</div>
+the connection with obj, that obj can be attached to us.</p>
 
 <p><span id="dobjFor(AttachTo)"></span></p>
 
@@ -249,11 +193,7 @@ the connection with obj, that obj can be attached to us.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#618">618</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="isAttachedTo"></span></p>
 
@@ -261,13 +201,9 @@ the connection with obj, that obj can be attached to us.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#642">642</a>]</p>
 
-<div class="desc">
-
-I'm attached to obj in the broad sense of having an attachement
+<p>I’m attached to obj in the broad sense of having an attachement
 relationship with obj either if obj is attached to me or if obj is in
-the list of things to which I'm attached.
-
-</div>
+the list of things to which I’m attached.</p>
 
 <p><span id="makeAttachedTo"></span></p>
 
@@ -275,11 +211,7 @@ the list of things to which I'm attached.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#581">581</a>]</p>
 
-<div class="desc">
-
-To make me attached to obj, add obj to my attachedTo list.
-
-</div>
+<p>To make me attached to obj, add obj to my attachedTo list.</p>
 
 <p><span id="makeDetachedFrom"></span></p>
 
@@ -287,11 +219,7 @@ To make me attached to obj, add obj to my attachedTo list.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#589">589</a>]</p>
 
-<div class="desc">
-
-To make something detached from me, remove obj from my attachedTo list.
-
-</div>
+<p>To make something detached from me, remove obj from my attachedTo list.</p>
 
 <p><span id="reverseConnect"></span></p>
 
@@ -299,22 +227,15 @@ To make something detached from me, remove obj from my attachedTo list.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#602">602</a>]</p>
 
-<div class="desc">
-
-Since an ATTACHABLE could potentially be in a many-to-many relationship,
+<p>Since an ATTACHABLE could potentially be in a many-to-many relationship,
 we may sometimes want to control the order of connection (i.e. which is
-considered to be the connected object and which the object it's
-connected to). If reverseConnect(obj) returns true then we'll turn
-CONNECT obj TO self into CONNECT self TO obj.
+considered to be the connected object and which the object it’s
+connected to). If reverseConnect(obj) returns true then we’ll turn
+CONNECT obj TO self into CONNECT self TO obj.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

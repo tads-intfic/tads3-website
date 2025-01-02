@@ -75,7 +75,7 @@ match object.
 
 
 
-[`grammarAltProps`](#grammarAltProps)[`grammarTag`](#grammarTag)
+[`grammarAltProps`](#grammarAltProps) [`grammarTag`](#grammarTag)
 
 <span id="_MethodSummary_"></span>
 

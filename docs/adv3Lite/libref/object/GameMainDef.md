@@ -81,7 +81,7 @@ OBJTIME EXTENSION
 
 
 
-[`againRepeatsParse`](#againRepeatsParse)[`allVerbsAllowAll`](#allVerbsAllowAll)[`autoSwitchAgain`](#autoSwitchAgain)[`beforeRunsBeforeCheck`](#beforeRunsBeforeCheck)[`fastGoTo`](#fastGoTo)[`gameStartTime`](#gameStartTime)[`initialPlayerChar`](#initialPlayerChar)[`paraBrksBtwnSubcontents`](#paraBrksBtwnSubcontents)[`scoreRankTable`](#scoreRankTable)[`useParentheticalListing`](#useParentheticalListing)[`usePastTense`](#usePastTense)[`verbose`](#verbose)
+[`againRepeatsParse`](#againRepeatsParse) [`allVerbsAllowAll`](#allVerbsAllowAll) [`autoSwitchAgain`](#autoSwitchAgain) [`beforeRunsBeforeCheck`](#beforeRunsBeforeCheck) [`fastGoTo`](#fastGoTo) [`gameStartTime`](#gameStartTime) [`initialPlayerChar`](#initialPlayerChar) [`paraBrksBtwnSubcontents`](#paraBrksBtwnSubcontents) [`scoreRankTable`](#scoreRankTable) [`useParentheticalListing`](#useParentheticalListing) [`usePastTense`](#usePastTense) [`verbose`](#verbose)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ OBJTIME EXTENSION
 
 
 
-[`getSaveDesc`](#getSaveDesc)[`maxScore`](#maxScore)[`newGame`](#newGame)[`restoreAndRunGame`](#restoreAndRunGame)[`setAboutBox`](#setAboutBox)[`setGameTitle`](#setGameTitle)[`showGoodbye`](#showGoodbye)[`showIntro`](#showIntro)
+[`getSaveDesc`](#getSaveDesc) [`maxScore`](#maxScore) [`newGame`](#newGame) [`restoreAndRunGame`](#restoreAndRunGame) [`setAboutBox`](#setAboutBox) [`setGameTitle`](#setGameTitle) [`showGoodbye`](#showGoodbye) [`showIntro`](#showIntro)
 
 <span id="_Properties_"></span>
 

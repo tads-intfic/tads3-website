@@ -46,81 +46,53 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Direction object represents a direction in which an actor might
+<p>A Direction object represents a direction in which an actor might
 attempt to travel. The library defines eight compass directions (north,
 south, etc.) and a further eight special directions (in, out, up, down,
 port, starboard, fore and aft), but game code can define additional
-directions if required.
+directions if required.</p>
 
-The convention that should be followed in naming a Direction object is
+<p>The convention that should be followed in naming a Direction object is
 to use the name of the direction followed by Dir; e.g. the Direction
 object corresponding to north is called northDir. Custom directions
 should follow the same convention, since it is assumed by the
-goInstead() and goNested() macros.
+goInstead() and goNested() macros.</p>
 
-`class `**`Direction`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Direction</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Direction</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Direction</code></strong><br />
 <a href="../object/CompassDirection.html"><code class="language-plaintext highlighter-rouge">CompassDirection</code></a><br />
 <a href="../object/ShipboardDirection.html"><code class="language-plaintext highlighter-rouge">ShipboardDirection</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/downDir.html"><code class="language-plaintext highlighter-rouge">downDir</code></a><a href="../object/inDir.html"><code class="language-plaintext highlighter-rouge">inDir</code></a><a href="../object/outDir.html"><code class="language-plaintext highlighter-rouge">outDir</code></a><a href="../object/upDir.html"><code class="language-plaintext highlighter-rouge">upDir</code></a>
+<p><a href="../object/downDir.html"><code class="language-plaintext highlighter-rouge">downDir</code></a> <a href="../object/inDir.html"><code class="language-plaintext highlighter-rouge">inDir</code></a> <a href="../object/outDir.html"><code class="language-plaintext highlighter-rouge">outDir</code></a> <a href="../object/upDir.html"><code class="language-plaintext highlighter-rouge">upDir</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#allDirections"><code class="language-plaintext highlighter-rouge">allDirections</code></a><a href="#departureName"><code class="language-plaintext highlighter-rouge">departureName</code></a><a href="#dirProp"><code class="language-plaintext highlighter-rouge">dirProp</code></a><a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a><a href="#nameTab"><code class="language-plaintext highlighter-rouge">nameTab</code></a><a href="#opposite"><code class="language-plaintext highlighter-rouge">opposite</code></a><a href="#sortingOrder"><code class="language-plaintext highlighter-rouge">sortingOrder</code></a></p>
+<p><a href="#allDirections"><code class="language-plaintext highlighter-rouge">allDirections</code></a> <a href="#departureName"><code class="language-plaintext highlighter-rouge">departureName</code></a> <a href="#dirProp"><code class="language-plaintext highlighter-rouge">dirProp</code></a> <a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="#nameTab"><code class="language-plaintext highlighter-rouge">nameTab</code></a> <a href="#opposite"><code class="language-plaintext highlighter-rouge">opposite</code></a> <a href="#sortingOrder"><code class="language-plaintext highlighter-rouge">sortingOrder</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a><a href="#initializeDirection"><code class="language-plaintext highlighter-rouge">initializeDirection</code></a><a href="#oppositeProp"><code class="language-plaintext highlighter-rouge">oppositeProp</code></a><a href="#propDir"><code class="language-plaintext highlighter-rouge">propDir</code></a></p>
+<p><a href="#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a> <a href="#initializeDirection"><code class="language-plaintext highlighter-rouge">initializeDirection</code></a> <a href="#oppositeProp"><code class="language-plaintext highlighter-rouge">oppositeProp</code></a> <a href="#propDir"><code class="language-plaintext highlighter-rouge">propDir</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="allDirections"></span></p>
 
@@ -128,13 +100,9 @@ goInstead() and goNested() macros.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1748">1748</a>]</p>
 
-<div class="desc">
-
-A Class property containing a Vector of all the directions defined in
+<p>A Class property containing a Vector of all the directions defined in
 the game (the 16 defined in the library plus any additionasl custom
-directions defined in game code)
-
-</div>
+directions defined in game code)</p>
 
 <p><span id="departureName"></span></p>
 
@@ -142,11 +110,7 @@ directions defined in game code)
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1698">1698</a>]</p>
 
-<div class="desc">
-
-The name to use when departing via this direction, e.g. 'to the north'
-
-</div>
+<p>The name to use when departing via this direction, e.g. ‘to the north’</p>
 
 <p><span id="dirProp"></span></p>
 
@@ -154,12 +118,8 @@ The name to use when departing via this direction, e.g. 'to the north'
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1684">1684</a>]</p>
 
-<div class="desc">
-
-The exit property of a room association with this Direction, e.g. &amp;north
-(corresponding to northDir).
-
-</div>
+<p>The exit property of a room association with this Direction, e.g. &amp;north
+(corresponding to northDir).</p>
 
 <p><span id="name"></span></p>
 
@@ -167,12 +127,8 @@ The exit property of a room association with this Direction, e.g. &amp;north
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1690">1690</a>]</p>
 
-<div class="desc">
-
-The name of this direction, e.g. 'north'. This is the name that appears
-in the exit lister.
-
-</div>
+<p>The name of this direction, e.g. ‘north’. This is the name that appears
+in the exit lister.</p>
 
 <p><span id="nameTab"></span></p>
 
@@ -180,11 +136,7 @@ in the exit lister.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1693">1693</a>]</p>
 
-<div class="desc">
-
-Class property: a LookupTable matching names to direction objects.
-
-</div>
+<p>Class property: a LookupTable matching names to direction objects.</p>
 
 <p><span id="opposite"></span></p>
 
@@ -192,11 +144,7 @@ Class property: a LookupTable matching names to direction objects.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1751">1751</a>]</p>
 
-<div class="desc">
-
-The direction that is opposite to this one.
-
-</div>
+<p>The direction that is opposite to this one.</p>
 
 <p><span id="sortingOrder"></span></p>
 
@@ -204,25 +152,17 @@ The direction that is opposite to this one.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1741">1741</a>]</p>
 
-<div class="desc">
-
-Our sorting order in the master list. We use this to present directions
+<p>Our sorting order in the master list. We use this to present directions
 in a consistent, aesthetically pleasing order in listings involving
 multiple directions. The sorting order is simply an integer that gives
 the relative position in the list; the list of directions is sorted from
-lowest sorting order to highest. Sorting order numbers don't have to be
+lowest sorting order to highest. Sorting order numbers don’t have to be
 contiguous, since we simply put the directions in an order that makes
-the sortingOrder values ascend through the list.
-
-</div>
+the sortingOrder values ascend through the list.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="classInit"></span></p>
 
@@ -230,13 +170,9 @@ the sortingOrder values ascend through the list.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1719">1719</a>]</p>
 
-<div class="desc">
-
-Class initialization - this is called once on the class object. We'll
+<p>Class initialization - this is called once on the class object. We’ll
 build our master list of all of the Direction objects in the game, and
-then sort the list using the sorting order.
-
-</div>
+then sort the list using the sorting order.</p>
 
 <p><span id="initializeDirection"></span></p>
 
@@ -244,13 +180,9 @@ then sort the list using the sorting order.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1705">1705</a>]</p>
 
-<div class="desc">
-
-Initialize. We'll use this routine to add each Direction instance to the
+<p>Initialize. We’ll use this routine to add each Direction instance to the
 master direction list (Direction.allDirections) during
-pre-initialization.
-
-</div>
+pre-initialization.</p>
 
 <p><span id="oppositeProp"></span></p>
 
@@ -258,11 +190,7 @@ pre-initialization.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1754">1754</a>]</p>
 
-<div class="desc">
-
-The dirProp that's the opposite to prop
-
-</div>
+<p>The dirProp that’s the opposite to prop</p>
 
 <p><span id="propDir"></span></p>
 
@@ -270,18 +198,11 @@ The dirProp that's the opposite to prop
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1763">1763</a>]</p>
 
-<div class="desc">
+<p>The direction to which prop points.</p>
 
-The direction to which prop points.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

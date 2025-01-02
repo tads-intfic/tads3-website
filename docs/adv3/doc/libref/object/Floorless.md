@@ -84,7 +84,7 @@ either disappear from the game or are transported to another location
 
 
 
-[`bottomRoom`](#bottomRoom)[`roomParts`](#roomParts)
+[`bottomRoom`](#bottomRoom) [`roomParts`](#roomParts)
 
 <span id="_MethodSummary_"></span>
 

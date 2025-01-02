@@ -54,7 +54,7 @@ from running on some systems.
 
 
 
-[`enableSystemMenuCommand`](#enableSystemMenuCommand)[`showPopupMenu`](#showPopupMenu)
+[`enableSystemMenuCommand`](#enableSystemMenuCommand) [`showPopupMenu`](#showPopupMenu)
 
 <span id="_MacroSummary_"></span>
 
@@ -64,7 +64,7 @@ from running on some systems.
 
 
 
-[`MenuStatEventDisable`](#MenuStatEventDisable)[`MenuStatEventEnable`](#MenuStatEventEnable)[`MenuStatLineDisable`](#MenuStatLineDisable)[`MenuStatLineEnable`](#MenuStatLineEnable)[`PopMenuCancel`](#PopMenuCancel)[`PopMenuEof`](#PopMenuEof)[`PopMenuFail`](#PopMenuFail)[`PopMenuHRef`](#PopMenuHRef)
+[`MenuStatEventDisable`](#MenuStatEventDisable) [`MenuStatEventEnable`](#MenuStatEventEnable) [`MenuStatLineDisable`](#MenuStatLineDisable) [`MenuStatLineEnable`](#MenuStatLineEnable) [`PopMenuCancel`](#PopMenuCancel) [`PopMenuEof`](#PopMenuEof) [`PopMenuFail`](#PopMenuFail) [`PopMenuHRef`](#PopMenuHRef)
 
 <span id="_EnumSummary_"></span>
 

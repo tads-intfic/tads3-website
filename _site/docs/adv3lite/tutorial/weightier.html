@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Weightier Matters  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Weightier Matters<br />
 <span class="navnp"><a href="improving.html" class="nav"><em>Prev:</em> Improving the
 Game</a>    
 <a href="inplace.html" class="nav"><em>Next:</em> Everything in its
-place</a>     </span>
-
-</div>
+place</a>     </span></p>
 
 <h1 id="weightier-matters">Weightier Matters</h1>
 
@@ -52,11 +44,10 @@ might not be the best way to do things.</p>
 <p>To illustrate the problem, try adding another small object to the
 <code class="language-plaintext highlighter-rouge">cave</code> location:</p>
 
-<p>`
-    + pebble: Thing ‘tiny pebble; smooth round’
-        “It’s just a tiny, round pebble, almost perfectly smooth. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pebble: Thing 'tiny pebble; smooth round'
+        "It's just a tiny, round pebble, almost perfectly smooth. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Now compile and run the game again. You’ll find that putting the tiny
 pebble on the pedestal works just as well in avoiding the trap as using
@@ -80,19 +71,18 @@ weight by default, but it’s easy enough to modify Thing so it does.
 Here’s a first attempt (which you could add right at the end of your
 existing code):</p>
 
-<p>`
-    modify Thing
-        weight = 1</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    getWeightWithin()
-    {
-        local totalWeight = 0;
-        for (local item in contents)
-            totalWeight += item.weight;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
+        weight = 1
         
-        return totalWeight;
-    }
-; `
+        getWeightWithin()
+        {
+            local totalWeight = 0;
+            for (local item in contents)
+                totalWeight += item.weight;
+            
+            return totalWeight;
+        }
+    ;
 </code></pre></div></div>
 
 <p>This adds a new <code class="language-plaintext highlighter-rouge">weight</code> property to the Thing
@@ -109,44 +99,42 @@ to implement this, but it will be more instructive for the sake of this
 tutorial to do it from scratch; besides adv3Lite extensions are beyond
 the scope of this tutorial).</p>
 
-<p>`
-    ++ goldSkull: Thing ‘gold skull;; head’
-        “It’s the shape and size of a human skull, but made of solid gold; it must
-        be worth a fortune. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ goldSkull: Thing 'gold skull;; head'
+        "It's the shape and size of a human skull, but made of solid gold; it must
+        be worth a fortune. "
+        
+        weight = 10
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    weight = 10
-;
-
-+ smallRock: Thing 'small rock; round solid'
-     "It's roughly round and looks pretty solid. "
-    
-    weight = 10
-; `
+    + smallRock: Thing 'small rock; round solid'
+         "It's roughly round and looks pretty solid. "
+        
+        weight = 10
+    ;
 </code></pre></div></div>
 
 <p>The next step is to arrange for the trap to be sprung when the total
 weight of objects resting on the pedestal is less than the weight of the
 skull:</p>
 
-<p>`
-    + pedestal: Fixture, Surface ‘stone pedestal; smooth’
-        “The smooth stone pedestal is artfully positioned to catch the sunlight at
-        just this time of day. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    notifyRemove(obj)
-    {
-        gMessageParams(obj);
-        
-        if(getWeightWithin() - obj.weight &lt; goldSkull.weight)
-        {
-            "As {the subj obj} {leaves} the pedestal, a volley of poisonous
-            arrows is shot from the walls! You try to dodge the arrows, but
-            they take you by surprise!";  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pedestal: Fixture, Surface 'stone pedestal; smooth'
+        "The smooth stone pedestal is artfully positioned to catch the sunlight at
+        just this time of day. "
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);  
+        notifyRemove(obj)
+        {
+            gMessageParams(obj);
+            
+            if(getWeightWithin() - obj.weight &lt; goldSkull.weight)
+            {
+                "As {the subj obj} {leaves} the pedestal, a volley of poisonous
+                arrows is shot from the walls! You try to dodge the arrows, but
+                they take you by surprise!";  
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);  
+            }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>Note how we specify this. The total weight of objects resting on top of
@@ -221,13 +209,12 @@ spotted. To demonstrate what it is, we’ll introduce another object into
 the game, a knapsack worn by the player character. We can define it like
 this:</p>
 
-<p>`
-    ++ knapsack: Wearable, Container ‘knapsack; trusty old worn; bag sack’
-        “Your trusty old knapsack may be getting a bit worn, but it’s accompanied
-        you on so many adventures you wouldn’t be without it. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    wornBy = me
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ knapsack: Wearable, Container 'knapsack; trusty old worn; bag sack'
+        "Your trusty old knapsack may be getting a bit worn, but it's accompanied
+        you on so many adventures you wouldn't be without it. "
+        
+        wornBy = me
+    ;
 </code></pre></div></div>
 
 <p>We could have defined the knapsack as a Thing with
@@ -259,21 +246,20 @@ items in its contents, plus the weight of the items <em>they</em> contain, and
 so on all the way down the chain, plus the weight of the original
 object. Just a couple of small changes should fix it:</p>
 
-<p>`
-    modify Thing
-        weight = 1</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    getWeightWithin()
-    {
-        local totalWeight = 0;
-        for (local item in contents)
-            totalWeight += item.getWeight;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
+        weight = 1
         
-        return totalWeight;
-    }
-    
-    getWeight = weight + getWeightWithin()
-; `
+        getWeightWithin()
+        {
+            local totalWeight = 0;
+            for (local item in contents)
+                totalWeight += item.getWeight;
+            
+            return totalWeight;
+        }
+        
+        getWeight = weight + getWeightWithin()
+    ;
 </code></pre></div></div>
 
 <p>At first sight this may look a little odd, since
@@ -305,25 +291,24 @@ to use the <code class="language-plaintext highlighter-rouge">getWeight</code> p
 being removed rather than just its <code class="language-plaintext highlighter-rouge">weight</code>
 property:</p>
 
-<p>`
-    + pedestal: Fixture, Surface ‘stone pedestal; smooth’
-        “The smooth stone pedestal is artfully positioned to catch the sunlight at
-        just this time of day. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    notifyRemove(obj)
-    {
-        gMessageParams(obj);
-        
-        if(getWeightWithin() - obj.getWeight &lt; goldSkull.weight)
-        {
-            "As {the subj obj} {leaves} the pedestal, a volley of poisonous
-            arrows is shot from the walls! You try to dodge the arrows, but
-            they take you by surprise!";  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pedestal: Fixture, Surface 'stone pedestal; smooth'
+        "The smooth stone pedestal is artfully positioned to catch the sunlight at
+        just this time of day. "
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);  
+        notifyRemove(obj)
+        {
+            gMessageParams(obj);
+            
+            if(getWeightWithin() - obj.getWeight &lt; goldSkull.weight)
+            {
+                "As {the subj obj} {leaves} the pedestal, a volley of poisonous
+                arrows is shot from the walls! You try to dodge the arrows, but
+                they take you by surprise!";  
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);  
+            }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>If you compile and run the game again, you should find it runs as
@@ -347,54 +332,52 @@ that the skull will be knocked off the pedestal if the object thrown at
 it is at least half its weight, then if we want the rock-throwing
 solution to succeed, we might write:</p>
 
-<p>`
-    ++ goldSkull: Thing ‘gold skull;; head’
-        “It’s the shape and size of a human skull, but made of solid gold; it must
-        be worth a fortune. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    weight = 10
-    
-    iobjFor(ThrowAt)
-    {
-        action()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ goldSkull: Thing 'gold skull;; head'
+        "It's the shape and size of a human skull, but made of solid gold; it must
+        be worth a fortune. "
+        
+        weight = 10
+        
+        iobjFor(ThrowAt)
         {
-            if(location != pedestal || gDobj.getWeight() &lt; weight / 2)
-                inherited;
-            else
+            action()
             {
-                moveInto(cave);
-                gDobj.moveInto(cave);
-                "{The subj dobj} {strikes} the gold skull, sending both objects
-                tumbling to the floor. At the same time, a volley of poisonous
-                arrows is shot from the walls! Fortunately you're standing just
-                far enough away to avoid being hit. ";
+                if(location != pedestal || gDobj.getWeight() &lt; weight / 2)
+                    inherited;
+                else
+                {
+                    moveInto(cave);
+                    gDobj.moveInto(cave);
+                    "{The subj dobj} {strikes} the gold skull, sending both objects
+                    tumbling to the floor. At the same time, a volley of poisonous
+                    arrows is shot from the walls! Fortunately you're standing just
+                    far enough away to avoid being hit. ";
+                }
             }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>If, on the other hand, we don’t want this solution to work (perhaps the
 cave isn’t big enough to allow the player character to stand far enough
 away to avoid the trap), we can use the slightly simpler:</p>
 
-<p>`
-    ++ goldSkull: Thing ‘gold skull;; head’
-        “It’s the shape and size of a human skull, but made of solid gold; it must
-        be worth a fortune. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    weight = 10
-    
-    iobjFor(ThrowAt)
-    {
-        action()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ goldSkull: Thing 'gold skull;; head'
+        "It's the shape and size of a human skull, but made of solid gold; it must
+        be worth a fortune. "
+        
+        weight = 10
+        
+        iobjFor(ThrowAt)
         {
-            inherited;
-            if(gDobj.getWeight() &gt;= weight/2 &amp;&amp; location == pedestal)
-                actionMoveInto(cave);
+            action()
+            {
+                inherited;
+                if(gDobj.getWeight() &gt;= weight/2 &amp;&amp; location == pedestal)
+                    actionMoveInto(cave);
+            }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>Okay, so let’s take a closer look at what’s going on here. The command
@@ -506,17 +489,14 @@ confidence with it.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Weightier Matters  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Weightier Matters<br />
 <span class="navnp"><a href="improving.html" class="nav"><em>Prev:</em> Improving the
 Game</a>    
 <a href="inplace.html" class="nav"><em>Next:</em> Everything in its
-place</a>     </span>
+place</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

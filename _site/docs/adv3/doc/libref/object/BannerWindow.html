@@ -46,88 +46,60 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A BannerWindow corresponds to an on-screen banner. For each banner
+<p>A BannerWindow corresponds to an on-screen banner. For each banner
 window a game wants to display, the game must create an object of this
-class.
+class.</p>
 
-Note that merely creating a BannerWindow object doesn't actually display
+<p>Note that merely creating a BannerWindow object doesn’t actually display
 a banner window. Once a BannerWindow is created, the game must call the
-object's showBanner() method to create the on-screen window for the
-banner.
+object’s showBanner() method to create the on-screen window for the
+banner.</p>
 
-BannerWindow instances are intended to be persistent (not transient).
-The banner manager keeps track of each banner window that's actually
+<p>BannerWindow instances are intended to be persistent (not transient).
+The banner manager keeps track of each banner window that’s actually
 being displayed separately via an internal transient object; the game
-doesn't need to worry about these tracking objects, since the banner
-manager automatically handles them.
+doesn’t need to worry about these tracking objects, since the banner
+manager automatically handles them.</p>
 
-`class `**`BannerWindow`**` :   `[`OutputStreamWindow`](../object/OutputStreamWindow.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">BannerWindow</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputStreamWindow.html"><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">BannerWindow</code></strong><br />
 <a href="../object/OutputStreamWindow.html"><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/contentsMenuBanner.html"><code class="language-plaintext highlighter-rouge">contentsMenuBanner</code></a><a href="../object/longTopicBanner.html"><code class="language-plaintext highlighter-rouge">longTopicBanner</code></a><a href="../object/statuslineBanner1.html"><code class="language-plaintext highlighter-rouge">statuslineBanner</code></a><a href="../object/topMenuBanner.html"><code class="language-plaintext highlighter-rouge">topMenuBanner</code></a>
+<p><a href="../object/contentsMenuBanner.html"><code class="language-plaintext highlighter-rouge">contentsMenuBanner</code></a> <a href="../object/longTopicBanner.html"><code class="language-plaintext highlighter-rouge">longTopicBanner</code></a> <a href="../object/statuslineBanner1.html"><code class="language-plaintext highlighter-rouge">statuslineBanner</code></a> <a href="../object/topMenuBanner.html"><code class="language-plaintext highlighter-rouge">topMenuBanner</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#align_"><code class="language-plaintext highlighter-rouge">align_</code></a><a href="#handle_"><code class="language-plaintext highlighter-rouge">handle_</code></a><a href="#id_"><code class="language-plaintext highlighter-rouge">id_</code></a><a href="#inited_"><code class="language-plaintext highlighter-rouge">inited_</code></a><a href="#parentID_"><code class="language-plaintext highlighter-rouge">parentID_</code></a><a href="#size_"><code class="language-plaintext highlighter-rouge">size_</code></a><a href="#sizeUnits_"><code class="language-plaintext highlighter-rouge">sizeUnits_</code></a><a href="#styleFlags_"><code class="language-plaintext highlighter-rouge">styleFlags_</code></a><a href="#windowType_"><code class="language-plaintext highlighter-rouge">windowType_</code></a></p>
+<p><a href="#align_"><code class="language-plaintext highlighter-rouge">align_</code></a> <a href="#handle_"><code class="language-plaintext highlighter-rouge">handle_</code></a> <a href="#id_"><code class="language-plaintext highlighter-rouge">id_</code></a> <a href="#inited_"><code class="language-plaintext highlighter-rouge">inited_</code></a> <a href="#parentID_"><code class="language-plaintext highlighter-rouge">parentID_</code></a> <a href="#size_"><code class="language-plaintext highlighter-rouge">size_</code></a> <a href="#sizeUnits_"><code class="language-plaintext highlighter-rouge">sizeUnits_</code></a> <a href="#styleFlags_"><code class="language-plaintext highlighter-rouge">styleFlags_</code></a> <a href="#windowType_"><code class="language-plaintext highlighter-rouge">windowType_</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
 <a href="../object/OutputStreamWindow.html#outputStream_"><code class="language-plaintext highlighter-rouge">outputStream_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#clearWindow"><code class="language-plaintext highlighter-rouge">clearWindow</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#createOutputStreamObj"><code class="language-plaintext highlighter-rouge">createOutputStreamObj</code></a><a href="#createSystemBanner"><code class="language-plaintext highlighter-rouge">createSystemBanner</code></a><a href="#cursorTo"><code class="language-plaintext highlighter-rouge">cursorTo</code></a><a href="#flushBanner"><code class="language-plaintext highlighter-rouge">flushBanner</code></a><a href="#getBannerID"><code class="language-plaintext highlighter-rouge">getBannerID</code></a><a href="#initBannerWindow"><code class="language-plaintext highlighter-rouge">initBannerWindow</code></a><a href="#removeBanner"><code class="language-plaintext highlighter-rouge">removeBanner</code></a><a href="#setScreenColor"><code class="language-plaintext highlighter-rouge">setScreenColor</code></a><a href="#setSize"><code class="language-plaintext highlighter-rouge">setSize</code></a><a href="#setTextColor"><code class="language-plaintext highlighter-rouge">setTextColor</code></a><a href="#showBanner"><code class="language-plaintext highlighter-rouge">showBanner</code></a><a href="#showForRestore"><code class="language-plaintext highlighter-rouge">showForRestore</code></a><a href="#sizeToContents"><code class="language-plaintext highlighter-rouge">sizeToContents</code></a><a href="#updateForRestore"><code class="language-plaintext highlighter-rouge">updateForRestore</code></a><a href="#writeToBanner"><code class="language-plaintext highlighter-rouge">writeToBanner</code></a></p>
+<p><a href="#clearWindow"><code class="language-plaintext highlighter-rouge">clearWindow</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#createOutputStreamObj"><code class="language-plaintext highlighter-rouge">createOutputStreamObj</code></a> <a href="#createSystemBanner"><code class="language-plaintext highlighter-rouge">createSystemBanner</code></a> <a href="#cursorTo"><code class="language-plaintext highlighter-rouge">cursorTo</code></a> <a href="#flushBanner"><code class="language-plaintext highlighter-rouge">flushBanner</code></a> <a href="#getBannerID"><code class="language-plaintext highlighter-rouge">getBannerID</code></a> <a href="#initBannerWindow"><code class="language-plaintext highlighter-rouge">initBannerWindow</code></a> <a href="#removeBanner"><code class="language-plaintext highlighter-rouge">removeBanner</code></a> <a href="#setScreenColor"><code class="language-plaintext highlighter-rouge">setScreenColor</code></a> <a href="#setSize"><code class="language-plaintext highlighter-rouge">setSize</code></a> <a href="#setTextColor"><code class="language-plaintext highlighter-rouge">setTextColor</code></a> <a href="#showBanner"><code class="language-plaintext highlighter-rouge">showBanner</code></a> <a href="#showForRestore"><code class="language-plaintext highlighter-rouge">showForRestore</code></a> <a href="#sizeToContents"><code class="language-plaintext highlighter-rouge">sizeToContents</code></a> <a href="#updateForRestore"><code class="language-plaintext highlighter-rouge">updateForRestore</code></a> <a href="#writeToBanner"><code class="language-plaintext highlighter-rouge">writeToBanner</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
-<a href="../object/OutputStreamWindow.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a><a href="../object/OutputStreamWindow.html#createOutputStream"><code class="language-plaintext highlighter-rouge">createOutputStream</code></a><a href="../object/OutputStreamWindow.html#setOutputStream"><code class="language-plaintext highlighter-rouge">setOutputStream</code></a></p>
+<a href="../object/OutputStreamWindow.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a> <a href="../object/OutputStreamWindow.html#createOutputStream"><code class="language-plaintext highlighter-rouge">createOutputStream</code></a> <a href="../object/OutputStreamWindow.html#setOutputStream"><code class="language-plaintext highlighter-rouge">setOutputStream</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="align_"></span></p>
 
@@ -135,11 +107,7 @@ manager automatically handles them.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#450">450</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="handle_"></span></p>
 
@@ -147,11 +115,7 @@ manager automatically handles them.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#441">441</a>]</p>
 
-<div class="desc">
-
-the handle to my system-level banner window
-
-</div>
+<p>the handle to my system-level banner window</p>
 
 <p><span id="id_"></span></p>
 
@@ -159,14 +123,10 @@ the handle to my system-level banner window
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#438">438</a>]</p>
 
-<div class="desc">
-
-The creator-assigned ID string to identify the banner persistently. This
+<p>The creator-assigned ID string to identify the banner persistently. This
 is only needed for banners created dynamically; for BannerWindow objects
 defined statically at compile time, simply leave this value as nil, and
-we'll use the object itself as the identifier.
-
-</div>
+we’ll use the object itself as the identifier.</p>
 
 <p><span id="inited_"></span></p>
 
@@ -174,11 +134,7 @@ we'll use the object itself as the identifier.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#429">429</a>]</p>
 
-<div class="desc">
-
-flag: this banner has been initialized with initBannerWindow()
-
-</div>
+<p>flag: this banner has been initialized with initBannerWindow()</p>
 
 <p><span id="parentID_"></span></p>
 
@@ -186,12 +142,8 @@ flag: this banner has been initialized with initBannerWindow()
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#448">448</a>]</p>
 
-<div class="desc">
-
-Creation parameters. We store these when we create the banner, and
-update them as needed when the banner's display attributes are changed.
-
-</div>
+<p>Creation parameters. We store these when we create the banner, and
+update them as needed when the banner’s display attributes are changed.</p>
 
 <p><span id="size_"></span></p>
 
@@ -199,11 +151,7 @@ update them as needed when the banner's display attributes are changed.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#451">451</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="sizeUnits_"></span></p>
 
@@ -211,11 +159,7 @@ update them as needed when the banner's display attributes are changed.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#452">452</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="styleFlags_"></span></p>
 
@@ -223,11 +167,7 @@ update them as needed when the banner's display attributes are changed.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#453">453</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="windowType_"></span></p>
 
@@ -235,19 +175,11 @@ update them as needed when the banner's display attributes are changed.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#449">449</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="clearWindow"></span></p>
 
@@ -255,12 +187,8 @@ update them as needed when the banner's display attributes are changed.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#309">309</a>]</p>
 
-<div class="desc">
-
-Clear my banner window. This clears out all of the contents of our
-on-screen display area.
-
-</div>
+<p>Clear my banner window. This clears out all of the contents of our
+on-screen display area.</p>
 
 <p><span id="construct"></span></p>
 
@@ -268,20 +196,16 @@ on-screen display area.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#54">54</a>]</p>
 
-<div class="desc">
+<p>Construct the object.</p>
 
-Construct the object.
-
-'id' is a globally unique identifying string for the banner. When we
+<p>‘id’ is a globally unique identifying string for the banner. When we
 dynamically create a banner object, we have to provide a unique
 identifying string, so that we can correlate transient on-screen banners
-with the banners in a saved state when restoring the saved state.
+with the banners in a saved state when restoring the saved state.</p>
 
-Note that no ID string is needed for BannerWindow objects defined
-statically at compile-time, because the object itself ('self') is a
-suitably unique and stable identifier.
-
-</div>
+<p>Note that no ID string is needed for BannerWindow objects defined
+statically at compile-time, because the object itself (‘self’) is a
+suitably unique and stable identifier.</p>
 
 <p><span id="createOutputStreamObj"></span></p>
 
@@ -289,11 +213,7 @@ suitably unique and stable identifier.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#375">375</a>]</p>
 
-<div class="desc">
-
-create our banner output stream
-
-</div>
+<p>create our banner output stream</p>
 
 <p><span id="createSystemBanner"></span></p>
 
@@ -301,16 +221,12 @@ create our banner output stream
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#361">361</a>]</p>
 
-<div class="desc">
-
-Create the system-level banner window. This can be customized as needed,
+<p>Create the system-level banner window. This can be customized as needed,
 although this default implementation should be suitable for most
-instances.
+instances.</p>
 
-Returns true if we are successful in creating the system window, nil if
-we fail.
-
-</div>
+<p>Returns true if we are successful in creating the system window, nil if
+we fail.</p>
 
 <p><span id="cursorTo"></span></p>
 
@@ -318,12 +234,8 @@ we fail.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#326">326</a>]</p>
 
-<div class="desc">
-
-Move the cursor to the given row/column position. This can only be used
-with text-grid banners; for ordinary text banners, this has no effect.
-
-</div>
+<p>Move the cursor to the given row/column position. This can only be used
+with text-grid banners; for ordinary text banners, this has no effect.</p>
 
 <p><span id="flushBanner"></span></p>
 
@@ -331,11 +243,7 @@ with text-grid banners; for ordinary text banners, this has no effect.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#267">267</a>]</p>
 
-<div class="desc">
-
-flush any pending output to the banner
-
-</div>
+<p>flush any pending output to the banner</p>
 
 <p><span id="getBannerID"></span></p>
 
@@ -343,13 +251,9 @@ flush any pending output to the banner
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#334">334</a>]</p>
 
-<div class="desc">
-
-Get the banner identifier. If our 'id\_' property is set to nil, we'll
-assume that we're a statically-defined object, in which case 'self' is a
-suitable identifier. Otherwise, we'll return the identifier string.
-
-</div>
+<p>Get the banner identifier. If our ‘id_’ property is set to nil, we’ll
+assume that we’re a statically-defined object, in which case ‘self’ is a
+suitable identifier. Otherwise, we’ll return the identifier string.</p>
 
 <p><span id="initBannerWindow"></span></p>
 
@@ -357,33 +261,29 @@ suitable identifier. Otherwise, we'll return the identifier string.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#422">422</a>]</p>
 
-<div class="desc">
-
-Initialize the banner window. This is called during initialization (when
+<p>Initialize the banner window. This is called during initialization (when
 first starting the game, or when resetting with RESTART). If the banner
 is to be displayed from the start of the game, this can set up the
-on-screen display.
+on-screen display.</p>
 
-Note that we might already have an on-screen handle when this is called.
-This indicates that we're restarting an ongoing session, and that this
+<p>Note that we might already have an on-screen handle when this is called.
+This indicates that we’re restarting an ongoing session, and that this
 banner already existed in the session before the RESTART operation. If
 desired, we can attach ourselves to the existing on-screen banner,
-avoiding the redrawing that would occur if we created a new window.
+avoiding the redrawing that would occur if we created a new window.</p>
 
-If this window depends upon another window for its layout order
-placement (i.e., we'll call showBanner() with another BannerWindow given
-as the 'other' parameter), then this routine should call the other
-window's initBannerWindow() method before creating its own window, to
+<p>If this window depends upon another window for its layout order
+placement (i.e., we’ll call showBanner() with another BannerWindow given
+as the ‘other’ parameter), then this routine should call the other
+window’s initBannerWindow() method before creating its own window, to
 ensure that the other window has a system window and thus will be
-meaningful to establish the layout order.
+meaningful to establish the layout order.</p>
 
-Overriding implementations should check the 'inited\_' property. If this
-property is true, then it can be assumed that we've already been
-initialized and don't require further initialization. This routine can
+<p>Overriding implementations should check the ‘inited_’ property. If this
+property is true, then it can be assumed that we’ve already been
+initialized and don’t require further initialization. This routine can
 be called multiple times because dependent windows might call us
-directly, before we're called for our regular initialization.
-
-</div>
+directly, before we’re called for our regular initialization.</p>
 
 <p><span id="removeBanner"></span></p>
 
@@ -391,19 +291,15 @@ directly, before we're called for our regular initialization.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#237">237</a>]</p>
 
-<div class="desc">
-
-Remove the banner. This removes the banner's on-screen window. The
+<p>Remove the banner. This removes the banner’s on-screen window. The
 BannerWindow object itself remains valid, but after this method returns,
-the BannerWindow no longer has an associated display window.
+the BannerWindow no longer has an associated display window.</p>
 
-Note that any child banners of ours will become undisplayable after
-we're gone. A child banner depends upon its parent to obtain display
+<p>Note that any child banners of ours will become undisplayable after
+we’re gone. A child banner depends upon its parent to obtain display
 space, so once the parent is gone, its children no longer have any way
 to obtain any display space. Our children remain valid objects even
-after we're closed, but they won't be visible on the display.
-
-</div>
+after we’re closed, but they won’t be visible on the display.</p>
 
 <p><span id="setScreenColor"></span></p>
 
@@ -411,11 +307,7 @@ after we're closed, but they won't be visible on the display.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#319">319</a>]</p>
 
-<div class="desc">
-
-set the screen color in the banner window
-
-</div>
+<p>set the screen color in the banner window</p>
 
 <p><span id="setSize"></span></p>
 
@@ -423,17 +315,13 @@ set the screen color in the banner window
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#280">280</a>]</p>
 
-<div class="desc">
+<p>Set the banner window to a specific size. ‘size’ is the new size, in
+units given by ‘sizeUnits’, which is a BannerSizeXxx constant.</p>
 
-Set the banner window to a specific size. 'size' is the new size, in
-units given by 'sizeUnits', which is a BannerSizeXxx constant.
-
-'isAdvisory' is true or nil; if true, it indicates that the size setting
+<p>‘isAdvisory’ is true or nil; if true, it indicates that the size setting
 is purely advisory, and that a sizeToContents() call will eventually
-follow to set the actual size. When 'isAdvisory is true, the interpreter
-is free to ignore the request if sizeToContents()
-
-</div>
+follow to set the actual size. When ‘isAdvisory is true, the interpreter
+is free to ignore the request if sizeToContents()</p>
 
 <p><span id="setTextColor"></span></p>
 
@@ -441,11 +329,7 @@ is free to ignore the request if sizeToContents()
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#316">316</a>]</p>
 
-<div class="desc">
-
-set the text color in the banner
-
-</div>
+<p>set the text color in the banner</p>
 
 <p><span id="showBanner"></span></p>
 
@@ -453,49 +337,45 @@ set the text color in the banner
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#104">104</a>]</p>
 
-<div class="desc">
+<p>Show the banner. The game should call this method when it first wants to
+display the banner.</p>
 
-Show the banner. The game should call this method when it first wants to
-display the banner.
+<p>‘parent’ is the parent banner; this is an existing BannerWindow object.
+If ‘parent’ is nil, then the parent is the main game text window. The
+new window’s display space is obtained by carving space out of the
+parent’s area, according to the alignment and size values specified.</p>
 
-'parent' is the parent banner; this is an existing BannerWindow object.
-If 'parent' is nil, then the parent is the main game text window. The
-new window's display space is obtained by carving space out of the
-parent's area, according to the alignment and size values specified.
+<p>‘where’ and ‘other’ give the position of the banner among the children
+of the given parent. ‘where’ is one of the constants BannerFirst,
+BannerLast, BannerBefore, or BannerAfter. If ‘where’ is BannerBefore or
+BannerAfter, ‘other’ gives the BannerWindow object to be used as the
+reference point in the parent’s child list; ‘other’ is ignored in other
+cases. Note that ‘other’ must always be another child of the same
+parent; if it’s not, then we act as though ‘where’ were given as
+BannerLast.</p>
 
-'where' and 'other' give the position of the banner among the children
-of the given parent. 'where' is one of the constants BannerFirst,
-BannerLast, BannerBefore, or BannerAfter. If 'where' is BannerBefore or
-BannerAfter, 'other' gives the BannerWindow object to be used as the
-reference point in the parent's child list; 'other' is ignored in other
-cases. Note that 'other' must always be another child of the same
-parent; if it's not, then we act as though 'where' were given as
-BannerLast.
+<p>‘windowType’ is a BannerTypeXxx constant giving the new window’s type.</p>
 
-'windowType' is a BannerTypeXxx constant giving the new window's type.
-
-'align' is a BannerAlignXxx constant giving the alignment of the new
-window. 'size' is an integer giving the size of the banner, in units
-specified by 'sizeUnits', which is a BannerSizeXxx constant. If 'size'
-is nil, it indicates that the caller doesn't care about the size,
+<p>‘align’ is a BannerAlignXxx constant giving the alignment of the new
+window. ‘size’ is an integer giving the size of the banner, in units
+specified by ‘sizeUnits’, which is a BannerSizeXxx constant. If ‘size’
+is nil, it indicates that the caller doesn’t care about the size,
 usually because the caller will be resizing the banner soon anyway; the
 banner will initially have zero size in this case if we create a new
-window, or will retain the existing size if there's already a system
-window.
+window, or will retain the existing size if there’s already a system
+window.</p>
 
-'styleFlags' is a combination of BannerStyleXxx constants (combined with
-the bitwise OR operator, '\|'), giving the requested display style of
-the new banner window.
+<p>‘styleFlags’ is a combination of BannerStyleXxx constants (combined with
+the bitwise OR operator, ‘|’), giving the requested display style of
+the new banner window.</p>
 
-Note that if we already have a system banner window, and the existing
+<p>Note that if we already have a system banner window, and the existing
 banner window has the same characteristics as the new creation
-parameters, we'll simply re-use the existing window rather than closing
+parameters, we’ll simply re-use the existing window rather than closing
 and re-creating it; this reduces unnecessary redrawing in cases where
-the window isn't changing. If the caller explicitly wants to create a
+the window isn’t changing. If the caller explicitly wants to create a
 new window even if we already have a window, the caller should simply
-call removeBanner() before calling this routine.
-
-</div>
+call removeBanner() before calling this routine.</p>
 
 <p><span id="showForRestore"></span></p>
 
@@ -503,14 +383,10 @@ call removeBanner() before calling this routine.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#343">343</a>]</p>
 
-<div class="desc">
-
-Restore this banner. This is called after a RESTORE or UNDO operation
+<p>Restore this banner. This is called after a RESTORE or UNDO operation
 that finds that this banner was being displayed at the time the state
-was saved but is not currently displayed in the active UI. We'll show
-the banner using the characteristics saved persistently.
-
-</div>
+was saved but is not currently displayed in the active UI. We’ll show
+the banner using the characteristics saved persistently.</p>
 
 <p><span id="sizeToContents"></span></p>
 
@@ -518,13 +394,9 @@ the banner using the characteristics saved persistently.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#299">299</a>]</p>
 
-<div class="desc">
-
-Size the banner to its current contents. Note that some systems do not
+<p>Size the banner to its current contents. Note that some systems do not
 support this operation, so callers should always make an advisory call
-to setSize() first to set a size based on the expected content size.
-
-</div>
+to setSize() first to set a size based on the expected content size.</p>
 
 <p><span id="updateForRestore"></span></p>
 
@@ -532,18 +404,14 @@ to setSize() first to set a size based on the expected content size.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#390">390</a>]</p>
 
-<div class="desc">
-
-Update my contents after being restored. By default, this does nothing;
+<p>Update my contents after being restored. By default, this does nothing;
 instances might want to override this to refresh the contents of the
 banner if the banner is normally updated only in response to specific
-events. Note that it's not necessary to do anything here if the banner
+events. Note that it’s not necessary to do anything here if the banner
 will soon be updated automatically as part of normal processing; for
 example, the status line banner is updated at each new command line via
-a prompt-daemon, so there's no need for the status line banner to do
-anything here.
-
-</div>
+a prompt-daemon, so there’s no need for the status line banner to do
+anything here.</p>
 
 <p><span id="writeToBanner"></span></p>
 
@@ -551,18 +419,11 @@ anything here.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#260">260</a>]</p>
 
-<div class="desc">
+<p>write the given text to the banner</p>
 
-write the given text to the banner
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

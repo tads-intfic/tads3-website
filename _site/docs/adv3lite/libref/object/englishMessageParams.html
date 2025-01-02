@@ -40,62 +40,42 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The message parameters object. The language module must provide one
+<p>The message parameters object. The language module must provide one
 instance of MessageParams, to fill in the language-specific list of
-parameter names and expansion functions.
+parameter names and expansion functions.</p>
 
-\[Required\]
+<p>[Required]</p>
 
-**`englishMessageParams`**` :   `[`MessageParams`](../object/MessageParams.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">englishMessageParams</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MessageParams.html"><code class="language-plaintext highlighter-rouge">MessageParams</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">englishMessageParams</code></strong><br />
 <a href="../object/MessageParams.html"><code class="language-plaintext highlighter-rouge">MessageParams</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#params"><code class="language-plaintext highlighter-rouge">params</code></a><a href="#sentenceOrder"><code class="language-plaintext highlighter-rouge">sentenceOrder</code></a><a href="#sLetters"><code class="language-plaintext highlighter-rouge">sLetters</code></a><a href="#verbTab"><code class="language-plaintext highlighter-rouge">verbTab</code></a></p>
+<p><a href="#params"><code class="language-plaintext highlighter-rouge">params</code></a> <a href="#sentenceOrder"><code class="language-plaintext highlighter-rouge">sentenceOrder</code></a> <a href="#sLetters"><code class="language-plaintext highlighter-rouge">sLetters</code></a> <a href="#verbTab"><code class="language-plaintext highlighter-rouge">verbTab</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MessageParams</code> :<br />
-<a href="../object/MessageParams.html#langObj"><code class="language-plaintext highlighter-rouge">langObj</code></a><a href="../object/MessageParams.html#paramTab"><code class="language-plaintext highlighter-rouge">paramTab</code></a></p>
+<a href="../object/MessageParams.html#langObj"><code class="language-plaintext highlighter-rouge">langObj</code></a> <a href="../object/MessageParams.html#paramTab"><code class="language-plaintext highlighter-rouge">paramTab</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#awkwardEnding"><code class="language-plaintext highlighter-rouge">awkwardEnding</code></a><a href="#cmdInfoReflexive"><code class="language-plaintext highlighter-rouge">cmdInfoReflexive</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+<p><a href="#awkwardEnding"><code class="language-plaintext highlighter-rouge">awkwardEnding</code></a> <a href="#cmdInfoReflexive"><code class="language-plaintext highlighter-rouge">cmdInfoReflexive</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MessageParams</code> :<br />
-<a href="../object/MessageParams.html#cmdInfo"><code class="language-plaintext highlighter-rouge">cmdInfo</code></a><a href="../object/MessageParams.html#expand"><code class="language-plaintext highlighter-rouge">expand</code></a><a href="../object/MessageParams.html#findStrParam"><code class="language-plaintext highlighter-rouge">findStrParam</code></a></p>
+<a href="../object/MessageParams.html#cmdInfo"><code class="language-plaintext highlighter-rouge">cmdInfo</code></a> <a href="../object/MessageParams.html#expand"><code class="language-plaintext highlighter-rouge">expand</code></a> <a href="../object/MessageParams.html#findStrParam"><code class="language-plaintext highlighter-rouge">findStrParam</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="params"></span></p>
 
@@ -103,21 +83,17 @@ parameter names and expansion functions.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4202">4202</a>]</p>
 
-<div class="desc">
-
-The English parameter mappings. The base library doesn't use any of
+<p>The English parameter mappings. The base library doesn’t use any of
 these directly, so parameter names and mappings are entirely up to the
 language module. The only part of the library that uses the parameters
 is the library message strings, which are all defined by the language
 module itself. Other translations are free to use different parameter
-names, and don't have to replicate 1-for-1 the parameters defined for
+names, and don’t have to replicate 1-for-1 the parameters defined for
 English. Translations only have to define the parameters needed for
 their own library messages (plus any others they want to provide for use
-by game authors, of course).
+by game authors, of course).</p>
 
-\[Required\]
-
-</div>
+<p>[Required]</p>
 
 <p><span id="sentenceOrder"></span></p>
 
@@ -125,17 +101,13 @@ by game authors, of course).
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4186">4186</a>]</p>
 
-<div class="desc">
-
-The language's general sentence order. This should be a string
+<p>The language’s general sentence order. This should be a string
 containing the letters S, V, and O in the appropriate order for the
 language. S is for Subject, V is for Verb, and O is for Object. For
 example, English is an SVO language, since the general order of an
-English sentence is Subject Verb Object.
+English sentence is Subject Verb Object.</p>
 
-This can be left nil for languages with no prevailing sentence order.
-
-</div>
+<p>This can be left nil for languages with no prevailing sentence order.</p>
 
 <p><span id="sLetters"></span></p>
 
@@ -143,12 +115,8 @@ This can be left nil for languages with no prevailing sentence order.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4649">4649</a>]</p>
 
-<div class="desc">
-
-Word-ending letter combinations that are awkward to follow with a
-contracted verb such a 've.
-
-</div>
+<p>Word-ending letter combinations that are awkward to follow with a
+contracted verb such a ‘ve.</p>
 
 <p><span id="verbTab"></span></p>
 
@@ -156,19 +124,11 @@ contracted verb such a 've.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4643">4643</a>]</p>
 
-<div class="desc">
-
-verb table - we build this at preinit from the verb parameters
-
-</div>
+<p>verb table - we build this at preinit from the verb parameters</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="awkwardEnding"></span></p>
 
@@ -176,12 +136,8 @@ verb table - we build this at preinit from the verb parameters
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4655">4655</a>]</p>
 
-<div class="desc">
-
-Does nam end with one of the letter combinations in sLetters, in which
-case it's awkward to follow it with a contraction.
-
-</div>
+<p>Does nam end with one of the letter combinations in sLetters, in which
+case it’s awkward to follow it with a contraction.</p>
 
 <p><span id="cmdInfoReflexive"></span></p>
 
@@ -189,16 +145,12 @@ case it's awkward to follow it with a contraction.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4571">4571</a>]</p>
 
-<div class="desc">
-
-Check for reflexives in cmdInfo. This is called when we see a noun
+<p>Check for reflexives in cmdInfo. This is called when we see a noun
 phrase being used as an object of the verb (i.e., in a role other than
 as the subject of the verb). If appropriate, we can return a reflexive
-pronoun instead of the noun we'd normally generate. If no reflexive is
+pronoun instead of the noun we’d normally generate. If no reflexive is
 required, we return nil, and the caller will use the normal noun or
-pronoun instead.
-
-</div>
+pronoun instead.</p>
 
 <p><span id="construct"></span></p>
 
@@ -206,18 +158,11 @@ pronoun instead.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4593">4593</a>]</p>
 
-<div class="desc">
+<p>On construction, fill in the verb parameters from CustomVocab objects.</p>
 
-On construction, fill in the verb parameters from CustomVocab objects.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

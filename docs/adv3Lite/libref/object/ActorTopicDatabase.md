@@ -81,7 +81,7 @@ Modifications to ActorTopicDatabase for SceneTopic extension
 
 
 
-[`askForTopics`](#askForTopics)[`askTopics`](#askTopics)[`commandTopics`](#commandTopics)[`defaultAgendaTopic`](#defaultAgendaTopic)[`giveTopics`](#giveTopics)[`initiateTopics`](#initiateTopics)[`miscTopics`](#miscTopics)[`queryTopics`](#queryTopics)[`sayTopics`](#sayTopics)[`sceneEndTopics`](#sceneEndTopics)[`sceneStartTopics`](#sceneStartTopics)[`showTopics`](#showTopics)[`talkTopics`](#talkTopics)[`tellTopics`](#tellTopics)
+[`askForTopics`](#askForTopics) [`askTopics`](#askTopics) [`commandTopics`](#commandTopics) [`defaultAgendaTopic`](#defaultAgendaTopic) [`giveTopics`](#giveTopics) [`initiateTopics`](#initiateTopics) [`miscTopics`](#miscTopics) [`queryTopics`](#queryTopics) [`sayTopics`](#sayTopics) [`sceneEndTopics`](#sceneEndTopics) [`sceneStartTopics`](#sceneStartTopics) [`showTopics`](#showTopics) [`talkTopics`](#talkTopics) [`tellTopics`](#tellTopics)
 
 
 
@@ -93,10 +93,10 @@ Modifications to ActorTopicDatabase for SceneTopic extension
 
 
 
-[`initiateTopic`](#initiateTopic)[`listableTopics`](#listableTopics)
+[`initiateTopic`](#initiateTopic) [`listableTopics`](#listableTopics)
 
 Inherited from `TopicDatabase` :  
-[`addTopic`](../object/TopicDatabase.html#addTopic)[`getBestMatch`](../object/TopicDatabase.html#getBestMatch)
+[`addTopic`](../object/TopicDatabase.html#addTopic) [`getBestMatch`](../object/TopicDatabase.html#getBestMatch)
 
 <span id="_Properties_"></span>
 

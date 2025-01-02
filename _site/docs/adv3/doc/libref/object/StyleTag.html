@@ -46,79 +46,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Style tag. This defines an HTML-like tag that can be used in output text
+to display an author-customizable substitution string.</p>
 
-Style tag. This defines an HTML-like tag that can be used in output text
-to display an author-customizable substitution string.
-
-Each StyleTag object defines the name of the tag, which can be invoked
-in output text using the syntax "\&lt;.name\&gt;" - we require the period
+<p>Each StyleTag object defines the name of the tag, which can be invoked
+in output text using the syntax “&lt;.name&gt;” - we require the period
 after the opening angle-bracket to plainly distinguish the sequence as a
-style tag, not a regular HTML tag.
+style tag, not a regular HTML tag.</p>
 
-Each StyleTag also defines the text string that should be substituted
-for each occurrence of the "\&lt;.name\&gt;" sequence in output text, and,
+<p>Each StyleTag also defines the text string that should be substituted
+for each occurrence of the “&lt;.name&gt;” sequence in output text, and,
 optionally, another string that is substituted for occurrences of the
-"closing" version of the tag, invoked with the syntax "\&lt;./name\&gt;".
+“closing” version of the tag, invoked with the syntax “&lt;./name&gt;”.</p>
 
-`class `**`StyleTag`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">StyleTag</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">StyleTag</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">StyleTag</code></strong><br />
 <a href="../object/HtmlStyleTag.html"><code class="language-plaintext highlighter-rouge">HtmlStyleTag</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/announceObjStyleTag.html"><code class="language-plaintext highlighter-rouge">announceObjStyleTag</code></a><a href="../object/assumeStyleTag.html"><code class="language-plaintext highlighter-rouge">assumeStyleTag</code></a><a href="../object/notificationStyleTag.html"><code class="language-plaintext highlighter-rouge">notificationStyleTag</code></a><a href="../object/parserStyleTag.html"><code class="language-plaintext highlighter-rouge">parserStyleTag</code></a><a href="../object/roomdescStyleTag.html"><code class="language-plaintext highlighter-rouge">roomdescStyleTag</code></a><a href="../object/roomnameStyleTag.html"><code class="language-plaintext highlighter-rouge">roomnameStyleTag</code></a><a href="../object/roomparaStyleTag.html"><code class="language-plaintext highlighter-rouge">roomparaStyleTag</code></a><a href="../object/tipStyleTag.html"><code class="language-plaintext highlighter-rouge">tipStyleTag</code></a>
+<p><a href="../object/announceObjStyleTag.html"><code class="language-plaintext highlighter-rouge">announceObjStyleTag</code></a> <a href="../object/assumeStyleTag.html"><code class="language-plaintext highlighter-rouge">assumeStyleTag</code></a> <a href="../object/notificationStyleTag.html"><code class="language-plaintext highlighter-rouge">notificationStyleTag</code></a> <a href="../object/parserStyleTag.html"><code class="language-plaintext highlighter-rouge">parserStyleTag</code></a> <a href="../object/roomdescStyleTag.html"><code class="language-plaintext highlighter-rouge">roomdescStyleTag</code></a> <a href="../object/roomnameStyleTag.html"><code class="language-plaintext highlighter-rouge">roomnameStyleTag</code></a> <a href="../object/roomparaStyleTag.html"><code class="language-plaintext highlighter-rouge">roomparaStyleTag</code></a> <a href="../object/tipStyleTag.html"><code class="language-plaintext highlighter-rouge">tipStyleTag</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#closeText"><code class="language-plaintext highlighter-rouge">closeText</code></a><a href="#openText"><code class="language-plaintext highlighter-rouge">openText</code></a><a href="#tagName"><code class="language-plaintext highlighter-rouge">tagName</code></a></p>
+<p><a href="#closeText"><code class="language-plaintext highlighter-rouge">closeText</code></a> <a href="#openText"><code class="language-plaintext highlighter-rouge">openText</code></a> <a href="#tagName"><code class="language-plaintext highlighter-rouge">tagName</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><em>(none)</em> <span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="closeText"></span></p>
 
@@ -126,13 +98,9 @@ optionally, another string that is substituted for occurrences of the
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#780">780</a>]</p>
 
-<div class="desc">
-
-Closing text - this is substituted for each instance of the tag with a
-'/' prefix (\&lt;./xxx\&gt;). Note that non-container tags don't have closing
-text at all.
-
-</div>
+<p>Closing text - this is substituted for each instance of the tag with a
+‘/’ prefix (&lt;./xxx&gt;). Note that non-container tags don’t have closing
+text at all.</p>
 
 <p><span id="openText"></span></p>
 
@@ -140,12 +108,8 @@ text at all.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#773">773</a>]</p>
 
-<div class="desc">
-
-opening text - this is substituted for each instance of the tag without
-a '/' prefix
-
-</div>
+<p>opening text - this is substituted for each instance of the tag without
+a ‘/’ prefix</p>
 
 <p><span id="tagName"></span></p>
 
@@ -153,28 +117,17 @@ a '/' prefix
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#767">767</a>]</p>
 
-<div class="desc">
-
-name of the tag - the tag appears in source text in \&lt;.xxx\&gt; notation
-
-</div>
+<p>name of the tag - the tag appears in source text in &lt;.xxx&gt; notation</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

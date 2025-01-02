@@ -1,7 +1,7 @@
 import os
 
 files = [f for f in os.listdir('.') if f.endswith('.md') and '-' in f]
-files.sort(key=lambda x: int(x.split('-')[0]))
+files.sort(key=lambda x: int(x.split('-') [0]))
 
 for i, fn in enumerate(files):
     with open(fn, "a") as f:

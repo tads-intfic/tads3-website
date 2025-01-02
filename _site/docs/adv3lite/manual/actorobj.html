@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; The Actor Object  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; The Actor Object<br />
 <span class="navnp"><a href="actoroverview.html" class="nav"><em>Prev:</em> NPC Overview</a>
     <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="the-actor-object">The Actor Object</h1>
 
@@ -87,12 +79,11 @@ to nil.</li>
 
 <p>A minimal Actor definition might thus look something like this:</p>
 
-<p>`
-    george: Actor ‘George; tall thin; man; him’ @hall
-        “He’s a tall thin man. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    globalParamName = 'george'
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    george: Actor 'George; tall thin; man; him' @hall
+        "He's a tall thin man. "    
+       
+        globalParamName = 'george'
+    ;
 </code></pre></div></div>
 
 <p><span id="additional"></span></p>
@@ -367,43 +358,39 @@ to set the ProxyActor’s location property to the Actor it’s standing in
 for, which we can do via the @ notation in the ProxyActor template,
 e.g.:</p>
 
-<p>`
-    ProxyActor @guard  <br />
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ProxyActor @guard    
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ guardAlertState: ActorState
-   isInitState = true
-   specialDesc = "A burly guard blocks your path, eyeing you suspiciously. "
-   stateDesc = 'You certainly don\'t want to mess with him. '
-   
-   beforeTravel(traveler, connector)
-   {
-      if(traveler == gPlayerChar &amp;&amp; connector == forbiddenDoor)
-      {
-          "The guard blocks your path with a warning snarl. ";
-          exit;
-      }
-   }
-;
+    + guardAlertState: ActorState
+       isInitState = true
+       specialDesc = "A burly guard blocks your path, eyeing you suspiciously. "
+       stateDesc = 'You certainly don\'t want to mess with him. '
+       
+       beforeTravel(traveler, connector)
+       {
+          if(traveler == gPlayerChar &amp;&amp; connector == forbiddenDoor)
+          {
+              "The guard blocks your path with a warning snarl. ";
+              exit;
+          }
+       }
+    ;
 
-+ guardAgenda: AgendaItem
-   ...
+    + guardAgenda: AgendaItem
+       ...
 
-; `
+    ;
 </code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; The Actor Object  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; The Actor Object<br />
 <span class="navnp"><a href="actoroverview.html" class="nav"><em>Prev:</em> NPC Overview</a>
     <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

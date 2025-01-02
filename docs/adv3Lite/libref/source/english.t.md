@@ -317,7 +317,7 @@ layout: docs
                      *   possibilities, it's easy to store an integer instead,
                      *   and it saves a bit of space.)  
                      */
-                    anTab[rexGroup(2)[3]] = rexGroup(1)[3] == 'a' ? 1 : 2;
+                    anTab[rexGroup(2) [3]] = rexGroup(1) [3] == 'a' ? 1 : 2;
                 }
 
                 /* we're done with these lists - to save space, forget them */
@@ -1002,7 +1002,7 @@ layout: docs
                                 MatchWeak);
                 
                 /* note the new part of speech */
-                switch (rexGroup(1)[3])
+                switch (rexGroup(1) [3])
                 {
                 case 'n':
                     matchFlags |= MatchNoun;
@@ -1057,7 +1057,7 @@ layout: docs
     //             *   strip off the apostrophe-S, since the tokenizer will do
     //             *   this when parsing the input 
     //             */
-    //            w = rexGroup(1)[3];
+    //            w = rexGroup(1) [3];
     //
     //            /* mark it as an apostrophe-S word in the dictionary */
     //            partOfSpeech = &nounApostS;
@@ -1081,7 +1081,7 @@ layout: docs
                  *   full token with the apostrophe-S for the actual noun phrase
                  *   matching.
                  */
-                cmdDict.addWord(dictionaryPlaceholder, rexGroup(1)[3],
+                cmdDict.addWord(dictionaryPlaceholder, rexGroup(1) [3],
                                 partOfSpeech);
             }
             
@@ -1100,7 +1100,7 @@ layout: docs
             else if (w.find(pluralPat) != nil)
             {
                 /* there's an explicit plural - retrieve it */
-                local pl = rexGroup(1)[3];
+                local pl = rexGroup(1) [3];
 
                 /* strip it out of the string */
                 w = w.findReplace(pluralPat, '', ReplaceOnce);
@@ -1578,7 +1578,7 @@ layout: docs
                  */
                 local sc;
                 if (rexMatch(firstWordPat, str)
-                    && (sc = specialAOrAn[rexGroup(1)[3]]) != nil)
+                    && (sc = specialAOrAn[rexGroup(1) [3]]) != nil)
                     return (sc == 1 ? 'a ' : 'an ') + str;
 
                 /* get the first character of the name */
@@ -1754,8 +1754,8 @@ layout: docs
                  *   part we'll actually pluralize, and the rest is a suffix 
                  *   we'll stick on the end of the pluralized part. 
                  */
-                str = rexGroup(1)[3];
-                str2 = rexGroup(2)[3];
+                str = rexGroup(1) [3];
+                str2 = rexGroup(2) [3];
 
                 /*
                  *   now pluralize the part up to the 'of' using the normal
@@ -1768,8 +1768,8 @@ layout: docs
             rexMatch(lastWordPat, str);
 
             /* pluralize the last word */
-            str = rexGroup(1)[3];
-            str2 = rexGroup(2)[3];
+            str = rexGroup(1) [3];
+            str2 = rexGroup(2) [3];
             return str + pluralWordFrom(str2, '&rsquo;');
         }
 
@@ -1807,7 +1807,7 @@ layout: docs
 
             /* check for words ending in 'man' */
             if (rexMatch(menPluralPat, str))
-                return '<<rexGroup(1)[3]>>men';
+                return '<<rexGroup(1) [3]>>men';
 
             /* if the string is empty, return empty */
             len = str.length();
@@ -1839,7 +1839,7 @@ layout: docs
 
             /* check for 'y' -> 'ies' plurals */
             if (rexMatch(iesPluralPat, str) != nil)
-                return '<<rexGroup(1)[3]>>ies';
+                return '<<rexGroup(1) [3]>>ies';
 
             /* for anything else, just add -s */
             return '<<str>>s';
@@ -3837,7 +3837,7 @@ layout: docs
             local r;
             if (rexGroup(3) != nil)
             {
-                r = rexGroup(3)[3];
+                r = rexGroup(3) [3];
                 r = (r == 'dobj' ? DirectObject :
                      r == 'iobj' ? IndirectObject :
                      AccessoryObject);
@@ -3852,10 +3852,10 @@ layout: docs
             }
 
             /* get the preposition, if supplied */
-            local prep = (rexGroup(1) != nil ? rexGroup(1)[3].substr(2) : '');
+            local prep = (rexGroup(1) != nil ? rexGroup(1) [3].substr(2) : '');
 
             /* return the noun phrase */
-            return npListPronoun(rexGroup(2)[3], cmd.(r.npListProp), prep);
+            return npListPronoun(rexGroup(2) [3], cmd.(r.npListProp), prep);
         };
 
         /* substitute each other-object phrase and return the result */    
@@ -5195,7 +5195,7 @@ layout: docs
         local idx = ctx.subj.person == 3 && !ctx.subj.plural ? 2 : 1;
         
         /* get the infinitive form by splitting off any [x/y] ending */
-        local inf = params[2].split('[')[1];
+        local inf = params[2].split('[') [1];
 
         /* look up the conjugation in the current tense */
         switch (Narrator.tense)
@@ -5242,7 +5242,7 @@ layout: docs
         local idx = ctx.subj.person == 3 && !ctx.subj.plural ? 2 : 1;
         
         /* get the infinitive form by splitting off any [x/y] ending */
-        local inf = params[2].split('[')[1];
+        local inf = params[2].split('[') [1];
 
         /* look up the conjugation in the current tense */
         switch (Narrator.tense)
@@ -5312,7 +5312,7 @@ layout: docs
      */
     conjugateMust(ctx, params)
     {
-        local inf = params[2].split('[')[1];    
+        local inf = params[2].split('[') [1];    
         
         local part = pastParticiple(params[2]);
         local idx = ctx.subj.person == 3 && !ctx.subj.plural ? 2 : 1;
@@ -5362,12 +5362,12 @@ layout: docs
                  *   infinitive - we want the part before the slash, plus the
                  *   extra prepositions (or whatever) after the switched part
                  */
-                return rexGroup(1)[3] + rexGroup(3)[3];
+                return rexGroup(1) [3] + rexGroup(3) [3];
             }
             else
             {
                 /* participle - it's the part after the slash */
-                return rexGroup(2)[3] + rexGroup(3)[3];
+                return rexGroup(2) [3] + rexGroup(3) [3];
             }
         }
       
@@ -5556,15 +5556,15 @@ layout: docs
 
             /* start off with the infinitive or participle, as desired */
             if (inf)
-                ret = rexGroup(1)[3];
+                ret = rexGroup(1) [3];
             else
-                ret = rexGroup(2)[3];
+                ret = rexGroup(2) [3];
 
             /* get the prepositional complementizer */
-            vcomp = rexGroup(3)[3];
+            vcomp = rexGroup(3) [3];
 
             /* get the direct object preposition */
-            dprep = rexGroup(4)[3];
+            dprep = rexGroup(4) [3];
 
             /*
              *   if the direct object is not a pronoun, put the complementizer
@@ -5590,7 +5590,7 @@ layout: docs
              *   if there's any suffix following the direct object
              *   placeholder, add it at the end of the phrase
              */
-            ret += rexGroup(5)[3];
+            ret += rexGroup(5) [3];
 
             /* return the complete phrase string */
             return ret;
@@ -5646,16 +5646,16 @@ layout: docs
 
             /* start off with the infinitive or participle, as desired */
             if (inf)
-                ret = rexGroup(1)[3];
+                ret = rexGroup(1) [3];
             else
-                ret = rexGroup(2)[3];
+                ret = rexGroup(2) [3];
 
             /* get the complementizer */
-            vcomp = (rexGroup(3) == nil ? '' : rexGroup(3)[3]);
+            vcomp = (rexGroup(3) == nil ? '' : rexGroup(3) [3]);
 
             /* get the direct and indirect object prepositions */
-            dprep = rexGroup(4)[3];
-            iprep = rexGroup(5)[3];
+            dprep = rexGroup(4) [3];
+            iprep = rexGroup(5) [3];
 
             /*
              *   add the complementizer BEFORE the direct object, if the
@@ -5786,7 +5786,7 @@ layout: docs
              *   Obtain the verb from the first part of the verbPhrase of the
              *   verbRule of the action matched by this CommandTopic.
              */
-            local verb = myAction.verbRule.verbPhrase.split('/')[1];
+            local verb = myAction.verbRule.verbPhrase.split('/') [1];
             
             /*  
              *   Go through all the grammar templates associated with the action

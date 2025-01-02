@@ -49,12 +49,12 @@ like finishOptionRestart, but shows a different option name.
 
 
 
-[`desc`](#desc)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)
+[`desc`](#desc) [`responseChar`](#responseChar) [`responseKeyword`](#responseKeyword)
 
 
 
 Inherited from `FinishOption` :  
-[`listed`](../object/FinishOption.html#listed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
+[`listed`](../object/FinishOption.html#listed) [`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 

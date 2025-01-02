@@ -113,7 +113,7 @@ they're all actually parts of one larger object.
 [`getConnectedContainers`](#getConnectedContainers)
 
 Inherited from `BaseMultiLoc` :  
-[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass)[`locationList`](../object/BaseMultiLoc.html#locationList)
+[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass) [`locationList`](../object/BaseMultiLoc.html#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -123,10 +123,10 @@ Inherited from `BaseMultiLoc` :
 
 
 
-[`addDirectConnections`](#addDirectConnections)[`baseMoveInto`](#baseMoveInto)[`baseMoveIntoAdd`](#baseMoveIntoAdd)[`baseMoveOutOf`](#baseMoveOutOf)[`cloneForMultiInstanceContents`](#cloneForMultiInstanceContents)[`cloneMultiInstanceContents`](#cloneMultiInstanceContents)[`forEachConnectedContainer`](#forEachConnectedContainer)[`forEachContainer`](#forEachContainer)[`getDropDestination`](#getDropDestination)[`initializeLocation`](#initializeLocation)[`moveIntoAdd`](#moveIntoAdd)[`moveOutOf`](#moveOutOf)[`reInitializeLocation`](#reInitializeLocation)[`restoreLocation`](#restoreLocation)[`saveLocation`](#saveLocation)[`sensePathToLoc`](#sensePathToLoc)[`shineOnLoc`](#shineOnLoc)
+[`addDirectConnections`](#addDirectConnections) [`baseMoveInto`](#baseMoveInto) [`baseMoveIntoAdd`](#baseMoveIntoAdd) [`baseMoveOutOf`](#baseMoveOutOf) [`cloneForMultiInstanceContents`](#cloneForMultiInstanceContents) [`cloneMultiInstanceContents`](#cloneMultiInstanceContents) [`forEachConnectedContainer`](#forEachConnectedContainer) [`forEachContainer`](#forEachContainer) [`getDropDestination`](#getDropDestination) [`initializeLocation`](#initializeLocation) [`moveIntoAdd`](#moveIntoAdd) [`moveOutOf`](#moveOutOf) [`reInitializeLocation`](#reInitializeLocation) [`restoreLocation`](#restoreLocation) [`saveLocation`](#saveLocation) [`sensePathToLoc`](#sensePathToLoc) [`shineOnLoc`](#shineOnLoc)
 
 Inherited from `BaseMultiLoc` :  
-[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList)[`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn)[`isIn`](../object/BaseMultiLoc.html#isIn)[`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn)[`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents)[`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
+[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList) [`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn) [`isIn`](../object/BaseMultiLoc.html#isIn) [`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn) [`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents) [`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
 
 <span id="_Properties_"></span>
 

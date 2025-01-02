@@ -36,7 +36,7 @@ permission.
 
 
 
-[`Attachable`](../object/Attachable.html)[`BagOfHolding`](../object/BagOfHolding.html)[`Candle`](../object/Candle.html)[`ComplexComponent`](../object/ComplexComponent.html)[`ComplexContainer`](../object/ComplexContainer.html)[`ContainerDoor`](../object/ContainerDoor.html)[`Dispensable`](../object/Dispensable.html)[`Dispenser`](../object/Dispenser.html)[`FireSource`](../object/FireSource.html)[`FueledLightSource`](../object/FueledLightSource.html)[`GuidedInTravelState`](../object/GuidedInTravelState.html)[`GuidedTourState`](../object/GuidedTourState.html)[`Key`](../object/Key.html)[`Keyring`](../object/Keyring.html)[`Matchbook`](../object/Matchbook.html)[`Matchstick`](../object/Matchstick.html)[`NearbyAttachable`](../object/NearbyAttachable.html)[`PermanentAttachment`](../object/PermanentAttachment.html)[`PermanentAttachmentChild`](../object/PermanentAttachmentChild.html)[`PlugAttachable`](../object/PlugAttachable.html)[`PresentLater`](../object/PresentLater.html)[`RearContainer`](../object/RearContainer.html)[`RearSurface`](../object/RearSurface.html)[`RestrictedRearContainer`](../object/RestrictedRearContainer.html)[`RestrictedRearSurface`](../object/RestrictedRearSurface.html)[`RestrictedUnderside`](../object/RestrictedUnderside.html)[`SpaceOverlay`](../object/SpaceOverlay.html)[`SpaceOverlayAbandonFinisher`](../object/SpaceOverlayAbandonFinisher.html)[`StretchyContainer`](../object/StretchyContainer.html)[`TourGuide`](../object/TourGuide.html)[`Underside`](../object/Underside.html)
+[`Attachable`](../object/Attachable.html) [`BagOfHolding`](../object/BagOfHolding.html) [`Candle`](../object/Candle.html) [`ComplexComponent`](../object/ComplexComponent.html) [`ComplexContainer`](../object/ComplexContainer.html) [`ContainerDoor`](../object/ContainerDoor.html) [`Dispensable`](../object/Dispensable.html) [`Dispenser`](../object/Dispenser.html) [`FireSource`](../object/FireSource.html) [`FueledLightSource`](../object/FueledLightSource.html) [`GuidedInTravelState`](../object/GuidedInTravelState.html) [`GuidedTourState`](../object/GuidedTourState.html) [`Key`](../object/Key.html) [`Keyring`](../object/Keyring.html) [`Matchbook`](../object/Matchbook.html) [`Matchstick`](../object/Matchstick.html) [`NearbyAttachable`](../object/NearbyAttachable.html) [`PermanentAttachment`](../object/PermanentAttachment.html) [`PermanentAttachmentChild`](../object/PermanentAttachmentChild.html) [`PlugAttachable`](../object/PlugAttachable.html) [`PresentLater`](../object/PresentLater.html) [`RearContainer`](../object/RearContainer.html) [`RearSurface`](../object/RearSurface.html) [`RestrictedRearContainer`](../object/RestrictedRearContainer.html) [`RestrictedRearSurface`](../object/RestrictedRearSurface.html) [`RestrictedUnderside`](../object/RestrictedUnderside.html) [`SpaceOverlay`](../object/SpaceOverlay.html) [`SpaceOverlayAbandonFinisher`](../object/SpaceOverlayAbandonFinisher.html) [`StretchyContainer`](../object/StretchyContainer.html) [`TourGuide`](../object/TourGuide.html) [`Underside`](../object/Underside.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -45,7 +45,7 @@ permission.
 
 
 
-[`nearbyAttachableCond`](../object/nearbyAttachableCond.html)[`objNotAttached`](../object/objNotAttached.html)
+[`nearbyAttachableCond`](../object/nearbyAttachableCond.html) [`objNotAttached`](../object/objNotAttached.html)
 <span id="FunctionSummary_"></span>
 
 

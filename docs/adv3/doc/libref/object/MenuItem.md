@@ -91,10 +91,10 @@ Menu Item - user interface implementation for the console
 
 
 
-[`bgcolor`](#bgcolor)[`curKeyList`](#curKeyList)[`curMenu`](#curMenu)[`fgcolor`](#fgcolor)[`fullScreenMode`](#fullScreenMode)[`heading`](#heading)[`indent`](#indent)[`isOpen`](#isOpen)[`keyList`](#keyList)[`prevMenuLink`](#prevMenuLink)[`title`](#title)[`topbarbg`](#topbarbg)[`topbarfg`](#topbarfg)[`topMenu`](#topMenu)
+[`bgcolor`](#bgcolor) [`curKeyList`](#curKeyList) [`curMenu`](#curMenu) [`fgcolor`](#fgcolor) [`fullScreenMode`](#fullScreenMode) [`heading`](#heading) [`indent`](#indent) [`isOpen`](#isOpen) [`keyList`](#keyList) [`prevMenuLink`](#prevMenuLink) [`title`](#title) [`topbarbg`](#topbarbg) [`topbarfg`](#topbarfg) [`topMenu`](#topMenu)
 
 Inherited from `MenuObject` :  
-[`contents`](../object/MenuObject.html#contents)[`menuOrder`](../object/MenuObject.html#menuOrder)
+[`contents`](../object/MenuObject.html#contents) [`menuOrder`](../object/MenuObject.html#menuOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -104,10 +104,10 @@ Inherited from `MenuObject` :
 
 
 
-[`display`](#display)[`enterSubMenu`](#enterSubMenu)[`formatXML`](#formatXML)[`getChildIndex`](#getChildIndex)[`getKeysXML`](#getKeysXML)[`getNextMenu`](#getNextMenu)[`getPrevMenu`](#getPrevMenu)[`getXML`](#getXML)[`refreshTopMenuBanner`](#refreshTopMenuBanner)[`removeStatusLine`](#removeStatusLine)[`removeTopMenuBanner`](#removeTopMenuBanner)[`showMenu`](#showMenu)[`showMenuHtml`](#showMenuHtml)[`showMenuText`](#showMenuText)[`showTopMenuBanner`](#showTopMenuBanner)[`updateContents`](#updateContents)
+[`display`](#display) [`enterSubMenu`](#enterSubMenu) [`formatXML`](#formatXML) [`getChildIndex`](#getChildIndex) [`getKeysXML`](#getKeysXML) [`getNextMenu`](#getNextMenu) [`getPrevMenu`](#getPrevMenu) [`getXML`](#getXML) [`refreshTopMenuBanner`](#refreshTopMenuBanner) [`removeStatusLine`](#removeStatusLine) [`removeTopMenuBanner`](#removeTopMenuBanner) [`showMenu`](#showMenu) [`showMenuHtml`](#showMenuHtml) [`showMenuText`](#showMenuText) [`showTopMenuBanner`](#showTopMenuBanner) [`updateContents`](#updateContents)
 
 Inherited from `MenuObject` :  
-[`addToContents`](../object/MenuObject.html#addToContents)[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)[`execute`](../object/MenuObject.html#execute)[`initializeContents`](../object/MenuObject.html#initializeContents)[`initializeLocation`](../object/MenuObject.html#initializeLocation)
+[`addToContents`](../object/MenuObject.html#addToContents) [`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort) [`execute`](../object/MenuObject.html#execute) [`initializeContents`](../object/MenuObject.html#initializeContents) [`initializeLocation`](../object/MenuObject.html#initializeLocation)
 
 <span id="_Properties_"></span>
 

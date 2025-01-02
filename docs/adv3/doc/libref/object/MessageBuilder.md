@@ -57,7 +57,7 @@ is usually something like 'actor', 'dobj', or 'iobj'.
 One instance of this class, called langMessageBuilder, should be created
 by the language-specific library.
 
-`class `**`MessageBuilder`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
+`class `**`MessageBuilder`**` :   `[`OutputFilter`](../object/OutputFilter.html) [`PreinitObject`](../object/PreinitObject.html)
 
 
 
@@ -100,14 +100,14 @@ by the language-specific library.
 
 
 
-[`lastParamObj_`](#lastParamObj_)[`lastTargetObj_`](#lastTargetObj_)[`nameTable_`](#nameTable_)[`paramList_`](#paramList_)[`paramTable_`](#paramTable_)[`patAllCaps`](#patAllCaps)[`patIdObj`](#patIdObj)[`patIdObjSlashId`](#patIdObjSlashId)[`patIdSlash`](#patIdSlash)[`patUpper`](#patUpper)
+[`lastParamObj_`](#lastParamObj_) [`lastTargetObj_`](#lastTargetObj_) [`nameTable_`](#nameTable_) [`paramList_`](#paramList_) [`paramTable_`](#paramTable_) [`patAllCaps`](#patAllCaps) [`patIdObj`](#patIdObj) [`patIdObjSlashId`](#patIdObjSlashId) [`patIdSlash`](#patIdSlash) [`patUpper`](#patUpper)
 
 
 
 
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -117,14 +117,14 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`execute`](#execute)[`filterText`](#filterText)[`generateMessage`](#generateMessage)[`genLiteral`](#genLiteral)[`getTargetProp`](#getTargetProp)[`langRewriteParam`](#langRewriteParam)[`processResult`](#processResult)[`quoteMessage`](#quoteMessage)
+[`execute`](#execute) [`filterText`](#filterText) [`generateMessage`](#generateMessage) [`genLiteral`](#genLiteral) [`getTargetProp`](#getTargetProp) [`langRewriteParam`](#langRewriteParam) [`processResult`](#processResult) [`quoteMessage`](#quoteMessage)
 
 
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

@@ -46,79 +46,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Network Request Event. This type of event occurs when a server (such as
+an HTTPServer object) receives a request from a network client.</p>
 
-Network Request Event. This type of event occurs when a server (such as
-an HTTPServer object) receives a request from a network client.
-
-The evRequest member contains a request object describing the network
+<p>The evRequest member contains a request object describing the network
 request. The class of this object depends on the type of server that
 received the request. For example, for an HTTP server, this will be an
 HTTPRequest object. To reply to the request, use the appropriate
 method(s) in the request object - for details, see the specific request
-classes for the server types you create in your program.
+classes for the server types you create in your program.</p>
 
-`class `**`NetRequestEvent`**` :   `[`NetEvent`](../object/NetEvent.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">NetRequestEvent</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/NetEvent.html"><code class="language-plaintext highlighter-rouge">NetEvent</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">NetRequestEvent</code></strong><br />
 <a href="../object/NetEvent.html"><code class="language-plaintext highlighter-rouge">NetEvent</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#evRequest"><code class="language-plaintext highlighter-rouge">evRequest</code></a><a href="#evType"><code class="language-plaintext highlighter-rouge">evType</code></a></p>
+<p><a href="#evRequest"><code class="language-plaintext highlighter-rouge">evRequest</code></a> <a href="#evType"><code class="language-plaintext highlighter-rouge">evType</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">NetEvent</code> :<br />
 <a href="../object/NetEvent.html#evArgs"><code class="language-plaintext highlighter-rouge">evArgs</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="evRequest"></span></p>
 
@@ -126,15 +98,11 @@ classes for the server types you create in your program.
 
 <p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#97">97</a>]</p>
 
-<div class="desc">
-
-The request object. When the event type is NetEvRequest, this contains a
+<p>The request object. When the event type is NetEvRequest, this contains a
 request object describing the request. The class of the request object
 varies according to the server type; you can use ofKind() to check which
 type of request it is. For example, for an HTTP request, this will be an
-object of class HTTPRequest.
-
-</div>
+object of class HTTPRequest.</p>
 
 <p><span id="evType"></span></p>
 
@@ -142,19 +110,11 @@ object of class HTTPRequest.
 
 <p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#88">88</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -162,18 +122,11 @@ object of class HTTPRequest.
 
 <p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#82">82</a>]</p>
 
-<div class="desc">
+<p>construction</p>
 
-construction
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

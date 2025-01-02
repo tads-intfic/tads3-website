@@ -70,7 +70,7 @@ characteristics of the parent lister.
 
 
 
-[`parentGroup`](#parentGroup)[`parentLister`](#parentLister)
+[`parentGroup`](#parentGroup) [`parentLister`](#parentLister)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ characteristics of the parent lister.
 
 
 
-[`construct`](#construct)[`getTopLister`](#getTopLister)[`propNotDefined`](#propNotDefined)[`showListEmpty`](#showListEmpty)[`showListItem`](#showListItem)[`showListItemCounted`](#showListItemCounted)[`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
+[`construct`](#construct) [`getTopLister`](#getTopLister) [`propNotDefined`](#propNotDefined) [`showListEmpty`](#showListEmpty) [`showListItem`](#showListItem) [`showListItemCounted`](#showListItemCounted) [`showListPrefixTall`](#showListPrefixTall) [`showListPrefixWide`](#showListPrefixWide) [`showListSuffixWide`](#showListSuffixWide)
 
 <span id="_Properties_"></span>
 

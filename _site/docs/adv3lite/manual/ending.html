@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Endings  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Endings<br />
 <span class="navnp"><a href="beginning.html" class="nav"><em>Prev:</em> Beginnings</a>
     <a href="optional.html" class="nav"><em>Next:</em> Part III: Optional
-Modules</a>     </span>
-
-</div>
+Modules</a>     </span></p>
 
 <h1 id="endings">Endings</h1>
 
@@ -84,24 +76,23 @@ player character sets off down the drive from the front of the house.
 The definition of the drive location to achieve this might then look
 something like this:</p>
 
-<p>`
-    drive: Room ‘Front Drive’ ‘front drive’
-        “The front drive sweeps round from the northwest and comes to an end just in
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    drive: Room 'Front Drive' 'front drive'
+        "The front drive sweeps round from the northwest and comes to an end just in
         front of the house, which stands directly to the east. A narrow path runs
-        round the side of the house to the southeast. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = frontDoorOutside
-    southeast = sidePath
-    
-    northwest()
-    {
-        "You stride off down the drive to safety. ";
-        finishGameMsg(ftVictory, [finishOptionUndo, finishOptionFullScore, 
-                 finishOptionCredits]);
-    }
-    
-    regions = outdoors
-; `
+        round the side of the house to the southeast. "
+        
+        east = frontDoorOutside
+        southeast = sidePath
+        
+        northwest()
+        {
+            "You stride off down the drive to safety. ";
+            finishGameMsg(ftVictory, [finishOptionUndo, finishOptionFullScore, 
+                     finishOptionCredits]);
+        }
+        
+        regions = outdoors
+    ;
 </code></pre></div></div>
 
 <p>If your game offers the “Amusing” finish option you’ll need to do a bit
@@ -116,45 +107,40 @@ returning true (to tell the library that the option has successfully
 completed and it should now show the list of options again). For
 example:</p>
 
-<p>`
-    modify finishOptionAmusing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify finishOptionAmusing
        doOption()
        {
-           “Have you tried feeding the chile soup to the pet tiger?\n
+           "Have you tried feeding the chile soup to the pet tiger?\n
            Or asking Mavis about her underwear?\n
-           Or setting the blender to ‘superspin’ with the cholocolate sponge inside?”;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       return true;
-   }
-;    `
+           Or setting the blender to 'superspin' with the cholocolate sponge inside?";
+           
+           return true;
+       }
+    ;   
 </code></pre></div></div>
 
 <p>Or:</p>
 
-<p>`
-    modify finishOptionAmusing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify finishOptionAmusing
        doOption()
        {
-           amusingMenu.display();</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       "Done &lt;.p&gt;";      
-       return true;
-   }
-;    `
+           amusingMenu.display();
+            
+           "Done &lt;.p&gt;";      
+           return true;
+       }
+    ;   
 </code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Endings  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Endings<br />
 <span class="navnp"><a href="Beginning.html" class="nav"><em>Prev:</em> Beginnings</a>
     <a href="optional.html" class="nav"><em>Next:</em>Part III: Optional
-Modules</a>     </span>
+Modules</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

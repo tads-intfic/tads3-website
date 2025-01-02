@@ -46,30 +46,22 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Basic possessive phrase. The grammar rules for these phrases must map
+the possessive qualifier phrase to poss_, and the noun phrase being
+qualified to np_. We are based on DefiniteNounProd because we resolve
+the possessive qualifier as though it had a definite article.</p>
 
-Basic possessive phrase. The grammar rules for these phrases must map
-the possessive qualifier phrase to poss\_, and the noun phrase being
-qualified to np\_. We are based on DefiniteNounProd because we resolve
-the possessive qualifier as though it had a definite article.
-
-The possessive production object poss\_ must define the method
+<p>The possessive production object poss_ must define the method
 getOrigMainText() to return the text of its noun phrase in a format
 suitable for disambiguation prompts or error messages. In English, for
 example, this means that the getOrigMainText() must omit the
-apostrophe-S suffix if present.
+apostrophe-S suffix if present.</p>
 
-`class `**`BasicPossessiveProd`**` :   `[`DefiniteNounProd`](../object/DefiniteNounProd.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/DefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></strong><br />
 <a href="../object/DefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></a><br />
@@ -80,11 +72,7 @@ apostrophe-S suffix if present.
 </code>                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></strong><br />
 <a href="../object/ButPossessiveProd.html"><code class="language-plaintext highlighter-rouge">ButPossessiveProd</code></a><br />
@@ -98,19 +86,11 @@ apostrophe-S suffix if present.
 <a href="../object/explicitDetPluralOnlyNounPhrase(possessive).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(possessive)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#npKeeper"><code class="language-plaintext highlighter-rouge">npKeeper</code></a></p>
 
@@ -118,40 +98,32 @@ apostrophe-S suffix if present.
 <a href="../object/NounPhraseProd.html#filterForCollectives"><code class="language-plaintext highlighter-rouge">filterForCollectives</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code> :<br />
 <a href="../object/AmbigResponseKeeper.html#ambigResponses_"><code class="language-plaintext highlighter-rouge">ambigResponses_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#resolvePossessive"><code class="language-plaintext highlighter-rouge">resolvePossessive</code></a><a href="#selectWithPossessive"><code class="language-plaintext highlighter-rouge">selectWithPossessive</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#resolvePossessive"><code class="language-plaintext highlighter-rouge">resolvePossessive</code></a> <a href="#selectWithPossessive"><code class="language-plaintext highlighter-rouge">selectWithPossessive</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">DefiniteNounProd</code> :<br />
-<a href="../object/DefiniteNounProd.html#reduceDefinite"><code class="language-plaintext highlighter-rouge">reduceDefinite</code></a><a href="../object/DefiniteNounProd.html#resolveDefinite"><code class="language-plaintext highlighter-rouge">resolveDefinite</code></a><a href="../object/DefiniteNounProd.html#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
+<a href="../object/DefiniteNounProd.html#reduceDefinite"><code class="language-plaintext highlighter-rouge">reduceDefinite</code></a> <a href="../object/DefiniteNounProd.html#resolveDefinite"><code class="language-plaintext highlighter-rouge">resolveDefinite</code></a> <a href="../object/DefiniteNounProd.html#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
-<a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a><a href="../object/NounPhraseProd.html#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a></p>
+<a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a> <a href="../object/NounPhraseProd.html#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code> :<br />
-<a href="../object/AmbigResponseKeeper.html#addAmbigResponse"><code class="language-plaintext highlighter-rouge">addAmbigResponse</code></a><a href="../object/AmbigResponseKeeper.html#getAmbigResponses"><code class="language-plaintext highlighter-rouge">getAmbigResponses</code></a></p>
+<a href="../object/AmbigResponseKeeper.html#addAmbigResponse"><code class="language-plaintext highlighter-rouge">addAmbigResponse</code></a> <a href="../object/AmbigResponseKeeper.html#getAmbigResponses"><code class="language-plaintext highlighter-rouge">getAmbigResponses</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="npKeeper"></span></p>
 
@@ -159,19 +131,11 @@ apostrophe-S suffix if present.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2979">2979</a>]</p>
 
-<div class="desc">
-
-our ambiguous response keeper
-
-</div>
+<p>our ambiguous response keeper</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -179,15 +143,11 @@ our ambiguous response keeper
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2779">2779</a>]</p>
 
-<div class="desc">
-
-To allow this class to be mixed with other classes that have mixed-in
+<p>To allow this class to be mixed with other classes that have mixed-in
 ambiguous response keepers, create a separate object to hold our
 ambiguous response keeper for the possessive phrase. We will never use
 our own ambiguous response keeper properties, so those are available to
-any other production class we're mixed into.
-
-</div>
+any other production class we’re mixed into.</p>
 
 <p><span id="resolvePossessive"></span></p>
 
@@ -195,17 +155,13 @@ any other production class we're mixed into.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2795">2795</a>]</p>
 
-<div class="desc">
-
-Resolve the possessive, and perform preliminary resolution of the
+<p>Resolve the possessive, and perform preliminary resolution of the
 qualified noun phrase. We find the owner object and reduce the resolved
-objects for the qualified phrase to those owned by the owner.
+objects for the qualified phrase to those owned by the owner.</p>
 
-If we fail, we return nil. Otherwise, we return a list of the
+<p>If we fail, we return nil. Otherwise, we return a list of the
 tentatively resolved objects. The caller can further resolve this list
-as needed.
-
-</div>
+as needed.</p>
 
 <p><span id="selectWithPossessive"></span></p>
 
@@ -213,25 +169,18 @@ as needed.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2830">2830</a>]</p>
 
-<div class="desc">
+<p>Resolve the possessive, and reduce the given match list by selecting
+only those items owned by the resolution of the possessive phrase.</p>
 
-Resolve the possessive, and reduce the given match list by selecting
-only those items owned by the resolution of the possessive phrase.
+<p>‘num’ is the number of objects we want to select. If the noun phrase
+being qualified is singular, this will be 1; if it’s plural, this will
+be nil, to indicate that there’s no specific target quantity; if the
+phrase is something like “bob’s five books,” the the number will be the
+qualifying quantity (5, in this case).</p>
 
-'num' is the number of objects we want to select. If the noun phrase
-being qualified is singular, this will be 1; if it's plural, this will
-be nil, to indicate that there's no specific target quantity; if the
-phrase is something like "bob's five books," the the number will be the
-qualifying quantity (5, in this case).
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

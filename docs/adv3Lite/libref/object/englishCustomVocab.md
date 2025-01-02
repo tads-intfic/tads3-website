@@ -53,7 +53,7 @@ into the dictionary during preinit.
 
 
 
-[`irregularPlurals`](#irregularPlurals)[`specialAOrAn`](#specialAOrAn)[`verbParams`](#verbParams)
+[`irregularPlurals`](#irregularPlurals) [`specialAOrAn`](#specialAOrAn) [`verbParams`](#verbParams)
 
 
 

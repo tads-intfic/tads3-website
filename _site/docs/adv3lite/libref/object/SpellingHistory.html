@@ -46,75 +46,47 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-SpellingHistory: this maintains the history of attempted spelling
+<p>SpellingHistory: this maintains the history of attempted spelling
 corrections for the current command. We process each word separately, so
-each word has its own entry in the history.
+each word has its own entry in the history.</p>
 
-The point of maintaining a history is that it allows us to backtrack if
-we decide that an earlier guess at a corrected word isn't going to
+<p>The point of maintaining a history is that it allows us to backtrack if
+we decide that an earlier guess at a corrected word isn’t going to
 result in a working command after all. If an earlier correction had
 other equally good options, we can go back and try the other options by
-unwinding the history.
+unwinding the history.</p>
 
-`class `**`SpellingHistory`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SpellingHistory</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">SpellingHistory</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#corrections"><code class="language-plaintext highlighter-rouge">corrections</code></a><a href="#cstack"><code class="language-plaintext highlighter-rouge">cstack</code></a><a href="#parser"><code class="language-plaintext highlighter-rouge">parser</code></a><a href="#startTime"><code class="language-plaintext highlighter-rouge">startTime</code></a></p>
+<p><a href="#corrections"><code class="language-plaintext highlighter-rouge">corrections</code></a> <a href="#cstack"><code class="language-plaintext highlighter-rouge">cstack</code></a> <a href="#parser"><code class="language-plaintext highlighter-rouge">parser</code></a> <a href="#startTime"><code class="language-plaintext highlighter-rouge">startTime</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkSpelling"><code class="language-plaintext highlighter-rouge">checkSpelling</code></a><a href="#clear"><code class="language-plaintext highlighter-rouge">clear</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#hasCorrections"><code class="language-plaintext highlighter-rouge">hasCorrections</code></a><a href="#noteSpelling"><code class="language-plaintext highlighter-rouge">noteSpelling</code></a><a href="#rollback"><code class="language-plaintext highlighter-rouge">rollback</code></a></p>
+<p><a href="#checkSpelling"><code class="language-plaintext highlighter-rouge">checkSpelling</code></a> <a href="#clear"><code class="language-plaintext highlighter-rouge">clear</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#hasCorrections"><code class="language-plaintext highlighter-rouge">hasCorrections</code></a> <a href="#noteSpelling"><code class="language-plaintext highlighter-rouge">noteSpelling</code></a> <a href="#rollback"><code class="language-plaintext highlighter-rouge">rollback</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="corrections"></span></p>
 
@@ -122,14 +94,10 @@ unwinding the history.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#772">772</a>]</p>
 
-<div class="desc">
-
-The indices of the words we've corrected so far. We keep track of the
-corrections we've made so that we don't try to further correct a word
-we've already corrected. (We \*do\* try multiple candidates per slot,
-but we do that by backtracking.)
-
-</div>
+<p>The indices of the words we’ve corrected so far. We keep track of the
+corrections we’ve made so that we don’t try to further correct a word
+we’ve already corrected. (We *do* try multiple candidates per slot,
+but we do that by backtracking.)</p>
 
 <p><span id="cstack"></span></p>
 
@@ -137,14 +105,10 @@ but we do that by backtracking.)
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#781">781</a>]</p>
 
-<div class="desc">
-
-The attempted correction stack. Each time we correct a word, we'll add a
-SpellingCorrection item to the stack. If we decide a correction didn't
-work after all (i.e., didn't yield a valid parsing), the stack lets us
-retract it and try a different correction candidate.
-
-</div>
+<p>The attempted correction stack. Each time we correct a word, we’ll add a
+SpellingCorrection item to the stack. If we decide a correction didn’t
+work after all (i.e., didn’t yield a valid parsing), the stack lets us
+retract it and try a different correction candidate.</p>
 
 <p><span id="parser"></span></p>
 
@@ -152,11 +116,7 @@ retract it and try a different correction candidate.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#761">761</a>]</p>
 
-<div class="desc">
-
-our parser object
-
-</div>
+<p>our parser object</p>
 
 <p><span id="startTime"></span></p>
 
@@ -164,19 +124,11 @@ our parser object
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#764">764</a>]</p>
 
-<div class="desc">
-
-starting time (in GetTimeTicks time)
-
-</div>
+<p>starting time (in GetTimeTicks time)</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkSpelling"></span></p>
 
@@ -184,19 +136,15 @@ starting time (in GetTimeTicks time)
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#463">463</a>]</p>
 
-<div class="desc">
-
-Check for spelling errors in a token list, and attempt automatic
-spelling correction. We'll scan the token list for a word that isn't in
+<p>Check for spelling errors in a token list, and attempt automatic
+spelling correction. We’ll scan the token list for a word that isn’t in
 the dictionary. If we find one, and spelling correction is enabled,
-we'll attempt to automatically correct the error.
+we’ll attempt to automatically correct the error.</p>
 
-'toks' is the token list for the command line, and 'err' is the
-ParseError object indicating what error triggered the spelling check.
+<p>‘toks’ is the token list for the command line, and ‘err’ is the
+ParseError object indicating what error triggered the spelling check.</p>
 
-Returns a new token list if we correct a spelling error, nil otherwise.
-
-</div>
+<p>Returns a new token list if we correct a spelling error, nil otherwise.</p>
 
 <p><span id="clear"></span></p>
 
@@ -204,11 +152,7 @@ Returns a new token list if we correct a spelling error, nil otherwise.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#786">786</a>]</p>
 
-<div class="desc">
-
-Clear the history
-
-</div>
+<p>Clear the history</p>
 
 <p><span id="construct"></span></p>
 
@@ -216,11 +160,7 @@ Clear the history
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#438">438</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="hasCorrections"></span></p>
 
@@ -228,11 +168,7 @@ Clear the history
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#448">448</a>]</p>
 
-<div class="desc">
-
-have we made any corrections?
-
-</div>
+<p>have we made any corrections?</p>
 
 <p><span id="noteSpelling"></span></p>
 
@@ -240,12 +176,8 @@ have we made any corrections?
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#685">685</a>]</p>
 
-<div class="desc">
-
-Note spelling changes between the original token list and the given
-token list.
-
-</div>
+<p>Note spelling changes between the original token list and the given
+token list.</p>
 
 <p><span id="rollback"></span></p>
 
@@ -253,50 +185,43 @@ token list.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#646">646</a>]</p>
 
-<div class="desc">
+<p>Roll back spelling changes to the last one that actually improved
+matters. ‘toks’ is the latest token list, and ‘err’ is the parsing error
+that we encountered attempting to parse this token list.</p>
 
-Roll back spelling changes to the last one that actually improved
-matters. 'toks' is the latest token list, and 'err' is the parsing error
-that we encountered attempting to parse this token list.
-
-If 'err' is a curable error, we'll leave things as they are. The curable
+<p>If ‘err’ is a curable error, we’ll leave things as they are. The curable
 error means that the token list is now well-formed, but is missing some
-information we need to actually execute it. Since it's well-formed, our
-spelling corrections must have made some kind of sense, so we'll assume
-they were correct.
+information we need to actually execute it. Since it’s well-formed, our
+spelling corrections must have made some kind of sense, so we’ll assume
+they were correct.</p>
 
-If the error isn't curable, though, our spelling corrections didn't
+<p>If the error isn’t curable, though, our spelling corrections didn’t
 result in a working command. The way we pick candidate words tends to
-give us lots of false matches, so the fact that we didn't end up with
+give us lots of false matches, so the fact that we didn’t end up with
 meaningful syntax overall suggests that our guess for an individual word
-was a spurious match.
+was a spurious match.</p>
 
-To determine what we keep and what we roll back, we look at whether a
+<p>To determine what we keep and what we roll back, we look at whether a
 change improved the intelligibility of the command. There are basically
 three stages of intelligibility that we can distinguish: (1) completely
 unintelligible, (2) valid verb structure but unknown noun phrases, and
-(3) valid verb structure AND resolvable noun phrases.
+(3) valid verb structure AND resolvable noun phrases.</p>
 
-We want to keep any attempted spelling corrections that successfully
+<p>We want to keep any attempted spelling corrections that successfully
 advanced us from one stage to the next, because the improved
 intelligibility is pretty good evidence that our corrections were in
-fact correct. We DON'T want to keep any corrections that didn't advance
-the process, because we can't tell if they actually helped. We're
+fact correct. We DON’T want to keep any corrections that didn’t advance
+the process, because we can’t tell if they actually helped. We’re
 intentionally conservative about spelling correction, because spurious
 corrections are worse in an IF context than in most applications. In IF,
 a spurious correction could be a spoiler, by revealing the existence of
 a dictionary word too early in the game. To reduce spurious corrections,
 we only accept corrections that actually make the command more
-parseable.
+parseable.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

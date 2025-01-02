@@ -52,10 +52,10 @@ like finishOptionRestore, but shows a different option name.
 [`desc`](#desc)
 
 Inherited from `finishOptionRestore` :  
-[`responseChar`](../object/finishOptionRestore.html#responseChar)[`responseKeyword`](../object/finishOptionRestore.html#responseKeyword)
+[`responseChar`](../object/finishOptionRestore.html#responseChar) [`responseKeyword`](../object/finishOptionRestore.html#responseKeyword)
 
 Inherited from `FinishOption` :  
-[`isListed`](../object/FinishOption.html#isListed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
+[`isListed`](../object/FinishOption.html#isListed) [`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 

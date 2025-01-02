@@ -77,7 +77,7 @@ end.
 
 
 Inherited from `CommandReport` :  
-[`action_`](../object/CommandReport.html#action_)[`isFailure`](../object/CommandReport.html#isFailure)[`isQuestion`](../object/CommandReport.html#isQuestion)[`iter_`](../object/CommandReport.html#iter_)
+[`action_`](../object/CommandReport.html#action_) [`isFailure`](../object/CommandReport.html#isFailure) [`isQuestion`](../object/CommandReport.html#isQuestion) [`iter_`](../object/CommandReport.html#iter_)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,7 +93,7 @@ Inherited from `MarkerReport` :
 [`showMessage`](../object/MarkerReport.html#showMessage)
 
 Inherited from `CommandReport` :  
-[`construct`](../object/CommandReport.html#construct)[`getAction`](../object/CommandReport.html#getAction)[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)[`isPartOf`](../object/CommandReport.html#isPartOf)[`setAction`](../object/CommandReport.html#setAction)
+[`construct`](../object/CommandReport.html#construct) [`getAction`](../object/CommandReport.html#getAction) [`isActionImplicit`](../object/CommandReport.html#isActionImplicit) [`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn) [`isPartOf`](../object/CommandReport.html#isPartOf) [`setAction`](../object/CommandReport.html#setAction)
 
 <span id="_Properties_"></span>
 

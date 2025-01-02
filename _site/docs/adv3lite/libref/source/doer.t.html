@@ -1003,7 +1003,7 @@ doerPreinit: PreinitObject
 
                 /* match it against each template with the same first word */
                 local found = nil;
-                foreach (local p in ptab.getParsers(rexGroup(1)[3]))
+                foreach (local p in ptab.getParsers(rexGroup(1) [3]))
                 {
                     /* if we match this item's template, this is the one */
                     if (rexMatch(p.pat_, c))
@@ -1049,7 +1049,7 @@ doerPreinit: PreinitObject
                                 break;
                             
                             /* get the regular expression match */
-                            local n = rexGroup(idx)[3];
+                            local n = rexGroup(idx) [3];
 
                             /* add it to the template list */
                             tpl += n;
@@ -1172,12 +1172,9 @@ default1Doer: Doer
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

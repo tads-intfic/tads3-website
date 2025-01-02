@@ -68,7 +68,7 @@ as long as it's not Bob's we're looking for.
 
 
 
-[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
+[`comparePass1`](#comparePass1) [`comparePass2`](#comparePass2)
 
 
 

@@ -80,10 +80,10 @@ must-be-open precondition "look in" and "board".
 
 
 
-[`descContentsLister`](#descContentsLister)[`lockStatusReportable`](#lockStatusReportable)[`openingLister`](#openingLister)
+[`descContentsLister`](#descContentsLister) [`lockStatusReportable`](#lockStatusReportable) [`openingLister`](#openingLister)
 
 Inherited from `BasicOpenable` :  
-[`cannotMoveThroughMsg`](../object/BasicOpenable.html#cannotMoveThroughMsg)[`cannotTouchThroughMsg`](../object/BasicOpenable.html#cannotTouchThroughMsg)[`initiallyOpen`](../object/BasicOpenable.html#initiallyOpen)[`isOpen_`](../object/BasicOpenable.html#isOpen_)[`openDesc`](../object/BasicOpenable.html#openDesc)
+[`cannotMoveThroughMsg`](../object/BasicOpenable.html#cannotMoveThroughMsg) [`cannotTouchThroughMsg`](../object/BasicOpenable.html#cannotTouchThroughMsg) [`initiallyOpen`](../object/BasicOpenable.html#initiallyOpen) [`isOpen_`](../object/BasicOpenable.html#isOpen_) [`openDesc`](../object/BasicOpenable.html#openDesc)
 
 
 
@@ -95,10 +95,10 @@ Inherited from `BasicOpenable` :
 
 
 
-[`addInteriorReachableCond`](#addInteriorReachableCond)[`dobjFor(Board)`](#dobjFor(Board))[`dobjFor(Close)`](#dobjFor(Close))[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(Open)`](#dobjFor(Open))[`dobjFor(Search)`](#dobjFor(Search))[`iobjFor(PourInto)`](#iobjFor(PourInto))[`iobjFor(PutIn)`](#iobjFor(PutIn))[`openStatus`](#openStatus)
+[`addInteriorReachableCond`](#addInteriorReachableCond) [`dobjFor(Board)`](#dobjFor(Board)) [`dobjFor(Close)`](#dobjFor(Close)) [`dobjFor(GetOutOf)`](#dobjFor(GetOutOf)) [`dobjFor(Lock)`](#dobjFor(Lock)) [`dobjFor(LockWith)`](#dobjFor(LockWith)) [`dobjFor(LookIn)`](#dobjFor(LookIn)) [`dobjFor(Open)`](#dobjFor(Open)) [`dobjFor(Search)`](#dobjFor(Search)) [`iobjFor(PourInto)`](#iobjFor(PourInto)) [`iobjFor(PutIn)`](#iobjFor(PutIn)) [`openStatus`](#openStatus)
 
 Inherited from `BasicOpenable` :  
-[`initializeThing`](../object/BasicOpenable.html#initializeThing)[`isOpen`](../object/BasicOpenable.html#isOpen)[`makeOpen`](../object/BasicOpenable.html#makeOpen)[`tryImplicitRemoveObstructor`](../object/BasicOpenable.html#tryImplicitRemoveObstructor)
+[`initializeThing`](../object/BasicOpenable.html#initializeThing) [`isOpen`](../object/BasicOpenable.html#isOpen) [`makeOpen`](../object/BasicOpenable.html#makeOpen) [`tryImplicitRemoveObstructor`](../object/BasicOpenable.html#tryImplicitRemoveObstructor)
 
 Inherited from `Linkable` :  
 [`masterObject`](../object/Linkable.html#masterObject)

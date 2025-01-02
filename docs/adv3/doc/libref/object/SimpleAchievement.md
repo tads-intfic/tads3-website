@@ -74,7 +74,7 @@ one of these to encapsulate the achievement.
 [`desc_`](#desc_)
 
 Inherited from `Achievement` :  
-[`desc`](../object/Achievement.html#desc)[`maxPoints`](../object/Achievement.html#maxPoints)[`points`](../object/Achievement.html#points)[`scoreCount`](../object/Achievement.html#scoreCount)[`totalPoints`](../object/Achievement.html#totalPoints)
+[`desc`](../object/Achievement.html#desc) [`maxPoints`](../object/Achievement.html#maxPoints) [`points`](../object/Achievement.html#points) [`scoreCount`](../object/Achievement.html#scoreCount) [`totalPoints`](../object/Achievement.html#totalPoints)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `Achievement` :
 
 
 
-[`construct`](#construct)[`desc`](#desc)
+[`construct`](#construct) [`desc`](#desc)
 
 Inherited from `Achievement` :  
-[`addToScoreOnce`](../object/Achievement.html#addToScoreOnce)[`awardPoints`](../object/Achievement.html#awardPoints)[`awardPointsOnce`](../object/Achievement.html#awardPointsOnce)[`listFullScoreItem`](../object/Achievement.html#listFullScoreItem)
+[`addToScoreOnce`](../object/Achievement.html#addToScoreOnce) [`awardPoints`](../object/Achievement.html#awardPoints) [`awardPointsOnce`](../object/Achievement.html#awardPointsOnce) [`listFullScoreItem`](../object/Achievement.html#listFullScoreItem)
 
 <span id="_Properties_"></span>
 

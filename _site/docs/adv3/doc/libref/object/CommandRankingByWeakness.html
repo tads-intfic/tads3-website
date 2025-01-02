@@ -46,81 +46,53 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A "weakness" criterion. This is similar to the rank-by-problem
+<p>A “weakness” criterion. This is similar to the rank-by-problem
 criterion, but rather than ranking on an actual structural problem, it
 ranks on a structural weakness. This is suitable for things like
-adjective endings and truncations, where the weakness isn't on the same
-order as a "problem" but where we'd still rather avoid the weakness if
-we can.
+adjective endings and truncations, where the weakness isn’t on the same
+order as a “problem” but where we’d still rather avoid the weakness if
+we can.</p>
 
-The point of the separate "weakness" criterion is that we only allow
-weaknesses to come into play on pass 2, after we've already
+<p>The point of the separate “weakness” criterion is that we only allow
+weaknesses to come into play on pass 2, after we’ve already
 discriminated based on problems. If we can discriminate based on
-problems, we'll do so in pass 1 and won't even get to pass 2; we'll only
-discriminate based on weakness if we can't tell the difference based on
-real problems.
+problems, we’ll do so in pass 1 and won’t even get to pass 2; we’ll only
+discriminate based on weakness if we can’t tell the difference based on
+real problems.</p>
 
-`class `**`CommandRankingByWeakness`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CommandRankingByWeakness</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/CommandRankingCriterion.html"><code class="language-plaintext highlighter-rouge">CommandRankingCriterion</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">CommandRankingByWeakness</code></strong><br />
 <a href="../object/CommandRankingCriterion.html"><code class="language-plaintext highlighter-rouge">CommandRankingCriterion</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/rankByEndAdj.html"><code class="language-plaintext highlighter-rouge">rankByEndAdj</code></a><a href="../object/rankByPluralTrunc.html"><code class="language-plaintext highlighter-rouge">rankByPluralTrunc</code></a><a href="../object/rankByPronoun.html"><code class="language-plaintext highlighter-rouge">rankByPronoun</code></a><a href="../object/rankByTrunc.html"><code class="language-plaintext highlighter-rouge">rankByTrunc</code></a><a href="../object/rankByWeakness.html"><code class="language-plaintext highlighter-rouge">rankByWeakness</code></a>
+<p><a href="../object/rankByEndAdj.html"><code class="language-plaintext highlighter-rouge">rankByEndAdj</code></a> <a href="../object/rankByPluralTrunc.html"><code class="language-plaintext highlighter-rouge">rankByPluralTrunc</code></a> <a href="../object/rankByPronoun.html"><code class="language-plaintext highlighter-rouge">rankByPronoun</code></a> <a href="../object/rankByTrunc.html"><code class="language-plaintext highlighter-rouge">rankByTrunc</code></a> <a href="../object/rankByWeakness.html"><code class="language-plaintext highlighter-rouge">rankByWeakness</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#comparePass1"><code class="language-plaintext highlighter-rouge">comparePass1</code></a><a href="#comparePass2"><code class="language-plaintext highlighter-rouge">comparePass2</code></a></p>
+<p><a href="#comparePass1"><code class="language-plaintext highlighter-rouge">comparePass1</code></a> <a href="#comparePass2"><code class="language-plaintext highlighter-rouge">comparePass2</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="prop_"></span></p>
 
@@ -128,19 +100,11 @@ real problems.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5910">5910</a>]</p>
 
-<div class="desc">
-
-our command-ranking property
-
-</div>
+<p>our command-ranking property</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="comparePass1"></span></p>
 
@@ -148,11 +112,7 @@ our command-ranking property
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5904">5904</a>]</p>
 
-<div class="desc">
-
-on pass 1, ignore weaknesses
-
-</div>
+<p>on pass 1, ignore weaknesses</p>
 
 <p><span id="comparePass2"></span></p>
 
@@ -160,18 +120,11 @@ on pass 1, ignore weaknesses
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5907">5907</a>]</p>
 
-<div class="desc">
+<p>on pass 2, compare based on weaknesses</p>
 
-on pass 2, compare based on weaknesses
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

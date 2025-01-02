@@ -1047,7 +1047,7 @@ layout: docs
         determiner = Definite
 
         /* look up the value of the ordinal word */
-        ordval() { return cmdDict.findWord(ord_, &ordinalWord)[1].ordinalVal; }
+        ordval() { return cmdDict.findWord(ord_, &ordinalWord) [1].ordinalVal; }
     ;
 
     grammar disambigList(single): disambigListItem->np1_ :
@@ -1069,7 +1069,7 @@ layout: docs
         determiner = Definite
 
         /* look up the value of the ordinal word */
-        ordval() { return cmdDict.findWord(ord_, &ordinalWord)[1].ordinalVal; }
+        ordval() { return cmdDict.findWord(ord_, &ordinalWord) [1].ordinalVal; }
     ;
 
     grammar disambigListItem(noun):
@@ -1204,7 +1204,7 @@ layout: docs
         numval()
         {
             /* look up the units word in the dictionary */
-            return cmdDict.findWord(num_, &digitWord)[1].numval;
+            return cmdDict.findWord(num_, &digitWord) [1].numval;
         }
     ;
 
@@ -1212,7 +1212,7 @@ layout: docs
         numval()
         {
             /* look up the units word in the dictionary */
-            return cmdDict.findWord(num_, &teenWord)[1].numval;
+            return cmdDict.findWord(num_, &teenWord) [1].numval;
         }
     ;
 
@@ -1220,7 +1220,7 @@ layout: docs
         numval()
         {
             /* look up the units word in the dictionary */
-            return cmdDict.findWord(num_, &tensWord)[1].numval;
+            return cmdDict.findWord(num_, &tensWord) [1].numval;
         }
     ;
 
@@ -1232,8 +1232,8 @@ layout: docs
         //    numval = (tens_.numval + units_.numval)
         numval()
         {
-            return cmdDict.findWord(tens_, &tensWord)[1].numval +
-                cmdDict.findWord(units_, &digitWord)[1].numval;
+            return cmdDict.findWord(tens_, &tensWord) [1].numval +
+                cmdDict.findWord(units_, &digitWord) [1].numval;
         }
     ;
 

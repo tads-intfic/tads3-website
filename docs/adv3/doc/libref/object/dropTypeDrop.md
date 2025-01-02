@@ -61,7 +61,7 @@ singleton instance.
 
 
 
-[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
+[`getReportPrefix`](#getReportPrefix) [`standardReport`](#standardReport)
 
 
 

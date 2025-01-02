@@ -69,10 +69,10 @@ settings when we start (or RESTART) the game.
 
 
 
-[`restoreSettingsMsg`](#restoreSettingsMsg)[`saveSettingsMsg`](#saveSettingsMsg)[`showAll`](#showAll)
+[`restoreSettingsMsg`](#restoreSettingsMsg) [`saveSettingsMsg`](#saveSettingsMsg) [`showAll`](#showAll)
 
 Inherited from `settingsManager` :  
-[`restoreSettings`](../object/settingsManager.html#restoreSettings)[`retrieveSettings`](../object/settingsManager.html#retrieveSettings)[`saveSettings`](../object/settingsManager.html#saveSettings)[`storeSettings`](../object/settingsManager.html#storeSettings)
+[`restoreSettings`](../object/settingsManager.html#restoreSettings) [`retrieveSettings`](../object/settingsManager.html#retrieveSettings) [`saveSettings`](../object/settingsManager.html#saveSettings) [`storeSettings`](../object/settingsManager.html#storeSettings)
 
 <span id="_Properties_"></span>
 

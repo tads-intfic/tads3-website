@@ -58,7 +58,7 @@ interpreter's user interface is not part of the persistence mechanism.
 
 
 
-[`addBanner`](#addBanner)[`getTracker`](#getTracker)[`orderMatches`](#orderMatches)[`removeBanner`](#removeBanner)[`skipDescendants`](#skipDescendants)
+[`addBanner`](#addBanner) [`getTracker`](#getTracker) [`orderMatches`](#orderMatches) [`removeBanner`](#removeBanner) [`skipDescendants`](#skipDescendants)
 
 <span id="_Properties_"></span>
 

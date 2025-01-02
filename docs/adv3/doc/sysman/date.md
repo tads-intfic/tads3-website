@@ -916,7 +916,7 @@ Julian date string:
 
 ```
     local str = 'October 4, 1582';
-    "<<str>> Julian = <<Date.parseJulianDate(str)[1].formatDate('%B %#d, %Y')>>\n";
+    "<<str>> Julian = <<Date.parseJulianDate(str) [1].formatDate('%B %#d, %Y')>>\n";
 ```
 
 

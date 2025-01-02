@@ -51,7 +51,7 @@ subject to future incompatible changes.
 
 
 
-[`t3test_get_charcode`](#t3test_get_charcode)[`t3test_get_obj_gc_state`](#t3test_get_obj_gc_state)[`t3test_get_obj_id`](#t3test_get_obj_id)
+[`t3test_get_charcode`](#t3test_get_charcode) [`t3test_get_obj_gc_state`](#t3test_get_obj_gc_state) [`t3test_get_obj_id`](#t3test_get_obj_id)
 
 <span id="_MacroSummary_"></span>
 

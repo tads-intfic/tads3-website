@@ -37,58 +37,38 @@
 <a href="#_FunctionSummary_">Summary</a><br />
 <a href="#_Functions_">Details</a></p>
 
-<div class="fdesc">
+<p>TADS 3 Library - browser (Web UI) input/output manager</p>
 
-TADS 3 Library - browser (Web UI) input/output manager
+<p>This module defines the low-level functions for handling input and
+output via the Web UI.</p>
 
-This module defines the low-level functions for handling input and
-output via the Web UI.
-
-The functions in this module are designed primarily for internal use
+<p>The functions in this module are designed primarily for internal use
 within the library itself. Games should use the higher level objects and
 functions defined in input.t and output.t instead of directly calling
 the functions defined here. The reason for separating these functions is
 to make the UI selection pluggable, so that the same game can be
 compiled for either the traditional UI or the Web UI simply by plugging
-in the correct i/o module.
-
-</div>
+in the correct i/o module.</p>
 
 <p><span id="_ClassSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Classes</span>  </p>
 
-<span class="hdln">Summary of Classes</span>  
-
-</div>
-
-<p><a href="../object/WebBannerWin.html"><code class="language-plaintext highlighter-rouge">WebBannerWin</code></a><a href="../object/WebWinOutputStream.html"><code class="language-plaintext highlighter-rouge">WebWinOutputStream</code></a>
+<p><a href="../object/WebBannerWin.html"><code class="language-plaintext highlighter-rouge">WebBannerWin</code></a> <a href="../object/WebWinOutputStream.html"><code class="language-plaintext highlighter-rouge">WebWinOutputStream</code></a>
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Global Objects</span>  </p>
 
-<span class="hdln">Summary of Global Objects</span>  
-
-</div>
-
-<p><a href="../object/browserGlobals.html"><code class="language-plaintext highlighter-rouge">browserGlobals</code></a><a href="../object/commandWin.html"><code class="language-plaintext highlighter-rouge">commandWin</code></a><a href="../object/statuslineBanner.html"><code class="language-plaintext highlighter-rouge">statuslineBanner</code></a>
+<p><a href="../object/browserGlobals.html"><code class="language-plaintext highlighter-rouge">browserGlobals</code></a> <a href="../object/commandWin.html"><code class="language-plaintext highlighter-rouge">commandWin</code></a> <a href="../object/statuslineBanner.html"><code class="language-plaintext highlighter-rouge">statuslineBanner</code></a>
 <span id="FunctionSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Global Functions</span>  </p>
 
-<span class="hdln">Summary of Global Functions</span>  
-
-</div>
-
-<p><a href="#aHref"><code class="language-plaintext highlighter-rouge">aHref</code></a><a href="#aHrefAlt"><code class="language-plaintext highlighter-rouge">aHrefAlt</code></a><a href="#aioClearScreen"><code class="language-plaintext highlighter-rouge">aioClearScreen</code></a><a href="#aioInputDialog"><code class="language-plaintext highlighter-rouge">aioInputDialog</code></a><a href="#aioInputEvent"><code class="language-plaintext highlighter-rouge">aioInputEvent</code></a><a href="#aioInputFile"><code class="language-plaintext highlighter-rouge">aioInputFile</code></a><a href="#aioInputLineCancel"><code class="language-plaintext highlighter-rouge">aioInputLineCancel</code></a><a href="#aioInputLineTimeout"><code class="language-plaintext highlighter-rouge">aioInputLineTimeout</code></a><a href="#aioLogInputEvent"><code class="language-plaintext highlighter-rouge">aioLogInputEvent</code></a><a href="#aioMorePrompt"><code class="language-plaintext highlighter-rouge">aioMorePrompt</code></a><a href="#aioSay"><code class="language-plaintext highlighter-rouge">aioSay</code></a><a href="#aioSetLogFile"><code class="language-plaintext highlighter-rouge">aioSetLogFile</code></a><a href="#checkHtmlMode"><code class="language-plaintext highlighter-rouge">checkHtmlMode</code></a><a href="#evtCharForScript"><code class="language-plaintext highlighter-rouge">evtCharForScript</code></a><a href="#initDisplay"><code class="language-plaintext highlighter-rouge">initDisplay</code></a><a href="#initUI"><code class="language-plaintext highlighter-rouge">initUI</code></a><a href="#readingEventScript"><code class="language-plaintext highlighter-rouge">readingEventScript</code></a><a href="#readingScript"><code class="language-plaintext highlighter-rouge">readingScript</code></a><a href="#statusHTML"><code class="language-plaintext highlighter-rouge">statusHTML</code></a><a href="#terminateUI"><code class="language-plaintext highlighter-rouge">terminateUI</code></a></p>
+<p><a href="#aHref"><code class="language-plaintext highlighter-rouge">aHref</code></a> <a href="#aHrefAlt"><code class="language-plaintext highlighter-rouge">aHrefAlt</code></a> <a href="#aioClearScreen"><code class="language-plaintext highlighter-rouge">aioClearScreen</code></a> <a href="#aioInputDialog"><code class="language-plaintext highlighter-rouge">aioInputDialog</code></a> <a href="#aioInputEvent"><code class="language-plaintext highlighter-rouge">aioInputEvent</code></a> <a href="#aioInputFile"><code class="language-plaintext highlighter-rouge">aioInputFile</code></a> <a href="#aioInputLineCancel"><code class="language-plaintext highlighter-rouge">aioInputLineCancel</code></a> <a href="#aioInputLineTimeout"><code class="language-plaintext highlighter-rouge">aioInputLineTimeout</code></a> <a href="#aioLogInputEvent"><code class="language-plaintext highlighter-rouge">aioLogInputEvent</code></a> <a href="#aioMorePrompt"><code class="language-plaintext highlighter-rouge">aioMorePrompt</code></a> <a href="#aioSay"><code class="language-plaintext highlighter-rouge">aioSay</code></a> <a href="#aioSetLogFile"><code class="language-plaintext highlighter-rouge">aioSetLogFile</code></a> <a href="#checkHtmlMode"><code class="language-plaintext highlighter-rouge">checkHtmlMode</code></a> <a href="#evtCharForScript"><code class="language-plaintext highlighter-rouge">evtCharForScript</code></a> <a href="#initDisplay"><code class="language-plaintext highlighter-rouge">initDisplay</code></a> <a href="#initUI"><code class="language-plaintext highlighter-rouge">initUI</code></a> <a href="#readingEventScript"><code class="language-plaintext highlighter-rouge">readingEventScript</code></a> <a href="#readingScript"><code class="language-plaintext highlighter-rouge">readingScript</code></a> <a href="#statusHTML"><code class="language-plaintext highlighter-rouge">statusHTML</code></a> <a href="#terminateUI"><code class="language-plaintext highlighter-rouge">terminateUI</code></a></p>
 
 <p><span id="_Functions_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Functions</span>  
-
-</div>
+<p><span class="hdln">Global Functions</span>  </p>
 
 <p><span id="aHref"></span></p>
 
@@ -96,21 +76,17 @@ in the correct i/o module.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#642">642</a>]</p>
 
-<div class="desc">
+<p>Generate a string to show hyperlinked text. The browser UI is always in
+HTML mode, so we unconditionally generate the hyperlink.</p>
 
-Generate a string to show hyperlinked text. The browser UI is always in
-HTML mode, so we unconditionally generate the hyperlink.
+<p>If the display text is included, we’ll generate the entire link,
+including the &lt;A HREF&gt; tag, the hyperlinked text contents, and the
+&lt;/A&gt; end tag. If the text is omitted, we’ll simply generate the &lt;A
+HREF&gt; tag itself, leaving it to the caller to display the text and the
+&lt;/A&gt;.</p>
 
-If the display text is included, we'll generate the entire link,
-including the \&lt;A HREF\&gt; tag, the hyperlinked text contents, and the
-\&lt;/A\&gt; end tag. If the text is omitted, we'll simply generate the \&lt;A
-HREF\&gt; tag itself, leaving it to the caller to display the text and the
-\&lt;/A\&gt;.
-
-The optional 'flags' is a combination of AHREF_xxx flags indicating any
-special properties of the hyperlink.
-
-</div>
+<p>The optional ‘flags’ is a combination of AHREF_xxx flags indicating any
+special properties of the hyperlink.</p>
 
 <p><span id="aHrefAlt"></span></p>
 
@@ -118,13 +94,9 @@ special properties of the hyperlink.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#667">667</a>]</p>
 
-<div class="desc">
-
-Generate a string to show hyperlinked text, with alternate text if we're
+<p>Generate a string to show hyperlinked text, with alternate text if we’re
 not in HTML mode. The browser UI is always in HTML mode, so we
-unconditionally generate the hyperlink.
-
-</div>
+unconditionally generate the hyperlink.</p>
 
 <p><span id="aioClearScreen"></span></p>
 
@@ -132,11 +104,7 @@ unconditionally generate the hyperlink.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#277">277</a>]</p>
 
-<div class="desc">
-
-Clear the screen
-
-</div>
+<p>Clear the screen</p>
 
 <p><span id="aioInputDialog"></span></p>
 
@@ -144,11 +112,7 @@ Clear the screen
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#398">398</a>]</p>
 
-<div class="desc">
-
-Show an input dialog
-
-</div>
+<p>Show an input dialog</p>
 
 <p><span id="aioInputEvent"></span></p>
 
@@ -156,11 +120,7 @@ Show an input dialog
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#241">241</a>]</p>
 
-<div class="desc">
-
-Read an input event
-
-</div>
+<p>Read an input event</p>
 
 <p><span id="aioInputFile"></span></p>
 
@@ -168,11 +128,7 @@ Read an input event
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#288">288</a>]</p>
 
-<div class="desc">
-
-Show a file selector dialog
-
-</div>
+<p>Show a file selector dialog</p>
 
 <p><span id="aioInputLineCancel"></span></p>
 
@@ -180,11 +136,7 @@ Show a file selector dialog
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#230">230</a>]</p>
 
-<div class="desc">
-
-Cancel a suspended input line
-
-</div>
+<p>Cancel a suspended input line</p>
 
 <p><span id="aioInputLineTimeout"></span></p>
 
@@ -192,11 +144,7 @@ Cancel a suspended input line
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#195">195</a>]</p>
 
-<div class="desc">
-
-Get a line of input from the keyboard, with timeout
-
-</div>
+<p>Get a line of input from the keyboard, with timeout</p>
 
 <p><span id="aioLogInputEvent"></span></p>
 
@@ -204,12 +152,8 @@ Get a line of input from the keyboard, with timeout
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#525">525</a>]</p>
 
-<div class="desc">
-
-Log an input event. We call this internally from each of the event input
-routines to add the event to any event or command log we're creating.
-
-</div>
+<p>Log an input event. We call this internally from each of the event input
+routines to add the event to any event or command log we’re creating.</p>
 
 <p><span id="aioMorePrompt"></span></p>
 
@@ -217,11 +161,7 @@ routines to add the event to any event or command log we're creating.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#267">267</a>]</p>
 
-<div class="desc">
-
-Show a "More" prompt
-
-</div>
+<p>Show a “More” prompt</p>
 
 <p><span id="aioSay"></span></p>
 
@@ -229,11 +169,7 @@ Show a "More" prompt
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#163">163</a>]</p>
 
-<div class="desc">
-
-Write text to the main game window
-
-</div>
+<p>Write text to the main game window</p>
 
 <p><span id="aioSetLogFile"></span></p>
 
@@ -241,11 +177,7 @@ Write text to the main game window
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#429">429</a>]</p>
 
-<div class="desc">
-
-Set/remove the output logging file
-
-</div>
+<p>Set/remove the output logging file</p>
 
 <p><span id="checkHtmlMode"></span></p>
 
@@ -253,11 +185,7 @@ Set/remove the output logging file
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#147">147</a>]</p>
 
-<div class="desc">
-
-Check to see if we're in HTML mode
-
-</div>
+<p>Check to see if we’re in HTML mode</p>
 
 <p><span id="evtCharForScript"></span></p>
 
@@ -265,13 +193,9 @@ Check to see if we're in HTML mode
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#613">613</a>]</p>
 
-<div class="desc">
-
-Get an InEvtKey event parameter in suitable format for script file
+<p>Get an InEvtKey event parameter in suitable format for script file
 output. This returns the key as it appears in the event, except that
-ASCII control characters are translated to '\[ctrl-X\]'.
-
-</div>
+ASCII control characters are translated to ‘[ctrl-X]’.</p>
 
 <p><span id="initDisplay"></span></p>
 
@@ -279,15 +203,11 @@ ASCII control characters are translated to '\[ctrl-X\]'.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#72">72</a>]</p>
 
-<div class="desc">
-
-Initialize the display. We call this when we first enter the
-interpreter, and again at each RESTART, to set up the main game window's
+<p>Initialize the display. We call this when we first enter the
+interpreter, and again at each RESTART, to set up the main game window’s
 initial layout. We set up the conventional IF screen layout, with the
 status line across the top and the transcript/command window filling the
-rest of the display.
-
-</div>
+rest of the display.</p>
 
 <p><span id="initUI"></span></p>
 
@@ -295,13 +215,9 @@ rest of the display.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#48">48</a>]</p>
 
-<div class="desc">
-
-Initialize the user interface. The library calls this once at the start
+<p>Initialize the user interface. The library calls this once at the start
 of the interpreter session to set up the UI. For the Web UI, we create
-the HTTP server and send connection instructions to the client.
-
-</div>
+the HTTP server and send connection instructions to the client.</p>
 
 <p><span id="readingEventScript"></span></p>
 
@@ -309,11 +225,7 @@ the HTTP server and send connection instructions to the client.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#185">185</a>]</p>
 
-<div class="desc">
-
-Is an event script active?
-
-</div>
+<p>Is an event script active?</p>
 
 <p><span id="readingScript"></span></p>
 
@@ -321,11 +233,7 @@ Is an event script active?
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#177">177</a>]</p>
 
-<div class="desc">
-
-Is a script file active?
-
-</div>
+<p>Is a script file active?</p>
 
 <p><span id="statusHTML"></span></p>
 
@@ -333,15 +241,11 @@ Is a script file active?
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#688">688</a>]</p>
 
-<div class="desc">
-
-Generate HTML to wrap the left/right portions of the status line. The
+<p>Generate HTML to wrap the left/right portions of the status line. The
 basic status line has three stages: stage 0 precedes the left portion,
 stage 1 comes between the left and right portions, and stage 2 follows
-the right portion. If we're listing exits, we get two more stages: stage
-3 precedes the exit listing, stage 4 follows it.
-
-</div>
+the right portion. If we’re listing exits, we get two more stages: stage
+3 precedes the exit listing, stage 4 follows it.</p>
 
 <p><span id="terminateUI"></span></p>
 
@@ -349,19 +253,12 @@ the right portion. If we're listing exits, we get two more stages: stage
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#113">113</a>]</p>
 
-<div class="desc">
+<p>Shut down the user interface. The library calls this when the game is
+about to terminate.</p>
 
-Shut down the user interface. The library calls this when the game is
-about to terminate.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

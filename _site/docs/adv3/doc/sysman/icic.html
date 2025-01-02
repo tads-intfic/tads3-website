@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt;
-IntrinsicClass  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt;
+IntrinsicClass<br />
 <span class="navnp"><a href="httpsrv.html" class="nav"><em>Prev:</em> HTTPServer</a>
     <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="intrinsicclass">IntrinsicClass</h1>
 
@@ -116,65 +108,55 @@ empty list.</p>
 
 <p><code class="language-plaintext highlighter-rouge">isIntrinsicClass(*val*)</code></p>
 
-<div class="fdef">
+<p>Returns <code class="language-plaintext highlighter-rouge">true</code> if <em>val</em> is an IntrinsicClass
+object, <code class="language-plaintext highlighter-rouge">nil</code> if not.</p>
 
-Returns `true` if *val* is an IntrinsicClass
-object, `nil` if not.
+<p>This is a class method, so you call this method directly on
+IntrinsicClass itself:</p>
 
-This is a class method, so you call this method directly on
-IntrinsicClass itself:
-
-```
-    if (IntrinsicClass.isIntrinsicClass(x))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if (IntrinsicClass.isIntrinsicClass(x))
       "x is an intrinsic class instance!\n";
-```
+</code></pre></div></div>
 
-At first glance, this method might seem redundant with
-`ofKind()` and
-`getSuperclassList()`. It's not, though: those
-methods don't let you determine if you're dealing with an IntrinsicClass
-object, because they instead yield information about the *inheritance*
+<p>At first glance, this method might seem redundant with
+<code class="language-plaintext highlighter-rouge">ofKind()</code> and
+<code class="language-plaintext highlighter-rouge">getSuperclassList()</code>. It’s not, though: those
+methods don’t let you determine if you’re dealing with an IntrinsicClass
+object, because they instead yield information about the <em>inheritance</em>
 structure for the intrinsic types. IntrinsicClass is used only for the
-*representation* of these objects, and isn't involved in the inheritance
-structure.
+<em>representation</em> of these objects, and isn’t involved in the inheritance
+structure.</p>
 
-For example, `\[1,2,3\].getSuperclassList()`
-yields `\[List\]`, and
-`List.getSuperclassList()` yields
-`\[Object\]`. Since
-`Object` is the root object,
-`Object.getSuperclassList()` yields an empty
+<p>For example, <code class="language-plaintext highlighter-rouge">\[1,2,3\].getSuperclassList()</code>
+yields <code class="language-plaintext highlighter-rouge">\[List\]</code>, and
+<code class="language-plaintext highlighter-rouge">List.getSuperclassList()</code> yields
+<code class="language-plaintext highlighter-rouge">\[Object\]</code>. Since
+<code class="language-plaintext highlighter-rouge">Object</code> is the root object,
+<code class="language-plaintext highlighter-rouge">Object.getSuperclassList()</code> yields an empty
 list. In order for the type system to be internally consistent,
-`ofKind()` must report information that's
-consistent with `getSuperclassList()`, so
-`List.ofKind(IntrinsicClass)` must return
-`nil`: IntrinsicClass isn't anywhere in
-`List`'s superclass tree, so
-`List` must not be of kind
-`IntrinsicClass`.
+<code class="language-plaintext highlighter-rouge">ofKind()</code> must report information that’s
+consistent with <code class="language-plaintext highlighter-rouge">getSuperclassList()</code>, so
+<code class="language-plaintext highlighter-rouge">List.ofKind(IntrinsicClass)</code> must return
+<code class="language-plaintext highlighter-rouge">nil</code>: IntrinsicClass isn’t anywhere in
+<code class="language-plaintext highlighter-rouge">List</code>’s superclass tree, so
+<code class="language-plaintext highlighter-rouge">List</code> must not be of kind
+<code class="language-plaintext highlighter-rouge">IntrinsicClass</code>.</p>
 
-That's why `isIntrinsicClass()` is needed. It's
-occasionally useful to know when you're dealing with an intrinsic class
+<p>That’s why <code class="language-plaintext highlighter-rouge">isIntrinsicClass()</code> is needed. It’s
+occasionally useful to know when you’re dealing with an intrinsic class
 representation object, and the normal means of class relationship
-testing don't work for this test.
+testing don’t work for this test.</p>
 
+<hr />
 
-
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt;
-IntrinsicClass  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt;
+IntrinsicClass<br />
 <span class="navnp"><a href="httpsrv.html" class="nav"><em>Prev:</em> HTTPServer</a>
     <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
-</span>
+</span></p>
 
-</div>
-
-</div>
 
 </main>
 <footer>

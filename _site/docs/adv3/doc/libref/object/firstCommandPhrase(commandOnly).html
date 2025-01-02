@@ -40,25 +40,17 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Define the simplest grammar rule for a first-on-line command phrase,
+<p>Define the simplest grammar rule for a first-on-line command phrase,
 which is just an ordinary command phrase. The language-specific grammar
 must define any other alternatives; specifically, the language might
-provide an "actor, command" syntax to direct a command to a particular
-actor.
+provide an “actor, command” syntax to direct a command to a particular
+actor.</p>
 
-`grammar `<span class="gramalt">[`firstCommandPhrase`](../object/firstCommandPhrase.html)`(commandOnly)`</span>` :   `[`FirstCommandProd`](../object/FirstCommandProd.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">grammar </code><span class="gramalt"><a href="../object/firstCommandPhrase.html"><code class="language-plaintext highlighter-rouge">firstCommandPhrase</code></a><code class="language-plaintext highlighter-rouge">(commandOnly)</code></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/FirstCommandProd.html"><code class="language-plaintext highlighter-rouge">FirstCommandProd</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">firstCommandPhrase(commandOnly)</code></strong><br />
 <a href="../object/FirstCommandProd.html"><code class="language-plaintext highlighter-rouge">FirstCommandProd</code></a><br />
@@ -67,59 +59,40 @@ actor.
 `                                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">CommandProd</code> :<br />
 <a href="../object/CommandProd.html#getActorPhrase"><code class="language-plaintext highlighter-rouge">getActorPhrase</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">FirstCommandProd</code> :<br />
-<a href="../object/FirstCommandProd.html#countCommands"><code class="language-plaintext highlighter-rouge">countCommands</code></a><a href="../object/FirstCommandProd.html#getCommandSepIndex"><code class="language-plaintext highlighter-rouge">getCommandSepIndex</code></a><a href="../object/FirstCommandProd.html#getCommandTokens"><code class="language-plaintext highlighter-rouge">getCommandTokens</code></a><a href="../object/FirstCommandProd.html#getNextCommandIndex"><code class="language-plaintext highlighter-rouge">getNextCommandIndex</code></a><a href="../object/FirstCommandProd.html#getTargetActor"><code class="language-plaintext highlighter-rouge">getTargetActor</code></a><a href="../object/FirstCommandProd.html#isEndOfSentence"><code class="language-plaintext highlighter-rouge">isEndOfSentence</code></a><a href="../object/FirstCommandProd.html#resolveFirstAction"><code class="language-plaintext highlighter-rouge">resolveFirstAction</code></a><a href="../object/FirstCommandProd.html#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
+<a href="../object/FirstCommandProd.html#countCommands"><code class="language-plaintext highlighter-rouge">countCommands</code></a> <a href="../object/FirstCommandProd.html#getCommandSepIndex"><code class="language-plaintext highlighter-rouge">getCommandSepIndex</code></a> <a href="../object/FirstCommandProd.html#getCommandTokens"><code class="language-plaintext highlighter-rouge">getCommandTokens</code></a> <a href="../object/FirstCommandProd.html#getNextCommandIndex"><code class="language-plaintext highlighter-rouge">getNextCommandIndex</code></a> <a href="../object/FirstCommandProd.html#getTargetActor"><code class="language-plaintext highlighter-rouge">getTargetActor</code></a> <a href="../object/FirstCommandProd.html#isEndOfSentence"><code class="language-plaintext highlighter-rouge">isEndOfSentence</code></a> <a href="../object/FirstCommandProd.html#resolveFirstAction"><code class="language-plaintext highlighter-rouge">resolveFirstAction</code></a> <a href="../object/FirstCommandProd.html#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">CommandProd</code> :<br />
-<a href="../object/CommandProd.html#execActorPhrase"><code class="language-plaintext highlighter-rouge">execActorPhrase</code></a><a href="../object/CommandProd.html#hasTargetActor"><code class="language-plaintext highlighter-rouge">hasTargetActor</code></a></p>
+<a href="../object/CommandProd.html#execActorPhrase"><code class="language-plaintext highlighter-rouge">execActorPhrase</code></a> <a href="../object/CommandProd.html#hasTargetActor"><code class="language-plaintext highlighter-rouge">hasTargetActor</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

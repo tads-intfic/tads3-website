@@ -64,7 +64,7 @@ determined by the active() method.
 
 
 
-[`commLink`](../object/commLink.html)[`QDefaults`](../object/QDefaults.html)[`QSenseRegion`](../object/QSenseRegion.html)[`QViewport`](../object/QViewport.html)
+[`commLink`](../object/commLink.html) [`QDefaults`](../object/QDefaults.html) [`QSenseRegion`](../object/QSenseRegion.html) [`QViewport`](../object/QViewport.html)
 <span id="_PropSummary_"></span>
 
 
@@ -73,7 +73,7 @@ determined by the active() method.
 
 
 
-[`active`](#active)[`all`](#all)[`allActive_`](#allActive_)[`priority`](#priority)
+[`active`](#active) [`all`](#all) [`allActive_`](#allActive_) [`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ determined by the active() method.
 
 
 
-[`allActive`](#allActive)[`classInit`](#classInit)[`first`](#first)[`next`](#next)
+[`allActive`](#allActive) [`classInit`](#classInit) [`first`](#first) [`next`](#next)
 
 <span id="_Properties_"></span>
 

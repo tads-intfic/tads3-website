@@ -926,7 +926,7 @@ layout: docs
             if (dataType(vpath) == TypeSString
                 && vpath.length() > 0
                 && rexSearch(vpath, '/([^/]+)$') != nil)
-                root = rexGroup(1)[3];
+                root = rexGroup(1) [3];
             
             /* send the reply, wrapping the fragment in a proper XML document */
             sendXML(req, root, xml);
@@ -1004,7 +1004,7 @@ layout: docs
             /* get the filename suffix (extension) */
             local ext = nil;
             if (rexSearch('%.([^.]+)$', name) != nil)
-                ext = rexGroup(1)[3];
+                ext = rexGroup(1) [3];
 
             local fp = nil;
             try
@@ -1071,7 +1071,7 @@ layout: docs
             if (rexMatch('.*%.([^.]+)$', fname) != nil)
             {
                 /* pull out the extension */
-                local ext = rexGroup(1)[3].toLower();
+                local ext = rexGroup(1) [3].toLower();
 
                 /* 
                  *   check against common binary types - if it's not there,
@@ -2417,14 +2417,14 @@ layout: docs
                 if (rexMatch(curProPat, l) != nil)
                 {
                     /* current profile setting */
-                    curProfile = rexGroup(1)[3];
+                    curProfile = rexGroup(1) [3];
                 }
                 else if (rexMatch(proItemPat, l) != nil)
                 {
                     /* style item definition - pull out the parts */
-                    local proid = rexGroup(1)[3];
-                    local key = rexGroup(2)[3];
-                    local val = rexGroup(3)[3];
+                    local proid = rexGroup(1) [3];
+                    local key = rexGroup(2) [3];
+                    local val = rexGroup(3) [3];
 
                     /* if the profile isn't in the table yet, add it */
                     local pro = pros[proid];

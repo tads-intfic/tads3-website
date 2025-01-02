@@ -46,44 +46,38 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A hint menu. This same class can be used for the top-level hints menu
+and for sub-menus within the hints menu.</p>
 
-A hint menu. This same class can be used for the top-level hints menu
-and for sub-menus within the hints menu.
-
-The typical hint menu system will be structured into a top-level hint
+<p>The typical hint menu system will be structured into a top-level hint
 menu that contains a set of sub-menus for the main areas of the game;
 each sub-menu will have a series of Goal items, each Goal providing a
-set of answers to a particular question. Something like this:
+set of answers to a particular question. Something like this:</p>
 
-topHintMenu: TopHintMenu 'Hints';  
-+ HintMenu 'General Questions';  
-++ Goal 'What am I supposed to be doing?' \[answer, answer, answer\];  
-++ Goal 'Amusing things to try' \[thing, thing, thing\];  
-+ HintMenu 'First Area';  
-++ Goal 'How do I get past the shark?' \[answer, answer, answer\];  
-++ Goal 'How do I open the fish tank?' \[answer, answer, answer\];  
-+ HintMenu 'Second Area';  
-++ Goal 'Where is the gold key?' \[answer, answer, answer\];  
-++ Goal 'How do I unlock the gold door?' \[answer, answer, answer\];
+<p>topHintMenu: TopHintMenu ‘Hints’;</p>
+<ul>
+  <li>HintMenu ‘General Questions’;<br />
+++ Goal ‘What am I supposed to be doing?’ [answer, answer, answer];<br />
+++ Goal ‘Amusing things to try’ [thing, thing, thing];</li>
+  <li>HintMenu ‘First Area’;<br />
+++ Goal ‘How do I get past the shark?’ [answer, answer, answer];<br />
+++ Goal ‘How do I open the fish tank?’ [answer, answer, answer];</li>
+  <li>HintMenu ‘Second Area’;<br />
+++ Goal ‘Where is the gold key?’ [answer, answer, answer];<br />
+++ Goal ‘How do I unlock the gold door?’ [answer, answer, answer];</li>
+</ul>
 
-Note that there's no requirement that the hint menu tree takes exactly
+<p>Note that there’s no requirement that the hint menu tree takes exactly
 this shape. A very small game could dispense with the submenus and
 simply put all of the goals directly in the top hint menu. A very large
 game with lots of goals could add more levels of sub-menus to make it
-easier to navigate the large number of topics.
+easier to navigate the large number of topics.</p>
 
-`class `**`HintMenu`**` :   `[`MenuItem`](../object/MenuItem.html)[`HintMenuObject`](../object/HintMenuObject.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">HintMenu</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MenuItem.html"><code class="language-plaintext highlighter-rouge">MenuItem</code></a> <a href="../object/HintMenuObject.html"><code class="language-plaintext highlighter-rouge">HintMenuObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">HintMenu</code></strong><br />
 <a href="../object/MenuItem.html"><code class="language-plaintext highlighter-rouge">MenuItem</code></a><br />
@@ -93,67 +87,47 @@ easier to navigate the large number of topics.
 </code>                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">HintMenu</code></strong><br />
 <a href="../object/TopHintMenu.html"><code class="language-plaintext highlighter-rouge">TopHintMenu</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#allContents"><code class="language-plaintext highlighter-rouge">allContents</code></a><a href="#isActiveInMenu"><code class="language-plaintext highlighter-rouge">isActiveInMenu</code></a><a href="#title"><code class="language-plaintext highlighter-rouge">title</code></a></p>
+<p><a href="#allContents"><code class="language-plaintext highlighter-rouge">allContents</code></a> <a href="#isActiveInMenu"><code class="language-plaintext highlighter-rouge">isActiveInMenu</code></a> <a href="#title"><code class="language-plaintext highlighter-rouge">title</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
-<a href="../object/MenuItem.html#bgcolor"><code class="language-plaintext highlighter-rouge">bgcolor</code></a><a href="../object/MenuItem.html#curKeyList"><code class="language-plaintext highlighter-rouge">curKeyList</code></a><a href="../object/MenuItem.html#curMenu"><code class="language-plaintext highlighter-rouge">curMenu</code></a><a href="../object/MenuItem.html#fgcolor"><code class="language-plaintext highlighter-rouge">fgcolor</code></a><a href="../object/MenuItem.html#fullScreenMode"><code class="language-plaintext highlighter-rouge">fullScreenMode</code></a><a href="../object/MenuItem.html#heading"><code class="language-plaintext highlighter-rouge">heading</code></a><a href="../object/MenuItem.html#indent"><code class="language-plaintext highlighter-rouge">indent</code></a><a href="../object/MenuItem.html#isOpen"><code class="language-plaintext highlighter-rouge">isOpen</code></a><a href="../object/MenuItem.html#keyList"><code class="language-plaintext highlighter-rouge">keyList</code></a><a href="../object/MenuItem.html#prevMenuLink"><code class="language-plaintext highlighter-rouge">prevMenuLink</code></a><a href="../object/MenuItem.html#topbarbg"><code class="language-plaintext highlighter-rouge">topbarbg</code></a><a href="../object/MenuItem.html#topbarfg"><code class="language-plaintext highlighter-rouge">topbarfg</code></a><a href="../object/MenuItem.html#topMenu"><code class="language-plaintext highlighter-rouge">topMenu</code></a></p>
+<a href="../object/MenuItem.html#bgcolor"><code class="language-plaintext highlighter-rouge">bgcolor</code></a> <a href="../object/MenuItem.html#curKeyList"><code class="language-plaintext highlighter-rouge">curKeyList</code></a> <a href="../object/MenuItem.html#curMenu"><code class="language-plaintext highlighter-rouge">curMenu</code></a> <a href="../object/MenuItem.html#fgcolor"><code class="language-plaintext highlighter-rouge">fgcolor</code></a> <a href="../object/MenuItem.html#fullScreenMode"><code class="language-plaintext highlighter-rouge">fullScreenMode</code></a> <a href="../object/MenuItem.html#heading"><code class="language-plaintext highlighter-rouge">heading</code></a> <a href="../object/MenuItem.html#indent"><code class="language-plaintext highlighter-rouge">indent</code></a> <a href="../object/MenuItem.html#isOpen"><code class="language-plaintext highlighter-rouge">isOpen</code></a> <a href="../object/MenuItem.html#keyList"><code class="language-plaintext highlighter-rouge">keyList</code></a> <a href="../object/MenuItem.html#prevMenuLink"><code class="language-plaintext highlighter-rouge">prevMenuLink</code></a> <a href="../object/MenuItem.html#topbarbg"><code class="language-plaintext highlighter-rouge">topbarbg</code></a> <a href="../object/MenuItem.html#topbarfg"><code class="language-plaintext highlighter-rouge">topbarfg</code></a> <a href="../object/MenuItem.html#topMenu"><code class="language-plaintext highlighter-rouge">topMenu</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
-<a href="../object/MenuObject.html#contents"><code class="language-plaintext highlighter-rouge">contents</code></a><a href="../object/MenuObject.html#menuOrder"><code class="language-plaintext highlighter-rouge">menuOrder</code></a></p>
+<a href="../object/MenuObject.html#contents"><code class="language-plaintext highlighter-rouge">contents</code></a> <a href="../object/MenuObject.html#menuOrder"><code class="language-plaintext highlighter-rouge">menuOrder</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">HintMenuObject</code> :<br />
 <a href="../object/HintMenuObject.html#topicOrder"><code class="language-plaintext highlighter-rouge">topicOrder</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a><a href="#initializeContents"><code class="language-plaintext highlighter-rouge">initializeContents</code></a><a href="#updateContents"><code class="language-plaintext highlighter-rouge">updateContents</code></a></p>
+<p><a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a> <a href="#initializeContents"><code class="language-plaintext highlighter-rouge">initializeContents</code></a> <a href="#updateContents"><code class="language-plaintext highlighter-rouge">updateContents</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
-<a href="../object/MenuItem.html#display"><code class="language-plaintext highlighter-rouge">display</code></a><a href="../object/MenuItem.html#enterSubMenu"><code class="language-plaintext highlighter-rouge">enterSubMenu</code></a><a href="../object/MenuItem.html#formatXML"><code class="language-plaintext highlighter-rouge">formatXML</code></a><a href="../object/MenuItem.html#getChildIndex"><code class="language-plaintext highlighter-rouge">getChildIndex</code></a><a href="../object/MenuItem.html#getKeysXML"><code class="language-plaintext highlighter-rouge">getKeysXML</code></a><a href="../object/MenuItem.html#getNextMenu"><code class="language-plaintext highlighter-rouge">getNextMenu</code></a><a href="../object/MenuItem.html#getPrevMenu"><code class="language-plaintext highlighter-rouge">getPrevMenu</code></a><a href="../object/MenuItem.html#getXML"><code class="language-plaintext highlighter-rouge">getXML</code></a><a href="../object/MenuItem.html#refreshTopMenuBanner"><code class="language-plaintext highlighter-rouge">refreshTopMenuBanner</code></a><a href="../object/MenuItem.html#removeStatusLine"><code class="language-plaintext highlighter-rouge">removeStatusLine</code></a><a href="../object/MenuItem.html#removeTopMenuBanner"><code class="language-plaintext highlighter-rouge">removeTopMenuBanner</code></a><a href="../object/MenuItem.html#showMenu"><code class="language-plaintext highlighter-rouge">showMenu</code></a><a href="../object/MenuItem.html#showMenuHtml"><code class="language-plaintext highlighter-rouge">showMenuHtml</code></a><a href="../object/MenuItem.html#showMenuText"><code class="language-plaintext highlighter-rouge">showMenuText</code></a><a href="../object/MenuItem.html#showTopMenuBanner"><code class="language-plaintext highlighter-rouge">showTopMenuBanner</code></a></p>
+<a href="../object/MenuItem.html#display"><code class="language-plaintext highlighter-rouge">display</code></a> <a href="../object/MenuItem.html#enterSubMenu"><code class="language-plaintext highlighter-rouge">enterSubMenu</code></a> <a href="../object/MenuItem.html#formatXML"><code class="language-plaintext highlighter-rouge">formatXML</code></a> <a href="../object/MenuItem.html#getChildIndex"><code class="language-plaintext highlighter-rouge">getChildIndex</code></a> <a href="../object/MenuItem.html#getKeysXML"><code class="language-plaintext highlighter-rouge">getKeysXML</code></a> <a href="../object/MenuItem.html#getNextMenu"><code class="language-plaintext highlighter-rouge">getNextMenu</code></a> <a href="../object/MenuItem.html#getPrevMenu"><code class="language-plaintext highlighter-rouge">getPrevMenu</code></a> <a href="../object/MenuItem.html#getXML"><code class="language-plaintext highlighter-rouge">getXML</code></a> <a href="../object/MenuItem.html#refreshTopMenuBanner"><code class="language-plaintext highlighter-rouge">refreshTopMenuBanner</code></a> <a href="../object/MenuItem.html#removeStatusLine"><code class="language-plaintext highlighter-rouge">removeStatusLine</code></a> <a href="../object/MenuItem.html#removeTopMenuBanner"><code class="language-plaintext highlighter-rouge">removeTopMenuBanner</code></a> <a href="../object/MenuItem.html#showMenu"><code class="language-plaintext highlighter-rouge">showMenu</code></a> <a href="../object/MenuItem.html#showMenuHtml"><code class="language-plaintext highlighter-rouge">showMenuHtml</code></a> <a href="../object/MenuItem.html#showMenuText"><code class="language-plaintext highlighter-rouge">showMenuText</code></a> <a href="../object/MenuItem.html#showTopMenuBanner"><code class="language-plaintext highlighter-rouge">showTopMenuBanner</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
-<a href="../object/MenuObject.html#compareForMenuSort"><code class="language-plaintext highlighter-rouge">compareForMenuSort</code></a><a href="../object/MenuObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="../object/MenuObject.html#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a></p>
+<a href="../object/MenuObject.html#compareForMenuSort"><code class="language-plaintext highlighter-rouge">compareForMenuSort</code></a> <a href="../object/MenuObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/MenuObject.html#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">HintMenuObject</code> :<br />
 <a href="../object/HintMenuObject.html#compareForTopicSort"><code class="language-plaintext highlighter-rouge">compareForTopicSort</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="allContents"></span></p>
 
@@ -161,13 +135,9 @@ easier to navigate the large number of topics.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#517">517</a>]</p>
 
-<div class="desc">
-
-our list of all of our sub-items (some of which may not be active, in
-which case they'll appear in this list but not in our 'contents' list,
-which contains only active contents)
-
-</div>
+<p>our list of all of our sub-items (some of which may not be active, in
+which case they’ll appear in this list but not in our ‘contents’ list,
+which contains only active contents)</p>
 
 <p><span id="isActiveInMenu"></span></p>
 
@@ -175,11 +145,7 @@ which contains only active contents)
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#492">492</a>]</p>
 
-<div class="desc">
-
-we're active in a menu if we have any active contents
-
-</div>
+<p>we’re active in a menu if we have any active contents</p>
 
 <p><span id="title"></span></p>
 
@@ -187,19 +153,11 @@ we're active in a menu if we have any active contents
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#464">464</a>]</p>
 
-<div class="desc">
-
-the menu's title
-
-</div>
+<p>the menu’s title</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addToContents"></span></p>
 
@@ -207,11 +165,7 @@ the menu's title
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#495">495</a>]</p>
 
-<div class="desc">
-
-add a sub-item to our contents
-
-</div>
+<p>add a sub-item to our contents</p>
 
 <p><span id="initializeContents"></span></p>
 
@@ -219,11 +173,7 @@ add a sub-item to our contents
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#505">505</a>]</p>
 
-<div class="desc">
-
-initialize our contents list
-
-</div>
+<p>initialize our contents list</p>
 
 <p><span id="updateContents"></span></p>
 
@@ -231,18 +181,11 @@ initialize our contents list
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#467">467</a>]</p>
 
-<div class="desc">
+<p>update our contents</p>
 
-update our contents
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

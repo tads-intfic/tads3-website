@@ -71,7 +71,7 @@ object that will handle the request.
 
 
 
-[`all`](#all)[`contents`](#contents)[`priority`](#priority)[`server`](#server)
+[`all`](#all) [`contents`](#contents) [`priority`](#priority) [`server`](#server)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ object that will handle the request.
 
 
 
-[`isGroupFor`](#isGroupFor)[`processRequest`](#processRequest)
+[`isGroupFor`](#isGroupFor) [`processRequest`](#processRequest)
 
 <span id="_Properties_"></span>
 

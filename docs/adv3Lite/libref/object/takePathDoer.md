@@ -48,10 +48,10 @@ In English taking a path means going along it
 
 
 
-[`ignoreError`](#ignoreError)[`strict`](#strict)
+[`ignoreError`](#ignoreError) [`strict`](#strict)
 
 Inherited from `Doer` :  
-[`cmd`](../object/Doer.html#cmd)[`handleAction`](../object/Doer.html#handleAction)[`priority`](../object/Doer.html#priority)
+[`cmd`](../object/Doer.html#cmd) [`handleAction`](../object/Doer.html#handleAction) [`priority`](../object/Doer.html#priority)
 
 
 
@@ -66,10 +66,10 @@ Inherited from `Doer` :
 [`execAction`](#execAction)
 
 Inherited from `Doer` :  
-[`checkDirection`](../object/Doer.html#checkDirection)[`exec`](../object/Doer.html#exec)[`redirect`](../object/Doer.html#redirect)
+[`checkDirection`](../object/Doer.html#checkDirection) [`exec`](../object/Doer.html#exec) [`redirect`](../object/Doer.html#redirect)
 
 Inherited from `Redirector` :  
-[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
+[`doInstead`](../object/Redirector.html#doInstead) [`doNested`](../object/Redirector.html#doNested) [`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

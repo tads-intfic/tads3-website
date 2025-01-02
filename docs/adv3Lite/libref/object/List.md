@@ -93,13 +93,13 @@ Modify the List intrinsic class to provide a to-symbol mapping
 
 
 
-[`append`](#append)[`appendUnique`](#appendUnique)[`car`](#car)[`cdr`](#cdr)[`countOf`](#countOf)[`countWhich`](#countWhich)[`element`](#element)[`find`](#find)[`forEach`](#forEach)[`forEachAssoc`](#forEachAssoc)[`getUnique`](#getUnique)[`indexOf`](#indexOf)[`indexOfMax`](#indexOfMax)[`indexOfMin`](#indexOfMin)[`indexWhich`](#indexWhich)[`insertAt`](#insertAt)[`intersect`](#intersect)[`join`](#join)[`lastIndexOf`](#lastIndexOf)[`lastIndexWhich`](#lastIndexWhich)[`lastValWhich`](#lastValWhich)[`length`](#length)[`mapAll`](#mapAll)[`matchProto`](#matchProto)[`maxVal`](#maxVal)[`minVal`](#minVal)[`overlapsWith`](#overlapsWith)[`prepend`](#prepend)[`removeElementAt`](#removeElementAt)[`removeRange`](#removeRange)[`shuffle`](#shuffle)[`sort`](#sort)[`splice`](#splice)[`strComp`](#strComp)[`sublist`](#sublist)[`subset`](#subset)[`toList`](#toList)[`valToSymbol`](#valToSymbol)[`valWhich`](#valWhich)
+[`append`](#append) [`appendUnique`](#appendUnique) [`car`](#car) [`cdr`](#cdr) [`countOf`](#countOf) [`countWhich`](#countWhich) [`element`](#element) [`find`](#find) [`forEach`](#forEach) [`forEachAssoc`](#forEachAssoc) [`getUnique`](#getUnique) [`indexOf`](#indexOf) [`indexOfMax`](#indexOfMax) [`indexOfMin`](#indexOfMin) [`indexWhich`](#indexWhich) [`insertAt`](#insertAt) [`intersect`](#intersect) [`join`](#join) [`lastIndexOf`](#lastIndexOf) [`lastIndexWhich`](#lastIndexWhich) [`lastValWhich`](#lastValWhich) [`length`](#length) [`mapAll`](#mapAll) [`matchProto`](#matchProto) [`maxVal`](#maxVal) [`minVal`](#minVal) [`overlapsWith`](#overlapsWith) [`prepend`](#prepend) [`removeElementAt`](#removeElementAt) [`removeRange`](#removeRange) [`shuffle`](#shuffle) [`sort`](#sort) [`splice`](#splice) [`strComp`](#strComp) [`sublist`](#sublist) [`subset`](#subset) [`toList`](#toList) [`valToSymbol`](#valToSymbol) [`valWhich`](#valWhich)
 
 Inherited from `Collection` :  
-[`createIterator`](../object/Collection.html#createIterator)[`createLiveIterator`](../object/Collection.html#createLiveIterator)
+[`createIterator`](../object/Collection.html#createIterator) [`createLiveIterator`](../object/Collection.html#createLiveIterator)
 
 Inherited from `Object` :  
-[`callInherited`](../object/Object.html#callInherited)[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)
+[`callInherited`](../object/Object.html#callInherited) [`getPropList`](../object/Object.html#getPropList) [`getPropParams`](../object/Object.html#getPropParams) [`getSuperclassList`](../object/Object.html#getSuperclassList) [`isClass`](../object/Object.html#isClass) [`isTransient`](../object/Object.html#isTransient) [`ofKind`](../object/Object.html#ofKind) [`propDefined`](../object/Object.html#propDefined) [`propInherited`](../object/Object.html#propInherited) [`propType`](../object/Object.html#propType)
 
 <span id="_Properties_"></span>
 

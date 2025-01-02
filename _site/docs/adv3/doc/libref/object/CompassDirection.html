@@ -47,89 +47,57 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The base class for compass directions (north, south, etc). We don't add
+<p>The base class for compass directions (north, south, etc). We don’t add
 anything to the basic Direction class, but we use a separate class for
 compass directions to allow language-specific customizations for all of
 the directions and to allow travel commands to treat these specially
-when needed.
+when needed.</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[3072](../source/en_us.t.html#3072)\]:*  
-The English-specific modifications for compass directions.
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3072">3072</a>]:</em><br />
+The English-specific modifications for compass directions.</p>
 
-`class `**`CompassDirection`**` :   `[`Direction`](../object/Direction.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CompassDirection</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Direction.html"><code class="language-plaintext highlighter-rouge">Direction</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">CompassDirection</code></strong><br />
 <a href="../object/Direction.html"><code class="language-plaintext highlighter-rouge">Direction</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/eastDirection.html"><code class="language-plaintext highlighter-rouge">eastDirection</code></a><a href="../object/northDirection.html"><code class="language-plaintext highlighter-rouge">northDirection</code></a><a href="../object/northeastDirection.html"><code class="language-plaintext highlighter-rouge">northeastDirection</code></a><a href="../object/northwestDirection.html"><code class="language-plaintext highlighter-rouge">northwestDirection</code></a><a href="../object/southDirection.html"><code class="language-plaintext highlighter-rouge">southDirection</code></a><a href="../object/southeastDirection.html"><code class="language-plaintext highlighter-rouge">southeastDirection</code></a><a href="../object/southwestDirection.html"><code class="language-plaintext highlighter-rouge">southwestDirection</code></a><a href="../object/westDirection.html"><code class="language-plaintext highlighter-rouge">westDirection</code></a>
+<p><a href="../object/eastDirection.html"><code class="language-plaintext highlighter-rouge">eastDirection</code></a> <a href="../object/northDirection.html"><code class="language-plaintext highlighter-rouge">northDirection</code></a> <a href="../object/northeastDirection.html"><code class="language-plaintext highlighter-rouge">northeastDirection</code></a> <a href="../object/northwestDirection.html"><code class="language-plaintext highlighter-rouge">northwestDirection</code></a> <a href="../object/southDirection.html"><code class="language-plaintext highlighter-rouge">southDirection</code></a> <a href="../object/southeastDirection.html"><code class="language-plaintext highlighter-rouge">southeastDirection</code></a> <a href="../object/southwestDirection.html"><code class="language-plaintext highlighter-rouge">southwestDirection</code></a> <a href="../object/westDirection.html"><code class="language-plaintext highlighter-rouge">westDirection</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Direction</code> :<br />
-<a href="../object/Direction.html#allDirections"><code class="language-plaintext highlighter-rouge">allDirections</code></a><a href="../object/Direction.html#dirProp"><code class="language-plaintext highlighter-rouge">dirProp</code></a><a href="../object/Direction.html#sortingOrder"><code class="language-plaintext highlighter-rouge">sortingOrder</code></a></p>
+<a href="../object/Direction.html#allDirections"><code class="language-plaintext highlighter-rouge">allDirections</code></a> <a href="../object/Direction.html#dirProp"><code class="language-plaintext highlighter-rouge">dirProp</code></a> <a href="../object/Direction.html#sortingOrder"><code class="language-plaintext highlighter-rouge">sortingOrder</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a><a href="#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a></p>
+<p><a href="#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a> <a href="#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Direction</code> :<br />
-<a href="../object/Direction.html#defaultConnector"><code class="language-plaintext highlighter-rouge">defaultConnector</code></a><a href="../object/Direction.html#initializeDirection"><code class="language-plaintext highlighter-rouge">initializeDirection</code></a><a href="../object/Direction.html#initializeDirectionClass"><code class="language-plaintext highlighter-rouge">initializeDirectionClass</code></a></p>
+<a href="../object/Direction.html#defaultConnector"><code class="language-plaintext highlighter-rouge">defaultConnector</code></a> <a href="../object/Direction.html#initializeDirection"><code class="language-plaintext highlighter-rouge">initializeDirection</code></a> <a href="../object/Direction.html#initializeDirectionClass"><code class="language-plaintext highlighter-rouge">initializeDirectionClass</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="sayArriving"></span></p>
 
@@ -137,11 +105,7 @@ The English-specific modifications for compass directions.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3074">3074</a>]</p>
 
-<div class="desc">
-
-describe a traveler arriving from this direction
-
-</div>
+<p>describe a traveler arriving from this direction</p>
 
 <p><span id="sayDeparting"></span></p>
 
@@ -149,18 +113,11 @@ describe a traveler arriving from this direction
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3081">3081</a>]</p>
 
-<div class="desc">
+<p>describe a traveler departing in this direction</p>
 
-describe a traveler departing in this direction
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

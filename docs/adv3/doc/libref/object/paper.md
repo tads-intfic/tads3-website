@@ -47,7 +47,7 @@ Paper is opaque to sight and touch, but allows sound and smell to pass.
 
 
 
-[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
+[`hearThru`](#hearThru) [`seeThru`](#seeThru) [`smellThru`](#smellThru) [`touchThru`](#touchThru)
 
 
 

@@ -39,7 +39,7 @@ implementations for many of the functions and classes defined here.
 
 
 
-[`BreakLoopSignal`](../object/BreakLoopSignal.html)[`CircularExecException`](../object/CircularExecException.html)[`Exception`](../object/Exception.html)[`InitObject`](../object/InitObject.html)[`ModuleExecObject`](../object/ModuleExecObject.html)[`OneOfIndexGen`](../object/OneOfIndexGen.html)[`PreinitObject`](../object/PreinitObject.html)[`ProgramException`](../object/ProgramException.html)[`RestartSignal`](../object/RestartSignal.html)[`RuntimeError`](../object/RuntimeError.html)[`SpecialsToHtmlState`](../object/SpecialsToHtmlState.html)[`StorageServerError`](../object/StorageServerError.html)[`T3StackInfo`](../object/T3StackInfo.html)[`UnknownCharSetException`](../object/UnknownCharSetException.html)
+[`BreakLoopSignal`](../object/BreakLoopSignal.html) [`CircularExecException`](../object/CircularExecException.html) [`Exception`](../object/Exception.html) [`InitObject`](../object/InitObject.html) [`ModuleExecObject`](../object/ModuleExecObject.html) [`OneOfIndexGen`](../object/OneOfIndexGen.html) [`PreinitObject`](../object/PreinitObject.html) [`ProgramException`](../object/ProgramException.html) [`RestartSignal`](../object/RestartSignal.html) [`RuntimeError`](../object/RuntimeError.html) [`SpecialsToHtmlState`](../object/SpecialsToHtmlState.html) [`StorageServerError`](../object/StorageServerError.html) [`T3StackInfo`](../object/T3StackInfo.html) [`UnknownCharSetException`](../object/UnknownCharSetException.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -48,7 +48,7 @@ implementations for many of the functions and classes defined here.
 
 
 
-[`mainAtExit`](../object/mainAtExit.html)[`mainGlobal`](../object/mainGlobal.html)
+[`mainAtExit`](../object/mainAtExit.html) [`mainGlobal`](../object/mainGlobal.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -57,7 +57,7 @@ implementations for many of the functions and classes defined here.
 
 
 
-[`_default_display_fn`](#_default_display_fn)[`_init`](#_init)[`_main`](#_main)[`_mainCommon`](#_mainCommon)[`_mainRestore`](#_mainRestore)[`_outputCapture`](#_outputCapture)[`_preinit`](#_preinit)[`dataTypeXlat`](#dataTypeXlat)[`flexcall`](#flexcall)[`forEachInstance`](#forEachInstance)[`initAfterLoad`](#initAfterLoad)[`instanceWhich`](#instanceWhich)
+[`_default_display_fn`](#_default_display_fn) [`_init`](#_init) [`_main`](#_main) [`_mainCommon`](#_mainCommon) [`_mainRestore`](#_mainRestore) [`_outputCapture`](#_outputCapture) [`_preinit`](#_preinit) [`dataTypeXlat`](#dataTypeXlat) [`flexcall`](#flexcall) [`forEachInstance`](#forEachInstance) [`initAfterLoad`](#initAfterLoad) [`instanceWhich`](#instanceWhich)
 
 <span id="_Functions_"></span>
 

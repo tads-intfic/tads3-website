@@ -48,7 +48,7 @@ cquoteOutputFilter; this turns straight quotes into typographical quotes
 
 
 
-[`aggressive`](#aggressive)[`isActive`](#isActive)[`patAggressive`](#patAggressive)[`patIsCont1Tag`](#patIsCont1Tag)[`patIsCont2Tag`](#patIsCont2Tag)[`patIsFormatTag`](#patIsFormatTag)[`patIsHTMLTag`](#patIsHTMLTag)[`patIsPossTag`](#patIsPossTag)
+[`aggressive`](#aggressive) [`isActive`](#isActive) [`patAggressive`](#patAggressive) [`patIsCont1Tag`](#patIsCont1Tag) [`patIsCont2Tag`](#patIsCont2Tag) [`patIsFormatTag`](#patIsFormatTag) [`patIsHTMLTag`](#patIsHTMLTag) [`patIsPossTag`](#patIsPossTag)
 
 
 
@@ -60,7 +60,7 @@ cquoteOutputFilter; this turns straight quotes into typographical quotes
 
 
 
-[`activate`](#activate)[`deactivate`](#deactivate)[`filterText`](#filterText)
+[`activate`](#activate) [`deactivate`](#deactivate) [`filterText`](#filterText)
 
 
 

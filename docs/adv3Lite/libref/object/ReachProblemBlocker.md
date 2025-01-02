@@ -83,7 +83,7 @@ Inherited from `ReachProblem` :
 
 
 
-[`construct`](#construct)[`reachBlockedMsg`](#reachBlockedMsg)[`verify`](#verify)
+[`construct`](#construct) [`reachBlockedMsg`](#reachBlockedMsg) [`verify`](#verify)
 
 Inherited from `ReachProblem` :  
 [`check`](../object/ReachProblem.html#check)

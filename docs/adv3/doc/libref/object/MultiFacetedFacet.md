@@ -76,7 +76,7 @@ directly.
 
 
 Inherited from `MultiInstanceInstance` :  
-[`isEquivalent`](../object/MultiInstanceInstance.html#isEquivalent)[`miParent`](../object/MultiInstanceInstance.html#miParent)
+[`isEquivalent`](../object/MultiInstanceInstance.html#isEquivalent) [`miParent`](../object/MultiInstanceInstance.html#miParent)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ Inherited from `MultiInstanceInstance` :
 [`getFacets`](#getFacets)
 
 Inherited from `MultiInstanceInstance` :  
-[`baseMoveInto`](../object/MultiInstanceInstance.html#baseMoveInto)[`construct`](../object/MultiInstanceInstance.html#construct)
+[`baseMoveInto`](../object/MultiInstanceInstance.html#baseMoveInto) [`construct`](../object/MultiInstanceInstance.html#construct)
 
 <span id="_Properties_"></span>
 

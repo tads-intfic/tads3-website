@@ -47,85 +47,57 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>“State” of a Thing. This is an object abstractly describing the state of
+an object that can assume different states.</p>
 
-"State" of a Thing. This is an object abstractly describing the state of
-an object that can assume different states.
-
-The 'listName', 'inventoryName', and 'wornName' give the names of state
+<p>The ‘listName’, ‘inventoryName’, and ‘wornName’ give the names of state
 as displayed in room/contents listings, inventory listings, and listings
 of items being worn by an actor. This state name is displayed along with
 the item name (usually parenthetically after the item name, but the
 exact nature of the display is controlled by the language-specific part
-of the library).
+of the library).</p>
 
-The 'listingOrder' is an integer giving the listing order of this state
+<p>The ‘listingOrder’ is an integer giving the listing order of this state
 relative to other states of the same kind of object. When we show a list
-of equivalent items in different states, we'll order the state names in
-ascending order of listingOrder.
+of equivalent items in different states, we’ll order the state names in
+ascending order of listingOrder.</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[214](../source/en_us.t.html#214)\]:*  
-Language-specific modifications for ThingState.
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#214">214</a>]:</em><br />
+Language-specific modifications for ThingState.</p>
 
-`class `**`ThingState`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ThingState</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ThingState</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/lightSourceStateOff.html"><code class="language-plaintext highlighter-rouge">lightSourceStateOff</code></a><a href="../object/lightSourceStateOn.html"><code class="language-plaintext highlighter-rouge">lightSourceStateOn</code></a><a href="../object/matchStateLit.html"><code class="language-plaintext highlighter-rouge">matchStateLit</code></a><a href="../object/matchStateUnlit.html"><code class="language-plaintext highlighter-rouge">matchStateUnlit</code></a><a href="../object/unwornState.html"><code class="language-plaintext highlighter-rouge">unwornState</code></a><a href="../object/wornState.html"><code class="language-plaintext highlighter-rouge">wornState</code></a>
+<p><a href="../object/lightSourceStateOff.html"><code class="language-plaintext highlighter-rouge">lightSourceStateOff</code></a> <a href="../object/lightSourceStateOn.html"><code class="language-plaintext highlighter-rouge">lightSourceStateOn</code></a> <a href="../object/matchStateLit.html"><code class="language-plaintext highlighter-rouge">matchStateLit</code></a> <a href="../object/matchStateUnlit.html"><code class="language-plaintext highlighter-rouge">matchStateUnlit</code></a> <a href="../object/unwornState.html"><code class="language-plaintext highlighter-rouge">unwornState</code></a> <a href="../object/wornState.html"><code class="language-plaintext highlighter-rouge">wornState</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#listingOrder"><code class="language-plaintext highlighter-rouge">listingOrder</code></a><a href="#listName_"><code class="language-plaintext highlighter-rouge">listName_</code></a><a href="#stateTokens"><code class="language-plaintext highlighter-rouge">stateTokens</code></a></p>
+<p><a href="#listingOrder"><code class="language-plaintext highlighter-rouge">listingOrder</code></a> <a href="#listName_"><code class="language-plaintext highlighter-rouge">listName_</code></a> <a href="#stateTokens"><code class="language-plaintext highlighter-rouge">stateTokens</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#findStateToken"><code class="language-plaintext highlighter-rouge">findStateToken</code></a><a href="#inventoryName"><code class="language-plaintext highlighter-rouge">inventoryName</code></a><a href="#listName"><code class="language-plaintext highlighter-rouge">listName</code></a><a href="#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a><a href="#wornName"><code class="language-plaintext highlighter-rouge">wornName</code></a></p>
+<p><a href="#findStateToken"><code class="language-plaintext highlighter-rouge">findStateToken</code></a> <a href="#inventoryName"><code class="language-plaintext highlighter-rouge">inventoryName</code></a> <a href="#listName"><code class="language-plaintext highlighter-rouge">listName</code></a> <a href="#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a> <a href="#wornName"><code class="language-plaintext highlighter-rouge">wornName</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="listingOrder"></span></p>
 
@@ -133,11 +105,7 @@ Language-specific modifications for ThingState.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#504">504</a>]</p>
 
-<div class="desc">
-
-the relative listing order
-
-</div>
+<p>the relative listing order</p>
 
 <p><span id="listName_"></span></p>
 
@@ -145,15 +113,11 @@ the relative listing order
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#325">325</a>]</p>
 
-<div class="desc">
-
-our list name setting - we define this so that we can be easily
-initialized with a template (we can't initialize listName() directly in
-this manner because it's a method, but we define the listName() method
+<p>our list name setting - we define this so that we can be easily
+initialized with a template (we can’t initialize listName() directly in
+this manner because it’s a method, but we define the listName() method
 to simply return this property value, which we can initialize with a
-template)
-
-</div>
+template)</p>
 
 <p><span id="stateTokens"></span></p>
 
@@ -161,42 +125,35 @@ template)
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#242">242</a>]</p>
 
-<div class="desc">
-
-Our state-specific tokens. This is a list of vocabulary words that are
+<p>Our state-specific tokens. This is a list of vocabulary words that are
 state-specific: that is, if a word is in this list, the word can ONLY
 refer to this object if the object is in a state with that word in its
-list.
+list.</p>
 
-The idea is that you set up the object's "static" vocabulary with the
-\*complete\* list of words for all of its possible states. For example:
+<p>The idea is that you set up the object’s “static” vocabulary with the
+*complete* list of words for all of its possible states. For example:</p>
 
-  
-+ Matchstick 'lit unlit match';
+<ul>
+  <li>Matchstick ‘lit unlit match’;</li>
+</ul>
 
-Then, you define the states: in the "lit" state, the word 'lit' is in
-the stateTokens list; in the "unlit" state, the word 'unlit' is in the
-list. By putting the words in the state lists, you "reserve" the words
+<p>Then, you define the states: in the “lit” state, the word ‘lit’ is in
+the stateTokens list; in the “unlit” state, the word ‘unlit’ is in the
+list. By putting the words in the state lists, you “reserve” the words
 to their respective states. When the player enters a command, the parser
 will limit object matches so that the reserved state-specific words can
 only refer to objects in the corresponding states. Hence, if the player
-refers to a "lit match", the word 'lit' will only match an object in the
-"lit" state, because 'lit' is a reserved state-specific word associated
-with the "lit" state.
+refers to a “lit match”, the word ‘lit’ will only match an object in the
+“lit” state, because ‘lit’ is a reserved state-specific word associated
+with the “lit” state.</p>
 
-You can re-use a word in multiple states. For example, you could have a
-"red painted" state and a "blue painted" state, along with an
-"unpainted" state.
-
-</div>
+<p>You can re-use a word in multiple states. For example, you could have a
+“red painted” state and a “blue painted” state, along with an
+“unpainted” state.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="findStateToken"></span></p>
 
@@ -204,14 +161,10 @@ You can re-use a word in multiple states. For example, you could have a
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#293">293</a>]</p>
 
-<div class="desc">
+<p>Check a token list for any tokens matching any of our state-specific
+words. Returns true if we find any such words, nil if not.</p>
 
-Check a token list for any tokens matching any of our state-specific
-words. Returns true if we find any such words, nil if not.
-
-'toks' is the \*adjusted\* token list used in matchName().
-
-</div>
+<p>‘toks’ is the *adjusted* token list used in matchName().</p>
 
 <p><span id="inventoryName"></span></p>
 
@@ -219,12 +172,8 @@ words. Returns true if we find any such words, nil if not.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#494">494</a>]</p>
 
-<div class="desc">
-
-The state name to use in inventory lists. By default, we just use the
-base name. 'lst' has the same meaning as in listName().
-
-</div>
+<p>The state name to use in inventory lists. By default, we just use the
+base name. ‘lst’ has the same meaning as in listName().</p>
 
 <p><span id="listName"></span></p>
 
@@ -233,26 +182,22 @@ base name. 'lst' has the same meaning as in listName().
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#488">488</a>],
 <a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#316">316</a>]</p>
 
-<div class="desc">
-
-The name of the state to use in ordinary room/object contents listings.
+<p>The name of the state to use in ordinary room/object contents listings.
 If the name is nil, no extra state information is shown in a listing for
-an object in this state. (It's often desirable to leave the most
+an object in this state. (It’s often desirable to leave the most
 ordinary state an object can be in unnamed, to avoid belaboring the
-obvious. For example, a match that isn't burning would probably not want
-to mention "(not lit)" every time it's listed.)
+obvious. For example, a match that isn’t burning would probably not want
+to mention “(not lit)” every time it’s listed.)</p>
 
-'lst' is a list of the objects being listed in this state. If we're only
+<p>‘lst’ is a list of the objects being listed in this state. If we’re only
 listing a single object, this will be a list with one element giving the
-object being listed. If we're listing a counted set of equivalent items
+object being listed. If we’re listing a counted set of equivalent items
 all in this same state, this will be the list of items. Everything in
-'lst' will be equivalent (in the isEquivalent sense).
+‘lst’ will be equivalent (in the isEquivalent sense).</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[316](../source/en_us.t.html#316)\]:*  
-get our name
-
-</div>
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#316">316</a>]:</em><br />
+get our name</p>
 
 <p><span id="matchName"></span></p>
 
@@ -261,28 +206,24 @@ get our name
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#520">520</a>],
 <a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#250">250</a>]</p>
 
-<div class="desc">
+<p>Match the name of an object in this state. ‘obj’ is the object to be
+matched; ‘origTokens’ and ‘adjustedTokens’ have the same meanings they
+do for Thing.matchName; and ‘states’ is a list of all of the possible
+states the object can assume.</p>
 
-Match the name of an object in this state. 'obj' is the object to be
-matched; 'origTokens' and 'adjustedTokens' have the same meanings they
-do for Thing.matchName; and 'states' is a list of all of the possible
-states the object can assume.
-
-Implementation of this is always language-specific. In most cases, this
+<p>Implementation of this is always language-specific. In most cases, this
 should do something along the lines of checking for the presence (in the
 token list) of words that only apply to other states, rejecting the
 match if any such words are found. For example, the ThingState object
 representing the unlit state of a light source might check for the
-presence of 'lit' as an adjective, and reject the object if it's found.
+presence of ‘lit’ as an adjective, and reject the object if it’s found.</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[250](../source/en_us.t.html#250)\]:*  
-Match the name of an object in this state. We'll check the token list
-for any words that apply only to \*other\* states the object can assume;
-if we find any, we'll reject the match, since the phrase must be
-referring to an object in a different state.
-
-</div>
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#250">250</a>]:</em><br />
+Match the name of an object in this state. We’ll check the token list
+for any words that apply only to *other* states the object can assume;
+if we find any, we’ll reject the match, since the phrase must be
+referring to an object in a different state.</p>
 
 <p><span id="wornName"></span></p>
 
@@ -290,19 +231,12 @@ referring to an object in a different state.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#501">501</a>]</p>
 
-<div class="desc">
+<p>The state name to use in listings of items being worn. By default, we
+just use the base name. ‘lst’ has the same meaning as in listName().</p>
 
-The state name to use in listings of items being worn. By default, we
-just use the base name. 'lst' has the same meaning as in listName().
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

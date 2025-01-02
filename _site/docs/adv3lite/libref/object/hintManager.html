@@ -40,25 +40,17 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The default hint system user interface implementation. All of the
+<p>The default hint system user interface implementation. All of the
 hint-related verbs operate by calling methods in the object stored in
-the global variable gHintSystem, which we'll by default initialize with
+the global variable gHintSystem, which we’ll by default initialize with
 a reference to this object. Games can replace this with their own
-implementations if desired.
+implementations if desired.</p>
 
-**`hintManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">hintManager</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">hintManager</code></strong><br />
 <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
@@ -66,40 +58,28 @@ implementations if desired.
 `                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#topHintMenuObj"><code class="language-plaintext highlighter-rouge">topHintMenuObj</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#disableHints"><code class="language-plaintext highlighter-rouge">disableHints</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#showHints"><code class="language-plaintext highlighter-rouge">showHints</code></a><a href="#showHintWarning"><code class="language-plaintext highlighter-rouge">showHintWarning</code></a></p>
+<p><a href="#disableHints"><code class="language-plaintext highlighter-rouge">disableHints</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#showHints"><code class="language-plaintext highlighter-rouge">showHints</code></a> <a href="#showHintWarning"><code class="language-plaintext highlighter-rouge">showHintWarning</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="topHintMenuObj"></span></p>
 
@@ -107,28 +87,20 @@ implementations if desired.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#594">594</a>]</p>
 
-<div class="desc">
+<p>The top-level hint menu. This must be provided by the game, and should
+be set during initialization. If this is nil, hints won’t be available.</p>
 
-The top-level hint menu. This must be provided by the game, and should
-be set during initialization. If this is nil, hints won't be available.
-
-We don't provide a default top-level hint menu because we want to give
+<p>We don’t provide a default top-level hint menu because we want to give
 the game maximum flexibility in defining this object exactly as it
 wants. For convenience, an object of class TopHintMenu will
 automatically register itself during pre-initialization - but note that
 there should be only one such object in the entire game, since if there
 are more than one, only one will be arbitrarily chosen as the registered
-object.
-
-</div>
+object.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="disableHints"></span></p>
 
@@ -136,21 +108,17 @@ object.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#567">567</a>]</p>
 
-<div class="desc">
+<p>Disable hints - this is invoked by the HINTS OFF action.</p>
 
-Disable hints - this is invoked by the HINTS OFF action.
-
-Some users don't like on-line hint systems because they find them to be
+<p>Some users don’t like on-line hint systems because they find them to be
 too much of a temptation. To address this concern, we provide this HINTS
-OFF command. Players who want to ensure that their will-power won't
+OFF command. Players who want to ensure that their will-power won’t
 crumble later on in the face of a difficult puzzle can type HINTS OFF
 early on, before the going gets rough; this will disable hints for the
-rest of the session. It's kind of like giving your credit card to a
+rest of the session. It’s kind of like giving your credit card to a
 friend before going to the mall, making the friend promise that they
-won't let you spend more than such and such an amount, no matter how
-much you beg and plead.
-
-</div>
+won’t let you spend more than such and such an amount, no matter how
+much you beg and plead.</p>
 
 <p><span id="execute"></span></p>
 
@@ -158,11 +126,7 @@ much you beg and plead.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#551">551</a>]</p>
 
-<div class="desc">
-
-during pre-initialization, register as the global hint manager
-
-</div>
+<p>during pre-initialization, register as the global hint manager</p>
 
 <p><span id="showHints"></span></p>
 
@@ -170,11 +134,7 @@ during pre-initialization, register as the global hint manager
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#599">599</a>]</p>
 
-<div class="desc">
-
-Show hints - invoke the hint system.
-
-</div>
+<p>Show hints - invoke the hint system.</p>
 
 <p><span id="showHintWarning"></span></p>
 
@@ -182,20 +142,13 @@ Show hints - invoke the hint system.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#646">646</a>]</p>
 
-<div class="desc">
-
-Show a warning before showing any hints. By default, we'll show this at
+<p>Show a warning before showing any hints. By default, we’ll show this at
 most once per session or once per saved game. Returns true if we are to
-proceed to the hints, nil if not.
+proceed to the hints, nil if not.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

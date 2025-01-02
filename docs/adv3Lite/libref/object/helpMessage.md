@@ -67,7 +67,7 @@ invalid commands (so that we can then offer more help).
 
 
 
-[`briefIntro`](#briefIntro)[`printMsg`](#printMsg)[`showSample`](#showSample)
+[`briefIntro`](#briefIntro) [`printMsg`](#printMsg) [`showSample`](#showSample)
 
 <span id="_Properties_"></span>
 

@@ -283,7 +283,7 @@ layout: docs
     /* Take a string and return the object whose programmatic name it refers to */
     symToVal(val)
     {    
-        return t3GetGlobalSymbols()[val];      
+        return t3GetGlobalSymbols() [val];      
     }
         
     /* Take a value and return the string representation of its programmatic name */

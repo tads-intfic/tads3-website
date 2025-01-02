@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="final.html" class="nav">Final Moves</a> \&gt; Lists and Listers  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="final.html" class="nav">Final Moves</a> &gt; Lists and Listers<br />
 <span class="navnp"><a href="utility.html" class="nav"><em>Prev:</em> Utility Functions</a>
     <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="lists-and-listers">Lists and Listers</h1>
 
@@ -268,21 +260,19 @@ want to change the way a list is introduced or concluded by overriding
 globally, in which case you can just modify the lister concerned, for
 example:</p>
 
-<p>`
-     modify lookLister
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     modify lookLister
         showListPrefix(lst, pl, parent)
         {
-            “Lying on the floor «if pl»are«else»is«end» “;
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showListSuffix(lst, pl, parent)
-    {
-        ". ";
-    }    
-; 
+            "Lying on the floor &lt;&lt;if pl&gt;&gt;are&lt;&lt;else&gt;&gt;is&lt;&lt;end&gt;&gt; ";
+        }
+        
+        showListSuffix(lst, pl, parent)
+        {
+            ". ";
+        }    
+    ; 
+     
 </code></pre></div></div>
-
-<p>`</p>
 
 <p>This would then affect the way in which miscellaneous items were listed
 in every room in the game. More typically, though, we might want to
@@ -336,28 +326,26 @@ wanted to use the same custom lister on a number of different objects).
 For example, to customize the lister used when opening or looking in a
 box you could do something like this:</p>
 
-<p>`
-     + largeBox: OpenableContainer ‘large box’</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myOpeningContentsLister: openingContentsLister
-    {
-        showListPrefix(lst, pl, parent)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + largeBox: OpenableContainer 'large box'
+        
+        myOpeningContentsLister: openingContentsLister
         {
-            "On ripping open the box {i} discover{s/ed} ";
+            showListPrefix(lst, pl, parent)
+            {
+                "On ripping open the box {i} discover{s/ed} ";
+            }
         }
-    }
-    
-    myLookInLister: lookInLister
-    {
-        showListPrefix(lst, pl, parent)
+        
+        myLookInLister: lookInLister
         {
-            "Lurking inside the box &lt;&lt;if pl&gt;&gt;are&lt;&lt;else&gt;&gt;is&lt;&lt;end&gt;&gt; ";
+            showListPrefix(lst, pl, parent)
+            {
+                "Lurking inside the box &lt;&lt;if pl&gt;&gt;are&lt;&lt;else&gt;&gt;is&lt;&lt;end&gt;&gt; ";
+            }
         }
-    }
-;
+    ;
+     
 </code></pre></div></div>
-
-<p>`</p>
 
 <p>For more information on customizing the way items are listed in room
 descriptions, see the chapters on <a href="roomdesc.html">Room Descriptions</a> and
@@ -528,16 +516,13 @@ the resultant string in lower case.</li>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="final.html" class="nav">Final Moves</a> \&gt; Lists and Listers  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="final.html" class="nav">Final Moves</a> &gt; Lists and Listers<br />
 <span class="navnp"><a href="utility.html" class="nav"><em>Prev:</em> Utility Functions</a>
     <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

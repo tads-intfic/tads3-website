@@ -46,75 +46,47 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Message expansion sentence context. This keeps track of the parts of the
+sentence we’ve seen so far in the substitution parameters.</p>
 
-Message expansion sentence context. This keeps track of the parts of the
-sentence we've seen so far in the substitution parameters.
-
-The sentence context is important for expanding certain items. For
+<p>The sentence context is important for expanding certain items. For
 verbs, it tells us which object is the subject, so that we can generate
 the agreeing conjugation of the verb (in number and grammatical person).
 For direct and indirect objects, it lets us generate a reflexive when
-the same object appears in a second role ("You can't put the box in
-itself").
+the same object appears in a second role (“You can’t put the box in
+itself”).</p>
 
-`class `**`MessageCtx`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MessageCtx</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MessageCtx</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#args"><code class="language-plaintext highlighter-rouge">args</code></a>  <a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a>  <a href="#gotVerb"><code class="language-plaintext highlighter-rouge">gotVerb</code></a>  <a href="#lastParam"><code class="language-plaintext highlighter-rouge">lastParam</code></a>  <a href="#prescan"><code class="language-plaintext highlighter-rouge">prescan</code></a>  <a href="#reflexiveAnte"><code class="language-plaintext highlighter-rouge">reflexiveAnte</code></a>  <a href="#subj"><code class="language-plaintext highlighter-rouge">subj</code></a>  <a href="#vobj"><code class="language-plaintext highlighter-rouge">vobj</code></a>  `</p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#actorIsPC"><code class="language-plaintext highlighter-rouge">actorIsPC</code></a>  <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a>  <a href="#endPreScan"><code class="language-plaintext highlighter-rouge">endPreScan</code></a>  <a href="#lastParamPlural"><code class="language-plaintext highlighter-rouge">lastParamPlural</code></a>  <a href="#noteObj"><code class="language-plaintext highlighter-rouge">noteObj</code></a>  <a href="#noteParam"><code class="language-plaintext highlighter-rouge">noteParam</code></a>  <a href="#noteVerb"><code class="language-plaintext highlighter-rouge">noteVerb</code></a>  <a href="#paramToNum"><code class="language-plaintext highlighter-rouge">paramToNum</code></a>  <a href="#paramToString"><code class="language-plaintext highlighter-rouge">paramToString</code></a>  <a href="#startSentence"><code class="language-plaintext highlighter-rouge">startSentence</code></a>  `</p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="args"></span></p>
 
@@ -122,11 +94,7 @@ itself").
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#756">756</a>]</p>
 
-<div class="desc">
-
-the message argument list
-
-</div>
+<p>the message argument list</p>
 
 <p><span id="cmd"></span></p>
 
@@ -134,11 +102,7 @@ the message argument list
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#759">759</a>]</p>
 
-<div class="desc">
-
-the Command object among the arguments, if any
-
-</div>
+<p>the Command object among the arguments, if any</p>
 
 <p><span id="gotVerb"></span></p>
 
@@ -146,11 +110,7 @@ the Command object among the arguments, if any
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#753">753</a>]</p>
 
-<div class="desc">
-
-have we seen a verb parameter in this sentence yet?
-
-</div>
+<p>have we seen a verb parameter in this sentence yet?</p>
 
 <p><span id="lastParam"></span></p>
 
@@ -158,11 +118,7 @@ have we seen a verb parameter in this sentence yet?
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#741">741</a>]</p>
 
-<div class="desc">
-
-the last parameter value
-
-</div>
+<p>the last parameter value</p>
 
 <p><span id="prescan"></span></p>
 
@@ -170,11 +126,7 @@ the last parameter value
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#744">744</a>]</p>
 
-<div class="desc">
-
-are we on the initial pre-expansion scan?
-
-</div>
+<p>are we on the initial pre-expansion scan?</p>
 
 <p><span id="reflexiveAnte"></span></p>
 
@@ -182,18 +134,14 @@ are we on the initial pre-expansion scan?
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#772">772</a>]</p>
 
-<div class="desc">
-
-The reflexive antecedents. Each time we see an object in a non-subject
+<p>The reflexive antecedents. Each time we see an object in a non-subject
 role, and the object has different pronoun usage from any previous
-entry, we'll add it to this list. If we see the same object subsequently
-in another non-subject role, we'll know that we should generate a
+entry, we’ll add it to this list. If we see the same object subsequently
+in another non-subject role, we’ll know that we should generate a
 reflexive pronoun for the object rather than the name or a regular
-pronoun:
+pronoun:</p>
 
-You can't put the tongs in the box with the tongs -\&gt; with themselves
-
-</div>
+<p>You can’t put the tongs in the box with the tongs -&gt; with themselves</p>
 
 <p><span id="subj"></span></p>
 
@@ -201,11 +149,7 @@ You can't put the tongs in the box with the tongs -\&gt; with themselves
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#747">747</a>]</p>
 
-<div class="desc">
-
-the subject of the sentence (as a Mentionable object)
-
-</div>
+<p>the subject of the sentence (as a Mentionable object)</p>
 
 <p><span id="vobj"></span></p>
 
@@ -213,19 +157,11 @@ the subject of the sentence (as a Mentionable object)
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#750">750</a>]</p>
 
-<div class="desc">
-
-the last object of the verb we saw
-
-</div>
+<p>the last object of the verb we saw</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="actorIsPC"></span></p>
 
@@ -233,14 +169,10 @@ the last object of the verb we saw
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#734">734</a>]</p>
 
-<div class="desc">
-
-Is the actor involved in the Command the PC? If there's a Command with
-an actor, we check to see if it's the PC. If there's no Command or no
-actor, we assume that the PC is the relevant actor (since there's
-nothing else specified anywhere) and return true.
-
-</div>
+<p>Is the actor involved in the Command the PC? If there’s a Command with
+an actor, we check to see if it’s the PC. If there’s no Command or no
+actor, we assume that the PC is the relevant actor (since there’s
+nothing else specified anywhere) and return true.</p>
 
 <p><span id="construct"></span></p>
 
@@ -248,11 +180,7 @@ nothing else specified anywhere) and return true.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#434">434</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="endPreScan"></span></p>
 
@@ -260,16 +188,12 @@ nothing else specified anywhere) and return true.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#472">472</a>]</p>
 
-<div class="desc">
-
-End the pre-expansion scan. The expander makes two passes over each
-sentence. The first scan doesn't actually do any substitutions, but
+<p>End the pre-expansion scan. The expander makes two passes over each
+sentence. The first scan doesn’t actually do any substitutions, but
 merely invokes each parameter to give it a chance to exert its side
 effects on the sentence context. The second scan actually applies the
 substitutions. At the end of the first pass, the expander calls this to
-let us finalize the initial scan and prepare for the second scan.
-
-</div>
+let us finalize the initial scan and prepare for the second scan.</p>
 
 <p><span id="lastParamPlural"></span></p>
 
@@ -277,14 +201,10 @@ let us finalize the initial scan and prepare for the second scan.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#703">703</a>]</p>
 
-<div class="desc">
-
-Was the last parameter value plural? If the value is numeric, 1 is
-singular and anything else is plural. If it's a list, a one-element list
-is singular and anything else is plural. If it's a Mentionable, the
-'plural' property determines it.
-
-</div>
+<p>Was the last parameter value plural? If the value is numeric, 1 is
+singular and anything else is plural. If it’s a list, a one-element list
+is singular and anything else is plural. If it’s a Mentionable, the
+‘plural’ property determines it.</p>
 
 <p><span id="noteObj"></span></p>
 
@@ -292,17 +212,13 @@ is singular and anything else is plural. If it's a Mentionable, the
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#580">580</a>]</p>
 
-<div class="desc">
-
-Note an object being used as a parameter in the given sentence role. The
+<p>Note an object being used as a parameter in the given sentence role. The
 role is one of the noun role enums defined above: vSubject, vObject, or
-vAmbig. If the object is a subject, we'll save it as the sentence
+vAmbig. If the object is a subject, we’ll save it as the sentence
 subject, so that we can generate an agreeing verb. Regardless of role,
-we'll also save it as a reflexive antecedent, so that we can generate a
+we’ll also save it as a reflexive antecedent, so that we can generate a
 reflexive pronoun if we see the same object again in another role in the
-same sentence.
-
-</div>
+same sentence.</p>
 
 <p><span id="noteParam"></span></p>
 
@@ -310,13 +226,9 @@ same sentence.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#494">494</a>]</p>
 
-<div class="desc">
-
-Note a parameter value. Some parameters refer back to the immediately
-preceding parameter, so it's useful to have the most recent value
-stashed away. Returns the parameter value as given.
-
-</div>
+<p>Note a parameter value. Some parameters refer back to the immediately
+preceding parameter, so it’s useful to have the most recent value
+stashed away. Returns the parameter value as given.</p>
 
 <p><span id="noteVerb"></span></p>
 
@@ -324,11 +236,7 @@ stashed away. Returns the parameter value as given.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#691">691</a>]</p>
 
-<div class="desc">
-
-Note a verb parameter.
-
-</div>
+<p>Note a verb parameter.</p>
 
 <p><span id="paramToNum"></span></p>
 
@@ -336,14 +244,10 @@ Note a verb parameter.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#542">542</a>]</p>
 
-<div class="desc">
-
-Convert a parameter value to a numeric representation. If the value is
+<p>Convert a parameter value to a numeric representation. If the value is
 an integer or BigNumber, we return it as is; if a list or vector, we
 return the number of elements; if nil, 0; if a string, the parsed
-numeric value of the string; otherwise we simply return 1.
-
-</div>
+numeric value of the string; otherwise we simply return 1.</p>
 
 <p><span id="paramToString"></span></p>
 
@@ -351,12 +255,8 @@ numeric value of the string; otherwise we simply return 1.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#504">504</a>]</p>
 
-<div class="desc">
-
-Convert a parameter value to a string representation suitable for
-message substitution.
-
-</div>
+<p>Convert a parameter value to a string representation suitable for
+message substitution.</p>
 
 <p><span id="startSentence"></span></p>
 
@@ -364,18 +264,11 @@ message substitution.
 
 <p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#448">448</a>]</p>
 
-<div class="desc">
+<p>start a new sentence</p>
 
-start a new sentence
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

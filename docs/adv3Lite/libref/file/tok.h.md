@@ -55,7 +55,7 @@ This header defines some macros for the standard tokenizer class.
 
 
 
-[`getTokOrig`](#getTokOrig)[`getTokType`](#getTokType)[`getTokVal`](#getTokVal)[`tokRuleName`](#tokRuleName)[`tokRulePat`](#tokRulePat)[`tokRuleTest`](#tokRuleTest)[`tokRuleType`](#tokRuleType)[`tokRuleVal`](#tokRuleVal)
+[`getTokOrig`](#getTokOrig) [`getTokType`](#getTokType) [`getTokVal`](#getTokVal) [`tokRuleName`](#tokRuleName) [`tokRulePat`](#tokRulePat) [`tokRuleTest`](#tokRuleTest) [`tokRuleType`](#tokRuleType) [`tokRuleVal`](#tokRuleVal)
 
 <span id="_EnumSummary_"></span>
 
@@ -97,7 +97,7 @@ This header defines some macros for the standard tokenizer class.
 
 
 
-`((tok)[3])`  
+`((tok) [3])`  
 Get the token's original text. This is the original text matched from
 the tokenized string.
 
@@ -111,7 +111,7 @@ the tokenized string.
 
 
 
-`((tok)[2])`  
+`((tok) [2])`  
 Get the token type. This is a token enum value describing the type of
 the token.
 
@@ -125,7 +125,7 @@ the token.
 
 
 
-`((tok)[1])`  
+`((tok) [1])`  
 Get the token value. This is the parsed representation of the token; in
 most cases, this is simply the text of the original token, although it
 might be converted in some way (words are usually converted to

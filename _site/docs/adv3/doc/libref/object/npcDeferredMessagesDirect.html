@@ -40,88 +40,64 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Deferred NPC messages. We use this to report deferred messages from an
+<p>Deferred NPC messages. We use this to report deferred messages from an
 NPC to the player. A message is deferred when a parsing error occurs,
-but the NPC can't talk to the player because there's no sense path to
+but the NPC can’t talk to the player because there’s no sense path to
 the player. When this happens, the NPC queues the message for eventual
 delivery; when a sense path appears later that lets the NPC talk to the
 player, we deliver the message through this object. Since these messages
 describe conditions that occurred in the past, we use the past tense to
-phrase the messages.
+phrase the messages.</p>
 
-Some messages will never be deferred:
+<p>Some messages will never be deferred:</p>
 
-commandNotHeard - if a command is not heard, it will never enter an
-actor's command queue; the error is given immediately in response to the
-command entry.
+<p>commandNotHeard - if a command is not heard, it will never enter an
+actor’s command queue; the error is given immediately in response to the
+command entry.</p>
 
-refuseCommandBusy - same as commandNotHeard
+<p>refuseCommandBusy - same as commandNotHeard</p>
 
-noMatchDisambig - interactive disambiguation will not happen in a
+<p>noMatchDisambig - interactive disambiguation will not happen in a
 deferred response situation, so it is impossible to have an interactive
-disambiguation failure.
+disambiguation failure.</p>
 
-disambigOrdinalOutOfRange - for the same reason noMatchDisambig can't be
-deferred.
+<p>disambigOrdinalOutOfRange - for the same reason noMatchDisambig can’t be
+deferred.</p>
 
-askDisambig - if we couldn't display a message, we definitely couldn't
-perform interactive disambiguation.
+<p>askDisambig - if we couldn’t display a message, we definitely couldn’t
+perform interactive disambiguation.</p>
 
-askMissingObject - for the same reason that askDisambig can't be
-deferred
+<p>askMissingObject - for the same reason that askDisambig can’t be
+deferred</p>
 
-askUnknownWord - for the same reason that askDisambig can't be deferred.
+<p>askUnknownWord - for the same reason that askDisambig can’t be deferred.</p>
 
-**`npcDeferredMessagesDirect`**` :   `[`npcDeferredMessages`](../object/npcDeferredMessages.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">npcDeferredMessagesDirect</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/npcDeferredMessages.html"><code class="language-plaintext highlighter-rouge">npcDeferredMessages</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">npcDeferredMessagesDirect</code></strong><br />
 <a href="../object/npcDeferredMessages.html"><code class="language-plaintext highlighter-rouge">npcDeferredMessages</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#ambiguousNounPhrase"><code class="language-plaintext highlighter-rouge">ambiguousNounPhrase</code></a><a href="#askMissingObject"><code class="language-plaintext highlighter-rouge">askMissingObject</code></a><a href="#commandNotUnderstood"><code class="language-plaintext highlighter-rouge">commandNotUnderstood</code></a><a href="#emptyNounPhrase"><code class="language-plaintext highlighter-rouge">emptyNounPhrase</code></a><a href="#insufficientQuantity"><code class="language-plaintext highlighter-rouge">insufficientQuantity</code></a><a href="#noMatchCannotSee"><code class="language-plaintext highlighter-rouge">noMatchCannotSee</code></a><a href="#noMatchForAll"><code class="language-plaintext highlighter-rouge">noMatchForAll</code></a><a href="#noMatchForAllBut"><code class="language-plaintext highlighter-rouge">noMatchForAllBut</code></a><a href="#noMatchNotAware"><code class="language-plaintext highlighter-rouge">noMatchNotAware</code></a><a href="#singleObjectRequired"><code class="language-plaintext highlighter-rouge">singleObjectRequired</code></a><a href="#uniqueObjectRequired"><code class="language-plaintext highlighter-rouge">uniqueObjectRequired</code></a><a href="#wordIsUnknown"><code class="language-plaintext highlighter-rouge">wordIsUnknown</code></a><a href="#zeroQuantity"><code class="language-plaintext highlighter-rouge">zeroQuantity</code></a></p>
+<p><a href="#ambiguousNounPhrase"><code class="language-plaintext highlighter-rouge">ambiguousNounPhrase</code></a> <a href="#askMissingObject"><code class="language-plaintext highlighter-rouge">askMissingObject</code></a> <a href="#commandNotUnderstood"><code class="language-plaintext highlighter-rouge">commandNotUnderstood</code></a> <a href="#emptyNounPhrase"><code class="language-plaintext highlighter-rouge">emptyNounPhrase</code></a> <a href="#insufficientQuantity"><code class="language-plaintext highlighter-rouge">insufficientQuantity</code></a> <a href="#noMatchCannotSee"><code class="language-plaintext highlighter-rouge">noMatchCannotSee</code></a> <a href="#noMatchForAll"><code class="language-plaintext highlighter-rouge">noMatchForAll</code></a> <a href="#noMatchForAllBut"><code class="language-plaintext highlighter-rouge">noMatchForAllBut</code></a> <a href="#noMatchNotAware"><code class="language-plaintext highlighter-rouge">noMatchNotAware</code></a> <a href="#singleObjectRequired"><code class="language-plaintext highlighter-rouge">singleObjectRequired</code></a> <a href="#uniqueObjectRequired"><code class="language-plaintext highlighter-rouge">uniqueObjectRequired</code></a> <a href="#wordIsUnknown"><code class="language-plaintext highlighter-rouge">wordIsUnknown</code></a> <a href="#zeroQuantity"><code class="language-plaintext highlighter-rouge">zeroQuantity</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="ambiguousNounPhrase"></span></p>
 
@@ -129,12 +105,8 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2526">2526</a>]</p>
 
-<div class="desc">
-
-we found an ambiguous noun phrase, but we were unable to perform
-interactive disambiguation
-
-</div>
+<p>we found an ambiguous noun phrase, but we were unable to perform
+interactive disambiguation</p>
 
 <p><span id="askMissingObject"></span></p>
 
@@ -142,11 +114,7 @@ interactive disambiguation
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2533">2533</a>]</p>
 
-<div class="desc">
-
-an object phrase was missing
-
-</div>
+<p>an object phrase was missing</p>
 
 <p><span id="commandNotUnderstood"></span></p>
 
@@ -154,11 +122,7 @@ an object phrase was missing
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2458">2458</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="emptyNounPhrase"></span></p>
 
@@ -166,11 +130,7 @@ an object phrase was missing
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2488">2488</a>]</p>
 
-<div class="desc">
-
-empty noun phrase ('take the')
-
-</div>
+<p>empty noun phrase (‘take the’)</p>
 
 <p><span id="insufficientQuantity"></span></p>
 
@@ -178,11 +138,7 @@ empty noun phrase ('take the')
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2502">2502</a>]</p>
 
-<div class="desc">
-
-insufficient quantity to meet a command request ('take five books')
-
-</div>
+<p>insufficient quantity to meet a command request (‘take five books’)</p>
 
 <p><span id="noMatchCannotSee"></span></p>
 
@@ -190,11 +146,7 @@ insufficient quantity to meet a command request ('take five books')
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2465">2465</a>]</p>
 
-<div class="desc">
-
-no match for a noun phrase
-
-</div>
+<p>no match for a noun phrase</p>
 
 <p><span id="noMatchForAll"></span></p>
 
@@ -202,11 +154,7 @@ no match for a noun phrase
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2475">2475</a>]</p>
 
-<div class="desc">
-
-no match for 'all'
-
-</div>
+<p>no match for ‘all’</p>
 
 <p><span id="noMatchForAllBut"></span></p>
 
@@ -214,11 +162,7 @@ no match for 'all'
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2481">2481</a>]</p>
 
-<div class="desc">
-
-nothing left for 'all' after removing 'except' items
-
-</div>
+<p>nothing left for ‘all’ after removing ‘except’ items</p>
 
 <p><span id="noMatchNotAware"></span></p>
 
@@ -226,11 +170,7 @@ nothing left for 'all' after removing 'except' items
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2469">2469</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="singleObjectRequired"></span></p>
 
@@ -238,11 +178,7 @@ nothing left for 'all' after removing 'except' items
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2516">2516</a>]</p>
 
-<div class="desc">
-
-a unique object is required, but multiple objects were specified
-
-</div>
+<p>a unique object is required, but multiple objects were specified</p>
 
 <p><span id="uniqueObjectRequired"></span></p>
 
@@ -250,11 +186,7 @@ a unique object is required, but multiple objects were specified
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2509">2509</a>]</p>
 
-<div class="desc">
-
-a unique object is required, but multiple objects were specified
-
-</div>
+<p>a unique object is required, but multiple objects were specified</p>
 
 <p><span id="wordIsUnknown"></span></p>
 
@@ -262,11 +194,7 @@ a unique object is required, but multiple objects were specified
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2542">2542</a>]</p>
 
-<div class="desc">
-
-tell the user they entered a word we don't know
-
-</div>
+<p>tell the user they entered a word we don’t know</p>
 
 <p><span id="zeroQuantity"></span></p>
 
@@ -274,18 +202,11 @@ tell the user they entered a word we don't know
 
 <p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2495">2495</a>]</p>
 
-<div class="desc">
+<p>‘take zero books’</p>
 
-'take zero books'
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

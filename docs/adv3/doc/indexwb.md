@@ -17,7 +17,7 @@ TADS 3 Bookshelf
 
 [<img src="qstart_cover.jpg" class="book" />](T3QuickStart.html)
 
-<a href="T3QuickStart.html" class="title" data-"="">TADS 3 Quick Start
+<a href="T3QuickStart.html" class="title" >TADS 3 Quick Start
 Guide</a>  
 by Eric Eve
 
@@ -112,9 +112,9 @@ task-oriented information on topics of interest to most TADS 3 users.
 
 ------------------------------------------------------------------------
 
-[<img src="libcover.jpg" class="book" />](libref/index.html)
+[<img src="libcover.jpg" class="book" />](doc/libref/index.html)
 
-<a href="libref/index.html" class="title">TADS 3 Library Reference
+<a href="doc/libref/index.html" class="title">TADS 3 Library Reference
 Manual</a>
 
 This is an extensively cross-referenced and hyperlinked compilation of

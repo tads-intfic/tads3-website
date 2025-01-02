@@ -46,79 +46,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A pending command marker. This is not an actual pending command; rather,
-it's just a queue marker. We sometimes want to synchronize some other
-activity with an actor's progress through its command queue; for
+<p>A pending command marker. This is not an actual pending command; rather,
+it’s just a queue marker. We sometimes want to synchronize some other
+activity with an actor’s progress through its command queue; for
 example, we might want one actor to wait until another actor has
 executed a particular pending action. These markers can be used for this
 kind of synchronization; they move through the queue like ordinary
 pending commands, so we can tell if an actor has reached a particular
-command by observing the marker's progress through the queue.
+command by observing the marker’s progress through the queue.</p>
 
-`class `**`PendingCommandMarker`**` :   `[`PendingCommandInfo`](../object/PendingCommandInfo.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PendingCommandMarker</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PendingCommandInfo.html"><code class="language-plaintext highlighter-rouge">PendingCommandInfo</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">PendingCommandMarker</code></strong><br />
 <a href="../object/PendingCommandInfo.html"><code class="language-plaintext highlighter-rouge">PendingCommandInfo</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#hasCommand"><code class="language-plaintext highlighter-rouge">hasCommand</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PendingCommandInfo</code> :<br />
-<a href="../object/PendingCommandInfo.html#issuer_"><code class="language-plaintext highlighter-rouge">issuer_</code></a><a href="../object/PendingCommandInfo.html#startOfSentence_"><code class="language-plaintext highlighter-rouge">startOfSentence_</code></a></p>
+<a href="../object/PendingCommandInfo.html#issuer_"><code class="language-plaintext highlighter-rouge">issuer_</code></a> <a href="../object/PendingCommandInfo.html#startOfSentence_"><code class="language-plaintext highlighter-rouge">startOfSentence_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PendingCommandInfo</code> :<br />
-<a href="../object/PendingCommandInfo.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/PendingCommandInfo.html#executePending"><code class="language-plaintext highlighter-rouge">executePending</code></a></p>
+<a href="../object/PendingCommandInfo.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/PendingCommandInfo.html#executePending"><code class="language-plaintext highlighter-rouge">executePending</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="hasCommand"></span></p>
 
@@ -126,28 +98,17 @@ command by observing the marker's progress through the queue.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#10568">10568</a>]</p>
 
-<div class="desc">
-
-I have no command to execute
-
-</div>
+<p>I have no command to execute</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

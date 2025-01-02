@@ -47,29 +47,21 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>The basic command-level parsing error. This occurs when we can’t find a
+grammar match to the overall command phrasing.</p>
 
-The basic command-level parsing error. This occurs when we can't find a
-grammar match to the overall command phrasing.
-
-*Modified in
-[newbie.t](../file/newbie.t.html)\[[327](../source/newbie.t.html#327)\]:*  
-This game may be played by novice players. We'll try to keep track of
+<p><em>Modified in
+<a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#327">327</a>]:</em><br />
+This game may be played by novice players. We’ll try to keep track of
 how many not-understood commands they enter, in case it helps us decide
 whether they need help. The playerHelper object will use this
-information to decide whether to offer help.
+information to decide whether to offer help.</p>
 
-`class `**`NotUnderstoodError`**` :   `[`ParseError`](../object/ParseError.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">NotUnderstoodError</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ParseError.html"><code class="language-plaintext highlighter-rouge">ParseError</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">NotUnderstoodError</code></strong><br />
 <a href="../object/ParseError.html"><code class="language-plaintext highlighter-rouge">ParseError</code></a><br />
@@ -77,65 +69,41 @@ information to decide whether to offer help.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
-<a href="../object/ParseError.html#allowOnRespell"><code class="language-plaintext highlighter-rouge">allowOnRespell</code></a><a href="../object/ParseError.html#curable"><code class="language-plaintext highlighter-rouge">curable</code></a><a href="../object/ParseError.html#errStage"><code class="language-plaintext highlighter-rouge">errStage</code></a></p>
+<a href="../object/ParseError.html#allowOnRespell"><code class="language-plaintext highlighter-rouge">allowOnRespell</code></a> <a href="../object/ParseError.html#curable"><code class="language-plaintext highlighter-rouge">curable</code></a> <a href="../object/ParseError.html#errStage"><code class="language-plaintext highlighter-rouge">errStage</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
 <a href="../object/Exception.html#errmsg_"><code class="language-plaintext highlighter-rouge">errmsg_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#display"><code class="language-plaintext highlighter-rouge">display</code></a><a href="#rankCorrection"><code class="language-plaintext highlighter-rouge">rankCorrection</code></a></p>
+<p><a href="#display"><code class="language-plaintext highlighter-rouge">display</code></a> <a href="#rankCorrection"><code class="language-plaintext highlighter-rouge">rankCorrection</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
 <a href="../object/ParseError.html#tryCuring"><code class="language-plaintext highlighter-rouge">tryCuring</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
-<a href="../object/Exception.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a><a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a><a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
+<a href="../object/Exception.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a> <a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a> <a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="display"></span></p>
 
@@ -144,11 +112,7 @@ information to decide whether to offer help.
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5020">5020</a>],
 <a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#328">328</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="rankCorrection"></span></p>
 
@@ -156,22 +120,15 @@ information to decide whether to offer help.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5037">5037</a>]</p>
 
-<div class="desc">
-
-This is a general verb syntax error, so our best candidates will words
-that are used in verb phrases. The next best is a corrected word that's
+<p>This is a general verb syntax error, so our best candidates will words
+that are used in verb phrases. The next best is a corrected word that’s
 used in any GrammarProd, since the problem might actually be in some
 other structural part of the command phrase above the verb phrase (a
-conjunction, for example).
+conjunction, for example).</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

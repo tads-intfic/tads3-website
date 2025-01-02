@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; ActorTopicEntry  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; ActorTopicEntry<br />
 <span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
     <a href="suggest.html" class="nav"><em>Next:</em> Suggesting
-Conversational Topics</a>     </span>
-
-</div>
+Conversational Topics</a>     </span></p>
 
 <h1 id="the-actortopicentry-class">The ActorTopicEntry Class</h1>
 
@@ -136,20 +128,19 @@ ActorTopicEntries, allowing you to use these keys to group
 ActorTopicEntries in any way you like and refer to a group of topics
 with a single key. For example if we defined:</p>
 
-<p>`
-    + AskTopic @darkTower
-       “<q>Tell me about the dark tower,</q> you insist.\b
-        <q>Oh no!</q> says Bob. <q>We don’t talk about that – ever!</q>”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTopic @darkTower
+       "&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+        &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;"
+        
+        convKeys = ['tower-node', 'bob-fright']
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    convKeys = ['tower-node', 'bob-fright']
-;
-
-+ AskTopic @tFear
-   "&lt;q&gt;Why are you so frightened of the dark tower?&lt;q&gt; you demand.
-    Bob merely rolls his eyes and shivers. "
-    
-    convKeys = 'bob-fright'
-; `
+    + AskTopic @tFear
+       "&lt;q&gt;Why are you so frightened of the dark tower?&lt;q&gt; you demand.
+        Bob merely rolls his eyes and shivers. "
+        
+        convKeys = 'bob-fright'
+    ;
 </code></pre></div></div>
 
 <p>In this example, the first AskTopic can be referred to with either the
@@ -190,33 +181,32 @@ Actor object (which is precisely what the &lt;.activate key&gt; tag does).</p>
 ActorTopicEntries at once, when they share a common convKey. For
 example:</p>
 
-<p>`
-    + AskTopic @darkTower
-       “<q>Just why is that dark tower considered so terrible?</q> you ask.\b
-       <q>It all started with the troubles,</q> Bob replies darkly, <q>that and the massacre
-        at Longacre Farm.</q> &lt;.activate troubles&gt; “
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTopic @darkTower
+       "&lt;q&gt;Just why is that dark tower considered so terrible?&lt;/q&gt; you ask.\b
+       &lt;q&gt;It all started with the troubles,&lt;/q&gt; Bob replies darkly, &lt;q&gt;that and the massacre
+        at Longacre Farm.&lt;/q&gt; &lt;.activate troubles&gt; "
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ AskTopic @tTroubles
-   "&lt;q&gt;Tell me about the troubles... "
-   
-   convKeys = ['troubles']
-   activated = nil
-;
+    + AskTopic @tTroubles
+       "&lt;q&gt;Tell me about the troubles... "
+       
+       convKeys = ['troubles']
+       activated = nil
+    ;
 
-+ AskTopic @tMassacre
-   "&lt;q&gt;Tell me about the massacre..."
- 
-   convKeys = ['troubles']
-   activated = nil
-;
+    + AskTopic @tMassacre
+       "&lt;q&gt;Tell me about the massacre..."
+     
+       convKeys = ['troubles']
+       activated = nil
+    ;
 
-+ AskTopic @tLongacre
-   "&lt;q&gt;What happened at Longacre Farm?..."
-   
-   convKeys = ['troubles', 'farm']
-   activated = nil
-; `
+    + AskTopic @tLongacre
+       "&lt;q&gt;What happened at Longacre Farm?..."
+       
+       convKeys = ['troubles', 'farm']
+       activated = nil
+    ;
 </code></pre></div></div>
 
 <p>In this example, it doesn’t make sense for the player character to be
@@ -374,61 +364,60 @@ don’t want it. One of the uses envisaged for it is to specify a broad
 topic of conversation and have the game respond with a list of possible
 sub-topics, like this:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;talk about the dark tower
+You could ask Bob when the tower was built, or why the tower is scary, or tell him
+about your visit, or say you think he's exaggerating.
+</code></pre></div></div>
 
-    &gt;talk about the dark tower
-    You could ask Bob when the tower was built, or why the tower is scary, or tell him
-    about your visit, or say you think he's exaggerating.
+<p>Just how you’d go about that is discussed in the section on
+<a href="suggest.html">suggesting</a> topics.</p>
 
-
-
-Just how you'd go about that is discussed in the section on
-[suggesting](suggest.html) topics.
-
-In addition to the ActorTopicEntry classes listed above are the various
+<p>In addition to the ActorTopicEntry classes listed above are the various
 kinds of <span id="default_idx">DefaultTopic</span> (which match the
 appropriate conversational command when no specific response have been
-defined):
+defined):</p>
 
-- **DefaultAnyTopic**: responds to any conversational command (but not
-  to HIT or KISS or to an attempt to invoke an InitiateTopic, and not to
-  HELLO or GOODBYE unless its **matchGreetings** property is true — the
-  default is nil.)
-- **DefaultConversationTopic**: responds to any conversational command
-  except GIVE, SHOW, YES, NO, HELLO and GOODBYE (but not to HIT or KISS
-  or to an attempt to invoke an InitiateTopic)
-- **DefaultAgendaTopic**: responds to any conversational command that a
-  DefaultAnyTopic would and gives the NPC the opportunity to seize the
-  conversational initiative via an AgendaItem. This is explained more
-  fully [below](initiate.html#defaultagenda) in the section on
-  [NPC-Initiated Conversation](initiate.html).
-- **DefaultAskTopic**: provides a default response for ASK X ABOUT Y
-- **DefaultTellTopic**: provides a default response for TELL X ABOUT Y
-- **DefaultAskTellTopic**: provides a default response for ASK X ABOUT Y
-  or TELL X ABOUT Y
-- **DefaultAskForTopic**: provides a default response for ASK X FOR Y
-- **DefaultTalkTopic**: provides a default response for TALK ABOUT X
-- **DefaultGiveTopic**: provides a default response for GIVE X TO Y
-- **DefaultShowTopic**: provides a default response for SHOW X TO Y
-- **DefaultGiveShowTopic**: provides a default response for GIVE X TO Y
-  or SHOW X TO Y
-- **DefaultSayTopic**: provides a default response for SAY X
-- **DefaultQueryTopic**: provides a default response for questions like
-  ASK WHO/WHAT/WHY/WHEN
-- **DefaultSayQueryTopic**: provides a default response for SAY X or
-  questions like ASK WHO/WHAT/WHY/WHEN
-- **DefaultSayTellTopic**: provides a default response for SAY X or TELL
-  X ABOUT Y (or T X)
-- **DefaultSayTellTalkTopic**: provides a default response for SAY X or
-  TELL X ABOUT Y (or T X) or TALK ABOUT X
-- **DefaultTellTalkTopic**: provides a default response for TELL X ABOUT
-  Y (or T X) or TALK ABOUT X
-- **DefaultAskQueryTopic**: provides a default response for ASK ABOUT X
-  or questions like ASK WHO/WHAT/WHY/WHEN
-- **DefaultCommandTopic**: provides a default response for orders given
-  to the NPC.
+<ul>
+  <li><strong>DefaultAnyTopic</strong>: responds to any conversational command (but not
+to HIT or KISS or to an attempt to invoke an InitiateTopic, and not to
+HELLO or GOODBYE unless its <strong>matchGreetings</strong> property is true — the
+default is nil.)</li>
+  <li><strong>DefaultConversationTopic</strong>: responds to any conversational command
+except GIVE, SHOW, YES, NO, HELLO and GOODBYE (but not to HIT or KISS
+or to an attempt to invoke an InitiateTopic)</li>
+  <li><strong>DefaultAgendaTopic</strong>: responds to any conversational command that a
+DefaultAnyTopic would and gives the NPC the opportunity to seize the
+conversational initiative via an AgendaItem. This is explained more
+fully <a href="initiate.html#defaultagenda">below</a> in the section on
+<a href="initiate.html">NPC-Initiated Conversation</a>.</li>
+  <li><strong>DefaultAskTopic</strong>: provides a default response for ASK X ABOUT Y</li>
+  <li><strong>DefaultTellTopic</strong>: provides a default response for TELL X ABOUT Y</li>
+  <li><strong>DefaultAskTellTopic</strong>: provides a default response for ASK X ABOUT Y
+or TELL X ABOUT Y</li>
+  <li><strong>DefaultAskForTopic</strong>: provides a default response for ASK X FOR Y</li>
+  <li><strong>DefaultTalkTopic</strong>: provides a default response for TALK ABOUT X</li>
+  <li><strong>DefaultGiveTopic</strong>: provides a default response for GIVE X TO Y</li>
+  <li><strong>DefaultShowTopic</strong>: provides a default response for SHOW X TO Y</li>
+  <li><strong>DefaultGiveShowTopic</strong>: provides a default response for GIVE X TO Y
+or SHOW X TO Y</li>
+  <li><strong>DefaultSayTopic</strong>: provides a default response for SAY X</li>
+  <li><strong>DefaultQueryTopic</strong>: provides a default response for questions like
+ASK WHO/WHAT/WHY/WHEN</li>
+  <li><strong>DefaultSayQueryTopic</strong>: provides a default response for SAY X or
+questions like ASK WHO/WHAT/WHY/WHEN</li>
+  <li><strong>DefaultSayTellTopic</strong>: provides a default response for SAY X or TELL
+X ABOUT Y (or T X)</li>
+  <li><strong>DefaultSayTellTalkTopic</strong>: provides a default response for SAY X or
+TELL X ABOUT Y (or T X) or TALK ABOUT X</li>
+  <li><strong>DefaultTellTalkTopic</strong>: provides a default response for TELL X ABOUT
+Y (or T X) or TALK ABOUT X</li>
+  <li><strong>DefaultAskQueryTopic</strong>: provides a default response for ASK ABOUT X
+or questions like ASK WHO/WHAT/WHY/WHEN</li>
+  <li><strong>DefaultCommandTopic</strong>: provides a default response for orders given
+to the NPC.</li>
+</ul>
 
-Note that there is a hierarchy among the various kinds of DefaultTopics,
+<p>Note that there is a hierarchy among the various kinds of DefaultTopics,
 such that the more specific types are defined with a higher matchScore
 than the more general ones. So, for example, if you define a
 DefaultAskTopic, a DefaultAskTellTopic, and a DefaultAnyTopic on the
@@ -437,28 +426,27 @@ ASK X ABOUT Y, the DefaultAskTellTopic to commands of the form TELL X
 ABOUT Y, and the DefaultAnyTopic to anything else (in the absence of
 more specific responses). The one apparent exception to this is the
 DefaultAgendaTopic, which takes precedence over all other types of
-DefaultTopics, but only when there's anything in its agendaList; this is
-to allow NPC's to pursue their own conversational agendas (if and when
-they have them) in preference to giving canned default responses.
+DefaultTopics, but only when there’s anything in its agendaList; this is
+to allow NPC’s to pursue their own conversational agendas (if and when
+they have them) in preference to giving canned default responses.</p>
 
-<span id="exceptions"></span>
+<p><span id="exceptions"></span></p>
 
-There may be occasions where there are topics you don't want a
+<p>There may be occasions where there are topics you don’t want a
 DefaultTopic to match, for example where a DefaultTopic is defined on an
-ActorState but there are a handful of TopicEntries you've defined on the
+ActorState but there are a handful of TopicEntries you’ve defined on the
 Actor which you still want to be available. You can handle this by
-defining the **exceptions** property on the DefaultTopic in question to
-contain a list of the topics you don't want the DefaultTopic to handle,
+defining the <strong>exceptions</strong> property on the DefaultTopic in question to
+contain a list of the topics you don’t want the DefaultTopic to handle,
 so that handling of just those topics can be handled elsewhere; for
-example:
+example:</p>
 
-`
-    bob: Actor 'Bob; short; man; him'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob; short; man; him'
        "He's a short man. "
      ;
      
     + AskTopic @tTroubles
-        "<q>Troubles? What troubles!</q> he cries. "
+        "&lt;q&gt;Troubles? What troubles!&lt;/q&gt; he cries. "
     ;
      
     + bobStacking: ActorState
@@ -472,134 +460,127 @@ example:
          
         exceptions = [tTroubles]
     ;
-`
+</code></pre></div></div>
 
-This would allow Bob to respond with the special response to ASK BOB
+<p>This would allow Bob to respond with the special response to ASK BOB
 ABOUT TROUBLES even when Bob is in the bobStacking state, even though
-every other enquiry will be met by the "Bob merely grunts..." response.
-This is useful where we don't want to put the AskTopic for tTroubles in
+every other enquiry will be met by the “Bob merely grunts…” response.
+This is useful where we don’t want to put the AskTopic for tTroubles in
 the bobStacking state because we want to be common to more than one
-ActorState.
+ActorState.</p>
 
-If we need something a bit more complex than the
-`exceptions` list can provide, we can instead
-override the DefaultTopic's **avoidMatching(top)** so that it returns
-`true` for any topic *top* we don't want the
+<p>If we need something a bit more complex than the
+<code class="language-plaintext highlighter-rouge">exceptions</code> list can provide, we can instead
+override the DefaultTopic’s <strong>avoidMatching(top)</strong> so that it returns
+<code class="language-plaintext highlighter-rouge">true</code> for any topic <em>top</em> we don’t want the
 DefaultTopic to match. The default behaviour of avoidMatching(top) is to
-return true if and only if *top* is listed in the
-`exceptions` property.
+return true if and only if <em>top</em> is listed in the
+<code class="language-plaintext highlighter-rouge">exceptions</code> property.</p>
 
-  
-<span id="alttopic"></span>
+<p><span id="alttopic"></span></p>
 
-## AltTopic
+<h2 id="alttopic">AltTopic</h2>
 
-Sometimes we may want an NPC to give different responses to
+<p>Sometimes we may want an NPC to give different responses to
 conversational commands depending on context, for example what the
 player character already knows. We could do this with a number of
-if...else statements within the topicResponse of a single TopicEntry,
+if…else statements within the topicResponse of a single TopicEntry,
 but this can quickly become cumbersome. A better alternative would be to
 define a sequence of ActorTopicEntries with increasing matchScores,
 which will work perfectly well but is perhaps just a little long-winded.
 In adv3Lite (as in adv3), the best solution is to use one or more
-`AltTopics`.
+<code class="language-plaintext highlighter-rouge">AltTopics</code>.</p>
 
-To use an AltTopic, just locate it directly (with the + notation) in
-ActorTopicEntry to which it is to provide an alternative response. Don't
+<p>To use an AltTopic, just locate it directly (with the + notation) in
+ActorTopicEntry to which it is to provide an alternative response. Don’t
 define a matchObj for it, since it will simply match whatever its
-location matches, but do define its `isActive`
+location matches, but do define its <code class="language-plaintext highlighter-rouge">isActive</code>
 property to be different from that of its location, then, when its
 isActive property is true, it will be used instead of its parent
-ActorTopicEntry.
+ActorTopicEntry.</p>
 
-You can also define a whole series of AltTopics located in an
+<p>You can also define a whole series of AltTopics located in an
 ActorTopicEntry, in which case the one that will be used will be the
-last of those for which isActive is true. For example, we might define:
+last of those for which isActive is true. For example, we might define:</p>
 
-`
-    + AskTellTopic @lighthouse 
-       "<q>What can you tell me about the lighthouse?</q> you ask.
-        <q>I hear it has quite a history.</q>\b
-        <q>Nothing you want to know about,</q> Bob mutters darkly.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTellTopic @lighthouse 
+       "&lt;q&gt;What can you tell me about the lighthouse?&lt;/q&gt; you ask.
+        &lt;q&gt;I hear it has quite a history.&lt;/q&gt;\b
+        &lt;q&gt;Nothing you want to know about,&lt;/q&gt; Bob mutters darkly.
         
         name = 'the lighthouse'
     ;
 
     ++ AltTopic
-       "<q>I hear the lighthouse was caught up in the troubles,</q> you remark.\b
-        <q>So they say -- but you don't want to go poking your nose into them
-         -- or the lighthouse,</q> Bob warns you. "
+       "&lt;q&gt;I hear the lighthouse was caught up in the troubles,&lt;/q&gt; you remark.\b
+        &lt;q&gt;So they say -- but you don't want to go poking your nose into them
+         -- or the lighthouse,&lt;/q&gt; Bob warns you. "
          
         isActive = gRevealed('troubles') 
     ;
 
     ++ AltTopic
-       "<q>I've been to see the lighthouse,</q> you tell him. <q>I don't know what
-        all the fuss is about -- I didn't see anything!</q>\b
-        Bob looks momentarily relieved. <q>Just because you didn't see it doesn't
-        mean it aint there,</q> he replies. "
+       "&lt;q&gt;I've been to see the lighthouse,&lt;/q&gt; you tell him. &lt;q&gt;I don't know what
+        all the fuss is about -- I didn't see anything!&lt;/q&gt;\b
+        Bob looks momentarily relieved. &lt;q&gt;Just because you didn't see it doesn't
+        mean it aint there,&lt;/q&gt; he replies. "
        
        isActive = gPlayerChar.hasSeen(lighthouse)
     ;
-`
+</code></pre></div></div>
 
-If the player types ASK BOB ABOUT LIGHTHOUSE or TELL BOB ABOUT
+<p>If the player types ASK BOB ABOUT LIGHTHOUSE or TELL BOB ABOUT
 LIGHTHOUSE then the response that will be used will depend on whether
-the player character has seen the lighthouse or 'troubles' has been
-revealed. If the player character has seen the lighthouse then the "I've
-been to the lighthouse..." response will be use. Otherwise, if
-'troubles' has been revealed the "I hear the lighthouse was caught..."
-response will be used. Otherwise the "What can you tell me..." response
-will be used.
+the player character has seen the lighthouse or ‘troubles’ has been
+revealed. If the player character has seen the lighthouse then the “I’ve
+been to the lighthouse…” response will be use. Otherwise, if
+‘troubles’ has been revealed the “I hear the lighthouse was caught…”
+response will be used. Otherwise the “What can you tell me…” response
+will be used.</p>
 
-One further point to note is that the two AltTopics will also copy their
+<p>One further point to note is that the two AltTopics will also copy their
 name property from their location, so whichever of them is available at
-any one time will be suggested as "You could ask Bob about the
-lighthouse", provided the curiosity hasn't been satsified on them yet.
-If you don't want an AltTopic to be suggested in the same way as its
+any one time will be suggested as “You could ask Bob about the
+lighthouse”, provided the curiosity hasn’t been satsified on them yet.
+If you don’t want an AltTopic to be suggested in the same way as its
 parent TopicEntry, you can simply override its name property to be
-something different or nil.
+something different or nil.</p>
 
-Finally, it may help to know that internally AltTopics work by
+<p>Finally, it may help to know that internally AltTopics work by
 incrementing their matchScore in relation to their parent topic or a
-previous AltTopic. Normally you won't need to worry about this, but if
+previous AltTopic. Normally you won’t need to worry about this, but if
 you did have an ActorTopicEntry with a lot of AltTopics, and you also
 defined another ActorTopicEntry that might match the same object as the
 first, you might need to give it a substantially higher matchScore to be
 sure of its being used in preference to any of the AltTopics of the
-first TopicEntry.
+first TopicEntry.</p>
 
-  
-<span id="summarizing"></span>
+<p><span id="summarizing"></span></p>
 
-## Summarizing Give and Show
+<h2 id="summarizing-give-and-show">Summarizing Give and Show</h2>
 
-When a GIVE or SHOW command is issued, it is possible that it could be
+<p>When a GIVE or SHOW command is issued, it is possible that it could be
 given more than one direct object. For example GIVE BELL, BOOK and
 CANDLE TO PRIEST. The normal behaviour in such a situation would be for
 the appropriate TopicEntries to be triggered in turn for each of the
-bell, the book and the candle, resulting in three separate reports, e.g.
+bell, the book and the candle, resulting in three separate reports, e.g.</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;give bell, book and candle to priest
+Thank you, says the priest, taking the bell.
 
-    &gt;give bell, book and candle to priest
-    Thank you, says the priest, taking the bell.
+The priest takes the book.
 
-    The priest takes the book.
+No, I don't need that, he says, waving the candle away.
+</code></pre></div></div>
 
-    No, I don't need that, he says, waving the candle away.
-
-</div>
-
-In a case where you want a different response to each object, this is
+<p>In a case where you want a different response to each object, this is
 absolutely fine. There may be some cases, however, in which it is less
 optimal, especially when the GIVE command relates to handing over money
 to someone, for example, suppose you had created a PieceOfSilver class
 and given the player character thirty instances of it, and had defined a
-GiveTopic like so for the priest:
+GiveTopic like so for the priest:</p>
 
-`
-     + GiveTopic @PieceOfSilver
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + GiveTopic @PieceOfSilver
        topicResponse()
        {
           gDobj.moveInto(getActor);
@@ -607,66 +588,59 @@ GiveTopic like so for the priest:
        }
     ; 
      
-`
+</code></pre></div></div>
 
-This could lead to an interchange like this:
+<p>This could lead to an interchange like this:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;give thirty pieces of silver to priest
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+The priest takes the piece of silver and nods in acknowledgement.
+</code></pre></div></div>
 
-    &gt;give thirty pieces of silver to priest
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
-    The priest takes the piece of silver and nods in acknowledgement.
+<p><span id="summaryreport"></span></p>
 
-</div>
+<p>In this case it would be <em>much</em> better if we could get:</p>
 
-<span id="summaryreport"></span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;give thirty pieces of silver to priest
+The priest takes thirty pieces of silver and nods in acknowledgement.
+</code></pre></div></div>
 
-In this case it would be *much* better if we could get:
-
-<div class="cmdline">
-
-    &gt;give thirty pieces of silver to priest
-    The priest takes thirty pieces of silver and nods in acknowledgement.
-
-</div>
-
-We can do this by making use of the current action's **summaryReport**
+<p>We can do this by making use of the current action’s <strong>summaryReport</strong>
 property in our definition of the GiveTopic. Instead of directly
-outputting some text, we set the current action's
-`summaryReport` property to a single-quoted
-string to be used to generate a summary report at the action's report
-stage, like this:
+outputting some text, we set the current action’s
+<code class="language-plaintext highlighter-rouge">summaryReport</code> property to a single-quoted
+string to be used to generate a summary report at the action’s report
+stage, like this:</p>
 
-`
-     + GiveTopic @PieceOfSilver
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + GiveTopic @PieceOfSilver
        topicResponse()
        {
           gDobj.moveInto(getActor);
@@ -674,62 +648,58 @@ stage, like this:
        }
     ; 
      
-`
+</code></pre></div></div>
 
-Once the GIVE command has been executed on all thirty pieces of silver,
-this report will be displayed with `{1}`
+<p>Once the GIVE command has been executed on all thirty pieces of silver,
+this report will be displayed with <code class="language-plaintext highlighter-rouge">{1}</code>
 replaced by a list of the objects just affected, which will
-automatically list all identical objects together into 'thirty pieces of
-silver'. It works like this: when it comes to the report stage, we have:
+automatically list all identical objects together into ‘thirty pieces of
+silver’. It works like this: when it comes to the report stage, we have:</p>
 
-`
-            report()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            report()
             {
                 if(gAction.summaryReport != nil)
                     dmsg(gAction.summaryReport, gActionListStr); 
             }
-`
+</code></pre></div></div>
 
-Since summaryReport is now non-nil this becomes in effect:
+<p>Since summaryReport is now non-nil this becomes in effect:</p>
 
-`
-        dmsg(The priest takes {1} and nods in acknowledgement. ', gActionListStr);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        dmsg(The priest takes {1} and nods in acknowledgement. ', gActionListStr);
      
-`
+</code></pre></div></div>
 
-The macro `gActionListStr` expands to a list of
-the objects just acted on ('thirty pieces of silver') and is inserted
-into the report text in place of `{1}`.
+<p>The macro <code class="language-plaintext highlighter-rouge">gActionListStr</code> expands to a list of
+the objects just acted on (‘thirty pieces of silver’) and is inserted
+into the report text in place of <code class="language-plaintext highlighter-rouge">{1}</code>.</p>
 
-<span id="sumprop"></span>
+<p><span id="sumprop"></span></p>
 
-This is certainly an improvement, but we may need a little more. In
+<p>This is certainly an improvement, but we may need a little more. In
 particular the priest may react differently according to how many pieces
-of silver he's been given. If he's expecting thirty, he won't be content
-with twenty-nine. We can therefore make use of the **summaryProp**
+of silver he’s been given. If he’s expecting thirty, he won’t be content
+with twenty-nine. We can therefore make use of the <strong>summaryProp</strong>
 property of the current action to define a method on the priest that
-should be executed just after the display of our summary report. We'd
-typically do it like this:
+should be executed just after the display of our summary report. We’d
+typically do it like this:</p>
 
-`
-     + GiveTopic @PieceOfSilver
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + GiveTopic @PieceOfSilver
        topicResponse()
        {
           gDobj.moveInto(getActor);
           gAction.summaryReport = 'The priest takes {1} and nods in acknowledgement. ';
-          gAction.summaryProp = &silverCount;
+          gAction.summaryProp = &amp;silverCount;
        }
     ; 
      
-`
+</code></pre></div></div>
 
-We'd then need to define a suitable
-`silverCount()` method on the priest, taking
-advantage of the fact that `gAction.reportList`
-will contain a list of the objects that have just been reported on:
+<p>We’d then need to define a suitable
+<code class="language-plaintext highlighter-rouge">silverCount()</code> method on the priest, taking
+advantage of the fact that <code class="language-plaintext highlighter-rouge">gAction.reportList</code>
+will contain a list of the objects that have just been reported on:</p>
 
-`
-     priest: Actor 'priest; tall thin ascetic; man; him'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     priest: Actor 'priest; tall thin ascetic; man; him'
         "He's a tall, thin ascetic-looking man. "
         
         silverPieces = 0
@@ -742,25 +712,24 @@ will contain a list of the objects that have just been reported on:
            silverPieces += count;
            
            if(silverPieces &gt;= 30)
-             "The priest nods in satisfaction. <q>That will do,</q> he says.
-             <q>Very well, I shall carry out my part of the bargain.</q> &lt;.reveal priest-satisfied&gt;. ";
+             "The priest nods in satisfaction. &lt;q&gt;That will do,&lt;/q&gt; he says.
+             &lt;q&gt;Very well, I shall carry out my part of the bargain.&lt;/q&gt; &lt;.reveal priest-satisfied&gt;. ";
            else
-             "<q>We agreed thirty pieces of silver,</q> the priest insists. <q>So far you have only
-              given me &lt;&lt;spellNumber(silverPieces)&gt;&gt;.</q> ";
+             "&lt;q&gt;We agreed thirty pieces of silver,&lt;/q&gt; the priest insists. &lt;q&gt;So far you have only
+              given me &lt;&lt;spellNumber(silverPieces)&gt;&gt;.&lt;/q&gt; ";
         }
     ;
      
-`
+</code></pre></div></div>
 
-This technique can be used with GiveTopics, ShowTopics or
+<p>This technique can be used with GiveTopics, ShowTopics or
 GiveShowTopics, but it does come with a limitation: the system can only
 deal with one summaryReport and one summaryProp on any given turn, so,
-for example, you *mustn't* do this if there's any possibility that the
+for example, you <em>mustn’t</em> do this if there’s any possibility that the
 player character could hand over a mix of gold and silver coins on any
-one turn:
+one turn:</p>
 
-`
-     + GiveTopic @GoldCoin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + GiveTopic @GoldCoin
        topicResponse()
        {
           gDobj.moveInto(getActor);
@@ -778,18 +747,17 @@ one turn:
        }
     ;
      
-`
+</code></pre></div></div>
 
-Since if you do do something like this the value of
-`summaryReport` and
-`summaryProp` will be that set by the last
+<p>Since if you do do something like this the value of
+<code class="language-plaintext highlighter-rouge">summaryReport</code> and
+<code class="language-plaintext highlighter-rouge">summaryProp</code> will be that set by the last
 GiveTopic to be triggered, which may not give you the result you want if
 the player types GIVE PRIEST THREE SILVER COINS AND FIVE GOLD COINS.
 Instead you need to combine both sets of coins into a single set of
-properties to ensure a predictable outcome:
+properties to ensure a predictable outcome:</p>
 
-`
-     + GiveTopic [GoldCoin, SilverCoin]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + GiveTopic [GoldCoin, SilverCoin]
        topicResponse()
        {
           gDobj.moveInto(getActor);
@@ -798,40 +766,34 @@ properties to ensure a predictable outcome:
        }
     ; 
      
-`
+</code></pre></div></div>
 
-This will work fine provided you define your coinCount() method to check
-`gAction.reportList` for both gold and silver
-coins and react accordingly.
+<p>This will work fine provided you define your coinCount() method to check
+<code class="language-plaintext highlighter-rouge">gAction.reportList</code> for both gold and silver
+coins and react accordingly.</p>
 
-One final point: it's possible that the player could include some
+<p>One final point: it’s possible that the player could include some
 extraneous items in a give command, such as GIVE TEN COLD COINS AND OLD
-TWIG TO PRIEST. This shouldn't present too much of a problem provided
+TWIG TO PRIEST. This shouldn’t present too much of a problem provided
 your code can handle the extraneous old twig gracefully. This may be as
 simple as defining a suitable DefaultGiveShowTopic that names the item
-that triggers it:
+that triggers it:</p>
 
-`
-     + DefaultGiveShowTopic 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + DefaultGiveShowTopic 
        "The priest has no interest in {the dobj}. "
     ; 
      
-`
-
-</div>
+</code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; ActorTopicEntry  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; ActorTopicEntry<br />
 <span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
     <a href="suggest.html" class="nav"><em>Next:</em> Suggesting
-Conversational Topics</a>     </span>
+Conversational Topics</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

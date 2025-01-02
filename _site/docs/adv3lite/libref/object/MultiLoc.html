@@ -46,33 +46,21 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A MultiLoc is an object that can exist in several locations at once.
+<p>A MultiLoc is an object that can exist in several locations at once.
 MultiLoc is a mix-in class that should be used in conjunction with Thing
-or a Thing-derived class.
+or a Thing-derived class.</p>
 
-`class `**`MultiLoc`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MultiLoc</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MultiLoc</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MultiLoc</code></strong><br />
 <a href="../object/Floor.html"><code class="language-plaintext highlighter-rouge">Floor</code></a><br />
@@ -85,40 +73,24 @@ or a Thing-derived class.
 <a href="../object/SymStairway.html"><code class="language-plaintext highlighter-rouge">SymStairway</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><a href="../object/bodyParts.html"><code class="language-plaintext highlighter-rouge">bodyParts</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#exceptions"><code class="language-plaintext highlighter-rouge">exceptions</code></a><a href="#initialLocationClass"><code class="language-plaintext highlighter-rouge">initialLocationClass</code></a><a href="#initialLocationList"><code class="language-plaintext highlighter-rouge">initialLocationList</code></a><a href="#locationList"><code class="language-plaintext highlighter-rouge">locationList</code></a></p>
+<p><a href="#exceptions"><code class="language-plaintext highlighter-rouge">exceptions</code></a> <a href="#initialLocationClass"><code class="language-plaintext highlighter-rouge">initialLocationClass</code></a> <a href="#initialLocationList"><code class="language-plaintext highlighter-rouge">initialLocationList</code></a> <a href="#locationList"><code class="language-plaintext highlighter-rouge">locationList</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addToLocations"><code class="language-plaintext highlighter-rouge">addToLocations</code></a><a href="#isDirectlyIn"><code class="language-plaintext highlighter-rouge">isDirectlyIn</code></a><a href="#isIn"><code class="language-plaintext highlighter-rouge">isIn</code></a><a href="#isInitiallyIn"><code class="language-plaintext highlighter-rouge">isInitiallyIn</code></a><a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a><a href="#moveInto"><code class="language-plaintext highlighter-rouge">moveInto</code></a><a href="#moveIntoAdd"><code class="language-plaintext highlighter-rouge">moveIntoAdd</code></a><a href="#moveOutOf"><code class="language-plaintext highlighter-rouge">moveOutOf</code></a><a href="#preinitThing"><code class="language-plaintext highlighter-rouge">preinitThing</code></a></p>
+<p><a href="#addToLocations"><code class="language-plaintext highlighter-rouge">addToLocations</code></a> <a href="#isDirectlyIn"><code class="language-plaintext highlighter-rouge">isDirectlyIn</code></a> <a href="#isIn"><code class="language-plaintext highlighter-rouge">isIn</code></a> <a href="#isInitiallyIn"><code class="language-plaintext highlighter-rouge">isInitiallyIn</code></a> <a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a> <a href="#moveInto"><code class="language-plaintext highlighter-rouge">moveInto</code></a> <a href="#moveIntoAdd"><code class="language-plaintext highlighter-rouge">moveIntoAdd</code></a> <a href="#moveOutOf"><code class="language-plaintext highlighter-rouge">moveOutOf</code></a> <a href="#preinitThing"><code class="language-plaintext highlighter-rouge">preinitThing</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="exceptions"></span></p>
 
@@ -126,13 +98,9 @@ or a Thing-derived class.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9669">9669</a>]</p>
 
-<div class="desc">
-
-A list of locations this object is not to be present in. This is
+<p>A list of locations this object is not to be present in. This is
 intended mainly to allow certain rooms to be excepted from a specified
-region.
-
-</div>
+region.</p>
 
 <p><span id="initialLocationClass"></span></p>
 
@@ -140,15 +108,11 @@ region.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9679">9679</a>]</p>
 
-<div class="desc">
-
-If the initialLocationClass property is defined, then this MultiLoc is
+<p>If the initialLocationClass property is defined, then this MultiLoc is
 initially located in every instance of this class. Note that this would
 be in addition to the locations defined in the locationList class and
 would likewise be subject to anything defined in the exceptions
-property.
-
-</div>
+property.</p>
 
 <p><span id="initialLocationList"></span></p>
 
@@ -156,12 +120,8 @@ property.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9662">9662</a>]</p>
 
-<div class="desc">
-
-A list of the locations this object is to start out in. Locations may be
-specified as Things, Rooms or Regions, or as some mix of all three.
-
-</div>
+<p>A list of the locations this object is to start out in. Locations may be
+specified as Things, Rooms or Regions, or as some mix of all three.</p>
 
 <p><span id="locationList"></span></p>
 
@@ -169,22 +129,14 @@ specified as Things, Rooms or Regions, or as some mix of all three.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9655">9655</a>]</p>
 
-<div class="desc">
-
-A list of the locations this object is currently present in. If this
+<p>A list of the locations this object is currently present in. If this
 property is defined at the start of the game and initialLocationList
-isn't, then this list will be copied to initialLocationList, and so can
-be specified by users in exactly the same way.
-
-</div>
+isn’t, then this list will be copied to initialLocationList, and so can
+be specified by users in exactly the same way.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addToLocations"></span></p>
 
@@ -192,14 +144,10 @@ be specified by users in exactly the same way.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9696">9696</a>]</p>
 
-<div class="desc">
-
-In Preinit, add this MultiLoc into the contents list of every item in
+<p>In Preinit, add this MultiLoc into the contents list of every item in
 its locationList and every object of class initialLocationClass (if this
 is not nil) and then remove it from the contents list of every item in
-its exceptions list.
-
-</div>
+its exceptions list.</p>
 
 <p><span id="isDirectlyIn"></span></p>
 
@@ -207,12 +155,8 @@ its exceptions list.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9804">9804</a>]</p>
 
-<div class="desc">
-
-A MultiLoc is directly in another object if it's listed in that other
-object's contents list.
-
-</div>
+<p>A MultiLoc is directly in another object if it’s listed in that other
+object’s contents list.</p>
 
 <p><span id="isIn"></span></p>
 
@@ -220,12 +164,8 @@ object's contents list.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9821">9821</a>]</p>
 
-<div class="desc">
-
-A MultiLoc is in another object either if it's directly in that object
-or if one of the items in its location list is in that object.
-
-</div>
+<p>A MultiLoc is in another object either if it’s directly in that object
+or if one of the items in its location list is in that object.</p>
 
 <p><span id="isInitiallyIn"></span></p>
 
@@ -233,15 +173,11 @@ or if one of the items in its location list is in that object.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9688">9688</a>]</p>
 
-<div class="desc">
-
-Test an object for inclusion in our initial location list. By default,
-we'll simply return true to include every object. We return true by
+<p>Test an object for inclusion in our initial location list. By default,
+we’ll simply return true to include every object. We return true by
 default so that an instance can merely specify a value for
 initialLocationClass in order to place this object in every instance of
-the given class.
-
-</div>
+the given class.</p>
 
 <p><span id="location"></span></p>
 
@@ -249,17 +185,13 @@ the given class.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9838">9838</a>]</p>
 
-<div class="desc">
-
-For certain purposes, such as sense path calculations, a Multiloc needs
+<p>For certain purposes, such as sense path calculations, a Multiloc needs
 a notional location. We assume the enquiry is made from the perspective
 of the current actor, or, failing that, the player char, so we return
-the current actor's (or the player char's) current location if the
+the current actor’s (or the player char’s) current location if the
 MultiLoc is present there, or the last place where the MultiLoc was seen
 otherwise. The intention is to select the most currently significant
-location where we're present.
-
-</div>
+location where we’re present.</p>
 
 <p><span id="moveInto"></span></p>
 
@@ -267,13 +199,9 @@ location where we're present.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9788">9788</a>]</p>
 
-<div class="desc">
-
-To move a MultiLoc into a single location, first remove it from every
-location in its location list, then add it to the single location it's
-now in.
-
-</div>
+<p>To move a MultiLoc into a single location, first remove it from every
+location in its location list, then add it to the single location it’s
+now in.</p>
 
 <p><span id="moveIntoAdd"></span></p>
 
@@ -281,11 +209,7 @@ now in.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9761">9761</a>]</p>
 
-<div class="desc">
-
-Move this MultiLoc into an additional location.
-
-</div>
+<p>Move this MultiLoc into an additional location.</p>
 
 <p><span id="moveOutOf"></span></p>
 
@@ -293,11 +217,7 @@ Move this MultiLoc into an additional location.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9774">9774</a>]</p>
 
-<div class="desc">
-
-Remove this MultiLoc from loc.
-
-</div>
+<p>Remove this MultiLoc from loc.</p>
 
 <p><span id="preinitThing"></span></p>
 
@@ -305,19 +225,12 @@ Remove this MultiLoc from loc.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9891">9891</a>]</p>
 
-<div class="desc">
+<p>If we’re a MultiLoc we don’t want to carry out any of the normal
+preinitialization related to our location.</p>
 
-If we're a MultiLoc we don't want to carry out any of the normal
-preinitialization related to our location.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

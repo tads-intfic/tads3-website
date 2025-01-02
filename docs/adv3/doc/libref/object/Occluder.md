@@ -105,7 +105,7 @@ occlude.
 
 
 
-[`clearSenseInfo`](#clearSenseInfo)[`finishSensePath`](#finishSensePath)[`occludeObj`](#occludeObj)
+[`clearSenseInfo`](#clearSenseInfo) [`finishSensePath`](#finishSensePath) [`occludeObj`](#occludeObj)
 
 <span id="_Properties_"></span>
 

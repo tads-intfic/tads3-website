@@ -79,7 +79,7 @@ indexed by the first word (the verb) of the command template.
 
 
 
-[`addParser`](#addParser)[`getParsers`](#getParsers)
+[`addParser`](#addParser) [`getParsers`](#getParsers)
 
 <span id="_Properties_"></span>
 

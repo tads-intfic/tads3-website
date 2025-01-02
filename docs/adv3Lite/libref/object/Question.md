@@ -85,7 +85,7 @@ carry out the action of answering the question.
 
 
 
-[`answerTemplate`](#answerTemplate)[`priority`](#priority)
+[`answerTemplate`](#answerTemplate) [`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 

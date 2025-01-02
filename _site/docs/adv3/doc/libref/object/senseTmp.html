@@ -40,61 +40,41 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Sense calculation scratch-pad globals. Many of the sense calculations
+<p>Sense calculation scratch-pad globals. Many of the sense calculations
 involve recursive descents of portions of the containment tree. In the
-course of these calculations, it's sometimes useful to have information
+course of these calculations, it’s sometimes useful to have information
 about the entire operation in one of the recursive calls. We could pass
 the information around as extra parameters, but that adds overhead, and
 performance is critical in the sense routines (because they tend to get
-invoked a \*lot\*). To reduce the overhead, particularly for information
-that's not needed very often, we stuff some information into this global
-object rather than passing it around through parameters.
+invoked a *lot*). To reduce the overhead, particularly for information
+that’s not needed very often, we stuff some information into this global
+object rather than passing it around through parameters.</p>
 
-Note that this object is transient because this information is useful
-only during the course of a single tree traversal, and so doesn't need
-to be saved or undone.
+<p>Note that this object is transient because this information is useful
+only during the course of a single tree traversal, and so doesn’t need
+to be saved or undone.</p>
 
-`transient `**`senseTmp`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">senseTmp</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">senseTmp</code></strong><br />
 `         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#notifyList"><code class="language-plaintext highlighter-rouge">notifyList</code></a><a href="#pointOfView"><code class="language-plaintext highlighter-rouge">pointOfView</code></a></p>
+<p><a href="#notifyList"><code class="language-plaintext highlighter-rouge">notifyList</code></a> <a href="#pointOfView"><code class="language-plaintext highlighter-rouge">pointOfView</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><em>(none)</em> <span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="notifyList"></span></p>
 
@@ -102,11 +82,7 @@ to be saved or undone.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#168">168</a>]</p>
 
-<div class="desc">
-
-post-calculation notification list
-
-</div>
+<p>post-calculation notification list</p>
 
 <p><span id="pointOfView"></span></p>
 
@@ -114,29 +90,18 @@ post-calculation notification list
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#165">165</a>]</p>
 
-<div class="desc">
-
-The point of view of the sense calculation. This is the starting point
-of a sense traversal; it's the object that's viewing the other objects.
-
-</div>
+<p>The point of view of the sense calculation. This is the starting point
+of a sense traversal; it’s the object that’s viewing the other objects.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

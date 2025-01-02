@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Vector  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Vector<br />
 <span class="navnp"><a href="timezone.html" class="nav"><em>Prev:</em> TimeZone</a>
    
 <a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="vector">Vector</h1>
 
@@ -286,761 +278,610 @@ methods, Vector provides many methods of its own, shown below.</p>
 
 <p><code class="language-plaintext highlighter-rouge">append(*val*)</code></p>
 
-<div class="fdef">
-
-Appends the value *val* to the end of the vector, increasing the
-vector's length by one. This method has almost the same effect as the
-`+` operator, except for the treatment if *val*
+<p>Appends the value <em>val</em> to the end of the vector, increasing the
+vector’s length by one. This method has almost the same effect as the
+<code class="language-plaintext highlighter-rouge">+</code> operator, except for the treatment if <em>val</em>
 is a list: this method simply appends a list value as a single new
-element, whereas the `+` operator appends each
+element, whereas the <code class="language-plaintext highlighter-rouge">+</code> operator appends each
 element of the list value as a separate new element. In addition, unlike
-the `+` operator, this method modifies the
+the <code class="language-plaintext highlighter-rouge">+</code> operator, this method modifies the
 Vector object, rather than creating a new Vector to store the result.
-Returns `self`.
+Returns <code class="language-plaintext highlighter-rouge">self</code>.</p>
 
+<p><code class="language-plaintext highlighter-rouge">appendAll(*val*)</code></p>
 
-
-`appendAll(*val*)`
-
-<div class="fdef">
-
-This works like `append(*val*)`, except that if
-*val* is a List or Vector, each element of *val* is individually
+<p>This works like <code class="language-plaintext highlighter-rouge">append(*val*)</code>, except that if
+<em>val</em> is a List or Vector, each element of <em>val</em> is individually
 appended to the target Vector. This method works like the
-`+` operator, except that this method modifies
+<code class="language-plaintext highlighter-rouge">+</code> operator, except that this method modifies
 the Vector, rather than creating a new Vector to store the result.
-Returns `self`.
+Returns <code class="language-plaintext highlighter-rouge">self</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">appendUnique(*val*)</code></p>
 
-`appendUnique(*val*)`
-
-<div class="fdef">
-
-Appends the elements of the list or Vector *val* to this vector; the
+<p>Appends the elements of the list or Vector <em>val</em> to this vector; the
 vector is modified so that it consists only of the unique elements of
 the combination. On return, any given value will appear in the vector
-will appear only once. Like `append()` and
-`appendAll()`, this modifies the Vector
-directly.
+will appear only once. Like <code class="language-plaintext highlighter-rouge">append()</code> and
+<code class="language-plaintext highlighter-rouge">appendAll()</code>, this modifies the Vector
+directly.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">applyAll(*func*)</code></p>
 
-`applyAll(*func*)`
-
-<div class="fdef">
-
-For each element of the vector, this method invokes the callback
-function *func*, passing the current element as the single argument,
+<p>For each element of the vector, this method invokes the callback
+function <em>func</em>, passing the current element as the single argument,
 then replaces the vector element with the return value from the
 callback. This method does not create a new Vector; rather, it modifies
-the original Vector. This method returns `self`
-as the result value.
+the original Vector. This method returns <code class="language-plaintext highlighter-rouge">self</code>
+as the result value.</p>
 
-This method is useful for transforming the elements of a vector by
+<p>This method is useful for transforming the elements of a vector by
 applying a modifier function. For example, if we have a vector of
 numbers, we could use this method to multiply each number in the vector
-by two:
+by two:</p>
 
-```
-    x.applyAll({x: x*2});
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x.applyAll({x: x*2});
+</code></pre></div></div>
 
-This method is also handy for performing complex initializations on a
-new Vector. For example, here's a function that creates a new vector and
-initializes it with the first *n* Fibonacci numbers. Because we're
+<p>This method is also handy for performing complex initializations on a
+new Vector. For example, here’s a function that creates a new vector and
+initializes it with the first <em>n</em> Fibonacci numbers. Because we’re
 simply initializing the new vector, note that the callback function
-doesn't make any reference to the original element value, but it must
+doesn’t make any reference to the original element value, but it must
 still declare a parameter for the argument value so that the arguments
-passed from `applyAll()` match the declaration.
+passed from <code class="language-plaintext highlighter-rouge">applyAll()</code> match the declaration.</p>
 
-```
-    createFibonacciVector(n)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    createFibonacciVector(n)
     {
       local f0 = 0, f1 = 1;
       return new Vector(n, n).applyAll(function(x)
         { local ret = f0; f0 = f1; f1 += ret; return ret; });
     }
-```
+</code></pre></div></div>
 
-Note that we specify the value *n* twice in the constructor to
-explicitly set the initial size of the vector to *n*
-`nil` elements. This is important because a
-newly-created vector normally doesn't contain any elements, regardless
+<p>Note that we specify the value <em>n</em> twice in the constructor to
+explicitly set the initial size of the vector to <em>n</em>
+<code class="language-plaintext highlighter-rouge">nil</code> elements. This is important because a
+newly-created vector normally doesn’t contain any elements, regardless
 of the initial allocation setting; by explicitly using the initial
-length argument *n*, we ensure that `applyAll()`
-will visit *n* elements.
+length argument <em>n</em>, we ensure that <code class="language-plaintext highlighter-rouge">applyAll()</code>
+will visit <em>n</em> elements.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">copyFrom(*source*, *sourceStart*, *destStart*,
+*count*)</code></p>
 
-`copyFrom(*source*, *sourceStart*, *destStart*,
-*count*)`
-
-<div class="fdef">
-
-Copies values from a list or from another list or vector into this
-Vector. This function doesn't create a new Vector, but simply modifies
-entries in the `self` vector. *source* is the
+<p>Copies values from a list or from another list or vector into this
+Vector. This function doesn’t create a new Vector, but simply modifies
+entries in the <code class="language-plaintext highlighter-rouge">self</code> vector. <em>source</em> is the
 source of the values; it must be either a vector or a list.
-*sourceStart* is an index into source, and specifies the first element
-of source that is to be copied. *destStart* is an index into the
-`self` vector, and specifies the first element
-of the vector that is to be modified. *count* is the number of elements
-to modify. The method copies elements from *source* into the
-`self` vector, one at a time, until it reaches
+<em>sourceStart</em> is an index into source, and specifies the first element
+of source that is to be copied. <em>destStart</em> is an index into the
+<code class="language-plaintext highlighter-rouge">self</code> vector, and specifies the first element
+of the vector that is to be modified. <em>count</em> is the number of elements
+to modify. The method copies elements from <em>source</em> into the
+<code class="language-plaintext highlighter-rouge">self</code> vector, one at a time, until it reaches
 the last element of source, or has copied the number of elements
-specified by count.
+specified by count.</p>
 
-If either starting index is negative, it counts backwards from the last
+<p>If either starting index is negative, it counts backwards from the last
 element of its vector: -1 is the last element, -2 is the second to last,
-and so on.
+and so on.</p>
 
-Calling this method is equivalent to writing a code fragment like this:
+<p>Calling this method is equivalent to writing a code fragment like this:</p>
 
-```
-    for (local i = 0 ; i &lt; count ; ++i)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 0 ; i &lt; count ; ++i)
       dest[destStart + i] = source[sourceStart + i];
-```
+</code></pre></div></div>
 
-If necessary, the method expands the `self`
-vector to make room for the added elements.
+<p>If necessary, the method expands the <code class="language-plaintext highlighter-rouge">self</code>
+vector to make room for the added elements.</p>
 
-The `copyFrom()` method simply returns
-`self`; this is convenient for expressions like
-this:
+<p>The <code class="language-plaintext highlighter-rouge">copyFrom()</code> method simply returns
+<code class="language-plaintext highlighter-rouge">self</code>; this is convenient for expressions like
+this:</p>
 
-```
-    x = new Vector(20).copyFrom(lst, 3, 2, 5);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = new Vector(20).copyFrom(lst, 3, 2, 5);
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">countOf(*val*)</code></p>
 
-`countOf(*val*)`
+<p>Returns the number of elements in the vector whose values equal <em>val</em>.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">countWhich(*cond*)</code></p>
 
-Returns the number of elements in the vector whose values equal *val*.
+<p>Returns the number of elements in the vector for which the callback
+function <em>cond</em> returns a non-false value (anything but
+<code class="language-plaintext highlighter-rouge">nil</code> or 0). For each element in the Vector, the
+method invokes <em>cond</em>, passing the element as the argument to the
+callback. If <em>cond</em> returns anything but <code class="language-plaintext highlighter-rouge">nil</code>
+or 0, the method counts the element. After invoking <em>cond</em> for each
+element, the method returns the number of elements for which <em>cond</em>
+returned a non-false value.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">fillValue(*value*, *start*?, *count*?)</code></p>
 
-`countWhich(*cond*)`
+<p>Fills elements of this Vector with <em>value</em>. If only <em>value</em> is
+specified, this method simply stores <em>value</em> in every element of the
+<code class="language-plaintext highlighter-rouge">self</code> vector. If <em>start</em> is specified, it gives
+the starting index; the method fills values starting with <em>start</em>, to
+the end of the Vector. If both <em>start</em> and <em>count</em> are specified, count
+gives the maximum number of elements to fill.</p>
 
-<div class="fdef">
-
-Returns the number of elements in the vector for which the callback
-function *cond* returns a non-false value (anything but
-`nil` or 0). For each element in the Vector, the
-method invokes *cond*, passing the element as the argument to the
-callback. If *cond* returns anything but `nil`
-or 0, the method counts the element. After invoking *cond* for each
-element, the method returns the number of elements for which *cond*
-returned a non-false value.
-
-</div>
-
-`fillValue(*value*, *start*?, *count*?)`
-
-<div class="fdef">
-
-Fills elements of this Vector with *value*. If only *value* is
-specified, this method simply stores *value* in every element of the
-`self` vector. If *start* is specified, it gives
-the starting index; the method fills values starting with *start*, to
-the end of the Vector. If both *start* and *count* are specified, count
-gives the maximum number of elements to fill.
-
-If *start* isn't specified, the default starting index is 1. If *start*
+<p>If <em>start</em> isn’t specified, the default starting index is 1. If <em>start</em>
 is negative, it counts from the end of the vector: -1 is the last
-element, -2 is the second to last, and so on.
+element, -2 is the second to last, and so on.</p>
 
-If *count* isn't specified, the default count is
-`self.length() -` *start* `+
-1`, or 0 if that yields a negative value. In other words, the
-default *count* is chosen to fill to the end of the existing elements of
+<p>If <em>count</em> isn’t specified, the default count is
+<code class="language-plaintext highlighter-rouge">self.length() -</code> <em>start</em> <code class="language-plaintext highlighter-rouge">+
+1</code>, or 0 if that yields a negative value. In other words, the
+default <em>count</em> is chosen to fill to the end of the existing elements of
 the Vector. Note that this is the actual populated length of the Vector,
-*not* the initial allocation size: `new
-Vector(10).fillValue('x')` yields a vector with zero elements
+<em>not</em> the initial allocation size: <code class="language-plaintext highlighter-rouge">new
+Vector(10).fillValue('x')</code> yields a vector with zero elements
 filled in, not 10, because a Vector created this way is initially
-empty - the `10` is merely the initial
-allocation size hint, not the initial filled length.
+empty - the <code class="language-plaintext highlighter-rouge">10</code> is merely the initial
+allocation size hint, not the initial filled length.</p>
 
-This method is equivalent to writing a code fragment like this:
+<p>This method is equivalent to writing a code fragment like this:</p>
 
-```
-    for (local i = 0 ; i &lt; count ; ++i)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 0 ; i &lt; count ; ++i)
       dest[start + i] = value;
-```
+</code></pre></div></div>
 
-Calling `fillValue()` is easier than writing
+<p>Calling <code class="language-plaintext highlighter-rouge">fillValue()</code> is easier than writing
 this code fragment, though, and considerably faster because it is
-implemented as native code.
+implemented as native code.</p>
 
-This method returns `self`, which allows for
-expressions like this:
+<p>This method returns <code class="language-plaintext highlighter-rouge">self</code>, which allows for
+expressions like this:</p>
 
-```
-    x = new Vector(20).fillValue('A', 1, 20);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = new Vector(20).fillValue('A', 1, 20);
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">forEach(*func*)</code></p>
 
-`forEach(*func*)`
-
-<div class="fdef">
-
-Invokes the callback function
-`(*func*)(*value*)` for each element, in order
-from first to last, passing the value of one element as *value* to the
+<p>Invokes the callback function
+<code class="language-plaintext highlighter-rouge">(*func*)(*value*)</code> for each element, in order
+from first to last, passing the value of one element as <em>value</em> to the
 callback on each invocation. The callback function takes one argument
 giving the value of the current element, and returns no value. This
 method returns no value. This method is a convenient means of executing
-some code for each element of the vector.
+some code for each element of the vector.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">forEachAssoc(*func*)</code></p>
 
-`forEachAssoc(*func*)`
-
-<div class="fdef">
-
-Invokes the callback function `(*func*)(*index*,
-*value*)` for each element, in order from first to last, passing
-each element's index and value to the function *func*. The callback
+<p>Invokes the callback function <code class="language-plaintext highlighter-rouge">(*func*)(*index*,
+*value*)</code> for each element, in order from first to last, passing
+each element’s index and value to the function <em>func</em>. The callback
 function returns no value. This method returns no value. This method is
-the same as `forEach()`, except that this method
+the same as <code class="language-plaintext highlighter-rouge">forEach()</code>, except that this method
 provides the callback with the index as well as the value for each
-element it visits.
+element it visits.</p>
 
-</div>
+<p><span id="generate"></span></p>
 
-<span id="generate"></span>
+<p><code class="language-plaintext highlighter-rouge">generate(*func*, *n*)</code></p>
 
-`generate(*func*, *n*)`
-
-<div class="fdef">
-
-Creates a new Vector containing *n* elements by invoking the callback
-function *func* once for each element, and using the return value as the
+<p>Creates a new Vector containing <em>n</em> elements by invoking the callback
+function <em>func</em> once for each element, and using the return value as the
 element value. This is a class method that you call on the Vector class
-directly, as in `Vector.generate(f, 10)`.
+directly, as in <code class="language-plaintext highlighter-rouge">Vector.generate(f, 10)</code>.</p>
 
-*func* is a callback function, which can be a regular function or an
-anonymous function. *func* can take zero or one argument. The
+<p><em>func</em> is a callback function, which can be a regular function or an
+anonymous function. <em>func</em> can take zero or one argument. The
 one-argument form is invoked with the index of the current element as
-the argument on each call.
+the argument on each call.</p>
 
-`generate()` is convenient for creating a Vector
+<p><code class="language-plaintext highlighter-rouge">generate()</code> is convenient for creating a Vector
 of items based on a formula. For example, this creates a Vector of the
-first ten positive even integers:
+first ten positive even integers:</p>
 
-```
-    local e = Vector.generate({i: i*2}, 10);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local e = Vector.generate({i: i*2}, 10);
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getUnique()</code></p>
 
-`getUnique()`
-
-<div class="fdef">
-
-Returns a new vector consisting of the unique elements of the original
+<p>Returns a new vector consisting of the unique elements of the original
 vector. For each value in the original vector, the value will appear in
 the new vector only once. The order of the elements in the new vector is
 that of the first appearances of the unique elements of the original
-vector. For example, if the original vector's elements are, in order, 1,
+vector. For example, if the original vector’s elements are, in order, 1,
 5, 2, 5, 3, 5, 4, 5, this method will return a new vector whose elements
 are, in order, 1, 5, 2, 3, 4. Note that the size of the new vector is
 just large enough to hold only the unique elements, so the new vector
-might be smaller than the original vector.
+might be smaller than the original vector.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">indexOf(*val*)</code></p>
 
-`indexOf(*val*)`
+<p>Finds the first element of the vector whose value equals <em>val</em>, and
+returns the index of the element. Returns <code class="language-plaintext highlighter-rouge">nil</code>
+if none of the vector’s elements equals <em>val</em>.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">indexOfMax(*func*?)</code></p>
 
-Finds the first element of the vector whose value equals *val*, and
-returns the index of the element. Returns `nil`
-if none of the vector's elements equals *val*.
-
-</div>
-
-`indexOfMax(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns the index of the element with the maximum
+<p>If <em>func</em> is omitted, returns the index of the element with the maximum
 value, comparing values to one another as though using the
-`\&gt;` operator.
+<code class="language-plaintext highlighter-rouge">\&gt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the vector, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the vector, passing the element’s value as
 the function argument. The function must return a value. The result of
-`indexOfMax` in this case is the index of the
-element for which *func*() returned the maximum value.
+<code class="language-plaintext highlighter-rouge">indexOfMax</code> in this case is the index of the
+element for which <em>func</em>() returned the maximum value.</p>
 
-For example, if `v` is a vector containing
-string values as elements, `v.indexOfMax({x:
-x.length()})` returns the index of the longest string.
+<p>For example, if <code class="language-plaintext highlighter-rouge">v</code> is a vector containing
+string values as elements, <code class="language-plaintext highlighter-rouge">v.indexOfMax({x:
+x.length()})</code> returns the index of the longest string.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">indexOfMin(*func*?)</code></p>
 
-`indexOfMin(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns the index of the element with the minimum
+<p>If <em>func</em> is omitted, returns the index of the element with the minimum
 value, comparing values to one another as though using the
-`\&lt;` operator.
+<code class="language-plaintext highlighter-rouge">\&lt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the vector, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the vector, passing the element’s value as
 the function argument. The function must return a value. The result of
-`indexOfMin` in this case is the index of the
-element for which *func*() returned the minimum value.
+<code class="language-plaintext highlighter-rouge">indexOfMin</code> in this case is the index of the
+element for which <em>func</em>() returned the minimum value.</p>
 
-For example, if `lst` is a vector containing
-string values as elements, `v.indexOfMin({x:
-x.length()})` returns the index of the shortest string.
+<p>For example, if <code class="language-plaintext highlighter-rouge">lst</code> is a vector containing
+string values as elements, <code class="language-plaintext highlighter-rouge">v.indexOfMin({x:
+x.length()})</code> returns the index of the shortest string.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code></p>
 
-`indexWhich(*cond*)`
-
-<div class="fdef">
-
-Finds the first element for which the given condition is true. The
+<p>Finds the first element for which the given condition is true. The
 method iterates through the elements of the vector, starting at the
 first element and proceeding in order, and applies the callback function
-*cond* to each element. The callback takes one argument, which is the
+<em>cond</em> to each element. The callback takes one argument, which is the
 value of the vector element, and returns a condition result value. For
 each element, if the callback function returns a non-false value (i.e.,
-any value except `nil` or zero), the method
+any value except <code class="language-plaintext highlighter-rouge">nil</code> or zero), the method
 immediately stops the iteration and returns the index of that element.
-If the callback returns a false value (`nil` or
+If the callback returns a false value (<code class="language-plaintext highlighter-rouge">nil</code> or
 zero) for every element of the vector, the method returns
-`nil`.
+<code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">insertAt(*startingIndex*, *val*, ...)</code></p>
 
-`insertAt(*startingIndex*, *val*, ...)`
-
-<div class="fdef">
-
-Inserts one or more values into the vector at the giving starting index.
+<p>Inserts one or more values into the vector at the giving starting index.
 The size of the vector is increased to accommodate the new elements.
 Note that, if any of the values are lists or other collections, they are
 simply inserted as single elements; this contrasts with the
-`+` operator, which adds each element of a list
-as a separate element of the vector.
+<code class="language-plaintext highlighter-rouge">+</code> operator, which adds each element of a list
+as a separate element of the vector.</p>
 
-If *startingIndex* is negative, it counts from the end of the vector: -1
+<p>If <em>startingIndex</em> is negative, it counts from the end of the vector: -1
 is the last element, -2 is the second to last, etc. The special value 0
-means to insert after the last element. If *startingIndex* is positive,
+means to insert after the last element. If <em>startingIndex</em> is positive,
 it must be in the range from 1 to one higher than the length of the
 vector. If the starting index value is 1, the new elements are inserted
 before the first existing element of the vector. If the starting index
 is one higher than the length of the vector, the new elements are
 appended after the last existing element of the vector. If the starting
-index is out of this valid range, the method throws an error ("index out
-of range").
+index is out of this valid range, the method throws an error (“index out
+of range”).</p>
 
-Returns the `self` object.
+<p>Returns the <code class="language-plaintext highlighter-rouge">self</code> object.</p>
 
-</div>
+<p><span id="join"></span></p>
 
-<span id="join"></span>
+<p><code class="language-plaintext highlighter-rouge">join(*sep*?)</code></p>
 
-`join(*sep*?)`
+<p>Returns a string made by concatenating the elements of the vector
+together in index order. If <em>sep</em> is provided, it’s a string that’s
+interposed between elements as a separator. If <em>sep</em> is omitted, the
+elements are concatenated with no separation.</p>
 
-<div class="fdef">
+<p>Each element is converted to a string using the usual automatic
+conversions before it’s concatenated. If an element can’t be converted
+to string, the method throws an error.</p>
 
-Returns a string made by concatenating the elements of the vector
-together in index order. If *sep* is provided, it's a string that's
-interposed between elements as a separator. If *sep* is omitted, the
-elements are concatenated with no separation.
+<p><code class="language-plaintext highlighter-rouge">lastIndexOf(*val*)</code></p>
 
-Each element is converted to a string using the usual automatic
-conversions before it's concatenated. If an element can't be converted
-to string, the method throws an error.
+<p>Returns the index of the last element in the vector whose value equals
+<em>val</em>. If none of the elements in the vector matches the given value,
+the method returns <code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">lastIndexWhich(*cond*)</code></p>
 
-`lastIndexOf(*val*)`
-
-<div class="fdef">
-
-Returns the index of the last element in the vector whose value equals
-*val*. If none of the elements in the vector matches the given value,
-the method returns `nil`.
-
-</div>
-
-`lastIndexWhich(*cond*)`
-
-<div class="fdef">
-
-Finds the last element for which the given condition is true. This
-method is similar to `indexWhich(*cond*)`, but
+<p>Finds the last element for which the given condition is true. This
+method is similar to <code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code>, but
 scans the vector in reverse order, starting with the last element and
 working backwards. Returns the index of the matching element, or
-`nil` if the condition returns false for every
-element.
+<code class="language-plaintext highlighter-rouge">nil</code> if the condition returns false for every
+element.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">lastValWhich(*cond*)</code></p>
 
-`lastValWhich(*cond*)`
-
-<div class="fdef">
-
-Finds the last element for which the given condition is true, and
-returns the element's value. This method is similar to
-`lastIndexWhich(*cond*)`, but returns the value
+<p>Finds the last element for which the given condition is true, and
+returns the element’s value. This method is similar to
+<code class="language-plaintext highlighter-rouge">lastIndexWhich(*cond*)</code>, but returns the value
 of the matching element rather than its index. Returns
-`nil` if no matching element is found.
+<code class="language-plaintext highlighter-rouge">nil</code> if no matching element is found.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">length()</code></p>
 
-`length()`
-
-<div class="fdef">
-
-Returns an integer giving the number of elements in the vector. This is
+<p>Returns an integer giving the number of elements in the vector. This is
 the number of elements actually stored in the vector, and is unrelated
-to the initial allocation size specified when the vector was created.
+to the initial allocation size specified when the vector was created.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">mapAll(*func*)</code></p>
 
-`mapAll(*func*)`
-
-<div class="fdef">
-
-Creates a new vector consisting of the results of applying the callback
-function *func* to each element of the original vector. This method is
-similar to `applyAll(*func*)`, but rather than
+<p>Creates a new vector consisting of the results of applying the callback
+function <em>func</em> to each element of the original vector. This method is
+similar to <code class="language-plaintext highlighter-rouge">applyAll(*func*)</code>, but rather than
 modifying the elements of the original vector, this method creates a new
 vector, and leaves the elements of the original vector unchanged. The
-return value is the new vector.
+return value is the new vector.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">maxVal(*func*?)</code></p>
 
-`maxVal(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns the maximum of the element values in the
+<p>If <em>func</em> is omitted, returns the maximum of the element values in the
 vector, comparing values to one another as though using the
-`\&gt;` operator.
+<code class="language-plaintext highlighter-rouge">\&gt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the vector, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the vector, passing the element’s value as
 the function argument. The function must return a value. The result of
-`maxVal` in this case is the value of the
-element that maximizes *func*. Note that the **element value** is
-returned, *not* the return value of *func*.
+<code class="language-plaintext highlighter-rouge">maxVal</code> in this case is the value of the
+element that maximizes <em>func</em>. Note that the <strong>element value</strong> is
+returned, <em>not</em> the return value of <em>func</em>.</p>
 
-For example, if `v` is a vector containing
-string values, `v.maxVal({x: x.length()})`
-returns the longest string element.
+<p>For example, if <code class="language-plaintext highlighter-rouge">v</code> is a vector containing
+string values, <code class="language-plaintext highlighter-rouge">v.maxVal({x: x.length()})</code>
+returns the longest string element.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">minVal(*func*?)</code></p>
 
-`minVal(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns minimum of the element values in the
+<p>If <em>func</em> is omitted, returns minimum of the element values in the
 vector, comparing values to one another as though using the
-`\&lt;` operator.
+<code class="language-plaintext highlighter-rouge">\&lt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the vector, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the vector, passing the element’s value as
 the function argument. The function must return a value. The result of
-`minVal` in this case is the element value that
-minimizes *func* Note that the **element value** is returned, *not* the
-return value of *func*.
+<code class="language-plaintext highlighter-rouge">minVal</code> in this case is the element value that
+minimizes <em>func</em> Note that the <strong>element value</strong> is returned, <em>not</em> the
+return value of <em>func</em>.</p>
 
-For example, if `v` is a vector containing
-string values, `v.minVal({x: x.length()})`
-returns the shortest string element.
+<p>For example, if <code class="language-plaintext highlighter-rouge">v</code> is a vector containing
+string values, <code class="language-plaintext highlighter-rouge">v.minVal({x: x.length()})</code>
+returns the shortest string element.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">prepend(*val*)</code></p>
 
-`prepend(*val*)`
-
-<div class="fdef">
-
-Inserts the value *val* before the first element of the vector,
-increasing the vector's length by one. This method is similar to
-`append(*val*)`, but inserts the new element at
+<p>Inserts the value <em>val</em> before the first element of the vector,
+increasing the vector’s length by one. This method is similar to
+<code class="language-plaintext highlighter-rouge">append(*val*)</code>, but inserts the new element at
 the start of the vector rather than at the end. Returns
-`self`.
+<code class="language-plaintext highlighter-rouge">self</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">removeElement(*val*)</code></p>
 
-`removeElement(*val*)`
-
-<div class="fdef">
-
-Deletes one or more elements from the vector; each vector element whose
-value equals *val* is removed from the vector. This reduces the length
+<p>Deletes one or more elements from the vector; each vector element whose
+value equals <em>val</em> is removed from the vector. This reduces the length
 of the vector by the number of elements removed. If there is no element
-of the vector whose value equals *val*, the vector is unchanged. Returns
-`self`.
+of the vector whose value equals <em>val</em>, the vector is unchanged. Returns
+<code class="language-plaintext highlighter-rouge">self</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">removeElementAt(*index*)</code></p>
 
-`removeElementAt(*index*)`
+<p>Deletes one element from the vector at the given index. This reduces the
+length of the vector by one. The <em>index</em> value must refer to an existing
+element of the vector, or the method throws an error (“index out of
+range”). Returns <code class="language-plaintext highlighter-rouge">self</code>.</p>
 
-<div class="fdef">
+<p>If <em>index</em> is negative, it counts from the end of the vector: -1 is the
+last element, -2 is the second to last, and so on.</p>
 
-Deletes one element from the vector at the given index. This reduces the
-length of the vector by one. The *index* value must refer to an existing
-element of the vector, or the method throws an error ("index out of
-range"). Returns `self`.
+<p><code class="language-plaintext highlighter-rouge">removeRange(*startingIndex*, *endingIndex*)</code></p>
 
-If *index* is negative, it counts from the end of the vector: -1 is the
-last element, -2 is the second to last, and so on.
-
-</div>
-
-`removeRange(*startingIndex*, *endingIndex*)`
-
-<div class="fdef">
-
-Deletes elements from the vector from *startingIndex* through and
-including *endingIndex*. If *startingIndex* equals *endingIndex*, this
+<p>Deletes elements from the vector from <em>startingIndex</em> through and
+including <em>endingIndex</em>. If <em>startingIndex</em> equals <em>endingIndex</em>, this
 method simply deletes one element. This reduces the length of the vector
-by the number of elements removed.
+by the number of elements removed.</p>
 
-Either index (or both) can be negative. A negative index counts from the
+<p>Either index (or both) can be negative. A negative index counts from the
 end of the vector: -1 is the last element, -2 is the second to last,
 etc. To delete the last two elements, for example, you can use
-`vec.removeRange(-2, -1)`.
+<code class="language-plaintext highlighter-rouge">vec.removeRange(-2, -1)</code>.</p>
 
-Both *startingIndex* and *endingIndex* must refer to existing elements
+<p>Both <em>startingIndex</em> and <em>endingIndex</em> must refer to existing elements
 of the vector, and the ending index must be greater than or equal to the
-starting index; if these conditions don't hold, the method throws an
-error ("index out of range").
+starting index; if these conditions don’t hold, the method throws an
+error (“index out of range”).</p>
 
-Returns the `self` object.
+<p>Returns the <code class="language-plaintext highlighter-rouge">self</code> object.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">setLength(*newLength*)</code></p>
 
-`setLength(*newLength*)`
-
-<div class="fdef">
-
-Sets the number of elements of the vector to *newLength*. If *newLength*
+<p>Sets the number of elements of the vector to <em>newLength</em>. If <em>newLength</em>
 is smaller than the number of elements currently in the vector, this
-discards elements at the end of the vector. If *newLength* is larger
+discards elements at the end of the vector. If <em>newLength</em> is larger
 than the current size, this adds new elements and sets their values to
-`nil`. Returns the
-`self` object.
+<code class="language-plaintext highlighter-rouge">nil</code>. Returns the
+<code class="language-plaintext highlighter-rouge">self</code> object.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">sort(*descending*?, *comparisonFunction*?)</code></p>
 
-`sort(*descending*?, *comparisonFunction*?)`
-
-<div class="fdef">
-
-Re-orders the elements of the vector into sorted order. By default, this
+<p>Re-orders the elements of the vector into sorted order. By default, this
 method sorts the elements of the vector into ascending order, but you
-can reverse this ordering by specifying true for the *descending*
-argument.
+can reverse this ordering by specifying true for the <em>descending</em>
+argument.</p>
 
-The optional *comparisonFunction* can be used to specify the ordering of
+<p>The optional <em>comparisonFunction</em> can be used to specify the ordering of
 the result. If this argument is not specified (or is
-`nil`), the method will sort the elements
+<code class="language-plaintext highlighter-rouge">nil</code>), the method will sort the elements
 according to the standard system ordering of values; hence, the elements
 must be of comparable types (such as all integers or all strings). By
 specifying a comparison function, you can provide your own special
 ordering, and you can also sort values that have no system-defined
-order, such as object values.
+order, such as object values.</p>
 
-The *comparisonFunction* works the same way as the for the
-[List](list.html) class's `sort()` method.
+<p>The <em>comparisonFunction</em> works the same way as the for the
+<a href="list.html">List</a> class’s <code class="language-plaintext highlighter-rouge">sort()</code> method.</p>
 
-</div>
+<p><span id="splice"></span></p>
 
-<span id="splice"></span>
+<p><code class="language-plaintext highlighter-rouge">splice(*idx*, *del*, ...)</code></p>
 
-`splice(*idx*, *del*, ...)`
-
-<div class="fdef">
-
-Splices elements into the vector, by replacing a given range of elements
-with a set of new elements. *idx* is the starting index for the splice,
-and *del* is the number of items to delete. The remaining arguments are
+<p>Splices elements into the vector, by replacing a given range of elements
+with a set of new elements. <em>idx</em> is the starting index for the splice,
+and <em>del</em> is the number of items to delete. The remaining arguments are
 values to be inserted in place of the items deleted. The method first
-deletes *del* elements from the list starting at *idx*, then inserts the
+deletes <em>del</em> elements from the list starting at <em>idx</em>, then inserts the
 remaining arguments as new elements at the same index. The effect is to
-replace the *del* elements starting at *idx* with the new list of
+replace the <em>del</em> elements starting at <em>idx</em> with the new list of
 elements. The number of new elements can be different from the number of
-elements deleted.
+elements deleted.</p>
 
-If *idx* is negative, it counts from the end of the vector: -1 is the
-last element, -2 is the second to last, and so on. If *idx* is zero, the
-new elements are inserted after the existing last element.
+<p>If <em>idx</em> is negative, it counts from the end of the vector: -1 is the
+last element, -2 is the second to last, and so on. If <em>idx</em> is zero, the
+new elements are inserted after the existing last element.</p>
 
-To insert elements without deleting any existing elements, pass 0 for
-*del*. To delete elements without inserting any new elements in their
-place, simply omit any additional arguments.
+<p>To insert elements without deleting any existing elements, pass 0 for
+<em>del</em>. To delete elements without inserting any new elements in their
+place, simply omit any additional arguments.</p>
 
-This method modifies the vector in place, and returns
-`self`.
+<p>This method modifies the vector in place, and returns
+<code class="language-plaintext highlighter-rouge">self</code>.</p>
 
-You can get the same effect as this method using a combination of
-`removeRange()` and
-`insertAt()`. `splice()`
+<p>You can get the same effect as this method using a combination of
+<code class="language-plaintext highlighter-rouge">removeRange()</code> and
+<code class="language-plaintext highlighter-rouge">insertAt()</code>. <code class="language-plaintext highlighter-rouge">splice()</code>
 is clearer and more concise for cases where you want to replace a range
-with new values. It's also a little more efficient, because it minimizes
+with new values. It’s also a little more efficient, because it minimizes
 the number of copy operations needed to move elements around in the
-vector to open and/or close gaps as the size of the vector changes.
+vector to open and/or close gaps as the size of the vector changes.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">subset(*func*)</code></p>
 
-`subset(*func*)`
-
-<div class="fdef">
-
-Creates and returns a new vector containing the elements of this vector
-for which the callback function *func* returns a non-false value (i.e.,
-any value other than `nil` or 0). For each
+<p>Creates and returns a new vector containing the elements of this vector
+for which the callback function <em>func</em> returns a non-false value (i.e.,
+any value other than <code class="language-plaintext highlighter-rouge">nil</code> or 0). For each
 element of the source vector, this method invokes the callback function,
-passing the value of the current element as the callback function's
-single argument. If the callback returns `nil`
+passing the value of the current element as the callback function’s
+single argument. If the callback returns <code class="language-plaintext highlighter-rouge">nil</code>
 or 0, the method omits the element from the result; otherwise, the
-method includes the element in the result vector. The new vector's
+method includes the element in the result vector. The new vector’s
 elements will be in the same order as the selected elements from the
-source vector.
+source vector.</p>
 
-This method does not modify the original vector.
+<p>This method does not modify the original vector.</p>
 
-This example uses a short-form anonymous function to create to create a
+<p>This example uses a short-form anonymous function to create to create a
 new vector that contains only the elements from an original vector whose
-values are greater than 10.
+values are greater than 10.</p>
 
-```
-    y = x.subset({x: x &gt; 10});
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    y = x.subset({x: x &gt; 10});
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">toList(*start*?, *count*?)</code></p>
 
-`toList(*start*?, *count*?)`
-
-<div class="fdef">
-
-Creates and returns a new list value based on the vector. With no
+<p>Creates and returns a new list value based on the vector. With no
 arguments, the new list has the same number of elements as the original
 vector, and each element of the list is a copy of the corresponding
-element of the vector. If *start* is specified, it gives the starting
+element of the vector. If <em>start</em> is specified, it gives the starting
 index in the vector for the list; elements of the vector before start
-are not included in the list. If *count* is specified, it indicates the
+are not included in the list. If <em>count</em> is specified, it indicates the
 number of elements of the vector, starting at start, to copy into the
-list.
+list.</p>
 
-This method is useful when you need to pass a value to a routine that
+<p>This method is useful when you need to pass a value to a routine that
 requires a list value. Vectors cannot always be passed to routines
 requiring list values, so you can use this routine to create a list with
-the same values as the vector.
+the same values as the vector.</p>
 
-This method does not modify the vector.
+<p>This method does not modify the vector.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">valWhich(*cond*)</code></p>
 
-`valWhich(*cond*)`
-
-<div class="fdef">
-
-Returns the value of the first element for which the callback function
-*cond* returns a non-false value (i.e., any value other than
-`nil` or 0). The method applies the callback to
+<p>Returns the value of the first element for which the callback function
+<em>cond</em> returns a non-false value (i.e., any value other than
+<code class="language-plaintext highlighter-rouge">nil</code> or 0). The method applies the callback to
 each element of the vector, starting with the first, and calls the
-function for each element in turn until *cond* returns a non-false
-value. Returns `nil` if the callback returns a
+function for each element in turn until <em>cond</em> returns a non-false
+value. Returns <code class="language-plaintext highlighter-rouge">nil</code> if the callback returns a
 false value for every element. This function is almost the same as
-`indexWhich(*cond*)`, but returns the value of
-the first element for which *cond* returns non-false rather than the
-index of the element. Returns `nil` if no
-matching value is found.
+<code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code>, but returns the value of
+the first element for which <em>cond</em> returns non-false rather than the
+index of the element. Returns <code class="language-plaintext highlighter-rouge">nil</code> if no
+matching value is found.</p>
 
-</div>
+<h2 id="reference-semantics">Reference Semantics</h2>
 
-## Reference Semantics
-
-The most important distinction between lists and vectors, and the
+<p>The most important distinction between lists and vectors, and the
 primary reason to use vectors rather than lists in certain situations,
-is that vectors use "reference" semantics, while lists use "value"
-semantics.
+is that vectors use “reference” semantics, while lists use “value”
+semantics.</p>
 
-The difference is that a list's value can never change, but an vector's
-value can change.
+<p>The difference is that a list’s value can never change, but an vector’s
+value can change.</p>
 
-When you do something that modifies a list, such as assigning a value to
+<p>When you do something that modifies a list, such as assigning a value to
 an element of the list, the operation does not change the list. Instead,
 it creates a new list that reflects the change, leaving the original
 list unmodified. TADS automatically updates the variable that contained
-the list being indexed so that it contains the newly-created list.
+the list being indexed so that it contains the newly-created list.</p>
 
-In contrast, when you assign a new value to an element of an vector, the
-vector's value is changed. No new vector object is created.
+<p>In contrast, when you assign a new value to an element of an vector, the
+vector’s value is changed. No new vector object is created.</p>
 
-This might seem like a very obscure difference, but it has two important
+<p>This might seem like a very obscure difference, but it has two important
 practical effects. The first is that operations that modify vectors are
-much cheaper to execute, because they don't result in creating new
+much cheaper to execute, because they don’t result in creating new
 objects; this means that operations involving a large number of element
-changes will run faster with vectors than with lists.
+changes will run faster with vectors than with lists.</p>
 
-The second practical difference is that, whenever you change a vector,
+<p>The second practical difference is that, whenever you change a vector,
 the change is visible everywhere the vector is referenced. In contrast,
 when you change a list, the change is visible only to the code that made
-the change.
+the change.</p>
 
-Consider this example:
+<p>Consider this example:</p>
 
-```
-    local a = [1, 2, 3];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = [1, 2, 3];
     local b = a;
 
     a[2] = 100;
     tadsSay(b[2]);
-```
+</code></pre></div></div>
 
-What will this example display? At the beginning of the code, we set a
+<p>What will this example display? At the beginning of the code, we set a
 to a list, and then we set b to the value in a, so b refers to the same
 list. So far we have only one object, and both a and b refer to this
 single object. We next assign a new value, 100, to the second element of
-a. As we've seen, this cannot change the list that a refers to, because
-lists can never change; so, what we're doing is creating a new list,
+a. As we’ve seen, this cannot change the list that a refers to, because
+lists can never change; so, what we’re doing is creating a new list,
 copying each element from the original list to the new list, but
 changing the second element to reflect the assignment. This new list is
 then assigned to a, so a and b now refer to different lists. So, when we
-display the second element of b, we see the value "2" displayed, because
-b still refers to the original, unmodified list.
+display the second element of b, we see the value “2” displayed, because
+b still refers to the original, unmodified list.</p>
 
-Now, consider the same example with an vector:
+<p>Now, consider the same example with an vector:</p>
 
-```
-    local a = new Vector(10, [1, 2, 3]);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = new Vector(10, [1, 2, 3]);
     local b = a;
 
     a[2] = 100;
     tadsSay(b[2]);
-```
+</code></pre></div></div>
 
-This code looks almost identical, but it displays a different result
+<p>This code looks almost identical, but it displays a different result
 than the list version. We start out by creating a new vector object and
 assigning it to a, and then we assign the same value to b. Next, we
 assign 100 to the second element of a. Unlike lists, vectors can be
 changed, so this assignment simply replaces the value in the vector
-object's second element. No new vector object is created, so a and b
-still refer to the same object. So, when we display b\[2\] in this
-example, we see the modified value.
+object’s second element. No new vector object is created, so a and b
+still refer to the same object. So, when we display b[2] in this
+example, we see the modified value.</p>
 
-Here's a more interesting example:
+<p>Here’s a more interesting example:</p>
 
-```
-    f1()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    f1()
     {
       local a = new Vector(3);
 
@@ -1056,43 +897,37 @@ Here's a more interesting example:
       "Please enter your age: "; x[2] = toInteger(input());
       "Please enter your social security number: "; x[3] = input();
     }
-```
+</code></pre></div></div>
 
-This is something we couldn't have done with lists: assigning elements
-of x in getInfo() wouldn't have affected the caller's copy of the list,
-so the routine wouldn't be able to pass back information this way using
-lists.
+<p>This is something we couldn’t have done with lists: assigning elements
+of x in getInfo() wouldn’t have affected the caller’s copy of the list,
+so the routine wouldn’t be able to pass back information this way using
+lists.</p>
 
-Note that, when you explicitly create a copy of a vector, the new copy
-is not affected by any changes to the original:
+<p>Note that, when you explicitly create a copy of a vector, the new copy
+is not affected by any changes to the original:</p>
 
-```
-    x = new Vector(10, [1, 2, 3, 4, 5]);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = new Vector(10, [1, 2, 3, 4, 5]);
     y = new Vector(10, x);
 
     x[3] = 100;
     tadsSay(y[3]);
-```
+</code></pre></div></div>
 
-This example displays the value "3" (not "100"), because x and y refer
+<p>This example displays the value “3” (not “100”), because x and y refer
 to separate objects. Changing a value in the vector to which x refers
-has no effect on the vector to which y refers.
-
-</div>
+has no effect on the vector to which y refers.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Vector  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Vector<br />
 <span class="navnp"><a href="timezone.html" class="nav"><em>Prev:</em> TimeZone</a>
    
 <a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

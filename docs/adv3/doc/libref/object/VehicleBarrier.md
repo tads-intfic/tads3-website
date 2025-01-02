@@ -83,7 +83,7 @@ customize this so that we block only specific vehicles.
 
 
 
-[`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
+[`canTravelerPass`](#canTravelerPass) [`explainTravelBarrier`](#explainTravelBarrier)
 
 
 

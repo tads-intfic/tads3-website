@@ -50,10 +50,10 @@ Lit/Unlit state. This is useful for light sources and flammable objects.
 
 
 
-[`additionalInfo`](#additionalInfo)[`adjectives`](#adjectives)[`stateProp`](#stateProp)
+[`additionalInfo`](#additionalInfo) [`adjectives`](#adjectives) [`stateProp`](#stateProp)
 
 Inherited from `State` :  
-[`all`](../object/State.html#all)[`vocabTab`](../object/State.html#vocabTab)[`vocabWords`](../object/State.html#vocabWords)
+[`all`](../object/State.html#all) [`vocabTab`](../object/State.html#vocabTab) [`vocabWords`](../object/State.html#vocabWords)
 
 
 
@@ -68,10 +68,10 @@ Inherited from `State` :
 [`appliesTo`](#appliesTo)
 
 Inherited from `State` :  
-[`classInit`](../object/State.html#classInit)[`construct`](../object/State.html#construct)[`getVocab`](../object/State.html#getVocab)[`matchName`](../object/State.html#matchName)
+[`classInit`](../object/State.html#classInit) [`construct`](../object/State.html#construct) [`getVocab`](../object/State.html#getVocab) [`matchName`](../object/State.html#matchName)
 
 Inherited from `LState` :  
-[`addToName`](../object/LState.html#addToName)[`getAdditionalInfo`](../object/LState.html#getAdditionalInfo)[`initWord`](../object/LState.html#initWord)
+[`addToName`](../object/LState.html#addToName) [`getAdditionalInfo`](../object/LState.html#getAdditionalInfo) [`initWord`](../object/LState.html#initWord)
 
 <span id="_Properties_"></span>
 

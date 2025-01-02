@@ -46,67 +46,39 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Stream state object for String.specialsToHtml().</p>
 
-Stream state object for String.specialsToHtml().
-
-`class `**`SpecialsToHtmlState`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SpecialsToHtmlState</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">SpecialsToHtmlState</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#flags_"><code class="language-plaintext highlighter-rouge">flags_</code></a><a href="#tag_"><code class="language-plaintext highlighter-rouge">tag_</code></a></p>
+<p><a href="#flags_"><code class="language-plaintext highlighter-rouge">flags_</code></a> <a href="#tag_"><code class="language-plaintext highlighter-rouge">tag_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#resetLine"><code class="language-plaintext highlighter-rouge">resetLine</code></a><a href="#resetState"><code class="language-plaintext highlighter-rouge">resetState</code></a></p>
+<p><a href="#resetLine"><code class="language-plaintext highlighter-rouge">resetLine</code></a> <a href="#resetState"><code class="language-plaintext highlighter-rouge">resetState</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="flags_"></span></p>
 
@@ -114,23 +86,19 @@ Stream state object for String.specialsToHtml().
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1170">1170</a>]</p>
 
-<div class="desc">
+<p>Internal output state flags at end of last string parsed. This is a
+combination of bit flags:</p>
 
-Internal output state flags at end of last string parsed. This is a
-combination of bit flags:
-
-0x0001 - last string ended within a line of text  
-0x0002 - caps flag '\\' pending  
-0x0004 - lowercase flag '\v' pending  
-0x0008 - last string ended within an HTML tag  
-0x0010 - last string ended in double-quoted HTML tag attribute text  
-0x0020 - last string ended in single-quoted HTML tag attribute text  
-0x0040 - last string ended with an ordinary space  
-0x0080 - last string ended with a quoted space '\\ '  
-0x0100 - \&lt;Q\&gt; parity level: 0=double quotes, 1=single quotes  
-0x0300 - distance from last '\t' tab column (0..3)
-
-</div>
+<p>0x0001 - last string ended within a line of text<br />
+0x0002 - caps flag ‘\’ pending<br />
+0x0004 - lowercase flag ‘\v’ pending<br />
+0x0008 - last string ended within an HTML tag<br />
+0x0010 - last string ended in double-quoted HTML tag attribute text<br />
+0x0020 - last string ended in single-quoted HTML tag attribute text<br />
+0x0040 - last string ended with an ordinary space<br />
+0x0080 - last string ended with a quoted space ‘\ ‘<br />
+0x0100 - &lt;Q&gt; parity level: 0=double quotes, 1=single quotes<br />
+0x0300 - distance from last ‘\t’ tab column (0..3)</p>
 
 <p><span id="tag_"></span></p>
 
@@ -138,19 +106,11 @@ combination of bit flags:
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1173">1173</a>]</p>
 
-<div class="desc">
-
-tag in progress at end of last string parsed
-
-</div>
+<p>tag in progress at end of last string parsed</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="resetLine"></span></p>
 
@@ -158,13 +118,9 @@ tag in progress at end of last string parsed
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1149">1149</a>]</p>
 
-<div class="desc">
-
-Explicitly reset to the start of a line. This can be called after a
+<p>Explicitly reset to the start of a line. This can be called after a
 non-output operation that resets the line position, such as reading an
-input line.
-
-</div>
+input line.</p>
 
 <p><span id="resetState"></span></p>
 
@@ -172,19 +128,12 @@ input line.
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1138">1138</a>]</p>
 
-<div class="desc">
+<p>Reset the state. This should be used when the output stream context is
+reset, such as when clearing the window.</p>
 
-Reset the state. This should be used when the output stream context is
-reset, such as when clearing the window.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

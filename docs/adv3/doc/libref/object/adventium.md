@@ -49,7 +49,7 @@ type of material is opaque to all senses.
 
 
 
-[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
+[`hearThru`](#hearThru) [`seeThru`](#seeThru) [`smellThru`](#smellThru) [`touchThru`](#touchThru)
 
 
 

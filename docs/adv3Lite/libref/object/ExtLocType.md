@@ -51,7 +51,7 @@ the outside of an object, such as atop it or attached to it.
 
 
 Inherited from `LocType` :  
-[`intoPrep`](../object/LocType.html#intoPrep)[`listOrder`](../object/LocType.html#listOrder)[`prep`](../object/LocType.html#prep)
+[`intoPrep`](../object/LocType.html#intoPrep) [`listOrder`](../object/LocType.html#listOrder) [`prep`](../object/LocType.html#prep)
 
 <span id="_MethodSummary_"></span>
 

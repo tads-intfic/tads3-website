@@ -49,10 +49,10 @@ when it is first opened.
 
 
 
-[`listRecursively`](#listRecursively)[`showSubListing`](#showSubListing)
+[`listRecursively`](#listRecursively) [`showSubListing`](#showSubListing)
 
 Inherited from `ItemLister` :  
-[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)[`showWornInfo`](../object/ItemLister.html#showWornInfo)
+[`contentsListedProp`](../object/ItemLister.html#contentsListedProp) [`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo) [`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
 
 
@@ -64,13 +64,13 @@ Inherited from `ItemLister` :
 
 
 
-[`listed`](#listed)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
+[`listed`](#listed) [`showListEmpty`](#showListEmpty) [`showListPrefix`](#showListPrefix) [`showListSuffix`](#showListSuffix)
 
 Inherited from `ItemLister` :  
-[`listName`](../object/ItemLister.html#listName)[`show`](../object/ItemLister.html#show)[`showList`](../object/ItemLister.html#showList)
+[`listName`](../object/ItemLister.html#listName) [`show`](../object/ItemLister.html#show) [`showList`](../object/ItemLister.html#showList)
 
 Inherited from `Lister` :  
-[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)
+[`buildList`](../object/Lister.html#buildList) [`listOrder`](../object/Lister.html#listOrder)
 
 <span id="_Properties_"></span>
 

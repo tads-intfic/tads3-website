@@ -107,18 +107,18 @@ presentationProfile - Multimedia, Plain Text
 [`listingOrder`](#listingOrder)
 
 Inherited from `GameInfoModuleID` :  
-[`authorEmail`](../object/GameInfoModuleID.html#authorEmail)[`copyingRules`](../object/GameInfoModuleID.html#copyingRules)[`desc`](../object/GameInfoModuleID.html#desc)[`firstPublished`](../object/GameInfoModuleID.html#firstPublished)[`forgivenessLevel`](../object/GameInfoModuleID.html#forgivenessLevel)[`gameInfoFilename`](../object/GameInfoModuleID.html#gameInfoFilename)[`gameUrl`](../object/GameInfoModuleID.html#gameUrl)[`genreName`](../object/GameInfoModuleID.html#genreName)[`headline`](../object/GameInfoModuleID.html#headline)[`htmlDesc`](../object/GameInfoModuleID.html#htmlDesc)[`IFID`](../object/GameInfoModuleID.html#IFID)[`languageCode`](../object/GameInfoModuleID.html#languageCode)[`licenseType`](../object/GameInfoModuleID.html#licenseType)[`metadataKeys`](../object/GameInfoModuleID.html#metadataKeys)[`presentationProfile`](../object/GameInfoModuleID.html#presentationProfile)[`releaseDate`](../object/GameInfoModuleID.html#releaseDate)[`seriesName`](../object/GameInfoModuleID.html#seriesName)[`seriesNumber`](../object/GameInfoModuleID.html#seriesNumber)
+[`authorEmail`](../object/GameInfoModuleID.html#authorEmail) [`copyingRules`](../object/GameInfoModuleID.html#copyingRules) [`desc`](../object/GameInfoModuleID.html#desc) [`firstPublished`](../object/GameInfoModuleID.html#firstPublished) [`forgivenessLevel`](../object/GameInfoModuleID.html#forgivenessLevel) [`gameInfoFilename`](../object/GameInfoModuleID.html#gameInfoFilename) [`gameUrl`](../object/GameInfoModuleID.html#gameUrl) [`genreName`](../object/GameInfoModuleID.html#genreName) [`headline`](../object/GameInfoModuleID.html#headline) [`htmlDesc`](../object/GameInfoModuleID.html#htmlDesc) [`IFID`](../object/GameInfoModuleID.html#IFID) [`languageCode`](../object/GameInfoModuleID.html#languageCode) [`licenseType`](../object/GameInfoModuleID.html#licenseType) [`metadataKeys`](../object/GameInfoModuleID.html#metadataKeys) [`presentationProfile`](../object/GameInfoModuleID.html#presentationProfile) [`releaseDate`](../object/GameInfoModuleID.html#releaseDate) [`seriesName`](../object/GameInfoModuleID.html#seriesName) [`seriesNumber`](../object/GameInfoModuleID.html#seriesNumber)
 
 
 
 Inherited from `ModuleID` :  
-[`byline`](../object/ModuleID.html#byline)[`htmlByline`](../object/ModuleID.html#htmlByline)[`name`](../object/ModuleID.html#name)[`version`](../object/ModuleID.html#version)
+[`byline`](../object/ModuleID.html#byline) [`htmlByline`](../object/ModuleID.html#htmlByline) [`name`](../object/ModuleID.html#name) [`version`](../object/ModuleID.html#version)
 
 Inherited from `PreinitObject` :  
-[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe) [`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -128,21 +128,21 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`showCredit`](#showCredit)[`showVersion`](#showVersion)
+[`showCredit`](#showCredit) [`showVersion`](#showVersion)
 
 Inherited from `GameInfoModuleID` :  
-[`getGameInfoToday`](../object/GameInfoModuleID.html#getGameInfoToday)[`writeMetadataFile`](../object/GameInfoModuleID.html#writeMetadataFile)
+[`getGameInfoToday`](../object/GameInfoModuleID.html#getGameInfoToday) [`writeMetadataFile`](../object/GameInfoModuleID.html#writeMetadataFile)
 
 Inherited from `MetadataModuleID` :  
 [`execute`](../object/MetadataModuleID.html#execute)
 
 Inherited from `ModuleID` :  
-[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
+[`getModuleList`](../object/ModuleID.html#getModuleList) [`showAbout`](../object/ModuleID.html#showAbout) [`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Creating the Basic Source File  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Creating the Basic Source File<br />
 <span class="navnp"><a href="heidi.html" class="nav"><em>Prev:</em> Heidi: our first adv3Lite
 game</a>    
 <a href="understanding.html" class="nav"><em>Next:</em> Understanding the
-Source File</a>     </span>
-
-</div>
+Source File</a>     </span></p>
 
 <h1 id="creating-the-basic-source-file">Creating the Basic Source File</h1>
 
@@ -53,50 +45,49 @@ you’re not using Workbench, navigate to your Heidi directory and open
 start.t in your text editor. You should now see a file that looks like
 this:</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h"
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 
-versionInfo: GameID
-    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-    name = 'My Game'
-    byline = 'by A.N. Author'
-    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                  A.N. Author&lt;/a&gt;'
-    version = '1'
-    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-    desc = 'Your blurb here.'
-    htmlDesc = 'Your blurb here.'    
-    
-;
+    versionInfo: GameID
+        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+        name = 'My Game'
+        byline = 'by A.N. Author'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+        desc = 'Your blurb here.'
+        htmlDesc = 'Your blurb here.'    
+        
+    ;
 
-gameMain: GameMainDef
-    /* Define the initial player character; this is compulsory */
-    initialPlayerChar = me
-;
+    gameMain: GameMainDef
+        /* Define the initial player character; this is compulsory */
+        initialPlayerChar = me
+    ;
 
 
-/* The starting location; this can be called anything you like */
+    /* The starting location; this can be called anything you like */
 
-startroom: Room 'The Starting Location'
-    "Add your description here. "
-;
+    startroom: Room 'The Starting Location'
+        "Add your description here. "
+    ;
 
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 
-+ me: Thing 'you'   
-    isFixed = true    
-    proper = true
-    ownsContents = true
-    person = 2   
-    contType = Carrier    
-; `
+    + me: Thing 'you'   
+        isFixed = true    
+        proper = true
+        ownsContents = true
+        person = 2   
+        contType = Carrier    
+    ;
 </code></pre></div></div>
 
 <p>Don’t worry too much about what all that means for the moment, we’ll be
@@ -120,52 +111,51 @@ source file a little less generic and a little more relevant to the game
 we’re about to write. Edit your copy of the file so it reads as it does
 below (to help you with this the main changes are shown in bold):</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h"
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 
-versionInfo: GameID
-    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-    name = 'The Adventures of Heidi'
-    byline = 'by A.N. Author'
-    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                  A.N. Author&lt;/a&gt;'
-    version = '1'
-    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-    desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
-        Firth and Sonja Kesserich.'
-    htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
-        by Roger Firth and Sonja Kesserich.'    
-    
-;
+    versionInfo: GameID
+        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+        name = 'The Adventures of Heidi'
+        byline = 'by A.N. Author'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+        desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
+            Firth and Sonja Kesserich.'
+        htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
+            by Roger Firth and Sonja Kesserich.'    
+        
+    ;
 
-gameMain: GameMainDef
-    /* Define the initial player character; this is compulsory */
-    initialPlayerChar = me
-;
+    gameMain: GameMainDef
+        /* Define the initial player character; this is compulsory */
+        initialPlayerChar = me
+    ;
 
 
-/* The starting location; this can be called anything you like */
+    /* The starting location; this can be called anything you like */
 
-beforeCottage: Room 'In front of a Cottage'
-    "You stand outside a cottage. The forest stretches east. "
-;
+    beforeCottage: Room 'In front of a Cottage'
+        "You stand outside a cottage. The forest stretches east. "
+    ;
 
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 
-+ me: Thing 'you;;heidi'   
-    isFixed = true    
-    proper = true
-    ownsContents = true
-    person = 2   
-    contType = Carrier    
-; `
+    + me: Thing 'you;;heidi'   
+        isFixed = true    
+        proper = true
+        ownsContents = true
+        person = 2   
+        contType = Carrier    
+    ;
 </code></pre></div></div>
 
 <p>If you like, you can also change the byline, htmlByline and authorEmail
@@ -177,41 +167,33 @@ have it (in Workbench, just click the ‘Go’ button at the left-hand end
 of the toolbar; otherwise follow the instructions at the end of the last
 chapter). The interpreter should then display something like this:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In front of a Cottage
+You stand outside a cottage. The forest stretches east.
+</code></pre></div></div>
 
-    In front of a Cottage
-    You stand outside a cottage. The forest stretches east.
+<p>If you don’t get this, check very carefully that your version of the
+code in start.t corresponds <em>exactly</em> to that given immediately above
+(the precise amount of white space doesn’t matter much, but just about
+everything else does) and then try again until you get it working.</p>
 
-
-
-If you don't get this, check very carefully that your version of the
-code in start.t corresponds *exactly* to that given immediately above
-(the precise amount of white space doesn't matter much, but just about
-everything else does) and then try again until you get it working.
-
-Even when you do get it working, it isn't much of a game yet. You can
+<p>Even when you do get it working, it isn’t much of a game yet. You can
 try a couple of commands like X ME and X HEIDI, but even then the
-responses aren't terribly exciting, and just about everything else will
-result in a refusal to act. We'll be livening things up a bit soon, but
-first we should pause and reflect what we've got in our source file so
-far actually means; that's what we'll do next.
-
-</div>
+responses aren’t terribly exciting, and just about everything else will
+result in a refusal to act. We’ll be livening things up a bit soon, but
+first we should pause and reflect what we’ve got in our source file so
+far actually means; that’s what we’ll do next.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Creating the Basic Source File  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Creating the Basic Source File<br />
 <span class="navnp"><a href="heidi.html" class="nav"><em>Prev:</em> Heidi: our first adv3Lite
 game</a>    
 <a href="understanding.html" class="nav"><em>Next:</em> Understanding the
-Source File</a>     </span>
+Source File</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

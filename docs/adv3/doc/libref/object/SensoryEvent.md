@@ -78,7 +78,7 @@ notifies observers.
 
 
 
-[`notifyProp`](#notifyProp)[`sense`](#sense)
+[`notifyProp`](#notifyProp) [`sense`](#sense)
 
 <span id="_MethodSummary_"></span>
 

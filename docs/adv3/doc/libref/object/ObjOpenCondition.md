@@ -61,7 +61,7 @@ Pre-condition: the object is open.
 
 
 
-[`doorOpen`](../object/doorOpen.html)[`objOpen`](../object/objOpen.html)
+[`doorOpen`](../object/doorOpen.html) [`objOpen`](../object/objOpen.html)
 <span id="_PropSummary_"></span>
 
 
@@ -83,7 +83,7 @@ Inherited from `PreCondition` :
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`conditionFailed`](#conditionFailed)[`verifyPreCondition`](#verifyPreCondition)
+[`checkPreCondition`](#checkPreCondition) [`conditionFailed`](#conditionFailed) [`verifyPreCondition`](#verifyPreCondition)
 
 
 

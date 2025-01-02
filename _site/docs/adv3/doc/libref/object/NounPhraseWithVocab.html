@@ -46,34 +46,26 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Noun phrase with vocabulary resolution. This is a base class for the
+<p>Noun phrase with vocabulary resolution. This is a base class for the
 various noun phrases that match adjective, noun, and plural tokens. This
 class provides dictionary resolution of a vocabulary word into a list of
-objects.
+objects.</p>
 
-In non-declined languages such as English, the parts of speech of our
-words are usually simply 'adjective' and 'noun'. A language "declines"
+<p>In non-declined languages such as English, the parts of speech of our
+words are usually simply ‘adjective’ and ‘noun’. A language “declines”
 its noun phrases if the words in a noun phrase have different forms that
 depend on the function of the noun phrase in a sentence; for example, in
 German, adjectives take suffixes that depend upon the gender of the noun
 being modified and the function of the noun phrase in the sentence
 (subject, direct object, etc). In a declined language, it might be
 desirable to use separate parts of speech for separate declined
-adjective and noun forms.
+adjective and noun forms.</p>
 
-`class `**`NounPhraseWithVocab`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">NounPhraseWithVocab</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/NounPhraseProd.html"><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">NounPhraseWithVocab</code></strong><br />
 <a href="../object/NounPhraseProd.html"><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></a><br />
@@ -81,11 +73,7 @@ adjective and noun forms.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">NounPhraseWithVocab</code></strong><br />
 <a href="../object/adjPhrase(adjAdj).html"><code class="language-plaintext highlighter-rouge">adjPhrase(adjAdj)</code></a><br />
@@ -122,57 +110,37 @@ adjective and noun forms.
 <a href="../object/simplePluralPhrase(poundNum).html"><code class="language-plaintext highlighter-rouge">simplePluralPhrase(poundNum)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
 <a href="../object/NounPhraseProd.html#filterForCollectives"><code class="language-plaintext highlighter-rouge">filterForCollectives</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#combineWordMatches"><code class="language-plaintext highlighter-rouge">combineWordMatches</code></a><a href="#combineWordMatchItems"><code class="language-plaintext highlighter-rouge">combineWordMatchItems</code></a><a href="#dictMatchIsExact"><code class="language-plaintext highlighter-rouge">dictMatchIsExact</code></a><a href="#dictMatchIsStronger"><code class="language-plaintext highlighter-rouge">dictMatchIsStronger</code></a><a href="#filterDictMatches"><code class="language-plaintext highlighter-rouge">filterDictMatches</code></a><a href="#getAdjustedTokens"><code class="language-plaintext highlighter-rouge">getAdjustedTokens</code></a><a href="#getVocabMatchList"><code class="language-plaintext highlighter-rouge">getVocabMatchList</code></a><a href="#getWordMatches"><code class="language-plaintext highlighter-rouge">getWordMatches</code></a><a href="#inScopeMatches"><code class="language-plaintext highlighter-rouge">inScopeMatches</code></a><a href="#intersectWordMatches"><code class="language-plaintext highlighter-rouge">intersectWordMatches</code></a><a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a><a href="#resolveNounsMatchName"><code class="language-plaintext highlighter-rouge">resolveNounsMatchName</code></a></p>
+<p><a href="#combineWordMatches"><code class="language-plaintext highlighter-rouge">combineWordMatches</code></a> <a href="#combineWordMatchItems"><code class="language-plaintext highlighter-rouge">combineWordMatchItems</code></a> <a href="#dictMatchIsExact"><code class="language-plaintext highlighter-rouge">dictMatchIsExact</code></a> <a href="#dictMatchIsStronger"><code class="language-plaintext highlighter-rouge">dictMatchIsStronger</code></a> <a href="#filterDictMatches"><code class="language-plaintext highlighter-rouge">filterDictMatches</code></a> <a href="#getAdjustedTokens"><code class="language-plaintext highlighter-rouge">getAdjustedTokens</code></a> <a href="#getVocabMatchList"><code class="language-plaintext highlighter-rouge">getVocabMatchList</code></a> <a href="#getWordMatches"><code class="language-plaintext highlighter-rouge">getWordMatches</code></a> <a href="#inScopeMatches"><code class="language-plaintext highlighter-rouge">inScopeMatches</code></a> <a href="#intersectWordMatches"><code class="language-plaintext highlighter-rouge">intersectWordMatches</code></a> <a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a> <a href="#resolveNounsMatchName"><code class="language-plaintext highlighter-rouge">resolveNounsMatchName</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
-<a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a><a href="../object/NounPhraseProd.html#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a></p>
+<a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a> <a href="../object/NounPhraseProd.html#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="combineWordMatches"></span></p>
 
@@ -180,13 +148,9 @@ adjective and noun forms.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3607">3607</a>]</p>
 
-<div class="desc">
-
-Combine two word match lists. This simply adds each entry from the
-second list that doesn't already have a corresponding entry in the first
-list, returning the combined list.
-
-</div>
+<p>Combine two word match lists. This simply adds each entry from the
+second list that doesn’t already have a corresponding entry in the first
+list, returning the combined list.</p>
 
 <p><span id="combineWordMatchItems"></span></p>
 
@@ -194,12 +158,8 @@ list, returning the combined list.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3656">3656</a>]</p>
 
-<div class="desc">
-
-Combine the given word match entries. We'll merge the flags of the two
-entries to produce a single merged entry in 'a'.
-
-</div>
+<p>Combine the given word match entries. We’ll merge the flags of the two
+entries to produce a single merged entry in ‘a’.</p>
 
 <p><span id="dictMatchIsExact"></span></p>
 
@@ -207,25 +167,21 @@ entries to produce a single merged entry in 'a'.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3769">3769</a>]</p>
 
-<div class="desc">
-
-Check a dictionary match's string comparator flags to see if the match
-is "exact." The exact meaning of "exact" is dependent on the language's
+<p>Check a dictionary match’s string comparator flags to see if the match
+is “exact.” The exact meaning of “exact” is dependent on the language’s
 lexical rules; this generic base version considers a match to be exact
-if it doesn't have any string comparator flags other than the base
-"matched" flag and the case-fold flag. This should be suitable for most
-languages, as (1) case folding usually doesn't improve match strength,
+if it doesn’t have any string comparator flags other than the base
+“matched” flag and the case-fold flag. This should be suitable for most
+languages, as (1) case folding usually doesn’t improve match strength,
 and (2) any additional comparator flags usually indicate some kind of
-inexact match status.
+inexact match status.</p>
 
-A language that depends on upper/lower case as a marker of match
+<p>A language that depends on upper/lower case as a marker of match
 strength will need to override this to consider the case-fold flag as
 significant in determining match exactness. In addition, a language that
 uses additional string comparator flags to indicate better (rather than
 worse) matches will have to override this to require the presence of
-those flags.
-
-</div>
+those flags.</p>
 
 <p><span id="dictMatchIsStronger"></span></p>
 
@@ -233,23 +189,19 @@ those flags.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3795">3795</a>]</p>
 
-<div class="desc">
-
-Compare two dictionary matches for the same object and determine if the
+<p>Compare two dictionary matches for the same object and determine if the
 first one is stronger than the second. Both are for the same object; the
-only difference is the string comparator flags.
+only difference is the string comparator flags.</p>
 
-Language modules might need to override this to supplement the filtering
+<p>Language modules might need to override this to supplement the filtering
 with their own rules. This generic base version considers truncation: an
 untruncated match is stronger than a truncated match. Non-English
 languages might want to consider other lexical factors in the match
 strength, such as whether we matched the exact accented characters or
 approximated with unaccented equivalents - this information will, of
-course, need to be coordinated with the dictionary's string comparator,
-and reflected in the comparator match flags. It's the comparator match
-flags that we're looking at here.
-
-</div>
+course, need to be coordinated with the dictionary’s string comparator,
+and reflected in the comparator match flags. It’s the comparator match
+flags that we’re looking at here.</p>
 
 <p><span id="filterDictMatches"></span></p>
 
@@ -257,27 +209,23 @@ flags that we're looking at here.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3702">3702</a>]</p>
 
-<div class="desc">
+<p>Filter a dictionary match list. This is called to clean up the raw match
+list returned from looking up a vocabulary word in the dictionary.</p>
 
-Filter a dictionary match list. This is called to clean up the raw match
-list returned from looking up a vocabulary word in the dictionary.
-
-The main purpose of this routine is to eliminate unwanted redundancy
+<p>The main purpose of this routine is to eliminate unwanted redundancy
 from the dictionary matches; in particular, the dictionary might have
 multiple matches for a given word at a given object, due to truncation,
 upper/lower folding, accent removal, and so on. In general, we want to
 keep only the single strongest match from the dictionary for a given
-word matching a given object.
+word matching a given object.</p>
 
-The meaning of "stronger" and "exact" matches is language-dependent, so
+<p>The meaning of “stronger” and “exact” matches is language-dependent, so
 we abstract these with the separate methods dictMatchIsExact() and
-dictMatchIsStronger().
+dictMatchIsStronger().</p>
 
-Keep in mind that the raw dictionary match list has alternating entries:
+<p>Keep in mind that the raw dictionary match list has alternating entries:
 object, comparator flags, object, comparator flags, etc. The return list
-should be in the same format.
-
-</div>
+should be in the same format.</p>
 
 <p><span id="getAdjustedTokens"></span></p>
 
@@ -285,19 +233,15 @@ should be in the same format.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4005">4005</a>]</p>
 
-<div class="desc">
-
-Each subclass must override getAdjustedTokens() to provide the
+<p>Each subclass must override getAdjustedTokens() to provide the
 appropriate set of tokens used to match the object. This is usually
 simply the original set of tokens, but in some cases it may differ; for
 example, spelled-out numbers normally adjust to the numeral form of the
-number.
+number.</p>
 
-For each adjusted token, the list must have two entries: the first is a
+<p>For each adjusted token, the list must have two entries: the first is a
 string giving the token text, and the second is the property giving the
-part of speech for the token.
-
-</div>
+part of speech for the token.</p>
 
 <p><span id="getVocabMatchList"></span></p>
 
@@ -305,14 +249,10 @@ part of speech for the token.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4014">4014</a>]</p>
 
-<div class="desc">
-
-Get the vocabulary match list. This is simply the set of objects that
+<p>Get the vocabulary match list. This is simply the set of objects that
 match all of the words in the noun phrase. Each rule subclass must
 override this to return an appropriate list. Note that subclasses should
-use getWordMatches() and intersectWordMatches() to build the list.
-
-</div>
+use getWordMatches() and intersectWordMatches() to build the list.</p>
 
 <p><span id="getWordMatches"></span></p>
 
@@ -320,14 +260,10 @@ use getWordMatches() and intersectWordMatches() to build the list.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3585">3585</a>]</p>
 
-<div class="desc">
-
-Get a list of the matches in the main dictionary for the given token as
+<p>Get a list of the matches in the main dictionary for the given token as
 the given part of speech (&amp;noun, &amp;adjective, &amp;plural, or others as
 appropriate for the local language) that are in scope according to the
-resolver.
-
-</div>
+resolver.</p>
 
 <p><span id="inScopeMatches"></span></p>
 
@@ -335,13 +271,9 @@ resolver.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3832">3832</a>]</p>
 
-<div class="desc">
-
-Given a list of dictionary matches to a given word, construct a list of
+<p>Given a list of dictionary matches to a given word, construct a list of
 ResolveInfo objects for the matches that are in scope. For regular
-resolution, "in scope" means the resolver thinks the object is in scope.
-
-</div>
+resolution, “in scope” means the resolver thinks the object is in scope.</p>
 
 <p><span id="intersectWordMatches"></span></p>
 
@@ -349,12 +281,8 @@ resolution, "in scope" means the resolver thinks the object is in scope.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3811">3811</a>]</p>
 
-<div class="desc">
-
-Get a list of the matches in the main dictionary for the given token,
-intersecting the resulting list with the given list.
-
-</div>
+<p>Get a list of the matches in the main dictionary for the given token,
+intersecting the resulting list with the given list.</p>
 
 <p><span id="resolveNouns"></span></p>
 
@@ -362,11 +290,7 @@ intersecting the resulting list with the given list.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3882">3882</a>]</p>
 
-<div class="desc">
-
-Resolve the objects.
-
-</div>
+<p>Resolve the objects.</p>
 
 <p><span id="resolveNounsMatchName"></span></p>
 
@@ -374,19 +298,12 @@ Resolve the objects.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3912">3912</a>]</p>
 
-<div class="desc">
+<p>Run a set of resolved objects through matchName() or a similar routine.
+Returns the filtered results.</p>
 
-Run a set of resolved objects through matchName() or a similar routine.
-Returns the filtered results.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

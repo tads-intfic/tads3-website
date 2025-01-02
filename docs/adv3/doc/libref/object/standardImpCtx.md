@@ -50,7 +50,7 @@ the standard implicit action announcement context
 
 
 Inherited from `ImplicitAnnouncementContext` :  
-[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)[`useInfPhrase`](../object/ImplicitAnnouncementContext.html#useInfPhrase)
+[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx) [`isInList`](../object/ImplicitAnnouncementContext.html#isInList) [`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist) [`useInfPhrase`](../object/ImplicitAnnouncementContext.html#useInfPhrase)
 
 <span id="_MethodSummary_"></span>
 

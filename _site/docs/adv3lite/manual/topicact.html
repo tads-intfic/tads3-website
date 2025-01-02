@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Topic Actions  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Topic Actions<br />
 <span class="navnp"><a href="literalact.html" class="nav"><em>Prev:</em> Literal Actions</a>
     <a href="query.html" class="nav"><em>Next:</em> Querying the World
-Model</a>     </span>
-
-</div>
+Model</a>     </span></p>
 
 <h1 id="topic-actions">Topic Actions</h1>
 
@@ -142,68 +134,67 @@ TopicTActions that aren’t already defined in the library, but if, say,
 you wanted to define a WorryAbout command that did something different
 from ThinkAbout you’d start by defining the VerbRule thus:</p>
 
-<p>`
-    VerbRule(WorryAbout)
-        (‘worry’ | ‘fret’) ‘about’ topicDobj
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VerbRule(WorryAbout)
+        ('worry' | 'fret') 'about' topicDobj
         : VerbProduction
         action = WorryAbout
-        verbPhrase = ‘worry/worrying (about what)’
-        missingQ = ‘what do you want to worry about’
+        verbPhrase = 'worry/worrying (about what)'
+        missingQ = 'what do you want to worry about'
     ;
-`</p>
+</code></pre></div></div>
 
 <p>You’d probably then handle worries in much the same way as the library
 handles Thoughts:</p>
 
-<p>`
-    DefineTopicAction(WorryAbout)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineTopicAction(WorryAbout)
         execAction(cmd)
         {
            worryManager.handleTopic(cmd.dobj.topicList);
         }
-    ;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worryManager: PreinitObject, TopicDatabase
-    execute()
-    {        
-        forEachInstance(Worry, new function(t) {
-            if(t.location == self)
-                addTopic(t);
-        });
-    }   
-    
-    handleTopic(top)
-    {
-        local match = getBestMatch(worryList, top);
-        if(match == nil)
-            say(noWorryMsg);
-        else
-            match.topicResponse();
-    }
-    
-    worryList = []
-    
-    noWorryMsg = 'You\'re really not at all worried about that right now. '
-;
+    ;
 
 
-/* 
- *   A kind of TopicEntry that responds to a WORRY ABOUT command when located in
- *   the worryManager object. These can be defined just like any other topic
- *   entry objects, and work in just the same way as ConsultTopics.
- */
-class Worry: TopicEntry
-    includeInList = [&amp;worryList]
-;
+    worryManager: PreinitObject, TopicDatabase
+        execute()
+        {        
+            forEachInstance(Worry, new function(t) {
+                if(t.location == self)
+                    addTopic(t);
+            });
+        }   
+        
+        handleTopic(top)
+        {
+            local match = getBestMatch(worryList, top);
+            if(match == nil)
+                say(noWorryMsg);
+            else
+                match.topicResponse();
+        }
+        
+        worryList = []
+        
+        noWorryMsg = 'You\'re really not at all worried about that right now. '
+    ;
 
-class DefaultWorry: Worry
-    matchTopic(top)
-    {
-        return matchScore + scoreBoost;
-    }
-    
-    matchScore = 1
-; `
+
+    /* 
+     *   A kind of TopicEntry that responds to a WORRY ABOUT command when located in
+     *   the worryManager object. These can be defined just like any other topic
+     *   entry objects, and work in just the same way as ConsultTopics.
+     */
+    class Worry: TopicEntry
+        includeInList = [&amp;worryList]
+    ;
+
+    class DefaultWorry: Worry
+        matchTopic(top)
+        {
+            return matchScore + scoreBoost;
+        }
+        
+        matchScore = 1
+    ;
 </code></pre></div></div>
 
 <p>Define a TopicTAction requires much the same steps as definind a
@@ -213,33 +204,31 @@ role; remember that in either case the TopicTAction will treat the
 physical object involved as actual direct object). For example, to
 define a BotherAbout command we might define:</p>
 
-<p>`
-    VerbRule(BotherAbout)
-        (‘bother’ | ‘worry’ | ‘vex’) singleDobj ‘about’ topicIobj
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VerbRule(BotherAbout)
+        ('bother' | 'worry' | 'vex') singleDobj 'about' topicIobj
         : VerbProduction
         action = BotherAbout
-        verbPhrase = ‘bother/bothering (whom) (about what)’
-        missingQ = ‘whom do you want to bother; what do you want to bother it about’
+        verbPhrase = 'bother/bothering (whom) (about what)'
+        missingQ = 'whom do you want to bother; what do you want to bother it about'
         dobjReply = singleNoun
-    ;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DefineTopicTAction(BotherAbout)
-; `
+    ;  
+      
+    DefineTopicTAction(BotherAbout)
+    ;
 </code></pre></div></div>
 
 <p>The next step would be to define default handling for this on Thing, to
 the effect that an inanimate object can’t be bothered:</p>
 
-<p>`
-    modify Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
       dobjFor(BotherAbout)
       {
           preCond = [objAudible]
           verify() { illogical(cannotBeBotheredMsg); }
-      }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cannotBeBotheredMsg = '{The subj dobj} {can\'t} be bothered. '
-; `
+      }
+      
+      cannotBeBotheredMsg = '{The subj dobj} {can\'t} be bothered. '
+    ;
 </code></pre></div></div>
 
 <p>You’d next need to define some handling on the actor class analogous to
@@ -275,16 +264,13 @@ that it’s the one that ends up getting chosen in cases of ambiguity.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Topic Actions  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Topic Actions<br />
 <span class="navnp"><a href="literalact.html" class="nav"><em>Prev:</em> Literal Actions</a>
     <a href="query.html" class="nav"><em>Next:</em> Querying the World
-Model</a>     </span>
+Model</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

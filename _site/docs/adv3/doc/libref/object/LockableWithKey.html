@@ -46,27 +46,19 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>LockableWithKey: a mix-in class that can be combined with an object’s
+other superclasses to make the object respond to the verbs “lock” and
+“unlock,” with a key as an indirect object. A LockableWithKey cannot be
+locked or unlocked except with the keys listed in the keyList property.</p>
 
-LockableWithKey: a mix-in class that can be combined with an object's
-other superclasses to make the object respond to the verbs "lock" and
-"unlock," with a key as an indirect object. A LockableWithKey cannot be
-locked or unlocked except with the keys listed in the keyList property.
+<p>Note that LockableWithKey should usually go BEFORE a Thing-derived class
+in the superclass list.</p>
 
-Note that LockableWithKey should usually go BEFORE a Thing-derived class
-in the superclass list.
-
-`class `**`LockableWithKey`**` :   `[`Lockable`](../object/Lockable.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">LockableWithKey</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Lockable.html"><code class="language-plaintext highlighter-rouge">Lockable</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LockableWithKey</code></strong><br />
 <a href="../object/Lockable.html"><code class="language-plaintext highlighter-rouge">Lockable</code></a><br />
@@ -74,58 +66,38 @@ in the superclass list.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LockableWithKey</code></strong><br />
 <a href="../object/KeyedContainer.html"><code class="language-plaintext highlighter-rouge">KeyedContainer</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#keyList"><code class="language-plaintext highlighter-rouge">keyList</code></a><a href="#knownKeyList"><code class="language-plaintext highlighter-rouge">knownKeyList</code></a><a href="#lockStatusObvious"><code class="language-plaintext highlighter-rouge">lockStatusObvious</code></a><a href="#rememberKnownKeys"><code class="language-plaintext highlighter-rouge">rememberKnownKeys</code></a></p>
+<p><a href="#keyList"><code class="language-plaintext highlighter-rouge">keyList</code></a> <a href="#knownKeyList"><code class="language-plaintext highlighter-rouge">knownKeyList</code></a> <a href="#lockStatusObvious"><code class="language-plaintext highlighter-rouge">lockStatusObvious</code></a> <a href="#rememberKnownKeys"><code class="language-plaintext highlighter-rouge">rememberKnownKeys</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Lockable</code> :<br />
-<a href="../object/Lockable.html#autoUnlockOnOpen"><code class="language-plaintext highlighter-rouge">autoUnlockOnOpen</code></a><a href="../object/Lockable.html#initiallyLocked"><code class="language-plaintext highlighter-rouge">initiallyLocked</code></a><a href="../object/Lockable.html#isLocked_"><code class="language-plaintext highlighter-rouge">isLocked_</code></a><a href="../object/Lockable.html#lockedDesc"><code class="language-plaintext highlighter-rouge">lockedDesc</code></a><a href="../object/Lockable.html#lockStatusReportable"><code class="language-plaintext highlighter-rouge">lockStatusReportable</code></a></p>
+<a href="../object/Lockable.html#autoUnlockOnOpen"><code class="language-plaintext highlighter-rouge">autoUnlockOnOpen</code></a> <a href="../object/Lockable.html#initiallyLocked"><code class="language-plaintext highlighter-rouge">initiallyLocked</code></a> <a href="../object/Lockable.html#isLocked_"><code class="language-plaintext highlighter-rouge">isLocked_</code></a> <a href="../object/Lockable.html#lockedDesc"><code class="language-plaintext highlighter-rouge">lockedDesc</code></a> <a href="../object/Lockable.html#lockStatusReportable"><code class="language-plaintext highlighter-rouge">lockStatusReportable</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#autoUnlockOnOpen"><code class="language-plaintext highlighter-rouge">autoUnlockOnOpen</code></a><a href="#dobjFor(Lock)"><code class="language-plaintext highlighter-rouge">dobjFor(Lock)</code></a><a href="#dobjFor(LockWith)"><code class="language-plaintext highlighter-rouge">dobjFor(LockWith)</code></a><a href="#dobjFor(Unlock)"><code class="language-plaintext highlighter-rouge">dobjFor(Unlock)</code></a><a href="#dobjFor(UnlockWith)"><code class="language-plaintext highlighter-rouge">dobjFor(UnlockWith)</code></a><a href="#getKnownKeyList"><code class="language-plaintext highlighter-rouge">getKnownKeyList</code></a><a href="#getKnownKeyOwner"><code class="language-plaintext highlighter-rouge">getKnownKeyOwner</code></a><a href="#isKeyKnown"><code class="language-plaintext highlighter-rouge">isKeyKnown</code></a><a href="#keyFitsLock"><code class="language-plaintext highlighter-rouge">keyFitsLock</code></a><a href="#keyIsPlausible"><code class="language-plaintext highlighter-rouge">keyIsPlausible</code></a><a href="#lockOrUnlockAction"><code class="language-plaintext highlighter-rouge">lockOrUnlockAction</code></a></p>
+<p><a href="#autoUnlockOnOpen"><code class="language-plaintext highlighter-rouge">autoUnlockOnOpen</code></a> <a href="#dobjFor(Lock)"><code class="language-plaintext highlighter-rouge">dobjFor(Lock)</code></a> <a href="#dobjFor(LockWith)"><code class="language-plaintext highlighter-rouge">dobjFor(LockWith)</code></a> <a href="#dobjFor(Unlock)"><code class="language-plaintext highlighter-rouge">dobjFor(Unlock)</code></a> <a href="#dobjFor(UnlockWith)"><code class="language-plaintext highlighter-rouge">dobjFor(UnlockWith)</code></a> <a href="#getKnownKeyList"><code class="language-plaintext highlighter-rouge">getKnownKeyList</code></a> <a href="#getKnownKeyOwner"><code class="language-plaintext highlighter-rouge">getKnownKeyOwner</code></a> <a href="#isKeyKnown"><code class="language-plaintext highlighter-rouge">isKeyKnown</code></a> <a href="#keyFitsLock"><code class="language-plaintext highlighter-rouge">keyFitsLock</code></a> <a href="#keyIsPlausible"><code class="language-plaintext highlighter-rouge">keyIsPlausible</code></a> <a href="#lockOrUnlockAction"><code class="language-plaintext highlighter-rouge">lockOrUnlockAction</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Lockable</code> :<br />
-<a href="../object/Lockable.html#dobjFor(Open)"><code class="language-plaintext highlighter-rouge">dobjFor(Open)</code></a><a href="../object/Lockable.html#examineStatus"><code class="language-plaintext highlighter-rouge">examineStatus</code></a><a href="../object/Lockable.html#initializeThing"><code class="language-plaintext highlighter-rouge">initializeThing</code></a><a href="../object/Lockable.html#isLocked"><code class="language-plaintext highlighter-rouge">isLocked</code></a><a href="../object/Lockable.html#makeLocked"><code class="language-plaintext highlighter-rouge">makeLocked</code></a></p>
+<a href="../object/Lockable.html#dobjFor(Open)"><code class="language-plaintext highlighter-rouge">dobjFor(Open)</code></a> <a href="../object/Lockable.html#examineStatus"><code class="language-plaintext highlighter-rouge">examineStatus</code></a> <a href="../object/Lockable.html#initializeThing"><code class="language-plaintext highlighter-rouge">initializeThing</code></a> <a href="../object/Lockable.html#isLocked"><code class="language-plaintext highlighter-rouge">isLocked</code></a> <a href="../object/Lockable.html#makeLocked"><code class="language-plaintext highlighter-rouge">makeLocked</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Linkable</code> :<br />
 <a href="../object/Linkable.html#masterObject"><code class="language-plaintext highlighter-rouge">masterObject</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="keyList"></span></p>
 
@@ -133,11 +105,7 @@ in the superclass list.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4070">4070</a>]</p>
 
-<div class="desc">
-
-the list of objects that can serve as keys for this object
-
-</div>
+<p>the list of objects that can serve as keys for this object</p>
 
 <p><span id="knownKeyList"></span></p>
 
@@ -145,13 +113,9 @@ the list of objects that can serve as keys for this object
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4077">4077</a>]</p>
 
-<div class="desc">
-
-The list of keys which the player knows will fit this lock. This is used
+<p>The list of keys which the player knows will fit this lock. This is used
 to make key disambiguation automatic once the player knows the correct
-key for a lock.
-
-</div>
+key for a lock.</p>
 
 <p><span id="lockStatusObvious"></span></p>
 
@@ -159,17 +123,13 @@ key for a lock.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4138">4138</a>]</p>
 
-<div class="desc">
-
-By default, the locked/unlocked status of a keyed lockable is nil. In
-most cases, an object that's locked and unlocked using a key doesn't
-have a visible indication of the status; for example, you usually can't
+<p>By default, the locked/unlocked status of a keyed lockable is nil. In
+most cases, an object that’s locked and unlocked using a key doesn’t
+have a visible indication of the status; for example, you usually can’t
 tell just by looking at it from the outside whether or not an exterior
 door to a building is locked. Usually, the only way to tell from the
 outside that an exterior door is locked is to try opening it and see if
-it opens.
-
-</div>
+it opens.</p>
 
 <p><span id="rememberKnownKeys"></span></p>
 
@@ -177,30 +137,22 @@ it opens.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4120">4120</a>]</p>
 
-<div class="desc">
-
-Flag: remember my keys after they're successfully used. If this is true,
-whenever a key is successfully used to lock or unlock this object, we'll
+<p>Flag: remember my keys after they’re successfully used. If this is true,
+whenever a key is successfully used to lock or unlock this object, we’ll
 add the key to our known key list; subsequently, whenever we try to use
 a key in this lock, we will automatically disambiguate the key based on
-the keys known to work previously.
+the keys known to work previously.</p>
 
-Some authors might prefer not to assume that the player should remember
+<p>Some authors might prefer not to assume that the player should remember
 which keys operate which locks, so this property can be changed to nil
 to eliminate this memory feature. By default we set this to true, since
-it shouldn't generally give away any secrets or puzzles for the game to
+it shouldn’t generally give away any secrets or puzzles for the game to
 assume that a key that was used successfully once with a given lock is
-the one to be used subsequently with the same lock.
-
-</div>
+the one to be used subsequently with the same lock.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="autoUnlockOnOpen"></span></p>
 
@@ -208,16 +160,12 @@ the one to be used subsequently with the same lock.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4148">4148</a>]</p>
 
-<div class="desc">
-
-Should we automatically unlock on OPEN? We will if our inherited
-handling says so, OR if the current actor is carrying a key that's known
+<p>Should we automatically unlock on OPEN? We will if our inherited
+handling says so, OR if the current actor is carrying a key that’s known
 to work with this object. We automatically unlock when a known key is
-present as a convenience: if we have a known key, then there's no
+present as a convenience: if we have a known key, then there’s no
 mystery in unlocking this object, and thus for playability we want to
-make its operation fully automatic.
-
-</div>
+make its operation fully automatic.</p>
 
 <p><span id="dobjFor(Lock)"></span></p>
 
@@ -225,11 +173,7 @@ make its operation fully automatic.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4158">4158</a>]</p>
 
-<div class="desc">
-
-Action handling
-
-</div>
+<p>Action handling</p>
 
 <p><span id="dobjFor(LockWith)"></span></p>
 
@@ -237,11 +181,7 @@ Action handling
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4265">4265</a>]</p>
 
-<div class="desc">
-
-"lock with"
-
-</div>
+<p>“lock with”</p>
 
 <p><span id="dobjFor(Unlock)"></span></p>
 
@@ -249,11 +189,7 @@ Action handling
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4184">4184</a>]</p>
 
-<div class="desc">
-
-"unlock"
-
-</div>
+<p>“unlock”</p>
 
 <p><span id="dobjFor(UnlockWith)"></span></p>
 
@@ -261,11 +197,7 @@ Action handling
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4281">4281</a>]</p>
 
-<div class="desc">
-
-"unlock with"
-
-</div>
+<p>“unlock with”</p>
 
 <p><span id="getKnownKeyList"></span></p>
 
@@ -273,12 +205,8 @@ Action handling
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4083">4083</a>]</p>
 
-<div class="desc">
-
-Get my known key list. This simply returns the known key list from the
-known key owner.
-
-</div>
+<p>Get my known key list. This simply returns the known key list from the
+known key owner.</p>
 
 <p><span id="getKnownKeyOwner"></span></p>
 
@@ -286,13 +214,9 @@ known key owner.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4091">4091</a>]</p>
 
-<div class="desc">
-
-Get the object that own our known key list. If we explicitly have our
+<p>Get the object that own our known key list. If we explicitly have our
 own non-empty known key list, we own the key list; otherwise, our master
-object owns the list, as long as it has a non-nil key list at all.
-
-</div>
+object owns the list, as long as it has a non-nil key list at all.</p>
 
 <p><span id="isKeyKnown"></span></p>
 
@@ -300,12 +224,8 @@ object owns the list, as long as it has a non-nil key list at all.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4127">4127</a>]</p>
 
-<div class="desc">
-
-Determine if the player knows that the given key operates this lock.
-Returns true if the key is in our known key list, nil if not.
-
-</div>
+<p>Determine if the player knows that the given key operates this lock.
+Returns true if the key is in our known key list, nil if not.</p>
 
 <p><span id="keyFitsLock"></span></p>
 
@@ -313,13 +233,9 @@ Returns true if the key is in our known key list, nil if not.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4027">4027</a>]</p>
 
-<div class="desc">
-
-Determine if the key fits this lock. Returns true if so, nil if not. By
-default, we'll return true if the key is in my keyList. This can be
-overridden to use other key selection criteria.
-
-</div>
+<p>Determine if the key fits this lock. Returns true if so, nil if not. By
+default, we’ll return true if the key is in my keyList. This can be
+overridden to use other key selection criteria.</p>
 
 <p><span id="keyIsPlausible"></span></p>
 
@@ -327,21 +243,19 @@ overridden to use other key selection criteria.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4067">4067</a>]</p>
 
-<div class="desc">
-
-Determine if the key is plausibly of the right type for this lock. This
-doesn't check to see if the key actually fits the lock - rather, this
+<p>Determine if the key is plausibly of the right type for this lock. This
+doesn’t check to see if the key actually fits the lock - rather, this
 checks to see if the key is generally the kind of object that might
-plausibly be used with this lock.
+plausibly be used with this lock.</p>
 
-The point of this routine is to make this class concerned only with the
+<p>The point of this routine is to make this class concerned only with the
 abstract notion of objects that serve to lock and unlock other objects,
 without requiring that the key objects resemble little notched metal
 sticks or that the lock objects resemble cylinders with pins - or, more
 specifically, without requiring that all of the kinds of keys in a game
-remotely resemble one another.
+remotely resemble one another.</p>
 
-For example, one kind of "key" in a game might be a plastic card with a
+<p>For example, one kind of “key” in a game might be a plastic card with a
 magnetic stripe, and the corresponding lock would be a card slot;
 another kind of key might the traditional notched metal stick. Clearly,
 no one would ever think to use a plastic card with a conventional door
@@ -349,20 +263,18 @@ lock, nor would one try to put a house key into a card slot (not with
 the expectation that it would actually work, anyway). This routine is
 meant to facilitate this kind of distinction: the card slot can use this
 routine to indicate that only plastic card objects are plausible as
-keys, and door locks can indicate that only metal keys are plausible.
+keys, and door locks can indicate that only metal keys are plausible.</p>
 
-This routine can be used for disambiguation and other purposes when we
+<p>This routine can be used for disambiguation and other purposes when we
 must programmatically select a key that is not specified or is only
 vaguely specified. For example, the keyring searcher uses it so that,
-when we're searching for a key on a keyring to open this lock, we
+when we’re searching for a key on a keyring to open this lock, we
 implicitly try only the kinds of keys that would be plausibly useful for
-this kind of lock.
+this kind of lock.</p>
 
-By default, we'll simply return true. Subclasses specific to a game
-(such as the "card reader" base class or the "door lock" base class) can
-override this to discriminate among the game-specific key classes.
-
-</div>
+<p>By default, we’ll simply return true. Subclasses specific to a game
+(such as the “card reader” base class or the “door lock” base class) can
+override this to discriminate among the game-specific key classes.</p>
 
 <p><span id="lockOrUnlockAction"></span></p>
 
@@ -370,20 +282,13 @@ override this to discriminate among the game-specific key classes.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4220">4220</a>]</p>
 
-<div class="desc">
-
-perform the action processing for LockWith or UnlockWith - these are
+<p>perform the action processing for LockWith or UnlockWith - these are
 highly symmetrical, in that the only thing that varies is the new lock
-state we establish
+state we establish</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

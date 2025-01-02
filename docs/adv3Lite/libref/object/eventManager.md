@@ -47,7 +47,7 @@ as Fuses and Daemons.
 
 
 
-[`curEvent_`](#curEvent_)[`eventList`](#eventList)[`schedulableList`](#schedulableList)
+[`curEvent_`](#curEvent_) [`eventList`](#eventList) [`schedulableList`](#schedulableList)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ as Fuses and Daemons.
 
 
 
-[`addEvent`](#addEvent)[`executeList`](#executeList)[`executePrompt`](#executePrompt)[`executeTurn`](#executeTurn)[`removeCurrentEvent`](#removeCurrentEvent)[`removeEvent`](#removeEvent)[`removeMatchingEvents`](#removeMatchingEvents)
+[`addEvent`](#addEvent) [`executeList`](#executeList) [`executePrompt`](#executePrompt) [`executeTurn`](#executeTurn) [`removeCurrentEvent`](#removeCurrentEvent) [`removeEvent`](#removeEvent) [`removeMatchingEvents`](#removeMatchingEvents)
 
 <span id="_Properties_"></span>
 

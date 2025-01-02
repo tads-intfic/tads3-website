@@ -88,7 +88,7 @@ then simply stops doing anything once we pass the last event.
 
 
 
-[`curScriptState`](#curScriptState)[`eventList`](#eventList)[`eventListLen`](#eventListLen)
+[`curScriptState`](#curScriptState) [`eventList`](#eventList) [`eventListLen`](#eventListLen)
 
 
 
@@ -100,7 +100,7 @@ then simply stops doing anything once we pass the last event.
 
 
 
-[`advanceState`](#advanceState)[`construct`](#construct)[`doScript`](#doScript)[`doScriptEvent`](#doScriptEvent)[`scriptDone`](#scriptDone)
+[`advanceState`](#advanceState) [`construct`](#construct) [`doScript`](#doScript) [`doScriptEvent`](#doScriptEvent) [`scriptDone`](#scriptDone)
 
 Inherited from `Script` :  
 [`getScriptState`](../object/Script.html#getScriptState)

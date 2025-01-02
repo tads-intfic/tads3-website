@@ -85,7 +85,7 @@ the captured text to a string.
 
 
 
-[`addText`](#addText)[`filterText`](#filterText)
+[`addText`](#addText) [`filterText`](#filterText)
 
 
 

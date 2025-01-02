@@ -235,7 +235,7 @@ execNestedAction equivalent) to redirect one action to another.
 [`redirect`](#redirect)
 
 Inherited from `Redirector` :  
-[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
+[`doInstead`](../object/Redirector.html#doInstead) [`doNested`](../object/Redirector.html#doNested) [`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

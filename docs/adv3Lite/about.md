@@ -41,7 +41,7 @@ programmer's guide.** The links under "See Also" will transport you to
 complete language and library documentation.
 
 *(If you're seeking the adv3 periplus,
-<a href="../adv3/index.html" target="_blank">go here</a>.)*
+<a href="../adv3/adv3index.html" target="_blank">go here</a>.)*
 
 ## Organizing principles
 
@@ -68,7 +68,7 @@ complete language and library documentation.
   authoring system for writing your own interactive fiction
 - <a href="https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.html"
   target="_blank">adv3Lite</a>, an alternate library for TADS 3
-- <a href="libref/index.html" target="_blank">Complete adv3Lite class
+- <a href="doc/libref/intro.html" target="_blank">Complete adv3Lite class
   reference</a>
 - <a href="https://www.tads.org/t3doc/doc/sysman/toc.html"
   target="_blank">TADS 3 System Manual</a>, covers the TADS 3 language

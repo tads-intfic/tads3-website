@@ -31,7 +31,7 @@ layout: docs
 
 
 
-[`Command`](../object/Command.html)[`FuncCommand`](../object/FuncCommand.html)
+[`Command`](../object/Command.html) [`FuncCommand`](../object/FuncCommand.html)
 <span id="_ObjectSummary_"></span>
 
 

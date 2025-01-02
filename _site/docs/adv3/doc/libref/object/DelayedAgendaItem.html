@@ -46,75 +46,47 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A delayed agenda item. This type of item becomes ready to execute when
+the game clock reaches a given turn counter.</p>
 
-A delayed agenda item. This type of item becomes ready to execute when
-the game clock reaches a given turn counter.
-
-`class `**`DelayedAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">DelayedAgendaItem</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">DelayedAgendaItem</code></strong><br />
 <a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a><a href="#readyTime"><code class="language-plaintext highlighter-rouge">readyTime</code></a></p>
+<p><a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a> <a href="#readyTime"><code class="language-plaintext highlighter-rouge">readyTime</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
-<a href="../object/AgendaItem.html#agendaOrder"><code class="language-plaintext highlighter-rouge">agendaOrder</code></a><a href="../object/AgendaItem.html#initiallyActive"><code class="language-plaintext highlighter-rouge">initiallyActive</code></a><a href="../object/AgendaItem.html#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a></p>
+<a href="../object/AgendaItem.html#agendaOrder"><code class="language-plaintext highlighter-rouge">agendaOrder</code></a> <a href="../object/AgendaItem.html#initiallyActive"><code class="language-plaintext highlighter-rouge">initiallyActive</code></a> <a href="../object/AgendaItem.html#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#setDelay"><code class="language-plaintext highlighter-rouge">setDelay</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
-<a href="../object/AgendaItem.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="../object/AgendaItem.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a><a href="../object/AgendaItem.html#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a><a href="../object/AgendaItem.html#resetItem"><code class="language-plaintext highlighter-rouge">resetItem</code></a></p>
+<a href="../object/AgendaItem.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/AgendaItem.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="../object/AgendaItem.html#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a> <a href="../object/AgendaItem.html#resetItem"><code class="language-plaintext highlighter-rouge">resetItem</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="isReady"></span></p>
 
@@ -122,11 +94,7 @@ the game clock reaches a given turn counter.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5627">5627</a>]</p>
 
-<div class="desc">
-
-we're ready if the game clock time has reached our ready time
-
-</div>
+<p>we’re ready if the game clock time has reached our ready time</p>
 
 <p><span id="readyTime"></span></p>
 
@@ -134,19 +102,11 @@ we're ready if the game clock time has reached our ready time
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5630">5630</a>]</p>
 
-<div class="desc">
-
-the turn counter on the game clock when we become ready
-
-</div>
+<p>the turn counter on the game clock when we become ready</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="setDelay"></span></p>
 
@@ -154,23 +114,16 @@ the turn counter on the game clock when we become ready
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5641">5641</a>]</p>
 
-<div class="desc">
-
-Set our ready time based on a delay from the current time. We'll become
+<p>Set our ready time based on a delay from the current time. We’ll become
 ready after the given number of turns elapses. For convenience, we
-return 'self', so a delayed agenda item can be initialized and added to
-an actor's agenda in one simple operation, like so:
+return ‘self’, so a delayed agenda item can be initialized and added to
+an actor’s agenda in one simple operation, like so:</p>
 
-actor.addToAgenda(item.setDelay(1));
+<p>actor.addToAgenda(item.setDelay(1));</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

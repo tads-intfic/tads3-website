@@ -51,7 +51,7 @@ WebResource objects.
 [`priority`](#priority)
 
 Inherited from `WebResourceGroup` :  
-[`all`](../object/WebResourceGroup.html#all)[`contents`](../object/WebResourceGroup.html#contents)[`server`](../object/WebResourceGroup.html#server)
+[`all`](../object/WebResourceGroup.html#all) [`contents`](../object/WebResourceGroup.html#contents) [`server`](../object/WebResourceGroup.html#server)
 
 <span id="_MethodSummary_"></span>
 
@@ -61,7 +61,7 @@ Inherited from `WebResourceGroup` :
 
 
 
-[`execute`](#execute)[`isGroupFor`](#isGroupFor)
+[`execute`](#execute) [`isGroupFor`](#isGroupFor)
 
 Inherited from `WebResourceGroup` :  
 [`processRequest`](../object/WebResourceGroup.html#processRequest)

@@ -31,7 +31,7 @@ OBJTIME EXTENSION Objective Time module
 
 
 
-[`SenseTimeFuse`](../object/SenseTimeFuse.html)[`TimeFuse`](../object/TimeFuse.html)
+[`SenseTimeFuse`](../object/SenseTimeFuse.html) [`TimeFuse`](../object/TimeFuse.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -49,7 +49,7 @@ OBJTIME EXTENSION Objective Time module
 
 
 
-[`addTime`](#addTime)[`takeTime`](#takeTime)
+[`addTime`](#addTime) [`takeTime`](#takeTime)
 
 <span id="_Functions_"></span>
 

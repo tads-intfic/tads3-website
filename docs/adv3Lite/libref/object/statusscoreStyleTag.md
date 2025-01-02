@@ -48,10 +48,10 @@ Details](#_Methods_)
 
 
 
-[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)
+[`htmlCloseText`](#htmlCloseText) [`htmlOpenText`](#htmlOpenText)
 
 Inherited from `HtmlStyleTag` :  
-[`closeText`](../object/HtmlStyleTag.html#closeText)[`openText`](../object/HtmlStyleTag.html#openText)[`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText)[`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)
+[`closeText`](../object/HtmlStyleTag.html#closeText) [`openText`](../object/HtmlStyleTag.html#openText) [`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText) [`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)
 
 Inherited from `StyleTag` :  
 [`tagName`](../object/StyleTag.html#tagName)

@@ -102,10 +102,10 @@ Inherited from `ListGroup` :
 
 
 
-[`showGroupList`](#showGroupList)[`showGroupMsg`](#showGroupMsg)
+[`showGroupList`](#showGroupList) [`showGroupMsg`](#showGroupMsg)
 
 Inherited from `ListGroup` :  
-[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister) [`groupCardinality`](../object/ListGroup.html#groupCardinality) [`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount) [`showGroupItem`](../object/ListGroup.html#showGroupItem) [`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

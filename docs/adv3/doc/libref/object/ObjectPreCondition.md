@@ -70,7 +70,7 @@ rather than the direct/indirect object of the command.
 
 
 
-[`cond_`](#cond_)[`obj_`](#obj_)[`preCondOrder`](#preCondOrder)
+[`cond_`](#cond_) [`obj_`](#obj_) [`preCondOrder`](#preCondOrder)
 
 
 
@@ -82,7 +82,7 @@ rather than the direct/indirect object of the command.
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)[`verifyPreCondition`](#verifyPreCondition)
+[`checkPreCondition`](#checkPreCondition) [`construct`](#construct) [`verifyPreCondition`](#verifyPreCondition)
 
 
 

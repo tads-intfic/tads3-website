@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Laying out the
-map  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Laying out the
+map<br />
 <span class="navnp"><a href="goldskull.html" class="nav"><em>Prev:</em> Goldskull</a>
    
 <a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="laying-out-the-map">Laying out the map</h1>
 
@@ -70,79 +62,78 @@ represent the cave, and three objects: the pedestal, the skull and the
 rock. There’s very little that’s new here; this is what the code should
 look like:</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h"
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 
-versionInfo: GameID
-    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-    name = 'Goldskull'
-    byline = 'by A.N. Author'
-    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                  A.N. Author&lt;/a&gt;'
-    version = '1'
-    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-    desc = 'Your blurb here.'
-    htmlDesc = 'Your blurb here.'    
-    
-;
+    versionInfo: GameID
+        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+        name = 'Goldskull'
+        byline = 'by A.N. Author'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+        desc = 'Your blurb here.'
+        htmlDesc = 'Your blurb here.'    
+        
+    ;
 
-gameMain: GameMainDef    
-     
+    gameMain: GameMainDef    
+         
+        /* 
+         * By using the Player class to define the player character object 
+         * below, we remove the need to set the initialPlayerChar property here.
+         */
+    ;
+
+
+    /* The starting location; this can be called anything you like */
+
+    startroom: Room 'Outside Cave'
+         desc = "You're standing in the bright sunlight just outside of a large,
+             dark, foreboding cave, which lies to the north. " 
+        north = cave 
+    ;
+
     /* 
-     * By using the Player class to define the player character object 
-     * below, we remove the need to set the initialPlayerChar property here.
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. As an alternative to defining the player character object
+     *   as a Thing and defining various of its properties, we can simply define it as
+     *   a Player object, as here, in which case we don't also need to set gameMain.initialPlayerChar, 
+     *   although we must still define the gameMain object. We'll add a description to the Player
+     *   object so that it can provide a non-default response to X ME. 
      */
-;
 
+    + me: Player 'you'   
+        "You can't see yourself, but you suspect you must look quite a sight after
+        traipsing miles through tropical jungle to get here. "      
+    ;
 
-/* The starting location; this can be called anything you like */
+    cave: Room 'Cave'    
+        desc = "You're inside a dark and musty cave. Sunlight 
+        pours in from a passage to the south. " 
 
-startroom: Room 'Outside Cave'
-     desc = "You're standing in the bright sunlight just outside of a large,
-         dark, foreboding cave, which lies to the north. " 
-    north = cave 
-;
+        south = startroom 
+    ;
 
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. As an alternative to defining the player character object
- *   as a Thing and defining various of its properties, we can simply define it as
- *   a Player object, as here, in which case we don't also need to set gameMain.initialPlayerChar, 
- *   although we must still define the gameMain object. We'll add a description to the Player
- *   object so that it can provide a non-default response to X ME. 
- */
+    + pedestal: Thing 'stone pedestal; smooth'
+        "The smooth stone pedestal is artfully positioned to catch the sunlight at
+        just this time of day. "
+        
+        isFixed = true
+        contType = On
+    ;
 
-+ me: Player 'you'   
-    "You can't see yourself, but you suspect you must look quite a sight after
-    traipsing miles through tropical jungle to get here. "      
-;
+    ++ goldSkull: Thing 'gold skull;; head'
+        "It's the shape and size of a human skull, but made of solid gold; it must
+        be worth a fortune. "
+    ;
 
-cave: Room 'Cave'    
-    desc = "You're inside a dark and musty cave. Sunlight 
-    pours in from a passage to the south. " 
-
-    south = startroom 
-;
-
-+ pedestal: Thing 'stone pedestal; smooth'
-    "The smooth stone pedestal is artfully positioned to catch the sunlight at
-    just this time of day. "
-    
-    isFixed = true
-    contType = On
-;
-
-++ goldSkull: Thing 'gold skull;; head'
-    "It's the shape and size of a human skull, but made of solid gold; it must
-    be worth a fortune. "
-;
-
-+ smallRock: Thing 'small rock; round solid'
-     "It's roughly round and looks pretty solid. "
-; `
+    + smallRock: Thing 'small rock; round solid'
+         "It's roughly round and looks pretty solid. "
+    ;
 </code></pre></div></div>
 
 <p>Changes to the boiler-plate code already provided are marked in bold to
@@ -169,18 +160,15 @@ make sure it all works.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Laying out the
-map  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Laying out the
+map<br />
 <span class="navnp"><a href="goldskull.html" class="nav"><em>Prev:</em> Goldskull</a>
    
 <a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

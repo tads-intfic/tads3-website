@@ -74,7 +74,7 @@ SENSORY EXTENSION\]
 
 
 
-[`notifyProp`](#notifyProp)[`remoteProp`](#remoteProp)[`senseProp`](#senseProp)
+[`notifyProp`](#notifyProp) [`remoteProp`](#remoteProp) [`senseProp`](#senseProp)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ SENSORY EXTENSION\]
 
 
 
-[`remoteList`](#remoteList)[`triggerEvent`](#triggerEvent)
+[`remoteList`](#remoteList) [`triggerEvent`](#triggerEvent)
 
 <span id="_Properties_"></span>
 

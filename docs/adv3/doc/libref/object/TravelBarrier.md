@@ -82,7 +82,7 @@ travelBarrier property, to form a conditional barrier to travel.
 
 
 
-[`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
+[`canTravelerPass`](#canTravelerPass) [`explainTravelBarrier`](#explainTravelBarrier)
 
 <span id="_Properties_"></span>
 

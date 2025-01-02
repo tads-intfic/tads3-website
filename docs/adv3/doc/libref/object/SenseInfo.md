@@ -70,7 +70,7 @@ sense.
 
 
 
-[`ambient`](#ambient)[`obj`](#obj)[`obstructor`](#obstructor)[`trans`](#trans)
+[`ambient`](#ambient) [`obj`](#obj) [`obstructor`](#obstructor) [`trans`](#trans)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ sense.
 
 
 
-[`compareTransTo`](#compareTransTo)[`construct`](#construct)[`selectMoreTrans`](#selectMoreTrans)
+[`compareTransTo`](#compareTransTo) [`construct`](#construct) [`selectMoreTrans`](#selectMoreTrans)
 
 <span id="_Properties_"></span>
 

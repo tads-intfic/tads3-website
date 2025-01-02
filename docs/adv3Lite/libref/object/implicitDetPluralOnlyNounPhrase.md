@@ -5,7 +5,7 @@ layout: docs
 
 `grammar `**[`implicitDetPluralOnlyNounPhrase(main)`](../object/implicitDetPluralOnlyNounPhrase(main).html)**` :   `[`Production`](../object/Production.html)
 
-[`grammar.t`](../file/grammar.t.html)[`[`591`](../source/grammar.t.html#591)]`
+[`grammar.t`](../file/grammar.t.html) [`[`591`](../source/grammar.t.html#591)]`
 
 
 

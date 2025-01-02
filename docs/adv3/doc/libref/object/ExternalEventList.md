@@ -77,7 +77,7 @@ method).
 
 
 Inherited from `EventList` :  
-[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)
+[`curScriptState`](../object/EventList.html#curScriptState) [`eventList`](../object/EventList.html#eventList) [`eventListLen`](../object/EventList.html#eventListLen)
 
 
 
@@ -92,7 +92,7 @@ Inherited from `EventList` :
 [`scriptDone`](#scriptDone)
 
 Inherited from `EventList` :  
-[`advanceState`](../object/EventList.html#advanceState)[`construct`](../object/EventList.html#construct)[`doScript`](../object/EventList.html#doScript)[`doScriptEvent`](../object/EventList.html#doScriptEvent)
+[`advanceState`](../object/EventList.html#advanceState) [`construct`](../object/EventList.html#construct) [`doScript`](../object/EventList.html#doScript) [`doScriptEvent`](../object/EventList.html#doScriptEvent)
 
 Inherited from `Script` :  
 [`getScriptState`](../object/Script.html#getScriptState)

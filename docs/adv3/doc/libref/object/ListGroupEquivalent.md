@@ -84,10 +84,10 @@ Inherited from `ListGroup` :
 
 
 
-[`groupNounPhraseCount`](#groupNounPhraseCount)[`showGroupList`](#showGroupList)
+[`groupNounPhraseCount`](#groupNounPhraseCount) [`showGroupList`](#showGroupList)
 
 Inherited from `ListGroup` :  
-[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister) [`groupCardinality`](../object/ListGroup.html#groupCardinality) [`showGroupItem`](../object/ListGroup.html#showGroupItem) [`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

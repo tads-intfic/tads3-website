@@ -47,91 +47,63 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Random-Firing script add-in. This is a mix-in class that you can add to
+<p>Random-Firing script add-in. This is a mix-in class that you can add to
 the superclass list of any Script subclass to make the script execute
-only a given percentage of the time it's invoked. Each time doScript()
-is invoked on the script, we'll look at the probability settings (see
+only a given percentage of the time it’s invoked. Each time doScript()
+is invoked on the script, we’ll look at the probability settings (see
 the properties below) to determine whether we really want to execute the
-script this time; if so, we'll proceed with the scripted event,
-otherwise we'll just return immediately, doing nothing.
+script this time; if so, we’ll proceed with the scripted event,
+otherwise we’ll just return immediately, doing nothing.</p>
 
-Note that this must be used in the superclass list \*before\* the Script
-subclass:
+<p>Note that this must be used in the superclass list *before* the Script
+subclass:</p>
 
-myScript: RandomFiringScript, EventList  
-// ...my definitions...  
-;
+<p>myScript: RandomFiringScript, EventList<br />
+// …my definitions…<br />
+;</p>
 
-This class is especially useful for random atmospheric events, because
+<p>This class is especially useful for random atmospheric events, because
 it allows you to make the timing of scripted events random. Rather than
 making a scripted event happen on every single turn, you can use this to
 make events happen only sporadically. It can often feel too predictable
 and repetitious when a random background event happens on every single
 turn; firing events less frequently often makes them feel more
-realistic.
+realistic.</p>
 
-`class `**`RandomFiringScript`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">RandomFiringScript</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RandomFiringScript</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RandomFiringScript</code></strong><br />
 <a href="../object/RandomEventList.html"><code class="language-plaintext highlighter-rouge">RandomEventList</code></a><br />
 <a href="../object/ShuffledEventList.html"><code class="language-plaintext highlighter-rouge">ShuffledEventList</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#eventPercent"><code class="language-plaintext highlighter-rouge">eventPercent</code></a><a href="#eventReduceAfter"><code class="language-plaintext highlighter-rouge">eventReduceAfter</code></a><a href="#eventReduceTo"><code class="language-plaintext highlighter-rouge">eventReduceTo</code></a></p>
+<p><a href="#eventPercent"><code class="language-plaintext highlighter-rouge">eventPercent</code></a> <a href="#eventReduceAfter"><code class="language-plaintext highlighter-rouge">eventReduceAfter</code></a> <a href="#eventReduceTo"><code class="language-plaintext highlighter-rouge">eventReduceTo</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkEventOdds"><code class="language-plaintext highlighter-rouge">checkEventOdds</code></a><a href="#doScript"><code class="language-plaintext highlighter-rouge">doScript</code></a><a href="#underusedReadyELIidx"><code class="language-plaintext highlighter-rouge">underusedReadyELIidx</code></a></p>
+<p><a href="#checkEventOdds"><code class="language-plaintext highlighter-rouge">checkEventOdds</code></a> <a href="#doScript"><code class="language-plaintext highlighter-rouge">doScript</code></a> <a href="#underusedReadyELIidx"><code class="language-plaintext highlighter-rouge">underusedReadyELIidx</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="eventPercent"></span></p>
 
@@ -139,22 +111,18 @@ realistic.
 
 <p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#65">65</a>]</p>
 
-<div class="desc">
-
-Percentage of the time an event occurs. By default, we execute an event
+<p>Percentage of the time an event occurs. By default, we execute an event
 100% of the time - meaning every time that doScript() is invoked. If you
 set this to a lower percentage, then each time doScript() is invoked,
-we'll randomly decide whether or not to execute an event based on this
+we’ll randomly decide whether or not to execute an event based on this
 percentage. For example, if you want an event to execute on average
-about a third of the time, set this to 33.
+about a third of the time, set this to 33.</p>
 
-Note that this is a probabilistic frequency. Setting this to 33 does
-\*not\* mean that we'll execute exactly every third time. Rather, it
-means that we'll randomly execute or not on each invocation, and
-averaged over a large number of invocations, we'll execute about a third
-of the time.
-
-</div>
+<p>Note that this is a probabilistic frequency. Setting this to 33 does
+*not* mean that we’ll execute exactly every third time. Rather, it
+means that we’ll randomly execute or not on each invocation, and
+averaged over a large number of invocations, we’ll execute about a third
+of the time.</p>
 
 <p><span id="eventReduceAfter"></span></p>
 
@@ -162,20 +130,16 @@ of the time.
 
 <p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#80">80</a>]</p>
 
-<div class="desc">
-
-Random atmospheric events can get repetitive after a while, so we
+<p>Random atmospheric events can get repetitive after a while, so we
 provide an easy way to reduce the frequency of our events after a while.
-This way, we'll generate the events more frequently at first, but once
-the player has seen them enough to get the idea, we'll cut back.
+This way, we’ll generate the events more frequently at first, but once
+the player has seen them enough to get the idea, we’ll cut back.
 Sometimes, the player will spend a lot of time in one place trying to
 solve a puzzle, so the same set of random events can get stale. Set
 eventReduceAfter to the number of times you want the events to be
-generated at full frequency; after we've fired events that many times,
-we'll change eventPercent to eventReduceTo. If eventReduceAfter is nil,
-we won't ever change eventPercent.
-
-</div>
+generated at full frequency; after we’ve fired events that many times,
+we’ll change eventPercent to eventReduceTo. If eventReduceAfter is nil,
+we won’t ever change eventPercent.</p>
 
 <p><span id="eventReduceTo"></span></p>
 
@@ -183,19 +147,11 @@ we won't ever change eventPercent.
 
 <p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#81">81</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkEventOdds"></span></p>
 
@@ -203,12 +159,8 @@ we won't ever change eventPercent.
 
 <p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#98">98</a>]</p>
 
-<div class="desc">
-
-Check the event odds to see if we want to fire an event at all on this
-invocation.
-
-</div>
+<p>Check the event odds to see if we want to fire an event at all on this
+invocation.</p>
 
 <p><span id="doScript"></span></p>
 
@@ -216,12 +168,8 @@ invocation.
 
 <p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#87">87</a>]</p>
 
-<div class="desc">
-
-When doScript() is invoked, check the event probabilities before
-proceeding.
-
-</div>
+<p>When doScript() is invoked, check the event probabilities before
+proceeding.</p>
 
 <p><span id="underusedReadyELIidx"></span></p>
 
@@ -229,20 +177,13 @@ proceeding.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#481">481</a>]</p>
 
-<div class="desc">
+<p>Return the index within our eventList of any as yet unused EventListItem
+that’s ready to fire. This is principally for the use of our
+RandomEventList and ShuffledEventList subclasses.</p>
 
-Return the index within our eventList of any as yet unused EventListItem
-that's ready to fire. This is principally for the use of our
-RandomEventList and ShuffledEventList subclasses.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

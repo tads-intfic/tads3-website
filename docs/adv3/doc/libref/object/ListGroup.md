@@ -77,7 +77,7 @@ of objects that are to be grouped together.
 
 
 
-[`groupDisplaysSublist`](#groupDisplaysSublist)[`minGroupSize`](#minGroupSize)
+[`groupDisplaysSublist`](#groupDisplaysSublist) [`minGroupSize`](#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ of objects that are to be grouped together.
 
 
 
-[`createGroupSublister`](#createGroupSublister)[`groupCardinality`](#groupCardinality)[`groupNounPhraseCount`](#groupNounPhraseCount)[`showGroupItem`](#showGroupItem)[`showGroupItemCounted`](#showGroupItemCounted)[`showGroupList`](#showGroupList)
+[`createGroupSublister`](#createGroupSublister) [`groupCardinality`](#groupCardinality) [`groupNounPhraseCount`](#groupNounPhraseCount) [`showGroupItem`](#showGroupItem) [`showGroupItemCounted`](#showGroupItemCounted) [`showGroupList`](#showGroupList)
 
 <span id="_Properties_"></span>
 

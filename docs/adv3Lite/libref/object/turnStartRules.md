@@ -52,13 +52,13 @@ Rulebook for start of turn rules \[SYSRULES EXTENSION\]
 [`contValue`](#contValue)
 
 Inherited from `RuleBook` :  
-[`actor`](../object/RuleBook.html#actor)[`contents`](../object/RuleBook.html#contents)[`defaultVal`](../object/RuleBook.html#defaultVal)[`matchObj`](../object/RuleBook.html#matchObj)[`stopValue`](../object/RuleBook.html#stopValue)
+[`actor`](../object/RuleBook.html#actor) [`contents`](../object/RuleBook.html#contents) [`defaultVal`](../object/RuleBook.html#defaultVal) [`matchObj`](../object/RuleBook.html#matchObj) [`stopValue`](../object/RuleBook.html#stopValue)
 
 Inherited from `PreinitObject` :  
-[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe) [`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -71,12 +71,12 @@ Inherited from `ModuleExecObject` :
 
 
 Inherited from `RuleBook` :  
-[`addToContents`](../object/RuleBook.html#addToContents)[`follow`](../object/RuleBook.html#follow)[`initBook`](../object/RuleBook.html#initBook)[`removeFromContents`](../object/RuleBook.html#removeFromContents)
+[`addToContents`](../object/RuleBook.html#addToContents) [`follow`](../object/RuleBook.html#follow) [`initBook`](../object/RuleBook.html#initBook) [`removeFromContents`](../object/RuleBook.html#removeFromContents)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)[`execute`](../object/ModuleExecObject.html#execute)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec) [`execute`](../object/ModuleExecObject.html#execute)
 
 <span id="_Properties_"></span>
 

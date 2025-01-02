@@ -71,10 +71,10 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 
 
 
-[`allowOnRespell`](#allowOnRespell)[`cmd`](#cmd)[`curable`](#curable)[`nameList`](#nameList)
+[`allowOnRespell`](#allowOnRespell) [`cmd`](#cmd) [`curable`](#curable) [`nameList`](#nameList)
 
 Inherited from `ResolutionError` :  
-[`np`](../object/ResolutionError.html#np)[`txt`](../object/ResolutionError.html#txt)
+[`np`](../object/ResolutionError.html#np) [`txt`](../object/ResolutionError.html#txt)
 
 Inherited from `ParseError` :  
 [`errStage`](../object/ParseError.html#errStage)
@@ -90,7 +90,7 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`display`](#display)[`tryCuring`](#tryCuring)
+[`construct`](#construct) [`display`](#display) [`tryCuring`](#tryCuring)
 
 Inherited from `ResolutionError` :  
 [`rankCorrection`](../object/ResolutionError.html#rankCorrection)
@@ -98,7 +98,7 @@ Inherited from `ResolutionError` :
 
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

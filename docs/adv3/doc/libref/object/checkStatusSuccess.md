@@ -52,7 +52,7 @@ this single success indicator for all uses.
 [`isSuccess`](#isSuccess)
 
 Inherited from `CheckStatus` :  
-[`msgParams`](../object/CheckStatus.html#msgParams)[`msgProp`](../object/CheckStatus.html#msgProp)
+[`msgParams`](../object/CheckStatus.html#msgParams) [`msgProp`](../object/CheckStatus.html#msgProp)
 
 <span id="_MethodSummary_"></span>
 

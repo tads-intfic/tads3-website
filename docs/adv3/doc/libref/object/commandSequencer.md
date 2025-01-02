@@ -65,7 +65,7 @@ finishes reading a command line.
 
 
 
-[`patNextTag`](#patNextTag)[`state_`](#state_)
+[`patNextTag`](#patNextTag) [`state_`](#state_)
 
 
 
@@ -77,7 +77,7 @@ finishes reading a command line.
 
 
 
-[`filterText`](#filterText)[`setCommandMode`](#setCommandMode)[`writeThrough`](#writeThrough)
+[`filterText`](#filterText) [`setCommandMode`](#setCommandMode) [`writeThrough`](#writeThrough)
 
 
 

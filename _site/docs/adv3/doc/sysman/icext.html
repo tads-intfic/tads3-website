@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Extending
-Intrinsic Classes  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Extending
+Intrinsic Classes<br />
 <span class="navnp"><a href="reflect.html" class="nav"><em>Prev:</em> Reflection</a>
    
 <a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="extending-intrinsic-classes">Extending Intrinsic Classes</h1>
 
@@ -52,26 +44,22 @@ features of the class.</p>
 <code class="language-plaintext highlighter-rouge">modify</code> syntax for intrinsic classes is almost
 exactly the same as it is for regular objects:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify intrinsicClassName
+   method1 ( paramList ) { code }
+   method2 ...
+;
+</code></pre></div></div>
 
-    modify intrinsicClassName
-       method1 ( paramList ) { code }
-       method2 ...
-    ;
-
-
-
-When you modify an intrinsic class, the intrinsic class must be defined
-before the `modify` statement. In most cases,
-this simply means that you must `\#include` the
+<p>When you modify an intrinsic class, the intrinsic class must be defined
+before the <code class="language-plaintext highlighter-rouge">modify</code> statement. In most cases,
+this simply means that you must <code class="language-plaintext highlighter-rouge">\#include</code> the
 system header file that defines the intrinsic class before the
-`modify` statement in the same compilation unit.
+<code class="language-plaintext highlighter-rouge">modify</code> statement in the same compilation unit.</p>
 
-The following example adds a base-2 logarithm function to the BigNumber
-intrinsic class.
+<p>The following example adds a base-2 logarithm function to the BigNumber
+intrinsic class.</p>
 
-```
-    #include <bignum.h>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include &lt;bignum.h&gt;
 
     modify BigNumber
       log2()
@@ -100,105 +88,104 @@ intrinsic class.
       // our caches ln(2) value  we don't have any value initially
       cacheLn2_ = nil
     ;
-```
+</code></pre></div></div>
 
-This example illustrates several aspects of intrinsic class extensions.
+<p>This example illustrates several aspects of intrinsic class extensions.</p>
 
-First, note that we can refer to `self` within
-the method we add to the class. We're modifying BigNumber, so
-`self` is always a BigNumber object; we can thus
-refer to its methods, such as `getPrecision()`
-and `setPrecision()`, and we can also use the
-value in arithmetic.
+<p>First, note that we can refer to <code class="language-plaintext highlighter-rouge">self</code> within
+the method we add to the class. We’re modifying BigNumber, so
+<code class="language-plaintext highlighter-rouge">self</code> is always a BigNumber object; we can thus
+refer to its methods, such as <code class="language-plaintext highlighter-rouge">getPrecision()</code>
+and <code class="language-plaintext highlighter-rouge">setPrecision()</code>, and we can also use the
+value in arithmetic.</p>
 
-Second, note that we can add a data property to the class. In the
-example, we add a property called `cacheLn2`,
+<p>Second, note that we can add a data property to the class. In the
+example, we add a property called <code class="language-plaintext highlighter-rouge">cacheLn2</code>,
 which contains a cached value of the natural logarithm of 2. (In the
 example, we have chosen to cache the value rather than recalculate it
-each time we call the `ln2()` method as a
-performance optimization; calculating `ln(2)` is
+each time we call the <code class="language-plaintext highlighter-rouge">ln2()</code> method as a
+performance optimization; calculating <code class="language-plaintext highlighter-rouge">ln(2)</code> is
 fairly expensive, so it makes sense to save the value when we first
 calculate it, and re-use the same value rather than calculating it on
-each new call to the method.)
+each new call to the method.)</p>
 
-Note, though, that we can only add class-level properties to the class.
+<p>Note, though, that we can only add class-level properties to the class.
 We cannot add instance properties. In other words, we can only add a
 property to BigNumber itself, not to each individual BigNumber value.
 So, we cannot write something like this within an intrinsic class
-extension method:
+extension method:</p>
 
-```
-    self.val1 = 5;  // ILLEGAL!
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.val1 = 5;  // ILLEGAL!
+</code></pre></div></div>
 
-The statement above is illegal in an intrinsic class extension method
+<p>The statement above is illegal in an intrinsic class extension method
 because it attempts to store a property value with the object itself,
-rather than with the intrinsic class.
+rather than with the intrinsic class.</p>
 
-## Restrictions
+<h2 id="restrictions">Restrictions</h2>
 
-There are some restrictions on modifying intrinsic classes:
+<p>There are some restrictions on modifying intrinsic classes:</p>
 
-- You cannot add properties to instances of an intrinsic class (you can,
-  however, add class-level properties).
-- You cannot modify an intrinsic method of an intrinsic class, whether
-  defined directly on the class or inherited from its intrinsic
-  superclass
-- You cannot use `replace` with an intrinsic
-  class.
-- You cannot subclass an intrinsic class.
+<ul>
+  <li>You cannot add properties to instances of an intrinsic class (you can,
+however, add class-level properties).</li>
+  <li>You cannot modify an intrinsic method of an intrinsic class, whether
+defined directly on the class or inherited from its intrinsic
+superclass</li>
+  <li>You cannot use <code class="language-plaintext highlighter-rouge">replace</code> with an intrinsic
+class.</li>
+  <li>You cannot subclass an intrinsic class.</li>
+</ul>
 
-## Using Aggregation
+<h2 id="using-aggregation">Using Aggregation</h2>
 
-There might be times when the intrinsic class extension mechanism is too
+<p>There might be times when the intrinsic class extension mechanism is too
 restrictive for a particular application you have in mind. In
 particular, you might sometimes find it necessary to add new properties
-to individual instances of a class; since you can't do this by extending
-an intrinsic class, you'll have to find an alternative approach in such
-cases.
+to individual instances of a class; since you can’t do this by extending
+an intrinsic class, you’ll have to find an alternative approach in such
+cases.</p>
 
-One approach that you might consider is aggregation. Aggregation is a
+<p>One approach that you might consider is aggregation. Aggregation is a
 common technique in object-oriented programming in which you create a
-"wrapper" object that contains an instance of a class you want to
+“wrapper” object that contains an instance of a class you want to
 extend. In other words, rather than subclassing, you create a new,
 independent class, and store an instance of the class you wish to extend
-as a property of the new class.
+as a property of the new class.</p>
 
-For example, suppose you wanted to create a complex number class. (A
-complex number is a mathematical entity with two components, a "real"
-part and an "imaginary" part. The real part is an ordinary real number,
-and the imaginary part is a real number multiplied by *i*, the square
+<p>For example, suppose you wanted to create a complex number class. (A
+complex number is a mathematical entity with two components, a “real”
+part and an “imaginary” part. The real part is an ordinary real number,
+and the imaginary part is a real number multiplied by <em>i</em>, the square
 root of -1, known as the imaginary unit. The two parts are added
-together to form the complex number.) You can't create a complex number
-class by extending BigNumber, since there'd be no way to store the two
+together to form the complex number.) You can’t create a complex number
+class by extending BigNumber, since there’d be no way to store the two
 separate numbers making up a complex value. Instead, you could use
-aggregation.
+aggregation.</p>
 
-To create a complex number class using aggregation, we'd start with
-something like this:
+<p>To create a complex number class using aggregation, we’d start with
+something like this:</p>
 
-```
-    class Complex: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Complex: object
       construct(r, i) { r_ = r; i_ = i; }
       r_ = nil // the real part
       i_ = nil // the imaginary part
     ;
-```
+</code></pre></div></div>
 
-Here, the properties `r\_` and
-`i\_` are simply BigNumber values. We have thus
+<p>Here, the properties <code class="language-plaintext highlighter-rouge">r\_</code> and
+<code class="language-plaintext highlighter-rouge">i\_</code> are simply BigNumber values. We have thus
 aggregated two BigNumber values into this new class that we call
-Complex.
+Complex.</p>
 
-Starting in TADS 3.1, you can use take this idea further using [operator
-overloading](opoverload.html), which lets you define mathematical
-operators (such as `+` and
-`\*`) on a custom class. This makes it possible
+<p>Starting in TADS 3.1, you can use take this idea further using <a href="opoverload.html">operator
+overloading</a>, which lets you define mathematical
+operators (such as <code class="language-plaintext highlighter-rouge">+</code> and
+<code class="language-plaintext highlighter-rouge">\*</code>) on a custom class. This makes it possible
 to define a Complex class that you can use as though it were a built-in
-numeric type.
+numeric type.</p>
 
-```
-      // adding to the Complex class definition...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      // adding to the Complex class definition...
       operator+(v) { return new Complex(r_ + v.r_, i_ + v.i_); }
       operator-(v) { return new Complex(r_ - v.r_, i_ - v.i_); }
     ;
@@ -211,31 +198,25 @@ numeric type.
       b = new Complex(-3.1, -2.0);
       c = a + b;
     }
-```
+</code></pre></div></div>
 
-With a little more work, we could add the other standard math operators
+<p>With a little more work, we could add the other standard math operators
 to round out the class. Note that a really robust Complex class would
 also want to deal with integer and BigNumber values as arguments to the
 math operators; the example code above is a little too simplistic in
-that it'll only work with other Complex values.
+that it’ll only work with other Complex values.</p>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Extending
-Intrinsic Classes  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Extending
+Intrinsic Classes<br />
 <span class="navnp"><a href="reflect.html" class="nav"><em>Prev:</em> Reflection</a>
    
 <a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
-    </span>
+    </span></p>
 
-</div>
-</bignum.h></div>
 
 </main>
 <footer>

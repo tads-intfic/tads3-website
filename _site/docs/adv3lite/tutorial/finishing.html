@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Finishing Touches  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Finishing Touches<br />
 <span class="navnp"><a href="tree.html" class="nav"><em>Prev:</em> Adding the Tree and the
 Branch</a>    
 <a href="reviewing.html" class="nav"><em>Next:</em> Reviewing the
-Basics</a>     </span>
-
-</div>
+Basics</a>     </span></p>
 
 <h1 id="finishing-touches">Finishing Touches</h1>
 
@@ -51,16 +43,15 @@ the bird. In this simple game we’ll enforce this in the simplest way
 possible, by limiting the amount Heidi can carry at any one time. First
 change the definition of the <code class="language-plaintext highlighter-rouge">me</code> object:</p>
 
-<p>`
-    + me: Thing ‘you;;heidi’ <br />
-        isFixed = true  <br />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + me: Thing 'you;;heidi'   
+        isFixed = true    
         proper = true
         ownsContents = true
-        person = 2 <br />
-        contType = Carrier  <br />
+        person = 2   
+        contType = Carrier    
         bulkCapacity = 1
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Adding <code class="language-plaintext highlighter-rouge">bulkCapacity = 1</code> to the definition of
 the <code class="language-plaintext highlighter-rouge">me</code> object limits the total bulk Heidi can
@@ -75,28 +66,27 @@ this game that we can get away with it.</p>
 portable objects in question, the bird and the nest, by defining
 <code class="language-plaintext highlighter-rouge">bulk = 1</code> on both of them:</p>
 
-<p>`
-    + bird: Thing ‘baby bird;;nestling’
-        “Too young to fly, the nestling tweets helplessly. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bird: Thing 'baby bird;;nestling'
+        "Too young to fly, the nestling tweets helplessly. "
+        
+        bulk = 1
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 1
-;
 
+    clearing: Room 'A forest clearing'
+        "A tall sycamore stands in the middle of this clearing. The path winds
+        southwest through the trees. "
+        
+        southwest = forest
+        up = topOfTree
+    ;
 
-clearing: Room 'A forest clearing'
-    "A tall sycamore stands in the middle of this clearing. The path winds
-    southwest through the trees. "
-    
-    southwest = forest
-    up = topOfTree
-;
-
-+ nest: Thing 'bird\'s nest; carefully woven; moss twigs'
-    "The nest is carefully woven of twigs and moss. "
-    
-    contType = In   
-    bulk = 1
-; `
+    + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
+        "The nest is carefully woven of twigs and moss. "
+        
+        contType = In   
+        bulk = 1
+    ;
 </code></pre></div></div>
 
 <p>Try making the changes indicated above and then compiling and running
@@ -114,20 +104,19 @@ this, but the one we’ll use here is to use the
 <code class="language-plaintext highlighter-rouge">branch</code> to test whether the nest is on the
 branch, and then end the game in victory if it is:</p>
 
-<p>`
-    + branch: Thing ‘wide firm bough; flat; branch’
-        “It’s flat enough to support a small object. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    iFixed = true
-    isListed = true
-    contType = On
-    
-    afterAction()
-    {
-        if(nest.isIn(self))
-            finishGameMsg(ftVictory, [finishOptionUndo]);
-    }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + branch: Thing 'wide firm bough; flat; branch'
+        "It's flat enough to support a small object. "
+        
+        iFixed = true
+        isListed = true
+        contType = On
+        
+        afterAction()
+        {
+            if(nest.isIn(self))
+                finishGameMsg(ftVictory, [finishOptionUndo]);
+        }
+    ;
 </code></pre></div></div>
 
 <p>This introduces several new concepts at once; we’ll explain them briefly
@@ -255,130 +244,126 @@ game we should pause and take stock, which is what we’ll do in the next
 chapter. In the meantime, here’s the complete listing of what the Heidi
 game should now look like:</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h"
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 
-versionInfo: GameID
-    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-    name = 'The Adventures of Heidi'
-    byline = 'by A.N. Author'
-    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                  A.N. Author&lt;/a&gt;'
-    version = '1'
-    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-    desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
-        Firth and Sonja Kesserich.'
-    htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
-        by Roger Firth and Sonja Kesserich.'    
-    
-;
+    versionInfo: GameID
+        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+        name = 'The Adventures of Heidi'
+        byline = 'by A.N. Author'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+        desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
+            Firth and Sonja Kesserich.'
+        htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
+            by Roger Firth and Sonja Kesserich.'    
+        
+    ;
 
-gameMain: GameMainDef
-    /* Define the initial player character; this is compulsory */
-    initialPlayerChar = me
-;
-
-
-/* The starting location; this can be called anything you like */
-
-beforeCottage: Room 'In front of a Cottage'
-    "You stand outside a cottage. The forest stretches east. "
-    
-    east = forest
-;
-
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */
-
-+ me: Thing 'you;;heidi'   
-    isFixed = true    
-    proper = true
-    ownsContents = true
-    person = 2   
-    contType = Carrier    
-    bulkCapacity = 1
-;
+    gameMain: GameMainDef
+        /* Define the initial player character; this is compulsory */
+        initialPlayerChar = me
+    ;
 
 
-forest: Room 'Deep in the forest'
-    "Through the dense foliage, you glimpse a building to the west. A track
-    heads to the northeast. "
-    
-    west = beforeCottage
-    northeast = clearing
-;
+    /* The starting location; this can be called anything you like */
 
-+ bird: Thing 'baby bird;;nestling'
-    "Too young to fly, the nestling tweets helplessly. "
-    
-    bulk = 1
-;
+    beforeCottage: Room 'In front of a Cottage'
+        "You stand outside a cottage. The forest stretches east. "
+        
+        east = forest
+    ;
 
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 
-clearing: Room 'A forest clearing'
-    "A tall sycamore stands in the middle of this clearing. The path winds
-    southwest through the trees. "
-    
-    southwest = forest
-    up = topOfTree
-;
-
-+ nest: Thing 'bird\'s nest; carefully woven; moss twigs'
-    "The nest is carefully woven of twigs and moss. "
-    
-    contType = In   
-    bulk = 1
-;
+    + me: Thing 'you;;heidi'   
+        isFixed = true    
+        proper = true
+        ownsContents = true
+        person = 2   
+        contType = Carrier    
+        bulkCapacity = 1
+    ;
 
 
-+ tree: Thing 'tall sycamore tree;;stout proud'     
-    "Standing proud in the middle of the clearing, the stout tree looks easy to
-    climb."
-    
-    isFixed = true
-;
+    forest: Room 'Deep in the forest'
+        "Through the dense foliage, you glimpse a building to the west. A track
+        heads to the northeast. "
+        
+        west = beforeCottage
+        northeast = clearing
+    ;
 
-topOfTree: Room 'At the top of the tree'
-    "You cling precariously to the trunk. "
-    
-    down = clearing
-;
+    + bird: Thing 'baby bird;;nestling'
+        "Too young to fly, the nestling tweets helplessly. "
+        
+        bulk = 1
+    ;
 
-+ branch: Thing 'wide firm bough; flat; branch'
-    "It's flat enough to support a small object. "
-    
-    iFixed = true
-    isListed = true
-    contType = On
-    
-    afterAction()
-    {
-        if(nest.isIn(self))
-            finishGameMsg(ftVictory, [finishOptionUndo]);
-    }
-; `
+
+    clearing: Room 'A forest clearing'
+        "A tall sycamore stands in the middle of this clearing. The path winds
+        southwest through the trees. "
+        
+        southwest = forest
+        up = topOfTree
+    ;
+
+    + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
+        "The nest is carefully woven of twigs and moss. "
+        
+        contType = In   
+        bulk = 1
+    ;
+
+
+    + tree: Thing 'tall sycamore tree;;stout proud'     
+        "Standing proud in the middle of the clearing, the stout tree looks easy to
+        climb."
+        
+        isFixed = true
+    ;
+
+    topOfTree: Room 'At the top of the tree'
+        "You cling precariously to the trunk. "
+        
+        down = clearing
+    ;
+
+    + branch: Thing 'wide firm bough; flat; branch'
+        "It's flat enough to support a small object. "
+        
+        iFixed = true
+        isListed = true
+        contType = On
+        
+        afterAction()
+        {
+            if(nest.isIn(self))
+                finishGameMsg(ftVictory, [finishOptionUndo]);
+        }
+    ;
 </code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Finishing Touches  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Finishing Touches<br />
 <span class="navnp"><a href="tree.html" class="nav"><em>Prev:</em> Adding the Tree and the
 Branch</a>    
 <a href="reviewing.html" class="nav"><em>Next:</em> Reviewing the
-Basics</a>     </span>
+Basics</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

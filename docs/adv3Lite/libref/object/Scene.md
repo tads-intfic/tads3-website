@@ -76,7 +76,7 @@ Modifications to Scene for the SCENETOPIC EXTENSION
 
 
 
-[`endedAt`](#endedAt)[`endsWhen`](#endsWhen)[`hasHappened`](#hasHappened)[`howEnded`](#howEnded)[`isHappening`](#isHappening)[`notifySingleActor`](#notifySingleActor)[`recurring`](#recurring)[`startedAt`](#startedAt)[`startsWhen`](#startsWhen)[`timesHappened`](#timesHappened)
+[`endedAt`](#endedAt) [`endsWhen`](#endsWhen) [`hasHappened`](#hasHappened) [`howEnded`](#howEnded) [`isHappening`](#isHappening) [`notifySingleActor`](#notifySingleActor) [`recurring`](#recurring) [`startedAt`](#startedAt) [`startsWhen`](#startsWhen) [`timesHappened`](#timesHappened)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Modifications to Scene for the SCENETOPIC EXTENSION
 
 
 
-[`afterAction`](#afterAction)[`beforeAction`](#beforeAction)[`eachTurn`](#eachTurn)[`end`](#end)[`notifyActors`](#notifyActors)[`start`](#start)[`whenEnding`](#whenEnding)[`whenStarting`](#whenStarting)
+[`afterAction`](#afterAction) [`beforeAction`](#beforeAction) [`eachTurn`](#eachTurn) [`end`](#end) [`notifyActors`](#notifyActors) [`start`](#start) [`whenEnding`](#whenEnding) [`whenStarting`](#whenStarting)
 
 <span id="_Properties_"></span>
 

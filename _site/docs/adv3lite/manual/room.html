@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Rooms and
-Regions  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Rooms and
+Regions<br />
 <span class="navnp"><a href="thing.html" class="nav"><em>Prev:</em>Things</a>
    
 <a href="roomdesc.html" class="nav"><em>Next:</em> Room Descriptions</a>
-    </span>
-
-</div>
+    </span></p>
 
 <p><span id="rooms"></span></p>
 
@@ -74,26 +66,24 @@ that’s displayed in bold at the start of a room description), its
 <strong>vocab</strong>. The normal way to define these properties is through the Room
 template. Without the vocab property this looks like this:</p>
 
-<p>`
-    kitchen: Room ‘Kitchen’ 
-        “This kitchen is equipped much as you’d expect, with, for example, a sink
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    kitchen: Room 'Kitchen' 
+        "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
-        are west to the hall, north to the dining-room and down to the cellar. “
+        are west to the hall, north to the dining-room and down to the cellar. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>If the vocab property is defined, it is given in a second single-quoted
 string, thus:</p>
 
-<p>`
-    kitchen: Room ‘Kitchen’ ‘kitchen’ 
-        “This kitchen is equipped much as you’d expect, with, for example, a sink
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    kitchen: Room 'Kitchen' 'kitchen' 
+        "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
-        are west to the hall, north to the dining-room and down to the cellar. “
+        are west to the hall, north to the dining-room and down to the cellar. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>There are a couple of advantages to defining the vocab property on a
 Room:</p>
@@ -146,12 +136,11 @@ any reason you want to change this format you can do so by modifying the
 of the room) to be displayed in bold italics each time, you could
 override roomnameStyleTag thus:</p>
 
-<p>`
-    modify roomnameStyleTag
-        openText = ‘\n<b><i>’
-        closeText = ‘</i></b>\n’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify roomnameStyleTag
+        openText = '\n&lt;b&gt;&lt;i&gt;'
+        closeText = '&lt;/i&gt;&lt;/b&gt;\n'
     ;
-`</p>
+</code></pre></div></div>
 
 <p>You could also use &lt;FONT&gt; tags here for other effects, for example
 specifying a particular colour, but this needs to be done with caution,
@@ -161,12 +150,11 @@ text on a blue background. On the other hand, there’s no reason why you
 shouldn’t use a &lt;FONT&gt; tag to change the <em>size</em> of the room name if
 you so wished, for example:</p>
 
-<p>`
-    modify roomnameStyleTag
-        openText = ‘\n<b>&lt;FONT SIZE=+2&gt;’
-        closeText = ‘&lt;/FONT&gt;</b>\n’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify roomnameStyleTag
+        openText = '\n&lt;b&gt;&lt;FONT SIZE=+2&gt;'
+        closeText = '&lt;/FONT&gt;&lt;/b&gt;\n'
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Incidentally, there’s also a <strong>roomdescStyleTag</strong> that can be used in a
 similar way to format the long description of a room (but not the
@@ -237,20 +225,19 @@ method that simply displays a string is equivalent to an adv3
 FakeConnector (which is likewise not defined in the adv3Lite library).
 For example:</p>
 
-<p>`
-    kitchen: Room ‘Kitchen’ ‘kitchen’ 
-        “This kitchen is equipped much as you’d expect, with, for example, a sink
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    kitchen: Room 'Kitchen' 'kitchen' 
+        "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
-        are west to the hall, north to the dining-room and down to the cellar. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    north = diningRoom
-    east = backDoor
-    west = hall
-    down = cellar
-    south = "Unfortunately, you can't simply walk through the window, and you have no means of opening it. "
-    southwest { "You have no reason to visit the pantry. "; }
-; `
+        are west to the hall, north to the dining-room and down to the cellar. "
+        
+        north = diningRoom
+        east = backDoor
+        west = hall
+        down = cellar
+        south = "Unfortunately, you can't simply walk through the window, and you have no means of opening it. "
+        southwest { "You have no reason to visit the pantry. "; }
+    ;
 </code></pre></div></div>
 
 <p>This illustrates what is probably likely to be the most common use of a
@@ -333,17 +320,16 @@ the player character to travel via the nornoreast property of the
 current room when the player entered the command NORNOREAST or NNE. You
 would just need to do this:</p>
 
-<p>`
-    nornoreastDir: CompassDirection
-        name = ‘nornoreast’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    nornoreastDir: CompassDirection
+        name = 'nornoreast'
         dirProp = &amp;nornoreast
         sortingOrder = 1450
         opposite = sousouwestDir //assuming you were also defining a sousouwest direction
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grammar directionName(nornoreast): 'nornoreast' | 'nne' : Production
-    dir = nornoreastDir
-; `
+    grammar directionName(nornoreast): 'nornoreast' | 'nne' : Production
+        dir = nornoreastDir
+    ;
 </code></pre></div></div>
 
 <p>With these two definitions, you could then used nornoreast just like any
@@ -538,31 +524,29 @@ you do. To include a Room in a Region, simply list that Region in the
 Room’s region property and create a corresponding Region object, for
 example:</p>
 
-<p>`
-    kitchen: Room ‘Kitchen’ ‘kitchen’ 
-        “This kitchen is equipped much as you’d expect, with, for example, a sink
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    kitchen: Room 'Kitchen' 'kitchen' 
+        "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
-        are west to the hall, north to the dining-room and down to the cellar. “</p>
+        are west to the hall, north to the dining-room and down to the cellar. "
+        
+        regions = [downstairs]
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    regions = [downstairs]
-;
-
-downstairs: Region
-; `
+    downstairs: Region
+    ;
 </code></pre></div></div>
 
 <p>Regions can themselves be included within other regions by setting their
 regions property. For example, to place the downstairs Region entirely
 within the indoors Region we could write:</p>
 
-<p>`
-    downstairs: Region
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    downstairs: Region
       regions = [indoors]
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>indoors: Region
-; `
+    indoors: Region
+    ;
 </code></pre></div></div>
 
 <p>It is also perfectly legal to define the regions property of Rooms in
@@ -670,17 +654,16 @@ actually executed. If you want something to take place immediately after
 the traveler enters a region one way to do it would be to set a
 zero-length fuse in the travelerEntering() method, e.g.:</p>
 
-<p>`
-    planeRegion: Region
-        travelerLeaving(traveler, dest) { “You’re about to leave the plane. “; }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    planeRegion: Region
+        travelerLeaving(traveler, dest) { "You're about to leave the plane. "; }
         travelerEntering(traveler, origin) 
         { 
-            “You’re about to enter the plane. “;
+            "You're about to enter the plane. ";
             new Fuse(self, &amp;edesc, 0);
         }
-        edesc = “You’ve just boarded the plane. “
+        edesc = "You've just boarded the plane. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>One further point: several of the properties on which the Region
 mechanisms depend are set up by the library at the preinitialization
@@ -710,13 +693,12 @@ mixture of the two.</p>
 <p>The <code class="language-plaintext highlighter-rouge">rooms</code> property of a Region can be
 specified via a template, thus:</p>
 
-<p>`
-     downstairsRegion: Region
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     downstairsRegion: Region
        [hall, kitchen, study, lounge]
        regions = [indoorRegion]
-    ;</p>
-
-<p>`</p>
+    ;
+     
+</code></pre></div></div>
 
 <p>In this example, note how putting one Region inside another must still
 be done via the enclosed Region’s <code class="language-plaintext highlighter-rouge">regions</code>
@@ -731,18 +713,15 @@ defining the same relationship.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Rooms and
-Regions  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Rooms and
+Regions<br />
 <span class="navnp"><a href="thing.html" class="nav"><em>Prev:</em> Things</a>
    
 <a href="roomdesc.html" class="nav"><em>Next:</em> Room Descriptions</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

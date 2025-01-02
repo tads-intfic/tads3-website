@@ -83,7 +83,7 @@ phrases.
 
 
 
-[`isObjPronoun`](#isObjPronoun)[`objNameObj`](#objNameObj)[`setPronounObj`](#setPronounObj)
+[`isObjPronoun`](#isObjPronoun) [`objNameObj`](#objNameObj) [`setPronounObj`](#setPronounObj)
 
 <span id="_Properties_"></span>
 

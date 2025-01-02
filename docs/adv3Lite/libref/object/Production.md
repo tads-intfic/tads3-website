@@ -551,7 +551,7 @@ though, we'll treat the next clause as a sentence opener again.
 
 
 
-[`determiner`](#determiner)[`nounPhraseRole`](#nounPhraseRole)[`npClass`](#npClass)[`parent`](#parent)
+[`determiner`](#determiner) [`nounPhraseRole`](#nounPhraseRole) [`npClass`](#npClass) [`parent`](#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -561,7 +561,7 @@ though, we'll treat the next clause as a sentence opener again.
 
 
 
-[`addNounListItem`](#addNounListItem)[`build`](#build)[`findAction`](#findAction)[`findChild`](#findChild)[`findParent`](#findParent)[`getNounPhraseRole`](#getNounPhraseRole)[`getText`](#getText)[`getTokens`](#getTokens)[`grammarInfoForBuild`](#grammarInfoForBuild)[`isChildOf`](#isChildOf)[`noteEndOfSentence`](#noteEndOfSentence)[`visitLiteral`](#visitLiteral)[`visitProd`](#visitProd)
+[`addNounListItem`](#addNounListItem) [`build`](#build) [`findAction`](#findAction) [`findChild`](#findChild) [`findParent`](#findParent) [`getNounPhraseRole`](#getNounPhraseRole) [`getText`](#getText) [`getTokens`](#getTokens) [`grammarInfoForBuild`](#grammarInfoForBuild) [`isChildOf`](#isChildOf) [`noteEndOfSentence`](#noteEndOfSentence) [`visitLiteral`](#visitLiteral) [`visitProd`](#visitProd)
 
 <span id="_Properties_"></span>
 

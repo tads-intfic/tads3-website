@@ -19,7 +19,7 @@ Adv3Lite Bookshelf
 class="book" /></a>
 
 <a href="t3QuickStart.html" class="title" target="_blank"
-data-"="">Adv3Lite Quick Start Guide</a>  
+>Adv3Lite Quick Start Guide</a>  
 by Eric Eve
 
 This brief guide is probably the best place to start for newcomers to

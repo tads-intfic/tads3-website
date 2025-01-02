@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="reviewing.html" class="nav">Reviewing the Basics</a> \&gt; Object
-Definitions  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> &gt; Object
+Definitions<br />
 <span class="navnp"><a href="reviewing.html" class="nav"><em>Prev:</em> Reviewing the
 Basics</a>    
 <a href="containment.html" class="nav"><em>Next:</em> Object
-Containment</a>     </span>
-
-</div>
+Containment</a>     </span></p>
 
 <h1 id="object-definitions">Object Definitions</h1>
 
@@ -114,47 +106,44 @@ and referred to in your program code) followed by a colon followed by
 the class to which it belongs, or by a list of the classes to which it
 belong, for example:</p>
 
-<p>`
-    redBall: Thing</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stoneAltar: Surface, Fixture `
+    stoneAltar: Surface, Fixture
 </code></pre></div></div>
 
 <p>The body of the object definition then consists of zero or more property
 definitions plus zero or more method definitions, either terminated by a
 semicolon or enclosed in curly braces. For example:</p>
 
-<p>`
-    redBall: Thing
-       vocab = ‘red ball;; round’
-       desc = “It’s just a round red ball. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bounces = 0
-   
-   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      bounces = bounces + 1;
-   }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
+       vocab = 'red ball;; round'
+       desc = "It's just a round red ball. "
+       
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          bounces = bounces + 1;
+       }
+    ;
 </code></pre></div></div>
 
 <p>Or equivalently:</p>
 
-<p>`
-    redBall: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
     {
-       vocab = ‘red ball;; round’
-       desc = “It’s just a round red ball. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bounces = 0
-   
-   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      bounces = bounces + 1;
-   }
-} `
+       vocab = 'red ball;; round'
+       desc = "It's just a round red ball. "
+       
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          bounces = bounces + 1;
+       }
+    }
 </code></pre></div></div>
 
 <p>In what follows we shall normally use the first of these forms (with the
@@ -184,19 +173,17 @@ definition:</p>
 
 <p>For example:</p>
 
-<p>`
-        isListed = (!isFixed)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    momentum = (mass * velocity) `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        isListed = (!isFixed)    
+        
+        momentum = (mass * velocity)
 </code></pre></div></div>
 
 <p>These definitions are equivalent to:</p>
 
-<p>`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
+      isListed()  { return !isFixed; }
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  isListed()  { return !isFixed; }
-
-  momentum()  { return mass * velocity; }   `
+      momentum()  { return mass * velocity; }  
 </code></pre></div></div>
 
 <p>Don’t worry if you don’t fully understand what these methods mean yet;
@@ -210,9 +197,8 @@ list and the terminating semi-colon (or braces). The following is a
 perfectly legal (though almost certainly pointless and useless) object
 definition:</p>
 
-<p>`
-    Thing;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Thing;
+</code></pre></div></div>
 
 <p>This creates an anonymous object of class
 <code class="language-plaintext highlighter-rouge">Thing</code> with all the default methods and
@@ -236,9 +222,8 @@ for now).</p>
 
 <p>The template for the <em>Thing</em> class is basically:</p>
 
-<p>`
-       ‘vocab’ @location? “desc”?
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       'vocab' @location? "desc"?
+</code></pre></div></div>
 
 <p>The question-mark denotes an optional element. This means that when
 we’re defining a Thing and we’re using its template, the first property
@@ -253,52 +238,49 @@ wish). Thus, using the Thing template we could define the redBall object
 used as an example above in any of the three following (functionally
 equivalent) ways:</p>
 
-<p>`
-    redBall: Thing’red ball;; round’
-       “It’s just a round red ball. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bounces = 0
-   
-   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      bounces = bounces + 1;
-   }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing'red ball;; round'
+       "It's just a round red ball. "
+       
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          bounces = bounces + 1;
+       }
+    ;
 </code></pre></div></div>
 
 <p>Or equivalently:</p>
 
-<p>`
-    redBall: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
     {
-       ‘red ball;; round’
-       “It’s just a round red ball. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bounces = 0
-   
-   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      bounces = bounces + 1;
-   }
-} `
+       'red ball;; round'
+       "It's just a round red ball. "
+       
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          bounces = bounces + 1;
+       }
+    }
 </code></pre></div></div>
 
 <p>Or equivalently:</p>
 
-<p>`
-    redBall: Thing ‘red ball;; round’
-     “It’s just a round red ball. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;; round'
+     "It's just a round red ball. "
      {
-       bounces = 0</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      bounces = bounces + 1;
-   }
-} `
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          bounces = bounces + 1;
+       }
+    }
 </code></pre></div></div>
 
 <p>In other words, if we define an object using the brace notation along
@@ -309,19 +291,17 @@ however, we shall mainly stick to the first of the three forms above
 
 <p>We’ve already met the Room template in the form:</p>
 
-<p>`
-    ‘roomTitle’ “desc”?;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'roomTitle' "desc"?;
+</code></pre></div></div>
 
 <p>So for example, we can define the starting location of The Adventures of
 Heidi like this:</p>
 
-<p>`
-    beforeCottage: Room ‘In front of a Cottage’
-        “You stand outside a cottage. The forest stretches east. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = forest
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 'In front of a Cottage'
+        "You stand outside a cottage. The forest stretches east. "
+        
+        east = forest
+    ;
 </code></pre></div></div>
 
 <p>Here, ‘In front of a Cottage’ is thus the
@@ -330,19 +310,17 @@ stand outside a cottage. The forest stretches east. “ is its desc
 property. There’s also a second form of the Room template which looks
 like this:</p>
 
-<p>`
-    ‘roomTitle’ ‘vocab’ “desc”?;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'roomTitle' 'vocab' "desc"?;
+</code></pre></div></div>
 
 <p>Which would allow us to define the vocab property of a Room as well, for
 example:</p>
 
-<p>`
-    beforeCottage: Room ‘In front of a Cottage’ ‘front of the cottage’
-        “You stand outside a cottage. The forest stretches east. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = forest
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 'In front of a Cottage' 'front of the cottage'
+        "You stand outside a cottage. The forest stretches east. "
+        
+        east = forest
+    ;
 </code></pre></div></div>
 
 <p>This would give the beforeCottage room a display name (note, this is
@@ -377,34 +355,32 @@ that case, there’s no need to qualify the method or property name, since
 the compiler will assume that we’re talking about the same object.
 That’s why we can write:</p>
 
-<p>`
-    redBall: Thing ‘red ball;; round’
-       “It’s just a round red ball. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bounces = 0
-   
-   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      bounces = bounces + 1;
-   }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;; round'
+       "It's just a round red ball. "
+       
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          bounces = bounces + 1;
+       }
+    ;
 </code></pre></div></div>
 
 <p>Rather than:</p>
 
-<p>`
-    redBall: Thing ‘red ball;; round’
-       “It’s just a round red ball. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bounces = 0
-   
-   doBounce()
-   {
-      "The red ball bounces back up when you drop it. ";
-      redBall.bounces = redBall.bounces + 1; //There's no need for this!
-   }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;; round'
+       "It's just a round red ball. "
+       
+       bounces = 0
+       
+       doBounce()
+       {
+          "The red ball bounces back up when you drop it. ";
+          redBall.bounces = redBall.bounces + 1; //There's no need for this!
+       }
+    ;
 </code></pre></div></div>
 
 <p>Indeed, in this kind of case, the second form is best avoided.</p>
@@ -414,19 +390,18 @@ should use the special keyword <code class="language-plaintext highlighter-rouge
 example, if the nest needed to test whether the bird was inside it we
 might write:</p>
 
-<p>`
-    + nest: Thing ‘bird's nest; carefully woven; moss twigs’
-        “The nest is carefully woven of twigs and moss. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    contType = In   
-    bulk = 1
-    
-    afterAction()
-    {
-       if(bird.isIn(self))
-         /* do something appropriate here */
-    }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
+        "The nest is carefully woven of twigs and moss. "
+        
+        contType = In   
+        bulk = 1
+        
+        afterAction()
+        {
+           if(bird.isIn(self))
+             /* do something appropriate here */
+        }
+    ;
 </code></pre></div></div>
 
 <h2 id="class-definitions">Class Definitions</h2>
@@ -446,14 +421,13 @@ wanted to put things in and on we could have created custom classes for
 the purpose (though in practice most class definitions would probably be
 more complex than this):</p>
 
-<p>`
-    class Surface: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Surface: Thing
        contType = On
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Container: Thing
-   contType = In
-;    `
+    class Container: Thing
+       contType = In
+    ;   
 </code></pre></div></div>
 
 <p>This would make a Surface just like a Thing except that you could put
@@ -461,28 +435,27 @@ things on it, and a Container just like a Thing except that you could
 put things in it. We could then have defined the nest and the branch
 thus:</p>
 
-<p>`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
+    + nest: Container 'bird\'s nest; carefully woven; moss twigs'
+        "The nest is carefully woven of twigs and moss. "
+               
+        bulk = 1
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ nest: Container 'bird\'s nest; carefully woven; moss twigs'
-    "The nest is carefully woven of twigs and moss. "
-           
-    bulk = 1
-;
+    ...
 
-...
-
-+ branch: Surface 'wide firm bough; flat; branch'
-    "It's flat enough to support a small object. "
+    + branch: Surface 'wide firm bough; flat; branch'
+        "It's flat enough to support a small object. "
+            
+        isListed = true
+        contType = On
         
-    isListed = true
-    contType = On
-    
-    afterAction()
-    {
-        if(nest.isIn(self))
-            finishGameMsg(ftVictory, [finishOptionUndo]);
-    }
-;    `
+        afterAction()
+        {
+            if(nest.isIn(self))
+                finishGameMsg(ftVictory, [finishOptionUndo]);
+        }
+    ;   
 </code></pre></div></div>
 
 <p>In fact, we could have done this anyway, since the adv3Lite already
@@ -496,22 +469,21 @@ and tables and shelves) often aren’t portable. We might then feel it
 useful to define a FixedSurface class which we could define in a number
 of ways:</p>
 
-<p>`
-    class FixedSurface: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class FixedSurface: Thing
        isFixed = true
        contType = On
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class FixedSurface: Surface
-   isFixed = true
-;
+    class FixedSurface: Surface
+       isFixed = true
+    ;
 
-class Fixture: Thing
-   isFixed =  true
-;
+    class Fixture: Thing
+       isFixed =  true
+    ;
 
-class FixedSurface: Fixture, Surface
-; `
+    class FixedSurface: Fixture, Surface
+    ;
 </code></pre></div></div>
 
 <p>Of these, the last is probably the best (given that the adv3Lite library
@@ -540,18 +512,15 @@ information on objects, that’s the place to go.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="reviewing.html" class="nav">Reviewing the Basics</a> \&gt; Object
-Definitions  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> &gt; Object
+Definitions<br />
 <span class="navnp"><a href="reviewing.html" class="nav"><em>Prev:</em> Reviewing the
 Basics</a>    
 <a href="containment.html" class="nav"><em>Next:</em> Object
-Containment</a>     </span>
+Containment</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

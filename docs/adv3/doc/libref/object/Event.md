@@ -76,10 +76,10 @@ Base class for fuses and daemons
 
 
 
-[`eventOrder`](#eventOrder)[`isPromptDaemon`](#isPromptDaemon)[`nextRunTime`](#nextRunTime)
+[`eventOrder`](#eventOrder) [`isPromptDaemon`](#isPromptDaemon) [`nextRunTime`](#nextRunTime)
 
 Inherited from `BasicEvent` :  
-[`obj_`](../object/BasicEvent.html#obj_)[`prop_`](../object/BasicEvent.html#prop_)[`sense_`](../object/BasicEvent.html#sense_)[`source_`](../object/BasicEvent.html#source_)
+[`obj_`](../object/BasicEvent.html#obj_) [`prop_`](../object/BasicEvent.html#prop_) [`sense_`](../object/BasicEvent.html#sense_) [`source_`](../object/BasicEvent.html#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,10 +89,10 @@ Inherited from `BasicEvent` :
 
 
 
-[`construct`](#construct)[`delayEvent`](#delayEvent)[`getNextRunTime`](#getNextRunTime)[`removeEvent`](#removeEvent)
+[`construct`](#construct) [`delayEvent`](#delayEvent) [`getNextRunTime`](#getNextRunTime) [`removeEvent`](#removeEvent)
 
 Inherited from `BasicEvent` :  
-[`callMethod`](../object/BasicEvent.html#callMethod)[`eventMatches`](../object/BasicEvent.html#eventMatches)[`executeEvent`](../object/BasicEvent.html#executeEvent)
+[`callMethod`](../object/BasicEvent.html#callMethod) [`eventMatches`](../object/BasicEvent.html#eventMatches) [`executeEvent`](../object/BasicEvent.html#executeEvent)
 
 <span id="_Properties_"></span>
 

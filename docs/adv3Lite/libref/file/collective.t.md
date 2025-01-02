@@ -31,7 +31,7 @@ COLLECTIVE EXTENSION
 
 
 
-[`Collective`](../object/Collective.html)[`DispensingCollective`](../object/DispensingCollective.html)
+[`Collective`](../object/Collective.html) [`DispensingCollective`](../object/DispensingCollective.html)
 <span id="_ObjectSummary_"></span>
 
 

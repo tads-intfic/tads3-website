@@ -84,7 +84,7 @@ specific objects.
 
 
 
-[`canPushedObjectPass`](#canPushedObjectPass)[`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
+[`canPushedObjectPass`](#canPushedObjectPass) [`canTravelerPass`](#canTravelerPass) [`explainTravelBarrier`](#explainTravelBarrier)
 
 
 

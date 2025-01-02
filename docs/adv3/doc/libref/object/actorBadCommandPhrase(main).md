@@ -63,13 +63,13 @@ messages for the rest of the command.
 
 
 Inherited from `CommandProdWithActor` :  
-[`resolvedActor_`](../object/CommandProdWithActor.html#resolvedActor_)[`resolver_`](../object/CommandProdWithActor.html#resolver_)
+[`resolvedActor_`](../object/CommandProdWithActor.html#resolvedActor_) [`resolver_`](../object/CommandProdWithActor.html#resolver_)
 
 Inherited from `CommandProd` :  
 [`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 
 
@@ -90,15 +90,15 @@ Inherited from `BasicProd` :
 
 
 Inherited from `CommandProdWithActor` :  
-[`execActorPhrase`](../object/CommandProdWithActor.html#execActorPhrase)[`getActorPhrase`](../object/CommandProdWithActor.html#getActorPhrase)[`getResolver`](../object/CommandProdWithActor.html#getResolver)[`getTargetActor`](../object/CommandProdWithActor.html#getTargetActor)[`hasTargetActor`](../object/CommandProdWithActor.html#hasTargetActor)
+[`execActorPhrase`](../object/CommandProdWithActor.html#execActorPhrase) [`getActorPhrase`](../object/CommandProdWithActor.html#getActorPhrase) [`getResolver`](../object/CommandProdWithActor.html#getResolver) [`getTargetActor`](../object/CommandProdWithActor.html#getTargetActor) [`hasTargetActor`](../object/CommandProdWithActor.html#hasTargetActor)
 
 
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `FirstCommandProd` :  
-[`countCommands`](../object/FirstCommandProd.html#countCommands)[`getCommandSepIndex`](../object/FirstCommandProd.html#getCommandSepIndex)[`getCommandTokens`](../object/FirstCommandProd.html#getCommandTokens)[`getNextCommandIndex`](../object/FirstCommandProd.html#getNextCommandIndex)[`isEndOfSentence`](../object/FirstCommandProd.html#isEndOfSentence)[`resolveFirstAction`](../object/FirstCommandProd.html#resolveFirstAction)
+[`countCommands`](../object/FirstCommandProd.html#countCommands) [`getCommandSepIndex`](../object/FirstCommandProd.html#getCommandSepIndex) [`getCommandTokens`](../object/FirstCommandProd.html#getCommandTokens) [`getNextCommandIndex`](../object/FirstCommandProd.html#getNextCommandIndex) [`isEndOfSentence`](../object/FirstCommandProd.html#isEndOfSentence) [`resolveFirstAction`](../object/FirstCommandProd.html#resolveFirstAction)
 
 
 

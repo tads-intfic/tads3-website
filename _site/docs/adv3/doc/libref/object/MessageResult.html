@@ -46,32 +46,20 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Result message object. This is used for verification results and main
+command reports, which must keep track of messages to display.</p>
 
-Result message object. This is used for verification results and main
-command reports, which must keep track of messages to display.
-
-`class `**`MessageResult`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MessageResult</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MessageResult</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MessageResult</code></strong><br />
 <a href="../object/CommandReportMessage.html"><code class="language-plaintext highlighter-rouge">CommandReportMessage</code></a><br />
@@ -96,39 +84,23 @@ command reports, which must keep track of messages to display.
 <a href="../object/NonObviousVerifyResult.html"><code class="language-plaintext highlighter-rouge">NonObviousVerifyResult</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a><a href="#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
+<p><a href="#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a> <a href="#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a><a href="#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a><a href="#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a> <a href="#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a> <a href="#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="messageProp_"></span></p>
 
@@ -136,11 +108,7 @@ command reports, which must keep track of messages to display.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1850">1850</a>]</p>
 
-<div class="desc">
-
-the message property, if we have one
-
-</div>
+<p>the message property, if we have one</p>
 
 <p><span id="messageText_"></span></p>
 
@@ -148,19 +116,11 @@ the message property, if we have one
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1847">1847</a>]</p>
 
-<div class="desc">
-
-the text of our result message
-
-</div>
+<p>the text of our result message</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -168,14 +128,10 @@ the text of our result message
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1585">1585</a>]</p>
 
-<div class="desc">
-
-Construct given literal message text, or alternatively a property of the
-current actor's verb messages object. In either case, we'll expand the
+<p>Construct given literal message text, or alternatively a property of the
+current actor’s verb messages object. In either case, we’ll expand the
 message immediately to allow the message to be displayed later with any
-parameters fixed at the time the message is constructed.
-
-</div>
+parameters fixed at the time the message is constructed.</p>
 
 <p><span id="resolveMessageText"></span></p>
 
@@ -183,13 +139,9 @@ parameters fixed at the time the message is constructed.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1620">1620</a>]</p>
 
-<div class="desc">
-
-Static method: resolve a message. If the message is given as a property,
-we'll look up the message in the given source objects and in the actor's
-"action messages" object. We'll return the resolved message string.
-
-</div>
+<p>Static method: resolve a message. If the message is given as a property,
+we’ll look up the message in the given source objects and in the actor’s
+“action messages” object. We’ll return the resolved message string.</p>
 
 <p><span id="setMessage"></span></p>
 
@@ -197,12 +149,8 @@ we'll look up the message in the given source objects and in the actor's
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1831">1831</a>]</p>
 
-<div class="desc">
-
-set a new message, given the same type of information as we'd use to
-construct the object
-
-</div>
+<p>set a new message, given the same type of information as we’d use to
+construct the object</p>
 
 <p><span id="showMessage"></span></p>
 
@@ -210,18 +158,11 @@ construct the object
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1840">1840</a>]</p>
 
-<div class="desc">
+<p>Display a message describing why the command isn’t allowed.</p>
 
-Display a message describing why the command isn't allowed.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

@@ -78,7 +78,7 @@ directly.
 
 
 
-[`isEquivalent`](#isEquivalent)[`miParent`](#miParent)
+[`isEquivalent`](#isEquivalent) [`miParent`](#miParent)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,7 +88,7 @@ directly.
 
 
 
-[`baseMoveInto`](#baseMoveInto)[`construct`](#construct)
+[`baseMoveInto`](#baseMoveInto) [`construct`](#construct)
 
 <span id="_Properties_"></span>
 

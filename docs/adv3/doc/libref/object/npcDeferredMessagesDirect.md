@@ -89,7 +89,7 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 
 
-[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingObject`](#askMissingObject)[`commandNotUnderstood`](#commandNotUnderstood)[`emptyNounPhrase`](#emptyNounPhrase)[`insufficientQuantity`](#insufficientQuantity)[`noMatchCannotSee`](#noMatchCannotSee)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchNotAware`](#noMatchNotAware)[`singleObjectRequired`](#singleObjectRequired)[`uniqueObjectRequired`](#uniqueObjectRequired)[`wordIsUnknown`](#wordIsUnknown)[`zeroQuantity`](#zeroQuantity)
+[`ambiguousNounPhrase`](#ambiguousNounPhrase) [`askMissingObject`](#askMissingObject) [`commandNotUnderstood`](#commandNotUnderstood) [`emptyNounPhrase`](#emptyNounPhrase) [`insufficientQuantity`](#insufficientQuantity) [`noMatchCannotSee`](#noMatchCannotSee) [`noMatchForAll`](#noMatchForAll) [`noMatchForAllBut`](#noMatchForAllBut) [`noMatchNotAware`](#noMatchNotAware) [`singleObjectRequired`](#singleObjectRequired) [`uniqueObjectRequired`](#uniqueObjectRequired) [`wordIsUnknown`](#wordIsUnknown) [`zeroQuantity`](#zeroQuantity)
 
 
 

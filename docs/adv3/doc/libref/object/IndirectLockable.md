@@ -80,10 +80,10 @@ directly.
 
 
 
-[`cannotLockMsg`](#cannotLockMsg)[`cannotUnlockMsg`](#cannotUnlockMsg)[`lockStatusObvious`](#lockStatusObvious)
+[`cannotLockMsg`](#cannotLockMsg) [`cannotUnlockMsg`](#cannotUnlockMsg) [`lockStatusObvious`](#lockStatusObvious)
 
 Inherited from `Lockable` :  
-[`autoUnlockOnOpen`](../object/Lockable.html#autoUnlockOnOpen)[`initiallyLocked`](../object/Lockable.html#initiallyLocked)[`isLocked_`](../object/Lockable.html#isLocked_)[`lockedDesc`](../object/Lockable.html#lockedDesc)[`lockStatusReportable`](../object/Lockable.html#lockStatusReportable)
+[`autoUnlockOnOpen`](../object/Lockable.html#autoUnlockOnOpen) [`initiallyLocked`](../object/Lockable.html#initiallyLocked) [`isLocked_`](../object/Lockable.html#isLocked_) [`lockedDesc`](../object/Lockable.html#lockedDesc) [`lockStatusReportable`](../object/Lockable.html#lockStatusReportable)
 
 
 
@@ -95,10 +95,10 @@ Inherited from `Lockable` :
 
 
 
-[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))
+[`dobjFor(Lock)`](#dobjFor(Lock)) [`dobjFor(LockWith)`](#dobjFor(LockWith)) [`dobjFor(Unlock)`](#dobjFor(Unlock)) [`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))
 
 Inherited from `Lockable` :  
-[`dobjFor(Open)`](../object/Lockable.html#dobjFor(Open))[`examineStatus`](../object/Lockable.html#examineStatus)[`initializeThing`](../object/Lockable.html#initializeThing)[`isLocked`](../object/Lockable.html#isLocked)[`makeLocked`](../object/Lockable.html#makeLocked)
+[`dobjFor(Open)`](../object/Lockable.html#dobjFor(Open)) [`examineStatus`](../object/Lockable.html#examineStatus) [`initializeThing`](../object/Lockable.html#initializeThing) [`isLocked`](../object/Lockable.html#isLocked) [`makeLocked`](../object/Lockable.html#makeLocked)
 
 Inherited from `Linkable` :  
 [`masterObject`](../object/Linkable.html#masterObject)

@@ -100,10 +100,10 @@ isActive test.
 
 
 
-[`altTalkCount`](#altTalkCount)[`altTopicOrder`](#altTopicOrder)[`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)[`isConversational`](#isConversational)
+[`altTalkCount`](#altTalkCount) [`altTopicOrder`](#altTopicOrder) [`impliesGreeting`](#impliesGreeting) [`includeInList`](#includeInList) [`isConversational`](#isConversational)
 
 Inherited from `TopicEntry` :  
-[`altTopicList`](../object/TopicEntry.html#altTopicList)[`isActive`](../object/TopicEntry.html#isActive)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchScore`](../object/TopicEntry.html#matchScore)[`talkCount`](../object/TopicEntry.html#talkCount)[`topicGroupActive`](../object/TopicEntry.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment)[`topicResponse`](../object/TopicEntry.html#topicResponse)
+[`altTopicList`](../object/TopicEntry.html#altTopicList) [`isActive`](../object/TopicEntry.html#isActive) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchScore`](../object/TopicEntry.html#matchScore) [`talkCount`](../object/TopicEntry.html#talkCount) [`topicGroupActive`](../object/TopicEntry.html#topicGroupActive) [`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_MethodSummary_"></span>
 
@@ -113,10 +113,10 @@ Inherited from `TopicEntry` :
 
 
 
-[`checkIsActive`](#checkIsActive)[`initializeAltTopic`](#initializeAltTopic)[`isMatchPossible`](#isMatchPossible)[`matchPreParse`](#matchPreParse)[`matchTopic`](#matchTopic)[`noteInvocation`](#noteInvocation)[`setTopicPronouns`](#setTopicPronouns)
+[`checkIsActive`](#checkIsActive) [`initializeAltTopic`](#initializeAltTopic) [`isMatchPossible`](#isMatchPossible) [`matchPreParse`](#matchPreParse) [`matchTopic`](#matchTopic) [`noteInvocation`](#noteInvocation) [`setTopicPronouns`](#setTopicPronouns)
 
 Inherited from `TopicEntry` :  
-[`addAltTopic`](../object/TopicEntry.html#addAltTopic)[`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic)[`addTopic`](../object/TopicEntry.html#addTopic)[`adjustScore`](../object/TopicEntry.html#adjustScore)[`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive)[`breakTopicTie`](../object/TopicEntry.html#breakTopicTie)[`deferToEntry`](../object/TopicEntry.html#deferToEntry)[`getActor`](../object/TopicEntry.html#getActor)[`getTopicOwner`](../object/TopicEntry.html#getTopicOwner)[`handleTopic`](../object/TopicEntry.html#handleTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)
+[`addAltTopic`](../object/TopicEntry.html#addAltTopic) [`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic) [`addTopic`](../object/TopicEntry.html#addTopic) [`adjustScore`](../object/TopicEntry.html#adjustScore) [`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive) [`breakTopicTie`](../object/TopicEntry.html#breakTopicTie) [`deferToEntry`](../object/TopicEntry.html#deferToEntry) [`getActor`](../object/TopicEntry.html#getActor) [`getTopicOwner`](../object/TopicEntry.html#getTopicOwner) [`handleTopic`](../object/TopicEntry.html#handleTopic) [`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry) [`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)
 
 <span id="_Properties_"></span>
 

@@ -865,7 +865,7 @@ layout: docs
                  *   of the relation; try looking up the programatic name of the
                  *   relation in the global symbol table.
                  */
-                rel = t3GetGlobalSymbols()[literal];
+                rel = t3GetGlobalSymbols() [literal];
                 
                 /*   
                  *   If we didn't find anything, or what we found wasn't a Relation,

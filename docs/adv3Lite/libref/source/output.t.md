@@ -1110,7 +1110,7 @@ layout: docs
                 local afterStr;
                 
                 /* ask the formatter to translate it */
-                xlat = translateTag(rexGroup(1)[3]);
+                xlat = translateTag(rexGroup(1) [3]);
 
                 /* get the part of the string that follows the tag */
                 afterOfs = idx[1] + idx[2];
@@ -1312,7 +1312,7 @@ layout: docs
                     txt = txt.substr(match[1] + match[2]);
 
                     /* get the tag name */
-                    tag = rexGroup(1)[3];
+                    tag = rexGroup(1) [3];
                 }
 
                 /* process the plain text up to the tag, if any */

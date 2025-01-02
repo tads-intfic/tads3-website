@@ -47,7 +47,7 @@ SYMMETRICAL CONNECTOR (SYMCONN) EXTENSION
 
 
 
-[`byline`](#byline)[`htmlByline`](#htmlByline)[`name`](#name)[`version`](#version)
+[`byline`](#byline) [`htmlByline`](#htmlByline) [`name`](#name) [`version`](#version)
 
 Inherited from `ModuleID` :  
 [`listingOrder`](../object/ModuleID.html#listingOrder)
@@ -63,7 +63,7 @@ Inherited from `ModuleID` :
 
 
 Inherited from `ModuleID` :  
-[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showCredit`](../object/ModuleID.html#showCredit)[`showVersion`](../object/ModuleID.html#showVersion)[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
+[`getModuleList`](../object/ModuleID.html#getModuleList) [`showAbout`](../object/ModuleID.html#showAbout) [`showCredit`](../object/ModuleID.html#showCredit) [`showVersion`](../object/ModuleID.html#showVersion) [`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
 
 <span id="_Properties_"></span>
 

@@ -70,7 +70,7 @@ GrammarAltInfo object's gramTokens property has a list of these objects.
 
 
 
-[`gramTargetProp`](#gramTargetProp)[`gramTokenInfo`](#gramTokenInfo)[`gramTokenType`](#gramTokenType)
+[`gramTargetProp`](#gramTargetProp) [`gramTokenInfo`](#gramTokenInfo) [`gramTokenType`](#gramTokenType)
 
 <span id="_MethodSummary_"></span>
 

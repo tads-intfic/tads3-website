@@ -84,7 +84,7 @@ command's output).
 
 
 
-[`byline`](#byline)[`htmlByline`](#htmlByline)[`listingOrder`](#listingOrder)[`name`](#name)[`version`](#version)
+[`byline`](#byline) [`htmlByline`](#htmlByline) [`listingOrder`](#listingOrder) [`name`](#name) [`version`](#version)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,7 +94,7 @@ command's output).
 
 
 
-[`getModuleList`](#getModuleList)[`showAbout`](#showAbout)[`showCredit`](#showCredit)[`showVersion`](#showVersion)
+[`getModuleList`](#getModuleList) [`showAbout`](#showAbout) [`showCredit`](#showCredit) [`showVersion`](#showVersion)
 
 <span id="_Properties_"></span>
 

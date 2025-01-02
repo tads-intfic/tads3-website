@@ -62,7 +62,7 @@ event queue; the subclasses must define the specifics of event timing.
 
 
 
-[`eventManager`](../object/eventManager.html)[`realTimeManager`](../object/realTimeManager.html)
+[`eventManager`](../object/eventManager.html) [`realTimeManager`](../object/realTimeManager.html)
 <span id="_PropSummary_"></span>
 
 
@@ -81,7 +81,7 @@ event queue; the subclasses must define the specifics of event timing.
 
 
 
-[`addEvent`](#addEvent)[`removeCurrentEvent`](#removeCurrentEvent)[`removeEvent`](#removeEvent)[`removeMatchingEvents`](#removeMatchingEvents)
+[`addEvent`](#addEvent) [`removeCurrentEvent`](#removeCurrentEvent) [`removeEvent`](#removeEvent) [`removeMatchingEvents`](#removeMatchingEvents)
 
 <span id="_Properties_"></span>
 

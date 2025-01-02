@@ -251,7 +251,7 @@ layout: docs
                 /* If we have a list of dispensedObjs, select the next one. */
                 if(dispensedObjs)
                 {
-                    obj = valToList(dispensedObjs)[dispensedCount];            
+                    obj = valToList(dispensedObjs) [dispensedCount];            
                 }
                 /*  Otherwise create a new object of our dispensedClass class. */
                 else

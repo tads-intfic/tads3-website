@@ -55,7 +55,7 @@ object). Any actor-type object should define Carrier as its contType.
 
 
 Inherited from `LocType` :  
-[`intoPrep`](../object/LocType.html#intoPrep)[`listOrder`](../object/LocType.html#listOrder)
+[`intoPrep`](../object/LocType.html#intoPrep) [`listOrder`](../object/LocType.html#listOrder)
 
 <span id="_MethodSummary_"></span>
 

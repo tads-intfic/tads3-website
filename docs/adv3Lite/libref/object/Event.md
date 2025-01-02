@@ -71,7 +71,7 @@ subclasses rather than the Event class directly.
 
 
 
-[`actorSchedule`](../object/actorSchedule.html)[`sceneManager`](../object/sceneManager.html)
+[`actorSchedule`](../object/actorSchedule.html) [`sceneManager`](../object/sceneManager.html)
 <span id="_PropSummary_"></span>
 
 
@@ -80,7 +80,7 @@ subclasses rather than the Event class directly.
 
 
 
-[`captureText`](#captureText)[`eventOrder`](#eventOrder)[`executed`](#executed)[`interval_`](#interval_)[`isPromptDaemon`](#isPromptDaemon)[`nextRunTime`](#nextRunTime)[`obj_`](#obj_)[`prop_`](#prop_)[`senseObj_`](#senseObj_)[`senseProp_`](#senseProp_)
+[`captureText`](#captureText) [`eventOrder`](#eventOrder) [`executed`](#executed) [`interval_`](#interval_) [`isPromptDaemon`](#isPromptDaemon) [`nextRunTime`](#nextRunTime) [`obj_`](#obj_) [`prop_`](#prop_) [`senseObj_`](#senseObj_) [`senseProp_`](#senseProp_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ subclasses rather than the Event class directly.
 
 
 
-[`callMethod`](#callMethod)[`construct`](#construct)[`delayEvent`](#delayEvent)[`eventMatches`](#eventMatches)[`executeEvent`](#executeEvent)[`getNextRunTime`](#getNextRunTime)[`removeEvent`](#removeEvent)
+[`callMethod`](#callMethod) [`construct`](#construct) [`delayEvent`](#delayEvent) [`eventMatches`](#eventMatches) [`executeEvent`](#executeEvent) [`getNextRunTime`](#getNextRunTime) [`removeEvent`](#removeEvent)
 
 <span id="_Properties_"></span>
 

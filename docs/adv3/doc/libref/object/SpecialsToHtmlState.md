@@ -68,7 +68,7 @@ Stream state object for String.specialsToHtml().
 
 
 
-[`flags_`](#flags_)[`tag_`](#tag_)
+[`flags_`](#flags_) [`tag_`](#tag_)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ Stream state object for String.specialsToHtml().
 
 
 
-[`resetLine`](#resetLine)[`resetState`](#resetState)
+[`resetLine`](#resetLine) [`resetState`](#resetState)
 
 <span id="_Properties_"></span>
 

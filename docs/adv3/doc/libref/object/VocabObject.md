@@ -226,7 +226,7 @@ Language-specific modifications for VocabObject.
 
 
 
-[`canResolvePossessive`](#canResolvePossessive)[`disambigPromptOrder`](#disambigPromptOrder)[`owner`](#owner)[`pluralOrder`](#pluralOrder)[`vocabLikelihood`](#vocabLikelihood)[`vocabWords`](#vocabWords)[`weakTokens`](#weakTokens)
+[`canResolvePossessive`](#canResolvePossessive) [`disambigPromptOrder`](#disambigPromptOrder) [`owner`](#owner) [`pluralOrder`](#pluralOrder) [`vocabLikelihood`](#vocabLikelihood) [`vocabWords`](#vocabWords) [`weakTokens`](#weakTokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -236,7 +236,7 @@ Language-specific modifications for VocabObject.
 
 
 
-[`addToDictionary`](#addToDictionary)[`construct`](#construct)[`expandPronounList`](#expandPronounList)[`filterResolveList`](#filterResolveList)[`getFacets`](#getFacets)[`getNominalOwner`](#getNominalOwner)[`inheritVocab`](#inheritVocab)[`initializeVocab`](#initializeVocab)[`initializeVocabWith`](#initializeVocabWith)[`isOwnedBy`](#isOwnedBy)[`matchName`](#matchName)[`matchNameCommon`](#matchNameCommon)[`matchNameDisambig`](#matchNameDisambig)[`throwNoMatchForLocation`](#throwNoMatchForLocation)[`throwNoMatchForPossessive`](#throwNoMatchForPossessive)[`throwNothingInLocation`](#throwNothingInLocation)
+[`addToDictionary`](#addToDictionary) [`construct`](#construct) [`expandPronounList`](#expandPronounList) [`filterResolveList`](#filterResolveList) [`getFacets`](#getFacets) [`getNominalOwner`](#getNominalOwner) [`inheritVocab`](#inheritVocab) [`initializeVocab`](#initializeVocab) [`initializeVocabWith`](#initializeVocabWith) [`isOwnedBy`](#isOwnedBy) [`matchName`](#matchName) [`matchNameCommon`](#matchNameCommon) [`matchNameDisambig`](#matchNameDisambig) [`throwNoMatchForLocation`](#throwNoMatchForLocation) [`throwNoMatchForPossessive`](#throwNoMatchForPossessive) [`throwNothingInLocation`](#throwNothingInLocation)
 
 <span id="_Properties_"></span>
 

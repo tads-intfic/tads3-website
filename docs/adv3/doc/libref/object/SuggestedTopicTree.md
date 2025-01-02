@@ -105,7 +105,7 @@ which kind of suggestion this is.
 
 
 Inherited from `SuggestedTopic` :  
-[`associatedTopic`](../object/SuggestedTopic.html#associatedTopic)[`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied)[`fullName`](../object/SuggestedTopic.html#fullName)[`location`](../object/SuggestedTopic.html#location)[`name`](../object/SuggestedTopic.html#name)[`suggestionGroup`](../object/SuggestedTopic.html#suggestionGroup)[`suggestTo`](../object/SuggestedTopic.html#suggestTo)[`timesToSuggest`](../object/SuggestedTopic.html#timesToSuggest)
+[`associatedTopic`](../object/SuggestedTopic.html#associatedTopic) [`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied) [`fullName`](../object/SuggestedTopic.html#fullName) [`location`](../object/SuggestedTopic.html#location) [`name`](../object/SuggestedTopic.html#name) [`suggestionGroup`](../object/SuggestedTopic.html#suggestionGroup) [`suggestTo`](../object/SuggestedTopic.html#suggestTo) [`timesToSuggest`](../object/SuggestedTopic.html#timesToSuggest)
 
 <span id="_MethodSummary_"></span>
 
@@ -115,10 +115,10 @@ Inherited from `SuggestedTopic` :
 
 
 
-[`associatedTopicIsActive`](#associatedTopicIsActive)[`associatedTopicTalkCount`](#associatedTopicTalkCount)
+[`associatedTopicIsActive`](#associatedTopicIsActive) [`associatedTopicTalkCount`](#associatedTopicTalkCount)
 
 Inherited from `SuggestedTopic` :  
-[`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch)[`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic)[`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic)[`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic)[`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic)[`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive)[`noteSuggestion`](../object/SuggestedTopic.html#noteSuggestion)
+[`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch) [`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic) [`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic) [`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic) [`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic) [`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive) [`noteSuggestion`](../object/SuggestedTopic.html#noteSuggestion)
 
 <span id="_Properties_"></span>
 

@@ -37,7 +37,7 @@ buttons, levers and dials.
 
 
 
-[`BagOfHolding`](../object/BagOfHolding.html)[`Button`](../object/Button.html)[`Dial`](../object/Dial.html)[`Lever`](../object/Lever.html)[`NumberedDial`](../object/NumberedDial.html)[`Settable`](../object/Settable.html)
+[`BagOfHolding`](../object/BagOfHolding.html) [`Button`](../object/Button.html) [`Dial`](../object/Dial.html) [`Lever`](../object/Lever.html) [`NumberedDial`](../object/NumberedDial.html) [`Settable`](../object/Settable.html)
 <span id="_ObjectSummary_"></span>
 
 

@@ -46,85 +46,57 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A command ranking criterion that measures a "problem" by a count of
+<p>A command ranking criterion that measures a “problem” by a count of
 occurrences stored in a property of the CommandRanking object. For
-example, we could count the number of noun phrases that don't resolve to
-any objects.
+example, we could count the number of noun phrases that don’t resolve to
+any objects.</p>
 
-On the first, coarse-grained pass, we measure only the presence or
+<p>On the first, coarse-grained pass, we measure only the presence or
 absence of our problem. That is, if one parse tree has zero occurrences
 of the problem and the other has a non-zero number of occurrences of the
-problem (as measured by our counting property), then we'll prefer the
+problem (as measured by our counting property), then we’ll prefer the
 one with zero occurrences. If both have no occurrences, or both have a
-non-zero number of occurrences, we'll consider the two equivalent for
+non-zero number of occurrences, we’ll consider the two equivalent for
 the first pass, since we only care about the presence or absence of the
-problem.
+problem.</p>
 
-On the second, fine-grained pass, we measure the actual number of
+<p>On the second, fine-grained pass, we measure the actual number of
 occurrences of the problem, and choose the parse tree with the lower
-number.
+number.</p>
 
-`class `**`CommandRankingByProblem`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CommandRankingByProblem</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/CommandRankingCriterion.html"><code class="language-plaintext highlighter-rouge">CommandRankingCriterion</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">CommandRankingByProblem</code></strong><br />
 <a href="../object/CommandRankingCriterion.html"><code class="language-plaintext highlighter-rouge">CommandRankingCriterion</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/rankByActorSpecified.html"><code class="language-plaintext highlighter-rouge">rankByActorSpecified</code></a><a href="../object/rankByAllExcluded.html"><code class="language-plaintext highlighter-rouge">rankByAllExcluded</code></a><a href="../object/rankByDisambigOrdinals.html"><code class="language-plaintext highlighter-rouge">rankByDisambigOrdinals</code></a><a href="../object/rankByEmptyBut.html"><code class="language-plaintext highlighter-rouge">rankByEmptyBut</code></a><a href="../object/rankByIndefinite.html"><code class="language-plaintext highlighter-rouge">rankByIndefinite</code></a><a href="../object/rankByInsufficient.html"><code class="language-plaintext highlighter-rouge">rankByInsufficient</code></a><a href="../object/rankByListForSingle.html"><code class="language-plaintext highlighter-rouge">rankByListForSingle</code></a><a href="../object/rankByMiscWordList.html"><code class="language-plaintext highlighter-rouge">rankByMiscWordList</code></a><a href="../object/rankByMissing.html"><code class="language-plaintext highlighter-rouge">rankByMissing</code></a><a href="../object/rankByNonMatch.html"><code class="language-plaintext highlighter-rouge">rankByNonMatch</code></a><a href="../object/rankByUnwantedPlural.html"><code class="language-plaintext highlighter-rouge">rankByUnwantedPlural</code></a><a href="../object/rankByVocabNonMatch.html"><code class="language-plaintext highlighter-rouge">rankByVocabNonMatch</code></a>
+<p><a href="../object/rankByActorSpecified.html"><code class="language-plaintext highlighter-rouge">rankByActorSpecified</code></a> <a href="../object/rankByAllExcluded.html"><code class="language-plaintext highlighter-rouge">rankByAllExcluded</code></a> <a href="../object/rankByDisambigOrdinals.html"><code class="language-plaintext highlighter-rouge">rankByDisambigOrdinals</code></a> <a href="../object/rankByEmptyBut.html"><code class="language-plaintext highlighter-rouge">rankByEmptyBut</code></a> <a href="../object/rankByIndefinite.html"><code class="language-plaintext highlighter-rouge">rankByIndefinite</code></a> <a href="../object/rankByInsufficient.html"><code class="language-plaintext highlighter-rouge">rankByInsufficient</code></a> <a href="../object/rankByListForSingle.html"><code class="language-plaintext highlighter-rouge">rankByListForSingle</code></a> <a href="../object/rankByMiscWordList.html"><code class="language-plaintext highlighter-rouge">rankByMiscWordList</code></a> <a href="../object/rankByMissing.html"><code class="language-plaintext highlighter-rouge">rankByMissing</code></a> <a href="../object/rankByNonMatch.html"><code class="language-plaintext highlighter-rouge">rankByNonMatch</code></a> <a href="../object/rankByUnwantedPlural.html"><code class="language-plaintext highlighter-rouge">rankByUnwantedPlural</code></a> <a href="../object/rankByVocabNonMatch.html"><code class="language-plaintext highlighter-rouge">rankByVocabNonMatch</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#comparePass1"><code class="language-plaintext highlighter-rouge">comparePass1</code></a><a href="#comparePass2"><code class="language-plaintext highlighter-rouge">comparePass2</code></a></p>
+<p><a href="#comparePass1"><code class="language-plaintext highlighter-rouge">comparePass1</code></a> <a href="#comparePass2"><code class="language-plaintext highlighter-rouge">comparePass2</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="prop_"></span></p>
 
@@ -132,21 +104,13 @@ number.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5854">5854</a>]</p>
 
-<div class="desc">
-
-our ranking property - this is a property of the CommandRanking object
-that gives us a count of the number of times our "problem" has occurred
-in the ranking object's parse tree
-
-</div>
+<p>our ranking property - this is a property of the CommandRanking object
+that gives us a count of the number of times our “problem” has occurred
+in the ranking object’s parse tree</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="comparePass1"></span></p>
 
@@ -154,11 +118,7 @@ in the ranking object's parse tree
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5857">5857</a>]</p>
 
-<div class="desc">
-
-first pass - compare by presence or absence of the problem
-
-</div>
+<p>first pass - compare by presence or absence of the problem</p>
 
 <p><span id="comparePass2"></span></p>
 
@@ -166,18 +126,11 @@ first pass - compare by presence or absence of the problem
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5875">5875</a>]</p>
 
-<div class="desc">
+<p>second pass - compare by number of occurrences of the problem</p>
 
-second pass - compare by number of occurrences of the problem
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

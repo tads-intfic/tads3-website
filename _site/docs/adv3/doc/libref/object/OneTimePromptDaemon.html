@@ -46,41 +46,33 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A one-time-only prompt daemon is a regular command prompt daemon, except
+<p>A one-time-only prompt daemon is a regular command prompt daemon, except
 that it fires only once. After it fires once, the daemon automatically
-deactivates itself, so that it won't fire again.
+deactivates itself, so that it won’t fire again.</p>
 
-Prompt daemons are occasionally useful for non-recurring processing,
-when you want to defer some bit of code until a "safe" time between
+<p>Prompt daemons are occasionally useful for non-recurring processing,
+when you want to defer some bit of code until a “safe” time between
 turns. In these cases, the regular PromptDaemon is inconvenient to use
 because it automatically recurs. This subclass is handy for these cases,
 since it lets you schedule some bit of processing for a single deferred
-execution.
+execution.</p>
 
-One special situation where one-time prompt daemons can be handy is in
+<p>One special situation where one-time prompt daemons can be handy is in
 triggering conversational events - such as initiating a conversation -
 at the very beginning of the game. Initiating a conversation can only be
 done from within an action context, but no action context is in effect
-during the game's initialization. An easy way to deal with this is to
+during the game’s initialization. An easy way to deal with this is to
 create a one-time prompt daemon during initialization, and then trigger
-the event from the daemon's callback method. The prompt daemon will set
+the event from the daemon’s callback method. The prompt daemon will set
 up a daemon action environment just before the first command prompt is
 displayed, at which point the callback will be able to trigger the event
-as though it were in ordinary action handler code.
+as though it were in ordinary action handler code.</p>
 
-`class `**`OneTimePromptDaemon`**` :   `[`PromptDaemon`](../object/PromptDaemon.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">OneTimePromptDaemon</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PromptDaemon.html"><code class="language-plaintext highlighter-rouge">PromptDaemon</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">OneTimePromptDaemon</code></strong><br />
 <a href="../object/PromptDaemon.html"><code class="language-plaintext highlighter-rouge">PromptDaemon</code></a><br />
@@ -89,68 +81,44 @@ as though it were in ordinary action handler code.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PromptDaemon</code> :<br />
 <a href="../object/PromptDaemon.html#isPromptDaemon"><code class="language-plaintext highlighter-rouge">isPromptDaemon</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
-<a href="../object/Event.html#eventOrder"><code class="language-plaintext highlighter-rouge">eventOrder</code></a><a href="../object/Event.html#nextRunTime"><code class="language-plaintext highlighter-rouge">nextRunTime</code></a></p>
+<a href="../object/Event.html#eventOrder"><code class="language-plaintext highlighter-rouge">eventOrder</code></a> <a href="../object/Event.html#nextRunTime"><code class="language-plaintext highlighter-rouge">nextRunTime</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
-<a href="../object/BasicEvent.html#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a><a href="../object/BasicEvent.html#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a><a href="../object/BasicEvent.html#sense_"><code class="language-plaintext highlighter-rouge">sense_</code></a><a href="../object/BasicEvent.html#source_"><code class="language-plaintext highlighter-rouge">source_</code></a></p>
+<a href="../object/BasicEvent.html#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a> <a href="../object/BasicEvent.html#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a> <a href="../object/BasicEvent.html#sense_"><code class="language-plaintext highlighter-rouge">sense_</code></a> <a href="../object/BasicEvent.html#source_"><code class="language-plaintext highlighter-rouge">source_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#executeEvent"><code class="language-plaintext highlighter-rouge">executeEvent</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
-<a href="../object/Event.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/Event.html#delayEvent"><code class="language-plaintext highlighter-rouge">delayEvent</code></a><a href="../object/Event.html#getNextRunTime"><code class="language-plaintext highlighter-rouge">getNextRunTime</code></a><a href="../object/Event.html#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
+<a href="../object/Event.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/Event.html#delayEvent"><code class="language-plaintext highlighter-rouge">delayEvent</code></a> <a href="../object/Event.html#getNextRunTime"><code class="language-plaintext highlighter-rouge">getNextRunTime</code></a> <a href="../object/Event.html#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
-<a href="../object/BasicEvent.html#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a><a href="../object/BasicEvent.html#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a></p>
+<a href="../object/BasicEvent.html#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a> <a href="../object/BasicEvent.html#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="executeEvent"></span></p>
 
@@ -158,18 +126,11 @@ as though it were in ordinary action handler code.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#854">854</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

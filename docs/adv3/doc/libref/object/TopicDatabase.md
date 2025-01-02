@@ -91,7 +91,7 @@ stand-alone abstract topic entry container.
 
 
 
-[`limitSuggestions`](#limitSuggestions)[`suggestedTopics`](#suggestedTopics)[`topicGroupActive`](#topicGroupActive)[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)
+[`limitSuggestions`](#limitSuggestions) [`suggestedTopics`](#suggestedTopics) [`topicGroupActive`](#topicGroupActive) [`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)
 
 <span id="_MethodSummary_"></span>
 
@@ -101,7 +101,7 @@ stand-alone abstract topic entry container.
 
 
 
-[`addSuggestedTopic`](#addSuggestedTopic)[`addTopic`](#addTopic)[`addTopicToList`](#addTopicToList)[`compareVocabMatch`](#compareVocabMatch)[`findTopicResponse`](#findTopicResponse)[`getTopicOwner`](#getTopicOwner)[`handleTopic`](#handleTopic)[`removeSuggestedTopic`](#removeSuggestedTopic)[`removeTopic`](#removeTopic)[`removeTopicFromList`](#removeTopicFromList)[`showSuggestedTopicList`](#showSuggestedTopicList)[`showTopicResponse`](#showTopicResponse)
+[`addSuggestedTopic`](#addSuggestedTopic) [`addTopic`](#addTopic) [`addTopicToList`](#addTopicToList) [`compareVocabMatch`](#compareVocabMatch) [`findTopicResponse`](#findTopicResponse) [`getTopicOwner`](#getTopicOwner) [`handleTopic`](#handleTopic) [`removeSuggestedTopic`](#removeSuggestedTopic) [`removeTopic`](#removeTopic) [`removeTopicFromList`](#removeTopicFromList) [`showSuggestedTopicList`](#showSuggestedTopicList) [`showTopicResponse`](#showTopicResponse)
 
 <span id="_Properties_"></span>
 

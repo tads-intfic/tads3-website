@@ -46,73 +46,45 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A mix-in class for objects that don't come into play until some future
+<p>A mix-in class for objects that don’t come into play until some future
 event. This class lets us initialize these objects with their
-\*eventual\* location, using the standard '+' syntax, but they won't
+*eventual* location, using the standard ‘+’ syntax, but they won’t
 actually appear in the given location until later in the game. During
-pre-initialization, we'll remember the starting location, then set the
+pre-initialization, we’ll remember the starting location, then set the
 actual location to nil; later, the object can be easily moved to its
-eventual location by calling makePresent().
+eventual location by calling makePresent().</p>
 
-`class `**`PresentLater`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PresentLater</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">PresentLater</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#eventualLocation"><code class="language-plaintext highlighter-rouge">eventualLocation</code></a><a href="#initiallyPresent"><code class="language-plaintext highlighter-rouge">initiallyPresent</code></a><a href="#plKey"><code class="language-plaintext highlighter-rouge">plKey</code></a></p>
+<p><a href="#eventualLocation"><code class="language-plaintext highlighter-rouge">eventualLocation</code></a> <a href="#initiallyPresent"><code class="language-plaintext highlighter-rouge">initiallyPresent</code></a> <a href="#plKey"><code class="language-plaintext highlighter-rouge">plKey</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a><a href="#makePresent"><code class="language-plaintext highlighter-rouge">makePresent</code></a><a href="#makePresentByKey"><code class="language-plaintext highlighter-rouge">makePresentByKey</code></a><a href="#makePresentByKeyIf"><code class="language-plaintext highlighter-rouge">makePresentByKeyIf</code></a><a href="#makePresentIf"><code class="language-plaintext highlighter-rouge">makePresentIf</code></a></p>
+<p><a href="#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a> <a href="#makePresent"><code class="language-plaintext highlighter-rouge">makePresent</code></a> <a href="#makePresentByKey"><code class="language-plaintext highlighter-rouge">makePresentByKey</code></a> <a href="#makePresentByKeyIf"><code class="language-plaintext highlighter-rouge">makePresentByKeyIf</code></a> <a href="#makePresentIf"><code class="language-plaintext highlighter-rouge">makePresentIf</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="eventualLocation"></span></p>
 
@@ -120,11 +92,7 @@ eventual location by calling makePresent().
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3787">3787</a>]</p>
 
-<div class="desc">
-
-our eventual location
-
-</div>
+<p>our eventual location</p>
 
 <p><span id="initiallyPresent"></span></p>
 
@@ -132,15 +100,11 @@ our eventual location
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3647">3647</a>]</p>
 
-<div class="desc">
-
-Flag: are we present initially? By default, we're only present later, as
-that's the whole point. In some cases, though, we have objects that come
+<p>Flag: are we present initially? By default, we’re only present later, as
+that’s the whole point. In some cases, though, we have objects that come
 and go, but start out present. Setting this property to true makes the
 object present initially, but still allows it to come and go using the
-standard PresentLater mechanisms.
-
-</div>
+standard PresentLater mechanisms.</p>
 
 <p><span id="plKey"></span></p>
 
@@ -148,29 +112,21 @@ standard PresentLater mechanisms.
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3637">3637</a>]</p>
 
-<div class="desc">
-
-My "key" - this is an optional property you can add to a PresentLater
+<p>My “key” - this is an optional property you can add to a PresentLater
 object to associate it with a group of objects. You can then use
 makePresentByKey() to move every object with a given key into the game
 world at once. This is useful when an event triggers a whole set of
 objects to come into the game world: rather than having to write a
 method that calls makePresent() on each of the related objects
 individually, you can simply give each related object the same key
-value, then call makePresentByKey() on that key.
+value, then call makePresentByKey() on that key.</p>
 
-You don't need to define this for an object unless you want to use
-makePresentByKey() with the object.
-
-</div>
+<p>You don’t need to define this for an object unless you want to use
+makePresentByKey() with the object.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="initializeLocation"></span></p>
 
@@ -178,11 +134,7 @@ makePresentByKey() with the object.
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3649">3649</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="makePresent"></span></p>
 
@@ -190,11 +142,7 @@ makePresentByKey() with the object.
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3688">3688</a>]</p>
 
-<div class="desc">
-
-bring the object into the game world in its eventual location(s)
-
-</div>
+<p>bring the object into the game world in its eventual location(s)</p>
 
 <p><span id="makePresentByKey"></span></p>
 
@@ -202,14 +150,10 @@ bring the object into the game world in its eventual location(s)
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3732">3732</a>]</p>
 
-<div class="desc">
+<p>Bring every PresentLater object with the given key into the game. Note
+that this is a “class” method that you call on PresentLater itself:</p>
 
-Bring every PresentLater object with the given key into the game. Note
-that this is a "class" method that you call on PresentLater itself:
-
-PresentLater.makePresentByKey('foo');
-
-</div>
+<p>PresentLater.makePresentByKey(‘foo’);</p>
 
 <p><span id="makePresentByKeyIf"></span></p>
 
@@ -217,22 +161,18 @@ PresentLater.makePresentByKey('foo');
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3760">3760</a>]</p>
 
-<div class="desc">
+<p>Bring every PresentLater object with the given key into the game, or
+move every one out of the game, according to the condition ‘cond’.</p>
 
-Bring every PresentLater object with the given key into the game, or
-move every one out of the game, according to the condition 'cond'.
-
-If 'cond' is a function pointer, we'll invoke it once per object with
+<p>If ‘cond’ is a function pointer, we’ll invoke it once per object with
 the given key, passing the object as the parameter, and use the return
 value as the in game/out of game setting. For example, if you wanted to
-show every object with key 'foo' AND with the property 'showObj' set to
-true, you could write this:
+show every object with key ‘foo’ AND with the property ‘showObj’ set to
+true, you could write this:</p>
 
-PresentLater.makePresentByKeyIf('foo', {x: x.showObj});
+<p>PresentLater.makePresentByKeyIf(‘foo’, {x: x.showObj});</p>
 
-Note that this is a "class" method that you call on PresentLater itself.
-
-</div>
+<p>Note that this is a “class” method that you call on PresentLater itself.</p>
 
 <p><span id="makePresentIf"></span></p>
 
@@ -240,19 +180,12 @@ Note that this is a "class" method that you call on PresentLater itself.
 
 <p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3717">3717</a>]</p>
 
-<div class="desc">
+<p>make myself present if the given condition is true; otherwise, remove me
+from the game world (i.e. move me into nil)</p>
 
-make myself present if the given condition is true; otherwise, remove me
-from the game world (i.e. move me into nil)
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

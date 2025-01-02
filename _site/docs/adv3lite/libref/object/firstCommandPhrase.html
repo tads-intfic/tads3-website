@@ -27,39 +27,24 @@
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#61"><code class="language-plaintext highlighter-rouge">61</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-('ask' \| 'tell' \| 'a' \| 't') singleNounOnly-\&gt;actor\_  
-'to' commandPhrase-\&gt;cmd\_  
-
-</div>
+<p>(‘ask’ | ‘tell’ | ‘a’ | ‘t’) singleNounOnly-&gt;actor_<br />
+‘to’ commandPhrase-&gt;cmd_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/firstCommandPhrase(commandOnly).html"><code class="language-plaintext highlighter-rouge">firstCommandPhrase(commandOnly)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/CommandProduction.html"><code class="language-plaintext highlighter-rouge">CommandProduction</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#52"><code class="language-plaintext highlighter-rouge">52</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-commandPhrase-\&gt;cmd\_  
-
-</div>
+<p>commandPhrase-&gt;cmd_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/firstCommandPhrase(withActor).html"><code class="language-plaintext highlighter-rouge">firstCommandPhrase(withActor)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/CommandProduction.html"><code class="language-plaintext highlighter-rouge">CommandProduction</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#56"><code class="language-plaintext highlighter-rouge">56</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
+<p>singleNounOnly-&gt;actor_ ‘,’ commandPhrase-&gt;cmd_</p>
 
-singleNounOnly-\&gt;actor\_ ',' commandPhrase-\&gt;cmd\_  
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

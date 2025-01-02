@@ -62,7 +62,7 @@ goals because the player presumably has no need of them any longer; we
 don't show Undiscovered goals to avoid giving away developments later in
 the game before they become relevant.
 
-`class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html)[`HintMenuObject`](../object/HintMenuObject.html)[`HintOpener`](../object/HintOpener.html)
+`class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html) [`HintMenuObject`](../object/HintMenuObject.html) [`HintOpener`](../object/HintOpener.html)
 
 
 
@@ -107,22 +107,22 @@ the game before they become relevant.
 
 
 
-[`goalFullyDisplayed`](#goalFullyDisplayed)[`goalState`](#goalState)[`isActiveInMenu`](#isActiveInMenu)[`location`](#location)[`menuContents`](#menuContents)[`title`](#title)
+[`goalFullyDisplayed`](#goalFullyDisplayed) [`goalState`](#goalState) [`isActiveInMenu`](#isActiveInMenu) [`location`](#location) [`menuContents`](#menuContents) [`title`](#title)
 
 Inherited from `MenuTopicItem` :  
-[`chunkSize`](../object/MenuTopicItem.html#chunkSize)[`heading`](../object/MenuTopicItem.html#heading)[`lastDisplayed`](../object/MenuTopicItem.html#lastDisplayed)[`menuTopicListEnd`](../object/MenuTopicItem.html#menuTopicListEnd)[`nextMenuTopicLink`](../object/MenuTopicItem.html#nextMenuTopicLink)
+[`chunkSize`](../object/MenuTopicItem.html#chunkSize) [`heading`](../object/MenuTopicItem.html#heading) [`lastDisplayed`](../object/MenuTopicItem.html#lastDisplayed) [`menuTopicListEnd`](../object/MenuTopicItem.html#menuTopicListEnd) [`nextMenuTopicLink`](../object/MenuTopicItem.html#nextMenuTopicLink)
 
 Inherited from `MenuItem` :  
-[`bgcolor`](../object/MenuItem.html#bgcolor)[`curKeyList`](../object/MenuItem.html#curKeyList)[`curMenu`](../object/MenuItem.html#curMenu)[`fgcolor`](../object/MenuItem.html#fgcolor)[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)[`indent`](../object/MenuItem.html#indent)[`isOpen`](../object/MenuItem.html#isOpen)[`keyList`](../object/MenuItem.html#keyList)[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)[`topbarbg`](../object/MenuItem.html#topbarbg)[`topbarfg`](../object/MenuItem.html#topbarfg)[`topMenu`](../object/MenuItem.html#topMenu)
+[`bgcolor`](../object/MenuItem.html#bgcolor) [`curKeyList`](../object/MenuItem.html#curKeyList) [`curMenu`](../object/MenuItem.html#curMenu) [`fgcolor`](../object/MenuItem.html#fgcolor) [`fullScreenMode`](../object/MenuItem.html#fullScreenMode) [`indent`](../object/MenuItem.html#indent) [`isOpen`](../object/MenuItem.html#isOpen) [`keyList`](../object/MenuItem.html#keyList) [`prevMenuLink`](../object/MenuItem.html#prevMenuLink) [`topbarbg`](../object/MenuItem.html#topbarbg) [`topbarfg`](../object/MenuItem.html#topbarfg) [`topMenu`](../object/MenuItem.html#topMenu)
 
 Inherited from `MenuObject` :  
-[`contents`](../object/MenuObject.html#contents)[`menuOrder`](../object/MenuObject.html#menuOrder)
+[`contents`](../object/MenuObject.html#contents) [`menuOrder`](../object/MenuObject.html#menuOrder)
 
 Inherited from `HintMenuObject` :  
 [`topicOrder`](../object/HintMenuObject.html#topicOrder)
 
 Inherited from `HintOpener` :  
-[`closeWhen`](../object/HintOpener.html#closeWhen)[`closeWhenAchieved`](../object/HintOpener.html#closeWhenAchieved)[`closeWhenExamined`](../object/HintOpener.html#closeWhenExamined)[`closeWhenKnown`](../object/HintOpener.html#closeWhenKnown)[`closeWhenMoved`](../object/HintOpener.html#closeWhenMoved)[`closeWhenRevealed`](../object/HintOpener.html#closeWhenRevealed)[`closeWhenSeen`](../object/HintOpener.html#closeWhenSeen)[`closeWhenTrue`](../object/HintOpener.html#closeWhenTrue)[`openWhen`](../object/HintOpener.html#openWhen)[`openWhenAchieved`](../object/HintOpener.html#openWhenAchieved)[`openWhenExamined`](../object/HintOpener.html#openWhenExamined)[`openWhenKnown`](../object/HintOpener.html#openWhenKnown)[`openWhenMoved`](../object/HintOpener.html#openWhenMoved)[`openWhenRevealed`](../object/HintOpener.html#openWhenRevealed)[`openWhenSeen`](../object/HintOpener.html#openWhenSeen)[`openWhenTrue`](../object/HintOpener.html#openWhenTrue)
+[`closeWhen`](../object/HintOpener.html#closeWhen) [`closeWhenAchieved`](../object/HintOpener.html#closeWhenAchieved) [`closeWhenExamined`](../object/HintOpener.html#closeWhenExamined) [`closeWhenKnown`](../object/HintOpener.html#closeWhenKnown) [`closeWhenMoved`](../object/HintOpener.html#closeWhenMoved) [`closeWhenRevealed`](../object/HintOpener.html#closeWhenRevealed) [`closeWhenSeen`](../object/HintOpener.html#closeWhenSeen) [`closeWhenTrue`](../object/HintOpener.html#closeWhenTrue) [`openWhen`](../object/HintOpener.html#openWhen) [`openWhenAchieved`](../object/HintOpener.html#openWhenAchieved) [`openWhenExamined`](../object/HintOpener.html#openWhenExamined) [`openWhenKnown`](../object/HintOpener.html#openWhenKnown) [`openWhenMoved`](../object/HintOpener.html#openWhenMoved) [`openWhenRevealed`](../object/HintOpener.html#openWhenRevealed) [`openWhenSeen`](../object/HintOpener.html#openWhenSeen) [`openWhenTrue`](../object/HintOpener.html#openWhenTrue)
 
 <span id="_MethodSummary_"></span>
 
@@ -132,16 +132,16 @@ Inherited from `HintOpener` :
 
 
 
-[`displaySubItem`](#displaySubItem)[`updateContents`](#updateContents)
+[`displaySubItem`](#displaySubItem) [`updateContents`](#updateContents)
 
 Inherited from `MenuTopicItem` :  
-[`getNextTopicXML`](../object/MenuTopicItem.html#getNextTopicXML)[`getTopicXML`](../object/MenuTopicItem.html#getTopicXML)[`getXML`](../object/MenuTopicItem.html#getXML)[`redrawWinHtml`](../object/MenuTopicItem.html#redrawWinHtml)[`showMenuHtml`](../object/MenuTopicItem.html#showMenuHtml)[`showMenuText`](../object/MenuTopicItem.html#showMenuText)
+[`getNextTopicXML`](../object/MenuTopicItem.html#getNextTopicXML) [`getTopicXML`](../object/MenuTopicItem.html#getTopicXML) [`getXML`](../object/MenuTopicItem.html#getXML) [`redrawWinHtml`](../object/MenuTopicItem.html#redrawWinHtml) [`showMenuHtml`](../object/MenuTopicItem.html#showMenuHtml) [`showMenuText`](../object/MenuTopicItem.html#showMenuText)
 
 Inherited from `MenuItem` :  
-[`display`](../object/MenuItem.html#display)[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)[`formatXML`](../object/MenuItem.html#formatXML)[`getChildIndex`](../object/MenuItem.html#getChildIndex)[`getKeysXML`](../object/MenuItem.html#getKeysXML)[`getNextMenu`](../object/MenuItem.html#getNextMenu)[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)[`showMenu`](../object/MenuItem.html#showMenu)[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)
+[`display`](../object/MenuItem.html#display) [`enterSubMenu`](../object/MenuItem.html#enterSubMenu) [`formatXML`](../object/MenuItem.html#formatXML) [`getChildIndex`](../object/MenuItem.html#getChildIndex) [`getKeysXML`](../object/MenuItem.html#getKeysXML) [`getNextMenu`](../object/MenuItem.html#getNextMenu) [`getPrevMenu`](../object/MenuItem.html#getPrevMenu) [`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner) [`removeStatusLine`](../object/MenuItem.html#removeStatusLine) [`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner) [`showMenu`](../object/MenuItem.html#showMenu) [`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)
 
 Inherited from `MenuObject` :  
-[`addToContents`](../object/MenuObject.html#addToContents)[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)[`execute`](../object/MenuObject.html#execute)[`initializeContents`](../object/MenuObject.html#initializeContents)[`initializeLocation`](../object/MenuObject.html#initializeLocation)
+[`addToContents`](../object/MenuObject.html#addToContents) [`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort) [`execute`](../object/MenuObject.html#execute) [`initializeContents`](../object/MenuObject.html#initializeContents) [`initializeLocation`](../object/MenuObject.html#initializeLocation)
 
 Inherited from `HintMenuObject` :  
 [`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)

@@ -96,7 +96,7 @@ turn.
 
 
 
-[`FootnotesFullAction`](../object/FootnotesFullAction.html)[`FootnotesMediumAction`](../object/FootnotesMediumAction.html)[`FootnotesOffAction`](../object/FootnotesOffAction.html)[`Record`](../object/Record.html)[`RecordEvents`](../object/RecordEvents.html)[`RecordEventsString`](../object/RecordEventsString.html)[`RecordString`](../object/RecordString.html)[`Replay`](../object/Replay.html)[`ReplayString`](../object/ReplayString.html)[`RestoreString`](../object/RestoreString.html)[`Save`](../object/Save.html)[`SaveString`](../object/SaveString.html)[`ScriptOn`](../object/ScriptOn.html)[`ScriptString`](../object/ScriptString.html)
+[`FootnotesFullAction`](../object/FootnotesFullAction.html) [`FootnotesMediumAction`](../object/FootnotesMediumAction.html) [`FootnotesOffAction`](../object/FootnotesOffAction.html) [`Record`](../object/Record.html) [`RecordEvents`](../object/RecordEvents.html) [`RecordEventsString`](../object/RecordEventsString.html) [`RecordString`](../object/RecordString.html) [`Replay`](../object/Replay.html) [`ReplayString`](../object/ReplayString.html) [`RestoreString`](../object/RestoreString.html) [`Save`](../object/Save.html) [`SaveString`](../object/SaveString.html) [`ScriptOn`](../object/ScriptOn.html) [`ScriptString`](../object/ScriptString.html)
 <span id="_PropSummary_"></span>
 
 
@@ -105,7 +105,7 @@ turn.
 
 
 
-[`actionFailed`](#actionFailed)[`advanceOnFailure`](#advanceOnFailure)[`againRepeatsParse`](#againRepeatsParse)[`allowAll`](#allowAll)[`extraMessageParams`](#extraMessageParams)[`failCheckMsg`](#failCheckMsg)[`failedActionCountsAsTurn`](#failedActionCountsAsTurn)[`implicitTimeTaken`](#implicitTimeTaken)[`includeInUndo`](#includeInUndo)[`isConversational`](#isConversational)[`isImplicit`](#isImplicit)[`isRepeatable`](#isRepeatable)[`oldRoom`](#oldRoom)[`parentAction`](#parentAction)[`parentAllowAll`](#parentAllowAll)[`preCond`](#preCond)[`redirectParent`](#redirectParent)[`reportImplicitActions`](#reportImplicitActions)[`scopeList`](#scopeList)[`spellingPriority`](#spellingPriority)[`synthParamID`](#synthParamID)[`timeTaken`](#timeTaken)[`turnsTaken`](#turnsTaken)[`unhides`](#unhides)[`verifyObj`](#verifyObj)[`wasIlluminated`](#wasIlluminated)
+[`actionFailed`](#actionFailed) [`advanceOnFailure`](#advanceOnFailure) [`againRepeatsParse`](#againRepeatsParse) [`allowAll`](#allowAll) [`extraMessageParams`](#extraMessageParams) [`failCheckMsg`](#failCheckMsg) [`failedActionCountsAsTurn`](#failedActionCountsAsTurn) [`implicitTimeTaken`](#implicitTimeTaken) [`includeInUndo`](#includeInUndo) [`isConversational`](#isConversational) [`isImplicit`](#isImplicit) [`isRepeatable`](#isRepeatable) [`oldRoom`](#oldRoom) [`parentAction`](#parentAction) [`parentAllowAll`](#parentAllowAll) [`preCond`](#preCond) [`redirectParent`](#redirectParent) [`reportImplicitActions`](#reportImplicitActions) [`scopeList`](#scopeList) [`spellingPriority`](#spellingPriority) [`synthParamID`](#synthParamID) [`timeTaken`](#timeTaken) [`turnsTaken`](#turnsTaken) [`unhides`](#unhides) [`verifyObj`](#verifyObj) [`wasIlluminated`](#wasIlluminated)
 
 
 
@@ -119,13 +119,13 @@ turn.
 
 
 
-[`acknowledgeNotifyStatus`](#acknowledgeNotifyStatus)[`addExtraScopeItems`](#addExtraScopeItems)[`addImplicitTime`](#addImplicitTime)[`advanceTime`](#advanceTime)[`afterAction`](#afterAction)[`announceObject`](#announceObject)[`beforeAction`](#beforeAction)[`buildImplicitActionAnnouncement`](#buildImplicitActionAnnouncement)[`buildScopeList`](#buildScopeList)[`checkAction`](#checkAction)[`checkActionPreconditions`](#checkActionPreconditions)[`commandNotPresent`](#commandNotPresent)[`exec`](#exec)[`execAction`](#execAction)[`execCycle`](#execCycle)[`execGroup`](#execGroup)[`getAll`](#getAll)[`getAllUnhidden`](#getAllUnhidden)[`getMessageParam`](#getMessageParam)[`implicitAnnouncement`](#implicitAnnouncement)[`reportAction`](#reportAction)[`scoreObjects`](#scoreObjects)[`setMessageParam`](#setMessageParam)[`setMessageParams`](#setMessageParams)[`spPrefix`](#spPrefix)[`spSuffix`](#spSuffix)[`synthMessageParam`](#synthMessageParam)[`turnSequence`](#turnSequence)[`verify`](#verify)[`verifyObjRole`](#verifyObjRole)[`wrapObjectsNP`](#wrapObjectsNP)
+[`acknowledgeNotifyStatus`](#acknowledgeNotifyStatus) [`addExtraScopeItems`](#addExtraScopeItems) [`addImplicitTime`](#addImplicitTime) [`advanceTime`](#advanceTime) [`afterAction`](#afterAction) [`announceObject`](#announceObject) [`beforeAction`](#beforeAction) [`buildImplicitActionAnnouncement`](#buildImplicitActionAnnouncement) [`buildScopeList`](#buildScopeList) [`checkAction`](#checkAction) [`checkActionPreconditions`](#checkActionPreconditions) [`commandNotPresent`](#commandNotPresent) [`exec`](#exec) [`execAction`](#execAction) [`execCycle`](#execCycle) [`execGroup`](#execGroup) [`getAll`](#getAll) [`getAllUnhidden`](#getAllUnhidden) [`getMessageParam`](#getMessageParam) [`implicitAnnouncement`](#implicitAnnouncement) [`reportAction`](#reportAction) [`scoreObjects`](#scoreObjects) [`setMessageParam`](#setMessageParam) [`setMessageParams`](#setMessageParams) [`spPrefix`](#spPrefix) [`spSuffix`](#spSuffix) [`synthMessageParam`](#synthMessageParam) [`turnSequence`](#turnSequence) [`verify`](#verify) [`verifyObjRole`](#verifyObjRole) [`wrapObjectsNP`](#wrapObjectsNP)
 
 Inherited from `ReplaceRedirector` :  
 [`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
+[`doInstead`](../object/Redirector.html#doInstead) [`doNested`](../object/Redirector.html#doNested) [`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

@@ -76,7 +76,7 @@ of the CustomVocab objects defined throughout the game.
 
 
 
-[`irregularPlurals`](#irregularPlurals)[`specialAOrAn`](#specialAOrAn)[`verbParams`](#verbParams)
+[`irregularPlurals`](#irregularPlurals) [`specialAOrAn`](#specialAOrAn) [`verbParams`](#verbParams)
 
 <span id="_MethodSummary_"></span>
 

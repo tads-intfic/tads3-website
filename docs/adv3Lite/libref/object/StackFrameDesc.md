@@ -100,7 +100,7 @@ including the frame object.
 
 
 
-[`getDefiningObj`](#getDefiningObj)[`getInvokee`](#getInvokee)[`getSelf`](#getSelf)[`getTargetObj`](#getTargetObj)[`getTargetProp`](#getTargetProp)[`getVars`](#getVars)[`isActive`](#isActive)
+[`getDefiningObj`](#getDefiningObj) [`getInvokee`](#getInvokee) [`getSelf`](#getSelf) [`getTargetObj`](#getTargetObj) [`getTargetProp`](#getTargetProp) [`getVars`](#getVars) [`isActive`](#isActive)
 
 <span id="_Properties_"></span>
 

@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Suggesting Conversational
-Topics  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Suggesting Conversational
+Topics<br />
 <span class="navnp"><a href="actortopicentry.html" class="nav"><em>Prev:</em>
 ActorTopicEntry</a>    
 <a href="specialtopic.html" class="nav"><em>Next:</em> Special Topics</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="suggesting-conversational-topics">Suggesting Conversational Topics</h1>
 
@@ -85,20 +77,19 @@ has no effect.</li>
 <p>The following two definitions are therefore equivalent (assuming the
 darkTower object has a name of ‘dark tower’):</p>
 
-<p>`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTopic @darkTower
+       "&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+        &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;"
+        
+        name = 'the dark tower'
+    ;
+
     + AskTopic @darkTower
-       “<q>Tell me about the dark tower,</q> you insist.\b
-        <q>Oh no!</q> says Bob. <q>We don’t talk about that – ever!</q>”</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    name = 'the dark tower'
-;
-
-+ AskTopic @darkTower
-   "&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
-    &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;"
-    
-    autoName = true
-; `
+       "&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+        &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;"
+        
+        autoName = true
+    ;
 </code></pre></div></div>
 
 <p><span id="suggestas"></span></p>
@@ -116,19 +107,18 @@ particular case you can override it by using the TopicEntry’s
 For example, to make the game suggest ‘You could tell Bob about your
 visit’ with an AskTellTopic you could so the following:</p>
 
-<p>`
-    + AskTellTopic @tVisit
-       “<q>I visited the dark tower this morning,</q> you announce.\b
-        <q>You shouldn’t have done that, you really shouldn’t,</q> Bob
-        replies with a shudder. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTellTopic @tVisit
+       "&lt;q&gt;I visited the dark tower this morning,&lt;/q&gt; you announce.\b
+        &lt;q&gt;You shouldn't have done that, you really shouldn't,&lt;/q&gt; Bob
+        replies with a shudder. "
+        
+        autoName = true
+        suggestAs = TellTopic
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    autoName = true
-    suggestAs = TellTopic
-;
+    ....
 
-....
-
-tVisit: Topic '()your visit; my;' ; `
+    tVisit: Topic '()your visit; my;' ;
 </code></pre></div></div>
 
 <p><span id="listorder"></span></p>
@@ -240,50 +230,45 @@ topicResponse method). An ActorTopicEntry can instead be defined to
 display a further list of more specific topics. We saw an example of
 this in the previous section:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;talk about the dark tower
+You could ask Bob when the tower was built, or why the tower is scary, or tell him
+about your visit, or say you think he's exaggerating.
+</code></pre></div></div>
 
-    &gt;talk about the dark tower
-    You could ask Bob when the tower was built, or why the tower is scary, or tell him
-    about your visit, or say you think he's exaggerating.
-
-
-
-Setting this up is quite straightfoward. You just define the
-**keyTopics** property on the ActorTopicEntry to contain a key or a list
+<p>Setting this up is quite straightfoward. You just define the
+<strong>keyTopics</strong> property on the ActorTopicEntry to contain a key or a list
 of keys (single-quoted strings) that will be matched by the convKeys
-property of the TopicEntries you want to suggest. For example:
+property of the TopicEntries you want to suggest. For example:</p>
 
-`
-    + AskTellTalkTopic @darkTower
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTellTalkTopic @darkTower
         keyTopics = 'dark-tower'
         autoName = true
     ;
 
     + TellTopic @tVisit
-       "<q>I visited the dark tower earlier..."
+       "&lt;q&gt;I visited the dark tower earlier..."
      
         convKeys = 'dark-tower'
         autoName = true    
     ;
 
     ...
-`
+</code></pre></div></div>
 
-One potential problem with this is that both the AskTellTalkTopic and
+<p>One potential problem with this is that both the AskTellTalkTopic and
 the topics it suggests would be listed in response to a TOPICS command,
 which might seem redundant, or even as presenting the player with too
 much information at once. For this reason, if you were defining a whole
 lot of TalkTopics (say) that went on to suggest further subtopics you
 might prefer it if the TOPICS command only listed the top-level
 TalkTopics, leaving the TalkTopics to suggest their sub-topics. The
-topic suggestions could then act a little like a two-tier menu.
+topic suggestions could then act a little like a two-tier menu.</p>
 
-To implement this scheme you would give all your top-level topics a
-common convKey (such as 'top') and then define that key on the
-**suggestionKey** property of the actor. For example:
+<p>To implement this scheme you would give all your top-level topics a
+common convKey (such as ‘top’) and then define that key on the
+<strong>suggestionKey</strong> property of the actor. For example:</p>
 
-`
-    bob: Actor 'Bob; worried; man; him' @store
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob; worried; man; him' @store
       ...
       suggestionKey = 'top'
     ;
@@ -295,45 +280,44 @@ common convKey (such as 'top') and then define that key on the
     ;
 
     + TellTopic @tVisit
-       "<q>I visited the dark tower earlier..."
+       "&lt;q&gt;I visited the dark tower earlier..."
      
         convKeys = 'dark-tower'
         autoName = true    
     ; 
     ... 
-`
+</code></pre></div></div>
 
-Note that if you do this, bob's suggestionKey isn't set in stone; it can
+<p>Note that if you do this, bob’s suggestionKey isn’t set in stone; it can
 be changed at run-time to anything else (including nil, which removes
 the restriction on what topics to suggest) simply by executing the
-statement `bob.suggestionKey = 'another-key'` or
-`bob.suggestionKey = nil`, or equivalently using
-the tag **\&lt;.sugkey another-key\&gt;** or **\&lt;.sugkey nil\&gt;**.
+statement <code class="language-plaintext highlighter-rouge">bob.suggestionKey = 'another-key'</code> or
+<code class="language-plaintext highlighter-rouge">bob.suggestionKey = nil</code>, or equivalently using
+the tag <strong>&lt;.sugkey another-key&gt;</strong> or <strong>&lt;.sugkey nil&gt;</strong>.</p>
 
-It should be emphasized once again that there is absolutely no reason to
-use this scheme if you don't want to; in many games it probably wouldn't
+<p>It should be emphasized once again that there is absolutely no reason to
+use this scheme if you don’t want to; in many games it probably wouldn’t
 be convenient; but it is one of the reasons for introducing a separate
 TalkTopic (for use at the top-level of such a scheme in a way that
 clearly distinguishes top-level topics and suggestions from the
 sub-topics that fall underneath). It should also be emphasized that game
 authors are, of course, free to use the tools described here in any way
-they wish; they are certainly not restricted to this particular scheme.
+they wish; they are certainly not restricted to this particular scheme.</p>
 
-One alternative to using a scheme involving top-level topics is to
+<p>One alternative to using a scheme involving top-level topics is to
 activate or arouse curiosity concerning a group of topics just prior to
 suggesting them via keyTopics. To facilitate this the list of strings
 defined on a keyTopics property is allowed to include control tags such
-as \&lt;.activate key\&gt; or \&lt;.arouse key\&gt; that can activate or arouse
-curiosity concerning a group of topics just before they're due to be
+as &lt;.activate key&gt; or &lt;.arouse key&gt; that can activate or arouse
+curiosity concerning a group of topics just before they’re due to be
 suggested. This avoids the need to use a top-level suggestion key, but
 also makes the suggested sub-topics permanently available once they have
 been suggested (which may be what you want). For example, instead of
 defining a top-level suggestionKey on bob, we could make the dark
-tower's subtopics initially inactive and then have the darkTower
-activate them just prior to suggesting them, like this:
+tower’s subtopics initially inactive and then have the darkTower
+activate them just prior to suggesting them, like this:</p>
 
-`
-    bob: Actor 'Bob; worried; man; him' @store
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob; worried; man; him' @store
       ...
       
     ;
@@ -345,59 +329,52 @@ activate them just prior to suggesting them, like this:
     ;
 
     + TellTopic @tVisit
-       "<q>I visited the dark tower earlier..."
+       "&lt;q&gt;I visited the dark tower earlier..."
      
         convKeys = 'dark-tower'
         autoName = true
         activated = nil    
     ; 
     ... 
-`
+</code></pre></div></div>
 
-This would cause all the topic entries with 'dark-tower' as one of their
+<p>This would cause all the topic entries with ‘dark-tower’ as one of their
 convKeys to be activated just prior to their being suggested from the
 darkTower topic entry. Unless we took steps to make things work
 differently, they would then remain activated and would hence be
-suggested in any future topic inventory.
+suggested in any future topic inventory.</p>
 
-  
-<span id="otherways"></span>
+<p><span id="otherways"></span></p>
 
-## Other Ways of Suggesting Topics
+<h2 id="other-ways-of-suggesting-topics">Other Ways of Suggesting Topics</h2>
 
-It has already been mentioned in passing that the player can see a list
+<p>It has already been mentioned in passing that the player can see a list
 of suggested topics (assuming there are any) by entering a TOPICS
 command. If you want to show the player an equivalent list of topics
-even though s/he hasn't explicitly asked for them, you can do so by
-including a **\&lt;.topics\&gt;** tag in the output of a conversational
+even though s/he hasn’t explicitly asked for them, you can do so by
+including a <strong>&lt;.topics&gt;</strong> tag in the output of a conversational
 response. This schedules the diplay of a topic inventory (a list of
 suggested topics) just before the next command prompt. As a variation on
-this you can use the **\&lt;.suggest key\&gt;** tag to schedule a list of all
-suggested topics whose convKeys match *key*. To list all available
+this you can use the <strong>&lt;.suggest key&gt;</strong> tag to schedule a list of all
+suggested topics whose convKeys match <em>key</em>. To list all available
 suggested topics, even when the list might otherwise be restricted by
-the actor's suggestionKey property, use **\&lt;.suggest all\&gt;**.
+the actor’s suggestionKey property, use <strong>&lt;.suggest all&gt;</strong>.</p>
 
-One further way to display a restricted list of suggested topics is via
-the \&lt;.convnode node\&gt; tag, but we'll discuss this in more detail when
-we come to look at [Conversation Nodes](convnode.html).
+<p>One further way to display a restricted list of suggested topics is via
+the &lt;.convnode node&gt; tag, but we’ll discuss this in more detail when
+we come to look at <a href="convnode.html">Conversation Nodes</a>.</p>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Suggesting Conversational
-Topics  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Suggesting Conversational
+Topics<br />
 <span class="navnp"><a href="actortopicentry.html" class="nav"><em>Prev:</em>
 ActorTopicEntry</a>    
 <a href="specialtopic.html" class="nav"><em>Next:</em> Special Topics</a>
-    </span>
+    </span></p>
 
-</div>
-</q></q></q></div>
 
 </main>
 <footer>

@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 
 
-[`active`](#active)[`priority`](#priority)
+[`active`](#active) [`priority`](#priority)
 
 Inherited from `Special` :  
-[`all`](../object/Special.html#all)[`allActive_`](../object/Special.html#allActive_)
+[`all`](../object/Special.html#all) [`allActive_`](../object/Special.html#allActive_)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,7 +63,7 @@ Inherited from `Special` :
 [`canTalkTo`](#canTalkTo)
 
 Inherited from `Special` :  
-[`allActive`](../object/Special.html#allActive)[`classInit`](../object/Special.html#classInit)[`first`](../object/Special.html#first)[`next`](../object/Special.html#next)
+[`allActive`](../object/Special.html#allActive) [`classInit`](../object/Special.html#classInit) [`first`](../object/Special.html#first) [`next`](../object/Special.html#next)
 
 <span id="_Properties_"></span>
 

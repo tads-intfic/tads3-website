@@ -78,7 +78,7 @@ for convenience to set up these direction synonyms.
 
 
 
-[`isConnectorListed`](#isConnectorListed)[`primaryConn`](#primaryConn)
+[`isConnectorListed`](#isConnectorListed) [`primaryConn`](#primaryConn)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,7 +88,7 @@ for convenience to set up these direction synonyms.
 
 
 
-[`construct`](#construct)[`dobjFor(TravelVia)`](#dobjFor(TravelVia))[`ofKind`](#ofKind)[`propNotDefined`](#propNotDefined)
+[`construct`](#construct) [`dobjFor(TravelVia)`](#dobjFor(TravelVia)) [`ofKind`](#ofKind) [`propNotDefined`](#propNotDefined)
 
 <span id="_Properties_"></span>
 

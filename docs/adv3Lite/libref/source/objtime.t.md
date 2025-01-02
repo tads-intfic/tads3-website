@@ -279,7 +279,7 @@ layout: docs
                 break;
             case TypeSString:
                 eventTime = Date.parseDate(interval, nil,
-                                           timeManager.currentTime)[1];
+                                           timeManager.currentTime) [1];
                 break;
             case TypeObject:
                 if(interval.ofKind(BigNumber))

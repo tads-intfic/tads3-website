@@ -40,82 +40,74 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Conversation manager output filter. We look for special tags in the
+output stream:</p>
 
-Conversation manager output filter. We look for special tags in the
-output stream:
-
-\&lt;.reveal key\&gt; - add 'key' to the knowledge token lookup table. The
-'key' is an arbitrary string, which we can look up in the table to
+<p>&lt;.reveal key&gt; - add ‘key’ to the knowledge token lookup table. The
+‘key’ is an arbitrary string, which we can look up in the table to
 determine if the key has even been revealed. This can be used to make a
 response conditional on another response having been displayed, because
 the key will only be added to the table when the text containing the
-\&lt;.reveal key\&gt; sequence is displayed.
+&lt;.reveal key&gt; sequence is displayed.</p>
 
-\&lt;.unreveal key\&gt; - remove 'key from the knowledge token lookup table.
+<p>&lt;.unreveal key&gt; - remove ‘key from the knowledge token lookup table.</p>
 
-\&lt;.inform key\&gt; - add 'key' to our actor's knowledge token lookup take.
-The 'key' is an arbitrary string, which we can look up in the table to
+<p>&lt;.inform key&gt; - add ‘key’ to our actor’s knowledge token lookup take.
+The ‘key’ is an arbitrary string, which we can look up in the table to
 determine if the actor has ever been informed about this key. This can
 be used to make a response conditional on another response having been
 displayed, because the key will only be added to the information table
-when the text containing the \&lt;.inform key\&gt; sequence is displayed.
+when the text containing the &lt;.inform key&gt; sequence is displayed.</p>
 
-\&lt;.convnode name\&gt; - add 'name' to the current list of convKeys (this
-actually adds it to the actor's pendingKeys for use on the next turn);
-this is normally used to trigger a Conversation Node that's defined to
-match the same name.
+<p>&lt;.convnode name&gt; - add ‘name’ to the current list of convKeys (this
+actually adds it to the actor’s pendingKeys for use on the next turn);
+this is normally used to trigger a Conversation Node that’s defined to
+match the same name.</p>
 
-\&lt;.convodet name\&gt; does the same as \&lt;.convnode name\&gt; and additionally
+<p>&lt;.convodet name&gt; does the same as &lt;.convnode name&gt; and additionally
 schedules a topic inventory (a listing of suggested topics); this can be
 used to ensure that the player knows what conversational options are
-available in the node we're about to enter, where this isn't obvious
-from the context.
+available in the node we’re about to enter, where this isn’t obvious
+from the context.</p>
 
-\&lt;.convstay\&gt; - retain the same list of active keys for the next
+<p>&lt;.convstay&gt; - retain the same list of active keys for the next
 conversational response (and thus has the effect of making the
-conversation remain in the same conversation node).
+conversation remain in the same conversation node).</p>
 
-\&lt;.convstayt\&gt; - does the same as \&lt;.convstay\&gt; but additionally
-schedules a topic inventory.
+<p>&lt;.convstayt&gt; - does the same as &lt;.convstay&gt; but additionally
+schedules a topic inventory.</p>
 
-\&lt;.topics\&gt; - schedule a topic inventory for the end of the turn (just
-before the next command prompt)
+<p>&lt;.topics&gt; - schedule a topic inventory for the end of the turn (just
+before the next command prompt)</p>
 
-\&lt;.arouse key\&gt; Set the curiosityAroused property to true for all
-TopicEntries whose convKeys include key
+<p>&lt;.arouse key&gt; Set the curiosityAroused property to true for all
+TopicEntries whose convKeys include key</p>
 
-\&lt;.suggest key\&gt; Schedule a topic inventory for all topic entries whose
-convKeys include key.
+<p>&lt;.suggest key&gt; Schedule a topic inventory for all topic entries whose
+convKeys include key.</p>
 
-\&lt;.sugkey key\&gt; Set our actor's suggestionKey to key (this potentially
-restricts the list of topics that will be suggested)
+<p>&lt;.sugkey key&gt; Set our actor’s suggestionKey to key (this potentially
+restricts the list of topics that will be suggested)</p>
 
-\&lt;.activate key\&gt; Set the activated property to true for every topic
-entry whose convKeys list includes key.
+<p>&lt;.activate key&gt; Set the activated property to true for every topic
+entry whose convKeys list includes key.</p>
 
-\&lt;.agenda item\&gt; Add item to the agenda list of our Actor and any
-associated DefaultAgendaTopics.
+<p>&lt;.agenda item&gt; Add item to the agenda list of our Actor and any
+associated DefaultAgendaTopics.</p>
 
-\&lt;.remove item\&gt; Remove item from the agenda list of our Actor and any
-associated DefaultAgendaTopics.
+<p>&lt;.remove item&gt; Remove item from the agenda list of our Actor and any
+associated DefaultAgendaTopics.</p>
 
-\&lt;.state newstate\&gt; Change our actor's current ActorState to newstate.
+<p>&lt;.state newstate&gt; Change our actor’s current ActorState to newstate.</p>
 
-\&lt;.known obj\&gt; Mark obj (a Thing or Topic) as now being known (i.e.
-familiar)
+<p>&lt;.known obj&gt; Mark obj (a Thing or Topic) as now being known (i.e.
+familiar)</p>
 
-**`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">conversationManager</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a> <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">conversationManager</code></strong><br />
 <a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
@@ -125,40 +117,28 @@ familiar)
 </code>                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#convnodeSetTurn"><code class="language-plaintext highlighter-rouge">convnodeSetTurn</code></a><a href="#customTags"><code class="language-plaintext highlighter-rouge">customTags</code></a><a href="#idToActor"><code class="language-plaintext highlighter-rouge">idToActor</code></a><a href="#objNameTab"><code class="language-plaintext highlighter-rouge">objNameTab</code></a><a href="#pendingTopicInventory"><code class="language-plaintext highlighter-rouge">pendingTopicInventory</code></a><a href="#pendingTopicInventoryKey"><code class="language-plaintext highlighter-rouge">pendingTopicInventoryKey</code></a><a href="#respondingActor"><code class="language-plaintext highlighter-rouge">respondingActor</code></a><a href="#tagPat"><code class="language-plaintext highlighter-rouge">tagPat</code></a></p>
+<p><a href="#convnodeSetTurn"><code class="language-plaintext highlighter-rouge">convnodeSetTurn</code></a> <a href="#customTags"><code class="language-plaintext highlighter-rouge">customTags</code></a> <a href="#idToActor"><code class="language-plaintext highlighter-rouge">idToActor</code></a> <a href="#objNameTab"><code class="language-plaintext highlighter-rouge">objNameTab</code></a> <a href="#pendingTopicInventory"><code class="language-plaintext highlighter-rouge">pendingTopicInventory</code></a> <a href="#pendingTopicInventoryKey"><code class="language-plaintext highlighter-rouge">pendingTopicInventoryKey</code></a> <a href="#respondingActor"><code class="language-plaintext highlighter-rouge">respondingActor</code></a> <a href="#tagPat"><code class="language-plaintext highlighter-rouge">tagPat</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#doCustomTag"><code class="language-plaintext highlighter-rouge">doCustomTag</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a><a href="#manageKeys"><code class="language-plaintext highlighter-rouge">manageKeys</code></a><a href="#scheduleTopicInventory"><code class="language-plaintext highlighter-rouge">scheduleTopicInventory</code></a><a href="#setInformed"><code class="language-plaintext highlighter-rouge">setInformed</code></a><a href="#setRevealed"><code class="language-plaintext highlighter-rouge">setRevealed</code></a><a href="#setUnrevealed"><code class="language-plaintext highlighter-rouge">setUnrevealed</code></a><a href="#showAgendaError"><code class="language-plaintext highlighter-rouge">showAgendaError</code></a><a href="#showKnownError"><code class="language-plaintext highlighter-rouge">showKnownError</code></a><a href="#showObjDoesNotBelongToActorError"><code class="language-plaintext highlighter-rouge">showObjDoesNotBelongToActorError</code></a><a href="#showObjNotExistError"><code class="language-plaintext highlighter-rouge">showObjNotExistError</code></a><a href="#showStateError"><code class="language-plaintext highlighter-rouge">showStateError</code></a><a href="#showWrongKindofObjectError"><code class="language-plaintext highlighter-rouge">showWrongKindofObjectError</code></a><a href="#topicInventoryDaemon"><code class="language-plaintext highlighter-rouge">topicInventoryDaemon</code></a></p>
+<p><a href="#doCustomTag"><code class="language-plaintext highlighter-rouge">doCustomTag</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a> <a href="#manageKeys"><code class="language-plaintext highlighter-rouge">manageKeys</code></a> <a href="#scheduleTopicInventory"><code class="language-plaintext highlighter-rouge">scheduleTopicInventory</code></a> <a href="#setInformed"><code class="language-plaintext highlighter-rouge">setInformed</code></a> <a href="#setRevealed"><code class="language-plaintext highlighter-rouge">setRevealed</code></a> <a href="#setUnrevealed"><code class="language-plaintext highlighter-rouge">setUnrevealed</code></a> <a href="#showAgendaError"><code class="language-plaintext highlighter-rouge">showAgendaError</code></a> <a href="#showKnownError"><code class="language-plaintext highlighter-rouge">showKnownError</code></a> <a href="#showObjDoesNotBelongToActorError"><code class="language-plaintext highlighter-rouge">showObjDoesNotBelongToActorError</code></a> <a href="#showObjNotExistError"><code class="language-plaintext highlighter-rouge">showObjNotExistError</code></a> <a href="#showStateError"><code class="language-plaintext highlighter-rouge">showStateError</code></a> <a href="#showWrongKindofObjectError"><code class="language-plaintext highlighter-rouge">showWrongKindofObjectError</code></a> <a href="#topicInventoryDaemon"><code class="language-plaintext highlighter-rouge">topicInventoryDaemon</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="convnodeSetTurn"></span></p>
 
@@ -166,11 +146,7 @@ familiar)
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5358">5358</a>]</p>
 
-<div class="desc">
-
-The turn on which we last processed a convnode tag
-
-</div>
+<p>The turn on which we last processed a convnode tag</p>
 
 <p><span id="customTags"></span></p>
 
@@ -178,24 +154,20 @@ The turn on which we last processed a convnode tag
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5025">5025</a>]</p>
 
-<div class="desc">
+<p>Custom extended tags. Games and library extensions can add their own tag
+processing as needed, by using ‘modify’ to extend this object. There are
+two things you have to do to add your own tags:</p>
 
-Custom extended tags. Games and library extensions can add their own tag
-processing as needed, by using 'modify' to extend this object. There are
-two things you have to do to add your own tags:
-
-First, add a 'customTags' property that defines a regular expression for
+<p>First, add a ‘customTags’ property that defines a regular expression for
 your added tags. This will be incorporated into the main pattern we use
 to look for tags. Simply specify a string that lists your tags separated
-by "\|" characters, like this:
+by “|” characters, like this:</p>
 
-customTags = 'foo\|bar'
+<p>customTags = ‘foo|bar’</p>
 
-Second, define a doCustomTag() method to process the tags. The filter
+<p>Second, define a doCustomTag() method to process the tags. The filter
 routine will call your doCustomTag() method whenever it finds one of
-your custom tags in the output stream.
-
-</div>
+your custom tags in the output stream.</p>
 
 <p><span id="idToActor"></span></p>
 
@@ -203,11 +175,7 @@ your custom tags in the output stream.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5573">5573</a>]</p>
 
-<div class="desc">
-
-a vector of actors, indexed by their convMgrID values
-
-</div>
+<p>a vector of actors, indexed by their convMgrID values</p>
 
 <p><span id="objNameTab"></span></p>
 
@@ -215,11 +183,7 @@ a vector of actors, indexed by their convMgrID values
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5623">5623</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="pendingTopicInventory"></span></p>
 
@@ -227,11 +191,7 @@ a vector of actors, indexed by their convMgrID values
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5618">5618</a>]</p>
 
-<div class="desc">
-
-flag: we have a pending prompt-time topic inventory request
-
-</div>
+<p>flag: we have a pending prompt-time topic inventory request</p>
 
 <p><span id="pendingTopicInventoryKey"></span></p>
 
@@ -239,11 +199,7 @@ flag: we have a pending prompt-time topic inventory request
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5621">5621</a>]</p>
 
-<div class="desc">
-
-The key to use for the pending prompt-time inventory request
-
-</div>
+<p>The key to use for the pending prompt-time inventory request</p>
 
 <p><span id="respondingActor"></span></p>
 
@@ -251,12 +207,8 @@ The key to use for the pending prompt-time inventory request
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5032">5032</a>]</p>
 
-<div class="desc">
-
-The actor we're dealing with is the player character's current
-interlocutor
-
-</div>
+<p>The actor we’re dealing with is the player character’s current
+interlocutor</p>
 
 <p><span id="tagPat"></span></p>
 
@@ -264,19 +216,11 @@ interlocutor
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5361">5361</a>]</p>
 
-<div class="desc">
-
-regular expression pattern for our tags
-
-</div>
+<p>regular expression pattern for our tags</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="doCustomTag"></span></p>
 
@@ -284,11 +228,7 @@ regular expression pattern for our tags
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5026">5026</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="execute"></span></p>
 
@@ -296,11 +236,7 @@ regular expression pattern for our tags
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5576">5576</a>]</p>
 
-<div class="desc">
-
-preinitialize
-
-</div>
+<p>preinitialize</p>
 
 <p><span id="filterText"></span></p>
 
@@ -308,11 +244,7 @@ preinitialize
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5035">5035</a>]</p>
 
-<div class="desc">
-
-filter text written to the output stream
-
-</div>
+<p>filter text written to the output stream</p>
 
 <p><span id="manageKeys"></span></p>
 
@@ -320,11 +252,7 @@ filter text written to the output stream
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5370">5370</a>]</p>
 
-<div class="desc">
-
-Provided we have a respondingActor, call its manageKeys method.
-
-</div>
+<p>Provided we have a respondingActor, call its manageKeys method.</p>
 
 <p><span id="scheduleTopicInventory"></span></p>
 
@@ -332,15 +260,11 @@ Provided we have a respondingActor, call its manageKeys method.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5383">5383</a>]</p>
 
-<div class="desc">
-
-Schedule a topic inventory request. Game code can call this at any time
-to request that the player character's topic inventory be shown
+<p>Schedule a topic inventory request. Game code can call this at any time
+to request that the player character’s topic inventory be shown
 automatically just before the next command prompt. In most cases, game
-code won't call this directly, but will request the same effect using
-the \&lt;.topics\&gt; tag in topic response text.
-
-</div>
+code won’t call this directly, but will request the same effect using
+the &lt;.topics&gt; tag in topic response text.</p>
 
 <p><span id="setInformed"></span></p>
 
@@ -348,12 +272,8 @@ the \&lt;.topics\&gt; tag in topic response text.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5455">5455</a>]</p>
 
-<div class="desc">
-
-Notify every actor who's in a position to hear that we've just imparted
-some information.
-
-</div>
+<p>Notify every actor who’s in a position to hear that we’ve just imparted
+some information.</p>
 
 <p><span id="setRevealed"></span></p>
 
@@ -361,26 +281,22 @@ some information.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5410">5410</a>]</p>
 
-<div class="desc">
-
-Mark a tag as revealed. This adds an entry for the tag to the
-revealedNameTab table. We simply set the table entry to 'true'; the
+<p>Mark a tag as revealed. This adds an entry for the tag to the
+revealedNameTab table. We simply set the table entry to ‘true’; the
 presence of the tag in the table constitutes the indication that the tag
-has been revealed.
+has been revealed.</p>
 
-(Games and library extensions can use 'modify' to override this and
+<p>(Games and library extensions can use ‘modify’ to override this and
 store more information in the table entry. For example, you could store
 the time when the information was first revealed, or the location where
 it was learned. If you do override this, just be sure to set the
 revealedNameTab entry for the tag to a non-nil and non-zero value, so
 that any code testing the presence of the table entry will see that the
-slot is indeed set.)
+slot is indeed set.)</p>
 
-The actual method and the revealedNameTab are on libGlobal rather than
-here in order to make them available to games that don't include
-actor.t.
-
-</div>
+<p>The actual method and the revealedNameTab are on libGlobal rather than
+here in order to make them available to games that don’t include
+actor.t.</p>
 
 <p><span id="setUnrevealed"></span></p>
 
@@ -388,16 +304,12 @@ actor.t.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5446">5446</a>]</p>
 
-<div class="desc">
+<p>Mark a tag as unrevealed. This removes an entry for the tag to the
+revealedNameTab table.</p>
 
-Mark a tag as unrevealed. This removes an entry for the tag to the
-revealedNameTab table.
-
-The actual method and the revealedNameTab are on libGlobal rather than
-here in order to make them available to games that don't include
-actor.t.
-
-</div>
+<p>The actual method and the revealedNameTab are on libGlobal rather than
+here in order to make them available to games that don’t include
+actor.t.</p>
 
 <p><span id="showAgendaError"></span></p>
 
@@ -405,14 +317,10 @@ actor.t.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5489">5489</a>]</p>
 
-<div class="desc">
-
-Display an error message if the game code tries to add or remove agenda
-items from an agendaList using a \&lt;.agenda item\&gt; or \&lt;.remove item\&gt;
-tag, when item doesn't correspond to a valid AgendaItem, but only do so
-if the game has been compiled for debugging.
-
-</div>
+<p>Display an error message if the game code tries to add or remove agenda
+items from an agendaList using a &lt;.agenda item&gt; or &lt;.remove item&gt;
+tag, when item doesn’t correspond to a valid AgendaItem, but only do so
+if the game has been compiled for debugging.</p>
 
 <p><span id="showKnownError"></span></p>
 
@@ -420,14 +328,10 @@ if the game has been compiled for debugging.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5531">5531</a>]</p>
 
-<div class="desc">
-
-Display an error message if the game code tries mark an object as known
-about using a \&lt;.known obj\&gt; tag, when obj doesn't correspond to a valid
+<p>Display an error message if the game code tries mark an object as known
+about using a &lt;.known obj&gt; tag, when obj doesn’t correspond to a valid
 Mentionable object, but only do so if the game has been compiled for
-debugging.
-
-</div>
+debugging.</p>
 
 <p><span id="showObjDoesNotBelongToActorError"></span></p>
 
@@ -435,11 +339,7 @@ debugging.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5565">5565</a>]</p>
 
-<div class="desc">
-
-The object referred to by tag doesn't belong to the actor in question
-
-</div>
+<p>The object referred to by tag doesn’t belong to the actor in question</p>
 
 <p><span id="showObjNotExistError"></span></p>
 
@@ -447,11 +347,7 @@ The object referred to by tag doesn't belong to the actor in question
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5550">5550</a>]</p>
 
-<div class="desc">
-
-The object referred to by tag doesn't exist
-
-</div>
+<p>The object referred to by tag doesn’t exist</p>
 
 <p><span id="showStateError"></span></p>
 
@@ -459,14 +355,10 @@ The object referred to by tag doesn't exist
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5511">5511</a>]</p>
 
-<div class="desc">
-
-Display an error message if the game code tries to change our actor's
-ActorState via a \&lt;.state newstate\&gt; tag, when tag doesn't correspond to
+<p>Display an error message if the game code tries to change our actor’s
+ActorState via a &lt;.state newstate&gt; tag, when tag doesn’t correspond to
 a valid ActorState, but only do so if the game has been compiled for
-debugging.
-
-</div>
+debugging.</p>
 
 <p><span id="showWrongKindofObjectError"></span></p>
 
@@ -474,11 +366,7 @@ debugging.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5558">5558</a>]</p>
 
-<div class="desc">
-
-The object referred to by tag is the wrong sort of object
-
-</div>
+<p>The object referred to by tag is the wrong sort of object</p>
 
 <p><span id="topicInventoryDaemon"></span></p>
 
@@ -486,22 +374,15 @@ The object referred to by tag is the wrong sort of object
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5596">5596</a>]</p>
 
-<div class="desc">
-
-Prompt daemon: show topic inventory when appropriate. When a response
-explicitly asks us to show a topic inventory using the \&lt;.topics\&gt; tag,
+<p>Prompt daemon: show topic inventory when appropriate. When a response
+explicitly asks us to show a topic inventory using the &lt;.topics&gt; tag,
 or when other game code asks us to show topic inventory by calling
-scheduleTopicInventory(), we'll show the inventory just before the
-command input prompt.
+scheduleTopicInventory(), we’ll show the inventory just before the
+command input prompt.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

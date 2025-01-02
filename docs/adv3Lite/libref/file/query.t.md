@@ -37,7 +37,7 @@ Based substantially on the query.t module in the Mercury Library (c)
 
 
 
-[`ReachProblem`](../object/ReachProblem.html)[`ReachProblemBlocker`](../object/ReachProblemBlocker.html)[`ReachProblemCheckReach`](../object/ReachProblemCheckReach.html)[`ReachProblemDistance`](../object/ReachProblemDistance.html)[`ReachProblemReachOut`](../object/ReachProblemReachOut.html)[`ReachProblemVerifyReach`](../object/ReachProblemVerifyReach.html)[`ScopeList`](../object/ScopeList.html)[`Special`](../object/Special.html)
+[`ReachProblem`](../object/ReachProblem.html) [`ReachProblemBlocker`](../object/ReachProblemBlocker.html) [`ReachProblemCheckReach`](../object/ReachProblemCheckReach.html) [`ReachProblemDistance`](../object/ReachProblemDistance.html) [`ReachProblemReachOut`](../object/ReachProblemReachOut.html) [`ReachProblemVerifyReach`](../object/ReachProblemVerifyReach.html) [`ScopeList`](../object/ScopeList.html) [`Special`](../object/Special.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -46,7 +46,7 @@ Based substantially on the query.t module in the Mercury Library (c)
 
 
 
-[`commLink`](../object/commLink.html)[`Q`](../object/Q.html)[`QDefaults`](../object/QDefaults.html)
+[`commLink`](../object/commLink.html) [`Q`](../object/Q.html) [`QDefaults`](../object/QDefaults.html)
 <span id="FunctionSummary_"></span>
 
 

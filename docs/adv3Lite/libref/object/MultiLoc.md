@@ -80,7 +80,7 @@ or a Thing-derived class.
 
 
 
-[`exceptions`](#exceptions)[`initialLocationClass`](#initialLocationClass)[`initialLocationList`](#initialLocationList)[`locationList`](#locationList)
+[`exceptions`](#exceptions) [`initialLocationClass`](#initialLocationClass) [`initialLocationList`](#initialLocationList) [`locationList`](#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ or a Thing-derived class.
 
 
 
-[`addToLocations`](#addToLocations)[`isDirectlyIn`](#isDirectlyIn)[`isIn`](#isIn)[`isInitiallyIn`](#isInitiallyIn)[`location`](#location)[`moveInto`](#moveInto)[`moveIntoAdd`](#moveIntoAdd)[`moveOutOf`](#moveOutOf)[`preinitThing`](#preinitThing)
+[`addToLocations`](#addToLocations) [`isDirectlyIn`](#isDirectlyIn) [`isIn`](#isIn) [`isInitiallyIn`](#isInitiallyIn) [`location`](#location) [`moveInto`](#moveInto) [`moveIntoAdd`](#moveIntoAdd) [`moveOutOf`](#moveOutOf) [`preinitThing`](#preinitThing)
 
 <span id="_Properties_"></span>
 

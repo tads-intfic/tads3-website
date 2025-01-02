@@ -86,7 +86,7 @@ Modifications to Parser for CMDHELP EXTENSION
 
 
 
-[`autoHelp`](#autoHelp)[`autoLook`](#autoLook)[`autoSpell`](#autoSpell)[`DefaultAction`](#DefaultAction)[`defaultActions`](#defaultActions)[`lastTokens`](#lastTokens)[`question`](#question)[`showUnknownWords`](#showUnknownWords)[`spellTimeLimit`](#spellTimeLimit)
+[`autoHelp`](#autoHelp) [`autoLook`](#autoLook) [`autoSpell`](#autoSpell) [`DefaultAction`](#DefaultAction) [`defaultActions`](#defaultActions) [`lastTokens`](#lastTokens) [`question`](#question) [`showUnknownWords`](#showUnknownWords) [`spellTimeLimit`](#spellTimeLimit)
 
 <span id="_MethodSummary_"></span>
 
@@ -96,7 +96,7 @@ Modifications to Parser for CMDHELP EXTENSION
 
 
 
-[`emptyCommand`](#emptyCommand)[`parse`](#parse)[`rmcType`](#rmcType)
+[`emptyCommand`](#emptyCommand) [`parse`](#parse) [`rmcType`](#rmcType)
 
 <span id="_Properties_"></span>
 

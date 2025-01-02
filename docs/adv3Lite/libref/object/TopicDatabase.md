@@ -85,7 +85,7 @@ for determining the TopicEntry that best matches a list of topics
 
 
 
-[`addTopic`](#addTopic)[`getBestMatch`](#getBestMatch)
+[`addTopic`](#addTopic) [`getBestMatch`](#getBestMatch)
 
 <span id="_Properties_"></span>
 

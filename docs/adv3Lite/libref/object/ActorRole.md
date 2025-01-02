@@ -50,10 +50,10 @@ Command.
 
 
 
-[`isPredicate`](#isPredicate)[`npListProp`](#npListProp)[`objListProp`](#objListProp)[`objProp`](#objProp)
+[`isPredicate`](#isPredicate) [`npListProp`](#npListProp) [`objListProp`](#objListProp) [`objProp`](#objProp)
 
 Inherited from `NounRole` :  
-[`all`](../object/NounRole.html#all)[`allPredicate`](../object/NounRole.html#allPredicate)[`matchProp`](../object/NounRole.html#matchProp)[`missingReplyProp`](../object/NounRole.html#missingReplyProp)[`name`](../object/NounRole.html#name)[`objMatchProp`](../object/NounRole.html#objMatchProp)[`order`](../object/NounRole.html#order)
+[`all`](../object/NounRole.html#all) [`allPredicate`](../object/NounRole.html#allPredicate) [`matchProp`](../object/NounRole.html#matchProp) [`missingReplyProp`](../object/NounRole.html#missingReplyProp) [`name`](../object/NounRole.html#name) [`objMatchProp`](../object/NounRole.html#objMatchProp) [`order`](../object/NounRole.html#order)
 
 <span id="_MethodSummary_"></span>
 

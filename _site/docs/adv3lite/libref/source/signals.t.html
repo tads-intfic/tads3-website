@@ -339,7 +339,7 @@ modify TadsObject
  */
 connect(sender, signal, receiver, handler?)
 {
-    signal = relationTable.getRelation(signal)[1];
+    signal = relationTable.getRelation(signal) [1];
     
     relate(sender, signal, receiver);
     if(handler)
@@ -353,7 +353,7 @@ connect(sender, signal, receiver, handler?)
  */
 unconnect(sender, signal, receiver)
 {
-    signal = relationTable.getRelation(signal)[1];
+    signal = relationTable.getRelation(signal) [1];
     unrelate(sender, signal, receiver);
     
     if(receiver.propDefined(&amp;removeSenderHandler))
@@ -410,12 +410,9 @@ modify Feel
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

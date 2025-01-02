@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Querying the World
-Model  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Querying the World
+Model<br />
 <span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
-    <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
-
-</div>
+    <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span></p>
 
 <h1 id="querying-the-world-model">Querying the World Model</h1>
 
@@ -354,69 +346,67 @@ want ending a conversation with another actor to sever any
 communications link there may have been. A fairly basic scheme to do all
 this might be as follows:</p>
 
-<p>`
-     DefineTAction(Phone)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     DefineTAction(Phone)
         addExtraScopeItems(role)
         {
-            inherited(role);</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        scopeList = scopeList.appendUnique(Q.knownScopeList.subset({x:
-            x.ofKind(Actor)}));
-    }
-;
-
-VerbRule(Phone)
-    ('phone' | 'call') singleDobj
-    : VerbProduction
-    action = Phone
-    verbPhrase = 'phone/phoning (whom)'
-    missingQ = 'who do you want to phone'
-;
-
-modify Thing
-    dobjFor(Phone)
-    {
-        verify()
-        {
-            illogical('{I} {can\'t} phone {that dobj}. ');
-        }
-    }
-;
-
-modify Actor
-    dobjFor(Phone)
-    {
-        verify()
-        {
-            if(commLink.isConnectedTo(self))
-                illogicalNow('{I} {am} already connected to {the dobj}. ');
+            inherited(role);
             
+            scopeList = scopeList.appendUnique(Q.knownScopeList.subset({x:
+                x.ofKind(Actor)}));
         }
-        
-        check()
-        {
-            if(!canBePhoned)
-                "{The dobj} {doesn\'t answer[ed]} {her actor} call. ";  
-        }
-        
-        action()
-        {
-            commLink.connectTo(self);
-            sayHello();
-        }
-    }
-    
-    sayGoodbye(reason = endConvBye)
-    {
-        inherited(reason);
-        commLink.disconnectFrom(self);
-    }
-    
-    canBePhoned = true
-; 
-</code></pre></div></div>
+    ;
 
-<p>`</p>
+    VerbRule(Phone)
+        ('phone' | 'call') singleDobj
+        : VerbProduction
+        action = Phone
+        verbPhrase = 'phone/phoning (whom)'
+        missingQ = 'who do you want to phone'
+    ;
+
+    modify Thing
+        dobjFor(Phone)
+        {
+            verify()
+            {
+                illogical('{I} {can\'t} phone {that dobj}. ');
+            }
+        }
+    ;
+
+    modify Actor
+        dobjFor(Phone)
+        {
+            verify()
+            {
+                if(commLink.isConnectedTo(self))
+                    illogicalNow('{I} {am} already connected to {the dobj}. ');
+                
+            }
+            
+            check()
+            {
+                if(!canBePhoned)
+                    "{The dobj} {doesn\'t answer[ed]} {her actor} call. ";  
+            }
+            
+            action()
+            {
+                commLink.connectTo(self);
+                sayHello();
+            }
+        }
+        
+        sayGoodbye(reason = endConvBye)
+        {
+            inherited(reason);
+            commLink.disconnectFrom(self);
+        }
+        
+        canBePhoned = true
+    ; 
+     
+</code></pre></div></div>
 
 <p>If you want to try this out for yourself, bear in mind that the way
 we’ve tried it allows the player character to phone only those actors
@@ -426,16 +416,13 @@ work.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Querying the World
-Model  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Querying the World
+Model<br />
 <span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
-    <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
+    <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

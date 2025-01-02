@@ -40,70 +40,50 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Command Sequencer Filter. This is an output filter that handles the
+special &lt;.commandsep&gt; tag for visual command separation. This tag has
+the form of a style tag, but must be processed specially.</p>
 
-Command Sequencer Filter. This is an output filter that handles the
-special \&lt;.commandsep\&gt; tag for visual command separation. This tag has
-the form of a style tag, but must be processed specially.
-
-\&lt;.commandsep\&gt; shows an appropriate separator between commands. Before
+<p>&lt;.commandsep&gt; shows an appropriate separator between commands. Before
 the first command output or after the last command output, this has no
-effect. A run of multiple consecutive \&lt;.commandsep\&gt; tags is treated as
-a single tag.
+effect. A run of multiple consecutive &lt;.commandsep&gt; tags is treated as
+a single tag.</p>
 
-Between commands, we show gLibMessages.commandResultsSeparator. After an
+<p>Between commands, we show gLibMessages.commandResultsSeparator. After an
 input line and before the first command result text, we show
 gLibMessages.commandResultsPrefix. After the last command result text
 before a new input line, we show gLibMessages.commandResultsSuffix. If
 we read two input lines, and there is no intervening text output at all,
-we show gLibMessages.commandResultsEmpty.
+we show gLibMessages.commandResultsEmpty.</p>
 
-The input manager should write a \&lt;.commandbefore\&gt; tag whenever it
-starts reading a command line, and a \&lt;.commandafter\&gt; tag whenever it
-finishes reading a command line.
+<p>The input manager should write a &lt;.commandbefore&gt; tag whenever it
+starts reading a command line, and a &lt;.commandafter&gt; tag whenever it
+finishes reading a command line.</p>
 
-`transient `**`commandSequencer`**` :   `[`OutputFilter`](../object/OutputFilter.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">commandSequencer</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">commandSequencer</code></strong><br />
 <a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#patNextTag"><code class="language-plaintext highlighter-rouge">patNextTag</code></a><a href="#state_"><code class="language-plaintext highlighter-rouge">state_</code></a></p>
+<p><a href="#patNextTag"><code class="language-plaintext highlighter-rouge">patNextTag</code></a> <a href="#state_"><code class="language-plaintext highlighter-rouge">state_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a><a href="#setCommandMode"><code class="language-plaintext highlighter-rouge">setCommandMode</code></a><a href="#writeThrough"><code class="language-plaintext highlighter-rouge">writeThrough</code></a></p>
+<p><a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a> <a href="#setCommandMode"><code class="language-plaintext highlighter-rouge">setCommandMode</code></a> <a href="#writeThrough"><code class="language-plaintext highlighter-rouge">writeThrough</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="patNextTag"></span></p>
 
@@ -111,11 +91,7 @@ finishes reading a command line.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1264">1264</a>]</p>
 
-<div class="desc">
-
-pre-compile our tag sequence pattern
-
-</div>
+<p>pre-compile our tag sequence pattern</p>
 
 <p><span id="state_"></span></p>
 
@@ -123,19 +99,11 @@ pre-compile our tag sequence pattern
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1543">1543</a>]</p>
 
-<div class="desc">
-
-our current state - start out in before-command mode
-
-</div>
+<p>our current state - start out in before-command mode</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="filterText"></span></p>
 
@@ -143,11 +111,7 @@ our current state - start out in before-command mode
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1272">1272</a>]</p>
 
-<div class="desc">
-
-Apply our filter
-
-</div>
+<p>Apply our filter</p>
 
 <p><span id="setCommandMode"></span></p>
 
@@ -155,13 +119,9 @@ Apply our filter
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1234">1234</a>]</p>
 
-<div class="desc">
-
-Force the sequencer into mid-command mode. This can be used to defeat
+<p>Force the sequencer into mid-command mode. This can be used to defeat
 the resequencing into before-results mode that occurs if any interactive
-command-line input must be read in the course of a command's execution.
-
-</div>
+command-line input must be read in the course of a command’s execution.</p>
 
 <p><span id="writeThrough"></span></p>
 
@@ -169,19 +129,12 @@ command-line input must be read in the course of a command's execution.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1240">1240</a>]</p>
 
-<div class="desc">
+<p>Internal routine: write the given text directly through us, skipping any
+filtering we’d otherwise apply.</p>
 
-Internal routine: write the given text directly through us, skipping any
-filtering we'd otherwise apply.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

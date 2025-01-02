@@ -46,7 +46,7 @@ English module options.
 
 
 
-[`decimalPt`](#decimalPt)[`numGroupMark`](#numGroupMark)
+[`decimalPt`](#decimalPt) [`numGroupMark`](#numGroupMark)
 
 <span id="_MethodSummary_"></span>
 

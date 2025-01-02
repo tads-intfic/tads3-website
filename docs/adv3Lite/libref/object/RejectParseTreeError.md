@@ -78,10 +78,10 @@ displayable error; the parser simply rules out these structures.
 
 
 Inherited from `CommandError` :  
-[`cmd`](../object/CommandError.html#cmd)[`errStage`](../object/CommandError.html#errStage)
+[`cmd`](../object/CommandError.html#cmd) [`errStage`](../object/CommandError.html#errStage)
 
 Inherited from `ParseError` :  
-[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -100,10 +100,10 @@ Inherited from `CommandError` :
 [`construct`](../object/CommandError.html#construct)
 
 Inherited from `ParseError` :  
-[`rankCorrection`](../object/ParseError.html#rankCorrection)[`tryCuring`](../object/ParseError.html#tryCuring)
+[`rankCorrection`](../object/ParseError.html#rankCorrection) [`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

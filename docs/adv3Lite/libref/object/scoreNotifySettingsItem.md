@@ -46,7 +46,7 @@ settings item for score notification mode
 
 
 
-[`isOn`](#isOn)[`settingID`](#settingID)
+[`isOn`](#isOn) [`settingID`](#settingID)
 
 <span id="_MethodSummary_"></span>
 

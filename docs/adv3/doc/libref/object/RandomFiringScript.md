@@ -92,7 +92,7 @@ realistic.
 
 
 
-[`eventPercent`](#eventPercent)[`eventReduceAfter`](#eventReduceAfter)[`eventReduceTo`](#eventReduceTo)
+[`eventPercent`](#eventPercent) [`eventReduceAfter`](#eventReduceAfter) [`eventReduceTo`](#eventReduceTo)
 
 <span id="_MethodSummary_"></span>
 
@@ -102,7 +102,7 @@ realistic.
 
 
 
-[`checkEventOdds`](#checkEventOdds)[`doScript`](#doScript)
+[`checkEventOdds`](#checkEventOdds) [`doScript`](#doScript)
 
 <span id="_Properties_"></span>
 

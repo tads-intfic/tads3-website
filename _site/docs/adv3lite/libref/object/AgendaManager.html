@@ -46,70 +46,42 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Base class for items (Actors and DefaultAgendaTopics) that can handle</p>
 
-Base class for items (Actors and DefaultAgendaTopics) that can handle
-
-`class `**`AgendaManager`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">AgendaManager</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">AgendaManager</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">AgendaManager</code></strong><br />
 <a href="../object/Actor.html"><code class="language-plaintext highlighter-rouge">Actor</code></a><br />
 <a href="../object/DefaultAgendaTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAgendaTopic</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#agendaList"><code class="language-plaintext highlighter-rouge">agendaList</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addToAgenda"><code class="language-plaintext highlighter-rouge">addToAgenda</code></a><a href="#executeAgenda"><code class="language-plaintext highlighter-rouge">executeAgenda</code></a><a href="#removeFromAgenda"><code class="language-plaintext highlighter-rouge">removeFromAgenda</code></a></p>
+<p><a href="#addToAgenda"><code class="language-plaintext highlighter-rouge">addToAgenda</code></a> <a href="#executeAgenda"><code class="language-plaintext highlighter-rouge">executeAgenda</code></a> <a href="#removeFromAgenda"><code class="language-plaintext highlighter-rouge">removeFromAgenda</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="agendaList"></span></p>
 
@@ -117,20 +89,12 @@ Base class for items (Actors and DefaultAgendaTopics) that can handle
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5636">5636</a>]</p>
 
-<div class="desc">
-
-Our agendaList is the list of AgendaItems we're ready to execute when
-they're isReady property is true.
-
-</div>
+<p>Our agendaList is the list of AgendaItems we’re ready to execute when
+they’re isReady property is true.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addToAgenda"></span></p>
 
@@ -138,13 +102,9 @@ they're isReady property is true.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5643">5643</a>]</p>
 
-<div class="desc">
-
-add an agenda item. We try to make this as author-proof as possible so
+<p>add an agenda item. We try to make this as author-proof as possible so
 that the method will accept addToAgenda(item), addToAgenda(item1, item2,
-...) or addToAgenda(\[item1, item2,..\])
-
-</div>
+…) or addToAgenda([item1, item2,..])</p>
 
 <p><span id="executeAgenda"></span></p>
 
@@ -152,13 +112,9 @@ that the method will accept addToAgenda(item), addToAgenda(item1, item2,
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5696">5696</a>]</p>
 
-<div class="desc">
-
-Execute the next item in our agenda, if there are any items in the
-agenda that are ready to execute. We'll return true if we found an item
-to execute, nil if not.
-
-</div>
+<p>Execute the next item in our agenda, if there are any items in the
+agenda that are ready to execute. We’ll return true if we found an item
+to execute, nil if not.</p>
 
 <p><span id="removeFromAgenda"></span></p>
 
@@ -166,18 +122,11 @@ to execute, nil if not.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5676">5676</a>]</p>
 
-<div class="desc">
+<p>remove one or more agenda items</p>
 
-remove one or more agenda items
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

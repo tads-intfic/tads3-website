@@ -77,7 +77,7 @@ for a command line.
 [`isPromptDaemon`](#isPromptDaemon)
 
 Inherited from `Event` :  
-[`captureText`](../object/Event.html#captureText)[`eventOrder`](../object/Event.html#eventOrder)[`executed`](../object/Event.html#executed)[`interval_`](../object/Event.html#interval_)[`nextRunTime`](../object/Event.html#nextRunTime)[`obj_`](../object/Event.html#obj_)[`prop_`](../object/Event.html#prop_)[`senseObj_`](../object/Event.html#senseObj_)[`senseProp_`](../object/Event.html#senseProp_)
+[`captureText`](../object/Event.html#captureText) [`eventOrder`](../object/Event.html#eventOrder) [`executed`](../object/Event.html#executed) [`interval_`](../object/Event.html#interval_) [`nextRunTime`](../object/Event.html#nextRunTime) [`obj_`](../object/Event.html#obj_) [`prop_`](../object/Event.html#prop_) [`senseObj_`](../object/Event.html#senseObj_) [`senseProp_`](../object/Event.html#senseProp_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ Inherited from `Event` :
 [`executeEvent`](#executeEvent)
 
 Inherited from `Event` :  
-[`callMethod`](../object/Event.html#callMethod)[`construct`](../object/Event.html#construct)[`delayEvent`](../object/Event.html#delayEvent)[`eventMatches`](../object/Event.html#eventMatches)[`getNextRunTime`](../object/Event.html#getNextRunTime)[`removeEvent`](../object/Event.html#removeEvent)
+[`callMethod`](../object/Event.html#callMethod) [`construct`](../object/Event.html#construct) [`delayEvent`](../object/Event.html#delayEvent) [`eventMatches`](../object/Event.html#eventMatches) [`getNextRunTime`](../object/Event.html#getNextRunTime) [`removeEvent`](../object/Event.html#removeEvent)
 
 <span id="_Properties_"></span>
 

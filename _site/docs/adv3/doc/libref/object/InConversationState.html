@@ -46,32 +46,24 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The "in-conversation" state. This works with ConversationReadyState to
+<p>The “in-conversation” state. This works with ConversationReadyState to
 handle transitions in and out of conversations. In this state, we are
-actively engaged in a conversation.
+actively engaged in a conversation.</p>
 
-Throughout this implementation, we assume that we only care about
+<p>Throughout this implementation, we assume that we only care about
 conversations with a single character, specifically the player
-character. There's generally no good reason to fully model conversations
-between NPC's, since that kind of NPC activity is in most cases purely
+character. There’s generally no good reason to fully model conversations
+between NPC’s, since that kind of NPC activity is in most cases purely
 pre-scripted and thus requires no special state tracking. Since we
 generally only need to worry about tracking a conversation with the
-player character, we don't bother with the possibility that we're
-simultaneously in conversation with more than one other character.
+player character, we don’t bother with the possibility that we’re
+simultaneously in conversation with more than one other character.</p>
 
-`class `**`InConversationState`**` :   `[`ActorState`](../object/ActorState.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">InConversationState</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ActorState.html"><code class="language-plaintext highlighter-rouge">ActorState</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">InConversationState</code></strong><br />
 <a href="../object/ActorState.html"><code class="language-plaintext highlighter-rouge">ActorState</code></a><br />
@@ -82,68 +74,48 @@ simultaneously in conversation with more than one other character.
 </code>                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#attentionSpan"><code class="language-plaintext highlighter-rouge">attentionSpan</code></a><a href="#nextState"><code class="language-plaintext highlighter-rouge">nextState</code></a><a href="#previousState"><code class="language-plaintext highlighter-rouge">previousState</code></a></p>
+<p><a href="#attentionSpan"><code class="language-plaintext highlighter-rouge">attentionSpan</code></a> <a href="#nextState"><code class="language-plaintext highlighter-rouge">nextState</code></a> <a href="#previousState"><code class="language-plaintext highlighter-rouge">previousState</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorState</code> :<br />
-<a href="../object/ActorState.html#autoSuggest"><code class="language-plaintext highlighter-rouge">autoSuggest</code></a><a href="../object/ActorState.html#getImpliedConvState"><code class="language-plaintext highlighter-rouge">getImpliedConvState</code></a><a href="../object/ActorState.html#isInitState"><code class="language-plaintext highlighter-rouge">isInitState</code></a><a href="../object/ActorState.html#location"><code class="language-plaintext highlighter-rouge">location</code></a><a href="../object/ActorState.html#stateDesc"><code class="language-plaintext highlighter-rouge">stateDesc</code></a><a href="../object/ActorState.html#stateSuggestedTopics"><code class="language-plaintext highlighter-rouge">stateSuggestedTopics</code></a></p>
+<a href="../object/ActorState.html#autoSuggest"><code class="language-plaintext highlighter-rouge">autoSuggest</code></a> <a href="../object/ActorState.html#getImpliedConvState"><code class="language-plaintext highlighter-rouge">getImpliedConvState</code></a> <a href="../object/ActorState.html#isInitState"><code class="language-plaintext highlighter-rouge">isInitState</code></a> <a href="../object/ActorState.html#location"><code class="language-plaintext highlighter-rouge">location</code></a> <a href="../object/ActorState.html#stateDesc"><code class="language-plaintext highlighter-rouge">stateDesc</code></a> <a href="../object/ActorState.html#stateSuggestedTopics"><code class="language-plaintext highlighter-rouge">stateSuggestedTopics</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
-<a href="../object/ActorTopicDatabase.html#askForTopics"><code class="language-plaintext highlighter-rouge">askForTopics</code></a><a href="../object/ActorTopicDatabase.html#askTopics"><code class="language-plaintext highlighter-rouge">askTopics</code></a><a href="../object/ActorTopicDatabase.html#commandTopics"><code class="language-plaintext highlighter-rouge">commandTopics</code></a><a href="../object/ActorTopicDatabase.html#giveTopics"><code class="language-plaintext highlighter-rouge">giveTopics</code></a><a href="../object/ActorTopicDatabase.html#initiateTopics"><code class="language-plaintext highlighter-rouge">initiateTopics</code></a><a href="../object/ActorTopicDatabase.html#miscTopics"><code class="language-plaintext highlighter-rouge">miscTopics</code></a><a href="../object/ActorTopicDatabase.html#showTopics"><code class="language-plaintext highlighter-rouge">showTopics</code></a><a href="../object/ActorTopicDatabase.html#specialTopics"><code class="language-plaintext highlighter-rouge">specialTopics</code></a><a href="../object/ActorTopicDatabase.html#tellTopics"><code class="language-plaintext highlighter-rouge">tellTopics</code></a></p>
+<a href="../object/ActorTopicDatabase.html#askForTopics"><code class="language-plaintext highlighter-rouge">askForTopics</code></a> <a href="../object/ActorTopicDatabase.html#askTopics"><code class="language-plaintext highlighter-rouge">askTopics</code></a> <a href="../object/ActorTopicDatabase.html#commandTopics"><code class="language-plaintext highlighter-rouge">commandTopics</code></a> <a href="../object/ActorTopicDatabase.html#giveTopics"><code class="language-plaintext highlighter-rouge">giveTopics</code></a> <a href="../object/ActorTopicDatabase.html#initiateTopics"><code class="language-plaintext highlighter-rouge">initiateTopics</code></a> <a href="../object/ActorTopicDatabase.html#miscTopics"><code class="language-plaintext highlighter-rouge">miscTopics</code></a> <a href="../object/ActorTopicDatabase.html#showTopics"><code class="language-plaintext highlighter-rouge">showTopics</code></a> <a href="../object/ActorTopicDatabase.html#specialTopics"><code class="language-plaintext highlighter-rouge">specialTopics</code></a> <a href="../object/ActorTopicDatabase.html#tellTopics"><code class="language-plaintext highlighter-rouge">tellTopics</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
-<a href="../object/TopicDatabase.html#limitSuggestions"><code class="language-plaintext highlighter-rouge">limitSuggestions</code></a><a href="../object/TopicDatabase.html#suggestedTopics"><code class="language-plaintext highlighter-rouge">suggestedTopics</code></a><a href="../object/TopicDatabase.html#topicGroupActive"><code class="language-plaintext highlighter-rouge">topicGroupActive</code></a><a href="../object/TopicDatabase.html#topicGroupScoreAdjustment"><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></a></p>
+<a href="../object/TopicDatabase.html#limitSuggestions"><code class="language-plaintext highlighter-rouge">limitSuggestions</code></a> <a href="../object/TopicDatabase.html#suggestedTopics"><code class="language-plaintext highlighter-rouge">suggestedTopics</code></a> <a href="../object/TopicDatabase.html#topicGroupActive"><code class="language-plaintext highlighter-rouge">topicGroupActive</code></a> <a href="../object/TopicDatabase.html#topicGroupScoreAdjustment"><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#activateState"><code class="language-plaintext highlighter-rouge">activateState</code></a><a href="#deactivateState"><code class="language-plaintext highlighter-rouge">deactivateState</code></a><a href="#defaultGreetingResponse"><code class="language-plaintext highlighter-rouge">defaultGreetingResponse</code></a><a href="#endConversation"><code class="language-plaintext highlighter-rouge">endConversation</code></a><a href="#handleConversation"><code class="language-plaintext highlighter-rouge">handleConversation</code></a><a href="#takeTurn"><code class="language-plaintext highlighter-rouge">takeTurn</code></a></p>
+<p><a href="#activateState"><code class="language-plaintext highlighter-rouge">activateState</code></a> <a href="#deactivateState"><code class="language-plaintext highlighter-rouge">deactivateState</code></a> <a href="#defaultGreetingResponse"><code class="language-plaintext highlighter-rouge">defaultGreetingResponse</code></a> <a href="#endConversation"><code class="language-plaintext highlighter-rouge">endConversation</code></a> <a href="#handleConversation"><code class="language-plaintext highlighter-rouge">handleConversation</code></a> <a href="#takeTurn"><code class="language-plaintext highlighter-rouge">takeTurn</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorState</code> :<br />
-<a href="../object/ActorState.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a><a href="../object/ActorState.html#afterTravel"><code class="language-plaintext highlighter-rouge">afterTravel</code></a><a href="../object/ActorState.html#arrivingTurn"><code class="language-plaintext highlighter-rouge">arrivingTurn</code></a><a href="../object/ActorState.html#arrivingWithDesc"><code class="language-plaintext highlighter-rouge">arrivingWithDesc</code></a><a href="../object/ActorState.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a><a href="../object/ActorState.html#beforeTravel"><code class="language-plaintext highlighter-rouge">beforeTravel</code></a><a href="../object/ActorState.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/ActorState.html#distantSpecialDesc"><code class="language-plaintext highlighter-rouge">distantSpecialDesc</code></a><a href="../object/ActorState.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a><a href="../object/ActorState.html#getNominalTraveler"><code class="language-plaintext highlighter-rouge">getNominalTraveler</code></a><a href="../object/ActorState.html#getSuggestedTopicList"><code class="language-plaintext highlighter-rouge">getSuggestedTopicList</code></a><a href="../object/ActorState.html#getTopicOwner"><code class="language-plaintext highlighter-rouge">getTopicOwner</code></a><a href="../object/ActorState.html#initializeActorState"><code class="language-plaintext highlighter-rouge">initializeActorState</code></a><a href="../object/ActorState.html#justFollowed"><code class="language-plaintext highlighter-rouge">justFollowed</code></a><a href="../object/ActorState.html#notifyTopicResponse"><code class="language-plaintext highlighter-rouge">notifyTopicResponse</code></a><a href="../object/ActorState.html#obeyCommand"><code class="language-plaintext highlighter-rouge">obeyCommand</code></a><a href="../object/ActorState.html#remoteSpecialDesc"><code class="language-plaintext highlighter-rouge">remoteSpecialDesc</code></a><a href="../object/ActorState.html#showSpecialDescInContents"><code class="language-plaintext highlighter-rouge">showSpecialDescInContents</code></a><a href="../object/ActorState.html#specialDesc"><code class="language-plaintext highlighter-rouge">specialDesc</code></a><a href="../object/ActorState.html#specialDescListWith"><code class="language-plaintext highlighter-rouge">specialDescListWith</code></a><a href="../object/ActorState.html#suggestTopicsFor"><code class="language-plaintext highlighter-rouge">suggestTopicsFor</code></a></p>
+<a href="../object/ActorState.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="../object/ActorState.html#afterTravel"><code class="language-plaintext highlighter-rouge">afterTravel</code></a> <a href="../object/ActorState.html#arrivingTurn"><code class="language-plaintext highlighter-rouge">arrivingTurn</code></a> <a href="../object/ActorState.html#arrivingWithDesc"><code class="language-plaintext highlighter-rouge">arrivingWithDesc</code></a> <a href="../object/ActorState.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="../object/ActorState.html#beforeTravel"><code class="language-plaintext highlighter-rouge">beforeTravel</code></a> <a href="../object/ActorState.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/ActorState.html#distantSpecialDesc"><code class="language-plaintext highlighter-rouge">distantSpecialDesc</code></a> <a href="../object/ActorState.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="../object/ActorState.html#getNominalTraveler"><code class="language-plaintext highlighter-rouge">getNominalTraveler</code></a> <a href="../object/ActorState.html#getSuggestedTopicList"><code class="language-plaintext highlighter-rouge">getSuggestedTopicList</code></a> <a href="../object/ActorState.html#getTopicOwner"><code class="language-plaintext highlighter-rouge">getTopicOwner</code></a> <a href="../object/ActorState.html#initializeActorState"><code class="language-plaintext highlighter-rouge">initializeActorState</code></a> <a href="../object/ActorState.html#justFollowed"><code class="language-plaintext highlighter-rouge">justFollowed</code></a> <a href="../object/ActorState.html#notifyTopicResponse"><code class="language-plaintext highlighter-rouge">notifyTopicResponse</code></a> <a href="../object/ActorState.html#obeyCommand"><code class="language-plaintext highlighter-rouge">obeyCommand</code></a> <a href="../object/ActorState.html#remoteSpecialDesc"><code class="language-plaintext highlighter-rouge">remoteSpecialDesc</code></a> <a href="../object/ActorState.html#showSpecialDescInContents"><code class="language-plaintext highlighter-rouge">showSpecialDescInContents</code></a> <a href="../object/ActorState.html#specialDesc"><code class="language-plaintext highlighter-rouge">specialDesc</code></a> <a href="../object/ActorState.html#specialDescListWith"><code class="language-plaintext highlighter-rouge">specialDescListWith</code></a> <a href="../object/ActorState.html#suggestTopicsFor"><code class="language-plaintext highlighter-rouge">suggestTopicsFor</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TravelMessageHandler</code> :<br />
-<a href="../object/TravelMessageHandler.html#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a><a href="../object/TravelMessageHandler.html#sayArrivingDir"><code class="language-plaintext highlighter-rouge">sayArrivingDir</code></a><a href="../object/TravelMessageHandler.html#sayArrivingDownStairs"><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs</code></a><a href="../object/TravelMessageHandler.html#sayArrivingLocally"><code class="language-plaintext highlighter-rouge">sayArrivingLocally</code></a><a href="../object/TravelMessageHandler.html#sayArrivingThroughPassage"><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage</code></a><a href="../object/TravelMessageHandler.html#sayArrivingUpStairs"><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs</code></a><a href="../object/TravelMessageHandler.html#sayArrivingViaPath"><code class="language-plaintext highlighter-rouge">sayArrivingViaPath</code></a><a href="../object/TravelMessageHandler.html#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a><a href="../object/TravelMessageHandler.html#sayDepartingDir"><code class="language-plaintext highlighter-rouge">sayDepartingDir</code></a><a href="../object/TravelMessageHandler.html#sayDepartingDownStairs"><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs</code></a><a href="../object/TravelMessageHandler.html#sayDepartingLocally"><code class="language-plaintext highlighter-rouge">sayDepartingLocally</code></a><a href="../object/TravelMessageHandler.html#sayDepartingThroughPassage"><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage</code></a><a href="../object/TravelMessageHandler.html#sayDepartingUpStairs"><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs</code></a><a href="../object/TravelMessageHandler.html#sayDepartingViaPath"><code class="language-plaintext highlighter-rouge">sayDepartingViaPath</code></a><a href="../object/TravelMessageHandler.html#sayTravelingRemotely"><code class="language-plaintext highlighter-rouge">sayTravelingRemotely</code></a></p>
+<a href="../object/TravelMessageHandler.html#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingDir"><code class="language-plaintext highlighter-rouge">sayArrivingDir</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingDownStairs"><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingLocally"><code class="language-plaintext highlighter-rouge">sayArrivingLocally</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingThroughPassage"><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingUpStairs"><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingViaPath"><code class="language-plaintext highlighter-rouge">sayArrivingViaPath</code></a> <a href="../object/TravelMessageHandler.html#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingDir"><code class="language-plaintext highlighter-rouge">sayDepartingDir</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingDownStairs"><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingLocally"><code class="language-plaintext highlighter-rouge">sayDepartingLocally</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingThroughPassage"><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingUpStairs"><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingViaPath"><code class="language-plaintext highlighter-rouge">sayDepartingViaPath</code></a> <a href="../object/TravelMessageHandler.html#sayTravelingRemotely"><code class="language-plaintext highlighter-rouge">sayTravelingRemotely</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
-<a href="../object/ActorTopicDatabase.html#initiateTopic"><code class="language-plaintext highlighter-rouge">initiateTopic</code></a><a href="../object/ActorTopicDatabase.html#showTopicResponse"><code class="language-plaintext highlighter-rouge">showTopicResponse</code></a></p>
+<a href="../object/ActorTopicDatabase.html#initiateTopic"><code class="language-plaintext highlighter-rouge">initiateTopic</code></a> <a href="../object/ActorTopicDatabase.html#showTopicResponse"><code class="language-plaintext highlighter-rouge">showTopicResponse</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
-<a href="../object/TopicDatabase.html#addSuggestedTopic"><code class="language-plaintext highlighter-rouge">addSuggestedTopic</code></a><a href="../object/TopicDatabase.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a><a href="../object/TopicDatabase.html#addTopicToList"><code class="language-plaintext highlighter-rouge">addTopicToList</code></a><a href="../object/TopicDatabase.html#compareVocabMatch"><code class="language-plaintext highlighter-rouge">compareVocabMatch</code></a><a href="../object/TopicDatabase.html#findTopicResponse"><code class="language-plaintext highlighter-rouge">findTopicResponse</code></a><a href="../object/TopicDatabase.html#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a><a href="../object/TopicDatabase.html#removeSuggestedTopic"><code class="language-plaintext highlighter-rouge">removeSuggestedTopic</code></a><a href="../object/TopicDatabase.html#removeTopic"><code class="language-plaintext highlighter-rouge">removeTopic</code></a><a href="../object/TopicDatabase.html#removeTopicFromList"><code class="language-plaintext highlighter-rouge">removeTopicFromList</code></a><a href="../object/TopicDatabase.html#showSuggestedTopicList"><code class="language-plaintext highlighter-rouge">showSuggestedTopicList</code></a></p>
+<a href="../object/TopicDatabase.html#addSuggestedTopic"><code class="language-plaintext highlighter-rouge">addSuggestedTopic</code></a> <a href="../object/TopicDatabase.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="../object/TopicDatabase.html#addTopicToList"><code class="language-plaintext highlighter-rouge">addTopicToList</code></a> <a href="../object/TopicDatabase.html#compareVocabMatch"><code class="language-plaintext highlighter-rouge">compareVocabMatch</code></a> <a href="../object/TopicDatabase.html#findTopicResponse"><code class="language-plaintext highlighter-rouge">findTopicResponse</code></a> <a href="../object/TopicDatabase.html#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a> <a href="../object/TopicDatabase.html#removeSuggestedTopic"><code class="language-plaintext highlighter-rouge">removeSuggestedTopic</code></a> <a href="../object/TopicDatabase.html#removeTopic"><code class="language-plaintext highlighter-rouge">removeTopic</code></a> <a href="../object/TopicDatabase.html#removeTopicFromList"><code class="language-plaintext highlighter-rouge">removeTopicFromList</code></a> <a href="../object/TopicDatabase.html#showSuggestedTopicList"><code class="language-plaintext highlighter-rouge">showSuggestedTopicList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="attentionSpan"></span></p>
 
@@ -151,19 +123,15 @@ simultaneously in conversation with more than one other character.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4979">4979</a>]</p>
 
-<div class="desc">
-
-Our attention span, in turns. This is the number of turns that we'll be
+<p>Our attention span, in turns. This is the number of turns that we’ll be
 willing to stay in the conversation while the other character is
-ignoring us. After the conversation has been idle this long, we'll
-assume the other actor is no longer talking to us, so we'll terminate
-the conversation ourselves.
+ignoring us. After the conversation has been idle this long, we’ll
+assume the other actor is no longer talking to us, so we’ll terminate
+the conversation ourselves.</p>
 
-If the NPC's doesn't have a limited attention span, set this property to
+<p>If the NPC’s doesn’t have a limited attention span, set this property to
 nil. This will prevent the NPC from ever disengaging of its own
-volition.
-
-</div>
+volition.</p>
 
 <p><span id="nextState"></span></p>
 
@@ -171,13 +139,9 @@ volition.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4987">4987</a>]</p>
 
-<div class="desc">
-
-The state to switch to when the conversation ends. Instances can
-override this to select the next state. By default, we'll return to the
-state that we were in immediately before the conversation started.
-
-</div>
+<p>The state to switch to when the conversation ends. Instances can
+override this to select the next state. By default, we’ll return to the
+state that we were in immediately before the conversation started.</p>
 
 <p><span id="previousState"></span></p>
 
@@ -185,21 +149,13 @@ state that we were in immediately before the conversation started.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5170">5170</a>]</p>
 
-<div class="desc">
-
-The previous state - this is the state we were in before the
-conversation began, and the one we'll return to by default when the
-conversation ends. We'll set this automatically on activation.
-
-</div>
+<p>The previous state - this is the state we were in before the
+conversation began, and the one we’ll return to by default when the
+conversation ends. We’ll set this automatically on activation.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="activateState"></span></p>
 
@@ -207,11 +163,7 @@ conversation ends. We'll set this automatically on activation.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5118">5118</a>]</p>
 
-<div class="desc">
-
-activate this state
-
-</div>
+<p>activate this state</p>
 
 <p><span id="deactivateState"></span></p>
 
@@ -219,11 +171,7 @@ activate this state
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5152">5152</a>]</p>
 
-<div class="desc">
-
-deactivate this state
-
-</div>
+<p>deactivate this state</p>
 
 <p><span id="defaultGreetingResponse"></span></p>
 
@@ -231,12 +179,8 @@ deactivate this state
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5094">5094</a>]</p>
 
-<div class="desc">
-
-provide a default HELLO response, if we don't have a special TopicEntry
-for it
-
-</div>
+<p>provide a default HELLO response, if we don’t have a special TopicEntry
+for it</p>
 
 <p><span id="endConversation"></span></p>
 
@@ -244,23 +188,19 @@ for it
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5005">5005</a>]</p>
 
-<div class="desc">
+<p>End the current conversation. ‘reason’ indicates why we’re leaving the
+conversation - this is one of the endConvXxx enums defined in adv3.h.</p>
 
-End the current conversation. 'reason' indicates why we're leaving the
-conversation - this is one of the endConvXxx enums defined in adv3.h.
-
-This method is a convenience only; you aren't required to call this
+<p>This method is a convenience only; you aren’t required to call this
 method to end the conversation, since you can simply switch to another
-actor state directly if you prefer. This method's main purpose is to
+actor state directly if you prefer. This method’s main purpose is to
 display an appropriate message terminating the conversation while
 switching to the new state. If you want to display your own message
-directly from the code that's changing the state, there's no reason to
-call this.
+directly from the code that’s changing the state, there’s no reason to
+call this.</p>
 
-This returns true if we wish to allow the conversation to end, nil if
-not.
-
-</div>
+<p>This returns true if we wish to allow the conversation to end, nil if
+not.</p>
 
 <p><span id="handleConversation"></span></p>
 
@@ -268,11 +208,7 @@ not.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5051">5051</a>]</p>
 
-<div class="desc">
-
-handle a conversational command
-
-</div>
+<p>handle a conversational command</p>
 
 <p><span id="takeTurn"></span></p>
 
@@ -280,20 +216,13 @@ handle a conversational command
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5105">5105</a>]</p>
 
-<div class="desc">
+<p>As our default response, point out that we’re already at the actor’s
+service. (This isn’t an error, because the other actor might not have
+been talking to us, even though we thought we were talking to them.)</p>
 
-As our default response, point out that we're already at the actor's
-service. (This isn't an error, because the other actor might not have
-been talking to us, even though we thought we were talking to them.)
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

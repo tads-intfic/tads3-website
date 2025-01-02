@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Retrospective  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Retrospective<br />
 <span class="navnp"><a href="inplace.html" class="nav"><em>Prev:</em> Everything in its
 place</a>    
-<a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
-
-</div>
+<a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span></p>
 
 <h1 id="retrospective">Retrospective</h1>
 
@@ -176,218 +168,214 @@ Goldskull with a complete listing of the game as it ended up.</p>
 
 <h2 id="complete-goldskull-listing">Complete Goldskull Listing</h2>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h"
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 
-versionInfo: GameID
-    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-    name = 'Goldskull'
-    byline = 'by A.N. Author'
-    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                  A.N. Author&lt;/a&gt;'
-    version = '1'
-    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-    desc = 'Your blurb here.'
-    htmlDesc = 'Your blurb here.'    
-    
-;
-
-gameMain: GameMainDef
-    
-    /* 
-     * Define the initial player character; this is not strictly necessary if we use the 
-     * Player class to define the initial player character as below
-     */
-    // initialPlayerChar = me
-;
-
-
-/* The starting location; this can be called anything you like */
-
-startroom: Room 'Outside Cave'
-    desc = "You're standing in the bright sunlight just outside of a large,
-        dark, foreboding cave, which lies to the north. The path back to your
-        camp winds roughly southeast through the dense foliage. " 
-    
-    north = cave 
-    in asExit(north)
-   
-    southeast = pathBack
-    
+    versionInfo: GameID
+        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+        name = 'Goldskull'
+        byline = 'by A.N. Author'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+        desc = 'Your blurb here.'
+        htmlDesc = 'Your blurb here.'    
+        
     ;
 
-+ pathBack: PathPassage 'overgrown path'
-    "The heavily overgrown path runs roughly southeast through the trees. "
-    
-    canTravelerPass(traveler)
-    {
-        return goldSkull.isIn(traveler);
-    }
-    
-    explainTravelBarrier(traveler)
-    {
-        "You've no intention of leaving till you've got what you came for. ";
-    }
-    
-    travelDesc()
-    {
-        "Your mission complete, you head triumphantly back to your camp. ";
-        finishGameMsg(ftVictory, [finishOptionUndo]);
-    }
-    
-;
-
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. Here we define it using the Player class rather than the
- *   Thing class just to show how it can be done.
- */
-
-+ me: Player 'you'   
-    "You can't see yourself, but you suspect you must look quite a sight after
-    traipsing miles through tropical jungle to get here. "      
-;
-
-++ knapsack: Wearable, Container 'knapsack; trusty old worn; bag sack'
-    "Your trusty old knapsack may be getting a bit worn, but it's accompanied
-    you on so many adventures you wouldn't be without it. "
-    
-    wornBy = me
-;
-
-+ caveMouth: Enterable 'cave; dark large foreboding uninviting of[prep];
-    mouth entrance'
-    "The mouth of the cave is easily large enough to allow entrance, but looks
-    dark and uninviting. "
-    
-    destination = cave
-;
- 
-+  Decoration 'foliage; thick dense; jungle trees leaves'
-    "The foliage is so thick round here that it blocks every route but the one
-    you came by and the entrance to the cave. "    
-;    
-
-+  Decoration 'sunlight; bright dazzling; sun light'
-    "It's so bright it's almost dazzling. "
-    
-    notImportantMsg = 'It\'s pointless even attempting that with something as
-        insubstantial as sunlight. '
-;
-    
-
-+ smallRock: Thing 'small rock; round solid'
-     "It's roughly round and looks pretty solid. "
-    
-    initSpecialDesc = "A small rock &lt;&lt;if pebble.moved&gt;&gt;lies &lt;&lt;else&gt;&gt; and
-        &lt;&lt;mention a pebble&gt;&gt; lie &lt;&lt;end&gt;&gt; on the ground near the mouth of the
-        cave, evidence, perhaps, of long-term erosion. "
-    
-    weight = 10
-;
-
-+ pebble: Thing 'tiny pebble; smooth round'
-    "It's just a tiny, round pebble, almost perfectly smooth. "
-;
-
-
-
-
-cave: Room 'Cave'    
-    desc = "You're inside a dark and musty cave. Sunlight 
-    pours in from a passage to the south. " 
-
-    south = startroom 
-    out asExit(south)
-;
-
-+ pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
-    "The smooth stone pedestal is artfully positioned to catch the sunlight at
-    just this time of day, picking out the inscription carved into its front. "
+    gameMain: GameMainDef
         
-    specialDesc = "A solitary stone pedestal stands at the centre of the
-        cave&lt;&lt;if listableContents.length &gt; 0 &gt;&gt;, with &lt;&lt;list of
-          listableContents&gt;&gt; resting on top of it&lt;&lt;end&gt;&gt;. "
-    
-    notifyRemove(obj)
-    {
-        gMessageParams(obj);
+        /* 
+         * Define the initial player character; this is not strictly necessary if we use the 
+         * Player class to define the initial player character as below
+         */
+        // initialPlayerChar = me
+    ;
+
+
+    /* The starting location; this can be called anything you like */
+
+    startroom: Room 'Outside Cave'
+        desc = "You're standing in the bright sunlight just outside of a large,
+            dark, foreboding cave, which lies to the north. The path back to your
+            camp winds roughly southeast through the dense foliage. " 
         
-        if(getWeightWithin() - obj.getWeight &lt; goldSkull.weight)
+        north = cave 
+        in asExit(north)
+       
+        southeast = pathBack
+        
+        ;
+
+    + pathBack: PathPassage 'overgrown path'
+        "The heavily overgrown path runs roughly southeast through the trees. "
+        
+        canTravelerPass(traveler)
         {
-            "As {the subj obj} {leaves} the pedestal, a volley of poisonous
-            arrows is shot from the walls! You try to dodge the arrows, but
-            they take you by surprise!";  
+            return goldSkull.isIn(traveler);
+        }
+        
+        explainTravelBarrier(traveler)
+        {
+            "You've no intention of leaving till you've got what you came for. ";
+        }
+        
+        travelDesc()
+        {
+            "Your mission complete, you head triumphantly back to your camp. ";
+            finishGameMsg(ftVictory, [finishOptionUndo]);
+        }
+        
+    ;
+
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. Here we define it using the Player class rather than the
+     *   Thing class just to show how it can be done.
+     */
+
+    + me: Player 'you'   
+        "You can't see yourself, but you suspect you must look quite a sight after
+        traipsing miles through tropical jungle to get here. "      
+    ;
+
+    ++ knapsack: Wearable, Container 'knapsack; trusty old worn; bag sack'
+        "Your trusty old knapsack may be getting a bit worn, but it's accompanied
+        you on so many adventures you wouldn't be without it. "
+        
+        wornBy = me
+    ;
+
+    + caveMouth: Enterable 'cave; dark large foreboding uninviting of[prep];
+        mouth entrance'
+        "The mouth of the cave is easily large enough to allow entrance, but looks
+        dark and uninviting. "
+        
+        destination = cave
+    ;
+     
+    +  Decoration 'foliage; thick dense; jungle trees leaves'
+        "The foliage is so thick round here that it blocks every route but the one
+        you came by and the entrance to the cave. "    
+    ;    
+
+    +  Decoration 'sunlight; bright dazzling; sun light'
+        "It's so bright it's almost dazzling. "
+        
+        notImportantMsg = 'It\'s pointless even attempting that with something as
+            insubstantial as sunlight. '
+    ;
+        
+
+    + smallRock: Thing 'small rock; round solid'
+         "It's roughly round and looks pretty solid. "
+        
+        initSpecialDesc = "A small rock &lt;&lt;if pebble.moved&gt;&gt;lies &lt;&lt;else&gt;&gt; and
+            &lt;&lt;mention a pebble&gt;&gt; lie &lt;&lt;end&gt;&gt; on the ground near the mouth of the
+            cave, evidence, perhaps, of long-term erosion. "
+        
+        weight = 10
+    ;
+
+    + pebble: Thing 'tiny pebble; smooth round'
+        "It's just a tiny, round pebble, almost perfectly smooth. "
+    ;
+
+
+
+
+    cave: Room 'Cave'    
+        desc = "You're inside a dark and musty cave. Sunlight 
+        pours in from a passage to the south. " 
+
+        south = startroom 
+        out asExit(south)
+    ;
+
+    + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
+        "The smooth stone pedestal is artfully positioned to catch the sunlight at
+        just this time of day, picking out the inscription carved into its front. "
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);  
-        }
-    }
-;
-
-++ Fixture 'inscription; faded ancient sumerian; lettering script cuneiform'
-    "The lettering is quite faded, and the script is in ancient Sumerian
-    Cuneiform, but fortunately that's a language you took the trouble to learn,
-    and you can just about make it out. "
-    
-    readDesc = "The inscription reads &lt;q&gt;Whoever dares remove this sacred object
-        from its place shall become as that which he desires.&lt;/q&gt; "
-    
-    weight = 0
-    
-    cannotTakeMsg = 'You can hardly take the inscription; it\'s part of the
-        pedestal. '
-    
-;    
-
-++ goldSkull: Thing 'gold skull;; head'
-    "It's the shape and size of a human skull, but made of solid gold; it must
-    be worth a fortune. "
-    
-    weight = 10
-    
-    iobjFor(ThrowAt)
-    {
-        action()
-        {
-            inherited;
-            if(gDobj.getWeight &gt;= weight/2 &amp;&amp; location == pedestal)
-                actionMoveInto(cave);
-        }
-    }
-;
-
-
-modify Thing
-    weight = 1
-    
-    getWeightWithin()
-    {
-        local totalWeight = 0;
-        for (local item in contents)
-            totalWeight += (item.weight + item.getWeightWithin());
+        specialDesc = "A solitary stone pedestal stands at the centre of the
+            cave&lt;&lt;if listableContents.length &gt; 0 &gt;&gt;, with &lt;&lt;list of
+              listableContents&gt;&gt; resting on top of it&lt;&lt;end&gt;&gt;. "
         
-        return totalWeight;
-    }
-    
-    getWeight = weight + getWeightWithin()
-; `
+        notifyRemove(obj)
+        {
+            gMessageParams(obj);
+            
+            if(getWeightWithin() - obj.getWeight &lt; goldSkull.weight)
+            {
+                "As {the subj obj} {leaves} the pedestal, a volley of poisonous
+                arrows is shot from the walls! You try to dodge the arrows, but
+                they take you by surprise!";  
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);  
+            }
+        }
+    ;
+
+    ++ Fixture 'inscription; faded ancient sumerian; lettering script cuneiform'
+        "The lettering is quite faded, and the script is in ancient Sumerian
+        Cuneiform, but fortunately that's a language you took the trouble to learn,
+        and you can just about make it out. "
+        
+        readDesc = "The inscription reads &lt;q&gt;Whoever dares remove this sacred object
+            from its place shall become as that which he desires.&lt;/q&gt; "
+        
+        weight = 0
+        
+        cannotTakeMsg = 'You can hardly take the inscription; it\'s part of the
+            pedestal. '
+        
+    ;    
+
+    ++ goldSkull: Thing 'gold skull;; head'
+        "It's the shape and size of a human skull, but made of solid gold; it must
+        be worth a fortune. "
+        
+        weight = 10
+        
+        iobjFor(ThrowAt)
+        {
+            action()
+            {
+                inherited;
+                if(gDobj.getWeight &gt;= weight/2 &amp;&amp; location == pedestal)
+                    actionMoveInto(cave);
+            }
+        }
+    ;
+
+
+    modify Thing
+        weight = 1
+        
+        getWeightWithin()
+        {
+            local totalWeight = 0;
+            for (local item in contents)
+                totalWeight += (item.weight + item.getWeightWithin());
+            
+            return totalWeight;
+        }
+        
+        getWeight = weight + getWeightWithin()
+    ;
 </code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Retrospective  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Retrospective<br />
 <span class="navnp"><a href="inplace.html" class="nav"><em>Prev:</em> Everything in its
 place</a>    
-<a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
+<a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

@@ -46,126 +46,93 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-HTTP Server Object. This implements a multi-threaded, background server
+<p>HTTP Server Object. This implements a multi-threaded, background server
 that runs concurrently with the game program. The server listens for and
 accepts incoming connection requests from clients, and then handles HTTP
 protocol transactions with connected clients. Client requests are routed
 to the byte code program via network events, which the program can
-retrieve via the getNetEvent() function.
+retrieve via the getNetEvent() function.</p>
 
-Construction: to set up an HTTP server, simply create an HTTPServer
-object with 'new':
+<p>Construction: to set up an HTTP server, simply create an HTTPServer
+object with ‘new’:</p>
 
-  
-local srv = new HTTPServer(hostname, portnum?, maxUploadSize?);
+<p>local srv = new HTTPServer(hostname, portnum?, maxUploadSize?);</p>
 
-'hostname' is a string giving the domain name or IP address that the
+<p>‘hostname’ is a string giving the domain name or IP address that the
 server will bind to for accepting connections. For a server that accepts
 connections from separate client machines, this is simply the external
 IP address of the local machine. (This is specified as an argument
 because some machines have more than one network interface, and thus
-have more than one IP address or domain name.)
+have more than one IP address or domain name.)</p>
 
-'portnum' is the TCP/IP port number wehre the server will listen for
+<p>‘portnum’ is the TCP/IP port number wehre the server will listen for
 incoming connections. If this is omitted or nil, the operating system
 will automatically select an available port number and assign it to the
 server. Using a specific port number allows you to create a service on a
-"well known" port, which makes it easier for clients to find the
+“well known” port, which makes it easier for clients to find the
 service; but a given port can only be used by one server at a time, so
 using a pre-selected port number runs the risk that some other process
-will already be using the same port.
+will already be using the same port.</p>
 
-'maxUploadSize' is the maximum size in bytes for any single request's
+<p>‘maxUploadSize’ is the maximum size in bytes for any single request’s
 content. Content sizes over this limit will be rejected. Some HTTP
 requests, such as POST, can include uploaded content from the client,
 and the HTTP protocol itself supports essentially unlimited sizes for
-these objects. Uploads consume resources on the server, though, so it's
+these objects. Uploads consume resources on the server, though, so it’s
 often desirable to set a size limit to prevent errant or malicious
 clients from overwhelming the server with a very large upload. Depending
 on the specific function of your server, you might or might not wish to
 set a limit. If you omit this argument or set it to nil, unlimited
 upload sizes will be allowed. Note that this limit applies to each
-individual upload separately; it's not a lifetime limit for the server
-or for any session.
+individual upload separately; it’s not a lifetime limit for the server
+or for any session.</p>
 
-Creating an HTTPServer object with 'new' automatically starts the
+<p>Creating an HTTPServer object with ‘new’ automatically starts the
 server. The object will create a background thread that will listen for
 incoming connections on the given network address and port number, so
-the server is active as soon as the 'new' finishes. You can create any
+the server is active as soon as the ‘new’ finishes. You can create any
 number of servers, as long as they have different port numbers. When a
 connection request is received, the server will accept the connection
 and automatically create another background thread to handle requests on
 that connection. Each incoming request will be forwarded to the game
-program to handle, via the network message queue.
+program to handle, via the network message queue.</p>
 
-`intrinsic class `**`HTTPServer`**` :   `[`Object`](../object/Object.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">HTTPServer</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">HTTPServer</code></strong><br />
 <a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#getAddress"><code class="language-plaintext highlighter-rouge">getAddress</code></a><a href="#getIPAddress"><code class="language-plaintext highlighter-rouge">getIPAddress</code></a><a href="#getPortNum"><code class="language-plaintext highlighter-rouge">getPortNum</code></a><a href="#shutdown"><code class="language-plaintext highlighter-rouge">shutdown</code></a></p>
+<p><a href="#getAddress"><code class="language-plaintext highlighter-rouge">getAddress</code></a> <a href="#getIPAddress"><code class="language-plaintext highlighter-rouge">getIPAddress</code></a> <a href="#getPortNum"><code class="language-plaintext highlighter-rouge">getPortNum</code></a> <a href="#shutdown"><code class="language-plaintext highlighter-rouge">shutdown</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
-<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a><a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a><a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a><a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a><a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a><a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a><a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a><a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a><a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a><a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a><a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a><a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a><a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a><a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a><a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a> <a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a> <a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a> <a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a> <a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a> <a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a> <a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getAddress"></span></p>
 
@@ -173,14 +140,10 @@ program to handle, via the network message queue.
 
 <p><a href="../file/httpsrv.h.html">httpsrv.h</a>[<a href="../source/httpsrv.h.html#120">120</a>]</p>
 
-<div class="desc">
-
-Get the listening address. This returns a string giving the original
+<p>Get the listening address. This returns a string giving the original
 binding address specified when the object was constructed. This can
 contain either a host name or an IP address, since either form can be
-used in the constructor.
-
-</div>
+used in the constructor.</p>
 
 <p><span id="getIPAddress"></span></p>
 
@@ -188,12 +151,8 @@ used in the constructor.
 
 <p><a href="../file/httpsrv.h.html">httpsrv.h</a>[<a href="../source/httpsrv.h.html#126">126</a>]</p>
 
-<div class="desc">
-
-Get the listening IP address. This returns the numerical IP address
-where the server is listening for connections.
-
-</div>
+<p>Get the listening IP address. This returns the numerical IP address
+where the server is listening for connections.</p>
 
 <p><span id="getPortNum"></span></p>
 
@@ -201,15 +160,11 @@ where the server is listening for connections.
 
 <p><a href="../file/httpsrv.h.html">httpsrv.h</a>[<a href="../source/httpsrv.h.html#136">136</a>]</p>
 
-<div class="desc">
-
-Get the port number. This returns an integer giving the TCP/IP network
+<p>Get the port number. This returns an integer giving the TCP/IP network
 port number on which this server is listening for incoming connections.
 Clients connect to the port by including it in the HTTP URL, after the
 host name. For example, if the server is on port 10815, the client would
-connect to a URL of the form http://myserver.com:10815/index.html.
-
-</div>
+connect to a URL of the form http://myserver.com:10815/index.html.</p>
 
 <p><span id="shutdown"></span></p>
 
@@ -217,41 +172,34 @@ connect to a URL of the form http://myserver.com:10815/index.html.
 
 <p><a href="../file/httpsrv.h.html">httpsrv.h</a>[<a href="../source/httpsrv.h.html#112">112</a>]</p>
 
-<div class="desc">
-
-Shut down the server. This immediately disconnects the server from its
+<p>Shut down the server. This immediately disconnects the server from its
 network port; no further client connections will be accepted once the
 server shuts down. In addition, all of the server threads that were
-started by this server object will be notified to terminate.
+started by this server object will be notified to terminate.</p>
 
-If 'wait' is omitted or is nil, the routine sends the shutdown
+<p>If ‘wait’ is omitted or is nil, the routine sends the shutdown
 notification to the main server and to its server threads, then
-immediately returns. This means that one or more of the server's
+immediately returns. This means that one or more of the server’s
 background threads might continue to run for a while after shutdown()
 returns. The main practical consideration is that the port number used
 by the server might not be immediately available for use by a new server
-object, since the port won't be closed until the server actually exits.
+object, since the port won’t be closed until the server actually exits.</p>
 
-If 'wait' is true, this routine won't return until all of the server
-threads have actually terminated.
+<p>If ‘wait’ is true, this routine won’t return until all of the server
+threads have actually terminated.</p>
 
-The return value is true if all server threads have terminated, nil if
-any server threads are still running. It's legal to call this routine
+<p>The return value is true if all server threads have terminated, nil if
+any server threads are still running. It’s legal to call this routine
 repeatedly, so you can make repeated calls to shutdown(nil) to poll for
 completion. This is useful if you need to wait until the server shuts
 down to move on to a next step, but you have other work you can perform
-in the meantime. If you don't have any other work, you can avoid burning
+in the meantime. If you don’t have any other work, you can avoid burning
 CPU time by calling shutdown(true), which waits (without consuming CPU
-time) for the server to exit.
+time) for the server to exit.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

@@ -95,7 +95,7 @@ high-priority agenda items.
 
 
 
-[`agendaOrder`](#agendaOrder)[`calledBy`](#calledBy)[`initiallyActive`](#initiallyActive)[`invokedByActor`](#invokedByActor)[`isDone`](#isDone)[`isReady`](#isReady)[`name`](#name)
+[`agendaOrder`](#agendaOrder) [`calledBy`](#calledBy) [`initiallyActive`](#initiallyActive) [`invokedByActor`](#invokedByActor) [`isDone`](#isDone) [`isReady`](#isReady) [`name`](#name)
 
 <span id="_MethodSummary_"></span>
 
@@ -105,7 +105,7 @@ high-priority agenda items.
 
 
 
-[`getActor`](#getActor)[`invokeItem`](#invokeItem)[`invokeItemBase`](#invokeItemBase)[`registerItem`](#registerItem)[`report`](#report)[`resetItem`](#resetItem)
+[`getActor`](#getActor) [`invokeItem`](#invokeItem) [`invokeItemBase`](#invokeItemBase) [`registerItem`](#registerItem) [`report`](#report) [`resetItem`](#resetItem)
 
 <span id="_Properties_"></span>
 

@@ -93,7 +93,7 @@ excluded from the build if they're not needed in a particular game.
 
 
 
-[`doScript`](#doScript)[`getScriptState`](#getScriptState)
+[`doScript`](#doScript) [`getScriptState`](#getScriptState)
 
 <span id="_Properties_"></span>
 

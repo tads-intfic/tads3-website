@@ -76,7 +76,7 @@ the player might not yet have encountered).
 
 
 
-[`hintText`](#hintText)[`referencedGoals`](#referencedGoals)
+[`hintText`](#hintText) [`referencedGoals`](#referencedGoals)
 
 
 

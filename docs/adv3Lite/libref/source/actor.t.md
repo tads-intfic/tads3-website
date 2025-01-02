@@ -480,7 +480,7 @@ layout: docs
              */
             
             if(gPlayerChar.currentInterlocutor != self &&
-               valToList(topic)[1] not in (helloTopicObj, impHelloTopicObj, 
+               valToList(topic) [1] not in (helloTopicObj, impHelloTopicObj, 
                                            actorHelloTopicObj ))
             {
                 /* Find a greeting response for an ImpHelloTopic/HelloTopic */
@@ -3169,7 +3169,7 @@ layout: docs
          *   Construct the name of this ActorTopicEntry by using the theName
          *   property of our first matchObj.     
          */
-        buildName() { name = valToList(matchObj)[1].theName; }
+        buildName() { name = valToList(matchObj) [1].theName; }
         
         /* Our associated actor is our location's associated actor. */
         getActor = (location.getActor)
@@ -3502,7 +3502,7 @@ layout: docs
              *   exercise.
              */             
             if(prop == &queryTopics)
-                gAction.qType = qtype.split('|')[1];
+                gAction.qType = qtype.split('|') [1];
             
             /* 
              *   Try seeing what the best response would be if we asked our actor to
@@ -4645,7 +4645,7 @@ layout: docs
                  *   Prepend the first word from the query type list to the name of
                  *   our matchObj to create our name
                  */
-                name = qList[1] + ' ' + valToList(matchObj)[1].name; 
+                name = qList[1] + ' ' + valToList(matchObj) [1].name; 
             }
         }
         
@@ -4683,7 +4683,7 @@ layout: docs
                  *   list, in which case use the first (and possibly only) item in
                  *   the list to construct our name.
                  */
-                name = valToList(matchObj)[1].name; 
+                name = valToList(matchObj) [1].name; 
         }
 
         /* SayTopics belong in the sayTopics list of their TopicDatabase */    
@@ -5068,7 +5068,7 @@ layout: docs
                     arg = arg[3];
 
                 /* pick out the tag */
-                tag = rexGroup(1)[3].toLower();
+                tag = rexGroup(1) [3].toLower();
 
                            
                 /* check which tag we have */

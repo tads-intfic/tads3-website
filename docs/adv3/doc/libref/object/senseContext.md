@@ -51,7 +51,7 @@ otherwise, we'll pass output through unchanged.
 
 
 
-[`cached_`](#cached_)[`isBlocking_`](#isBlocking_)[`sense_`](#sense_)[`source_`](#source_)
+[`cached_`](#cached_) [`isBlocking_`](#isBlocking_) [`sense_`](#sense_) [`source_`](#source_)
 
 Inherited from `SwitchableCaptureFilter` :  
 [`isBlocking`](../object/SwitchableCaptureFilter.html#isBlocking)
@@ -68,7 +68,7 @@ Inherited from `SwitchableCaptureFilter` :
 
 
 
-[`isBlocking`](#isBlocking)[`recalcSenseContext`](#recalcSenseContext)[`setSenseContext`](#setSenseContext)[`shouldBlock`](#shouldBlock)[`withSenseContext`](#withSenseContext)
+[`isBlocking`](#isBlocking) [`recalcSenseContext`](#recalcSenseContext) [`setSenseContext`](#setSenseContext) [`shouldBlock`](#shouldBlock) [`withSenseContext`](#withSenseContext)
 
 Inherited from `SwitchableCaptureFilter` :  
 [`filterText`](../object/SwitchableCaptureFilter.html#filterText)

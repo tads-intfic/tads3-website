@@ -37,48 +37,28 @@
 <a href="#_FunctionSummary_">Summary</a><br />
 <a href="#_Functions_">Details</a></p>
 
-<div class="fdesc">
+<p>TADS 3 Library: command execution</p>
 
-TADS 3 Library: command execution
-
-This module defines functions that perform command execution.
-
-</div>
+<p>This module defines functions that perform command execution.</p>
 
 <p><span id="_ClassSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Classes</span>  </p>
 
-<span class="hdln">Summary of Classes</span>  
-
-</div>
-
-<p><a href="../object/AbortImplicitSignal.html"><code class="language-plaintext highlighter-rouge">AbortImplicitSignal</code></a><a href="../object/ExitActionSignal.html"><code class="language-plaintext highlighter-rouge">ExitActionSignal</code></a><a href="../object/ExitSignal.html"><code class="language-plaintext highlighter-rouge">ExitSignal</code></a><a href="../object/GlobalRemapping.html"><code class="language-plaintext highlighter-rouge">GlobalRemapping</code></a><a href="../object/MessageResult.html"><code class="language-plaintext highlighter-rouge">MessageResult</code></a><a href="../object/RemapActionSignal.html"><code class="language-plaintext highlighter-rouge">RemapActionSignal</code></a>
+<p><a href="../object/AbortImplicitSignal.html"><code class="language-plaintext highlighter-rouge">AbortImplicitSignal</code></a> <a href="../object/ExitActionSignal.html"><code class="language-plaintext highlighter-rouge">ExitActionSignal</code></a> <a href="../object/ExitSignal.html"><code class="language-plaintext highlighter-rouge">ExitSignal</code></a> <a href="../object/GlobalRemapping.html"><code class="language-plaintext highlighter-rouge">GlobalRemapping</code></a> <a href="../object/MessageResult.html"><code class="language-plaintext highlighter-rouge">MessageResult</code></a> <a href="../object/RemapActionSignal.html"><code class="language-plaintext highlighter-rouge">RemapActionSignal</code></a>
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Global Objects</span>  
-
-</div>
+<p><span class="hdln">Summary of Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="FunctionSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Global Functions</span>  </p>
 
-<span class="hdln">Summary of Global Functions</span>  
-
-</div>
-
-<p><a href="#_nestedAction"><code class="language-plaintext highlighter-rouge">_nestedAction</code></a><a href="#_newAction"><code class="language-plaintext highlighter-rouge">_newAction</code></a><a href="#_replaceAction"><code class="language-plaintext highlighter-rouge">_replaceAction</code></a><a href="#_tryImplicitAction"><code class="language-plaintext highlighter-rouge">_tryImplicitAction</code></a><a href="#execNestedAction"><code class="language-plaintext highlighter-rouge">execNestedAction</code></a><a href="#executeAction"><code class="language-plaintext highlighter-rouge">executeAction</code></a><a href="#executeCommand"><code class="language-plaintext highlighter-rouge">executeCommand</code></a><a href="#nestedActionAgain"><code class="language-plaintext highlighter-rouge">nestedActionAgain</code></a><a href="#newActionObj"><code class="language-plaintext highlighter-rouge">newActionObj</code></a><a href="#prepareNestedAction"><code class="language-plaintext highlighter-rouge">prepareNestedAction</code></a><a href="#remapAction"><code class="language-plaintext highlighter-rouge">remapAction</code></a><a href="#remapActionCreate"><code class="language-plaintext highlighter-rouge">remapActionCreate</code></a><a href="#remapVerify"><code class="language-plaintext highlighter-rouge">remapVerify</code></a><a href="#resolveAndReplaceAction"><code class="language-plaintext highlighter-rouge">resolveAndReplaceAction</code></a><a href="#withActionEnv"><code class="language-plaintext highlighter-rouge">withActionEnv</code></a></p>
+<p><a href="#_nestedAction"><code class="language-plaintext highlighter-rouge">_nestedAction</code></a> <a href="#_newAction"><code class="language-plaintext highlighter-rouge">_newAction</code></a> <a href="#_replaceAction"><code class="language-plaintext highlighter-rouge">_replaceAction</code></a> <a href="#_tryImplicitAction"><code class="language-plaintext highlighter-rouge">_tryImplicitAction</code></a> <a href="#execNestedAction"><code class="language-plaintext highlighter-rouge">execNestedAction</code></a> <a href="#executeAction"><code class="language-plaintext highlighter-rouge">executeAction</code></a> <a href="#executeCommand"><code class="language-plaintext highlighter-rouge">executeCommand</code></a> <a href="#nestedActionAgain"><code class="language-plaintext highlighter-rouge">nestedActionAgain</code></a> <a href="#newActionObj"><code class="language-plaintext highlighter-rouge">newActionObj</code></a> <a href="#prepareNestedAction"><code class="language-plaintext highlighter-rouge">prepareNestedAction</code></a> <a href="#remapAction"><code class="language-plaintext highlighter-rouge">remapAction</code></a> <a href="#remapActionCreate"><code class="language-plaintext highlighter-rouge">remapActionCreate</code></a> <a href="#remapVerify"><code class="language-plaintext highlighter-rouge">remapVerify</code></a> <a href="#resolveAndReplaceAction"><code class="language-plaintext highlighter-rouge">resolveAndReplaceAction</code></a> <a href="#withActionEnv"><code class="language-plaintext highlighter-rouge">withActionEnv</code></a></p>
 
 <p><span id="_Functions_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Functions</span>  
-
-</div>
+<p><span class="hdln">Global Functions</span>  </p>
 
 <p><span id="_nestedAction"></span></p>
 
@@ -86,12 +66,8 @@ This module defines functions that perform command execution.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1134">1134</a>]</p>
 
-<div class="desc">
-
-Run a nested action. 'isReplacement' has the same meaning as in
-execNestedAction().
-
-</div>
+<p>Run a nested action. ‘isReplacement’ has the same meaning as in
+execNestedAction().</p>
 
 <p><span id="_newAction"></span></p>
 
@@ -99,12 +75,8 @@ execNestedAction().
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1076">1076</a>]</p>
 
-<div class="desc">
-
-Run an action as a new turn. Returns the CommandTranscript describing
-the action's results.
-
-</div>
+<p>Run an action as a new turn. Returns the CommandTranscript describing
+the action’s results.</p>
 
 <p><span id="_replaceAction"></span></p>
 
@@ -112,11 +84,7 @@ the action's results.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1041">1041</a>]</p>
 
-<div class="desc">
-
-Run a replacement action.
-
-</div>
+<p>Run a replacement action.</p>
 
 <p><span id="_tryImplicitAction"></span></p>
 
@@ -124,17 +92,13 @@ Run a replacement action.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#936">936</a>]</p>
 
-<div class="desc">
+<p>Try an implicit action.</p>
 
-Try an implicit action.
-
-Returns true if the action was attempted, whether or not it succeeded,
+<p>Returns true if the action was attempted, whether or not it succeeded,
 nil if the command was not even attempted. We will not attempt an
-implied command that verifies as "dangerous," since this means that it
+implied command that verifies as “dangerous,” since this means that it
 should be obvious to the player character that such a command should not
-be performed lightly.
-
-</div>
+be performed lightly.</p>
 
 <p><span id="execNestedAction"></span></p>
 
@@ -142,22 +106,18 @@ be performed lightly.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1162">1162</a>]</p>
 
-<div class="desc">
+<p>Execute a fully-constructed nested action.</p>
 
-Execute a fully-constructed nested action.
-
-'isReplacement' indicates whether the action is a full replacement or an
-ordinary nested action. If it's a replacement, then we use the game time
+<p>‘isReplacement’ indicates whether the action is a full replacement or an
+ordinary nested action. If it’s a replacement, then we use the game time
 taken by the replacement, and set the enclosing action (i.e., the
-current gAction) to take zero time. If it's an ordinary nested action,
+current gAction) to take zero time. If it’s an ordinary nested action,
 then we consider the nested action to take zero time, using the current
-action's time as the overall command time.
+action’s time as the overall command time.</p>
 
-'isRemapping' indicates whether or not this is a remapped action. If
-we're remapping from one action to another, this will be true; for any
-other kind of nested or replacement action, this should be nil.
-
-</div>
+<p>‘isRemapping’ indicates whether or not this is a remapped action. If
+we’re remapping from one action to another, this will be true; for any
+other kind of nested or replacement action, this should be nil.</p>
 
 <p><span id="executeAction"></span></p>
 
@@ -165,12 +125,8 @@ other kind of nested or replacement action, this should be nil.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#788">788</a>]</p>
 
-<div class="desc">
-
-Execute an action, as specified by an Action object. We'll resolve the
-nouns in the action, then perform the action.
-
-</div>
+<p>Execute an action, as specified by an Action object. We’ll resolve the
+nouns in the action, then perform the action.</p>
 
 <p><span id="executeCommand"></span></p>
 
@@ -178,26 +134,22 @@ nouns in the action, then perform the action.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#33">33</a>]</p>
 
-<div class="desc">
+<p>Execute a command line, as issued by the given actor and as given as a
+list of tokens.</p>
 
-Execute a command line, as issued by the given actor and as given as a
-list of tokens.
-
-If 'firstInSentence' is true, we're at the start of a "sentence." The
+<p>If ‘firstInSentence’ is true, we’re at the start of a “sentence.” The
 meaning and effect of this may vary by language. In English, a sentence
 ends with certain punctuation marks (a period, semicolon, exclamation
 mark, or question mark), so anything after one of these punctuation
 marks is the start of a new sentence. Also in English, we can address a
-command to an explicit target actor using the "actor," prefix syntax,
-which we can't use except at the start of a sentence.
+command to an explicit target actor using the “actor,” prefix syntax,
+which we can’t use except at the start of a sentence.</p>
 
-If the command line consists of multiple commands, we will only actually
-execute the first command before returning. We'll schedule any
+<p>If the command line consists of multiple commands, we will only actually
+execute the first command before returning. We’ll schedule any
 additional commands for later execution by putting them into the target
-actor's pending command queue before we return, but we won't actually
-execute them.
-
-</div>
+actor’s pending command queue before we return, but we won’t actually
+execute them.</p>
 
 <p><span id="nestedActionAgain"></span></p>
 
@@ -205,12 +157,8 @@ execute them.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1232">1232</a>]</p>
 
-<div class="desc">
-
-Run a previously-executed command as a nested action, re-resolving all
-of its objects to ensure they are still valid.
-
-</div>
+<p>Run a previously-executed command as a nested action, re-resolving all
+of its objects to ensure they are still valid.</p>
 
 <p><span id="newActionObj"></span></p>
 
@@ -218,18 +166,14 @@ of its objects to ensure they are still valid.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1099">1099</a>]</p>
 
-<div class="desc">
-
-Run an action as a new turn. This is almost the same as \_newAction, but
+<p>Run an action as a new turn. This is almost the same as _newAction, but
 should be used when the caller has already explicitly created an
-instance of the Action to be performed.
+instance of the Action to be performed.</p>
 
-If issuingActor is nil, we'll use the current global issuing actor; if
-that's also nil, we'll use the target actor.
+<p>If issuingActor is nil, we’ll use the current global issuing actor; if
+that’s also nil, we’ll use the target actor.</p>
 
-Returns a CommandTranscript object describing the result of the action.
-
-</div>
+<p>Returns a CommandTranscript object describing the result of the action.</p>
 
 <p><span id="prepareNestedAction"></span></p>
 
@@ -237,11 +181,7 @@ Returns a CommandTranscript object describing the result of the action.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1176">1176</a>]</p>
 
-<div class="desc">
-
-Prepare a nested or replacement action for execution.
-
-</div>
+<p>Prepare a nested or replacement action for execution.</p>
 
 <p><span id="remapAction"></span></p>
 
@@ -249,12 +189,8 @@ Prepare a nested or replacement action for execution.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1448">1448</a>]</p>
 
-<div class="desc">
-
-Perform a remapping to a new action. This is normally invoked through
-the remapTo() macro.
-
-</div>
+<p>Perform a remapping to a new action. This is normally invoked through
+the remapTo() macro.</p>
 
 <p><span id="remapActionCreate"></span></p>
 
@@ -262,11 +198,7 @@ the remapTo() macro.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1486">1486</a>]</p>
 
-<div class="desc">
-
-Create a new action object for the given remapped action.
-
-</div>
+<p>Create a new action object for the given remapped action.</p>
 
 <p><span id="remapVerify"></span></p>
 
@@ -274,12 +206,8 @@ Create a new action object for the given remapped action.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1368">1368</a>]</p>
 
-<div class="desc">
-
-Remap a 'verify' method for a remapped action. This is normally invoked
-through the remapTo() macro.
-
-</div>
+<p>Remap a ‘verify’ method for a remapped action. This is normally invoked
+through the remapTo() macro.</p>
 
 <p><span id="resolveAndReplaceAction"></span></p>
 
@@ -287,13 +215,9 @@ through the remapTo() macro.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1056">1056</a>]</p>
 
-<div class="desc">
-
-Resolve and execute a replacement action. This differs from the normal
+<p>Resolve and execute a replacement action. This differs from the normal
 replacement action execution in that the action we execute requires
-resolution before execution.
-
-</div>
+resolution before execution.</p>
 
 <p><span id="withActionEnv"></span></p>
 
@@ -301,22 +225,15 @@ resolution before execution.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1261">1261</a>]</p>
 
-<div class="desc">
-
-Run some code in a simulated Action environment. We'll create a dummy
+<p>Run some code in a simulated Action environment. We’ll create a dummy
 instance of the given Action class, and set up a command transcript,
 then invoke the function. This is useful for writing daemon code that
-needs to invoke other code that's set up to expect a normal action
-processing environment.
+needs to invoke other code that’s set up to expect a normal action
+processing environment.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

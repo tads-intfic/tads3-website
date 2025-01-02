@@ -60,10 +60,10 @@ when the game comes to an end.
 
 
 
-[`showList`](#showList)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
+[`showList`](#showList) [`showListPrefix`](#showListPrefix) [`showListSuffix`](#showListSuffix)
 
 Inherited from `Lister` :  
-[`buildList`](../object/Lister.html#buildList)[`listed`](../object/Lister.html#listed)[`listOrder`](../object/Lister.html#listOrder)[`show`](../object/Lister.html#show)[`showListEmpty`](../object/Lister.html#showListEmpty)
+[`buildList`](../object/Lister.html#buildList) [`listed`](../object/Lister.html#listed) [`listOrder`](../object/Lister.html#listOrder) [`show`](../object/Lister.html#show) [`showListEmpty`](../object/Lister.html#showListEmpty)
 
 <span id="_Properties_"></span>
 

@@ -46,69 +46,41 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Grammar rule token descriptor. GrammarProd.getGrammarInfo() instantiates
+<p>Grammar rule token descriptor. GrammarProd.getGrammarInfo() instantiates
 one of these objects to represent each token slot in an alternative; a
-GrammarAltInfo object's gramTokens property has a list of these objects.
+GrammarAltInfo object’s gramTokens property has a list of these objects.</p>
 
-`class `**`GrammarAltTokInfo`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">GrammarAltTokInfo</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">GrammarAltTokInfo</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#gramTargetProp"><code class="language-plaintext highlighter-rouge">gramTargetProp</code></a><a href="#gramTokenInfo"><code class="language-plaintext highlighter-rouge">gramTokenInfo</code></a><a href="#gramTokenType"><code class="language-plaintext highlighter-rouge">gramTokenType</code></a></p>
+<p><a href="#gramTargetProp"><code class="language-plaintext highlighter-rouge">gramTargetProp</code></a> <a href="#gramTokenInfo"><code class="language-plaintext highlighter-rouge">gramTokenInfo</code></a> <a href="#gramTokenType"><code class="language-plaintext highlighter-rouge">gramTokenType</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="gramTargetProp"></span></p>
 
@@ -116,13 +88,9 @@ GrammarAltInfo object's gramTokens property has a list of these objects.
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#114">114</a>]</p>
 
-<div class="desc">
-
-The target property - this is the property of the \*match object\* that
-will store the match information for the token. In a 'grammar'
-statement, this is the property after the '-\&gt;' symbol for this token.
-
-</div>
+<p>The target property - this is the property of the *match object* that
+will store the match information for the token. In a ‘grammar’
+statement, this is the property after the ‘-&gt;’ symbol for this token.</p>
 
 <p><span id="gramTokenInfo"></span></p>
 
@@ -130,29 +98,25 @@ statement, this is the property after the '-\&gt;' symbol for this token.
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#143">143</a>]</p>
 
-<div class="desc">
+<p>Detailed information for the token slot, which depends on the token
+type:</p>
 
-Detailed information for the token slot, which depends on the token
-type:
+<p>GramTokTypeProd - this gives the GrammarProd object defining the
+sub-production that this token slot matches</p>
 
-GramTokTypeProd - this gives the GrammarProd object defining the
-sub-production that this token slot matches
+<p>GramTokTypeSpeech - this is the property ID giving the part-of-speech
+property that this token slot matches</p>
 
-GramTokTypeSpeech - this is the property ID giving the part-of-speech
-property that this token slot matches
+<p>GramTokTypeNSpeech - this is a list of property IDs giving the
+part-of-speech properties that this token slot matches</p>
 
-GramTokTypeNSpeech - this is a list of property IDs giving the
-part-of-speech properties that this token slot matches
+<p>GramTokTypeLiteral - this is a string giving the literal that this slot
+matches</p>
 
-GramTokTypeLiteral - this is a string giving the literal that this slot
-matches
+<p>GramTokTypeTokEnum - this is the enum value giving the token type that
+this slot matches</p>
 
-GramTokTypeTokEnum - this is the enum value giving the token type that
-this slot matches
-
-GramTokTypeStar - no extra information (the value will be nil)
-
-</div>
+<p>GramTokTypeStar - no extra information (the value will be nil)</p>
 
 <p><span id="gramTokenType"></span></p>
 
@@ -160,20 +124,12 @@ GramTokTypeStar - no extra information (the value will be nil)
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#120">120</a>]</p>
 
-<div class="desc">
-
-The token type. This is one of the GramTokTypeXxx values (see
-gramprod.h) indicating what kind of token slot this is.
-
-</div>
+<p>The token type. This is one of the GramTokTypeXxx values (see
+gramprod.h) indicating what kind of token slot this is.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -181,24 +137,17 @@ gramprod.h) indicating what kind of token slot this is.
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#100">100</a>]</p>
 
-<div class="desc">
-
-Constructor. GrammarProd.getGrammarInfo() calls this once for each token
+<p>Constructor. GrammarProd.getGrammarInfo() calls this once for each token
 in each alternative in the production, passing in values to fully
-describe the token slot: the target property (in a 'grammar' statement,
-this is the property after a '-\&gt;' symbol); the token type; and extra
-information that depends on the token type. Note that we use '...' at
-the end of the argument list so that we'll be compatible with any future
-changes to GrammarProd that add more arguments to this method.
+describe the token slot: the target property (in a ‘grammar’ statement,
+this is the property after a ‘-&gt;’ symbol); the token type; and extra
+information that depends on the token type. Note that we use ‘…’ at
+the end of the argument list so that we’ll be compatible with any future
+changes to GrammarProd that add more arguments to this method.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

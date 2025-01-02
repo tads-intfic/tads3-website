@@ -46,74 +46,46 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A GramQuestion is a question handler that parses an answer using a
+grammar rule.</p>
 
-A GramQuestion is a question handler that parses an answer using a
-grammar rule.
-
-`class `**`GramQuestion`**` :   `[`Question`](../object/Question.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">GramQuestion</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Question.html"><code class="language-plaintext highlighter-rouge">Question</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">GramQuestion</code></strong><br />
 <a href="../object/Question.html"><code class="language-plaintext highlighter-rouge">Question</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">GramQuestion</code></strong><br />
 <a href="../object/YesNoQuestion.html"><code class="language-plaintext highlighter-rouge">YesNoQuestion</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#answerFunc"><code class="language-plaintext highlighter-rouge">answerFunc</code></a><a href="#answerProd"><code class="language-plaintext highlighter-rouge">answerProd</code></a></p>
+<p><a href="#answerFunc"><code class="language-plaintext highlighter-rouge">answerFunc</code></a> <a href="#answerProd"><code class="language-plaintext highlighter-rouge">answerProd</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Question</code> :<br />
-<a href="../object/Question.html#answerTemplate"><code class="language-plaintext highlighter-rouge">answerTemplate</code></a><a href="../object/Question.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+<a href="../object/Question.html#answerTemplate"><code class="language-plaintext highlighter-rouge">answerTemplate</code></a> <a href="../object/Question.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#makeCommand"><code class="language-plaintext highlighter-rouge">makeCommand</code></a><a href="#parseAnswer"><code class="language-plaintext highlighter-rouge">parseAnswer</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#makeCommand"><code class="language-plaintext highlighter-rouge">makeCommand</code></a> <a href="#parseAnswer"><code class="language-plaintext highlighter-rouge">parseAnswer</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="answerFunc"></span></p>
 
@@ -121,11 +93,7 @@ grammar rule.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1120">1120</a>]</p>
 
-<div class="desc">
-
-the callback function that carries out the reply action
-
-</div>
+<p>the callback function that carries out the reply action</p>
 
 <p><span id="answerProd"></span></p>
 
@@ -133,19 +101,11 @@ the callback function that carries out the reply action
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1117">1117</a>]</p>
 
-<div class="desc">
-
-the GrammarProd rule that we use to parse the answer
-
-</div>
+<p>the GrammarProd rule that we use to parse the answer</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -153,16 +113,12 @@ the GrammarProd rule that we use to parse the answer
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1090">1090</a>]</p>
 
-<div class="desc">
-
-Create a simple question. 'prod' is the root GrammarProd to use for
-parsing the reply. 'func' is a callback function that carries out the
-action of the answering the question. 'func' is invoked with a single
+<p>Create a simple question. ‘prod’ is the root GrammarProd to use for
+parsing the reply. ‘func’ is a callback function that carries out the
+action of the answering the question. ‘func’ is invoked with a single
 argument giving the Command object representing the answer; you can get
 the match tree from the Command if you need the parsed form of the
-answer input.
-
-</div>
+answer input.</p>
 
 <p><span id="makeCommand"></span></p>
 
@@ -170,13 +126,9 @@ answer input.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1114">1114</a>]</p>
 
-<div class="desc">
-
-Create a Command object for a successful grammar match. 'prod' is the
+<p>Create a Command object for a successful grammar match. ‘prod’ is the
 root match object of the grammar match. This returns a suitable Command
-that carries out the action of answering the question.
-
-</div>
+that carries out the action of answering the question.</p>
 
 <p><span id="parseAnswer"></span></p>
 
@@ -184,20 +136,13 @@ that carries out the action of answering the question.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1101">1101</a>]</p>
 
-<div class="desc">
+<p>Parse the answer. We’ll match the token list against the grammar rule.
+If we find a match, we’ll call makeCommand() to create the command to
+carry out the action of answering the question.</p>
 
-Parse the answer. We'll match the token list against the grammar rule.
-If we find a match, we'll call makeCommand() to create the command to
-carry out the action of answering the question.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

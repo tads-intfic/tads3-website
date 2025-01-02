@@ -57,7 +57,7 @@ distinguishable.)
 [`sortOrder`](#sortOrder)
 
 Inherited from `Distinguisher` :  
-[`all`](../object/Distinguisher.html#all)[`classInitFirst`](../object/Distinguisher.html#classInitFirst)
+[`all`](../object/Distinguisher.html#all) [`classInitFirst`](../object/Distinguisher.html#classInitFirst)
 
 <span id="_MethodSummary_"></span>
 
@@ -67,10 +67,10 @@ Inherited from `Distinguisher` :
 
 
 
-[`appliesTo`](#appliesTo)[`equal`](#equal)
+[`appliesTo`](#appliesTo) [`equal`](#equal)
 
 Inherited from `Distinguisher` :  
-[`apply`](../object/Distinguisher.html#apply)[`classInit`](../object/Distinguisher.html#classInit)[`getNames`](../object/Distinguisher.html#getNames)
+[`apply`](../object/Distinguisher.html#apply) [`classInit`](../object/Distinguisher.html#classInit) [`getNames`](../object/Distinguisher.html#getNames)
 
 <span id="_Properties_"></span>
 

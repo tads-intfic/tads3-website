@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="character.html" class="nav">Character Building</a> \&gt; The
-Security Guard  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="character.html" class="nav">Character Building</a> &gt; The
+Security Guard<br />
 <span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
     <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="the-security-guard--a-really-simple-npc">The Security Guard — A Really Simple NPC</h1>
 
@@ -53,18 +45,17 @@ opposed to various aspects of its behaviour) is defined much like any
 other Thing, except that we define it to be of class Actor. The Actor
 object representing the security guard might look like this:</p>
 
-<p>`
-    guard: Actor ‘security guard; burly flab; man; him’ @securityGate
-        “He’s a burly-looking fellow, though it’s probably as much flab as muscle. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    actorSpecialDesc = "A security guard stands by the metal detector, eyeing
-        you suspiciously. "
-    
-    checkAttackMsg = 'With your training you could probably overpower him
-        easily enough, although he\'s armed and you\'re not, but that would
-        probably result in all the other airport security staff coming after you,
-        which is a complication you could do without right now. '
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    guard: Actor 'security guard; burly flab; man; him' @securityGate
+        "He's a burly-looking fellow, though it's probably as much flab as muscle. "
+        
+        actorSpecialDesc = "A security guard stands by the metal detector, eyeing
+            you suspiciously. "
+        
+        checkAttackMsg = 'With your training you could probably overpower him
+            easily enough, although he\'s armed and you\'re not, but that would
+            probably result in all the other airport security staff coming after you,
+            which is a complication you could do without right now. '
+    ;
 </code></pre></div></div>
 
 <p>You can place this code right at the start of your npcs.t file, and then
@@ -113,17 +104,14 @@ Object</a>, consult the <em>adv3Lite Library Manual</em>.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="character.html" class="nav">Character Building</a> \&gt; The
-Security Guard  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="character.html" class="nav">Character Building</a> &gt; The
+Security Guard<br />
 <span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
     <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

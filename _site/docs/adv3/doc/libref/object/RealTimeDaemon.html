@@ -46,37 +46,29 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Real-time daemon. This is an event that occurs repeatedly at given
+<p>Real-time daemon. This is an event that occurs repeatedly at given
 real-time intervals. When a daemon is executed, it is scheduled again
-for execution after its real-time interval elapses again. The daemon's
+for execution after its real-time interval elapses again. The daemon’s
 first execution will occur one interval from the time at which the
-daemon is created.
+daemon is created.</p>
 
-If a daemon is executed late (because other, more pressing tasks had to
+<p>If a daemon is executed late (because other, more pressing tasks had to
 be completed first, or because the user was busy editing a command line
-and the local platform doesn't support real-time command interruptions),
+and the local platform doesn’t support real-time command interruptions),
 the interval is applied to the time the daemon actually executed, not to
 the originally scheduled execution time. For example, if the daemon is
-scheduled to run once every minute, but can't run at all for five
+scheduled to run once every minute, but can’t run at all for five
 minutes because of command editing on a non-interrupting platform, once
-it actually does run, it won't run again for (at least) another minute
+it actually does run, it won’t run again for (at least) another minute
 after that. This means that the daemon will not run five times all at
-once when it's finally allowed to run - there's no making up for lost
-time.
+once when it’s finally allowed to run - there’s no making up for lost
+time.</p>
 
-`class `**`RealTimeDaemon`**` :   `[`RealTimeEvent`](../object/RealTimeEvent.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">RealTimeDaemon</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/RealTimeEvent.html"><code class="language-plaintext highlighter-rouge">RealTimeEvent</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RealTimeDaemon</code></strong><br />
 <a href="../object/RealTimeEvent.html"><code class="language-plaintext highlighter-rouge">RealTimeEvent</code></a><br />
@@ -84,29 +76,17 @@ time.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RealTimeDaemon</code></strong><br />
 <a href="../object/RealTimeSenseDaemon.html"><code class="language-plaintext highlighter-rouge">RealTimeSenseDaemon</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#interval_"><code class="language-plaintext highlighter-rouge">interval_</code></a></p>
 
@@ -114,31 +94,23 @@ time.
 <a href="../object/RealTimeEvent.html#eventTime"><code class="language-plaintext highlighter-rouge">eventTime</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
-<a href="../object/BasicEvent.html#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a><a href="../object/BasicEvent.html#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a><a href="../object/BasicEvent.html#sense_"><code class="language-plaintext highlighter-rouge">sense_</code></a><a href="../object/BasicEvent.html#source_"><code class="language-plaintext highlighter-rouge">source_</code></a></p>
+<a href="../object/BasicEvent.html#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a> <a href="../object/BasicEvent.html#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a> <a href="../object/BasicEvent.html#sense_"><code class="language-plaintext highlighter-rouge">sense_</code></a> <a href="../object/BasicEvent.html#source_"><code class="language-plaintext highlighter-rouge">source_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#executeEvent"><code class="language-plaintext highlighter-rouge">executeEvent</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#executeEvent"><code class="language-plaintext highlighter-rouge">executeEvent</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">RealTimeEvent</code> :<br />
-<a href="../object/RealTimeEvent.html#getEventTime"><code class="language-plaintext highlighter-rouge">getEventTime</code></a><a href="../object/RealTimeEvent.html#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
+<a href="../object/RealTimeEvent.html#getEventTime"><code class="language-plaintext highlighter-rouge">getEventTime</code></a> <a href="../object/RealTimeEvent.html#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
-<a href="../object/BasicEvent.html#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a><a href="../object/BasicEvent.html#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a></p>
+<a href="../object/BasicEvent.html#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a> <a href="../object/BasicEvent.html#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="interval_"></span></p>
 
@@ -146,19 +118,11 @@ time.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#1275">1275</a>]</p>
 
-<div class="desc">
-
-my execution interval, in milliseconds
-
-</div>
+<p>my execution interval, in milliseconds</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -166,11 +130,7 @@ my execution interval, in milliseconds
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#1238">1238</a>]</p>
 
-<div class="desc">
-
-Creation. 'interval' is the number of milliseconds between invocations.
-
-</div>
+<p>Creation. ‘interval’ is the number of milliseconds between invocations.</p>
 
 <p><span id="executeEvent"></span></p>
 
@@ -178,18 +138,11 @@ Creation. 'interval' is the number of milliseconds between invocations.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#1254">1254</a>]</p>
 
-<div class="desc">
+<p>execute the daemon</p>
 
-execute the daemon
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

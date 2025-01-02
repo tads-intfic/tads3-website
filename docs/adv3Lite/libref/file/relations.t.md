@@ -34,7 +34,7 @@ in a TADS 3 game.
 
 
 
-[`Relation`](../object/Relation.html)[`VerbRule(ListRelations)`](../object/VerbRule(ListRelations).html)[`VerbRule(RelationDetails)`](../object/VerbRule(RelationDetails).html)
+[`Relation`](../object/Relation.html) [`VerbRule(ListRelations)`](../object/VerbRule(ListRelations).html) [`VerbRule(RelationDetails)`](../object/VerbRule(RelationDetails).html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -43,7 +43,7 @@ in a TADS 3 game.
 
 
 
-[`DerivedRelation`](../object/DerivedRelation.html)[`ListRelations`](../object/ListRelations.html)[`RelationDetails`](../object/RelationDetails.html)[`relationPathfinder`](../object/relationPathfinder.html)[`relationTable`](../object/relationTable.html)
+[`DerivedRelation`](../object/DerivedRelation.html) [`ListRelations`](../object/ListRelations.html) [`RelationDetails`](../object/RelationDetails.html) [`relationPathfinder`](../object/relationPathfinder.html) [`relationTable`](../object/relationTable.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -52,7 +52,7 @@ in a TADS 3 game.
 
 
 
-[`relate`](#relate)[`related`](#related)[`relationPath`](#relationPath)[`unrelate`](#unrelate)
+[`relate`](#relate) [`related`](#related) [`relationPath`](#relationPath) [`unrelate`](#unrelate)
 
 <span id="_Functions_"></span>
 

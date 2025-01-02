@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="conversation.html" class="nav">The Art of Conversation</a> \&gt;
-Diverse Defaults  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="conversation.html" class="nav">The Art of Conversation</a> &gt;
+Diverse Defaults<br />
 <span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Angela Wants
 Answers</a>    
 <a href="convsumm.html" class="nav"><em>Next:</em> Summary</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="diverse-defaults">Diverse Defaults</h1>
 
@@ -58,12 +50,11 @@ straightforward refusals implemented as DefaultTopics directly located
 in Angela. First the <strong>DefaultAskForTopic</strong> to field, ASK ANGELA FOR
 SUCH-AND-SUCH:</p>
 
-<p>`
-    + DefaultAskForTopic
-        “{The subj angela} listens to your request and shakes her head. <q>Sorry, I
-        can’t help you with that,</q> she says. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAskForTopic
+        "{The subj angela} listens to your request and shakes her head. &lt;q&gt;Sorry, I
+        can't help you with that,&lt;/q&gt; she says. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Commands issued to an NPC can be handled by CommandTopics (for details,
 see the section on <a href="../manual/orders.html">Giving Orders to NPCs</a> in the
@@ -75,14 +66,13 @@ least a reasonable approximation to the actual words that might be
 spoken to give the command. Our DefaultCommandTopic might therefore look
 like this:</p>
 
-<p>`
-    + DefaultCommandTopic
-        “<q>«if angela.proper»Angela«else»Miss«end», would you
-        «actionPhrase», please?</q> you request.\b
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultCommandTopic
+        "&lt;q&gt;&lt;&lt;if angela.proper&gt;&gt;Angela&lt;&lt;else&gt;&gt;Miss&lt;&lt;end&gt;&gt;, would you
+        &lt;&lt;actionPhrase&gt;&gt;, please?&lt;/q&gt; you request.\b
         In reply she merely cocks an eyebrow at you and looks at you as if to say,
-        <q>Who do you think you’re talking to?</q> “
+        &lt;q&gt;Who do you think you're talking to?&lt;/q&gt; "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Note that we also make use of an embedded
 <code class="language-plaintext highlighter-rouge">\&lt;\&lt;if\&gt;\&gt;</code> expression so that the player
@@ -93,22 +83,20 @@ whether or not he’s learned her name.</p>
 anything that slips through all the other DefaultTopics we’re about to
 go on and define:</p>
 
-<p>`
-    + DefaultAnyTopic
-        “{The subj angela} smiles and shrugs. “<br />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAnyTopic
+        "{The subj angela} smiles and shrugs. "  
     ;
-`</p>
+</code></pre></div></div>
 
 <p>We can also write a general-purpose <strong>DefaultGiveShowTopic</strong> to field
 attempts to GIVE or SHOW something to Angela:</p>
 
-<p>`
-    + DefaultGiveShowTopic
-        “You offer {the angela} {the dobj}, but she shakes her head and pushes {him
-        dobj} away, saying, <q>I’m afraid I can’t accept {that dobj} from you,
-        sir.</q> “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultGiveShowTopic
+        "You offer {the angela} {the dobj}, but she shakes her head and pushes {him
+        dobj} away, saying, &lt;q&gt;I'm afraid I can't accept {that dobj} from you,
+        sir.&lt;/q&gt; "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Here we take advantage of the fact that the object the player character
 is attempting to give or show will always be the direct object of the
@@ -122,14 +110,13 @@ look more than a little odd. One solution is to define a
 <strong>DefaultShowTopic</strong> that’s active when what’s being shown is fixed in
 place:</p>
 
-<p>`
-    + DefaultShowTopic
-        “You point towards {the dobj}.\b
-        <q>Very interesting, I’m sure, sir,</q> {the subj angela} remarks without
-        much enthusiasm. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isActive = gDobj.isFixed
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultShowTopic
+        "You point towards {the dobj}.\b
+        &lt;q&gt;Very interesting, I'm sure, sir,&lt;/q&gt; {the subj angela} remarks without
+        much enthusiasm. "
+        
+        isActive = gDobj.isFixed
+    ;
 </code></pre></div></div>
 
 <p>This works because being slightly more specific than a
@@ -199,41 +186,40 @@ takeoff. Thus, when Angela is in angelaGreetingState we actually want
 two groups of conversational DefaultTopics, which we could define like
 so:</p>
 
-<p>`
-    + TopicGroup +5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TopicGroup +5
         isActive = angela.curState == angelaGreetingState &amp;&amp;
         !angelaGreetingState.ticketSeen
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ DefaultAskQueryTopic
-    "&lt;q&gt;I really need to see your ticket, sir,&lt;/q&gt; she insists &lt;&lt;one
-      of&gt;&gt;politely&lt;&lt;or&gt;&gt;once more&lt;&lt;stopping&gt;&gt;. "
-;
+    ++ DefaultAskQueryTopic
+        "&lt;q&gt;I really need to see your ticket, sir,&lt;/q&gt; she insists &lt;&lt;one
+          of&gt;&gt;politely&lt;&lt;or&gt;&gt;once more&lt;&lt;stopping&gt;&gt;. "
+    ;
 
-++ DefaultSayTellTalkTopic
-    "{The subj angela} listens &lt;&lt;one of&gt;&gt;politely&lt;&lt;or&gt;&gt;a little impatiently
-    &lt;&lt;stopping&gt;&gt; to what you have to say, then replies, &lt;q&gt;May I see your
-    ticket, sir?&lt;/q&gt; "
-;
+    ++ DefaultSayTellTalkTopic
+        "{The subj angela} listens &lt;&lt;one of&gt;&gt;politely&lt;&lt;or&gt;&gt;a little impatiently
+        &lt;&lt;stopping&gt;&gt; to what you have to say, then replies, &lt;q&gt;May I see your
+        ticket, sir?&lt;/q&gt; "
+    ;
 
-+ TopicGroup +5
-    isActive = angela.curState == angelaGreetingState &amp;&amp;
-    angelaGreetingState.ticketSeen
-;
+    + TopicGroup +5
+        isActive = angela.curState == angelaGreetingState &amp;&amp;
+        angelaGreetingState.ticketSeen
+    ;
 
-++ DefaultAskQueryTopic
-    "&lt;q&gt;If you have any further questions perhaps you could ask them once we're
-    in flight,&lt;/q&gt; she &lt;&lt;one of&gt;&gt;suggests&lt;&lt;or&gt;&gt;repeats&lt;&lt;stopping&gt;&gt;. &lt;q&gt;&lt;&lt;one
-      of&gt;&gt;It would be best if you moved &lt;&lt;or&gt;&gt;Please move&lt;&lt;stopping&gt;&gt; to the
-    rear of the plane and &lt;&lt;one of&gt;&gt;took&lt;&lt;or&gt;&gt;take&lt;&lt;stopping&gt;&gt; your seat now,
-    sir.&lt;/q&gt; "
-;
+    ++ DefaultAskQueryTopic
+        "&lt;q&gt;If you have any further questions perhaps you could ask them once we're
+        in flight,&lt;/q&gt; she &lt;&lt;one of&gt;&gt;suggests&lt;&lt;or&gt;&gt;repeats&lt;&lt;stopping&gt;&gt;. &lt;q&gt;&lt;&lt;one
+          of&gt;&gt;It would be best if you moved &lt;&lt;or&gt;&gt;Please move&lt;&lt;stopping&gt;&gt; to the
+        rear of the plane and &lt;&lt;one of&gt;&gt;took&lt;&lt;or&gt;&gt;take&lt;&lt;stopping&gt;&gt; your seat now,
+        sir.&lt;/q&gt; "
+    ;
 
-++ DefaultSayTellTalkTopic
-    "{The subj angela} holds up her hand to stop you in mid-flow. &lt;q&gt;Can I ask
-    you to move to the rear of your plane and take your seat now, sir?&lt;/q&gt; she
-    &lt;&lt;one of&gt;&gt;requests&lt;&lt;or&gt;&gt;repeats&lt;&lt;or&gt;&gt;insists&lt;&lt;stopping&gt;&gt;. "
-; `
+    ++ DefaultSayTellTalkTopic
+        "{The subj angela} holds up her hand to stop you in mid-flow. &lt;q&gt;Can I ask
+        you to move to the rear of your plane and take your seat now, sir?&lt;/q&gt; she
+        &lt;&lt;one of&gt;&gt;requests&lt;&lt;or&gt;&gt;repeats&lt;&lt;or&gt;&gt;insists&lt;&lt;stopping&gt;&gt;. "
+    ;
 </code></pre></div></div>
 
 <p>Since at this stage the flight attendant is focused almost entirely on
@@ -254,34 +240,33 @@ probably get away with one default response for say/tell/talk, but we
 should provide some variety of responses to asking unimplemented
 questions:</p>
 
-<p>`
-    + TopicGroup +5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TopicGroup +5
         isActive = angela.curState == angelaTalkingState
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++  DefaultAskQueryTopic, ShuffledEventList
-    [
-        '{The subj angela} mutters something inaudible and looks round, as if
-        dropping a heavy hint that she has other people besides you to attend
-        to. ',
-        
-        '&lt;q&gt;Maybe we can discuss that some other time,&lt;/q&gt; she suggests, with
-        a significant glance at the other passengers anxious to attract her
-        attention. ',
-        
-        '&lt;q&gt;Hm, well,&lt;/q&gt; she says, in a tone of voice that rather suggests
-        she has more urgent things on her mind. ',
-        
-        '&lt;q&gt;I think perhaps...&lt;/q&gt; she begins, and then trails off as one of the
-        other passengers taps her on the arm in an attempt to grab her
-        attention. '
-    ]
-;
+    ++  DefaultAskQueryTopic, ShuffledEventList
+        [
+            '{The subj angela} mutters something inaudible and looks round, as if
+            dropping a heavy hint that she has other people besides you to attend
+            to. ',
+            
+            '&lt;q&gt;Maybe we can discuss that some other time,&lt;/q&gt; she suggests, with
+            a significant glance at the other passengers anxious to attract her
+            attention. ',
+            
+            '&lt;q&gt;Hm, well,&lt;/q&gt; she says, in a tone of voice that rather suggests
+            she has more urgent things on her mind. ',
+            
+            '&lt;q&gt;I think perhaps...&lt;/q&gt; she begins, and then trails off as one of the
+            other passengers taps her on the arm in an attempt to grab her
+            attention. '
+        ]
+    ;
 
-++ DefaultSayTellTalkTopic
-    "{The subj angela} listens to what you have to say without comment, but with
-    the air of one who has other things on her mind. "
-; `
+    ++ DefaultSayTellTalkTopic
+        "{The subj angela} listens to what you have to say without comment, but with
+        the air of one who has other things on her mind. "
+    ;
 </code></pre></div></div>
 
 <p>The DefaultTopics for angelaSeatedState, when Angela and the player
@@ -290,50 +275,46 @@ occupying the passenger seats, can follow much the same pattern, except
 that here Angela’s main concern will be with the type of people who may
 overhear the conversation:</p>
 
-<p>`
-    + TopicGroup +5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TopicGroup +5
         isActive = angela.curState == angelaSeatedState
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ DefaultAskQueryTopic, ShuffledEventList
-    [
-        '{The subj angela} lowers her voice and swivels her eyes just enough to
-        remind you of the other people in earshot. &lt;q&gt;Perhaps we should discuss
-        that some other time,&lt;/q&gt; she suggests. ',
-        
-        '&lt;q&gt;I don\'t think I care to answer that right now,&lt;/q&gt; she replies,
-        with just enough movement of the head to indicate how easily you might
-        be overheard by the hoodlums in the other passenger seats. ',
-        
-        '&lt;q&gt;I think...&lt;/q&gt; she begins, and then breaks off. &lt;q&gt;I think this may
-        not be the best time to talk about that,&lt;/q&gt; she concludes. ',
-        
-        '&lt;q&gt;Hm,&lt;/q&gt; she says, &lt;q&gt;right.&lt;/q&gt; It\'s obviously intended as a
-        non-answer, perhaps because she\'s worried about who else might hear
-        what she says. '       
-    ]
-;
+    ++ DefaultAskQueryTopic, ShuffledEventList
+        [
+            '{The subj angela} lowers her voice and swivels her eyes just enough to
+            remind you of the other people in earshot. &lt;q&gt;Perhaps we should discuss
+            that some other time,&lt;/q&gt; she suggests. ',
+            
+            '&lt;q&gt;I don\'t think I care to answer that right now,&lt;/q&gt; she replies,
+            with just enough movement of the head to indicate how easily you might
+            be overheard by the hoodlums in the other passenger seats. ',
+            
+            '&lt;q&gt;I think...&lt;/q&gt; she begins, and then breaks off. &lt;q&gt;I think this may
+            not be the best time to talk about that,&lt;/q&gt; she concludes. ',
+            
+            '&lt;q&gt;Hm,&lt;/q&gt; she says, &lt;q&gt;right.&lt;/q&gt; It\'s obviously intended as a
+            non-answer, perhaps because she\'s worried about who else might hear
+            what she says. '       
+        ]
+    ;
 
-++ DefaultSayTellTalkTopic
-    "{The subj angela} merely listens, looking faintly disapproving at your
-    garrulousness. "
-; `
+    ++ DefaultSayTellTalkTopic
+        "{The subj angela} merely listens, looking faintly disapproving at your
+        garrulousness. "
+    ;
 </code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="conversation.html" class="nav">The Art of Conversation</a> \&gt;
-Diverse Defaults  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="conversation.html" class="nav">The Art of Conversation</a> &gt;
+Diverse Defaults<br />
 <span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Angela Wants
 Answers</a>    
 <a href="convsumm.html" class="nav"><em>Next:</em> Summary</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

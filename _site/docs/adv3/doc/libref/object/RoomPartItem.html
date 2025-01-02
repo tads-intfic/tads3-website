@@ -46,93 +46,61 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A "room part item" is an object that's specially described as being part
+<p>A “room part item” is an object that’s specially described as being part
 of, or attached to, a RoomPart (a wall, ceiling, floor, or the like).
 This is a mix-in class that can be combined with any ordinary object
 class (but usually with something non-portable, such as a Fixture or
-Immovable). The effect of adding RoomPartItem to an object's
+Immovable). The effect of adding RoomPartItem to an object’s
 superclasses is that a command like EXAMINE EAST WALL (or whichever room
-part the object is associated with) will display the object's
+part the object is associated with) will display the object’s
 specialDesc, but a simple LOOK will not. This class is sometimes useful
 for things like doors, windows, ceiling fans, and other things attached
-to the room.
+to the room.</p>
 
-Note that this is a mix-in class, so you should always combine it with a
-regular Thing-based class.
+<p>Note that this is a mix-in class, so you should always combine it with a
+regular Thing-based class.</p>
 
-When using this class, you should define two properties in the object:
+<p>When using this class, you should define two properties in the object:
 specialNominalRoomPartLocation, which you should set to the RoomPart
 (such as a wall) where the object should be described; and specialDesc,
 which is the description to show when the room part is examined.
 Alternatively (or in addition), you can define
 initNominalRoomPartLocation and initSpecialDesc - these work the same
-way, but will only be in effect until the object is moved.
+way, but will only be in effect until the object is moved.</p>
 
-`class `**`RoomPartItem`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">RoomPartItem</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RoomPartItem</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#useSpecialDescInContents"><code class="language-plaintext highlighter-rouge">useSpecialDescInContents</code></a><a href="#useSpecialDescInRoom"><code class="language-plaintext highlighter-rouge">useSpecialDescInRoom</code></a><a href="#useSpecialDescInRoomPart"><code class="language-plaintext highlighter-rouge">useSpecialDescInRoomPart</code></a></p>
+<p><a href="#useSpecialDescInContents"><code class="language-plaintext highlighter-rouge">useSpecialDescInContents</code></a> <a href="#useSpecialDescInRoom"><code class="language-plaintext highlighter-rouge">useSpecialDescInRoom</code></a> <a href="#useSpecialDescInRoomPart"><code class="language-plaintext highlighter-rouge">useSpecialDescInRoomPart</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="useSpecialDescInContents"></span></p>
 
@@ -140,11 +108,7 @@ way, but will only be in effect until the object is moved.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#5566">5566</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="useSpecialDescInRoom"></span></p>
 
@@ -152,12 +116,8 @@ way, but will only be in effect until the object is moved.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#5565">5565</a>]</p>
 
-<div class="desc">
-
-don't use the special description in room descriptions, or in examining
-any other container
-
-</div>
+<p>don’t use the special description in room descriptions, or in examining
+any other container</p>
 
 <p><span id="useSpecialDescInRoomPart"></span></p>
 
@@ -165,19 +125,12 @@ any other container
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#5537">5537</a>]</p>
 
-<div class="desc">
+<p>show our special description when examining our associated room part, as
+long as we actually define a special description</p>
 
-show our special description when examining our associated room part, as
-long as we actually define a special description
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

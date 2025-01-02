@@ -34,7 +34,7 @@ score, which indicates the player's progress through the game.
 
 
 
-[`Achievement`](../object/Achievement.html)[`SimpleAchievement`](../object/SimpleAchievement.html)
+[`Achievement`](../object/Achievement.html) [`SimpleAchievement`](../object/SimpleAchievement.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -43,7 +43,7 @@ score, which indicates the player's progress through the game.
 
 
 
-[`fullScoreLister`](../object/fullScoreLister.html)[`libScore`](../object/libScore.html)[`scoreNotifier`](../object/scoreNotifier.html)[`scoreNotifySettingsItem`](../object/scoreNotifySettingsItem.html)
+[`fullScoreLister`](../object/fullScoreLister.html) [`libScore`](../object/libScore.html) [`scoreNotifier`](../object/scoreNotifier.html) [`scoreNotifySettingsItem`](../object/scoreNotifySettingsItem.html)
 <span id="FunctionSummary_"></span>
 
 

@@ -1067,7 +1067,7 @@ grammar disambigOrdinalItem(main):
     determiner = Definite
 
     /* look up the value of the ordinal word */
-    ordval() { return cmdDict.findWord(ord_, &amp;ordinalWord)[1].ordinalVal; }
+    ordval() { return cmdDict.findWord(ord_, &amp;ordinalWord) [1].ordinalVal; }
 ;
 
 grammar disambigList(single): disambigListItem-&gt;np1_ :
@@ -1089,7 +1089,7 @@ grammar disambigListItem(ordinal):
     determiner = Definite
 
     /* look up the value of the ordinal word */
-    ordval() { return cmdDict.findWord(ord_, &amp;ordinalWord)[1].ordinalVal; }
+    ordval() { return cmdDict.findWord(ord_, &amp;ordinalWord) [1].ordinalVal; }
 ;
 
 grammar disambigListItem(noun):
@@ -1224,7 +1224,7 @@ grammar spelledSmallNumber(digit): digitWord-&gt;num_ : Production
     numval()
     {
         /* look up the units word in the dictionary */
-        return cmdDict.findWord(num_, &amp;digitWord)[1].numval;
+        return cmdDict.findWord(num_, &amp;digitWord) [1].numval;
     }
 ;
 
@@ -1232,7 +1232,7 @@ grammar spelledSmallNumber(teen): teenWord-&gt;num_ : Production
     numval()
     {
         /* look up the units word in the dictionary */
-        return cmdDict.findWord(num_, &amp;teenWord)[1].numval;
+        return cmdDict.findWord(num_, &amp;teenWord) [1].numval;
     }
 ;
 
@@ -1240,7 +1240,7 @@ grammar spelledSmallNumber(tens): tensWord-&gt;num_ : Production
     numval()
     {
         /* look up the units word in the dictionary */
-        return cmdDict.findWord(num_, &amp;tensWord)[1].numval;
+        return cmdDict.findWord(num_, &amp;tensWord) [1].numval;
     }
 ;
 
@@ -1252,8 +1252,8 @@ grammar spelledSmallNumber(tensAndUnits):
     //    numval = (tens_.numval + units_.numval)
     numval()
     {
-        return cmdDict.findWord(tens_, &amp;tensWord)[1].numval +
-            cmdDict.findWord(units_, &amp;digitWord)[1].numval;
+        return cmdDict.findWord(tens_, &amp;tensWord) [1].numval +
+            cmdDict.findWord(units_, &amp;digitWord) [1].numval;
     }
 ;
 
@@ -3737,12 +3737,9 @@ modify VerbProduction
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

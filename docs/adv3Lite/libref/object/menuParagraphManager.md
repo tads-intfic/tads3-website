@@ -51,7 +51,7 @@ Paragraph manager for the menu output stream.
 
 
 Inherited from `ParagraphManager` :  
-[`leadingMultiPat`](../object/ParagraphManager.html#leadingMultiPat)[`leadingSinglePat`](../object/ParagraphManager.html#leadingSinglePat)[`renderAfterInput`](../object/ParagraphManager.html#renderAfterInput)[`renderText`](../object/ParagraphManager.html#renderText)[`suppressAfter`](../object/ParagraphManager.html#suppressAfter)[`suppressBefore`](../object/ParagraphManager.html#suppressBefore)
+[`leadingMultiPat`](../object/ParagraphManager.html#leadingMultiPat) [`leadingSinglePat`](../object/ParagraphManager.html#leadingSinglePat) [`renderAfterInput`](../object/ParagraphManager.html#renderAfterInput) [`renderText`](../object/ParagraphManager.html#renderText) [`suppressAfter`](../object/ParagraphManager.html#suppressAfter) [`suppressBefore`](../object/ParagraphManager.html#suppressBefore)
 
 
 

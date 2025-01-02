@@ -87,7 +87,7 @@ Inherited from `InputDef` :
 [`construct`](#construct)
 
 Inherited from `InputDef` :  
-[`beginInputFont`](../object/InputDef.html#beginInputFont)[`endInputFont`](../object/InputDef.html#endInputFont)
+[`beginInputFont`](../object/InputDef.html#beginInputFont) [`endInputFont`](../object/InputDef.html#endInputFont)
 
 <span id="_Properties_"></span>
 

@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="lib.html" class="nav">The System Library</a> \&gt; Miscellaneous
-Library Definitions  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="lib.html" class="nav">The System Library</a> &gt; Miscellaneous
+Library Definitions<br />
 <span class="navnp"><a href="tok.html" class="nav"><em>Prev:</em> Basic Tokenizer</a>
     <a href="nodef.html" class="nav"><em>Next:</em> Replacing the System
-Library</a>     </span>
-
-</div>
+Library</a>     </span></p>
 
 <h1 id="miscellaneous-library-definitions">Miscellaneous Library Definitions</h1>
 
@@ -47,96 +39,66 @@ the system library defines.</p>
 
 <p><code class="language-plaintext highlighter-rouge">forEachInstance(*cls*, *func*)</code></p>
 
-<div class="fdef">
+<p>This function is a simple object “iterator” function; it iterates (in
+arbitrary order) over all instances of the class given by the <em>cls</em>
+argument, and for each instance invokes the function given by <em>func</em>,
+passing the current instance as the function’s single argument.</p>
 
-This function is a simple object "iterator" function; it iterates (in
-arbitrary order) over all instances of the class given by the *cls*
-argument, and for each instance invokes the function given by *func*,
-passing the current instance as the function's single argument.
-
-This function is a convenience. You can use it as an alternative to
+<p>This function is a convenience. You can use it as an alternative to
 writing a loop involving the firstObj/nextObj functions. For example, to
-set the `isAnimate` property for all instances
-of Actor:
+set the <code class="language-plaintext highlighter-rouge">isAnimate</code> property for all instances
+of Actor:</p>
 
-```
-    forEachInstance(Actor, {obj: obj.isAnimate = true});
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    forEachInstance(Actor, {obj: obj.isAnimate = true});
+</code></pre></div></div>
 
+<p><code class="language-plaintext highlighter-rouge">\_default_display_fn(*val*)</code></p>
 
+<p>This function simply calls the function
+<code class="language-plaintext highlighter-rouge">tadsSay(val)</code> from the <a href="tadsio.html">tads-io</a>
+intrinsic function set. It’s defined as a function here simply so that
+the library can register it with the VM as the default display function.</p>
 
-`\_default_display_fn(*val*)`
+<h2 id="classes">Classes</h2>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">class Exception: object</code></p>
 
-This function simply calls the function
-`tadsSay(val)` from the [tads-io](tadsio.html)
-intrinsic function set. It's defined as a function here simply so that
-the library can register it with the VM as the default display function.
-
-</div>
-
-## Classes
-
-`class Exception: object`
-
-<div class="fdef">
-
-This class is defined to serve as the base class for all exceptions,
+<p>This class is defined to serve as the base class for all exceptions,
 including run-time errors and program-defined exceptions. The class
-defines a method, `displayException()`, that
+defines a method, <code class="language-plaintext highlighter-rouge">displayException()</code>, that
 should be overridden in all subclasses to display an appropriate message
-describing the exception.
+describing the exception.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">class RuntimeError: Exception</code></p>
 
-`class RuntimeError: Exception`
+<p>This class is the base class for all run-time exceptions that the VM
+itself throws.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">class ModuleExecObject: object</code></p>
 
-This class is the base class for all run-time exceptions that the VM
-itself throws.
+<p>This is the base class for PreinitObject and InitObject. (See the
+section on <a href="init.html">initialization</a> for full details on these
+objects.)</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">mainGlobal: object</code></p>
 
-`class ModuleExecObject: object`
-
-<div class="fdef">
-
-This is the base class for PreinitObject and InitObject. (See the
-section on [initialization](init.html) for full details on these
-objects.)
-
-</div>
-
-`mainGlobal: object`
-
-<div class="fdef">
-
-This object simply serves as a repository for global variables for the
-system library. In particular, this object's property
-`preinited\_` stores the pre-initialization
-status; this property is set to `true` after
+<p>This object simply serves as a repository for global variables for the
+system library. In particular, this object’s property
+<code class="language-plaintext highlighter-rouge">preinited\_</code> stores the pre-initialization
+status; this property is set to <code class="language-plaintext highlighter-rouge">true</code> after
 pre-initialization has been completed, so that the library knows that
-the process won't have to be repeated when the program is started.
-
-</div>
-
-</div>
+the process won’t have to be repeated when the program is started.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="lib.html" class="nav">The System Library</a> \&gt; Miscellaneous
-Library Definitions  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="lib.html" class="nav">The System Library</a> &gt; Miscellaneous
+Library Definitions<br />
 <span class="navnp"><a href="tok.html" class="nav"><em>Prev:</em> Basic Tokenizer</a>
     <a href="nodef.html" class="nav"><em>Next:</em> Replacing the System
-Library</a>     </span>
+Library</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

@@ -106,7 +106,7 @@ type on the traveler object.
 
 
 
-[`getNominalTraveler`](#getNominalTraveler)[`sayArriving`](#sayArriving)[`sayArrivingDir`](#sayArrivingDir)[`sayArrivingDownStairs`](#sayArrivingDownStairs)[`sayArrivingLocally`](#sayArrivingLocally)[`sayArrivingThroughPassage`](#sayArrivingThroughPassage)[`sayArrivingUpStairs`](#sayArrivingUpStairs)[`sayArrivingViaPath`](#sayArrivingViaPath)[`sayDeparting`](#sayDeparting)[`sayDepartingDir`](#sayDepartingDir)[`sayDepartingDownStairs`](#sayDepartingDownStairs)[`sayDepartingLocally`](#sayDepartingLocally)[`sayDepartingThroughPassage`](#sayDepartingThroughPassage)[`sayDepartingUpStairs`](#sayDepartingUpStairs)[`sayDepartingViaPath`](#sayDepartingViaPath)[`sayTravelingRemotely`](#sayTravelingRemotely)
+[`getNominalTraveler`](#getNominalTraveler) [`sayArriving`](#sayArriving) [`sayArrivingDir`](#sayArrivingDir) [`sayArrivingDownStairs`](#sayArrivingDownStairs) [`sayArrivingLocally`](#sayArrivingLocally) [`sayArrivingThroughPassage`](#sayArrivingThroughPassage) [`sayArrivingUpStairs`](#sayArrivingUpStairs) [`sayArrivingViaPath`](#sayArrivingViaPath) [`sayDeparting`](#sayDeparting) [`sayDepartingDir`](#sayDepartingDir) [`sayDepartingDownStairs`](#sayDepartingDownStairs) [`sayDepartingLocally`](#sayDepartingLocally) [`sayDepartingThroughPassage`](#sayDepartingThroughPassage) [`sayDepartingUpStairs`](#sayDepartingUpStairs) [`sayDepartingViaPath`](#sayDepartingViaPath) [`sayTravelingRemotely`](#sayTravelingRemotely)
 
 <span id="_Properties_"></span>
 

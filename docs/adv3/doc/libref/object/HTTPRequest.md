@@ -90,10 +90,10 @@ HTTPRequest extensions
 
 
 
-[`endChunkedReply`](#endChunkedReply)[`getBody`](#getBody)[`getClientAddress`](#getClientAddress)[`getCookie`](#getCookie)[`getCookies`](#getCookies)[`getFormFields`](#getFormFields)[`getHeaders`](#getHeaders)[`getQuery`](#getQuery)[`getQueryParam`](#getQueryParam)[`getServer`](#getServer)[`getVerb`](#getVerb)[`parseQuery`](#parseQuery)[`sendReply`](#sendReply)[`sendReplyAsync`](#sendReplyAsync)[`sendReplyCatch`](#sendReplyCatch)[`sendReplyChunk`](#sendReplyChunk)[`setCookie`](#setCookie)[`startChunkedReply`](#startChunkedReply)
+[`endChunkedReply`](#endChunkedReply) [`getBody`](#getBody) [`getClientAddress`](#getClientAddress) [`getCookie`](#getCookie) [`getCookies`](#getCookies) [`getFormFields`](#getFormFields) [`getHeaders`](#getHeaders) [`getQuery`](#getQuery) [`getQueryParam`](#getQueryParam) [`getServer`](#getServer) [`getVerb`](#getVerb) [`parseQuery`](#parseQuery) [`sendReply`](#sendReply) [`sendReplyAsync`](#sendReplyAsync) [`sendReplyCatch`](#sendReplyCatch) [`sendReplyChunk`](#sendReplyChunk) [`setCookie`](#setCookie) [`startChunkedReply`](#startChunkedReply)
 
 Inherited from `Object` :  
-[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
+[`getPropList`](../object/Object.html#getPropList) [`getPropParams`](../object/Object.html#getPropParams) [`getSuperclassList`](../object/Object.html#getSuperclassList) [`isClass`](../object/Object.html#isClass) [`isTransient`](../object/Object.html#isTransient) [`ofKind`](../object/Object.html#ofKind) [`propDefined`](../object/Object.html#propDefined) [`propInherited`](../object/Object.html#propInherited) [`propType`](../object/Object.html#propType) [`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

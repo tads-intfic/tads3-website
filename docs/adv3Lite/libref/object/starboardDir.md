@@ -48,12 +48,12 @@ Details](#_Methods_)
 
 
 
-[`departureName`](#departureName)[`dirProp`](#dirProp)[`name`](#name)[`opposite`](#opposite)[`sortingOrder`](#sortingOrder)
+[`departureName`](#departureName) [`dirProp`](#dirProp) [`name`](#name) [`opposite`](#opposite) [`sortingOrder`](#sortingOrder)
 
 
 
 Inherited from `Direction` :  
-[`allDirections`](../object/Direction.html#allDirections)[`nameTab`](../object/Direction.html#nameTab)
+[`allDirections`](../object/Direction.html#allDirections) [`nameTab`](../object/Direction.html#nameTab)
 
 <span id="_MethodSummary_"></span>
 
@@ -69,7 +69,7 @@ Inherited from `ShipboardDirection` :
 [`initializeDirection`](../object/ShipboardDirection.html#initializeDirection)
 
 Inherited from `Direction` :  
-[`classInit`](../object/Direction.html#classInit)[`oppositeProp`](../object/Direction.html#oppositeProp)[`propDir`](../object/Direction.html#propDir)
+[`classInit`](../object/Direction.html#classInit) [`oppositeProp`](../object/Direction.html#oppositeProp) [`propDir`](../object/Direction.html#propDir)
 
 <span id="_Properties_"></span>
 

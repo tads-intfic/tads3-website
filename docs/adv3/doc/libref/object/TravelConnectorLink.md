@@ -81,7 +81,7 @@ specify the destination; instead, these just point to travel connectors.
 
 
 
-[`connector`](#connector)[`sightSize`](#sightSize)
+[`connector`](#connector) [`sightSize`](#sightSize)
 
 <span id="_MethodSummary_"></span>
 

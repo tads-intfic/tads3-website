@@ -46,76 +46,48 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A ScopeList is a helper object used to build the list of objects in
+<p>A ScopeList is a helper object used to build the list of objects in
 scope. This object provides methods for the common ways of adding
-objects to scope.
+objects to scope.</p>
 
-The ScopeList isn't a true Collection object, but it mimics one by
+<p>The ScopeList isn’t a true Collection object, but it mimics one by
 providing most of the standard methods. You can use length() and the
-\[\] operator to scan the list, perform a foreach or for..in loop with a
+[] operator to scan the list, perform a foreach or for..in loop with a
 ScopeList to iterate over the items in scope, you can use find() to
 check if a given object is in scope, and you can use subset() to get a
-list of in-scope objects satisfying some condition.
+list of in-scope objects satisfying some condition.</p>
 
-`class `**`ScopeList`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ScopeList</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ScopeList</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#status_"><code class="language-plaintext highlighter-rouge">status_</code></a><a href="#vec_"><code class="language-plaintext highlighter-rouge">vec_</code></a></p>
+<p><a href="#status_"><code class="language-plaintext highlighter-rouge">status_</code></a> <a href="#vec_"><code class="language-plaintext highlighter-rouge">vec_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#add"><code class="language-plaintext highlighter-rouge">add</code></a><a href="#addAll"><code class="language-plaintext highlighter-rouge">addAll</code></a><a href="#addOnly"><code class="language-plaintext highlighter-rouge">addOnly</code></a><a href="#addSelfIlluminatingWithin"><code class="language-plaintext highlighter-rouge">addSelfIlluminatingWithin</code></a><a href="#addWithin"><code class="language-plaintext highlighter-rouge">addWithin</code></a><a href="#close"><code class="language-plaintext highlighter-rouge">close</code></a><a href="#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a><a href="#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a><a href="#find"><code class="language-plaintext highlighter-rouge">find</code></a><a href="#length"><code class="language-plaintext highlighter-rouge">length</code></a><a href="#subset"><code class="language-plaintext highlighter-rouge">subset</code></a><a href="#toList"><code class="language-plaintext highlighter-rouge">toList</code></a></p>
+<p><a href="#add"><code class="language-plaintext highlighter-rouge">add</code></a> <a href="#addAll"><code class="language-plaintext highlighter-rouge">addAll</code></a> <a href="#addOnly"><code class="language-plaintext highlighter-rouge">addOnly</code></a> <a href="#addSelfIlluminatingWithin"><code class="language-plaintext highlighter-rouge">addSelfIlluminatingWithin</code></a> <a href="#addWithin"><code class="language-plaintext highlighter-rouge">addWithin</code></a> <a href="#close"><code class="language-plaintext highlighter-rouge">close</code></a> <a href="#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a> <a href="#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a> <a href="#find"><code class="language-plaintext highlighter-rouge">find</code></a> <a href="#length"><code class="language-plaintext highlighter-rouge">length</code></a> <a href="#subset"><code class="language-plaintext highlighter-rouge">subset</code></a> <a href="#toList"><code class="language-plaintext highlighter-rouge">toList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="status_"></span></p>
 
@@ -123,19 +95,14 @@ list of in-scope objects satisfying some condition.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1045">1045</a>]</p>
 
-<div class="desc">
+<p>A LookupTable with the objects already added to the list. We use this to
+avoid redundantly scanning containment trees for objects that we’ve
+already added. For each object, we set status_[obj] to a status
+indicator:</p>
 
-A LookupTable with the objects already added to the list. We use this to
-avoid redundantly scanning containment trees for objects that we've
-already added. For each object, we set status\_\[obj\] to a status
-indicator:
-
-  
-nil (unset) - the object has never been visited  
-1 - we've added the object only, not its contents  
-2 - we've added the object and its contents
-
-</div>
+<p>nil (unset) - the object has never been visited<br />
+1 - we’ve added the object only, not its contents<br />
+2 - we’ve added the object and its contents</p>
 
 <p><span id="vec_"></span></p>
 
@@ -143,19 +110,11 @@ nil (unset) - the object has never been visited
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1033">1033</a>]</p>
 
-<div class="desc">
-
-a vector with the objects in scope
-
-</div>
+<p>a vector with the objects in scope</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="add"></span></p>
 
@@ -163,11 +122,7 @@ a vector with the objects in scope
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#927">927</a>]</p>
 
-<div class="desc">
-
-Add an object and its contents to the scope.
-
-</div>
+<p>Add an object and its contents to the scope.</p>
 
 <p><span id="addAll"></span></p>
 
@@ -175,11 +130,7 @@ Add an object and its contents to the scope.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#957">957</a>]</p>
 
-<div class="desc">
-
-Add all of the objects in the given list
-
-</div>
+<p>Add all of the objects in the given list</p>
 
 <p><span id="addOnly"></span></p>
 
@@ -187,12 +138,8 @@ Add all of the objects in the given list
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#985">985</a>]</p>
 
-<div class="desc">
-
-Add a single object to the scope. This doesn't add anything related to
-the object (such as its contents) - just the object itself.
-
-</div>
+<p>Add a single object to the scope. This doesn’t add anything related to
+the object (such as its contents) - just the object itself.</p>
 
 <p><span id="addSelfIlluminatingWithin"></span></p>
 
@@ -200,11 +147,7 @@ the object (such as its contents) - just the object itself.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#975">975</a>]</p>
 
-<div class="desc">
-
-add each self-illuminating object in the interior contents
-
-</div>
+<p>add each self-illuminating object in the interior contents</p>
 
 <p><span id="addWithin"></span></p>
 
@@ -212,12 +155,8 @@ add each self-illuminating object in the interior contents
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#967">967</a>]</p>
 
-<div class="desc">
-
-Add the interior contents of an object to the scope. This adds only the
-contents, not the object itself.
-
-</div>
+<p>Add the interior contents of an object to the scope. This adds only the
+contents, not the object itself.</p>
 
 <p><span id="close"></span></p>
 
@@ -225,11 +164,7 @@ contents, not the object itself.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1005">1005</a>]</p>
 
-<div class="desc">
-
-"close" the scope list - this converts the vector to a list
-
-</div>
+<p>“close” the scope list - this converts the vector to a list</p>
 
 <p><span id="createIterator"></span></p>
 
@@ -237,11 +172,7 @@ contents, not the object itself.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1027">1027</a>]</p>
 
-<div class="desc">
-
-create an iterator, for foreach()
-
-</div>
+<p>create an iterator, for foreach()</p>
 
 <p><span id="createLiveIterator"></span></p>
 
@@ -249,11 +180,7 @@ create an iterator, for foreach()
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1030">1030</a>]</p>
 
-<div class="desc">
-
-create a live iterator
-
-</div>
+<p>create a live iterator</p>
 
 <p><span id="find"></span></p>
 
@@ -261,11 +188,7 @@ create a live iterator
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1018">1018</a>]</p>
 
-<div class="desc">
-
-is the given object in scope?
-
-</div>
+<p>is the given object in scope?</p>
 
 <p><span id="length"></span></p>
 
@@ -273,11 +196,7 @@ is the given object in scope?
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1012">1012</a>]</p>
 
-<div class="desc">
-
-get the number of items in scope
-
-</div>
+<p>get the number of items in scope</p>
 
 <p><span id="subset"></span></p>
 
@@ -285,11 +204,7 @@ get the number of items in scope
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1021">1021</a>]</p>
 
-<div class="desc">
-
-get the subset of the objects in scope matching the given condition
-
-</div>
+<p>get the subset of the objects in scope matching the given condition</p>
 
 <p><span id="toList"></span></p>
 
@@ -297,18 +212,11 @@ get the subset of the objects in scope matching the given condition
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1024">1024</a>]</p>
 
-<div class="desc">
+<p>return the scope as a simple list of objects</p>
 
-return the scope as a simple list of objects
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

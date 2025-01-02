@@ -74,7 +74,7 @@ the run-time error that occurred.
 
 
 
-[`errno_`](#errno_)[`exceptionMessage`](#exceptionMessage)[`stack_`](#stack_)
+[`errno_`](#errno_) [`exceptionMessage`](#exceptionMessage) [`stack_`](#stack_)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -87,10 +87,10 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`displayException`](#displayException)[`isDebuggerSignal`](#isDebuggerSignal)[`newRuntimeError`](#newRuntimeError)
+[`construct`](#construct) [`displayException`](#displayException) [`isDebuggerSignal`](#isDebuggerSignal) [`newRuntimeError`](#newRuntimeError)
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

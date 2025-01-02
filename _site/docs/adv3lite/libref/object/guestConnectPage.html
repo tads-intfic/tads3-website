@@ -40,75 +40,55 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Guest connection request. This enables "switchboard" applications on
+<p>Guest connection request. This enables “switchboard” applications on
 remote servers that keep track of multi-user game sessions, to show
-users available sessions and connect new users to those sessions.
+users available sessions and connect new users to those sessions.</p>
 
-The first step in setting up a switchboard is for the game server to
+<p>The first step in setting up a switchboard is for the game server to
 register itself with the switchboard by sending a request on startup.
-That part is external to us - that's not handled within the game program
+That part is external to us - that’s not handled within the game program
 but rather within the web server script that launches the game. Here,
-then, we simply assume that this work is already done.
+then, we simply assume that this work is already done.</p>
 
-The second step is that the switchboard needs to check back with the
-game server from time to time to see if it's still alive - essentially a
-"ping" operation. We handle that here: if we respond to the request,
-we're obviously still alive.
+<p>The second step is that the switchboard needs to check back with the
+game server from time to time to see if it’s still alive - essentially a
+“ping” operation. We handle that here: if we respond to the request,
+we’re obviously still alive.</p>
 
-The third step is that we need to send the switchboard a URL that lets
-secondary users ("guests") connect to the game session. We handle that
-here as well: our reply body is the client connection URL.
+<p>The third step is that we need to send the switchboard a URL that lets
+secondary users (“guests”) connect to the game session. We handle that
+here as well: our reply body is the client connection URL.</p>
 
-**`guestConnectPage`**` :   `[`WebResource`](../object/WebResource.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">guestConnectPage</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/WebResource.html"><code class="language-plaintext highlighter-rouge">WebResource</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">guestConnectPage</code></strong><br />
 <a href="../object/WebResource.html"><code class="language-plaintext highlighter-rouge">WebResource</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#vpath"><code class="language-plaintext highlighter-rouge">vpath</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
-<a href="../object/WebResource.html#group"><code class="language-plaintext highlighter-rouge">group</code></a><a href="../object/WebResource.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+<a href="../object/WebResource.html#group"><code class="language-plaintext highlighter-rouge">group</code></a> <a href="../object/WebResource.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
-<a href="../object/WebResource.html#matchRequest"><code class="language-plaintext highlighter-rouge">matchRequest</code></a><a href="../object/WebResource.html#sendAck"><code class="language-plaintext highlighter-rouge">sendAck</code></a><a href="../object/WebResource.html#sendXML"><code class="language-plaintext highlighter-rouge">sendXML</code></a></p>
+<a href="../object/WebResource.html#matchRequest"><code class="language-plaintext highlighter-rouge">matchRequest</code></a> <a href="../object/WebResource.html#sendAck"><code class="language-plaintext highlighter-rouge">sendAck</code></a> <a href="../object/WebResource.html#sendXML"><code class="language-plaintext highlighter-rouge">sendXML</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="vpath"></span></p>
 
@@ -116,19 +96,11 @@ here as well: our reply body is the client connection URL.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1380">1380</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="processRequest"></span></p>
 
@@ -136,18 +108,11 @@ here as well: our reply body is the client connection URL.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1381">1381</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

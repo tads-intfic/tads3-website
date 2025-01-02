@@ -103,7 +103,7 @@ Modify the basic Object class to provide a to-symbol mapping
 
 
 
-[`getPropList`](#getPropList)[`getPropParams`](#getPropParams)[`getSuperclassList`](#getSuperclassList)[`isClass`](#isClass)[`isTransient`](#isTransient)[`ofKind`](#ofKind)[`propDefined`](#propDefined)[`propInherited`](#propInherited)[`propType`](#propType)[`valToSymbol`](#valToSymbol)
+[`getPropList`](#getPropList) [`getPropParams`](#getPropParams) [`getSuperclassList`](#getSuperclassList) [`isClass`](#isClass) [`isTransient`](#isTransient) [`ofKind`](#ofKind) [`propDefined`](#propDefined) [`propInherited`](#propInherited) [`propType`](#propType) [`valToSymbol`](#valToSymbol)
 
 <span id="_Properties_"></span>
 

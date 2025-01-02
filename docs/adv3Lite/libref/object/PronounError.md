@@ -77,10 +77,10 @@ Base class for resolution errors involving pronouns
 [`pronoun`](#pronoun)
 
 Inherited from `ResolutionError` :  
-[`np`](../object/ResolutionError.html#np)[`txt`](../object/ResolutionError.html#txt)
+[`np`](../object/ResolutionError.html#np) [`txt`](../object/ResolutionError.html#txt)
 
 Inherited from `ParseError` :  
-[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable) [`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -99,10 +99,10 @@ Inherited from `ResolutionError` :
 [`rankCorrection`](../object/ResolutionError.html#rankCorrection)
 
 Inherited from `ParseError` :  
-[`display`](../object/ParseError.html#display)[`tryCuring`](../object/ParseError.html#tryCuring)
+[`display`](../object/ParseError.html#display) [`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

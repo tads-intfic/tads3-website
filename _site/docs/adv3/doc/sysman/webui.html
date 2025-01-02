@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="web.html" class="nav">Playing on the Web</a> \&gt; The Web UI  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="web.html" class="nav">Playing on the Web</a> &gt; The Web UI<br />
 <span class="navnp"><a href="web.html" class="nav"><em>Prev:</em> Playing on the Web</a>
    
 <a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
-game</a>     </span>
-
-</div>
+game</a>     </span></p>
 
 <h1 id="the-web-ui">The Web UI</h1>
 
@@ -334,421 +326,419 @@ should group your resources into one or more folders - that is,
 subdirectories of your main project folder for the game. Second, for
 each folder, add an object definition like this to your game:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WebResourceResFile
+   vpath = static new RexPattern('/foldername/')
+; ```
+</code></pre></div></div>
 
-    WebResourceResFile
-       vpath = static new RexPattern('/foldername/')
-    ;
-```
-
-That tells the library to treat anything in the "foldername"
+<p>That tells the library to treat anything in the “foldername”
 subdirectory of the game folder as an HTML resource, allowing the client
-browser to download those files. It's just an ordinary object
+browser to download those files. It’s just an ordinary object
 definition, so you can put it anywhere in your source code that object
 definitions are allowed. If you divide your resources into multiple
 folders, just add a definition like the one above for each folder. (You
-don't have to do this for subfolders, though - the '/foldername/'
-definition will allow files in subfolders 'foldername'.)
+don’t have to do this for subfolders, though - the ‘/foldername/’
+definition will allow files in subfolders ‘foldername’.)</p>
 
-## <span id="shutdown">QUIT, disconnect, and program termination</span>
+<h2 id="quit-disconnect-and-program-termination"><span id="shutdown">QUIT, disconnect, and program termination</span></h2>
 
-In the traditional console UI, the way the game program terminates is
+<p>In the traditional console UI, the way the game program terminates is
 fairly straightforward. When the player types QUIT, the Adv3 command
 loop exits, which unwinds the call stack until the
-`main()` function returns. This terminates the
+<code class="language-plaintext highlighter-rouge">main()</code> function returns. This terminates the
 game program, at which point the interpreter program exits to the
 operating system. Alternatively, on GUI versions (such as QTads or HTML
 TADS), the player can end the program by closing the main window. This
 is processed in much the same way as QUIT internally: the interpreter
-sends an "end of file" indication to the command loop, to let it know
-that no more input is forthcoming (as there's no way for the player to
+sends an “end of file” indication to the command loop, to let it know
+that no more input is forthcoming (as there’s no way for the player to
 enter more input without the main window), causing the command loop to
-exit.
+exit.</p>
 
-With the Web UI, things aren't quite as simple. The complication is that
+<p>With the Web UI, things aren’t quite as simple. The complication is that
 the player and the game are on separate computers. At first glance, it
 might seem as though we could take the same approach: if the player
 types QUIT or closes their browser, we should simply let the TADS
-program terminate as usual. But what happens if the player's network
-connection momentarily lapses? We obviously don't want to treat that the
-same way as an intentional disconnection, but it's not always possible
+program terminate as usual. But what happens if the player’s network
+connection momentarily lapses? We obviously don’t want to treat that the
+same way as an intentional disconnection, but it’s not always possible
 to tell the difference with the network protocols involved. And what
 happens if the player presses the Refresh button in their browser? It
-turns out that "Refresh" and "Close Page" are essentially
+turns out that “Refresh” and “Close Page” are essentially
 indistinguishable from the perspective of a Web page. Further, what
-happens if the player types QUIT, but still wants to see what's on the
+happens if the player types QUIT, but still wants to see what’s on the
 page for a while after? If they try to refresh the page after typing
 QUIT, the server - the game program - still has to be running to service
-the request.
+the request.</p>
 
-To handle these various situations, the Web UI has to use a different
-approach to managing its session lifetime. For the Web UI, the program's
-job is larger than merely running the game; it's also acting as a Web
-server. The Web server's lifetime isn't defined by the duration of the
+<p>To handle these various situations, the Web UI has to use a different
+approach to managing its session lifetime. For the Web UI, the program’s
+job is larger than merely running the game; it’s also acting as a Web
+server. The Web server’s lifetime isn’t defined by the duration of the
 game session, but rather by the existence of connected clients: as long
-as there's a client connected, the Web server needs to be available to
-service any new requests from the client.
+as there’s a client connected, the Web server needs to be available to
+service any new requests from the client.</p>
 
-As we mentioned above, the network protocols we use don't tell us with
+<p>As we mentioned above, the network protocols we use don’t tell us with
 certainty whether or not a client is connected. More precisely, they
-don't tell us with certainty that a client is *not* connected. We *can*
+don’t tell us with certainty that a client is <em>not</em> connected. We <em>can</em>
 tell for sure that a client is connected, because if we receive a
 request message, we know that it had to come from a connected client.
-But the absence of any requests doesn't necessarily mean that there are
-no clients; it could simply mean that the client doesn't have any work
+But the absence of any requests doesn’t necessarily mean that there are
+no clients; it could simply mean that the client doesn’t have any work
 for us at the moment, or that the client computer is tied up doing
 something else before it can issue its next request, or that a network
-glitch has temporarily delayed messages from the client.
+glitch has temporarily delayed messages from the client.</p>
 
-The Web UI has a two-pronged approach to dealing with all these
+<p>The Web UI has a two-pronged approach to dealing with all these
 uncertainties. First, the Javascript portion of the UI uses a
 publish/subscribe model to maintain a continuous communication channel
 with the server. The server uses this channel to send periodic
-"keepalive" messages to the client when no other messaging activity is
+“keepalive” messages to the client when no other messaging activity is
 taking place. This ensures that the client and server exchange messages
 with a minimum frequency (about every 90 seconds - frequently enough to
 allow reasonably timely detection of a disconnected client, but rarely
-enough that the extra messages won't affect network performance).
+enough that the extra messages won’t affect network performance).
 Second, the server monitors client sessions for long periods of
-inactivity. When a client doesn't responds to our "keepalive" messages
+inactivity. When a client doesn’t responds to our “keepalive” messages
 for longer than a certain interval (about 60 seconds), we assume that
-the client has disconnected. When we haven't heard from *any* clients
+the client has disconnected. When we haven’t heard from <em>any</em> clients
 for a certain interval (about 120 seconds), we assume that the player
 must be finished with the game. This the point when the program exits
-and the interpreter terminates.
+and the interpreter terminates.</p>
 
-The timeout intervals mentioned above are nothing magical; they're just
+<p>The timeout intervals mentioned above are nothing magical; they’re just
 parameters in the Web UI server code, chosen based on practical
 experience. Detecting a disconnection is inherently probabilistic: we
 can never be certain a client is never coming back, no matter how long
-it's been since we last heard from them, but the longer we go the more
+it’s been since we last heard from them, but the longer we go the more
 likely it becomes that we have a disconnection rather than something
 temporary like a network glitch or client-side CPU bottleneck. The
 practical goal is to choose timeouts that let us shut down the
-server-side program as soon as possible when it's no longer needed (so
-that the server machine resources aren't tied up longer than necessary),
-but no sooner.
+server-side program as soon as possible when it’s no longer needed (so
+that the server machine resources aren’t tied up longer than necessary),
+but no sooner.</p>
 
-Note that when running in [local stand-alone mode](#standalone), some
+<p>Note that when running in <a href="#standalone">local stand-alone mode</a>, some
 interpreters maintain a direct connection to the browser window that
 allows them to detect when the player closes the window. This bypasses
 the timeouts and allows the game program and interpreter to terminate
 immediately when the player closes the browser window. This is possible
-in standalone mode because everything's running on one machine, which
+in standalone mode because everything’s running on one machine, which
 eliminates the uncertainties of the network configuration and allows the
-interpreter to know exactly what's going on with the browser. The
-Windows interpreter provides this feature.
+interpreter to know exactly what’s going on with the browser. The
+Windows interpreter provides this feature.</p>
 
-## <span id="standalone">Local single-machine (stand-alone) testing</span>
+<h2 id="local-single-machine-stand-alone-testing"><span id="standalone">Local single-machine (stand-alone) testing</span></h2>
 
-One of the main reasons to create a Web UI game is that it allows users
+<p>One of the main reasons to create a Web UI game is that it allows users
 to play on the Web, without having to download your game or install
-software. However, Web UI games can *also* be played without a Web
+software. However, Web UI games can <em>also</em> be played without a Web
 server, a browser, or a network connection. Most TADS interpreters let
-you play a Web UI game in "local" mode, also known as standalone mode -
+you play a Web UI game in “local” mode, also known as standalone mode -
 this means that you run the game on a single computer without a Web
-server involved.
+server involved.</p>
 
-You'll probably want to use standalone mode while you're developing and
+<p>You’ll probably want to use standalone mode while you’re developing and
 testing your game, since it would be inconvenient to have to upload your
-game to a server every time you recompile.
+game to a server every time you recompile.</p>
 
-### Debugging with Workbench on Windows
+<h3 id="debugging-with-workbench-on-windows">Debugging with Workbench on Windows</h3>
 
-If you're using Workbench on Windows to develop your game, standalone
+<p>If you’re using Workbench on Windows to develop your game, standalone
 mode is the default way of running. When you use the Go command,
 Workbench automatically runs the game in standalone mode. Everything
 looks just like it does with a traditional console-mode game. The only
 difference is that the game window is actually an embedded Web browser -
-but this is all handled invisibly, so you don't have to worry about
-launching a browser separately or typing a URL or anything like that.
+but this is all handled invisibly, so you don’t have to worry about
+launching a browser separately or typing a URL or anything like that.</p>
 
-As we described [earlier](shutdown), a Web UI game continues running
+<p>As we described <a href="shutdown">earlier</a>, a Web UI game continues running
 even after the player types QUIT, so that it can continue to provide
 HTTP services as long as the client is connected (to allow page
-refreshes, for example). This can be a little strange when you're using
+refreshes, for example). This can be a little strange when you’re using
 the debugger. There are two simple ways to truly terminate the game
 program: you can close the game window, or you can use the Terminate
 Game command in the debugger. Closing the game window triggers a special
 message to the game program that tells it to terminate immediately,
 bypassing the usual timeout intervals that would otherwise keep the game
 running for a while longer. When you use the Terminate Game command,
-this directly ends the game program.
+this directly ends the game program.</p>
 
-## <span id="Adv3WebUsageTips">Adv3web usage tips</span>
+<h2 id="adv3web-usage-tips"><span id="Adv3WebUsageTips">Adv3web usage tips</span></h2>
 
-When using the Adv3web library, there are some additional things you
-should do to make sure your game works correctly.
+<p>When using the Adv3web library, there are some additional things you
+should do to make sure your game works correctly.</p>
 
-### Use aHref() for command links
+<h3 id="use-ahref-for-command-links">Use aHref() for command links</h3>
 
-In HTML TADS games, you can use `\&lt;A HREF=xxx\&gt;`
+<p>In HTML TADS games, you can use <code class="language-plaintext highlighter-rouge">\&lt;A HREF=xxx\&gt;</code>
 to create clickable command links. With the Web UI, all HTML is
-displayed by a standard Web browser, so the `\&lt;A
-HREF\&gt;` tag has its standard meaning, which is to create a
-hyperlink to a separate Web page.
+displayed by a standard Web browser, so the <code class="language-plaintext highlighter-rouge">\&lt;A
+HREF\&gt;</code> tag has its standard meaning, which is to create a
+hyperlink to a separate Web page.</p>
 
-To create a command link, use the Adv3web function
-`aHref()`:
+<p>To create a command link, use the Adv3web function
+<code class="language-plaintext highlighter-rouge">aHref()</code>:</p>
 
-```
-    "To save the game, type &lt;&lt;aHref('SAVE')&gt;&gt;. "
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "To save the game, type &lt;&lt;aHref('SAVE')&gt;&gt;. "
+</code></pre></div></div>
 
-You should continue to use `\&lt;A HREF\&gt;` for
+<p>You should continue to use <code class="language-plaintext highlighter-rouge">\&lt;A HREF\&gt;</code> for
 actual hyperlinks, where the link navigates to another Web page rather
 than entering a command, as well as for special links such as
-`mailto:` links.
+<code class="language-plaintext highlighter-rouge">mailto:</code> links.</p>
 
-### Don't use `\&lt;TAB\&gt;`
+<h3 id="dont-use-tab">Don’t use <code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code></h3>
 
-The `\&lt;TAB\&gt;` tag is an HTML TADS extension that
-isn't in standard HTML. Standard Web browsers don't support it.
-Unfortunately, standard HTML doesn't have a simple equivalent of
-`\&lt;TAB\&gt;`, but you can usually achieve similar
-effects using `\&lt;SPAN\&gt;` or
-`\&lt;DIV\&gt;` tags with CSS styling to control
-spacing.
+<p>The <code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> tag is an HTML TADS extension that
+isn’t in standard HTML. Standard Web browsers don’t support it.
+Unfortunately, standard HTML doesn’t have a simple equivalent of
+<code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code>, but you can usually achieve similar
+effects using <code class="language-plaintext highlighter-rouge">\&lt;SPAN\&gt;</code> or
+<code class="language-plaintext highlighter-rouge">\&lt;DIV\&gt;</code> tags with CSS styling to control
+spacing.</p>
 
-### Use inputManager methods for input
+<h3 id="use-inputmanager-methods-for-input">Use inputManager methods for input</h3>
 
-As we've already mentioned a couple of times, you can't use the
-interpreter's built-in functions for input and output. The built-ins all
-operate directly on the local console, which obviously isn't available
-to a remote user playing on the Web.
+<p>As we’ve already mentioned a couple of times, you can’t use the
+interpreter’s built-in functions for input and output. The built-ins all
+operate directly on the local console, which obviously isn’t available
+to a remote user playing on the Web.</p>
 
-Instead of the interpreter built-ins, always use the Adv3web
-equivalents:
+<p>Instead of the interpreter built-ins, always use the Adv3web
+equivalents:</p>
 
-- inputManager.getInputLine (*not* inputLine or inputLineTimout)
-- inputManager.getKey (*not* inputKey)
-- inputManager.getEventOrKey (*not* inputEvent)
-- inputManager.getInputFile (*not* inputFile)
-- inputManager.getInputDialog (*not* inputDialog)
-- inputManager.pauseForMore (*not* morePrompt)
+<ul>
+  <li>inputManager.getInputLine (<em>not</em> inputLine or inputLineTimout)</li>
+  <li>inputManager.getKey (<em>not</em> inputKey)</li>
+  <li>inputManager.getEventOrKey (<em>not</em> inputEvent)</li>
+  <li>inputManager.getInputFile (<em>not</em> inputFile)</li>
+  <li>inputManager.getInputDialog (<em>not</em> inputDialog)</li>
+  <li>inputManager.pauseForMore (<em>not</em> morePrompt)</li>
+</ul>
 
-Note one small difference with timed command-line input: if a call to
+<p>Note one small difference with timed command-line input: if a call to
 inputManager.getInputLine() is interrupted by a timer event (such as a
-real-time daemon or fuse), the Web version doesn't return the text on
+real-time daemon or fuse), the Web version doesn’t return the text on
 the interrupted command line. This is because the timeout occurs on the
 server side, so obtaining the partial text would require an extra
 network request to ask the browser for the information. The library
-doesn't make this extra request, since it would take extra time, and the
-information isn't usually needed anyway.
+doesn’t make this extra request, since it would take extra time, and the
+information isn’t usually needed anyway.</p>
 
-### Use `cls()` instead of `clearScreen()`
+<h3 id="use-cls-instead-of-clearscreen">Use <code class="language-plaintext highlighter-rouge">cls()</code> instead of <code class="language-plaintext highlighter-rouge">clearScreen()</code></h3>
 
-You shouldn't use the built-in function
-`clearScreen()`, just as you shouldn't use any
-other built-in I/O functions. Use `cls()`
-instead - this will work correctly in both Adv3 and Adv3web.
+<p>You shouldn’t use the built-in function
+<code class="language-plaintext highlighter-rouge">clearScreen()</code>, just as you shouldn’t use any
+other built-in I/O functions. Use <code class="language-plaintext highlighter-rouge">cls()</code>
+instead - this will work correctly in both Adv3 and Adv3web.</p>
 
-### Don't use the Banner API
+<h3 id="dont-use-the-banner-api">Don’t use the Banner API</h3>
 
-The Banner API isn't supported in Adv3web. This includes both the
+<p>The Banner API isn’t supported in Adv3web. This includes both the
 low-level banner functions built into the interpreter and the Adv3
-BannerWindow class.
+BannerWindow class.</p>
 
-The Web UI provides similar capabilities, but it uses a new programming
+<p>The Web UI provides similar capabilities, but it uses a new programming
 interface. The new system is much more flexible than the banner API
-because it uses Javascript and CSS in the client. This combination isn't
-limited to the "tiled" model of the banner API - you can create
+because it uses Javascript and CSS in the client. This combination isn’t
+limited to the “tiled” model of the banner API - you can create
 overlapping windows, create transparent windows, move windows
 dynamically, set sizes using font metrics, etc. The new system is so
 different that it makes more sense to work directly with the new
 interfaces, so that you can take better advantage of their new
-capabilities.
+capabilities.</p>
 
-Note that Adv3web *does* provide the higher-level components that were
+<p>Note that Adv3web <em>does</em> provide the higher-level components that were
 built on the banner API in Adv3: the status line, the menu system, and
 the hint system. The Adv3web versions of these components are built
-directly on the new Javascript front end instead of the banner API.
+directly on the new Javascript front end instead of the banner API.</p>
 
-### Sound playback
+<h3 id="sound-playback">Sound playback</h3>
 
-The `\&lt;SOUND\&gt;` tag is an HTML TADS extension
-that's not in standard HTML, so you can't use it for sound playback in
-Web UI games.
+<p>The <code class="language-plaintext highlighter-rouge">\&lt;SOUND\&gt;</code> tag is an HTML TADS extension
+that’s not in standard HTML, so you can’t use it for sound playback in
+Web UI games.</p>
 
-There's currently no support for sound playback in the Web UI library.
+<p>There’s currently no support for sound playback in the Web UI library.
 We plan to add this in the future. For the moment, if you need sound
-playback, you'll have to resort to direct Javascript programming.
+playback, you’ll have to resort to direct Javascript programming.</p>
 
-### `\&lt;ABOUTBOX\&gt;`
+<h3 id="aboutbox"><code class="language-plaintext highlighter-rouge">\&lt;ABOUTBOX\&gt;</code></h3>
 
-The `\&lt;ABOUTBOX\&gt;\&gt;` tag is an HTML TADS
-extension, not part of standard HTML. You shouldn't use this tag.
-There's currently no equivalent in the Web UI. However, note that the
-Adv3 library only calls `gameMain.setAboutBox()`
-when running in console mode, so it's fine to write your
-`\&lt;ABOUTBOX\&gt;` code as usual in that method.
+<p>The <code class="language-plaintext highlighter-rouge">\&lt;ABOUTBOX\&gt;\&gt;</code> tag is an HTML TADS
+extension, not part of standard HTML. You shouldn’t use this tag.
+There’s currently no equivalent in the Web UI. However, note that the
+Adv3 library only calls <code class="language-plaintext highlighter-rouge">gameMain.setAboutBox()</code>
+when running in console mode, so it’s fine to write your
+<code class="language-plaintext highlighter-rouge">\&lt;ABOUTBOX\&gt;</code> code as usual in that method.</p>
 
-## Direct Javascript programming
+<h2 id="direct-javascript-programming">Direct Javascript programming</h2>
 
-So far we've focused on how the Web UI is practically invisible from a
+<p>So far we’ve focused on how the Web UI is practically invisible from a
 programming perspective - how everything works exactly like it does in
 the traditional UI, as long as you stick to the Adv3 input/output
-functions. We've focused on this transparency because we expect many
+functions. We’ve focused on this transparency because we expect many
 authors will be interested in the Web UI primarily for its ability to
-eliminate installation requirements for players. As we've seen, this
-"Web deployment" capability can be included in new games or added to
-existing games with very little extra work.
+eliminate installation requirements for players. As we’ve seen, this
+“Web deployment” capability can be included in new games or added to
+existing games with very little extra work.</p>
 
-However, there's another benefit to the Web UI that we've barely
+<p>However, there’s another benefit to the Web UI that we’ve barely
 mentioned so far: it has much more powerful UI capabilities than
 text-only TADS or even HTML TADS. Adventurous authors who wish to go
 beyond the compatibility features in the Adv3web library will discover a
-whole new frontier in the Web UI.
+whole new frontier in the Web UI.</p>
 
-The key to the Web UI's expanded power is that the user interface runs
+<p>The key to the Web UI’s expanded power is that the user interface runs
 in a true Web browser, not in a TADS interpreter. Modern Web browsers
 are extremely sophisticated UI application platforms, far beyond what
-the TADS interpreter can offer.
+the TADS interpreter can offer.</p>
 
-When you create a TADS Web UI game, there are two libraries involved.
+<p>When you create a TADS Web UI game, there are two libraries involved.
 The first is Adv3web: this is the component that emulates the
 traditional Adv3 input/output functions, to make it easy to write games
 that require only the basic command-line style of interaction. When you
-use Adv3web, you'll barely notice that you're using the Web UI at all
+use Adv3web, you’ll barely notice that you’re using the Web UI at all
 from a programming perspective, since everything works just like in the
 regular console UI. The second library is the Web UI library: this is
 the library that actually implements the Web UI. It has its own separate
-programming model that's *not* based on anything in Adv3, but rather is
-designed to provide direct access to the browser's capabilities.
+programming model that’s <em>not</em> based on anything in Adv3, but rather is
+designed to provide direct access to the browser’s capabilities.</p>
 
-The Web UI library is different from any other TADS library, in that
-it's not just TADS code. It also contains HTML, CSS, and Javascript
-code. These files are in the "resource" section of the library. They're
-compiled into your game, and your game sends them to the browser.
+<p>The Web UI library is different from any other TADS library, in that
+it’s not just TADS code. It also contains HTML, CSS, and Javascript
+code. These files are in the “resource” section of the library. They’re
+compiled into your game, and your game sends them to the browser.</p>
 
-The Web UI library's TADS code, Javascript, HTML, and CSS are designed
+<p>The Web UI library’s TADS code, Javascript, HTML, and CSS are designed
 to work together. The HTML defines the basic templates for the pages,
 and initiates the Javascript. The CSS defines the layout style
 information for the HTML. The Javascript code uses XML Requests (also
-known as "AJAX") to communicate with the TADS code through an HTTP
+known as “AJAX”) to communicate with the TADS code through an HTTP
 network connection. The TADS code uses the TADS networking system to
-serve the HTTP XML requests.
+serve the HTTP XML requests.</p>
 
-The really interesting thing about this setup is that all of the HTML,
-Javascript, and CSS are part of the game program. They're bundled into
+<p>The really interesting thing about this setup is that all of the HTML,
+Javascript, and CSS are part of the game program. They’re bundled into
 the .t3 file, and the game transmits them to the browser via HTTP. This
 means that everything about the Web UI is open for you to inspect,
-change, and extend.
+change, and extend.</p>
 
-The browser-side code making up the Web UI library is contained in the
-**webuires** subfolder of the Web UI library folder. The code consists
-of these main components:
+<p>The browser-side code making up the Web UI library is contained in the
+<strong>webuires</strong> subfolder of the Web UI library folder. The code consists
+of these main components:</p>
 
-- util.js - a Javascript utility library, with many useful
-  "cross-browser" functions that provide portable implementations for
-  features that vary between different browsers
-- tads.css - a "global" style sheet for the whole interface
-- main.(js, css, htm) - a wrapper for the overall user interface, which
-  manages the screen layout of a set of widget sub-windows, and also
-  provides a powerful dialog-box system
-- layoutwin.(js, css, htm) - a system for managing the layout of a
-  collection of sub-windows; roughly analogous to the TADS banner API
-- cmdwin.(js, css, htm) - a command-line window "widget", implementing a
-  window that behaves like a traditional console terminal window
-- statwin(.js, css, .html) - a status-line window, implementing the
-  traditional IF status bar across the top of the screen
+<ul>
+  <li>util.js - a Javascript utility library, with many useful
+“cross-browser” functions that provide portable implementations for
+features that vary between different browsers</li>
+  <li>tads.css - a “global” style sheet for the whole interface</li>
+  <li>main.(js, css, htm) - a wrapper for the overall user interface, which
+manages the screen layout of a set of widget sub-windows, and also
+provides a powerful dialog-box system</li>
+  <li>layoutwin.(js, css, htm) - a system for managing the layout of a
+collection of sub-windows; roughly analogous to the TADS banner API</li>
+  <li>cmdwin.(js, css, htm) - a command-line window “widget”, implementing a
+window that behaves like a traditional console terminal window</li>
+  <li>statwin(.js, css, .html) - a status-line window, implementing the
+traditional IF status bar across the top of the screen</li>
+</ul>
 
-The TADS code for the Web UI is in the file **webui.t**. This file
+<p>The TADS code for the Web UI is in the file <strong>webui.t</strong>. This file
 defines TADS classes corresponding to the various Javascript widget
 objects. It also provides a framework for handling Ajax requests from
 the client, and a publish/subscribe framework that allows the server to
-send updates and requests to the client.
+send updates and requests to the client.</p>
 
-Some of the key objects, classes, and functions in webui.t:
+<p>Some of the key objects, classes, and functions in webui.t:</p>
 
-- webSession - manages the overall game session, which can consist of
-  any number of connected browsers
-- ClientSession - represents a single connected browser
-- ClientEventRequest - represents an incoming XML (Ajax) request from a
-  browser
-- WebResource - represents a "resource", which is basically a Web page
-  with a URL address; a client sends a request by specifying the
-  resource it wishes to access, and can include additional information
-  about the request in the form of parameters
-- WebResourceResFile - a resource subclass for simple files; this makes
-  it easy to map arbitrary page addresses to files in a resource folder
-- eventPage - implements a publish/subscribe framework that allows the
-  server to send events, notifications, and information requests to the
-  client; this extends the basic Ajax model, which doesn't have a native
-  mechanism for initiating asynchronous requests on the server side
-- processNetRequests() - the basic network event processing loop
-- WebWindow - represents a frame sub-window in the browser UI; roughly
-  analogous to a BannerWindow object in the traditional Adv3 UI
-- WebLayoutWindow - represents a "layout window", which is a browser
-  frame that contains sub-frames and manages their geometry and layout
-- WebCommandWin - represents a command-line frame in the browser
-- WebStatusWin - represents a status-line frame in the browser
-- webMainWin - represents the overall browser user interface; serves as
-  a container for the command window, status line, etc
+<ul>
+  <li>webSession - manages the overall game session, which can consist of
+any number of connected browsers</li>
+  <li>ClientSession - represents a single connected browser</li>
+  <li>ClientEventRequest - represents an incoming XML (Ajax) request from a
+browser</li>
+  <li>WebResource - represents a “resource”, which is basically a Web page
+with a URL address; a client sends a request by specifying the
+resource it wishes to access, and can include additional information
+about the request in the form of parameters</li>
+  <li>WebResourceResFile - a resource subclass for simple files; this makes
+it easy to map arbitrary page addresses to files in a resource folder</li>
+  <li>eventPage - implements a publish/subscribe framework that allows the
+server to send events, notifications, and information requests to the
+client; this extends the basic Ajax model, which doesn’t have a native
+mechanism for initiating asynchronous requests on the server side</li>
+  <li>processNetRequests() - the basic network event processing loop</li>
+  <li>WebWindow - represents a frame sub-window in the browser UI; roughly
+analogous to a BannerWindow object in the traditional Adv3 UI</li>
+  <li>WebLayoutWindow - represents a “layout window”, which is a browser
+frame that contains sub-frames and manages their geometry and layout</li>
+  <li>WebCommandWin - represents a command-line frame in the browser</li>
+  <li>WebStatusWin - represents a status-line frame in the browser</li>
+  <li>webMainWin - represents the overall browser user interface; serves as
+a container for the command window, status line, etc</li>
+</ul>
 
-To customize or extend the Web UI, you'll obviously have to know not
+<p>To customize or extend the Web UI, you’ll obviously have to know not
 just TADS but also the standard Web technologies in the resource
-components - Javascript, CSS, HTML, Ajax. It's beyond the scope of this
-chapter to provide tutorials for any of these, but it's easy to find
-that sort of information on the Web.
+components - Javascript, CSS, HTML, Ajax. It’s beyond the scope of this
+chapter to provide tutorials for any of these, but it’s easy to find
+that sort of information on the Web.</p>
 
-One thing we will mention on the Javascript side: the Web UI resource
-folder, called `webuires` (it's a subfolder of
+<p>One thing we will mention on the Javascript side: the Web UI resource
+folder, called <code class="language-plaintext highlighter-rouge">webuires</code> (it’s a subfolder of
 the main TADS system library directory) contains a useful Javascript
-file called `util.js`. This is a collection of
+file called <code class="language-plaintext highlighter-rouge">util.js</code>. This is a collection of
 utility functions that make it easier to write Web UI code in
 Javascript, and you can easily include it in your own custom HTML pages
-using the `\&lt;SCRIPT\&gt;` tag. The utility
-functions fall into three main categories:
+using the <code class="language-plaintext highlighter-rouge">\&lt;SCRIPT\&gt;</code> tag. The utility
+functions fall into three main categories:</p>
 
-Browser portability. Javascript is notoriously inconsistent from one
+<p>Browser portability. Javascript is notoriously inconsistent from one
 browser to the next. There are well-known ways of dealing with nearly
-all of the common browser variations, but it's tedious to hand-code all
+all of the common browser variations, but it’s tedious to hand-code all
 of the special cases every time you run into one, and even more
-difficult to test them all. `util.js` provides
+difficult to test them all. <code class="language-plaintext highlighter-rouge">util.js</code> provides
 tested cross-browser solutions for many common UI operations, with
 simple interfaces that work the same way everywhere. One particularly
 powerful feature is a keyboard interface that smooths out browser
 differences and provides a very consistent, complete, and high-level
 keyboard model; keyboard handling is one of the most divergent elements
-of Javascript across browsers, the `util.js`
+of Javascript across browsers, the <code class="language-plaintext highlighter-rouge">util.js</code>
 model is a huge help if you need to do anything with keystroke input.
-`util.js` also provides a way to get detailed
+<code class="language-plaintext highlighter-rouge">util.js</code> also provides a way to get detailed
 information on the browser being used, for situations where you need to
-hand-code something that's not already handled in
-`util.js` itself.
+hand-code something that’s not already handled in
+<code class="language-plaintext highlighter-rouge">util.js</code> itself.</p>
 
-TADS work-alike functions. Javascript is strikingly similar to TADS in
+<p>TADS work-alike functions. Javascript is strikingly similar to TADS in
 many ways: syntax, object model, built-in datatypes. But many of the
 basic datatype methods have different names or behavior.
-`util.js` defines equivalents for some of the
+<code class="language-plaintext highlighter-rouge">util.js</code> defines equivalents for some of the
 most important TADS methods for the basic datatypes. This makes it
 easier to switch back and forth between Javascript and TADS coding,
 since it reduces the number of superficial differences you have to
-remember.
+remember.</p>
 
-Convenience functions. There are a number of tasks that seem to come up
+<p>Convenience functions. There are a number of tasks that seem to come up
 over and over where Javascript has APIs that are portable, but verbose
-and/or overly complex. `util.js` provides more
+and/or overly complex. <code class="language-plaintext highlighter-rouge">util.js</code> provides more
 convenient alternatives for some of these common tasks. For example, you
 can retrieve any DOM element with a single function call taking a
-path-like name string, and parse XML trees using XMLpath-like syntax.
-
-</div>
+path-like name string, and parse XML trees using XMLpath-like syntax.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="web.html" class="nav">Playing on the Web</a> \&gt; The Web UI  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="web.html" class="nav">Playing on the Web</a> &gt; The Web UI<br />
 <span class="navnp"><a href="web.html" class="nav"><em>Prev:</em> Playing on the Web</a>
    
 <a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
-game</a>     </span>
+game</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

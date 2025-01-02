@@ -52,7 +52,7 @@ navigating to the parent menu, closing the menu.
 [`vpath`](#vpath)
 
 Inherited from `WebResource` :  
-[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)
+[`group`](../object/WebResource.html#group) [`priority`](../object/WebResource.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,7 +65,7 @@ Inherited from `WebResource` :
 [`processRequest`](#processRequest)
 
 Inherited from `WebResource` :  
-[`matchRequest`](../object/WebResource.html#matchRequest)[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
+[`matchRequest`](../object/WebResource.html#matchRequest) [`sendAck`](../object/WebResource.html#sendAck) [`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

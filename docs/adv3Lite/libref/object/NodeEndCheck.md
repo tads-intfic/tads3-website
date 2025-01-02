@@ -35,7 +35,7 @@ this node. There's no need to define one of these objects for a
 conversation node if you're happy for the conversation to be ended
 during it under all circumstances.
 
-`class `**`NodeEndCheck`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html)[`InitiateTopic`](../object/InitiateTopic.html)
+`class `**`NodeEndCheck`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html) [`InitiateTopic`](../object/InitiateTopic.html)
 
 
 
@@ -81,7 +81,7 @@ during it under all circumstances.
 
 
 
-[`active`](#active)[`convKeys`](#convKeys)[`matchObj`](#matchObj)
+[`active`](#active) [`convKeys`](#convKeys) [`matchObj`](#matchObj)
 
 
 
@@ -89,14 +89,14 @@ Inherited from `InitiateTopic` :
 [`includeInList`](../object/InitiateTopic.html#includeInList)
 
 Inherited from `ActorTopicEntry` :  
-[`activated`](../object/ActorTopicEntry.html#activated)[`autoName`](../object/ActorTopicEntry.html#autoName)[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)[`getActor`](../object/ActorTopicEntry.html#getActor)[`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting)[`isConversational`](../object/ActorTopicEntry.html#isConversational)[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)[`listOrder`](../object/ActorTopicEntry.html#listOrder)[`name`](../object/ActorTopicEntry.html#name)[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)
+[`activated`](../object/ActorTopicEntry.html#activated) [`autoName`](../object/ActorTopicEntry.html#autoName) [`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused) [`getActor`](../object/ActorTopicEntry.html#getActor) [`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting) [`isConversational`](../object/ActorTopicEntry.html#isConversational) [`keyTopics`](../object/ActorTopicEntry.html#keyTopics) [`listOrder`](../object/ActorTopicEntry.html#listOrder) [`name`](../object/ActorTopicEntry.html#name) [`suggestAs`](../object/ActorTopicEntry.html#suggestAs) [`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)
 
 
 
 
 
 Inherited from `TopicEntry` :  
-[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`matchScore`](../object/TopicEntry.html#matchScore)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
+[`isActive`](../object/TopicEntry.html#isActive) [`matchExactCase`](../object/TopicEntry.html#matchExactCase) [`matchPattern`](../object/TopicEntry.html#matchPattern) [`matchScore`](../object/TopicEntry.html#matchScore) [`scoreBoost`](../object/TopicEntry.html#scoreBoost) [`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -106,7 +106,7 @@ Inherited from `TopicEntry` :
 
 
 
-[`canEndConversation`](#canEndConversation)[`handleTopic`](#handleTopic)
+[`canEndConversation`](#canEndConversation) [`handleTopic`](#handleTopic)
 
 Inherited from `EndConvBlocker` :  
 [`blockEndConv`](../object/EndConvBlocker.html#blockEndConv)
@@ -114,16 +114,16 @@ Inherited from `EndConvBlocker` :
 
 
 Inherited from `ActorTopicEntry` :  
-[`activate`](../object/ActorTopicEntry.html#activate)[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)[`buildName`](../object/ActorTopicEntry.html#buildName)[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)[`deactivate`](../object/ActorTopicEntry.html#deactivate)[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)[`isReachable`](../object/ActorTopicEntry.html#isReachable)[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)
+[`activate`](../object/ActorTopicEntry.html#activate) [`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable) [`buildName`](../object/ActorTopicEntry.html#buildName) [`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied) [`deactivate`](../object/ActorTopicEntry.html#deactivate) [`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics) [`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry) [`isReachable`](../object/ActorTopicEntry.html#isReachable) [`nodeActive`](../object/ActorTopicEntry.html#nodeActive) [`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics) [`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)
 
 Inherited from `ReplaceRedirector` :  
 [`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
+[`doInstead`](../object/Redirector.html#doInstead) [`doNested`](../object/Redirector.html#doNested) [`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 Inherited from `TopicEntry` :  
-[`addTopic`](../object/TopicEntry.html#addTopic)[`matchTopic`](../object/TopicEntry.html#matchTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
+[`addTopic`](../object/TopicEntry.html#addTopic) [`matchTopic`](../object/TopicEntry.html#matchTopic) [`scoreBooster`](../object/TopicEntry.html#scoreBooster) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

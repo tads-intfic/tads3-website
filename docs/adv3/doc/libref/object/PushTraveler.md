@@ -78,7 +78,7 @@ English-specific PushTraveler changes
 
 
 
-[`obj_`](#obj_)[`traveler_`](#traveler_)
+[`obj_`](#obj_) [`traveler_`](#traveler_)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,7 +88,7 @@ English-specific PushTraveler changes
 
 
 
-[`canTravelVia`](#canTravelVia)[`construct`](#construct)[`explainNoTravelVia`](#explainNoTravelVia)[`propNotDefined`](#propNotDefined)[`travelerName`](#travelerName)[`travelerTravelTo`](#travelerTravelTo)[`travelerTravelWithin`](#travelerTravelWithin)
+[`canTravelVia`](#canTravelVia) [`construct`](#construct) [`explainNoTravelVia`](#explainNoTravelVia) [`propNotDefined`](#propNotDefined) [`travelerName`](#travelerName) [`travelerTravelTo`](#travelerTravelTo) [`travelerTravelWithin`](#travelerTravelWithin)
 
 <span id="_Properties_"></span>
 

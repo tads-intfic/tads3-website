@@ -46,32 +46,20 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>The basic production node base class. We’ll use this as the base class
+for all of our grammar rule match objects.</p>
 
-The basic production node base class. We'll use this as the base class
-for all of our grammar rule match objects.
-
-`class `**`BasicProd`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">BasicProd</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">BasicProd</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">BasicProd</code></strong><br />
 <a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a><br />
@@ -810,39 +798,23 @@ for all of our grammar rule match objects.
 <a href="../object/TokenListProd.html"><code class="language-plaintext highlighter-rouge">TokenListProd</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<p><a href="#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<p><a href="#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="firstTokenIndex"></span></p>
 
@@ -850,17 +822,13 @@ for all of our grammar rule match objects.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#603">603</a>]</p>
 
-<div class="desc">
-
-Grammar match objects that come from a GrammarProd.parseTokens() call
+<p>Grammar match objects that come from a GrammarProd.parseTokens() call
 will always have a set of properties indicating which tokens from the
 input matched the grammar rule. However, we sometimes synthesize match
 trees internally rather than getting them from parser input; for
-synthesized trees, the parser obviously won't supply those properties
+synthesized trees, the parser obviously won’t supply those properties
 for us, so we need to define suitable defaults that synthesized match
-tree nodes can inherit.
-
-</div>
+tree nodes can inherit.</p>
 
 <p><span id="isSpecialResponseMatch"></span></p>
 
@@ -868,30 +836,25 @@ tree nodes can inherit.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#592">592</a>]</p>
 
-<div class="desc">
-
-Is this match a match to the special syntax for a custom missing object
+<p>Is this match a match to the special syntax for a custom missing object
 query? This returns true if the match has a wording that strongly
 distinguishes it from an ordinary new command. In the English parser,
 for example, this returns true for the PrepSingleTopicProd matches
 (e.g., inSingleNoun) if the phrase starts with the preposition for the
-match.
+match.</p>
 
-This property is used when we ask a missing object question:
+<p>This property is used when we ask a missing object question:</p>
 
-  
-\&gt;dig  
-What do you want to dig in? \*.  
-\&gt;in the dirt
+<p>&gt;dig<br />
+What do you want to dig in? *.<br />
+&gt;in the dirt</p>
 
-In English, the DIG command sets up to receive a response phrased as "in
-\&lt;noun phrase\&gt;" - that's done by setting the response production to
-inSingleNoun. In this case, "in the dirt" would return true, since
-that's pretty clearly a match to the expected inSingleNoun syntax. In
-contrast, "the dirt" would return false, since that's just a noun phrase
-without the special wording for this particular verb.
-
-</div>
+<p>In English, the DIG command sets up to receive a response phrased as “in
+&lt;noun phrase&gt;” - that’s done by setting the response production to
+inSingleNoun. In this case, “in the dirt” would return true, since
+that’s pretty clearly a match to the expected inSingleNoun syntax. In
+contrast, “the dirt” would return false, since that’s just a noun phrase
+without the special wording for this particular verb.</p>
 
 <p><span id="lastTokenIndex"></span></p>
 
@@ -899,19 +862,11 @@ without the special wording for this particular verb.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#604">604</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="canResolveTo"></span></p>
 
@@ -919,13 +874,9 @@ without the special wording for this particular verb.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#540">540</a>]</p>
 
-<div class="desc">
-
-Can this object match tree resolve to the given object? We'll resolve
+<p>Can this object match tree resolve to the given object? We’ll resolve
 the phrase as though it were a topic phrase, then look for the object
-among the matches.
-
-</div>
+among the matches.</p>
 
 <p><span id="getOrigText"></span></p>
 
@@ -933,11 +884,7 @@ among the matches.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#502">502</a>]</p>
 
-<div class="desc">
-
-get the original text of the command for this match
-
-</div>
+<p>get the original text of the command for this match</p>
 
 <p><span id="getOrigTokenList"></span></p>
 
@@ -945,11 +892,7 @@ get the original text of the command for this match
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#513">513</a>]</p>
 
-<div class="desc">
-
-get my original token list, in canonical tokenizer format
-
-</div>
+<p>get my original token list, in canonical tokenizer format</p>
 
 <p><span id="setOrigTokenList"></span></p>
 
@@ -957,19 +900,12 @@ get my original token list, in canonical tokenizer format
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#528">528</a>]</p>
 
-<div class="desc">
+<p>Set my original token list. This replaces the actual token list we
+matched from the parser with a new token list provided by the caller.</p>
 
-Set my original token list. This replaces the actual token list we
-matched from the parser with a new token list provided by the caller.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

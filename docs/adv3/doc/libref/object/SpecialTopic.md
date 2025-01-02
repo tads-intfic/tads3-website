@@ -53,7 +53,7 @@ For SpecialTopic matches, treat some strings as "weak": if the user's
 input consists of just one of these weak strings and nothing else, don't
 match the topic.
 
-`class `**`SpecialTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)[`SuggestedTopicTree`](../object/SuggestedTopicTree.html)
+`class `**`SpecialTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html) [`SuggestedTopicTree`](../object/SuggestedTopicTree.html)
 
 
 
@@ -95,15 +95,15 @@ match the topic.
 
 
 
-[`fullName`](#fullName)[`includeInList`](#includeInList)[`keywordList`](#keywordList)[`matchPat`](#matchPat)[`name`](#name)[`timesToSuggest`](#timesToSuggest)[`weakPat`](#weakPat)
+[`fullName`](#fullName) [`includeInList`](#includeInList) [`keywordList`](#keywordList) [`matchPat`](#matchPat) [`name`](#name) [`timesToSuggest`](#timesToSuggest) [`weakPat`](#weakPat)
 
 Inherited from `TopicEntry` :  
-[`altTalkCount`](../object/TopicEntry.html#altTalkCount)[`altTopicList`](../object/TopicEntry.html#altTopicList)[`impliesGreeting`](../object/TopicEntry.html#impliesGreeting)[`isActive`](../object/TopicEntry.html#isActive)[`isConversational`](../object/TopicEntry.html#isConversational)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchScore`](../object/TopicEntry.html#matchScore)[`talkCount`](../object/TopicEntry.html#talkCount)[`topicGroupActive`](../object/TopicEntry.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment)[`topicResponse`](../object/TopicEntry.html#topicResponse)
+[`altTalkCount`](../object/TopicEntry.html#altTalkCount) [`altTopicList`](../object/TopicEntry.html#altTopicList) [`impliesGreeting`](../object/TopicEntry.html#impliesGreeting) [`isActive`](../object/TopicEntry.html#isActive) [`isConversational`](../object/TopicEntry.html#isConversational) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchScore`](../object/TopicEntry.html#matchScore) [`talkCount`](../object/TopicEntry.html#talkCount) [`topicGroupActive`](../object/TopicEntry.html#topicGroupActive) [`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 
 
 Inherited from `SuggestedTopic` :  
-[`associatedTopic`](../object/SuggestedTopic.html#associatedTopic)[`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied)[`location`](../object/SuggestedTopic.html#location)[`suggestionGroup`](../object/SuggestedTopic.html#suggestionGroup)[`suggestTo`](../object/SuggestedTopic.html#suggestTo)
+[`associatedTopic`](../object/SuggestedTopic.html#associatedTopic) [`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied) [`location`](../object/SuggestedTopic.html#location) [`suggestionGroup`](../object/SuggestedTopic.html#suggestionGroup) [`suggestTo`](../object/SuggestedTopic.html#suggestTo)
 
 <span id="_MethodSummary_"></span>
 
@@ -113,16 +113,16 @@ Inherited from `SuggestedTopic` :
 
 
 
-[`getConvNode`](#getConvNode)[`initializeSpecialTopic`](#initializeSpecialTopic)[`isMatchPossible`](#isMatchPossible)[`matchPreParse`](#matchPreParse)[`matchTopic`](#matchTopic)[`noteSuggestion`](#noteSuggestion)
+[`getConvNode`](#getConvNode) [`initializeSpecialTopic`](#initializeSpecialTopic) [`isMatchPossible`](#isMatchPossible) [`matchPreParse`](#matchPreParse) [`matchTopic`](#matchTopic) [`noteSuggestion`](#noteSuggestion)
 
 Inherited from `TopicEntry` :  
-[`addAltTopic`](../object/TopicEntry.html#addAltTopic)[`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic)[`addTopic`](../object/TopicEntry.html#addTopic)[`adjustScore`](../object/TopicEntry.html#adjustScore)[`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive)[`breakTopicTie`](../object/TopicEntry.html#breakTopicTie)[`checkIsActive`](../object/TopicEntry.html#checkIsActive)[`deferToEntry`](../object/TopicEntry.html#deferToEntry)[`getActor`](../object/TopicEntry.html#getActor)[`getTopicOwner`](../object/TopicEntry.html#getTopicOwner)[`handleTopic`](../object/TopicEntry.html#handleTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)[`noteInvocation`](../object/TopicEntry.html#noteInvocation)[`setTopicPronouns`](../object/TopicEntry.html#setTopicPronouns)
+[`addAltTopic`](../object/TopicEntry.html#addAltTopic) [`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic) [`addTopic`](../object/TopicEntry.html#addTopic) [`adjustScore`](../object/TopicEntry.html#adjustScore) [`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive) [`breakTopicTie`](../object/TopicEntry.html#breakTopicTie) [`checkIsActive`](../object/TopicEntry.html#checkIsActive) [`deferToEntry`](../object/TopicEntry.html#deferToEntry) [`getActor`](../object/TopicEntry.html#getActor) [`getTopicOwner`](../object/TopicEntry.html#getTopicOwner) [`handleTopic`](../object/TopicEntry.html#handleTopic) [`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry) [`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation) [`noteInvocation`](../object/TopicEntry.html#noteInvocation) [`setTopicPronouns`](../object/TopicEntry.html#setTopicPronouns)
 
 Inherited from `SuggestedTopicTree` :  
-[`associatedTopicIsActive`](../object/SuggestedTopicTree.html#associatedTopicIsActive)[`associatedTopicTalkCount`](../object/SuggestedTopicTree.html#associatedTopicTalkCount)
+[`associatedTopicIsActive`](../object/SuggestedTopicTree.html#associatedTopicIsActive) [`associatedTopicTalkCount`](../object/SuggestedTopicTree.html#associatedTopicTalkCount)
 
 Inherited from `SuggestedTopic` :  
-[`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch)[`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic)[`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic)[`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic)[`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic)[`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive)
+[`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch) [`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic) [`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic) [`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic) [`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic) [`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive)
 
 <span id="_Properties_"></span>
 

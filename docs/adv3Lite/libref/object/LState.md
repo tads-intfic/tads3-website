@@ -82,7 +82,7 @@ LState is the language-specific base class for State objects.
 
 
 
-[`addToName`](#addToName)[`getAdditionalInfo`](#getAdditionalInfo)[`initWord`](#initWord)
+[`addToName`](#addToName) [`getAdditionalInfo`](#getAdditionalInfo) [`initWord`](#initWord)
 
 <span id="_Properties_"></span>
 

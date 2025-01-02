@@ -73,7 +73,7 @@ of the method that matches the types of the arguments.
 
 
 
-[`args_`](#args_)[`func_`](#func_)[`name_`](#name_)
+[`args_`](#args_) [`func_`](#func_) [`name_`](#name_)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -86,10 +86,10 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`displayException`](#displayException)
+[`construct`](#construct) [`displayException`](#displayException)
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

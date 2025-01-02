@@ -90,7 +90,7 @@ to a list of character values.
 
 
 
-[`lcsA`](#lcsA)[`lcsB`](#lcsB)
+[`lcsA`](#lcsA) [`lcsB`](#lcsB)
 
 <span id="_MethodSummary_"></span>
 

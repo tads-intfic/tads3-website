@@ -46,31 +46,23 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Terminate Command exception - when the parser encounters an error that
+<p>Terminate Command exception - when the parser encounters an error that
 makes it impossible to go any further processing a command, we throw
 this error to abandon the current command and proceed to the next. This
 indicates a syntax error or semantic resolution error that renders the
-command meaningless or makes it impossible to proceed.
+command meaningless or makes it impossible to proceed.</p>
 
-When this exception is thrown, all processing of the current command
+<p>When this exception is thrown, all processing of the current command
 termintes immediately. No further action processing is performed; we
-don't continue iterating the command on any additional objects for a
+don’t continue iterating the command on any additional objects for a
 multi-object command; and we discard any remaining commands on the same
-command line.
+command line.</p>
 
-`class `**`TerminateCommandException`**` :   `[`ParserException`](../object/ParserException.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TerminateCommandException</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ParserException.html"><code class="language-plaintext highlighter-rouge">ParserException</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TerminateCommandException</code></strong><br />
 <a href="../object/ParserException.html"><code class="language-plaintext highlighter-rouge">ParserException</code></a><br />
@@ -78,68 +70,41 @@ command line.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TerminateCommandException</code></strong><br />
 <a href="../object/CancelCommandLineException.html"><code class="language-plaintext highlighter-rouge">CancelCommandLineException</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
 <a href="../object/Exception.html#errmsg_"><code class="language-plaintext highlighter-rouge">errmsg_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
-<a href="../object/Exception.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a><a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a><a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
+<a href="../object/Exception.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a> <a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a> <a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

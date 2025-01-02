@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Reflection  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Reflection<br />
 <span class="navnp"><a href="undef.html" class="nav"><em>Prev:</em> Capturing Calls to
 Undefined Methods</a>    
 <a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
-Classes</a>     </span>
-
-</div>
+Classes</a>     </span></p>
 
 <h1 id="reflection">Reflection</h1>
 
@@ -280,107 +272,101 @@ that this is designed to be a separately-compiled module, so <strong>do not</str
 instead, simply add it to your project (.t3m) file. If you’re not using
 a project file, just add it to your t3make command line:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t3make myProg.t reflect.t
+</code></pre></div></div>
 
-    t3make myProg.t reflect.t
-
-
-
-Note that, by default, reflect.t does not include support for the
+<p>Note that, by default, reflect.t does not include support for the
 BigNumber intrinsic class. However, you can enable BigNumber support by
-defining the symbol `REFLECT_BIGNUM`, using the
-`-D` option in your project file or on the
-t3make command line.
+defining the symbol <code class="language-plaintext highlighter-rouge">REFLECT_BIGNUM</code>, using the
+<code class="language-plaintext highlighter-rouge">-D</code> option in your project file or on the
+t3make command line.</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t3make -DREFLECT_BIGNUM myProg.t reflect.t
+</code></pre></div></div>
 
-    t3make -DREFLECT_BIGNUM myProg.t reflect.t
-
-</div>
-
-The `reflectionServices` object provides the
+<p>The <code class="language-plaintext highlighter-rouge">reflectionServices</code> object provides the
 high-level compiler symbols interface. The methods of this object are
-discussed below.
+discussed below.</p>
 
-### formatStackFrame
+<h3 id="formatstackframe">formatStackFrame</h3>
 
-`formatStackFrame(fr, includeSourcePos)` returns
+<p><code class="language-plaintext highlighter-rouge">formatStackFrame(fr, includeSourcePos)</code> returns
 a string with a formatted representation of the stack frame fr, which
-must be an object of class `T3StackInfo` (the
+must be an object of class <code class="language-plaintext highlighter-rouge">T3StackInfo</code> (the
 type of object in the list returned by the intrinsic function
-`t3GetStackTrace()`). If
-`includeSourcePos` is
-`true`, and source information is available for
+<code class="language-plaintext highlighter-rouge">t3GetStackTrace()</code>). If
+<code class="language-plaintext highlighter-rouge">includeSourcePos</code> is
+<code class="language-plaintext highlighter-rouge">true</code>, and source information is available for
 the frame, the return value includes a printable representation of the
-source position's filename and line number. The return values look like
-this:
+source position’s filename and line number. The return values look like
+this:</p>
 
-```
-    myObj.prop1('abc', 123) myProg.t, line 52
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myObj.prop1('abc', 123) myProg.t, line 52
+</code></pre></div></div>
 
-### valToSymbol
+<h3 id="valtosymbol">valToSymbol</h3>
 
-`valToSymbol(val)` converts the value val to a
+<p><code class="language-plaintext highlighter-rouge">valToSymbol(val)</code> converts the value val to a
 symbolic or string representation, as appropriate. If the value is an
-integer, string, BigNumber, list, `true`, or
-`nil`, the return value is a string
+integer, string, BigNumber, list, <code class="language-plaintext highlighter-rouge">true</code>, or
+<code class="language-plaintext highlighter-rouge">nil</code>, the return value is a string
 representation of the value appropriate to the type (in the case of
-`true` and `nil`, the
-strings 'true' and 'nil' are returned, respectively). If the value is an
+<code class="language-plaintext highlighter-rouge">true</code> and <code class="language-plaintext highlighter-rouge">nil</code>, the
+strings ‘true’ and ‘nil’ are returned, respectively). If the value is an
 object, property ID, function pointer, or enumerator, the return value
 is a string giving the symbolic name of the value, if available, or a
-string showing the type without a symbol (such as "(obj)" or "(prop)").
+string showing the type without a symbol (such as “(obj)” or “(prop)”).</p>
 
-## Low-level compiler symbol services
+<h2 id="low-level-compiler-symbol-services">Low-level compiler symbol services</h2>
 
-This section discusses the low-level compiler symbol services. These
+<p>This section discusses the low-level compiler symbol services. These
 services are built into the VM. In most cases, you should use the
 high-level services provided by the
-`reflectionServices` object, since that
+<code class="language-plaintext highlighter-rouge">reflectionServices</code> object, since that
 interface is easier to use and provides substantially the same
-capabilities.
+capabilities.</p>
 
-The interpreter provides the program with the global symbols via a
+<p>The interpreter provides the program with the global symbols via a
 LookupTable object. Each entry in the table has a compiler symbol as its
-key, and the symbol's definition as its value. For example, each named
+key, and the symbol’s definition as its value. For example, each named
 object defined in the program has an entry in the table with the
 compile-time name of the object as the key, and a reference to the
 object as its value. In addition, the table includes all of the
-properties, functions, enumerators, and intrinsic classes.
+properties, functions, enumerators, and intrinsic classes.</p>
 
-To obtain a reference to the symbol table, use the
-`t3GetGlobalSymbols()` intrinsic function. This
-function returns the LookupTable object, if it's available, or
-`nil` if not.
+<p>To obtain a reference to the symbol table, use the
+<code class="language-plaintext highlighter-rouge">t3GetGlobalSymbols()</code> intrinsic function. This
+function returns the LookupTable object, if it’s available, or
+<code class="language-plaintext highlighter-rouge">nil</code> if not.</p>
 
-Note that the global symbol table is available from
-`t3GetGlobalSymbols()` only under certain
-conditions:
+<p>Note that the global symbol table is available from
+<code class="language-plaintext highlighter-rouge">t3GetGlobalSymbols()</code> only under certain
+conditions:</p>
 
-- The global symbols are available during pre-initialization when
-  building a program.
-- The symbols are available during a normal interpreter session if the
-  program was compiled with debugging symbols.
+<ul>
+  <li>The global symbols are available during pre-initialization when
+building a program.</li>
+  <li>The symbols are available during a normal interpreter session if the
+program was compiled with debugging symbols.</li>
+</ul>
 
-At other times, the symbol table isn't available, so
-`t3GetGlobalSymbls()` returns
-`nil`. In particular, this is the case during
+<p>At other times, the symbol table isn’t available, so
+<code class="language-plaintext highlighter-rouge">t3GetGlobalSymbls()</code> returns
+<code class="language-plaintext highlighter-rouge">nil</code>. In particular, this is the case during
 normal execution (after preinit) of a program compiled for release,
 since the compiler omits the symbol table information from release
-builds to reduce the size of the image file.
+builds to reduce the size of the image file.</p>
 
-Note that you can use the global symbol table during normal execution of
+<p>Note that you can use the global symbol table during normal execution of
 a program compiled for release, if you want. To do this, simply obtain a
 reference to the symbol table in pre-initialization code, and then store
 the reference in a property of a statically-defined object. When the
 compiler builds the final image file, it will automatically keep the
-symbol table because of the reference stored in the program. Here's an
-example:
+symbol table because of the reference stored in the program. Here’s an
+example:</p>
 
-```
-    #include <t3.h>
-    #include <lookup.h>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include &lt;t3.h&gt;
+    #include &lt;lookup.h&gt;
 
     symtabObj: PreinitObject
       execute()
@@ -392,29 +378,28 @@ example:
       }
       symtab = nil
     ;
-```
+</code></pre></div></div>
 
-To reference the symbol table at run-time, you would get it from
-`symtabObj.symtab`. Note that even though you
+<p>To reference the symbol table at run-time, you would get it from
+<code class="language-plaintext highlighter-rouge">symtabObj.symtab</code>. Note that even though you
 stored a reference to the table,
-`t3GetGlobalSymbols()` will still return nil at
-run-time if the program wasn't compiled for debugging; the reference you
+<code class="language-plaintext highlighter-rouge">t3GetGlobalSymbols()</code> will still return nil at
+run-time if the program wasn’t compiled for debugging; the reference you
 saved is to the table that was created during pre-initialization, which
 at run-time is just an ordinary LookupTable object loaded from the image
-file.
+file.</p>
 
-If you don't store a reference to the symbol table during
+<p>If you don’t store a reference to the symbol table during
 pre-initialization, the garbage collector will detect that the table is
 unreachable, and will automatically discard the object. This saves space
-in the image file (and at run-time) for programs that don't need access
-to the information during normal execution.
+in the image file (and at run-time) for programs that don’t need access
+to the information during normal execution.</p>
 
-Here's an example of using the symbol table to call a method by name.
+<p>Here’s an example of using the symbol table to call a method by name.
 This example asks the user to type in the name of a method, then looks
-up the name in the symbol table and calls the property, if it's found.
+up the name in the symbol table and calls the property, if it’s found.</p>
 
-```
-    callMethod(obj)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    callMethod(obj)
     {
       local methodName;
       local prop;
@@ -448,57 +433,60 @@ up the name in the symbol table and calls the property, if it's found.
         }
       }
     }
-```
+</code></pre></div></div>
 
-## Preprocessor macros
+<h2 id="preprocessor-macros">Preprocessor macros</h2>
 
-The `t3GetGlobalSymbols()` function can also
-retrieve information on the preprocessor macros defined in the program's
+<p>The <code class="language-plaintext highlighter-rouge">t3GetGlobalSymbols()</code> function can also
+retrieve information on the preprocessor macros defined in the program’s
 source code. This information is in the correct format for use with the
-[DynamicFunc](dynfunc.html) class's dynamic compiler, so you can pass it
-directly to the DynamicFunc constructor as the "macroTable" argument.
+<a href="dynfunc.html">DynamicFunc</a> class’s dynamic compiler, so you can pass it
+directly to the DynamicFunc constructor as the “macroTable” argument.</p>
 
-To retrieve the macro information, specify the constant value
-`T3PreprocMacros` as the selector argument to
-`t3GetGlobalSymbols()`:
+<p>To retrieve the macro information, specify the constant value
+<code class="language-plaintext highlighter-rouge">T3PreprocMacros</code> as the selector argument to
+<code class="language-plaintext highlighter-rouge">t3GetGlobalSymbols()</code>:</p>
 
-```
-    local macros = t3GetGlobalSymbols(T3PreprocMacros);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local macros = t3GetGlobalSymbols(T3PreprocMacros);
+</code></pre></div></div>
 
-This retrieves a LookupTable containing all of the "global" macros
-defined in the compiled program's source code (more on this
-[shortly](#globalMacros)). Each key in the table is a macro symbol name,
+<p>This retrieves a LookupTable containing all of the “global” macros
+defined in the compiled program’s source code (more on this
+<a href="#globalMacros">shortly</a>). Each key in the table is a macro symbol name,
 and the corresponding value contains information on the definition of
-the macro.
+the macro.</p>
 
-The definition of a macro consists of a list with three elements:
+<p>The definition of a macro consists of a list with three elements:</p>
 
-- Element \[1\] is the text of the macro's expansion (that is, the part
-  of the original source text of the \#define that follows the macro's
-  name and parameter list).
-- Element \[2\] is a list giving the names of the parameters to the
-  macro. This is an empty list if the macro doesn't take any arguments.
-- Element \[3\] is an integer with a combination of bit flags (combined
-  with the bitwise OR operator "`\|`") with more
-  details on the macro:
-  - T3MacroHasArgs (0x0001) is set if the macro has a parameter list at
-    all. A macro defined without a parameter list behaves a little
-    differently from a macro defined with an empty parameter list, so
-    this flag is needed to distinguish the two cases when there are zero
-    arguments.
-  - T3MacroHasVarargs (0x0002) is set if the macro takes a varying
-    number of arguments, which is specified with a "..." suffix on the
-    macro's last parameter name. (Note that the "..." is **not**
-    included in the name list in element \[2\] of the macro, which is
-    why you need this flag to tell whether it was included in the
-    macro's definition.)
+<ul>
+  <li>Element [1] is the text of the macro’s expansion (that is, the part
+of the original source text of the #define that follows the macro’s
+name and parameter list).</li>
+  <li>Element [2] is a list giving the names of the parameters to the
+macro. This is an empty list if the macro doesn’t take any arguments.</li>
+  <li>Element [3] is an integer with a combination of bit flags (combined
+with the bitwise OR operator “<code class="language-plaintext highlighter-rouge">\|</code>”) with more
+details on the macro:
+    <ul>
+      <li>T3MacroHasArgs (0x0001) is set if the macro has a parameter list at
+all. A macro defined without a parameter list behaves a little
+differently from a macro defined with an empty parameter list, so
+this flag is needed to distinguish the two cases when there are zero
+arguments.</li>
+      <li>T3MacroHasVarargs (0x0002) is set if the macro takes a varying
+number of arguments, which is specified with a “…” suffix on the
+macro’s last parameter name. (Note that the “…” is <strong>not</strong>
+included in the name list in element [2] of the macro, which is
+why you need this flag to tell whether it was included in the
+macro’s definition.)</li>
+    </ul>
+  </li>
+</ul>
 
-Here are a few examples of macros and their corresponding table
-information.
+<p>Here are a few examples of macros and their corresponding table
+information.</p>
 
-```
-    #define HUNDRED  100
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define HUNDRED  100
        -&gt;   ['100', [], 0]
 
     #define square(x) ((x)*(x))
@@ -506,80 +494,77 @@ information.
 
     #define debugPrint(msg...)  tadsSay('Debug message: ', ##msg)
        -&gt;   ['tadsSay(\'Debug message: \', ##msg)', ['msg'], 0x0003]
-```
+</code></pre></div></div>
 
-### <span id="globalMacros"></span>What makes a macro global?
+<h3 id="what-makes-a-macro-global"><span id="globalMacros"></span>What makes a macro global?</h3>
 
-The macro table returned by
-`t3GetGlobalSymbols()` only contains "global"
-macros.
+<p>The macro table returned by
+<code class="language-plaintext highlighter-rouge">t3GetGlobalSymbols()</code> only contains “global”
+macros.</p>
 
-A global macro is one that has a fixed value throughout the program.
+<p>A global macro is one that has a fixed value throughout the program.
 Global macros are the most common type, because the usual convention is
 to define macros in common header files, which ensures that each module
 throughout the program has the same definition for any given macro.
-However, it's perfectly legal to use `\#define`
-directly in a source code module, rather than in a header, and it's
+However, it’s perfectly legal to use <code class="language-plaintext highlighter-rouge">\#define</code>
+directly in a source code module, rather than in a header, and it’s
 legal for different modules to have different definitions for the same
-macro. It's also possible to change a macro's definition one or more
+macro. It’s also possible to change a macro’s definition one or more
 times within a single source module, by using
-`\#undef` to remove the old definition. In
+<code class="language-plaintext highlighter-rouge">\#undef</code> to remove the old definition. In
 either case, the table excludes macros that have two or more distinct
-definitions anywhere in the program.
+definitions anywhere in the program.</p>
 
-The reason for excluding non-global macros is that the table itself is
-global: there's only one table for the whole program, so the table can't
+<p>The reason for excluding non-global macros is that the table itself is
+global: there’s only one table for the whole program, so the table can’t
 be tied to any particular source code file or portion of a file. If a
 macro is redefined with different expansions in different parts of the
-source code, there's no "one true definition" that applies throughout
+source code, there’s no “one true definition” that applies throughout
 the program. So, the system considers such macros to be roughly
 analogous to local variables, and omits them from the global macro
-table.
+table.</p>
 
-### Availability of macro information
+<h3 id="availability-of-macro-information">Availability of macro information</h3>
 
-The macro table is available under the same conditions as the global
+<p>The macro table is available under the same conditions as the global
 symbol table: during preinit, and during normal execution as long as the
 program was compiled for debugging. You can use the same trick we saw
 for the global symbol table if you want to be able to access the macros
 during normal program execution in release mode: retrieve the table
-during preinit, and save a reference in an object property.
+during preinit, and save a reference in an object property.</p>
 
-## Custom reflection services
+<h2 id="custom-reflection-services">Custom reflection services</h2>
 
-You can replace the reflection services defined in reflect.t by defining
+<p>You can replace the reflection services defined in reflect.t by defining
 your own versions. For the most part, the services defined there are for
-your program's consumption, so you can define the interfaces however you
+your program’s consumption, so you can define the interfaces however you
 like. However, the VM makes its own calls to certain reflect.t services
-when they're available, so for full functionality you'll need to define
+when they’re available, so for full functionality you’ll need to define
 your replacements using the same interfaces in those cases. The specific
-requirements are:
+requirements are:</p>
 
-- `reflectionServices.valToSymbol(val)` -
-  returns a string giving the symbolic version of *val*, if possible.
-  You can use whatever names you want for the object and property, as
-  long as you export your names as follows:
-  ```
-      export reflectionServices 'reflection.reflectionServices';
-      export valToSymbol 'reflection.valToSymbol';
-
-  &lt;/div&gt;
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">reflectionServices.valToSymbol(val)</code> -
+returns a string giving the symbolic version of <em>val</em>, if possible.
+You can use whatever names you want for the object and property, as
+long as you export your names as follows:
 ```
+    export reflectionServices ‘reflection.reflectionServices’;
+    export valToSymbol ‘reflection.valToSymbol’;</li>
+</ul>
 
-------------------------------------------------------------------------
+<p>```</p>
 
-<div class="navb">
+<hr />
 
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Reflection  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Reflection<br />
 <span class="navnp"><a href="undef.html" class="nav"><em>Prev:</em> Capturing Calls to
 Undefined Methods</a>    
 <a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
-Classes</a>     </span>
+Classes</a>     </span></p>
 
-</div>
-</lookup.h></t3.h></div>
 
 </main>
 <footer>

@@ -80,7 +80,7 @@ Keyboard input parameter definition.
 
 
 
-[`beginInputFont`](#beginInputFont)[`endInputFont`](#endInputFont)
+[`beginInputFont`](#beginInputFont) [`endInputFont`](#endInputFont)
 
 <span id="_Properties_"></span>
 

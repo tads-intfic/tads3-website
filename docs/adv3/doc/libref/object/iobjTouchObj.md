@@ -78,7 +78,7 @@ Inherited from `TouchObjCondition` :
 
 
 Inherited from `TouchObjCondition` :  
-[`checkPreCondition`](../object/TouchObjCondition.html#checkPreCondition)[`construct`](../object/TouchObjCondition.html#construct)[`verifyPreCondition`](../object/TouchObjCondition.html#verifyPreCondition)
+[`checkPreCondition`](../object/TouchObjCondition.html#checkPreCondition) [`construct`](../object/TouchObjCondition.html#construct) [`verifyPreCondition`](../object/TouchObjCondition.html#verifyPreCondition)
 
 
 

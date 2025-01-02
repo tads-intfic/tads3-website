@@ -77,7 +77,7 @@ without a direct object).
 [`curable`](#curable)
 
 Inherited from `CommandError` :  
-[`cmd`](../object/CommandError.html#cmd)[`errStage`](../object/CommandError.html#errStage)
+[`cmd`](../object/CommandError.html#cmd) [`errStage`](../object/CommandError.html#errStage)
 
 Inherited from `ParseError` :  
 [`allowOnRespell`](../object/ParseError.html#allowOnRespell)
@@ -93,7 +93,7 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`display`](#display)[`tryCuring`](#tryCuring)
+[`construct`](#construct) [`display`](#display) [`tryCuring`](#tryCuring)
 
 
 
@@ -101,7 +101,7 @@ Inherited from `ParseError` :
 [`rankCorrection`](../object/ParseError.html#rankCorrection)
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

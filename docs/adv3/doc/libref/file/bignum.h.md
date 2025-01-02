@@ -56,7 +56,7 @@ This header defines the BigNumber intrinsic class.
 
 
 
-[`BignumCommas`](#BignumCommas)[`BignumCompact`](#BignumCompact)[`BignumEuroStyle`](#BignumEuroStyle)[`BignumExp`](#BignumExp)[`BignumExpSign`](#BignumExpSign)[`BignumKeepTrailingZeros`](#BignumKeepTrailingZeros)[`BignumLeadingZero`](#BignumLeadingZero)[`BignumMaxSigDigits`](#BignumMaxSigDigits)[`BignumPoint`](#BignumPoint)[`BignumPosSpace`](#BignumPosSpace)[`BignumSign`](#BignumSign)[`NumTypeInf`](#NumTypeInf)[`NumTypeNAN`](#NumTypeNAN)[`NumTypeNInf`](#NumTypeNInf)[`NumTypeNum`](#NumTypeNum)[`NumTypeNZero`](#NumTypeNZero)[`NumTypePInf`](#NumTypePInf)[`NumTypePZero`](#NumTypePZero)[`NumTypeZero`](#NumTypeZero)
+[`BignumCommas`](#BignumCommas) [`BignumCompact`](#BignumCompact) [`BignumEuroStyle`](#BignumEuroStyle) [`BignumExp`](#BignumExp) [`BignumExpSign`](#BignumExpSign) [`BignumKeepTrailingZeros`](#BignumKeepTrailingZeros) [`BignumLeadingZero`](#BignumLeadingZero) [`BignumMaxSigDigits`](#BignumMaxSigDigits) [`BignumPoint`](#BignumPoint) [`BignumPosSpace`](#BignumPosSpace) [`BignumSign`](#BignumSign) [`NumTypeInf`](#NumTypeInf) [`NumTypeNAN`](#NumTypeNAN) [`NumTypeNInf`](#NumTypeNInf) [`NumTypeNum`](#NumTypeNum) [`NumTypeNZero`](#NumTypeNZero) [`NumTypePInf`](#NumTypePInf) [`NumTypePZero`](#NumTypePZero) [`NumTypeZero`](#NumTypeZero)
 
 <span id="_EnumSummary_"></span>
 

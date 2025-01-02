@@ -81,7 +81,7 @@ directly in.
 
 
 
-[`actor_`](#actor_)[`conn_`](#conn_)[`loc_`](#loc_)
+[`actor_`](#actor_) [`conn_`](#conn_) [`loc_`](#loc_)
 
 Inherited from `PreCondition` :  
 [`preCondOrder`](../object/PreCondition.html#preCondOrder)
@@ -94,7 +94,7 @@ Inherited from `PreCondition` :
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)
+[`checkPreCondition`](#checkPreCondition) [`construct`](#construct)
 
 Inherited from `PreCondition` :  
 [`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)

@@ -21,20 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="finish.html" class="nav">Finishing Touches</a> \&gt; Scoring  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="finish.html" class="nav">Finishing Touches</a> &gt; Scoring<br />
 <span class="navnp"><a href="starting.html" class="nav"><em>Prev:</em> Starting Out Right</a>
-    <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span>
-
-</div>
+    <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span></p>
 
 <h1 id="scoring">Scoring</h1>
 
@@ -95,41 +87,39 @@ it’s worth and the text describing the achievement. This can be done
 very simply using the Achievement template, so that, for example, our
 achievement objects might look like this:</p>
 
-<p>`
-    ticketAchievement: Achievement +10 “finding the plane ticket”;
-    boardingAchievement: Achievement +10 “boarding the plane”;
-    escapeAchievement: Achievement +10 “escaping Pablo Cortez”;
-    powerAchievement: Achievement +10 “cutting the power to the metal detector”;
-    securityAchievement: Achievement +10 “opening the security door”;
-    suitcaseAchievement: Achievement +15 “opening the suitcase”;
-    uniformAchievement: Achievement +10 “putting on the pilot’s uniform”;
-    cockpitAchievement: Achievement +10 “entering the cockpit”;
-    flyingAchievement: Achievement +15 “flying the plane”;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ticketAchievement: Achievement +10 "finding the plane ticket";
+    boardingAchievement: Achievement +10 "boarding the plane";
+    escapeAchievement: Achievement +10 "escaping Pablo Cortez";
+    powerAchievement: Achievement +10 "cutting the power to the metal detector";
+    securityAchievement: Achievement +10 "opening the security door";
+    suitcaseAchievement: Achievement +15 "opening the suitcase";
+    uniformAchievement: Achievement +10 "putting on the pilot's uniform";
+    cockpitAchievement: Achievement +10 "entering the cockpit";
+    flyingAchievement: Achievement +15 "flying the plane";
+</code></pre></div></div>
 
 <p>All we have to do now is to ensure that carrying out the appropriate
 action calls <code class="language-plaintext highlighter-rouge">awardPointsOnce(</code>) on the
 appropriate Achievement object. For example, for the first achievement:</p>
 
-<p>`
-    ticket: Thing ‘ticket’
-        “It’s a ticket for flight TI 179 to Buenos Aires. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = (desc)
-    specialDesc = "A ticket lies on the ground. "
-    useSpecialDesc = (location == getOutermostRoom)
-    
-    bulk = 1
-    
-    dobjFor(Take)
-    {
-        action()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ticket: Thing 'ticket'
+        "It's a ticket for flight TI 179 to Buenos Aires. "
+        
+        readDesc = (desc)
+        specialDesc = "A ticket lies on the ground. "
+        useSpecialDesc = (location == getOutermostRoom)
+        
+        bulk = 1
+        
+        dobjFor(Take)
         {
-            inherited;
-            ticketAchievement.awardPointsOnce();
-        }   
-    }
-; `
+            action()
+            {
+                inherited;
+                ticketAchievement.awardPointsOnce();
+            }   
+        }
+    ;
 </code></pre></div></div>
 
 <p>If you compile and run the game and try this, you’ll find that the
@@ -139,21 +129,20 @@ awardPointsOnce() method makes sure the points are awarded only once.</p>
 <p>The second achievement is awarded when the player character shows Angela
 the ticket:</p>
 
-<p>`
-    ++ GiveShowTopic @ticket
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ GiveShowTopic @ticket
         topicResponse()
         {
-            “<q>Here you are,</q> you say, holding out the ticket for {the angela}
+            "&lt;q&gt;Here you are,&lt;/q&gt; you say, holding out the ticket for {the angela}
             to see.\b
             She glances down at the ticket in your hand, and temporarily takes it
-            off you to check. <q>That’s fine, sir,</q> she assures you as she
-            returns it to you. <q>Please move to the rear of the plane to find a
-            seat.</q> “;
+            off you to check. &lt;q&gt;That's fine, sir,&lt;/q&gt; she assures you as she
+            returns it to you. &lt;q&gt;Please move to the rear of the plane to find a
+            seat.&lt;/q&gt; ";
             angelaGreetingState.ticketSeen = true;
             boardingAchievement.awardPointsOnce();
         }
     ;
-`</p>
+</code></pre></div></div>
 
 <p>The next achievement needs just a little more thought. The points are
 awarded when the player reaches the Jetway from the plane, but only when
@@ -163,33 +152,32 @@ other is to test for whether the takeover Scene is happening. If it is,
 we can then award the points in the
 <code class="language-plaintext highlighter-rouge">travelerEntering()</code> method of the jetway Room:</p>
 
-<p>`
-    jetway: Room ‘Jetway’ ‘jetway;short enclosed; walkway’
-        “This is little more than a short enclosed walkway leading west-east from
-        the gate to the plane. «if takeover.isHappening» Right now it’s thronging
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    jetway: Room 'Jetway' 'jetway;short enclosed; walkway'
+        "This is little more than a short enclosed walkway leading west-east from
+        the gate to the plane. &lt;&lt;if takeover.isHappening&gt;&gt; Right now it's thronging
         with a stream of disgruntled passengers who have just been forced to
-        disembark from their flight. «else unless takeover.hasHappened»You seem to
-        be the only person here, as if everyone else has already boarded.«end» “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    west = gate3
-    east: TravelConnector
-    {
-        destination = planeFront
+        disembark from their flight. &lt;&lt;else unless takeover.hasHappened&gt;&gt;You seem to
+        be the only person here, as if everyone else has already boarded.&lt;&lt;end&gt;&gt; "
         
-        canTravelerPass(traveler) { return !takeover.isHappening; }
-        explainTravelBarrier(traveler)
+        west = gate3
+        east: TravelConnector
         {
-            "You dare not go back aboard the plane until you've found a rather
-            more effective disguise than a handful of cleaning items. ";
+            destination = planeFront
+            
+            canTravelerPass(traveler) { return !takeover.isHappening; }
+            explainTravelBarrier(traveler)
+            {
+                "You dare not go back aboard the plane until you've found a rather
+                more effective disguise than a handful of cleaning items. ";
+            }
         }
-    }
-    
-    travelerEntering(traveler, origin) 
-    {
-        if(traveler == me &amp;&amp; takeover.isHappening)
-            escapeAchievement.awardPointsOnce();
-    }    
-; `
+        
+        travelerEntering(traveler, origin) 
+        {
+            if(traveler == me &amp;&amp; takeover.isHappening)
+                escapeAchievement.awardPointsOnce();
+        }    
+    ;
 </code></pre></div></div>
 
 <p>Now that we’ve established the principle, implementing the scoring for
@@ -203,99 +191,99 @@ player character kills himself with a botched take-off attempt, so we’ll
 want to tweak the <code class="language-plaintext highlighter-rouge">eachTurn()</code> method of the
 <code class="language-plaintext highlighter-rouge">takeOff</code> Scene thus:</p>
 
-<p>`
-    takeoff: Scene <br />
-        …</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    eachTurn()
-    {
-        local oldSpeed = asi.airspeed;
-        
-        if(controlColumn.position &lt; 0)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    takeoff: Scene   
+        ...
+     
+     
+        eachTurn()
         {
-            if(asi.airspeed &gt;= 115)
+            local oldSpeed = asi.airspeed;
+            
+            if(controlColumn.position &lt; 0)
             {
-                "The aircraft leaves the ground and continues up into the sky,
-                climbing rapidly above the city. Once you've gained enough
-                height you turn the plane --- not south towards Bogota but north
-                towards Miami. Hopefully those hoodlums back in passenger cabin
-                won't notice, though, at least, not until it's far too late. You
-                reach for the radio to call ahead and arrange a suitable
-                reception committee, and then settle back in your seat, content
-                with a job well done. ";
-                
-                flyingAchievement.awardPointsOnce();
-                
-                finishGameMsg(ftVictory, [finishOptionUndo, finishOptionFullScore]);
+                if(asi.airspeed &gt;= 115)
+                {
+                    "The aircraft leaves the ground and continues up into the sky,
+                    climbing rapidly above the city. Once you've gained enough
+                    height you turn the plane --- not south towards Bogota but north
+                    towards Miami. Hopefully those hoodlums back in passenger cabin
+                    won't notice, though, at least, not until it's far too late. You
+                    reach for the radio to call ahead and arrange a suitable
+                    reception committee, and then settle back in your seat, content
+                    with a job well done. ";
+                    
+                    flyingAchievement.awardPointsOnce();
+                    
+                    finishGameMsg(ftVictory, [finishOptionUndo, finishOptionFullScore]);
+                }
+                else if(asi.airspeed &gt; 90)
+                {
+                    "The aircraft leaves the ground for a moment and then stalls,
+                    rapidly losing speed and bumping back down onto the runway. ";
+                    
+                    asi.airspeed -= 30;
+                }
+                else
+                    "The aircraft judders slightly but nothing else happens; it
+                    isn't traveling nearly fast enough to take off. ";
             }
-            else if(asi.airspeed &gt; 90)
+            
+            local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
+            
+            asi.airspeed += (thrust/100);
+            
+            if(asi.airspeed &lt; 0)
+                asi.airspeed = 0;
+            
+            distanceTraveled += ((asi.airspeed + oldSpeed)/2);        
+           
+           
+            
+            /* If we go too far, we run off the end of the runway */
+            if(distanceTraveled &gt; 500)
             {
-                "The aircraft leaves the ground for a moment and then stalls,
-                rapidly losing speed and bumping back down onto the runway. ";
+                "The plane reaches the end of the runway, ploughs through the fences
+                and crashes into some buildings. What happens after that you never
+                know, but it seems a terribly destructive way to displose of a
+                plane-load of hoodlums. ";
                 
-                asi.airspeed -= 30;
+                finishGameMsg(ftDeath, [finishOptionUndo, finishOptionFullScore]);
             }
-            else
-                "The aircraft judders slightly but nothing else happens; it
-                isn't traveling nearly fast enough to take off. ";
-        }
-        
-        local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
-        
-        asi.airspeed += (thrust/100);
-        
-        if(asi.airspeed &lt; 0)
-            asi.airspeed = 0;
-        
-        distanceTraveled += ((asi.airspeed + oldSpeed)/2);        
-       
-       
-        
-        /* If we go too far, we run off the end of the runway */
-        if(distanceTraveled &gt; 500)
-        {
-            "The plane reaches the end of the runway, ploughs through the fences
-            and crashes into some buildings. What happens after that you never
-            know, but it seems a terribly destructive way to displose of a
-            plane-load of hoodlums. ";
+                
             
-            finishGameMsg(ftDeath, [finishOptionUndo, finishOptionFullScore]);
-        }
+            /* 
+             *   If we turn the wheel while the plane is moving along the runway,
+             *   the results are likely to be catastrophic.
+             */        
             
-        
-        /* 
-         *   If we turn the wheel while the plane is moving along the runway,
-         *   the results are likely to be catastrophic.
-         */        
-        
-        if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
-        {
-            "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
-            starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
-            taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
-            collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
-            sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
-            Fortunately, you won't be around to answer for your incompetence. ";
+            if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
+            {
+                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
+                starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
+                taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
+                collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
+                sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
+                Fortunately, you won't be around to answer for your incompetence. ";
+                
+                finishGameMsg(ftDeath, [finishOptionUndo, finishOptionFullScore]);
+            }
             
-            finishGameMsg(ftDeath, [finishOptionUndo, finishOptionFullScore]);
-        }
-        
-        /* 
-         *   If nothing else dramatic has intervened, report what's happening to
-         *   the speed.
-         */
-        
-        if(asi.airspeed &gt; oldSpeed &amp;&amp; oldSpeed == 0)
-            "The plane starts moving forward. ";
-        else if (asi.airspeed &gt; oldSpeed)
-            "The plane continues to pick up speed. ";
-        
-        if(asi.airspeed &lt; oldSpeed &amp;&amp; asi.airspeed == 0)
-            "The plane comes to a halt. ";
-        else if(asi.airspeed &lt; oldSpeed)
-            "The plane is losing speed. ";
-    }   
-; `
+            /* 
+             *   If nothing else dramatic has intervened, report what's happening to
+             *   the speed.
+             */
+            
+            if(asi.airspeed &gt; oldSpeed &amp;&amp; oldSpeed == 0)
+                "The plane starts moving forward. ";
+            else if (asi.airspeed &gt; oldSpeed)
+                "The plane continues to pick up speed. ";
+            
+            if(asi.airspeed &lt; oldSpeed &amp;&amp; asi.airspeed == 0)
+                "The plane comes to a halt. ";
+            else if(asi.airspeed &lt; oldSpeed)
+                "The plane is losing speed. ";
+        }   
+    ;
 </code></pre></div></div>
 
 <p>The same option should probably be added when the player character
@@ -305,17 +293,12 @@ reader.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="finish.html" class="nav">Finishing Touches</a> \&gt; Scoring  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="finish.html" class="nav">Finishing Touches</a> &gt; Scoring<br />
 <span class="navnp"><a href="starting.html" class="nav"><em>Prev:</em> Starting Out Right</a>
-    <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span>
+    <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span></p>
 
-
-
-</div>
 
 </main>
 <footer>

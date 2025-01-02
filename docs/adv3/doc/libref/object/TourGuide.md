@@ -86,7 +86,7 @@ Actor subclass.
 
 
 
-[`dobjFor(Follow)`](#dobjFor(Follow))[`getTourDest`](#getTourDest)
+[`dobjFor(Follow)`](#dobjFor(Follow)) [`getTourDest`](#getTourDest)
 
 <span id="_Properties_"></span>
 

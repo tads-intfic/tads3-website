@@ -46,75 +46,47 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Hint encapsulates one hint from a topic. In many cases, hints can be
+<p>A Hint encapsulates one hint from a topic. In many cases, hints can be
 listed in a topic simply as strings, rather than using Hint objects.
 Hint objects provide a little more control, though; in particular, a
 Hint object can specify some additional code to run when the hint is
 shown, so that it can apply any side effects of showing the hint (for
 example, when a hint is shown, it could mark another Goal object as
 Open, which might be desirable if the hint refers to another topic that
-the player might not yet have encountered).
+the player might not yet have encountered).</p>
 
-`class `**`Hint`**` :   `[`MenuTopicSubItem`](../object/MenuTopicSubItem.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Hint</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MenuTopicSubItem.html"><code class="language-plaintext highlighter-rouge">MenuTopicSubItem</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Hint</code></strong><br />
 <a href="../object/MenuTopicSubItem.html"><code class="language-plaintext highlighter-rouge">MenuTopicSubItem</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#hintText"><code class="language-plaintext highlighter-rouge">hintText</code></a><a href="#referencedGoals"><code class="language-plaintext highlighter-rouge">referencedGoals</code></a></p>
+<p><a href="#hintText"><code class="language-plaintext highlighter-rouge">hintText</code></a> <a href="#referencedGoals"><code class="language-plaintext highlighter-rouge">referencedGoals</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#getItemText"><code class="language-plaintext highlighter-rouge">getItemText</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="hintText"></span></p>
 
@@ -122,11 +94,7 @@ the player might not yet have encountered).
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#364">364</a>]</p>
 
-<div class="desc">
-
-the hint text
-
-</div>
+<p>the hint text</p>
 
 <p><span id="referencedGoals"></span></p>
 
@@ -134,30 +102,22 @@ the hint text
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#381">381</a>]</p>
 
-<div class="desc">
+<p>A list of other Goal objects that this hint references. By default, when
+we show this hint for the first time, we’ll promote each goal in this
+list from Undiscovered to Open.</p>
 
-A list of other Goal objects that this hint references. By default, when
-we show this hint for the first time, we'll promote each goal in this
-list from Undiscovered to Open.
-
-Sometimes, it's necessary to solve one puzzle before another can be
+<p>Sometimes, it’s necessary to solve one puzzle before another can be
 solved. In these cases, some hints for the first puzzle (which depends
 on the second), especially the later, more specific hints, might need to
 refer to the other puzzle. This would make the player aware of the other
-puzzle even if they weren't already. In such cases, it's a good idea to
+puzzle even if they weren’t already. In such cases, it’s a good idea to
 make sure that we make hints for the other puzzle available immediately,
 since otherwise the player might be confused by the absence of hints
-about it.
-
-</div>
+about it.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getItemText"></span></p>
 
@@ -165,21 +125,14 @@ about it.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#389">389</a>]</p>
 
-<div class="desc">
-
-Get my hint text. By default, we mark as Open any goals listed in our
+<p>Get my hint text. By default, we mark as Open any goals listed in our
 referencedGoals list, then return our hintText string. Individual Hint
 objects can override this as desired to apply any additional side
-effects.
+effects.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

@@ -47,7 +47,7 @@ The main adv3Lite library ID.
 
 
 
-[`byline`](#byline)[`htmlByline`](#htmlByline)[`listingOrder`](#listingOrder)[`listingOrder`](#listingOrder)[`name`](#name)[`version`](#version)
+[`byline`](#byline) [`htmlByline`](#htmlByline) [`listingOrder`](#listingOrder) [`listingOrder`](#listingOrder) [`name`](#name) [`version`](#version)
 
 
 
@@ -62,7 +62,7 @@ The main adv3Lite library ID.
 [`showVersion`](#showVersion)
 
 Inherited from `ModuleID` :  
-[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showCredit`](../object/ModuleID.html#showCredit)[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
+[`getModuleList`](../object/ModuleID.html#getModuleList) [`showAbout`](../object/ModuleID.html#showAbout) [`showCredit`](../object/ModuleID.html#showCredit) [`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
 
 <span id="_Properties_"></span>
 

@@ -75,7 +75,7 @@ short of the target).
 
 
 Inherited from `DropTypeThrow` :  
-[`path_`](../object/DropTypeThrow.html#path_)[`target_`](../object/DropTypeThrow.html#target_)
+[`path_`](../object/DropTypeThrow.html#path_) [`target_`](../object/DropTypeThrow.html#target_)
 
 
 
@@ -87,7 +87,7 @@ Inherited from `DropTypeThrow` :
 
 
 
-[`construct`](#construct)[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
+[`construct`](#construct) [`getReportPrefix`](#getReportPrefix) [`standardReport`](#standardReport)
 
 
 

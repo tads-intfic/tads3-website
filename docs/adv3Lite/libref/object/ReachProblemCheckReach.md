@@ -84,7 +84,7 @@ Inherited from `ReachProblem` :
 
 
 
-[`check`](#check)[`construct`](#construct)
+[`check`](#check) [`construct`](#construct)
 
 Inherited from `ReachProblem` :  
 [`verify`](../object/ReachProblem.html#verify)

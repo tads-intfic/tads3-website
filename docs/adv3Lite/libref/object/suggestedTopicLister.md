@@ -47,7 +47,7 @@ provided in the lst parameter.
 
 
 
-[`askForList`](#askForList)[`askForPrefix`](#askForPrefix)[`askList`](#askList)[`askPrefix`](#askPrefix)[`commandList`](#commandList)[`giveList`](#giveList)[`givePrefix`](#givePrefix)[`hyperlinkSuggestions`](#hyperlinkSuggestions)[`noList`](#noList)[`orListSep`](#orListSep)[`queryList`](#queryList)[`queryPrefix`](#queryPrefix)[`sayList`](#sayList)[`sayPrefix`](#sayPrefix)[`showPrefix`](#showPrefix)[`showToList`](#showToList)[`talkList`](#talkList)[`talkPrefix`](#talkPrefix)[`tellList`](#tellList)[`tellPrefix`](#tellPrefix)[`tellToPrefix`](#tellToPrefix)[`typeInfo`](#typeInfo)[`yesList`](#yesList)
+[`askForList`](#askForList) [`askForPrefix`](#askForPrefix) [`askList`](#askList) [`askPrefix`](#askPrefix) [`commandList`](#commandList) [`giveList`](#giveList) [`givePrefix`](#givePrefix) [`hyperlinkSuggestions`](#hyperlinkSuggestions) [`noList`](#noList) [`orListSep`](#orListSep) [`queryList`](#queryList) [`queryPrefix`](#queryPrefix) [`sayList`](#sayList) [`sayPrefix`](#sayPrefix) [`showPrefix`](#showPrefix) [`showToList`](#showToList) [`talkList`](#talkList) [`talkPrefix`](#talkPrefix) [`tellList`](#tellList) [`tellPrefix`](#tellPrefix) [`tellToPrefix`](#tellToPrefix) [`typeInfo`](#typeInfo) [`yesList`](#yesList)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ provided in the lst parameter.
 
 
 
-[`includes`](#includes)[`show`](#show)[`showList`](#showList)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)[`showSection`](#showSection)
+[`includes`](#includes) [`show`](#show) [`showList`](#showList) [`showListEmpty`](#showListEmpty) [`showListPrefix`](#showListPrefix) [`showListSuffix`](#showListSuffix) [`showSection`](#showSection)
 
 <span id="_Properties_"></span>
 

@@ -69,10 +69,10 @@ a pending command based on a pre-resolved Action and its objects
 
 
 
-[`action_`](#action_)[`objs_`](#objs_)
+[`action_`](#action_) [`objs_`](#objs_)
 
 Inherited from `PendingCommandInfo` :  
-[`hasCommand`](../object/PendingCommandInfo.html#hasCommand)[`issuer_`](../object/PendingCommandInfo.html#issuer_)[`startOfSentence_`](../object/PendingCommandInfo.html#startOfSentence_)
+[`hasCommand`](../object/PendingCommandInfo.html#hasCommand) [`issuer_`](../object/PendingCommandInfo.html#issuer_) [`startOfSentence_`](../object/PendingCommandInfo.html#startOfSentence_)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ Inherited from `PendingCommandInfo` :
 
 
 
-[`construct`](#construct)[`executePending`](#executePending)
+[`construct`](#construct) [`executePending`](#executePending)
 
 
 

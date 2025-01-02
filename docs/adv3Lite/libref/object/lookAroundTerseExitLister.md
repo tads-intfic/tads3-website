@@ -51,7 +51,7 @@ Details](#_Methods_)
 
 
 Inherited from `ExitLister` :  
-[`exitsPrefix`](../object/ExitLister1.html#exitsPrefix)[`listerShowsDest`](../object/ExitLister1.html#listerShowsDest)
+[`exitsPrefix`](../object/ExitLister1.html#exitsPrefix) [`listerShowsDest`](../object/ExitLister1.html#listerShowsDest)
 
 
 
@@ -63,13 +63,13 @@ Inherited from `ExitLister` :
 
 
 
-[`showListEmpty`](#showListEmpty)[`showListItem`](#showListItem)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSuffixWide`](#showListSuffixWide)
+[`showListEmpty`](#showListEmpty) [`showListItem`](#showListItem) [`showListPrefixWide`](#showListPrefixWide) [`showListSeparator`](#showListSeparator) [`showListSuffixWide`](#showListSuffixWide)
 
 Inherited from `ExitLister` :  
 [`showListAll`](../object/ExitLister1.html#showListAll)
 
 Inherited from `Lister` :  
-[`buildList`](../object/Lister.html#buildList)[`listed`](../object/Lister.html#listed)[`listOrder`](../object/Lister.html#listOrder)[`show`](../object/Lister.html#show)[`showList`](../object/Lister.html#showList)[`showListPrefix`](../object/Lister.html#showListPrefix)[`showListSuffix`](../object/Lister.html#showListSuffix)
+[`buildList`](../object/Lister.html#buildList) [`listed`](../object/Lister.html#listed) [`listOrder`](../object/Lister.html#listOrder) [`show`](../object/Lister.html#show) [`showList`](../object/Lister.html#showList) [`showListPrefix`](../object/Lister.html#showListPrefix) [`showListSuffix`](../object/Lister.html#showListSuffix)
 
 <span id="_Properties_"></span>
 

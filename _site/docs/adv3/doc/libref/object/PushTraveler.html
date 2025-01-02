@@ -47,76 +47,48 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A special Traveler class for travel involving pushing an object from one
+<p>A special Traveler class for travel involving pushing an object from one
 room to another. This class encapsulates the object being pushed and the
-actual Traveler performing the travel.
+actual Traveler performing the travel.</p>
 
-For the most part, we refer Traveler methods to the underlying Traveler.
-We override a few methods to provide special handling.
+<p>For the most part, we refer Traveler methods to the underlying Traveler.
+We override a few methods to provide special handling.</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[2842](../source/en_us.t.html#2842)\]:*  
-English-specific PushTraveler changes
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2842">2842</a>]:</em><br />
+English-specific PushTraveler changes</p>
 
-`class `**`PushTraveler`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PushTraveler</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">PushTraveler</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a><a href="#traveler_"><code class="language-plaintext highlighter-rouge">traveler_</code></a></p>
+<p><a href="#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a> <a href="#traveler_"><code class="language-plaintext highlighter-rouge">traveler_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#canTravelVia"><code class="language-plaintext highlighter-rouge">canTravelVia</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#explainNoTravelVia"><code class="language-plaintext highlighter-rouge">explainNoTravelVia</code></a><a href="#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a><a href="#travelerName"><code class="language-plaintext highlighter-rouge">travelerName</code></a><a href="#travelerTravelTo"><code class="language-plaintext highlighter-rouge">travelerTravelTo</code></a><a href="#travelerTravelWithin"><code class="language-plaintext highlighter-rouge">travelerTravelWithin</code></a></p>
+<p><a href="#canTravelVia"><code class="language-plaintext highlighter-rouge">canTravelVia</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#explainNoTravelVia"><code class="language-plaintext highlighter-rouge">explainNoTravelVia</code></a> <a href="#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a> <a href="#travelerName"><code class="language-plaintext highlighter-rouge">travelerName</code></a> <a href="#travelerTravelTo"><code class="language-plaintext highlighter-rouge">travelerTravelTo</code></a> <a href="#travelerTravelWithin"><code class="language-plaintext highlighter-rouge">travelerTravelWithin</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="obj_"></span></p>
 
@@ -124,11 +96,7 @@ English-specific PushTraveler changes
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3323">3323</a>]</p>
 
-<div class="desc">
-
-the object being pushed
-
-</div>
+<p>the object being pushed</p>
 
 <p><span id="traveler_"></span></p>
 
@@ -136,20 +104,12 @@ the object being pushed
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3329">3329</a>]</p>
 
-<div class="desc">
-
-the underlying Traveler - this is the real Traveler that will move to a
-new location
-
-</div>
+<p>the underlying Traveler - this is the real Traveler that will move to a
+new location</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="canTravelVia"></span></p>
 
@@ -157,12 +117,8 @@ new location
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3400">3400</a>]</p>
 
-<div class="desc">
-
-Can we travel via the given connector? We'll ask our underlying traveler
-first, and if that succeeds, we'll ask the object we're pushing.
-
-</div>
+<p>Can we travel via the given connector? We’ll ask our underlying traveler
+first, and if that succeeds, we’ll ask the object we’re pushing.</p>
 
 <p><span id="construct"></span></p>
 
@@ -170,11 +126,7 @@ first, and if that succeeds, we'll ask the object we're pushing.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3315">3315</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="explainNoTravelVia"></span></p>
 
@@ -182,13 +134,9 @@ first, and if that succeeds, we'll ask the object we're pushing.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3412">3412</a>]</p>
 
-<div class="desc">
-
-Explain why the given travel is not possible. If our underlying traveler
+<p>Explain why the given travel is not possible. If our underlying traveler
 raised the objection, let it explain; otherwise, let our pushed object
-explain.
-
-</div>
+explain.</p>
 
 <p><span id="propNotDefined"></span></p>
 
@@ -196,11 +144,7 @@ explain.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3421">3421</a>]</p>
 
-<div class="desc">
-
-by default, send everything to the underlying Traveler
-
-</div>
+<p>by default, send everything to the underlying Traveler</p>
 
 <p><span id="travelerName"></span></p>
 
@@ -208,13 +152,9 @@ by default, send everything to the underlying Traveler
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2848">2848</a>]</p>
 
-<div class="desc">
-
-When an actor is pushing an object from one room to another, show its
+<p>When an actor is pushing an object from one room to another, show its
 name with an additional clause indicating the object being moved along
-with us.
-
-</div>
+with us.</p>
 
 <p><span id="travelerTravelTo"></span></p>
 
@@ -222,13 +162,9 @@ with us.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3337">3337</a>]</p>
 
-<div class="desc">
-
-Travel to a new location. We'll run the normal travel routine for the
-underlying real traveler; then, if we ended up in a new location, we'll
-move the object being pushed to the traveler's new location.
-
-</div>
+<p>Travel to a new location. We’ll run the normal travel routine for the
+underlying real traveler; then, if we ended up in a new location, we’ll
+move the object being pushed to the traveler’s new location.</p>
 
 <p><span id="travelerTravelWithin"></span></p>
 
@@ -236,29 +172,22 @@ move the object being pushed to the traveler's new location.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3389">3389</a>]</p>
 
-<div class="desc">
+<p>Perform local travel, between nested rooms within a top-level location.
+By default, we simply don’t allow pushing objects between nested rooms.</p>
 
-Perform local travel, between nested rooms within a top-level location.
-By default, we simply don't allow pushing objects between nested rooms.
-
-To allow pushing an object between nested rooms, override this in
-parallel with travelerTravelTo(). Note that you'll have to call
+<p>To allow pushing an object between nested rooms, override this in
+parallel with travelerTravelTo(). Note that you’ll have to call
 travelerTravelWithin() on the underlying traveler (which will generally
-be the actor), and you'll probably want to set up a new set of notifiers
-parallel to beforeMovePushable() and movePushable(). You'll probably
+be the actor), and you’ll probably want to set up a new set of notifiers
+parallel to beforeMovePushable() and movePushable(). You’ll probably
 particularly need to customize the report in your parallel for
-movePushable() - the default ("you push x into the area") isn't very
-good when nested rooms are involved, and you'll probably want something
-more specific.
+movePushable() - the default (“you push x into the area”) isn’t very
+good when nested rooms are involved, and you’ll probably want something
+more specific.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

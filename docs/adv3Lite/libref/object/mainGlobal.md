@@ -46,7 +46,7 @@ global data object for this module
 
 
 
-[`mainRestoreFunc`](#mainRestoreFunc)[`preinited_`](#preinited_)[`reflectionObj`](#reflectionObj)[`restartID`](#restartID)
+[`mainRestoreFunc`](#mainRestoreFunc) [`preinited_`](#preinited_) [`reflectionObj`](#reflectionObj) [`restartID`](#restartID)
 
 <span id="_MethodSummary_"></span>
 

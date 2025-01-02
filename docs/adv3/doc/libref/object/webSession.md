@@ -47,7 +47,7 @@ associated with the game session.
 
 
 
-[`clientSessions`](#clientSessions)[`collabKey`](#collabKey)[`everHadClient`](#everHadClient)[`hkTime`](#hkTime)[`lastClientTime`](#lastClientTime)[`launcherGameID`](#launcherGameID)[`launcherUsername`](#launcherUsername)[`server`](#server)[`sessionKey`](#sessionKey)[`storageSID`](#storageSID)
+[`clientSessions`](#clientSessions) [`collabKey`](#collabKey) [`everHadClient`](#everHadClient) [`hkTime`](#hkTime) [`lastClientTime`](#lastClientTime) [`launcherGameID`](#launcherGameID) [`launcherUsername`](#launcherUsername) [`server`](#server) [`sessionKey`](#sessionKey) [`storageSID`](#storageSID)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ associated with the game session.
 
 
 
-[`addClient`](#addClient)[`connectUI`](#connectUI)[`getCollabUrl`](#getCollabUrl)[`getFullUrl`](#getFullUrl)[`housekeeping`](#housekeeping)[`removeClient`](#removeClient)[`validateKey`](#validateKey)
+[`addClient`](#addClient) [`connectUI`](#connectUI) [`getCollabUrl`](#getCollabUrl) [`getFullUrl`](#getFullUrl) [`housekeeping`](#housekeeping) [`removeClient`](#removeClient) [`validateKey`](#validateKey)
 
 <span id="_Properties_"></span>
 

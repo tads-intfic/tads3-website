@@ -112,7 +112,7 @@ disambiguation question.
 
 
 
-[`addAmbigResponse`](#addAmbigResponse)[`getAmbigResponses`](#getAmbigResponses)
+[`addAmbigResponse`](#addAmbigResponse) [`getAmbigResponses`](#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

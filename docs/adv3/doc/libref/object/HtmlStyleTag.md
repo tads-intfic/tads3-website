@@ -64,7 +64,7 @@ HTML mode, we display our plainOpenText and plainCloseText.
 
 
 
-[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)[`inputlineStyleTag`](../object/inputlineStyleTag.html)[`statusroomStyleTag`](../object/statusroomStyleTag.html)[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)
+[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html) [`inputlineStyleTag`](../object/inputlineStyleTag.html) [`statusroomStyleTag`](../object/statusroomStyleTag.html) [`statusscoreStyleTag`](../object/statusscoreStyleTag.html)
 <span id="_PropSummary_"></span>
 
 
@@ -73,7 +73,7 @@ HTML mode, we display our plainOpenText and plainCloseText.
 
 
 
-[`closeText`](#closeText)[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)[`openText`](#openText)[`plainCloseText`](#plainCloseText)[`plainOpenText`](#plainOpenText)
+[`closeText`](#closeText) [`htmlCloseText`](#htmlCloseText) [`htmlOpenText`](#htmlOpenText) [`openText`](#openText) [`plainCloseText`](#plainCloseText) [`plainOpenText`](#plainOpenText)
 
 Inherited from `StyleTag` :  
 [`tagName`](../object/StyleTag.html#tagName)

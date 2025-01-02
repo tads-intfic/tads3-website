@@ -60,7 +60,7 @@ directions are valid.
 
 
 
-[`exitLister`](../object/exitLister.html)[`ExitLister`](../object/ExitLister1.html)[`exitsMode`](../object/exitsMode1.html)[`explicitExitLister`](../object/explicitExitLister.html)[`lookAroundExitLister`](../object/lookAroundExitLister.html)[`lookAroundTerseExitLister`](../object/lookAroundTerseExitLister.html)[`statuslineExitLister`](../object/statuslineExitLister.html)
+[`exitLister`](../object/exitLister.html) [`ExitLister`](../object/ExitLister1.html) [`exitsMode`](../object/exitsMode1.html) [`explicitExitLister`](../object/explicitExitLister.html) [`lookAroundExitLister`](../object/lookAroundExitLister.html) [`lookAroundTerseExitLister`](../object/lookAroundTerseExitLister.html) [`statuslineExitLister`](../object/statuslineExitLister.html)
 <span id="FunctionSummary_"></span>
 
 

@@ -84,7 +84,7 @@ the topic group's container.
 
 
 
-[`isActive`](#isActive)[`matchScoreAdjustment`](#matchScoreAdjustment)[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)
+[`isActive`](#isActive) [`matchScoreAdjustment`](#matchScoreAdjustment) [`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,7 +94,7 @@ the topic group's container.
 
 
 
-[`addSuggestedTopic`](#addSuggestedTopic)[`addTopic`](#addTopic)[`getTopicOwner`](#getTopicOwner)[`topicGroupActive`](#topicGroupActive)
+[`addSuggestedTopic`](#addSuggestedTopic) [`addTopic`](#addTopic) [`getTopicOwner`](#getTopicOwner) [`topicGroupActive`](#topicGroupActive)
 
 <span id="_Properties_"></span>
 

@@ -40,41 +40,33 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>The standard “main window” of our user interface. This is the game
+object that represents the default initial HTML page that the player’s
+web browser connects to. We build this out of three base classes:</p>
 
-The standard "main window" of our user interface. This is the game
-object that represents the default initial HTML page that the player's
-web browser connects to. We build this out of three base classes:
-
-\- WebResourceInit, because this is the starting page that the browser
+<p>- WebResourceInit, because this is the starting page that the browser
 initially connects to. This class does the initial handshaking to set up
-the session.
+the session.</p>
 
-\- WebResourceResFile, because we store the HTML for the page in a
-resource file. This class does the work of sending the resource file's
-contents to the browser.
+<p>- WebResourceResFile, because we store the HTML for the page in a
+resource file. This class does the work of sending the resource file’s
+contents to the browser.</p>
 
-\- WebLayoutWindow, because the default main page is also a layout
+<p>- WebLayoutWindow, because the default main page is also a layout
 window, which is basically a container for IFRAME elements where we plug
-in the sub-windows that make up the game's user interface.
+in the sub-windows that make up the game’s user interface.</p>
 
-Games can customize the front page in any way they like. If you want to
+<p>Games can customize the front page in any way they like. If you want to
 customize the HTML of the main page, you can substitute a different HTML
 (.html) file, and change the processName() method to return the name of
 that file. If you want to use something other than a layout window as
-the front page, you can simply replace this whole class.
+the front page, you can simply replace this whole class.</p>
 
-`transient `**`webMainWin`**` :   `[`WebResourceInit`](../object/WebResourceInit.html)[`WebLayoutWindow`](../object/WebLayoutWindow.html)[`WebResourceResFile`](../object/WebResourceResFile.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">webMainWin</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/WebResourceInit.html"><code class="language-plaintext highlighter-rouge">WebResourceInit</code></a> <a href="../object/WebLayoutWindow.html"><code class="language-plaintext highlighter-rouge">WebLayoutWindow</code></a> <a href="../object/WebResourceResFile.html"><code class="language-plaintext highlighter-rouge">WebResourceResFile</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">webMainWin</code></strong><br />
 <a href="../object/WebResourceInit.html"><code class="language-plaintext highlighter-rouge">WebResourceInit</code></a><br />
@@ -89,61 +81,49 @@ the front page, you can simply replace this whole class.
 </code>                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#curCmdClient"><code class="language-plaintext highlighter-rouge">curCmdClient</code></a><a href="#fileDialogResult"><code class="language-plaintext highlighter-rouge">fileDialogResult</code></a><a href="#fileDialogState"><code class="language-plaintext highlighter-rouge">fileDialogState</code></a><a href="#inputDialogResult"><code class="language-plaintext highlighter-rouge">inputDialogResult</code></a><a href="#inputDialogState"><code class="language-plaintext highlighter-rouge">inputDialogState</code></a><a href="#inputEventResult"><code class="language-plaintext highlighter-rouge">inputEventResult</code></a><a href="#inputEventState"><code class="language-plaintext highlighter-rouge">inputEventState</code></a><a href="#menuSysState"><code class="language-plaintext highlighter-rouge">menuSysState</code></a><a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a><a href="#pathName"><code class="language-plaintext highlighter-rouge">pathName</code></a><a href="#synthEventQueue"><code class="language-plaintext highlighter-rouge">synthEventQueue</code></a><a href="#title"><code class="language-plaintext highlighter-rouge">title</code></a><a href="#vpath"><code class="language-plaintext highlighter-rouge">vpath</code></a></p>
+<p><a href="#curCmdClient"><code class="language-plaintext highlighter-rouge">curCmdClient</code></a> <a href="#fileDialogResult"><code class="language-plaintext highlighter-rouge">fileDialogResult</code></a> <a href="#fileDialogState"><code class="language-plaintext highlighter-rouge">fileDialogState</code></a> <a href="#inputDialogResult"><code class="language-plaintext highlighter-rouge">inputDialogResult</code></a> <a href="#inputDialogState"><code class="language-plaintext highlighter-rouge">inputDialogState</code></a> <a href="#inputEventResult"><code class="language-plaintext highlighter-rouge">inputEventResult</code></a> <a href="#inputEventState"><code class="language-plaintext highlighter-rouge">inputEventState</code></a> <a href="#menuSysState"><code class="language-plaintext highlighter-rouge">menuSysState</code></a> <a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="#pathName"><code class="language-plaintext highlighter-rouge">pathName</code></a> <a href="#synthEventQueue"><code class="language-plaintext highlighter-rouge">synthEventQueue</code></a> <a href="#title"><code class="language-plaintext highlighter-rouge">title</code></a> <a href="#vpath"><code class="language-plaintext highlighter-rouge">vpath</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceInit</code> :<br />
 <a href="../object/WebResourceInit.html#server"><code class="language-plaintext highlighter-rouge">server</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebLayoutWindow</code> :<br />
-<a href="../object/WebLayoutWindow.html#frames"><code class="language-plaintext highlighter-rouge">frames</code></a><a href="../object/WebLayoutWindow.html#src"><code class="language-plaintext highlighter-rouge">src</code></a></p>
+<a href="../object/WebLayoutWindow.html#frames"><code class="language-plaintext highlighter-rouge">frames</code></a> <a href="../object/WebLayoutWindow.html#src"><code class="language-plaintext highlighter-rouge">src</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebWindow</code> :<br />
 <a href="../object/WebWindow.html#sthCtx"><code class="language-plaintext highlighter-rouge">sthCtx</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceResFile</code> :<br />
-<a href="../object/WebResourceResFile.html#binaryExts"><code class="language-plaintext highlighter-rouge">binaryExts</code></a><a href="../object/WebResourceResFile.html#browserExtToMime"><code class="language-plaintext highlighter-rouge">browserExtToMime</code></a></p>
+<a href="../object/WebResourceResFile.html#binaryExts"><code class="language-plaintext highlighter-rouge">binaryExts</code></a> <a href="../object/WebResourceResFile.html#browserExtToMime"><code class="language-plaintext highlighter-rouge">browserExtToMime</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
-<a href="../object/WebResource.html#group"><code class="language-plaintext highlighter-rouge">group</code></a><a href="../object/WebResource.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+<a href="../object/WebResource.html#group"><code class="language-plaintext highlighter-rouge">group</code></a> <a href="../object/WebResource.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#getInputDialog"><code class="language-plaintext highlighter-rouge">getInputDialog</code></a><a href="#getInputEvent"><code class="language-plaintext highlighter-rouge">getInputEvent</code></a><a href="#getInputFile"><code class="language-plaintext highlighter-rouge">getInputFile</code></a><a href="#getInputFileFromClient"><code class="language-plaintext highlighter-rouge">getInputFileFromClient</code></a><a href="#getState"><code class="language-plaintext highlighter-rouge">getState</code></a><a href="#getSyntheticEvent"><code class="language-plaintext highlighter-rouge">getSyntheticEvent</code></a><a href="#inputFileDismissed"><code class="language-plaintext highlighter-rouge">inputFileDismissed</code></a><a href="#offerDownload"><code class="language-plaintext highlighter-rouge">offerDownload</code></a><a href="#postSyntheticEvent"><code class="language-plaintext highlighter-rouge">postSyntheticEvent</code></a><a href="#processName"><code class="language-plaintext highlighter-rouge">processName</code></a><a href="#receiveFileSelection"><code class="language-plaintext highlighter-rouge">receiveFileSelection</code></a><a href="#receiveFileUpload"><code class="language-plaintext highlighter-rouge">receiveFileUpload</code></a><a href="#receiveInputDialog"><code class="language-plaintext highlighter-rouge">receiveInputDialog</code></a><a href="#receiveInputEvent"><code class="language-plaintext highlighter-rouge">receiveInputEvent</code></a><a href="#setTitle"><code class="language-plaintext highlighter-rouge">setTitle</code></a><a href="#syntheticEventReady"><code class="language-plaintext highlighter-rouge">syntheticEventReady</code></a></p>
+<p><a href="#getInputDialog"><code class="language-plaintext highlighter-rouge">getInputDialog</code></a> <a href="#getInputEvent"><code class="language-plaintext highlighter-rouge">getInputEvent</code></a> <a href="#getInputFile"><code class="language-plaintext highlighter-rouge">getInputFile</code></a> <a href="#getInputFileFromClient"><code class="language-plaintext highlighter-rouge">getInputFileFromClient</code></a> <a href="#getState"><code class="language-plaintext highlighter-rouge">getState</code></a> <a href="#getSyntheticEvent"><code class="language-plaintext highlighter-rouge">getSyntheticEvent</code></a> <a href="#inputFileDismissed"><code class="language-plaintext highlighter-rouge">inputFileDismissed</code></a> <a href="#offerDownload"><code class="language-plaintext highlighter-rouge">offerDownload</code></a> <a href="#postSyntheticEvent"><code class="language-plaintext highlighter-rouge">postSyntheticEvent</code></a> <a href="#processName"><code class="language-plaintext highlighter-rouge">processName</code></a> <a href="#receiveFileSelection"><code class="language-plaintext highlighter-rouge">receiveFileSelection</code></a> <a href="#receiveFileUpload"><code class="language-plaintext highlighter-rouge">receiveFileUpload</code></a> <a href="#receiveInputDialog"><code class="language-plaintext highlighter-rouge">receiveInputDialog</code></a> <a href="#receiveInputEvent"><code class="language-plaintext highlighter-rouge">receiveInputEvent</code></a> <a href="#setTitle"><code class="language-plaintext highlighter-rouge">setTitle</code></a> <a href="#syntheticEventReady"><code class="language-plaintext highlighter-rouge">syntheticEventReady</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceInit</code> :<br />
-<a href="../object/WebResourceInit.html#connectUI"><code class="language-plaintext highlighter-rouge">connectUI</code></a><a href="../object/WebResourceInit.html#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a></p>
+<a href="../object/WebResourceInit.html#connectUI"><code class="language-plaintext highlighter-rouge">connectUI</code></a> <a href="../object/WebResourceInit.html#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebLayoutWindow</code> :<br />
-<a href="../object/WebLayoutWindow.html#createFrame"><code class="language-plaintext highlighter-rouge">createFrame</code></a><a href="../object/WebLayoutWindow.html#flushWin"><code class="language-plaintext highlighter-rouge">flushWin</code></a><a href="../object/WebLayoutWindow.html#winFromPath"><code class="language-plaintext highlighter-rouge">winFromPath</code></a></p>
+<a href="../object/WebLayoutWindow.html#createFrame"><code class="language-plaintext highlighter-rouge">createFrame</code></a> <a href="../object/WebLayoutWindow.html#flushWin"><code class="language-plaintext highlighter-rouge">flushWin</code></a> <a href="../object/WebLayoutWindow.html#winFromPath"><code class="language-plaintext highlighter-rouge">winFromPath</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebWindow</code> :<br />
-<a href="../object/WebWindow.html#clearWindow"><code class="language-plaintext highlighter-rouge">clearWindow</code></a><a href="../object/WebWindow.html#sendWinEvent"><code class="language-plaintext highlighter-rouge">sendWinEvent</code></a><a href="../object/WebWindow.html#sendWinEventTo"><code class="language-plaintext highlighter-rouge">sendWinEventTo</code></a><a href="../object/WebWindow.html#write"><code class="language-plaintext highlighter-rouge">write</code></a></p>
+<a href="../object/WebWindow.html#clearWindow"><code class="language-plaintext highlighter-rouge">clearWindow</code></a> <a href="../object/WebWindow.html#sendWinEvent"><code class="language-plaintext highlighter-rouge">sendWinEvent</code></a> <a href="../object/WebWindow.html#sendWinEventTo"><code class="language-plaintext highlighter-rouge">sendWinEventTo</code></a> <a href="../object/WebWindow.html#write"><code class="language-plaintext highlighter-rouge">write</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceResFile</code> :<br />
-<a href="../object/WebResourceResFile.html#isTextFile"><code class="language-plaintext highlighter-rouge">isTextFile</code></a><a href="../object/WebResourceResFile.html#matchRequest"><code class="language-plaintext highlighter-rouge">matchRequest</code></a></p>
+<a href="../object/WebResourceResFile.html#isTextFile"><code class="language-plaintext highlighter-rouge">isTextFile</code></a> <a href="../object/WebResourceResFile.html#matchRequest"><code class="language-plaintext highlighter-rouge">matchRequest</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
-<a href="../object/WebResource.html#sendAck"><code class="language-plaintext highlighter-rouge">sendAck</code></a><a href="../object/WebResource.html#sendXML"><code class="language-plaintext highlighter-rouge">sendXML</code></a></p>
+<a href="../object/WebResource.html#sendAck"><code class="language-plaintext highlighter-rouge">sendAck</code></a> <a href="../object/WebResource.html#sendXML"><code class="language-plaintext highlighter-rouge">sendXML</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="curCmdClient"></span></p>
 
@@ -151,13 +131,9 @@ the front page, you can simply replace this whole class.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2744">2744</a>]</p>
 
-<div class="desc">
-
-Client session for current command line input. Certain modal
+<p>Client session for current command line input. Certain modal
 interactions, such as file dialogs, are directed only to the client that
-initiated the current command.
-
-</div>
+initiated the current command.</p>
 
 <p><span id="fileDialogResult"></span></p>
 
@@ -165,12 +141,8 @@ initiated the current command.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3202">3202</a>]</p>
 
-<div class="desc">
-
-file dialog result - this is a result list using the same format as the
-native inputFile() function
-
-</div>
+<p>file dialog result - this is a result list using the same format as the
+native inputFile() function</p>
 
 <p><span id="fileDialogState"></span></p>
 
@@ -178,12 +150,8 @@ native inputFile() function
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3196">3196</a>]</p>
 
-<div class="desc">
-
-file dialog state - this is the XML describing the currently open file
-dialog; if the dialog isn't open, this is an empty string
-
-</div>
+<p>file dialog state - this is the XML describing the currently open file
+dialog; if the dialog isn’t open, this is an empty string</p>
 
 <p><span id="inputDialogResult"></span></p>
 
@@ -191,11 +159,7 @@ dialog; if the dialog isn't open, this is an empty string
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3211">3211</a>]</p>
 
-<div class="desc">
-
-input dialog result - this is the button number the user selected
-
-</div>
+<p>input dialog result - this is the button number the user selected</p>
 
 <p><span id="inputDialogState"></span></p>
 
@@ -203,12 +167,8 @@ input dialog result - this is the button number the user selected
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3208">3208</a>]</p>
 
-<div class="desc">
-
-input dialog state - this is the XML describing an input dialog while a
-dialog is running, or an empty string if not
-
-</div>
+<p>input dialog state - this is the XML describing an input dialog while a
+dialog is running, or an empty string if not</p>
 
 <p><span id="inputEventResult"></span></p>
 
@@ -216,11 +176,7 @@ dialog is running, or an empty string if not
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3217">3217</a>]</p>
 
-<div class="desc">
-
-input event result
-
-</div>
+<p>input event result</p>
 
 <p><span id="inputEventState"></span></p>
 
@@ -228,11 +184,7 @@ input event result
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3214">3214</a>]</p>
 
-<div class="desc">
-
-input event state
-
-</div>
+<p>input event state</p>
 
 <p><span id="menuSysState"></span></p>
 
@@ -240,11 +192,7 @@ input event state
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3220">3220</a>]</p>
 
-<div class="desc">
-
-menuSys state - menu system state (maintained by the menu module)
-
-</div>
+<p>menuSys state - menu system state (maintained by the menu module)</p>
 
 <p><span id="name"></span></p>
 
@@ -252,11 +200,7 @@ menuSys state - menu system state (maintained by the menu module)
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2723">2723</a>]</p>
 
-<div class="desc">
-
-the top window is always called "main"
-
-</div>
+<p>the top window is always called “main”</p>
 
 <p><span id="pathName"></span></p>
 
@@ -264,11 +208,7 @@ the top window is always called "main"
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2724">2724</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="synthEventQueue"></span></p>
 
@@ -276,14 +216,10 @@ the top window is always called "main"
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3229">3229</a>]</p>
 
-<div class="desc">
-
-Synthetic event queue. This is a vector of synthetic events, set up in
-the \[type, params...\] format that the system inputEvent() function and
-related functions use. The 'type' code for a synthetic evente is a
-string instead of the numeric identifier that the system functions use.
-
-</div>
+<p>Synthetic event queue. This is a vector of synthetic events, set up in
+the [type, params…] format that the system inputEvent() function and
+related functions use. The ‘type’ code for a synthetic evente is a
+string instead of the numeric identifier that the system functions use.</p>
 
 <p><span id="title"></span></p>
 
@@ -291,11 +227,7 @@ string instead of the numeric identifier that the system functions use.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2727">2727</a>]</p>
 
-<div class="desc">
-
-the window title
-
-</div>
+<p>the window title</p>
 
 <p><span id="vpath"></span></p>
 
@@ -303,20 +235,12 @@ the window title
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2719">2719</a>]</p>
 
-<div class="desc">
-
-match the webuires directory path as the URL path, but map this to
-main.html as the underlying resource name
-
-</div>
+<p>match the webuires directory path as the URL path, but map this to
+main.html as the underlying resource name</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getInputDialog"></span></p>
 
@@ -324,11 +248,7 @@ main.html as the underlying resource name
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3100">3100</a>]</p>
 
-<div class="desc">
-
-show a generic inputDialog dialog
-
-</div>
+<p>show a generic inputDialog dialog</p>
 
 <p><span id="getInputEvent"></span></p>
 
@@ -336,11 +256,7 @@ show a generic inputDialog dialog
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2779">2779</a>]</p>
 
-<div class="desc">
-
-wait for an input event
-
-</div>
+<p>wait for an input event</p>
 
 <p><span id="getInputFile"></span></p>
 
@@ -348,11 +264,7 @@ wait for an input event
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2835">2835</a>]</p>
 
-<div class="desc">
-
-show the file selector dialog
-
-</div>
+<p>show the file selector dialog</p>
 
 <p><span id="getInputFileFromClient"></span></p>
 
@@ -360,14 +272,10 @@ show the file selector dialog
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2912">2912</a>]</p>
 
-<div class="desc">
-
-Get an input file from the client PC. We'll attempt to upload or
+<p>Get an input file from the client PC. We’ll attempt to upload or
 download a file from/to the client PC, using a local temporary file for
 the actual file operations. This is a special form of the input file
-dialog that we use when we're not connected to a storage server.
-
-</div>
+dialog that we use when we’re not connected to a storage server.</p>
 
 <p><span id="getState"></span></p>
 
@@ -375,11 +283,7 @@ dialog that we use when we're not connected to a storage server.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2747">2747</a>]</p>
 
-<div class="desc">
-
-get the state
-
-</div>
+<p>get the state</p>
 
 <p><span id="getSyntheticEvent"></span></p>
 
@@ -387,11 +291,7 @@ get the state
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3190">3190</a>]</p>
 
-<div class="desc">
-
-pull the next synthetic event from the queue
-
-</div>
+<p>pull the next synthetic event from the queue</p>
 
 <p><span id="inputFileDismissed"></span></p>
 
@@ -399,11 +299,7 @@ pull the next synthetic event from the queue
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3033">3033</a>]</p>
 
-<div class="desc">
-
-receive notification that the file dialog has been closed
-
-</div>
+<p>receive notification that the file dialog has been closed</p>
 
 <p><span id="offerDownload"></span></p>
 
@@ -411,12 +307,8 @@ receive notification that the file dialog has been closed
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2986">2986</a>]</p>
 
-<div class="desc">
-
-Offer a file for download to the client. 'file' is a DownloadTempFile
-object previously created by a call to inputFile().
-
-</div>
+<p>Offer a file for download to the client. ‘file’ is a DownloadTempFile
+object previously created by a call to inputFile().</p>
 
 <p><span id="postSyntheticEvent"></span></p>
 
@@ -424,16 +316,12 @@ object previously created by a call to inputFile().
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3180">3180</a>]</p>
 
-<div class="desc">
-
-Post a synthetic event. A synthetic event looks like a regular UI or
+<p>Post a synthetic event. A synthetic event looks like a regular UI or
 network event, but is generated internally instead of being delivered
-from the underlying browser or network subsystems.
+from the underlying browser or network subsystems.</p>
 
-'id' is a string giving the event type. The remaining parameters are up
-to each event type to define.
-
-</div>
+<p>‘id’ is a string giving the event type. The remaining parameters are up
+to each event type to define.</p>
 
 <p><span id="processName"></span></p>
 
@@ -441,11 +329,7 @@ to each event type to define.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2720">2720</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="receiveFileSelection"></span></p>
 
@@ -453,11 +337,7 @@ to each event type to define.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2999">2999</a>]</p>
 
-<div class="desc">
-
-receive a file selection from the file selector dialog
-
-</div>
+<p>receive a file selection from the file selector dialog</p>
 
 <p><span id="receiveFileUpload"></span></p>
 
@@ -465,11 +345,7 @@ receive a file selection from the file selector dialog
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3040">3040</a>]</p>
 
-<div class="desc">
-
-receive a file upload from the file upload dialog
-
-</div>
+<p>receive a file upload from the file upload dialog</p>
 
 <p><span id="receiveInputDialog"></span></p>
 
@@ -477,11 +353,7 @@ receive a file upload from the file upload dialog
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3159">3159</a>]</p>
 
-<div class="desc">
-
-receive a selection from the input dialog
-
-</div>
+<p>receive a selection from the input dialog</p>
 
 <p><span id="receiveInputEvent"></span></p>
 
@@ -489,11 +361,7 @@ receive a selection from the input dialog
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2813">2813</a>]</p>
 
-<div class="desc">
-
-receive an input event
-
-</div>
+<p>receive an input event</p>
 
 <p><span id="setTitle"></span></p>
 
@@ -501,11 +369,7 @@ receive an input event
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2730">2730</a>]</p>
 
-<div class="desc">
-
-set the window title
-
-</div>
+<p>set the window title</p>
 
 <p><span id="syntheticEventReady"></span></p>
 
@@ -513,18 +377,11 @@ set the window title
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3187">3187</a>]</p>
 
-<div class="desc">
+<p>is a synthetic event ready?</p>
 
-is a synthetic event ready?
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

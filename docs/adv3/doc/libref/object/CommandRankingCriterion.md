@@ -75,7 +75,7 @@ to determine if one tree is slightly better than the other.
 
 
 
-[`rankByAmbiguity`](../object/rankByAmbiguity.html)[`rankByLiteralLength`](../object/rankByLiteralLength.html)[`rankByNonMatchPoss`](../object/rankByNonMatchPoss.html)[`rankBySubcommands`](../object/rankBySubcommands.html)[`rankByTokenCount`](../object/rankByTokenCount.html)[`rankByVerbStructure`](../object/rankByVerbStructure.html)
+[`rankByAmbiguity`](../object/rankByAmbiguity.html) [`rankByLiteralLength`](../object/rankByLiteralLength.html) [`rankByNonMatchPoss`](../object/rankByNonMatchPoss.html) [`rankBySubcommands`](../object/rankBySubcommands.html) [`rankByTokenCount`](../object/rankByTokenCount.html) [`rankByVerbStructure`](../object/rankByVerbStructure.html)
 <span id="_PropSummary_"></span>
 
 
@@ -94,7 +94,7 @@ to determine if one tree is slightly better than the other.
 
 
 
-[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
+[`comparePass1`](#comparePass1) [`comparePass2`](#comparePass2)
 
 <span id="_Properties_"></span>
 

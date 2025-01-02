@@ -50,7 +50,7 @@ Details](#_Methods_)
 
 
 Inherited from `ThingState` :  
-[`listingOrder`](../object/ThingState.html#listingOrder)[`listName_`](../object/ThingState.html#listName_)[`stateTokens`](../object/ThingState.html#stateTokens)
+[`listingOrder`](../object/ThingState.html#listingOrder) [`listName_`](../object/ThingState.html#listName_) [`stateTokens`](../object/ThingState.html#stateTokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,7 +63,7 @@ Inherited from `ThingState` :
 [`wornName`](#wornName)
 
 Inherited from `ThingState` :  
-[`findStateToken`](../object/ThingState.html#findStateToken)[`inventoryName`](../object/ThingState.html#inventoryName)[`listName`](../object/ThingState.html#listName)[`matchName`](../object/ThingState.html#matchName)
+[`findStateToken`](../object/ThingState.html#findStateToken) [`inventoryName`](../object/ThingState.html#inventoryName) [`listName`](../object/ThingState.html#listName) [`matchName`](../object/ThingState.html#matchName)
 
 <span id="_Properties_"></span>
 

@@ -79,7 +79,7 @@ qualifiers with subsidiary NounPhrase objects.
 
 
 
-[`contPrep`](#contPrep)[`contQual`](#contQual)[`coreProd`](#coreProd)[`determiner`](#determiner)[`disambigNameList`](#disambigNameList)[`errName`](#errName)[`errNameProd`](#errNameProd)[`exclusions`](#exclusions)[`locQual`](#locQual)[`locType`](#locType)[`matches`](#matches)[`objs`](#objs)[`ordinal`](#ordinal)[`parent`](#parent)[`possQual`](#possQual)[`prod`](#prod)[`pronoun`](#pronoun)[`quantifier`](#quantifier)[`role`](#role)[`tokens`](#tokens)
+[`contPrep`](#contPrep) [`contQual`](#contQual) [`coreProd`](#coreProd) [`determiner`](#determiner) [`disambigNameList`](#disambigNameList) [`errName`](#errName) [`errNameProd`](#errNameProd) [`exclusions`](#exclusions) [`locQual`](#locQual) [`locType`](#locType) [`matches`](#matches) [`objs`](#objs) [`ordinal`](#ordinal) [`parent`](#parent) [`possQual`](#possQual) [`prod`](#prod) [`pronoun`](#pronoun) [`quantifier`](#quantifier) [`role`](#role) [`tokens`](#tokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ qualifiers with subsidiary NounPhrase objects.
 
 
 
-[`addContents`](#addContents)[`addExclusionItem`](#addExclusionItem)[`addLiteral`](#addLiteral)[`addLocation`](#addLocation)[`addMatches`](#addMatches)[`addOrdinal`](#addOrdinal)[`addPossessive`](#addPossessive)[`addQuantifier`](#addQuantifier)[`ambigError`](#ambigError)[`applyContQual`](#applyContQual)[`applyDisambig`](#applyDisambig)[`applyExclusion`](#applyExclusion)[`applyLocational`](#applyLocational)[`applyPossessive`](#applyPossessive)[`buildObjList`](#buildObjList)[`clone`](#clone)[`construct`](#construct)[`contains`](#contains)[`disambiguate`](#disambiguate)[`expandErrName`](#expandErrName)[`isAllEquivalent`](#isAllEquivalent)[`isMultiple`](#isMultiple)[`matchNameScope`](#matchNameScope)[`matchVocab`](#matchVocab)[`matchVocabPoss`](#matchVocabPoss)[`resolveAll`](#resolveAll)[`resolveReflexives`](#resolveReflexives)[`selectObjects`](#selectObjects)
+[`addContents`](#addContents) [`addExclusionItem`](#addExclusionItem) [`addLiteral`](#addLiteral) [`addLocation`](#addLocation) [`addMatches`](#addMatches) [`addOrdinal`](#addOrdinal) [`addPossessive`](#addPossessive) [`addQuantifier`](#addQuantifier) [`ambigError`](#ambigError) [`applyContQual`](#applyContQual) [`applyDisambig`](#applyDisambig) [`applyExclusion`](#applyExclusion) [`applyLocational`](#applyLocational) [`applyPossessive`](#applyPossessive) [`buildObjList`](#buildObjList) [`clone`](#clone) [`construct`](#construct) [`contains`](#contains) [`disambiguate`](#disambiguate) [`expandErrName`](#expandErrName) [`isAllEquivalent`](#isAllEquivalent) [`isMultiple`](#isMultiple) [`matchNameScope`](#matchNameScope) [`matchVocab`](#matchVocab) [`matchVocabPoss`](#matchVocabPoss) [`resolveAll`](#resolveAll) [`resolveReflexives`](#resolveReflexives) [`selectObjects`](#selectObjects)
 
 <span id="_Properties_"></span>
 

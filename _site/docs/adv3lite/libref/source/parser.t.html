@@ -2323,7 +2323,7 @@ class NounPhrase: object
                  *   role so that it can be available to the verify routine for
                  *   the other role; so we store a reference now.
                  */
-                cmd.action.(role.curObjProp) = cmd.(role.objListProp)[1].obj;
+                cmd.action.(role.curObjProp) = cmd.(role.objListProp) [1].obj;
             break;
 
         case Indefinite:
@@ -2419,7 +2419,7 @@ class NounPhrase: object
             foreach (local m in matches)
             {
                 m.flags |= SelDisambig;
-                m.name = names.valWhich({ n: n[2].indexOf(m.obj) != nil })[1];
+                m.name = names.valWhich({ n: n[2].indexOf(m.obj) != nil }) [1];
             }
             
             /* we've successfully disambiguated the phrase */
@@ -5792,12 +5792,9 @@ class TerminateCommandException: Exception
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

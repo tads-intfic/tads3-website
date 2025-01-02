@@ -75,7 +75,7 @@ dictionary.
 [`badWord`](#badWord)
 
 Inherited from `ParseError` :  
-[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable) [`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -88,13 +88,13 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`display`](#display)
+[`construct`](#construct) [`display`](#display)
 
 Inherited from `ParseError` :  
-[`rankCorrection`](../object/ParseError.html#rankCorrection)[`tryCuring`](../object/ParseError.html#tryCuring)
+[`rankCorrection`](../object/ParseError.html#rankCorrection) [`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

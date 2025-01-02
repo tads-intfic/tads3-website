@@ -40,31 +40,23 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The persistent banner tracker. This keeps track of the active banner
-windows persistently. Whenever we save or restore the game's state, this
+<p>The persistent banner tracker. This keeps track of the active banner
+windows persistently. Whenever we save or restore the game’s state, this
 object will be saved or restored along with the state. When we restore a
 previously saved state, we can look at this object to determine which
 banners were active at the time the state was saved, and use this
-information to restore the same active banners in the user interface.
+information to restore the same active banners in the user interface.</p>
 
-This is a post-restore and post-undo object, so we're notified via our
+<p>This is a post-restore and post-undo object, so we’re notified via our
 execute() method whenever we restore a saved state using RESTORE or
-UNDO. When we restore a saved state, we'll restore the banner display
-conditions as they existed in the saved state.
+UNDO. When we restore a saved state, we’ll restore the banner display
+conditions as they existed in the saved state.</p>
 
-**`bannerTracker`**` :   `[`PostRestoreObject`](../object/PostRestoreObject.html)[`PostUndoObject`](../object/PostUndoObject.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">bannerTracker</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PostRestoreObject.html"><code class="language-plaintext highlighter-rouge">PostRestoreObject</code></a> <a href="../object/PostUndoObject.html"><code class="language-plaintext highlighter-rouge">PostUndoObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">bannerTracker</code></strong><br />
 <a href="../object/PostRestoreObject.html"><code class="language-plaintext highlighter-rouge">PostRestoreObject</code></a><br />
@@ -75,11 +67,7 @@ conditions as they existed in the saved state.
 </code>                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#activeBanners_"><code class="language-plaintext highlighter-rouge">activeBanners_</code></a></p>
 
@@ -87,28 +75,20 @@ conditions as they existed in the saved state.
 <a href="../object/PostRestoreObject.html#restoreCode"><code class="language-plaintext highlighter-rouge">restoreCode</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addBanner"><code class="language-plaintext highlighter-rouge">addBanner</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#removeBanner"><code class="language-plaintext highlighter-rouge">removeBanner</code></a><a href="#restoreDisplayState"><code class="language-plaintext highlighter-rouge">restoreDisplayState</code></a><a href="#skipDescendants"><code class="language-plaintext highlighter-rouge">skipDescendants</code></a></p>
+<p><a href="#addBanner"><code class="language-plaintext highlighter-rouge">addBanner</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#removeBanner"><code class="language-plaintext highlighter-rouge">removeBanner</code></a> <a href="#restoreDisplayState"><code class="language-plaintext highlighter-rouge">restoreDisplayState</code></a> <a href="#skipDescendants"><code class="language-plaintext highlighter-rouge">skipDescendants</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="activeBanners_"></span></p>
 
@@ -116,20 +96,12 @@ conditions as they existed in the saved state.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#927">927</a>]</p>
 
-<div class="desc">
-
-The list of active banners. This is a list of BannerWindow objects,
-stored in banner layout list order.
-
-</div>
+<p>The list of active banners. This is a list of BannerWindow objects,
+stored in banner layout list order.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addBanner"></span></p>
 
@@ -137,11 +109,7 @@ stored in banner layout list order.
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#813">813</a>]</p>
 
-<div class="desc">
-
-add a banner to the active display list
-
-</div>
+<p>add a banner to the active display list</p>
 
 <p><span id="execute"></span></p>
 
@@ -149,11 +117,7 @@ add a banner to the active display list
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#930">930</a>]</p>
 
-<div class="desc">
-
-receive RESTORE/UNDO notification
-
-</div>
+<p>receive RESTORE/UNDO notification</p>
 
 <p><span id="removeBanner"></span></p>
 
@@ -161,11 +125,7 @@ receive RESTORE/UNDO notification
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#899">899</a>]</p>
 
-<div class="desc">
-
-remove a banner from the active list
-
-</div>
+<p>remove a banner from the active list</p>
 
 <p><span id="restoreDisplayState"></span></p>
 
@@ -173,14 +133,10 @@ remove a banner from the active list
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#943">943</a>]</p>
 
-<div class="desc">
-
-Restore the saved banner display state, so that the banner layout looks
+<p>Restore the saved banner display state, so that the banner layout looks
 the same as it did when we saved the persistent state. This should be
 called after restoring a saved state, undoing to a savepoint, or
-initializing (when first starting the game or when restarting).
-
-</div>
+initializing (when first starting the game or when restarting).</p>
 
 <p><span id="skipDescendants"></span></p>
 
@@ -188,18 +144,11 @@ initializing (when first starting the game or when restarting).
 
 <p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#872">872</a>]</p>
 
-<div class="desc">
+<p>Skip all descendants of the window at the given index.</p>
 
-Skip all descendants of the window at the given index.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

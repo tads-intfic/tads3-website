@@ -70,7 +70,7 @@ people might react. \[DEFINED IN SENSORY EXTENSION\]
 
 
 
-[`notifyProp`](#notifyProp)[`remoteProp`](#remoteProp)[`senseProp`](#senseProp)
+[`notifyProp`](#notifyProp) [`remoteProp`](#remoteProp) [`senseProp`](#senseProp)
 
 
 
@@ -85,7 +85,7 @@ people might react. \[DEFINED IN SENSORY EXTENSION\]
 
 
 Inherited from `SensoryEvent` :  
-[`remoteList`](../object/SensoryEvent.html#remoteList)[`triggerEvent`](../object/SensoryEvent.html#triggerEvent)
+[`remoteList`](../object/SensoryEvent.html#remoteList) [`triggerEvent`](../object/SensoryEvent.html#triggerEvent)
 
 <span id="_Properties_"></span>
 

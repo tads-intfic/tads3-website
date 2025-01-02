@@ -5,7 +5,7 @@ layout: docs
 
 `grammar `**[`indetSingularNounPhrase(basic)`](../object/indetSingularNounPhrase(basic).html)**` :   `[`Production`](../object/Production.html)
 
-[`grammar.t`](../file/grammar.t.html)[`[`482`](../source/grammar.t.html#482)]`
+[`grammar.t`](../file/grammar.t.html) [`[`482`](../source/grammar.t.html#482)]`
 
 
 
@@ -15,7 +15,7 @@ nounPhraseWithContents-\>np\_
 
 `grammar `**[`indetSingularNounPhrase(locational)`](../object/indetSingularNounPhrase(locational).html)**` :   `[`LocationalProduction`](../object/LocationalProduction.html)
 
-[`grammar.t`](../file/grammar.t.html)[`[`487`](../source/grammar.t.html#487)]`
+[`grammar.t`](../file/grammar.t.html) [`[`487`](../source/grammar.t.html#487)]`
 
 
 

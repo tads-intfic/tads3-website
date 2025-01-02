@@ -73,7 +73,7 @@ Details](#_Methods_)
 
 
 Inherited from `UnboundMultiMethod` :  
-[`args_`](../object/UnboundMultiMethod.html#args_)[`func_`](../object/UnboundMultiMethod.html#func_)[`name_`](../object/UnboundMultiMethod.html#name_)
+[`args_`](../object/UnboundMultiMethod.html#args_) [`func_`](../object/UnboundMultiMethod.html#func_) [`name_`](../object/UnboundMultiMethod.html#name_)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -92,7 +92,7 @@ Inherited from `UnboundMultiMethod` :
 [`construct`](../object/UnboundMultiMethod.html#construct)
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

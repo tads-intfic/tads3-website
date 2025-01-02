@@ -71,13 +71,13 @@ is consulted about something not otherwise provided for.
 
 
 
-[`isActive`](#isActive)[`matchScore`](#matchScore)
+[`isActive`](#isActive) [`matchScore`](#matchScore)
 
 Inherited from `ConsultTopic` :  
 [`includeInList`](../object/ConsultTopic.html#includeInList)
 
 Inherited from `TopicEntry` :  
-[`active`](../object/TopicEntry.html#active)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
+[`active`](../object/TopicEntry.html#active) [`matchExactCase`](../object/TopicEntry.html#matchExactCase) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchPattern`](../object/TopicEntry.html#matchPattern) [`scoreBoost`](../object/TopicEntry.html#scoreBoost) [`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,7 +92,7 @@ Inherited from `TopicEntry` :
 
 
 Inherited from `TopicEntry` :  
-[`addTopic`](../object/TopicEntry.html#addTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
+[`addTopic`](../object/TopicEntry.html#addTopic) [`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry) [`scoreBooster`](../object/TopicEntry.html#scoreBooster) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

@@ -46,51 +46,39 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Module Execution Object. This is an abstract base class for various
+<p>Module Execution Object. This is an abstract base class for various
 classes that provide modular execution hooks. This class and its
 subclasses are mix-in classes - they can be multiply inherited by any
-object (as long as it's not already some other kind of module execution
-object).
+object (as long as it’s not already some other kind of module execution
+object).</p>
 
-The point of the Module Execution Object and its subclasses is to allow
+<p>The point of the Module Execution Object and its subclasses is to allow
 libraries and user code to define execution hooks, without having to
 worry about what other libraries and user code bits are defining the
 same hook. When we need to execute a hook defined via this object, we
 iterate over all of the instances of the appropriate subclass and invoke
-its execute() method.
+its execute() method.</p>
 
-By default, the order of execution is arbitrary. In some cases, though,
+<p>By default, the order of execution is arbitrary. In some cases, though,
 dependencies will exist, so that one object cannot be invoked until
 another object has already been invoked. In these cases, you must set
 the execBeforeMe property to contain a list of the objects whose
-execute() methods must be invoked before this object's execute() method
+execute() methods must be invoked before this object’s execute() method
 is invoked. The library will check this list before calling execute() on
 this object, and ensure that each object in the list has been invoked
-before calling this object's execute().
+before calling this object’s execute().</p>
 
-`class `**`ModuleExecObject`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></strong><br />
 <a href="../object/InitObject.html"><code class="language-plaintext highlighter-rouge">InitObject</code></a><br />
@@ -112,39 +100,23 @@ before calling this object's execute().
 <a href="../object/PreSaveObject.html"><code class="language-plaintext highlighter-rouge">PreSaveObject</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<p><a href="#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+<p><a href="#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="execAfterMe"></span></p>
 
@@ -152,12 +124,8 @@ before calling this object's execute().
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#327">327</a>]</p>
 
-<div class="desc">
-
-List of objects that must be executed after me - this is analogous to
-execBeforeMe, but we make sure we run before these.
-
-</div>
+<p>List of objects that must be executed after me - this is analogous to
+execBeforeMe, but we make sure we run before these.</p>
 
 <p><span id="execBeforeMe"></span></p>
 
@@ -165,14 +133,10 @@ execBeforeMe, but we make sure we run before these.
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#321">321</a>]</p>
 
-<div class="desc">
-
-List of objects that must be executed before me - by default, the order
-doesn't matter, so we'll set this to an empty list. Instances can
+<p>List of objects that must be executed before me - by default, the order
+doesn’t matter, so we’ll set this to an empty list. Instances can
 override this if it is necessary to execute other objects before this
-object can be executed.
-
-</div>
+object can be executed.</p>
 
 <p><span id="hasInitialized_"></span></p>
 
@@ -180,11 +144,7 @@ object can be executed.
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#422">422</a>]</p>
 
-<div class="desc">
-
-flag to indicate that this is the first time running classExec
-
-</div>
+<p>flag to indicate that this is the first time running classExec</p>
 
 <p><span id="isDoingExec_"></span></p>
 
@@ -192,11 +152,7 @@ flag to indicate that this is the first time running classExec
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#345">345</a>]</p>
 
-<div class="desc">
-
-flag - true if we're in the process of executing
-
-</div>
+<p>flag - true if we’re in the process of executing</p>
 
 <p><span id="isExecuted_"></span></p>
 
@@ -204,19 +160,11 @@ flag - true if we're in the process of executing
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#342">342</a>]</p>
 
-<div class="desc">
-
-flag - true if we've been executed on this round
-
-</div>
+<p>flag - true if we’ve been executed on this round</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="_execute"></span></p>
 
@@ -224,11 +172,7 @@ flag - true if we've been executed on this round
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#348">348</a>]</p>
 
-<div class="desc">
-
-execute - internal method: checks dependency order
-
-</div>
+<p>execute - internal method: checks dependency order</p>
 
 <p><span id="classExec"></span></p>
 
@@ -236,13 +180,9 @@ execute - internal method: checks dependency order
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#429">429</a>]</p>
 
-<div class="desc">
-
-Class execution. Call this method on the particular class of modules to
-execute. We'll iterate over all instances of that class and invoke each
-instance's \_execute() method.
-
-</div>
+<p>Class execution. Call this method on the particular class of modules to
+execute. We’ll iterate over all instances of that class and invoke each
+instance’s _execute() method.</p>
 
 <p><span id="execute"></span></p>
 
@@ -250,19 +190,12 @@ instance's \_execute() method.
 
 <p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#333">333</a>]</p>
 
-<div class="desc">
+<p>Subclass-specific execution method. Each subclass should override this
+method to provide its execution code.</p>
 
-Subclass-specific execution method. Each subclass should override this
-method to provide its execution code.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Beginnings  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Beginnings<br />
 <span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em>Topics</a>
     <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="beginnings">Beginnings</h1>
 
@@ -78,34 +70,33 @@ format) (e.g. ‘I.F.Author &lt;i.author@whatevermail.com&gt;’)</li>
 
 <p>So, for example, a typical versionInfo definition might look like this:</p>
 
-<p>`
-    versionInfo: GameID
-        IFID = ‘0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB’
-        name = ‘Fire!’
-        byline = ‘by Eric Eve’
-        htmlByline = ‘by <a href="mailto:eric.eve@nospam.com">
-                      Eric Eve</a>’
-        version = ‘1’
-        authorEmail = ‘Eric Eve <a href="mailto:eric.eve@nospam.com">eric.eve@nospam.com</a>’
-        desc = ‘A test game for the adv3lite library.’
-        htmlDesc = ‘A test game for the adv3lite library.’</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showAbout()
-    {
-        aboutMenu.display();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    versionInfo: GameID
+        IFID = '0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB'
+        name = 'Fire!'
+        byline = 'by Eric Eve'
+        htmlByline = 'by &lt;a href="mailto:eric.eve@nospam.com"&gt;
+                      Eric Eve&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'Eric Eve &lt;eric.eve@nospam.com&gt;'
+        desc = 'A test game for the adv3lite library.'
+        htmlDesc = 'A test game for the adv3lite library.'
         
-        "This is a demonstration/test game for the adv3Lite library. It should
-        be possible to reach a winning solution using a basic subset of common
-        IF commands.&lt;.p&gt;";
-    }
-    
-    showCredit()
-    {
-        "Fire! by Eric Eve\b
-        adv3Lite library by Eric Eve with substantial chunks borrowed from the
-        Mercury and adv3 libraries by Mike Roberts. ";               
-    }
-; `
+        showAbout()
+        {
+            aboutMenu.display();
+            
+            "This is a demonstration/test game for the adv3Lite library. It should
+            be possible to reach a winning solution using a basic subset of common
+            IF commands.&lt;.p&gt;";
+        }
+        
+        showCredit()
+        {
+            "Fire! by Eric Eve\b
+            adv3Lite library by Eric Eve with substantial chunks borrowed from the
+            Mercury and adv3 libraries by Mike Roberts. ";               
+        }
+    ;
 </code></pre></div></div>
 
 <p>In addition, you can override the following settings if you don’t like
@@ -133,11 +124,10 @@ represent the player character at the start of the game (typically this
 is called me, though you can call it anything you like). A minimal
 gameMain definition will therefore look like this:</p>
 
-<p>`
-    gameMain: GameMainDef
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gameMain: GameMainDef
        initialPlayerChar = me
     ;
-`</p>
+</code></pre></div></div>
 
 <p>In practice you’ll normally want to define rather more than this on your
 gameMain object. The other properties and methods you may want to define
@@ -261,31 +251,30 @@ later version of adv3Lite).</p>
 <p>A fairly typical gameMain definition might thus look something like
 this:</p>
 
-<p>`
-    gameMain: GameMainDef
-        initialPlayerChar = me</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showIntro()
-    {       
-        cls();
-                        
-        george.startFollowing;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gameMain: GameMainDef
+        initialPlayerChar = me
         
-        "&lt;b&gt;&lt;font color='red'&gt;FIRE!&lt;/font&gt;&lt;/b&gt;  You woke up just now, choking
-            from the smoke that was already starting to fill your bedroom,
-            threw something on and hurried downstairs -- narrowly missing
-            tripping over the beach ball so thoughtgfully left on the landing
-            by your &lt;i&gt;dear&lt;/i&gt; nephew Jason -- you &lt;i&gt;knew&lt;/i&gt; having him to
-            stay yesterday would be trouble -- perhaps he's even responsible
-            for the fire (not that he's around any more to blame -- that's one
-            less thing to worry about anyway).\b
-            So, here you are, in the hall, all ready to dash out of the house
-            before it burns down around you. There's just one problem: in your
-            hurry to get downstairs you left your front door key in your
-            bedroom.&lt;.p&gt;";
-    }
-   
-; `
+        showIntro()
+        {       
+            cls();
+                            
+            george.startFollowing;
+            
+            "&lt;b&gt;&lt;font color='red'&gt;FIRE!&lt;/font&gt;&lt;/b&gt;  You woke up just now, choking
+                from the smoke that was already starting to fill your bedroom,
+                threw something on and hurried downstairs -- narrowly missing
+                tripping over the beach ball so thoughtgfully left on the landing
+                by your &lt;i&gt;dear&lt;/i&gt; nephew Jason -- you &lt;i&gt;knew&lt;/i&gt; having him to
+                stay yesterday would be trouble -- perhaps he's even responsible
+                for the fire (not that he's around any more to blame -- that's one
+                less thing to worry about anyway).\b
+                So, here you are, in the hall, all ready to dash out of the house
+                before it burns down around you. There's just one problem: in your
+                hurry to get downstairs you left your front door key in your
+                bedroom.&lt;.p&gt;";
+        }
+       
+    ;
 </code></pre></div></div>
 
 <p><span id="notes"></span></p>
@@ -298,15 +287,14 @@ you’d typically make it display a string beginning and ending with the
 that picks up all the relevant text from the versionInfo object might
 look like this:</p>
 
-<p>`
-      setAboutBox()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      setAboutBox()
         {
-            “<ABOUTBOX><CENTER>&lt;FONT size=+2 color=red&gt;<b>&lt;<versionInfo.name>&gt;
+            "&lt;ABOUTBOX&gt;&lt;CENTER&gt;&lt;FONT size=+2 color=red&gt;&lt;b&gt;&lt;&lt;versionInfo.name&gt;&gt;
             &lt;/b&gt;&lt;/FONT&gt;\b
-             &lt;<versionInfo.byline>&gt;\b
-            Version &lt;<versionInfo.version>&gt;&lt;/CENTER&gt;&lt;/ABOUTBOX&gt;";
+             &lt;&lt;versionInfo.byline&gt;&gt;\b
+            Version &lt;&lt;versionInfo.version&gt;&gt;&lt;/CENTER&gt;&lt;/ABOUTBOX&gt;";
         }
-`</versionInfo.version></versionInfo.byline></versionInfo.name></b></CENTER></ABOUTBOX></p>
+</code></pre></div></div>
 
 <p>For <span id="tenses"><strong>tenses</strong></span> other than past or present,
 override <code class="language-plaintext highlighter-rouge">Narrator.tense</code> to be one of Present
@@ -355,46 +343,45 @@ you create a new adv3Lite new game using the new Project Wizard in TADS
 3 Workbench, the Wizard will create a minimal template game that does
 all this work for you thus:</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h"
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 
-versionInfo: GameID
-    IFID = '$IFID$'
-    name = '$TITLE$'
-    byline = 'by $AUTHOR$'
-    htmlByline = 'by &lt;a href="mailto:$EMAIL$"&gt;$AUTHOR$&lt;/a&gt;'
-    version = '1'
-    authorEmail = '$AUTHOR$ &lt;$EMAIL$&gt;'
-    desc = '$DESC$'
-    htmlDesc = '$HTMLDESC$'
-;
+    versionInfo: GameID
+        IFID = '$IFID$'
+        name = '$TITLE$'
+        byline = 'by $AUTHOR$'
+        htmlByline = 'by &lt;a href="mailto:$EMAIL$"&gt;$AUTHOR$&lt;/a&gt;'
+        version = '1'
+        authorEmail = '$AUTHOR$ &lt;$EMAIL$&gt;'
+        desc = '$DESC$'
+        htmlDesc = '$HTMLDESC$'
+    ;
 
-gameMain: GameMainDef
-    /* Define the initial player character; this is compulsory */
-    initialPlayerChar = me
-;
+    gameMain: GameMainDef
+        /* Define the initial player character; this is compulsory */
+        initialPlayerChar = me
+    ;
 
 
-/* The starting location; this can be called anything you like */
+    /* The starting location; this can be called anything you like */
 
-startroom: Room 'The Starting Location'
-    "Add your description here. "
-;
+    startroom: Room 'The Starting Location'
+        "Add your description here. "
+    ;
 
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 
-+ me: Thing 'you'   
-    isFixed = true       
-    person = 2  // change to 1 for a first-person game
-    contType = Carrier    
-; `
+    + me: Thing 'you'   
+        isFixed = true       
+        person = 2  // change to 1 for a first-person game
+        contType = Carrier    
+    ;
 </code></pre></div></div>
 
 <p>Except that the versionInfo object will be filled in with the data you
@@ -414,7 +401,7 @@ you aren’t using Workbench) you can save yourself a small amount of
 typing by using the Player class instead of the Thing class to define
 the player character object:</p>
 
-<p>`
+<p>```
     #charset “us-ascii”</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
@@ -459,9 +446,9 @@ it does, it’s effectively identical to the first way of doing things.</p>
 <p>Finally, as an alternative to both these ways of defining the player
 character, you can define it as an Actor (provided actor.t is present in
 your game build), and either define
-<code class="language-plaintext highlighter-rouge">isInitialPlayerChar = true</code> on that player
+```isInitialPlayerChar = true<code class="language-plaintext highlighter-rouge"> on that player
 character Actor or define
-<code class="language-plaintext highlighter-rouge">gameMain.initialPlayerChar</code> to point to it.
+</code>gameMain.initialPlayerChar` to point to it.
 None of these ways of doing it is intrinsically better to any other
 (unless you plan to switch the player character in the course of the
 game, in which case using the Actor class may be your best choice), so
@@ -474,19 +461,14 @@ customized response to X ME.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Beginnings  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Beginnings<br />
 <span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
     <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
 </span>
-`
+`</p>
 
-
-
-</div>
 
 </main>
 <footer>

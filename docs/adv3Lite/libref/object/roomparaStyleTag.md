@@ -51,7 +51,7 @@ description
 
 
 Inherited from `StyleTag` :  
-[`closeText`](../object/StyleTag.html#closeText)[`openText`](../object/StyleTag.html#openText)[`tagName`](../object/StyleTag.html#tagName)
+[`closeText`](../object/StyleTag.html#closeText) [`openText`](../object/StyleTag.html#openText) [`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 

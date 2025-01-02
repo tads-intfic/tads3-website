@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt;
-StackFrameDesc  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt;
+StackFrameDesc<br />
 <span class="navnp"><a href="rexpat.html" class="nav"><em>Prev:</em> RexPattern</a>
     <a href="string.html" class="nav"><em>Next:</em> String</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="stackframedesc">StackFrameDesc</h1>
 
@@ -203,125 +195,92 @@ snapshot, since the true local variables will no longer exist.</p>
 
 <p><code class="language-plaintext highlighter-rouge">getDefiningObj()</code></p>
 
-<div class="fdef">
-
-Retrieves the value of `definingobj` from the
+<p>Retrieves the value of <code class="language-plaintext highlighter-rouge">definingobj</code> from the
 frame, returning the value. This is the object which actually contains
 the definition of the method being executed; since methods can be
 inherited from superclasses, this might not be the same as the
-`self` object in the frame. If the level refers
-to an ordinary function rather than a method, returns nil.
+<code class="language-plaintext highlighter-rouge">self</code> object in the frame. If the level refers
+to an ordinary function rather than a method, returns nil.</p>
 
+<p><code class="language-plaintext highlighter-rouge">getInvokee()</code></p>
 
+<p>Retrieve the value of <code class="language-plaintext highlighter-rouge">invokee</code> in the frame,
+returning the value.</p>
 
-`getInvokee()`
+<p><code class="language-plaintext highlighter-rouge">getSelf()</code></p>
 
-<div class="fdef">
-
-Retrieve the value of `invokee` in the frame,
-returning the value.
-
-</div>
-
-`getSelf()`
-
-<div class="fdef">
-
-Retrieves the value of `self` from the frame,
+<p>Retrieves the value of <code class="language-plaintext highlighter-rouge">self</code> from the frame,
 returning the value. If the level refers to an ordinary function rather
-than a method, returns nil.
+than a method, returns nil.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getTargetObj()</code></p>
 
-`getTargetObj()`
-
-<div class="fdef">
-
-Retrieves the value of `targetobj` from the
-frame, returning the value. `targetobj` is the
-object on the left side of the "." expression that invoked the method.
-This is usually the same as `self`, but can
-differ when `delegated` is used to invoke
-another object's method as though it belonged to the calling object. If
+<p>Retrieves the value of <code class="language-plaintext highlighter-rouge">targetobj</code> from the
+frame, returning the value. <code class="language-plaintext highlighter-rouge">targetobj</code> is the
+object on the left side of the “.” expression that invoked the method.
+This is usually the same as <code class="language-plaintext highlighter-rouge">self</code>, but can
+differ when <code class="language-plaintext highlighter-rouge">delegated</code> is used to invoke
+another object’s method as though it belonged to the calling object. If
 the level refers to an ordinary function rather than a method, returns
-nil.
+nil.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getTargetProp()</code></p>
 
-`getTargetProp()`
-
-<div class="fdef">
-
-Retrieves the value of `targetprop` from the
+<p>Retrieves the value of <code class="language-plaintext highlighter-rouge">targetprop</code> from the
 frame, returning the value. This is the property value on the right side
-of the "." expression that invoked the method. If the level refers to an
-ordinary function rather than a method, returns nil.
+of the “.” expression that invoked the method. If the level refers to an
+ordinary function rather than a method, returns nil.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getVars()</code></p>
 
-`getVars()`
-
-<div class="fdef">
-
-Returns a LookupTable containing all of the local variables in the
+<p>Returns a LookupTable containing all of the local variables in the
 frame. The table is keyed by variable name (each name is given as a
 single-quoted string), and each associated value is the value of the
-variable.
+variable.</p>
 
-The values in the lookup table are snapshot copies of the variable
+<p>The values in the lookup table are snapshot copies of the variable
 values, as they were at the time you called
-`getVars()`. The values in the table are **not**
-updated when the actual local variable values change.
+<code class="language-plaintext highlighter-rouge">getVars()</code>. The values in the table are <strong>not</strong>
+updated when the actual local variable values change.</p>
 
-A new LookupTable is constructed each time this routine is called, based
-on the variable values at the time of the call.
+<p>A new LookupTable is constructed each time this routine is called, based
+on the variable values at the time of the call.</p>
 
-There are two main uses for `getVars()`. First,
+<p>There are two main uses for <code class="language-plaintext highlighter-rouge">getVars()</code>. First,
 it lets you enumerate all of the locals in the frame (using the
-`forEach()` method on the table), or get a list
-of their names (using `keysToList()`). Second,
+<code class="language-plaintext highlighter-rouge">forEach()</code> method on the table), or get a list
+of their names (using <code class="language-plaintext highlighter-rouge">keysToList()</code>). Second,
 it lets you get a fixed snapshot copy of the locals, in case you want
-the values at a particular point in time.
+the values at a particular point in time.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">isActive()</code></p>
 
-`isActive()`
-
-<div class="fdef">
-
-Determines if the frame is still active. Returns
-`true` if so, `nil` if
+<p>Determines if the frame is still active. Returns
+<code class="language-plaintext highlighter-rouge">true</code> if so, <code class="language-plaintext highlighter-rouge">nil</code> if
 not. A frame is active as long as the function or method call it
 represents has not returned to its caller; once the routine returns to
 its caller, the system automatically deletes the associated stack frame.
-A frame does remain valid during the time it's suspended waiting for a
-routine it called to return.
+A frame does remain valid during the time it’s suspended waiting for a
+routine it called to return.</p>
 
-Note that you don't have to worry about whether the frame is active or
+<p>Note that you don’t have to worry about whether the frame is active or
 not if all you want to do is access its local variables. When the actual
 stack frame is destroyed, if a StackFrameDesc object exists, the system
-automatically makes a snapshot copy of the frame's local variables in
+automatically makes a snapshot copy of the frame’s local variables in
 the StackFrameDesc, which then uses the snapshot copy whenever you
 access the locals. This means that you can access the locals even after
-the true stack frame has been deleted.
-
-</div>
-
-</div>
+the true stack frame has been deleted.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt;
-StackFrameDesc  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt;
+StackFrameDesc<br />
 <span class="navnp"><a href="rexpat.html" class="nav"><em>Prev:</em> RexPattern</a>
     <a href="string.html" class="nav"><em>Next:</em> String</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

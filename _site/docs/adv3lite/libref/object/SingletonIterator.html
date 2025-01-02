@@ -46,71 +46,43 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A SingletonIterator is an implementation of the Iterator interface for
-singleton values. This allows 'foreach' to be used with arbitrary
+<p>A SingletonIterator is an implementation of the Iterator interface for
+singleton values. This allows ‘foreach’ to be used with arbitrary
 objects, or even primitive values. The effect of iterating over a
-singleton value with 'foreach' using this iterator is simply to invoke
-the loop once with the loop variable set to the singleton value.
+singleton value with ‘foreach’ using this iterator is simply to invoke
+the loop once with the loop variable set to the singleton value.</p>
 
-`class `**`SingletonIterator`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SingletonIterator</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">SingletonIterator</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#more_"><code class="language-plaintext highlighter-rouge">more_</code></a><a href="#val_"><code class="language-plaintext highlighter-rouge">val_</code></a></p>
+<p><a href="#more_"><code class="language-plaintext highlighter-rouge">more_</code></a> <a href="#val_"><code class="language-plaintext highlighter-rouge">val_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#getCurVal"><code class="language-plaintext highlighter-rouge">getCurVal</code></a><a href="#getKey"><code class="language-plaintext highlighter-rouge">getKey</code></a><a href="#getNext"><code class="language-plaintext highlighter-rouge">getNext</code></a><a href="#isNextAvailable"><code class="language-plaintext highlighter-rouge">isNextAvailable</code></a><a href="#resetIterator"><code class="language-plaintext highlighter-rouge">resetIterator</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getCurVal"><code class="language-plaintext highlighter-rouge">getCurVal</code></a> <a href="#getKey"><code class="language-plaintext highlighter-rouge">getKey</code></a> <a href="#getNext"><code class="language-plaintext highlighter-rouge">getNext</code></a> <a href="#isNextAvailable"><code class="language-plaintext highlighter-rouge">isNextAvailable</code></a> <a href="#resetIterator"><code class="language-plaintext highlighter-rouge">resetIterator</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="more_"></span></p>
 
@@ -118,11 +90,7 @@ the loop once with the loop variable set to the singleton value.
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1698">1698</a>]</p>
 
-<div class="desc">
-
-do we have any more values to fetch?
-
-</div>
+<p>do we have any more values to fetch?</p>
 
 <p><span id="val_"></span></p>
 
@@ -130,19 +98,11 @@ do we have any more values to fetch?
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1695">1695</a>]</p>
 
-<div class="desc">
-
-the singleton value we're "iterating" over
-
-</div>
+<p>the singleton value we’re “iterating” over</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -150,11 +110,7 @@ the singleton value we're "iterating" over
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1670">1670</a>]</p>
 
-<div class="desc">
-
-construction: save the singleton value that we're "iterating" over
-
-</div>
+<p>construction: save the singleton value that we’re “iterating” over</p>
 
 <p><span id="getCurVal"></span></p>
 
@@ -162,11 +118,7 @@ construction: save the singleton value that we're "iterating" over
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1692">1692</a>]</p>
 
-<div class="desc">
-
-get the current value
-
-</div>
+<p>get the current value</p>
 
 <p><span id="getKey"></span></p>
 
@@ -174,11 +126,7 @@ get the current value
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1689">1689</a>]</p>
 
-<div class="desc">
-
-get the current key; we have no keys, so use a fake key of nil
-
-</div>
+<p>get the current key; we have no keys, so use a fake key of nil</p>
 
 <p><span id="getNext"></span></p>
 
@@ -186,11 +134,7 @@ get the current key; we have no keys, so use a fake key of nil
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1673">1673</a>]</p>
 
-<div class="desc">
-
-get the next value
-
-</div>
+<p>get the next value</p>
 
 <p><span id="isNextAvailable"></span></p>
 
@@ -198,11 +142,7 @@ get the next value
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1683">1683</a>]</p>
 
-<div class="desc">
-
-is another item available?
-
-</div>
+<p>is another item available?</p>
 
 <p><span id="resetIterator"></span></p>
 
@@ -210,18 +150,11 @@ is another item available?
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1686">1686</a>]</p>
 
-<div class="desc">
+<p>reset: restore the flag that says the value is available</p>
 
-reset: restore the flag that says the value is available
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

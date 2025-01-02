@@ -58,7 +58,7 @@ throughout the US English modules of the TADS 3 library.
 
 
 
-[`dobjList`](#dobjList)[`iobjList`](#iobjList)[`setPastTense`](#setPastTense)[`singleDir`](#singleDir)[`singleDobj`](#singleDobj)[`singleIobj`](#singleIobj)[`singleLiteral`](#singleLiteral)[`singleNumber`](#singleNumber)[`singleTopic`](#singleTopic)[`tSel`](#tSel)[`VerbRule`](#VerbRule)[`withPast`](#withPast)[`withPresent`](#withPresent)
+[`dobjList`](#dobjList) [`iobjList`](#iobjList) [`setPastTense`](#setPastTense) [`singleDir`](#singleDir) [`singleDobj`](#singleDobj) [`singleIobj`](#singleIobj) [`singleLiteral`](#singleLiteral) [`singleNumber`](#singleNumber) [`singleTopic`](#singleTopic) [`tSel`](#tSel) [`VerbRule`](#VerbRule) [`withPast`](#withPast) [`withPresent`](#withPresent)
 
 <span id="_EnumSummary_"></span>
 
@@ -76,7 +76,7 @@ throughout the US English modules of the TADS 3 library.
 
 
 
-[`Actor`](#Actor)[`DeadEndConnector`](#DeadEndConnector)[`Enterable`](#Enterable)[`Exitable`](#Exitable)[`NoTravelMessage`](#NoTravelMessage)[`OneWayRoomConnector`](#OneWayRoomConnector)[`Passage`](#Passage)[`Room`](#Room)[`Thing`](#Thing)[`ThingState`](#ThingState)[`TravelMessage`](#TravelMessage)[`Unthing`](#Unthing)[`VocabObject`](#VocabObject)
+[`Actor`](#Actor) [`DeadEndConnector`](#DeadEndConnector) [`Enterable`](#Enterable) [`Exitable`](#Exitable) [`NoTravelMessage`](#NoTravelMessage) [`OneWayRoomConnector`](#OneWayRoomConnector) [`Passage`](#Passage) [`Room`](#Room) [`Thing`](#Thing) [`ThingState`](#ThingState) [`TravelMessage`](#TravelMessage) [`Unthing`](#Unthing) [`VocabObject`](#VocabObject)
 
 <span id="_Functions_"></span>
 

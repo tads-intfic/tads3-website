@@ -72,7 +72,7 @@ by default.
 
 
 
-[`ambienceProp`](#ambienceProp)[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
+[`ambienceProp`](#ambienceProp) [`presenceProp`](#presenceProp) [`sizeProp`](#sizeProp) [`thruProp`](#thruProp)
 
 
 

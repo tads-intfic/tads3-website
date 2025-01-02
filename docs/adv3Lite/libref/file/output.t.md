@@ -36,7 +36,7 @@ Roberts.
 
 
 
-[`CaptureFilter`](../object/CaptureFilter.html)[`HtmlStyleTag`](../object/HtmlStyleTag.html)[`ImplicitActionFilter`](../object/ImplicitActionFilter.html)[`LogConsole`](../object/LogConsole.html)[`MonitorFilter`](../object/MonitorFilter.html)[`OutputFilter`](../object/OutputFilter.html)[`OutputStream`](../object/OutputStream.html)[`OutputStreamWindow`](../object/OutputStreamWindow.html)[`ParagraphManager`](../object/ParagraphManager.html)[`StringCaptureFilter`](../object/StringCaptureFilter.html)[`StyleTag`](../object/StyleTag.html)[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)
+[`CaptureFilter`](../object/CaptureFilter.html) [`HtmlStyleTag`](../object/HtmlStyleTag.html) [`ImplicitActionFilter`](../object/ImplicitActionFilter.html) [`LogConsole`](../object/LogConsole.html) [`MonitorFilter`](../object/MonitorFilter.html) [`OutputFilter`](../object/OutputFilter.html) [`OutputStream`](../object/OutputStream.html) [`OutputStreamWindow`](../object/OutputStreamWindow.html) [`ParagraphManager`](../object/ParagraphManager.html) [`StringCaptureFilter`](../object/StringCaptureFilter.html) [`StyleTag`](../object/StyleTag.html) [`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -45,7 +45,7 @@ Roberts.
 
 
 
-[`announceObjStyleTag`](../object/announceObjStyleTag.html)[`assumeStyleTag`](../object/assumeStyleTag.html)[`commandSequencer`](../object/commandSequencer.html)[`cquoteOutputFilter`](../object/cquoteOutputFilter.html)[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)[`inputlineStyleTag`](../object/inputlineStyleTag.html)[`mainOutputStream`](../object/mainOutputStream.html)[`mainParagraphManager`](../object/mainParagraphManager.html)[`notificationStyleTag`](../object/notificationStyleTag.html)[`outputManager`](../object/outputManager.html)[`parserStyleTag`](../object/parserStyleTag.html)[`quoteFilter`](../object/quoteFilter.html)[`roomcontentsStyleTag`](../object/roomcontentsStyleTag.html)[`roomdescStyleTag`](../object/roomdescStyleTag.html)[`roomnameStyleTag`](../object/roomnameStyleTag.html)[`roomparaStyleTag`](../object/roomparaStyleTag.html)[`statusroomStyleTag`](../object/statusroomStyleTag.html)[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)[`styleTagFilter`](../object/styleTagFilter.html)[`typographicalOutputFilter`](../object/typographicalOutputFilter.html)
+[`announceObjStyleTag`](../object/announceObjStyleTag.html) [`assumeStyleTag`](../object/assumeStyleTag.html) [`commandSequencer`](../object/commandSequencer.html) [`cquoteOutputFilter`](../object/cquoteOutputFilter.html) [`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html) [`inputlineStyleTag`](../object/inputlineStyleTag.html) [`mainOutputStream`](../object/mainOutputStream.html) [`mainParagraphManager`](../object/mainParagraphManager.html) [`notificationStyleTag`](../object/notificationStyleTag.html) [`outputManager`](../object/outputManager.html) [`parserStyleTag`](../object/parserStyleTag.html) [`quoteFilter`](../object/quoteFilter.html) [`roomcontentsStyleTag`](../object/roomcontentsStyleTag.html) [`roomdescStyleTag`](../object/roomdescStyleTag.html) [`roomnameStyleTag`](../object/roomnameStyleTag.html) [`roomparaStyleTag`](../object/roomparaStyleTag.html) [`statusroomStyleTag`](../object/statusroomStyleTag.html) [`statusscoreStyleTag`](../object/statusscoreStyleTag.html) [`styleTagFilter`](../object/styleTagFilter.html) [`typographicalOutputFilter`](../object/typographicalOutputFilter.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -54,7 +54,7 @@ Roberts.
 
 
 
-[`extraReport`](#extraReport)[`filterText`](#filterText)[`htmlSay`](#htmlSay)[`oSay`](#oSay)[`say`](#say)[`senseSay`](#senseSay)[`withQuotes`](#withQuotes)[`withTense`](#withTense)
+[`extraReport`](#extraReport) [`filterText`](#filterText) [`htmlSay`](#htmlSay) [`oSay`](#oSay) [`say`](#say) [`senseSay`](#senseSay) [`withQuotes`](#withQuotes) [`withTense`](#withTense)
 
 <span id="_Functions_"></span>
 

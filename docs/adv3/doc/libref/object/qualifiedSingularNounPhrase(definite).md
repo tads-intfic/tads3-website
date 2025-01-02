@@ -61,7 +61,7 @@ Inherited from `NounPhraseProd` :
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
 [`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
@@ -77,16 +77,16 @@ Inherited from `AmbigResponseKeeper` :
 
 
 Inherited from `DefiniteNounProd` :  
-[`reduceDefinite`](../object/DefiniteNounProd.html#reduceDefinite)[`resolveDefinite`](../object/DefiniteNounProd.html#resolveDefinite)[`resolveNouns`](../object/DefiniteNounProd.html#resolveNouns)
+[`reduceDefinite`](../object/DefiniteNounProd.html#reduceDefinite) [`resolveDefinite`](../object/DefiniteNounProd.html#resolveDefinite) [`resolveNouns`](../object/DefiniteNounProd.html#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations) [`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse) [`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

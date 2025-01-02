@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="../../docs/manual/topbar.jpg" data-border="0" /></p>
 
-<img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \&gt;
-Relations  
+<p><a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Relations<br />
 <span class="navnp"><a href="postures.html" class="nav"><em>Prev:</em> Postures</a>
     <a href="roomparts.html" class="nav"><em>Next:</em> Room Parts</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="relations">Relations</h1>
 
@@ -381,78 +373,62 @@ available to query and test relations:</p>
 <p>The <strong>relations</strong> command lists all the relations defined in the game,
 with information about their type, e.g.:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;relations
+fatherOf oneToMany: name = 'father of' reverseName = 'child of'
+knows oneToOne: name = 'knows' reverseName = 'known by'
+loving manyToOne: name = 'loves' reverseName = 'loved by'
+overlooking manyToMany: name = 'overlooks' reverseName = 'overlooked by'
+sibling (DerivedRelation) manyToMany: (reciprocal): name = 'sibling of'
+</code></pre></div></div>
 
-    &gt;relations
-    fatherOf oneToMany: name = 'father of' reverseName = 'child of'
-    knows oneToOne: name = 'knows' reverseName = 'known by'
-    loving manyToOne: name = 'loves' reverseName = 'loved by'
-    overlooking manyToMany: name = 'overlooks' reverseName = 'overlooked by'
-    sibling (DerivedRelation) manyToMany: (reciprocal): name = 'sibling of'
+<p>REL, RELATION or RELATIONS followed by the name of a relation lists the
+items related via that relation, e.g.:</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;rel father of
+fatherOf oneToMany: name = 'father of' reverseName = 'child of'
+andrew -&gt; [james, simon]
+james -&gt; [mary, luke, john]
+john -&gt; [mark]
+simon -&gt; [aaron]
+</code></pre></div></div>
 
+<p>The EVAL command (which can be used with any valid expression) can also
+be used to set and test relations, e.g.:</p>
 
-REL, RELATION or RELATIONS followed by the name of a relation lists the
-items related via that relation, e.g.:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;eval related(mark, loving)
 
-<div class="cmdline">
+&gt;eval relate(mark, loving, jill)
+nil
 
-    &gt;rel father of
-    fatherOf oneToMany: name = 'father of' reverseName = 'child of'
-    andrew -&gt; [james, simon]
-    james -&gt; [mary, luke, john]
-    john -&gt; [mark]
-    simon -&gt; [aaron]
+&gt;eval relate(jack, loving, jill)
+nil
 
-</div>
+&gt;eval related(mark, loving)
+Jill (Actor)
 
-The EVAL command (which can be used with any valid expression) can also
-be used to set and test relations, e.g.:
+&gt;eval related(jill, 'loved by')
+Mark (Actor),Jack (Actor)
 
-<div class="cmdline">
+&gt;rel loving
+loving manyToOne: name = 'loves' reverseName = 'loved by'
+jack -&gt; [jill]
+mark -&gt; [jill]
+</code></pre></div></div>
 
-    &gt;eval related(mark, loving)
-
-    &gt;eval relate(mark, loving, jill)
-    nil
-
-    &gt;eval relate(jack, loving, jill)
-    nil
-
-    &gt;eval related(mark, loving)
-    Jill (Actor)
-
-    &gt;eval related(jill, 'loved by')
-    Mark (Actor),Jack (Actor)
-
-    &gt;rel loving
-    loving manyToOne: name = 'loves' reverseName = 'loved by'
-    jack -&gt; [jill]
-    mark -&gt; [jill]
-
-</div>
-
-  
-
-This covers most of what you need to know to use this extension. For
+<p>This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
-[relations.t](../relations.t) file.
-
-</div>
+<a href="../relations.t">relations.t</a> file.</p>
 
 <hr />
 
-<div class="navb">
-
-*Adv3Lite Manual*  
-<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \&gt;
-Postures  
+<p><em>Adv3Lite Manual</em><br />
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Postures<br />
 <span class="navnp"><a href="postures.html" class="nav"><em>Prev:</em> Postures</a>
     <a href="roomparts.html" class="nav"><em>Next:</em> Room Parts</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

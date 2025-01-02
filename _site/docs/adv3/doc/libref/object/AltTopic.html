@@ -46,105 +46,77 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-An alternative topic entry. This makes it easy to define different
+<p>An alternative topic entry. This makes it easy to define different
 responses to a topic according to the game state; for example, we might
 want to provide a different response for a topic after some event has
-occurred, so that we can reflect knowledge of the event in the response.
+occurred, so that we can reflect knowledge of the event in the response.</p>
 
-A set of alternative topics is sort of like an inverted if-then-else.
+<p>A set of alternative topics is sort of like an inverted if-then-else.
 You start by defining a normal TopicEntry (an AskTopic, or an
 AskTellTopic, or whatever) for the basic response. Then, you add a
 nested AltTopic located within the base topic; you can add another
 AltTopic nested within the base topic, and another after that, and so
-on. When we need to choose one of the topics, we'll choose the last one
-that indicates it's active. So, the order of appearance is essentially
+on. When we need to choose one of the topics, we’ll choose the last one
+that indicates it’s active. So, the order of appearance is essentially
 an override order: the first AltTopic overrides its parent TopicEntry,
-and each subsequent AltTopic overrides its previous AltTopic.
+and each subsequent AltTopic overrides its previous AltTopic.</p>
 
-\+ AskTellTopic @lighthouse "It's very tall.";  
-++ AltTopic "Not really..." isActive=(...);  
-++ AltTopic "Well, maybe..." isActive=(...);  
-++ AltTopic "One more thing..." isActive=(...);
+<p>+ AskTellTopic @lighthouse “It’s very tall.”;<br />
+++ AltTopic “Not really…” isActive=(…);<br />
+++ AltTopic “Well, maybe…” isActive=(…);<br />
+++ AltTopic “One more thing…” isActive=(…);</p>
 
-In this example, the response we'll show for ASK ABOUT LIGHTHOUSE will
-always be the LAST entry of the group that's active. For example, if all
-of the responses are active except for the very last one, then we'll
-show the "Well, maybe" response, because it's the last active response.
+<p>In this example, the response we’ll show for ASK ABOUT LIGHTHOUSE will
+always be the LAST entry of the group that’s active. For example, if all
+of the responses are active except for the very last one, then we’ll
+show the “Well, maybe” response, because it’s the last active response.
 If the main AskTellTopic is active, but none of the AltTopics are
-active, we'll show the "It's very tall" main response, because it's the
-last element of the group that's active.
+active, we’ll show the “It’s very tall” main response, because it’s the
+last element of the group that’s active.</p>
 
-Note that an AltTopic takes its matching information from its parent, so
-you don't need to specify a matchObj or any other matching information
+<p>Note that an AltTopic takes its matching information from its parent, so
+you don’t need to specify a matchObj or any other matching information
 in an AltTopic. You merely need to provide the response text and the
-isActive test.
+isActive test.</p>
 
-`class `**`AltTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">AltTopic</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/TopicEntry.html"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">AltTopic</code></strong><br />
 <a href="../object/TopicEntry.html"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#altTalkCount"><code class="language-plaintext highlighter-rouge">altTalkCount</code></a><a href="#altTopicOrder"><code class="language-plaintext highlighter-rouge">altTopicOrder</code></a><a href="#impliesGreeting"><code class="language-plaintext highlighter-rouge">impliesGreeting</code></a><a href="#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a><a href="#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a></p>
+<p><a href="#altTalkCount"><code class="language-plaintext highlighter-rouge">altTalkCount</code></a> <a href="#altTopicOrder"><code class="language-plaintext highlighter-rouge">altTopicOrder</code></a> <a href="#impliesGreeting"><code class="language-plaintext highlighter-rouge">impliesGreeting</code></a> <a href="#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a> <a href="#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
-<a href="../object/TopicEntry.html#altTopicList"><code class="language-plaintext highlighter-rouge">altTopicList</code></a><a href="../object/TopicEntry.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a><a href="../object/TopicEntry.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a><a href="../object/TopicEntry.html#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a><a href="../object/TopicEntry.html#talkCount"><code class="language-plaintext highlighter-rouge">talkCount</code></a><a href="../object/TopicEntry.html#topicGroupActive"><code class="language-plaintext highlighter-rouge">topicGroupActive</code></a><a href="../object/TopicEntry.html#topicGroupScoreAdjustment"><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></a><a href="../object/TopicEntry.html#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
+<a href="../object/TopicEntry.html#altTopicList"><code class="language-plaintext highlighter-rouge">altTopicList</code></a> <a href="../object/TopicEntry.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="../object/TopicEntry.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="../object/TopicEntry.html#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a> <a href="../object/TopicEntry.html#talkCount"><code class="language-plaintext highlighter-rouge">talkCount</code></a> <a href="../object/TopicEntry.html#topicGroupActive"><code class="language-plaintext highlighter-rouge">topicGroupActive</code></a> <a href="../object/TopicEntry.html#topicGroupScoreAdjustment"><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></a> <a href="../object/TopicEntry.html#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkIsActive"><code class="language-plaintext highlighter-rouge">checkIsActive</code></a><a href="#initializeAltTopic"><code class="language-plaintext highlighter-rouge">initializeAltTopic</code></a><a href="#isMatchPossible"><code class="language-plaintext highlighter-rouge">isMatchPossible</code></a><a href="#matchPreParse"><code class="language-plaintext highlighter-rouge">matchPreParse</code></a><a href="#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a><a href="#noteInvocation"><code class="language-plaintext highlighter-rouge">noteInvocation</code></a><a href="#setTopicPronouns"><code class="language-plaintext highlighter-rouge">setTopicPronouns</code></a></p>
+<p><a href="#checkIsActive"><code class="language-plaintext highlighter-rouge">checkIsActive</code></a> <a href="#initializeAltTopic"><code class="language-plaintext highlighter-rouge">initializeAltTopic</code></a> <a href="#isMatchPossible"><code class="language-plaintext highlighter-rouge">isMatchPossible</code></a> <a href="#matchPreParse"><code class="language-plaintext highlighter-rouge">matchPreParse</code></a> <a href="#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a> <a href="#noteInvocation"><code class="language-plaintext highlighter-rouge">noteInvocation</code></a> <a href="#setTopicPronouns"><code class="language-plaintext highlighter-rouge">setTopicPronouns</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
-<a href="../object/TopicEntry.html#addAltTopic"><code class="language-plaintext highlighter-rouge">addAltTopic</code></a><a href="../object/TopicEntry.html#addSuggestedTopic"><code class="language-plaintext highlighter-rouge">addSuggestedTopic</code></a><a href="../object/TopicEntry.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a><a href="../object/TopicEntry.html#adjustScore"><code class="language-plaintext highlighter-rouge">adjustScore</code></a><a href="../object/TopicEntry.html#anyAltIsActive"><code class="language-plaintext highlighter-rouge">anyAltIsActive</code></a><a href="../object/TopicEntry.html#breakTopicTie"><code class="language-plaintext highlighter-rouge">breakTopicTie</code></a><a href="../object/TopicEntry.html#deferToEntry"><code class="language-plaintext highlighter-rouge">deferToEntry</code></a><a href="../object/TopicEntry.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a><a href="../object/TopicEntry.html#getTopicOwner"><code class="language-plaintext highlighter-rouge">getTopicOwner</code></a><a href="../object/TopicEntry.html#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a><a href="../object/TopicEntry.html#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a><a href="../object/TopicEntry.html#noteAltInvocation"><code class="language-plaintext highlighter-rouge">noteAltInvocation</code></a></p>
+<a href="../object/TopicEntry.html#addAltTopic"><code class="language-plaintext highlighter-rouge">addAltTopic</code></a> <a href="../object/TopicEntry.html#addSuggestedTopic"><code class="language-plaintext highlighter-rouge">addSuggestedTopic</code></a> <a href="../object/TopicEntry.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="../object/TopicEntry.html#adjustScore"><code class="language-plaintext highlighter-rouge">adjustScore</code></a> <a href="../object/TopicEntry.html#anyAltIsActive"><code class="language-plaintext highlighter-rouge">anyAltIsActive</code></a> <a href="../object/TopicEntry.html#breakTopicTie"><code class="language-plaintext highlighter-rouge">breakTopicTie</code></a> <a href="../object/TopicEntry.html#deferToEntry"><code class="language-plaintext highlighter-rouge">deferToEntry</code></a> <a href="../object/TopicEntry.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="../object/TopicEntry.html#getTopicOwner"><code class="language-plaintext highlighter-rouge">getTopicOwner</code></a> <a href="../object/TopicEntry.html#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a> <a href="../object/TopicEntry.html#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a> <a href="../object/TopicEntry.html#noteAltInvocation"><code class="language-plaintext highlighter-rouge">noteAltInvocation</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="altTalkCount"></span></p>
 
@@ -152,11 +124,7 @@ isActive test.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2756">2756</a>]</p>
 
-<div class="desc">
-
-our AltTopic counter is the AltTopic counter for the enclosing topic
-
-</div>
+<p>our AltTopic counter is the AltTopic counter for the enclosing topic</p>
 
 <p><span id="altTopicOrder"></span></p>
 
@@ -164,15 +132,11 @@ our AltTopic counter is the AltTopic counter for the enclosing topic
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2742">2742</a>]</p>
 
-<div class="desc">
-
-Our relative order within our parent's list of alternatives. By default,
+<p>Our relative order within our parent’s list of alternatives. By default,
 we simply return the source file ordering, which ensures that static
 AltTopic objects (i.e., those defined directly in source files, not
-dynamically created with 'new') will be ordered just as they're laid out
-in the source file.
-
-</div>
+dynamically created with ‘new’) will be ordered just as they’re laid out
+in the source file.</p>
 
 <p><span id="impliesGreeting"></span></p>
 
@@ -180,11 +144,7 @@ in the source file.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2730">2730</a>]</p>
 
-<div class="desc">
-
-take our implied-greeting status from our parent
-
-</div>
+<p>take our implied-greeting status from our parent</p>
 
 <p><span id="includeInList"></span></p>
 
@@ -192,11 +152,7 @@ take our implied-greeting status from our parent
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2685">2685</a>]</p>
 
-<div class="desc">
-
-include in the same lists as our parent
-
-</div>
+<p>include in the same lists as our parent</p>
 
 <p><span id="isConversational"></span></p>
 
@@ -204,19 +160,11 @@ include in the same lists as our parent
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2733">2733</a>]</p>
 
-<div class="desc">
-
-take our conversational status from our parent
-
-</div>
+<p>take our conversational status from our parent</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkIsActive"></span></p>
 
@@ -224,12 +172,8 @@ take our conversational status from our parent
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2700">2700</a>]</p>
 
-<div class="desc">
-
-Determine if this topic is active. An AltTopic is active if its own
-isActive indicates true, AND none of its subsequent siblings are active.
-
-</div>
+<p>Determine if this topic is active. An AltTopic is active if its own
+isActive indicates true, AND none of its subsequent siblings are active.</p>
 
 <p><span id="initializeAltTopic"></span></p>
 
@@ -237,11 +181,7 @@ isActive indicates true, AND none of its subsequent siblings are active.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2688">2688</a>]</p>
 
-<div class="desc">
-
-AltTopic initialization
-
-</div>
+<p>AltTopic initialization</p>
 
 <p><span id="isMatchPossible"></span></p>
 
@@ -249,11 +189,7 @@ AltTopic initialization
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2674">2674</a>]</p>
 
-<div class="desc">
-
-we can match if our parent can match
-
-</div>
+<p>we can match if our parent can match</p>
 
 <p><span id="matchPreParse"></span></p>
 
@@ -261,11 +197,7 @@ we can match if our parent can match
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2678">2678</a>]</p>
 
-<div class="desc">
-
-we can match a pre-parse string if our parent can
-
-</div>
+<p>we can match a pre-parse string if our parent can</p>
 
 <p><span id="matchTopic"></span></p>
 
@@ -273,11 +205,7 @@ we can match a pre-parse string if our parent can
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2670">2670</a>]</p>
 
-<div class="desc">
-
-we match if our parent matches, and with the same score
-
-</div>
+<p>we match if our parent matches, and with the same score</p>
 
 <p><span id="noteInvocation"></span></p>
 
@@ -285,11 +213,7 @@ we match if our parent matches, and with the same score
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2745">2745</a>]</p>
 
-<div class="desc">
-
-note invocation
-
-</div>
+<p>note invocation</p>
 
 <p><span id="setTopicPronouns"></span></p>
 
@@ -297,18 +221,11 @@ note invocation
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2681">2681</a>]</p>
 
-<div class="desc">
+<p>set pronouns for the topic</p>
 
-set pronouns for the topic
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

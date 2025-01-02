@@ -47,7 +47,7 @@ Details](#_Methods_)
 
 
 
-[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)[`unknownMsg`](#unknownMsg)
+[`defaultResponseProp`](#defaultResponseProp) [`topicListProp`](#topicListProp) [`unknownMsg`](#unknownMsg)
 
 
 

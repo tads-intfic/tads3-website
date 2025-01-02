@@ -46,43 +46,31 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>QuantifierProduction is a subclass of Production for phrases that add a
+number qualifier, as in “five books”.</p>
 
-QuantifierProduction is a subclass of Production for phrases that add a
-number qualifier, as in "five books".
-
-Each grammar rule of this type needs to define a special '-\&gt;quant\_'
+<p>Each grammar rule of this type needs to define a special ‘-&gt;quant_’
 association in its template, giving the quantity phrase production. This
-phrase must in turn provide a 'numval' property giving its numeric
-value.
+phrase must in turn provide a ‘numval’ property giving its numeric
+value.</p>
 
-Alternatively, this production can itself simply provide a 'numval'
+<p>Alternatively, this production can itself simply provide a ‘numval’
 property with the correct number. This is convenient for adjective-like
 qualifier phrases that imply a number without stating one directly, such
-as BOTH BOOKS.
+as BOTH BOOKS.</p>
 
-`class `**`QuantifierProduction`**` :   `[`Production`](../object/Production.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></strong><br />
 <a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></strong><br />
 <a href="../object/disambigPhrase(both).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(both)</code></a><br />
@@ -98,51 +86,31 @@ as BOTH BOOKS.
 <a href="../object/qualifiedPluralNounPhrase(definiteNum).html"><code class="language-plaintext highlighter-rouge">qualifiedPluralNounPhrase(definiteNum)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
-<a href="../object/Production.html#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a><a href="../object/Production.html#nounPhraseRole"><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></a><a href="../object/Production.html#npClass"><code class="language-plaintext highlighter-rouge">npClass</code></a><a href="../object/Production.html#parent"><code class="language-plaintext highlighter-rouge">parent</code></a></p>
+<a href="../object/Production.html#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a> <a href="../object/Production.html#nounPhraseRole"><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></a> <a href="../object/Production.html#npClass"><code class="language-plaintext highlighter-rouge">npClass</code></a> <a href="../object/Production.html#parent"><code class="language-plaintext highlighter-rouge">parent</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#build"><code class="language-plaintext highlighter-rouge">build</code></a><a href="#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a></p>
+<p><a href="#build"><code class="language-plaintext highlighter-rouge">build</code></a> <a href="#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
-<a href="../object/Production.html#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a><a href="../object/Production.html#findAction"><code class="language-plaintext highlighter-rouge">findAction</code></a><a href="../object/Production.html#findChild"><code class="language-plaintext highlighter-rouge">findChild</code></a><a href="../object/Production.html#findParent"><code class="language-plaintext highlighter-rouge">findParent</code></a><a href="../object/Production.html#getNounPhraseRole"><code class="language-plaintext highlighter-rouge">getNounPhraseRole</code></a><a href="../object/Production.html#getText"><code class="language-plaintext highlighter-rouge">getText</code></a><a href="../object/Production.html#getTokens"><code class="language-plaintext highlighter-rouge">getTokens</code></a><a href="../object/Production.html#grammarInfoForBuild"><code class="language-plaintext highlighter-rouge">grammarInfoForBuild</code></a><a href="../object/Production.html#isChildOf"><code class="language-plaintext highlighter-rouge">isChildOf</code></a><a href="../object/Production.html#noteEndOfSentence"><code class="language-plaintext highlighter-rouge">noteEndOfSentence</code></a><a href="../object/Production.html#visitLiteral"><code class="language-plaintext highlighter-rouge">visitLiteral</code></a></p>
+<a href="../object/Production.html#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a> <a href="../object/Production.html#findAction"><code class="language-plaintext highlighter-rouge">findAction</code></a> <a href="../object/Production.html#findChild"><code class="language-plaintext highlighter-rouge">findChild</code></a> <a href="../object/Production.html#findParent"><code class="language-plaintext highlighter-rouge">findParent</code></a> <a href="../object/Production.html#getNounPhraseRole"><code class="language-plaintext highlighter-rouge">getNounPhraseRole</code></a> <a href="../object/Production.html#getText"><code class="language-plaintext highlighter-rouge">getText</code></a> <a href="../object/Production.html#getTokens"><code class="language-plaintext highlighter-rouge">getTokens</code></a> <a href="../object/Production.html#grammarInfoForBuild"><code class="language-plaintext highlighter-rouge">grammarInfoForBuild</code></a> <a href="../object/Production.html#isChildOf"><code class="language-plaintext highlighter-rouge">isChildOf</code></a> <a href="../object/Production.html#noteEndOfSentence"><code class="language-plaintext highlighter-rouge">noteEndOfSentence</code></a> <a href="../object/Production.html#visitLiteral"><code class="language-plaintext highlighter-rouge">visitLiteral</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="build"></span></p>
 
@@ -150,14 +118,10 @@ as BOTH BOOKS.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4413">4413</a>]</p>
 
-<div class="desc">
-
-Build out the subtree. If we have a numval embedded in this production,
-we'll use it as the quantifier. Otherwise, we'll expect to find a
-separate quant\_ sub-production among our children, and that it provides
-the quantity.
-
-</div>
+<p>Build out the subtree. If we have a numval embedded in this production,
+we’ll use it as the quantifier. Otherwise, we’ll expect to find a
+separate quant_ sub-production among our children, and that it provides
+the quantity.</p>
 
 <p><span id="visitProd"></span></p>
 
@@ -165,25 +129,18 @@ the quantity.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4433">4433</a>]</p>
 
-<div class="desc">
-
-Visit a production. When we visit the quantifier phrase, we'll handle it
-specially: we'll add the quantifier value to the main noun phrase, and
-then we \*won't\* parse into the subtree. There's no need to parse the
+<p>Visit a production. When we visit the quantifier phrase, we’ll handle it
+specially: we’ll add the quantifier value to the main noun phrase, and
+then we *won’t* parse into the subtree. There’s no need to parse the
 quantifier subtree, as its entire meaning is captured in its numeric
 value. Parsing into it is undesirable because that would add the numeric
-tokens to the noun phrase - they don't belong there, since their
-qualification is captured in the quantifier and shouldn't also be added
-as adjectives.
+tokens to the noun phrase - they don’t belong there, since their
+qualification is captured in the quantifier and shouldn’t also be added
+as adjectives.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

@@ -49,7 +49,7 @@ object iteration, regular expressions, and state persistence operations.
 
 
 
-[`abs`](#abs)[`concat`](#concat)[`dataType`](#dataType)[`firstObj`](#firstObj)[`getArg`](#getArg)[`getFuncParams`](#getFuncParams)[`getTime`](#getTime)[`makeList`](#makeList)[`makeString`](#makeString)[`max`](#max)[`min`](#min)[`nextObj`](#nextObj)[`rand`](#rand)[`randomize`](#randomize)[`restartGame`](#restartGame)[`restoreGame`](#restoreGame)[`rexGroup`](#rexGroup)[`rexMatch`](#rexMatch)[`rexReplace`](#rexReplace)[`rexSearch`](#rexSearch)[`rexSearchLast`](#rexSearchLast)[`saveGame`](#saveGame)[`savepoint`](#savepoint)[`sgn`](#sgn)[`sprintf`](#sprintf)[`toInteger`](#toInteger)[`toNumber`](#toNumber)[`toString`](#toString)[`undo`](#undo)
+[`abs`](#abs) [`concat`](#concat) [`dataType`](#dataType) [`firstObj`](#firstObj) [`getArg`](#getArg) [`getFuncParams`](#getFuncParams) [`getTime`](#getTime) [`makeList`](#makeList) [`makeString`](#makeString) [`max`](#max) [`min`](#min) [`nextObj`](#nextObj) [`rand`](#rand) [`randomize`](#randomize) [`restartGame`](#restartGame) [`restoreGame`](#restoreGame) [`rexGroup`](#rexGroup) [`rexMatch`](#rexMatch) [`rexReplace`](#rexReplace) [`rexSearch`](#rexSearch) [`rexSearchLast`](#rexSearchLast) [`saveGame`](#saveGame) [`savepoint`](#savepoint) [`sgn`](#sgn) [`sprintf`](#sprintf) [`toInteger`](#toInteger) [`toNumber`](#toNumber) [`toString`](#toString) [`undo`](#undo)
 
 <span id="_MacroSummary_"></span>
 
@@ -59,7 +59,7 @@ object iteration, regular expressions, and state persistence operations.
 
 
 
-[`GetTimeDateAndTime`](#GetTimeDateAndTime)[`GetTimeTicks`](#GetTimeTicks)[`ObjAll`](#ObjAll)[`ObjClasses`](#ObjClasses)[`ObjInstances`](#ObjInstances)[`ReplaceAll`](#ReplaceAll)[`ReplaceFollowCase`](#ReplaceFollowCase)[`ReplaceIgnoreCase`](#ReplaceIgnoreCase)[`ReplaceOnce`](#ReplaceOnce)[`ReplaceSerial`](#ReplaceSerial)[`RNG_ISAAC`](#RNG_ISAAC)[`RNG_LCG`](#RNG_LCG)[`RNG_MT19937`](#RNG_MT19937)
+[`GetTimeDateAndTime`](#GetTimeDateAndTime) [`GetTimeTicks`](#GetTimeTicks) [`ObjAll`](#ObjAll) [`ObjClasses`](#ObjClasses) [`ObjInstances`](#ObjInstances) [`ReplaceAll`](#ReplaceAll) [`ReplaceFollowCase`](#ReplaceFollowCase) [`ReplaceIgnoreCase`](#ReplaceIgnoreCase) [`ReplaceOnce`](#ReplaceOnce) [`ReplaceSerial`](#ReplaceSerial) [`RNG_ISAAC`](#RNG_ISAAC) [`RNG_LCG`](#RNG_LCG) [`RNG_MT19937`](#RNG_MT19937)
 
 <span id="_EnumSummary_"></span>
 

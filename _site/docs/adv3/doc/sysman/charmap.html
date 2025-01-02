@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Source File
-Character Sets  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Source File
+Character Sets<br />
 <span class="navnp"><a href="progstru.html" class="nav"><em>Prev:</em> Source Code
 Structure</a>    
 <a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="source-file-character-sets">Source File Character Sets</h1>
 
@@ -96,92 +88,92 @@ option - this is simply the filename minus the “.tcm” suffix. For
 example, to compile source code created using code page 1250 (Windows
 Central/Eastern Europe), you’d use this command:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t3make -cs cp1250 mygame.t
+</code></pre></div></div>
 
-    t3make -cs cp1250 mygame.t
+<p>If the TADS 3 distribution doesn’t include a mapping file for the
+character set you’re using, you can <a href="cmap.html">build your own mapping
+file</a>.</p>
 
+<p>The compiler provides several built-in character set names that you can
+use, in addition to those supplied by mapping files:</p>
 
+<ul>
+  <li>US-ASCII - US ASCII 7-bit Default, which is a simple mapping for plain
+ASCII characters. This encoding represents each character with a
+single byte, and the value in each byte is in the range 0-127.</li>
+  <li>UTF-16LE - “little-endian” 16-bit Unicode (also known as UCS-2
+encoding). In a file encoded in UTF-16, each character is represented
+by two consecutive bytes; in the little-endian version, each byte pair
+has the low-order 8 bits first. This is the typical Unicode encoding
+used on Windows machines; most Unicode-enabled text editors on Windows
+use this encoding.</li>
+  <li>UTF-16BE - “big-endian” 16-bit UTF-16, which places the high-order
+byte of each 16-bit character first. This is the typical Unicode
+encoding used on Macintosh systems.</li>
+  <li>UTF-8 - This is a multi-byte encoding that represents each character
+with a varying number of bytes. All of the plain ASCII characters are
+represented with a single byte; many other characters, including most
+of the characters from Western alphabets, are represented with two
+bytes; and other characters take three bytes. This encoding is more
+compact than UTF-16 for any text with lots of plain ASCII characters,
+since UTF-8 requires only one byte for each such character; however,
+this encoding isn’t very commonly supported by text editors.</li>
+</ul>
 
-If the TADS 3 distribution doesn't include a mapping file for the
-character set you're using, you can [build your own mapping
-file](cmap.html).
+<p>These built-in character set translations don’t require any external
+mapping files.</p>
 
-The compiler provides several built-in character set names that you can
-use, in addition to those supplied by mapping files:
+<h2 id="specifying-an-individual-files-character-set">Specifying an Individual File’s Character Set</h2>
 
-- US-ASCII - US ASCII 7-bit Default, which is a simple mapping for plain
-  ASCII characters. This encoding represents each character with a
-  single byte, and the value in each byte is in the range 0-127.
-- UTF-16LE - "little-endian" 16-bit Unicode (also known as UCS-2
-  encoding). In a file encoded in UTF-16, each character is represented
-  by two consecutive bytes; in the little-endian version, each byte pair
-  has the low-order 8 bits first. This is the typical Unicode encoding
-  used on Windows machines; most Unicode-enabled text editors on Windows
-  use this encoding.
-- UTF-16BE - "big-endian" 16-bit UTF-16, which places the high-order
-  byte of each 16-bit character first. This is the typical Unicode
-  encoding used on Macintosh systems.
-- UTF-8 - This is a multi-byte encoding that represents each character
-  with a varying number of bytes. All of the plain ASCII characters are
-  represented with a single byte; many other characters, including most
-  of the characters from Western alphabets, are represented with two
-  bytes; and other characters take three bytes. This encoding is more
-  compact than UTF-16 for any text with lots of plain ASCII characters,
-  since UTF-8 requires only one byte for each such character; however,
-  this encoding isn't very commonly supported by text editors.
-
-These built-in character set translations don't require any external
-mapping files.
-
-## Specifying an Individual File's Character Set
-
-The -cs option specifies the default character set; the mapping you
+<p>The -cs option specifies the default character set; the mapping you
 specify with this option applies to each source file involved in the
 compilation (including header files), except for files that specify
-their own character set with the \#charset directive. If present, this
-directive must be the very first thing in the file - comments can't
+their own character set with the #charset directive. If present, this
+directive must be the very first thing in the file - comments can’t
 precede it, and even spaces are not allowed before it. The directive
 takes the name of the character set in double quotes - the name used
-here is the same name you'd use in a -cs option:
+here is the same name you’d use in a -cs option:</p>
 
-```
-    #charset "cp1250"
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "cp1250"
+</code></pre></div></div>
 
-If the \#charset directive is present at the start of a file, it
+<p>If the #charset directive is present at the start of a file, it
 overrides any -cs option that was specified for the compilation. This
 makes it easy to mix source files that use different character sets in a
-single compilation.
+single compilation.</p>
 
-Note that a \#charset directive applies only to the file containing the
-directive:
+<p>Note that a #charset directive applies only to the file containing the
+directive:</p>
 
-- If a file uses \#charset to specify the character set, then includes a
-  header file with \#include, the header file uses to the default (-cs)
-  character set, unless the header file itself specifies a \#charset.
-- If an included file uses \#charset, it applies only to the included
-  file. Once the compiler finishes reading the included file and returns
-  to the enclosing source file, the compiler returns to the character
-  set that was in effect in the enclosing source file.
+<ul>
+  <li>If a file uses #charset to specify the character set, then includes a
+header file with #include, the header file uses to the default (-cs)
+character set, unless the header file itself specifies a #charset.</li>
+  <li>If an included file uses #charset, it applies only to the included
+file. Once the compiler finishes reading the included file and returns
+to the enclosing source file, the compiler returns to the character
+set that was in effect in the enclosing source file.</li>
+</ul>
 
-An individual file can only use a single character set. It is not
-possible to switch character sets mid-stream with a new \#charset
-directive.
+<p>An individual file can only use a single character set. It is not
+possible to switch character sets mid-stream with a new #charset
+directive.</p>
 
-Note that you cannot use \#charset in files encoded in UTF-16 (16-bit
+<p>Note that you cannot use #charset in files encoded in UTF-16 (16-bit
 Unicode) - the compiler recognizes this directive only in single-byte or
-multi-byte files.
+multi-byte files.</p>
 
-## <span id="unisource"></span>Using Unicode Source Files
+<h2 id="using-unicode-source-files"><span id="unisource"></span>Using Unicode Source Files</h2>
 
-Since you can't use \#charset in Unicode UTF-16 files, the compiler
+<p>Since you can’t use #charset in Unicode UTF-16 files, the compiler
 requires a different method of recognizing such files. Fortunately, this
 is usually completely automatic, because there is a standard way of
 flagging UTF-16 files; most text editors include this special flagging,
-and the TADS 3 compiler recognizes it. If you're using a cooperating
-text editor, you will not need to do anything more.
+and the TADS 3 compiler recognizes it. If you’re using a cooperating
+text editor, you will not need to do anything more.</p>
 
-UTF-16 encodes each Unicode character in two bytes. There are two
+<p>UTF-16 encodes each Unicode character in two bytes. There are two
 different UTF-16 formats: one that stores the more significant byte of
 each character first, and one that stores the less significant byte
 first. It might seem strange that this supposedly standardized format
@@ -198,53 +190,48 @@ sensing. The Unicode character code 0xFEFF serves this purpose;
 importantly, the character 0xFFFE is explicitly not valid. So, if a
 program reading a UTF-16 file sees the byte sequence FE FF, the program
 knows that it is reading a big-endian UTF-16 file. Likewise, if a
-program sees the sequence FF FE, it knows that it can't be a big-endian
+program sees the sequence FF FE, it knows that it can’t be a big-endian
 UTF-16 file, because 0xFFFE is illegal; so, the program knows the file
-must be a little-endian UTF-16 file.
+must be a little-endian UTF-16 file.</p>
 
-The TADS 3 compiler looks at the first two bytes of each file it reads.
+<p>The TADS 3 compiler looks at the first two bytes of each file it reads.
 If these two bytes are FE FF, the compiler assumes the file is encoded
 in big-endian UTF-16; if the bytes are FF FE, the compiler assumes the
-file is encoded in little-endian UTF-16.
+file is encoded in little-endian UTF-16.</p>
 
-Most Unicode-enabled text editors include the byte-order marker
+<p>Most Unicode-enabled text editors include the byte-order marker
 automatically, since this is part of the Unicode standard. However, if
 your text editor does not automatically insert the marker, you must
 either insert it manually (as the first character of the file), or use
 the -cs compiler option to specify the appropriate encoding - UTF-16BE
-or UTF-16LE - as described earlier.
+or UTF-16LE - as described earlier.</p>
 
-Note that you shouldn't normally see the 0xFEFF marker character when
+<p>Note that you shouldn’t normally see the 0xFEFF marker character when
 you display or print your file, since the Unicode standard specifies
 that this character is to be rendered as a non-breaking, zero-width
-space - in other words, invisible.
+space - in other words, invisible.</p>
 
-Finally, note that the character codes 0xFE and 0xFF are valid
-characters in some single-byte character sets. If you're using a
+<p>Finally, note that the character codes 0xFE and 0xFF are valid
+characters in some single-byte character sets. If you’re using a
 single-byte character set, and the first two characters of your file
 happen to have byte codes 0xFE and 0xFF (in either order), the compiler
 will incorrectly sense that the file is encoded in UTF-16. It seems
 rather improbable that this would happen by chance, but if it does, you
 can avoid confusing the compiler simply by inserting a space character
-or a \#charset directive at the very start of the file, or by using the
--cs compiler option.
-
-</div>
+or a #charset directive at the very start of the file, or by using the
+-cs compiler option.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Source File
-Character Sets  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Source File
+Character Sets<br />
 <span class="navnp"><a href="progstru.html" class="nav"><em>Prev:</em> Source Code
 Structure</a>    
 <a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

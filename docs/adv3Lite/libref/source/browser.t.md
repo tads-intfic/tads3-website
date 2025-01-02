@@ -89,8 +89,8 @@ layout: docs
             {: gameMain.setGameTitle() });
 
         /* parse out the contents of the <title> tag */
-        if (rexSearch('<nocase>[<]title[>](.*)[<]/title[>]', title))
-            title = rexGroup(1)[3];
+        if (rexSearch('<nocase>[<]title[>](.*) [<]/title[>]', title))
+            title = rexGroup(1) [3];
 
         /* initialize the statusline window object */
         statuslineBanner.init();

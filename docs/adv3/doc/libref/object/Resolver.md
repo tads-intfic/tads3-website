@@ -371,7 +371,7 @@ Custom base resolver
 
 
 
-[`action_`](#action_)[`actor_`](#actor_)[`equivs_`](#equivs_)[`isGlobalScope`](#isGlobalScope)[`isSubResolver`](#isSubResolver)[`issuer_`](#issuer_)[`scope_`](#scope_)[`whichMessageObject`](#whichMessageObject)[`whichObject`](#whichObject)
+[`action_`](#action_) [`actor_`](#actor_) [`equivs_`](#equivs_) [`isGlobalScope`](#isGlobalScope) [`isSubResolver`](#isSubResolver) [`issuer_`](#issuer_) [`scope_`](#scope_) [`whichMessageObject`](#whichMessageObject) [`whichObject`](#whichObject)
 
 <span id="_MethodSummary_"></span>
 
@@ -381,7 +381,7 @@ Custom base resolver
 
 
 
-[`allowAll`](#allowAll)[`cacheScopeList`](#cacheScopeList)[`construct`](#construct)[`filterAll`](#filterAll)[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`filterPossRank`](#filterPossRank)[`getAction`](#getAction)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)[`getPossessiveResolver`](#getPossessiveResolver)[`getPronounDefault`](#getPronounDefault)[`getQualifierResolver`](#getQualifierResolver)[`getRawPronounAntecedent`](#getRawPronounAntecedent)[`getReflexiveBinding`](#getReflexiveBinding)[`getScopeList`](#getScopeList)[`getTargetActor`](#getTargetActor)[`matchName`](#matchName)[`objInScope`](#objInScope)[`resetResolver`](#resetResolver)[`resolvePronounAntecedent`](#resolvePronounAntecedent)[`resolveUnknownNounPhrase`](#resolveUnknownNounPhrase)[`selectIndefinite`](#selectIndefinite)[`withGlobals`](#withGlobals)
+[`allowAll`](#allowAll) [`cacheScopeList`](#cacheScopeList) [`construct`](#construct) [`filterAll`](#filterAll) [`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents) [`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase) [`filterPluralPhrase`](#filterPluralPhrase) [`filterPossRank`](#filterPossRank) [`getAction`](#getAction) [`getAll`](#getAll) [`getAllDefaults`](#getAllDefaults) [`getDefaultObject`](#getDefaultObject) [`getPossessiveResolver`](#getPossessiveResolver) [`getPronounDefault`](#getPronounDefault) [`getQualifierResolver`](#getQualifierResolver) [`getRawPronounAntecedent`](#getRawPronounAntecedent) [`getReflexiveBinding`](#getReflexiveBinding) [`getScopeList`](#getScopeList) [`getTargetActor`](#getTargetActor) [`matchName`](#matchName) [`objInScope`](#objInScope) [`resetResolver`](#resetResolver) [`resolvePronounAntecedent`](#resolvePronounAntecedent) [`resolveUnknownNounPhrase`](#resolveUnknownNounPhrase) [`selectIndefinite`](#selectIndefinite) [`withGlobals`](#withGlobals)
 
 <span id="_Properties_"></span>
 

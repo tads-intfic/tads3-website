@@ -71,7 +71,7 @@ any given time.
 
 
 
-[`align_`](#align_)[`handle_`](#handle_)[`id_`](#id_)[`outputStream_`](#outputStream_)[`parentID_`](#parentID_)[`styleFlags_`](#styleFlags_)[`win_`](#win_)[`windowType_`](#windowType_)
+[`align_`](#align_) [`handle_`](#handle_) [`id_`](#id_) [`outputStream_`](#outputStream_) [`parentID_`](#parentID_) [`styleFlags_`](#styleFlags_) [`win_`](#win_) [`windowType_`](#windowType_)
 
 <span id="_MethodSummary_"></span>
 

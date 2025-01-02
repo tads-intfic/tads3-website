@@ -53,15 +53,15 @@ and restore.
 
 
 
-[`curTranscript`](#curTranscript)[`myInputManager`](#myInputManager)
+[`curTranscript`](#curTranscript) [`myInputManager`](#myInputManager)
 
 Inherited from `OutputStream` :  
-[`filterList_`](../object/OutputStream.html#filterList_)[`justDidPara`](../object/OutputStream.html#justDidPara)[`justDidParaSuppressor`](../object/OutputStream.html#justDidParaSuppressor)
+[`filterList_`](../object/OutputStream.html#filterList_) [`justDidPara`](../object/OutputStream.html#justDidPara) [`justDidParaSuppressor`](../object/OutputStream.html#justDidParaSuppressor)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -74,12 +74,12 @@ Inherited from `ModuleExecObject` :
 [`writeFromStream`](#writeFromStream)
 
 Inherited from `OutputStream` :  
-[`addOutputFilter`](../object/OutputStream.html#addOutputFilter)[`addOutputFilterBelow`](../object/OutputStream.html#addOutputFilterBelow)[`applyFilters`](../object/OutputStream.html#applyFilters)[`applyTextFilters`](../object/OutputStream.html#applyTextFilters)[`captureOutput`](../object/OutputStream.html#captureOutput)[`construct`](../object/OutputStream.html#construct)[`execute`](../object/OutputStream.html#execute)[`inputLineEnd`](../object/OutputStream.html#inputLineEnd)[`removeOutputFilter`](../object/OutputStream.html#removeOutputFilter)[`watchForOutput`](../object/OutputStream.html#watchForOutput)[`writeToStream`](../object/OutputStream.html#writeToStream)
+[`addOutputFilter`](../object/OutputStream.html#addOutputFilter) [`addOutputFilterBelow`](../object/OutputStream.html#addOutputFilterBelow) [`applyFilters`](../object/OutputStream.html#applyFilters) [`applyTextFilters`](../object/OutputStream.html#applyTextFilters) [`captureOutput`](../object/OutputStream.html#captureOutput) [`construct`](../object/OutputStream.html#construct) [`execute`](../object/OutputStream.html#execute) [`inputLineEnd`](../object/OutputStream.html#inputLineEnd) [`removeOutputFilter`](../object/OutputStream.html#removeOutputFilter) [`watchForOutput`](../object/OutputStream.html#watchForOutput) [`writeToStream`](../object/OutputStream.html#writeToStream)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

@@ -75,7 +75,7 @@ reshuffle.
 
 
 
-[`suppressRepeats`](#suppressRepeats)[`valueList`](#valueList)[`valuesAvail`](#valuesAvail)[`valuesVec`](#valuesVec)
+[`suppressRepeats`](#suppressRepeats) [`valueList`](#valueList) [`valuesAvail`](#valuesAvail) [`valuesVec`](#valuesVec)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ reshuffle.
 
 
 
-[`construct`](#construct)[`getNextValue`](#getNextValue)[`reshuffle`](#reshuffle)
+[`construct`](#construct) [`getNextValue`](#getNextValue) [`reshuffle`](#reshuffle)
 
 <span id="_Properties_"></span>
 

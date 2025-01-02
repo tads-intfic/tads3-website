@@ -46,71 +46,43 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>LState is the language-specific base class for State objects.</p>
 
-LState is the language-specific base class for State objects.
+<p>[Required]</p>
 
-\[Required\]
-
-`class `**`LState`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">LState</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LState</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LState</code></strong><br />
 <a href="../object/State.html"><code class="language-plaintext highlighter-rouge">State</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#additionalInfo"><code class="language-plaintext highlighter-rouge">additionalInfo</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addToName"><code class="language-plaintext highlighter-rouge">addToName</code></a><a href="#getAdditionalInfo"><code class="language-plaintext highlighter-rouge">getAdditionalInfo</code></a><a href="#initWord"><code class="language-plaintext highlighter-rouge">initWord</code></a></p>
+<p><a href="#addToName"><code class="language-plaintext highlighter-rouge">addToName</code></a> <a href="#getAdditionalInfo"><code class="language-plaintext highlighter-rouge">getAdditionalInfo</code></a> <a href="#initWord"><code class="language-plaintext highlighter-rouge">initWord</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="additionalInfo"></span></p>
 
@@ -118,20 +90,12 @@ LState is the language-specific base class for State objects.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1956">1956</a>]</p>
 
-<div class="desc">
-
-Additional info to be added to the item name when it appears in a
-listing and is in the corresponding state
-
-</div>
+<p>Additional info to be added to the item name when it appears in a
+listing and is in the corresponding state</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addToName"></span></p>
 
@@ -139,15 +103,11 @@ listing and is in the corresponding state
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1927">1927</a>]</p>
 
-<div class="desc">
+<p>Add the state name to an object name under construction. ‘obj’ is the
+object, and ‘str’ the object name being built. This adds the appropriate
+adjective for the state to the name.</p>
 
-Add the state name to an object name under construction. 'obj' is the
-object, and 'str' the object name being built. This adds the appropriate
-adjective for the state to the name.
-
-\[Required\]
-
-</div>
+<p>[Required]</p>
 
 <p><span id="getAdditionalInfo"></span></p>
 
@@ -155,13 +115,9 @@ adjective for the state to the name.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1963">1963</a>]</p>
 
-<div class="desc">
-
-Get the string providing additional info about this object when it's in
-a particular state (such as '(providing light)', the only additional
-state info actually defined in the English library)
-
-</div>
+<p>Get the string providing additional info about this object when it’s in
+a particular state (such as ‘(providing light)’, the only additional
+state info actually defined in the English library)</p>
 
 <p><span id="initWord"></span></p>
 
@@ -169,24 +125,17 @@ state info actually defined in the English library)
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1946">1946</a>]</p>
 
-<div class="desc">
-
-Initialize a state adjective. The base library calls this during preinit
+<p>Initialize a state adjective. The base library calls this during preinit
 for each word, given as a string. The language module must define this
-routine, but it doesn't have to do anything. The English version adds
+routine, but it doesn’t have to do anything. The English version adds
 the word to the dictionary, so that the spelling corrector can recognize
-it.
+it.</p>
 
-\[Required\]
+<p>[Required]</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

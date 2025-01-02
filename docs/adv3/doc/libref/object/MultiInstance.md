@@ -120,10 +120,10 @@ the MultiInstance parent to keep its location list consistent.
 
 
 
-[`instanceList`](#instanceList)[`instanceMixIn`](#instanceMixIn)[`instanceObject`](#instanceObject)
+[`instanceList`](#instanceList) [`instanceMixIn`](#instanceMixIn) [`instanceObject`](#instanceObject)
 
 Inherited from `BaseMultiLoc` :  
-[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass)[`locationList`](../object/BaseMultiLoc.html#locationList)
+[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass) [`locationList`](../object/BaseMultiLoc.html#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -133,10 +133,10 @@ Inherited from `BaseMultiLoc` :
 
 
 
-[`addInstance`](#addInstance)[`addToContents`](#addToContents)[`getInstanceIn`](#getInstanceIn)[`initializeLocation`](#initializeLocation)[`moveInto`](#moveInto)[`moveIntoAdd`](#moveIntoAdd)[`moveOutOf`](#moveOutOf)[`removeFromContents`](#removeFromContents)
+[`addInstance`](#addInstance) [`addToContents`](#addToContents) [`getInstanceIn`](#getInstanceIn) [`initializeLocation`](#initializeLocation) [`moveInto`](#moveInto) [`moveIntoAdd`](#moveIntoAdd) [`moveOutOf`](#moveOutOf) [`removeFromContents`](#removeFromContents)
 
 Inherited from `BaseMultiLoc` :  
-[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList)[`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn)[`isIn`](../object/BaseMultiLoc.html#isIn)[`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn)[`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents)[`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
+[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList) [`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn) [`isIn`](../object/BaseMultiLoc.html#isIn) [`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn) [`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents) [`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
 
 <span id="_Properties_"></span>
 

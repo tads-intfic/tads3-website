@@ -108,7 +108,7 @@ items as necessary from the actor's hands to the bag.
 
 
 
-[`affinityFor`](#affinityFor)[`getBagsOfHolding`](#getBagsOfHolding)
+[`affinityFor`](#affinityFor) [`getBagsOfHolding`](#getBagsOfHolding)
 
 <span id="_Properties_"></span>
 

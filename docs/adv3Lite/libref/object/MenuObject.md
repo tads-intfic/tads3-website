@@ -79,7 +79,7 @@ the + syntax (like "+ MenuItem") to define containment.
 
 
 
-[`contents`](#contents)[`menuOrder`](#menuOrder)
+[`contents`](#contents) [`menuOrder`](#menuOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ the + syntax (like "+ MenuItem") to define containment.
 
 
 
-[`addToContents`](#addToContents)[`compareForMenuSort`](#compareForMenuSort)[`execute`](#execute)[`initializeContents`](#initializeContents)[`initializeLocation`](#initializeLocation)
+[`addToContents`](#addToContents) [`compareForMenuSort`](#compareForMenuSort) [`execute`](#execute) [`initializeContents`](#initializeContents) [`initializeLocation`](#initializeLocation)
 
 <span id="_Properties_"></span>
 

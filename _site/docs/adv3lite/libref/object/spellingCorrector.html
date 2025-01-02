@@ -40,52 +40,32 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Spelling corrector. This object implements automatic spelling correction
+on the player’s input.</p>
 
-Spelling corrector. This object implements automatic spelling correction
-on the player's input.
-
-**`spellingCorrector`**` :   object`
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">spellingCorrector</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">spellingCorrector</code></strong><br />
 `         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#dict"><code class="language-plaintext highlighter-rouge">dict</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkSpacing"><code class="language-plaintext highlighter-rouge">checkSpacing</code></a><a href="#correct"><code class="language-plaintext highlighter-rouge">correct</code></a><a href="#correctPairSpacing"><code class="language-plaintext highlighter-rouge">correctPairSpacing</code></a><a href="#findUnknownWord"><code class="language-plaintext highlighter-rouge">findUnknownWord</code></a><a href="#getCandidates"><code class="language-plaintext highlighter-rouge">getCandidates</code></a><a href="#isWordDefined"><code class="language-plaintext highlighter-rouge">isWordDefined</code></a></p>
+<p><a href="#checkSpacing"><code class="language-plaintext highlighter-rouge">checkSpacing</code></a> <a href="#correct"><code class="language-plaintext highlighter-rouge">correct</code></a> <a href="#correctPairSpacing"><code class="language-plaintext highlighter-rouge">correctPairSpacing</code></a> <a href="#findUnknownWord"><code class="language-plaintext highlighter-rouge">findUnknownWord</code></a> <a href="#getCandidates"><code class="language-plaintext highlighter-rouge">getCandidates</code></a> <a href="#isWordDefined"><code class="language-plaintext highlighter-rouge">isWordDefined</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="dict"></span></p>
 
@@ -93,19 +73,11 @@ on the player's input.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#282">282</a>]</p>
 
-<div class="desc">
-
-the dictionary object we use for looking up words
-
-</div>
+<p>the dictionary object we use for looking up words</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkSpacing"></span></p>
 
@@ -113,20 +85,16 @@ the dictionary object we use for looking up words
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#148">148</a>]</p>
 
-<div class="desc">
-
-Find spacing corrections for the token at the given index. This looks
+<p>Find spacing corrections for the token at the given index. This looks
 for extra inserted spaces, missing spaces, and spaces transposed with
 adjacent letters. We return a list of proposed changes; each element is
 a list of three token values, giving the preceding, current and next
 token in the proposed change. The preceding and/or next can be nil, in
-which case we're not proposing changes to those tokens.
+which case we’re not proposing changes to those tokens.</p>
 
-Note that all spacing changes have edit distance 1. All of our
+<p>Note that all spacing changes have edit distance 1. All of our
 corrections are single character insertions or deletions, or pair
-transpositions (which we count as one edit).
-
-</div>
+transpositions (which we count as one edit).</p>
 
 <p><span id="correct"></span></p>
 
@@ -134,36 +102,32 @@ transpositions (which we count as one edit).
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#62">62</a>]</p>
 
-<div class="desc">
+<p>Attempt to correct a typographical error in a token list.</p>
 
-Attempt to correct a typographical error in a token list.
-
-'toks' is a token list to be corrected, and 'idx' is the index of the
-first unknown word. 'err' is ParseError that triggered the spelling
+<p>‘toks’ is a token list to be corrected, and ‘idx’ is the index of the
+first unknown word. ‘err’ is ParseError that triggered the spelling
 check. We use the error to filter the list of candidates for corrected
-spellings: for a general verb syntax error, for example, we'll look for
-words that are used in verb phrases, and for noun resolution we'll look
-for words associated with in-scope objects.
+spellings: for a general verb syntax error, for example, we’ll look for
+words that are used in verb phrases, and for noun resolution we’ll look
+for words associated with in-scope objects.</p>
 
-If we fail to find a correction, the return value is nil.
+<p>If we fail to find a correction, the return value is nil.</p>
 
-If we find a correction, the return value is a list of token lists. It's
+<p>If we find a correction, the return value is a list of token lists. It’s
 a list rather than a single correction because we might be unable to
 break a tie; rather than picking one arbitrarily, we return all of the
 candidates. This allows the caller to try the different possibilities.
 The caller will generally have more information than we have here about
-the overall context, so it's in a better position to make a final
-judgment about how to break a tie.
+the overall context, so it’s in a better position to make a final
+judgment about how to break a tie.</p>
 
-Note that we only correct a single error per call. If the token list has
+<p>Note that we only correct a single error per call. If the token list has
 additional unknown words, the caller can continue parsing and call here
 again to get candidate corrections for the next word, and so on until
 all unknown words are resolved. We use this iterative approach because
-the first correction might change the parser's guess about where the
+the first correction might change the parser’s guess about where the
 error lies; by waiting, we get the benefit of the revised context
-information for correcting each additional word.
-
-</div>
+information for correcting each additional word.</p>
 
 <p><span id="correctPairSpacing"></span></p>
 
@@ -171,15 +135,11 @@ information for correcting each additional word.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#211">211</a>]</p>
 
-<div class="desc">
-
-Try correcting spelling based on changes to the spacing between a pair
-of tokens. We'll try deleting the intervening space entirely, and we'll
-try transposing the space with each adjacent letter. 'toks' is a vector
-that we'll modify in place; 'idx' is the index of the first word of the
-pair. We return true if we make a correction, nil if not.
-
-</div>
+<p>Try correcting spelling based on changes to the spacing between a pair
+of tokens. We’ll try deleting the intervening space entirely, and we’ll
+try transposing the space with each adjacent letter. ‘toks’ is a vector
+that we’ll modify in place; ‘idx’ is the index of the first word of the
+pair. We return true if we make a correction, nil if not.</p>
 
 <p><span id="findUnknownWord"></span></p>
 
@@ -187,12 +147,8 @@ pair. We return true if we make a correction, nil if not.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#14">14</a>]</p>
 
-<div class="desc">
-
-Find the first word token that isn't in the dictionary. Returns the
-token index, or nil if we don't find any unknown words.
-
-</div>
+<p>Find the first word token that isn’t in the dictionary. Returns the
+token index, or nil if we don’t find any unknown words.</p>
 
 <p><span id="getCandidates"></span></p>
 
@@ -200,12 +156,8 @@ token index, or nil if we don't find any unknown words.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#294">294</a>]</p>
 
-<div class="desc">
-
-Get a list of similar words, with their Levenshtein edit distances This
-returns a list of \[word, distance\] values.
-
-</div>
+<p>Get a list of similar words, with their Levenshtein edit distances This
+returns a list of [word, distance] values.</p>
 
 <p><span id="isWordDefined"></span></p>
 
@@ -213,18 +165,11 @@ returns a list of \[word, distance\] values.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#288">288</a>]</p>
 
-<div class="desc">
+<p>Is the given word defined? We check the command dictionary for the word.</p>
 
-Is the given word defined? We check the command dictionary for the word.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

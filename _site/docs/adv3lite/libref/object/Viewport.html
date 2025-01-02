@@ -46,71 +46,43 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Viewport is a mix-in class which can be added to an object representing
+<p>Viewport is a mix-in class which can be added to an object representing
 a window or TV screen or the like to describe the remote location
-viewable via the viewport. \[DEFINED ON VIEWPORT EXTENSION\]
+viewable via the viewport. [DEFINED ON VIEWPORT EXTENSION]</p>
 
-`class `**`Viewport`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Viewport</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Viewport</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Viewport</code></strong><br />
 <a href="../object/SwitchableViewport.html"><code class="language-plaintext highlighter-rouge">SwitchableViewport</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#examineToView"><code class="language-plaintext highlighter-rouge">examineToView</code></a>  <a href="#isViewing"><code class="language-plaintext highlighter-rouge">isViewing</code></a>  <a href="#lookThroughToView"><code class="language-plaintext highlighter-rouge">lookThroughToView</code></a>  <a href="#visibleRooms"><code class="language-plaintext highlighter-rouge">visibleRooms</code></a>  `</p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#describeVisibleRooms"><code class="language-plaintext highlighter-rouge">describeVisibleRooms</code></a>  <a href="#dobjFor(LookThrough)"><code class="language-plaintext highlighter-rouge">dobjFor(LookThrough)</code></a>  <a href="#examineStatus"><code class="language-plaintext highlighter-rouge">examineStatus</code></a>  <a href="#setRooms"><code class="language-plaintext highlighter-rouge">setRooms</code></a>  `</p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="examineToView"></span></p>
 
@@ -118,12 +90,8 @@ viewable via the viewport. \[DEFINED ON VIEWPORT EXTENSION\]
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#96">96</a>]</p>
 
-<div class="desc">
-
-Flag: should examining this object display a description of the visible
-rooms and their contents? By default it should. \[VIEWPORT EXTENSION\]
-
-</div>
+<p>Flag: should examining this object display a description of the visible
+rooms and their contents? By default it should. [VIEWPORT EXTENSION]</p>
 
 <p><span id="isViewing"></span></p>
 
@@ -131,13 +99,9 @@ rooms and their contents? By default it should. \[VIEWPORT EXTENSION\]
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#103">103</a>]</p>
 
-<div class="desc">
-
-Is the Viewport currently available for viewing through (it may not be
+<p>Is the Viewport currently available for viewing through (it may not be
 if windows cover the curtain, or the CCTV screen has been turned off).
-\[VIEWPORT EXTENSION\]
-
-</div>
+[VIEWPORT EXTENSION]</p>
 
 <p><span id="lookThroughToView"></span></p>
 
@@ -145,13 +109,9 @@ if windows cover the curtain, or the CCTV screen has been turned off).
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#90">90</a>]</p>
 
-<div class="desc">
-
-Flag: can I see into the visibleRooms by looking through this object?
+<p>Flag: can I see into the visibleRooms by looking through this object?
 This should normally be true for a window-type object but probably nil
-for a CCTV monitor. {VIEWPORT EXTENSION\]
-
-</div>
+for a CCTV monitor. {VIEWPORT EXTENSION]</p>
 
 <p><span id="visibleRooms"></span></p>
 
@@ -159,20 +119,12 @@ for a CCTV monitor. {VIEWPORT EXTENSION\]
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#60">60</a>]</p>
 
-<div class="desc">
-
-A list of rooms that are made visible by looking through or at this
-viewport. \[VIEWPORT EXTENSION\]
-
-</div>
+<p>A list of rooms that are made visible by looking through or at this
+viewport. [VIEWPORT EXTENSION]</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="describeVisibleRooms"></span></p>
 
@@ -180,12 +132,8 @@ viewport. \[VIEWPORT EXTENSION\]
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#42">42</a>]</p>
 
-<div class="desc">
-
-Method to display a description of the rooms and contents visible by
-means of me. \[VIEWPORT EXTENSION\]
-
-</div>
+<p>Method to display a description of the rooms and contents visible by
+means of me. [VIEWPORT EXTENSION]</p>
 
 <p><span id="dobjFor(LookThrough)"></span></p>
 
@@ -193,12 +141,8 @@ means of me. \[VIEWPORT EXTENSION\]
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#109">109</a>]</p>
 
-<div class="desc">
-
-For the VIEWPORT EXTENSION add desribing rooms visible through this
-viewport to the inherited behaviour
-
-</div>
+<p>For the VIEWPORT EXTENSION add desribing rooms visible through this
+viewport to the inherited behaviour</p>
 
 <p><span id="examineStatus"></span></p>
 
@@ -206,12 +150,8 @@ viewport to the inherited behaviour
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#124">124</a>]</p>
 
-<div class="desc">
-
-If examining this Viewport should describe what it shows, add a
-description of the rooms it overlooks. \[VIEWPORT EXTENSION\]
-
-</div>
+<p>If examining this Viewport should describe what it shows, add a
+description of the rooms it overlooks. [VIEWPORT EXTENSION]</p>
 
 <p><span id="setRooms"></span></p>
 
@@ -219,18 +159,11 @@ description of the rooms it overlooks. \[VIEWPORT EXTENSION\]
 
 <p><a href="../file/viewport.t.html">viewport.t</a>[<a href="../source/viewport.t.html#64">64</a>]</p>
 
-<div class="desc">
+<p>Set the list of visible rooms to lst [VIEWPORT EXTENSION]</p>
 
-Set the list of visible rooms to lst \[VIEWPORT EXTENSION\]
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

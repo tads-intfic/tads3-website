@@ -87,7 +87,7 @@ otherwise overridden back to an underlying resolver
 
 
 
-[`construct`](#construct)[`getPossessiveResolver`](#getPossessiveResolver)[`propNotDefined`](#propNotDefined)
+[`construct`](#construct) [`getPossessiveResolver`](#getPossessiveResolver) [`propNotDefined`](#propNotDefined)
 
 <span id="_Properties_"></span>
 

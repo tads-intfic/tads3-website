@@ -46,75 +46,43 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Out Of Reach - this is a special mix-in that can be used to create an
+object that places its *contents* out of reach under customizable
+conditions, and can optionally place itself out of reach as well.</p>
 
-Out Of Reach - this is a special mix-in that can be used to create an
-object that places its \*contents\* out of reach under customizable
-conditions, and can optionally place itself out of reach as well.
-
-`class `**`OutOfReach`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">OutOfReach</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">OutOfReach</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#cannotReachFromInsideMsg"><code class="language-plaintext highlighter-rouge">cannotReachFromInsideMsg</code></a><a href="#cannotReachFromOutsideMsg"><code class="language-plaintext highlighter-rouge">cannotReachFromOutsideMsg</code></a><a href="#canObjReachContents"><code class="language-plaintext highlighter-rouge">canObjReachContents</code></a><a href="#canObjReachSelf"><code class="language-plaintext highlighter-rouge">canObjReachSelf</code></a><a href="#canReachFromInside"><code class="language-plaintext highlighter-rouge">canReachFromInside</code></a><a href="#canReachSelfFromInside"><code class="language-plaintext highlighter-rouge">canReachSelfFromInside</code></a><a href="#checkTouchViaPath"><code class="language-plaintext highlighter-rouge">checkTouchViaPath</code></a><a href="#tryImplicitRemoveObstructor"><code class="language-plaintext highlighter-rouge">tryImplicitRemoveObstructor</code></a></p>
+<p><a href="#cannotReachFromInsideMsg"><code class="language-plaintext highlighter-rouge">cannotReachFromInsideMsg</code></a> <a href="#cannotReachFromOutsideMsg"><code class="language-plaintext highlighter-rouge">cannotReachFromOutsideMsg</code></a> <a href="#canObjReachContents"><code class="language-plaintext highlighter-rouge">canObjReachContents</code></a> <a href="#canObjReachSelf"><code class="language-plaintext highlighter-rouge">canObjReachSelf</code></a> <a href="#canReachFromInside"><code class="language-plaintext highlighter-rouge">canReachFromInside</code></a> <a href="#canReachSelfFromInside"><code class="language-plaintext highlighter-rouge">canReachSelfFromInside</code></a> <a href="#checkTouchViaPath"><code class="language-plaintext highlighter-rouge">checkTouchViaPath</code></a> <a href="#tryImplicitRemoveObstructor"><code class="language-plaintext highlighter-rouge">tryImplicitRemoveObstructor</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="cannotReachFromInsideMsg"></span></p>
 
@@ -122,11 +90,7 @@ conditions, and can optionally place itself out of reach as well.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2328">2328</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="cannotReachFromOutsideMsg"></span></p>
 
@@ -134,14 +98,10 @@ conditions, and can optionally place itself out of reach as well.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2327">2327</a>]</p>
 
-<div class="desc">
-
-The message to use to indicate that we can't reach an object, because
+<p>The message to use to indicate that we can’t reach an object, because
 the actor is outside me and the target is inside, or vice versa. Each of
 these can return a property ID giving an actor action message property,
-or can simply return a string with the message text.
-
-</div>
+or can simply return a string with the message text.</p>
 
 <p><span id="canObjReachContents"></span></p>
 
@@ -149,18 +109,14 @@ or can simply return a string with the message text.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2341">2341</a>]</p>
 
-<div class="desc">
+<p>Determine if the given object can reach my contents. ‘obj’ is the object
+(usually an actor) attempting to reach my contents from outside of me.</p>
 
-Determine if the given object can reach my contents. 'obj' is the object
-(usually an actor) attempting to reach my contents from outside of me.
-
-By default, we'll return nil, so that nothing within me can be reached
+<p>By default, we’ll return nil, so that nothing within me can be reached
 from anyone outside. This can be overridden to allow my contents to
 become reachable from some external locations but not others; for
 example, a high shelf could allow an actor standing on a chair to reach
-my contents.
-
-</div>
+my contents.</p>
 
 <p><span id="canObjReachSelf"></span></p>
 
@@ -168,14 +124,10 @@ my contents.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2350">2350</a>]</p>
 
-<div class="desc">
+<p>Determine if the given object can reach me. ‘obj’ is the object (usually
+an actor) attempting to reach this object.</p>
 
-Determine if the given object can reach me. 'obj' is the object (usually
-an actor) attempting to reach this object.
-
-By default, make this object subject to the same rules as its contents.
-
-</div>
+<p>By default, make this object subject to the same rules as its contents.</p>
 
 <p><span id="canReachFromInside"></span></p>
 
@@ -183,16 +135,12 @@ By default, make this object subject to the same rules as its contents.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2361">2361</a>]</p>
 
-<div class="desc">
+<p>Determine if the given object outside of me is reachable from within me.
+‘obj’ (usually an actor) is attempting to reach ‘dest’.</p>
 
-Determine if the given object outside of me is reachable from within me.
-'obj' (usually an actor) is attempting to reach 'dest'.
-
-By default, we return nil, so nothing outside of me is reachable from
+<p>By default, we return nil, so nothing outside of me is reachable from
 within me. This can be overridden as needed. This should usually behave
-symmetrically with canObjReachContents().
-
-</div>
+symmetrically with canObjReachContents().</p>
 
 <p><span id="canReachSelfFromInside"></span></p>
 
@@ -200,16 +148,12 @@ symmetrically with canObjReachContents().
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2371">2371</a>]</p>
 
-<div class="desc">
+<p>Determine if we can reach this object itself from within. This is used
+when ‘obj’ tries to touch this object when ‘obj’ is located within this
+object.</p>
 
-Determine if we can reach this object itself from within. This is used
-when 'obj' tries to touch this object when 'obj' is located within this
-object.
-
-By default, we we use the same rules as we use to reach an external
-object from within.
-
-</div>
+<p>By default, we we use the same rules as we use to reach an external
+object from within.</p>
 
 <p><span id="checkTouchViaPath"></span></p>
 
@@ -217,11 +161,7 @@ object from within.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2272">2272</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="tryImplicitRemoveObstructor"></span></p>
 
@@ -229,19 +169,12 @@ object from within.
 
 <p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2377">2377</a>]</p>
 
-<div class="desc">
+<p>We cannot implicitly remove this obstruction, so simply return nil when
+asked.</p>
 
-We cannot implicitly remove this obstruction, so simply return nil when
-asked.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

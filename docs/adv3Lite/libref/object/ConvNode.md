@@ -73,7 +73,7 @@ it's active when its nodeActive property is true.
 [`isActive`](#isActive)
 
 Inherited from `TopicGroup` :  
-[`active`](../object/TopicGroup.html#active)[`convKeys`](../object/TopicGroup.html#convKeys)[`getActor`](../object/TopicGroup.html#getActor)[`scoreBoost`](../object/TopicGroup.html#scoreBoost)
+[`active`](../object/TopicGroup.html#active) [`convKeys`](../object/TopicGroup.html#convKeys) [`getActor`](../object/TopicGroup.html#getActor) [`scoreBoost`](../object/TopicGroup.html#scoreBoost)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Inherited from `TopicGroup` :
 [`register`](#register)
 
 Inherited from `TopicGroup` :  
-[`addTopic`](../object/TopicGroup.html#addTopic)[`nodeActive`](../object/TopicGroup.html#nodeActive)[`scoreBooster`](../object/TopicGroup.html#scoreBooster)
+[`addTopic`](../object/TopicGroup.html#addTopic) [`nodeActive`](../object/TopicGroup.html#nodeActive) [`scoreBooster`](../object/TopicGroup.html#scoreBooster)
 
 <span id="_Properties_"></span>
 

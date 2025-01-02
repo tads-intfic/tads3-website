@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt;
-StringComparator  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt;
+StringComparator<br />
 <span class="navnp"><a href="strbuf.html" class="nav"><em>Prev:</em> StringBuffer</a>
     <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="stringcomparator">StringComparator</h1>
 
@@ -255,75 +247,64 @@ the following methods:</p>
 
 <p><code class="language-plaintext highlighter-rouge">calcHash(*str*)</code></p>
 
-<div class="fdef">
-
-Calculate a hash value for the given string. Returns an integer giving
+<p>Calculate a hash value for the given string. Returns an integer giving
 the hash value. The hash calculation conforms to the requirement that,
-for two strings *s1* and *s2*, if `matchValues(s1,
-s2)` indicates a match, then
-`calcHash(s1)` will equal
-`calcHash(s2)`.
+for two strings <em>s1</em> and <em>s2</em>, if <code class="language-plaintext highlighter-rouge">matchValues(s1,
+s2)</code> indicates a match, then
+<code class="language-plaintext highlighter-rouge">calcHash(s1)</code> will equal
+<code class="language-plaintext highlighter-rouge">calcHash(s2)</code>.</p>
 
+<p><code class="language-plaintext highlighter-rouge">matchValues(*inputStr*, *refStr*)</code></p>
 
-
-`matchValues(*inputStr*, *refStr*)`
-
-<div class="fdef">
-
-Compares the two strings, and returns a non-zero integer if the two
+<p>Compares the two strings, and returns a non-zero integer if the two
 strings match, according to the rules defined when the StringComparator
 was constructed, or 0 (the integer zero) if the strings do not match.
-*inputStr* is the "input" string, which typically will come from user
-input or a similar source; *refStr* is the "reference" string, which is
+<em>inputStr</em> is the “input” string, which typically will come from user
+input or a similar source; <em>refStr</em> is the “reference” string, which is
 the string against which the input is to be tested. When used with a
-Dictionary, the reference string is the string stored in the dictionary.
+Dictionary, the reference string is the string stored in the dictionary.</p>
 
-The return value for a match will always be a non-zero integer. This
+<p>The return value for a match will always be a non-zero integer. This
 value is formed by combining, using bitwise OR, all of the applicable
 flags for the match, including the pre-defined flags and the result
 flags for all equivalence mappings used to make the match. The following
-flag values are pre-defined:
+flag values are pre-defined:</p>
 
-- `StrCompMatch` (0x0001) - this flag is set for
-  all matching values, simply to ensure that, even in the absence of any
-  other flags, a non-zero value is returned from matchValues().
-- `StrCompCaseFold` (0x0002) - indicates that
-  the match used "case folding," which is to say that one or more
-  upper-case letters in the input matched corresponding lower-case
-  letters in the reference string, or vice versa. This flag can only be
-  returned when case-insensitive matches were selected in the
-  constructor, since a case-sensitive comparator will not match strings
-  that differ in case.
-- `StrCompTrunc` (0x0004) - the match was
-  truncated; in other words, the input string was a leading substring of
-  the reference string, was shorter than the reference string, and was
-  at least the truncation length specified when the comparator was
-  created. If truncation was disabled when the comparator was created
-  (by setting the truncation length to zero or nil), this flag will
-  never be returned, because truncated matches will never be allowed.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">StrCompMatch</code> (0x0001) - this flag is set for
+all matching values, simply to ensure that, even in the absence of any
+other flags, a non-zero value is returned from matchValues().</li>
+  <li><code class="language-plaintext highlighter-rouge">StrCompCaseFold</code> (0x0002) - indicates that
+the match used “case folding,” which is to say that one or more
+upper-case letters in the input matched corresponding lower-case
+letters in the reference string, or vice versa. This flag can only be
+returned when case-insensitive matches were selected in the
+constructor, since a case-sensitive comparator will not match strings
+that differ in case.</li>
+  <li><code class="language-plaintext highlighter-rouge">StrCompTrunc</code> (0x0004) - the match was
+truncated; in other words, the input string was a leading substring of
+the reference string, was shorter than the reference string, and was
+at least the truncation length specified when the comparator was
+created. If truncation was disabled when the comparator was created
+(by setting the truncation length to zero or nil), this flag will
+never be returned, because truncated matches will never be allowed.</li>
+</ul>
 
-Note that, in addition to the pre-defined flags listed above,
+<p>Note that, in addition to the pre-defined flags listed above,
 StringComparator reserves all flag values from 0x0001 to 0x0080, to
 allow for future expansion; equivalence mappings should use flag values
-0x0100 and above.
-
-</div>
-
-</div>
+0x0100 and above.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt;
-StringComparator  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt;
+StringComparator<br />
 <span class="navnp"><a href="strbuf.html" class="nav"><em>Prev:</em> StringBuffer</a>
     <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

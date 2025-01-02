@@ -40,37 +40,29 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Signal is a kind of Relation that can be used to send a signal from a
+<p>A Signal is a kind of Relation that can be used to send a signal from a
 sender to all the objects related to that sender via this Signal
-Relation.
+Relation.</p>
 
-For a signal to be sent from a sender to a receiver, a relationship
-first needs to be set up between them with a statement like:
+<p>For a signal to be sent from a sender to a receiver, a relationship
+first needs to be set up between them with a statement like:</p>
 
-connect(sender, signal, receiver);
+<p>connect(sender, signal, receiver);</p>
 
-Where signal is either the programmatic name or the string name of the
-signal we want sent.
+<p>Where signal is either the programmatic name or the string name of the
+signal we want sent.</p>
 
-To break the link subsequently we can use:
+<p>To break the link subsequently we can use:</p>
 
-unconnect(sender, signal, receiver);
+<p>unconnect(sender, signal, receiver);</p>
 
-\[SIGNALS EXTENSION\]
+<p>[SIGNALS EXTENSION]</p>
 
-**`Signal`**` :   `[`Relation`](../object/Relation.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">Signal</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Signal</code></strong><br />
 <a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a><br />
@@ -79,46 +71,34 @@ unconnect(sender, signal, receiver);
 `                                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#dispatchTab"><code class="language-plaintext highlighter-rouge">dispatchTab</code></a><a href="#propList"><code class="language-plaintext highlighter-rouge">propList</code></a><a href="#relationType"><code class="language-plaintext highlighter-rouge">relationType</code></a></p>
+<p><a href="#dispatchTab"><code class="language-plaintext highlighter-rouge">dispatchTab</code></a> <a href="#propList"><code class="language-plaintext highlighter-rouge">propList</code></a> <a href="#relationType"><code class="language-plaintext highlighter-rouge">relationType</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
-<a href="../object/Relation.html#name"><code class="language-plaintext highlighter-rouge">name</code></a><a href="../object/Relation.html#reciprocal"><code class="language-plaintext highlighter-rouge">reciprocal</code></a><a href="../object/Relation.html#relTab"><code class="language-plaintext highlighter-rouge">relTab</code></a><a href="../object/Relation.html#reverseName"><code class="language-plaintext highlighter-rouge">reverseName</code></a></p>
+<a href="../object/Relation.html#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="../object/Relation.html#reciprocal"><code class="language-plaintext highlighter-rouge">reciprocal</code></a> <a href="../object/Relation.html#relTab"><code class="language-plaintext highlighter-rouge">relTab</code></a> <a href="../object/Relation.html#reverseName"><code class="language-plaintext highlighter-rouge">reverseName</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addHandler"><code class="language-plaintext highlighter-rouge">addHandler</code></a><a href="#emit"><code class="language-plaintext highlighter-rouge">emit</code></a><a href="#removeHandler"><code class="language-plaintext highlighter-rouge">removeHandler</code></a></p>
+<p><a href="#addHandler"><code class="language-plaintext highlighter-rouge">addHandler</code></a> <a href="#emit"><code class="language-plaintext highlighter-rouge">emit</code></a> <a href="#removeHandler"><code class="language-plaintext highlighter-rouge">removeHandler</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
-<a href="../object/Relation.html#addRelation"><code class="language-plaintext highlighter-rouge">addRelation</code></a><a href="../object/Relation.html#inverselyRelatedTo"><code class="language-plaintext highlighter-rouge">inverselyRelatedTo</code></a><a href="../object/Relation.html#isInverselyRelated"><code class="language-plaintext highlighter-rouge">isInverselyRelated</code></a><a href="../object/Relation.html#isRelated"><code class="language-plaintext highlighter-rouge">isRelated</code></a><a href="../object/Relation.html#makeUnique"><code class="language-plaintext highlighter-rouge">makeUnique</code></a><a href="../object/Relation.html#relatedTo"><code class="language-plaintext highlighter-rouge">relatedTo</code></a><a href="../object/Relation.html#removeRelation"><code class="language-plaintext highlighter-rouge">removeRelation</code></a></p>
+<a href="../object/Relation.html#addRelation"><code class="language-plaintext highlighter-rouge">addRelation</code></a> <a href="../object/Relation.html#inverselyRelatedTo"><code class="language-plaintext highlighter-rouge">inverselyRelatedTo</code></a> <a href="../object/Relation.html#isInverselyRelated"><code class="language-plaintext highlighter-rouge">isInverselyRelated</code></a> <a href="../object/Relation.html#isRelated"><code class="language-plaintext highlighter-rouge">isRelated</code></a> <a href="../object/Relation.html#makeUnique"><code class="language-plaintext highlighter-rouge">makeUnique</code></a> <a href="../object/Relation.html#relatedTo"><code class="language-plaintext highlighter-rouge">relatedTo</code></a> <a href="../object/Relation.html#removeRelation"><code class="language-plaintext highlighter-rouge">removeRelation</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a><a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="dispatchTab"></span></p>
 
@@ -126,17 +106,13 @@ unconnect(sender, signal, receiver);
 
 <p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#99">99</a>]</p>
 
-<div class="desc">
-
-A LookupTable liniking objects that might emit this signal (potential
+<p>A LookupTable liniking objects that might emit this signal (potential
 senders) to potential receivers of this signal, so that notifications
 can be sent from the former to the latter. Game code should not need to
 manipulate this table directly; it should instead be updated via the
-supplied connect() and unconnect() functions.
+supplied connect() and unconnect() functions.</p>
 
-\[SIGNALS EXTENSION\]
-
-</div>
+<p>[SIGNALS EXTENSION]</p>
 
 <p><span id="propList"></span></p>
 
@@ -144,12 +120,8 @@ supplied connect() and unconnect() functions.
 
 <p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#89">89</a>]</p>
 
-<div class="desc">
-
-A list of pointers to the properties to which additional arguments to
-our emit method should be assigned. \[SIGNALS EXTENSION\]
-
-</div>
+<p>A list of pointers to the properties to which additional arguments to
+our emit method should be assigned. [SIGNALS EXTENSION]</p>
 
 <p><span id="relationType"></span></p>
 
@@ -157,19 +129,11 @@ our emit method should be assigned. \[SIGNALS EXTENSION\]
 
 <p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#31">31</a>]</p>
 
-<div class="desc">
-
-Signals can potentially relate many things to many other things.
-
-</div>
+<p>Signals can potentially relate many things to many other things.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addHandler"></span></p>
 
@@ -177,11 +141,7 @@ Signals can potentially relate many things to many other things.
 
 <p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#101">101</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="emit"></span></p>
 
@@ -189,21 +149,17 @@ Signals can potentially relate many things to many other things.
 
 <p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#46">46</a>]</p>
 
-<div class="desc">
+<p>Notify every object related to sender by us to handle us as a signal
+from sender.</p>
 
-Notify every object related to sender by us to handle us as a signal
-from sender.
-
-If additional args are supplied, they can take one of two forms. Either
+<p>If additional args are supplied, they can take one of two forms. Either
 values, which are then assigned in turn to the properties listed in our
-propList property, or two-element lists of the form \[prop, val\] where
+propList property, or two-element lists of the form [prop, val] where
 prop is a property pointer and val is the value to be assigned to this
 property. Note that these two forms cannot be mixed in the same call to
-this method, unless all the list form arguments come at the end.
+this method, unless all the list form arguments come at the end.</p>
 
-\[SIGNALS EXTENSION\]
-
-</div>
+<p>[SIGNALS EXTENSION]</p>
 
 <p><span id="removeHandler"></span></p>
 
@@ -211,18 +167,11 @@ this method, unless all the list form arguments come at the end.
 
 <p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#109">109</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

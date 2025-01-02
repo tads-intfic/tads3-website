@@ -46,24 +46,16 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A base class for file-oriented actions, such as SCRIPT, RECORD, and
+<p>A base class for file-oriented actions, such as SCRIPT, RECORD, and
 REPLAY. We provide common handling that prompts interactively for a
 filename; subclasses must override a few methods and properties to carry
-out the specific subclassed operation on the file.
+out the specific subclassed operation on the file.</p>
 
-`class `**`FileOpAction`**` :   `[`SystemAction`](../object/SystemAction.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">FileOpAction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/SystemAction.html"><code class="language-plaintext highlighter-rouge">SystemAction</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">FileOpAction</code></strong><br />
 <a href="../object/SystemAction.html"><code class="language-plaintext highlighter-rouge">SystemAction</code></a><br />
@@ -74,27 +66,15 @@ out the specific subclassed operation on the file.
 `                                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#fileDisposition"><code class="language-plaintext highlighter-rouge">fileDisposition</code></a>  <a href="#filePromptMsg"><code class="language-plaintext highlighter-rouge">filePromptMsg</code></a>  <a href="#fileTypeID"><code class="language-plaintext highlighter-rouge">fileTypeID</code></a>  <a href="#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a>  <a href="#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a>  <a href="#showCancelMsg"><code class="language-plaintext highlighter-rouge">showCancelMsg</code></a>  `</p>
 
@@ -109,11 +89,7 @@ out the specific subclassed operation on the file.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a>  <a href="#performFileOp"><code class="language-plaintext highlighter-rouge">performFileOp</code></a>  <a href="#setUpFileOp"><code class="language-plaintext highlighter-rouge">setUpFileOp</code></a>  `</p>
 
@@ -134,11 +110,7 @@ out the specific subclassed operation on the file.
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="fileDisposition"></span></p>
 
@@ -146,11 +118,7 @@ out the specific subclassed operation on the file.
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2208">2208</a>]</p>
 
-<div class="desc">
-
-the file dialog open/save type
-
-</div>
+<p>the file dialog open/save type</p>
 
 <p><span id="filePromptMsg"></span></p>
 
@@ -158,11 +126,7 @@ the file dialog open/save type
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2205">2205</a>]</p>
 
-<div class="desc">
-
-our file dialog prompt message
-
-</div>
+<p>our file dialog prompt message</p>
 
 <p><span id="fileTypeID"></span></p>
 
@@ -170,11 +134,7 @@ our file dialog prompt message
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2211">2211</a>]</p>
 
-<div class="desc">
-
-the file dialog type ID
-
-</div>
+<p>the file dialog type ID</p>
 
 <p><span id="includeInUndo"></span></p>
 
@@ -182,11 +142,7 @@ the file dialog type ID
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2282">2282</a>]</p>
 
-<div class="desc">
-
-we can't include this in undo, as it affects external files
-
-</div>
+<p>we can’t include this in undo, as it affects external files</p>
 
 <p><span id="isRepeatable"></span></p>
 
@@ -194,11 +150,7 @@ we can't include this in undo, as it affects external files
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2285">2285</a>]</p>
 
-<div class="desc">
-
-don't allow repeating with AGAIN
-
-</div>
+<p>don’t allow repeating with AGAIN</p>
 
 <p><span id="showCancelMsg"></span></p>
 
@@ -206,19 +158,11 @@ don't allow repeating with AGAIN
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2214">2214</a>]</p>
 
-<div class="desc">
-
-show our cancellation mesage
-
-</div>
+<p>show our cancellation mesage</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="execAction"></span></p>
 
@@ -226,13 +170,9 @@ show our cancellation mesage
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2234">2234</a>]</p>
 
-<div class="desc">
-
-Each concrete action subclass must override this to carry out our
+<p>Each concrete action subclass must override this to carry out our
 operation. This is called when the user has successfully selected a
-filename for the operation.
-
-</div>
+filename for the operation.</p>
 
 <p><span id="performFileOp"></span></p>
 
@@ -240,16 +180,12 @@ filename for the operation.
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2225">2225</a>]</p>
 
-<div class="desc">
+<p>Carry out our file operation.</p>
 
-Carry out our file operation.
-
-'desc' is an optional named argument giving a description string entered
+<p>‘desc’ is an optional named argument giving a description string entered
 by the user via the Save Game dialog. Some versions of the Save Game
 dialog let the user enter this additional information, which can be
-stored as part of the saved game metadata.
-
-</div>
+stored as part of the saved game metadata.</p>
 
 <p><span id="setUpFileOp"></span></p>
 
@@ -257,18 +193,11 @@ stored as part of the saved game metadata.
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#2245">2245</a>]</p>
 
-<div class="desc">
+<p>ask for a file, and carry out our operation is we get one</p>
 
-ask for a file, and carry out our operation is we get one
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

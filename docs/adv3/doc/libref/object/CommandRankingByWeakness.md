@@ -73,7 +73,7 @@ real problems.
 
 
 
-[`rankByEndAdj`](../object/rankByEndAdj.html)[`rankByPluralTrunc`](../object/rankByPluralTrunc.html)[`rankByPronoun`](../object/rankByPronoun.html)[`rankByTrunc`](../object/rankByTrunc.html)[`rankByWeakness`](../object/rankByWeakness.html)
+[`rankByEndAdj`](../object/rankByEndAdj.html) [`rankByPluralTrunc`](../object/rankByPluralTrunc.html) [`rankByPronoun`](../object/rankByPronoun.html) [`rankByTrunc`](../object/rankByTrunc.html) [`rankByWeakness`](../object/rankByWeakness.html)
 <span id="_PropSummary_"></span>
 
 
@@ -94,7 +94,7 @@ real problems.
 
 
 
-[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
+[`comparePass1`](#comparePass1) [`comparePass2`](#comparePass2)
 
 
 

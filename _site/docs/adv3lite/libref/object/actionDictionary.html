@@ -40,32 +40,24 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Action Dictionary. This is a lookup table that we generate during
+preinit from the vocabulary words associated with ‘predicate’ grammar
+rules. We map each vocabulary word to the Action objects it’s associated
+with.</p>
 
-Action Dictionary. This is a lookup table that we generate during
-preinit from the vocabulary words associated with 'predicate' grammar
-rules. We map each vocabulary word to the Action objects it's associated
-with.
-
-The standard dictionary contains all of these words as well, but it maps
-them all to the generic 'predicate' GrammarProd object. That doesn't
+<p>The standard dictionary contains all of these words as well, but it maps
+them all to the generic ‘predicate’ GrammarProd object. That doesn’t
 help us identify which words are associated with which actions. That
-information is sometimes needed, such as during spelling correction.
+information is sometimes needed, such as during spelling correction.</p>
 
-Note that the system library file gramprod.t must be included in the
-build, so that GrammarAltInfo is defined.
+<p>Note that the system library file gramprod.t must be included in the
+build, so that GrammarAltInfo is defined.</p>
 
-**`actionDictionary`**` :   `[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">actionDictionary</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">actionDictionary</code></strong><br />
 <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
@@ -73,40 +65,28 @@ build, so that GrammarAltInfo is defined.
 `                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#wordToAction"><code class="language-plaintext highlighter-rouge">wordToAction</code></a><a href="#xwords"><code class="language-plaintext highlighter-rouge">xwords</code></a></p>
+<p><a href="#wordToAction"><code class="language-plaintext highlighter-rouge">wordToAction</code></a> <a href="#xwords"><code class="language-plaintext highlighter-rouge">xwords</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="wordToAction"></span></p>
 
@@ -114,12 +94,8 @@ build, so that GrammarAltInfo is defined.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#412">412</a>]</p>
 
-<div class="desc">
-
-word-to-action table: this maps each vocabulary word to a list of the
-Action objects associated with the grammar rules in which it appears
-
-</div>
+<p>word-to-action table: this maps each vocabulary word to a list of the
+Action objects associated with the grammar rules in which it appears</p>
 
 <p><span id="xwords"></span></p>
 
@@ -127,22 +103,14 @@ Action objects associated with the grammar rules in which it appears
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#421">421</a>]</p>
 
-<div class="desc">
-
-Associated word table: this maps each vocabulary word to a list of all
+<p>Associated word table: this maps each vocabulary word to a list of all
 of the other words that appear in predicate grammar rules in which the
-given word appears. For example, 'up' will have a list like \[pick, go,
-look\], since it's used in rules for 'pick up', 'go up', 'look up'.
-
-</div>
+given word appears. For example, ‘up’ will have a list like [pick, go,
+look], since it’s used in rules for ‘pick up’, ‘go up’, ‘look up’.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="execute"></span></p>
 
@@ -150,18 +118,11 @@ look\], since it's used in rules for 'pick up', 'go up', 'look up'.
 
 <p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#366">366</a>]</p>
 
-<div class="desc">
+<p>initialize</p>
 
-initialize
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

@@ -92,7 +92,7 @@ ParseError is an Exception subclass for parsing errors.
 
 
 
-[`allowOnRespell`](#allowOnRespell)[`curable`](#curable)[`errStage`](#errStage)
+[`allowOnRespell`](#allowOnRespell) [`curable`](#curable) [`errStage`](#errStage)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -105,10 +105,10 @@ Inherited from `Exception` :
 
 
 
-[`display`](#display)[`rankCorrection`](#rankCorrection)[`tryCuring`](#tryCuring)
+[`display`](#display) [`rankCorrection`](#rankCorrection) [`tryCuring`](#tryCuring)
 
 Inherited from `Exception` :  
-[`construct`](../object/Exception.html#construct)[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`construct`](../object/Exception.html#construct) [`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

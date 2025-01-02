@@ -46,83 +46,55 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Make a room "floorless." This is a mix-in class that you can include in
+<p>Make a room “floorless.” This is a mix-in class that you can include in
 a superclass list ahead of Room or any of its subclasses to create a
 room where support is provided by some means other than standing on a
-surface, or where there's simply no support. Examples: hanging on a rope
+surface, or where there’s simply no support. Examples: hanging on a rope
 over a chasm; climbing a ladder; in free-fall after jumping out of a
-plane; levitating in mid-air.
+plane; levitating in mid-air.</p>
 
-There are two main special features of a floorless room. First, and most
-obviously, there's no "floor" or "ground" object among the room parts.
+<p>There are two main special features of a floorless room. First, and most
+obviously, there’s no “floor” or “ground” object among the room parts.
 We accomplish this by simply subtracting out any object of class Floor
-from the room parts list inherited from the combined base room class.
+from the room parts list inherited from the combined base room class.</p>
 
-Second, there's no place to put anything down, so objects dropped here
+<p>Second, there’s no place to put anything down, so objects dropped here
 either disappear from the game or are transported to another location
-(the room at the bottom of the chasm, for example).
+(the room at the bottom of the chasm, for example).</p>
 
-`class `**`Floorless`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Floorless</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Floorless</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Floorless</code></strong><br />
 <a href="../object/FloorlessRoom.html"><code class="language-plaintext highlighter-rouge">FloorlessRoom</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#bottomRoom"><code class="language-plaintext highlighter-rouge">bottomRoom</code></a><a href="#roomParts"><code class="language-plaintext highlighter-rouge">roomParts</code></a></p>
+<p><a href="#bottomRoom"><code class="language-plaintext highlighter-rouge">bottomRoom</code></a> <a href="#roomParts"><code class="language-plaintext highlighter-rouge">roomParts</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#receiveDrop"><code class="language-plaintext highlighter-rouge">receiveDrop</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="bottomRoom"></span></p>
 
@@ -130,14 +102,10 @@ either disappear from the game or are transported to another location
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#4818">4818</a>]</p>
 
-<div class="desc">
-
-The room below, if any - this is where objects dropped here will
+<p>The room below, if any - this is where objects dropped here will
 actually end up. By default, this is nil, which means that objects
-dropped here simply disappear from the game. If there's a "bottom of
-chasm" location where dropped objects should land, provide it here.
-
-</div>
+dropped here simply disappear from the game. If there’s a “bottom of
+chasm” location where dropped objects should land, provide it here.</p>
 
 <p><span id="roomParts"></span></p>
 
@@ -145,25 +113,17 @@ chasm" location where dropped objects should land, provide it here.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#4809">4809</a>]</p>
 
-<div class="desc">
-
-Omit the default floor/ground objects from the room parts list. Room
+<p>Omit the default floor/ground objects from the room parts list. Room
 classes generally have static room parts lists, so calculate this once
-per instance and store the results.
+per instance and store the results.</p>
 
-NOTE - if you combine Floorless with a base Room class that has a
-dynamic room parts list, you'll need to override this to calculate the
-subset dynamically on each invocation.
-
-</div>
+<p>NOTE - if you combine Floorless with a base Room class that has a
+dynamic room parts list, you’ll need to override this to calculate the
+subset dynamically on each invocation.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="receiveDrop"></span></p>
 
@@ -171,18 +131,11 @@ subset dynamically on each invocation.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#4821">4821</a>]</p>
 
-<div class="desc">
+<p>receive a dropped object</p>
 
-receive a dropped object
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

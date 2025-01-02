@@ -69,7 +69,7 @@ is active and when it's dormant.
 
 
 
-[`default1Doer`](../object/default1Doer.html)[`default2Doer`](../object/default2Doer.html)[`default3Doer`](../object/default3Doer.html)[`default4Doer`](../object/default4Doer.html)[`getOnGroundDoer`](../object/getOnGroundDoer.html)[`putOnGroundDoer`](../object/putOnGroundDoer.html)[`removeDoer`](../object/removeDoer.html)[`reverseAttachableDoer`](../object/reverseAttachableDoer.html)[`takePathDoer`](../object/takePathDoer.html)
+[`default1Doer`](../object/default1Doer.html) [`default2Doer`](../object/default2Doer.html) [`default3Doer`](../object/default3Doer.html) [`default4Doer`](../object/default4Doer.html) [`getOnGroundDoer`](../object/getOnGroundDoer.html) [`putOnGroundDoer`](../object/putOnGroundDoer.html) [`removeDoer`](../object/removeDoer.html) [`reverseAttachableDoer`](../object/reverseAttachableDoer.html) [`takePathDoer`](../object/takePathDoer.html)
 <span id="_PropSummary_"></span>
 
 
@@ -78,7 +78,7 @@ is active and when it's dormant.
 
 
 
-[`cmd`](#cmd)[`handleAction`](#handleAction)[`ignoreError`](#ignoreError)[`priority`](#priority)[`strict`](#strict)
+[`cmd`](#cmd) [`handleAction`](#handleAction) [`ignoreError`](#ignoreError) [`priority`](#priority) [`strict`](#strict)
 
 
 
@@ -90,10 +90,10 @@ is active and when it's dormant.
 
 
 
-[`checkDirection`](#checkDirection)[`exec`](#exec)[`execAction`](#execAction)[`redirect`](#redirect)
+[`checkDirection`](#checkDirection) [`exec`](#exec) [`execAction`](#execAction) [`redirect`](#redirect)
 
 Inherited from `Redirector` :  
-[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
+[`doInstead`](../object/Redirector.html#doInstead) [`doNested`](../object/Redirector.html#doNested) [`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

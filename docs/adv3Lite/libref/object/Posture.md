@@ -61,7 +61,7 @@ POSTURES EXTENSION.
 
 
 
-[`lying`](../object/lying.html)[`sitting`](../object/sitting.html)[`standing`](../object/standing.html)
+[`lying`](../object/lying.html) [`sitting`](../object/sitting.html) [`standing`](../object/standing.html)
 <span id="_PropSummary_"></span>
 
 
@@ -70,7 +70,7 @@ POSTURES EXTENSION.
 
 
 
-[`allowedInProp`](#allowedInProp)[`allowedOnProp`](#allowedOnProp)[`cannotInMsgProp`](#cannotInMsgProp)[`cannotOnMsgProp`](#cannotOnMsgProp)[`participle`](#participle)[`verbPhrase`](#verbPhrase)
+[`allowedInProp`](#allowedInProp) [`allowedOnProp`](#allowedOnProp) [`cannotInMsgProp`](#cannotInMsgProp) [`cannotOnMsgProp`](#cannotOnMsgProp) [`participle`](#participle) [`verbPhrase`](#verbPhrase)
 
 <span id="_MethodSummary_"></span>
 

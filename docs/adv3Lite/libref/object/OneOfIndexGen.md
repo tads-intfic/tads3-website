@@ -73,7 +73,7 @@ index value, which is an integer from 1 to numItems.
 
 
 
-[`idx_`](#idx_)[`listAttrs`](#listAttrs)[`lst_`](#lst_)[`numItems`](#numItems)
+[`idx_`](#idx_) [`listAttrs`](#listAttrs) [`lst_`](#lst_) [`numItems`](#numItems)
 
 <span id="_MethodSummary_"></span>
 

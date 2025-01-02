@@ -219,7 +219,7 @@ layout: docs
                     arg = arg[3];
 
                 /* pick out the tag */
-                tag = rexGroup(1)[3].toLower();
+                tag = rexGroup(1) [3].toLower();
 
                 /* check which tag we have */
                 switch (tag)

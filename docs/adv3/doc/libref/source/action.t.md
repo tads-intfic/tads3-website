@@ -4276,7 +4276,7 @@ layout: docs
             if (self.(objList1).length() == 1)
             {
                 /* set the current first-resolved object */
-                self.(objCur1) = self.(objList1)[1].obj_;
+                self.(objCur1) = self.(objList1) [1].obj_;
 
                 /* if remapping is allowed at this point, look for a remapping */
                 if (results.allowActionRemapping)
@@ -5613,7 +5613,7 @@ layout: docs
                         issuingActor, targetActor, true);
                     
                     /* sort it and return the best match */
-                    return CommandRanking.sortByRanking(match, resolver)[1].match;
+                    return CommandRanking.sortByRanking(match, resolver) [1].match;
                 }
                 else if (match != nil && match.length() > 0)
                 {

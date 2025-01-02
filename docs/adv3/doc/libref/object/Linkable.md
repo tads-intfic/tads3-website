@@ -125,7 +125,7 @@ in one side designated as the master.
 
 
 
-[`initializeThing`](#initializeThing)[`masterObject`](#masterObject)
+[`initializeThing`](#initializeThing) [`masterObject`](#masterObject)
 
 <span id="_Properties_"></span>
 

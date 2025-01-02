@@ -77,12 +77,12 @@ by compareGroupItems().
 
 
 
-[`groupPrefix`](#groupPrefix)[`groupSuffix`](#groupSuffix)
+[`groupPrefix`](#groupPrefix) [`groupSuffix`](#groupSuffix)
 
 
 
 Inherited from `ListGroup` :  
-[`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist)[`minGroupSize`](../object/ListGroup.html#minGroupSize)
+[`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist) [`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,13 +92,13 @@ Inherited from `ListGroup` :
 
 
 
-[`showGroupList`](#showGroupList)[`showGroupPrefix`](#showGroupPrefix)[`showGroupSuffix`](#showGroupSuffix)
+[`showGroupList`](#showGroupList) [`showGroupPrefix`](#showGroupPrefix) [`showGroupSuffix`](#showGroupSuffix)
 
 Inherited from `ListGroupSorted` :  
-[`compareGroupItems`](../object/ListGroupSorted.html#compareGroupItems)[`sortListGroup`](../object/ListGroupSorted.html#sortListGroup)
+[`compareGroupItems`](../object/ListGroupSorted.html#compareGroupItems) [`sortListGroup`](../object/ListGroupSorted.html#sortListGroup)
 
 Inherited from `ListGroup` :  
-[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister) [`groupCardinality`](../object/ListGroup.html#groupCardinality) [`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount) [`showGroupItem`](../object/ListGroup.html#showGroupItem) [`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

@@ -91,10 +91,10 @@ Inherited from `Exception` :
 
 
 Inherited from `NetException` :  
-[`construct`](../object/NetException.html#construct)[`displayException`](../object/NetException.html#displayException)
+[`construct`](../object/NetException.html#construct) [`displayException`](../object/NetException.html#displayException)
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

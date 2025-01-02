@@ -92,10 +92,10 @@ disambiguation questions and prompts for missing noun phrases.
 
 
 
-[`getReflexiveBinding`](#getReflexiveBinding)[`resolvePronounAntecedent`](#resolvePronounAntecedent)[`resolvePronounAsTargetActor`](#resolvePronounAsTargetActor)
+[`getReflexiveBinding`](#getReflexiveBinding) [`resolvePronounAntecedent`](#resolvePronounAntecedent) [`resolvePronounAsTargetActor`](#resolvePronounAsTargetActor)
 
 Inherited from `ProxyResolver` :  
-[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
+[`construct`](../object/ProxyResolver.html#construct) [`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver) [`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

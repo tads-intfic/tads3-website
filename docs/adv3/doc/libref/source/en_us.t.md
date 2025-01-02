@@ -1752,8 +1752,8 @@ layout: docs
                  *   part we'll actually pluralize, and the rest is a suffix
                  *   we'll stick on the end of the pluralized part.
                  */
-                str = rexGroup(1)[3];
-                ofSuffix = rexGroup(2)[3];
+                str = rexGroup(1) [3];
+                ofSuffix = rexGroup(2) [3];
 
                 /*
                  *   now pluralize the part up to the 'of' using the normal
@@ -2728,7 +2728,7 @@ layout: docs
 
             /* if it starts with "A" or "T", strip off the leading verb */
             if (rexMatch(aOrTPat, str) != nil)
-                str = rexGroup(1)[3];
+                str = rexGroup(1) [3];
 
             /* return the processed result */
             return str;
@@ -4202,7 +4202,7 @@ layout: docs
              */
             if (exclam)
             {
-                local exclamInd = rexGroup(1)[1];
+                local exclamInd = rexGroup(1) [1];
                 paramStr = paramStr.substr(1, exclamInd - 1)
                            + paramStr.substr(exclamInd + 1);
             }
@@ -4211,13 +4211,13 @@ layout: docs
             if (rexMatch(patIdObjSlashIdApostS, paramStr) != nil)
             {
                 /* rewrite with the "'s" moved to the preceding parameter name */
-                paramStr = rexGroup(1)[3] + '\'s'
-                           + rexGroup(2)[3] + rexGroup(3)[3];
+                paramStr = rexGroup(1) [3] + '\'s'
+                           + rexGroup(2) [3] + rexGroup(3) [3];
             }
             else if (rexMatch(patIdObjApostS, paramStr) != nil)
             {
                 /* rewrite with the "'s" moved to the preceding parameter name */
-                paramStr = rexGroup(1)[3] + '\'s' + rexGroup(2)[3];
+                paramStr = rexGroup(1) [3] + '\'s' + rexGroup(2) [3];
             }
 
             /*
@@ -4229,7 +4229,7 @@ layout: docs
                  *   It does - remember the past verb ending, and rewrite the
                  *   parameter literally as 's/?ed'.
                  */
-                pastEnding_ = rexGroup(1)[3];
+                pastEnding_ = rexGroup(1) [3];
                 paramStr = 's/?ed';
             }
 
@@ -4958,13 +4958,13 @@ layout: docs
             rexMatch(patAlphaDashAlpha, txt);
 
             /* add the part before the hyphen */
-            toks.append([rexGroup(1)[3], typ, rexGroup(1)[3]]);
+            toks.append([rexGroup(1) [3], typ, rexGroup(1) [3]]);
 
             /* add the hyphen */
             toks.append(['-', typ, '-']);
 
             /* add the part after the hyphen */
-            toks.append([rexGroup(2)[3], typ, rexGroup(2)[3]]);
+            toks.append([rexGroup(2) [3], typ, rexGroup(2) [3]]);
         }
         patAlphaDashAlpha = static new RexPattern('(<alpha>+)-(<alpha>+)')
 
@@ -7447,7 +7447,7 @@ layout: docs
              *   that each ordinalWord is unique, since we only create one of
              *   each)
              */
-            idx = cmdDict.findWord(ordTok, &ordinalWord)[1].numval;
+            idx = cmdDict.findWord(ordTok, &ordinalWord) [1].numval;
 
             /*
              *   if it's the special value -1, it indicates that we should
@@ -7742,7 +7742,7 @@ layout: docs
              *   object's numeric value property 'numval', which gives the
              *   number for the name.
              */
-            return cmdDict.findWord(num_, &digitWord)[1].numval;
+            return cmdDict.findWord(num_, &digitWord) [1].numval;
         }
     ;
 
@@ -7750,7 +7750,7 @@ layout: docs
         getval()
         {
             /* look up the dictionary word for the number */
-            return cmdDict.findWord(num_, &teenWord)[1].numval;
+            return cmdDict.findWord(num_, &teenWord) [1].numval;
         }
     ;
 
@@ -7758,7 +7758,7 @@ layout: docs
         getval()
         {
             /* look up the dictionary word for the number */
-            return cmdDict.findWord(num_, &tensWord)[1].numval;
+            return cmdDict.findWord(num_, &tensWord) [1].numval;
         }
     ;
 
@@ -7769,8 +7769,8 @@ layout: docs
         getval()
         {
             /* look up the words, and add up the values */
-            return cmdDict.findWord(tens_, &tensWord)[1].numval
-                + cmdDict.findWord(units_, &digitWord)[1].numval;
+            return cmdDict.findWord(tens_, &tensWord) [1].numval
+                + cmdDict.findWord(units_, &digitWord) [1].numval;
         }
     ;
 
@@ -8394,12 +8394,12 @@ layout: docs
                  *   infinitive - we want the part before the slash, plus the
                  *   extra prepositions (or whatever) after the switched part
                  */
-                return rexGroup(1)[3] + rexGroup(3)[3];
+                return rexGroup(1) [3] + rexGroup(3) [3];
             }
             else
             {
                 /* participle - it's the part after the slash */
-                return rexGroup(2)[3] + rexGroup(3)[3];
+                return rexGroup(2) [3] + rexGroup(3) [3];
             }
         }
 
@@ -8434,7 +8434,7 @@ layout: docs
              *   last word enclosed in parentheses in our verbPhrase string.
              */
             rexSearch('<lparen>.*?(<alpha>+)<rparen>', verbPhrase);
-            return whatTranslate(rexGroup(1)[3]);
+            return whatTranslate(rexGroup(1) [3]);
         }
 
         /* announce a default object used with this action */
@@ -8445,7 +8445,7 @@ layout: docs
              *   the "(what)" specifier parens, excluding the last word
              */
             rexSearch('<lparen>(.*<space>+)?<alpha>+<rparen>', verbPhrase);
-            local prep = (rexGroup(1) == nil ? '' : rexGroup(1)[3]);
+            local prep = (rexGroup(1) == nil ? '' : rexGroup(1) [3]);
 
             /* do any verb-specific adjustment of the preposition */
             if (prep != nil)
@@ -8491,8 +8491,8 @@ layout: docs
             rexSearch('(.*)/<alphanum|-|squote>+(.*?)<space>+'
                       + '<lparen>(.*?)<space>*?<alpha>+<rparen>',
                       verbPhrase);
-            return rexGroup(1)[3] + spPrefix(rexGroup(2)[3])
-                + spPrefix(rexGroup(3)[3]);
+            return rexGroup(1) [3] + spPrefix(rexGroup(2) [3])
+                + spPrefix(rexGroup(3) [3]);
         }
 
         /* get the verb phrase in infinitive or participle form */
@@ -8556,15 +8556,15 @@ layout: docs
 
             /* start off with the infinitive or participle, as desired */
             if (inf)
-                ret = rexGroup(1)[3];
+                ret = rexGroup(1) [3];
             else
-                ret = rexGroup(2)[3];
+                ret = rexGroup(2) [3];
 
             /* get the prepositional complementizer */
-            vcomp = rexGroup(3)[3];
+            vcomp = rexGroup(3) [3];
 
             /* get the direct object preposition */
-            dprep = rexGroup(4)[3];
+            dprep = rexGroup(4) [3];
 
             /* do any verb-specific adjustment of the preposition */
             if (dprep != nil)
@@ -8594,7 +8594,7 @@ layout: docs
              *   if there's any suffix following the direct object
              *   placeholder, add it at the end of the phrase
              */
-            ret += rexGroup(5)[3];
+            ret += rexGroup(5) [3];
 
             /* return the complete phrase string */
             return ret;
@@ -8711,7 +8711,7 @@ layout: docs
             }
 
             /* show the group match */
-            return whatTranslate(rexGroup(1)[3]);
+            return whatTranslate(rexGroup(1) [3]);
         }
 
         /* announce a default object used with this action */
@@ -8738,7 +8738,7 @@ layout: docs
                  *   complementizer phrase)
                  */
                 rexSearch('/(<^lparen>+) <lparen>', verbPhrase);
-                verb = rexGroup(1)[3] + ' ';
+                verb = rexGroup(1) [3] + ' ';
             }
 
             /* get the preposition to use, if any */
@@ -8747,14 +8747,14 @@ layout: docs
             case DirectObject:
                 /* use the preposition in the first "(what)" phrase */
                 rexSearch('<lparen>(.*?)<space>*<alpha>+<rparen>', verbPhrase);
-                prep = rexGroup(1)[3];
+                prep = rexGroup(1) [3];
                 break;
 
             case IndirectObject:
                 /* use the preposition in the second "(what)" phrase */
                 rexSearch('<rparen>.*<lparen>(.*?)<space>*<alpha>+<rparen>',
                           verbPhrase);
-                prep = rexGroup(1)[3];
+                prep = rexGroup(1) [3];
                 break;
             }
 
@@ -8817,14 +8817,14 @@ layout: docs
                      verbPhrase);
 
             /* pull out the verb */
-            ret = rexGroup(1)[3];
+            ret = rexGroup(1) [3];
 
             /* pull out the verb complementizer */
-            vcomp = (rexGroup(2) == nil ? '' : rexGroup(2)[3]);
+            vcomp = (rexGroup(2) == nil ? '' : rexGroup(2) [3]);
 
             /* pull out the direct and indirect object prepositions */
-            dprep = rexGroup(3)[3];
-            iprep = rexGroup(4)[3];
+            dprep = rexGroup(3) [3];
+            iprep = rexGroup(4) [3];
 
             /* get the pronoun for the other object phrase */
             pro = getOtherMessageObjectPronoun(which);
@@ -8945,16 +8945,16 @@ layout: docs
 
             /* start off with the infinitive or participle, as desired */
             if (inf)
-                ret = rexGroup(1)[3];
+                ret = rexGroup(1) [3];
             else
-                ret = rexGroup(2)[3];
+                ret = rexGroup(2) [3];
 
             /* get the complementizer */
-            vcomp = (rexGroup(3) == nil ? '' : rexGroup(3)[3]);
+            vcomp = (rexGroup(3) == nil ? '' : rexGroup(3) [3]);
 
             /* get the direct and indirect object prepositions */
-            dprep = rexGroup(4)[3];
-            iprep = rexGroup(5)[3];
+            dprep = rexGroup(4) [3];
+            iprep = rexGroup(5) [3];
 
             /*
              *   add the complementizer BEFORE the direct object, if the

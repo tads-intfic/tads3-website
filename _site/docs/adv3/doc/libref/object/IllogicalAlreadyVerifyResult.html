@@ -46,31 +46,23 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Verification result - command is currently illogical, because the state
+that the command seeks to impose already obtains. For example, we’re
+trying to open a door that’s already open, or drop an object that we’re
+not carrying.</p>
 
-Verification result - command is currently illogical, because the state
-that the command seeks to impose already obtains. For example, we're
-trying to open a door that's already open, or drop an object that we're
-not carrying.
-
-This is almost exactly the same as an "illogical now" result, so this is
+<p>This is almost exactly the same as an “illogical now” result, so this is
 a simple subclass of that result type. We act almost the same as an
-"illogical now" result; the only reason to distinguish this type is that
-it's an especially obvious kind of condition, so we might want to use it
-to exclude some vocabulary matches that we wouldn't normally exclude for
-the more general "illogical now" result type.
+“illogical now” result; the only reason to distinguish this type is that
+it’s an especially obvious kind of condition, so we might want to use it
+to exclude some vocabulary matches that we wouldn’t normally exclude for
+the more general “illogical now” result type.</p>
 
-`class `**`IllogicalAlreadyVerifyResult`**` :   `[`IllogicalNowVerifyResult`](../object/IllogicalNowVerifyResult.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">IllogicalAlreadyVerifyResult</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/IllogicalNowVerifyResult.html"><code class="language-plaintext highlighter-rouge">IllogicalNowVerifyResult</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">IllogicalAlreadyVerifyResult</code></strong><br />
 <a href="../object/IllogicalNowVerifyResult.html"><code class="language-plaintext highlighter-rouge">IllogicalNowVerifyResult</code></a><br />
@@ -79,57 +71,37 @@ the more general "illogical now" result type.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#excludePluralMatches"><code class="language-plaintext highlighter-rouge">excludePluralMatches</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">IllogicalNowVerifyResult</code> :<br />
-<a href="../object/IllogicalNowVerifyResult.html#allowAction"><code class="language-plaintext highlighter-rouge">allowAction</code></a><a href="../object/IllogicalNowVerifyResult.html#resultRank"><code class="language-plaintext highlighter-rouge">resultRank</code></a></p>
+<a href="../object/IllogicalNowVerifyResult.html#allowAction"><code class="language-plaintext highlighter-rouge">allowAction</code></a> <a href="../object/IllogicalNowVerifyResult.html#resultRank"><code class="language-plaintext highlighter-rouge">resultRank</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
-<a href="../object/MessageResult.html#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a><a href="../object/MessageResult.html#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
+<a href="../object/MessageResult.html#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a> <a href="../object/MessageResult.html#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">VerifyResult</code> :<br />
-<a href="../object/VerifyResult.html#compareTo"><code class="language-plaintext highlighter-rouge">compareTo</code></a><a href="../object/VerifyResult.html#identicalTo"><code class="language-plaintext highlighter-rouge">identicalTo</code></a><a href="../object/VerifyResult.html#isWorseThan"><code class="language-plaintext highlighter-rouge">isWorseThan</code></a><a href="../object/VerifyResult.html#shouldInsertBefore"><code class="language-plaintext highlighter-rouge">shouldInsertBefore</code></a></p>
+<a href="../object/VerifyResult.html#compareTo"><code class="language-plaintext highlighter-rouge">compareTo</code></a> <a href="../object/VerifyResult.html#identicalTo"><code class="language-plaintext highlighter-rouge">identicalTo</code></a> <a href="../object/VerifyResult.html#isWorseThan"><code class="language-plaintext highlighter-rouge">isWorseThan</code></a> <a href="../object/VerifyResult.html#shouldInsertBefore"><code class="language-plaintext highlighter-rouge">shouldInsertBefore</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
-<a href="../object/MessageResult.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/MessageResult.html#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a><a href="../object/MessageResult.html#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a><a href="../object/MessageResult.html#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
+<a href="../object/MessageResult.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/MessageResult.html#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a> <a href="../object/MessageResult.html#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a> <a href="../object/MessageResult.html#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="excludePluralMatches"></span></p>
 
@@ -137,28 +109,17 @@ the more general "illogical now" result type.
 
 <p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#337">337</a>]</p>
 
-<div class="desc">
-
-exclude plural matches when this result type is present
-
-</div>
+<p>exclude plural matches when this result type is present</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

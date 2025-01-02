@@ -86,7 +86,7 @@ we'll show an explanation of how footnotes work.
 
 
 
-[`desc`](#desc)[`everShownFootnote`](#everShownFootnote)[`footnoteNum`](#footnoteNum)[`footnoteRead`](#footnoteRead)[`footnoteSettings`](#footnoteSettings)[`lastFootnote`](#lastFootnote)[`numberedFootnotes`](#numberedFootnotes)
+[`desc`](#desc) [`everShownFootnote`](#everShownFootnote) [`footnoteNum`](#footnoteNum) [`footnoteRead`](#footnoteRead) [`footnoteSettings`](#footnoteSettings) [`lastFootnote`](#lastFootnote) [`numberedFootnotes`](#numberedFootnotes)
 
 <span id="_MethodSummary_"></span>
 
@@ -96,7 +96,7 @@ we'll show an explanation of how footnotes work.
 
 
 
-[`checkNotification`](#checkNotification)[`showFootnote`](#showFootnote)
+[`checkNotification`](#checkNotification) [`showFootnote`](#showFootnote)
 
 <span id="_Properties_"></span>
 

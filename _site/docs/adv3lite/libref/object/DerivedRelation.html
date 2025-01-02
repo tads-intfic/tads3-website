@@ -40,26 +40,18 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A DerivedRelation is one that doesn't maintain its own table of what it
+<p>A DerivedRelation is one that doesn’t maintain its own table of what it
 related to what, but works out what is related to what on the basis of
 some other relation(s) (e.g. a sibling relation might work by testing
-for common parents).
+for common parents).</p>
 
-REQUIRES THE RELATIONS EXTENSION
+<p>REQUIRES THE RELATIONS EXTENSION</p>
 
-**`DerivedRelation`**` :   `[`Relation`](../object/Relation.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">DerivedRelation</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">DerivedRelation</code></strong><br />
 <a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a><br />
@@ -68,52 +60,36 @@ REQUIRES THE RELATIONS EXTENSION
 `                                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
-<a href="../object/Relation.html#name"><code class="language-plaintext highlighter-rouge">name</code></a><a href="../object/Relation.html#reciprocal"><code class="language-plaintext highlighter-rouge">reciprocal</code></a><a href="../object/Relation.html#relationType"><code class="language-plaintext highlighter-rouge">relationType</code></a><a href="../object/Relation.html#relTab"><code class="language-plaintext highlighter-rouge">relTab</code></a><a href="../object/Relation.html#reverseName"><code class="language-plaintext highlighter-rouge">reverseName</code></a></p>
+<a href="../object/Relation.html#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="../object/Relation.html#reciprocal"><code class="language-plaintext highlighter-rouge">reciprocal</code></a> <a href="../object/Relation.html#relationType"><code class="language-plaintext highlighter-rouge">relationType</code></a> <a href="../object/Relation.html#relTab"><code class="language-plaintext highlighter-rouge">relTab</code></a> <a href="../object/Relation.html#reverseName"><code class="language-plaintext highlighter-rouge">reverseName</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addRelation"><code class="language-plaintext highlighter-rouge">addRelation</code></a><a href="#inverselyRelatedTo"><code class="language-plaintext highlighter-rouge">inverselyRelatedTo</code></a><a href="#relatedTo"><code class="language-plaintext highlighter-rouge">relatedTo</code></a><a href="#removeRelation"><code class="language-plaintext highlighter-rouge">removeRelation</code></a></p>
+<p><a href="#addRelation"><code class="language-plaintext highlighter-rouge">addRelation</code></a> <a href="#inverselyRelatedTo"><code class="language-plaintext highlighter-rouge">inverselyRelatedTo</code></a> <a href="#relatedTo"><code class="language-plaintext highlighter-rouge">relatedTo</code></a> <a href="#removeRelation"><code class="language-plaintext highlighter-rouge">removeRelation</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
-<a href="../object/Relation.html#isInverselyRelated"><code class="language-plaintext highlighter-rouge">isInverselyRelated</code></a><a href="../object/Relation.html#isRelated"><code class="language-plaintext highlighter-rouge">isRelated</code></a><a href="../object/Relation.html#makeUnique"><code class="language-plaintext highlighter-rouge">makeUnique</code></a></p>
+<a href="../object/Relation.html#isInverselyRelated"><code class="language-plaintext highlighter-rouge">isInverselyRelated</code></a> <a href="../object/Relation.html#isRelated"><code class="language-plaintext highlighter-rouge">isRelated</code></a> <a href="../object/Relation.html#makeUnique"><code class="language-plaintext highlighter-rouge">makeUnique</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a><a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addRelation"></span></p>
 
@@ -121,12 +97,8 @@ REQUIRES THE RELATIONS EXTENSION
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#416">416</a>]</p>
 
-<div class="desc">
-
-By default we don't permit the direct addition of relationships via this
-relation, since this is a relation dependent upon external conditions.
-
-</div>
+<p>By default we don’t permit the direct addition of relationships via this
+relation, since this is a relation dependent upon external conditions.</p>
 
 <p><span id="inverselyRelatedTo"></span></p>
 
@@ -134,11 +106,7 @@ relation, since this is a relation dependent upon external conditions.
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#409">409</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="relatedTo"></span></p>
 
@@ -146,13 +114,9 @@ relation, since this is a relation dependent upon external conditions.
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#407">407</a>]</p>
 
-<div class="desc">
-
-Instances need to override to provide a method that returns a list of
+<p>Instances need to override to provide a method that returns a list of
 items related to a via this relationship, on the basis of whatever
-criteria are appropriate.
-
-</div>
+criteria are appropriate.</p>
 
 <p><span id="removeRelation"></span></p>
 
@@ -160,19 +124,12 @@ criteria are appropriate.
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#427">427</a>]</p>
 
-<div class="desc">
+<p>By default we don’t permit the direct removal of relationships via this
+relation, since this is a relation dependent upon external conditions.</p>
 
-By default we don't permit the direct removal of relationships via this
-relation, since this is a relation dependent upon external conditions.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

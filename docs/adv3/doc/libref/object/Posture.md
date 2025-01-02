@@ -67,7 +67,7 @@ Give the postures some additional attributes
 
 
 
-[`lying`](../object/lying.html)[`sitting`](../object/sitting.html)[`standing`](../object/standing.html)
+[`lying`](../object/lying.html) [`sitting`](../object/sitting.html) [`standing`](../object/standing.html)
 <span id="_PropSummary_"></span>
 
 
@@ -76,7 +76,7 @@ Give the postures some additional attributes
 
 
 
-[`msgVerbI`](#msgVerbI)[`msgVerbIPast`](#msgVerbIPast)[`msgVerbIPresent`](#msgVerbIPresent)[`msgVerbT`](#msgVerbT)[`msgVerbTPast`](#msgVerbTPast)[`msgVerbTPresent`](#msgVerbTPresent)[`participle`](#participle)
+[`msgVerbI`](#msgVerbI) [`msgVerbIPast`](#msgVerbIPast) [`msgVerbIPresent`](#msgVerbIPresent) [`msgVerbT`](#msgVerbT) [`msgVerbTPast`](#msgVerbTPast) [`msgVerbTPresent`](#msgVerbTPresent) [`participle`](#participle)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Give the postures some additional attributes
 
 
 
-[`setActorToPosture`](#setActorToPosture)[`tryMakingPosture`](#tryMakingPosture)
+[`setActorToPosture`](#setActorToPosture) [`tryMakingPosture`](#tryMakingPosture)
 
 <span id="_Properties_"></span>
 

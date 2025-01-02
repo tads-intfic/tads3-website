@@ -74,7 +74,7 @@ kind of failure.
 
 
 Inherited from `CheckStatus` :  
-[`isSuccess`](../object/CheckStatus.html#isSuccess)[`msgParams`](../object/CheckStatus.html#msgParams)[`msgProp`](../object/CheckStatus.html#msgProp)
+[`isSuccess`](../object/CheckStatus.html#isSuccess) [`msgParams`](../object/CheckStatus.html#msgParams) [`msgProp`](../object/CheckStatus.html#msgProp)
 
 <span id="_MethodSummary_"></span>
 

@@ -72,7 +72,7 @@ client through the UI.
 
 
 
-[`isReady`](#isReady)[`isWebTempFile`](#isWebTempFile)[`mimeType`](#mimeType)[`resName`](#resName)[`resPath`](#resPath)[`tempFileName`](#tempFileName)[`timeCreated`](#timeCreated)
+[`isReady`](#isReady) [`isWebTempFile`](#isWebTempFile) [`mimeType`](#mimeType) [`resName`](#resName) [`resPath`](#resPath) [`tempFileName`](#tempFileName) [`timeCreated`](#timeCreated)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ client through the UI.
 
 
 
-[`closeFile`](#closeFile)[`construct`](#construct)[`getFilename`](#getFilename)
+[`closeFile`](#closeFile) [`construct`](#construct) [`getFilename`](#getFilename)
 
 <span id="_Properties_"></span>
 

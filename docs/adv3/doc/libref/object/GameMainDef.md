@@ -81,7 +81,7 @@ implementation.
 
 
 
-[`allowYouMeMixing`](#allowYouMeMixing)[`allVerbsAllowAll`](#allVerbsAllowAll)[`ambigAnnounceMode`](#ambigAnnounceMode)[`beforeRunsBeforeCheck`](#beforeRunsBeforeCheck)[`cancelCmdLineOnFailure`](#cancelCmdLineOnFailure)[`filterPluralMatches`](#filterPluralMatches)[`initialPlayerChar`](#initialPlayerChar)[`parserTruncLength`](#parserTruncLength)[`scoreRankTable`](#scoreRankTable)[`useDistinguishersInAnnouncements`](#useDistinguishersInAnnouncements)[`usePastTense`](#usePastTense)[`verboseMode`](#verboseMode)
+[`allowYouMeMixing`](#allowYouMeMixing) [`allVerbsAllowAll`](#allVerbsAllowAll) [`ambigAnnounceMode`](#ambigAnnounceMode) [`beforeRunsBeforeCheck`](#beforeRunsBeforeCheck) [`cancelCmdLineOnFailure`](#cancelCmdLineOnFailure) [`filterPluralMatches`](#filterPluralMatches) [`initialPlayerChar`](#initialPlayerChar) [`parserTruncLength`](#parserTruncLength) [`scoreRankTable`](#scoreRankTable) [`useDistinguishersInAnnouncements`](#useDistinguishersInAnnouncements) [`usePastTense`](#usePastTense) [`verboseMode`](#verboseMode)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ implementation.
 
 
 
-[`getSaveDesc`](#getSaveDesc)[`maxScore`](#maxScore)[`newGame`](#newGame)[`restoreAndRunGame`](#restoreAndRunGame)[`setAboutBox`](#setAboutBox)[`setGameTitle`](#setGameTitle)[`showGoodbye`](#showGoodbye)[`showIntro`](#showIntro)
+[`getSaveDesc`](#getSaveDesc) [`maxScore`](#maxScore) [`newGame`](#newGame) [`restoreAndRunGame`](#restoreAndRunGame) [`setAboutBox`](#setAboutBox) [`setGameTitle`](#setGameTitle) [`showGoodbye`](#showGoodbye) [`showIntro`](#showIntro)
 
 <span id="_Properties_"></span>
 

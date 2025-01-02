@@ -72,7 +72,7 @@ contain something in the tentative resolution of the main list.
 
 
 
-[`mainList`](#mainList)[`mainListText`](#mainListText)
+[`mainList`](#mainList) [`mainListText`](#mainListText)
 
 Inherited from `BasicContainerResolver` :  
 [`isSubResolver`](../object/BasicContainerResolver.html#isSubResolver)
@@ -87,13 +87,13 @@ Inherited from `BasicContainerResolver` :
 
 
 
-[`construct`](#construct)[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)
+[`construct`](#construct) [`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)
 
 Inherited from `BasicContainerResolver` :  
-[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)[`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)
+[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase) [`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)
 
 Inherited from `ProxyResolver` :  
-[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
+[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver) [`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

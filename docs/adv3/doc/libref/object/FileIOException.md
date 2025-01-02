@@ -92,7 +92,7 @@ Inherited from `Exception` :
 
 
 Inherited from `Exception` :  
-[`construct`](../object/Exception.html#construct)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`construct`](../object/Exception.html#construct) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

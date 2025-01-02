@@ -68,7 +68,7 @@ Inherited from `PreCondition` :
 [`conditionFailed`](#conditionFailed)
 
 Inherited from `ObjOpenCondition` :  
-[`checkPreCondition`](../object/ObjOpenCondition.html#checkPreCondition)[`verifyPreCondition`](../object/ObjOpenCondition.html#verifyPreCondition)
+[`checkPreCondition`](../object/ObjOpenCondition.html#checkPreCondition) [`verifyPreCondition`](../object/ObjOpenCondition.html#verifyPreCondition)
 
 
 

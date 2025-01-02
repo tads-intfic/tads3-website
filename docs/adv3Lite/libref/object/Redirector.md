@@ -235,7 +235,7 @@ We begin this module by defing the Redirector class since in adv3Lite
 
 
 
-[`doInstead`](#doInstead)[`doNested`](#doNested)[`doOtherAction`](#doOtherAction)
+[`doInstead`](#doInstead) [`doNested`](#doNested) [`doOtherAction`](#doOtherAction)
 
 <span id="_Properties_"></span>
 

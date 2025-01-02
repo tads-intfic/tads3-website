@@ -83,7 +83,7 @@ saving persistently.
 
 
 
-[`beginStatusLine`](#beginStatusLine)[`endStatusLine`](#endStatusLine)[`getEstimatedHeightHtml`](#getEstimatedHeightHtml)[`initBannerWindow`](#initBannerWindow)[`setColorScheme`](#setColorScheme)[`showStatusHtml`](#showStatusHtml)[`showStatusLeft`](#showStatusLeft)[`showStatusLine`](#showStatusLine)[`showStatusLineDaemon`](#showStatusLineDaemon)[`showStatusRight`](#showStatusRight)[`showStatusText`](#showStatusText)
+[`beginStatusLine`](#beginStatusLine) [`endStatusLine`](#endStatusLine) [`getEstimatedHeightHtml`](#getEstimatedHeightHtml) [`initBannerWindow`](#initBannerWindow) [`setColorScheme`](#setColorScheme) [`showStatusHtml`](#showStatusHtml) [`showStatusLeft`](#showStatusLeft) [`showStatusLine`](#showStatusLine) [`showStatusLineDaemon`](#showStatusLineDaemon) [`showStatusRight`](#showStatusRight) [`showStatusText`](#showStatusText)
 
 <span id="_Properties_"></span>
 

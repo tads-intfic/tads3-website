@@ -57,7 +57,7 @@ on the player's input.
 
 
 
-[`checkSpacing`](#checkSpacing)[`correct`](#correct)[`correctPairSpacing`](#correctPairSpacing)[`findUnknownWord`](#findUnknownWord)[`getCandidates`](#getCandidates)[`isWordDefined`](#isWordDefined)
+[`checkSpacing`](#checkSpacing) [`correct`](#correct) [`correctPairSpacing`](#correctPairSpacing) [`findUnknownWord`](#findUnknownWord) [`getCandidates`](#getCandidates) [`isWordDefined`](#isWordDefined)
 
 <span id="_Properties_"></span>
 

@@ -171,7 +171,7 @@ layout: docs
                 if ((idx = self.(role.npListProp).indexOf(np)) != nil)
                 {
                     /* found it - replace it with the clone, and we're done */
-                    self.(role.npListProp)[idx] = cl;
+                    self.(role.npListProp) [idx] = cl;
                     break;
                 }
             }
@@ -269,7 +269,7 @@ layout: docs
                          */
                         matches.forEach(
                             { m: m.name = names.valWhich(
-                                { n: n[2].indexOf(m.obj) != nil })[1] });
+                                { n: n[2].indexOf(m.obj) != nil }) [1] });
                     }
                     
                     /* 

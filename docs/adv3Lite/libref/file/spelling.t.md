@@ -31,7 +31,7 @@ layout: docs
 
 
 
-[`CorrectionCandidate`](../object/CorrectionCandidate.html)[`SpellingCorrection`](../object/SpellingCorrection.html)[`SpellingHistory`](../object/SpellingHistory.html)
+[`CorrectionCandidate`](../object/CorrectionCandidate.html) [`SpellingCorrection`](../object/SpellingCorrection.html) [`SpellingHistory`](../object/SpellingHistory.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -40,7 +40,7 @@ layout: docs
 
 
 
-[`actionDictionary`](../object/actionDictionary.html)[`spellingCorrector`](../object/spellingCorrector.html)
+[`actionDictionary`](../object/actionDictionary.html) [`spellingCorrector`](../object/spellingCorrector.html)
 <span id="FunctionSummary_"></span>
 
 

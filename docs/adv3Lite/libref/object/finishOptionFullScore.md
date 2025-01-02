@@ -47,7 +47,7 @@ FULL SCORE option for finishGame
 
 
 
-[`desc`](#desc)[`listOrder`](#listOrder)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)[`showScoreInFinish`](#showScoreInFinish)
+[`desc`](#desc) [`listOrder`](#listOrder) [`responseChar`](#responseChar) [`responseKeyword`](#responseKeyword) [`showScoreInFinish`](#showScoreInFinish)
 
 Inherited from `FinishOption` :  
 [`listed`](../object/FinishOption.html#listed)

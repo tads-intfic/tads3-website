@@ -60,7 +60,7 @@ their immediate locations.
 
 
 
-[`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`matchName`](#matchName)[`name`](#name)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)[`theName`](#theName)
+[`aName`](#aName) [`canDistinguish`](#canDistinguish) [`countName`](#countName) [`matchName`](#matchName) [`name`](#name) [`notePrompt`](#notePrompt) [`objInScope`](#objInScope) [`theName`](#theName)
 
 
 

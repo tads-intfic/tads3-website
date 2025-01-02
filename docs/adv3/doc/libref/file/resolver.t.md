@@ -37,7 +37,7 @@ command.
 
 
 
-[`ActorResolver`](../object/ActorResolver.html)[`CommandActorAction`](../object/CommandActorAction.html)[`IobjResolver`](../object/IobjResolver.html)[`PossessiveResolver`](../object/PossessiveResolver.html)[`ProxyResolver`](../object/ProxyResolver.html)[`Resolver`](../object/Resolver.html)[`TopicQualifierResolver`](../object/TopicQualifierResolver.html)
+[`ActorResolver`](../object/ActorResolver.html) [`CommandActorAction`](../object/CommandActorAction.html) [`IobjResolver`](../object/IobjResolver.html) [`PossessiveResolver`](../object/PossessiveResolver.html) [`ProxyResolver`](../object/ProxyResolver.html) [`Resolver`](../object/Resolver.html) [`TopicQualifierResolver`](../object/TopicQualifierResolver.html)
 <span id="_ObjectSummary_"></span>
 
 

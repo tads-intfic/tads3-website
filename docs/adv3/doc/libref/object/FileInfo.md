@@ -68,7 +68,7 @@ File status information. This is returned from file.getFileInfo().
 
 
 
-[`fileAccessTime`](#fileAccessTime)[`fileAttrs`](#fileAttrs)[`fileCreateTime`](#fileCreateTime)[`fileLinkTarget`](#fileLinkTarget)[`fileModifyTime`](#fileModifyTime)[`fileSize`](#fileSize)[`fileType`](#fileType)[`isDir`](#isDir)[`specialLink`](#specialLink)
+[`fileAccessTime`](#fileAccessTime) [`fileAttrs`](#fileAttrs) [`fileCreateTime`](#fileCreateTime) [`fileLinkTarget`](#fileLinkTarget) [`fileModifyTime`](#fileModifyTime) [`fileSize`](#fileSize) [`fileType`](#fileType) [`isDir`](#isDir) [`specialLink`](#specialLink)
 
 <span id="_MethodSummary_"></span>
 

@@ -70,7 +70,7 @@ no match for token
 
 
 
-[`curChar_`](#curChar_)[`remainingStr_`](#remainingStr_)
+[`curChar_`](#curChar_) [`remainingStr_`](#remainingStr_)
 
 
 
@@ -85,12 +85,12 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`displayException`](#displayException)
+[`construct`](#construct) [`displayException`](#displayException)
 
 
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

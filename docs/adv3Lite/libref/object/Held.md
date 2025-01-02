@@ -55,7 +55,7 @@ object being held is exterior to the holder, not enclosed.
 
 
 Inherited from `LocType` :  
-[`intoPrep`](../object/LocType.html#intoPrep)[`listOrder`](../object/LocType.html#listOrder)
+[`intoPrep`](../object/LocType.html#intoPrep) [`listOrder`](../object/LocType.html#listOrder)
 
 <span id="_MethodSummary_"></span>
 

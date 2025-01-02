@@ -47,33 +47,25 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Topic is something that the player character can refer to in the
+<p>A Topic is something that the player character can refer to in the
 course of conversation or look up in a book, but which is not
 implemented as a physical object in the game. Topics can be used for
 abstract concepts such as life, liberty and happiness, or for physical
 objects that are referred to but not actually implemented as Things in
-the game, such as Alfred the Great or the Great Wall of China.
+the game, such as Alfred the Great or the Great Wall of China.</p>
 
-*Modified in
-[english.t](../file/english.t.html)\[[2093](../source/english.t.html#2093)\]:*  
+<p><em>Modified in
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2093">2093</a>]:</em><br />
 Modification to the Topic class so that when constructing a new Topic a
 separate apostrophe-S token is concatenated with the previous word when
 storing the name (which undoes the effect on building the name of what
-the English-language tokenizer does with apostrophe-S).
+the English-language tokenizer does with apostrophe-S).</p>
 
-`class `**`Topic`**` :   `[`Mentionable`](../object/Mentionable.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Topic</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Mentionable.html"><code class="language-plaintext highlighter-rouge">Mentionable</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Topic</code></strong><br />
 <a href="../object/Mentionable.html"><code class="language-plaintext highlighter-rouge">Mentionable</code></a><br />
@@ -81,59 +73,39 @@ the English-language tokenizer does with apostrophe-S).
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#familiar"><code class="language-plaintext highlighter-rouge">familiar</code></a><a href="#known"><code class="language-plaintext highlighter-rouge">known</code></a></p>
+<p><a href="#familiar"><code class="language-plaintext highlighter-rouge">familiar</code></a> <a href="#known"><code class="language-plaintext highlighter-rouge">known</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Mentionable</code> :<br />
-<a href="../object/Mentionable.html#ambiguouslyPlural"><code class="language-plaintext highlighter-rouge">ambiguouslyPlural</code></a><a href="../object/Mentionable.html#disambigGroup"><code class="language-plaintext highlighter-rouge">disambigGroup</code></a><a href="../object/Mentionable.html#disambigMatchPhrases"><code class="language-plaintext highlighter-rouge">disambigMatchPhrases</code></a><a href="../object/Mentionable.html#disambigName"><code class="language-plaintext highlighter-rouge">disambigName</code></a><a href="../object/Mentionable.html#disambigOrder"><code class="language-plaintext highlighter-rouge">disambigOrder</code></a><a href="../object/Mentionable.html#distinguishByContents"><code class="language-plaintext highlighter-rouge">distinguishByContents</code></a><a href="../object/Mentionable.html#isHer"><code class="language-plaintext highlighter-rouge">isHer</code></a><a href="../object/Mentionable.html#isHim"><code class="language-plaintext highlighter-rouge">isHim</code></a><a href="../object/Mentionable.html#isIt"><code class="language-plaintext highlighter-rouge">isIt</code></a><a href="../object/Mentionable.html#massNoun"><code class="language-plaintext highlighter-rouge">massNoun</code></a><a href="../object/Mentionable.html#matchPhrases"><code class="language-plaintext highlighter-rouge">matchPhrases</code></a><a href="../object/Mentionable.html#matchPhrasesExclude"><code class="language-plaintext highlighter-rouge">matchPhrasesExclude</code></a><a href="../object/Mentionable.html#name"><code class="language-plaintext highlighter-rouge">name</code></a><a href="../object/Mentionable.html#nominalContents"><code class="language-plaintext highlighter-rouge">nominalContents</code></a><a href="../object/Mentionable.html#person"><code class="language-plaintext highlighter-rouge">person</code></a><a href="../object/Mentionable.html#plural"><code class="language-plaintext highlighter-rouge">plural</code></a><a href="../object/Mentionable.html#proper"><code class="language-plaintext highlighter-rouge">proper</code></a><a href="../object/Mentionable.html#qualified"><code class="language-plaintext highlighter-rouge">qualified</code></a><a href="../object/Mentionable.html#roomTitle"><code class="language-plaintext highlighter-rouge">roomTitle</code></a><a href="../object/Mentionable.html#states"><code class="language-plaintext highlighter-rouge">states</code></a><a href="../object/Mentionable.html#vocab"><code class="language-plaintext highlighter-rouge">vocab</code></a><a href="../object/Mentionable.html#vocabWords"><code class="language-plaintext highlighter-rouge">vocabWords</code></a></p>
+<a href="../object/Mentionable.html#ambiguouslyPlural"><code class="language-plaintext highlighter-rouge">ambiguouslyPlural</code></a> <a href="../object/Mentionable.html#disambigGroup"><code class="language-plaintext highlighter-rouge">disambigGroup</code></a> <a href="../object/Mentionable.html#disambigMatchPhrases"><code class="language-plaintext highlighter-rouge">disambigMatchPhrases</code></a> <a href="../object/Mentionable.html#disambigName"><code class="language-plaintext highlighter-rouge">disambigName</code></a> <a href="../object/Mentionable.html#disambigOrder"><code class="language-plaintext highlighter-rouge">disambigOrder</code></a> <a href="../object/Mentionable.html#distinguishByContents"><code class="language-plaintext highlighter-rouge">distinguishByContents</code></a> <a href="../object/Mentionable.html#isHer"><code class="language-plaintext highlighter-rouge">isHer</code></a> <a href="../object/Mentionable.html#isHim"><code class="language-plaintext highlighter-rouge">isHim</code></a> <a href="../object/Mentionable.html#isIt"><code class="language-plaintext highlighter-rouge">isIt</code></a> <a href="../object/Mentionable.html#massNoun"><code class="language-plaintext highlighter-rouge">massNoun</code></a> <a href="../object/Mentionable.html#matchPhrases"><code class="language-plaintext highlighter-rouge">matchPhrases</code></a> <a href="../object/Mentionable.html#matchPhrasesExclude"><code class="language-plaintext highlighter-rouge">matchPhrasesExclude</code></a> <a href="../object/Mentionable.html#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="../object/Mentionable.html#nominalContents"><code class="language-plaintext highlighter-rouge">nominalContents</code></a> <a href="../object/Mentionable.html#person"><code class="language-plaintext highlighter-rouge">person</code></a> <a href="../object/Mentionable.html#plural"><code class="language-plaintext highlighter-rouge">plural</code></a> <a href="../object/Mentionable.html#proper"><code class="language-plaintext highlighter-rouge">proper</code></a> <a href="../object/Mentionable.html#qualified"><code class="language-plaintext highlighter-rouge">qualified</code></a> <a href="../object/Mentionable.html#roomTitle"><code class="language-plaintext highlighter-rouge">roomTitle</code></a> <a href="../object/Mentionable.html#states"><code class="language-plaintext highlighter-rouge">states</code></a> <a href="../object/Mentionable.html#vocab"><code class="language-plaintext highlighter-rouge">vocab</code></a> <a href="../object/Mentionable.html#vocabWords"><code class="language-plaintext highlighter-rouge">vocabWords</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">LMentionable</code> :<br />
-<a href="../object/LMentionable.html#acronymPluralPat"><code class="language-plaintext highlighter-rouge">acronymPluralPat</code></a><a href="../object/LMentionable.html#alphaCharPat"><code class="language-plaintext highlighter-rouge">alphaCharPat</code></a><a href="../object/LMentionable.html#aName"><code class="language-plaintext highlighter-rouge">aName</code></a><a href="../object/LMentionable.html#apostPluralPat"><code class="language-plaintext highlighter-rouge">apostPluralPat</code></a><a href="../object/LMentionable.html#apostSPat"><code class="language-plaintext highlighter-rouge">apostSPat</code></a><a href="../object/LMentionable.html#deannotatePat"><code class="language-plaintext highlighter-rouge">deannotatePat</code></a><a href="../object/LMentionable.html#dictComp"><code class="language-plaintext highlighter-rouge">dictComp</code></a><a href="../object/LMentionable.html#dummyName"><code class="language-plaintext highlighter-rouge">dummyName</code></a><a href="../object/LMentionable.html#elevenEighteenPat"><code class="language-plaintext highlighter-rouge">elevenEighteenPat</code></a><a href="../object/LMentionable.html#emptyVocabWords"><code class="language-plaintext highlighter-rouge">emptyVocabWords</code></a><a href="../object/LMentionable.html#esPluralPat"><code class="language-plaintext highlighter-rouge">esPluralPat</code></a><a href="../object/LMentionable.html#firstWordPat"><code class="language-plaintext highlighter-rouge">firstWordPat</code></a><a href="../object/LMentionable.html#heName"><code class="language-plaintext highlighter-rouge">heName</code></a><a href="../object/LMentionable.html#herName"><code class="language-plaintext highlighter-rouge">herName</code></a><a href="../object/LMentionable.html#hersName"><code class="language-plaintext highlighter-rouge">hersName</code></a><a href="../object/LMentionable.html#himName"><code class="language-plaintext highlighter-rouge">himName</code></a><a href="../object/LMentionable.html#iesPluralPat"><code class="language-plaintext highlighter-rouge">iesPluralPat</code></a><a href="../object/LMentionable.html#irregularPlurals"><code class="language-plaintext highlighter-rouge">irregularPlurals</code></a><a href="../object/LMentionable.html#lastWordPat"><code class="language-plaintext highlighter-rouge">lastWordPat</code></a><a href="../object/LMentionable.html#leadingTagOrQuotePat"><code class="language-plaintext highlighter-rouge">leadingTagOrQuotePat</code></a><a href="../object/LMentionable.html#menPluralPat"><code class="language-plaintext highlighter-rouge">menPluralPat</code></a><a href="../object/LMentionable.html#objInName"><code class="language-plaintext highlighter-rouge">objInName</code></a><a href="../object/LMentionable.html#objIntoName"><code class="language-plaintext highlighter-rouge">objIntoName</code></a><a href="../object/LMentionable.html#objName"><code class="language-plaintext highlighter-rouge">objName</code></a><a href="../object/LMentionable.html#objOutOfName"><code class="language-plaintext highlighter-rouge">objOutOfName</code></a><a href="../object/LMentionable.html#oneLetterAnWordPat"><code class="language-plaintext highlighter-rouge">oneLetterAnWordPat</code></a><a href="../object/LMentionable.html#oneLetterWordPat"><code class="language-plaintext highlighter-rouge">oneLetterWordPat</code></a><a href="../object/LMentionable.html#ownerNamed"><code class="language-plaintext highlighter-rouge">ownerNamed</code></a><a href="../object/LMentionable.html#pluralPat"><code class="language-plaintext highlighter-rouge">pluralPat</code></a><a href="../object/LMentionable.html#posPat"><code class="language-plaintext highlighter-rouge">posPat</code></a><a href="../object/LMentionable.html#possAdj"><code class="language-plaintext highlighter-rouge">possAdj</code></a><a href="../object/LMentionable.html#possEnding"><code class="language-plaintext highlighter-rouge">possEnding</code></a><a href="../object/LMentionable.html#possNoun"><code class="language-plaintext highlighter-rouge">possNoun</code></a><a href="../object/LMentionable.html#prepList"><code class="language-plaintext highlighter-rouge">prepList</code></a><a href="../object/LMentionable.html#prepPhrasePat"><code class="language-plaintext highlighter-rouge">prepPhrasePat</code></a><a href="../object/LMentionable.html#prepWordPat"><code class="language-plaintext highlighter-rouge">prepWordPat</code></a><a href="../object/LMentionable.html#pronounMap"><code class="language-plaintext highlighter-rouge">pronounMap</code></a><a href="../object/LMentionable.html#properNamePat"><code class="language-plaintext highlighter-rouge">properNamePat</code></a><a href="../object/LMentionable.html#properPat"><code class="language-plaintext highlighter-rouge">properPat</code></a><a href="../object/LMentionable.html#reflexiveName"><code class="language-plaintext highlighter-rouge">reflexiveName</code></a><a href="../object/LMentionable.html#specialAOrAn"><code class="language-plaintext highlighter-rouge">specialAOrAn</code></a><a href="../object/LMentionable.html#tagOrQuotePat"><code class="language-plaintext highlighter-rouge">tagOrQuotePat</code></a><a href="../object/LMentionable.html#thatName"><code class="language-plaintext highlighter-rouge">thatName</code></a><a href="../object/LMentionable.html#thatObjName"><code class="language-plaintext highlighter-rouge">thatObjName</code></a><a href="../object/LMentionable.html#theName"><code class="language-plaintext highlighter-rouge">theName</code></a><a href="../object/LMentionable.html#theObjName"><code class="language-plaintext highlighter-rouge">theObjName</code></a><a href="../object/LMentionable.html#trimPat"><code class="language-plaintext highlighter-rouge">trimPat</code></a><a href="../object/LMentionable.html#truncationLength"><code class="language-plaintext highlighter-rouge">truncationLength</code></a><a href="../object/LMentionable.html#weakWordPat"><code class="language-plaintext highlighter-rouge">weakWordPat</code></a></p>
+<a href="../object/LMentionable.html#acronymPluralPat"><code class="language-plaintext highlighter-rouge">acronymPluralPat</code></a> <a href="../object/LMentionable.html#alphaCharPat"><code class="language-plaintext highlighter-rouge">alphaCharPat</code></a> <a href="../object/LMentionable.html#aName"><code class="language-plaintext highlighter-rouge">aName</code></a> <a href="../object/LMentionable.html#apostPluralPat"><code class="language-plaintext highlighter-rouge">apostPluralPat</code></a> <a href="../object/LMentionable.html#apostSPat"><code class="language-plaintext highlighter-rouge">apostSPat</code></a> <a href="../object/LMentionable.html#deannotatePat"><code class="language-plaintext highlighter-rouge">deannotatePat</code></a> <a href="../object/LMentionable.html#dictComp"><code class="language-plaintext highlighter-rouge">dictComp</code></a> <a href="../object/LMentionable.html#dummyName"><code class="language-plaintext highlighter-rouge">dummyName</code></a> <a href="../object/LMentionable.html#elevenEighteenPat"><code class="language-plaintext highlighter-rouge">elevenEighteenPat</code></a> <a href="../object/LMentionable.html#emptyVocabWords"><code class="language-plaintext highlighter-rouge">emptyVocabWords</code></a> <a href="../object/LMentionable.html#esPluralPat"><code class="language-plaintext highlighter-rouge">esPluralPat</code></a> <a href="../object/LMentionable.html#firstWordPat"><code class="language-plaintext highlighter-rouge">firstWordPat</code></a> <a href="../object/LMentionable.html#heName"><code class="language-plaintext highlighter-rouge">heName</code></a> <a href="../object/LMentionable.html#herName"><code class="language-plaintext highlighter-rouge">herName</code></a> <a href="../object/LMentionable.html#hersName"><code class="language-plaintext highlighter-rouge">hersName</code></a> <a href="../object/LMentionable.html#himName"><code class="language-plaintext highlighter-rouge">himName</code></a> <a href="../object/LMentionable.html#iesPluralPat"><code class="language-plaintext highlighter-rouge">iesPluralPat</code></a> <a href="../object/LMentionable.html#irregularPlurals"><code class="language-plaintext highlighter-rouge">irregularPlurals</code></a> <a href="../object/LMentionable.html#lastWordPat"><code class="language-plaintext highlighter-rouge">lastWordPat</code></a> <a href="../object/LMentionable.html#leadingTagOrQuotePat"><code class="language-plaintext highlighter-rouge">leadingTagOrQuotePat</code></a> <a href="../object/LMentionable.html#menPluralPat"><code class="language-plaintext highlighter-rouge">menPluralPat</code></a> <a href="../object/LMentionable.html#objInName"><code class="language-plaintext highlighter-rouge">objInName</code></a> <a href="../object/LMentionable.html#objIntoName"><code class="language-plaintext highlighter-rouge">objIntoName</code></a> <a href="../object/LMentionable.html#objName"><code class="language-plaintext highlighter-rouge">objName</code></a> <a href="../object/LMentionable.html#objOutOfName"><code class="language-plaintext highlighter-rouge">objOutOfName</code></a> <a href="../object/LMentionable.html#oneLetterAnWordPat"><code class="language-plaintext highlighter-rouge">oneLetterAnWordPat</code></a> <a href="../object/LMentionable.html#oneLetterWordPat"><code class="language-plaintext highlighter-rouge">oneLetterWordPat</code></a> <a href="../object/LMentionable.html#ownerNamed"><code class="language-plaintext highlighter-rouge">ownerNamed</code></a> <a href="../object/LMentionable.html#pluralPat"><code class="language-plaintext highlighter-rouge">pluralPat</code></a> <a href="../object/LMentionable.html#posPat"><code class="language-plaintext highlighter-rouge">posPat</code></a> <a href="../object/LMentionable.html#possAdj"><code class="language-plaintext highlighter-rouge">possAdj</code></a> <a href="../object/LMentionable.html#possEnding"><code class="language-plaintext highlighter-rouge">possEnding</code></a> <a href="../object/LMentionable.html#possNoun"><code class="language-plaintext highlighter-rouge">possNoun</code></a> <a href="../object/LMentionable.html#prepList"><code class="language-plaintext highlighter-rouge">prepList</code></a> <a href="../object/LMentionable.html#prepPhrasePat"><code class="language-plaintext highlighter-rouge">prepPhrasePat</code></a> <a href="../object/LMentionable.html#prepWordPat"><code class="language-plaintext highlighter-rouge">prepWordPat</code></a> <a href="../object/LMentionable.html#pronounMap"><code class="language-plaintext highlighter-rouge">pronounMap</code></a> <a href="../object/LMentionable.html#properNamePat"><code class="language-plaintext highlighter-rouge">properNamePat</code></a> <a href="../object/LMentionable.html#properPat"><code class="language-plaintext highlighter-rouge">properPat</code></a> <a href="../object/LMentionable.html#reflexiveName"><code class="language-plaintext highlighter-rouge">reflexiveName</code></a> <a href="../object/LMentionable.html#specialAOrAn"><code class="language-plaintext highlighter-rouge">specialAOrAn</code></a> <a href="../object/LMentionable.html#tagOrQuotePat"><code class="language-plaintext highlighter-rouge">tagOrQuotePat</code></a> <a href="../object/LMentionable.html#thatName"><code class="language-plaintext highlighter-rouge">thatName</code></a> <a href="../object/LMentionable.html#thatObjName"><code class="language-plaintext highlighter-rouge">thatObjName</code></a> <a href="../object/LMentionable.html#theName"><code class="language-plaintext highlighter-rouge">theName</code></a> <a href="../object/LMentionable.html#theObjName"><code class="language-plaintext highlighter-rouge">theObjName</code></a> <a href="../object/LMentionable.html#trimPat"><code class="language-plaintext highlighter-rouge">trimPat</code></a> <a href="../object/LMentionable.html#truncationLength"><code class="language-plaintext highlighter-rouge">truncationLength</code></a> <a href="../object/LMentionable.html#weakWordPat"><code class="language-plaintext highlighter-rouge">weakWordPat</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#getTopicText"><code class="language-plaintext highlighter-rouge">getTopicText</code></a><a href="#setKnown"><code class="language-plaintext highlighter-rouge">setKnown</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getTopicText"><code class="language-plaintext highlighter-rouge">getTopicText</code></a> <a href="#setKnown"><code class="language-plaintext highlighter-rouge">setKnown</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Mentionable</code> :<br />
-<a href="../object/Mentionable.html#filterResolveList"><code class="language-plaintext highlighter-rouge">filterResolveList</code></a><a href="../object/Mentionable.html#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a><a href="../object/Mentionable.html#matchNameCommon"><code class="language-plaintext highlighter-rouge">matchNameCommon</code></a><a href="../object/Mentionable.html#matchNameDisambig"><code class="language-plaintext highlighter-rouge">matchNameDisambig</code></a><a href="../object/Mentionable.html#phraseMatchName"><code class="language-plaintext highlighter-rouge">phraseMatchName</code></a><a href="../object/Mentionable.html#simpleMatchName"><code class="language-plaintext highlighter-rouge">simpleMatchName</code></a></p>
+<a href="../object/Mentionable.html#filterResolveList"><code class="language-plaintext highlighter-rouge">filterResolveList</code></a> <a href="../object/Mentionable.html#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a> <a href="../object/Mentionable.html#matchNameCommon"><code class="language-plaintext highlighter-rouge">matchNameCommon</code></a> <a href="../object/Mentionable.html#matchNameDisambig"><code class="language-plaintext highlighter-rouge">matchNameDisambig</code></a> <a href="../object/Mentionable.html#phraseMatchName"><code class="language-plaintext highlighter-rouge">phraseMatchName</code></a> <a href="../object/Mentionable.html#simpleMatchName"><code class="language-plaintext highlighter-rouge">simpleMatchName</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">LMentionable</code> :<br />
-<a href="../object/LMentionable.html#addDictWord"><code class="language-plaintext highlighter-rouge">addDictWord</code></a><a href="../object/LMentionable.html#addVocab"><code class="language-plaintext highlighter-rouge">addVocab</code></a><a href="../object/LMentionable.html#addVocabWord"><code class="language-plaintext highlighter-rouge">addVocabWord</code></a><a href="../object/LMentionable.html#aNameFrom"><code class="language-plaintext highlighter-rouge">aNameFrom</code></a><a href="../object/LMentionable.html#aNameFromPoss"><code class="language-plaintext highlighter-rouge">aNameFromPoss</code></a><a href="../object/LMentionable.html#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a><a href="../object/LMentionable.html#contify"><code class="language-plaintext highlighter-rouge">contify</code></a><a href="../object/LMentionable.html#distinguishedName"><code class="language-plaintext highlighter-rouge">distinguishedName</code></a><a href="../object/LMentionable.html#ifPronoun"><code class="language-plaintext highlighter-rouge">ifPronoun</code></a><a href="../object/LMentionable.html#inheritVocab"><code class="language-plaintext highlighter-rouge">inheritVocab</code></a><a href="../object/LMentionable.html#initVocab"><code class="language-plaintext highlighter-rouge">initVocab</code></a><a href="../object/LMentionable.html#initVocabWord"><code class="language-plaintext highlighter-rouge">initVocabWord</code></a><a href="../object/LMentionable.html#locify"><code class="language-plaintext highlighter-rouge">locify</code></a><a href="../object/LMentionable.html#matchPronoun"><code class="language-plaintext highlighter-rouge">matchPronoun</code></a><a href="../object/LMentionable.html#pluralNameFrom"><code class="language-plaintext highlighter-rouge">pluralNameFrom</code></a><a href="../object/LMentionable.html#pluralWordFrom"><code class="language-plaintext highlighter-rouge">pluralWordFrom</code></a><a href="../object/LMentionable.html#possessify"><code class="language-plaintext highlighter-rouge">possessify</code></a><a href="../object/LMentionable.html#pronoun"><code class="language-plaintext highlighter-rouge">pronoun</code></a><a href="../object/LMentionable.html#removeVocabWord"><code class="language-plaintext highlighter-rouge">removeVocabWord</code></a><a href="../object/LMentionable.html#replaceVocab"><code class="language-plaintext highlighter-rouge">replaceVocab</code></a><a href="../object/LMentionable.html#theNameFrom"><code class="language-plaintext highlighter-rouge">theNameFrom</code></a><a href="../object/LMentionable.html#theNameIs"><code class="language-plaintext highlighter-rouge">theNameIs</code></a></p>
+<a href="../object/LMentionable.html#addDictWord"><code class="language-plaintext highlighter-rouge">addDictWord</code></a> <a href="../object/LMentionable.html#addVocab"><code class="language-plaintext highlighter-rouge">addVocab</code></a> <a href="../object/LMentionable.html#addVocabWord"><code class="language-plaintext highlighter-rouge">addVocabWord</code></a> <a href="../object/LMentionable.html#aNameFrom"><code class="language-plaintext highlighter-rouge">aNameFrom</code></a> <a href="../object/LMentionable.html#aNameFromPoss"><code class="language-plaintext highlighter-rouge">aNameFromPoss</code></a> <a href="../object/LMentionable.html#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a> <a href="../object/LMentionable.html#contify"><code class="language-plaintext highlighter-rouge">contify</code></a> <a href="../object/LMentionable.html#distinguishedName"><code class="language-plaintext highlighter-rouge">distinguishedName</code></a> <a href="../object/LMentionable.html#ifPronoun"><code class="language-plaintext highlighter-rouge">ifPronoun</code></a> <a href="../object/LMentionable.html#inheritVocab"><code class="language-plaintext highlighter-rouge">inheritVocab</code></a> <a href="../object/LMentionable.html#initVocab"><code class="language-plaintext highlighter-rouge">initVocab</code></a> <a href="../object/LMentionable.html#initVocabWord"><code class="language-plaintext highlighter-rouge">initVocabWord</code></a> <a href="../object/LMentionable.html#locify"><code class="language-plaintext highlighter-rouge">locify</code></a> <a href="../object/LMentionable.html#matchPronoun"><code class="language-plaintext highlighter-rouge">matchPronoun</code></a> <a href="../object/LMentionable.html#pluralNameFrom"><code class="language-plaintext highlighter-rouge">pluralNameFrom</code></a> <a href="../object/LMentionable.html#pluralWordFrom"><code class="language-plaintext highlighter-rouge">pluralWordFrom</code></a> <a href="../object/LMentionable.html#possessify"><code class="language-plaintext highlighter-rouge">possessify</code></a> <a href="../object/LMentionable.html#pronoun"><code class="language-plaintext highlighter-rouge">pronoun</code></a> <a href="../object/LMentionable.html#removeVocabWord"><code class="language-plaintext highlighter-rouge">removeVocabWord</code></a> <a href="../object/LMentionable.html#replaceVocab"><code class="language-plaintext highlighter-rouge">replaceVocab</code></a> <a href="../object/LMentionable.html#theNameFrom"><code class="language-plaintext highlighter-rouge">theNameFrom</code></a> <a href="../object/LMentionable.html#theNameIs"><code class="language-plaintext highlighter-rouge">theNameIs</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="familiar"></span></p>
 
@@ -141,12 +113,8 @@ the English-language tokenizer does with apostrophe-S).
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#10005">10005</a>]</p>
 
-<div class="desc">
-
-Whether the player character knows of the existence of this topic. By
-default we assume this is true.
-
-</div>
+<p>Whether the player character knows of the existence of this topic. By
+default we assume this is true.</p>
 
 <p><span id="known"></span></p>
 
@@ -154,19 +122,11 @@ default we assume this is true.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#10011">10011</a>]</p>
 
-<div class="desc">
-
-Test whether this topic is known to the player character
-
-</div>
+<p>Test whether this topic is known to the player character</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -175,11 +135,7 @@ Test whether this topic is known to the player character
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9995">9995</a>],
 <a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2094">2094</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="getTopicText"></span></p>
 
@@ -187,12 +143,8 @@ Test whether this topic is known to the player character
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#10017">10017</a>]</p>
 
-<div class="desc">
-
-Return a textual description of this topic, which will normally be just
-its name. We use the vocab as fall-back alternative.
-
-</div>
+<p>Return a textual description of this topic, which will normally be just
+its name. We use the vocab as fall-back alternative.</p>
 
 <p><span id="setKnown"></span></p>
 
@@ -200,18 +152,11 @@ its name. We use the vocab as fall-back alternative.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#10008">10008</a>]</p>
 
-<div class="desc">
+<p>Make this topic known to the player character</p>
 
-Make this topic known to the player character
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

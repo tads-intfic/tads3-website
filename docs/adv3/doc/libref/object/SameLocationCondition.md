@@ -62,7 +62,7 @@ location as a given object.
 
 
 
-[`sameLocationAsDobj`](../object/sameLocationAsDobj.html)[`sameLocationAsIobj`](../object/sameLocationAsIobj.html)
+[`sameLocationAsDobj`](../object/sameLocationAsDobj.html) [`sameLocationAsIobj`](../object/sameLocationAsIobj.html)
 <span id="_PropSummary_"></span>
 
 
@@ -84,7 +84,7 @@ Inherited from `PreCondition` :
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)
+[`checkPreCondition`](#checkPreCondition) [`construct`](#construct)
 
 Inherited from `PreCondition` :  
 [`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)

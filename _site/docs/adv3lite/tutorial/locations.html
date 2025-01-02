@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Defining the Game's Locations  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Defining the Game’s Locations<br />
 <span class="navnp"><a href="understanding.html" class="nav"><em>Prev:</em> Understanding the
 Source File</a>    
 <a href="bird.html" class="nav"><em>Next:</em> Adding the Bird and the
-Nest</a>     </span>
-
-</div>
+Nest</a>     </span></p>
 
 <h1 id="defining-the-games-locations">Defining the Game’s Locations</h1>
 
@@ -59,11 +51,10 @@ indicated in the following rough map:</p>
 ‘In front of a cottage’. Now let’s look at its definition a little more
 closely:</p>
 
-<p>`
-    beforeCottage: Room ‘In front of a Cottage’
-        “You stand outside a cottage. The forest stretches east. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 'In front of a Cottage'
+        "You stand outside a cottage. The forest stretches east. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>The programming name of this room (the name by which we can refer to it
 in our code) is <strong>beforeCottage</strong>. It’s defined to be of the <strong>Room</strong>
@@ -81,18 +72,18 @@ string).</p>
 using a kind of special shorthand called a <em>template</em>. The room
 definition above is exactly equivalent to:</p>
 
-<p>`
-    beforeCottage: Room 
-        roomTitle = ‘In front of a Cottage’
-        desc = “You stand outside a cottage. The forest stretches east. “
-    ;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Here the roomTitle property is the name of the room that appears both in the status line and (often in bold) as the heading of the room description, while the desc property is the fuller description of the room that occurs in the body of the room description. Because these properties are used so often when defining a room, a template (defined in advLite.h) enables us to define them with this short form:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 
+        roomTitle = 'In front of a Cottage'
+        desc = "You stand outside a cottage. The forest stretches east. "
+    ;
 
 
-someRoom: Room 'roomTitle'
-    "desc"
-; `
+    Here the roomTitle property is the name of the room that appears both in the status line and (often in bold) as the heading of the room description, while the desc property is the fuller description of the room that occurs in the body of the room description. Because these properties are used so often when defining a room, a template (defined in advLite.h) enables us to define them with this short form:
+
+
+    someRoom: Room 'roomTitle'
+        "desc"
+    ;
 </code></pre></div></div>
 
 <p>Note, incidentally, how we leave a space between the final full-stop and
@@ -103,21 +94,21 @@ text directly afterwards.</p>
 <p>Armed with all this knowledge we can now go ahead and define the other
 three rooms:</p>
 
-<p>`
-    forest: Room ‘Deep in the forest’
-        “Through the dense foliage, you glimpse a building to the west. A track
-        heads to the northeast. “
-    ;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clearing: Room 'A forest clearing'
-    "A tall sycamore stands in the middle of this clearing. The path winds
-    southwest through the trees. "
-;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    forest: Room 'Deep in the forest'
+        "Through the dense foliage, you glimpse a building to the west. A track
+        heads to the northeast. "
+    ;
 
 
-topOfTree: Room 'At the top of the tree'
-    "You cling precariously to the trunk. "
-; `
+    clearing: Room 'A forest clearing'
+        "A tall sycamore stands in the middle of this clearing. The path winds
+        southwest through the trees. "
+    ;
+
+
+    topOfTree: Room 'At the top of the tree'
+        "You cling precariously to the trunk. "
+    ;
 </code></pre></div></div>
 
 <p>But if you compile the game and run it again, you’ll find that
@@ -130,50 +121,49 @@ each room, to say where the player character ends up when going in
 particular directions from particular rooms. Amend the rooms so they now
 look like this (with the new code shown in bold below):</p>
 
-<p>`
-    beforeCottage: Room ‘In front of a Cottage’
-        “You stand outside a cottage. The forest stretches east. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 'In front of a Cottage'
+        "You stand outside a cottage. The forest stretches east. "
+        
+        east = forest
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = forest
-;
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */
-
-+ me: Thing 'you;;heidi'   
-    isFixed = true    
-    proper = true
-    ownsContents = true
-    person = 2   
-    contType = Carrier    
-;
-
-
-forest: Room 'Deep in the forest'
-    "Through the dense foliage, you glimpse a building to the west. A track
-    heads to the northeast. "
-    
-    west = beforeCottage
-    northeast = clearing
-;
+    + me: Thing 'you;;heidi'   
+        isFixed = true    
+        proper = true
+        ownsContents = true
+        person = 2   
+        contType = Carrier    
+    ;
 
 
-clearing: Room 'A forest clearing'
-    "A tall sycamore stands in the middle of this clearing. The path winds
-    southwest through the trees. "
-    
-    southwest = forest
-    up = topOfTree
-;
+    forest: Room 'Deep in the forest'
+        "Through the dense foliage, you glimpse a building to the west. A track
+        heads to the northeast. "
+        
+        west = beforeCottage
+        northeast = clearing
+    ;
 
-topOfTree: Room 'At the top of the tree'
-    "You cling precariously to the trunk. "
-    
-    down = clearing
-; `
+
+    clearing: Room 'A forest clearing'
+        "A tall sycamore stands in the middle of this clearing. The path winds
+        southwest through the trees. "
+        
+        southwest = forest
+        up = topOfTree
+    ;
+
+    topOfTree: Room 'At the top of the tree'
+        "You cling precariously to the trunk. "
+        
+        down = clearing
+    ;
 </code></pre></div></div>
 
 <p>If you now compile and run the game (assuming you haven’t made any
@@ -203,18 +193,15 @@ this tutorial.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Defining the Game's Locations  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Defining the Game’s Locations<br />
 <span class="navnp"><a href="understanding.html" class="nav"><em>Prev:</em> Understanding the
 Source File</a>    
 <a href="bird.html" class="nav"><em>Next:</em> Adding the Bird and the
-Nest</a>     </span>
+Nest</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

@@ -48,7 +48,7 @@ has changed since the last time we ran.
 
 
 
-[`everNotified`](#everNotified)[`lastScore`](#lastScore)
+[`everNotified`](#everNotified) [`lastScore`](#lastScore)
 
 <span id="_MethodSummary_"></span>
 
@@ -58,7 +58,7 @@ has changed since the last time we ran.
 
 
 
-[`basicScoreChange`](#basicScoreChange)[`checkNotification`](#checkNotification)[`firstScoreChange`](#firstScoreChange)[`scoreChange`](#scoreChange)
+[`basicScoreChange`](#basicScoreChange) [`checkNotification`](#checkNotification) [`firstScoreChange`](#firstScoreChange) [`scoreChange`](#scoreChange)
 
 <span id="_Properties_"></span>
 

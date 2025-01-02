@@ -69,7 +69,7 @@ external settings file.
 
 
 
-[`id_`](#id_)[`val_`](#val_)
+[`id_`](#id_) [`val_`](#val_)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ external settings file.
 
 
 
-[`construct`](#construct)[`writeToFile`](#writeToFile)
+[`construct`](#construct) [`writeToFile`](#writeToFile)
 
 <span id="_Properties_"></span>
 

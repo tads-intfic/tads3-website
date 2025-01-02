@@ -63,7 +63,7 @@ talking about.
 [`person`](#person)
 
 Inherited from `Pronoun` :  
-[`all`](../object/Pronoun.html#all)[`aName`](../object/Pronoun.html#aName)[`ante`](../object/Pronoun.html#ante)[`reflexive`](../object/Pronoun.html#reflexive)[`theName`](../object/Pronoun.html#theName)[`theObjName`](../object/Pronoun.html#theObjName)
+[`all`](../object/Pronoun.html#all) [`aName`](../object/Pronoun.html#aName) [`ante`](../object/Pronoun.html#ante) [`reflexive`](../object/Pronoun.html#reflexive) [`theName`](../object/Pronoun.html#theName) [`theObjName`](../object/Pronoun.html#theObjName)
 
 <span id="_MethodSummary_"></span>
 
@@ -76,7 +76,7 @@ Inherited from `Pronoun` :
 [`resolve`](#resolve)
 
 Inherited from `Pronoun` :  
-[`construct`](../object/Pronoun.html#construct)[`matchObj`](../object/Pronoun.html#matchObj)[`setAntecedents`](../object/Pronoun.html#setAntecedents)
+[`construct`](../object/Pronoun.html#construct) [`matchObj`](../object/Pronoun.html#matchObj) [`setAntecedents`](../object/Pronoun.html#setAntecedents)
 
 <span id="_Properties_"></span>
 

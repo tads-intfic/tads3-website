@@ -60,7 +60,7 @@ Transcript Transform.
 
 
 
-[`complexMultiTransform`](../object/complexMultiTransform.html)[`defaultReportTransform`](../object/defaultReportTransform.html)[`implicitGroupTransform`](../object/implicitGroupTransform.html)[`reportOrderTransform`](../object/reportOrderTransform.html)
+[`complexMultiTransform`](../object/complexMultiTransform.html) [`defaultReportTransform`](../object/defaultReportTransform.html) [`implicitGroupTransform`](../object/implicitGroupTransform.html) [`reportOrderTransform`](../object/reportOrderTransform.html)
 <span id="_PropSummary_"></span>
 
 

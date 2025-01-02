@@ -89,7 +89,7 @@ TravelConnector-derived superclass.
 
 
 
-[`noteTraversal`](#noteTraversal)[`showTravelDesc`](#showTravelDesc)[`travelDesc`](#travelDesc)
+[`noteTraversal`](#noteTraversal) [`showTravelDesc`](#showTravelDesc) [`travelDesc`](#travelDesc)
 
 <span id="_Properties_"></span>
 

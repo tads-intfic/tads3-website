@@ -46,71 +46,43 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-PlugAttachable is a mix-in class for use in conjunction with either
+<p>PlugAttachable is a mix-in class for use in conjunction with either
 SimpleAttachable or NearbyAttachable, enabling the commands PLUG X INTO
 Y, UNPLUG X FROM Y, PLUG X IN and UNPLUG X, treating ATTACH and DETACH
-commands as equivalent to these, and describing an object's attachments
-as being plugged into it.
+commands as equivalent to these, and describing an object’s attachments
+as being plugged into it.</p>
 
-`class `**`PlugAttachable`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PlugAttachable</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">PlugAttachable</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#alreadyAttachedMsg"><code class="language-plaintext highlighter-rouge">alreadyAttachedMsg</code></a>  <a href="#alreadyPluggedInMsg"><code class="language-plaintext highlighter-rouge">alreadyPluggedInMsg</code></a>  <a href="#attachmentLister"><code class="language-plaintext highlighter-rouge">attachmentLister</code></a>  <a href="#cannotBeAttachedMsg"><code class="language-plaintext highlighter-rouge">cannotBeAttachedMsg</code></a>  <a href="#cannotPlugInAnyMoreMsg"><code class="language-plaintext highlighter-rouge">cannotPlugInAnyMoreMsg</code></a>  <a href="#canPlugIntoMe"><code class="language-plaintext highlighter-rouge">canPlugIntoMe</code></a>  <a href="#isPlugable"><code class="language-plaintext highlighter-rouge">isPlugable</code></a>  <a href="#isPluggedIn"><code class="language-plaintext highlighter-rouge">isPluggedIn</code></a>  <a href="#needsExplicitSocket"><code class="language-plaintext highlighter-rouge">needsExplicitSocket</code></a>  <a href="#notAttachedMsg"><code class="language-plaintext highlighter-rouge">notAttachedMsg</code></a>  <a href="#notAttachedToThatMsg"><code class="language-plaintext highlighter-rouge">notAttachedToThatMsg</code></a>  <a href="#okayAttachMsg"><code class="language-plaintext highlighter-rouge">okayAttachMsg</code></a>  <a href="#okayDetachFromMsg"><code class="language-plaintext highlighter-rouge">okayDetachFromMsg</code></a>  <a href="#okayDetachMsg"><code class="language-plaintext highlighter-rouge">okayDetachMsg</code></a>  <a href="#socketCapacity"><code class="language-plaintext highlighter-rouge">socketCapacity</code></a>  `</p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#dobjFor(PlugIn)"><code class="language-plaintext highlighter-rouge">dobjFor(PlugIn)</code></a>  <a href="#dobjFor(PlugInto)"><code class="language-plaintext highlighter-rouge">dobjFor(PlugInto)</code></a>  <a href="#dobjFor(Unplug)"><code class="language-plaintext highlighter-rouge">dobjFor(Unplug)</code></a>  <a href="#dobjFor(UnplugFrom)"><code class="language-plaintext highlighter-rouge">dobjFor(UnplugFrom)</code></a>  <a href="#iobjFor(AttachTo)"><code class="language-plaintext highlighter-rouge">iobjFor(AttachTo)</code></a>  <a href="#iobjFor(PlugInto)"><code class="language-plaintext highlighter-rouge">iobjFor(PlugInto)</code></a>  <a href="#makePlugged"><code class="language-plaintext highlighter-rouge">makePlugged</code></a>  `</p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="alreadyAttachedMsg"></span></p>
 
@@ -118,11 +90,7 @@ as being plugged into it.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#744">744</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="alreadyPluggedInMsg"></span></p>
 
@@ -130,11 +98,7 @@ as being plugged into it.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#747">747</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="attachmentLister"></span></p>
 
@@ -142,12 +106,8 @@ as being plugged into it.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#684">684</a>]</p>
 
-<div class="desc">
-
-Objects attached to this object should be described as plugged into it,
-so we need to use the appropriate lister.
-
-</div>
+<p>Objects attached to this object should be described as plugged into it,
+so we need to use the appropriate lister.</p>
 
 <p><span id="cannotBeAttachedMsg"></span></p>
 
@@ -155,12 +115,8 @@ so we need to use the appropriate lister.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#799">799</a>]</p>
 
-<div class="desc">
-
-Make sure we don't exceed our socketCapacity if the player uses ATTACH
-TO rather than PLUG INTO; use the check method for PlugInto.
-
-</div>
+<p>Make sure we don’t exceed our socketCapacity if the player uses ATTACH
+TO rather than PLUG INTO; use the check method for PlugInto.</p>
 
 <p><span id="cannotPlugInAnyMoreMsg"></span></p>
 
@@ -168,12 +124,8 @@ TO rather than PLUG INTO; use the check method for PlugInto.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#779">779</a>]</p>
 
-<div class="desc">
-
-If plugging anything else into us would exceed our socketCapacity, rule
-out the action with an appropriate message,
-
-</div>
+<p>If plugging anything else into us would exceed our socketCapacity, rule
+out the action with an appropriate message,</p>
 
 <p><span id="canPlugIntoMe"></span></p>
 
@@ -181,11 +133,7 @@ out the action with an appropriate message,
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#678">678</a>]</p>
 
-<div class="desc">
-
-A PlugAttachable can have other things plugged into it.
-
-</div>
+<p>A PlugAttachable can have other things plugged into it.</p>
 
 <p><span id="isPlugable"></span></p>
 
@@ -193,11 +141,7 @@ A PlugAttachable can have other things plugged into it.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#675">675</a>]</p>
 
-<div class="desc">
-
-A PlugAttachable can be plugged into things.
-
-</div>
+<p>A PlugAttachable can be plugged into things.</p>
 
 <p><span id="isPluggedIn"></span></p>
 
@@ -205,11 +149,7 @@ A PlugAttachable can be plugged into things.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#695">695</a>]</p>
 
-<div class="desc">
-
-Is this item plugged in to anything?
-
-</div>
+<p>Is this item plugged in to anything?</p>
 
 <p><span id="needsExplicitSocket"></span></p>
 
@@ -217,14 +157,10 @@ Is this item plugged in to anything?
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#692">692</a>]</p>
 
-<div class="desc">
-
-Plugable objects could either be implemented so that an explicit socket
+<p>Plugable objects could either be implemented so that an explicit socket
 needs to be specified (e.g. PLUG CABLE INTO SOCKET) or so that the
 socket can be left unspecified (e.g. PLUG TV IN). For the former case,
-make this property true; for the latter, make it nil.
-
-</div>
+make this property true; for the latter, make it nil.</p>
 
 <p><span id="notAttachedMsg"></span></p>
 
@@ -232,11 +168,7 @@ make this property true; for the latter, make it nil.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#837">837</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="notAttachedToThatMsg"></span></p>
 
@@ -244,11 +176,7 @@ make this property true; for the latter, make it nil.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#840">840</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="okayAttachMsg"></span></p>
 
@@ -256,11 +184,7 @@ make this property true; for the latter, make it nil.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#741">741</a>]</p>
 
-<div class="desc">
-
-Note that we're now plugged in.
-
-</div>
+<p>Note that we’re now plugged in.</p>
 
 <p><span id="okayDetachFromMsg"></span></p>
 
@@ -268,11 +192,7 @@ Note that we're now plugged in.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#834">834</a>]</p>
 
-<div class="desc">
-
-Note that we're no longer plugged in to anything.
-
-</div>
+<p>Note that we’re no longer plugged in to anything.</p>
 
 <p><span id="okayDetachMsg"></span></p>
 
@@ -280,13 +200,9 @@ Note that we're no longer plugged in to anything.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#872">872</a>]</p>
 
-<div class="desc">
-
-If plugging/unplugging this item requires an explicit socket to plug
-into/unplug from, then detach this item from whatever it's currently
-attached to.
-
-</div>
+<p>If plugging/unplugging this item requires an explicit socket to plug
+into/unplug from, then detach this item from whatever it’s currently
+attached to.</p>
 
 <p><span id="socketCapacity"></span></p>
 
@@ -294,23 +210,15 @@ attached to.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#704">704</a>]</p>
 
-<div class="desc">
-
-If this object represents the socket side of a plug-and-socket
+<p>If this object represents the socket side of a plug-and-socket
 relationship, then the socketCapacity defines the total number of items
-that can be plugged into it once. By default we'll assume that a socket
+that can be plugged into it once. By default we’ll assume that a socket
 can only have one thing plugged into it at a time, but this can readily
-be overridded for items that can take more.
-
-</div>
+be overridded for items that can take more.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="dobjFor(PlugIn)"></span></p>
 
@@ -318,11 +226,7 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#874">874</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="dobjFor(PlugInto)"></span></p>
 
@@ -330,11 +234,7 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#712">712</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="dobjFor(Unplug)"></span></p>
 
@@ -342,11 +242,7 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#843">843</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="dobjFor(UnplugFrom)"></span></p>
 
@@ -354,11 +250,7 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#802">802</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="iobjFor(AttachTo)"></span></p>
 
@@ -366,11 +258,7 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#782">782</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="iobjFor(PlugInto)"></span></p>
 
@@ -378,11 +266,7 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#749">749</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="makePlugged"></span></p>
 
@@ -390,18 +274,11 @@ be overridded for items that can take more.
 
 <p><a href="../file/attachables.t.html">attachables.t</a>[<a href="../source/attachables.t.html#707">707</a>]</p>
 
-<div class="desc">
+<p>Note whether we’re plugged our unplugged.</p>
 
-Note whether we're plugged our unplugged.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

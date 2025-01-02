@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Hello and Goodbye  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Hello and Goodbye<br />
 <span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Conversation Nodes</a>
    
 <a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
-NPC Knowledge</a>     </span>
-
-</div>
+NPC Knowledge</a>     </span></p>
 
 <h1 id="hello-and-goodbye">Hello and Goodbye</h1>
 
@@ -89,13 +81,12 @@ further <a href="#deciding">below</a>).</p>
 <p>To define what happens at the start of a conversation, we can use a
 <strong>HelloTopic</strong>. For example:</p>
 
-<p>`
-    + HelloTopic
-        “<q>Hello,</q> you say.\b
-        <q>Hi there!</q> Bob replies. &lt;.agenda fireAgenda&gt; “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    changeToState = bobTalking
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + HelloTopic
+        "&lt;q&gt;Hello,&lt;/q&gt; you say.\b
+        &lt;q&gt;Hi there!&lt;/q&gt; Bob replies. &lt;.agenda fireAgenda&gt; "
+        
+        changeToState = bobTalking
+    ;
 </code></pre></div></div>
 
 <p>As we have defined it, this will be triggered when the player uses an
@@ -131,17 +122,16 @@ at the start of every conversation, whereas we’d probably only want it
 added the first time. In practice, then, we might define the HelloTopic
 to give a list of responses that takes care of this:</p>
 
-<p>`
-    + HelloTopic, StopEventList
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + HelloTopic, StopEventList
         [
-            ‘<q>Hello,</q> you say.\b
-            <q>Hi there!</q> Bob replies. &lt;.agenda fireAgenda&gt; ‘,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;Hello again!&lt;/q&gt; you declare.\b
-        &lt;q&gt;Hi,&lt;/q&gt; says Bob. '
-    ]
-    changeToState = bobTalking
-; `
+            '&lt;q&gt;Hello,&lt;/q&gt; you say.\b
+            &lt;q&gt;Hi there!&lt;/q&gt; Bob replies. &lt;.agenda fireAgenda&gt; ',
+            
+            '&lt;q&gt;Hello again!&lt;/q&gt; you declare.\b
+            &lt;q&gt;Hi,&lt;/q&gt; says Bob. '
+        ]
+        changeToState = bobTalking
+    ;
 </code></pre></div></div>
 
 <p><span id="nohello"></span></p>
@@ -198,13 +188,12 @@ end.</p>
 <p>At the simplest, we can define a <strong>ByeTopic</strong> in much the same way as we
 define a HelloTopic; for example:</p>
 
-<p>`
-    + ByeTopic
-        “<q>Goodbye,</q> you say.\b
-        <q>Cheerio,</q> he replies. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ByeTopic
+        "&lt;q&gt;Goodbye,&lt;/q&gt; you say.\b
+        &lt;q&gt;Cheerio,&lt;/q&gt; he replies. "
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    changeToState = bobWorking
-; `
+        changeToState = bobWorking
+    ;
 </code></pre></div></div>
 
 <p>Note that this needs to be located either directly in the Actor or in
@@ -290,17 +279,14 @@ being terminated:</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Hello and Goodbye  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Hello and Goodbye<br />
 <span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Conversation Nodes</a>
    
 <a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
-NPC Knowledge</a>     </span>
+NPC Knowledge</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

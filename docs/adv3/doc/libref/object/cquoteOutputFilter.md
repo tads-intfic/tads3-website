@@ -47,7 +47,7 @@ Details](#_Methods_)
 
 
 
-[`aggressive`](#aggressive)[`patAggressive`](#patAggressive)[`patIsCont1Tag`](#patIsCont1Tag)[`patIsCont2Tag`](#patIsCont2Tag)[`patIsFormatTag`](#patIsFormatTag)[`patIsHTMLTag`](#patIsHTMLTag)[`patIsPossTag`](#patIsPossTag)
+[`aggressive`](#aggressive) [`patAggressive`](#patAggressive) [`patIsCont1Tag`](#patIsCont1Tag) [`patIsCont2Tag`](#patIsCont2Tag) [`patIsFormatTag`](#patIsFormatTag) [`patIsHTMLTag`](#patIsHTMLTag) [`patIsPossTag`](#patIsPossTag)
 
 
 
@@ -59,7 +59,7 @@ Details](#_Methods_)
 
 
 
-[`execute`](#execute)[`filterText`](#filterText)
+[`execute`](#execute) [`filterText`](#filterText)
 
 
 

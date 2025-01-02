@@ -983,7 +983,7 @@ layout: docs
 
                     /* match it against each template with the same first word */
                     local found = nil;
-                    foreach (local p in ptab.getParsers(rexGroup(1)[3]))
+                    foreach (local p in ptab.getParsers(rexGroup(1) [3]))
                     {
                         /* if we match this item's template, this is the one */
                         if (rexMatch(p.pat_, c))
@@ -1029,7 +1029,7 @@ layout: docs
                                     break;
                                 
                                 /* get the regular expression match */
-                                local n = rexGroup(idx)[3];
+                                local n = rexGroup(idx) [3];
 
                                 /* add it to the template list */
                                 tpl += n;

@@ -69,7 +69,7 @@ object is able to reach out and touch another object.
 
 
 
-[`canTouch`](#canTouch)[`touchPath`](#touchPath)
+[`canTouch`](#canTouch) [`touchPath`](#touchPath)
 
 <span id="_MethodSummary_"></span>
 

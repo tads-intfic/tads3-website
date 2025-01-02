@@ -25,7 +25,7 @@ Details](#_Methods_)
 The sceneManager object is used to control the scene-switching and
 execution mechanism.
 
-**`sceneManager`**` :   `[`InitObject`](../object/InitObject.html)[`Event`](../object/Event.html)
+**`sceneManager`**` :   `[`InitObject`](../object/InitObject.html) [`Event`](../object/Event.html)
 
 
 
@@ -51,15 +51,15 @@ execution mechanism.
 
 
 
-[`eventOrder`](#eventOrder)[`execBeforeMe`](#execBeforeMe)
+[`eventOrder`](#eventOrder) [`execBeforeMe`](#execBeforeMe)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 Inherited from `Event` :  
-[`captureText`](../object/Event.html#captureText)[`executed`](../object/Event.html#executed)[`interval_`](../object/Event.html#interval_)[`isPromptDaemon`](../object/Event.html#isPromptDaemon)[`nextRunTime`](../object/Event.html#nextRunTime)[`obj_`](../object/Event.html#obj_)[`prop_`](../object/Event.html#prop_)[`senseObj_`](../object/Event.html#senseObj_)[`senseProp_`](../object/Event.html#senseProp_)
+[`captureText`](../object/Event.html#captureText) [`executed`](../object/Event.html#executed) [`interval_`](../object/Event.html#interval_) [`isPromptDaemon`](../object/Event.html#isPromptDaemon) [`nextRunTime`](../object/Event.html#nextRunTime) [`obj_`](../object/Event.html#obj_) [`prop_`](../object/Event.html#prop_) [`senseObj_`](../object/Event.html#senseObj_) [`senseProp_`](../object/Event.html#senseProp_)
 
 <span id="_MethodSummary_"></span>
 
@@ -69,15 +69,15 @@ Inherited from `Event` :
 
 
 
-[`execute`](#execute)[`executeEvent`](#executeEvent)[`notifyAfter`](#notifyAfter)[`notifyBefore`](#notifyBefore)
+[`execute`](#execute) [`executeEvent`](#executeEvent) [`notifyAfter`](#notifyAfter) [`notifyBefore`](#notifyBefore)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 Inherited from `Event` :  
-[`callMethod`](../object/Event.html#callMethod)[`construct`](../object/Event.html#construct)[`delayEvent`](../object/Event.html#delayEvent)[`eventMatches`](../object/Event.html#eventMatches)[`getNextRunTime`](../object/Event.html#getNextRunTime)[`removeEvent`](../object/Event.html#removeEvent)
+[`callMethod`](../object/Event.html#callMethod) [`construct`](../object/Event.html#construct) [`delayEvent`](../object/Event.html#delayEvent) [`eventMatches`](../object/Event.html#eventMatches) [`getNextRunTime`](../object/Event.html#getNextRunTime) [`removeEvent`](../object/Event.html#removeEvent)
 
 <span id="_Properties_"></span>
 

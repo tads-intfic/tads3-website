@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="cockpit.html" class="nav">Cockpit Controls</a> \&gt; Furnishing the
-Cockpit  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="cockpit.html" class="nav">Cockpit Controls</a> &gt; Furnishing the
+Cockpit<br />
 <span class="navnp"><a href="cockpit.html" class="nav"><em>Prev:</em> Cockpit Controls</a>
    
 <a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="furnishing-the-cockpit">Furnishing the Cockpit</h1>
 
@@ -68,17 +60,16 @@ plane to take off and the game to be won.</p>
 
 <p>The first step is to give the cockpit a decent description:</p>
 
-<p>`
-    cockpit: Room ‘Cockpit’ ‘cockpit’
-        “The cockpit is quite small but has everything you might expect: a
-        windscreen looking forward, a pilot’s seat from which you can operate all
-        the usual controls, and a door leading out aft. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cockpit: Room 'Cockpit' 'cockpit'
+        "The cockpit is quite small but has everything you might expect: a
+        windscreen looking forward, a pilot's seat from which you can operate all
+        the usual controls, and a door leading out aft. "
         aft = cabinDoor
         south asExit(aft)
-        out asExit(aft)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    regions = [planeRegion]
-; `
+        out asExit(aft)
+        
+        regions = [planeRegion]
+    ;
 </code></pre></div></div>
 
 <p>Next we need to implement the pilot’s seat and the controls. For the
@@ -93,28 +84,27 @@ things you can reach in the cockpit are the controls. Here’s how we can
 start this off (putting these object definitions immediately after that
 of the cabinDoor that’s already in the cockpit):</p>
 
-<p>`
-    + pilotSeat: Fixture, Platform ‘pilot's seat’</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pilotSeat: Fixture, Platform 'pilot\'s seat'
+            
+        dobjFor(Enter) asDobjFor(Board)
+        
+        allowReachOut(obj)
+        {
+            return obj.isOrIsIn(controls);
+        }
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobjFor(Enter) asDobjFor(Board)
-    
-    allowReachOut(obj)
-    {
-        return obj.isOrIsIn(controls);
-    }
-;
-
-+ controls: Fixture 'controls;; instruments;them'
-    "The instruments and controls of most immediate interest to you are
-    &lt;&lt;makeListStr(contents, &amp;theName)&gt;&gt;. "
-    
-    checkReach(actor)
-    {
-        if(!actor.isIn(pilotSeat))
-            "You really need to be sitting in the pilot's seat before you start
-            operating the controls. ";
-    }
-; `
+    + controls: Fixture 'controls;; instruments;them'
+        "The instruments and controls of most immediate interest to you are
+        &lt;&lt;makeListStr(contents, &amp;theName)&gt;&gt;. "
+        
+        checkReach(actor)
+        {
+            if(!actor.isIn(pilotSeat))
+                "You really need to be sitting in the pilot's seat before you start
+                operating the controls. ";
+        }
+    ;
 </code></pre></div></div>
 
 <p>The first point of note here is the use of a Platform to implement the
@@ -249,60 +239,59 @@ instruments and controls, locating them in the
 <code class="language-plaintext highlighter-rouge">controls</code> object, although at this stage their
 implementations will be a little sketchy:</p>
 
-<p>`
-    ++ controlColumn: Fixture ‘control column;;stick’
-        “It’s basically a stick that can be pushed forward or pulled back, with a
-        wheel attached at the top. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ controlColumn: Fixture 'control column;;stick'
+        "It's basically a stick that can be pushed forward or pulled back, with a
+        wheel attached at the top. "
         listOrder = 10
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+++ wheel: Fixture 'wheel'
-    "The wheel can be turned to port or starboard to steer the aircraft. "
-;
+    +++ wheel: Fixture 'wheel'
+        "The wheel can be turned to port or starboard to steer the aircraft. "
+    ;
 
-++ thrustLever: Fixture 'thrust lever'
-    "It's a lever that can be pushed forward or pulled back. "
-    listOrder = 20
-;
+    ++ thrustLever: Fixture 'thrust lever'
+        "It's a lever that can be pushed forward or pulled back. "
+        listOrder = 20
+    ;
 
-++ ignitionButton: Button 'engine ignition button; big green'
-    "It's a big green button. "
-    listOrder = 30
-    isOn = nil
-    
-    makePushed()
-    {
-        if(isOn)
-            "The engines are already running. ";
-        else
+    ++ ignitionButton: Button 'engine ignition button; big green'
+        "It's a big green button. "
+        listOrder = 30
+        isOn = nil
+        
+        makePushed()
         {
-            isOn = true;
-            "The plane judders as the engines roar into life. ";
+            if(isOn)
+                "The engines are already running. ";
+            else
+            {
+                isOn = true;
+                "The plane judders as the engines roar into life. ";
+            }
         }
-    }
-;
+    ;
 
-++ asi: Fixture 'airspeed indicator; air speed; asi'
-    "It's currently registering an airspeed of &lt;&lt;airspeed&gt;&gt; knots. "
-    listOrder = 40
-    
-    airspeed = 0
-;
+    ++ asi: Fixture 'airspeed indicator; air speed; asi'
+        "It's currently registering an airspeed of &lt;&lt;airspeed&gt;&gt; knots. "
+        listOrder = 40
+        
+        airspeed = 0
+    ;
 
-++ altimeter: Fixture 'altimeter'
-    "It's currently indicating an altitude of &lt;&lt;altitude&gt;&gt; feet. "
-    listOrder = 50
-    
-    altitude = 0
-;
+    ++ altimeter: Fixture 'altimeter'
+        "It's currently indicating an altitude of &lt;&lt;altitude&gt;&gt; feet. "
+        listOrder = 50
+        
+        altitude = 0
+    ;
 
-++ fuelGauge: Fixture 'fuel gauge'
-    "It's currently registering full. "
-    listOrder = 60
-;
+    ++ fuelGauge: Fixture 'fuel gauge'
+        "It's currently registering full. "
+        listOrder = 60
+    ;
 
-+ windscreen: Fixture 'windscreen;; window windshield'
-; `
+    + windscreen: Fixture 'windscreen;; window windshield'
+    ;
 </code></pre></div></div>
 
 <p>The implementation is deliberately incomplete at this stage, since
@@ -343,18 +332,15 @@ actions.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="cockpit.html" class="nav">Cockpit Controls</a> \&gt; Furnishing the
-Cockpit  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="cockpit.html" class="nav">Cockpit Controls</a> &gt; Furnishing the
+Cockpit<br />
 <span class="navnp"><a href="cockpit.html" class="nav"><em>Prev:</em> Cockpit Controls</a>
    
 <a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

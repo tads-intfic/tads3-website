@@ -76,7 +76,7 @@ paying any attention to us.
 [`agendaOrder`](#agendaOrder)
 
 Inherited from `AgendaItem` :  
-[`calledBy`](../object/AgendaItem.html#calledBy)[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`invokedByActor`](../object/AgendaItem.html#invokedByActor)[`isDone`](../object/AgendaItem.html#isDone)[`isReady`](../object/AgendaItem.html#isReady)[`name`](../object/AgendaItem.html#name)
+[`calledBy`](../object/AgendaItem.html#calledBy) [`initiallyActive`](../object/AgendaItem.html#initiallyActive) [`invokedByActor`](../object/AgendaItem.html#invokedByActor) [`isDone`](../object/AgendaItem.html#isDone) [`isReady`](../object/AgendaItem.html#isReady) [`name`](../object/AgendaItem.html#name)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `AgendaItem` :
 
 
 
-[`construct`](#construct)[`invokeItem`](#invokeItem)[`isReady`](#isReady)
+[`construct`](#construct) [`invokeItem`](#invokeItem) [`isReady`](#isReady)
 
 Inherited from `AgendaItem` :  
-[`getActor`](../object/AgendaItem.html#getActor)[`invokeItemBase`](../object/AgendaItem.html#invokeItemBase)[`registerItem`](../object/AgendaItem.html#registerItem)[`report`](../object/AgendaItem.html#report)[`resetItem`](../object/AgendaItem.html#resetItem)
+[`getActor`](../object/AgendaItem.html#getActor) [`invokeItemBase`](../object/AgendaItem.html#invokeItemBase) [`registerItem`](../object/AgendaItem.html#registerItem) [`report`](../object/AgendaItem.html#report) [`resetItem`](../object/AgendaItem.html#resetItem)
 
 <span id="_Properties_"></span>
 

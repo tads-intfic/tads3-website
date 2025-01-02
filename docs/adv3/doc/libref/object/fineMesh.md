@@ -47,7 +47,7 @@ Fine Mesh is transparent to all senses except touch.
 
 
 
-[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
+[`hearThru`](#hearThru) [`seeThru`](#seeThru) [`smellThru`](#smellThru) [`touchThru`](#touchThru)
 
 
 

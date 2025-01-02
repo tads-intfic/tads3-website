@@ -33,7 +33,7 @@ inexperienced players) when certain things happen in the game.
 
 
 
-[`Tip`](../object/Tip.html)[`TipModeAction`](../object/TipModeAction.html)
+[`Tip`](../object/Tip.html) [`TipModeAction`](../object/TipModeAction.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -42,7 +42,7 @@ inexperienced players) when certain things happen in the game.
 
 
 
-[`tipManager`](../object/tipManager.html)[`tipMode`](../object/tipMode.html)[`tipStyleTag`](../object/tipStyleTag.html)
+[`tipManager`](../object/tipManager.html) [`tipMode`](../object/tipMode.html) [`tipStyleTag`](../object/tipStyleTag.html)
 <span id="FunctionSummary_"></span>
 
 

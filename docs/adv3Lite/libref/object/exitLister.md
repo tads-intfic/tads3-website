@@ -48,13 +48,13 @@ The main exits lister.
 
 
 
-[`enableHyperlinks`](#enableHyperlinks)[`enableReminder`](#enableReminder)[`enableReminderAlways`](#enableReminderAlways)[`exitsOnOffExplained`](#exitsOnOffExplained)[`roomDescVerbose`](#roomDescVerbose)
+[`enableHyperlinks`](#enableHyperlinks) [`enableReminder`](#enableReminder) [`enableReminderAlways`](#enableReminderAlways) [`exitsOnOffExplained`](#exitsOnOffExplained) [`roomDescVerbose`](#roomDescVerbose)
 
 Inherited from `PreinitObject` :  
-[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe) [`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,12 +64,12 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`cannotGoShowExits`](#cannotGoShowExits)[`execute`](#execute)[`exitsOnOffCommand`](#exitsOnOffCommand)[`getRoomDescLister`](#getRoomDescLister)[`getStatuslineExitsHeight`](#getStatuslineExitsHeight)[`isReminderEnabled`](#isReminderEnabled)[`lookAroundShowExits`](#lookAroundShowExits)[`showExits`](#showExits)[`showExitsCommand`](#showExitsCommand)[`showExitsFrom`](#showExitsFrom)[`showExitsWithLister`](#showExitsWithLister)[`showStatuslineExits`](#showStatuslineExits)
+[`cannotGoShowExits`](#cannotGoShowExits) [`execute`](#execute) [`exitsOnOffCommand`](#exitsOnOffCommand) [`getRoomDescLister`](#getRoomDescLister) [`getStatuslineExitsHeight`](#getStatuslineExitsHeight) [`isReminderEnabled`](#isReminderEnabled) [`lookAroundShowExits`](#lookAroundShowExits) [`showExits`](#showExits) [`showExitsCommand`](#showExitsCommand) [`showExitsFrom`](#showExitsFrom) [`showExitsWithLister`](#showExitsWithLister) [`showStatuslineExits`](#showStatuslineExits)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

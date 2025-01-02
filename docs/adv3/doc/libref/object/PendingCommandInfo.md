@@ -74,7 +74,7 @@ executed.
 
 
 
-[`hasCommand`](#hasCommand)[`issuer_`](#issuer_)[`startOfSentence_`](#startOfSentence_)
+[`hasCommand`](#hasCommand) [`issuer_`](#issuer_) [`startOfSentence_`](#startOfSentence_)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ executed.
 
 
 
-[`construct`](#construct)[`executePending`](#executePending)
+[`construct`](#construct) [`executePending`](#executePending)
 
 <span id="_Properties_"></span>
 

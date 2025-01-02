@@ -46,76 +46,48 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A "conversational" agenda item. This type of item is ready to execute
-only when the actor hasn't engaged in conversation during the same turn.
+<p>A “conversational” agenda item. This type of item is ready to execute
+only when the actor hasn’t engaged in conversation during the same turn.
 This type of item is ideal for situations where we want the actor to
-pursue a conversational topic, because we won't initiate the action
-until we get a turn where the player didn't directly talk to us.
+pursue a conversational topic, because we won’t initiate the action
+until we get a turn where the player didn’t directly talk to us.</p>
 
-`class `**`ConvAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ConvAgendaItem</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ConvAgendaItem</code></strong><br />
 <a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a><a href="#otherActor"><code class="language-plaintext highlighter-rouge">otherActor</code></a></p>
+<p><a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a> <a href="#otherActor"><code class="language-plaintext highlighter-rouge">otherActor</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
-<a href="../object/AgendaItem.html#agendaOrder"><code class="language-plaintext highlighter-rouge">agendaOrder</code></a><a href="../object/AgendaItem.html#initiallyActive"><code class="language-plaintext highlighter-rouge">initiallyActive</code></a><a href="../object/AgendaItem.html#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a></p>
+<a href="../object/AgendaItem.html#agendaOrder"><code class="language-plaintext highlighter-rouge">agendaOrder</code></a> <a href="../object/AgendaItem.html#initiallyActive"><code class="language-plaintext highlighter-rouge">initiallyActive</code></a> <a href="../object/AgendaItem.html#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
-<a href="../object/AgendaItem.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="../object/AgendaItem.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a><a href="../object/AgendaItem.html#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a><a href="../object/AgendaItem.html#resetItem"><code class="language-plaintext highlighter-rouge">resetItem</code></a></p>
+<a href="../object/AgendaItem.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/AgendaItem.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="../object/AgendaItem.html#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a> <a href="../object/AgendaItem.html#resetItem"><code class="language-plaintext highlighter-rouge">resetItem</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="isReady"></span></p>
 
@@ -123,11 +95,7 @@ until we get a turn where the player didn't directly talk to us.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5609">5609</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="otherActor"></span></p>
 
@@ -135,30 +103,19 @@ until we get a turn where the player didn't directly talk to us.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5618">5618</a>]</p>
 
-<div class="desc">
-
-The actor we're planning to address - by default, this is the PC. If the
+<p>The actor we’re planning to address - by default, this is the PC. If the
 conversational overture will be directed to another NPC, you can specify
-that other actor here.
-
-</div>
+that other actor here.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

@@ -72,10 +72,10 @@ grammar rule.
 
 
 
-[`answerFunc`](#answerFunc)[`answerProd`](#answerProd)
+[`answerFunc`](#answerFunc) [`answerProd`](#answerProd)
 
 Inherited from `Question` :  
-[`answerTemplate`](../object/Question.html#answerTemplate)[`priority`](../object/Question.html#priority)
+[`answerTemplate`](../object/Question.html#answerTemplate) [`priority`](../object/Question.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ Inherited from `Question` :
 
 
 
-[`construct`](#construct)[`makeCommand`](#makeCommand)[`parseAnswer`](#parseAnswer)
+[`construct`](#construct) [`makeCommand`](#makeCommand) [`parseAnswer`](#parseAnswer)
 
 
 

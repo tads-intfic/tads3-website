@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="schemes.html" class="nav">Schemes and Devices</a> \&gt; The
-Security Area  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="schemes.html" class="nav">Schemes and Devices</a> &gt; The
+Security Area<br />
 <span class="navnp"><a href="maintenance.html" class="nav"><em>Prev:</em> The Maintenance
 Room</a>    
 <a href="scene.html" class="nav"><em>Next:</em> Making a Scene</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="the-security-area">The Security Area</h1>
 
@@ -59,28 +51,27 @@ computer stands. We’ll start with the combination lock.</p>
 <p>Here’s a first initial attempt at adding a sticker and a lock to the
 suitcase:</p>
 
-<p>`
-    + suitcase: OpenableContainer ‘suitcase;;case’ 
-        “It’s a black suitcase with a combination lock and a prominent sticker
-        bearing a French tricolor and the slogan <q>Vive la revolution
-        francaise!</q>. “
-        initSpecialDesc = “A suitcase stands neatly placed next to the settee. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + suitcase: OpenableContainer 'suitcase;;case' 
+        "It's a black suitcase with a combination lock and a prominent sticker
+        bearing a French tricolor and the slogan &lt;q&gt;Vive la revolution
+        francaise!&lt;/q&gt;. "
+        initSpecialDesc = "A suitcase stands neatly placed next to the settee. "  
+        
+        bulk = 8
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 8
-;
+    ++ Fixture 'sticker; prominent french; tricolor'
+        "The sticker is prominently marked with a tricolor and bears the slogan
+        &lt;q&gt;Vive la revolution francaise!&lt;/q&gt; &amp;mdash; Long Live the French
+        Revolution! "  
+        
+        readDesc = (desc)
+    ;
 
-++ Fixture 'sticker; prominent french; tricolor'
-    "The sticker is prominently marked with a tricolor and bears the slogan
-    &lt;q&gt;Vive la revolution francaise!&lt;/q&gt; &amp;mdash; Long Live the French
-    Revolution! "  
-    
-    readDesc = (desc)
-;
-
-++ comboLock: Fixture 'combination lock'
-    "The combination lock consists of four small brass wheels, each of which
-    can be turned to any number between 0 and 9. "
-; `
+    ++ comboLock: Fixture 'combination lock'
+        "The combination lock consists of four small brass wheels, each of which
+        can be turned to any number between 0 and 9. "
+    ;
 </code></pre></div></div>
 
 <p>If you compile and run this, however, you’ll quickly discover a problem.
@@ -98,25 +89,24 @@ interior of the suitcase and attach it to the suitcase’s remapIn
 property, just as we did when giving the short cabinet both an interior
 and a top:</p>
 
-<p>`
-    + suitcase: Thing ‘suitcase;;case’ 
-        “It’s a black suitcase with a combination lock and a prominent sticker
-        bearing a French tricolor and the slogan <q>Vive la revolution
-        francaise!</q>. “
-        initSpecialDesc = “A suitcase stands neatly placed next to the settee. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 8
-    
-    remapIn: SubComponent
-    {
-        isOpenable = true
-        lockability = indirectLockable
-        isLocked = true
-        bulkCapacity = 8
-        indirectLockableMsg = 'You\'ll have to use the combination lock for
-            that. '
-    }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + suitcase: Thing 'suitcase;;case' 
+        "It's a black suitcase with a combination lock and a prominent sticker
+        bearing a French tricolor and the slogan &lt;q&gt;Vive la revolution
+        francaise!&lt;/q&gt;. "
+        initSpecialDesc = "A suitcase stands neatly placed next to the settee. "  
+        
+        bulk = 8
+        
+        remapIn: SubComponent
+        {
+            isOpenable = true
+            lockability = indirectLockable
+            isLocked = true
+            bulkCapacity = 8
+            indirectLockableMsg = 'You\'ll have to use the combination lock for
+                that. '
+        }
+    ;
 </code></pre></div></div>
 
 <p>Note that in adding the remapIn SubComponent to the suitcase, we also
@@ -128,14 +118,13 @@ other thing we have to do is to tweak the definition of the uniform so
 that it ends up back inside the suitcase, by adding
 <code class="language-plaintext highlighter-rouge">subLocation = &amp;remapIn</code>:</p>
 
-<p>`
-    ++ uniform: Wearable ‘pilot's uniform; timo large’<br />
-        “It’s a uniform for a Timo Airlines pilot. It’s a little large for you, but
-        you could probably wear it. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 6
-    subLocation = &amp;remapIn
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ uniform: Wearable 'pilot\'s uniform; timo large'  
+        "It's a uniform for a Timo Airlines pilot. It's a little large for you, but
+        you could probably wear it. "
+        
+        bulk = 6
+        subLocation = &amp;remapIn
+    ;
 </code></pre></div></div>
 
 <p>We still don’t have a working lock, however. To do that we need a set of
@@ -160,21 +149,20 @@ to check whether the combination lock is now set to the correct
 combination. We can save ourselves quite a bit of repetitive coding if
 we define this behaviour on a custom class:</p>
 
-<p>`
-    class ComboWheel: NumberedDial
-        desc = “It’s a small brass wheel that can be turned to any number between 0
-            and 9, and is currently at «curSetting». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    maxSetting = 9
-    
-    cannotTakeMsg = 'You can\'t; it\'s part of the combination lock. '
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class ComboWheel: NumberedDial
+        desc = "It's a small brass wheel that can be turned to any number between 0
+            and 9, and is currently at &lt;&lt;curSetting&gt;&gt;. "
         
-    makeSetting(val)
-    {
-        inherited(val);
-        location.checkCombo();
-    }
-; `
+        maxSetting = 9
+        
+        cannotTakeMsg = 'You can\'t; it\'s part of the combination lock. '
+            
+        makeSetting(val)
+        {
+            inherited(val);
+            location.checkCombo();
+        }
+    ;
 </code></pre></div></div>
 
 <p>We don’t need to define <code class="language-plaintext highlighter-rouge">minSetting = 0</code> on this
@@ -185,51 +173,50 @@ the method that checks whether the player now has the correct
 combination, a method we’ll actually define on the comboLock object in
 which the four wheels will be located:</p>
 
-<p>`
-    ++ comboLock: Fixture ‘combination lock’
-        “The combination lock consists of four small brass wheels, each of which
-        can be turned to any number between 0 and 9. They’re currently showing
-        the combination «currentCombo». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    currentCombo = (wheel1.curSetting + wheel2.curSetting + wheel3.curSetting +
-                    wheel4.curSetting)
-    
-    correctCombo = '1789'
-    
-    checkCombo()
-    {
-        if(currentCombo == correctCombo)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ comboLock: Fixture 'combination lock'
+        "The combination lock consists of four small brass wheels, each of which
+        can be turned to any number between 0 and 9. They're currently showing
+        the combination &lt;&lt;currentCombo&gt;&gt;. "
+        
+        currentCombo = (wheel1.curSetting + wheel2.curSetting + wheel3.curSetting +
+                        wheel4.curSetting)
+        
+        correctCombo = '1789'
+        
+        checkCombo()
         {
-            reportAfter('You fancy you hear a slight click from the lock. ');
-            location.remapIn.makeLocked(nil);            
+            if(currentCombo == correctCombo)
+            {
+                reportAfter('You fancy you hear a slight click from the lock. ');
+                location.remapIn.makeLocked(nil);            
+            }
+            else
+                location.remapIn.makeLocked(true);
         }
-        else
-            location.remapIn.makeLocked(true);
-    }
-    
-;
+        
+    ;
 
 
 
-+++ wheel1: ComboWheel 'first wheel; small brass 1'
-    curSetting = '3'
-    listOrder = 1
-;
+    +++ wheel1: ComboWheel 'first wheel; small brass 1'
+        curSetting = '3'
+        listOrder = 1
+    ;
 
-+++ wheel2: ComboWheel 'second wheel; small brass 2'
-    curSetting = '5'
-    listOrder = 2
-;
+    +++ wheel2: ComboWheel 'second wheel; small brass 2'
+        curSetting = '5'
+        listOrder = 2
+    ;
 
-+++ wheel3: ComboWheel 'third wheel; small brass 3'
-    curSetting = '9'
-    listOrder = 3
-;
+    +++ wheel3: ComboWheel 'third wheel; small brass 3'
+        curSetting = '9'
+        listOrder = 3
+    ;
 
-+++ wheel4: ComboWheel 'fourth wheel; small brass 4'
-    curSetting = '2'
-    listOrder = 4
-; `
+    +++ wheel4: ComboWheel 'fourth wheel; small brass 4'
+        curSetting = '2'
+        listOrder = 4
+    ;
 </code></pre></div></div>
 
 <p>We’ve done several things to the comboLock object here. First we’ve
@@ -270,27 +257,25 @@ combination lock now works as expected.</p>
 up to now has been left almost totally bare. We’ll start by giving the
 room a description:</p>
 
-<p>`
-    securityCentre: Room ‘Security Centre’ ‘security centre’
-        “Judging by the monitors on the walls, this must be some sort of security
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    securityCentre: Room 'Security Centre' 'security centre'
+        "Judging by the monitors on the walls, this must be some sort of security
         centre. Otherwise the room is mostly bare apart from the utilitarian desk
-        located somewhere in the middle. The only way out is to the east. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = securityArea
-    out asExit(east)
-; `
+        located somewhere in the middle. The only way out is to the east. "
+        
+        east = securityArea
+        out asExit(east)
+    ;
 </code></pre></div></div>
 
 <p>The security monitors are merely scenery; we can implement them briskly
 as a Decoration:</p>
 
-<p>`
-    + Decoration ‘security monitors; blank; screens ;them’
-        “They’re all blank; either they’re switched off or they’re not working. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    notImportantMsg = 'You really don\'t have time to play around with the
-        monitors. '
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Decoration 'security monitors; blank; screens ;them'
+        "They're all blank; either they're switched off or they're not working. "
+        
+        notImportantMsg = 'You really don\'t have time to play around with the
+            monitors. '
+    ;
 </code></pre></div></div>
 
 <p>The desk requires a little more thought, since this is to have a drawer.
@@ -299,20 +284,19 @@ OPEN DESK and the like to refer to the drawer. We can do that by having
 the desk’s remapIn property refer to the drawer while using its remapOn
 property to provide it with a surface as a desktop:</p>
 
-<p>`
-    + desk: Heavy ‘desk; utilitarian metal’
-        “It’s a utilitarian metal desk with a single drawer. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + desk: Heavy 'desk; utilitarian metal'
+        "It's a utilitarian metal desk with a single drawer. "
+        
+        remapIn = drawer
+        remapOn: SubComponent { }    
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    remapIn = drawer
-    remapOn: SubComponent { }    
-;
-
-++ drawer: Fixture, OpenableContainer 'drawer'
-    
-    bulkCapacity = 5
-    
-    cannotTakeMsg = 'The drawer is part of the desk. '
-; `
+    ++ drawer: Fixture, OpenableContainer 'drawer'
+        
+        bulkCapacity = 5
+        
+        cannotTakeMsg = 'The drawer is part of the desk. '
+    ;
 </code></pre></div></div>
 
 <p>The only thing new here is the use of the <strong>Heavy</strong> class to define the
@@ -320,18 +304,17 @@ desk. This is almost the same as making it a Fixture, except that it
 provides a custom <code class="language-plaintext highlighter-rouge">cannotTakeMsg</code>, ‘The desk is
 too heavy to move around’. Next we add the notebook in the drawer:</p>
 
-<p>`
-    +++ notebook: Thing ‘notebook; little green book; writing’
-        “It’s just a little green book with writing in it. “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +++ notebook: Thing 'notebook; little green book; writing'
+        "It's just a little green book with writing in it. "
+        
+        readDesc = "It turns to be full of lots of sets of random-looking
+            characters, all crossed out apart from the last, which reads
+            &lt;&lt;password&gt;&gt;. "
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = "It turns to be full of lots of sets of random-looking
-        characters, all crossed out apart from the last, which reads
-        &lt;&lt;password&gt;&gt;. "
-
-    password = 'B49qJt0'
-    
-    dobjFor(Open) asDobjFor(Read)
-; `
+        password = 'B49qJt0'
+        
+        dobjFor(Open) asDobjFor(Read)
+    ;
 </code></pre></div></div>
 
 <p>There’s just a couple of points to note about this object definition.
@@ -367,12 +350,11 @@ inherit from the Heavy class (which we also used for the desk) so the
 player character can’t pick it up and carry it around, and we’ll give it
 a specialDesc to make sure that the player knows that it’s there:</p>
 
-<p>`
-    ++ computer: Heavy, Consultable ‘computer;; pc keyboard screen’</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    specialDesc = "A computer sits squarely on top of the desk. "
-    subLocation = &amp;remapOn
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
+        
+        specialDesc = "A computer sits squarely on top of the desk. "
+        subLocation = &amp;remapOn
+    ;
 </code></pre></div></div>
 
 <p>That’s all very well, but this definition doesn’t tell the computer how
@@ -395,9 +377,8 @@ liberty, equality, fraternity or, as here, the French Revolution. To
 define a Topic we simply define an object of the Topic class and give it
 a vocab property:</p>
 
-<p>`
-    tFrenchRevolution: Topic ‘french revolution’;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tFrenchRevolution: Topic 'french revolution';
+</code></pre></div></div>
 
 <p>A convenient place to put this definition might be right at the end of
 the start.t file, out of the way of anything else. Since the player
@@ -405,9 +386,8 @@ might reasonably use our simulated computer to look up flight
 departures, we might as well define a topic for that while we’re at it
 too:</p>
 
-<p>`
-    tFlightDepartures: Topic ‘flight departures; plane; times’;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tFlightDepartures: Topic 'flight departures; plane; times';
+</code></pre></div></div>
 
 <p>The vocab property of a Topic is defined just like that for a Thing, so
 here we’ve ensured that the tFlightDepartures Topic will match FLIGHT
@@ -423,19 +403,18 @@ from our computer. As mentioned the way to do that is to define a couple
 of ConsultTopic objects located directly in the computer. The template
 notation makes this quick and easy:</p>
 
-<p>`
-    +++ ConsultTopic @tFrenchRevolution
-        “According to Wikipedia, the French Revolution began in 1789. The article
-        goes on to tell you quite a bit more about it, but you don’t have time to
-        read it all now. “
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +++ ConsultTopic @tFrenchRevolution
+        "According to Wikipedia, the French Revolution began in 1789. The article
+        goes on to tell you quite a bit more about it, but you don't have time to
+        read it all now. "
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+++ ConsultTopic @tFlightDepartures
-    "So far as you can tell from the information displayed, Timo Flight 179 to
-    Buenos Aires is likely to be the only one out of here for the next several
-    hours, all the others being delayed for a variety of annoying reasons such
-    as strikes, illness and inclement weather. "
-; `
+    +++ ConsultTopic @tFlightDepartures
+        "So far as you can tell from the information displayed, Timo Flight 179 to
+        Buenos Aires is likely to be the only one out of here for the next several
+        hours, all the others being delayed for a variety of annoying reasons such
+        as strikes, illness and inclement weather. "
+    ;
 </code></pre></div></div>
 
 <p>Here we define the topic we want the ConsultTopic to respond to after an
@@ -452,12 +431,11 @@ We can do this by means of a <strong>DefaultConsultTopic</strong>, which is what
 game will resort to if it can’t find a more specific ConsultTopic that
 matches what the player asked for:</p>
 
-<p>`
-    +++ DefaultConsultTopic
-        “That’s of no immediate interest to you right now; you have more urgent
-        things to attend to. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +++ DefaultConsultTopic
+        "That's of no immediate interest to you right now; you have more urgent
+        things to attend to. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>For the full story on Consultables and ConsultTopics, see the section on
 <a href="../manual/topicentry.html">Topic Entries</a> in the <em>adv3Lite Library
@@ -489,31 +467,30 @@ being turned on and off. We can also use the
 <code class="language-plaintext highlighter-rouge">passwordEntered</code> properties to change the
 description of the computer according to its state:</p>
 
-<p>`
-    ++ computer: Heavy, Consultable ‘computer;; pc keyboard screen’
-        “The computer is currently «if isOn»on and «if passwordEntered» ready
-        for use«else» waiting for you to enter a password«end» «else»
-        off«end».”</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    specialDesc = "A computer sits squarely on top of the desk. "
-    subLocation = &amp;remapOn
-    
-    isSwitchable = true
-    
-    makeOn(stat)
-    {
-        inherited(stat);
-        if(stat)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
+        "The computer is currently &lt;&lt;if isOn&gt;&gt;on and &lt;&lt;if passwordEntered&gt;&gt; ready
+        for use&lt;&lt;else&gt;&gt; waiting for you to enter a password&lt;&lt;end&gt;&gt; &lt;&lt;else&gt;&gt;
+        off&lt;&lt;end&gt;&gt;."
+        
+        specialDesc = "A computer sits squarely on top of the desk. "
+        subLocation = &amp;remapOn
+        
+        isSwitchable = true
+        
+        makeOn(stat)
         {
-            "The computer rapidly boots up and displays a screen asking you
-            to enter a password. ";
-            passwordEntered = nil;
+            inherited(stat);
+            if(stat)
+            {
+                "The computer rapidly boots up and displays a screen asking you
+                to enter a password. ";
+                passwordEntered = nil;
+            }
+            else
+                "The computer rapidly powers down. ";
         }
-        else
-            "The computer rapidly powers down. ";
-    }
-    
-    passwordEntered = nil `
+        
+        passwordEntered = nil
 </code></pre></div></div>
 
 <p>For the next step, we need to prevent the player from looking anything
@@ -572,18 +549,17 @@ from going ahead either if the computer hasn’t been turned on yet
 entered yet (<code class="language-plaintext highlighter-rouge">passwordEntered == nil</code>). Our
 check routine should therefore look like this:</p>
 
-<p>`
-        dobjFor(ConsultAbout)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        dobjFor(ConsultAbout)
         {
             check()
             {
                 if(!isOn)
-                    “You can’t do that until the computer is switched on. “;
+                    "You can't do that until the computer is switched on. ";
                 else if(!passwordEntered)
-                    “You’ll need to enter a password first. “;
+                    "You'll need to enter a password first. ";
             }
         }
-`</p>
+</code></pre></div></div>
 
 <p>For further information on the check() stage in general, see the <a href="../manual/actres.html#check">Action
 Responses</a> section of the <em>adv3Lite Library
@@ -622,35 +598,34 @@ allow the EnterOn action to go ahead once
 to enter a password on the computer (once it is switched on), thus looks
 like this:</p>
 
-<p>`</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    canEnterOnMe = true
-    
-    dobjFor(EnterOn)
-    {
-        check()
-        {
-            if(!isOn)
-                "You can't do that until the computer is switched on. ";
-            else if(passwordEntered)
-                "You've already entered the password; this is no time to start
-                playing around with random commands. ";
-        }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       
+        canEnterOnMe = true
         
-        action()
+        dobjFor(EnterOn)
         {
-            if(gLiteral == notebook.password)
+            check()
             {
-                "The computer displays WELCOME for a few seconds, and then
-                clears to allow you to enter commands. ";
-                
-                passwordEntered  = true;
+                if(!isOn)
+                    "You can't do that until the computer is switched on. ";
+                else if(passwordEntered)
+                    "You've already entered the password; this is no time to start
+                    playing around with random commands. ";
             }
-            else
-                "The computer flashes PASSWORD NOT RECOGNIZED at you. ";
-                
+            
+            action()
+            {
+                if(gLiteral == notebook.password)
+                {
+                    "The computer displays WELCOME for a few seconds, and then
+                    clears to allow you to enter commands. ";
+                    
+                    passwordEntered  = true;
+                }
+                else
+                    "The computer flashes PASSWORD NOT RECOGNIZED at you. ";
+                    
+            }
         }
-    } `
 </code></pre></div></div>
 
 <p>One additional refinement we could add is to make TYPE PASSWORD ON
@@ -659,74 +634,73 @@ easily enough by defining <code class="language-plaintext highlighter-rouge">dob
 asDobjFor(EnterOn)</code>. The complete object definition for the
 computer then looks like this:</p>
 
-<p>`
-    ++ computer: Heavy, Consultable ‘computer;; pc keyboard screen’
-        “The computer is currently «if isOn»on and «if passwordEntered» ready
-        for use«else» waiting for you to enter a password«end»«else»
-        off«end». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    specialDesc = "A computer sits squarely on top of the desk. "
-    subLocation = &amp;remapOn
-    
-    isSwitchable = true
-    
-    makeOn(stat)
-    {
-        inherited(stat);
-        if(stat)
-        {
-            "The computer rapidly boots up and displays a screen asking you
-            to enter a password. ";
-            passwordEntered = nil;
-        }
-        else
-            "The computer rapidly powers down. ";
-    }
-    
-    passwordEntered = nil
-    
-    dobjFor(ConsultAbout)
-    {
-        check()
-        {
-            if(!isOn)
-                "You can't do that until the computer is switched on. ";
-            else if(!passwordEntered)
-                "You'll need to enter a password first. ";
-        }
-    }
-    
-    canEnterOnMe = true
-    
-    dobjFor(EnterOn)
-    {
-        check()
-        {
-            if(!isOn)
-                "You can't do that until the computer is switched on. ";
-            else if(passwordEntered)
-                "You've already entered the password; this is no time to start
-                playing around with random commands. ";
-        }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
+        "The computer is currently &lt;&lt;if isOn&gt;&gt;on and &lt;&lt;if passwordEntered&gt;&gt; ready
+        for use&lt;&lt;else&gt;&gt; waiting for you to enter a password&lt;&lt;end&gt;&gt;&lt;&lt;else&gt;&gt;
+        off&lt;&lt;end&gt;&gt;. "
         
-        action()
+        specialDesc = "A computer sits squarely on top of the desk. "
+        subLocation = &amp;remapOn
+        
+        isSwitchable = true
+        
+        makeOn(stat)
         {
-            if(gLiteral == notebook.password)
+            inherited(stat);
+            if(stat)
             {
-                "The computer displays WELCOME for a few seconds, and then
-                clears to allow you to enter commands. ";
-                
-                passwordEntered  = true;
+                "The computer rapidly boots up and displays a screen asking you
+                to enter a password. ";
+                passwordEntered = nil;
             }
             else
-                "The computer flashes PASSWORD NOT RECOGNIZED at you. ";
-                
+                "The computer rapidly powers down. ";
         }
-    }
- 
-    dobjFor(TypeOn) asDobjFor(EnterOn)
-    
-; `
+        
+        passwordEntered = nil
+        
+        dobjFor(ConsultAbout)
+        {
+            check()
+            {
+                if(!isOn)
+                    "You can't do that until the computer is switched on. ";
+                else if(!passwordEntered)
+                    "You'll need to enter a password first. ";
+            }
+        }
+        
+        canEnterOnMe = true
+        
+        dobjFor(EnterOn)
+        {
+            check()
+            {
+                if(!isOn)
+                    "You can't do that until the computer is switched on. ";
+                else if(passwordEntered)
+                    "You've already entered the password; this is no time to start
+                    playing around with random commands. ";
+            }
+            
+            action()
+            {
+                if(gLiteral == notebook.password)
+                {
+                    "The computer displays WELCOME for a few seconds, and then
+                    clears to allow you to enter commands. ";
+                    
+                    passwordEntered  = true;
+                }
+                else
+                    "The computer flashes PASSWORD NOT RECOGNIZED at you. ";
+                    
+            }
+        }
+     
+        dobjFor(TypeOn) asDobjFor(EnterOn)
+        
+    ;
 </code></pre></div></div>
 
 <p>You might once again like to compile and run the game to ensure that all
@@ -734,18 +708,15 @@ works as expected.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="schemes.html" class="nav">Schemes and Devices</a> \&gt; The
-Security Area  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="schemes.html" class="nav">Schemes and Devices</a> &gt; The
+Security Area<br />
 <span class="navnp"><a href="maintenance.html" class="nav"><em>Prev:</em> The Maintenance
 Room</a>    
 <a href="scene.html" class="nav"><em>Next:</em> Making a Scene</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

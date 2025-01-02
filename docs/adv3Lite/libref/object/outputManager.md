@@ -51,7 +51,7 @@ intepreter user interface, which is not affected by save and restore.
 
 
 
-[`curOutputStream`](#curOutputStream)[`htmlMode`](#htmlMode)
+[`curOutputStream`](#curOutputStream) [`htmlMode`](#htmlMode)
 
 <span id="_MethodSummary_"></span>
 
@@ -61,7 +61,7 @@ intepreter user interface, which is not affected by save and restore.
 
 
 
-[`setOutputStream`](#setOutputStream)[`withOutputStream`](#withOutputStream)
+[`setOutputStream`](#setOutputStream) [`withOutputStream`](#withOutputStream)
 
 <span id="_Properties_"></span>
 

@@ -75,7 +75,7 @@ string. During normal play we only need that internal representation.
 
 
 
-[`action_`](#action_)[`pat_`](#pat_)[`roles_`](#roles_)[`verb_`](#verb_)
+[`action_`](#action_) [`pat_`](#pat_) [`roles_`](#roles_) [`verb_`](#verb_)
 
 <span id="_MethodSummary_"></span>
 

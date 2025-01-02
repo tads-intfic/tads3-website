@@ -76,7 +76,7 @@ successfully consulted about.
 [`includeInList`](#includeInList)
 
 Inherited from `TopicEntry` :  
-[`active`](../object/TopicEntry.html#active)[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`matchScore`](../object/TopicEntry.html#matchScore)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
+[`active`](../object/TopicEntry.html#active) [`isActive`](../object/TopicEntry.html#isActive) [`matchExactCase`](../object/TopicEntry.html#matchExactCase) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchPattern`](../object/TopicEntry.html#matchPattern) [`matchScore`](../object/TopicEntry.html#matchScore) [`scoreBoost`](../object/TopicEntry.html#scoreBoost) [`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ Inherited from `TopicEntry` :
 
 
 Inherited from `TopicEntry` :  
-[`addTopic`](../object/TopicEntry.html#addTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`matchTopic`](../object/TopicEntry.html#matchTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
+[`addTopic`](../object/TopicEntry.html#addTopic) [`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry) [`matchTopic`](../object/TopicEntry.html#matchTopic) [`scoreBooster`](../object/TopicEntry.html#scoreBooster) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

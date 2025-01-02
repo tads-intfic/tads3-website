@@ -5,7 +5,7 @@ layout: docs
 
 `grammar `**[`withSingleNoun(main)`](../object/withSingleNoun(main).html)**` :   `[`Production`](../object/Production.html)
 
-[`grammar.t`](../file/grammar.t.html)[`[`279`](../source/grammar.t.html#279)]`
+[`grammar.t`](../file/grammar.t.html) [`[`279`](../source/grammar.t.html#279)]`
 
 
 

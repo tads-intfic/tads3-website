@@ -36,7 +36,7 @@ Mercury library (c) Michael J. Roberts).
 
 
 
-[`Test`](../object/Test.html)[`VerbRule(Debug)`](../object/VerbRule(Debug).html)[`VerbRule(DebugI)`](../object/VerbRule(DebugI).html)[`VerbRule(ListTests)`](../object/VerbRule(ListTests).html)[`VerbRule(Test)`](../object/VerbRule(Test).html)
+[`Test`](../object/Test.html) [`VerbRule(Debug)`](../object/VerbRule(Debug).html) [`VerbRule(DebugI)`](../object/VerbRule(DebugI).html) [`VerbRule(ListTests)`](../object/VerbRule(ListTests).html) [`VerbRule(Test)`](../object/VerbRule(Test).html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -45,7 +45,7 @@ Mercury library (c) Michael J. Roberts).
 
 
 
-[`actionTab`](../object/actionTab.html)[`allTests`](../object/allTests.html)[`Debug`](../object/Debug.html)[`DebugCtl`](../object/DebugCtl.html)[`DebugI`](../object/DebugI.html)[`DoTest`](../object/DoTest.html)[`Evaluate`](../object/Evaluate.html)[`FiatLux`](../object/FiatLux.html)[`GoNear`](../object/GoNear.html)[`ListTests`](../object/ListTests.html)[`Purloin`](../object/Purloin.html)[`symTab`](../object/symTab.html)
+[`actionTab`](../object/actionTab.html) [`allTests`](../object/allTests.html) [`Debug`](../object/Debug.html) [`DebugCtl`](../object/DebugCtl.html) [`DebugI`](../object/DebugI.html) [`DoTest`](../object/DoTest.html) [`Evaluate`](../object/Evaluate.html) [`FiatLux`](../object/FiatLux.html) [`GoNear`](../object/GoNear.html) [`ListTests`](../object/ListTests.html) [`Purloin`](../object/Purloin.html) [`symTab`](../object/symTab.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -54,7 +54,7 @@ Mercury library (c) Michael J. Roberts).
 
 
 
-[`symToVal`](#symToVal)[`valToSym`](#valToSym)
+[`symToVal`](#symToVal) [`valToSym`](#valToSym)
 
 <span id="_Functions_"></span>
 

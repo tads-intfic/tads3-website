@@ -81,7 +81,7 @@ A basic event, for game-time and real-time events.
 
 
 
-[`obj_`](#obj_)[`prop_`](#prop_)[`sense_`](#sense_)[`source_`](#source_)
+[`obj_`](#obj_) [`prop_`](#prop_) [`sense_`](#sense_) [`source_`](#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ A basic event, for game-time and real-time events.
 
 
 
-[`callMethod`](#callMethod)[`construct`](#construct)[`eventMatches`](#eventMatches)[`executeEvent`](#executeEvent)
+[`callMethod`](#callMethod) [`construct`](#construct) [`eventMatches`](#eventMatches) [`executeEvent`](#executeEvent)
 
 <span id="_Properties_"></span>
 

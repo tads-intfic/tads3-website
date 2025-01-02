@@ -68,7 +68,7 @@ object to hold the result of a literal input
 
 
 
-[`name`](#name)[`person`](#person)[`theName`](#theName)
+[`name`](#name) [`person`](#person) [`theName`](#theName)
 
 <span id="_MethodSummary_"></span>
 

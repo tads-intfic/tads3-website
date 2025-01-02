@@ -76,7 +76,7 @@ unwinding the history.
 
 
 
-[`corrections`](#corrections)[`cstack`](#cstack)[`parser`](#parser)[`startTime`](#startTime)
+[`corrections`](#corrections) [`cstack`](#cstack) [`parser`](#parser) [`startTime`](#startTime)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ unwinding the history.
 
 
 
-[`checkSpelling`](#checkSpelling)[`clear`](#clear)[`construct`](#construct)[`hasCorrections`](#hasCorrections)[`noteSpelling`](#noteSpelling)[`rollback`](#rollback)
+[`checkSpelling`](#checkSpelling) [`clear`](#clear) [`construct`](#construct) [`hasCorrections`](#hasCorrections) [`noteSpelling`](#noteSpelling) [`rollback`](#rollback)
 
 <span id="_Properties_"></span>
 

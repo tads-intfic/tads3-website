@@ -117,7 +117,7 @@ match.
 
 
 
-[`connectUI`](#connectUI)[`processRequest`](#processRequest)
+[`connectUI`](#connectUI) [`processRequest`](#processRequest)
 
 <span id="_Properties_"></span>
 

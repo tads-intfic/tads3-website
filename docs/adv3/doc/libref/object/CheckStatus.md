@@ -79,7 +79,7 @@ message giving the reason for the failure.
 
 
 
-[`isSuccess`](#isSuccess)[`msgParams`](#msgParams)[`msgProp`](#msgProp)
+[`isSuccess`](#isSuccess) [`msgParams`](#msgParams) [`msgProp`](#msgProp)
 
 <span id="_MethodSummary_"></span>
 

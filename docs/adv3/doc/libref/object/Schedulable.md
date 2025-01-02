@@ -81,7 +81,7 @@ our constructor to be added to the master list.
 
 
 
-[`allSchedulables`](#allSchedulables)[`gameClockTime`](#gameClockTime)[`nextRunTime`](#nextRunTime)[`scheduleOrder`](#scheduleOrder)
+[`allSchedulables`](#allSchedulables) [`gameClockTime`](#gameClockTime) [`nextRunTime`](#nextRunTime) [`scheduleOrder`](#scheduleOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ our constructor to be added to the master list.
 
 
 
-[`calcScheduleOrder`](#calcScheduleOrder)[`construct`](#construct)[`execute`](#execute)[`executeTurn`](#executeTurn)[`getNextRunTime`](#getNextRunTime)[`incNextRunTime`](#incNextRunTime)
+[`calcScheduleOrder`](#calcScheduleOrder) [`construct`](#construct) [`execute`](#execute) [`executeTurn`](#executeTurn) [`getNextRunTime`](#getNextRunTime) [`incNextRunTime`](#incNextRunTime)
 
 <span id="_Properties_"></span>
 

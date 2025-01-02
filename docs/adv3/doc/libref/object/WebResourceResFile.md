@@ -104,7 +104,7 @@ organized.
 
 
 
-[`coverArtResource`](../object/coverArtResource.html)[`webMainWin`](../object/webMainWin.html)[`webuiResources`](../object/webuiResources.html)
+[`coverArtResource`](../object/coverArtResource.html) [`webMainWin`](../object/webMainWin.html) [`webuiResources`](../object/webuiResources.html)
 <span id="_PropSummary_"></span>
 
 
@@ -113,10 +113,10 @@ organized.
 
 
 
-[`binaryExts`](#binaryExts)[`browserExtToMime`](#browserExtToMime)
+[`binaryExts`](#binaryExts) [`browserExtToMime`](#browserExtToMime)
 
 Inherited from `WebResource` :  
-[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)[`vpath`](../object/WebResource.html#vpath)
+[`group`](../object/WebResource.html#group) [`priority`](../object/WebResource.html#priority) [`vpath`](../object/WebResource.html#vpath)
 
 <span id="_MethodSummary_"></span>
 
@@ -126,10 +126,10 @@ Inherited from `WebResource` :
 
 
 
-[`isTextFile`](#isTextFile)[`matchRequest`](#matchRequest)[`processName`](#processName)[`processRequest`](#processRequest)
+[`isTextFile`](#isTextFile) [`matchRequest`](#matchRequest) [`processName`](#processName) [`processRequest`](#processRequest)
 
 Inherited from `WebResource` :  
-[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
+[`sendAck`](../object/WebResource.html#sendAck) [`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

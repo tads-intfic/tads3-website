@@ -78,7 +78,7 @@ wall-clock time in the real world.
 [`eventTime`](#eventTime)
 
 Inherited from `BasicEvent` :  
-[`obj_`](../object/BasicEvent.html#obj_)[`prop_`](../object/BasicEvent.html#prop_)[`sense_`](../object/BasicEvent.html#sense_)[`source_`](../object/BasicEvent.html#source_)
+[`obj_`](../object/BasicEvent.html#obj_) [`prop_`](../object/BasicEvent.html#prop_) [`sense_`](../object/BasicEvent.html#sense_) [`source_`](../object/BasicEvent.html#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,10 +88,10 @@ Inherited from `BasicEvent` :
 
 
 
-[`construct`](#construct)[`getEventTime`](#getEventTime)[`removeEvent`](#removeEvent)
+[`construct`](#construct) [`getEventTime`](#getEventTime) [`removeEvent`](#removeEvent)
 
 Inherited from `BasicEvent` :  
-[`callMethod`](../object/BasicEvent.html#callMethod)[`eventMatches`](../object/BasicEvent.html#eventMatches)[`executeEvent`](../object/BasicEvent.html#executeEvent)
+[`callMethod`](../object/BasicEvent.html#callMethod) [`eventMatches`](../object/BasicEvent.html#eventMatches) [`executeEvent`](../object/BasicEvent.html#executeEvent)
 
 <span id="_Properties_"></span>
 

@@ -46,36 +46,24 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Redirector is an object that can redirect one action to another via a
+<p>A Redirector is an object that can redirect one action to another via a
 doInstead wrapper method that provides a common interface. Subclasses
-are responsible for implementing the redirect method.
+are responsible for implementing the redirect method.</p>
 
-We begin this module by defing the Redirector class since in adv3Lite
-(though not in Mercury) Redirector is the base class for Doer.
+<p>We begin this module by defing the Redirector class since in adv3Lite
+(though not in Mercury) Redirector is the base class for Doer.</p>
 
-`class `**`Redirector`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Redirector</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Redirector</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Redirector</code></strong><br />
 <a href="../object/Doer.html"><code class="language-plaintext highlighter-rouge">Doer</code></a><br />
@@ -231,45 +219,25 @@ We begin this module by defing the Redirector class since in adv3Lite
 <a href="../object/Wearable.html"><code class="language-plaintext highlighter-rouge">Wearable</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a><a href="#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a><a href="#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+<p><a href="#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="doInstead"></span></p>
 
@@ -277,13 +245,9 @@ We begin this module by defing the Redirector class since in adv3Lite
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#28">28</a>]</p>
 
-<div class="desc">
-
-doInstead() turns the current action into altAction with the objects
+<p>doInstead() turns the current action into altAction with the objects
 specified in args, and executes altAction as a replacement for the
-current action.
-
-</div>
+current action.</p>
 
 <p><span id="doNested"></span></p>
 
@@ -291,12 +255,8 @@ current action.
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#37">37</a>]</p>
 
-<div class="desc">
-
-doNested() executes altAction with the objects specified in args,
-executins altAction as part of the current action.
-
-</div>
+<p>doNested() executes altAction with the objects specified in args,
+executins altAction as part of the current action.</p>
 
 <p><span id="doOtherAction"></span></p>
 
@@ -304,20 +264,13 @@ executins altAction as part of the current action.
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#47">47</a>]</p>
 
-<div class="desc">
-
-Execute altAction on the objects specified in the args parameter. If
+<p>Execute altAction on the objects specified in the args parameter. If
 isReplacement is true make altAction a replacement for the current
-action.
+action.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

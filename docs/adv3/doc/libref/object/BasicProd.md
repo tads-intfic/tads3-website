@@ -804,7 +804,7 @@ for all of our grammar rule match objects.
 
 
 
-[`firstTokenIndex`](#firstTokenIndex)[`isSpecialResponseMatch`](#isSpecialResponseMatch)[`lastTokenIndex`](#lastTokenIndex)
+[`firstTokenIndex`](#firstTokenIndex) [`isSpecialResponseMatch`](#isSpecialResponseMatch) [`lastTokenIndex`](#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -814,7 +814,7 @@ for all of our grammar rule match objects.
 
 
 
-[`canResolveTo`](#canResolveTo)[`getOrigText`](#getOrigText)[`getOrigTokenList`](#getOrigTokenList)[`setOrigTokenList`](#setOrigTokenList)
+[`canResolveTo`](#canResolveTo) [`getOrigText`](#getOrigText) [`getOrigTokenList`](#getOrigTokenList) [`setOrigTokenList`](#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

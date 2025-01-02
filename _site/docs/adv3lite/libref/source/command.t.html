@@ -191,7 +191,7 @@ class Command: object
             if ((idx = self.(role.npListProp).indexOf(np)) != nil)
             {
                 /* found it - replace it with the clone, and we're done */
-                self.(role.npListProp)[idx] = cl;
+                self.(role.npListProp) [idx] = cl;
                 break;
             }
         }
@@ -289,7 +289,7 @@ class Command: object
                      */
                     matches.forEach(
                         { m: m.name = names.valWhich(
-                            { n: n[2].indexOf(m.obj) != nil })[1] });
+                            { n: n[2].indexOf(m.obj) != nil }) [1] });
                 }
                 
                 /* 
@@ -1449,12 +1449,9 @@ class FuncCommand: Command
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

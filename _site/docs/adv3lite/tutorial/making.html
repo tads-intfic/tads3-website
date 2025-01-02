@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="revisit.html" class="nav">Goldskull</a> \&gt; Making things
-happen  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="revisit.html" class="nav">Goldskull</a> &gt; Making things
+happen<br />
 <span class="navnp"><a href="goldmap.html" class="nav"><em>Prev:</em> Laying out the map</a>
     <a href="improving.html" class="nav"><em>Next:</em> Improving the
-Game</a>     </span>
-
-</div>
+Game</a>     </span></p>
 
 <h1 id="making-things-happen">Making things happen</h1>
 
@@ -85,25 +77,24 @@ embedded expression to print the name of the right object, whether it’s
 the skull or the rock that’s just been removed from the pedestal. The
 resulting code looks like this:</p>
 
-<p>`
-    + pedestal: Thing ‘stone pedestal; smooth’
-        “The smooth stone pedestal is artfully positioned to catch the sunlight at
-        just this time of day. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pedestal: Thing 'stone pedestal; smooth'
+        "The smooth stone pedestal is artfully positioned to catch the sunlight at
+        just this time of day. "
         isFixed = true
-        contType = On</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    notifyRemove(obj)
-    {
-        if(contents.length &lt; 2)
+        contType = On
+        
+        notifyRemove(obj)
         {
-            "As &lt;&lt;obj.theName&gt;&gt; leaves the pedestal, a volley of poisonous
-            arrows is shot from the walls! You try to dodge the arrows, but
-            they take you by surprise!";  
-            
-            finishGameMsg(ftDeath, [finishOptionUndo]);  
+            if(contents.length &lt; 2)
+            {
+                "As &lt;&lt;obj.theName&gt;&gt; leaves the pedestal, a volley of poisonous
+                arrows is shot from the walls! You try to dodge the arrows, but
+                they take you by surprise!";  
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);  
+            }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>We’ve already encountered the use of the
@@ -128,26 +119,25 @@ properties too!) that disallows travel if the player character isn’t
 carrying the gold skull but announces victory if he is. This involves
 making a couple of additions to the startroom object:</p>
 
-<p>`
-    startroom: Room ‘Outside Cave’
-        desc = “You’re standing in the bright sunlight just outside of a large,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    startroom: Room 'Outside Cave'
+        desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
-            camp winds roughly southeast through the dense foliage. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    north = cave 
-    
-    southeast()
-    {
-        if(goldSkull.isIn(me))
+            camp winds roughly southeast through the dense foliage. " 
+        
+        north = cave 
+        
+        southeast()
         {
-            "Your mission complete, you head triumphantly back to your camp. ";
-            finishGameMsg(ftVictory, [finishOptionUndo]);
+            if(goldSkull.isIn(me))
+            {
+                "Your mission complete, you head triumphantly back to your camp. ";
+                finishGameMsg(ftVictory, [finishOptionUndo]);
+            }
+            else
+                "You've no intention of leaving till you've got what you came for.
+                ";
         }
-        else
-            "You've no intention of leaving till you've got what you came for.
-            ";
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>There really isn’t anything that’s new here, beyond the fact that you
@@ -177,17 +167,14 @@ adv3Lite in the process.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="revisit.html" class="nav">Goldskull</a> \&gt; Making things
-happen  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="revisit.html" class="nav">Goldskull</a> &gt; Making things
+happen<br />
 <span class="navnp"><a href="goldmap.html" class="nav"><em>Prev:</em> Laying out the map</a>
     <a href="improving.html" class="nav"><em>Next:</em> Improving the
-Game</a>     </span>
+Game</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

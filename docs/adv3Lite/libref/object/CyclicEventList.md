@@ -79,7 +79,7 @@ Chache our new eventList length.
 
 
 Inherited from `EventList` :  
-[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)[`resetEachCycle`](../object/EventList.html#resetEachCycle)
+[`curScriptState`](../object/EventList.html#curScriptState) [`eventList`](../object/EventList.html#eventList) [`eventListLen`](../object/EventList.html#eventListLen) [`resetEachCycle`](../object/EventList.html#resetEachCycle)
 
 
 
@@ -94,7 +94,7 @@ Inherited from `EventList` :
 [`advanceState`](#advanceState)
 
 Inherited from `EventList` :  
-[`addItem`](../object/EventList.html#addItem)[`construct`](../object/EventList.html#construct)[`doScript`](../object/EventList.html#doScript)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`resetList`](../object/EventList.html#resetList)[`scriptDone`](../object/EventList.html#scriptDone)
+[`addItem`](../object/EventList.html#addItem) [`construct`](../object/EventList.html#construct) [`doScript`](../object/EventList.html#doScript) [`doScriptEvent`](../object/EventList.html#doScriptEvent) [`resetList`](../object/EventList.html#resetList) [`scriptDone`](../object/EventList.html#scriptDone)
 
 Inherited from `Script` :  
 [`getScriptState`](../object/Script.html#getScriptState)

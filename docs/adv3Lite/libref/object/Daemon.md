@@ -74,7 +74,7 @@ A Daemon is an Event that executes once every defined number of turns.
 [`interval_`](#interval_)
 
 Inherited from `Event` :  
-[`captureText`](../object/Event.html#captureText)[`eventOrder`](../object/Event.html#eventOrder)[`executed`](../object/Event.html#executed)[`isPromptDaemon`](../object/Event.html#isPromptDaemon)[`nextRunTime`](../object/Event.html#nextRunTime)[`obj_`](../object/Event.html#obj_)[`prop_`](../object/Event.html#prop_)[`senseObj_`](../object/Event.html#senseObj_)[`senseProp_`](../object/Event.html#senseProp_)
+[`captureText`](../object/Event.html#captureText) [`eventOrder`](../object/Event.html#eventOrder) [`executed`](../object/Event.html#executed) [`isPromptDaemon`](../object/Event.html#isPromptDaemon) [`nextRunTime`](../object/Event.html#nextRunTime) [`obj_`](../object/Event.html#obj_) [`prop_`](../object/Event.html#prop_) [`senseObj_`](../object/Event.html#senseObj_) [`senseProp_`](../object/Event.html#senseProp_)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `Event` :
 
 
 
-[`construct`](#construct)[`executeEvent`](#executeEvent)
+[`construct`](#construct) [`executeEvent`](#executeEvent)
 
 Inherited from `Event` :  
-[`callMethod`](../object/Event.html#callMethod)[`delayEvent`](../object/Event.html#delayEvent)[`eventMatches`](../object/Event.html#eventMatches)[`getNextRunTime`](../object/Event.html#getNextRunTime)[`removeEvent`](../object/Event.html#removeEvent)
+[`callMethod`](../object/Event.html#callMethod) [`delayEvent`](../object/Event.html#delayEvent) [`eventMatches`](../object/Event.html#eventMatches) [`getNextRunTime`](../object/Event.html#getNextRunTime) [`removeEvent`](../object/Event.html#removeEvent)
 
 <span id="_Properties_"></span>
 

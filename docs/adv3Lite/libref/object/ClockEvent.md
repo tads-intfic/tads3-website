@@ -77,7 +77,7 @@ next plot event. \[DEFINED IN SUBTIME EXTENSION\]
 
 
 
-[`eventDate`](#eventDate)[`eventTime`](#eventTime)[`hasBeenReached`](#hasBeenReached)[`reachedWhen`](#reachedWhen)[`scaleFactor`](#scaleFactor)[`turnsToEvent`](#turnsToEvent)
+[`eventDate`](#eventDate) [`eventTime`](#eventTime) [`hasBeenReached`](#hasBeenReached) [`reachedWhen`](#reachedWhen) [`scaleFactor`](#scaleFactor) [`turnsToEvent`](#turnsToEvent)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ next plot event. \[DEFINED IN SUBTIME EXTENSION\]
 
 
 
-[`calcScaleFactor`](#calcScaleFactor)[`eventReached`](#eventReached)[`formatTime`](#formatTime)
+[`calcScaleFactor`](#calcScaleFactor) [`eventReached`](#eventReached) [`formatTime`](#formatTime)
 
 <span id="_Properties_"></span>
 

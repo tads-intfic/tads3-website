@@ -53,7 +53,7 @@ TravelConnectors).
 [`excludeLockedDoors`](#excludeLockedDoors)
 
 Inherited from `Pathfinder` :  
-[`cachedRoute`](../object/Pathfinder.html#cachedRoute)[`currentDestination`](../object/Pathfinder.html#currentDestination)[`nodesVisited`](../object/Pathfinder.html#nodesVisited)[`pathsFound`](../object/Pathfinder.html#pathsFound)[`steps`](../object/Pathfinder.html#steps)
+[`cachedRoute`](../object/Pathfinder.html#cachedRoute) [`currentDestination`](../object/Pathfinder.html#currentDestination) [`nodesVisited`](../object/Pathfinder.html#nodesVisited) [`pathsFound`](../object/Pathfinder.html#pathsFound) [`steps`](../object/Pathfinder.html#steps)
 
 <span id="_MethodSummary_"></span>
 
@@ -66,7 +66,7 @@ Inherited from `Pathfinder` :
 [`findDestinations`](#findDestinations)
 
 Inherited from `Pathfinder` :  
-[`findPath`](../object/Pathfinder.html#findPath)[`takeOneStep`](../object/Pathfinder.html#takeOneStep)
+[`findPath`](../object/Pathfinder.html#findPath) [`takeOneStep`](../object/Pathfinder.html#takeOneStep)
 
 <span id="_Properties_"></span>
 

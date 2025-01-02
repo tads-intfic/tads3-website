@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; TravelConnectors
-and Barriers  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; TravelConnectors
+and Barriers<br />
 <span class="navnp"><a href="door.html" class="nav"><em>Prev:</em>Doors</a>
-    <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
-
-</div>
+    <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span></p>
 
 <h1 id="travel-connectors-and-barriers">Travel Connectors and Barriers</h1>
 
@@ -182,45 +174,44 @@ stairs.</p>
 be one that only allows travel down a smoke-filled passage if the player
 is wearing a wet blanket, which could be defined thus:</p>
 
-<p>`
-    landing: Room ‘Landing’ ‘landing’
-        “The smoke is already becoming so thick here that it’s hard to see much.
-        Your bedroom lies to the north – if you can make your way through the
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    landing: Room 'Landing' 'landing'
+        "The smoke is already becoming so thick here that it's hard to see much.
+        Your bedroom lies to the north -- if you can make your way through the
         smoke. Most of the other upstairs rooms are down the passage the other way,
-        to the south, but the worst of the smoke seems to be coming from there. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    down = landingStairs
-    
-    north: TravelConnector
-    {
-        destination = bedroom
+        to the south, but the worst of the smoke seems to be coming from there. "
         
-        travelDesc = "You manage to force your way through the smoke, coughing
-            and choking as you go. "
+        down = landingStairs
         
-        canTravelerPass(actor)
+        north: TravelConnector
         {
-            return blanket.wornBy == actor &amp;&amp; blanket.isWet;
+            destination = bedroom
+            
+            travelDesc = "You manage to force your way through the smoke, coughing
+                and choking as you go. "
+            
+            canTravelerPass(actor)
+            {
+                return blanket.wornBy == actor &amp;&amp; blanket.isWet;
+            }
+            
+            explainTravelBarrier(actor)
+            {
+                if(blanket.wornBy == actor)
+                    "You take a few steps down the corridor but the smoke forces you
+                    back as the blanket starts to get singed. ";
+                else
+                    "The smoke is too thick; you find yourself coughing and choking
+                    after the first step and are forced to retreat. ";
+            }
         }
         
-        explainTravelBarrier(actor)
-        {
-            if(blanket.wornBy == actor)
-                "You take a few steps down the corridor but the smoke forces you
-                back as the blanket starts to get singed. ";
-            else
-                "The smoke is too thick; you find yourself coughing and choking
-                after the first step and are forced to retreat. ";
-        }
-    }
-    
-    
-    south  { "The smoke is too thick that way; you almost choke to death
-        with the first step south you take. Well, it's not as if there's
-        anything down there you really need all that much right now. "; }
-    
-    regions = upstairs
-; `
+        
+        south  { "The smoke is too thick that way; you almost choke to death
+            with the first step south you take. Well, it's not as if there's
+            anything down there you really need all that much right now. "; }
+        
+        regions = upstairs
+    ;
 </code></pre></div></div>
 
 <p>This incidentally illustrates that if we only want to use a particular
@@ -279,59 +270,58 @@ name the connector that’s being blocked. For example, suppose our game
 had several exits that required the player character to be wearing a wet
 blanket in order to penetrate the smoke. We might set it up thus:</p>
 
-<p>`
-    landing: Room ‘Landing’ ‘landing’
-        “The smoke is already becoming so thick here that it’s hard to see much.
-        Your bedroom lies to the north – if you can make your way through the
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    landing: Room 'Landing' 'landing'
+        "The smoke is already becoming so thick here that it's hard to see much.
+        Your bedroom lies to the north -- if you can make your way through the
         smoke. Most of the other upstairs rooms are down the passage the other way,
-        to the south, but the worst of the smoke seems to be coming from there. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    down = landingStairs
-    
-    north: TravelConnector
-    {
-        destination = bedroom
+        to the south, but the worst of the smoke seems to be coming from there. "
         
-        travelDesc = "You manage to force your way through the smoke, coughing
-            and choking as you go. "
+        down = landingStairs
         
-        theName = 'the corridor'
-        
-        travelBarriers = [smokeBarrier]
-    }
-    
-    
-    south: TravelConnector
-    {
-        destination = bathroom
-       
-        travelDesc = "With the aid of the blanket, you are able to make your way 
-         through the smoke to the bathroom. "
-        
-        theName = 'bathroom passage'
-       
-        travelBarriers = [smokeBarrier]
-    }   
-    
-    regions = upstairs
-;
-
-smokeBarrier: TravelBarrier
-        canTravelerPass(actor, connector)
+        north: TravelConnector
         {
-            return blanket.wornBy == actor &amp;&amp; blanket.isWet;
+            destination = bedroom
+            
+            travelDesc = "You manage to force your way through the smoke, coughing
+                and choking as you go. "
+            
+            theName = 'the corridor'
+            
+            travelBarriers = [smokeBarrier]
         }
         
-        explainTravelBarrier(actor, connector)
+        
+        south: TravelConnector
         {
-            if(blanket.wornBy == actor)
-                "You take a few steps down &lt;&lt;connector.theName&gt;&gt; but the smoke forces you
-                back as the blanket starts to get singed. ";
-            else
-                "The smoke is too thick; you find yourself coughing and choking
-                after the first step and are forced to retreat. ";
-        }
-; `
+            destination = bathroom
+           
+            travelDesc = "With the aid of the blanket, you are able to make your way 
+             through the smoke to the bathroom. "
+            
+            theName = 'bathroom passage'
+           
+            travelBarriers = [smokeBarrier]
+        }   
+        
+        regions = upstairs
+    ;
+
+    smokeBarrier: TravelBarrier
+            canTravelerPass(actor, connector)
+            {
+                return blanket.wornBy == actor &amp;&amp; blanket.isWet;
+            }
+            
+            explainTravelBarrier(actor, connector)
+            {
+                if(blanket.wornBy == actor)
+                    "You take a few steps down &lt;&lt;connector.theName&gt;&gt; but the smoke forces you
+                    back as the blanket starts to get singed. ";
+                else
+                    "The smoke is too thick; you find yourself coughing and choking
+                    after the first step and are forced to retreat. ";
+            }
+    ;
 </code></pre></div></div>
 
 <p>Note how we’ve added a custom theName property to the two
@@ -340,16 +330,13 @@ connector) can refer to them.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; TravelConnectors
-and Barriers  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; TravelConnectors
+and Barriers<br />
 <span class="navnp"><a href="door.html" class="nav"><em>Prev:</em> Doors</a>
-    <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
+    <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

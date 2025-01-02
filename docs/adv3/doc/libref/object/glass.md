@@ -47,7 +47,7 @@ Glass is transparent to light, but opaque to touch, sound, and smell.
 
 
 
-[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
+[`hearThru`](#hearThru) [`seeThru`](#seeThru) [`smellThru`](#smellThru) [`touchThru`](#touchThru)
 
 
 

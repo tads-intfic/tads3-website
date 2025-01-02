@@ -72,7 +72,7 @@ notification to the issuing actor.
 
 
 
-[`args_`](#args_)[`message_`](#message_)
+[`args_`](#args_) [`message_`](#message_)
 
 
 
@@ -87,12 +87,12 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`displayException`](#displayException)[`notifyActor`](#notifyActor)
+[`construct`](#construct) [`displayException`](#displayException) [`notifyActor`](#notifyActor)
 
 
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

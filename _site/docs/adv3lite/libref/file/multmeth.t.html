@@ -37,91 +37,73 @@
 <a href="#_FunctionSummary_">Summary</a><br />
 <a href="#_Functions_">Details</a></p>
 
-<div class="fdesc">
+<p>This module provides the run-time component of “multi-methods” in TADS</p>
+<ol>
+  <li>This works with the compiler to implement a multiple-dispatch system.</li>
+</ol>
 
-This module provides the run-time component of "multi-methods" in TADS
-3. This works with the compiler to implement a multiple-dispatch system.
-
-Multi-methods are essentially a combination of regular object methods
-and "overloaded functions" in languages like C++. Like a regular object
+<p>Multi-methods are essentially a combination of regular object methods
+and “overloaded functions” in languages like C++. Like a regular object
 method, multi-methods are polymorphic: you can define several
 incarnations of the same function name, with different parameter types,
 the system picks the right binding for each invocation dynamically,
 based on the actual argument values at run-time. Unlike regular methods,
 though, the selection is made on ALL of the argument types, not just a
-special "self" argument. In that respect, multi-methods are like
+special “self” argument. In that respect, multi-methods are like
 overloaded functions in C++; but multi-methods differ from C++
 overloading in that the selection of which method to call is made
-dynamically at run-time, not at compile time.
+dynamically at run-time, not at compile time.</p>
 
-There are two main uses for multi-methods.
+<p>There are two main uses for multi-methods.</p>
 
-First, most obviously, multi-methods provide what's known as "multiple
-dispatch" semantics. There are some situations (actually, quite a few)
+<p>First, most obviously, multi-methods provide what’s known as “multiple
+dispatch” semantics. There are some situations (actually, quite a few)
 where the ordinary Object Oriented notion of polymorphism - selecting a
-method based on a single target object - doesn't quite do the trick,
+method based on a single target object - doesn’t quite do the trick,
 because what you really want to do is select a particular method based
-on the \*combination\* of objects involved in an operation. Some
+on the *combination* of objects involved in an operation. Some
 canonical examples are calculating intersections of shapes in a graphics
-program, where you want to select a specialized "Rectangle + Circle"
-routine in one case and a "Line + Polygon" routine in another; or
+program, where you want to select a specialized “Rectangle + Circle”
+routine in one case and a “Line + Polygon” routine in another; or
 performing file format conversions, where you want to select, say, a
-specialized "JPEG to PNG" routine. In an IF context, the obvious use is
+specialized “JPEG to PNG” routine. In an IF context, the obvious use is
 for carrying out multi-object verbs, where you might want a special
 routine for PUT (liquid) IN (vessel), and another for PUT (object) IN
-(container).
+(container).</p>
 
-Second, multi-methods offer a way of extending a class without having to
-change the class's source code. Since a multi-method is defined
-externally to any classes it refers to, you can create a method that's
+<p>Second, multi-methods offer a way of extending a class without having to
+change the class’s source code. Since a multi-method is defined
+externally to any classes it refers to, you can create a method that’s
 polymorphic on class type - just like a regular method - but as a
-syntactically stand-alone function. This feature isn't as important in
+syntactically stand-alone function. This feature isn’t as important in
 TADS as in some other languages, since TADS lets you do essentially the
-same thing with the "modify" syntax; but for some purposes the
-multi-method approach might be preferable aesthetically, since it's
+same thing with the “modify” syntax; but for some purposes the
+multi-method approach might be preferable aesthetically, since it’s
 wholly external to the class rather than a sort of lexically separate
-continuation of the class's code. (However, as a practical matter, it's
+continuation of the class’s code. (However, as a practical matter, it’s
 not all that different; our implementation of multi-methods does in fact
 modify the original class object, since we store the binding information
-in the class objects.)
-
-</div>
+in the class objects.)</p>
 
 <p><span id="_ClassSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Classes</span>  </p>
 
-<span class="hdln">Summary of Classes</span>  
-
-</div>
-
-<p><a href="../object/_MultiMethodInheritCtx.html"><code class="language-plaintext highlighter-rouge">_MultiMethodInheritCtx</code></a><a href="../object/_MultiMethodPlaceholder.html"><code class="language-plaintext highlighter-rouge">_MultiMethodPlaceholder</code></a><a href="../object/UnboundInheritedMultiMethod.html"><code class="language-plaintext highlighter-rouge">UnboundInheritedMultiMethod</code></a><a href="../object/UnboundMultiMethod.html"><code class="language-plaintext highlighter-rouge">UnboundMultiMethod</code></a>
+<p><a href="../object/_MultiMethodInheritCtx.html"><code class="language-plaintext highlighter-rouge">_MultiMethodInheritCtx</code></a> <a href="../object/_MultiMethodPlaceholder.html"><code class="language-plaintext highlighter-rouge">_MultiMethodPlaceholder</code></a> <a href="../object/UnboundInheritedMultiMethod.html"><code class="language-plaintext highlighter-rouge">UnboundInheritedMultiMethod</code></a> <a href="../object/UnboundMultiMethod.html"><code class="language-plaintext highlighter-rouge">UnboundMultiMethod</code></a>
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Global Objects</span>  </p>
 
-<span class="hdln">Summary of Global Objects</span>  
-
-</div>
-
-<p><a href="../object/_multiMethodEndOfList.html"><code class="language-plaintext highlighter-rouge">_multiMethodEndOfList</code></a><a href="../object/_multiMethodNonObjectBindings.html"><code class="language-plaintext highlighter-rouge">_multiMethodNonObjectBindings</code></a><a href="../object/_multiMethodRegistry.html"><code class="language-plaintext highlighter-rouge">_multiMethodRegistry</code></a>
+<p><a href="../object/_multiMethodEndOfList.html"><code class="language-plaintext highlighter-rouge">_multiMethodEndOfList</code></a> <a href="../object/_multiMethodNonObjectBindings.html"><code class="language-plaintext highlighter-rouge">_multiMethodNonObjectBindings</code></a> <a href="../object/_multiMethodRegistry.html"><code class="language-plaintext highlighter-rouge">_multiMethodRegistry</code></a>
 <span id="FunctionSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Global Functions</span>  </p>
 
-<span class="hdln">Summary of Global Functions</span>  
-
-</div>
-
-<p><a href="#_multiMethodBuildBindings"><code class="language-plaintext highlighter-rouge">_multiMethodBuildBindings</code></a><a href="#_multiMethodCall"><code class="language-plaintext highlighter-rouge">_multiMethodCall</code></a><a href="#_multiMethodCallInherited"><code class="language-plaintext highlighter-rouge">_multiMethodCallInherited</code></a><a href="#_multiMethodInherit"><code class="language-plaintext highlighter-rouge">_multiMethodInherit</code></a><a href="#_multiMethodInheritMain"><code class="language-plaintext highlighter-rouge">_multiMethodInheritMain</code></a><a href="#_multiMethodRegister"><code class="language-plaintext highlighter-rouge">_multiMethodRegister</code></a><a href="#_multiMethodSelect"><code class="language-plaintext highlighter-rouge">_multiMethodSelect</code></a><a href="#getMultiMethodPointer"><code class="language-plaintext highlighter-rouge">getMultiMethodPointer</code></a></p>
+<p><a href="#_multiMethodBuildBindings"><code class="language-plaintext highlighter-rouge">_multiMethodBuildBindings</code></a> <a href="#_multiMethodCall"><code class="language-plaintext highlighter-rouge">_multiMethodCall</code></a> <a href="#_multiMethodCallInherited"><code class="language-plaintext highlighter-rouge">_multiMethodCallInherited</code></a> <a href="#_multiMethodInherit"><code class="language-plaintext highlighter-rouge">_multiMethodInherit</code></a> <a href="#_multiMethodInheritMain"><code class="language-plaintext highlighter-rouge">_multiMethodInheritMain</code></a> <a href="#_multiMethodRegister"><code class="language-plaintext highlighter-rouge">_multiMethodRegister</code></a> <a href="#_multiMethodSelect"><code class="language-plaintext highlighter-rouge">_multiMethodSelect</code></a> <a href="#getMultiMethodPointer"><code class="language-plaintext highlighter-rouge">getMultiMethodPointer</code></a></p>
 
 <p><span id="_Functions_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Functions</span>  
-
-</div>
+<p><span class="hdln">Global Functions</span>  </p>
 
 <p><span id="_multiMethodBuildBindings"></span></p>
 
@@ -129,13 +111,9 @@ in the class objects.)
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#518">518</a>]</p>
 
-<div class="desc">
-
-Build the method bindings. The compiler generates a call to this after
+<p>Build the method bindings. The compiler generates a call to this after
 all methods have been registered; we run through the list of registered
-methods and generate the binding properties in the referenced objects.
-
-</div>
+methods and generate the binding properties in the referenced objects.</p>
 
 <p><span id="_multiMethodCall"></span></p>
 
@@ -143,28 +121,22 @@ methods and generate the binding properties in the referenced objects.
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#76">76</a>]</p>
 
-<div class="desc">
+<p>Invoke a multi-method function. For an expression of the form</p>
 
-Invoke a multi-method function. For an expression of the form
+<p>f(a, b, …)</p>
 
-  
-f(a, b, ...)
+<p>where ‘f’ has been declared as a multi-method, the compiler will
+actually generate code that invokes this function, like so:</p>
 
-where 'f' has been declared as a multi-method, the compiler will
-actually generate code that invokes this function, like so:
+<p>_multiMethodCall(baseFunc, params);</p>
 
-  
-\_multiMethodCall(baseFunc, params);
-
-'baseFunc' is a function pointer giving the base function; this is a
+<p>‘baseFunc’ is a function pointer giving the base function; this is a
 pointer to the common stub function that the compiler generates to
-identify all of the multi-methods with a given name. 'params' is a list
-giving the actual parameter values for invoking the function.
+identify all of the multi-methods with a given name. ‘params’ is a list
+giving the actual parameter values for invoking the function.</p>
 
-Our job is to find the actual run-time binding for the function given
-the actual parameters, and invoke it.
-
-</div>
+<p>Our job is to find the actual run-time binding for the function given
+the actual parameters, and invoke it.</p>
 
 <p><span id="_multiMethodCallInherited"></span></p>
 
@@ -172,14 +144,10 @@ the actual parameters, and invoke it.
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#105">105</a>]</p>
 
-<div class="desc">
-
-Invoke the base multi-method inherited from the given multi-method.
-'fromFunc' is a pointer to a multi-method, presumably the one currently
+<p>Invoke the base multi-method inherited from the given multi-method.
+‘fromFunc’ is a pointer to a multi-method, presumably the one currently
 running; we look up the next in line in inheritance order and invoke it
-with the given argument list.
-
-</div>
+with the given argument list.</p>
 
 <p><span id="_multiMethodInherit"></span></p>
 
@@ -187,19 +155,15 @@ with the given argument list.
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#291">291</a>]</p>
 
-<div class="desc">
-
-Select the INHERITED version of a multi-method. This takes a particular
+<p>Select the INHERITED version of a multi-method. This takes a particular
 version of the multi-method, and finds the next version in inheritance
-order.
+order.</p>
 
-This is basically a copy of \_multiMethodSelect(), with a small amount
-of extra logic. This code repetition isn't good maintenance-wise, and
+<p>This is basically a copy of _multiMethodSelect(), with a small amount
+of extra logic. This code repetition isn’t good maintenance-wise, and
 the two functions could in principle be merged into one. However, doing
-so would have an efficiency cost to \_multiMethodSelect(), which we want
-to keep as lean as possible.
-
-</div>
+so would have an efficiency cost to _multiMethodSelect(), which we want
+to keep as lean as possible.</p>
 
 <p><span id="_multiMethodInheritMain"></span></p>
 
@@ -207,11 +171,7 @@ to keep as lean as possible.
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#301">301</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_multiMethodRegister"></span></p>
 
@@ -219,25 +179,21 @@ to keep as lean as possible.
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#495">495</a>]</p>
 
-<div class="desc">
+<p>Register a multi-method.</p>
 
-Register a multi-method.
-
-The compiler automatically generates a call to this function during
-pre-initialization for each defined multi-method. 'baseFunc' is a
-pointer to the "base" function - this is a stub function that the
+<p>The compiler automatically generates a call to this function during
+pre-initialization for each defined multi-method. ‘baseFunc’ is a
+pointer to the “base” function - this is a stub function that the
 compiler generates to refer to the whole collection of multi-methods
-with a given name. 'func' is the pointer to the specific multi-method
-we're registering; this is the actual function defined in the code with
-a given set of parameter types. 'params' is a list of the parameter type
+with a given name. ‘func’ is the pointer to the specific multi-method
+we’re registering; this is the actual function defined in the code with
+a given set of parameter types. ‘params’ is a list of the parameter type
 values; each parameter type in the list is given as a class object
 (meaning that the parameter matches that class), nil (meaning that the
-parameter matches ANY type of value), or the string '...' (meaning that
-this is a "varargs" function, and any number of additional parameters
+parameter matches ANY type of value), or the string ‘…’ (meaning that
+this is a “varargs” function, and any number of additional parameters
 can be supplied at this point in the parameters; this is always the last
-parameter in the list if it's present).
-
-</div>
+parameter in the list if it’s present).</p>
 
 <p><span id="_multiMethodSelect"></span></p>
 
@@ -245,45 +201,41 @@ parameter in the list if it's present).
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#205">205</a>]</p>
 
-<div class="desc">
-
-Resolve a multi-method binding. This function takes a binding property
+<p>Resolve a multi-method binding. This function takes a binding property
 ID (the property we assign during the registration process to generate
-the binding tables) and a "remaining" argument list. This function
+the binding tables) and a “remaining” argument list. This function
 invokes itself recursively to traverse the arguments from left to right,
 so at each recursive invocation, we lop off the leftmost argument (the
-one we're working on currently) and pass in the remaining arguments in
-the list.
+one we’re working on currently) and pass in the remaining arguments in
+the list.</p>
 
-We look up the binding property on the first argument in the remaining
-argument list. This can yield one of three things:
+<p>We look up the binding property on the first argument in the remaining
+argument list. This can yield one of three things:</p>
 
-\- The trivial result is nil, which means that this binding property has
-no definition on the first argument. This doesn't necessarily mean that
+<p>- The trivial result is nil, which means that this binding property has
+no definition on the first argument. This doesn’t necessarily mean that
 the whole function is undefined on the arguments; it only means that the
-current inheritance level we're looking at for the previous argument(s)
+current inheritance level we’re looking at for the previous argument(s)
 has no binding. If we get this result we simply return nil to tell the
 caller that it must look at an inherited binding for the previous
-argument.
+argument.</p>
 
-\- If the result is a function pointer, it's the bound function. This is
-the final result for the recursion, so we simply return it.
+<p>- If the result is a function pointer, it’s the bound function. This is
+the final result for the recursion, so we simply return it.</p>
 
-\- Otherwise, the result will be a new property ID, giving the property
-that resolves the binding for the \*next\* argument. In this case, we
+<p>- Otherwise, the result will be a new property ID, giving the property
+that resolves the binding for the *next* argument. In this case, we
 use this property to resolve the next argument in the list by a
 recursive invocation. If that recursive call succeeds (i.e., returns a
-non-nil value), we're done - we simply return the recursive result as
-though it were our own. If it fails, it means that there's no binding
-for the particular subclass we're currently working on for the first
+non-nil value), we’re done - we simply return the recursive result as
+though it were our own. If it fails, it means that there’s no binding
+for the particular subclass we’re currently working on for the first
 argument - however, there could still be a binding for a parent class of
 the first argument. So, we iterate up to any inherited binding for the
 first argument, and if we find one, we try again with the same recursive
-call. We continue up our first argument's class tree until we either
+call. We continue up our first argument’s class tree until we either
 find a binding (in which case we return it) or exhaust the class tree
-(in which case we return nil).
-
-</div>
+(in which case we return nil).</p>
 
 <p><span id="getMultiMethodPointer"></span></p>
 
@@ -291,31 +243,23 @@ find a binding (in which case we return it) or exhaust the class tree
 
 <p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#153">153</a>]</p>
 
-<div class="desc">
-
-Get a pointer to a resolved multi-method function. This takes a pointer
+<p>Get a pointer to a resolved multi-method function. This takes a pointer
 to the base function for the multi-method and a list of actual argument
 values, and returns a function pointer to the specific version of the
 multi-method that would be invoked if you called the multi-method with
-that argument list.
+that argument list.</p>
 
-For example, if you want to get a pointer to the function that would be
-called if you were to call foo(x, y, z), you'd use:
+<p>For example, if you want to get a pointer to the function that would be
+called if you were to call foo(x, y, z), you’d use:</p>
 
-  
-local func = getMultiMethodPointer(foo, x, y, z);
+<p>local func = getMultiMethodPointer(foo, x, y, z);</p>
 
-We return a pointer to the individual multi-method function that matches
-the argument list, or nil if there's no matching multi-method.
+<p>We return a pointer to the individual multi-method function that matches
+the argument list, or nil if there’s no matching multi-method.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

@@ -72,10 +72,10 @@ object in the game.
 
 
 
-[`sortOrder`](#sortOrder)[`state`](#state)[`stateList`](#stateList)
+[`sortOrder`](#sortOrder) [`state`](#state) [`stateList`](#stateList)
 
 Inherited from `Distinguisher` :  
-[`all`](../object/Distinguisher.html#all)[`classInitFirst`](../object/Distinguisher.html#classInitFirst)
+[`all`](../object/Distinguisher.html#all) [`classInitFirst`](../object/Distinguisher.html#classInitFirst)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ Inherited from `Distinguisher` :
 
 
 
-[`appliesTo`](#appliesTo)[`classInit`](#classInit)[`construct`](#construct)[`equal`](#equal)
+[`appliesTo`](#appliesTo) [`classInit`](#classInit) [`construct`](#construct) [`equal`](#equal)
 
 Inherited from `Distinguisher` :  
-[`apply`](../object/Distinguisher.html#apply)[`getNames`](../object/Distinguisher.html#getNames)
+[`apply`](../object/Distinguisher.html#apply) [`getNames`](../object/Distinguisher.html#getNames)
 
 <span id="_Properties_"></span>
 

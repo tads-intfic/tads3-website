@@ -81,7 +81,7 @@ don't otherwise try to interpret them.
 
 
 
-[`construct`](#construct)[`writeToFile`](#writeToFile)
+[`construct`](#construct) [`writeToFile`](#writeToFile)
 
 <span id="_Properties_"></span>
 

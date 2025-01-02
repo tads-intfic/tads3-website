@@ -46,68 +46,48 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A "custom" List Group implementation. This type of lister uses a
+<p>A “custom” List Group implementation. This type of lister uses a
 completely custom message to show the group, without a need to
 recursively invoke a lister to list the individual elements. The main
 difference between this and the base ListGroup is that the interface to
 the custom message generator is very simple - we can dispense with most
 of the numerous arguments that the base group message receives, since
 most of those arguments are there to allow recursive listing of the
-group list.
+group list.</p>
 
-This group type is intended mainly for cases where you want to display
+<p>This group type is intended mainly for cases where you want to display
 some sort of collective description of the group, rather than listing
 its members individually. The whole point of the simple interface is
-that we don't pass the normal big pile of parameters because we won't be
-invoking a full sublisting. Since we assume that this group won't itself
+that we don’t pass the normal big pile of parameters because we won’t be
+invoking a full sublisting. Since we assume that this group won’t itself
 look like a sublist, we set groupDisplaysSublist to nil by default. This
-means that our presence in the overall list won't trigger the "long
-list" format (usually, this uses semicolons instead of commas) in the
+means that our presence in the overall list won’t trigger the “long
+list” format (usually, this uses semicolons instead of commas) in the
 enclosing list. If your custom group message does indeed look like a
 sublist (that is, it displays multiple items in a comma-separated list),
 you might want to change groupDisplaysSublist back to true so that the
-overall list is shown in the "long" format.
+overall list is shown in the “long” format.</p>
 
-`class `**`ListGroupCustom`**` :   `[`ListGroup`](../object/ListGroup.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ListGroupCustom</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ListGroup.html"><code class="language-plaintext highlighter-rouge">ListGroup</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ListGroupCustom</code></strong><br />
 <a href="../object/ListGroup.html"><code class="language-plaintext highlighter-rouge">ListGroup</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#groupDisplaysSublist"><code class="language-plaintext highlighter-rouge">groupDisplaysSublist</code></a></p>
 
@@ -116,24 +96,16 @@ overall list is shown in the "long" format.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a><a href="#showGroupMsg"><code class="language-plaintext highlighter-rouge">showGroupMsg</code></a></p>
+<p><a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a> <a href="#showGroupMsg"><code class="language-plaintext highlighter-rouge">showGroupMsg</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ListGroup</code> :<br />
-<a href="../object/ListGroup.html#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a><a href="../object/ListGroup.html#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a><a href="../object/ListGroup.html#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a><a href="../object/ListGroup.html#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a><a href="../object/ListGroup.html#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a></p>
+<a href="../object/ListGroup.html#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a> <a href="../object/ListGroup.html#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a> <a href="../object/ListGroup.html#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a> <a href="../object/ListGroup.html#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a> <a href="../object/ListGroup.html#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="groupDisplaysSublist"></span></p>
 
@@ -141,19 +113,11 @@ overall list is shown in the "long" format.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2040">2040</a>]</p>
 
-<div class="desc">
-
-assume our listing message doesn't look like a sublist
-
-</div>
+<p>assume our listing message doesn’t look like a sublist</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="showGroupList"></span></p>
 
@@ -161,11 +125,7 @@ assume our listing message doesn't look like a sublist
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2030">2030</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="showGroupMsg"></span></p>
 
@@ -173,18 +133,11 @@ assume our listing message doesn't look like a sublist
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2037">2037</a>]</p>
 
-<div class="desc">
+<p>show the custom group message - subclasses should override</p>
 
-show the custom group message - subclasses should override
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

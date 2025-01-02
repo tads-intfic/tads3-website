@@ -51,10 +51,10 @@ nesting is limited by the maxNestingDepth property.
 
 
 
-[`maxNestingDepth`](#maxNestingDepth)[`nestingDepth`](#nestingDepth)[`showSubListing`](#showSubListing)
+[`maxNestingDepth`](#maxNestingDepth) [`nestingDepth`](#nestingDepth) [`showSubListing`](#showSubListing)
 
 Inherited from `ItemLister` :  
-[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)[`listRecursively`](../object/ItemLister.html#listRecursively)[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)[`showWornInfo`](../object/ItemLister.html#showWornInfo)
+[`contentsListedProp`](../object/ItemLister.html#contentsListedProp) [`listRecursively`](../object/ItemLister.html#listRecursively) [`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo) [`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
 
 
@@ -66,10 +66,10 @@ Inherited from `ItemLister` :
 
 
 
-[`buildList`](#buildList)[`listed`](#listed)[`showList`](#showList)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
+[`buildList`](#buildList) [`listed`](#listed) [`showList`](#showList) [`showListEmpty`](#showListEmpty) [`showListPrefix`](#showListPrefix) [`showListSuffix`](#showListSuffix)
 
 Inherited from `ItemLister` :  
-[`listName`](../object/ItemLister.html#listName)[`show`](../object/ItemLister.html#show)
+[`listName`](../object/ItemLister.html#listName) [`show`](../object/ItemLister.html#show)
 
 Inherited from `Lister` :  
 [`listOrder`](../object/Lister.html#listOrder)

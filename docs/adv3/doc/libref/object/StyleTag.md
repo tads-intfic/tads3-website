@@ -73,7 +73,7 @@ optionally, another string that is substituted for occurrences of the
 
 
 
-[`announceObjStyleTag`](../object/announceObjStyleTag.html)[`assumeStyleTag`](../object/assumeStyleTag.html)[`notificationStyleTag`](../object/notificationStyleTag.html)[`parserStyleTag`](../object/parserStyleTag.html)[`roomdescStyleTag`](../object/roomdescStyleTag.html)[`roomnameStyleTag`](../object/roomnameStyleTag.html)[`roomparaStyleTag`](../object/roomparaStyleTag.html)[`tipStyleTag`](../object/tipStyleTag.html)
+[`announceObjStyleTag`](../object/announceObjStyleTag.html) [`assumeStyleTag`](../object/assumeStyleTag.html) [`notificationStyleTag`](../object/notificationStyleTag.html) [`parserStyleTag`](../object/parserStyleTag.html) [`roomdescStyleTag`](../object/roomdescStyleTag.html) [`roomnameStyleTag`](../object/roomnameStyleTag.html) [`roomparaStyleTag`](../object/roomparaStyleTag.html) [`tipStyleTag`](../object/tipStyleTag.html)
 <span id="_PropSummary_"></span>
 
 
@@ -82,7 +82,7 @@ optionally, another string that is substituted for occurrences of the
 
 
 
-[`closeText`](#closeText)[`openText`](#openText)[`tagName`](#tagName)
+[`closeText`](#closeText) [`openText`](#openText) [`tagName`](#tagName)
 
 <span id="_MethodSummary_"></span>
 

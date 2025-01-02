@@ -83,7 +83,7 @@ Inherited from `ReachProblem` :
 
 
 
-[`construct`](#construct)[`tooFarAwayMsg`](#tooFarAwayMsg)[`verify`](#verify)
+[`construct`](#construct) [`tooFarAwayMsg`](#tooFarAwayMsg) [`verify`](#verify)
 
 Inherited from `ReachProblem` :  
 [`check`](../object/ReachProblem.html#check)

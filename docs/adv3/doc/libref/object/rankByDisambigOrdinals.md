@@ -66,7 +66,7 @@ phrases ("first", "the second one") we find in a result.
 
 
 Inherited from `CommandRankingByProblem` :  
-[`comparePass1`](../object/CommandRankingByProblem.html#comparePass1)[`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)
+[`comparePass1`](../object/CommandRankingByProblem.html#comparePass1) [`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)
 
 
 

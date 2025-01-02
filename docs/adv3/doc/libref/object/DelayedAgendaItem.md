@@ -70,10 +70,10 @@ the game clock reaches a given turn counter.
 
 
 
-[`isReady`](#isReady)[`readyTime`](#readyTime)
+[`isReady`](#isReady) [`readyTime`](#readyTime)
 
 Inherited from `AgendaItem` :  
-[`agendaOrder`](../object/AgendaItem.html#agendaOrder)[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`isDone`](../object/AgendaItem.html#isDone)
+[`agendaOrder`](../object/AgendaItem.html#agendaOrder) [`initiallyActive`](../object/AgendaItem.html#initiallyActive) [`isDone`](../object/AgendaItem.html#isDone)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Inherited from `AgendaItem` :
 [`setDelay`](#setDelay)
 
 Inherited from `AgendaItem` :  
-[`execute`](../object/AgendaItem.html#execute)[`getActor`](../object/AgendaItem.html#getActor)[`invokeItem`](../object/AgendaItem.html#invokeItem)[`resetItem`](../object/AgendaItem.html#resetItem)
+[`execute`](../object/AgendaItem.html#execute) [`getActor`](../object/AgendaItem.html#getActor) [`invokeItem`](../object/AgendaItem.html#invokeItem) [`resetItem`](../object/AgendaItem.html#resetItem)
 
 <span id="_Properties_"></span>
 

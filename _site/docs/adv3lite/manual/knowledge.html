@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Player Character and NPC
-Knowledge  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Player Character and NPC
+Knowledge<br />
 <span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
     <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
-NPCs</a>     </span>
-
-</div>
+NPCs</a>     </span></p>
 
 <h1 id="player-character-and-npc-knowledge">Player Character and NPC Knowledge</h1>
 
@@ -152,24 +144,22 @@ to keep separate track of Bob’s knowledge we could define new
 <code class="language-plaintext highlighter-rouge">bob.knownProp</code> to
 <code class="language-plaintext highlighter-rouge">&amp;bobFamiliar</code>, like this:</p>
 
-<p>`
-    modify Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
         bobSeen = nil
         bobFamiliar = nil
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify Topic
-   bobFamiliar = true // We tend to assume that most topics start out familiar, but we don't have to. 
-; 
+    modify Topic
+       bobFamiliar = true // We tend to assume that most topics start out familiar, but we don't have to. 
+    ; 
 
-bob: Actor 'Bob; squat little;fellow man; him'
-   "He's a squat little fellow. "
-   seenProp = &amp;bobSeen
-   knownProp = &amp;bobFamiliar
-;
+    bob: Actor 'Bob; squat little;fellow man; him'
+       "He's a squat little fellow. "
+       seenProp = &amp;bobSeen
+       knownProp = &amp;bobFamiliar
+    ;
+     
 </code></pre></div></div>
-
-<p>`</p>
 
 <p>With these definitions in place,
 <code class="language-plaintext highlighter-rouge">bob.setHasSeen(obj</code>) will set
@@ -220,18 +210,17 @@ to do anything else about it, the player character can’t ask about the
 dark tower, for example, until s/he knows of the dark tower’s existence.
 That means we can safely define ActorTopicEntries like this:</p>
 
-<p>`
-    + AskTellTopic @tTown
-       “<q>This seems a nice town,</q> you remark cheerily.\b
-        <q>Yes it is – provided you don’t go anywhere the dark
-        tower,</q> he agrees cautiously. &lt;.known darkTower&gt; “
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTellTopic @tTown
+       "&lt;q&gt;This seems a nice town,&lt;/q&gt; you remark cheerily.\b
+        &lt;q&gt;Yes it is -- provided you don't go anywhere the dark
+        tower,&lt;/q&gt; he agrees cautiously. &lt;.known darkTower&gt; "
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ AskTopic @darkTower
-  "&lt;q&gt;What can you tell me about the dark tower?&lt;/q&gt; you ask.\b
-  Bob rolls his eyes and looks away for a moment. &lt;q&gt;You don't want
-  to know,&lt;/q&gt; he mutters. &lt;q&gt;You really don't.&lt;/q&gt; "
-; `
+    + AskTopic @darkTower
+      "&lt;q&gt;What can you tell me about the dark tower?&lt;/q&gt; you ask.\b
+      Bob rolls his eyes and looks away for a moment. &lt;q&gt;You don't want
+      to know,&lt;/q&gt; he mutters. &lt;q&gt;You really don't.&lt;/q&gt; "
+    ;
 </code></pre></div></div>
 
 <p>Here, the second TopicEntry can’t be reached until the player character
@@ -269,15 +258,14 @@ whether some item of knowledge has been revealed to the player character
 we can use the <strong>gRevealed(tag)</strong> macro, e.g.
 gRevealed(‘tower-haunted’). So, for example, we might go on to define:</p>
 
-<p>`
-    + AskTellTopic +110 @darkTower
-       “<q>I’ve heard it said that the dark tower is haunted,</q> you remark.
-        <q>Do you believe that?</q>\b
-        Bob gives a little shudder. <q>I don’t <i>believe</i> that tower is
-        haunted,</q> he tells you, <q>I <i>know</i> it is!</q> “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isActive = gRevealed('tower-haunted')
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTellTopic +110 @darkTower
+       "&lt;q&gt;I've heard it said that the dark tower is haunted,&lt;/q&gt; you remark.
+        &lt;q&gt;Do you believe that?&lt;/q&gt;\b
+        Bob gives a little shudder. &lt;q&gt;I don't &lt;i&gt;believe&lt;/i&gt; that tower is
+        haunted,&lt;/q&gt; he tells you, &lt;q&gt;I &lt;i&gt;know&lt;/i&gt; it is!&lt;/q&gt; "
+        
+        isActive = gRevealed('tower-haunted')
+    ;
 </code></pre></div></div>
 
 <p>Note that we’ve given this AskTellTopic a matchScore of 110 (10 higher
@@ -319,16 +307,15 @@ belonging to the actor. For example, if at some later point in the game
 the player character were to discuss his experiences in Bob’s town with
 a friend, he might want to inform her about the haunting:</p>
 
-<p>`
-    + TellTopic @darkTower
-      “<q>You know, the folks in Doomsville even think their local tower is
-       haunted,</q> you remark. &lt;.inform tower-haunted&gt;\b
-       Mavis shakes her head tut-tutting away to herself. <q>There’s no
-       end to superstition and folly,</q> she remarks. <q>Mind you, I heard
-       a similar story about Spookhampton.</q> &lt;.reveal spookhampton-haunted&gt; “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  isActive = gRevealed('tower-haunted') &amp;&amp; !gInformed('tower-haunted')
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic @darkTower
+      "&lt;q&gt;You know, the folks in Doomsville even think their local tower is
+       haunted,&lt;/q&gt; you remark. &lt;.inform tower-haunted&gt;\b
+       Mavis shakes her head tut-tutting away to herself. &lt;q&gt;There's no
+       end to superstition and folly,&lt;/q&gt; she remarks. &lt;q&gt;Mind you, I heard
+       a similar story about Spookhampton.&lt;/q&gt; &lt;.reveal spookhampton-haunted&gt; "
+       
+      isActive = gRevealed('tower-haunted') &amp;&amp; !gInformed('tower-haunted')
+    ;
 </code></pre></div></div>
 
 <p>Note how we use the gInformed() macro in the isActive property so that
@@ -384,17 +371,14 @@ confusion).</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Player Character and NPC
-Knowledge  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Player Character and NPC
+Knowledge<br />
 <span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
     <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
-NPCs</a>     </span>
+NPCs</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

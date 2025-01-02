@@ -46,45 +46,33 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>LocationalProduction is a subclass of Production for phrases that
+involve locational qualifiers, as in “the book on the table”.</p>
 
-LocationalProduction is a subclass of Production for phrases that
-involve locational qualifiers, as in "the book on the table".
+<p>Each grammar rule of this type needs to define two special ‘-&gt;’
+associations in its template:</p>
 
-Each grammar rule of this type needs to define two special '-\&gt;'
-associations in its template:
+<p>cont_ is the locational qualifier. This is also just an ordinary noun
+phrase. This is the “the table” part in “the book on the table”.</p>
 
-cont\_ is the locational qualifier. This is also just an ordinary noun
-phrase. This is the "the table" part in "the book on the table".
-
-prep\_ is the preposition production. This should be \*or\* contain a
+<p>prep_ is the preposition production. This should be *or* contain a
 LocationTypeProduction match, which tells us the type of containment
-relationship specified by the grammar. \*Alternatively\*, you can define
+relationship specified by the grammar. *Alternatively*, you can define
 locType directly on this production. This specifies a LocType object
-giving the containment relationship.
+giving the containment relationship.</p>
 
-`class `**`LocationalProduction`**` :   `[`Production`](../object/Production.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">LocationalProduction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LocationalProduction</code></strong><br />
 <a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LocationalProduction</code></strong><br />
 <a href="../object/disambigPhrase(locational).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(locational)</code></a><br />
@@ -96,19 +84,11 @@ giving the containment relationship.
 <a href="../object/qualifiedSingularNounPhrase(theOneIn).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(theOneIn)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#locType"><code class="language-plaintext highlighter-rouge">locType</code></a>  `</p>
 
@@ -117,11 +97,7 @@ giving the containment relationship.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a>  `</p>
 
@@ -130,11 +106,7 @@ giving the containment relationship.
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="locType"></span></p>
 
@@ -142,24 +114,16 @@ giving the containment relationship.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4359">4359</a>]</p>
 
-<div class="desc">
-
-Our location type. This is a LocType object giving the location
+<p>Our location type. This is a LocType object giving the location
 relationship specified by this locational phrase. For languages that
 special locational phrases prepositionally, this will be set by the
 LocationPrepProduction in our sub-tree. For languages that use case
 inflection to specify the type of relationship, this must be set by the
-noun phrase sub-tree instead.
-
-</div>
+noun phrase sub-tree instead.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="visitProd"></span></p>
 
@@ -167,21 +131,14 @@ noun phrase sub-tree instead.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4319">4319</a>]</p>
 
-<div class="desc">
-
-Visit a production. When we process the locational qualifier phrase,
-we'll build out the sub-tree in the context of a new NounPhrase, which
+<p>Visit a production. When we process the locational qualifier phrase,
+we’ll build out the sub-tree in the context of a new NounPhrase, which
 we attach as a locational qualifier to the encompassing noun phrase
-under construction.
+under construction.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

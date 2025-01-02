@@ -46,28 +46,20 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Log Console output stream. This is a simple wrapper for the system log
+<p>Log Console output stream. This is a simple wrapper for the system log
 console, which allows console-style output to be captured to a file,
 with full processing (HTML expansion, word wrapping, etc) but without
-displaying anything to the game window.
+displaying anything to the game window.</p>
 
-This class should always be instantiated with transient instances, since
-the underlying system object doesn't participate in save/restore
-operations.
+<p>This class should always be instantiated with transient instances, since
+the underlying system object doesn’t participate in save/restore
+operations.</p>
 
-`class `**`LogConsole`**` :   `[`OutputStream`](../object/OutputStream.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">LogConsole</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">LogConsole</code></strong><br />
 <a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a><br />
@@ -76,62 +68,42 @@ operations.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#handle_"><code class="language-plaintext highlighter-rouge">handle_</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
-<a href="../object/OutputStream.html#filterList_"><code class="language-plaintext highlighter-rouge">filterList_</code></a><a href="../object/OutputStream.html#justDidPara"><code class="language-plaintext highlighter-rouge">justDidPara</code></a><a href="../object/OutputStream.html#justDidParaSuppressor"><code class="language-plaintext highlighter-rouge">justDidParaSuppressor</code></a><a href="../object/OutputStream.html#myInputManager"><code class="language-plaintext highlighter-rouge">myInputManager</code></a><a href="../object/OutputStream.html#prefix"><code class="language-plaintext highlighter-rouge">prefix</code></a></p>
+<a href="../object/OutputStream.html#filterList_"><code class="language-plaintext highlighter-rouge">filterList_</code></a> <a href="../object/OutputStream.html#justDidPara"><code class="language-plaintext highlighter-rouge">justDidPara</code></a> <a href="../object/OutputStream.html#justDidParaSuppressor"><code class="language-plaintext highlighter-rouge">justDidParaSuppressor</code></a> <a href="../object/OutputStream.html#myInputManager"><code class="language-plaintext highlighter-rouge">myInputManager</code></a> <a href="../object/OutputStream.html#prefix"><code class="language-plaintext highlighter-rouge">prefix</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#captureToFile"><code class="language-plaintext highlighter-rouge">captureToFile</code></a><a href="#closeConsole"><code class="language-plaintext highlighter-rouge">closeConsole</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#writeFromStream"><code class="language-plaintext highlighter-rouge">writeFromStream</code></a></p>
+<p><a href="#captureToFile"><code class="language-plaintext highlighter-rouge">captureToFile</code></a> <a href="#closeConsole"><code class="language-plaintext highlighter-rouge">closeConsole</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#writeFromStream"><code class="language-plaintext highlighter-rouge">writeFromStream</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
-<a href="../object/OutputStream.html#addOutputFilter"><code class="language-plaintext highlighter-rouge">addOutputFilter</code></a><a href="../object/OutputStream.html#addOutputFilterBelow"><code class="language-plaintext highlighter-rouge">addOutputFilterBelow</code></a><a href="../object/OutputStream.html#applyFilters"><code class="language-plaintext highlighter-rouge">applyFilters</code></a><a href="../object/OutputStream.html#applyTextFilters"><code class="language-plaintext highlighter-rouge">applyTextFilters</code></a><a href="../object/OutputStream.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a><a href="../object/OutputStream.html#captureOutputIgnoreExit"><code class="language-plaintext highlighter-rouge">captureOutputIgnoreExit</code></a><a href="../object/OutputStream.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="../object/OutputStream.html#inputLineEnd"><code class="language-plaintext highlighter-rouge">inputLineEnd</code></a><a href="../object/OutputStream.html#removeOutputFilter"><code class="language-plaintext highlighter-rouge">removeOutputFilter</code></a><a href="../object/OutputStream.html#setPrefix"><code class="language-plaintext highlighter-rouge">setPrefix</code></a><a href="../object/OutputStream.html#watchForOutput"><code class="language-plaintext highlighter-rouge">watchForOutput</code></a><a href="../object/OutputStream.html#writeToStream"><code class="language-plaintext highlighter-rouge">writeToStream</code></a></p>
+<a href="../object/OutputStream.html#addOutputFilter"><code class="language-plaintext highlighter-rouge">addOutputFilter</code></a> <a href="../object/OutputStream.html#addOutputFilterBelow"><code class="language-plaintext highlighter-rouge">addOutputFilterBelow</code></a> <a href="../object/OutputStream.html#applyFilters"><code class="language-plaintext highlighter-rouge">applyFilters</code></a> <a href="../object/OutputStream.html#applyTextFilters"><code class="language-plaintext highlighter-rouge">applyTextFilters</code></a> <a href="../object/OutputStream.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a> <a href="../object/OutputStream.html#captureOutputIgnoreExit"><code class="language-plaintext highlighter-rouge">captureOutputIgnoreExit</code></a> <a href="../object/OutputStream.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/OutputStream.html#inputLineEnd"><code class="language-plaintext highlighter-rouge">inputLineEnd</code></a> <a href="../object/OutputStream.html#removeOutputFilter"><code class="language-plaintext highlighter-rouge">removeOutputFilter</code></a> <a href="../object/OutputStream.html#setPrefix"><code class="language-plaintext highlighter-rouge">setPrefix</code></a> <a href="../object/OutputStream.html#watchForOutput"><code class="language-plaintext highlighter-rouge">watchForOutput</code></a> <a href="../object/OutputStream.html#writeToStream"><code class="language-plaintext highlighter-rouge">writeToStream</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="handle_"></span></p>
 
@@ -139,19 +111,11 @@ operations.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1760">1760</a>]</p>
 
-<div class="desc">
-
-our system log console handle
-
-</div>
+<p>our system log console handle</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="captureToFile"></span></p>
 
@@ -159,14 +123,10 @@ our system log console handle
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1708">1708</a>]</p>
 
-<div class="desc">
-
-Utility method: create a log file, set up to capture all console output
+<p>Utility method: create a log file, set up to capture all console output
 to the log file, run the given callback function, and then close the log
 file and restore the console output. This can be used as a simple means
-of creating a file that captures the output of a command.
-
-</div>
+of creating a file that captures the output of a command.</p>
 
 <p><span id="closeConsole"></span></p>
 
@@ -174,13 +134,9 @@ of creating a file that captures the output of a command.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1743">1743</a>]</p>
 
-<div class="desc">
-
-Close the console. This closes the underlying system log console, which
+<p>Close the console. This closes the underlying system log console, which
 closes the operating system file. No further text can be written to the
-console after it's closed.
-
-</div>
+console after it’s closed.</p>
 
 <p><span id="construct"></span></p>
 
@@ -188,11 +144,7 @@ console after it's closed.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1723">1723</a>]</p>
 
-<div class="desc">
-
-create a log console
-
-</div>
+<p>create a log console</p>
 
 <p><span id="writeFromStream"></span></p>
 
@@ -200,18 +152,11 @@ create a log console
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1757">1757</a>]</p>
 
-<div class="desc">
+<p>low-level stream writer - write to our system log console</p>
 
-low-level stream writer - write to our system log console
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

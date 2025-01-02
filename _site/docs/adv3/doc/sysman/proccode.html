@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Procedural Code  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Procedural Code<br />
 <span class="navnp"><a href="expr.html" class="nav"><em>Prev:</em> Expressions and
 Operators</a>    
 <a href="optparams.html" class="nav"><em>Next:</em> Optional
-Parameters</a>     </span>
-
-</div>
+Parameters</a>     </span></p>
 
 <h1 id="procedural-code">Procedural Code</h1>
 
@@ -135,221 +127,209 @@ it.</p>
 
 <p>A function definition has this form:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>functionName ( [ paramName [ , paramName ... ]  ]  )
+{
+   functionBody
+}
+</code></pre></div></div>
 
-    functionName ( [ paramName [ , paramName ... ]  ]  )
-    {
-       functionBody
-    }
+<p>Note that the parentheses for the parameter list are always required. If
+you want to define a function that doesn’t take any parameters, just use
+empty parentheses after the function name.</p>
 
-
-
-Note that the parentheses for the parameter list are always required. If
-you want to define a function that doesn't take any parameters, just use
-empty parentheses after the function name.
-
-The parameter names act like local variables defined just inside the
-function body's open-brace. This means that you can't define a local
-variable with the same name in the function's outermost code block.
-(It's legal to reuse a parameter's name for a local within a nested
+<p>The parameter names act like local variables defined just inside the
+function body’s open-brace. This means that you can’t define a local
+variable with the same name in the function’s outermost code block.
+(It’s legal to reuse a parameter’s name for a local within a nested
 block, though, for the same reason you can define a new local in a
-nested block with the same name as a local in an outer block.)
+nested block with the same name as a local in an outer block.)</p>
 
-The function body consists of a series of procedural statements. When
+<p>The function body consists of a series of procedural statements. When
 the function is invoked, the VM starts at the first (topmost) procedural
 statement in the function body, and proceeds through them sequentially
 until the function returns to its caller via an explicit
-`return` statement, throws an error, or "falls
-off the end" (that is, the sequential execution point reaches the
-function body's closing brace). Falling off the end is equivalent to
-returning `nil`, so it's as though there were a
-`return nil;` statement just before the function
-body's closing brace.
+<code class="language-plaintext highlighter-rouge">return</code> statement, throws an error, or “falls
+off the end” (that is, the sequential execution point reaches the
+function body’s closing brace). Falling off the end is equivalent to
+returning <code class="language-plaintext highlighter-rouge">nil</code>, so it’s as though there were a
+<code class="language-plaintext highlighter-rouge">return nil;</code> statement just before the function
+body’s closing brace.</p>
 
-A function definition can only appear in "top-level" code - that is,
+<p>A function definition can only appear in “top-level” code - that is,
 outside of any object, class, or function definition. If you use this
 syntax within an object or class definition, the compiler will think you
-want to define a method.
+want to define a method.</p>
 
-Function names are global. A symbol that's used as the name of a
+<p>Function names are global. A symbol that’s used as the name of a
 function cannot be used to name anything else with global scope (such as
-properties, objects, classes, enums).
+properties, objects, classes, enums).</p>
 
-To call a function, you write the function name followed by its
+<p>To call a function, you write the function name followed by its
 arguments, enclosed in parentheses. This syntax constitutes a
-*function-call expression*, and you can use it anywhere an expression
-can go, including within a larger expression.
+<em>function-call expression</em>, and you can use it anywhere an expression
+can go, including within a larger expression.</p>
 
-For example, here's a complete program that defines two functions:
-`main()`, which is the main entrypoint function
-that every program must provide, and `cube()`,
+<p>For example, here’s a complete program that defines two functions:
+<code class="language-plaintext highlighter-rouge">main()</code>, which is the main entrypoint function
+that every program must provide, and <code class="language-plaintext highlighter-rouge">cube()</code>,
 which raises a given number to the third power and returns the result.
-The `main()` function uses
-`cube()` to calculate a few cubed values,
-displays them, and exits.
+The <code class="language-plaintext highlighter-rouge">main()</code> function uses
+<code class="language-plaintext highlighter-rouge">cube()</code> to calculate a few cubed values,
+displays them, and exits.</p>
 
-```
-    #include "tads.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include "tads.h"
 
     main(args)
     {
       local c1 = cube(1), c2 = cube(2), c3 = cube(3);
       local cc3 = cube(c3);
 
-      "1 cubed = &lt;<c1>&gt;, 2 cubed = &lt;<c2>&gt;, 3 cubed = &lt;<c3>&gt;\n";
-      "3 cubed cubed &lt;<cc3>&gt;\n";
+      "1 cubed = &lt;&lt;c1&gt;&gt;, 2 cubed = &lt;&lt;c2&gt;&gt;, 3 cubed = &lt;&lt;c3&gt;&gt;\n";
+      "3 cubed cubed &lt;&lt;cc3&gt;&gt;\n";
     }
 
     cube(n)
     {
       return n * n * n;
     }
-```
+</code></pre></div></div>
 
-### <span id="optArgs">Optional arguments</span>
+<h3 id="optional-arguments"><span id="optArgs">Optional arguments</span></h3>
 
-In some cases, it's convenient to be able to declare a function or
+<p>In some cases, it’s convenient to be able to declare a function or
 method parameter as optional. This means that a caller can provide an
-argument value for the parameter, but doesn't have to: a caller can
+argument value for the parameter, but doesn’t have to: a caller can
 simply omit the argument entirely if it wants to use the default value
-for the parameter.
+for the parameter.</p>
 
-The syntax for optional parameters is simple. Just place a
-"`?`" after the name of a parameter:
+<p>The syntax for optional parameters is simple. Just place a
+“<code class="language-plaintext highlighter-rouge">?</code>” after the name of a parameter:</p>
 
-```
-    stringToInt(str, radix?)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    stringToInt(str, radix?)
     {
       // ...
     }
-```
+</code></pre></div></div>
 
-This lets callers call the function with or without the "radix"
-parameter:
+<p>This lets callers call the function with or without the “radix”
+parameter:</p>
 
-```
-    x = stringToInt('12345');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = stringToInt('12345');
     y = stringToInt('3F7A', 16);
-```
+</code></pre></div></div>
 
-When only one argument is supplied, it's assigned to "str", because that
-parameter is required, and the optional "radix" parameter is set to the
-default value `nil`. When two arguments are
-supplied, the first is assigned to "str" and the second to "radix".
+<p>When only one argument is supplied, it’s assigned to “str”, because that
+parameter is required, and the optional “radix” parameter is set to the
+default value <code class="language-plaintext highlighter-rouge">nil</code>. When two arguments are
+supplied, the first is assigned to “str” and the second to “radix”.</p>
 
-For this particular example, it would be even better to be able to
-define a specific default value for the "radix" argument. Fortunately,
-there's syntax for this: rather than using the
-"`?`" suffix, instead write
-"`=` *expression*", where *expression* gives the
-default value to be applied:
+<p>For this particular example, it would be even better to be able to
+define a specific default value for the “radix” argument. Fortunately,
+there’s syntax for this: rather than using the
+“<code class="language-plaintext highlighter-rouge">?</code>” suffix, instead write
+“<code class="language-plaintext highlighter-rouge">=</code> <em>expression</em>”, where <em>expression</em> gives the
+default value to be applied:</p>
 
-```
-    stringToInt(str, radix = 10)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    stringToInt(str, radix = 10)
     {
       // ...
     }
-```
+</code></pre></div></div>
 
-This says that the "radix" parameter should be set to 10 whenever a
-caller doesn't supply a second argument value. When the caller *does*
-provide two arguments, the caller's value overrides the default value.
+<p>This says that the “radix” parameter should be set to 10 whenever a
+caller doesn’t supply a second argument value. When the caller <em>does</em>
+provide two arguments, the caller’s value overrides the default value.</p>
 
-For more information, including a couple of subtleties that are worth
-knowing about, see the [optional parameters section](optparams.html).
+<p>For more information, including a couple of subtleties that are worth
+knowing about, see the <a href="optparams.html">optional parameters section</a>.</p>
 
-### <span id="namedArgs">Named arguments</span>
+<h3 id="named-arguments"><span id="namedArgs">Named arguments</span></h3>
 
-The usual way of passing arguments, as described above, is
-**positional**: the first value listed in the caller's argument list is
-assigned to the first variable name in the callee's parameter list, the
-caller's second value goes to the callee's second parameter name, and so
-on.
+<p>The usual way of passing arguments, as described above, is
+<strong>positional</strong>: the first value listed in the caller’s argument list is
+assigned to the first variable name in the callee’s parameter list, the
+caller’s second value goes to the callee’s second parameter name, and so
+on.</p>
 
-There's another way, which we call **named arguments**. Instead of
+<p>There’s another way, which we call <strong>named arguments</strong>. Instead of
 assigning values to parameter names by position, the caller actually
 specifies the name to use for each value. The values are then assigned
 to variables with the same names in the callee, regardless of the order
-of the values.
+of the values.</p>
 
-The caller and callee **both** have to agree on this protocol. When
+<p>The caller and callee <strong>both</strong> have to agree on this protocol. When
 defining a function, you specify that it takes named argument values by
-putting a colon after each parameter name:
+putting a colon after each parameter name:</p>
 
-```
-    diff(a:, b:)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    diff(a:, b:)
     {
        return a - b;
     }
-```
+</code></pre></div></div>
 
-The caller invokes this function with similar syntax: for each named
+<p>The caller invokes this function with similar syntax: for each named
 parameter, we must write the name, a colon, and then the value to use
-for that parameter:
+for that parameter:</p>
 
-```
-    local x = diff(a: 5, b: 3);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = diff(a: 5, b: 3);
+</code></pre></div></div>
 
-Because the parameters are named, the caller can list them in a
+<p>Because the parameters are named, the caller can list them in a
 different order from the callee. So we can rewrite the call above as
-follows, and we'll get exactly the same result:
+follows, and we’ll get exactly the same result:</p>
 
-```
-    local x = diff(b: 3, a: 5);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = diff(b: 3, a: 5);
+</code></pre></div></div>
 
-You can freely mix positional and named parameters in the same function
+<p>You can freely mix positional and named parameters in the same function
 definition. Parameters with the colon suffix will be named, and those
 without will be positional. The caller must specify the positional
 parameters in the same order as in the function definition, but the
-named parameters can be mixed into the list in any order.
+named parameters can be mixed into the list in any order.</p>
 
-For full details on named parameters and why (and when) you'd want to
-use them, see the [named arguments chapter](namedargs.html).
+<p>For full details on named parameters and why (and when) you’d want to
+use them, see the <a href="namedargs.html">named arguments chapter</a>.</p>
 
-### <span id="funcModRep">Replacing or modifying a function</span>
+<h3 id="replacing-or-modifying-a-function"><span id="funcModRep">Replacing or modifying a function</span></h3>
 
-When using a library, it's sometimes useful to be able to replace a
+<p>When using a library, it’s sometimes useful to be able to replace a
 function that the library provides with your own definition. The
-`replace` keyword lets you do this. To use this
-feature, just write `replace` in front of your
-function definition:
+<code class="language-plaintext highlighter-rouge">replace</code> keyword lets you do this. To use this
+feature, just write <code class="language-plaintext highlighter-rouge">replace</code> in front of your
+function definition:</p>
 
-```
-    replace someFunc(a, b)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    replace someFunc(a, b)
     {
        // new code for the function...
     }
-```
+</code></pre></div></div>
 
-`replace` completely discards the original
+<p><code class="language-plaintext highlighter-rouge">replace</code> completely discards the original
 library definition of the function, and replaces it with your new
-definition; it's as though the library version were never defined.
+definition; it’s as though the library version were never defined.</p>
 
-Sometimes you want to augment a library function rather than replace it
+<p>Sometimes you want to augment a library function rather than replace it
 entirely. For example, you might want to add some special-case handling
 for one or two particular parameter values, but fall back on the
 original library definition for everything else. In these cases, you can
-"modify" a function. This replaces the original function with your new
+“modify” a function. This replaces the original function with your new
 version, but it also keeps the original function around; the old
 function loses the right to use the name, but its code is still present.
 Whenever any code calls the function by name, your new version will be
-invoked.
+invoked.</p>
 
-To reach the original version of the function, you use a special
-keyword, `replaced`, within your new version of
+<p>To reach the original version of the function, you use a special
+keyword, <code class="language-plaintext highlighter-rouge">replaced</code>, within your new version of
 the function. This is the only place where
-`replaced` works - you can only reach the old
+<code class="language-plaintext highlighter-rouge">replaced</code> works - you can only reach the old
 function from within your new version.
-`replaced` looks syntactically like a function
-call: you write, for example, `replaced(7, 'a')`
-to invoke the original function.
+<code class="language-plaintext highlighter-rouge">replaced</code> looks syntactically like a function
+call: you write, for example, <code class="language-plaintext highlighter-rouge">replaced(7, 'a')</code>
+to invoke the original function.</p>
 
-Here's an example:
+<p>Here’s an example:</p>
 
-```
-    getName(val)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    getName(val)
     {
       switch(dataType(val))
       {
@@ -368,86 +348,82 @@ Here's an example:
       else
         return replaced(val);
     }
-```
+</code></pre></div></div>
 
-Note how the modified function refers back to the original version: we
-add handling for string values, which the original definition didn't
+<p>Note how the modified function refers back to the original version: we
+add handling for string values, which the original definition didn’t
 provide, but simply invoke the original version of the function for any
-other type. The call to `replaced(val)` invokes
-the previous definition of the function, which we're replacing.
+other type. The call to <code class="language-plaintext highlighter-rouge">replaced(val)</code> invokes
+the previous definition of the function, which we’re replacing.</p>
 
-Once a function is redefined using modify, it's no longer possible to
+<p>Once a function is redefined using modify, it’s no longer possible to
 invoke the old definition of the function directly by name. The only way
 to reach the old definition is via the
-`replaced` keyword, and that can only be used
+<code class="language-plaintext highlighter-rouge">replaced</code> keyword, and that can only be used
 within the new definition of the function. However, note that you can
 obtain a pointer to the old function, and then invoke the old function
 through that pointer outside the bounds of the redefinition. To get the
-pointer, use the `replaced` keyword without an
-argument list.
+pointer, use the <code class="language-plaintext highlighter-rouge">replaced</code> keyword without an
+argument list.</p>
 
-### <span id="methdef">Defining a method</span>
+<h3 id="defining-a-method"><span id="methdef">Defining a method</span></h3>
 
-A method definition looks just like a function definition syntactically.
+<p>A method definition looks just like a function definition syntactically.
 The only difference is the placement within the source code. Whereas a
 function is declared at the top level of the program, outside of all
-objects, a method is declared within an object. For example:
+objects, a method is declared within an object. For example:</p>
 
-```
-    class MyClass: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class MyClass: object
       getOwner()
       {
         // code goes here...
       }
     ;
-```
+</code></pre></div></div>
 
-In most respects, a method acts very much like a function. The
+<p>In most respects, a method acts very much like a function. The
 difference is that a method is associated with the class or object in
-which it's defined. The method can only be invoked through the defining
-object or class, or it can be reached by "inheritance" - that is,
+which it’s defined. The method can only be invoked through the defining
+object or class, or it can be reached by “inheritance” - that is,
 through a descendant in the class hierarchy (that is, a subclass of this
 object or class, a subclass of a subclass, etc., or an instance of the
 class). To call a method, then, you have to name not only the method
-itself but also the object it's associated with. You do that with the
-"dot" operator (`.`), like this:
+itself but also the object it’s associated with. You do that with the
+“dot” operator (<code class="language-plaintext highlighter-rouge">.</code>), like this:</p>
 
-```
-    local x = MyClass.getOwner();
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = MyClass.getOwner();
+</code></pre></div></div>
 
-Within the method, you can use the `self`
+<p>Within the method, you can use the <code class="language-plaintext highlighter-rouge">self</code>
 pseudo-variable to determine which object was used to invoke the method.
 Now, it might seem that this information is redundant, since the method
 is by its very nature already associated with a particular object or
 class. But as we just mentioned, you can reach the method through the
-defining object/class *or* through a subclass or instance of the
-defining object. For example, consider this code:
+defining object/class <em>or</em> through a subclass or instance of the
+defining object. For example, consider this code:</p>
 
-```
-    local x = new MyClass();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = new MyClass();
     local y = x.getOwner();
-```
+</code></pre></div></div>
 
-This creates an instance of the class, then calls the method on the
+<p>This creates an instance of the class, then calls the method on the
 instance object, not on the class itself. If you looked at
-`self` within the method in this case, it would
-contain the instance object, not MyClass itself.
+<code class="language-plaintext highlighter-rouge">self</code> within the method in this case, it would
+contain the instance object, not MyClass itself.</p>
 
-One of the key principles behind object-oriented programming is that
+<p>One of the key principles behind object-oriented programming is that
 code related to an object should be grouped with the object, by defining
 the code using methods. So one thing you tend to see a lot of in
 well-designed OO code is one method of an object calling another method
 of the same object. In other words, you tend to see a lot of
-`self.xxx()` calls within method code. This is
+<code class="language-plaintext highlighter-rouge">self.xxx()</code> calls within method code. This is
 so common that TADS 3 has a convenient short-hand notation for just this
 case: when calling a method or property of
-`self` within a method, you can omit the
-`self.` prefix entirely, and just write the
-method call as though it were a function call. For example:
+<code class="language-plaintext highlighter-rouge">self</code> within a method, you can omit the
+<code class="language-plaintext highlighter-rouge">self.</code> prefix entirely, and just write the
+method call as though it were a function call. For example:</p>
 
-```
-    class MyClass
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class MyClass
       isOwned()
       {
         // check some conditions, and return true or nil...
@@ -458,369 +434,349 @@ method call as though it were a function call. For example:
           // do something...
       }
     ;
-```
+</code></pre></div></div>
 
-In this example, the call to `isOwned()` within
-`getOwner()` is *not* a function call, even
-though it looks like one at first glance. Rather, it's a method call,
-and behaves exactly as though we'd written
-`self.isOwned()`.
+<p>In this example, the call to <code class="language-plaintext highlighter-rouge">isOwned()</code> within
+<code class="language-plaintext highlighter-rouge">getOwner()</code> is <em>not</em> a function call, even
+though it looks like one at first glance. Rather, it’s a method call,
+and behaves exactly as though we’d written
+<code class="language-plaintext highlighter-rouge">self.isOwned()</code>.</p>
 
-### <span id="shortMeth">Short-hand method definitions</span>
+<h3 id="short-hand-method-definitions"><span id="shortMeth">Short-hand method definitions</span></h3>
 
-In addition to the standard function-like syntax for defining a method,
+<p>In addition to the standard function-like syntax for defining a method,
 there are a couple of short-hand formats that are more convenient for
-simple methods.
+simple methods.</p>
 
-First, if a method take no parameters, you can omit the parameter list.
+<p>First, if a method take no parameters, you can omit the parameter list.
 This is especially handy for one-liner methods, where the whole body of
-the method fits on one line:
+the method fits on one line:</p>
 
-```
-    class MyClass
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class MyClass
       getOwner { // etc }
     ;
-```
+</code></pre></div></div>
 
-Second, if a method takes no parameters, and the only thing it does is
+<p>Second, if a method takes no parameters, and the only thing it does is
 evaluate an expression and return the result, you can write the method
-almost as though it were a property definition, like this:
+almost as though it were a property definition, like this:</p>
 
-```
-    class MyClass
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class MyClass
       getOwner = (myOwner != nil ? myOwner.actualOwner(self) : nil)
-```
+</code></pre></div></div>
 
-That has exactly the same meaning as if
-`getOwner()` had been defined like this:
+<p>That has exactly the same meaning as if
+<code class="language-plaintext highlighter-rouge">getOwner()</code> had been defined like this:</p>
 
-```
-      getOwner()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      getOwner()
       {
         return myOwner != nil ? myOwner.actualOwner(self) : nil;
       }
-```
+</code></pre></div></div>
 
-These short-hand formats are syntactic variations only - they don't make
+<p>These short-hand formats are syntactic variations only - they don’t make
 any difference in the behavior, size, or speed of the generated code.
-The short-hand syntax might make your *source* code look smaller, but it
-won't make your *compiled* code any smaller or any faster, because the
+The short-hand syntax might make your <em>source</em> code look smaller, but it
+won’t make your <em>compiled</em> code any smaller or any faster, because the
 compiler generates the same byte-code in any case. These syntax
-variations are for your coding convenience; they're not performance
-optimizations.
+variations are for your coding convenience; they’re not performance
+optimizations.</p>
 
-### <span id="floatingMethods">Floating methods</span>
+<h3 id="floating-methods"><span id="floatingMethods">Floating methods</span></h3>
 
-Another way of defining a method is to define it *without* an associated
-object definition. This is called a "floating" method, since it's not
-attached to any object definition.
+<p>Another way of defining a method is to define it <em>without</em> an associated
+object definition. This is called a “floating” method, since it’s not
+attached to any object definition.</p>
 
-The syntax for a floating method is almost the same as for a function.
+<p>The syntax for a floating method is almost the same as for a function.
 The only difference is that you substitute the keyword
-`method` for `function`:
+<code class="language-plaintext highlighter-rouge">method</code> for <code class="language-plaintext highlighter-rouge">function</code>:</p>
 
-```
-    method getTopLoc()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    method getTopLoc()
     {
        return location == nil ? self : location;
     }
-```
+</code></pre></div></div>
 
-Even though this looks like a function, you can use
-`self`, and access properties of
-`self` (such as
-`location`, in this example). You can also
+<p>Even though this looks like a function, you can use
+<code class="language-plaintext highlighter-rouge">self</code>, and access properties of
+<code class="language-plaintext highlighter-rouge">self</code> (such as
+<code class="language-plaintext highlighter-rouge">location</code>, in this example). You can also
 access all of the other method context pseudo-variables
-(`definingobj`,
-`targetobj`, and
-`targetprop`), and you can use
-`inherited` and
-`delegated`. None of these things are allowed in
-an ordinary function, since there's no method context in an ordinary
-function.
+(<code class="language-plaintext highlighter-rouge">definingobj</code>,
+<code class="language-plaintext highlighter-rouge">targetobj</code>, and
+<code class="language-plaintext highlighter-rouge">targetprop</code>), and you can use
+<code class="language-plaintext highlighter-rouge">inherited</code> and
+<code class="language-plaintext highlighter-rouge">delegated</code>. None of these things are allowed in
+an ordinary function, since there’s no method context in an ordinary
+function.</p>
 
-A floating method actually *is* a function. If you look at
-`dataType(getTopLoc)`, you'll see that it's
-`TypeFuncPtr`. You *can* call it like a regular
-function, without an object:
+<p>A floating method actually <em>is</em> a function. If you look at
+<code class="language-plaintext highlighter-rouge">dataType(getTopLoc)</code>, you’ll see that it’s
+<code class="language-plaintext highlighter-rouge">TypeFuncPtr</code>. You <em>can</em> call it like a regular
+function, without an object:</p>
 
-```
-    local t = getTopLoc();
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local t = getTopLoc();
+</code></pre></div></div>
 
-However, if the method accesses `self` or other
+<p>However, if the method accesses <code class="language-plaintext highlighter-rouge">self</code> or other
 method context variables, calling it this way will cause a run-time
-error. That's what would happen in our example, since it references a
-property of `self`. The problem is that a
-function call doesn't have a method context, so references to method
-context variables won't work the way they do when a method is running.
+error. That’s what would happen in our example, since it references a
+property of <code class="language-plaintext highlighter-rouge">self</code>. The problem is that a
+function call doesn’t have a method context, so references to method
+context variables won’t work the way they do when a method is running.</p>
 
-So if it's not really callable as a function, and it's not callable as a
-method because it's not associated with any object, what exactly is it
-good for? The answer, of course, is adoption.
+<p>So if it’s not really callable as a function, and it’s not callable as a
+method because it’s not associated with any object, what exactly is it
+good for? The answer, of course, is adoption.</p>
 
-Floating methods are intended to be associated with objects
-*eventually*, even though they're not initially. Their purpose is to let
-you define a method that's not *initially* attached to any object, but
+<p>Floating methods are intended to be associated with objects
+<em>eventually</em>, even though they’re not initially. Their purpose is to let
+you define a method that’s not <em>initially</em> attached to any object, but
 only so that you can attach it dynamically, at run-time, as an actual
 method of one or more objects. You do this using
-`TadsObject.setMethod()`, which you can find
-more about [here](tadsobj.html#setMethod).
+<code class="language-plaintext highlighter-rouge">TadsObject.setMethod()</code>, which you can find
+more about <a href="tadsobj.html#setMethod">here</a>.</p>
 
-### <span id="varargs">Varying argument lists</span>
+<h3 id="varying-argument-lists"><span id="varargs">Varying argument lists</span></h3>
 
-A function or method can be defined as taking a varying number of
+<p>A function or method can be defined as taking a varying number of
 parameters. That is, rather than specifying an exact number of arguments
 that the caller must supply, you can define the function or method so
-that it lets the *caller* decide how many arguments to supply; the
+that it lets the <em>caller</em> decide how many arguments to supply; the
 function or method determines how many were actually passed at run-time.
-(This is sometimes called a "varargs" function, for "varying
-arguments.") To define this type of function or method, you use an
-ellipsis, `...`, in place of the last parameter
-name. For example:
+(This is sometimes called a “varargs” function, for “varying
+arguments.”) To define this type of function or method, you use an
+ellipsis, <code class="language-plaintext highlighter-rouge">...</code>, in place of the last parameter
+name. For example:</p>
 
-```
-    printf(fmt, ...) { }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    printf(fmt, ...) { }
     {
       // code goes here...
     }
-```
+</code></pre></div></div>
 
-When you define a function/method that takes varying parameters, callers
-must supply *at least* the named parameters, and may then supply any
+<p>When you define a function/method that takes varying parameters, callers
+must supply <em>at least</em> the named parameters, and may then supply any
 number (including zero) of additional arguments. The first argument
 value (starting at the left) that the caller supplies is assigned to the
-first named parameter in the function's or methods' parameter list, the
+first named parameter in the function’s or methods’ parameter list, the
 second argument value is assigned to the second named parameter, and so
 on. You can retrieve the unnamed extra parameters using the
-`getArg()` intrinsic function, and you can
+<code class="language-plaintext highlighter-rouge">getArg()</code> intrinsic function, and you can
 determine the total number of arguments using the
-`argcount` pseudo-variable.
-`getArg(n)` returns the *n*th argument value,
-where *n* ranges from 1 to `argcount`.
+<code class="language-plaintext highlighter-rouge">argcount</code> pseudo-variable.
+<code class="language-plaintext highlighter-rouge">getArg(n)</code> returns the <em>n</em>th argument value,
+where <em>n</em> ranges from 1 to <code class="language-plaintext highlighter-rouge">argcount</code>.</p>
 
-It's equally valid to use an ellipsis as the *entire* parameter list, if
-you want to accept zero or more arguments:
+<p>It’s equally valid to use an ellipsis as the <em>entire</em> parameter list, if
+you want to accept zero or more arguments:</p>
 
-```
-    printStuff(...)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    printStuff(...)
     {
       // code goes here...
     }
-```
+</code></pre></div></div>
 
-Since there are no named arguments, the caller doesn't have to supply
+<p>Since there are no named arguments, the caller doesn’t have to supply
 any arguments at all, and you must access all of the arguments via
-`getArg()`.
+<code class="language-plaintext highlighter-rouge">getArg()</code>.</p>
 
-You can alternatively give the varying part of the parameter list a
+<p>You can alternatively give the varying part of the parameter list a
 name, indicating to the compiler that you want the extra arguments to be
 bundled up into a list and made accessible as a local variable. To do
-this, replace the ellispis (`...`) with a
-parameter name, but enclose the parameter name in square brackets:
+this, replace the ellispis (<code class="language-plaintext highlighter-rouge">...</code>) with a
+parameter name, but enclose the parameter name in square brackets:</p>
 
-```
-    printf(fmt, [lst])
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    printf(fmt, [lst])
     {
        foreach (local x in lst)
          // do something...
     }
-```
+</code></pre></div></div>
 
-This is exactly like the earlier `printf(fmt,
-...)` declaration, but it creates a list from the extra parameters
-and stores it in the local variable `lst`.
+<p>This is exactly like the earlier <code class="language-plaintext highlighter-rouge">printf(fmt,
+...)</code> declaration, but it creates a list from the extra parameters
+and stores it in the local variable <code class="language-plaintext highlighter-rouge">lst</code>.</p>
 
-The "varying list" syntax is essentially equivalent functionally to the
+<p>The “varying list” syntax is essentially equivalent functionally to the
 ellipsis syntax, but many people find it cleaner-looking and easier to
 use, since it lets you operate on the varying arguments using the
-language's standard list features. However, note that it's slightly less
+language’s standard list features. However, note that it’s slightly less
 efficient, because the VM has to go to a little extra trouble to create
 the list for you. For most functions and methods, the cleaner and easier
 coding is well worth the slight performance cost; but for a
-performance-critical function (one that's called very frequently, for
-example), you might get better execution speed with the ellipsis style.
+performance-critical function (one that’s called very frequently, for
+example), you might get better execution speed with the ellipsis style.</p>
 
-### <span id="varargsCall">Varying-argument calls</span>
+<h3 id="varying-argument-calls"><span id="varargsCall">Varying-argument calls</span></h3>
 
-In addition to being able to *receive* varying arguments as a list, you
-can *send* a list value to a function or method, as though the list were
+<p>In addition to being able to <em>receive</em> varying arguments as a list, you
+can <em>send</em> a list value to a function or method, as though the list were
 a series of individual argument values. To do this, place an ellipsis
-after the list argument value in the function or method call's argument
-list:
+after the list argument value in the function or method call’s argument
+list:</p>
 
-```
-    local lst = [1, 2, 3];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local lst = [1, 2, 3];
     formatStr('x[%d, %d] = %d', lst...);
-```
+</code></pre></div></div>
 
-Rather than passing two arguments to
-`formatStr()` (i.e., a string and a four-element
+<p>Rather than passing two arguments to
+<code class="language-plaintext highlighter-rouge">formatStr()</code> (i.e., a string and a four-element
 list), this passes four arguments (a string, the integer 1, the integer
 2, and the integer 3), as though all four had been passed as separate
-arguments - in other words, the call is identical to this:
+arguments - in other words, the call is identical to this:</p>
 
-```
-    formatStr('x[%d, %d] = %d', 1, 2, 3);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    formatStr('x[%d, %d] = %d', 1, 2, 3);
+</code></pre></div></div>
 
-This notation allows you to call a function that takes a variable
+<p>This notation allows you to call a function that takes a variable
 argument list, using a list to provide the varying argument values. This
 makes it possible to layer calls to functions and methods with variable
 argument lists, since an intermediate function can itself take a
 variable argument list and later pass the same arguments to another
-variable argument function.
+variable argument function.</p>
 
-## <span id="externDecl">External declarations</span>
+<h2 id="external-declarations"><span id="externDecl">External declarations</span></h2>
 
-When you build your program, the compiler scans all of the source files
+<p>When you build your program, the compiler scans all of the source files
 in your project for symbol names before it does anything else. This
 means that you can define a function or an object in one source file,
 and freely refer to it from another source file; and similarly, you can
 freely refer to functions and objects that are not defined until later
-in the same source file. The compiler's pre-scan of the entire source
+in the same source file. The compiler’s pre-scan of the entire source
 ensures that it knows how symbols are used throughout the program. This
-eliminates most of the "external" and "forward" declaration overhead
-that many other programming languages force you to use.
+eliminates most of the “external” and “forward” declaration overhead
+that many other programming languages force you to use.</p>
 
-In a few rare cases, though, you might actually need to explicitly
-define external symbols. This happens only when you're compiling part of
-a program in isolation, and won't combine the compiled object files with
+<p>In a few rare cases, though, you might actually need to explicitly
+define external symbols. This happens only when you’re compiling part of
+a program in isolation, and won’t combine the compiled object files with
 the rest of the program until later. The most likely situation where
 this would happen is in creating a library, where you want to distribute
-the library in compiled form rather than as source files.
+the library in compiled form rather than as source files.</p>
 
-To define a function or object as external, you use the
-`extern` statement. This statement can be used
-to define functions, objects, and classes. The syntax is:
+<p>To define a function or object as external, you use the
+<code class="language-plaintext highlighter-rouge">extern</code> statement. This statement can be used
+to define functions, objects, and classes. The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>extern function functionName ( [ param [ , param ... ]  ]  ) ;
+extern object objectName ;
+extern class className ;
+</code></pre></div></div>
 
-    extern function functionName ( [ param [ , param ... ]  ]  ) ;
-    extern object objectName ;
-    extern class className ;
+<p>These statements must be placed in “top level” code, outside of all
+object or function definitions.</p>
 
-</div>
+<h2 id="property-name-declarations"><span id="propdecl">Property name declarations</span></h2>
 
-These statements must be placed in "top level" code, outside of all
-object or function definitions.
-
-## <span id="propdecl">Property name declarations</span>
-
-For the most part, the compiler automatically determines the type of
+<p>For the most part, the compiler automatically determines the type of
 each symbol used throughout the program - object name, function name,
 class name, property name, enum, etc. The compiler recognizes a symbol
 as a property name when the symbol is used to define a property or
-method of an object:
+method of an object:</p>
 
-```
-    class MyClass: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class MyClass: object
        name = 'my class'
        weight = 10
        getOwner() { return owner; }
     ;
-```
+</code></pre></div></div>
 
-The compiler will automatically infer from this code that
-`name`, `weight`, and
-`getOwner()` are property names, since they're
-used to explicitly define properties and methods of MyClass.
+<p>The compiler will automatically infer from this code that
+<code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">weight</code>, and
+<code class="language-plaintext highlighter-rouge">getOwner()</code> are property names, since they’re
+used to explicitly define properties and methods of MyClass.</p>
 
-In some cases, you won't have occasion to define a value for a
+<p>In some cases, you won’t have occasion to define a value for a
 particular property as part of an object definition anywhere in the
 program, but you still want to use the name as a property name. For
 these situations, the compiler lets you explicitly declare a symbol as
-being a property name. The syntax is:
+being a property name. The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>property propName [ , propName ... ]  ;
+</code></pre></div></div>
 
-    property propName [ , propName ... ]  ;
+<p>This statement declares each listed symbol as a property. It must be
+placed in “top level” code, outside of all object or function
+definitions.</p>
 
-</div>
+<p>Here’s an example:</p>
 
-This statement declares each listed symbol as a property. It must be
-placed in "top level" code, outside of all object or function
-definitions.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    property name, weight, getOwner;
+</code></pre></div></div>
 
-Here's an example:
-
-```
-    property name, weight, getOwner;
-```
-
-Note that you can define method names as well as property names. A
+<p>Note that you can define method names as well as property names. A
 method name is identical to a property name in terms of the symbol type,
-so there's no difference in the declaration syntax.
+so there’s no difference in the declaration syntax.</p>
 
-## <span id="statements">Procedural statements</span>
+<h2 id="procedural-statements"><span id="statements">Procedural statements</span></h2>
 
-Within a function or method body, you can write a series of procedural
-steps, called "statements." A procedural statement is a single program
-instruction.
+<p>Within a function or method body, you can write a series of procedural
+steps, called “statements.” A procedural statement is a single program
+instruction.</p>
 
-Every statement starts with a "keyword" that indicates what action
+<p>Every statement starts with a “keyword” that indicates what action
 should be carried out when the statement is executed. Actually, make
-that *almost* every statement; there are a couple of exceptions. An
-"expression" statement simply consists of an expression to evaluate,
-with no introductory keyword. Also, there's such a thing as an "empty"
+that <em>almost</em> every statement; there are a couple of exceptions. An
+“expression” statement simply consists of an expression to evaluate,
+with no introductory keyword. Also, there’s such a thing as an “empty”
 statement, which contains nothing at all except for the final semicolon
 that all statements require. (An empty statement does nothing at all -
 which sounds useless, but it actually is useful in some cases as a
 placeholder, to fill in a spot that syntactically requires a statement
-but for which you have no actual work to do.)
+but for which you have no actual work to do.)</p>
 
-Most statements have some extra information after the keyword, giving
+<p>Most statements have some extra information after the keyword, giving
 the specifics about what to do in the course of carrying out the
-statement.
+statement.</p>
 
-All statements end with a semicolon (`;`).
+<p>All statements end with a semicolon (<code class="language-plaintext highlighter-rouge">;</code>).</p>
 
-The interpreter carries out a function or method by executing its
+<p>The interpreter carries out a function or method by executing its
 statements, one at a time, starting at the first. In the simplest case,
 execution steps sequentially through the statements in the function
-until reaching the last one. Usually, though, it's not quite this
-simple, because some statements "jump" to another point in the function.
-The `if` statement, for example, jumps to one
+until reaching the last one. Usually, though, it’s not quite this
+simple, because some statements “jump” to another point in the function.
+The <code class="language-plaintext highlighter-rouge">if</code> statement, for example, jumps to one
 point if a given condition is true, and a different point if the
-condition is false. The `for` statement sets up
+condition is false. The <code class="language-plaintext highlighter-rouge">for</code> statement sets up
 a loop, where a group of statements is repeatedly executed as long as a
-condition is true.
+condition is true.</p>
 
-### <span id="blocks">Code blocks</span>
+<h3 id="code-blocks"><span id="blocks">Code blocks</span></h3>
 
-A "code block" is a group of statements enclosed in braces
-(`{ }`). Code blocks are important for two
-reasons:
+<p>A “code block” is a group of statements enclosed in braces
+(<code class="language-plaintext highlighter-rouge">{ }</code>). Code blocks are important for two
+reasons:</p>
 
-First, grouping statements with braces turns the group into what's
+<p>First, grouping statements with braces turns the group into what’s
 effectively a single statement. In almost any place where a single
 statement is required, you can substitute a code block for the single
-statement. This is how you write a `for` loop
-with several statements in the loop body, for example.
+statement. This is how you write a <code class="language-plaintext highlighter-rouge">for</code> loop
+with several statements in the loop body, for example.</p>
 
-A group of statements enclosed in braces acts syntactically like a
-complete statement - *including* the obligatory semicolon that ends
+<p>A group of statements enclosed in braces acts syntactically like a
+complete statement - <em>including</em> the obligatory semicolon that ends
 every statement. That means that when you use a brace group in a slot
-designed for a single statement, you **must not** add a semicolon after
-the closing brace. For example:
+designed for a single statement, you <strong>must not</strong> add a semicolon after
+the closing brace. For example:</p>
 
-```
-    // WRONG!!!  The extra semicolon is redundant
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // WRONG!!!  The extra semicolon is redundant
     if (x == 1)
       { someFunc(1); };
 
     // Right
     if (x == 1)
       { someFunc(1); }
-```
+</code></pre></div></div>
 
-Second, code blocks define the "scope" of local variables. A local
+<p>Second, code blocks define the “scope” of local variables. A local
 variable defined within a given code block exists only within that
 block - that is, only as far as the next closing brace, not counting the
-closing braces of nested code blocks.
+closing braces of nested code blocks.</p>
 
-```
-    myFunc(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myFunc(x)
     {
       local a;
 
@@ -839,28 +795,27 @@ closing braces of nested code blocks.
       // its code block
     }
     // now local a is out of scope, too, since we've ended its block
-```
+</code></pre></div></div>
 
-### <span id="labels">Statement labels</span>
+<h3 id="statement-labels"><span id="labels">Statement labels</span></h3>
 
-A statement can be given a "label." This is a symbol that you can use to
+<p>A statement can be given a “label.” This is a symbol that you can use to
 refer to the labeled statement, such as in
-`goto` or `break`
-statements.
+<code class="language-plaintext highlighter-rouge">goto</code> or <code class="language-plaintext highlighter-rouge">break</code>
+statements.</p>
 
-Statement labels have function/method scope. That is, a label is visible
-within the *entire* function or method in which it's defined, but is not
+<p>Statement labels have function/method scope. That is, a label is visible
+within the <em>entire</em> function or method in which it’s defined, but is not
 visible outside the function or method. Even if a label is defined
-within a nested code block, it's still visible throughout the entire
-function.
+within a nested code block, it’s still visible throughout the entire
+function.</p>
 
-You label a statement by writing the label, followed by a colon,
+<p>You label a statement by writing the label, followed by a colon,
 followed by the statement itself. For example, this function contains an
-`if` statement labeled
-"`stm1`":
+<code class="language-plaintext highlighter-rouge">if</code> statement labeled
+“<code class="language-plaintext highlighter-rouge">stm1</code>”:</p>
 
-```
-    myFunc(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myFunc(x)
     {
     stm1:
       if (x &gt; 1)
@@ -869,14 +824,13 @@ followed by the statement itself. For example, this function contains an
         goto stm1;
       }
     }
-```
+</code></pre></div></div>
 
-A statement label **must** be followed by a statement. While this might
-seem obvious, there's a common situation where you might accidentally
-write a label without a statement:
+<p>A statement label <strong>must</strong> be followed by a statement. While this might
+seem obvious, there’s a common situation where you might accidentally
+write a label without a statement:</p>
 
-```
-    myFunc(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myFunc(x)
     {
       if (x == 1)
       {
@@ -891,70 +845,63 @@ write a label without a statement:
       done:  // WRONG!!! there's no statement for this label!
       }
     }
-```
+</code></pre></div></div>
 
-In this example, what we'd like to do is to jump to the end of the
-`if` block if an error has occurred at a certain
+<p>In this example, what we’d like to do is to jump to the end of the
+<code class="language-plaintext highlighter-rouge">if</code> block if an error has occurred at a certain
 point, to bypass the remaining work we were going to do. The problem is
-that we've written our label just before the closing brace of the
-`if` block. A closing brace doesn't constitute a
-statement, so it's illegal to put a label here. Fortunately, this is
+that we’ve written our label just before the closing brace of the
+<code class="language-plaintext highlighter-rouge">if</code> block. A closing brace doesn’t constitute a
+statement, so it’s illegal to put a label here. Fortunately, this is
 easily solved: all we have to do is add an empty statement after the
-label:
+label:</p>
 
-```
-      done: ;  // this is fine, since we have a statement for the label now
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      done: ;  // this is fine, since we have a statement for the label now
+</code></pre></div></div>
 
-### <span id="emptystm">Empty statements</span>
+<h3 id="empty-statements"><span id="emptystm">Empty statements</span></h3>
 
-The "empty statement" consists of merely a semicolon:
+<p>The “empty statement” consists of merely a semicolon:</p>
 
-```
-    ;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ;
+</code></pre></div></div>
 
-When executed, an empty statement has no effect.
+<p>When executed, an empty statement has no effect.</p>
 
-Despite their meaninglessness at run-time, empty statements are useful
+<p>Despite their meaninglessness at run-time, empty statements are useful
 in certain situations. One use is to supply the required statement for a
 label at the end of a code block. Another is to provide an empty loop
-body for a `for` or other looping statement:
+body for a <code class="language-plaintext highlighter-rouge">for</code> or other looping statement:</p>
 
-```
-    for (i = 1 ; i &lt; 10 ; handle(i++)) ;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (i = 1 ; i &lt; 10 ; handle(i++)) ;
+</code></pre></div></div>
 
-In this example, everything the loop needs to do is written within the
-`for` statement itself, so we don't need
+<p>In this example, everything the loop needs to do is written within the
+<code class="language-plaintext highlighter-rouge">for</code> statement itself, so we don’t need
 anything in the loop body. But the syntax of the
-`for` statement requires us to supply
-*something* as the loop body regardless, so we can use an empty
+<code class="language-plaintext highlighter-rouge">for</code> statement requires us to supply
+<em>something</em> as the loop body regardless, so we can use an empty
 statement to fill the syntactic need without adding any run-time
-overhead.
+overhead.</p>
 
-### <span id="local">local</span>
+<h3 id="local"><span id="local">local</span></h3>
 
-The `local` statement defines one or more local
-variables, and optionally assigns initial values to them.
+<p>The <code class="language-plaintext highlighter-rouge">local</code> statement defines one or more local
+variables, and optionally assigns initial values to them.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>local varName [ = expression ]  [ , ... ]  ;
+</code></pre></div></div>
 
-    local varName [ = expression ]  [ , ... ]  ;
+<p>Local variables are in scope from the <code class="language-plaintext highlighter-rouge">local</code>
+statement to the end of the enclosing code block. A local is <strong>not</strong> in
+scope before the <code class="language-plaintext highlighter-rouge">local</code> statement that defines
+it (“before” meaning earlier in the source text), and it goes out of
+scope at the closing brace of its enclosing code block.</p>
 
-</div>
+<p>It’s legal to define a local variable in a nested code block with the
+same name as a variable in the enclosing code block. For example:</p>
 
-Local variables are in scope from the `local`
-statement to the end of the enclosing code block. A local is **not** in
-scope before the `local` statement that defines
-it ("before" meaning earlier in the source text), and it goes out of
-scope at the closing brace of its enclosing code block.
-
-It's legal to define a local variable in a nested code block with the
-same name as a variable in the enclosing code block. For example:
-
-```
-    myFunc(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myFunc(x)
     {
       local a = 7;
 
@@ -965,733 +912,708 @@ same name as a variable in the enclosing code block. For example:
 
       return a;
     }
-```
+</code></pre></div></div>
 
-This function as written always returns 7, because the local variable
-named `a` that's definfed within the
-`if` statement's code block is a different
-variable from the `a` defined within the
-function's main code block. The two `a`'s share
-the same name, but they're nonetheless distinct variables: so assigning
-`x` to the "inner" `a`
-has no effect on the "outer" `a`.
+<p>This function as written always returns 7, because the local variable
+named <code class="language-plaintext highlighter-rouge">a</code> that’s definfed within the
+<code class="language-plaintext highlighter-rouge">if</code> statement’s code block is a different
+variable from the <code class="language-plaintext highlighter-rouge">a</code> defined within the
+function’s main code block. The two <code class="language-plaintext highlighter-rouge">a</code>’s share
+the same name, but they’re nonetheless distinct variables: so assigning
+<code class="language-plaintext highlighter-rouge">x</code> to the “inner” <code class="language-plaintext highlighter-rouge">a</code>
+has no effect on the “outer” <code class="language-plaintext highlighter-rouge">a</code>.</p>
 
-When you define a local variable in a nested block with the same name as
+<p>When you define a local variable in a nested block with the same name as
 a local defined in an enclosing block, the variable in the nested block
-"hides" the one in the enclosing block as long as it's in scope. There's
+“hides” the one in the enclosing block as long as it’s in scope. There’s
 no way to refer to the hidden variable from within the nested block in
-this case.
+this case.</p>
 
-If no initializer is supplied for a variable, the local variable is
+<p>If no initializer is supplied for a variable, the local variable is
 initialized to nil at entry to the function or method containing the
-`local` statement. If an initializer is
+<code class="language-plaintext highlighter-rouge">local</code> statement. If an initializer is
 supplied, the expression is evaluated when the
-`local` statement is executed, and the value is
-assigned to the local variable.
+<code class="language-plaintext highlighter-rouge">local</code> statement is executed, and the value is
+assigned to the local variable.</p>
 
-Each initializer expression applies to one variable only. For example:
+<p>Each initializer expression applies to one variable only. For example:</p>
 
-```
-    local a, b, c = 7;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a, b, c = 7;
+</code></pre></div></div>
 
-This initializes `c` to 7, and leaves
-`a` and `b` with the
-default `nil` value.
+<p>This initializes <code class="language-plaintext highlighter-rouge">c</code> to 7, and leaves
+<code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code> with the
+default <code class="language-plaintext highlighter-rouge">nil</code> value.</p>
 
-`local` statements that include initializers
-count as executable statements. This means that they're executed as
-they're encountered, just like any other statement. This is important to
-keep in mind when writing a loop:
+<p><code class="language-plaintext highlighter-rouge">local</code> statements that include initializers
+count as executable statements. This means that they’re executed as
+they’re encountered, just like any other statement. This is important to
+keep in mind when writing a loop:</p>
 
-```
-    for (i = 0 ; i &lt; 10 ; ++i)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (i = 0 ; i &lt; 10 ; ++i)
     {
       local j = 7;
 
       if (i &lt; j)
         ++j;
     }
-```
+</code></pre></div></div>
 
-The important thing to note here is that `j` is
-re-initialized to 7 *every time through the loop*.
+<p>The important thing to note here is that <code class="language-plaintext highlighter-rouge">j</code> is
+re-initialized to 7 <em>every time through the loop</em>.</p>
 
-If a `local` statement doesn't include an
+<p>If a <code class="language-plaintext highlighter-rouge">local</code> statement doesn’t include an
 initializer for a variable, that variable is initialized to
-`nil` at entry to the function or method, but is
-**not** reset to `nil` each time the
-`local` statement is executed. In fact, a
-`local` statement without an initializer doesn't
+<code class="language-plaintext highlighter-rouge">nil</code> at entry to the function or method, but is
+<strong>not</strong> reset to <code class="language-plaintext highlighter-rouge">nil</code> each time the
+<code class="language-plaintext highlighter-rouge">local</code> statement is executed. In fact, a
+<code class="language-plaintext highlighter-rouge">local</code> statement without an initializer doesn’t
 have any run-time effect, other than to reserve space for the local
-variable when the function or method is entered.
+variable when the function or method is entered.</p>
 
-### <span id="exprstm">Expression statements</span>
+<h3 id="expression-statements"><span id="exprstm">Expression statements</span></h3>
 
-An expression, all by itself, counts as a statement.
+<p>An expression, all by itself, counts as a statement.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>expression ;
+</code></pre></div></div>
 
-    expression ;
-
-</div>
-
-Expression statements are typically the most numerous type of statement
-in a program, because they're the main way to call functions and
+<p>Expression statements are typically the most numerous type of statement
+in a program, because they’re the main way to call functions and
 methods, assign values to variables, invoke intrinsic functions, and so
-on.
+on.</p>
 
-When you write an expression as a statement, it's virtually always to
-invoke the side effects of the expression. It's pointless to write an
-expression statement where the expression has no side effects:
+<p>When you write an expression as a statement, it’s virtually always to
+invoke the side effects of the expression. It’s pointless to write an
+expression statement where the expression has no side effects:</p>
 
-```
-    x + 2;  // a pointless statement!
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x + 2;  // a pointless statement!
+</code></pre></div></div>
 
-That does nothing meaningful: it adds 2 to x, but since the expression
-doesn't do anything with the result, the result is simply discarded.
+<p>That does nothing meaningful: it adds 2 to x, but since the expression
+doesn’t do anything with the result, the result is simply discarded.</p>
 
-So, typically, an expression statement includes something with side
-effects:
+<p>So, typically, an expression statement includes something with side
+effects:</p>
 
-- a function call
-- a method call
-- assigning a value to a variable
-- incrementing or decrementing a variable with
-  `++` or `--`
+<ul>
+  <li>a function call</li>
+  <li>a method call</li>
+  <li>assigning a value to a variable</li>
+  <li>incrementing or decrementing a variable with
+<code class="language-plaintext highlighter-rouge">++</code> or <code class="language-plaintext highlighter-rouge">--</code></li>
+</ul>
 
-Here are some examples:
+<p>Here are some examples:</p>
 
-```
-    myFunc(7);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myFunc(7);
     x = x + 3;
     myObj.weight *= 2;
-```
+</code></pre></div></div>
 
-### <span id="dqstm">Double-quoted string statement</span>
+<h3 id="double-quoted-string-statement"><span id="dqstm">Double-quoted string statement</span></h3>
 
-A double-quoted string, written by itself as a statement, displays the
+<p>A double-quoted string, written by itself as a statement, displays the
 string. (More precisely, it calls the default display function, which
-the default startup sets to `tadsSay()`, with
-the string's text as the argument.) For example:
+the default startup sets to <code class="language-plaintext highlighter-rouge">tadsSay()</code>, with
+the string’s text as the argument.) For example:</p>
 
-```
-    "Hello, world!\n";
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "Hello, world!\n";
+</code></pre></div></div>
 
-In addition to displaying fixed text, double-quoted strings can display
+<p>In addition to displaying fixed text, double-quoted strings can display
 embedded variables and expressions. You embed an expression within a
 double-quoted string by enclosing the expression within
-`\&lt;\&lt; \&gt;\&gt;` marks within the string:
+<code class="language-plaintext highlighter-rouge">\&lt;\&lt; \&gt;\&gt;</code> marks within the string:</p>
 
-```
-    "x = &lt;<x>&gt;, y*5 = &lt;&lt;y*5&gt;&gt;\n";
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "x = &lt;&lt;x&gt;&gt;, y*5 = &lt;&lt;y*5&gt;&gt;\n";
+</code></pre></div></div>
 
-The compiler treats this as though it were a series of statements like
-this:
+<p>The compiler treats this as though it were a series of statements like
+this:</p>
 
-```
-    {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {
       "x = ";
       tadsSay(x);
       ", y*5 = ";
       tadsSay(y*5);
       "\n";
     }
-```
+</code></pre></div></div>
 
-Embedded expressions are evaluated each time they're encountered. The
+<p>Embedded expressions are evaluated each time they’re encountered. The
 expressions within a string are evaluated in the order in which they
 appear in the string. Expression values are displayed according to their
-datatype:
+datatype:</p>
 
-- **string:** the text of the string is displayed
-- **integer:** the decimal representation of the number is displayed
-- **BigNumber:** the number is displayed using the default formatting
-- **nil:** nothing is displayed
-- **all other types:** a run-time error ("invalid type") is generated
+<ul>
+  <li><strong>string:</strong> the text of the string is displayed</li>
+  <li><strong>integer:</strong> the decimal representation of the number is displayed</li>
+  <li><strong>BigNumber:</strong> the number is displayed using the default formatting</li>
+  <li><strong>nil:</strong> nothing is displayed</li>
+  <li><strong>all other types:</strong> a run-time error (“invalid type”) is generated</li>
+</ul>
 
-For more on embedded expressions, see the section on [string
-literals](strlit.html#embeddings).
+<p>For more on embedded expressions, see the section on <a href="strlit.html#embeddings">string
+literals</a>.</p>
 
-### <span id="return">return</span>
+<h3 id="return"><span id="return">return</span></h3>
 
-The `return` statement exits the current
+<p>The <code class="language-plaintext highlighter-rouge">return</code> statement exits the current
 function or method and resumes execution in the caller. Optionally, the
 statement can specify an expression to evaluate as the return value of
-the function or method.
+the function or method.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return [ expression ]  ;
+</code></pre></div></div>
 
-    return [ expression ]  ;
-
-</div>
-
-If an expression is specified, it's evaluated when the
-`return` statement is executed, and the result
+<p>If an expression is specified, it’s evaluated when the
+<code class="language-plaintext highlighter-rouge">return</code> statement is executed, and the result
 is returned to the caller as the result value of the current function or
 method. If no expression is specified, the default return value of
-`nil` is used.
+<code class="language-plaintext highlighter-rouge">nil</code> is used.</p>
 
-When a `return` statement is executed, the VM
-first executes the `finally` clause of each
-enclosing `try` statement, working from the
+<p>When a <code class="language-plaintext highlighter-rouge">return</code> statement is executed, the VM
+first executes the <code class="language-plaintext highlighter-rouge">finally</code> clause of each
+enclosing <code class="language-plaintext highlighter-rouge">try</code> statement, working from the
 innermost outward. It then exits the function and resumes execution in
-the caller.
+the caller.</p>
 
-### <span id="if">if</span>
+<h3 id="if"><span id="if">if</span></h3>
 
-The `if` statement executes a statement if a
+<p>The <code class="language-plaintext highlighter-rouge">if</code> statement executes a statement if a
 given condition is true, and can optionally execute a different
-statement if the given condition is false.
+statement if the given condition is false.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( conditionExpression )
+  thenPart
+[ else
+  elsePart ] 
+</code></pre></div></div>
 
-    if ( conditionExpression )
-      thenPart
-    [ else
-      elsePart ] 
-
-</div>
-
-Each of <span class="synPar">thenPart</span> and
+<p>Each of <span class="synPar">thenPart</span> and
 <span class="synPar">elsePart</span> are single statements, or code
-blocks enclosed in braces.
+blocks enclosed in braces.</p>
 
-The `if` statement first evaluates the condition
-expression. Then:
+<p>The <code class="language-plaintext highlighter-rouge">if</code> statement first evaluates the condition
+expression. Then:</p>
 
-- If the result is anything except 0 or `nil`,
-  the <span class="synPar">truePart</span> is executed, then execution
-  jumps to the next statement after the entire
-  `if`.
-- Otherwise:
-  - If an `else` clause is specified, the
-    <span class="synPar">elsePart</span> is executed, then execution
-    resumes at the next statement.
-  - If there's no `else` clause, execution jumps
-    directly to the next statement.
+<ul>
+  <li>If the result is anything except 0 or <code class="language-plaintext highlighter-rouge">nil</code>,
+the <span class="synPar">truePart</span> is executed, then execution
+jumps to the next statement after the entire
+<code class="language-plaintext highlighter-rouge">if</code>.</li>
+  <li>Otherwise:
+    <ul>
+      <li>If an <code class="language-plaintext highlighter-rouge">else</code> clause is specified, the
+<span class="synPar">elsePart</span> is executed, then execution
+resumes at the next statement.</li>
+      <li>If there’s no <code class="language-plaintext highlighter-rouge">else</code> clause, execution jumps
+directly to the next statement.</li>
+    </ul>
+  </li>
+</ul>
 
-Since TADS uses a C-like syntax, it inherits a sometimes
+<p>Since TADS uses a C-like syntax, it inherits a sometimes
 counterintuitive quirk of C that affects nested
-`if` statements. Consider the following:
+<code class="language-plaintext highlighter-rouge">if</code> statements. Consider the following:</p>
 
-```
-    if (a == 1)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if (a == 1)
       if (b == 2)
         doSomething(a, b);
     else
       somethingElse(a, b);
-```
+</code></pre></div></div>
 
-Based on the indentation, the person who wrote this code seemed to be
-thinking that the `somethingElse()` line would
-be reached if `a != 1`. But that isn't the case:
-look more closely and you'll see that the `else`
-actually attaches to the *second* `if`. An
-`else` always goes with the nearest possible
-preceding `if`. So this code will simply do
-nothing if `a != 1`.
+<p>Based on the indentation, the person who wrote this code seemed to be
+thinking that the <code class="language-plaintext highlighter-rouge">somethingElse()</code> line would
+be reached if <code class="language-plaintext highlighter-rouge">a != 1</code>. But that isn’t the case:
+look more closely and you’ll see that the <code class="language-plaintext highlighter-rouge">else</code>
+actually attaches to the <em>second</em> <code class="language-plaintext highlighter-rouge">if</code>. An
+<code class="language-plaintext highlighter-rouge">else</code> always goes with the nearest possible
+preceding <code class="language-plaintext highlighter-rouge">if</code>. So this code will simply do
+nothing if <code class="language-plaintext highlighter-rouge">a != 1</code>.</p>
 
-To fix this, we have to add some braces to make the grouping explicit:
+<p>To fix this, we have to add some braces to make the grouping explicit:</p>
 
-```
-    if (a == 1)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if (a == 1)
     {
       if (b == 2)
         doSomething(a, b);
     }
     else
       somethingElse(a, b);
-```
+</code></pre></div></div>
 
-This makes it impossible for the `else` to
-attach to the second `if`, because the
-`if` is tucked away inside the nested code block
-and therefore out of consideration back in the main code block.
+<p>This makes it impossible for the <code class="language-plaintext highlighter-rouge">else</code> to
+attach to the second <code class="language-plaintext highlighter-rouge">if</code>, because the
+<code class="language-plaintext highlighter-rouge">if</code> is tucked away inside the nested code block
+and therefore out of consideration back in the main code block.</p>
 
-### <span id="for">for</span>
+<h3 id="for"><span id="for">for</span></h3>
 
-The `for` statement is a flexible and powerful
-looping construct that lets you construct almost any kind of loop.
+<p>The <code class="language-plaintext highlighter-rouge">for</code> statement is a flexible and powerful
+looping construct that lets you construct almost any kind of loop.</p>
 
-TADS has three different kinds of `for` loops:
-the standard C `for` loop, which is very similar
-to its counterpart in C++; the `for..in` loop,
-which works exactly like [`foreach`](#foreach);
-and the "range" loop, which makes it easy to write a loop over a range
-of integer values.
+<p>TADS has three different kinds of <code class="language-plaintext highlighter-rouge">for</code> loops:
+the standard C <code class="language-plaintext highlighter-rouge">for</code> loop, which is very similar
+to its counterpart in C++; the <code class="language-plaintext highlighter-rouge">for..in</code> loop,
+which works exactly like <a href="#foreach"><code class="language-plaintext highlighter-rouge">foreach</code></a>;
+and the “range” loop, which makes it easy to write a loop over a range
+of integer values.</p>
 
-#### <span id="cfor">C-style `for` loops</span>
+<h4 id="c-style-for-loops"><span id="cfor">C-style <code class="language-plaintext highlighter-rouge">for</code> loops</span></h4>
 
-The basic `for` loop in TADS is almost identical
-to the {\[for}} loop in C, C++, Javascript, and most other C-like
-languages. It has this basic syntax:
+<p>The basic <code class="language-plaintext highlighter-rouge">for</code> loop in TADS is almost identical
+to the {[for}} loop in C, C++, Javascript, and most other C-like
+languages. It has this basic syntax:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for ( [ initializer ]  ; [ condition ]  ; [ updater ]  )
+  loopBody
+</code></pre></div></div>
 
-    for ( [ initializer ]  ; [ condition ]  ; [ updater ]  )
-      loopBody
+<p>The <span class="synPar">initializer</span> is either an ordinary
+expression, or a list of local variable declarations, or a mix of both:</p>
 
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( expression | local varName = expression )  [ , ... ] 
+</code></pre></div></div>
 
-The <span class="synPar">initializer</span> is either an ordinary
-expression, or a list of local variable declarations, or a mix of both:
+<p>Note the difference from ordinary <code class="language-plaintext highlighter-rouge">local</code>
+statements: the initializer expression is <em>required</em> for a local
+variable defined here.</p>
 
-<div class="syntax">
-
-    ( expression | local varName = expression )  [ , ... ] 
-
-</div>
-
-Note the difference from ordinary `local`
-statements: the initializer expression is *required* for a local
-variable defined here.
-
-Local variables defined in a `for` statement are
-only in scope within the `for` loop. They're in
+<p>Local variables defined in a <code class="language-plaintext highlighter-rouge">for</code> statement are
+only in scope within the <code class="language-plaintext highlighter-rouge">for</code> loop. They’re in
 scope within all of the expressions that are part of the
-`for` statement itself (the initializer,
-condition, and updater expressions), and they're in scope within the
-body of the loop. The `for` statement has its
+<code class="language-plaintext highlighter-rouge">for</code> statement itself (the initializer,
+condition, and updater expressions), and they’re in scope within the
+body of the loop. The <code class="language-plaintext highlighter-rouge">for</code> statement has its
 own new nested scope that starts just before the
-`for` and ends at the end of its loop body; the
-locals exist within this nested scope.
+<code class="language-plaintext highlighter-rouge">for</code> and ends at the end of its loop body; the
+locals exist within this nested scope.</p>
 
-In practice, the expressions within the
+<p>In practice, the expressions within the
 <span class="synPar">initializer</span> section are almost always
 assignment expressions. The point is to initialize the variables used
-within the loop to their starting values for the loop.
+within the loop to their starting values for the loop.</p>
 
-The <span class="synPar">condition</span> and
+<p>The <span class="synPar">condition</span> and
 <span class="synPar">updater</span> are ordinary expressions, and the
 <span class="synPar">loopBody</span> is a single statement, or a block
-of statements enclosed in braces.
+of statements enclosed in braces.</p>
 
-The C-style `for` statement executes as follows:
+<p>The C-style <code class="language-plaintext highlighter-rouge">for</code> statement executes as follows:</p>
 
-- 1\. Evaluate each element of the
-  <span class="synPar">initializer</span> list, starting from the left.
-- 2\. If there's a <span class="synPar">condition</span>, evaluate it.
-  If result is 0 or `nil`, we're done with the
-  `for`, so jump to the next statement after the
-  loop body. Otherwise, proceed to step 3. If there's no
-  <span class="synPar">condition</span>, proceed to step 3.
-- 3\. Execute <span class="synPar">loopBody</span> once.
-- 4\. Evaluate <span class="synPar">updater</span>, if specified.
-- 5\. Go to step 2.
+<ul>
+  <li>1. Evaluate each element of the
+<span class="synPar">initializer</span> list, starting from the left.</li>
+  <li>2. If there’s a <span class="synPar">condition</span>, evaluate it.
+If result is 0 or <code class="language-plaintext highlighter-rouge">nil</code>, we’re done with the
+<code class="language-plaintext highlighter-rouge">for</code>, so jump to the next statement after the
+loop body. Otherwise, proceed to step 3. If there’s no
+<span class="synPar">condition</span>, proceed to step 3.</li>
+  <li>3. Execute <span class="synPar">loopBody</span> once.</li>
+  <li>4. Evaluate <span class="synPar">updater</span>, if specified.</li>
+  <li>5. Go to step 2.</li>
+</ul>
 
-An important feature of this procedure is that the
-<span class="synPar">condition</span> expression is evaluated *before
-the first iteration*. That means that if the condition is false (i.e., 0
-or `nil`) before the first iteration, the loop
-body is never executed. Therefore, it's possible for a
-`for` loop to iterate zero times.
+<p>An important feature of this procedure is that the
+<span class="synPar">condition</span> expression is evaluated <em>before
+the first iteration</em>. That means that if the condition is false (i.e., 0
+or <code class="language-plaintext highlighter-rouge">nil</code>) before the first iteration, the loop
+body is never executed. Therefore, it’s possible for a
+<code class="language-plaintext highlighter-rouge">for</code> loop to iterate zero times.</p>
 
-Another feature to note is that the <span class="synPar">updater</span>
-expression is evaluated *after each iteration*, before the
-<span class="synPar">condition</span> is re-tested.
+<p>Another feature to note is that the <span class="synPar">updater</span>
+expression is evaluated <em>after each iteration</em>, before the
+<span class="synPar">condition</span> is re-tested.</p>
 
-C-style `for` statements are extremely flexible.
-The statement doesn't do anything implicitly - it doesn't increment any
+<p>C-style <code class="language-plaintext highlighter-rouge">for</code> statements are extremely flexible.
+The statement doesn’t do anything implicitly - it doesn’t increment any
 variables automatically, or anything else. This is a departure from many
 programming languages, where similar looping constructs implicitly
 increment a variable on each iteration. With the
-`for` statement, you have to explicitly say what
-you want to do on each iteration. Although that's a little more work,
+<code class="language-plaintext highlighter-rouge">for</code> statement, you have to explicitly say what
+you want to do on each iteration. Although that’s a little more work,
 the benefit is that you can do exactly what you want, no matter how
-unusual: if you want to increment a variable by the *n*th Fibonacci
-number each time through, you can easily do that.
+unusual: if you want to increment a variable by the <em>n</em>th Fibonacci
+number each time through, you can easily do that.</p>
 
-Note that each of the expression parts - the
+<p>Note that each of the expression parts - the
 <span class="synPar">initializer</span>, the
 <span class="synPar">condition</span>, and the
 <span class="synPar">updater</span> - are allowed to be completely
-empty. You still have to write all of the semicolons, but it's legal to
-write *only* the semicolons. This is a valid loop:
+empty. You still have to write all of the semicolons, but it’s legal to
+write <em>only</em> the semicolons. This is a valid loop:</p>
 
-```
-    for (;;)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (;;)
     {
       // do some work...
     }
-```
+</code></pre></div></div>
 
-Because there's no <span class="synPar">condition</span> expression,
-this statement will loop forever, unless there's a statement within the
+<p>Because there’s no <span class="synPar">condition</span> expression,
+this statement will loop forever, unless there’s a statement within the
 loop that exits the loop or the entire function (such as
-`break`, `goto`,
-`return`, or `throw`).
+<code class="language-plaintext highlighter-rouge">break</code>, <code class="language-plaintext highlighter-rouge">goto</code>,
+<code class="language-plaintext highlighter-rouge">return</code>, or <code class="language-plaintext highlighter-rouge">throw</code>).</p>
 
-Here's a more typical example of a `for` loop.
+<p>Here’s a more typical example of a <code class="language-plaintext highlighter-rouge">for</code> loop.</p>
 
-```
-    for (local i = 1 ; i &lt;= lst.length() ; ++i)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 1 ; i &lt;= lst.length() ; ++i)
     {
-      "lst[&lt;<i>&gt;] = &lt;&lt;lst[i]&gt;&gt;\n";
+      "lst[&lt;&lt;i&gt;&gt;] = &lt;&lt;lst[i]&gt;&gt;\n";
     }
-```
+</code></pre></div></div>
 
-This loop goes through a list, displaying each element. It uses the
-counter variable `i` (defined as local to the
-loop): it starts by setting `i` to 1, and
-continues looping as long as `i` is less than or
+<p>This loop goes through a list, displaying each element. It uses the
+counter variable <code class="language-plaintext highlighter-rouge">i</code> (defined as local to the
+loop): it starts by setting <code class="language-plaintext highlighter-rouge">i</code> to 1, and
+continues looping as long as <code class="language-plaintext highlighter-rouge">i</code> is less than or
 equal to the length of the list; each time through the loop, it
-increments `i`, to move to the next list
-element.
+increments <code class="language-plaintext highlighter-rouge">i</code>, to move to the next list
+element.</p>
 
-You could speed up this example a little bit by saving the length of the
+<p>You could speed up this example a little bit by saving the length of the
 list in another loop local variable. This takes advantage of the ability
-to use more than one `local` clause in a
-`for` initializer.
+to use more than one <code class="language-plaintext highlighter-rouge">local</code> clause in a
+<code class="language-plaintext highlighter-rouge">for</code> initializer.</p>
 
-```
-    for (local i = 1, local len = lst.length() ; i &lt;= len ; ++i) ...
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 1, local len = lst.length() ; i &lt;= len ; ++i) ...
+</code></pre></div></div>
 
-That works the same as our original example, but runs a little faster,
-because it doesn't have to call `lst.length()`
-every time through the loop.
+<p>That works the same as our original example, but runs a little faster,
+because it doesn’t have to call <code class="language-plaintext highlighter-rouge">lst.length()</code>
+every time through the loop.</p>
 
-#### <span id="forIn">for..in</span>
+<h4 id="forin"><span id="forIn">for..in</span></h4>
 
-The `for` statement can alternatively iterate
+<p>The <code class="language-plaintext highlighter-rouge">for</code> statement can alternatively iterate
 over the elements of a collection. The syntax for this is exactly the
-same as for the [`foreach`](#foreach) statement,
-other than using `for` in place of
-`foreach`:
+same as for the <a href="#foreach"><code class="language-plaintext highlighter-rouge">foreach</code></a> statement,
+other than using <code class="language-plaintext highlighter-rouge">for</code> in place of
+<code class="language-plaintext highlighter-rouge">foreach</code>:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for ( [ local ]  loopVar in expression )
+   loopBody
+</code></pre></div></div>
 
-    for ( [ local ]  loopVar in expression )
-       loopBody
-
-</div>
-
-For..in loops are new in TADS 3.1; in older versions, only the
-`foreach` statement accepted this syntax. The
-`for` syntax was added for two reasons. First,
-it simplifies the language's syntax: you don't have to remember to use a
+<p>For..in loops are new in TADS 3.1; in older versions, only the
+<code class="language-plaintext highlighter-rouge">foreach</code> statement accepted this syntax. The
+<code class="language-plaintext highlighter-rouge">for</code> syntax was added for two reasons. First,
+it simplifies the language’s syntax: you don’t have to remember to use a
 different statement keyword for collection loops. Second, it lets you
-[combine](#combinedFor) the collection syntax with the standard C-style
-`for` syntax, so that you can add other
-variables (counters, sums, etc.) to a collection loop.
+<a href="#combinedFor">combine</a> the collection syntax with the standard C-style
+<code class="language-plaintext highlighter-rouge">for</code> syntax, so that you can add other
+variables (counters, sums, etc.) to a collection loop.</p>
 
-#### <span id="forInRange">for..in range</span>
+<h4 id="forin-range"><span id="forInRange">for..in range</span></h4>
 
-The third type of `for` loop iterates over a
+<p>The third type of <code class="language-plaintext highlighter-rouge">for</code> loop iterates over a
 range of integers. This is by far the most common type of
-`for` loop, so TADS provides this special syntax
-to make the meaning a little clearer.
+<code class="language-plaintext highlighter-rouge">for</code> loop, so TADS provides this special syntax
+to make the meaning a little clearer.</p>
 
-The syntax for an integer range loop is:
+<p>The syntax for an integer range loop is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for ( [ local ]  loopVar in fromExpr .. toExpr [ step stepExpr ]  )
+   loopBody
+</code></pre></div></div>
 
-    for ( [ local ]  loopVar in fromExpr .. toExpr [ step stepExpr ]  )
-       loopBody
-
-</div>
-
-As with other `for` loops, the
-`local` keyword lets you define a new local
-variable for the loop's control variable, with its scope limited to the
-loop. If you don't use `local`, the loop
+<p>As with other <code class="language-plaintext highlighter-rouge">for</code> loops, the
+<code class="language-plaintext highlighter-rouge">local</code> keyword lets you define a new local
+variable for the loop’s control variable, with its scope limited to the
+loop. If you don’t use <code class="language-plaintext highlighter-rouge">local</code>, the loop
 variable can be any local variable defined before the
-`for`.
+<code class="language-plaintext highlighter-rouge">for</code>.</p>
 
-*fromExpr*, *toExpr*, and the optional *stepExpr* are expressions that
-evaluate to integer values. If there's no `step`
-clause, the default step value is 1.
+<p><em>fromExpr</em>, <em>toExpr</em>, and the optional <em>stepExpr</em> are expressions that
+evaluate to integer values. If there’s no <code class="language-plaintext highlighter-rouge">step</code>
+clause, the default step value is 1.</p>
 
-The integer range loop is executed as follows:
+<p>The integer range loop is executed as follows:</p>
 
-- 1\. *fromExpr* is evaluated, and the result is assigned to *loopVar*.
-- 2\. *toExpr* and (if it's present) *stepExpr* are evaluated, in that
-  order, and the results are stored in temporary memory locations.
-- 3\. *loopVar* is compared to the value of *toExpr* calculated in
-  step 2. If the saved *stepExpr* is positive, we exit the loop if
-  *loopVar* is the result is "greater than". If *stepExpr* was negative,
-  we exit if the result is "less than". Otherwise we continue to step 4.
-- 4\. Execute the loop body one time.
-- 5\. Add the *stepExpr* value calculated in step 2 to *loopVar*.
-- 6\. Go to step 3.
+<ul>
+  <li>1. <em>fromExpr</em> is evaluated, and the result is assigned to <em>loopVar</em>.</li>
+  <li>2. <em>toExpr</em> and (if it’s present) <em>stepExpr</em> are evaluated, in that
+order, and the results are stored in temporary memory locations.</li>
+  <li>3. <em>loopVar</em> is compared to the value of <em>toExpr</em> calculated in
+step 2. If the saved <em>stepExpr</em> is positive, we exit the loop if
+<em>loopVar</em> is the result is “greater than”. If <em>stepExpr</em> was negative,
+we exit if the result is “less than”. Otherwise we continue to step 4.</li>
+  <li>4. Execute the loop body one time.</li>
+  <li>5. Add the <em>stepExpr</em> value calculated in step 2 to <em>loopVar</em>.</li>
+  <li>6. Go to step 3.</li>
+</ul>
 
-In step 3, note how the loop exits if the loop's control variable goes
-*beyond* the *toExpr* limit, where the direction of "beyond" depends on
+<p>In step 3, note how the loop exits if the loop’s control variable goes
+<em>beyond</em> the <em>toExpr</em> limit, where the direction of “beyond” depends on
 whether the step increment is positive or negative. If the step is
-positive, we're looping from a lower value to a higher value, so we stop
-when the loop variable is greater than the "to" limit. Likewise, if the
-step is negative, we're going from a higher value to a lower value, so
-we stop when the loop variable is less than the "to" limit.
+positive, we’re looping from a lower value to a higher value, so we stop
+when the loop variable is greater than the “to” limit. Likewise, if the
+step is negative, we’re going from a higher value to a lower value, so
+we stop when the loop variable is less than the “to” limit.</p>
 
-Take special note of how *toExpr* and *stepExpr* are used in the loop.
-They're only evaluated *once*, at the start of the loop (in step 2).
+<p>Take special note of how <em>toExpr</em> and <em>stepExpr</em> are used in the loop.
+They’re only evaluated <em>once</em>, at the start of the loop (in step 2).
 This is important, because it means that if any of these values change
-during the loop, it doesn't affect the loop boundaries. The original
-values at the start of the loop determine the loop's limits. Consider
-this example:
+during the loop, it doesn’t affect the loop boundaries. The original
+values at the start of the loop determine the loop’s limits. Consider
+this example:</p>
 
-```
-    local lst = ['a', 'b', 'c'];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local lst = ['a', 'b', 'c'];
     for (local i in 1..lst.length())
        lst += lst[i];
-```
+</code></pre></div></div>
 
-Each time through this loop, we append a new element to the end of the
-list. This means that `lst.length()` increases
+<p>Each time through this loop, we append a new element to the end of the
+list. This means that <code class="language-plaintext highlighter-rouge">lst.length()</code> increases
 by 1 on each iteration. If we re-evaluated
-`lst.length()` each time through, this loop
-would never end - both `i` and
-`lst.length()` are incremented by 1 each time
-through, so `i` would never catch up with
-`lst.length()`. But we *don't* re-evaluate
-`lst.length()` each time through; instead, the
+<code class="language-plaintext highlighter-rouge">lst.length()</code> each time through, this loop
+would never end - both <code class="language-plaintext highlighter-rouge">i</code> and
+<code class="language-plaintext highlighter-rouge">lst.length()</code> are incremented by 1 each time
+through, so <code class="language-plaintext highlighter-rouge">i</code> would never catch up with
+<code class="language-plaintext highlighter-rouge">lst.length()</code>. But we <em>don’t</em> re-evaluate
+<code class="language-plaintext highlighter-rouge">lst.length()</code> each time through; instead, the
 original value is calculated at the start of the loop, and that value is
 used to determine when the loop ends, no matter what happens once we
 start going through the loop. So the loop in this example runs only
-three times, then exits.
+three times, then exits.</p>
 
-The single evaluation of *toExpr* and *stepExpr* is also good for
-efficiency. With traditional C-style loops, it's common to write
-something like this:
+<p>The single evaluation of <em>toExpr</em> and <em>stepExpr</em> is also good for
+efficiency. With traditional C-style loops, it’s common to write
+something like this:</p>
 
-```
-    for (local i = 1, local len = lst.length() ; i &lt;= len ; ++i) ...
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 1, local len = lst.length() ; i &lt;= len ; ++i) ...
+</code></pre></div></div>
 
-The point of creating the extra local `len` is
+<p>The point of creating the extra local <code class="language-plaintext highlighter-rouge">len</code> is
 to speed up the code a little by avoiding a call to
-`lst.length()` every time through the loop. The
-`for..in` syntax is equally efficient, because
+<code class="language-plaintext highlighter-rouge">lst.length()</code> every time through the loop. The
+<code class="language-plaintext highlighter-rouge">for..in</code> syntax is equally efficient, because
 it does the same thing. It just saves you the trouble of coding the
-extra step by hand, and makes the code easier to read.
+extra step by hand, and makes the code easier to read.</p>
 
-#### <span id="combinedFor">Combining `for`, `for..in`, and `for..in range`</span>
+<h4 id="combining-for-forin-and-forin-range"><span id="combinedFor">Combining <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">for..in</code>, and <code class="language-plaintext highlighter-rouge">for..in range</code></span></h4>
 
-So far, we've presented the `for` statement as
+<p>So far, we’ve presented the <code class="language-plaintext highlighter-rouge">for</code> statement as
 though it had three separate syntax options: the standard C-style
-`for`, the collection loop with
-`for (x in y)`, and the integer range loop with
-`for (i in a..b)`. These aren't actually
-separate statement types, though - they're simply special cases of the
-standard `for`, which encompasses all three loop
+<code class="language-plaintext highlighter-rouge">for</code>, the collection loop with
+<code class="language-plaintext highlighter-rouge">for (x in y)</code>, and the integer range loop with
+<code class="language-plaintext highlighter-rouge">for (i in a..b)</code>. These aren’t actually
+separate statement types, though - they’re simply special cases of the
+standard <code class="language-plaintext highlighter-rouge">for</code>, which encompasses all three loop
 styles. The really interesting thing is that you can combine all three
-types in a single loop. For example:
+types in a single loop. For example:</p>
 
-```
-    for (local i = 1, local ele in lst ; ; ++i)
-       "lst[&lt;<i>&gt;] = &lt;&lt;lst[i]&gt;&gt;\n";
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 1, local ele in lst ; ; ++i)
+       "lst[&lt;&lt;i&gt;&gt;] = &lt;&lt;lst[i]&gt;&gt;\n";
+</code></pre></div></div>
 
-That kind of loop is cumbersome to write with
-`foreach`, since there's no way to include an
+<p>That kind of loop is cumbersome to write with
+<code class="language-plaintext highlighter-rouge">foreach</code>, since there’s no way to include an
 extra counter variable with the collection loop.
-`for`'s ability to combine the loop styles makes
-for shorter code that's often clearer, since the extra variables
+<code class="language-plaintext highlighter-rouge">for</code>’s ability to combine the loop styles makes
+for shorter code that’s often clearer, since the extra variables
 involved in the loop can be coded right into the
-`for` structure.
+<code class="language-plaintext highlighter-rouge">for</code> structure.</p>
 
-The key to combining the three types of `for`
-loops is that `x in y` and `i
-in a..b` are really just syntax options for the "initializer"
-clause of the C-style `for` statement. You can
+<p>The key to combining the three types of <code class="language-plaintext highlighter-rouge">for</code>
+loops is that <code class="language-plaintext highlighter-rouge">x in y</code> and <code class="language-plaintext highlighter-rouge">i
+in a..b</code> are really just syntax options for the “initializer”
+clause of the C-style <code class="language-plaintext highlighter-rouge">for</code> statement. You can
 freely mix these with one another and with ordinary initializer
-expressions.
+expressions.</p>
 
-When you use `x in y` or `i in
-a..b` in an initializer, the condition and updater clauses of the
-`for` become optional. You can omit them
+<p>When you use <code class="language-plaintext highlighter-rouge">x in y</code> or <code class="language-plaintext highlighter-rouge">i in
+a..b</code> in an initializer, the condition and updater clauses of the
+<code class="language-plaintext highlighter-rouge">for</code> become optional. You can omit them
 entirely, including the semicolons that separate the three clauses. The
-`for (x in y)` and `for (i in
-a..b)` statements we saw earlier, then, are nothing special:
-they're just the simplest `for` statements with
+<code class="language-plaintext highlighter-rouge">for (x in y)</code> and <code class="language-plaintext highlighter-rouge">for (i in
+a..b)</code> statements we saw earlier, then, are nothing special:
+they’re just the simplest <code class="language-plaintext highlighter-rouge">for</code> statements with
 the respective initializer types. The reason that the condition and
-updater clauses are optional when using an "in" clause is that an "in"
+updater clauses are optional when using an “in” clause is that an “in”
 clause supplies its own implicit condition and updater - so if you have
 nothing else to add to those parts, the compiler lets you leave them out
-entirely, to keep the code uncluttered.
+entirely, to keep the code uncluttered.</p>
 
-Here's the full sequence of events when processing a hybrid loop that
+<p>Here’s the full sequence of events when processing a hybrid loop that
 contains regular initializers, conditions, and updaters, as well as
-`in` clauses:
+<code class="language-plaintext highlighter-rouge">in</code> clauses:</p>
 
-- 1\. For each initializer, in order of appearance:
-  - If it's an ordinary expression, evaluate it.
-  - If it's an `x in y` clause, evaluate the
-    *collection* expression, then call the
-    `createIterator()` method on the result.
-    Store the method result in a temporary memory location ("the
-    iterator").
-  - If it's an `i in a..b` clause, evaluate the
-    *fromExpr*, and assign the result to the control variable. Then,
-    evaluate *toExpr* and (if present) *stepExpr*, and store the results
-    in temporary memory locations.
-- 2\. For each `in` clause among the
-  initializers, in order of appearance:
-  - For an `x in y` clause, call the
-    `isNextAvailable()` method on the iterator.
-    If it returns `nil`, exit the loop.
-    Otherwise call the iterator's `getNext()`
-    method and store the result in the clause's *loopVar*.
-  - For an `i in a..b` clause, compare the
-    clause's *loopVar* to the saved value of *toExpr* from step 1. If
-    it's "beyond" the *toExpr* value (greater than *toExpr* if the step
-    value is positive, less than *toExpr* if the step value is
-    negative), exit the loop.
-- 3\. If there's a *condition* expression, evaluate it. If the result is
-  `0` or `nil`, exit the
-  loop.
-- 4\. Execute the loop body once.
-- 5\. If there's an *updater* expression, evaluate it.
-- 6\. For each `i in a..b` clause (in the order
-  of the initializers), add the saved value of *stepExpr* from step 1 to
-  *loopVar*.
-- 7\. Go to step 2.
+<ul>
+  <li>1. For each initializer, in order of appearance:
+    <ul>
+      <li>If it’s an ordinary expression, evaluate it.</li>
+      <li>If it’s an <code class="language-plaintext highlighter-rouge">x in y</code> clause, evaluate the
+<em>collection</em> expression, then call the
+<code class="language-plaintext highlighter-rouge">createIterator()</code> method on the result.
+Store the method result in a temporary memory location (“the
+iterator”).</li>
+      <li>If it’s an <code class="language-plaintext highlighter-rouge">i in a..b</code> clause, evaluate the
+<em>fromExpr</em>, and assign the result to the control variable. Then,
+evaluate <em>toExpr</em> and (if present) <em>stepExpr</em>, and store the results
+in temporary memory locations.</li>
+    </ul>
+  </li>
+  <li>2. For each <code class="language-plaintext highlighter-rouge">in</code> clause among the
+initializers, in order of appearance:
+    <ul>
+      <li>For an <code class="language-plaintext highlighter-rouge">x in y</code> clause, call the
+<code class="language-plaintext highlighter-rouge">isNextAvailable()</code> method on the iterator.
+If it returns <code class="language-plaintext highlighter-rouge">nil</code>, exit the loop.
+Otherwise call the iterator’s <code class="language-plaintext highlighter-rouge">getNext()</code>
+method and store the result in the clause’s <em>loopVar</em>.</li>
+      <li>For an <code class="language-plaintext highlighter-rouge">i in a..b</code> clause, compare the
+clause’s <em>loopVar</em> to the saved value of <em>toExpr</em> from step 1. If
+it’s “beyond” the <em>toExpr</em> value (greater than <em>toExpr</em> if the step
+value is positive, less than <em>toExpr</em> if the step value is
+negative), exit the loop.</li>
+    </ul>
+  </li>
+  <li>3. If there’s a <em>condition</em> expression, evaluate it. If the result is
+<code class="language-plaintext highlighter-rouge">0</code> or <code class="language-plaintext highlighter-rouge">nil</code>, exit the
+loop.</li>
+  <li>4. Execute the loop body once.</li>
+  <li>5. If there’s an <em>updater</em> expression, evaluate it.</li>
+  <li>6. For each <code class="language-plaintext highlighter-rouge">i in a..b</code> clause (in the order
+of the initializers), add the saved value of <em>stepExpr</em> from step 1 to
+<em>loopVar</em>.</li>
+  <li>7. Go to step 2.</li>
+</ul>
 
-In a nutshell, this works just like the standard C
-`for` loop, except for two additions. First,
-**before** the explicit *condition* expression is tested,
-`x in y` and `i in a..b`
+<p>In a nutshell, this works just like the standard C
+<code class="language-plaintext highlighter-rouge">for</code> loop, except for two additions. First,
+<strong>before</strong> the explicit <em>condition</em> expression is tested,
+<code class="language-plaintext highlighter-rouge">x in y</code> and <code class="language-plaintext highlighter-rouge">i in a..b</code>
 clauses are tested, and the loop terminates if any of them are finished.
-Second, **after** the explicit *updater* expression is executed,
-`i in a..b` loop control variables are
-incremented by their step values. The explicit *updater* is executed
+Second, <strong>after</strong> the explicit <em>updater</em> expression is executed,
+<code class="language-plaintext highlighter-rouge">i in a..b</code> loop control variables are
+incremented by their step values. The explicit <em>updater</em> is executed
 first so that it can refer to the current values of the
-`in` control variables, from the loop iteration
-that just finished, if desired.
+<code class="language-plaintext highlighter-rouge">in</code> control variables, from the loop iteration
+that just finished, if desired.</p>
 
-### <span id="foreach">foreach</span>
+<h3 id="foreach"><span id="foreach">foreach</span></h3>
 
-The `foreach` statement iterates over a
-Collection object's contents. It executes a statement (or group of
-statements) once for each element of a Collection.
+<p>The <code class="language-plaintext highlighter-rouge">foreach</code> statement iterates over a
+Collection object’s contents. It executes a statement (or group of
+statements) once for each element of a Collection.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foreach ( loopVar in expression )
+  loopBody
+</code></pre></div></div>
 
-    foreach ( loopVar in expression )
-      loopBody
-
-</div>
-
-<span class="synPar">loopVar</span> can take one of two forms: it can be
-any "lvalue" (see the [expressions](expr.html#commonEles) section for
+<p><span class="synPar">loopVar</span> can take one of two forms: it can be
+any “lvalue” (see the <a href="expr.html#commonEles">expressions</a> section for
 details), such as a local variable, an object property, or an indexed
-lvalue; or it can be of this form:
+lvalue; or it can be of this form:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>local localName
+</code></pre></div></div>
 
-    local localName
-
-</div>
-
-The `local` syntax defines a new local variable,
-scoped to the `foreach` statement. (This works
-the same way as it does with the `for`
-statement.) If the `local` keyword is not
+<p>The <code class="language-plaintext highlighter-rouge">local</code> syntax defines a new local variable,
+scoped to the <code class="language-plaintext highlighter-rouge">foreach</code> statement. (This works
+the same way as it does with the <code class="language-plaintext highlighter-rouge">for</code>
+statement.) If the <code class="language-plaintext highlighter-rouge">local</code> keyword is not
 specified, the local variable with the given name from the enclosing
-scope is used.
+scope is used.</p>
 
-The <span class="synPar">expression</span> is any expression, but when
+<p>The <span class="synPar">expression</span> is any expression, but when
 evaluated it must yield a Collection object - a list, a Vector, or a
-LookupTable.
+LookupTable.</p>
 
-The <span class="synPar">loopBody</span> is a single statement, or a
-group of statements enclosed in braces.
+<p>The <span class="synPar">loopBody</span> is a single statement, or a
+group of statements enclosed in braces.</p>
 
-The statement first evaluates the
+<p>The statement first evaluates the
 <span class="synPar">expression</span>. This must yield a Collection
 object; if not, a run-time error results. The statement then iterates
 over the elements of the collection, one at a time. For each element of
 the collection, the statement sets the looping variable
 <span class="synPar">loopVar</span> to the current element, and executes
-the <span class="synPar">loopBody</span> once.
+the <span class="synPar">loopBody</span> once.</p>
 
-For a mutable object like a Vector or a HashTable,
-`foreach` automatically creates a "safe" copy of
+<p>For a mutable object like a Vector or a HashTable,
+<code class="language-plaintext highlighter-rouge">foreach</code> automatically creates a “safe” copy of
 the object at the beginning of the iteration, and uses the safe copy
 throughout the iteration. This ensures that the loop executes exactly
-once for each element of the collection *as it was at the start of the
-loop*, even if the loop body makes changes to the collection. This makes
+once for each element of the collection <em>as it was at the start of the
+loop</em>, even if the loop body makes changes to the collection. This makes
 it safe to make arbitrary changes to the collection in the loop body.
 For example, you can insert new element into a Vector, or delete
 existing elements. Changes you make from within the loop body will not
-affect the iteration.
+affect the iteration.</p>
 
-The order of the iteration depends on the type of the collection. For
+<p>The order of the iteration depends on the type of the collection. For
 lists and Vectors, the iteration is in ascending index order. For
-LookupTables, the order is arbitrary.
+LookupTables, the order is arbitrary.</p>
 
-The "element" value that's assigned to the looping variable on each
+<p>The “element” value that’s assigned to the looping variable on each
 iteration depends on the type of collection. For a list or a Vector,
-it's simply the element value. For a LookupTable, it's the *value* at a
-given key, *not* the key itself.
+it’s simply the element value. For a LookupTable, it’s the <em>value</em> at a
+given key, <em>not</em> the key itself.</p>
 
-Example:
+<p>Example:</p>
 
-```
-    foreach (local ele in lst)
-      "&lt;<ele>&gt;... ";
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    foreach (local ele in lst)
+      "&lt;&lt;ele&gt;&gt;... ";
+</code></pre></div></div>
 
-This simply runs through a collection and displays each element.
-Assuming `lst` is a list, the elements are
-displayed in ascending index order.
+<p>This simply runs through a collection and displays each element.
+Assuming <code class="language-plaintext highlighter-rouge">lst</code> is a list, the elements are
+displayed in ascending index order.</p>
 
-Here's an example that takes advantage of the "snapshot" feature - the
-safe copy that `foreach` creates before
-beginning the iteration.
+<p>Here’s an example that takes advantage of the “snapshot” feature - the
+safe copy that <code class="language-plaintext highlighter-rouge">foreach</code> creates before
+beginning the iteration.</p>
 
-```
-    local i = 1;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local i = 1;
     local vec = new Vector(10).fillValue(nil, 1, 10).applyAll({x: i++});
 
     foreach (local x in vec)
     {
       vec.applyAll({v: v+1});
-      "&lt;<x>&gt;\n";
+      "&lt;&lt;x&gt;&gt;\n";
     }
-```
+</code></pre></div></div>
 
-The first two lines create a Vector and initialize its elements to the
-integers 1 through 10, using the `applyAll()`
-method of the Vector. The `foreach` body
+<p>The first two lines create a Vector and initialize its elements to the
+integers 1 through 10, using the <code class="language-plaintext highlighter-rouge">applyAll()</code>
+method of the Vector. The <code class="language-plaintext highlighter-rouge">foreach</code> body
 modifies the entire Vector, by adding 1 to each element, then prints out
 the current value. At first glance, we might expect the values displayed
-to be something like this: 1, 3, 5, 7, 9, ...; we might expect this
-because of the `applyAll()` call updates every
-element of the Vector on every iteration of the loop. This isn't what
-happens, though: because the `foreach` iterates
+to be something like this: 1, 3, 5, 7, 9, …; we might expect this
+because of the <code class="language-plaintext highlighter-rouge">applyAll()</code> call updates every
+element of the Vector on every iteration of the loop. This isn’t what
+happens, though: because the <code class="language-plaintext highlighter-rouge">foreach</code> iterates
 a copy of the Vector, we actually print out the original contents of the
-Vector: 1, 2, 3, 4, and so on. After we're finished with the iteration,
-though, if we look at the Vector, we'll find it modified as we'd expect.
+Vector: 1, 2, 3, 4, and so on. After we’re finished with the iteration,
+though, if we look at the Vector, we’ll find it modified as we’d expect.
 In addition, even within the loop, if we were to refer directly to the
-Vector through the variable `vec`, we'd find it
-modified as we'd expect - the snapshot pertains only the iteration
-variable, and doesn't "freeze" the Vector itself. To see this, consider
-this more complex example:
+Vector through the variable <code class="language-plaintext highlighter-rouge">vec</code>, we’d find it
+modified as we’d expect - the snapshot pertains only the iteration
+variable, and doesn’t “freeze” the Vector itself. To see this, consider
+this more complex example:</p>
 
-```
-    local i = 1;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local i = 1;
     local vec = new Vector(10).fillValue(0, 1, 10).applyAll({x: i++});
 
     i = 1;
     foreach (local x in vec)
     {
       vec.applyAll({v: v+1});
-      "x = &lt;<x>&gt;, vec[&lt;<i>&gt;] = &lt;&lt;vec[i]&gt;&gt;\n";
+      "x = &lt;&lt;x&gt;&gt;, vec[&lt;&lt;i&gt;&gt;] = &lt;&lt;vec[i]&gt;&gt;\n";
       ++i;
     }
-```
+</code></pre></div></div>
 
-This would display the following, showing that the vector has been
+<p>This would display the following, showing that the vector has been
 modified - and the modifications are visible within the loop - even
-though the modifications are not visible to the iteration variable:
+though the modifications are not visible to the iteration variable:</p>
 
-```
-    x = 1, vec[1] = 2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = 1, vec[1] = 2
     x = 2, vec[2] = 4
     x = 3, vec[3] = 6
     x = 4, vec[4] = 8
@@ -1701,234 +1623,226 @@ though the modifications are not visible to the iteration variable:
     x = 8, vec[8] = 16
     x = 9, vec[9] = 18
     x = 10, vec[10] = 20
-```
+</code></pre></div></div>
 
-Although we've belabored this snapshot behavior as though it were some
+<p>Although we’ve belabored this snapshot behavior as though it were some
 pitfall you must take care to avoid, the snapshot actually simplifies
 things greatly for most common situations. The snapshot relieves you
 from having to worry about how the iteration will proceed. Even if
-you're making changes to the contents of the collection during the loop,
+you’re making changes to the contents of the collection during the loop,
 you can be confident that the updates will have no effect on the
 iteration. The snapshot feature makes it easy to iterate over
 collections without having to worry about the details of how changes
 would affect the order of the elements, or the number of elements, or
-anything else.
+anything else.</p>
 
-For those who are curious, here are the gory, internal details on how
-`foreach` actually executes. It first evaluates
+<p>For those who are curious, here are the gory, internal details on how
+<code class="language-plaintext highlighter-rouge">foreach</code> actually executes. It first evaluates
 the <span class="synPar">expression</span>, then calls the
-`createIterator()` method on the resulting
-value. It stores this value in a temporary variable, which we'll call
-*I*. It then loops as follows: call
-*I*`.isNextAvailable()`; if this is
-`nil`, exit the loop; otherwise call
-*I*`.getNext()`, and assign the result to the
+<code class="language-plaintext highlighter-rouge">createIterator()</code> method on the resulting
+value. It stores this value in a temporary variable, which we’ll call
+<em>I</em>. It then loops as follows: call
+<em>I</em><code class="language-plaintext highlighter-rouge">.isNextAvailable()</code>; if this is
+<code class="language-plaintext highlighter-rouge">nil</code>, exit the loop; otherwise call
+<em>I</em><code class="language-plaintext highlighter-rouge">.getNext()</code>, and assign the result to the
 looping variable <span class="synPar">loopVar</span>, then execute the
-loop body once, then go to the top of the loop.
+loop body once, then go to the top of the loop.</p>
 
-### <span id="while">while</span>
+<h3 id="while"><span id="while">while</span></h3>
 
-The `while` statement sets up a simple loop that
-repeats as long as a condition is true.
+<p>The <code class="language-plaintext highlighter-rouge">while</code> statement sets up a simple loop that
+repeats as long as a condition is true.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while ( conditionExpression )
+   loopBody
+</code></pre></div></div>
 
-    while ( conditionExpression )
-       loopBody
-
-</div>
-
-The <span class="synPar">conditionExpression</span> is any expression,
+<p>The <span class="synPar">conditionExpression</span> is any expression,
 and the <span class="synPar">loopBody</span> is a single statement or a
-group of statements enclosed in braces.
+group of statements enclosed in braces.</p>
 
-A `while` statement is executed as follows:
+<p>A <code class="language-plaintext highlighter-rouge">while</code> statement is executed as follows:</p>
 
-- 1\. Evaluate the condition expression. If the result is 0 or
-  `nil`, exit the loop, by jumping to the next
-  statement after the loop body. Otherwise, proceed to step 2.
-- 2\. Execute the loop body once.
-- 3\. Go to step 1.
+<ul>
+  <li>1. Evaluate the condition expression. If the result is 0 or
+<code class="language-plaintext highlighter-rouge">nil</code>, exit the loop, by jumping to the next
+statement after the loop body. Otherwise, proceed to step 2.</li>
+  <li>2. Execute the loop body once.</li>
+  <li>3. Go to step 1.</li>
+</ul>
 
-The condition expression is evaluated before every iteration of the
+<p>The condition expression is evaluated before every iteration of the
 loop - even before the first iteration, which means that the loop can
-execute zero times, if the condition is initially false.
+execute zero times, if the condition is initially false.</p>
 
-Here's an example:
+<p>Here’s an example:</p>
 
-```
-    local iter = coll.createIterator();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local iter = coll.createIterator();
     while (iter.isNextAvail())
     {
       local ele = iter.getNext();
-      "The next element is: &lt;<ele>&gt;\n";
+      "The next element is: &lt;&lt;ele&gt;&gt;\n";
     }
-```
+</code></pre></div></div>
 
-### <span id="dowhile">do...while</span>
+<h3 id="dowhile"><span id="dowhile">do…while</span></h3>
 
-The `do`...`while`
-statement sets up a loop similar to a `while`
+<p>The <code class="language-plaintext highlighter-rouge">do</code>…<code class="language-plaintext highlighter-rouge">while</code>
+statement sets up a loop similar to a <code class="language-plaintext highlighter-rouge">while</code>
 loop, but with the important difference that the loop condition is
-tested *after* each iteration, rather than at the beginning. This means
-that a `do`...`while`
-loop always executes *at least once*, since the loop condition isn't
-tested until after the first iteration.
+tested <em>after</em> each iteration, rather than at the beginning. This means
+that a <code class="language-plaintext highlighter-rouge">do</code>…<code class="language-plaintext highlighter-rouge">while</code>
+loop always executes <em>at least once</em>, since the loop condition isn’t
+tested until after the first iteration.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>do
+  loopBody
+while ( conditionExpression ) ;
+</code></pre></div></div>
 
-    do
-      loopBody
-    while ( conditionExpression ) ;
-
-</div>
-
-The <span class="synPar">conditionExpression</span> is any expression,
+<p>The <span class="synPar">conditionExpression</span> is any expression,
 and the <span class="synPar">loopBody</span> is one statement or a group
-of statements enclosed in braces.
+of statements enclosed in braces.</p>
 
-A `do`...`while` loop is
-executed as follows:
+<p>A <code class="language-plaintext highlighter-rouge">do</code>…<code class="language-plaintext highlighter-rouge">while</code> loop is
+executed as follows:</p>
 
-- 1\. Execute the loop body once.
-- 2\. Evaluate the condition expression. If the result is 0 or nil, exit
-  the loop by jumping to the next statement after the
-  `do`...`while`.
-  Otherwise, go to step 1.
+<ul>
+  <li>1. Execute the loop body once.</li>
+  <li>2. Evaluate the condition expression. If the result is 0 or nil, exit
+the loop by jumping to the next statement after the
+<code class="language-plaintext highlighter-rouge">do</code>…<code class="language-plaintext highlighter-rouge">while</code>.
+Otherwise, go to step 1.</li>
+</ul>
 
-Here's an example:
+<p>Here’s an example:</p>
 
-```
-    local x = 'a';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = 'a';
     do
     {
-        "x = &lt;<a>&gt;\n";
+        "x = &lt;&lt;a&gt;&gt;\n";
         x += 'a';
     } while (a.length() &lt; 10);
-```
+</code></pre></div></div>
 
-### <span id="switch">switch</span>
+<h3 id="switch"><span id="switch">switch</span></h3>
 
-The `switch` statement selects one of several
+<p>The <code class="language-plaintext highlighter-rouge">switch</code> statement selects one of several
 code branches, depending on the value of an expression.
-`switch` is similar to a series of
-`if`...`else
-if`...`else if`... statements, but has
-some advantages and restrictions over that approach.
+<code class="language-plaintext highlighter-rouge">switch</code> is similar to a series of
+<code class="language-plaintext highlighter-rouge">if</code>…<code class="language-plaintext highlighter-rouge">else
+if</code>…<code class="language-plaintext highlighter-rouge">else if</code>… statements, but has
+some advantages and restrictions over that approach.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>switch ( controlExpression )
+{
+  case value1 :
+    caseBody1
 
-    switch ( controlExpression )
-    {
-      case value1 :
-        caseBody1
+  case value2 :
+    caseBody2
 
-      case value2 :
-        caseBody2
+  default :
+    defaultBody
+}
+</code></pre></div></div>
 
-      default :
-        defaultBody
-    }
+<p>The <span class="synPar">controlExpression</span> is any expression.
+This is used to select which “branch” of the
+<code class="language-plaintext highlighter-rouge">switch</code> to execute.</p>
 
-</div>
-
-The <span class="synPar">controlExpression</span> is any expression.
-This is used to select which "branch" of the
-`switch` to execute.
-
-<span class="synPar">value1</span> and subsequent values are called the
-"case labels." These are **constant** expressions - that is, they must
+<p><span class="synPar">value1</span> and subsequent values are called the
+“case labels.” These are <strong>constant</strong> expressions - that is, they must
 be integers, enums, object names, string constants, property IDs,
 function names, BigNumber constants, or lists containing only constant
 expressions. These values can be expressions, as long as the expression
 can be fully computed and reduced to a constant value at compile time.
-For example, you can use a value like `1+2\*3`,
+For example, you can use a value like <code class="language-plaintext highlighter-rouge">1+2\*3</code>,
 since the compiler can directly compute the integer value of this
-expression; but you can't use a value like
-`a+1`, where `a` is a
-local variable, because the value of a local variable can't be
+expression; but you can’t use a value like
+<code class="language-plaintext highlighter-rouge">a+1</code>, where <code class="language-plaintext highlighter-rouge">a</code> is a
+local variable, because the value of a local variable can’t be
 determined until the program is actually running. You can use any mix of
 types among the case labels - that is, each case label can be of a
-different datatype.
+different datatype.</p>
 
-The <span class="synPar">caseBody</span> elements, and the
+<p>The <span class="synPar">caseBody</span> elements, and the
 <span class="synPar">defaultBody</span>, each consist of zero or more
-statements. Note that it's legal for a case or default body to be empty,
-so it's legal for several `case` labels to
-appear consecutively.
+statements. Note that it’s legal for a case or default body to be empty,
+so it’s legal for several <code class="language-plaintext highlighter-rouge">case</code> labels to
+appear consecutively.</p>
 
-A `switch` must have at least one
-`case` *or*. `default`
-label, and can have at most one `default` label.
-Any number of `case` labels can appear -
-including zero, provided there's a `default` to
+<p>A <code class="language-plaintext highlighter-rouge">switch</code> must have at least one
+<code class="language-plaintext highlighter-rouge">case</code> <em>or</em>. <code class="language-plaintext highlighter-rouge">default</code>
+label, and can have at most one <code class="language-plaintext highlighter-rouge">default</code> label.
+Any number of <code class="language-plaintext highlighter-rouge">case</code> labels can appear -
+including zero, provided there’s a <code class="language-plaintext highlighter-rouge">default</code> to
 meet the required minimum of one label overall. So, for example, a
-`switch` that contains only a
-`default` label is legal, as is a
-`switch` with one `case`
-label, or with five `case` labels, or with
-`five` case labels and a
-`default`. A completely empty
-`switch` is illegal, as is a
-`switch` with more than one
-`default` label.
+<code class="language-plaintext highlighter-rouge">switch</code> that contains only a
+<code class="language-plaintext highlighter-rouge">default</code> label is legal, as is a
+<code class="language-plaintext highlighter-rouge">switch</code> with one <code class="language-plaintext highlighter-rouge">case</code>
+label, or with five <code class="language-plaintext highlighter-rouge">case</code> labels, or with
+<code class="language-plaintext highlighter-rouge">five</code> case labels and a
+<code class="language-plaintext highlighter-rouge">default</code>. A completely empty
+<code class="language-plaintext highlighter-rouge">switch</code> is illegal, as is a
+<code class="language-plaintext highlighter-rouge">switch</code> with more than one
+<code class="language-plaintext highlighter-rouge">default</code> label.</p>
 
-A `switch` statement is executed as follows.
+<p>A <code class="language-plaintext highlighter-rouge">switch</code> statement is executed as follows.
 First, the <span class="synPar">controlExpression</span> is evaluated.
 The result is then compared to each case label value, one at a time, in
 the order in which the labels appear in the source code. The comparison
-is done according to the same rules as the `==`
+is done according to the same rules as the <code class="language-plaintext highlighter-rouge">==</code>
 operator. At the first match, execution jumps to the first
 <span class="synPar">caseBody</span> statement following the matching
-label. If no matches are found among the case labels, and there's a
-`default` label, execution jumps to the first
+label. If no matches are found among the case labels, and there’s a
+<code class="language-plaintext highlighter-rouge">default</code> label, execution jumps to the first
 <span class="synPar">defaultBody</span> statement. If no matches are
-found among the case labels, and there's no
-`default` label, execution jumps to the next
-statement after the entire `switch` body.
+found among the case labels, and there’s no
+<code class="language-plaintext highlighter-rouge">default</code> label, execution jumps to the next
+statement after the entire <code class="language-plaintext highlighter-rouge">switch</code> body.</p>
 
-Note that the `default` can go anywhere in the
-`switch` without changing the behavior of the
-`switch`. We always search *all* of the value
-labels first, and only jump to the `default`
-label if we can't find a match. So you can even put the
-`default` label first if you want - it won't
+<p>Note that the <code class="language-plaintext highlighter-rouge">default</code> can go anywhere in the
+<code class="language-plaintext highlighter-rouge">switch</code> without changing the behavior of the
+<code class="language-plaintext highlighter-rouge">switch</code>. We always search <em>all</em> of the value
+labels first, and only jump to the <code class="language-plaintext highlighter-rouge">default</code>
+label if we can’t find a match. So you can even put the
+<code class="language-plaintext highlighter-rouge">default</code> label first if you want - it won’t
 change anything, since the value labels are always checked first, no
-matter where the `default` appears.
+matter where the <code class="language-plaintext highlighter-rouge">default</code> appears.</p>
 
-<span id="caseBreaks">Warning! `break` must be
-explicit!</span>
+<p><span id="caseBreaks">Warning! <code class="language-plaintext highlighter-rouge">break</code> must be
+explicit!</span></p>
 
-It's very important to note that a `case` label
-**does not** interrupt the flow of execution after a match has been
-found. In other words, the case bodies are **not** like
-`if`...`else` branches,
+<p>It’s very important to note that a <code class="language-plaintext highlighter-rouge">case</code> label
+<strong>does not</strong> interrupt the flow of execution after a match has been
+found. In other words, the case bodies are <strong>not</strong> like
+<code class="language-plaintext highlighter-rouge">if</code>…<code class="language-plaintext highlighter-rouge">else</code> branches,
 where execution leaves the overall statement when you reach the end of
-the branch. Instead, they're like `goto` labels,
+the branch. Instead, they’re like <code class="language-plaintext highlighter-rouge">goto</code> labels,
 where they just drop you into a linear sequence of code at a particular
-point - and once you're there, you'll by default just keep going all the
-way to the end of the `switch`, even if you
-encounter other `case` labels along the way.
+point - and once you’re there, you’ll by default just keep going all the
+way to the end of the <code class="language-plaintext highlighter-rouge">switch</code>, even if you
+encounter other <code class="language-plaintext highlighter-rouge">case</code> labels along the way.</p>
 
-This is a feature of C that's inherited by most C-like languages,
+<p>This is a feature of C that’s inherited by most C-like languages,
 including TADS, and it catches a lot of people off-guard. Many
-procedural languages outside the C-like family have similar "selection"
-statements that *do* work like multi-branch if-then-else trees, and to
-most people that's the obvious, intuitive way of doing things. This is
+procedural languages outside the C-like family have similar “selection”
+statements that <em>do</em> work like multi-branch if-then-else trees, and to
+most people that’s the obvious, intuitive way of doing things. This is
 probably one of the most counterintuitive aspects of C, and a common
-pitfall for new C (and Java and TADS) programmers.
+pitfall for new C (and Java and TADS) programmers.</p>
 
-Fortunately, you *can* make each case block a self-contained little
+<p>Fortunately, you <em>can</em> make each case block a self-contained little
 branch, just like an
-`if`...`else` - it's
-just that you have to do so *explicitly*. The way you do this is by
-adding a `break` statement at the end of each
-case body.
+<code class="language-plaintext highlighter-rouge">if</code>…<code class="language-plaintext highlighter-rouge">else</code> - it’s
+just that you have to do so <em>explicitly</em>. The way you do this is by
+adding a <code class="language-plaintext highlighter-rouge">break</code> statement at the end of each
+case body.</p>
 
-Here's an example:
+<p>Here’s an example:</p>
 
-```
-    switch (obj.color)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    switch (obj.color)
     {
     case red:
       lambda = 700;
@@ -1946,49 +1860,48 @@ Here's an example:
       lambda = 0;
       break;
     }
-```
+</code></pre></div></div>
 
-Here, we've made each case body a self-contained branch by putting a
-`break` statement at the end. A
-`break` within a
-`switch` body jumps to the next statement after
-the end of the `switch`, so for each color case,
-we'll just set the wavelength variable and leave the
-`switch`.
+<p>Here, we’ve made each case body a self-contained branch by putting a
+<code class="language-plaintext highlighter-rouge">break</code> statement at the end. A
+<code class="language-plaintext highlighter-rouge">break</code> within a
+<code class="language-plaintext highlighter-rouge">switch</code> body jumps to the next statement after
+the end of the <code class="language-plaintext highlighter-rouge">switch</code>, so for each color case,
+we’ll just set the wavelength variable and leave the
+<code class="language-plaintext highlighter-rouge">switch</code>.</p>
 
-Note that we've even put a `break` at the very
-end, as the last statement of the `default`
-body. There's no subtle magic behind this - it's presence changes
-nothing, exactly as you'd expect, since if we left it out we'd still
-fall out of the end of the overall `switch` body
+<p>Note that we’ve even put a <code class="language-plaintext highlighter-rouge">break</code> at the very
+end, as the last statement of the <code class="language-plaintext highlighter-rouge">default</code>
+body. There’s no subtle magic behind this - it’s presence changes
+nothing, exactly as you’d expect, since if we left it out we’d still
+fall out of the end of the overall <code class="language-plaintext highlighter-rouge">switch</code> body
 at that same point anyway. So why did we bother to write the
-`break` there? There are a few reasons. One is
-that it's a good habit to just automatically end each case branch with a
-`break`, since if you get into that habit you're
+<code class="language-plaintext highlighter-rouge">break</code> there? There are a few reasons. One is
+that it’s a good habit to just automatically end each case branch with a
+<code class="language-plaintext highlighter-rouge">break</code>, since if you get into that habit you’re
 less likely to miss one accidentally when it matters. Another is that it
 makes the code look a little more consistent, since each branch has the
-same form: `case`, code,
-`break`. Perhaps the most important reason is
-that it's a little insurance in case we add another case label below the
-`default` later on - at that point we might
-forget that there's a case above that we didn't
-`break` out of, so adding the
-`break` now ensures that we won't miss it then.
+same form: <code class="language-plaintext highlighter-rouge">case</code>, code,
+<code class="language-plaintext highlighter-rouge">break</code>. Perhaps the most important reason is
+that it’s a little insurance in case we add another case label below the
+<code class="language-plaintext highlighter-rouge">default</code> later on - at that point we might
+forget that there’s a case above that we didn’t
+<code class="language-plaintext highlighter-rouge">break</code> out of, so adding the
+<code class="language-plaintext highlighter-rouge">break</code> now ensures that we won’t miss it then.</p>
 
-You might wonder how the designers of C ever came up with the crazy
-"fall-through" feature in the first place. It's probably a result of C's
+<p>You might wonder how the designers of C ever came up with the crazy
+“fall-through” feature in the first place. It’s probably a result of C’s
 design as a thinly disguised version of assembly language. In assembler,
-labels are just targets for "goto" jumps. The use of the label-like
-syntax for the cases suggests that C's designers conceived of "switch"
-as a fancy "goto". If you think of the case labels as just "goto"
+labels are just targets for “goto” jumps. The use of the label-like
+syntax for the cases suggests that C’s designers conceived of “switch”
+as a fancy “goto”. If you think of the case labels as just “goto”
 targets, then, it makes a kind of sense that execution just plows on
-through them rather than leaving the switch at the end of a case.
+through them rather than leaving the switch at the end of a case.</p>
 
-The fall-through behavior is handy for one thing, though. It lets you
-easily share the same case body among multiple labels:
+<p>The fall-through behavior is handy for one thing, though. It lets you
+easily share the same case body among multiple labels:</p>
 
-```
-    switch (x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    switch (x)
     {
     case 1:
     case 2:
@@ -2006,17 +1919,16 @@ easily share the same case body among multiple labels:
       "x is from 6 to 10\n";
       break;
     }
-```
+</code></pre></div></div>
 
-This code works because the empty case bodies (for cases 1, 2, 3, etc.)
-all "fall through" to the next executable statement, even though there
-are intervening case labels.
+<p>This code works because the empty case bodies (for cases 1, 2, 3, etc.)
+all “fall through” to the next executable statement, even though there
+are intervening case labels.</p>
 
-On some occasions, it's also convenient to take advantage of the
-fall-through feature with actual executable code.
+<p>On some occasions, it’s also convenient to take advantage of the
+fall-through feature with actual executable code.</p>
 
-```
-    switch (x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    switch (x)
     {
     case 1:
       "one...";
@@ -2025,35 +1937,33 @@ fall-through feature with actual executable code.
       "x is one or two\n";
       break;
     }
-```
+</code></pre></div></div>
 
-In this case, we're *intentionally* falling through from the "1" case to
-the "2" case. There's a little extra code we want to execute in the "1"
+<p>In this case, we’re <em>intentionally</em> falling through from the “1” case to
+the “2” case. There’s a little extra code we want to execute in the “1”
 case, but then we want to proceed to the common handling for 1 and 2.
-When you write code like this, it's not a bad idea to comment that the
-fall-through is intentional - if you don't, and you come back to this
+When you write code like this, it’s not a bad idea to comment that the
+fall-through is intentional - if you don’t, and you come back to this
 code after a couple of weeks, you might forget what you had in mind and
-mistakenly think you forgot a `break`, and
-mistakenly fix a non-mistake! So, something like this is a good idea:
+mistakenly think you forgot a <code class="language-plaintext highlighter-rouge">break</code>, and
+mistakenly fix a non-mistake! So, something like this is a good idea:</p>
 
-```
-    case 1:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    case 1:
       "one...";
       // FALL THROUGH...
 
     case 2:
       // etc...
-```
+</code></pre></div></div>
 
-<span id="indentStyle">A note on indentation styles</span>
+<p><span id="indentStyle">A note on indentation styles</span></p>
 
-There are basically two ways to indent `switch`
+<p>There are basically two ways to indent <code class="language-plaintext highlighter-rouge">switch</code>
 bodies. Some people like to indent the case labels one level in from the
-`switch`, and then indent the statements in the
-case bodies one level further:
+<code class="language-plaintext highlighter-rouge">switch</code>, and then indent the statements in the
+case bodies one level further:</p>
 
-```
-    switch (x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    switch (x)
     {
       case 1:
         "One!";
@@ -2067,13 +1977,12 @@ case bodies one level further:
         "A million!";
         break;
     }
-```
+</code></pre></div></div>
 
-Other people, your author included, prefer to put the labels at the same
-level as the `switch`:
+<p>Other people, your author included, prefer to put the labels at the same
+level as the <code class="language-plaintext highlighter-rouge">switch</code>:</p>
 
-```
-    switch (x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    switch (x)
     {
     case 1:
       "One!";
@@ -2082,100 +1991,93 @@ level as the `switch`:
     case 2:
       // etc
     }
-```
+</code></pre></div></div>
 
-Both styles are common. I prefer the second because it makes for
+<p>Both styles are common. I prefer the second because it makes for
 slightly less indenting overall, which can be helpful in complex
 functions; and because it treats the case labels consistently with
-ordinary statement ("goto") labels, which I like to "outdent" from the
-code they're labeling.
+ordinary statement (“goto”) labels, which I like to “outdent” from the
+code they’re labeling.</p>
 
-### <span id="goto">goto</span>
+<h3 id="goto"><span id="goto">goto</span></h3>
 
-The `goto` statement transfers the execution
-position directly to a labeled statement.
+<p>The <code class="language-plaintext highlighter-rouge">goto</code> statement transfers the execution
+position directly to a labeled statement.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto label ;
+</code></pre></div></div>
 
-    goto label ;
-
-</div>
-
-The <span class="synPar">label</span> is the name of a statement label
+<p>The <span class="synPar">label</span> is the name of a statement label
 defined elsewhere within the same function or method. The target label
 can be within an enclosing code block, since statement labels are
-visible within the entire containing function or method.
+visible within the entire containing function or method.</p>
 
-When a `goto` statement is executed, the VM
-first executes the `finally` clause of each
-enclosing `try` statement, working from the
+<p>When a <code class="language-plaintext highlighter-rouge">goto</code> statement is executed, the VM
+first executes the <code class="language-plaintext highlighter-rouge">finally</code> clause of each
+enclosing <code class="language-plaintext highlighter-rouge">try</code> statement, working from the
 innermost outward. It then jumps directly to the statement immediately
-following the target label.
+following the target label.</p>
 
-Almost anyone who's had any exposure to programming in any language has
+<p>Almost anyone who’s had any exposure to programming in any language has
 received the standard warnings about how bad
-`goto` is. This is generally true:
-`goto` is to be avoided. The problem with
-`goto` is that it makes it extremely difficult
+<code class="language-plaintext highlighter-rouge">goto</code> is. This is generally true:
+<code class="language-plaintext highlighter-rouge">goto</code> is to be avoided. The problem with
+<code class="language-plaintext highlighter-rouge">goto</code> is that it makes it extremely difficult
 to grasp the flow of execution through a piece of code by making
 arbitrary jumps. The sort of nested conditional and iteration structures
 that modern languages offer
-(`if`...`else`,
-`for`, `while`, and so
+(<code class="language-plaintext highlighter-rouge">if</code>…<code class="language-plaintext highlighter-rouge">else</code>,
+<code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, and so
 on) are much easier to comprehend at a glance, since their visual
 structure on the page maps fairly directly to their code flow.
-`goto` tends to ruin that clean visual structure
-by scribbling arbitrary transfer vectors all over the page.
+<code class="language-plaintext highlighter-rouge">goto</code> tends to ruin that clean visual structure
+by scribbling arbitrary transfer vectors all over the page.</p>
 
-Even so, in C and C++, `goto` is occasionally
+<p>Even so, in C and C++, <code class="language-plaintext highlighter-rouge">goto</code> is occasionally
 the clearest way to accomplish a task. The alternative is sometimes to
 create a network of extra flags that shepherd the execution point out of
 a series of nested loops and into a subsequent cleanup section. However,
 the ability in TADS 3 to use labeled targets in
-`break` and `continue`
+<code class="language-plaintext highlighter-rouge">break</code> and <code class="language-plaintext highlighter-rouge">continue</code>
 statements largely eliminates even this type of situation, so justified
-uses of `goto` in TADS 3 programs are rare
-indeed.
+uses of <code class="language-plaintext highlighter-rouge">goto</code> in TADS 3 programs are rare
+indeed.</p>
 
-### <span id="break">break</span>
+<h3 id="break"><span id="break">break</span></h3>
 
-The `break` statement exits a given statement,
-transferring control to the next statement after the given statement.
+<p>The <code class="language-plaintext highlighter-rouge">break</code> statement exits a given statement,
+transferring control to the next statement after the given statement.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>break [ label ]  ;
+</code></pre></div></div>
 
-    break [ label ]  ;
+<p><code class="language-plaintext highlighter-rouge">break</code> comes in two forms: with and without a
+target label.</p>
 
-</div>
-
-`break` comes in two forms: with and without a
-target label.
-
-When no label is specified, `break` applies to
-the nearest enclosing `for`,
-`while`,
-`do`...`while`, or
-`switch` statement. There must be an enclosing
+<p>When no label is specified, <code class="language-plaintext highlighter-rouge">break</code> applies to
+the nearest enclosing <code class="language-plaintext highlighter-rouge">for</code>,
+<code class="language-plaintext highlighter-rouge">while</code>,
+<code class="language-plaintext highlighter-rouge">do</code>…<code class="language-plaintext highlighter-rouge">while</code>, or
+<code class="language-plaintext highlighter-rouge">switch</code> statement. There must be an enclosing
 statement of one of these types in the current function or method; if
-there isn't, a compiler error results. Controls transfers to the
+there isn’t, a compiler error results. Controls transfers to the
 statement immediately after the end of the loop or
-`switch` body.
+<code class="language-plaintext highlighter-rouge">switch</code> body.</p>
 
-When a label is specified, the `break` applies
+<p>When a label is specified, the <code class="language-plaintext highlighter-rouge">break</code> applies
 to the labeled statement, which must enclose the
-`break`. If the labeled statement doesn't
-enclose the `break`, a compiler error results.
+<code class="language-plaintext highlighter-rouge">break</code>. If the labeled statement doesn’t
+enclose the <code class="language-plaintext highlighter-rouge">break</code>, a compiler error results.
 If the target statement is a loop, control transfers to the statement
 following the loop body. If the target is a compound statement (a group
 of statements enclosed in braces), control transfers to the next
-statement after the block's closing brace.
+statement after the block’s closing brace.</p>
 
-Targeted `break` statements are especially
+<p>Targeted <code class="language-plaintext highlighter-rouge">break</code> statements are especially
 useful when you want to break out of a loop from within a nested
-`switch`:
+<code class="language-plaintext highlighter-rouge">switch</code>:</p>
 
-```
-    scanLoop:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    scanLoop:
       for (i = 1 ; i &lt; 10 ; ++i)
       {
         switch(val[i])
@@ -2192,19 +2094,18 @@ useful when you want to break out of a loop from within a nested
           break scanLoop;
         }
       }
-```
+</code></pre></div></div>
 
-The label is necessary in this case because the
-`break` would, by default, only go as far as
-exiting the `switch`. By specifying the label,
+<p>The label is necessary in this case because the
+<code class="language-plaintext highlighter-rouge">break</code> would, by default, only go as far as
+exiting the <code class="language-plaintext highlighter-rouge">switch</code>. By specifying the label,
 you can break all the way out of the enclosing
-`for` loop.
+<code class="language-plaintext highlighter-rouge">for</code> loop.</p>
 
-Targeted break statements are also useful for breaking out of nested
-loops:
+<p>Targeted break statements are also useful for breaking out of nested
+loops:</p>
 
-```
-    matchLoop:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    matchLoop:
       for (i = 1 ; i &lt;= val.length() ; ++i)
       {
         for (j = 1 ; j &lt; i ; ++j)
@@ -2213,14 +2114,13 @@ loops:
             break matchLoop;
         }
       }
-```
+</code></pre></div></div>
 
-A labeled `break` can break out of *any* block
-of code - it doesn't have to be a loop or a
-`switch`. For example:
+<p>A labeled <code class="language-plaintext highlighter-rouge">break</code> can break out of <em>any</em> block
+of code - it doesn’t have to be a loop or a
+<code class="language-plaintext highlighter-rouge">switch</code>. For example:</p>
 
-```
-    section1:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    section1:
       {
         if (a == 1)
         {
@@ -2238,263 +2138,257 @@ of code - it doesn't have to be a loop or a
         // do some more stuff...
       }
       // that 'break section1' comes directly here
-```
+</code></pre></div></div>
 
-This is sometimes handy for error handling and the like, since it lets
+<p>This is sometimes handy for error handling and the like, since it lets
 you bypass a whole chunk of code by jumping directly out of the entire
-labeled block.
+labeled block.</p>
 
-### <span id="continue">continue</span>
+<h3 id="continue"><span id="continue">continue</span></h3>
 
-The `continue` statement bypasses the remainder
+<p>The <code class="language-plaintext highlighter-rouge">continue</code> statement bypasses the remainder
 of a loop body, and jumps directly to the start of the next iteration of
-the loop.
+the loop.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>continue [ label ]  ;
+</code></pre></div></div>
 
-    continue [ label ]  ;
-
-</div>
-
-If no label is specified, the `continue`
+<p>If no label is specified, the <code class="language-plaintext highlighter-rouge">continue</code>
 implicitly refers to the nearest enclosing
-`for`, `while`, or
-`do...while` loop.
+<code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, or
+<code class="language-plaintext highlighter-rouge">do...while</code> loop.</p>
 
-If a label is specified, the label must be associated with an enclosing
-`for`, `foreach`,
-`while`, or `do`
+<p>If a label is specified, the label must be associated with an enclosing
+<code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">foreach</code>,
+<code class="language-plaintext highlighter-rouge">while</code>, or <code class="language-plaintext highlighter-rouge">do</code>
 statement. The target statement of the
-`continue` is the labeled loop in this case.
+<code class="language-plaintext highlighter-rouge">continue</code> is the labeled loop in this case.</p>
 
-Note that, in contrast to `break`, a
-`continue` statement's label **must** be
-associated with a loop of some kind (`for`,
-`foreach`, `while`, or
-`do...while`).
+<p>Note that, in contrast to <code class="language-plaintext highlighter-rouge">break</code>, a
+<code class="language-plaintext highlighter-rouge">continue</code> statement’s label <strong>must</strong> be
+associated with a loop of some kind (<code class="language-plaintext highlighter-rouge">for</code>,
+<code class="language-plaintext highlighter-rouge">foreach</code>, <code class="language-plaintext highlighter-rouge">while</code>, or
+<code class="language-plaintext highlighter-rouge">do...while</code>).</p>
 
-`continue` transfers control to the "next
-iteration" of the targeted loop statement. The exact point depends on
-the type of that loop:
+<p><code class="language-plaintext highlighter-rouge">continue</code> transfers control to the “next
+iteration” of the targeted loop statement. The exact point depends on
+the type of that loop:</p>
 
-- If it's a `for` loop, control transfers to the
-  "updater" expression. That is, immediately after the
-  `continue` is executed, the
-  `for` evaluates its "updater" expression, then
-  then evaluates its "condition" expression and uses the result to
-  determine whether or not to perform another iteration of the loop
-  body.
-- If it's a `foreach` loop, the next element of
-  the Collection is fetched into the iteration variable, and control is
-  transferred back to the top of the loop body (unless the Collection
-  has been exhausted, in which case the loop terminates as normal).
-- If it's a `while` or
-  `do`...`while` loop,
-  control transfers to the condition evaluation. That is, immediately
-  after the `continue` statement, the loop
-  evaluates its condition expression, and uses the result to determine
-  whether or not to perform another iteration of the loop body.
+<ul>
+  <li>If it’s a <code class="language-plaintext highlighter-rouge">for</code> loop, control transfers to the
+“updater” expression. That is, immediately after the
+<code class="language-plaintext highlighter-rouge">continue</code> is executed, the
+<code class="language-plaintext highlighter-rouge">for</code> evaluates its “updater” expression, then
+then evaluates its “condition” expression and uses the result to
+determine whether or not to perform another iteration of the loop
+body.</li>
+  <li>If it’s a <code class="language-plaintext highlighter-rouge">foreach</code> loop, the next element of
+the Collection is fetched into the iteration variable, and control is
+transferred back to the top of the loop body (unless the Collection
+has been exhausted, in which case the loop terminates as normal).</li>
+  <li>If it’s a <code class="language-plaintext highlighter-rouge">while</code> or
+<code class="language-plaintext highlighter-rouge">do</code>…<code class="language-plaintext highlighter-rouge">while</code> loop,
+control transfers to the condition evaluation. That is, immediately
+after the <code class="language-plaintext highlighter-rouge">continue</code> statement, the loop
+evaluates its condition expression, and uses the result to determine
+whether or not to perform another iteration of the loop body.</li>
+</ul>
 
-Here's an example:
+<p>Here’s an example:</p>
 
-```
-    for (local i = 0 ; i &lt; 10 ; ++i)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (local i = 0 ; i &lt; 10 ; ++i)
     {
-      "i = &lt;<i>&gt;\n";
+      "i = &lt;&lt;i&gt;&gt;\n";
       if (i &lt; 5)
         continue;
 
       "*** i is at least 5!\n";
     }
-```
+</code></pre></div></div>
 
-### <span id="throw">throw</span>
+<h3 id="throw"><span id="throw">throw</span></h3>
 
-The `throw` statement "throws an exception."
+<p>The <code class="language-plaintext highlighter-rouge">throw</code> statement “throws an exception.”
 That is, given an Exception object, the statement transfers control to
-the nearest enclosing `catch` handler for that
-class of Exception.
+the nearest enclosing <code class="language-plaintext highlighter-rouge">catch</code> handler for that
+class of Exception.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>throw expression ;
+</code></pre></div></div>
 
-    throw expression ;
-
-</div>
-
-The <span class="synPar">expression</span> is most often of the form
-`new E()`, where `E` is
+<p>The <span class="synPar">expression</span> is most often of the form
+<code class="language-plaintext highlighter-rouge">new E()</code>, where <code class="language-plaintext highlighter-rouge">E</code> is
 some Exception subclass. However, any expression that yields an
-Exception instance is valid here, and it's frequently useful to use
-`throw` with a local variable that contains a
+Exception instance is valid here, and it’s frequently useful to use
+<code class="language-plaintext highlighter-rouge">throw</code> with a local variable that contains a
 previously caught Exception instance, or simply a static Exception
-instance.
+instance.</p>
 
-Refer to the section on [exception handling](except.html) for more
-details on `try` and
-`throw`.
+<p>Refer to the section on <a href="except.html">exception handling</a> for more
+details on <code class="language-plaintext highlighter-rouge">try</code> and
+<code class="language-plaintext highlighter-rouge">throw</code>.</p>
 
-### <span id="try">try</span>
+<h3 id="try"><span id="try">try</span></h3>
 
-The `try` statement sets up an exception handler
+<p>The <code class="language-plaintext highlighter-rouge">try</code> statement sets up an exception handler
 for the duration of the enclosed block of code, which is referred to as
-the code "protected" by the `try`. This allows
+the code “protected” by the <code class="language-plaintext highlighter-rouge">try</code>. This allows
 you to catch and handle selected exceptions that are thrown from within
 the protected code, or from any code that it calls via function and
-method calls.
+method calls.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>try
+{
+  protectedCode
+}
+catch ( exceptionClass exceptionLocal )
+{
+  handlerCode
+}
+catch ( exceptionClass exceptionLocal )
+{
+  handlerCode
+}
+finally
+{
+  finallyCode
+}
+</code></pre></div></div>
 
-    try
-    {
-      protectedCode
-    }
-    catch ( exceptionClass exceptionLocal )
-    {
-      handlerCode
-    }
-    catch ( exceptionClass exceptionLocal )
-    {
-      handlerCode
-    }
-    finally
-    {
-      finallyCode
-    }
-
-</div>
-
-The <span class="synPar">protectedCode</span> consists of any number of
-statements. This is the code that the `try`
+<p>The <span class="synPar">protectedCode</span> consists of any number of
+statements. This is the code that the <code class="language-plaintext highlighter-rouge">try</code>
 protects: if a handled exception is thrown from within this code or any
 other functions or methods it calls, control is transfered to the first
-statement of the body of the first `catch`
+statement of the body of the first <code class="language-plaintext highlighter-rouge">catch</code>
 clause whose <span class="synPar">exceptionClass</span> equals or is a
-superclass of the thrown exception.
+superclass of the thrown exception.</p>
 
-A `try` can have zero or more
-`catch` clauses.
+<p>A <code class="language-plaintext highlighter-rouge">try</code> can have zero or more
+<code class="language-plaintext highlighter-rouge">catch</code> clauses.</p>
 
-Within each `catch` clause, the
+<p>Within each <code class="language-plaintext highlighter-rouge">catch</code> clause, the
 <span class="synPar">exceptionClass</span> is the name of an Exception
 subclass, indicating which type of exception(s) this clause handles. The
 <span class="synPar">exceptionLocal</span> is a symbol that will be
 defined as a new local variable, which is scoped to the
-`catch` clause. (That is, the variable will be
-visible only within that `catch` clause, and
-hides any variable of the same name that's defined in any enclosing
+<code class="language-plaintext highlighter-rouge">catch</code> clause. (That is, the variable will be
+visible only within that <code class="language-plaintext highlighter-rouge">catch</code> clause, and
+hides any variable of the same name that’s defined in any enclosing
 scope.) The <span class="synPar">handlerCode</span> is any number of
 statements; this block of code comprises the handler for the specified
-exception.
+exception.</p>
 
-The `finally` clause is optional. If it's
+<p>The <code class="language-plaintext highlighter-rouge">finally</code> clause is optional. If it’s
 present, only one is allowed, and it must follow all of the
-`catch` clauses. The
+<code class="language-plaintext highlighter-rouge">catch</code> clauses. The
 <span class="synPar">finallyCode</span> consists of any number of
-statements; this block of code comprises the "finally" handler for the
-protected code.
+statements; this block of code comprises the “finally” handler for the
+protected code.</p>
 
-When an exception occurs within the protected code, the VM searches the
-`try` statement for a
-`catch` handler that "matches" the exception
+<p>When an exception occurs within the protected code, the VM searches the
+<code class="language-plaintext highlighter-rouge">try</code> statement for a
+<code class="language-plaintext highlighter-rouge">catch</code> handler that “matches” the exception
 actually thrown. A handler matches the thrown exception is the exception
 equals the <span class="synPar">exceptionClass</span> named in the
 handler, or the thrown exception is a subclass of the named class. The
-VM searches the `catch` clauses in order,
-starting at the first (top) handler:
+VM searches the <code class="language-plaintext highlighter-rouge">catch</code> clauses in order,
+starting at the first (top) handler:</p>
 
-- If the VM finds a matching `catch` handler, it
-  stores a reference to the thrown exception in the
-  <span class="synPar">exceptionLocal</span> local variable named in
-  that `catch` clause, then transfers control to
-  the first statement of the <span class="synPar">handlerCode</span> of
-  that `catch` clause. At this point, the VM
-  considers the exception completely handled.
-- If the VM fails to find a matching `catch`
-  handler after searching all of the `catch`
-  clauses, it "re-throws" the exception. This means that it looks for
-  the next enclosing `try` block within the
-  enclosing method, and failing that looks for the next enclosing block
-  in the calling method, and that method's caller, and so on. Upon
-  finding the enclosing `try`, the VM repeats
-  the `catch` search with the new
-  `try`.
+<ul>
+  <li>If the VM finds a matching <code class="language-plaintext highlighter-rouge">catch</code> handler, it
+stores a reference to the thrown exception in the
+<span class="synPar">exceptionLocal</span> local variable named in
+that <code class="language-plaintext highlighter-rouge">catch</code> clause, then transfers control to
+the first statement of the <span class="synPar">handlerCode</span> of
+that <code class="language-plaintext highlighter-rouge">catch</code> clause. At this point, the VM
+considers the exception completely handled.</li>
+  <li>If the VM fails to find a matching <code class="language-plaintext highlighter-rouge">catch</code>
+handler after searching all of the <code class="language-plaintext highlighter-rouge">catch</code>
+clauses, it “re-throws” the exception. This means that it looks for
+the next enclosing <code class="language-plaintext highlighter-rouge">try</code> block within the
+enclosing method, and failing that looks for the next enclosing block
+in the calling method, and that method’s caller, and so on. Upon
+finding the enclosing <code class="language-plaintext highlighter-rouge">try</code>, the VM repeats
+the <code class="language-plaintext highlighter-rouge">catch</code> search with the new
+<code class="language-plaintext highlighter-rouge">try</code>.</li>
+</ul>
 
-The `finally` block, if specified, contains code
+<p>The <code class="language-plaintext highlighter-rouge">finally</code> block, if specified, contains code
 that will be executed when control transfers out of the protected
-`try` code, *no matter how that transfer
-occurs.* Control can transfer out of the protected
-`try` code due to:
+<code class="language-plaintext highlighter-rouge">try</code> code, <em>no matter how that transfer
+occurs.</em> Control can transfer out of the protected
+<code class="language-plaintext highlighter-rouge">try</code> code due to:</p>
 
-- A `goto` that targets a label outside of the
-  protected code
-- A `break` that leaves the protected code
-- A `continue` that resumes a loop enclosing the
-  protected code
-- A `return` from within the protected code
-- A `throw` from within the protected code
-- Simply "falling off the end" of the protected code
+<ul>
+  <li>A <code class="language-plaintext highlighter-rouge">goto</code> that targets a label outside of the
+protected code</li>
+  <li>A <code class="language-plaintext highlighter-rouge">break</code> that leaves the protected code</li>
+  <li>A <code class="language-plaintext highlighter-rouge">continue</code> that resumes a loop enclosing the
+protected code</li>
+  <li>A <code class="language-plaintext highlighter-rouge">return</code> from within the protected code</li>
+  <li>A <code class="language-plaintext highlighter-rouge">throw</code> from within the protected code</li>
+  <li>Simply “falling off the end” of the protected code</li>
+</ul>
 
-If a `catch` handler catches an exception thrown
-within the protected code, the `finally` clause
-will *still* run - as promised, it *always* runs when control exits the
-`try`, no matter how. In this case, the
-`finally` clause will run when control transfers
-*out* of the `catch` handler. Control can
-transfer out of the `catch` handler in any of
+<p>If a <code class="language-plaintext highlighter-rouge">catch</code> handler catches an exception thrown
+within the protected code, the <code class="language-plaintext highlighter-rouge">finally</code> clause
+will <em>still</em> run - as promised, it <em>always</em> runs when control exits the
+<code class="language-plaintext highlighter-rouge">try</code>, no matter how. In this case, the
+<code class="language-plaintext highlighter-rouge">finally</code> clause will run when control transfers
+<em>out</em> of the <code class="language-plaintext highlighter-rouge">catch</code> handler. Control can
+transfer out of the <code class="language-plaintext highlighter-rouge">catch</code> handler in any of
 the ways listed above for the main protected code; the
-`finally` will be invoked at that time for any
-of those modes of egress.
+<code class="language-plaintext highlighter-rouge">finally</code> will be invoked at that time for any
+of those modes of egress.</p>
 
-For more details on `try` and
-`throw`, refer to the section on [exception
-handling](except.html).
+<p>For more details on <code class="language-plaintext highlighter-rouge">try</code> and
+<code class="language-plaintext highlighter-rouge">throw</code>, refer to the section on <a href="except.html">exception
+handling</a>.</p>
 
-## <span id="tads2">Notes for TADS 2 users</span>
+<h2 id="notes-for-tads-2-users"><span id="tads2">Notes for TADS 2 users</span></h2>
 
-TADS 2 users should note some important syntax changes from the old
-language:
+<p>TADS 2 users should note some important syntax changes from the old
+language:</p>
 
-- The TADS 2 function definition syntax is no longer supported. Instead,
-  TADS 3 uses a syntax that's much like Java's or C's. This makes the
-  language more internally consistent.
-- Method definitions are also slightly different from TADS 2's syntax.
-  In particular, the `=` (equals sign) that came
-  between a method's parameter list and its body is no longer allowed.
-  This makes method definitions look much more like they do in Java and
-  C++.
+<ul>
+  <li>The TADS 2 function definition syntax is no longer supported. Instead,
+TADS 3 uses a syntax that’s much like Java’s or C’s. This makes the
+language more internally consistent.</li>
+  <li>Method definitions are also slightly different from TADS 2’s syntax.
+In particular, the <code class="language-plaintext highlighter-rouge">=</code> (equals sign) that came
+between a method’s parameter list and its body is no longer allowed.
+This makes method definitions look much more like they do in Java and
+C++.</li>
+</ul>
 
-TADS 3 lifts a number of restrictions that TADS 2 imposed. Some of the
-more important ones:
+<p>TADS 3 lifts a number of restrictions that TADS 2 imposed. Some of the
+more important ones:</p>
 
-- In TADS 3, forward function declarations are never required. The
-  compiler processes the entire program's source code before resolving
-  symbols, so it looks ahead by itself and requires no explicit forward
-  declarations.
-- TADS 3 lets you use empty parentheses to call a method that takes no
-  parameters. This is exactly equivalent to calling the method with no
-  argument list (that is, no parentheses) at all.
-- You can define local variables anywhere in a code block in TADS 3.
-  That is, a `local` statement can go anywhere a
-  regular executable statement can go. The TADS 2 restriction, that
-  `local` statements could only go at the top of
-  a code block, no longer applies.
+<ul>
+  <li>In TADS 3, forward function declarations are never required. The
+compiler processes the entire program’s source code before resolving
+symbols, so it looks ahead by itself and requires no explicit forward
+declarations.</li>
+  <li>TADS 3 lets you use empty parentheses to call a method that takes no
+parameters. This is exactly equivalent to calling the method with no
+argument list (that is, no parentheses) at all.</li>
+  <li>You can define local variables anywhere in a code block in TADS 3.
+That is, a <code class="language-plaintext highlighter-rouge">local</code> statement can go anywhere a
+regular executable statement can go. The TADS 2 restriction, that
+<code class="language-plaintext highlighter-rouge">local</code> statements could only go at the top of
+a code block, no longer applies.</li>
+</ul>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Procedural Code  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Procedural Code<br />
 <span class="navnp"><a href="expr.html" class="nav"><em>Prev:</em> Expressions and
 Operators</a>    
 <a href="optparams.html" class="nav"><em>Next:</em> Optional
-Parameters</a>     </span>
+Parameters</a>     </span></p>
 
-</div>
-</i></a></ele></i></x></x></ele></i></i></x></cc3></c3></c2></c1></div>
 
 </main>
 <footer>

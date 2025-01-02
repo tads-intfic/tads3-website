@@ -75,7 +75,7 @@ substitution parameter names and handler functions.
 
 
 
-[`langObj`](#langObj)[`params`](#params)[`paramTab`](#paramTab)
+[`langObj`](#langObj) [`params`](#params) [`paramTab`](#paramTab)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ substitution parameter names and handler functions.
 
 
 
-[`cmdInfo`](#cmdInfo)[`construct`](#construct)[`expand`](#expand)[`findStrParam`](#findStrParam)
+[`cmdInfo`](#cmdInfo) [`construct`](#construct) [`expand`](#expand) [`findStrParam`](#findStrParam)
 
 <span id="_Properties_"></span>
 

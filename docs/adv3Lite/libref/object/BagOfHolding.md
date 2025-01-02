@@ -82,7 +82,7 @@ his/her hands become too full to pick up another object.
 
 
 
-[`affinityFor`](#affinityFor)[`moveAction`](#moveAction)[`suitabilityFor`](#suitabilityFor)[`tryHolding`](#tryHolding)
+[`affinityFor`](#affinityFor) [`moveAction`](#moveAction) [`suitabilityFor`](#suitabilityFor) [`tryHolding`](#tryHolding)
 
 <span id="_Properties_"></span>
 

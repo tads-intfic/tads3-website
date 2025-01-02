@@ -57,7 +57,7 @@ properties and constants.
 
 
 
-[`GramTokTypeLiteral`](#GramTokTypeLiteral)[`GramTokTypeNSpeech`](#GramTokTypeNSpeech)[`GramTokTypeProd`](#GramTokTypeProd)[`GramTokTypeSpeech`](#GramTokTypeSpeech)[`GramTokTypeStar`](#GramTokTypeStar)[`GramTokTypeTokEnum`](#GramTokTypeTokEnum)
+[`GramTokTypeLiteral`](#GramTokTypeLiteral) [`GramTokTypeNSpeech`](#GramTokTypeNSpeech) [`GramTokTypeProd`](#GramTokTypeProd) [`GramTokTypeSpeech`](#GramTokTypeSpeech) [`GramTokTypeStar`](#GramTokTypeStar) [`GramTokTypeTokEnum`](#GramTokTypeTokEnum)
 
 <span id="_EnumSummary_"></span>
 

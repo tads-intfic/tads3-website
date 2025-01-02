@@ -46,99 +46,67 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The GrammarProd intrinsic class is a specialized type that's designed
+<p>The GrammarProd intrinsic class is a specialized type that’s designed
 for creating parsers. An object of this type is created automatically by
-the TADS 3 compiler for each 'grammar' statement. This class
+the TADS 3 compiler for each ‘grammar’ statement. This class
 encapsulates the prototype token list and mapping information defined in
-a 'grammar' statement, and provides a method to match its prototype to
-an input token string.
+a ‘grammar’ statement, and provides a method to match its prototype to
+an input token string.</p>
 
-GrammarProd implements a "parser" in a limited computerese sense, which
-is essentially a program that produces "sentence diagrams" a la
+<p>GrammarProd implements a “parser” in a limited computerese sense, which
+is essentially a program that produces “sentence diagrams” a la
 elementary school grammar lessons. GrammarProd is thus only a small part
-of what we think of as "the parser" in an IF context. The broader parser
+of what we think of as “the parser” in an IF context. The broader parser
 starts with the sentence diagrams that GrammarProd produces, and must
-then interpret their meanings and carry out the intentions they express.
+then interpret their meanings and carry out the intentions they express.</p>
 
-Parsers built with GrammarProd trees can handle grammars with left or
+<p>Parsers built with GrammarProd trees can handle grammars with left or
 right recursion, and can handle ambiguous grammars (meaning that a
 single input can have multiple ways of matching the grammar). This is
 especially important for natural language parsing, since virtually all
 natural languages have ambiguous grammars. When a match is ambiguous, a
 GrammarProd parser builds all of the possible match trees, allowing you
-to choose the best match based on context and semantic content.
+to choose the best match based on context and semantic content.</p>
 
-You can also create new productions dynamically with new GrammarProd().
-Use addAlt() to populate a new production with token matching rules.
+<p>You can also create new productions dynamically with new GrammarProd().
+Use addAlt() to populate a new production with token matching rules.</p>
 
-`intrinsic class `**`GrammarProd`**` :   `[`Object`](../object/Object.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">GrammarProd</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">GrammarProd</code></strong><br />
 <a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addAlt"><code class="language-plaintext highlighter-rouge">addAlt</code></a><a href="#clearAlts"><code class="language-plaintext highlighter-rouge">clearAlts</code></a><a href="#deleteAlt"><code class="language-plaintext highlighter-rouge">deleteAlt</code></a><a href="#getGrammarInfo"><code class="language-plaintext highlighter-rouge">getGrammarInfo</code></a><a href="#parseTokens"><code class="language-plaintext highlighter-rouge">parseTokens</code></a></p>
+<p><a href="#addAlt"><code class="language-plaintext highlighter-rouge">addAlt</code></a> <a href="#clearAlts"><code class="language-plaintext highlighter-rouge">clearAlts</code></a> <a href="#deleteAlt"><code class="language-plaintext highlighter-rouge">deleteAlt</code></a> <a href="#getGrammarInfo"><code class="language-plaintext highlighter-rouge">getGrammarInfo</code></a> <a href="#parseTokens"><code class="language-plaintext highlighter-rouge">parseTokens</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
-<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a><a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a><a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a><a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a><a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a><a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a><a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a><a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a><a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a><a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a><a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a><a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a><a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a><a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a><a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a> <a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a> <a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a> <a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a> <a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a> <a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a> <a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addAlt"></span></p>
 
@@ -146,31 +114,27 @@ Use addAlt() to populate a new production with token matching rules.
 
 <p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#84">84</a>]</p>
 
-<div class="desc">
+<p>Add a new alternative set of alternatives to the rule list for this
+grammar production.</p>
 
-Add a new alternative set of alternatives to the rule list for this
-grammar production.
+<p>‘alt’ is a string with the token list specifying the alternative(s) to
+add. This uses the same syntax as the rule list in a static ‘grammar’
+statement. You can use ‘|’ symbols to add multiple alternatives.</p>
 
-'alt' is a string with the token list specifying the alternative(s) to
-add. This uses the same syntax as the rule list in a static 'grammar'
-statement. You can use '\|' symbols to add multiple alternatives.
-
-'matchObj' is the match object class, which is the class of the object
+<p>‘matchObj’ is the match object class, which is the class of the object
 that parseTokens() reutrns in the match list to represent a match to
 this production. This corresponds to the base class defined in a static
-'grammar' statement.
+‘grammar’ statement.</p>
 
-'dict' is an optional Dictionary object. Literal tokens used in the
-token list will be automatically added to the dictionary if they're not
-already defined.
+<p>‘dict’ is an optional Dictionary object. Literal tokens used in the
+token list will be automatically added to the dictionary if they’re not
+already defined.</p>
 
-'symtab' is an optional LookupTable with the global symbol table. This
+<p>‘symtab’ is an optional LookupTable with the global symbol table. This
 must be provided if any symbolic tokens are used in the rule list
 (property names, sub-production names, etc). In most cases this is
 simply the symbol table that t3GetGlobalSymbols() returns during
-preinit.
-
-</div>
+preinit.</p>
 
 <p><span id="clearAlts"></span></p>
 
@@ -178,18 +142,14 @@ preinit.
 
 <p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#123">123</a>]</p>
 
-<div class="desc">
-
-Delete all alternatives from the rule list for this grammar production.
+<p>Delete all alternatives from the rule list for this grammar production.
 This resets the rule to an empty production with no alternatives to
 match, which is convenient if you want to redefine the entire rule set
-with a subsequent addAlt() call.
+with a subsequent addAlt() call.</p>
 
-'dict' is an optional Dictionary object to adjust for the deletion. If a
-non-nil 'dict' is given, we'll remove all of the production's literals
-from the dictionary.
-
-</div>
+<p>‘dict’ is an optional Dictionary object to adjust for the deletion. If a
+non-nil ‘dict’ is given, we’ll remove all of the production’s literals
+from the dictionary.</p>
 
 <p><span id="deleteAlt"></span></p>
 
@@ -197,31 +157,27 @@ from the dictionary.
 
 <p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#111">111</a>]</p>
 
-<div class="desc">
+<p>Delete onen or more alternatives from the rule list for this grammar
+production. ‘id’ identifies the rule(s) to delete:</p>
 
-Delete onen or more alternatives from the rule list for this grammar
-production. 'id' identifies the rule(s) to delete:
-
-\- By tag: if 'id' is a string, the method deletes each alternative
-whose match object's grammarTag property equals 'id'. For static rules
-defined with 'grammar' statements, the compiler sets grammarTag to the
+<p>- By tag: if ‘id’ is a string, the method deletes each alternative
+whose match object’s grammarTag property equals ‘id’. For static rules
+defined with ‘grammar’ statements, the compiler sets grammarTag to the
 tag used in the statement defining the rule. This makes it easy to
-delete all of the rules defined by a given 'grammar' statement.
+delete all of the rules defined by a given ‘grammar’ statement.</p>
 
-\- By match object class: if 'id' is an object, the method deletes every
-alternative whose match object equals 'id' or is a subclass of 'id'.
+<p>- By match object class: if ‘id’ is an object, the method deletes every
+alternative whose match object equals ‘id’ or is a subclass of ‘id’.
 This makes it easy to delete a group of dynamically added rules that
-share a match object.
+share a match object.</p>
 
-\- By index: if 'id' is an integer, it gives the index of the rule to
+<p>- By index: if ‘id’ is an integer, it gives the index of the rule to
 delete. This corresponds to an index in the list returned by
-getGrammarInfo().
+getGrammarInfo().</p>
 
-'dict' is an optional Dictionary object to adjust for the deletion. If a
-non-nil 'dict' is given, we'll remove literals from the dictionary that
-were defined by the alternative and no longer used in the production.
-
-</div>
+<p>‘dict’ is an optional Dictionary object to adjust for the deletion. If a
+non-nil ‘dict’ is given, we’ll remove literals from the dictionary that
+were defined by the alternative and no longer used in the production.</p>
 
 <p><span id="getGrammarInfo"></span></p>
 
@@ -229,13 +185,9 @@ were defined by the alternative and no longer used in the production.
 
 <p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#58">58</a>]</p>
 
-<div class="desc">
-
-Retrieve a detailed description of the production. This returns a list
+<p>Retrieve a detailed description of the production. This returns a list
 of GrammarAltInfo objects that describe the rule alternatives that make
-up this production.
-
-</div>
+up this production.</p>
 
 <p><span id="parseTokens"></span></p>
 
@@ -243,20 +195,13 @@ up this production.
 
 <p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#51">51</a>]</p>
 
-<div class="desc">
-
-Parse the token list, starting at this production, using the given
+<p>Parse the token list, starting at this production, using the given
 dictionary to look up tokens. Returns a list of match objects. If there
-are no matches to the grammar, simply returns an empty list.
+are no matches to the grammar, simply returns an empty list.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

@@ -75,14 +75,14 @@ for objects in a specified list of exceptions; for example, in English,
 
 
 
-[`addedFlags`](#addedFlags)[`filterForCollectives`](#filterForCollectives)
+[`addedFlags`](#addedFlags) [`filterForCollectives`](#filterForCollectives)
 
 
 
 
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,16 +92,16 @@ Inherited from `BasicProd` :
 
 
 
-[`flagAllExcepted`](#flagAllExcepted)[`getMainList`](#getMainList)
+[`flagAllExcepted`](#flagAllExcepted) [`getMainList`](#getMainList)
 
 Inherited from `ButProd` :  
-[`filterFinalList`](../object/ButProd.html#filterFinalList)[`resolveNouns`](../object/ButProd.html#resolveNouns)
+[`filterFinalList`](../object/ButProd.html#filterFinalList) [`resolveNouns`](../object/ButProd.html#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations) [`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

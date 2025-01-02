@@ -63,7 +63,7 @@ ASK/TELL suggestion list group base class
 
 
 
-[`suggestionAskForGroup`](../object/suggestionAskForGroup.html)[`suggestionAskGroup`](../object/suggestionAskGroup.html)[`suggestionGiveGroup`](../object/suggestionGiveGroup.html)[`suggestionShowGroup`](../object/suggestionShowGroup.html)[`suggestionTellGroup`](../object/suggestionTellGroup.html)[`suggestionYesNoGroup`](../object/suggestionYesNoGroup.html)
+[`suggestionAskForGroup`](../object/suggestionAskForGroup.html) [`suggestionAskGroup`](../object/suggestionAskGroup.html) [`suggestionGiveGroup`](../object/suggestionGiveGroup.html) [`suggestionShowGroup`](../object/suggestionShowGroup.html) [`suggestionTellGroup`](../object/suggestionTellGroup.html) [`suggestionYesNoGroup`](../object/suggestionYesNoGroup.html)
 <span id="_PropSummary_"></span>
 
 
@@ -75,12 +75,12 @@ ASK/TELL suggestion list group base class
 
 
 Inherited from `ListGroupPrefixSuffix` :  
-[`groupPrefix`](../object/ListGroupPrefixSuffix.html#groupPrefix)[`groupSuffix`](../object/ListGroupPrefixSuffix.html#groupSuffix)
+[`groupPrefix`](../object/ListGroupPrefixSuffix.html#groupPrefix) [`groupSuffix`](../object/ListGroupPrefixSuffix.html#groupSuffix)
 
 
 
 Inherited from `ListGroup` :  
-[`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist)[`minGroupSize`](../object/ListGroup.html#minGroupSize)
+[`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist) [`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,13 +93,13 @@ Inherited from `ListGroup` :
 [`showGroupItem`](#showGroupItem)
 
 Inherited from `ListGroupPrefixSuffix` :  
-[`showGroupList`](../object/ListGroupPrefixSuffix.html#showGroupList)[`showGroupPrefix`](../object/ListGroupPrefixSuffix.html#showGroupPrefix)[`showGroupSuffix`](../object/ListGroupPrefixSuffix.html#showGroupSuffix)
+[`showGroupList`](../object/ListGroupPrefixSuffix.html#showGroupList) [`showGroupPrefix`](../object/ListGroupPrefixSuffix.html#showGroupPrefix) [`showGroupSuffix`](../object/ListGroupPrefixSuffix.html#showGroupSuffix)
 
 Inherited from `ListGroupSorted` :  
-[`compareGroupItems`](../object/ListGroupSorted.html#compareGroupItems)[`sortListGroup`](../object/ListGroupSorted.html#sortListGroup)
+[`compareGroupItems`](../object/ListGroupSorted.html#compareGroupItems) [`sortListGroup`](../object/ListGroupSorted.html#sortListGroup)
 
 Inherited from `ListGroup` :  
-[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister) [`groupCardinality`](../object/ListGroup.html#groupCardinality) [`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount) [`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

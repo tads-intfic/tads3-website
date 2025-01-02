@@ -90,13 +90,13 @@ Inherited from `ListGroup` :
 
 
 
-[`showGroupCountName`](#showGroupCountName)[`showGroupList`](#showGroupList)
+[`showGroupCountName`](#showGroupCountName) [`showGroupList`](#showGroupList)
 
 Inherited from `ListGroupSorted` :  
-[`compareGroupItems`](../object/ListGroupSorted.html#compareGroupItems)[`sortListGroup`](../object/ListGroupSorted.html#sortListGroup)
+[`compareGroupItems`](../object/ListGroupSorted.html#compareGroupItems) [`sortListGroup`](../object/ListGroupSorted.html#sortListGroup)
 
 Inherited from `ListGroup` :  
-[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister) [`groupCardinality`](../object/ListGroup.html#groupCardinality) [`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount) [`showGroupItem`](../object/ListGroup.html#showGroupItem) [`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

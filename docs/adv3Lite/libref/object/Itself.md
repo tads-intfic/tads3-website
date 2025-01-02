@@ -51,10 +51,10 @@ third-person singular neuter reflexive
 [`pronoun`](#pronoun)
 
 Inherited from `ReflexivePronoun` :  
-[`all`](../object/ReflexivePronoun.html#all)[`person`](../object/ReflexivePronoun.html#person)
+[`all`](../object/ReflexivePronoun.html#all) [`person`](../object/ReflexivePronoun.html#person)
 
 Inherited from `Pronoun` :  
-[`aName`](../object/Pronoun.html#aName)[`ante`](../object/Pronoun.html#ante)[`reflexive`](../object/Pronoun.html#reflexive)[`theName`](../object/Pronoun.html#theName)[`theObjName`](../object/Pronoun.html#theObjName)
+[`aName`](../object/Pronoun.html#aName) [`ante`](../object/Pronoun.html#ante) [`reflexive`](../object/Pronoun.html#reflexive) [`theName`](../object/Pronoun.html#theName) [`theObjName`](../object/Pronoun.html#theObjName)
 
 <span id="_MethodSummary_"></span>
 
@@ -67,10 +67,10 @@ Inherited from `Pronoun` :
 
 
 Inherited from `ReflexivePronoun` :  
-[`construct`](../object/ReflexivePronoun.html#construct)[`resolve`](../object/ReflexivePronoun.html#resolve)
+[`construct`](../object/ReflexivePronoun.html#construct) [`resolve`](../object/ReflexivePronoun.html#resolve)
 
 Inherited from `Pronoun` :  
-[`matchObj`](../object/Pronoun.html#matchObj)[`setAntecedents`](../object/Pronoun.html#setAntecedents)
+[`matchObj`](../object/Pronoun.html#matchObj) [`setAntecedents`](../object/Pronoun.html#setAntecedents)
 
 <span id="_Properties_"></span>
 

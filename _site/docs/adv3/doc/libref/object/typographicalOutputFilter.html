@@ -40,72 +40,52 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Typographical effects output filter. This filter looks for certain
+<p>Typographical effects output filter. This filter looks for certain
 sequences in the text and converts them to typographical equivalents.
 Authors could simply write the HTML for the typographical markups in the
-first place, but it's easier to write the typewriter-like sequences and
-let this filter convert to HTML.
+first place, but it’s easier to write the typewriter-like sequences and
+let this filter convert to HTML.</p>
 
-We perform the following conversions:
+<p>We perform the following conversions:</p>
 
-'---' -\&gt; &zwnbsp;&mdash;  
-'--' -\&gt; &zwnbsp;&ndash;  
-sentence-ending punctuation -\&gt; same + &ensp;
+<p>’—’ -&gt; &amp;zwnbsp;—<br />
+‘–’ -&gt; &amp;zwnbsp;–<br />
+sentence-ending punctuation -&gt; same +  </p>
 
-Since this routine is called so frequently, we hard-code the replacement
+<p>Since this routine is called so frequently, we hard-code the replacement
 strings, rather than using properties, for slightly faster performance.
 Since this routine is so simple, games that want to customize the
 replacement style should simply replace this entire routine with a new
-routine that applies the customizations.
+routine that applies the customizations.</p>
 
-Note that we define this filter in the English-specific part of the
+<p>Note that we define this filter in the English-specific part of the
 library, because it seems almost certain that each language will want to
-customize it for local conventions.
+customize it for local conventions.</p>
 
-**`typographicalOutputFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">typographicalOutputFilter</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">typographicalOutputFilter</code></strong><br />
 <a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#abbreviations"><code class="language-plaintext highlighter-rouge">abbreviations</code></a><a href="#abbrevPat"><code class="language-plaintext highlighter-rouge">abbrevPat</code></a><a href="#eosPattern"><code class="language-plaintext highlighter-rouge">eosPattern</code></a></p>
+<p><a href="#abbreviations"><code class="language-plaintext highlighter-rouge">abbreviations</code></a> <a href="#abbrevPat"><code class="language-plaintext highlighter-rouge">abbrevPat</code></a> <a href="#eosPattern"><code class="language-plaintext highlighter-rouge">eosPattern</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="abbreviations"></span></p>
 
@@ -113,17 +93,13 @@ customize it for local conventions.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3751">3751</a>]</p>
 
-<div class="desc">
+<p>Common abbreviations. These are excluded from being treated as sentence
+endings when they appear with a trailing period.</p>
 
-Common abbreviations. These are excluded from being treated as sentence
-endings when they appear with a trailing period.
-
-Note that abbrevPat must be rebuilt manually if you change this on the
+<p>Note that abbrevPat must be rebuilt manually if you change this on the
 fly - abbrevPat is static, so it picks up the initial value of this
-property at start-up, and doesn't re-evaluate it while the game is
-running.
-
-</div>
+property at start-up, and doesn’t re-evaluate it while the game is
+running.</p>
 
 <p><span id="abbrevPat"></span></p>
 
@@ -131,11 +107,7 @@ running.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3739">3739</a>]</p>
 
-<div class="desc">
-
-pattern for abbreviations that were mistaken for sentence endings
-
-</div>
+<p>pattern for abbreviations that were mistaken for sentence endings</p>
 
 <p><span id="eosPattern"></span></p>
 
@@ -143,34 +115,26 @@ pattern for abbreviations that were mistaken for sentence endings
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3726">3726</a>]</p>
 
-<div class="desc">
-
-The end-of-sentence pattern. This looks a bit complicated, but all we're
+<p>The end-of-sentence pattern. This looks a bit complicated, but all we’re
 looking for is a period, exclamation point, or question mark, optionally
 followed by any number of closing group marks (right parentheses or
 square brackets, closing HTML tags, or double or single quotes in either
-straight or curly styles), all followed by an ordinary space.
+straight or curly styles), all followed by an ordinary space.</p>
 
-If a lower-case letter follows the space, though, we won't consider it a
+<p>If a lower-case letter follows the space, though, we won’t consider it a
 sentence ending. This applies most commonly after quoted passages ending
-with what would normally be sentence-ending punctuation: "'Who are you?'
-he asked." In these cases, the enclosing sentence isn't ending, so we
-don't want the extra space. We can tell the enclosing sentence isn't
-ending because a non-capital letter follows.
+with what would normally be sentence-ending punctuation: “‘Who are you?’
+he asked.” In these cases, the enclosing sentence isn’t ending, so we
+don’t want the extra space. We can tell the enclosing sentence isn’t
+ending because a non-capital letter follows.</p>
 
-Note that we specifically look only for ordinary spaces. Any
-sentence-ending punctuation that's followed by a quoted space or any
-typographical space overrides this substitution.
-
-</div>
+<p>Note that we specifically look only for ordinary spaces. Any
+sentence-ending punctuation that’s followed by a quoted space or any
+typographical space overrides this substitution.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="filterText"></span></p>
 
@@ -178,18 +142,11 @@ typographical space overrides this substitution.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3670">3670</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

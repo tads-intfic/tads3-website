@@ -109,8 +109,8 @@ initDisplay()
         {: gameMain.setGameTitle() });
 
     /* parse out the contents of the &lt;title&gt; tag */
-    if (rexSearch('&lt;nocase&gt;[&lt;]title[&gt;](.*)[&lt;]/title[&gt;]', title))
-        title = rexGroup(1)[3];
+    if (rexSearch('&lt;nocase&gt;[&lt;]title[&gt;](.*) [&lt;]/title[&gt;]', title))
+        title = rexGroup(1) [3];
 
     /* initialize the statusline window object */
     statuslineBanner.init();
@@ -718,11 +718,11 @@ statusHTML(stage)
     {
     case 0:
         /* start the left-aligned portion */
-        return '&lt;div class="statusleft"&gt;';
+        return '';
 
     case 1:
         /* close the left portion, and start the right-aligned portion */
-        return '&lt;/div&gt;&lt;div class="statusright"&gt;';
+        return '';
 
     case 2:
         /* 
@@ -733,7 +733,7 @@ statusHTML(stage)
          *   so we need to manually extend the main vertical box's height
          *   past the floating sections. 
          */
-        return '&lt;/div&gt;&lt;div class="statusStrut"&gt;&lt;/div&gt;';
+        return '';
 
     case 3:
     case 4:
@@ -838,12 +838,9 @@ transient statuslineBanner: WebStatusWin, WebBannerWin
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

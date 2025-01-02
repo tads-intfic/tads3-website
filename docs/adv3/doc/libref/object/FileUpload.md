@@ -77,7 +77,7 @@ create use FileUpload to post file attachments to posted forms.
 
 
 
-[`contentType`](#contentType)[`file`](#file)[`filename`](#filename)
+[`contentType`](#contentType) [`file`](#file) [`filename`](#filename)
 
 <span id="_MethodSummary_"></span>
 

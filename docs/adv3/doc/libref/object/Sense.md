@@ -60,7 +60,7 @@ Sense: the basic class for senses.
 
 
 
-[`sight`](../object/sight.html)[`smell`](../object/smell.html)[`sound`](../object/sound.html)[`touch`](../object/touch.html)
+[`sight`](../object/sight.html) [`smell`](../object/smell.html) [`sound`](../object/sound.html) [`touch`](../object/touch.html)
 <span id="_PropSummary_"></span>
 
 
@@ -69,7 +69,7 @@ Sense: the basic class for senses.
 
 
 
-[`ambienceProp`](#ambienceProp)[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
+[`ambienceProp`](#ambienceProp) [`presenceProp`](#presenceProp) [`sizeProp`](#sizeProp) [`thruProp`](#thruProp)
 
 <span id="_MethodSummary_"></span>
 

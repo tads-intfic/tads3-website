@@ -38,7 +38,7 @@ library (c) Michael J. Roberts).
 
 
 
-[`Daemon`](../object/Daemon.html)[`Event`](../object/Event.html)[`Fuse`](../object/Fuse.html)[`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)[`PromptDaemon`](../object/PromptDaemon.html)[`SenseDaemon`](../object/SenseDaemon.html)[`SenseFuse`](../object/SenseFuse.html)
+[`Daemon`](../object/Daemon.html) [`Event`](../object/Event.html) [`Fuse`](../object/Fuse.html) [`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html) [`PromptDaemon`](../object/PromptDaemon.html) [`SenseDaemon`](../object/SenseDaemon.html) [`SenseFuse`](../object/SenseFuse.html)
 <span id="_ObjectSummary_"></span>
 
 

@@ -46,39 +46,27 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The base class for Enterables and Exitables. These are physical objects
+<p>The base class for Enterables and Exitables. These are physical objects
 associated with travel connectors. For example, the object representing
 the exterior of a building in the location containing the building could
 be an Enterable, so that typing ENTER BUILDING takes us into the
-building via the travel connector that leads inside.
+building via the travel connector that leads inside.</p>
 
-Enterables and Exitables are physical covers for travel connectors.
-These objects aren't travel connectors themselves, and they don't
-specify the destination; instead, these just point to travel connectors.
+<p>Enterables and Exitables are physical covers for travel connectors.
+These objects aren’t travel connectors themselves, and they don’t
+specify the destination; instead, these just point to travel connectors.</p>
 
-`class `**`TravelConnectorLink`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TravelConnectorLink</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TravelConnectorLink</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TravelConnectorLink</code></strong><br />
 <a href="../object/Enterable.html"><code class="language-plaintext highlighter-rouge">Enterable</code></a><br />
@@ -87,39 +75,23 @@ specify the destination; instead, these just point to travel connectors.
 <a href="../object/ExitPortal.html"><code class="language-plaintext highlighter-rouge">ExitPortal</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#connector"><code class="language-plaintext highlighter-rouge">connector</code></a><a href="#sightSize"><code class="language-plaintext highlighter-rouge">sightSize</code></a></p>
+<p><a href="#connector"><code class="language-plaintext highlighter-rouge">connector</code></a> <a href="#sightSize"><code class="language-plaintext highlighter-rouge">sightSize</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#dobjFor(TravelVia)"><code class="language-plaintext highlighter-rouge">dobjFor(TravelVia)</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="connector"></span></p>
 
@@ -127,11 +99,7 @@ specify the destination; instead, these just point to travel connectors.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3074">3074</a>]</p>
 
-<div class="desc">
-
-the underlying travel connector
-
-</div>
+<p>the underlying travel connector</p>
 
 <p><span id="sightSize"></span></p>
 
@@ -139,21 +107,13 @@ the underlying travel connector
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3102">3102</a>]</p>
 
-<div class="desc">
-
-These objects are generally things like buildings (exterior or
+<p>These objects are generally things like buildings (exterior or
 interior), which tend to be large enough that their details can be seen
-at a distance.
-
-</div>
+at a distance.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="dobjFor(TravelVia)"></span></p>
 
@@ -161,23 +121,16 @@ at a distance.
 
 <p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3084">3084</a>]</p>
 
-<div class="desc">
-
-The internal "TravelVia" action just maps to travel via the underlying
-connector. However, we want to apply our own preconditions, so we don't
+<p>The internal “TravelVia” action just maps to travel via the underlying
+connector. However, we want to apply our own preconditions, so we don’t
 directly remap to the underlying connector. Instead, we provide our own
 full TravelVia implementation, and then we perform the travel on the
 underlying connector via a replacement action in our own action()
-handler.
+handler.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

@@ -68,7 +68,7 @@ List entry for the still-to-resolve list
 
 
 
-[`fullMatchList`](#fullMatchList)[`matchList`](#matchList)[`origText`](#origText)
+[`fullMatchList`](#fullMatchList) [`matchList`](#matchList) [`origText`](#origText)
 
 <span id="_MethodSummary_"></span>
 

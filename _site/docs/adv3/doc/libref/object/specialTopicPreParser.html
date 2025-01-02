@@ -40,24 +40,16 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Pre-parser for special ConvNode-specific commands. When the player
+character is talking to another character, and the NPC’s current
+ConvNode includes topics with their own commands, we’ll check the
+player’s input to see if it matches any of these topics.</p>
 
-Pre-parser for special ConvNode-specific commands. When the player
-character is talking to another character, and the NPC's current
-ConvNode includes topics with their own commands, we'll check the
-player's input to see if it matches any of these topics.
-
-**`specialTopicPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">specialTopicPreParser</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">specialTopicPreParser</code></strong><br />
 <a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a><br />
@@ -66,43 +58,31 @@ player's input to see if it matches any of these topics.
 `                                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#aOrTPat"><code class="language-plaintext highlighter-rouge">aOrTPat</code></a><a href="#punctPat"><code class="language-plaintext highlighter-rouge">punctPat</code></a></p>
+<p><a href="#aOrTPat"><code class="language-plaintext highlighter-rouge">aOrTPat</code></a> <a href="#punctPat"><code class="language-plaintext highlighter-rouge">punctPat</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
-<a href="../object/StringPreParser.html#regList"><code class="language-plaintext highlighter-rouge">regList</code></a><a href="../object/StringPreParser.html#regListSorted"><code class="language-plaintext highlighter-rouge">regListSorted</code></a><a href="../object/StringPreParser.html#runOrder"><code class="language-plaintext highlighter-rouge">runOrder</code></a></p>
+<a href="../object/StringPreParser.html#regList"><code class="language-plaintext highlighter-rouge">regList</code></a> <a href="../object/StringPreParser.html#regListSorted"><code class="language-plaintext highlighter-rouge">regListSorted</code></a> <a href="../object/StringPreParser.html#runOrder"><code class="language-plaintext highlighter-rouge">runOrder</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#doParsing"><code class="language-plaintext highlighter-rouge">doParsing</code></a><a href="#processInputStr"><code class="language-plaintext highlighter-rouge">processInputStr</code></a></p>
+<p><a href="#doParsing"><code class="language-plaintext highlighter-rouge">doParsing</code></a> <a href="#processInputStr"><code class="language-plaintext highlighter-rouge">processInputStr</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
-<a href="../object/StringPreParser.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/StringPreParser.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="../object/StringPreParser.html#registerPreParser"><code class="language-plaintext highlighter-rouge">registerPreParser</code></a><a href="../object/StringPreParser.html#runAll"><code class="language-plaintext highlighter-rouge">runAll</code></a></p>
+<a href="../object/StringPreParser.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/StringPreParser.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/StringPreParser.html#registerPreParser"><code class="language-plaintext highlighter-rouge">registerPreParser</code></a> <a href="../object/StringPreParser.html#runAll"><code class="language-plaintext highlighter-rouge">runAll</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="aOrTPat"></span></p>
 
@@ -110,11 +90,7 @@ player's input to see if it matches any of these topics.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2731">2731</a>]</p>
 
-<div class="desc">
-
-pattern for string starting with "A" or "T" verbs
-
-</div>
+<p>pattern for string starting with “A” or “T” verbs</p>
 
 <p><span id="punctPat"></span></p>
 
@@ -122,19 +98,11 @@ pattern for string starting with "A" or "T" verbs
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2735">2735</a>]</p>
 
-<div class="desc">
-
-pattern to eliminate punctuation marks from the string
-
-</div>
+<p>pattern to eliminate punctuation marks from the string</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="doParsing"></span></p>
 
@@ -142,11 +110,7 @@ pattern to eliminate punctuation marks from the string
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1904">1904</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="processInputStr"></span></p>
 
@@ -155,22 +119,15 @@ pattern to eliminate punctuation marks from the string
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1939">1939</a>],
 <a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2714">2714</a>]</p>
 
-<div class="desc">
+<p>Process the input string, as desired, for special-topic parsing. This
+method is for the language module’s use; by default, we do nothing.</p>
 
-Process the input string, as desired, for special-topic parsing. This
-method is for the language module's use; by default, we do nothing.
+<p>Language modules should override this to remove punctuation marks and to
+do any other language-dependent processing to make the string parsable.</p>
 
-Language modules should override this to remove punctuation marks and to
-do any other language-dependent processing to make the string parsable.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

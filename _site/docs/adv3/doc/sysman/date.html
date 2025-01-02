@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Date  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Date<br />
 <span class="navnp"><a href="collect.html" class="nav"><em>Prev:</em> Collection</a>
     <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="date">Date</h1>
 
@@ -79,654 +71,608 @@ days to the date, yields a new Date object representing the result.</p>
 
 <p><code class="language-plaintext highlighter-rouge">new Date()</code></p>
 
-<div class="fdef">
-
-This creates a Date object representing the current date and time, as of
-the moment the `new` expression is evaluated.
-(The object created isn't a "live" current-time value that changes every
+<p>This creates a Date object representing the current date and time, as of
+the moment the <code class="language-plaintext highlighter-rouge">new</code> expression is evaluated.
+(The object created isn’t a “live” current-time value that changes every
 time you look at it; it simply records the fixed moment when the
-`new` expression was evaluated. Evaluating the
-same `new` expression again will yield another
-Date object representing the then-current time.)
+<code class="language-plaintext highlighter-rouge">new</code> expression was evaluated. Evaluating the
+same <code class="language-plaintext highlighter-rouge">new</code> expression again will yield another
+Date object representing the then-current time.)</p>
 
+<p><span id="newDateStr"></span></p>
 
+<p><code class="language-plaintext highlighter-rouge">new Date(*str*, *refTZ*?, *refDate*?)</code></p>
 
-<span id="newDateStr"></span>
-
-`new Date(*str*, *refTZ*?, *refDate*?)`
-
-<div class="fdef">
-
-This parses the string value *str*, attempting to interpret it as a
+<p>This parses the string value <em>str</em>, attempting to interpret it as a
 written date in various common human and computer formats. A wide range
-of formats is accepted, so the string doesn't have to be in any
+of formats is accepted, so the string doesn’t have to be in any
 particular rigid format; the parser attempts to make sense of most of
-the usual ways people (and computers) write dates. See [built-in input
-formats](#inputFormats) below for a full list.
+the usual ways people (and computers) write dates. See <a href="#inputFormats">built-in input
+formats</a> below for a full list.</p>
 
-*refTZ* is the reference time zone. If this is
-`nil` or is omitted, the default is the host
-system's local time zone. *refTZ* can be given in any of the [timezone
-argument](#tzarg) formats. The parsed date is taken to be in this time
+<p><em>refTZ</em> is the reference time zone. If this is
+<code class="language-plaintext highlighter-rouge">nil</code> or is omitted, the default is the host
+system’s local time zone. <em>refTZ</em> can be given in any of the <a href="#tzarg">timezone
+argument</a> formats. The parsed date is taken to be in this time
 zone unless it explicitly specifies a different time zone within the
-string.
+string.</p>
 
-See the notes on [parsing time zones](#tzParsing) if you expect to parse
-date strings that include time zone names within the strings.
+<p>See the notes on <a href="#tzParsing">parsing time zones</a> if you expect to parse
+date strings that include time zone names within the strings.</p>
 
-*refDate* is an optional Date object giving the reference point for
+<p><em>refDate</em> is an optional Date object giving the reference point for
 parsing the date. This is used to fill in certain missing information if
 the string contains only a partial date value. If this is omitted, the
-current time is used by default. The reference date is used as follows:
+current time is used by default. The reference date is used as follows:</p>
 
-- If the parsed date contains only a month and day (e.g., "March 15"),
-  or only a month ("June"), the year is taken from the reference date.
-- If the parsed date contains only a time ("12:13 pm"), the entire date
-  (day, month, and year) is taken from the reference date.
-- If the parsed date has a two-digit year ("5/15/92"), the century is
-  inferred from the reference date such that it yields the closest year
-  to the reference date's year. For example, if the reference date's
-  year is 2012, "92" would be interpreted as 1992, since that's closer
-  to 2012 than 2092 is; "55" would be taken as 2055, since that's closer
-  than 1955.
+<ul>
+  <li>If the parsed date contains only a month and day (e.g., “March 15”),
+or only a month (“June”), the year is taken from the reference date.</li>
+  <li>If the parsed date contains only a time (“12:13 pm”), the entire date
+(day, month, and year) is taken from the reference date.</li>
+  <li>If the parsed date has a two-digit year (“5/15/92”), the century is
+inferred from the reference date such that it yields the closest year
+to the reference date’s year. For example, if the reference date’s
+year is 2012, “92” would be interpreted as 1992, since that’s closer
+to 2012 than 2092 is; “55” would be taken as 2055, since that’s closer
+than 1955.</li>
+</ul>
 
-Other missing elements have different handling that doesn't involve the
-reference date:
+<p>Other missing elements have different handling that doesn’t involve the
+reference date:</p>
 
-- If the parsed date string contains only a year, the date is taken to
-  be January 1 of that year.
-- If the string contains only a year and month, the date is taken to be
-  the first of that month.
-- If the string has a date with no time, the time is implicitly midnight
-  (i.e., the very first moment of the day).
-- If the time is given in hours and minutes, the seconds and
-  milliseconds are implicitly zero.
+<ul>
+  <li>If the parsed date string contains only a year, the date is taken to
+be January 1 of that year.</li>
+  <li>If the string contains only a year and month, the date is taken to be
+the first of that month.</li>
+  <li>If the string has a date with no time, the time is implicitly midnight
+(i.e., the very first moment of the day).</li>
+  <li>If the time is given in hours and minutes, the seconds and
+milliseconds are implicitly zero.</li>
+</ul>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">new Date(*number*, '*J*')</code></p>
 
-`new Date(*number*, '*J*')`
-
-<div class="fdef">
-
-*number* is an integer or [BigNumber](bignum.html) giving a Julian day
-number (see [getJulianDay()](#getJulianDay)), which is the number of
+<p><em>number</em> is an integer or <a href="bignum.html">BigNumber</a> giving a Julian day
+number (see <a href="#getJulianDay">getJulianDay()</a>), which is the number of
 days since January 1, 4713 BCE on the (proleptic) Julian calendar, at
 noon UTC. The fractional portion (if any) is the fraction of a day past
-noon UTC, counting a day as exactly 24 hours (86,400 seconds).
+noon UTC, counting a day as exactly 24 hours (86,400 seconds).</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">new Date(*number*, '*U*')</code></p>
 
-`new Date(*number*, '*U*')`
-
-<div class="fdef">
-
-*number* is an integer or [BigNumber](bignum.html) giving the number of
+<p><em>number</em> is an integer or <a href="bignum.html">BigNumber</a> giving the number of
 seconds since January 1, 1970, at 00:00 UTC, which is also known as the
-Unix Epoch. If the value is negative, it's the number of seconds before
-the Epoch.
+Unix Epoch. If the value is negative, it’s the number of seconds before
+the Epoch.</p>
 
-This constructor option is provided because this is a common way to
+<p>This constructor option is provided because this is a common way to
 represent times in software. Unix-like systems in particular represent
 time this way. This constructor allows you to create a Date value
-directly from an external value in this format.
+directly from an external value in this format.</p>
 
-A 32-bit integer can only represent time values in this format from
+<p>A 32-bit integer can only represent time values in this format from
 12/13/1901 to 1/19/2038, since those are the dates that happen to be
 2,147,438,648 seconds on either side of 1/1/1970. (This is known in Unix
-circles as the "year 2038 bug", since older Unix systems used a 32-bit
+circles as the “year 2038 bug”, since older Unix systems used a 32-bit
 value for the time counter. This has been largely fixed in modern Unix
 systems by using a 64-bit value instead.) You can use a BigNumber value
 if you need to exceed these limits. A BigNumber also lets you specify
 fractional seconds. Note that the Date type stores times to millisecond
 precision, so any fractional part specified with a BigNumber will be
-rounded to the nearest millisecond.
+rounded to the nearest millisecond.</p>
 
-This constructor calculates the date and time based on the definition of
-one day as exactly 86,400 seconds, ignoring any [leap
-seconds](#leapseconds) between the Epoch and the given time. This is the
+<p>This constructor calculates the date and time based on the definition of
+one day as exactly 86,400 seconds, ignoring any <a href="#leapseconds">leap
+seconds</a> between the Epoch and the given time. This is the
 way almost all Unix systems work as well, so the result should be
 exactly the same calendar date and clock time that Unix systems show for
 a given timestamp value. If you should encounter a Unix-type system that
 actually does correct for leap seconds, it might show slightly different
 clock times for dates in the past (as of 2012, this could be up to a
-24-second difference, since that's how many leap seconds were added to
-UTC between 1972 and 2012).
+24-second difference, since that’s how many leap seconds were added to
+UTC between 1972 and 2012).</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">new Date(*year*, *month*, *day*, *tz*?)</code></p>
 
-`new Date(*year*, *month*, *day*, *tz*?)`
+<p>This creates a Date value representing midnight (00:00) on the given
+date. <em>year</em> is the year number (e.g., 2012), <em>month</em> is a calendar
+month (1 to 12), and <em>day</em> is a day of the month (1 to 31). For example,
+<code class="language-plaintext highlighter-rouge">new Date(2012, 4, 10</code> creates a Date value for
+April 10, 2012 at midnight, local time.</p>
 
-<div class="fdef">
+<p>The date is taken as midnight in the time zone specified by <em>tz</em> (using
+the usual <a href="#tzarg">timezone conventions</a>), which defaults to the host
+system’s local time zone if <code class="language-plaintext highlighter-rouge">nil</code> or not
+specified.</p>
 
-This creates a Date value representing midnight (00:00) on the given
-date. *year* is the year number (e.g., 2012), *month* is a calendar
-month (1 to 12), and *day* is a day of the month (1 to 31). For example,
-`new Date(2012, 4, 10` creates a Date value for
-April 10, 2012 at midnight, local time.
-
-The date is taken as midnight in the time zone specified by *tz* (using
-the usual [timezone conventions](#tzarg)), which defaults to the host
-system's local time zone if `nil` or not
-specified.
-
-You can also use this constructor with invalid month and day values. If
-the day is out of range for its month, it's interpreted by moving into
+<p>You can also use this constructor with invalid month and day values. If
+the day is out of range for its month, it’s interpreted by moving into
 the next or previous month until the day is valid. For example,
-`new Date(2012, 11, 31)` is the first day of
-December; `new Date(2012, 3, 0)` is the last day
+<code class="language-plaintext highlighter-rouge">new Date(2012, 11, 31)</code> is the first day of
+December; <code class="language-plaintext highlighter-rouge">new Date(2012, 3, 0)</code> is the last day
 of February 2012. You can use this feature for many simple date
-arithmetic operations; for example, `new Date(2012, 1,
-90)` gives you the 90th day of the year, and
-`new Date(2012, 4, 10 + 60)` is 60 days after
-April 10. The same treatment applies to the month; if it's less than 1
-or more than 12, it's a month in the previous or following year, so
-`new Date(2012, 14, 1)` is interpreted as
-February 1, 2013.
+arithmetic operations; for example, <code class="language-plaintext highlighter-rouge">new Date(2012, 1,
+90)</code> gives you the 90th day of the year, and
+<code class="language-plaintext highlighter-rouge">new Date(2012, 4, 10 + 60)</code> is 60 days after
+April 10. The same treatment applies to the month; if it’s less than 1
+or more than 12, it’s a month in the previous or following year, so
+<code class="language-plaintext highlighter-rouge">new Date(2012, 14, 1)</code> is interpreted as
+February 1, 2013.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">new Date(*year*, *month*, *day*, *hour*, *minutes*,
+*seconds*, *ms*, *tz*?)</code></p>
 
-`new Date(*year*, *month*, *day*, *hour*, *minutes*,
-*seconds*, *ms*, *tz*?)`
+<p>Creates a Date value representing the given time on the given date.
+<em>year</em> is the year number (e.g., 2012), <em>month</em> is the month (1 to 12),
+<em>day</em> is the day of the month (1 to 31). <em>hour</em> is the clock hour (0 for
+midnight to 23 for 11 PM), <em>minutes</em> is the number of minutes past the
+hour (0 to 59), <em>seconds</em> is the number of seconds past the minute (0 to
+59), and <em>ms</em> is the number of milliseconds past the second (0 to 999).</p>
 
-<div class="fdef">
+<p><em>tz</em> is the timezone in which the time is interpreted, specified with
+the usual <a href="#tzarg">timezone conventions</a>. If <em>tz</em> is
+<code class="language-plaintext highlighter-rouge">nil</code> or missing, the system’s local time zone
+is the default.</p>
 
-Creates a Date value representing the given time on the given date.
-*year* is the year number (e.g., 2012), *month* is the month (1 to 12),
-*day* is the day of the month (1 to 31). *hour* is the clock hour (0 for
-midnight to 23 for 11 PM), *minutes* is the number of minutes past the
-hour (0 to 59), *seconds* is the number of seconds past the minute (0 to
-59), and *ms* is the number of milliseconds past the second (0 to 999).
+<h2 id="timezone-arguments"><span id="tzarg">Timezone arguments</span></h2>
 
-*tz* is the timezone in which the time is interpreted, specified with
-the usual [timezone conventions](#tzarg). If *tz* is
-`nil` or missing, the system's local time zone
-is the default.
-
-</div>
-
-## <span id="tzarg">Timezone arguments</span>
-
-Many of the constructors and methods take a "timezone" argument. This
+<p>Many of the constructors and methods take a “timezone” argument. This
 lets you specify the local time to be used for parsing an input time,
 formatting a time, or extracting a date or time component. Remember that
-a Date object's value is stored internally in universal time (UTC), so
+a Date object’s value is stored internally in universal time (UTC), so
 it must be converted to a local time zone whenever you want a calendar
 date or clock time. The local time zone affects not only the clock time
 portion but also the date; it can be Monday in one time zone and Tuesday
-in another.
+in another.</p>
 
-All of the methods and constructors that take timezone arguments let you
-omit the argument or use `nil`, in which case
-the host system's local time zone will be used by default. For most
-purposes, this is the time zone you'll want. The typical situation is
-that you're simply displaying times to the user, who will want to see
-them in terms of her ordinary wall clock time.
+<p>All of the methods and constructors that take timezone arguments let you
+omit the argument or use <code class="language-plaintext highlighter-rouge">nil</code>, in which case
+the host system’s local time zone will be used by default. For most
+purposes, this is the time zone you’ll want. The typical situation is
+that you’re simply displaying times to the user, who will want to see
+them in terms of her ordinary wall clock time.</p>
 
-When you do wish to specify a particular time zone, you can supply one
-of the following:
+<p>When you do wish to specify a particular time zone, you can supply one
+of the following:</p>
 
-- a [TimeZone](timezone.html) object
-- a string giving a time zone name, in a format accepted by the TimeZone
-  constructor
-- a number giving a UTC offset in seconds
+<ul>
+  <li>a <a href="timezone.html">TimeZone</a> object</li>
+  <li>a string giving a time zone name, in a format accepted by the TimeZone
+constructor</li>
+  <li>a number giving a UTC offset in seconds</li>
+</ul>
 
-See the [TimeZone](timezone.html) class for full details on each of these
-formats.
+<p>See the <a href="timezone.html">TimeZone</a> class for full details on each of these
+formats.</p>
 
-## Date arithmetic
+<h2 id="date-arithmetic">Date arithmetic</h2>
 
-A Date value can be used in arithmetic expressions to carry out a number
-of common calendar calculations.
+<p>A Date value can be used in arithmetic expressions to carry out a number
+of common calendar calculations.</p>
 
-*Date* `+` *number* calculates a new Date that's
-the given number of days after the given Date (or before, if *number* is
-negative). For example, `new Date('2010-1-1') +
-30` returns a Date representing Jan 31, 2010 at midnight local
-time.
+<p><em>Date</em> <code class="language-plaintext highlighter-rouge">+</code> <em>number</em> calculates a new Date that’s
+the given number of days after the given Date (or before, if <em>number</em> is
+negative). For example, <code class="language-plaintext highlighter-rouge">new Date('2010-1-1') +
+30</code> returns a Date representing Jan 31, 2010 at midnight local
+time.</p>
 
-*Date* `-` *number* calculates a Date that's the
-given number of days before the given date (or after, if *number* is
-negative).
+<p><em>Date</em> <code class="language-plaintext highlighter-rouge">-</code> <em>number</em> calculates a Date that’s the
+given number of days before the given date (or after, if <em>number</em> is
+negative).</p>
 
-You can add or subtract time values by using fractional days, specified
-as [BigNumber](bignum.html) values. A day is defined for the purposes of
+<p>You can add or subtract time values by using fractional days, specified
+as <a href="bignum.html">BigNumber</a> values. A day is defined for the purposes of
 these calculations as exactly 86,400 seconds long, so an hour is 1/24th
 of a day, a minute is 1/1440th, and a second is 1/86400th. For example,
-`new Date('2010-1-1') + 1.0/24` yields 1:00 AM
-on Jan 1, 2010.
+<code class="language-plaintext highlighter-rouge">new Date('2010-1-1') + 1.0/24</code> yields 1:00 AM
+on Jan 1, 2010.</p>
 
-*Date* `-` *Date* returns a BigNumber giving the
+<p><em>Date</em> <code class="language-plaintext highlighter-rouge">-</code> <em>Date</em> returns a BigNumber giving the
 elapsed time between the two date values, measured in days. The result
 is a BigNumber because it represents any difference in the times as a
-fraction of a day. For example, `new Date('2010-1-1
-16:00') - new Date('2010-1-1 10:00')` yields 0.25, since the
+fraction of a day. For example, <code class="language-plaintext highlighter-rouge">new Date('2010-1-1
+16:00') - new Date('2010-1-1 10:00')</code> yields 0.25, since the
 difference between these two times is 6 hours, or 1/4th of a day.
-Similarly, `new Date('2010-1-2 16:00') - new
-Date('2010-1-1 10:00')` yields 1.25, since the difference is 1 day
-6 hours.
+Similarly, <code class="language-plaintext highlighter-rouge">new Date('2010-1-2 16:00') - new
+Date('2010-1-1 10:00')</code> yields 1.25, since the difference is 1 day
+6 hours.</p>
 
-You can compare two Date values with `\&gt;`,
-`\&lt;`, `\&lt;=`,
-`\&gt;=`, `==`, or
-`!=`. This compares the Dates based on the UTC
+<p>You can compare two Date values with <code class="language-plaintext highlighter-rouge">\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;</code>, <code class="language-plaintext highlighter-rouge">\&lt;=</code>,
+<code class="language-plaintext highlighter-rouge">\&gt;=</code>, <code class="language-plaintext highlighter-rouge">==</code>, or
+<code class="language-plaintext highlighter-rouge">!=</code>. This compares the Dates based on the UTC
 times they represent. One Date is greater than another if it occurs
 later in time than the other; a Date is less than another if it occurs
 earlier in time. Two dates are equal if they occur at exactly the same
-UTC moment.
+UTC moment.</p>
 
-## Conversion to string
+<h2 id="conversion-to-string">Conversion to string</h2>
 
-If a Date value is used in a context where a string is required, such as
+<p>If a Date value is used in a context where a string is required, such as
 for displaying output, the Date is automatically formatted to a string
 using a default format. For more control over the presentation, use
-`formatDate()`.
+<code class="language-plaintext highlighter-rouge">formatDate()</code>.</p>
 
-## Methods
+<h2 id="methods">Methods</h2>
 
-`addInterval(*interval*)`
+<p><code class="language-plaintext highlighter-rouge">addInterval(*interval*)</code></p>
 
-<div class="fdef">
-
-Adds the given calendar and/or clock interval to the given Date,
-returning a new Date object representing the result. *interval* is given
-as a list, consisting of \[*years*, *months*, *days*, *hours*,
-*minutes*, *seconds*\]. Each element is an integer (the *hours*,
-*minutes*, and *seconds* can also be given as BigNumber values) that's
+<p>Adds the given calendar and/or clock interval to the given Date,
+returning a new Date object representing the result. <em>interval</em> is given
+as a list, consisting of [<em>years</em>, <em>months</em>, <em>days</em>, <em>hours</em>,
+<em>minutes</em>, <em>seconds</em>]. Each element is an integer (the <em>hours</em>,
+<em>minutes</em>, and <em>seconds</em> can also be given as BigNumber values) that’s
 added to the corresponding date/time component (negative values are
-subtracted).
+subtracted).</p>
 
-You can omit trailing elements that are unneeded; this is the same as
+<p>You can omit trailing elements that are unneeded; this is the same as
 using 0 for the omitted elements. For example, to add one month to a
-date, you can write simply `d = d.addInterval(\[0,
-1\])`.
+date, you can write simply <code class="language-plaintext highlighter-rouge">d = d.addInterval(\[0,
+1\])</code>.</p>
 
-When months and years are added, the interval is in terms of whole
-calendar years and months. For example, if `d`
-represents February 1, 2011, `d.addInterval(\[0,
-1\]` yields March 1, 2011, and
-`d.addInterval\[0, 2\]` represents April 1,
-2011. The difference in the lengths of the months is irrelevant because
+<p>When months and years are added, the interval is in terms of whole
+calendar years and months. For example, if <code class="language-plaintext highlighter-rouge">d</code>
+represents February 1, 2011, <code class="language-plaintext highlighter-rouge">d.addInterval(\[0,
+1\]</code> yields March 1, 2011, and
+<code class="language-plaintext highlighter-rouge">d.addInterval\[0, 2\]</code> represents April 1,</p>
+<ol>
+  <li>The difference in the lengths of the months is irrelevant because
 the addition is in terms of whole months. The same holds for adding
 years: the difference in length between leap years and non-leap years
-doesn't matter, since the addition works in whole years.
+doesn’t matter, since the addition works in whole years.</li>
+</ol>
 
-When time units are added, one day is defined as exactly 86,400 seconds.
-Any UTC [leap seconds](#leapseconds) in the added interval are ignored.
+<p>When time units are added, one day is defined as exactly 86,400 seconds.
+Any UTC <a href="#leapseconds">leap seconds</a> in the added interval are ignored.</p>
 
-</div>
+<p><span id="compareTo"></span></p>
 
-<span id="compareTo"></span>
+<p><code class="language-plaintext highlighter-rouge">compareTo(*date*)</code></p>
 
-`compareTo(*date*)`
-
-<div class="fdef">
-
-Compares this Date value to *date*, which must be another Date value.
+<p>Compares this Date value to <em>date</em>, which must be another Date value.
 Returns an integer less than zero if this Date is less than (earlier in
-time than) *date*, zero if the two dates are equal (they represent the
+time than) <em>date</em>, zero if the two dates are equal (they represent the
 same point in time), and greater than zero if this date is greater than
-(after) *date*.
+(after) <em>date</em>.</p>
 
-Note that the same comparison can be made using the ordinary comparison
-operators (`\&lt;`, `\&gt;`,
-`\&gt;=`, `\&lt;=`,
-`==`, `!=`). This method
+<p>Note that the same comparison can be made using the ordinary comparison
+operators (<code class="language-plaintext highlighter-rouge">\&lt;</code>, <code class="language-plaintext highlighter-rouge">\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&gt;=</code>, <code class="language-plaintext highlighter-rouge">\&lt;=</code>,
+<code class="language-plaintext highlighter-rouge">==</code>, <code class="language-plaintext highlighter-rouge">!=</code>). This method
 is convenient for cases where you want the relative order of two dates,
-such as in sort callbacks, since it lets you get the order in one shot.
+such as in sort callbacks, since it lets you get the order in one shot.</p>
 
-</div>
+<p><span id="findWeekday"></span></p>
 
-<span id="findWeekday"></span>
+<p><code class="language-plaintext highlighter-rouge">findWeekday(*weekday*, *which*, *tz*?)</code></p>
 
-`findWeekday(*weekday*, *which*, *tz*?)`
-
-<div class="fdef">
-
-Returns a new Date giving the date of the Nth *weekday* on or
-after/before the given date, in local time zone given by *tz* (see
-[timezone arguments](#tzarg)). *weekday* is a weekday number, 1 to 7 for
-Sunday to Saturday. *which* is an integer specifying which occurrence of
+<p>Returns a new Date giving the date of the Nth <em>weekday</em> on or
+after/before the given date, in local time zone given by <em>tz</em> (see
+<a href="#tzarg">timezone arguments</a>). <em>weekday</em> is a weekday number, 1 to 7 for
+Sunday to Saturday. <em>which</em> is an integer specifying which occurrence of
 the given weekday to find. A positive value finds a future occurrence; a
 zero or negative value finds a past occurrence. +1 is the first
-*weekday* on or after the given date, +2 is the second *weekday* on or
-after the date, and so on. 0 is the first *weekday* on or before the
-date, -1 is the second *weekday* on or before the date, etc.
+<em>weekday</em> on or after the given date, +2 is the second <em>weekday</em> on or
+after the date, and so on. 0 is the first <em>weekday</em> on or before the
+date, -1 is the second <em>weekday</em> on or before the date, etc.</p>
 
-For example, to find the first Sunday in October of this year, you could
-write `new Date('Oct 1').findWeekday(1, 1)`. To
-find the last Thursday in November, `new Date('Dec
-0').findWeekday(0, 5)`: "December 0" is equivalent to the last day
+<p>For example, to find the first Sunday in October of this year, you could
+write <code class="language-plaintext highlighter-rouge">new Date('Oct 1').findWeekday(1, 1)</code>. To
+find the last Thursday in November, <code class="language-plaintext highlighter-rouge">new Date('Dec
+0').findWeekday(0, 5)</code>: “December 0” is equivalent to the last day
 of November, so this starts on the last day of November, then finds the
-nearest Thursday on or before that day.
+nearest Thursday on or before that day.</p>
 
-</div>
+<p><span id="formatDate"></span></p>
 
-<span id="formatDate"></span>
+<p><code class="language-plaintext highlighter-rouge">formatDate(*format*, *tz*?)</code></p>
 
-`formatDate(*format*, *tz*?)`
-
-<div class="fdef">
-
-Returns a string representation of the Date value's representation on
-the Gregorian calendar, in the local time zone specified by *tz* (see
-[timezone arguments](#tzarg)), formatted according to the format
-template string *format*. The format string consists of a free mixture
+<p>Returns a string representation of the Date value’s representation on
+the Gregorian calendar, in the local time zone specified by <em>tz</em> (see
+<a href="#tzarg">timezone arguments</a>), formatted according to the format
+template string <em>format</em>. The format string consists of a free mixture
 of literal text, which is simply copied exactly to the result string,
-and "%" substitution codes, listed below. For example,
-`new Date('12-3-2011 17:30').formatDate('on the %t of
-%M, %Y at %I:%M %p')` returns `'on 3rd of
-December, 2011 at 5:30 pm'`.
+and “%” substitution codes, listed below. For example,
+<code class="language-plaintext highlighter-rouge">new Date('12-3-2011 17:30').formatDate('on the %t of
+%M, %Y at %I:%M %p')</code> returns <code class="language-plaintext highlighter-rouge">'on 3rd of
+December, 2011 at 5:30 pm'</code>.</p>
 
-Most of the numeric formats have a fixed number of digits, with leading
-zeros for values that don't fill all of the digit slots - e.g., the
-`%d` format renders 7 as '07'. You can remove
-the leading zeros with the `\#` flag - e.g.,
-`%#d` shows 7 as '7'. You can alternatively
+<p>Most of the numeric formats have a fixed number of digits, with leading
+zeros for values that don’t fill all of the digit slots - e.g., the
+<code class="language-plaintext highlighter-rouge">%d</code> format renders 7 as ‘07’. You can remove
+the leading zeros with the <code class="language-plaintext highlighter-rouge">\#</code> flag - e.g.,
+<code class="language-plaintext highlighter-rouge">%#d</code> shows 7 as ‘7’. You can alternatively
 replace leading zeros with leading spaces or quoted spaces by putting
-the desired space character between the `%` and
-the specifier letter: `% m` (*percent space*
-`m`) shows the month number with a leading
-ordinary space when needed, and `%\\ m` show the
-month number with a leading quoted space when needed.
+the desired space character between the <code class="language-plaintext highlighter-rouge">%</code> and
+the specifier letter: <code class="language-plaintext highlighter-rouge">% m</code> (<em>percent space</em>
+<code class="language-plaintext highlighter-rouge">m</code>) shows the month number with a leading
+ordinary space when needed, and <code class="language-plaintext highlighter-rouge">%\\ m</code> show the
+month number with a leading quoted space when needed.</p>
 
-You can show a numeric field in Roman numerals with the
-`&amp;` flag: `%&amp;y` show the
+<p>You can show a numeric field in Roman numerals with the
+<code class="language-plaintext highlighter-rouge">&amp;</code> flag: <code class="language-plaintext highlighter-rouge">%&amp;y</code> show the
 year in Roman numerals. Leading zeros are obviously not a factor with
 this style. Roman numerals can be used for numbers from 1 to 4999; the
-`&amp;` flag is ignored if the value to be displayed
-is outside this range.
+<code class="language-plaintext highlighter-rouge">&amp;</code> flag is ignored if the value to be displayed
+is outside this range.</p>
 
-`%a`
+<p><code class="language-plaintext highlighter-rouge">%a</code></p>
 
-the abbreviated weekday name ('Mon')
+<p>the abbreviated weekday name (‘Mon’)</p>
 
-`%A`
+<p><code class="language-plaintext highlighter-rouge">%A</code></p>
 
-the full weekday name ('Monday')
+<p>the full weekday name (‘Monday’)</p>
 
-`%u`
+<p><code class="language-plaintext highlighter-rouge">%u</code></p>
 
-the ISO 8601 weekday number, 1 to 7 for Monday to Sunday
+<p>the ISO 8601 weekday number, 1 to 7 for Monday to Sunday</p>
 
-`%w`
+<p><code class="language-plaintext highlighter-rouge">%w</code></p>
 
-the weekday number, 0 to 6 for Sunday to Saturday
+<p>the weekday number, 0 to 6 for Sunday to Saturday</p>
 
-`%d`
+<p><code class="language-plaintext highlighter-rouge">%d</code></p>
 
-the two-digit day of the month, 01 to 31
+<p>the two-digit day of the month, 01 to 31</p>
 
-`%t`
+<p><code class="language-plaintext highlighter-rouge">%t</code></p>
 
-day of the month as a number with an ordinal suffix, '1st' to '31st'
+<p>day of the month as a number with an ordinal suffix, ‘1st’ to ’31st’</p>
 
-`%j`
+<p><code class="language-plaintext highlighter-rouge">%j</code></p>
 
-the three-digit day of the year, 001 to 366 (January 1 is day 1,
-February 1 is day 32, etc)
+<p>the three-digit day of the year, 001 to 366 (January 1 is day 1,
+February 1 is day 32, etc)</p>
 
-`%J`
+<p><code class="language-plaintext highlighter-rouge">%J</code></p>
 
-the Julian day number (see [getJulianDay()](#getJulianDay)). The value
+<p>the Julian day number (see <a href="#getJulianDay">getJulianDay()</a>). The value
 uses as many digits as needed, with no leading zeros. By default, the
 full value is displayed, including the fractional portion representing
-the time of day. Use the `\#` flag
-(`%#J`) to show only the whole part.
+the time of day. Use the <code class="language-plaintext highlighter-rouge">\#</code> flag
+(<code class="language-plaintext highlighter-rouge">%#J</code>) to show only the whole part.</p>
 
-`%U`
+<p><code class="language-plaintext highlighter-rouge">%U</code></p>
 
-a number giving the week of the year that contains the day represented
+<p>a number giving the week of the year that contains the day represented
 by the Date value, 00 to 53; week 01 is the week that starts with the
 first Sunday of the year, and week 00 is the partial week (if any) that
-precedes the first Sunday
+precedes the first Sunday</p>
 
-`%W`
+<p><code class="language-plaintext highlighter-rouge">%W</code></p>
 
-a number giving the week of the year that contains the day represented
+<p>a number giving the week of the year that contains the day represented
 by the Date value, 00 to 53; week 01 is the week that starts with the
 first Monday of the year, and week 00 is the partial week (if any) that
-precedes the first Monday
+precedes the first Monday</p>
 
-`%V`
+<p><code class="language-plaintext highlighter-rouge">%V</code></p>
 
-the ISO-8601 week number of the week that contains the day represented
+<p>the ISO-8601 week number of the week that contains the day represented
 by the Date value, 01 to 53; if the week containing January 1 has four
-or more days in the new year, it's week 1, otherwise it's the last week
+or more days in the new year, it’s week 1, otherwise it’s the last week
 of the previous year. There is no week 0 in this system, because days
 between January 1 and the Monday of week 1 are considered part of the
-the previous year. See also the `%g`,
-`%G`, and `%u` formats.
+the previous year. See also the <code class="language-plaintext highlighter-rouge">%g</code>,
+<code class="language-plaintext highlighter-rouge">%G</code>, and <code class="language-plaintext highlighter-rouge">%u</code> formats.</p>
 
-`%b`
+<p><code class="language-plaintext highlighter-rouge">%b</code></p>
 
-the abbreviated name of the month ('Feb')
+<p>the abbreviated name of the month (‘Feb’)</p>
 
-`%B`
+<p><code class="language-plaintext highlighter-rouge">%B</code></p>
 
-the full name of the month ('February')
+<p>the full name of the month (‘February’)</p>
 
-`%m`
+<p><code class="language-plaintext highlighter-rouge">%m</code></p>
 
-the two-digit month number, 01 to 12
+<p>the two-digit month number, 01 to 12</p>
 
-`%y`
+<p><code class="language-plaintext highlighter-rouge">%y</code></p>
 
-the two-digit year number (i.e., the last two digits of the year: 2005
-is formatted as '05')
+<p>the two-digit year number (i.e., the last two digits of the year: 2005
+is formatted as ‘05’)</p>
 
-`%Y`
+<p><code class="language-plaintext highlighter-rouge">%Y</code></p>
 
-the four-digit year number, in astronomer's notation (the year before AD
-1 is represented as year 0000, the year before that is -0001, and so on)
+<p>the four-digit year number, in astronomer’s notation (the year before AD
+1 is represented as year 0000, the year before that is -0001, and so on)</p>
 
-`%e`
+<p><code class="language-plaintext highlighter-rouge">%e</code></p>
 
-the year (with no leading zeros) followed by a space and the era name
+<p>the year (with no leading zeros) followed by a space and the era name
 (AD or BC by default, but these can be customized with
-[setLocaleInfo](#setLocaleInfo)). With a '-' flag
-(`%-e`), the era name is placed before the year.
-The year before AD 1 is shown as 1 BC, the year before that 2 BC, etc.
+<a href="#setLocaleInfo">setLocaleInfo</a>). With a ‘-‘ flag
+(<code class="language-plaintext highlighter-rouge">%-e</code>), the era name is placed before the year.
+The year before AD 1 is shown as 1 BC, the year before that 2 BC, etc.</p>
 
-`%E`
+<p><code class="language-plaintext highlighter-rouge">%E</code></p>
 
-the year (with no leading zeros) and era name; the era name is written
-before the year for AD years (e.g., 'AD 32') and after for BC ('37 BC');
-the order is reversed if the `-` flag is used
-(`%-E`).
+<p>the year (with no leading zeros) and era name; the era name is written
+before the year for AD years (e.g., ‘AD 32’) and after for BC (‘37 BC’);
+the order is reversed if the <code class="language-plaintext highlighter-rouge">-</code> flag is used
+(<code class="language-plaintext highlighter-rouge">%-E</code>).</p>
 
-`%C`
+<p><code class="language-plaintext highlighter-rouge">%C</code></p>
 
-the two-digit century prefix for the year ('19' for 1900 to 1999)
+<p>the two-digit century prefix for the year (‘19’ for 1900 to 1999)</p>
 
-`%g`
+<p><code class="language-plaintext highlighter-rouge">%g</code></p>
 
-the last two digits of the ISO-8601 Week calendar year for the date;
-this is for use with the `%V` format
+<p>the last two digits of the ISO-8601 Week calendar year for the date;
+this is for use with the <code class="language-plaintext highlighter-rouge">%V</code> format</p>
 
-`%G`
+<p><code class="language-plaintext highlighter-rouge">%G</code></p>
 
-the four digit ISO-8601 Week calendar year for the date; for use with
-the `%V` format
+<p>the four digit ISO-8601 Week calendar year for the date; for use with
+the <code class="language-plaintext highlighter-rouge">%V</code> format</p>
 
-`%H`
+<p><code class="language-plaintext highlighter-rouge">%H</code></p>
 
-the two-digit hour, on the 24-hour clock, 00 to 23
+<p>the two-digit hour, on the 24-hour clock, 00 to 23</p>
 
-`%I`
+<p><code class="language-plaintext highlighter-rouge">%I</code></p>
 
-the two-digit hour on the 12-hour clock, 01 to 12
+<p>the two-digit hour on the 12-hour clock, 01 to 12</p>
 
-`%M`
+<p><code class="language-plaintext highlighter-rouge">%M</code></p>
 
-the two-digit minutes after the hour, 00 to 59
+<p>the two-digit minutes after the hour, 00 to 59</p>
 
-`%S`
+<p><code class="language-plaintext highlighter-rouge">%S</code></p>
 
-the two-digit seconds after the minute, 00 to 59
+<p>the two-digit seconds after the minute, 00 to 59</p>
 
-`%N`
+<p><code class="language-plaintext highlighter-rouge">%N</code></p>
 
-the three-digit milliseconds after the second, 000 to 999
+<p>the three-digit milliseconds after the second, 000 to 999</p>
 
-`%P`
+<p><code class="language-plaintext highlighter-rouge">%P</code></p>
 
-upper-case AM or PM designator for a 12-hour clock
+<p>upper-case AM or PM designator for a 12-hour clock</p>
 
-`%p`
+<p><code class="language-plaintext highlighter-rouge">%p</code></p>
 
-lower-case AM or PM designator for a 12-hour clock
+<p>lower-case AM or PM designator for a 12-hour clock</p>
 
-`%r`
+<p><code class="language-plaintext highlighter-rouge">%r</code></p>
 
-the full 12-hour clock time, equivalent to `%I:%M:%S
-%P`
+<p>the full 12-hour clock time, equivalent to <code class="language-plaintext highlighter-rouge">%I:%M:%S
+%P</code></p>
 
-`%R`
+<p><code class="language-plaintext highlighter-rouge">%R</code></p>
 
-the 24-hour clock time with minutes, equivalent to
-`%H:%M`
+<p>the 24-hour clock time with minutes, equivalent to
+<code class="language-plaintext highlighter-rouge">%H:%M</code></p>
 
-`%T`
+<p><code class="language-plaintext highlighter-rouge">%T</code></p>
 
-the 24-hour clock time with seconds, equivalent to
-`%H:%M:%S`
+<p>the 24-hour clock time with seconds, equivalent to
+<code class="language-plaintext highlighter-rouge">%H:%M:%S</code></p>
 
-`%X`
+<p><code class="language-plaintext highlighter-rouge">%X</code></p>
 
-the preferred time representation according to the locale settings; the
-default is `%H:%M:%S`, but this can be
-overridden with [setLocaleInfo](#setLocaleInfo)
+<p>the preferred time representation according to the locale settings; the
+default is <code class="language-plaintext highlighter-rouge">%H:%M:%S</code>, but this can be
+overridden with <a href="#setLocaleInfo">setLocaleInfo</a></p>
 
-`%z`
+<p><code class="language-plaintext highlighter-rouge">%z</code></p>
 
-the local time zone abbreviation ('EST')
+<p>the local time zone abbreviation (‘EST’)</p>
 
-`%Z`
+<p><code class="language-plaintext highlighter-rouge">%Z</code></p>
 
-the local time zone offset from UTC, in hours and minutes, as four
-digits (+0500)
+<p>the local time zone offset from UTC, in hours and minutes, as four
+digits (+0500)</p>
 
-`%c`
+<p><code class="language-plaintext highlighter-rouge">%c</code></p>
 
-the preferred date and time stamp for the locale; the default is
-`%a %b %#d %T %Y`, but this can be overridden
-with [setLocaleInfo](#setLocaleInfo)
+<p>the preferred date and time stamp for the locale; the default is
+<code class="language-plaintext highlighter-rouge">%a %b %#d %T %Y</code>, but this can be overridden
+with <a href="#setLocaleInfo">setLocaleInfo</a></p>
 
-`%D`
+<p><code class="language-plaintext highlighter-rouge">%D</code></p>
 
-the short date, equivalent to `%m/%d/%y`
+<p>the short date, equivalent to <code class="language-plaintext highlighter-rouge">%m/%d/%y</code></p>
 
-`%F`
+<p><code class="language-plaintext highlighter-rouge">%F</code></p>
 
-the database-style date, equivalent to
-`%Y-%m-%d`
+<p>the database-style date, equivalent to
+<code class="language-plaintext highlighter-rouge">%Y-%m-%d</code></p>
 
-`%s`
+<p><code class="language-plaintext highlighter-rouge">%s</code></p>
 
-the Unix timestamp value for the Date; this is an integer giving the
+<p>the Unix timestamp value for the Date; this is an integer giving the
 number of seconds between the Date and the Unix Epoch, 1/1/1970 00:00
-UTC; it's positive for dates after the Epoch and negative for dates
+UTC; it’s positive for dates after the Epoch and negative for dates
 before; each day is counted as exactly 86,400 seconds, ignoring any UTC
-leap seconds
+leap seconds</p>
 
-`%x`
+<p><code class="language-plaintext highlighter-rouge">%x</code></p>
 
-the preferred locale date representation; the default is
-`%m/%d/%y`, but this can be overridden with
-[setLocaleInfo](#setLocaleInfo)
+<p>the preferred locale date representation; the default is
+<code class="language-plaintext highlighter-rouge">%m/%d/%y</code>, but this can be overridden with
+<a href="#setLocaleInfo">setLocaleInfo</a></p>
 
-`%%`
+<p><code class="language-plaintext highlighter-rouge">%%</code></p>
 
-a single `%` character
+<p>a single <code class="language-plaintext highlighter-rouge">%</code> character</p>
 
-This method is modeled on the `strftime()`
+<p>This method is modeled on the <code class="language-plaintext highlighter-rouge">strftime()</code>
 function found in C, php, and other languages (and the related
 DATE_FORMAT function in MySQL). Most of the format codes are the same as
-in those other languages. It's not a particularly mnemonic or rational
+in those other languages. It’s not a particularly mnemonic or rational
 set of codes, but given the number of variations needed it would be hard
 to come up with a set that actually was mnemonic or rational, so we
 figured we could at least choose a set that some people already know. A
-number of the codes are unique TADS extensions.
+number of the codes are unique TADS extensions.</p>
 
-</div>
+<p><span id="formatJulianDate"></span></p>
 
-<span id="formatJulianDate"></span>
+<p><code class="language-plaintext highlighter-rouge">formatJulianDate(*format*, *tz*?)</code></p>
 
-`formatJulianDate(*format*, *tz*?)`
-
-<div class="fdef">
-
-Formats the Date value to a string giving the Julian calendar
+<p>Formats the Date value to a string giving the Julian calendar
 representation of the date. This works just like
-[formatDate()](#formatDate), but uses the Julian year, month, and day
-for the appropriate fields.
+<a href="#formatDate">formatDate()</a>, but uses the Julian year, month, and day
+for the appropriate fields.</p>
 
-Many fields will show the same values as for formatDate(). The
-time-of-day fields aren't affected, since Julian days are deemed to
+<p>Many fields will show the same values as for formatDate(). The
+time-of-day fields aren’t affected, since Julian days are deemed to
 start at midnight, just like Gregorian days. The Week Date fields
-(`%V`, `%G`) aren't
+(<code class="language-plaintext highlighter-rouge">%V</code>, <code class="language-plaintext highlighter-rouge">%G</code>) aren’t
 affected because the Week Date system is effectively an independent
-calendar.
+calendar.</p>
 
-</div>
+<p><span id="getClockTime"></span></p>
 
-<span id="getClockTime"></span>
+<p><code class="language-plaintext highlighter-rouge">getClockTime(*tz*?)</code></p>
 
-`getClockTime(*tz*?)`
+<p>Returns the time of day represented by this Date object, in the local
+time zone specified by <em>tz</em> (see <a href="#tzarg">timezone arguments</a>). Returns
+a list containing [<em>hour</em>, <em>minute</em>, <em>second</em>, <em>ms</em>], where <em>hour</em> is
+the hour of the day on the 24-hour clock (0 to 23), <em>minute</em> is the
+number of minutes past the hour (0 to 59), <em>second</em> is the number of
+seconds past the minute (0 to 59), and <em>ms</em> is the number of
+milliseconds past the second (0 to 999).</p>
 
-<div class="fdef">
+<p><span id="getDate"></span></p>
 
-Returns the time of day represented by this Date object, in the local
-time zone specified by *tz* (see [timezone arguments](#tzarg)). Returns
-a list containing \[*hour*, *minute*, *second*, *ms*\], where *hour* is
-the hour of the day on the 24-hour clock (0 to 23), *minute* is the
-number of minutes past the hour (0 to 59), *second* is the number of
-seconds past the minute (0 to 59), and *ms* is the number of
-milliseconds past the second (0 to 999).
+<p><code class="language-plaintext highlighter-rouge">getDate(*tz*?)</code></p>
 
-</div>
-
-<span id="getDate"></span>
-
-`getDate(*tz*?)`
-
-<div class="fdef">
-
-Returns a list consisting of the \[*year*, *month*, *day*, *weekday*\]
+<p>Returns a list consisting of the [<em>year</em>, <em>month</em>, <em>day</em>, <em>weekday</em>]
 that the Date corresponds to on the Gregorian calendar, in the local
-time zone. *tz* specifies the local time zone to use; see [timezone
-arguments](#tzarg).
+time zone. <em>tz</em> specifies the local time zone to use; see <a href="#tzarg">timezone
+arguments</a>.</p>
 
-*year* is the calendar year; this uses an integer scale with no AD/BC
+<p><em>year</em> is the calendar year; this uses an integer scale with no AD/BC
 eras. Positive values correspond to the like numbered AD years, so 2012
 means AD 2012; 0 is the year before AD 1, which is called 1 BC in the
 AD/BC notation; -1 is the year before that, usually called 2 BC; and so
-on. So if the year is less than 1, it represents (-year+1) BC.
+on. So if the year is less than 1, it represents (-year+1) BC.</p>
 
-*month* is the calendar month, 1 to 12 for January to December. *day* is
-the day of the month, 1 to 31.
+<p><em>month</em> is the calendar month, 1 to 12 for January to December. <em>day</em> is
+the day of the month, 1 to 31.</p>
 
-*weekday* is the day of the week, 1 to 7 for Sunday to Saturday.
+<p><em>weekday</em> is the day of the week, 1 to 7 for Sunday to Saturday.</p>
 
-This method always yields Gregorian calendar dates, even for dates
-before 1582 (when the calendar was first adopted). It doesn't make any
-attempt to switch to other calendars for older dates.
+<p>This method always yields Gregorian calendar dates, even for dates
+before 1582 (when the calendar was first adopted). It doesn’t make any
+attempt to switch to other calendars for older dates.</p>
 
-</div>
+<p><span id="getISOWeekDate"></span></p>
 
-<span id="getISOWeekDate"></span>
+<p><code class="language-plaintext highlighter-rouge">getISOWeekDate(*tz*?)</code></p>
 
-`getISOWeekDate(*tz*?)`
+<p>Returns the Date object’s date in the ISO 8601 Week Date system, in the
+local time zone given by <em>tz</em> (see <a href="#tzarg">timezone arguments</a>). The
+return value is a list consisting of [<em>year</em>, <em>week</em>, <em>day</em>], where
+<em>year</em> is the Week Date year, <em>week</em> is the week of the year, 1 to 53,
+and <em>day</em> is the day of the week, 1 to 7 for Monday to Sunday.</p>
 
-<div class="fdef">
-
-Returns the Date object's date in the ISO 8601 Week Date system, in the
-local time zone given by *tz* (see [timezone arguments](#tzarg)). The
-return value is a list consisting of \[*year*, *week*, *day*\], where
-*year* is the Week Date year, *week* is the week of the year, 1 to 53,
-and *day* is the day of the week, 1 to 7 for Monday to Sunday.
-
-The ISO Week Date system is in a sense a full-fledged calendar, based on
+<p>The ISO Week Date system is in a sense a full-fledged calendar, based on
 an annual cycle of weeks rather than months. A full Week Date is
 expressed as a year, week number, and day number. For example,
 2009-W01-1 represents the first day (Monday) of the first week of Week
@@ -736,399 +682,380 @@ the year on the Gregorian calendar, but not always, as in the example we
 just saw; the years can differ by plus or minus one for the first few
 days of January (Gregorian) and the last few days of December. The
 reason for the difference is that the Week Date year boundaries always
-align exactly with week boundaries, so a week that's split across years
+align exactly with week boundaries, so a week that’s split across years
 on the Gregorian calendar will always be entirely in a single year on
 the Week calendar. The Gregorian and Week Date calendars always agree on
-the day of the week; a Monday is always a Monday on both calendars.
+the day of the week; a Monday is always a Monday on both calendars.</p>
 
-</div>
+<p><span id="getJulianDay"></span></p>
 
-<span id="getJulianDay"></span>
+<p><code class="language-plaintext highlighter-rouge">getJulianDay()</code></p>
 
-`getJulianDay()`
+<p>Get the Julian day number, defined as the number of days since January
+1, 4713 BCE on the (proleptic) Julian calendar, at noon UTC.</p>
 
-<div class="fdef">
-
-Get the Julian day number, defined as the number of days since January
-1, 4713 BCE on the (proleptic) Julian calendar, at noon UTC.
-
-The return value is a BigNumber value giving the Julian day
+<p>The return value is a BigNumber value giving the Julian day
 corresponding to this Date value, including a fractional part for the
 time past noon UTC on that date. The fractional part is the fraction of
 a day, defined as exactly 24 hours (86,400 seconds); for example, 0.25
 represents 1/4 of a day, or 6 hours, yielding a clock time of 18:00 UTC
-(6 hours past noon).
+(6 hours past noon).</p>
 
-There's no local time zone involved in this calculation, since the
-Julian day number is explicitly defined in terms of universal time.
+<p>There’s no local time zone involved in this calculation, since the
+Julian day number is explicitly defined in terms of universal time.</p>
 
-The Julian day number is an important figure in astronomy. It's also
+<p>The Julian day number is an important figure in astronomy. It’s also
 quite useful as a common currency for converting between arbitrary
 calendars. You might not be able to find a published formula for
-converting directly between calendar X and calendar Y, but there's
+converting directly between calendar X and calendar Y, but there’s
 almost always a formula for converting between any given calendar and
-Julian day numbers.
+Julian day numbers.</p>
 
-</div>
+<p><span id="getJulianDate"></span></p>
 
-<span id="getJulianDate"></span>
+<p><code class="language-plaintext highlighter-rouge">getJulianDate(*tz*?)</code></p>
 
-`getJulianDate(*tz*?)`
-
-<div class="fdef">
-
-Calculates the Julian calendar date for this Date object, in terms of
-the local time in the given time zone (or the system's local time zone
-if 'tz' isn't specified). Returns a list consisting of \[*year*,
-*month*, *day*, *weekday*\], where *year* is an integer giving the year
-number; *month* is an integer with the month, 1-12 for January to
-December; *day* is an integer with the day of the month, 1-31; and
-*weekday* is the day of the week, 1-7 for Sunday to Saturday. (The
+<p>Calculates the Julian calendar date for this Date object, in terms of
+the local time in the given time zone (or the system’s local time zone
+if ‘tz’ isn’t specified). Returns a list consisting of [<em>year</em>,
+<em>month</em>, <em>day</em>, <em>weekday</em>], where <em>year</em> is an integer giving the year
+number; <em>month</em> is an integer with the month, 1-12 for January to
+December; <em>day</em> is an integer with the day of the month, 1-31; and
+<em>weekday</em> is the day of the week, 1-7 for Sunday to Saturday. (The
 weekday on the Julian calendar always agrees with the weekday on the
 Gregorian calendar for a given day. Even medieval popes lacked the power
-to interfere with the eternal cycle of the seven-day week.)
+to interfere with the eternal cycle of the seven-day week.)</p>
 
-The Julian calendar is almost identical to the Gregorian; both have the
+<p>The Julian calendar is almost identical to the Gregorian; both have the
 same system of months and days, and both have an additional leap day on
 February 29 in leap years. The only difference is the formula that
 determines which years are leap years. On the Julian calendar, ever year
 evenly divisible by 4 is a leap year. On the Gregorian, leap years
-include *most* years divisible by 4, but not those divisible by 100,
-unless they're also divisible by 400. (So 1900 isn't a leap year on the
+include <em>most</em> years divisible by 4, but not those divisible by 100,
+unless they’re also divisible by 400. (So 1900 isn’t a leap year on the
 Gregorian calendar, and 2000 is.) The added complexity in the Gregorian
-system isn't gratuitous; it's designed to make the calendar's average
+system isn’t gratuitous; it’s designed to make the calendar’s average
 year length a closer approximation of the actual mean solar year, so
-that the calendar stays more closely aligned with the Earth's seasons
-over long periods of time.
+that the calendar stays more closely aligned with the Earth’s seasons
+over long periods of time.</p>
 
-The Julian calendar can be useful for historical purposes, as it was in
+<p>The Julian calendar can be useful for historical purposes, as it was in
 use in its present form in nearly all of Europe from 8 CE to 1582, and
 remained in use much later in many regions, as late as the 1920s in a
 few. (The nominal adoption date was even earlier, 46 BC, but that was a
 slightly different version; several revised versions were in effect at
 different times before the calendar reached the form now considered
 canonical.) Dates in historical records in Europe from before the local
-adoption of the Gregorian calendar are usually on the Julian system.
+adoption of the Gregorian calendar are usually on the Julian system.</p>
 
-</div>
+<p><span id="parseDate"></span></p>
 
-<span id="parseDate"></span>
+<p><code class="language-plaintext highlighter-rouge">static parseDate(*str*, *format*?, *refDate*?
+*refTZ*?)</code></p>
 
-`static parseDate(*str*, *format*?, *refDate*?
-*refTZ*?)`
-
-<div class="fdef">
-
-Parse a date. This is similar to the `new
-Date(*str*)` constructor, but lets you specify one or more custom
+<p>Parse a date. This is similar to the <code class="language-plaintext highlighter-rouge">new
+Date(*str*)</code> constructor, but lets you specify one or more custom
 format templates, and returns detailed information on the parsing
-results.
+results.</p>
 
-*str* is the string to parse. *format* is an optional custom format
+<p><em>str</em> is the string to parse. <em>format</em> is an optional custom format
 template string, or a list of custom template strings; if this is
-omitted or `nil`, the [built-in
-formats](#inputFormats) are used by default. Specifying a
-non-`nil` *format* overrides the built-in
+omitted or <code class="language-plaintext highlighter-rouge">nil</code>, the <a href="#inputFormats">built-in
+formats</a> are used by default. Specifying a
+non-<code class="language-plaintext highlighter-rouge">nil</code> <em>format</em> overrides the built-in
 formats, but you can include them in your list by including a
-`nil` element in the list; this means "include
-all of the built-in templates here". The order is sometimes important;
+<code class="language-plaintext highlighter-rouge">nil</code> element in the list; this means “include
+all of the built-in templates here”. The order is sometimes important;
 the template parser scans the entire template list, and if two or more
 templates match, it picks the one that matched the longest portion of
 the input string. But if two templates match the same amount of input
-text, the one that's earlier in the template list takes precedence.
-*refDate* is an optional Date object giving a reference date, used to
+text, the one that’s earlier in the template list takes precedence.
+<em>refDate</em> is an optional Date object giving a reference date, used to
 fill in missing date/time fields; this works the same way it does in the
-[`new Date(*str*)`](#newDateStr) constructor. If
-*refDate* is omitted or `nil`, the current
-system time is used by default. *refTZ* is an optional
-[timezone](#tzarg), specifying the default timezone to use if the date
-string doesn't contain a timezone name of its own; this defaults to the
-host system's local timezone.
+<a href="#newDateStr"><code class="language-plaintext highlighter-rouge">new Date(*str*)</code></a> constructor. If
+<em>refDate</em> is omitted or <code class="language-plaintext highlighter-rouge">nil</code>, the current
+system time is used by default. <em>refTZ</em> is an optional
+<a href="#tzarg">timezone</a>, specifying the default timezone to use if the date
+string doesn’t contain a timezone name of its own; this defaults to the
+host system’s local timezone.</p>
 
-If you include custom format template strings, you construct these
+<p>If you include custom format template strings, you construct these
 strings using the same syntax as the built-in formats. Refer to the
-[input format](#inputFormats) section for a list of the fields.
+<a href="#inputFormats">input format</a> section for a list of the fields.</p>
 
-If the parsing succeeds, the return value is a list that contains the
+<p>If the parsing succeeds, the return value is a list that contains the
 parsed date (as a Date object), the parsed timezone (if any, as a
 TimeZone object), the format string(s) matched, and a list of strings
 with the original source text matched for the individual date/time
 components. A TimeZone object is included only if the string contains an
 explicit time zone name; otherwise this element is
-`nil` in the return list, indicating that the
-reference timezone was used (*refTZ* if supplied, otherwise the host
-system's local timezone). Source text components that aren't matched in
-the string are set to `nil` in the list. The
-list elements are:
+<code class="language-plaintext highlighter-rouge">nil</code> in the return list, indicating that the
+reference timezone was used (<em>refTZ</em> if supplied, otherwise the host
+system’s local timezone). Source text components that aren’t matched in
+the string are set to <code class="language-plaintext highlighter-rouge">nil</code> in the list. The
+list elements are:</p>
 
-\[1\] a Date object with the parsed date
+<p>[1] a Date object with the parsed date</p>
 
-\[2\] a TimeZone object with the parsed timezone, or
-`nil` if a timezone name wasn't matched in the
-string.
+<p>[2] a TimeZone object with the parsed timezone, or
+<code class="language-plaintext highlighter-rouge">nil</code> if a timezone name wasn’t matched in the
+string.</p>
 
-\[3\] an integer giving the fixed timezone offset specified in the input
-string, in seconds, if applicable; `nil` if not.
+<p>[3] an integer giving the fixed timezone offset specified in the input
+string, in seconds, if applicable; <code class="language-plaintext highlighter-rouge">nil</code> if not.
 This is applicable only when the input string specifies a timezone name
-that carries specific a standard/daylight clock setting, such as "EST"
-or "PDT", which overrides the TimeZone object's normal automatic
-adjustment for the time of year.
+that carries specific a standard/daylight clock setting, such as “EST”
+or “PDT”, which overrides the TimeZone object’s normal automatic
+adjustment for the time of year.</p>
 
-\[4\] a sublist with the individual format strings matched; each element
+<p>[4] a sublist with the individual format strings matched; each element
 is a string from either the built-in format list or the custom format
-list you supplied
+list you supplied</p>
 
-\[5\] a sublist with the original source text matched in each of the
+<p>[5] a sublist with the original source text matched in each of the
 different fields making up the date time value. This is a list of
-strings; any element that wasn't matched in the input is set to
-`nil`. The elements of the sublist are:
+strings; any element that wasn’t matched in the input is set to
+<code class="language-plaintext highlighter-rouge">nil</code>. The elements of the sublist are:</p>
 
-- \[1\] era - the source text matched for the AD/BC or +/- era indicator
-- \[2\] year - the source text matched for the year
-- \[3\] month - the source text matched for the month
-- \[4\] day - the source text matched for the day of the month
-- \[5\] yearDay - the source text matched for the day of the year
-- \[6\] weekDay - the source text matched for the numeric day of the
-  week
-- \[7\] ampm - the source text matched for the AM/PM indicator
-- \[8\] hour - the source text matched for the hour
-- \[9\] minute - the source text matched for the minutes portion of the
-  time
-- \[10\] second - the source text matched for the seconds portion of the
-  time
-- \[11\] ms - the source text matched for the milliseconds portion of
-  the time
-- \[12\] unix - the source text matched for the Unix timestamp value
-- \[13\] tz - the source text matched for the timezone name
+<ul>
+  <li>[1] era - the source text matched for the AD/BC or +/- era indicator</li>
+  <li>[2] year - the source text matched for the year</li>
+  <li>[3] month - the source text matched for the month</li>
+  <li>[4] day - the source text matched for the day of the month</li>
+  <li>[5] yearDay - the source text matched for the day of the year</li>
+  <li>[6] weekDay - the source text matched for the numeric day of the
+week</li>
+  <li>[7] ampm - the source text matched for the AM/PM indicator</li>
+  <li>[8] hour - the source text matched for the hour</li>
+  <li>[9] minute - the source text matched for the minutes portion of the
+time</li>
+  <li>[10] second - the source text matched for the seconds portion of the
+time</li>
+  <li>[11] ms - the source text matched for the milliseconds portion of
+the time</li>
+  <li>[12] unix - the source text matched for the Unix timestamp value</li>
+  <li>[13] tz - the source text matched for the timezone name</li>
+</ul>
 
-The return value is `nil` if the parsing fails.
-This is different from the `new Date(*str*)`
+<p>The return value is <code class="language-plaintext highlighter-rouge">nil</code> if the parsing fails.
+This is different from the <code class="language-plaintext highlighter-rouge">new Date(*str*)</code>
 constructor, which throws an error if the parsing fails. The
-`nil` return used here is meant to make it a
+<code class="language-plaintext highlighter-rouge">nil</code> return used here is meant to make it a
 little more convenient to use this method to test a string of uncertain
-provenance to see if it looks like a date.
+provenance to see if it looks like a date.</p>
 
-</div>
+<p><span id="parseJulianDate"></span></p>
 
-<span id="parseJulianDate"></span>
+<p><code class="language-plaintext highlighter-rouge">static parseJulianDate(*str*, *format*?, *refDate*?
+*refTZ*?)</code></p>
 
-`static parseJulianDate(*str*, *format*?, *refDate*?
-*refTZ*?)`
-
-<div class="fdef">
-
-This works just like [parseDate()](#parseDate), except that it
+<p>This works just like <a href="#parseDate">parseDate()</a>, except that it
 interprets the date on the Julian calendar. The form of a Julian date is
 identical to that of a Gregorian date, since the two calendars have the
 same month names, days per month, and weekdays. However, a given day has
 different nominal dates on the two calendars, except for a stretch in
 the third century when they happen to overlap. This routine translates
 the written date to an internal date/time value according to the Julian
-calendar.
+calendar.</p>
 
-As with all Date operations, once the written date has been parsed into
+<p>As with all Date operations, once the written date has been parsed into
 a Date object, the Date value is independent of calendars and time
 zones, so you can freely use it with Date objects parsed from Gregorian
 dates. For example, this will display the Gregorian date for a given
-Julian date string:
+Julian date string:</p>
 
-```
-    local str = 'October 4, 1582';
-    "&lt;<str>&gt; Julian = &lt;&lt;Date.parseJulianDate(str)[1].formatDate('%B %#d, %Y')&gt;&gt;\n";
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local str = 'October 4, 1582';
+    "&lt;&lt;str&gt;&gt; Julian = &lt;&lt;Date.parseJulianDate(str) [1].formatDate('%B %#d, %Y')&gt;&gt;\n";
+</code></pre></div></div>
 
-&lt;/div&gt;
+<p><span id="setLocaleInfo"></span></p>
 
-<span id="setLocaleInfo"></span>
+<p><code class="language-plaintext highlighter-rouge">static setLocaleInfo(...)</code></p>
 
-`static setLocaleInfo(...)`
-
-<div class="fdef">
-
-Sets locale information for parsing and formatting date values. This
+<p>Sets locale information for parsing and formatting date values. This
 lets you customize month names, day names, and other date elements for a
-non-English presentation.
+non-English presentation.</p>
 
-There are two ways to call this method:
+<p>There are two ways to call this method:</p>
 
-- `setLocaleInfo(\[*monthNames*, *monthAbbrs*,
-  ...\])` This form lets you set the whole list of custom elements
-  in one shot. The list consists of strings giving the elements in order
-  of the index values (see below). You can stop after any number of
-  elements; any missing elements at the end of the list will simply be
-  left at the current or default settings.
-- `setLocaleInfo(*index*, *value*, ...)` This
-  form sets elements individually. For each element you wish to set,
-  include an *index*, which is one of the DateXXX values below, followed
-  by a string *value* giving the custom setting for that index. With
-  this format you can supply any number of index/value pairs in a single
-  call.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">setLocaleInfo(\[*monthNames*, *monthAbbrs*,
+...\])</code> This form lets you set the whole list of custom elements
+in one shot. The list consists of strings giving the elements in order
+of the index values (see below). You can stop after any number of
+elements; any missing elements at the end of the list will simply be
+left at the current or default settings.</li>
+  <li><code class="language-plaintext highlighter-rouge">setLocaleInfo(*index*, *value*, ...)</code> This
+form sets elements individually. For each element you wish to set,
+include an <em>index</em>, which is one of the DateXXX values below, followed
+by a string <em>value</em> giving the custom setting for that index. With
+this format you can supply any number of index/value pairs in a single
+call.</li>
+</ul>
 
-The index values are:
+<p>The index values are:</p>
 
-Index Name
+<p>Index Name</p>
 
-Value
+<p>Value</p>
 
-Description/Default
+<p>Description/Default</p>
 
-`DateMonthNames`
+<p><code class="language-plaintext highlighter-rouge">DateMonthNames</code></p>
 
-0
+<p>0</p>
 
-full names of the months  
-`'January,February,March,April,May,June,July,August,September,October,November,December'`
+<p>full names of the months<br />
+<code class="language-plaintext highlighter-rouge">'January,February,March,April,May,June,July,August,September,October,November,December'</code></p>
 
-`DateMonthAbbrs`
+<p><code class="language-plaintext highlighter-rouge">DateMonthAbbrs</code></p>
 
-1
+<p>1</p>
 
-abbreviated names of the months  
-`'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep=Sept,Oct,Nov,Dec'`
+<p>abbreviated names of the months<br />
+<code class="language-plaintext highlighter-rouge">'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep=Sept,Oct,Nov,Dec'</code></p>
 
-`DateWeekdayNames`
+<p><code class="language-plaintext highlighter-rouge">DateWeekdayNames</code></p>
 
-2
+<p>2</p>
 
-full names of the weekdays  
-`'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday'`
+<p>full names of the weekdays<br />
+<code class="language-plaintext highlighter-rouge">'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday'</code></p>
 
-`DateWeekdayAbbrs`
+<p><code class="language-plaintext highlighter-rouge">DateWeekdayAbbrs</code></p>
 
-3
+<p>3</p>
 
-abbreviated names of the weekdays  
-`'Sun,Mon,Tue,Wed,Thu,Fri,Sat'`
+<p>abbreviated names of the weekdays<br />
+<code class="language-plaintext highlighter-rouge">'Sun,Mon,Tue,Wed,Thu,Fri,Sat'</code></p>
 
-`DateAMPM`
+<p><code class="language-plaintext highlighter-rouge">DateAMPM</code></p>
 
-4
+<p>4</p>
 
-AM/PM (meridian) indicator for 12-hour clock; upper case AM, upper case
+<p>AM/PM (meridian) indicator for 12-hour clock; upper case AM, upper case
 PM, lower case AM, lower case PM (the parser ignores case when matching
-input, so the lower-case versions are needed only for formatting)  
-`'AM=A.M.,PM=P.M.,am,pm'`
+input, so the lower-case versions are needed only for formatting)<br />
+<code class="language-plaintext highlighter-rouge">'AM=A.M.,PM=P.M.,am,pm'</code></p>
 
-`DateEra`
+<p><code class="language-plaintext highlighter-rouge">DateEra</code></p>
 
-5
+<p>5</p>
 
-AD/BC indicators for era  
-`'AD=A.D.=CE=C.E.,BC=B.C.=BCE=B.C.E.'`
+<p>AD/BC indicators for era<br />
+<code class="language-plaintext highlighter-rouge">'AD=A.D.=CE=C.E.,BC=B.C.=BCE=B.C.E.'</code></p>
 
-`DateParseFilter`
+<p><code class="language-plaintext highlighter-rouge">DateParseFilter</code></p>
 
-6
+<p>6</p>
 
-a filter for the culture-specific parsing formats: currently this can be
-'us' to select the US-style formats (e.g., the numeric "month/day"
-formats), or 'eu' for the European-style formats (the "day/month"
-formats)  
-`'m/d'`
+<p>a filter for the culture-specific parsing formats: currently this can be
+‘us’ to select the US-style formats (e.g., the numeric “month/day”
+formats), or ‘eu’ for the European-style formats (the “day/month”
+formats)<br />
+<code class="language-plaintext highlighter-rouge">'m/d'</code></p>
 
-`DateOrdSuffixes`
+<p><code class="language-plaintext highlighter-rouge">DateOrdSuffixes</code></p>
 
-7
+<p>7</p>
 
-ordinal suffixes for the days of the month: 1st, 2nd, 3rd, Nth, X1st,
-X2nd, X3rd. The "Nth" entry is the one that applies to everything other
+<p>ordinal suffixes for the days of the month: 1st, 2nd, 3rd, Nth, X1st,
+X2nd, X3rd. The “Nth” entry is the one that applies to everything other
 than the enumerated ones. The X1st, X2nd, and X3rd entries apply to the
 twenties, thirties, forties, etc. - all of the decades except the teens.
 If all of the elements after after a given point are the same, you can
 omit the rest, and the last element will be used for all remaining
-elements; for example, French could specify simply 're,e', and German
-'.'.  
-`'st,nd,rd,th,st,nd,rd'`
+elements; for example, French could specify simply ‘re,e’, and German
+‘.’.<br />
+<code class="language-plaintext highlighter-rouge">'st,nd,rd,th,st,nd,rd'</code></p>
 
-`DateFmtTimestamp`
+<p><code class="language-plaintext highlighter-rouge">DateFmtTimestamp</code></p>
 
-8
+<p>8</p>
 
-the default local format for the full date and time, as a format string
-for `formatDate()`  
-`'%a %b %#d %T %Y'`
+<p>the default local format for the full date and time, as a format string
+for <code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%a %b %#d %T %Y'</code></p>
 
-`DateFmtTime`
+<p><code class="language-plaintext highlighter-rouge">DateFmtTime</code></p>
 
-9
+<p>9</p>
 
-the default local format for a time without a date, as a format string
-for `formatDate()`  
-`'%H:%M:%S'`
+<p>the default local format for a time without a date, as a format string
+for <code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%H:%M:%S'</code></p>
 
-`DateFmtDate`
+<p><code class="language-plaintext highlighter-rouge">DateFmtDate</code></p>
 
-10
+<p>10</p>
 
-the default local format for a date without a time, as a format string
-for `formatDate()`  
-`'%m/%d/%Y'`
+<p>the default local format for a date without a time, as a format string
+for <code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%m/%d/%Y'</code></p>
 
-`DateFmtShortDate`
+<p><code class="language-plaintext highlighter-rouge">DateFmtShortDate</code></p>
 
-11
+<p>11</p>
 
-the default short date format, as a format string for
-`formatDate()`  
-`'%m/%d/%y`
+<p>the default short date format, as a format string for
+<code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%m/%d/%y</code></p>
 
-`DateFmt12Hour`
+<p><code class="language-plaintext highlighter-rouge">DateFmt12Hour</code></p>
 
-12
+<p>12</p>
 
-local 12-hour clock format, as a format string for
-`formatDate()`  
-`'%I:%M:%S %P'`
+<p>local 12-hour clock format, as a format string for
+<code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%I:%M:%S %P'</code></p>
 
-`DateFmt24Hour`
+<p><code class="language-plaintext highlighter-rouge">DateFmt24Hour</code></p>
 
-13
+<p>13</p>
 
-local 24-hour clock format, as a format string for
-`formatDate()`  
-`'%H:%M'`
+<p>local 24-hour clock format, as a format string for
+<code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%H:%M'</code></p>
 
-`DateFmt24HourSec`
+<p><code class="language-plaintext highlighter-rouge">DateFmt24HourSec</code></p>
 
-14
+<p>14</p>
 
-24-hour clock format with seconds, as a format string for
-`formatDate()`  
-`'%H:%M:%S'`
+<p>24-hour clock format with seconds, as a format string for
+<code class="language-plaintext highlighter-rouge">formatDate()</code><br />
+<code class="language-plaintext highlighter-rouge">'%H:%M:%S'</code></p>
 
-Most elements serve as both a list of strings to match in parsed input
-(for the `new Date('string')` constructor) and a
+<p>Most elements serve as both a list of strings to match in parsed input
+(for the <code class="language-plaintext highlighter-rouge">new Date('string')</code> constructor) and a
 list of strings to use in formatted output (from
-`formatDate()`). These value lists are encoded
-as strings, with commas separating elements. (Don't use spaces unless
+<code class="language-plaintext highlighter-rouge">formatDate()</code>). These value lists are encoded
+as strings, with commas separating elements. (Don’t use spaces unless
 you want them to be literally included in the output.) For input parsing
 purposes, you can also supply synonyms for an item, using an equals sign
-('=') to separate synonyms. For example, you'll notice that the default
-list of month abbreviations allows both 'Sep' and 'Sept' for September.
+(‘=’) to separate synonyms. For example, you’ll notice that the default
+list of month abbreviations allows both ‘Sep’ and ‘Sept’ for September.
 When you supply synonyms, the first item is the one used for output; any
-synonyms are purely for input matching.
+synonyms are purely for input matching.</p>
 
-</div>
+<h2 id="input-formats"><span id="inputFormats">Input formats</span></h2>
 
-## <span id="inputFormats">Input formats</span>
-
-The Date class can parse a variety of common human and computer
+<p>The Date class can parse a variety of common human and computer
 date/time formats. It aims to be flexible enough that users can enter
-dates intuitively, the way they'd write them on their own, without
+dates intuitively, the way they’d write them on their own, without
 having to remember specific computer formats or adhere to rigid
 punctuation rules. It also allows the most common computer formats, so
 that data from other software sources can usually be used directly,
-without any reformatting.
+without any reformatting.</p>
 
-Date formats vary by language and culture. For one thing, the names of
+<p>Date formats vary by language and culture. For one thing, the names of
 months and weekdays depend on the language being used. For another, the
 order of fields in a purely numeric date varies by culture; Americans
 usually write dates in month/day order, as in 11/20 for November 20,
 while Europeans usually use day/month order, as in 20/11. The date
 parser uses the American conventions and English words by default, but
-you can customize the settings with [setLocaleInfo()](#setLocaleInfo).
+you can customize the settings with <a href="#setLocaleInfo">setLocaleInfo()</a>.</p>
 
-The date parser works by matching an input string to a list of format
+<p>The date parser works by matching an input string to a list of format
 templates, one at a time. If multiple templates match, the one that
 consumes the longest string of input is used. Since an input string can
 include a date, a time, or both, the parser makes multiple passes over
@@ -1136,729 +1063,729 @@ the string: any remaining text after the first pass is matched again on
 the next pass. This proceeds until either the entire input string has
 been matched, or none of the templates match. The parsing only succeeds
 if the entire input string can be matched, so if the process ends with
-unmatched text at the end of the string, the parsing fails.
+unmatched text at the end of the string, the parsing fails.</p>
 
-If the date string contains an explicit time zone name, the parser
+<p>If the date string contains an explicit time zone name, the parser
 interprets the date using the named zone, overriding any TimeZone
-argument passed to the Date constructor. See the notes on [parsing time
-zones](#tzParsing) for information on how to write time zone names in
-input strings.
+argument passed to the Date constructor. See the notes on <a href="#tzParsing">parsing time
+zones</a> for information on how to write time zone names in
+input strings.</p>
 
-The templates are composed of fields. Here are the meanings of the
-fields:
+<p>The templates are composed of fields. Here are the meanings of the
+fields:</p>
 
-d
+<p>d</p>
 
-a one- or two-digit day of the month, 1 to 31 or 01 to 31
+<p>a one- or two-digit day of the month, 1 to 31 or 01 to 31</p>
 
-dd
+<p>dd</p>
 
-a two-digit day of the month, 01 to 31
+<p>a two-digit day of the month, 01 to 31</p>
 
-ddth
+<p>ddth</p>
 
-a one- or two-digit day of the month with an optional ordinal suffix, 1
-to 31, 01 to 31, or 1st to 31st
+<p>a one- or two-digit day of the month with an optional ordinal suffix, 1
+to 31, 01 to 31, or 1st to 31st</p>
 
-m
+<p>m</p>
 
-a one- or two-digit month number, 1 to 12 or 01 to 12
+<p>a one- or two-digit month number, 1 to 12 or 01 to 12</p>
 
-mm
+<p>mm</p>
 
-a two-digit month number, 01 to 12
+<p>a two-digit month number, 01 to 12</p>
 
-mon
+<p>mon</p>
 
-an abbreviated month name, insensitive to case; this uses the English
-month names by default (Jan, Feb, ...), but localized names can be
-specified with [setLocaleInfo()](#setLocaleInfo)
+<p>an abbreviated month name, insensitive to case; this uses the English
+month names by default (Jan, Feb, …), but localized names can be
+specified with <a href="#setLocaleInfo">setLocaleInfo()</a></p>
 
-month
+<p>month</p>
 
-a full month name, insensitive to case; this uses the English month
-names by default (January, February, ...) but localized names can be
-specified with [setLocaleInfo()](#setLocaleInfo); also matches an
+<p>a full month name, insensitive to case; this uses the English month
+names by default (January, February, …) but localized names can be
+specified with <a href="#setLocaleInfo">setLocaleInfo()</a>; also matches an
 abbreviated month name or an upper-case roman numeral for the month (VI
-for June, XII for December, etc)
+for June, XII for December, etc)</p>
 
-W
+<p>W</p>
 
-an ISO 8601 week number: a two-digit number giving the week of the year,
+<p>an ISO 8601 week number: a two-digit number giving the week of the year,
 optionally followed by a day number, with or without a hyphen (e.g., 15,
-153, or 15-3)
+153, or 15-3)</p>
 
-doy
+<p>doy</p>
 
-a three-digit day of the year, 001 to 366
+<p>a three-digit day of the year, 001 to 366</p>
 
-y
+<p>y</p>
 
-a one- to seven-digit year number. If one or two digits are used, the
+<p>a one- to seven-digit year number. If one or two digits are used, the
 century is inferred such that the result is the year closest to the
 reference date (e.g., if the reference date is in 2012, 99 is taken as
-1999, since that's closer to 2012 than is 2099). If five or more digits
+1999, since that’s closer to 2012 than is 2099). If five or more digits
 are used, commas or periods may be used to separate groups of three
-digits, as in '5,000,000'.
+digits, as in ‘5,000,000’.</p>
 
-ye
+<p>ye</p>
 
-the year (with the same format as 'y' above), with optional era (in the
-format of 'era' below). The era can be before or after the year: '95
-BC', 'AD 101'. If an era is given, a one- or two-digit date isn't
-assumed to be in the current century: '95 BC' is taken as year -0094,
-and '11 AD' is year 0011.
+<p>the year (with the same format as ‘y’ above), with optional era (in the
+format of ‘era’ below). The era can be before or after the year: ‘95
+BC’, ‘AD 101’. If an era is given, a one- or two-digit date isn’t
+assumed to be in the current century: ‘95 BC’ is taken as year -0094,
+and ‘11 AD’ is year 0011.</p>
 
-era
+<p>era</p>
 
-an era name. The default era names are AD, A.D., CE, C.E., BC, B.C.,
+<p>an era name. The default era names are AD, A.D., CE, C.E., BC, B.C.,
 BCE, B.C.E., but localized names can be specified with
-[setLocaleInfo()](#setLocaleInfo). When an era is specified, the year
-isn't assumed to be in the current century: 'AD 95' is taken as year
-0095.
+<a href="#setLocaleInfo">setLocaleInfo()</a>. When an era is specified, the year
+isn’t assumed to be in the current century: ‘AD 95’ is taken as year
+0095.</p>
 
-+-
+<p>+-</p>
 
-an era designator as a "+" or "-" sign, using the astronomical timeline,
+<p>an era designator as a “+” or “-“ sign, using the astronomical timeline,
 in which the year before AD 1 is year 0000, the year before that is
--0001, then -0002, and so on
+-0001, then -0002, and so on</p>
 
-yy
+<p>yy</p>
 
-a two-digit year number; the century is inferred such that the result is
-the year closest to the reference date
+<p>a two-digit year number; the century is inferred such that the result is
+the year closest to the reference date</p>
 
-yyyy
+<p>yyyy</p>
 
-a four-digit year number
+<p>a four-digit year number</p>
 
-h
+<p>h</p>
 
-a one- or two-digit hour on the 12-hour clock, 1 to 12 or 01 to 12
+<p>a one- or two-digit hour on the 12-hour clock, 1 to 12 or 01 to 12</p>
 
-hh
+<p>hh</p>
 
-a two-digit hour on the 24-hour clock 00 to 23
+<p>a two-digit hour on the 24-hour clock 00 to 23</p>
 
-mi
+<p>mi</p>
 
-a two-digit minutes past the hour, 00 to 59
+<p>a two-digit minutes past the hour, 00 to 59</p>
 
-i
+<p>i</p>
 
-a one- or two-digit minutes past the hour, 1 to 59 or 01 to 59
+<p>a one- or two-digit minutes past the hour, 1 to 59 or 01 to 59</p>
 
-ss
+<p>ss</p>
 
-a two-digit seconds past the minute, 00 to 59
+<p>a two-digit seconds past the minute, 00 to 59</p>
 
-s
+<p>s</p>
 
-a one- or two-digit seconds past the minute, 1 to 59 or 01 to 59
+<p>a one- or two-digit seconds past the minute, 1 to 59 or 01 to 59</p>
 
-ssfrace
+<p>ssfrace</p>
 
-a string of one or more digits representing fractional seconds after a
-decimal point
+<p>a string of one or more digits representing fractional seconds after a
+decimal point</p>
 
-unix
+<p>unix</p>
 
-a Unix timestamp value: a string of digits representing an integer,
+<p>a Unix timestamp value: a string of digits representing an integer,
 positive or negative, giving the number of seconds after or before the
-Unix Epoch (1/1/1970 00:00 UTC), ignoring [leap seconds](#leapseconds)
+Unix Epoch (1/1/1970 00:00 UTC), ignoring <a href="#leapseconds">leap seconds</a></p>
 
-ampm
+<p>ampm</p>
 
-an AM/PM indicator; by default, this matches "AM", "PM", "A.M.", or
-"P.M." (ignoring case), but localized versions can be specified with
-[setLocaleInfo()](#setLocaleInfo)
+<p>an AM/PM indicator; by default, this matches “AM”, “PM”, “A.M.”, or
+“P.M.” (ignoring case), but localized versions can be specified with
+<a href="#setLocaleInfo">setLocaleInfo()</a></p>
 
-tz
+<p>tz</p>
 
-a timezone name or abbreviation, as a string of alphabetic characters,
+<p>a timezone name or abbreviation, as a string of alphabetic characters,
 slashes, and underscores, which must match the name or abbreviation for
-a timezone in the zoneinfo database (see the [TimeZone
-class](timezone.html) for more information); or a match to the gmtofs
-field type (below)
+a timezone in the zoneinfo database (see the <a href="timezone.html">TimeZone
+class</a> for more information); or a match to the gmtofs
+field type (below)</p>
 
-gmtofs
+<p>gmtofs</p>
 
-an offset from GMT, optionally starting with the literal text "GMT"
-(which must be in upper case), a "+" or "-" sign, and an offset in hours
-(e.g., "+8" or "+08"), hours and minutes ("+830", "+0830", "+8:30",
-"+08:30"), or hours, minutes, and seconds ("+083000", "+08:30:00")
+<p>an offset from GMT, optionally starting with the literal text “GMT”
+(which must be in upper case), a “+” or “-“ sign, and an offset in hours
+(e.g., “+8” or “+08”), hours and minutes (“+830”, “+0830”, “+8:30”,
+“+08:30”), or hours, minutes, and seconds (“+083000”, “+08:30:00”)</p>
 
-*literals*
+<p><em>literals</em></p>
 
-anything else is a single literal character to match, or a series of
-single characters, *any one of which* can be matched. An underscore
+<p>anything else is a single literal character to match, or a series of
+single characters, <em>any one of which</em> can be matched. An underscore
 represents a space. To match an alphabetic character, start the literals
-with a backslash: e.g., `\W` matches a literal
-'W'. You can also make the literals optional, or allow them to match
-more than once: a trailing "\*" means that the template matches zero or
-more characters of input, "+" matches one or more characters, and "?"
-matches zero or one. For example, `\_\*` matches
-zero or more spaces, and `.,;+` matches a series
-of one or more periods, commas, and/or semicolons.
+with a backslash: e.g., <code class="language-plaintext highlighter-rouge">\W</code> matches a literal
+‘W’. You can also make the literals optional, or allow them to match
+more than once: a trailing “*” means that the template matches zero or
+more characters of input, “+” matches one or more characters, and “?”
+matches zero or one. For example, <code class="language-plaintext highlighter-rouge">\_\*</code> matches
+zero or more spaces, and <code class="language-plaintext highlighter-rouge">.,;+</code> matches a series
+of one or more periods, commas, and/or semicolons.</p>
 
-Those are the field values. A template string is constructed by
+<p>Those are the field values. A template string is constructed by
 combining one or more of these fields, separated by spaces. A template
-can also contain a "filter", which specifies that it's only used when a
-given DateParseFilter value for [setLocaleInfo()](#setLocaleInfo) is
+can also contain a “filter”, which specifies that it’s only used when a
+given DateParseFilter value for <a href="#setLocaleInfo">setLocaleInfo()</a> is
 selected. The filter must be the very first thing in the string, and is
 simply the filter name enclosed in square brackets: so a template that
-begins with "\[us\]" means that the template only applies if
-DateParseFilter is set to 'us', and "\[eu\]" means that it only applies
-if DateParseFilter is set to 'eu' for European-style day/month ordering.
+begins with “[us]” means that the template only applies if
+DateParseFilter is set to ‘us’, and “[eu]” means that it only applies
+if DateParseFilter is set to ‘eu’ for European-style day/month ordering.</p>
 
-Template
+<p>Template</p>
 
-Description
+<p>Description</p>
 
-Examples
+<p>Examples</p>
 
-\[us\]m / d / y
+<p>[us]m / d / y</p>
 
-numeric month/day/year
+<p>numeric month/day/year</p>
 
-8/15/12  
-08/15/2012
+<p>8/15/12<br />
+08/15/2012</p>
 
-\[us\]m / d
+<p>[us]m / d</p>
 
-numeric month/day
+<p>numeric month/day</p>
 
-8/15  
-08/15
+<p>8/15<br />
+08/15</p>
 
-\[us\]m - d
+<p>[us]m - d</p>
 
-numeric month-day
+<p>numeric month-day</p>
 
-8-15  
-08-15
+<p>8-15<br />
+08-15</p>
 
-\[us\]m . d
+<p>[us]m . d</p>
 
-numeric month.day
+<p>numeric month.day</p>
 
-8.15  
-08.15
+<p>8.15<br />
+08.15</p>
 
-\[us\]m .\t- d .\t- y
+<p>[us]m .\t- d .\t- y</p>
 
-numeric month-day-year
+<p>numeric month-day-year</p>
 
-8-15-12  
-08.15.2012
+<p>8-15-12<br />
+08.15.2012</p>
 
-\[eu\]d / m / y
+<p>[eu]d / m / y</p>
 
-numeric day/month/year
+<p>numeric day/month/year</p>
 
-15/8/12  
-15/08/2012
+<p>15/8/12<br />
+15/08/2012</p>
 
-\[eu\]d / m
+<p>[eu]d / m</p>
 
-numeric day/month
+<p>numeric day/month</p>
 
-15/8  
-15/08
+<p>15/8<br />
+15/08</p>
 
-\[eu\]d - m
+<p>[eu]d - m</p>
 
-numeric day-month
+<p>numeric day-month</p>
 
-15-8  
-15-08
+<p>15-8<br />
+15-08</p>
 
-\[eu\]d . m
+<p>[eu]d . m</p>
 
-numeric day.month
+<p>numeric day.month</p>
 
-15.8  
-15.08
+<p>15.8<br />
+15.08</p>
 
-\[eu\]d .\t- m .\t- y
+<p>[eu]d .\t- m .\t- y</p>
 
-numeric day-month-year
+<p>numeric day-month-year</p>
 
-15-8-12  
-15-08-2012
+<p>15-8-12<br />
+15-08-2012</p>
 
-yyyy mm dd
+<p>yyyy mm dd</p>
 
-numeric year month day
+<p>numeric year month day</p>
 
-19991231
+<p>19991231</p>
 
-yyyy .? doy
+<p>yyyy .? doy</p>
 
-PostreSQL year with day-of-year
+<p>PostreSQL year with day-of-year</p>
 
-2011.072
+<p>2011.072</p>
 
-m / y
+<p>m / y</p>
 
-numeric month/year
+<p>numeric month/year</p>
 
-10/2012  
-5/99
+<p>10/2012<br />
+5/99</p>
 
-m - y
+<p>m - y</p>
 
-numeric month-year
+<p>numeric month-year</p>
 
-10-2012  
-5-99
+<p>10-2012<br />
+5-99</p>
 
-month \_.\t-\* ddth \_,.\t+ ye
+<p>month _.\t-* ddth _,.\t+ ye</p>
 
-month name with ordinal day and year, and optional era
+<p>month name with ordinal day and year, and optional era</p>
 
-Jan 7, 2011  
-December 15th, 1999  
-July 23rd, 2005  
-May 1, 95 AD
+<p>Jan 7, 2011<br />
+December 15th, 1999<br />
+July 23rd, 2005<br />
+May 1, 95 AD</p>
 
-ddth \_.\t-\* month \_,.\t-\* ye
+<p>ddth _.\t-* month _,.\t-* ye</p>
 
-ordinal day with month name and year, and optional era
+<p>ordinal day with month name and year, and optional era</p>
 
-7th January 2011  
-15 Dec 1999  
-11th November 11 C.E.
+<p>7th January 2011<br />
+15 Dec 1999<br />
+11th November 11 C.E.</p>
 
-month \_.\t-\* ddth
+<p>month _.\t-* ddth</p>
 
-month name and ordinal day
+<p>month name and ordinal day</p>
 
-January 7th  
-Nov 11
+<p>January 7th<br />
+Nov 11</p>
 
-ddth \_.\t-\* month
+<p>ddth _.\t-* month</p>
 
-ordinal day and month name
+<p>ordinal day and month name</p>
 
-7th January  
-11 Nov
+<p>7th January<br />
+11 Nov</p>
 
-month - dd - ye
+<p>month - dd - ye</p>
 
-month name-day-year, with optional era
+<p>month name-day-year, with optional era</p>
 
-Jan-07-10  
-January-07-2010  
-Dec-15-95 BC
+<p>Jan-07-10<br />
+January-07-2010<br />
+Dec-15-95 BC</p>
 
-month \_\t.-\* y
+<p>month _\t.-* y</p>
 
-month name and year
+<p>month name and year</p>
 
-January 2012  
-Feb-1999
+<p>January 2012<br />
+Feb-1999</p>
 
-month
+<p>month</p>
 
-month name
+<p>month name</p>
 
-January  
-Feb
+<p>January<br />
+Feb</p>
 
-+- y - mm - dd
+<p>+- y - mm - dd</p>
 
-numeric year month day
+<p>numeric year month day</p>
 
-+1999-12-31  
--0005-11-10
+<p>+1999-12-31<br />
+-0005-11-10</p>
 
-y / m / d
+<p>y / m / d</p>
 
-numeric year/month/day
+<p>numeric year/month/day</p>
 
-2012/10/5  
-95/3/1
+<p>2012/10/5<br />
+95/3/1</p>
 
-y - m - d
+<p>y - m - d</p>
 
-numeric year-month-day
+<p>numeric year-month-day</p>
 
-2012-10-05  
-95-3-1
+<p>2012-10-05<br />
+95-3-1</p>
 
-y / m
+<p>y / m</p>
 
-numeric year/month
+<p>numeric year/month</p>
 
-2012/10  
-99/05
+<p>2012/10<br />
+99/05</p>
 
-y - m
+<p>y - m</p>
 
-numeric year-month
+<p>numeric year-month</p>
 
-2012-10  
-99-05
+<p>2012-10<br />
+99-05</p>
 
-ye \_\t.-\* month \_\t.-\* d
+<p>ye _\t.-* month _\t.-* d</p>
 
-year (with optional era), month name, and day
+<p>year (with optional era), month name, and day</p>
 
-1999-Decemember-5  
-2012.Jan.03  
-AD 9 June 10  
-11 BC May 5
+<p>1999-Decemember-5<br />
+2012.Jan.03<br />
+AD 9 June 10<br />
+11 BC May 5</p>
 
-ye \_\t.-\* month
+<p>ye _\t.-* month</p>
 
-year (with optional era) and month name
+<p>year (with optional era) and month name</p>
 
-1999-December  
-72 BC Jan
+<p>1999-December<br />
+72 BC Jan</p>
 
-ye - month - dd
+<p>ye - month - dd</p>
 
-year-month name-day, with optional era
+<p>year-month name-day, with optional era</p>
 
-10-Jan-07  
-2010-Jan-07  
-15 AD-Jan-07
+<p>10-Jan-07<br />
+2010-Jan-07<br />
+15 AD-Jan-07</p>
 
-yyyy
+<p>yyyy</p>
 
-four-digit year
+<p>four-digit year</p>
 
-2010
+<p>2010</p>
 
-era \_\* y
+<p>era _* y</p>
 
-year with era
+<p>year with era</p>
 
-AD 2012  
-C.E. 95
+<p>AD 2012<br />
+C.E. 95</p>
 
-y \_\* era
+<p>y _* era</p>
 
-year with era
+<p>year with era</p>
 
-15 BC  
-100 BCE  
-11 A.D.
+<p>15 BC<br />
+100 BCE<br />
+11 A.D.</p>
 
-h \_? ampm
+<p>h _? ampm</p>
 
-hour with AM/PM
+<p>hour with AM/PM</p>
 
-11 PM  
-10am
+<p>11 PM<br />
+10am</p>
 
-h : mi
+<p>h : mi</p>
 
-hour and minute
+<p>hour and minute</p>
 
-3:00  
-11:30
+<p>3:00<br />
+11:30</p>
 
-h .: mi \_? ampm
+<p>h .: mi _? ampm</p>
 
-hour and minute with AM/PM
+<p>hour and minute with AM/PM</p>
 
-3:00 AM  
-11:30pm
+<p>3:00 AM<br />
+11:30pm</p>
 
-h .: mi .: ss \_? ampm
+<p>h .: mi .: ss _? ampm</p>
 
-hour, minute, and second with AM/PM
+<p>hour, minute, and second with AM/PM</p>
 
-3:15:10 AM  
-11:31:05 pm
+<p>3:15:10 AM<br />
+11:31:05 pm</p>
 
-h : mi : ss
+<p>h : mi : ss</p>
 
-hour, minute, and second
+<p>hour, minute, and second</p>
 
-3:15:10  
-11:31:05
+<p>3:15:10<br />
+11:31:05</p>
 
-h : mi : ss .: ssfrac \_? ampm
+<p>h : mi : ss .: ssfrac _? ampm</p>
 
-hour, minute, second, and fraction of a second with AM/PM
+<p>hour, minute, second, and fraction of a second with AM/PM</p>
 
-3:15.10.91 am
+<p>3:15.10.91 am</p>
 
-h : mi : ss .: ssfrac
+<p>h : mi : ss .: ssfrac</p>
 
-hour, minute, second, and fraction of a second
+<p>hour, minute, second, and fraction of a second</p>
 
-3:15:10.91
+<p>3:15:10.91</p>
 
-tT? hh .: mi
+<p>tT? hh .: mi</p>
 
-24-hour clock hour and minute
+<p>24-hour clock hour and minute</p>
 
-13:50  
-T23:01
+<p>13:50<br />
+T23:01</p>
 
-tT? hh mi
+<p>tT? hh mi</p>
 
-24-hour clock hour and minute
+<p>24-hour clock hour and minute</p>
 
-1350  
-T2301
+<p>1350<br />
+T2301</p>
 
-tT? hh .: mi .: ss
+<p>tT? hh .: mi .: ss</p>
 
-24-hour clock hour, minute, and second
+<p>24-hour clock hour, minute, and second</p>
 
-13:50:01  
-T23:01:15
+<p>13:50:01<br />
+T23:01:15</p>
 
-tT? hh mi SS
+<p>tT? hh mi SS</p>
 
-24-hour clock hour, minute, and second
+<p>24-hour clock hour, minute, and second</p>
 
-135001  
-T230115
+<p>135001<br />
+T230115</p>
 
-tT? hh .: mi .: ss \_? tz
+<p>tT? hh .: mi .: ss _? tz</p>
 
-24-hour clock hour, minute, and second with time zone
+<p>24-hour clock hour, minute, and second with time zone</p>
 
-13:50:01 America/New_York
+<p>13:50:01 America/New_York</p>
 
-tT? hh .: mi .: ss . ssfrac
+<p>tT? hh .: mi .: ss . ssfrac</p>
 
-24-hour hour, minute, second, and fraction of a second
+<p>24-hour hour, minute, second, and fraction of a second</p>
 
-13:50:01.95
+<p>13:50:01.95</p>
 
-tz
+<p>tz</p>
 
-time zone name or abbreviation
+<p>time zone name or abbreviation</p>
 
-America/Los_Angeles  
-EST
+<p>America/Los_Angeles<br />
+EST</p>
 
-d / mon / yyyy : hh : mi : ss \_ gmtofs
+<p>d / mon / yyyy : hh : mi : ss _ gmtofs</p>
 
-Unix log file format
+<p>Unix log file format</p>
 
-7/Jul/2011:15:31:07 +0800
+<p>7/Jul/2011:15:31:07 +0800</p>
 
-yyyy : mm : dd \_ hh : mi : ss
+<p>yyyy : mm : dd _ hh : mi : ss</p>
 
-EXIF format
+<p>EXIF format</p>
 
-1999:12:10 07:32:58
+<p>1999:12:10 07:32:58</p>
 
-yyyy -? \\W W
+<p>yyyy -? \W W</p>
 
-ISO year with ISO week and optional day
+<p>ISO year with ISO week and optional day</p>
 
-1999-W07  
-1999W073  
-1999W07-3
+<p>1999-W07<br />
+1999W073<br />
+1999W07-3</p>
 
-yyyy - mm - dd \\T hh : mi : ss . ssfrac
+<p>yyyy - mm - dd \T hh : mi : ss . ssfrac</p>
 
-SOAP
+<p>SOAP</p>
 
-2011-07-02T15:41:27.000
+<p>2011-07-02T15:41:27.000</p>
 
-yyyy - mm - dd \\T hh : mi : ss . ssfrac gmtofs
+<p>yyyy - mm - dd \T hh : mi : ss . ssfrac gmtofs</p>
 
-SOAP
+<p>SOAP</p>
 
-2011-07-02T15:42:27.000+0800
+<p>2011-07-02T15:42:27.000+0800</p>
 
-@ unix
+<p>@ unix</p>
 
-Unix timestamp
+<p>Unix timestamp</p>
 
-@314729346
+<p>@314729346</p>
 
-yyyy mm dd \\T hh : mi : ss
+<p>yyyy mm dd \T hh : mi : ss</p>
 
-XMLRPC
+<p>XMLRPC</p>
 
-20110719T13:41:07
+<p>20110719T13:41:07</p>
 
-yyyy mm dd \\t hh mi ss
+<p>yyyy mm dd \t hh mi ss</p>
 
-XMLRPC - compact
+<p>XMLRPC - compact</p>
 
-20110719T134107
+<p>20110719T134107</p>
 
-yyyy - m - d \\T h : i : s
+<p>yyyy - m - d \T h : i : s</p>
 
-WDDX
+<p>WDDX</p>
 
-2011-07-19T13:41:07
+<p>2011-07-19T13:41:07</p>
 
-## Details and background notes
+<h2 id="details-and-background-notes">Details and background notes</h2>
 
-### <span id="limits">Internal representation and range limits</span>
+<h3 id="internal-representation-and-range-limits"><span id="limits">Internal representation and range limits</span></h3>
 
-The internal representation of a Date has two components: a 32-bit "day
-number", and the time of day, as the number of milliseconds after
+<p>The internal representation of a Date has two components: a 32-bit “day
+number”, and the time of day, as the number of milliseconds after
 midnight. The zero point for the day number is March 1, year 0000 on the
-Gregorian calendar, at midnight UTC. (The day we label 3/1/0000 wasn't
+Gregorian calendar, at midnight UTC. (The day we label 3/1/0000 wasn’t
 known by that date at the time, of course, as the Gregorian calendar
-didn't exist yet. But the calendar's underlying formula can be projected
-arbitrarily far back in time, so we're talking about an extrapolated
+didn’t exist yet. But the calendar’s underlying formula can be projected
+arbitrarily far back in time, so we’re talking about an extrapolated
 date on the modern calendar, not the date that people alive at the time
-would have used to label the day. See also ["year 0" below](#year0).)
+would have used to label the day. See also <a href="#year0">“year 0” below</a>.)</p>
 
-The 32-bit day number can be positive or negative, allowing a range of
+<p>The 32-bit day number can be positive or negative, allowing a range of
 about plus or minus two billion days from 0000-03-01, which is about
-5.87 million years in each direction.
+5.87 million years in each direction.</p>
 
-Parsing time zone names date strings
+<p>Parsing time zone names date strings</p>
 
-The date parser accepts date and time strings that contain explicit time
-zone specifications, overriding the default local time zone.
+<p>The date parser accepts date and time strings that contain explicit time
+zone specifications, overriding the default local time zone.</p>
 
-The way humans usually write time zones is with a local abbreviation,
+<p>The way humans usually write time zones is with a local abbreviation,
 such as EST for US Eastern Standard Time. Unfortunately, many of those
-common abbreviations are highly ambiguous, since they're used for
+common abbreviations are highly ambiguous, since they’re used for
 different zones in other parts of the world. For example, CST stands for
 zones in the US, Cuba, Australia, and China, all with different UTC
-offsets. Even using the full name wouldn't completely clear things up;
+offsets. Even using the full name wouldn’t completely clear things up;
 Eastern Standard Time is the name of zones in at least the US and
-Australia, for example.
+Australia, for example.</p>
 
-Because of all the ambiguity in the common zone names, the designers of
+<p>Because of all the ambiguity in the common zone names, the designers of
 the zoneinfo database came up with their own separate, unambiguous
-naming system. (See the [TimeZone](timezone.html) class for more on the
+naming system. (See the <a href="timezone.html">TimeZone</a> class for more on the
 zoneinfo database.) The zoneinfo system is based on narrowly defined
 locations. It names each location by continent and city, sometimes with
 a region (such as a US state) interposed: America/Los_Angeles,
-Europe/Moscow, Asia/Shanghai, etc.
+Europe/Moscow, Asia/Shanghai, etc.</p>
 
-The date parser accepts both common abbreviations and zoneinfo location
-names. The zoneinfo names are the better of the two, since they're
+<p>The date parser accepts both common abbreviations and zoneinfo location
+names. The zoneinfo names are the better of the two, since they’re
 unambiguous. But the date parser is designed to understand dates in
-familiar human formats, so that users don't have to conform to any rigid
+familiar human formats, so that users don’t have to conform to any rigid
 computerese - and the zoneinfo names are definitely a sort of
-computerese. So the parser also accepts the common abbreviations.
+computerese. So the parser also accepts the common abbreviations.</p>
 
-When a zoneinfo name is specified, the time is interpreted according to
+<p>When a zoneinfo name is specified, the time is interpreted according to
 the local wall clock settings in effect in that zone on the date parsed
-from the string. For example, '2012-3-12 1:59 am America/Los_Angeles' is
-interpreted using Pacific Standard Time, while '2012-3-12 2:01 am
-America/Los_Angeles' is parsed using Pacific Daylight Time, since
-daylight time starts at 2:00 AM that day.
+from the string. For example, ‘2012-3-12 1:59 am America/Los_Angeles’ is
+interpreted using Pacific Standard Time, while ‘2012-3-12 2:01 am
+America/Los_Angeles’ is parsed using Pacific Daylight Time, since
+daylight time starts at 2:00 AM that day.</p>
 
-If you use a common local time abbreviation like EST or CDT, the date
+<p>If you use a common local time abbreviation like EST or CDT, the date
 parser tries to guess which zone you mean. It first looks for a zone
 that matches the abbreviation and is in the same country as your host
-system's local time zone. So if you're in the US and enter EST or CDT,
-the US zone by that name will be selected; if you're in Australia, the
-Australian zone will be used. If the parser can't find a country match,
+system’s local time zone. So if you’re in the US and enter EST or CDT,
+the US zone by that name will be selected; if you’re in Australia, the
+Australian zone will be used. If the parser can’t find a country match,
 it looks for a zone with the given abbreviation within 3 hours of your
-host system's UTC offset; this should at least give you a zone in the
+host system’s UTC offset; this should at least give you a zone in the
 same part of the world. If even that fails, an arbitrary match is used
 (currently the westernmost zone, with the most most negative UTC
-offset).
+offset).</p>
 
-Note that a zone name like EST or PDT specifies a particular Standard or
+<p>Note that a zone name like EST or PDT specifies a particular Standard or
 Daylight clock setting. The date parser assumes you mean exactly what
 you say, so it obeys the Standard or Daylight setting indicated by the
-abbreviation, even if it's not normally used on the given date. For
-example, if you enter '7/1/2011 12:00 PST', the parser interprets this
+abbreviation, even if it’s not normally used on the given date. For
+example, if you enter ‘7/1/2011 12:00 PST’, the parser interprets this
 as noon Pacific Standard Time, even though Pacific Daylight Time would
 normally apply in July. PST still exists during the summer months, so
-it's still meaningful to enter PST times in California in July - they'll
+it’s still meaningful to enter PST times in California in July - they’ll
 just be an hour off from what the clock on the wall reads. In zones
 where the same abbreviation is used for both standard and daylight time
 (this is the practice in Australia, for example), the parser uses the
-setting that's in effect for the parsed date.
+setting that’s in effect for the parsed date.</p>
 
-### Gregorian and Julian calendars
+<h3 id="gregorian-and-julian-calendars">Gregorian and Julian calendars</h3>
 
-The Date class is happy to calculate extrapolated Gregorian and Julian
+<p>The Date class is happy to calculate extrapolated Gregorian and Julian
 dates as far back as you want, within its +/-5.87 million year limit,
 even when those dates are before the calendar in question came into use
 (or, in the case of the Julian calendar, after it fell into disuse). For
-dates before the given calendar's adoption in a given region, the
-calculated dates won't correspond to the dates used by people alive at
+dates before the given calendar’s adoption in a given region, the
+calculated dates won’t correspond to the dates used by people alive at
 the time. For example, if you want to work with dates written in the
-ship's logs during Columbus's voyages, the source material obviously
-won't be rendered in Gregorian terms. Historians usually work in terms
+ship’s logs during Columbus’s voyages, the source material obviously
+won’t be rendered in Gregorian terms. Historians usually work in terms
 of the calendar that was in use in the era and region under study for
 just this reason. Some software systems try to be clever and switch
-between Gregorian and Julian dates in October, 1582, but TADS doesn't do
+between Gregorian and Julian dates in October, 1582, but TADS doesn’t do
 this. Because of the gradual adoption of the Gregorian calendar in
-different regions over several centuries, there's really no single
+different regions over several centuries, there’s really no single
 historically accurate cut-off date; the transition timing depends on the
-region you're talking about, and even within a single region it can be
-surprisingly complex, as the transition didn't always go smoothly. As a
-result, there's really no way to infer from a date alone that it should
+region you’re talking about, and even within a single region it can be
+surprisingly complex, as the transition didn’t always go smoothly. As a
+result, there’s really no way to infer from a date alone that it should
 be on one calendar or another. So the Date parser and formatter let you
-explicitly choose the calendar you wish to use for a given operation.
+explicitly choose the calendar you wish to use for a given operation.</p>
 
-### <span id="year0">Year zero and negative year numbers</span>
+<h3 id="year-zero-and-negative-year-numbers"><span id="year0">Year zero and negative year numbers</span></h3>
 
-In the traditional AD/BC timeline, there's no such thing as a Year 0,
+<p>In the traditional AD/BC timeline, there’s no such thing as a Year 0,
 and no negative year numbers: the year before AD 1 is called 1 BC, the
-year before that is 2 BC, and so on. That's the way most people write
+year before that is 2 BC, and so on. That’s the way most people write
 years before AD 1, but astronomers and most computer systems use a
 different convention where the years are numbered as ordinary integers.
 The positive year numbers correspond to the same positive integers, but
 when we count backwards past year 1, we just keep going through the
-integers instead of switching to a different "BC" era: so the year
+integers instead of switching to a different “BC” era: so the year
 before year 1 is year 0, the year before that is -1, then -2, etc. This
-is often called astronomical notation, since it's the way astronomers
-number years.
+is often called astronomical notation, since it’s the way astronomers
+number years.</p>
 
-When parsing and formatting date strings, the Date class can handle both
+<p>When parsing and formatting date strings, the Date class can handle both
 the astronomical notation and the AD/BC notation. In input, the parser
 determines which notation is used by analyzing the input string. For
-output via [formatDate()](#formatDate), you can choose the notation by
+output via <a href="#formatDate">formatDate()</a>, you can choose the notation by
 selecting the appropriate format code (e.g.,
-`%y` for astronomical years,
-`%e` for AD/BC eras).
+<code class="language-plaintext highlighter-rouge">%y</code> for astronomical years,
+<code class="language-plaintext highlighter-rouge">%e</code> for AD/BC eras).</p>
 
-### <span id="leapseconds">Leap seconds</span>
+<h3 id="leap-seconds"><span id="leapseconds">Leap seconds</span></h3>
 
-For most of human history, the Earth was our master clock. Timekeeping
-was traditionally a matter of observing the Earth's orientation in
+<p>For most of human history, the Earth was our master clock. Timekeeping
+was traditionally a matter of observing the Earth’s orientation in
 space; the key reference points on the clock and the calendar are
 defined by astronomical alignments like noon and the solstices. Until
 very recently, the Earth was the most stable and precise timepiece we
 had, and man-made clocks had to be reset regularly to make up for their
 mechanical imprecision. In the modern era, the situation is inverted:
 timekeeping technology now allows us to build clocks that are much more
-stable than the Earth's rotational speed. Atomic clocks now serve as the
+stable than the Earth’s rotational speed. Atomic clocks now serve as the
 definitive reference points for measuring time. We still want our clocks
 to match the observed solar time, though, so we still make occasional
-corrections - but now it's because the clocks are *too* accurate, and
-have to be tweaked to account for imperfections in the Earth's celestial
-mechanics.
+corrections - but now it’s because the clocks are <em>too</em> accurate, and
+have to be tweaked to account for imperfections in the Earth’s celestial
+mechanics.</p>
 
-Over the long haul, the Earth's rotational rate is gradually slowing:
+<p>Over the long haul, the Earth’s rotational rate is gradually slowing:
 the day is getting longer, which will be good news to those who feel
-there aren't enough hours in the day. In the short term, the rate varies
+there aren’t enough hours in the day. In the short term, the rate varies
 chaotically. Atomic clocks are so stable that the variation becomes
 significant over the span of couple of years. To keep the reference
 clocks synchronized with the heavens, the timekeeping authorities
-occasionally have to add or subtract a "leap second", where UTC is set
+occasionally have to add or subtract a “leap second”, where UTC is set
 ahead or back by one second. This has happened, on average, about once
-every two years since the practice was started in 1972. But that's just
-an average; there's no formula for it, since the short-term variations
-in the Earth's rotation are unpredictable.
+every two years since the practice was started in 1972. But that’s just
+an average; there’s no formula for it, since the short-term variations
+in the Earth’s rotation are unpredictable.</p>
 
-The Date class's treatment of leap seconds is simple: it ignores them.
-For future dates, it's simply not possible to account for them because
+<p>The Date class’s treatment of leap seconds is simple: it ignores them.
+For future dates, it’s simply not possible to account for them because
 of their inherent unpredictability. It would be possible in principle to
 account for leap seconds for past dates, but practical experience with
 other computer systems has suggested that doing so does more harm than
 good. Most computer systems today use an idealized UTC timeline that
 ignores all past and future leap seconds; this is what the Date class
-does.
+does.</p>
 
-The design of the Date class actually insulates it from the effects of
+<p>The design of the Date class actually insulates it from the effects of
 leap seconds for most purposes. A Date consists of a day number and a
 separate time of day. This design means that calendar calculations, such
 as determining the calendar date of a given Date value, or figuring the
@@ -1867,36 +1794,32 @@ seconds. Calculations of the time of day within a given day are also
 unaffected by leap seconds, since leap seconds are cleverly added at the
 very end of a day, by making the last minute of the day 61 seconds long
 (so each leap-second day has a rather anomalous moment labeled
-23:59:60). The only type of calculation with the Date type that's
+23:59:60). The only type of calculation with the Date type that’s
 affected by leap seconds is figuring the elapsed time, in units such as
 hours or minutes, between two events on different UTC days (or the
 reverse, figuring the date/time at a given interval measured in time
 units from another date/time, where the two values are on different UTC
-days). The Date class doesn't take leap seconds into account for these
+days). The Date class doesn’t take leap seconds into account for these
 calculations; it simply treats every day as exactly 86,400 seconds. This
 yields results that are consistent with most other computer systems,
-even though they're not precisely correct as measured on the atomic
-clocks.
+even though they’re not precisely correct as measured on the atomic
+clocks.</p>
 
-In concrete terms, 24 leap seconds were added to UTC between 1972 and
-2012. This makes the error due to ignoring leap seconds in an elapsed
-time calculation over that entire period about one part in 51 million.
+<p>In concrete terms, 24 leap seconds were added to UTC between 1972 and</p>
+<ol>
+  <li>This makes the error due to ignoring leap seconds in an elapsed
+time calculation over that entire period about one part in 51 million.</li>
+</ol>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Date  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Date<br />
 <span class="navnp"><a href="collect.html" class="nav"><em>Prev:</em> Collection</a>
     <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
-</span>
+</span></p>
 
-</div>
-</str></div></div>
 
 </main>
 <footer>

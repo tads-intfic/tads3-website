@@ -44,7 +44,7 @@ all), and number of turns.
 
 
 
-[`statusLeftOutputStream`](../object/statusLeftOutputStream.html)[`statusLine`](../object/statusLine.html)[`statusRightOutputStream`](../object/statusRightOutputStream.html)[`statusTagOutputStream`](../object/statusTagOutputStream.html)
+[`statusLeftOutputStream`](../object/statusLeftOutputStream.html) [`statusLine`](../object/statusLine.html) [`statusRightOutputStream`](../object/statusRightOutputStream.html) [`statusTagOutputStream`](../object/statusTagOutputStream.html)
 <span id="FunctionSummary_"></span>
 
 

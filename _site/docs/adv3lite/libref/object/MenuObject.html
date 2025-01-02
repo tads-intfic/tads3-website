@@ -46,33 +46,21 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A basic menu object. This is an abstract base class that encapsulates
+<p>A basic menu object. This is an abstract base class that encapsulates
 some behavior common to different menu classes, and allows the use of
-the + syntax (like "+ MenuItem") to define containment.
+the + syntax (like “+ MenuItem”) to define containment.</p>
 
-`class `**`MenuObject`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MenuObject</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MenuObject</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MenuObject</code></strong><br />
 <a href="../object/MenuItem.html"><code class="language-plaintext highlighter-rouge">MenuItem</code></a><br />
@@ -85,39 +73,23 @@ the + syntax (like "+ MenuItem") to define containment.
 <a href="../object/Goal.html"><code class="language-plaintext highlighter-rouge">Goal</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#contents"><code class="language-plaintext highlighter-rouge">contents</code></a><a href="#menuOrder"><code class="language-plaintext highlighter-rouge">menuOrder</code></a></p>
+<p><a href="#contents"><code class="language-plaintext highlighter-rouge">contents</code></a> <a href="#menuOrder"><code class="language-plaintext highlighter-rouge">menuOrder</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a><a href="#compareForMenuSort"><code class="language-plaintext highlighter-rouge">compareForMenuSort</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#initializeContents"><code class="language-plaintext highlighter-rouge">initializeContents</code></a><a href="#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a></p>
+<p><a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a> <a href="#compareForMenuSort"><code class="language-plaintext highlighter-rouge">compareForMenuSort</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#initializeContents"><code class="language-plaintext highlighter-rouge">initializeContents</code></a> <a href="#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="contents"></span></p>
 
@@ -125,11 +97,7 @@ the + syntax (like "+ MenuItem") to define containment.
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#143">143</a>]</p>
 
-<div class="desc">
-
-our contents list
-
-</div>
+<p>our contents list</p>
 
 <p><span id="menuOrder"></span></p>
 
@@ -137,24 +105,16 @@ our contents list
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#204">204</a>]</p>
 
-<div class="desc">
-
-The menu order. When we're about to show a list of menu items, we'll
+<p>The menu order. When we’re about to show a list of menu items, we’ll
 sort the list in ascending order of this property, then in ascending
 order of title. By default, we set this order value to be equal to the
-menu item's sourceTextOrder. This makes the menu order default to the
+menu item’s sourceTextOrder. This makes the menu order default to the
 order of objects as defined in the source. If some other basis is
-desired, override topicOrder.
-
-</div>
+desired, override topicOrder.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addToContents"></span></p>
 
@@ -162,11 +122,7 @@ desired, override topicOrder.
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#156">156</a>]</p>
 
-<div class="desc">
-
-add a menu item
-
-</div>
+<p>add a menu item</p>
 
 <p><span id="compareForMenuSort"></span></p>
 
@@ -174,17 +130,13 @@ add a menu item
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#215">215</a>]</p>
 
-<div class="desc">
-
-Compare this menu object to another, for the purposes of sorting a list
+<p>Compare this menu object to another, for the purposes of sorting a list
 of menu items. Returns a positive number if this menu item sorts after
 the other one, a negative number if this menu item sorts before the
-other one, 0 if the relative order is arbitrary.
+other one, 0 if the relative order is arbitrary.</p>
 
-By default, we'll sort by menuOrder if the menuOrder values are
-different, otherwise arbitrarily.
-
-</div>
+<p>By default, we’ll sort by menuOrder if the menuOrder values are
+different, otherwise arbitrarily.</p>
 
 <p><span id="execute"></span></p>
 
@@ -192,12 +144,8 @@ different, otherwise arbitrarily.
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#255">255</a>]</p>
 
-<div class="desc">
-
-This preinit object makes sure the MenuObjects all have their contents
-initialized properly.
-
-</div>
+<p>This preinit object makes sure the MenuObjects all have their contents
+initialized properly.</p>
 
 <p><span id="initializeContents"></span></p>
 
@@ -205,18 +153,14 @@ initialized properly.
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#242">242</a>]</p>
 
-<div class="desc">
-
-Finish initializing our contents list. This will be called on each
-MenuObject \*after\* we've called initializeLocation() on every object.
-In other words, every menu will already have been added to its parent's
-contents; this can do anything else that's needed to initialize the
+<p>Finish initializing our contents list. This will be called on each
+MenuObject *after* we’ve called initializeLocation() on every object.
+In other words, every menu will already have been added to its parent’s
+contents; this can do anything else that’s needed to initialize the
 contents list. For example, some subclasses might want to sort their
 contents here, so that they list their menus in a defined order. By
 default, we sort the menu items by menuOrder; subclasses can override
-this as needed.
-
-</div>
+this as needed.</p>
 
 <p><span id="initializeLocation"></span></p>
 
@@ -224,19 +168,12 @@ this as needed.
 
 <p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#149">149</a>]</p>
 
-<div class="desc">
+<p>Since we’re inheriting from object, but need to use the “+” syntax, we
+need to set up the contents appropriately</p>
 
-Since we're inheriting from object, but need to use the "+" syntax, we
-need to set up the contents appropriately
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

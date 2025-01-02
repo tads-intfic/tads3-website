@@ -46,33 +46,21 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-TopicEntry is the base class for ConsultTopics and various kinds of
+<p>TopicEntry is the base class for ConsultTopics and various kinds of
 Conversation Topics. It can be used to match a particular topic and
-output an appropriate response.
+output an appropriate response.</p>
 
-`class `**`TopicEntry`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TopicEntry</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TopicEntry</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TopicEntry</code></strong><br />
 <a href="../object/ActorTopicEntry.html"><code class="language-plaintext highlighter-rouge">ActorTopicEntry</code></a><br />
@@ -148,39 +136,23 @@ output an appropriate response.
 <a href="../object/DefaultThought.html"><code class="language-plaintext highlighter-rouge">DefaultThought</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#active"><code class="language-plaintext highlighter-rouge">active</code></a><a href="#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a><a href="#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a><a href="#matchExactCase"><code class="language-plaintext highlighter-rouge">matchExactCase</code></a><a href="#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a><a href="#matchPattern"><code class="language-plaintext highlighter-rouge">matchPattern</code></a><a href="#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a><a href="#scoreBoost"><code class="language-plaintext highlighter-rouge">scoreBoost</code></a><a href="#topicMatched"><code class="language-plaintext highlighter-rouge">topicMatched</code></a></p>
+<p><a href="#active"><code class="language-plaintext highlighter-rouge">active</code></a> <a href="#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a> <a href="#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="#matchExactCase"><code class="language-plaintext highlighter-rouge">matchExactCase</code></a> <a href="#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="#matchPattern"><code class="language-plaintext highlighter-rouge">matchPattern</code></a> <a href="#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a> <a href="#scoreBoost"><code class="language-plaintext highlighter-rouge">scoreBoost</code></a> <a href="#topicMatched"><code class="language-plaintext highlighter-rouge">topicMatched</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a><a href="#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a><a href="#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a><a href="#scoreBooster"><code class="language-plaintext highlighter-rouge">scoreBooster</code></a><a href="#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
+<p><a href="#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a> <a href="#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a> <a href="#scoreBooster"><code class="language-plaintext highlighter-rouge">scoreBooster</code></a> <a href="#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="active"></span></p>
 
@@ -188,18 +160,14 @@ output an appropriate response.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#172">172</a>]</p>
 
-<div class="desc">
-
-The active property is used internally by the library to determine
+<p>The active property is used internally by the library to determine
 whether a TopicEntry is currently available for use. On the base
 TopicEntry class a topic entry is active if its isActive property is
 true, but this is not necessarily the case on the ActorTopicEntry
 subclass defined in actor.t, which needs to distinguish between these
-properties.
+properties.</p>
 
-Game code should not normally need to override the active property.
-
-</div>
+<p>Game code should not normally need to override the active property.</p>
 
 <p><span id="includeInList"></span></p>
 
@@ -207,13 +175,9 @@ Game code should not normally need to override the active property.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#135">135</a>]</p>
 
-<div class="desc">
-
-The set of database lists we're part of. This is a list of one or more
+<p>The set of database lists we’re part of. This is a list of one or more
 property pointers, giving the TopicDatabase properties of the lists we
-participate in.
-
-</div>
+participate in.</p>
 
 <p><span id="isActive"></span></p>
 
@@ -221,13 +185,9 @@ participate in.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#160">160</a>]</p>
 
-<div class="desc">
-
-Is this TopicEntry currently active? Game code can set a condition here
+<p>Is this TopicEntry currently active? Game code can set a condition here
 so that a TopicEntry only becomes active (i.e. available) under
-particular circumstances.
-
-</div>
+particular circumstances.</p>
 
 <p><span id="matchExactCase"></span></p>
 
@@ -235,12 +195,8 @@ particular circumstances.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#128">128</a>]</p>
 
-<div class="desc">
-
-Do we want to restrict this TopicEntry to an exact case match with its
-matchPattern? By default we don't.
-
-</div>
+<p>Do we want to restrict this TopicEntry to an exact case match with its
+matchPattern? By default we don’t.</p>
 
 <p><span id="matchObj"></span></p>
 
@@ -248,12 +204,8 @@ matchPattern? By default we don't.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#110">110</a>]</p>
 
-<div class="desc">
-
-The object, topic or list of objects/topics that this TopicEntry
-matches.
-
-</div>
+<p>The object, topic or list of objects/topics that this TopicEntry
+matches.</p>
 
 <p><span id="matchPattern"></span></p>
 
@@ -261,13 +213,9 @@ matches.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#122">122</a>]</p>
 
-<div class="desc">
-
-A regular expression that this TopicEntry might match, if it doesn't
-match a matchObj. We don't need to define this if we've defined a
-matchObj.
-
-</div>
+<p>A regular expression that this TopicEntry might match, if it doesn’t
+match a matchObj. We don’t need to define this if we’ve defined a
+matchObj.</p>
 
 <p><span id="matchScore"></span></p>
 
@@ -275,13 +223,9 @@ matchObj.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#104">104</a>]</p>
 
-<div class="desc">
-
-Our matchScore is the base score we return if we match the topic
-requested; this is used to determine whether we're the best match under
-the circumstances. By default we use a value of 100.
-
-</div>
+<p>Our matchScore is the base score we return if we match the topic
+requested; this is used to determine whether we’re the best match under
+the circumstances. By default we use a value of 100.</p>
 
 <p><span id="scoreBoost"></span></p>
 
@@ -289,12 +233,8 @@ the circumstances. By default we use a value of 100.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#142">142</a>]</p>
 
-<div class="desc">
-
-A method or property that can be used to dynamically alter our score
-according to circumstances if needed.
-
-</div>
+<p>A method or property that can be used to dynamically alter our score
+according to circumstances if needed.</p>
 
 <p><span id="topicMatched"></span></p>
 
@@ -302,19 +242,11 @@ according to circumstances if needed.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#115">115</a>]</p>
 
-<div class="desc">
-
-The topic that this TopicEntry actually matched (set by matchTopic()).
-
-</div>
+<p>The topic that this TopicEntry actually matched (set by matchTopic()).</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addTopic"></span></p>
 
@@ -322,12 +254,8 @@ The topic that this TopicEntry actually matched (set by matchTopic()).
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#178">178</a>]</p>
 
-<div class="desc">
-
-If something located in us wants us to add it to our topic database,
-pass the request up to our location (this is used by AltTopic).
-
-</div>
+<p>If something located in us wants us to add it to our topic database,
+pass the request up to our location (this is used by AltTopic).</p>
 
 <p><span id="initializeTopicEntry"></span></p>
 
@@ -335,11 +263,7 @@ pass the request up to our location (this is used by AltTopic).
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#76">76</a>]</p>
 
-<div class="desc">
-
-Initialize this Topic Entry (actually carried out at pre-init
-
-</div>
+<p>Initialize this Topic Entry (actually carried out at pre-init</p>
 
 <p><span id="matchTopic"></span></p>
 
@@ -347,14 +271,10 @@ Initialize this Topic Entry (actually carried out at pre-init
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#24">24</a>]</p>
 
-<div class="desc">
-
-Determine how well this TopicEntry matches top (a Topic or Thing). If it
-doesn't match at all we return nil, otherwise we return a numerical
-score indicating the strength of the match so that a routine that's
-looking for the best match can choose the one with the highest score.
-
-</div>
+<p>Determine how well this TopicEntry matches top (a Topic or Thing). If it
+doesn’t match at all we return nil, otherwise we return a numerical
+score indicating the strength of the match so that a routine that’s
+looking for the best match can choose the one with the highest score.</p>
 
 <p><span id="scoreBooster"></span></p>
 
@@ -362,11 +282,7 @@ looking for the best match can choose the one with the highest score.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#144">144</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="topicResponse"></span></p>
 
@@ -374,19 +290,12 @@ looking for the best match can choose the one with the highest score.
 
 <p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#87">87</a>]</p>
 
-<div class="desc">
+<p>Output our response to the topic. This can be typically be overridden to
+a double-quoted string or method to output the required response.</p>
 
-Output our response to the topic. This can be typically be overridden to
-a double-quoted string or method to output the required response.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

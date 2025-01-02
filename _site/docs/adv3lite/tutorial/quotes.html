@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="reviewing.html" class="nav">Reviewing the Basics</a> \&gt; Things
-in Quotes  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> &gt; Things
+in Quotes<br />
 <span class="navnp"><a href="inherit.html" class="nav"><em>Prev:</em> Inheritance,
 Modification and Overriding</a>    
 <a href="revisit.html" class="nav"><em>Next:</em> Heidi Revisited</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="things-in-quotes">Things in Quotes</h1>
 
@@ -54,10 +46,9 @@ this”. In TADS 3 (and hence in adv3Lite) the distinction between the two
 is important, and to distinguish between the two they are referred to
 respectively as single-quoted strings and double-quoted strings:</p>
 
-<p>`
-    ‘This is a single-quoted string.’;
-    “This is a double-quoted string.”;
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'This is a single-quoted string.';
+    "This is a double-quoted string.";
+</code></pre></div></div>
 
 <p>The basic distinction between the two is relatively straightforward: a
 single-quoted string is a piece of textual data that can be assigned to
@@ -76,12 +67,11 @@ typical definition of a Thing where the <code class="language-plaintext highligh
 property is single-quoted string and the <code class="language-plaintext highlighter-rouge">desc</code>
 property a double-quoted string:</p>
 
-<p>`
-    + bird: Thing ‘baby bird;;nestling’
-        “Too young to fly, the nestling tweets helplessly. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 1
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bird: Thing 'baby bird;;nestling'
+        "Too young to fly, the nestling tweets helplessly. "
+        
+        bulk = 1
+    ;
 </code></pre></div></div>
 
 <p>The distinction isn’t too badly blurred here. The
@@ -97,12 +87,11 @@ to a method that displays some text. Indeed, it would have been
 perfectly legal (though in this case pointless) to define the bird
 object thus:</p>
 
-<p>`
-    + bird: Thing ‘baby bird;;nestling’
-        desc() { “Too young to fly, the nestling tweets helplessly. “; }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 1
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bird: Thing 'baby bird;;nestling'
+        desc() { "Too young to fly, the nestling tweets helplessly. "; }
+        
+        bulk = 1
+    ;
 </code></pre></div></div>
 
 <p>In fact, wherever the library requires a double-quoted string property,
@@ -167,17 +156,15 @@ superficially resemble an assignment statement, the two are quite
 different things. That means that while the following definition is
 legal:</p>
 
-<p>`
-    + bird: Thing ‘baby bird;;nestling’
-        desc = “Too young to fly, the nestling tweets helplessly. “ <br />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bird: Thing 'baby bird;;nestling'
+        desc = "Too young to fly, the nestling tweets helplessly. "   
     ;
-`</p>
+</code></pre></div></div>
 
 <p>The following statement is not:</p>
 
-<p>`
-    bird.desc = “The nestling looks calmer now. “; // DON’T DO THIS!
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bird.desc = "The nestling looks calmer now. "; // DON'T DO THIS!
+</code></pre></div></div>
 
 <p>You <em>cannot</em> assign a double-quoted string directly to a property or
 variable (or pass it as a parameter), since a double-quoted string is
@@ -188,28 +175,26 @@ way to handle the kind of variation in a description (or other
 double-quoted string property) is by including conditional statements
 either in an embedded expression or a method:</p>
 
-<p>`
-    + bird: Thing ‘baby bird;;nestling’
-        “«if isCalm»The nestling looks calmer now«else»Too young to fly, the nestling tweets helplessly«end». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isCalm = nil
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bird: Thing 'baby bird;;nestling'
+        "&lt;&lt;if isCalm&gt;&gt;The nestling looks calmer now&lt;&lt;else&gt;&gt;Too young to fly, the nestling tweets helplessly&lt;&lt;end&gt;&gt;. "   
+        
+        isCalm = nil
+    ;
 </code></pre></div></div>
 
 <p>Or:</p>
 
-<p>`
-    + bird: Thing ‘baby bird;;nestling’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bird: Thing 'baby bird;;nestling'
         desc()
         {
            if(isCalm)
-              “The nestling looks calmer now. “;
+              "The nestling looks calmer now. ";
            else
-              “Too young to fly, the nestling tweets helplessly. “;
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isCalm = nil
-; `
+              "Too young to fly, the nestling tweets helplessly. ";
+        }
+        
+        isCalm = nil
+    ;
 </code></pre></div></div>
 
 <p>In this relatively simple case, you’d probably prefer the first way. In
@@ -218,16 +203,14 @@ a more complex case you might well prefer the second.</p>
 <p>There is a way of sorts of assigning a new double-quoted string value to
 a property. Just for the record, it looks like this:</p>
 
-<p>`
-    bird.setMethod(&amp;desc, ‘The nestling looks calmer now. ‘);
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bird.setMethod(&amp;desc, 'The nestling looks calmer now. ');
+</code></pre></div></div>
 
 <p>Conversely, you can get at the current single-quoted string value of a
 double-quoted string property with a statement like:</p>
 
-<p>`
-    local str = bird.getMethod(&amp;desc);
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local str = bird.getMethod(&amp;desc);
+</code></pre></div></div>
 
 <p>But note that this will only work as expected (a) if desc has been
 defined as a double-quoted string and not as a method (this is one of
@@ -240,9 +223,8 @@ probably avoid it (it’s not really what
 <code class="language-plaintext highlighter-rouge">getMethod()</code> is for). A more reliable way of
 achieving the objective would be:</p>
 
-<p>`
-    local str = gOutStream.captureOutput({ : bird.desc });
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local str = gOutStream.captureOutput({ : bird.desc });
+</code></pre></div></div>
 
 <p>But that’s using features way beyond anything we’re likely to cover in
 this tutorial. For now, therefore, I suggest you stick to using the
@@ -285,18 +267,15 @@ make some improvements.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="reviewing.html" class="nav">Reviewing the Basics</a> \&gt; Things
-in Quotes  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> &gt; Things
+in Quotes<br />
 <span class="navnp"><a href="inherit.html" class="nav"><em>Prev:</em> Inheritance,
 Modification and Overriding</a>    
 <a href="revisit.html" class="nav"><em>Next:</em> Heidi Revisited</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

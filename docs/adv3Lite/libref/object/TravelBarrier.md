@@ -80,7 +80,7 @@ unconditional) barriers preventing travel.
 
 
 
-[`canTravelerPass`](#canTravelerPass)[`checkTravelBarrier`](#checkTravelBarrier)[`explainTravelBarrier`](#explainTravelBarrier)
+[`canTravelerPass`](#canTravelerPass) [`checkTravelBarrier`](#checkTravelBarrier) [`explainTravelBarrier`](#explainTravelBarrier)
 
 <span id="_Properties_"></span>
 

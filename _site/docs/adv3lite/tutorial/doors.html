@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="airport.html" class="nav">Airport</a> \&gt; Doors and Locks  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="airport.html" class="nav">Airport</a> &gt; Doors and Locks<br />
 <span class="navnp"><a href="airmap3.html" class="nav"><em>Prev:</em> Aboard the Plane</a>
    
 <a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="doors-and-locks">Doors and Locks</h1>
 
@@ -65,43 +57,42 @@ direction property of the relevant room to the door through which it
 leads. This should become clear with the particular example we’re
 implemented here:</p>
 
-<p>`
-    gateArea: Room ‘Gate Area’ ‘gate area’
-        “The ways to Gates 1, 2 and 3 are signposted to the northwest, north and
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gateArea: Room 'Gate Area' 'gate area'
+        "The ways to Gates 1, 2 and 3 are signposted to the northwest, north and
         northeast respectively, while a display board mounted high up on the wall
         indicates what flights are boarding and departing where and when.
         Immediately to the east is a metal door, while the main concourse lies
-        south. “</p>
+        south. "
+        
+        south = concourse
+        northwest = gate1
+        north = gate2
+        northeast = gate3
+        east = maintenanceRoomDoor
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    south = concourse
-    northwest = gate1
-    north = gate2
-    northeast = gate3
-    east = maintenanceRoomDoor
-;
 
+    + maintenanceRoomDoor: Door 'metal door'
+        "It's marked &lt;q&gt;Personal de Mantenimiento S&amp;oacute;lo&lt;/q&gt;, and &lt;&lt;if isOpen&gt;&gt;
+        is currently open&lt;&lt;else&gt;&gt; looks firmly closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = mrDoorOut
+    ;
 
-+ maintenanceRoomDoor: Door 'metal door'
-    "It's marked &lt;q&gt;Personal de Mantenimiento S&amp;oacute;lo&lt;/q&gt;, and &lt;&lt;if isOpen&gt;&gt;
-    is currently open&lt;&lt;else&gt;&gt; looks firmly closed&lt;&lt;end&gt;&gt;. "
-    
-    otherSide = mrDoorOut
-;
+     ...
 
- ...
+    maintenanceRoom: Room 'Maintenance Room' 'maintenance room'
+        
+        west = mrDoorOut
+        out asExit(west)
+    ;
 
-maintenanceRoom: Room 'Maintenance Room' 'maintenance room'
-    
-    west = mrDoorOut
-    out asExit(west)
-;
-
-+ mrDoorOut: Door 'metal door; plain'
-    "It's just a plain metal door, currently &lt;&lt;if isOpen&gt;&gt; open&lt;&lt;else&gt;&gt;
-    closed&lt;&lt;end&gt;&gt;. "
-    
-    otherSide = maintenanceRoomDoor
-; `
+    + mrDoorOut: Door 'metal door; plain'
+        "It's just a plain metal door, currently &lt;&lt;if isOpen&gt;&gt; open&lt;&lt;else&gt;&gt;
+        closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = maintenanceRoomDoor
+    ;
 </code></pre></div></div>
 
 <p>Note that we handle the description of whether the doors are open or
@@ -155,26 +146,25 @@ lockability can be defined on openable containers (a strongbox, say).</p>
 also want it to start out locked. We therefore need to make the
 following changes:</p>
 
-<p>`
-    + maintenanceRoomDoor: Door ‘metal door’
-        “It’s marked <q>Personal de Mantenimiento Sólo</q>, and «if isOpen»
-        is currently open«else» looks firmly closed«end». “</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + maintenanceRoomDoor: Door 'metal door'
+        "It's marked &lt;q&gt;Personal de Mantenimiento S&amp;oacute;lo&lt;/q&gt;, and &lt;&lt;if isOpen&gt;&gt;
+        is currently open&lt;&lt;else&gt;&gt; looks firmly closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = mrDoorOut
+        lockability = lockableWithKey
+        isLocked = true
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    otherSide = mrDoorOut
-    lockability = lockableWithKey
-    isLocked = true
-;
+    ...
 
-...
-
-+ mrDoorOut: Door 'metal door; plain'
-    "It's just a plain metal door, currently &lt;&lt;if isOpen&gt;&gt; open&lt;&lt;else&gt;&gt;
-    closed&lt;&lt;end&gt;&gt;. "
-    
-    otherSide = maintenanceRoomDoor    
-    lockability = lockableWithKey
-    isLocked = true
-; `
+    + mrDoorOut: Door 'metal door; plain'
+        "It's just a plain metal door, currently &lt;&lt;if isOpen&gt;&gt; open&lt;&lt;else&gt;&gt;
+        closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = maintenanceRoomDoor    
+        lockability = lockableWithKey
+        isLocked = true
+    ;
 </code></pre></div></div>
 
 <p>That’s all very well, but we still haven’t defined <em>which</em> key or keys
@@ -183,13 +173,12 @@ the other way round: we need to tell the key which things it can lock
 and unlock. We do that by assigning anything that’s going to act as a
 key to the Key class, and defining a couple of properties on it thus:</p>
 
-<p>`
-    + brassKey: Key ‘small brass key; yale’
-        “It’s just like all the other yale keys you’ve ever seen. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    actualLockList = [maintenanceRoomDoor, mrDoorOut]
-    plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + brassKey: Key 'small brass key; yale'
+        "It's just like all the other yale keys you've ever seen. "    
+        
+        actualLockList = [maintenanceRoomDoor, mrDoorOut]
+        plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
+    ;
 </code></pre></div></div>
 
 <p>The <strong>actualLockList</strong> property contains a list of the objects this key
@@ -235,23 +224,22 @@ result in a potentially misleading response). To save ourselves a bit of
 repetitious work we can therefore define a couple of custom classes that
 can be used to implement both pairs of doors:</p>
 
-<p>`
-    class PlaneDoor: Door 
-        desc = “It’s «if isOpen»open«else»closed«end». “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class PlaneDoor: Door 
+        desc = "It's &lt;&lt;if isOpen&gt;&gt;open&lt;&lt;else&gt;&gt;closed&lt;&lt;end&gt;&gt;. "
         lockability = indirectLockable
-        indirectLockableMsg = ‘It looks like this door can only be locked and
-            unlocked from the other side. ‘</p>
+        indirectLockableMsg = 'It looks like this door can only be locked and
+            unlocked from the other side. '
+            
+        isLocked = nil
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isLocked = nil
-;
-
-class LockablePlaneDoor: Door
-    desc = "It's currently &lt;&lt;if isOpen&gt;&gt;open&lt;&lt;else&gt;&gt;closed and &lt;&lt;if isLocked&gt;&gt;
-        locked&lt;&lt;else&gt;&gt;unlocked&lt;&lt;end&gt;&gt;&lt;&lt;end&gt;&gt;. "
-    lockability = lockableWithoutKey
-    
-    isLocked = nil
-; `
+    class LockablePlaneDoor: Door
+        desc = "It's currently &lt;&lt;if isOpen&gt;&gt;open&lt;&lt;else&gt;&gt;closed and &lt;&lt;if isLocked&gt;&gt;
+            locked&lt;&lt;else&gt;&gt;unlocked&lt;&lt;end&gt;&gt;&lt;&lt;end&gt;&gt;. "
+        lockability = lockableWithoutKey
+        
+        isLocked = nil
+    ;
 </code></pre></div></div>
 
 <p>Note the use of the nested &lt;&lt;if &gt;&gt; on the LockablePlaneDoor class.
@@ -265,70 +253,69 @@ game won’t be winnable.</p>
 <p>Armed with these class defintions we can now implement the doors aboard
 the plane as follows:</p>
 
-<p>`
-    cockpit: Room ‘Cockpit’ ‘cockpit’</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cockpit: Room 'Cockpit' 'cockpit'
+        
+        aft = cabinDoor
+        south asExit(aft)
+        out asExit(aft)
+        
+        regions = [planeRegion]
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    aft = cabinDoor
-    south asExit(aft)
-    out asExit(aft)
-    
-    regions = [planeRegion]
-;
+    + cabinDoor: LockablePlaneDoor 'cabin door'
+        otherSide = cockpitDoor
+    ;
 
-+ cabinDoor: LockablePlaneDoor 'cabin door'
-    otherSide = cockpitDoor
-;
+    planeFront: Room 'Front of Plane' 'front[n] of the plane;;airplane aeroplane'
+        "The main ailse comes to an end at the port exit of the plane, but continues
+        aft past the seating. A little further forward is a door that &lt;&lt;unless
+          me.hasSeen(cockpit)&gt;&gt;presumably&lt;&lt;end&gt;&gt; leads into the cockpit. "
+        
+        fore = cockpitDoor
+        north asExit(fore)
+        port = jetway
+        west asExit(port)
+        out asExit(port)
+        aft = planeRear
+        south asExit(aft)
+        
+        regions = [planeRegion]
+    ;
 
-planeFront: Room 'Front of Plane' 'front[n] of the plane;;airplane aeroplane'
-    "The main ailse comes to an end at the port exit of the plane, but continues
-    aft past the seating. A little further forward is a door that &lt;&lt;unless
-      me.hasSeen(cockpit)&gt;&gt;presumably&lt;&lt;end&gt;&gt; leads into the cockpit. "
-    
-    fore = cockpitDoor
-    north asExit(fore)
-    port = jetway
-    west asExit(port)
-    out asExit(port)
-    aft = planeRear
-    south asExit(aft)
-    
-    regions = [planeRegion]
-;
-
-+ cockpitDoor: PlaneDoor 'cockpit door'
-    otherSide = cabinDoor
-;
+    + cockpitDoor: PlaneDoor 'cockpit door'
+        otherSide = cabinDoor
+    ;
 
 
-planeRear: Room 'Rear of Plane' 'rear[n] of the plane;;airplane aeroplane'
-    "The main aisle continue forward to the front of the plane and aft to the
-    bathroom between rows of red coloured seats. "
-    fore = planeFront
-    north asExit(fore)
-    aft = bathroomDoor
-    south asExit(aft)
-    
-    regions = [planeRegion]    
-;
+    planeRear: Room 'Rear of Plane' 'rear[n] of the plane;;airplane aeroplane'
+        "The main aisle continue forward to the front of the plane and aft to the
+        bathroom between rows of red coloured seats. "
+        fore = planeFront
+        north asExit(fore)
+        aft = bathroomDoor
+        south asExit(aft)
+        
+        regions = [planeRegion]    
+    ;
 
-+ bathroomDoor: PlaneDoor 'bathroom door; loo toilet lavatory'
-    otherSide = bathroomDoorInside
-;
+    + bathroomDoor: PlaneDoor 'bathroom door; loo toilet lavatory'
+        otherSide = bathroomDoorInside
+    ;
 
-bathroom: Room 'Bathroom' 'bathroom;;loo lavatory toilet wc cubicle'
-    "The bathroom is just a tiny cubicle with all the standard fittings you'd
-    expect. "
-    
-    fore = bathroomDoorInside
-    north asExit(fore)
-    out asExit(fore)    
-    
-    regions = [planeRegion] 
-;
+    bathroom: Room 'Bathroom' 'bathroom;;loo lavatory toilet wc cubicle'
+        "The bathroom is just a tiny cubicle with all the standard fittings you'd
+        expect. "
+        
+        fore = bathroomDoorInside
+        north asExit(fore)
+        out asExit(fore)    
+        
+        regions = [planeRegion] 
+    ;
 
-+ bathroomDoorInside: LockablePlaneDoor 'cabin door'
-    otherSide = bathroomDoor
-; `
+    + bathroomDoorInside: LockablePlaneDoor 'cabin door'
+        otherSide = bathroomDoor
+    ;
 </code></pre></div></div>
 
 <p>If you compile and run the game now, after making these changes, you
@@ -343,64 +330,62 @@ other hand, it would not be unreasonable for the player to try to UNLOCK
 DOOR WITH CARD, so we shall instead make it lockableWithKey, making the
 IDCard the appropriate key:</p>
 
-<p>`
-    ++ IDcard: Key ‘an ID Card; identification poor; photo’   <br />
-        “According to what’s on the front it apparently belongs to one Antonio
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ IDcard: Key 'an ID Card; identification poor; photo'     
+        "According to what's on the front it apparently belongs to one Antonio
         Velaquez. Fortunately the accompanying photo is so poor it could be of
-        almost anyone, even you. A magnetic stripe runs down the back. “</p>
+        almost anyone, even you. A magnetic stripe runs down the back. "
+        
+        actualLockList = [securityDoor]
+        plausibleLockList = [securityDoor]
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    actualLockList = [securityDoor]
-    plausibleLockList = [securityDoor]
-;
+    ...
 
-...
+    concourse: Room 'Concourse' 'concourse; long; hallway'
+        "You are in a long hallway connecting the terminal
+        building (which lies to the south) to the boarding gates (which are
+        to the north). To the east is a snack bar, and a door leads west.
+        Next to the door on the west in a small slot that looks like it
+        accepts magnetic ID cards to operate the door lock. "
+        
+        north = gateArea
+        south = securityGate
+        east = snackBar
+        west = securityDoor
+    ;
 
-concourse: Room 'Concourse' 'concourse; long; hallway'
-    "You are in a long hallway connecting the terminal
-    building (which lies to the south) to the boarding gates (which are
-    to the north). To the east is a snack bar, and a door leads west.
-    Next to the door on the west in a small slot that looks like it
-    accepts magnetic ID cards to operate the door lock. "
-    
-    north = gateArea
-    south = securityGate
-    east = snackBar
-    west = securityDoor
-;
-
-+ securityDoor: Door 'door'
-    "It's clearly marked PRIVADO and is &lt;&lt;if isOpen&gt;&gt; currently open&lt;&lt;else&gt;&gt;
-    firmly closed&lt;&lt;end&gt;&gt;. "
-    
-    otherSide = concourseDoor
-    
-    lockability = lockableWithKey    
-    isLocked = true    
-; `
+    + securityDoor: Door 'door'
+        "It's clearly marked PRIVADO and is &lt;&lt;if isOpen&gt;&gt; currently open&lt;&lt;else&gt;&gt;
+        firmly closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = concourseDoor
+        
+        lockability = lockableWithKey    
+        isLocked = true    
+    ;
 </code></pre></div></div>
 
 <p>The other side of this door can just be a simple door, since we’ll
 assume that no special steps ever need be taken to lock it and unlock it
 from the Security Area side:</p>
 
-<p>`
-    securityArea: Room ‘Security Area’ ‘security area’
-        “This somewhat bare room seems to be lobby for other areas. There are exits
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    securityArea: Room 'Security Area' 'security area'
+        "This somewhat bare room seems to be lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
-        door to the east. “</p>
+        door to the east. "
+            
+        east = concourseDoor
+        south = lounge
+        west = securityCentre
+        out asExit(east)
+        
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = concourseDoor
-    south = lounge
-    west = securityCentre
-    out asExit(east)
-    
-;
-
-+ concourseDoor: Door 'door'
-    "It's currently &lt;&lt;if isOpen&gt;&gt;open &lt;&lt;else&gt;&gt;closed&lt;&lt;end&gt;&gt;. "
-    
-    otherSide = securityDoor
-; `
+    + concourseDoor: Door 'door'
+        "It's currently &lt;&lt;if isOpen&gt;&gt;open &lt;&lt;else&gt;&gt;closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = securityDoor
+    ;
 </code></pre></div></div>
 
 <p>This will work well enough if the player types UNLOCK DOOR WITH CARD,
@@ -408,14 +393,13 @@ but not so well if the equally plausible PUT CARD IN SLOT is used.
 Probably the best way to deal with that is to intercept PUT CARD IN SLOT
 and turn it into UNLOCK DOOR WITH KEY by using a Doer:</p>
 
-<p>`
-    Doer ‘put IDcard in cardslot’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'put IDcard in cardslot'
         execAction(c)
         {
             doInstead(UnlockWith, securityDoor, IDcard);
         }
     ;
-`</p>
+</code></pre></div></div>
 
 <p>If you recall our previous use of Doers you should probably recognize
 that this means “If the player’s command matches PUT IDcard IN cardslot,
@@ -427,14 +411,13 @@ other words UNLOCK securityDoor WITH IDCard).”</p>
 thing that should be put in the slot, which we can do by customizing the
 cannotPutInMsg on the cardSlot object:</p>
 
-<p>`
-    + cardslot: Fixture ‘card slot’<br />
-        “The slot appears to accept special ID cards with magnetic encoding. If you
-        had an appropriate ID card, you could put it in the slot to open the door. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cannotPutInMsg = '{The subj dobj} {does}n\'t look as if {he dobj}{\'s} meant
-        to fit in there. '
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cardslot: Fixture 'card slot'  
+        "The slot appears to accept special ID cards with magnetic encoding. If you
+        had an appropriate ID card, you could put it in the slot to open the door. "
+        
+        cannotPutInMsg = '{The subj dobj} {does}n\'t look as if {he dobj}{\'s} meant
+            to fit in there. '
+    ;
 </code></pre></div></div>
 
 <p>If you recompile and run this game you should be able to check that it
@@ -470,38 +453,37 @@ it, or at least make it pop open a fraction, and closing the door to
 lock it. We can implement these refinements by overriding the makeOpen()
 and makeLocked() method of the door like so:</p>
 
-<p>`
-    + securityDoor: Door ‘door’
-        “It’s clearly marked PRIVADO and is «if isOpen» currently open«else»
-        firmly closed«end». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    otherSide = concourseDoor
-    
-    lockability = lockableWithKey    
-    isLocked = true    
-    
-    makeLocked(stat)
-    {
-        inherited(stat);
-        if(stat == nil)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + securityDoor: Door 'door'
+        "It's clearly marked PRIVADO and is &lt;&lt;if isOpen&gt;&gt; currently open&lt;&lt;else&gt;&gt;
+        firmly closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = concourseDoor
+        
+        lockability = lockableWithKey    
+        isLocked = true    
+        
+        makeLocked(stat)
         {
-            makeOpen(true);
-            "The door pops open a fraction. ";
-        }
-    }
-    
-    makeOpen(stat)
-    {
-        inherited(stat);
-        if(stat == nil &amp;&amp; !gAction.isImplicit)
-        {
-            makeLocked(true);
-            "You hear a slight click as the door locks itself when you close
-            it. ";
+            inherited(stat);
+            if(stat == nil)
+            {
+                makeOpen(true);
+                "The door pops open a fraction. ";
+            }
         }
         
-    }
-; `
+        makeOpen(stat)
+        {
+            inherited(stat);
+            if(stat == nil &amp;&amp; !gAction.isImplicit)
+            {
+                makeLocked(true);
+                "You hear a slight click as the door locks itself when you close
+                it. ";
+            }
+            
+        }
+    ;
 </code></pre></div></div>
 
 <p>The messages that we’ve just added would look a bit awkward if they
@@ -527,14 +509,13 @@ part of a LOCK action.</p>
 locks itself when closed) by using a Doer to redirect the LOCK action to
 a CLOSE action:</p>
 
-<p>`
-    Doer ‘lock securityDoor; lock securityDoor with IDcard’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'lock securityDoor; lock securityDoor with IDcard'
         execAction(c)
         {
             doInstead(Close, securityDoor);
-        }  <br />
+        }    
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Note that some care is needed in choosing where to place such a
 definition in your source code. In particular, you need to avoid putting
@@ -587,17 +568,14 @@ features of adv3Lite.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="airport.html" class="nav">Airport</a> \&gt; Doors and Locks  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="airport.html" class="nav">Airport</a> &gt; Doors and Locks<br />
 <span class="navnp"><a href="airmap3.html" class="nav"><em>Prev:</em> Aboard the Plane</a>
    
 <a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

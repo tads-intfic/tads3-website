@@ -35,7 +35,7 @@ internally.
 
 
 
-[`BagAffinityInfo`](../object/BagAffinityInfo.html)[`CanTouchInfo`](../object/CanTouchInfo.html)[`CheckStatus`](../object/CheckStatus.html)[`CheckStatusFailure`](../object/CheckStatusFailure.html)[`DropType`](../object/DropType.html)[`DropTypeThrow`](../object/DropTypeThrow.html)[`EquivalentStateInfo`](../object/EquivalentStateInfo.html)[`SenseInfo`](../object/SenseInfo.html)[`SightTouchInfo`](../object/SightTouchInfo.html)[`Thing`](../object/Thing.html)[`ThingState`](../object/ThingState.html)[`VocabObject`](../object/VocabObject.html)
+[`BagAffinityInfo`](../object/BagAffinityInfo.html) [`CanTouchInfo`](../object/CanTouchInfo.html) [`CheckStatus`](../object/CheckStatus.html) [`CheckStatusFailure`](../object/CheckStatusFailure.html) [`DropType`](../object/DropType.html) [`DropTypeThrow`](../object/DropTypeThrow.html) [`EquivalentStateInfo`](../object/EquivalentStateInfo.html) [`SenseInfo`](../object/SenseInfo.html) [`SightTouchInfo`](../object/SightTouchInfo.html) [`Thing`](../object/Thing.html) [`ThingState`](../object/ThingState.html) [`VocabObject`](../object/VocabObject.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -44,7 +44,7 @@ internally.
 
 
 
-[`checkStatusSuccess`](../object/checkStatusSuccess.html)[`dropTypeDrop`](../object/dropTypeDrop.html)[`senseTmp`](../object/senseTmp.html)
+[`checkStatusSuccess`](../object/checkStatusSuccess.html) [`dropTypeDrop`](../object/dropTypeDrop.html) [`senseTmp`](../object/senseTmp.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -53,7 +53,7 @@ internally.
 
 
 
-[`findBestFacet`](#findBestFacet)[`senseInfoTableSubset`](#senseInfoTableSubset)
+[`findBestFacet`](#findBestFacet) [`senseInfoTableSubset`](#senseInfoTableSubset)
 
 <span id="_Functions_"></span>
 

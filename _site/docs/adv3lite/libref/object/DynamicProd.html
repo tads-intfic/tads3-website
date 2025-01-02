@@ -46,74 +46,46 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Dynamic match object interface. This is a mix-in class that should be
+<p>Dynamic match object interface. This is a mix-in class that should be
 used as a superclass for any class used as the match object when
-creating new alternatives dynamically with GrammarProd.addAlt().
+creating new alternatives dynamically with GrammarProd.addAlt().</p>
 
-This class provides an implementation of grammarInfo() that works like
+<p>This class provides an implementation of grammarInfo() that works like
 the version the compiler generates for static match objects. In this
 case, we use the grammarAltProps information that addAlt() stores in the
-match object.
+match object.</p>
 
-`class `**`DynamicProd`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">DynamicProd</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">DynamicProd</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#grammarAltProps"><code class="language-plaintext highlighter-rouge">grammarAltProps</code></a><a href="#grammarTag"><code class="language-plaintext highlighter-rouge">grammarTag</code></a></p>
+<p><a href="#grammarAltProps"><code class="language-plaintext highlighter-rouge">grammarAltProps</code></a> <a href="#grammarTag"><code class="language-plaintext highlighter-rouge">grammarTag</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#grammarInfo"><code class="language-plaintext highlighter-rouge">grammarInfo</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="grammarAltProps"></span></p>
 
@@ -121,13 +93,9 @@ match object.
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#180">180</a>]</p>
 
-<div class="desc">
-
-grammarAltProps - the list of "-\&gt;" properties used in all of the
+<p>grammarAltProps - the list of “-&gt;” properties used in all of the
 alternatives associated with this match object. addAlts() stores this
-list automatically - there's no need to create it manually.
-
-</div>
+list automatically - there’s no need to create it manually.</p>
 
 <p><span id="grammarTag"></span></p>
 
@@ -135,21 +103,13 @@ list automatically - there's no need to create it manually.
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#173">173</a>]</p>
 
-<div class="desc">
-
-grammarTag - the name for the collection of alternatives associated with
+<p>grammarTag - the name for the collection of alternatives associated with
 the match object. This name is primarily for debugging purposes; it
-appears as the first element of the grammarInfo() result list.
-
-</div>
+appears as the first element of the grammarInfo() result list.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="grammarInfo"></span></p>
 
@@ -157,20 +117,13 @@ appears as the first element of the grammarInfo() result list.
 
 <p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#162">162</a>]</p>
 
-<div class="desc">
-
-Generate match information. This returns the same information that
+<p>Generate match information. This returns the same information that
 grammarInfo() returns for match objects that the compiler generates for
-static 'grammar' statements.
+static ‘grammar’ statements.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

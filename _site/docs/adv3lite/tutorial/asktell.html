@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="conversation.html" class="nav">The Art of Conversation</a> \&gt;
-Ask, Tell, Give, Show  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="conversation.html" class="nav">The Art of Conversation</a> &gt;
+Ask, Tell, Give, Show<br />
 <span class="navnp"><a href="conversation.html" class="nav"><em>Prev:</em> The Art of
 Conversation</a>    
 <a href="query.html" class="nav"><em>Next:</em> Queries and
-Suggestions</a>     </span>
-
-</div>
+Suggestions</a>     </span></p>
 
 <h1 id="ask-tell-give-show">Ask, Tell, Give, Show</h1>
 
@@ -142,13 +134,12 @@ more talkative.</p>
 since the idea is to avoid attracting Cortez’s attention. In this case
 all we need is a single DefaultAnyTopic that explains this:</p>
 
-<p>`
-    + DefaultAnyTopic
-        “You really don’t want to attract his attention. If he recognizes you he’ll
-        kill you. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isConversational = nil
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAnyTopic
+        "You really don't want to attract his attention. If he recognizes you he'll
+        kill you. "
+        
+        isConversational = nil
+    ;
 </code></pre></div></div>
 
 <p>This object definition should be placed somewhere after the
@@ -173,14 +164,13 @@ for which we’ve already defined a corresponding
 <code class="language-plaintext highlighter-rouge">tFlightDepartures</code> Topic object. As a first
 attempt, then, we might define an AskTopic for our Security Guard thus:</p>
 
-<p>`
-    + AskTopic @tFlightDepartures
-       “<q>When’s the next plane out of here?</q> you ask.\b
-       <q>Listen for the announcements, Señor,</q> he suggests, <q>or look at
-       the departure boards through there.</q> He jerks his thumb vaguely in the
-       direction of north. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTopic @tFlightDepartures
+       "&lt;q&gt;When's the next plane out of here?&lt;/q&gt; you ask.\b
+       &lt;q&gt;Listen for the announcements, Se&amp;ntilde;or,&lt;/q&gt; he suggests, &lt;q&gt;or look at
+       the departure boards through there.&lt;/q&gt; He jerks his thumb vaguely in the
+       direction of north. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Here we use the @ symbol in the TopicEntry template to denote the fact
 that we’re defining the AskTopic’s <code class="language-plaintext highlighter-rouge">matchObj</code>
@@ -198,19 +188,18 @@ simply add StopEventList to the class list and then supply a list of
 single-quoted strings in place of the double-quoted string giving the
 response:</p>
 
-<p>`
-    + AskTopic, StopEventList @tFlightDepartures
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTopic, StopEventList @tFlightDepartures
         [
-            ‘<q>When's the next plane out of here?</q> you ask.\b
-            <q>Listen for the announcements, Señor,</q> he suggests, <q>or
-            look at the departure boards through there.</q> He jerks his thumb
-            vaguely in the direction of north. ‘,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;Is there a flight leaving soon?&lt;/q&gt; you enquire.\b
-        &lt;q&gt;I already told you, Se&amp;ntilde;or: listen for the announcements or
-        watch the board,&lt;/q&gt; he replies with a faint air of impatience.'
-    ]
-; `
+            '&lt;q&gt;When\'s the next plane out of here?&lt;/q&gt; you ask.\b
+            &lt;q&gt;Listen for the announcements, Se&amp;ntilde;or,&lt;/q&gt; he suggests, &lt;q&gt;or
+            look at the departure boards through there.&lt;/q&gt; He jerks his thumb
+            vaguely in the direction of north. ',
+            
+            '&lt;q&gt;Is there a flight leaving soon?&lt;/q&gt; you enquire.\b
+            &lt;q&gt;I already told you, Se&amp;ntilde;or: listen for the announcements or
+            watch the board,&lt;/q&gt; he replies with a faint air of impatience.'
+        ]
+    ;
 </code></pre></div></div>
 
 <p>Since this man is presumably meant to have something to do with airport
@@ -218,19 +207,18 @@ security, it’s possible that the player character might try to tell him
 about Pablo Cortez’s takeover of the plane, which we can do in a similar
 fashion via a TellTopic:</p>
 
-<p>`
-    + TellTopic, StopEventList @cortez
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic, StopEventList @cortez
         [
-            ‘<q>A criminal called Pablo Cortez has just tried to take over the
-            flight to Buenos Aires,</q> you say.\b
-            <q>I am sure it will all be taken care of, Señor,</q> the guard
-            assures you nonchalantly. ‘,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;Pablo Cortez...&lt;/q&gt; you begin.\b
-        The guard cuts you off with a gesture of his hand. &lt;q&gt;All taken care
-        of, Se&amp;ntilde;or,&lt;/q&gt; he insists. '
-    ]
-; `
+            '&lt;q&gt;A criminal called Pablo Cortez has just tried to take over the
+            flight to Buenos Aires,&lt;/q&gt; you say.\b
+            &lt;q&gt;I am sure it will all be taken care of, Se&amp;ntilde;or,&lt;/q&gt; the guard
+            assures you nonchalantly. ',
+            
+            '&lt;q&gt;Pablo Cortez...&lt;/q&gt; you begin.\b
+            The guard cuts you off with a gesture of his hand. &lt;q&gt;All taken care
+            of, Se&amp;ntilde;or,&lt;/q&gt; he insists. '
+        ]
+    ;
 </code></pre></div></div>
 
 <p>If you try compiling and running the game at this point, you’ll find
@@ -254,13 +242,12 @@ unknown until the player character sees him.</p>
 conversation with the security guard is to ask for the ID card back once
 it’s been confiscated. For that purpose we can use an AskForTopic:</p>
 
-<p>`
-    + AskForTopic @IDcard
-        “<q>Can I have my ID card back, please?</q> you ask.\b
-        <q>That was not your ID card, Señor,</q> the guard replies equably.
-        <q>I know Antonio Velaquez, and you are not he.</q> “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskForTopic @IDcard
+        "&lt;q&gt;Can I have my ID card back, please?&lt;/q&gt; you ask.\b
+        &lt;q&gt;That was not your ID card, Se&amp;ntilde;or,&lt;/q&gt; the guard replies equably.
+        &lt;q&gt;I know Antonio Velaquez, and you are not he.&lt;/q&gt; "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>The problem is that this AskForTopic can be triggered once the player
 has seen the ID card; there’s no guarantee that it will have been
@@ -287,39 +274,38 @@ question. Here, for example, we could use
 the notice of the card’s confiscation; this occurs on the definition of
 the metal detector:</p>
 
-<p>`
-    + metalDetector: Passage ‘metal detector; crude; frame’
-        “The metal detector is little more than a crude metal frame, just large
-        enough to step through, with a power cable trailing across the floor. “
-        destination = concourse</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isOn = (powerSwitch.isOn == true)
-    
-    canTravelerPass(traveler)
-    {
-        return !isOn || !IDcard.isIn(traveler);
-    }
-    
-    explainTravelBarrier(traveler)
-    {
-        "The metal detector buzzes furiously as you pass through it. The
-        security guard beckons you back immediately, with a pointed
-        tap of his holstered pistol. After a brisk search, he discovers the ID
-        card and takes it off you with a disapproving shake of his head,
-        before handing it to a colleague who walks off with it. &lt;.reveal
-        card-confiscated&gt; ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + metalDetector: Passage 'metal detector; crude; frame'
+        "The metal detector is little more than a crude metal frame, just large
+        enough to step through, with a power cable trailing across the floor. "
+        destination = concourse
         
-        IDcard.moveInto(counter);
-    }
-    
-    travelDesc()
-    {
-        "You pass through the metal detector without incident. ";
+        isOn = (powerSwitch.isOn == true)
         
-        if(takeover.startedAt == nil)
-            announcementObj.start();
-    }
-; `
+        canTravelerPass(traveler)
+        {
+            return !isOn || !IDcard.isIn(traveler);
+        }
+        
+        explainTravelBarrier(traveler)
+        {
+            "The metal detector buzzes furiously as you pass through it. The
+            security guard beckons you back immediately, with a pointed
+            tap of his holstered pistol. After a brisk search, he discovers the ID
+            card and takes it off you with a disapproving shake of his head,
+            before handing it to a colleague who walks off with it. &lt;.reveal
+            card-confiscated&gt; ";
+            
+            IDcard.moveInto(counter);
+        }
+        
+        travelDesc()
+        {
+            "You pass through the metal detector without incident. ";
+            
+            if(takeover.startedAt == nil)
+                announcementObj.start();
+        }
+    ;
 </code></pre></div></div>
 
 <p>At the same time as adding the <code class="language-plaintext highlighter-rouge">\&lt;.reveal
@@ -329,14 +315,13 @@ to explain how the card finds its way back to the counter.</p>
 <p>The next step is to add the appropriate isActive condition to the
 AskForTopic:</p>
 
-<p>`
-    + AskForTopic @IDcard
-        “<q>Can I have my ID card back, please?</q> you ask.\b
-        <q>That was not your ID card, Señor,</q> the guard replies equably.
-        <q>I know Antonio Velaquez, and you are not he.</q> “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isActive = gRevealed('card-confiscated') &amp;&amp; IDcard.location == counter
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskForTopic @IDcard
+        "&lt;q&gt;Can I have my ID card back, please?&lt;/q&gt; you ask.\b
+        &lt;q&gt;That was not your ID card, Se&amp;ntilde;or,&lt;/q&gt; the guard replies equably.
+        &lt;q&gt;I know Antonio Velaquez, and you are not he.&lt;/q&gt; "
+        
+        isActive = gRevealed('card-confiscated') &amp;&amp; IDcard.location == counter
+    ;
 </code></pre></div></div>
 
 <p>This is not absolutely bullet-proof, since the player character could
@@ -351,20 +336,19 @@ means we’ll need our ShowTopic to do a bit more than just display some
 text. We can do that by defining its topicResponse property explicitly
 as a method rather than as a double-quoted string via the template:</p>
 
-<p>`
-    + ShowTopic @IDcard
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ShowTopic @IDcard
         topicResponse()
         {
-            “You flash the ID card at the security guard, in the hope that it’ll
+            "You flash the ID card at the security guard, in the hope that it'll
             persuade him to let you straight through without any further questions,
             but instead he snatches it off you, stares at it with a deep frown.\b
-            <q>This is not yours, Señor,</q> he remarks.\b
+            &lt;q&gt;This is not yours, Se&amp;ntilde;or,&lt;/q&gt; he remarks.\b
             So saying, he hands the card to a colleague who at once carries it off
-            somewhere.&lt;.reveal card-confiscated&gt; “;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        IDcard.moveInto(counter);
-    }    
-; `
+            somewhere.&lt;.reveal card-confiscated&gt; ";
+            
+            IDcard.moveInto(counter);
+        }    
+    ;
 </code></pre></div></div>
 
 <p>Because of the way the ShowTo action is defined, a ShowTopic can’t be
@@ -377,19 +361,18 @@ to put an objHeld preCondition on the ShowTo response of the IDcard,
 since this will trigger an implicit take if the player character drops
 the card before showing it to the guard:</p>
 
-<p>`
-    ++ IDcard: Key ‘an ID Card; identification poor; photo’   <br />
-        “According to what’s on the front it apparently belongs to one Antonio
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ IDcard: Key 'an ID Card; identification poor; photo'     
+        "According to what's on the front it apparently belongs to one Antonio
         Velaquez. Fortunately the accompanying photo is so poor it could be of
-        almost anyone, even you. A magnetic stripe runs down the back. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    actualLockList = [securityDoor]
-    plausibleLockList = [securityDoor]
-    
-    bulk = 1
-    
-    dobjFor(ShowTo)   {  preCond = [objHeld]   }
-; `
+        almost anyone, even you. A magnetic stripe runs down the back. "
+        
+        actualLockList = [securityDoor]
+        plausibleLockList = [securityDoor]
+        
+        bulk = 1
+        
+        dobjFor(ShowTo)   {  preCond = [objHeld]   }
+    ;
 </code></pre></div></div>
 
 <p>Finally, we should give the security guard some form of default response
@@ -397,12 +380,11 @@ to handle all other conversational commands. Since he’s not really a
 major character we can afford to go with something fairly
 unsophisticated:</p>
 
-<p>`
-    + DefaultAnyTopic
-        “The guard merely shrugs and mutters something that could be either, <q>Not
-        my concern, Señor,</q> or <q>Not your concern, Señor.</q> “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAnyTopic
+        "The guard merely shrugs and mutters something that could be either, &lt;q&gt;Not
+        my concern, Se&amp;ntilde;or,&lt;/q&gt; or &lt;q&gt;Not your concern, Se&amp;ntilde;or.&lt;/q&gt; "
     ;
-`</p>
+</code></pre></div></div>
 
 <h2 id="showing-the-ticket-to-the-flight-attendant">Showing the Ticket to the Flight Attendant</h2>
 
@@ -412,27 +394,26 @@ automatically see if the player character was carrying a ticket, and
 allow him to board if so. Now we know how to allow the player character
 to show things to people, we can remove that code:</p>
 
-<p>`
-    + angelaTicketAgenda: ConvAgendaItem
-        initiallyActive = true</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    invokeItem()
-    {
-        isDone = true;
-        "&lt;q&gt;Welcome aboard, sir,&lt;/q&gt; {the subj angela} greets you with a smile.
-        &lt;q&gt;May I see your ticket please?&lt;/q&gt; ";
-                  
-//        /* The code shown commented out below can be deleted */
-//        if(ticket.isDirectlyIn(me))
-//        {
-//            "She glances down at the ticket in your hand, and temporarily takes
-//            it off you to check it. &lt;q&gt;That's fine, sir,&lt;/q&gt; she assures you as
-//            she returns it to you. &lt;q&gt;Please move to the rear of the plane to
-//            find a seat.&lt;/q&gt; ";
-//            angelaGreetingState.ticketSeen = true;
-//        }        
-    }
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaTicketAgenda: ConvAgendaItem
+        initiallyActive = true
+        
+        invokeItem()
+        {
+            isDone = true;
+            "&lt;q&gt;Welcome aboard, sir,&lt;/q&gt; {the subj angela} greets you with a smile.
+            &lt;q&gt;May I see your ticket please?&lt;/q&gt; ";
+                      
+    //        /* The code shown commented out below can be deleted */
+    //        if(ticket.isDirectlyIn(me))
+    //        {
+    //            "She glances down at the ticket in your hand, and temporarily takes
+    //            it off you to check it. &lt;q&gt;That's fine, sir,&lt;/q&gt; she assures you as
+    //            she returns it to you. &lt;q&gt;Please move to the rear of the plane to
+    //            find a seat.&lt;/q&gt; ";
+    //            angelaGreetingState.ticketSeen = true;
+    //        }        
+        }
+    ;
 </code></pre></div></div>
 
 <p>Instead, we can put similar code in the topicResponse() method of a
@@ -442,20 +423,19 @@ when the flight attendant is in her
 <code class="language-plaintext highlighter-rouge">angelaGreetingState</code> state, it’s probably best
 to locate our GiveShowTopic there rather than directly in angela:</p>
 
-<p>`
-    ++ GiveShowTopic @ticket
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ GiveShowTopic @ticket
         topicResponse()
         {
-            “<q>Here you are,</q> you say, holding out the ticket for {the angela}
+            "&lt;q&gt;Here you are,&lt;/q&gt; you say, holding out the ticket for {the angela}
             to see.\b
             She glances down at the ticket in your hand, and temporarily takes it
-            off you to check. <q>That’s fine, sir,</q> she assures you as she
-            returns it to you. <q>Please move to the rear of the plane to find a
-            seat.</q> “;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        angelaGreetingState.ticketSeen = true;
-    }
-; `
+            off you to check. &lt;q&gt;That's fine, sir,&lt;/q&gt; she assures you as she
+            returns it to you. &lt;q&gt;Please move to the rear of the plane to find a
+            seat.&lt;/q&gt; ";
+            
+            angelaGreetingState.ticketSeen = true;
+        }
+    ;
 </code></pre></div></div>
 
 <p>We’ve now completed all the conversation we want to implement with Pablo
@@ -472,18 +452,15 @@ Knowledge</a>.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="conversation.html" class="nav">The Art of Conversation</a> \&gt;
-Ask, Tell, Give, Show  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="conversation.html" class="nav">The Art of Conversation</a> &gt;
+Ask, Tell, Give, Show<br />
 <span class="navnp"><a href="conversation.html" class="nav"><em>Prev:</em> The Art of
 Conversation</a>    
 <a href="query.html" class="nav"><em>Next:</em> Queries and
-Suggestions</a>     </span>
+Suggestions</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

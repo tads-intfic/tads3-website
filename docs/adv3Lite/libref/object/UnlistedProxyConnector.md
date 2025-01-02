@@ -72,10 +72,10 @@ code, since game authors will always use the asExit macro instead.
 
 
 
-[`isConnectorListed`](#isConnectorListed)[`isConnectorVisible`](#isConnectorVisible)[`proxyForProp`](#proxyForProp)
+[`isConnectorListed`](#isConnectorListed) [`isConnectorVisible`](#isConnectorVisible) [`proxyForProp`](#proxyForProp)
 
 Inherited from `TravelConnector` :  
-[`destination`](../object/TravelConnector.html#destination)[`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent)[`isOpen`](../object/TravelConnector.html#isOpen)[`PushTravelVia`](../object/TravelConnector.html#PushTravelVia)[`suppressTravelDescForPushTravel`](../object/TravelConnector.html#suppressTravelDescForPushTravel)[`transmitsLight`](../object/TravelConnector.html#transmitsLight)[`travelBarriers`](../object/TravelConnector.html#travelBarriers)[`traversalTime`](../object/TravelConnector.html#traversalTime)[`traversed`](../object/TravelConnector.html#traversed)[`traversedBy`](../object/TravelConnector.html#traversedBy)
+[`destination`](../object/TravelConnector.html#destination) [`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent) [`isOpen`](../object/TravelConnector.html#isOpen) [`PushTravelVia`](../object/TravelConnector.html#PushTravelVia) [`suppressTravelDescForPushTravel`](../object/TravelConnector.html#suppressTravelDescForPushTravel) [`transmitsLight`](../object/TravelConnector.html#transmitsLight) [`travelBarriers`](../object/TravelConnector.html#travelBarriers) [`traversalTime`](../object/TravelConnector.html#traversalTime) [`traversed`](../object/TravelConnector.html#traversed) [`traversedBy`](../object/TravelConnector.html#traversedBy)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ Inherited from `TravelConnector` :
 
 
 
-[`afterTravelNotifications`](#afterTravelNotifications)[`beforeTravelNotifications`](#beforeTravelNotifications)[`construct`](#construct)[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`getDestination`](#getDestination)[`proxyForConnector`](#proxyForConnector)[`travelVia`](#travelVia)
+[`afterTravelNotifications`](#afterTravelNotifications) [`beforeTravelNotifications`](#beforeTravelNotifications) [`construct`](#construct) [`dobjFor(GoThrough)`](#dobjFor(GoThrough)) [`getDestination`](#getDestination) [`proxyForConnector`](#proxyForConnector) [`travelVia`](#travelVia)
 
 Inherited from `TravelConnector` :  
-[`canTravelerPass`](../object/TravelConnector.html#canTravelerPass)[`checkPushTravel`](../object/TravelConnector.html#checkPushTravel)[`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers)[`dobjFor(TravelVia)`](../object/TravelConnector.html#dobjFor(TravelVia))[`execTravel`](../object/TravelConnector.html#execTravel)[`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier)[`getDepartingDirection`](../object/TravelConnector.html#getDepartingDirection)[`getTraveler`](../object/TravelConnector.html#getTraveler)[`hasBeenTraversedBy`](../object/TravelConnector.html#hasBeenTraversedBy)[`iobjFor(PushTravelThrough)`](../object/TravelConnector.html#iobjFor(PushTravelThrough))[`isConnectorVisible`](../object/TravelConnector.html#isConnectorVisible)[`isDestinationKnown`](../object/TravelConnector.html#isDestinationKnown)[`noteTraversal`](../object/TravelConnector.html#noteTraversal)[`sayActorFollowing`](../object/TravelConnector.html#sayActorFollowing)[`sayDeparting`](../object/TravelConnector.html#sayDeparting)[`sayNoDestination`](../object/TravelConnector.html#sayNoDestination)[`travelDesc`](../object/TravelConnector.html#travelDesc)[`traversalMsg`](../object/TravelConnector.html#traversalMsg)[`traversalTimeFrom`](../object/TravelConnector.html#traversalTimeFrom)
+[`canTravelerPass`](../object/TravelConnector.html#canTravelerPass) [`checkPushTravel`](../object/TravelConnector.html#checkPushTravel) [`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers) [`dobjFor(TravelVia)`](../object/TravelConnector.html#dobjFor(TravelVia)) [`execTravel`](../object/TravelConnector.html#execTravel) [`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier) [`getDepartingDirection`](../object/TravelConnector.html#getDepartingDirection) [`getTraveler`](../object/TravelConnector.html#getTraveler) [`hasBeenTraversedBy`](../object/TravelConnector.html#hasBeenTraversedBy) [`iobjFor(PushTravelThrough)`](../object/TravelConnector.html#iobjFor(PushTravelThrough)) [`isConnectorVisible`](../object/TravelConnector.html#isConnectorVisible) [`isDestinationKnown`](../object/TravelConnector.html#isDestinationKnown) [`noteTraversal`](../object/TravelConnector.html#noteTraversal) [`sayActorFollowing`](../object/TravelConnector.html#sayActorFollowing) [`sayDeparting`](../object/TravelConnector.html#sayDeparting) [`sayNoDestination`](../object/TravelConnector.html#sayNoDestination) [`travelDesc`](../object/TravelConnector.html#travelDesc) [`traversalMsg`](../object/TravelConnector.html#traversalMsg) [`traversalTimeFrom`](../object/TravelConnector.html#traversalTimeFrom)
 
 <span id="_Properties_"></span>
 

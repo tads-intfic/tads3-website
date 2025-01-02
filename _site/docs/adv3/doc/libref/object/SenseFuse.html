@@ -46,34 +46,26 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Sensory-context-sensitive fuse - this is a fuse with an explicit sensory
-context. We'll run the fuse in its sense context, so any messages
+<p>Sensory-context-sensitive fuse - this is a fuse with an explicit sensory
+context. We’ll run the fuse in its sense context, so any messages
 generated will be visible only if the given source object is reachable
-by the player character in the given sense.
+by the player character in the given sense.</p>
 
-Conceptually, the source object is considered the source of any messages
+<p>Conceptually, the source object is considered the source of any messages
 that the fuse generates, and the messages pertain to the given sense; so
 if the player character cannot sense the source object in the given
 sense, the messages should not be displayed. For example, if the fuse
 will describe the noise made by an alarm clock when the alarm goes off,
 the source object would be the alarm clock and the sense would be sound;
-this way, if the player character isn't in hearing range of the alarm
-clock when the alarm goes off, we won't display messages about the alarm
-noise.
+this way, if the player character isn’t in hearing range of the alarm
+clock when the alarm goes off, we won’t display messages about the alarm
+noise.</p>
 
-`class `**`SenseFuse`**` :   `[`Fuse`](../object/Fuse.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SenseFuse</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Fuse.html"><code class="language-plaintext highlighter-rouge">Fuse</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">SenseFuse</code></strong><br />
 <a href="../object/Fuse.html"><code class="language-plaintext highlighter-rouge">Fuse</code></a><br />
@@ -82,41 +74,25 @@ noise.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
-<a href="../object/Event.html#eventOrder"><code class="language-plaintext highlighter-rouge">eventOrder</code></a><a href="../object/Event.html#isPromptDaemon"><code class="language-plaintext highlighter-rouge">isPromptDaemon</code></a><a href="../object/Event.html#nextRunTime"><code class="language-plaintext highlighter-rouge">nextRunTime</code></a></p>
+<a href="../object/Event.html#eventOrder"><code class="language-plaintext highlighter-rouge">eventOrder</code></a> <a href="../object/Event.html#isPromptDaemon"><code class="language-plaintext highlighter-rouge">isPromptDaemon</code></a> <a href="../object/Event.html#nextRunTime"><code class="language-plaintext highlighter-rouge">nextRunTime</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
-<a href="../object/BasicEvent.html#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a><a href="../object/BasicEvent.html#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a><a href="../object/BasicEvent.html#sense_"><code class="language-plaintext highlighter-rouge">sense_</code></a><a href="../object/BasicEvent.html#source_"><code class="language-plaintext highlighter-rouge">source_</code></a></p>
+<a href="../object/BasicEvent.html#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a> <a href="../object/BasicEvent.html#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a> <a href="../object/BasicEvent.html#sense_"><code class="language-plaintext highlighter-rouge">sense_</code></a> <a href="../object/BasicEvent.html#source_"><code class="language-plaintext highlighter-rouge">source_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
 
@@ -124,26 +100,18 @@ noise.
 <a href="../object/Fuse.html#executeEvent"><code class="language-plaintext highlighter-rouge">executeEvent</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
-<a href="../object/Event.html#delayEvent"><code class="language-plaintext highlighter-rouge">delayEvent</code></a><a href="../object/Event.html#getNextRunTime"><code class="language-plaintext highlighter-rouge">getNextRunTime</code></a><a href="../object/Event.html#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
+<a href="../object/Event.html#delayEvent"><code class="language-plaintext highlighter-rouge">delayEvent</code></a> <a href="../object/Event.html#getNextRunTime"><code class="language-plaintext highlighter-rouge">getNextRunTime</code></a> <a href="../object/Event.html#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
-<a href="../object/BasicEvent.html#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a><a href="../object/BasicEvent.html#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a></p>
+<a href="../object/BasicEvent.html#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a> <a href="../object/BasicEvent.html#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -151,18 +119,11 @@ noise.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#728">728</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

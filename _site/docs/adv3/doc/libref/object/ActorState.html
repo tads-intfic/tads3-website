@@ -46,48 +46,40 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>An ActorState represents the current state of an Actor.</p>
 
-An ActorState represents the current state of an Actor.
-
-The main thing that makes actors special is that they're supposed to be
+<p>The main thing that makes actors special is that they’re supposed to be
 living, breathing people or creatures. That substantially complicates
 the programming of one of these objects, because in order to create the
 appearance of animation, many things about an actor have to change over
-time.
+time.</p>
 
-The ActorState is designed to make it easier to program this variability
-that's needed to make an actor seem life-like. The idea is to separate
+<p>The ActorState is designed to make it easier to program this variability
+that’s needed to make an actor seem life-like. The idea is to separate
 the parts of an actor that tend to change according to what the actor is
 doing, moving all of those out of the Actor object and into an
 ActorState object instead. Each ActorState object represents one state
 of an actor (i.e., one thing the actor can be doing). The Actor object
-becomes easier to program, because we've reduced the Actor object to the
-character's constant, unchanging features. The stateful part is also
-easier to program, because we don't have to make it conditional on
+becomes easier to program, because we’ve reduced the Actor object to the
+character’s constant, unchanging features. The stateful part is also
+easier to program, because we don’t have to make it conditional on
 anything; we simply define all of the stateful parts in an ActorState,
-and we define separate ActorState objects for the different states.
+and we define separate ActorState objects for the different states.</p>
 
-For example, suppose we want a shopkeeper actor, whose activities
+<p>For example, suppose we want a shopkeeper actor, whose activities
 include waiting behind the counter, sweeping the floor, and stacking
-cans. We'd define one ActorState object for each of these activities.
+cans. We’d define one ActorState object for each of these activities.
 When the shopkeeper switches from standing behind the counter to
-sweeping, for example, we simply set the "curState" property in the
-shopkeeper object so that it points to the "sweeping" state object. When
-it's time to stack cans, we change "curState" to it points to the
-"stacking cans" state object.
+sweeping, for example, we simply set the “curState” property in the
+shopkeeper object so that it points to the “sweeping” state object. When
+it’s time to stack cans, we change “curState” to it points to the
+“stacking cans” state object.</p>
 
-`class `**`ActorState`**` :   `[`TravelMessageHandler`](../object/TravelMessageHandler.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ActorState</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/TravelMessageHandler.html"><code class="language-plaintext highlighter-rouge">TravelMessageHandler</code></a> <a href="../object/ActorTopicDatabase.html"><code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ActorState</code></strong><br />
 <a href="../object/TravelMessageHandler.html"><code class="language-plaintext highlighter-rouge">TravelMessageHandler</code></a><br />
@@ -97,11 +89,7 @@ it's time to stack cans, we change "curState" to it points to the
 </code>                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ActorState</code></strong><br />
 <a href="../object/AccompanyingInTravelState.html"><code class="language-plaintext highlighter-rouge">AccompanyingInTravelState</code></a><br />
@@ -113,54 +101,38 @@ it's time to stack cans, we change "curState" to it points to the
 <a href="../object/InConversationState.html"><code class="language-plaintext highlighter-rouge">InConversationState</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#autoSuggest"><code class="language-plaintext highlighter-rouge">autoSuggest</code></a><a href="#getImpliedConvState"><code class="language-plaintext highlighter-rouge">getImpliedConvState</code></a><a href="#isInitState"><code class="language-plaintext highlighter-rouge">isInitState</code></a><a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a><a href="#stateDesc"><code class="language-plaintext highlighter-rouge">stateDesc</code></a><a href="#stateSuggestedTopics"><code class="language-plaintext highlighter-rouge">stateSuggestedTopics</code></a></p>
+<p><a href="#autoSuggest"><code class="language-plaintext highlighter-rouge">autoSuggest</code></a> <a href="#getImpliedConvState"><code class="language-plaintext highlighter-rouge">getImpliedConvState</code></a> <a href="#isInitState"><code class="language-plaintext highlighter-rouge">isInitState</code></a> <a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a> <a href="#stateDesc"><code class="language-plaintext highlighter-rouge">stateDesc</code></a> <a href="#stateSuggestedTopics"><code class="language-plaintext highlighter-rouge">stateSuggestedTopics</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
-<a href="../object/ActorTopicDatabase.html#askForTopics"><code class="language-plaintext highlighter-rouge">askForTopics</code></a><a href="../object/ActorTopicDatabase.html#askTopics"><code class="language-plaintext highlighter-rouge">askTopics</code></a><a href="../object/ActorTopicDatabase.html#commandTopics"><code class="language-plaintext highlighter-rouge">commandTopics</code></a><a href="../object/ActorTopicDatabase.html#giveTopics"><code class="language-plaintext highlighter-rouge">giveTopics</code></a><a href="../object/ActorTopicDatabase.html#initiateTopics"><code class="language-plaintext highlighter-rouge">initiateTopics</code></a><a href="../object/ActorTopicDatabase.html#miscTopics"><code class="language-plaintext highlighter-rouge">miscTopics</code></a><a href="../object/ActorTopicDatabase.html#showTopics"><code class="language-plaintext highlighter-rouge">showTopics</code></a><a href="../object/ActorTopicDatabase.html#specialTopics"><code class="language-plaintext highlighter-rouge">specialTopics</code></a><a href="../object/ActorTopicDatabase.html#tellTopics"><code class="language-plaintext highlighter-rouge">tellTopics</code></a></p>
+<a href="../object/ActorTopicDatabase.html#askForTopics"><code class="language-plaintext highlighter-rouge">askForTopics</code></a> <a href="../object/ActorTopicDatabase.html#askTopics"><code class="language-plaintext highlighter-rouge">askTopics</code></a> <a href="../object/ActorTopicDatabase.html#commandTopics"><code class="language-plaintext highlighter-rouge">commandTopics</code></a> <a href="../object/ActorTopicDatabase.html#giveTopics"><code class="language-plaintext highlighter-rouge">giveTopics</code></a> <a href="../object/ActorTopicDatabase.html#initiateTopics"><code class="language-plaintext highlighter-rouge">initiateTopics</code></a> <a href="../object/ActorTopicDatabase.html#miscTopics"><code class="language-plaintext highlighter-rouge">miscTopics</code></a> <a href="../object/ActorTopicDatabase.html#showTopics"><code class="language-plaintext highlighter-rouge">showTopics</code></a> <a href="../object/ActorTopicDatabase.html#specialTopics"><code class="language-plaintext highlighter-rouge">specialTopics</code></a> <a href="../object/ActorTopicDatabase.html#tellTopics"><code class="language-plaintext highlighter-rouge">tellTopics</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
-<a href="../object/TopicDatabase.html#limitSuggestions"><code class="language-plaintext highlighter-rouge">limitSuggestions</code></a><a href="../object/TopicDatabase.html#suggestedTopics"><code class="language-plaintext highlighter-rouge">suggestedTopics</code></a><a href="../object/TopicDatabase.html#topicGroupActive"><code class="language-plaintext highlighter-rouge">topicGroupActive</code></a><a href="../object/TopicDatabase.html#topicGroupScoreAdjustment"><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></a></p>
+<a href="../object/TopicDatabase.html#limitSuggestions"><code class="language-plaintext highlighter-rouge">limitSuggestions</code></a> <a href="../object/TopicDatabase.html#suggestedTopics"><code class="language-plaintext highlighter-rouge">suggestedTopics</code></a> <a href="../object/TopicDatabase.html#topicGroupActive"><code class="language-plaintext highlighter-rouge">topicGroupActive</code></a> <a href="../object/TopicDatabase.html#topicGroupScoreAdjustment"><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#activateState"><code class="language-plaintext highlighter-rouge">activateState</code></a><a href="#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a><a href="#afterTravel"><code class="language-plaintext highlighter-rouge">afterTravel</code></a><a href="#arrivingTurn"><code class="language-plaintext highlighter-rouge">arrivingTurn</code></a><a href="#arrivingWithDesc"><code class="language-plaintext highlighter-rouge">arrivingWithDesc</code></a><a href="#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a><a href="#beforeTravel"><code class="language-plaintext highlighter-rouge">beforeTravel</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#deactivateState"><code class="language-plaintext highlighter-rouge">deactivateState</code></a><a href="#distantSpecialDesc"><code class="language-plaintext highlighter-rouge">distantSpecialDesc</code></a><a href="#endConversation"><code class="language-plaintext highlighter-rouge">endConversation</code></a><a href="#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a><a href="#getNominalTraveler"><code class="language-plaintext highlighter-rouge">getNominalTraveler</code></a><a href="#getSuggestedTopicList"><code class="language-plaintext highlighter-rouge">getSuggestedTopicList</code></a><a href="#getTopicOwner"><code class="language-plaintext highlighter-rouge">getTopicOwner</code></a><a href="#handleConversation"><code class="language-plaintext highlighter-rouge">handleConversation</code></a><a href="#initializeActorState"><code class="language-plaintext highlighter-rouge">initializeActorState</code></a><a href="#justFollowed"><code class="language-plaintext highlighter-rouge">justFollowed</code></a><a href="#notifyTopicResponse"><code class="language-plaintext highlighter-rouge">notifyTopicResponse</code></a><a href="#obeyCommand"><code class="language-plaintext highlighter-rouge">obeyCommand</code></a><a href="#remoteSpecialDesc"><code class="language-plaintext highlighter-rouge">remoteSpecialDesc</code></a><a href="#showSpecialDescInContents"><code class="language-plaintext highlighter-rouge">showSpecialDescInContents</code></a><a href="#specialDesc"><code class="language-plaintext highlighter-rouge">specialDesc</code></a><a href="#specialDescListWith"><code class="language-plaintext highlighter-rouge">specialDescListWith</code></a><a href="#suggestTopicsFor"><code class="language-plaintext highlighter-rouge">suggestTopicsFor</code></a><a href="#takeTurn"><code class="language-plaintext highlighter-rouge">takeTurn</code></a></p>
+<p><a href="#activateState"><code class="language-plaintext highlighter-rouge">activateState</code></a> <a href="#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="#afterTravel"><code class="language-plaintext highlighter-rouge">afterTravel</code></a> <a href="#arrivingTurn"><code class="language-plaintext highlighter-rouge">arrivingTurn</code></a> <a href="#arrivingWithDesc"><code class="language-plaintext highlighter-rouge">arrivingWithDesc</code></a> <a href="#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="#beforeTravel"><code class="language-plaintext highlighter-rouge">beforeTravel</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#deactivateState"><code class="language-plaintext highlighter-rouge">deactivateState</code></a> <a href="#distantSpecialDesc"><code class="language-plaintext highlighter-rouge">distantSpecialDesc</code></a> <a href="#endConversation"><code class="language-plaintext highlighter-rouge">endConversation</code></a> <a href="#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="#getNominalTraveler"><code class="language-plaintext highlighter-rouge">getNominalTraveler</code></a> <a href="#getSuggestedTopicList"><code class="language-plaintext highlighter-rouge">getSuggestedTopicList</code></a> <a href="#getTopicOwner"><code class="language-plaintext highlighter-rouge">getTopicOwner</code></a> <a href="#handleConversation"><code class="language-plaintext highlighter-rouge">handleConversation</code></a> <a href="#initializeActorState"><code class="language-plaintext highlighter-rouge">initializeActorState</code></a> <a href="#justFollowed"><code class="language-plaintext highlighter-rouge">justFollowed</code></a> <a href="#notifyTopicResponse"><code class="language-plaintext highlighter-rouge">notifyTopicResponse</code></a> <a href="#obeyCommand"><code class="language-plaintext highlighter-rouge">obeyCommand</code></a> <a href="#remoteSpecialDesc"><code class="language-plaintext highlighter-rouge">remoteSpecialDesc</code></a> <a href="#showSpecialDescInContents"><code class="language-plaintext highlighter-rouge">showSpecialDescInContents</code></a> <a href="#specialDesc"><code class="language-plaintext highlighter-rouge">specialDesc</code></a> <a href="#specialDescListWith"><code class="language-plaintext highlighter-rouge">specialDescListWith</code></a> <a href="#suggestTopicsFor"><code class="language-plaintext highlighter-rouge">suggestTopicsFor</code></a> <a href="#takeTurn"><code class="language-plaintext highlighter-rouge">takeTurn</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TravelMessageHandler</code> :<br />
-<a href="../object/TravelMessageHandler.html#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a><a href="../object/TravelMessageHandler.html#sayArrivingDir"><code class="language-plaintext highlighter-rouge">sayArrivingDir</code></a><a href="../object/TravelMessageHandler.html#sayArrivingDownStairs"><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs</code></a><a href="../object/TravelMessageHandler.html#sayArrivingLocally"><code class="language-plaintext highlighter-rouge">sayArrivingLocally</code></a><a href="../object/TravelMessageHandler.html#sayArrivingThroughPassage"><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage</code></a><a href="../object/TravelMessageHandler.html#sayArrivingUpStairs"><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs</code></a><a href="../object/TravelMessageHandler.html#sayArrivingViaPath"><code class="language-plaintext highlighter-rouge">sayArrivingViaPath</code></a><a href="../object/TravelMessageHandler.html#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a><a href="../object/TravelMessageHandler.html#sayDepartingDir"><code class="language-plaintext highlighter-rouge">sayDepartingDir</code></a><a href="../object/TravelMessageHandler.html#sayDepartingDownStairs"><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs</code></a><a href="../object/TravelMessageHandler.html#sayDepartingLocally"><code class="language-plaintext highlighter-rouge">sayDepartingLocally</code></a><a href="../object/TravelMessageHandler.html#sayDepartingThroughPassage"><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage</code></a><a href="../object/TravelMessageHandler.html#sayDepartingUpStairs"><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs</code></a><a href="../object/TravelMessageHandler.html#sayDepartingViaPath"><code class="language-plaintext highlighter-rouge">sayDepartingViaPath</code></a><a href="../object/TravelMessageHandler.html#sayTravelingRemotely"><code class="language-plaintext highlighter-rouge">sayTravelingRemotely</code></a></p>
+<a href="../object/TravelMessageHandler.html#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingDir"><code class="language-plaintext highlighter-rouge">sayArrivingDir</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingDownStairs"><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingLocally"><code class="language-plaintext highlighter-rouge">sayArrivingLocally</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingThroughPassage"><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingUpStairs"><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs</code></a> <a href="../object/TravelMessageHandler.html#sayArrivingViaPath"><code class="language-plaintext highlighter-rouge">sayArrivingViaPath</code></a> <a href="../object/TravelMessageHandler.html#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingDir"><code class="language-plaintext highlighter-rouge">sayDepartingDir</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingDownStairs"><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingLocally"><code class="language-plaintext highlighter-rouge">sayDepartingLocally</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingThroughPassage"><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingUpStairs"><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs</code></a> <a href="../object/TravelMessageHandler.html#sayDepartingViaPath"><code class="language-plaintext highlighter-rouge">sayDepartingViaPath</code></a> <a href="../object/TravelMessageHandler.html#sayTravelingRemotely"><code class="language-plaintext highlighter-rouge">sayTravelingRemotely</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
-<a href="../object/ActorTopicDatabase.html#initiateTopic"><code class="language-plaintext highlighter-rouge">initiateTopic</code></a><a href="../object/ActorTopicDatabase.html#showTopicResponse"><code class="language-plaintext highlighter-rouge">showTopicResponse</code></a></p>
+<a href="../object/ActorTopicDatabase.html#initiateTopic"><code class="language-plaintext highlighter-rouge">initiateTopic</code></a> <a href="../object/ActorTopicDatabase.html#showTopicResponse"><code class="language-plaintext highlighter-rouge">showTopicResponse</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
-<a href="../object/TopicDatabase.html#addSuggestedTopic"><code class="language-plaintext highlighter-rouge">addSuggestedTopic</code></a><a href="../object/TopicDatabase.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a><a href="../object/TopicDatabase.html#addTopicToList"><code class="language-plaintext highlighter-rouge">addTopicToList</code></a><a href="../object/TopicDatabase.html#compareVocabMatch"><code class="language-plaintext highlighter-rouge">compareVocabMatch</code></a><a href="../object/TopicDatabase.html#findTopicResponse"><code class="language-plaintext highlighter-rouge">findTopicResponse</code></a><a href="../object/TopicDatabase.html#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a><a href="../object/TopicDatabase.html#removeSuggestedTopic"><code class="language-plaintext highlighter-rouge">removeSuggestedTopic</code></a><a href="../object/TopicDatabase.html#removeTopic"><code class="language-plaintext highlighter-rouge">removeTopic</code></a><a href="../object/TopicDatabase.html#removeTopicFromList"><code class="language-plaintext highlighter-rouge">removeTopicFromList</code></a><a href="../object/TopicDatabase.html#showSuggestedTopicList"><code class="language-plaintext highlighter-rouge">showSuggestedTopicList</code></a></p>
+<a href="../object/TopicDatabase.html#addSuggestedTopic"><code class="language-plaintext highlighter-rouge">addSuggestedTopic</code></a> <a href="../object/TopicDatabase.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="../object/TopicDatabase.html#addTopicToList"><code class="language-plaintext highlighter-rouge">addTopicToList</code></a> <a href="../object/TopicDatabase.html#compareVocabMatch"><code class="language-plaintext highlighter-rouge">compareVocabMatch</code></a> <a href="../object/TopicDatabase.html#findTopicResponse"><code class="language-plaintext highlighter-rouge">findTopicResponse</code></a> <a href="../object/TopicDatabase.html#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a> <a href="../object/TopicDatabase.html#removeSuggestedTopic"><code class="language-plaintext highlighter-rouge">removeSuggestedTopic</code></a> <a href="../object/TopicDatabase.html#removeTopic"><code class="language-plaintext highlighter-rouge">removeTopic</code></a> <a href="../object/TopicDatabase.html#removeTopicFromList"><code class="language-plaintext highlighter-rouge">removeTopicFromList</code></a> <a href="../object/TopicDatabase.html#showSuggestedTopicList"><code class="language-plaintext highlighter-rouge">showSuggestedTopicList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="autoSuggest"></span></p>
 
@@ -168,21 +140,17 @@ it's time to stack cans, we change "curState" to it points to the
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4156">4156</a>]</p>
 
-<div class="desc">
+<p>Should we automatically suggest topics when the player greets our actor?
+By default, we show our “topic inventory” (the list of currently active
+topics marked as “suggested”). This can be set to nil to suppress this
+automatic suggestion list.</p>
 
-Should we automatically suggest topics when the player greets our actor?
-By default, we show our "topic inventory" (the list of currently active
-topics marked as "suggested"). This can be set to nil to suppress this
-automatic suggestion list.
-
-Some authors might not like the idea of automatically suggesting topics
+<p>Some authors might not like the idea of automatically suggesting topics
 every time we greet a character, but nonetheless wish to keep the TOPICS
 command as a sort of hint mechanism. This flag can be used for this
-purpose. Authors who don't like suggested topics at all can simply skip
+purpose. Authors who don’t like suggested topics at all can simply skip
 defining any SuggestedTopic entries, in which case there will never be
-anything to suggest, rendering this flag moot.
-
-</div>
+anything to suggest, rendering this flag moot.</p>
 
 <p><span id="getImpliedConvState"></span></p>
 
@@ -190,18 +158,14 @@ anything to suggest, rendering this flag moot.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4374">4374</a>]</p>
 
-<div class="desc">
-
-Get my implied in-conversation state. This is used when our actor
+<p>Get my implied in-conversation state. This is used when our actor
 initiates a conversation without specifying a particular conversation
 state to enter (i.e., actor.initiateConversation() is called with
-'state' set to nil). By default, we don't have an implied conversation
-state, so we just return 'self' to indicate that we want to stay in the
+‘state’ set to nil). By default, we don’t have an implied conversation
+state, so we just return ‘self’ to indicate that we want to stay in the
 current state. States that are coupled with separate in-conversation
 states, such as ConversationReadyState, should return their associated
-conversation states here.
-
-</div>
+conversation states here.</p>
 
 <p><span id="isInitState"></span></p>
 
@@ -209,15 +173,11 @@ conversation states here.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4140">4140</a>]</p>
 
-<div class="desc">
-
-Is this the actor's initial state? If so, we'll automatically set the
-actor's curState to point to 'self' during pre-initialization. For
+<p>Is this the actor’s initial state? If so, we’ll automatically set the
+actor’s curState to point to ‘self’ during pre-initialization. For
 obvious reasons, this should be set to true for only one state for each
 actor; if multiple states are all flagged as initial for the same actor,
-we'll pick on arbitrarily as the actual initial state.
-
-</div>
+we’ll pick on arbitrarily as the actual initial state.</p>
 
 <p><span id="location"></span></p>
 
@@ -225,16 +185,12 @@ we'll pick on arbitrarily as the actual initial state.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4167">4167</a>]</p>
 
-<div class="desc">
+<p>The ‘location’ is the actor that we’re associated with.</p>
 
-The 'location' is the actor that we're associated with.
-
-ActorState objects aren't actual simulation objects, so the 'location'
-property isn't used for containment. For convenience, though, use it to
-indicate which actor we're associated with; this lets us use the '+'
-notation to define the state objects associated with an actor.
-
-</div>
+<p>ActorState objects aren’t actual simulation objects, so the ‘location’
+property isn’t used for containment. For convenience, though, use it to
+indicate which actor we’re associated with; this lets us use the ‘+’
+notation to define the state objects associated with an actor.</p>
 
 <p><span id="stateDesc"></span></p>
 
@@ -242,15 +198,11 @@ notation to define the state objects associated with an actor.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4251">4251</a>]</p>
 
-<div class="desc">
-
-Our "state" description. This shows information on what the actor is
-\*currently\* doing; we display this after the static part of the
-actor's description on EXAMINE \&lt;ACTOR\&gt;. By default, we add nothing
+<p>Our “state” description. This shows information on what the actor is
+*currently* doing; we display this after the static part of the
+actor’s description on EXAMINE &lt;ACTOR&gt;. By default, we add nothing
 here, but state objects that represent scripted activies should override
-this to describe their scripted activities.
-
-</div>
+this to describe their scripted activities.</p>
 
 <p><span id="stateSuggestedTopics"></span></p>
 
@@ -258,20 +210,12 @@ this to describe their scripted activities.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4361">4361</a>]</p>
 
-<div class="desc">
-
-get the topic suggestions for this state - by default, we just return
-our own suggestedTopics list
-
-</div>
+<p>get the topic suggestions for this state - by default, we just return
+our own suggestedTopics list</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="activateState"></span></p>
 
@@ -279,12 +223,8 @@ our own suggestedTopics list
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4123">4123</a>]</p>
 
-<div class="desc">
-
-Activate the state - this is called when we're about to become the
-active state for an actor. We do nothing by default.
-
-</div>
+<p>Activate the state - this is called when we’re about to become the
+active state for an actor. We do nothing by default.</p>
 
 <p><span id="afterAction"></span></p>
 
@@ -292,11 +232,7 @@ active state for an actor. We do nothing by default.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4491">4491</a>]</p>
 
-<div class="desc">
-
-handle an after-action notification for our actor
-
-</div>
+<p>handle an after-action notification for our actor</p>
 
 <p><span id="afterTravel"></span></p>
 
@@ -304,11 +240,7 @@ handle an after-action notification for our actor
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4521">4521</a>]</p>
 
-<div class="desc">
-
-handle an after-travel notification
-
-</div>
+<p>handle an after-travel notification</p>
 
 <p><span id="arrivingTurn"></span></p>
 
@@ -316,19 +248,15 @@ handle an after-travel notification
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4706">4706</a>]</p>
 
-<div class="desc">
-
-Perform any special action on a group-travel arrival. When group travel
+<p>Perform any special action on a group-travel arrival. When group travel
 is performed using the AccompanyingInTravelState class, this is
 essentially called in lieu of the regular takeTurn() method on the state
 that is coming into effect after the group travel. (Not really, but
 effectively: the accompanying travel state will still be in effect, so
-its takeTurn() method is what's really called, but that method will call
+its takeTurn() method is what’s really called, but that method will call
 this method explicitly.) By default, we do nothing. Since this runs on
-our turn, it's a good place to put any scripted behavior we perform on
-arriving at our new destination after the group travel.
-
-</div>
+our turn, it’s a good place to put any scripted behavior we perform on
+arriving at our new destination after the group travel.</p>
 
 <p><span id="arrivingWithDesc"></span></p>
 
@@ -336,26 +264,22 @@ arriving at our new destination after the group travel.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4692">4692</a>]</p>
 
-<div class="desc">
-
-Our group-travel arrival description. By default, when we perform an
+<p>Our group-travel arrival description. By default, when we perform an
 accompanying travel with another actor as the lead actor, the
 accompanying travel state will display this message instead of our
-specialDesc when the lead actor first arrives in the new location. We'll
+specialDesc when the lead actor first arrives in the new location. We’ll
 just display our own specialDesc by default, but this should usually be
 overridden to say something specific to the group travel arrival. The
 actual message is entirely dependent on the nature of the group travel,
-which is why we don't provide a special message by default.
+which is why we don’t provide a special message by default.</p>
 
-For scripted behavior, it's sometimes better to use arrivingTurn()
+<p>For scripted behavior, it’s sometimes better to use arrivingTurn()
 rather than this method to describe the behavior. arrivingWithDesc() is
-called as part of the room description, so it's best for any message
+called as part of the room description, so it’s best for any message
 shown here to fit well into the usual room description format. For more
 complex transitions into the new room state, arrivingTurn() is sometimes
 more appropriate, since it runs like a daemon, after the arrival (and
-thus the new room description) is completed.
-
-</div>
+thus the new room description) is completed.</p>
 
 <p><span id="beforeAction"></span></p>
 
@@ -363,12 +287,8 @@ thus the new room description) is completed.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4485">4485</a>]</p>
 
-<div class="desc">
-
-Handle a before-action notification for our actor. By default, we do
-nothing.
-
-</div>
+<p>Handle a before-action notification for our actor. By default, we do
+nothing.</p>
 
 <p><span id="beforeTravel"></span></p>
 
@@ -376,11 +296,7 @@ nothing.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4496">4496</a>]</p>
 
-<div class="desc">
-
-handle a before-travel notification
-
-</div>
+<p>handle a before-travel notification</p>
 
 <p><span id="construct"></span></p>
 
@@ -388,11 +304,7 @@ handle a before-travel notification
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4117">4117</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="deactivateState"></span></p>
 
@@ -400,13 +312,9 @@ handle a before-travel notification
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4130">4130</a>]</p>
 
-<div class="desc">
-
-Deactivate the state - this is called when we're the active state for an
+<p>Deactivate the state - this is called when we’re the active state for an
 actor, and the actor is about to switch to a new state. We do nothing by
-default.
-
-</div>
+default.</p>
 
 <p><span id="distantSpecialDesc"></span></p>
 
@@ -414,11 +322,7 @@ default.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4210">4210</a>]</p>
 
-<div class="desc">
-
-show the special description for the actor at a distance
-
-</div>
+<p>show the special description for the actor at a distance</p>
 
 <p><span id="endConversation"></span></p>
 
@@ -426,17 +330,13 @@ show the special description for the actor at a distance
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4534">4534</a>]</p>
 
-<div class="desc">
-
-End the current conversation. 'reason' indicates why we're leaving the
+<p>End the current conversation. ‘reason’ indicates why we’re leaving the
 conversation - this is one of the endConvXxx enums defined in adv3.h.
 beforeTravel() calls this automatically when the other party is trying
-to depart, and they're talking to us.
+to depart, and they’re talking to us.</p>
 
-This returns true if we wish to allow the conversation to end, nil if
-not.
-
-</div>
+<p>This returns true if we wish to allow the conversation to end, nil if
+not.</p>
 
 <p><span id="getActor"></span></p>
 
@@ -444,13 +344,9 @@ not.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4174">4174</a>]</p>
 
-<div class="desc">
-
-Get the actor associated with the state - this is simply the 'location'
-property. If we're nested inside another ActorState, then our actor is
-our enclosing ActorState's actor.
-
-</div>
+<p>Get the actor associated with the state - this is simply the ‘location’
+property. If we’re nested inside another ActorState, then our actor is
+our enclosing ActorState’s actor.</p>
 
 <p><span id="getNominalTraveler"></span></p>
 
@@ -458,14 +354,10 @@ our enclosing ActorState's actor.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4714">4714</a>]</p>
 
-<div class="desc">
-
-For our TravelMessageHandler implementation, the nominal traveler is our
+<p>For our TravelMessageHandler implementation, the nominal traveler is our
 actor. Note that this is all we need to implement for travel message
 handling, since we simply inherit the default handling for all of the
-arrival/departure messages.
-
-</div>
+arrival/departure messages.</p>
 
 <p><span id="getSuggestedTopicList"></span></p>
 
@@ -473,21 +365,17 @@ arrival/departure messages.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4315">4315</a>]</p>
 
-<div class="desc">
+<p>Get our suggested topic list. The suggested topic list consists of the
+union of the current ConvNode’s suggestion list, the ActorState list,
+and the Actor’s suggestion list. In each case, the suggestion list is
+the list of all SuggestedTopic objects at each database level.</p>
 
-Get our suggested topic list. The suggested topic list consists of the
-union of the current ConvNode's suggestion list, the ActorState list,
-and the Actor's suggestion list. In each case, the suggestion list is
-the list of all SuggestedTopic objects at each database level.
-
-The suggestions are arranged in a hierarchy, and each hierarchy level
+<p>The suggestions are arranged in a hierarchy, and each hierarchy level
 can prevent suggestions from a lower level from being included. The top
 level of the hierarchy is the ConvNode; the next level is the
 ActorState; and the last level is the Actor. Suggestions are limited at
-each level with the 'limitSuggestions' property: if true, suggestions
-from lower levels are not included.
-
-</div>
+each level with the ‘limitSuggestions’ property: if true, suggestions
+from lower levels are not included.</p>
 
 <p><span id="getTopicOwner"></span></p>
 
@@ -495,11 +383,7 @@ from lower levels are not included.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4183">4183</a>]</p>
 
-<div class="desc">
-
-the owner of any topic entries within the state is just my actor
-
-</div>
+<p>the owner of any topic entries within the state is just my actor</p>
 
 <p><span id="handleConversation"></span></p>
 
@@ -507,28 +391,24 @@ the owner of any topic entries within the state is just my actor
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4397">4397</a>]</p>
 
-<div class="desc">
-
-General conversation handler. This can be used to process most
+<p>General conversation handler. This can be used to process most
 conversational commands - ASK, TELL, GIVE, SHOW, etc. The standard
-sequence of processing is as follows:
+sequence of processing is as follows:</p>
 
-\- If our actor has a non-nil current conversation node (ConvNode)
+<p>- If our actor has a non-nil current conversation node (ConvNode)
 object, and the ConvNode wants to handle the event, let the ConvNode
-handle it.
+handle it.</p>
 
-\- Otherwise, check our own topic database to see if we can find a
+<p>- Otherwise, check our own topic database to see if we can find a
 TopicEntry that matches the topic; if we can find one, let the
-TopicEntry handle it.
+TopicEntry handle it.</p>
 
-\- Otherwise, let the actor handle it.
+<p>- Otherwise, let the actor handle it.</p>
 
-'otherActor' is the actor who originated the conversation command
-(usually the player character). 'topic' is the subject being discussed
-(the indirect object of ASK ABOUT, for example). convType' is a ConvType
-describing the type of conversational action we're performing.
-
-</div>
+<p>‘otherActor’ is the actor who originated the conversation command
+(usually the player character). ‘topic’ is the subject being discussed
+(the indirect object of ASK ABOUT, for example). convType’ is a ConvType
+describing the type of conversational action we’re performing.</p>
 
 <p><span id="initializeActorState"></span></p>
 
@@ -536,11 +416,7 @@ describing the type of conversational action we're performing.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4186">4186</a>]</p>
 
-<div class="desc">
-
-initialize the actor state
-
-</div>
+<p>initialize the actor state</p>
 
 <p><span id="justFollowed"></span></p>
 
@@ -548,20 +424,16 @@ initialize the actor state
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4667">4667</a>]</p>
 
-<div class="desc">
-
-Receive notification that we just followed another actor as part of our
+<p>Receive notification that we just followed another actor as part of our
 programmed following behavior (in other words, due to our
-'followingActor' property, not due to an explicit FOLLOW command
-directed to us). 'success' is true if we ended up in the actor's
-location, nil if not.
+‘followingActor’ property, not due to an explicit FOLLOW command
+directed to us). ‘success’ is true if we ended up in the actor’s
+location, nil if not.</p>
 
-This can be used to update the actor's state after a 'follow' operation
-occurs; for example, if the actor's state depends on the actor's
-location, this can update the state accordingly. We don't do anything by
-default.
-
-</div>
+<p>This can be used to update the actor’s state after a ‘follow’ operation
+occurs; for example, if the actor’s state depends on the actor’s
+location, this can update the state accordingly. We don’t do anything by
+default.</p>
 
 <p><span id="notifyTopicResponse"></span></p>
 
@@ -569,14 +441,10 @@ default.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4479">4479</a>]</p>
 
-<div class="desc">
-
-Receive notification that a TopicEntry is being used (via its
+<p>Receive notification that a TopicEntry is being used (via its
 handleTopic method) to respond to a command. The TopicEntry will call
 this before it shows its message or takes any other action. By default,
-we do nothing.
-
-</div>
+we do nothing.</p>
 
 <p><span id="obeyCommand"></span></p>
 
@@ -584,14 +452,10 @@ we do nothing.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4259">4259</a>]</p>
 
-<div class="desc">
-
-Should we obey an action? If so, returns true; if not, displays an
+<p>Should we obey an action? If so, returns true; if not, displays an
 appropriate response and returns nil. This will only be called when the
 issuing actor is different from our actor, since a command to oneself is
-implicitly always obeyed.
-
-</div>
+implicitly always obeyed.</p>
 
 <p><span id="remoteSpecialDesc"></span></p>
 
@@ -599,11 +463,7 @@ implicitly always obeyed.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4213">4213</a>]</p>
 
-<div class="desc">
-
-show the special description for the actor in a remote location
-
-</div>
+<p>show the special description for the actor in a remote location</p>
 
 <p><span id="showSpecialDescInContents"></span></p>
 
@@ -611,11 +471,7 @@ show the special description for the actor in a remote location
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4238">4238</a>]</p>
 
-<div class="desc">
-
-show the special description when we appear in a contents listing
-
-</div>
+<p>show the special description when we appear in a contents listing</p>
 
 <p><span id="specialDesc"></span></p>
 
@@ -623,18 +479,14 @@ show the special description when we appear in a contents listing
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4207">4207</a>]</p>
 
-<div class="desc">
+<p>Show the special description for the actor when the actor is associated
+with this state. By default, we use the actor’s actorHereDesc message,
+which usually shows a generic message (something like “Bob is here” or
+“Bob is sitting on the chair”) to indicate that the actor is present.</p>
 
-Show the special description for the actor when the actor is associated
-with this state. By default, we use the actor's actorHereDesc message,
-which usually shows a generic message (something like "Bob is here" or
-"Bob is sitting on the chair") to indicate that the actor is present.
-
-States representing scripted activities should override these to
-indicate what the actor is doing: "Bob is sweeping the floor," for
-example.
-
-</div>
+<p>States representing scripted activities should override these to
+indicate what the actor is doing: “Bob is sweeping the floor,” for
+example.</p>
 
 <p><span id="specialDescListWith"></span></p>
 
@@ -642,17 +494,13 @@ example.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4224">4224</a>]</p>
 
-<div class="desc">
-
-The list group(s) for the special description. By default, if our
-specialDesc isn't overridden, we'll keep this in sync with the
-specialDesc by returning our actor's actorListWith. And if specialDesc
-\*is\* overridden, we'll just return an empty list to indicate that
-we're not part of any list group. If you want to provide your own
+<p>The list group(s) for the special description. By default, if our
+specialDesc isn’t overridden, we’ll keep this in sync with the
+specialDesc by returning our actor’s actorListWith. And if specialDesc
+*is* overridden, we’ll just return an empty list to indicate that
+we’re not part of any list group. If you want to provide your own
 listing group special to the state, simply override this and speicfy the
-custom list group.
-
-</div>
+custom list group.</p>
 
 <p><span id="suggestTopicsFor"></span></p>
 
@@ -660,14 +508,10 @@ custom list group.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4278">4278</a>]</p>
 
-<div class="desc">
-
-Suggest topics for the given actor to talk to us about. This is called
-when the given actor enters a TOPICS command (in which case 'explicit'
+<p>Suggest topics for the given actor to talk to us about. This is called
+when the given actor enters a TOPICS command (in which case ‘explicit’
 will be true) or enters a conversation with us via TALK TO or the like
-(in which case 'explicit' will be nil).
-
-</div>
+(in which case ‘explicit’ will be nil).</p>
 
 <p><span id="takeTurn"></span></p>
 
@@ -675,43 +519,36 @@ will be true) or enters a conversation with us via TALK TO or the like
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4619">4619</a>]</p>
 
-<div class="desc">
-
-Take a turn. This is called when it's the actor's turn and there's not
+<p>Take a turn. This is called when it’s the actor’s turn and there’s not
 something else the actor needs to be doing (such as following another
-actor, or carrying out a command in the actor's pending command queue).
+actor, or carrying out a command in the actor’s pending command queue).</p>
 
-By default, we perform several steps automatically.
+<p>By default, we perform several steps automatically.</p>
 
-First, we check to see if the actor is in a ConvNode. If so, the
-ConvNode takes precedence. If we haven't been addressed already in
-conversation on this turn, we'll let the ConvNode perform its
-"continuation," which lets the NPC advance the conversation of its own
-volition. In any case, if we have a current ConvNode, we're done with
+<p>First, we check to see if the actor is in a ConvNode. If so, the
+ConvNode takes precedence. If we haven’t been addressed already in
+conversation on this turn, we’ll let the ConvNode perform its
+“continuation,” which lets the NPC advance the conversation of its own
+volition. In any case, if we have a current ConvNode, we’re done with
 the turn, since we assume the actor will want to proceed with the
 conversation before pursuing its agenda or performing a background
-action.
+action.</p>
 
-Second, assuming there's no active ConvNode, we check for an "agenda"
-item that's ready to execute. If we find one, we execute it, and we're
+<p>Second, assuming there’s no active ConvNode, we check for an “agenda”
+item that’s ready to execute. If we find one, we execute it, and we’re
 done. The agenda item takes precedence over any other scripting we might
-have.
+have.</p>
 
-Finally, if we also inherit from Script, and we didn't find an active
+<p>Finally, if we also inherit from Script, and we didn’t find an active
 ConvNode or an agenda item that was ready to execute, we invoke our
 doScript() method. This makes it especially easy to define random
 background messages for the actor - just add an EventList class
-(ShuffledEventList is usually the right one) to the state's superclass
-list, and define a list of background message strings.
+(ShuffledEventList is usually the right one) to the state’s superclass
+list, and define a list of background message strings.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

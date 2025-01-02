@@ -96,7 +96,7 @@ restore.
 
 
 
-[`mainParagraphManager`](../object/mainParagraphManager.html)[`menuParagraphManager`](../object/menuParagraphManager.html)
+[`mainParagraphManager`](../object/mainParagraphManager.html) [`menuParagraphManager`](../object/menuParagraphManager.html)
 <span id="_PropSummary_"></span>
 
 
@@ -105,7 +105,7 @@ restore.
 
 
 
-[`leadingMultiPat`](#leadingMultiPat)[`leadingSinglePat`](#leadingSinglePat)[`renderAfterInput`](#renderAfterInput)[`renderText`](#renderText)[`suppressAfter`](#suppressAfter)[`suppressBefore`](#suppressBefore)
+[`leadingMultiPat`](#leadingMultiPat) [`leadingSinglePat`](#leadingSinglePat) [`renderAfterInput`](#renderAfterInput) [`renderText`](#renderText) [`suppressAfter`](#suppressAfter) [`suppressBefore`](#suppressBefore)
 
 
 

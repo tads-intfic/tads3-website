@@ -48,7 +48,7 @@ allow large objects to pass through.
 
 
 
-[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
+[`hearThru`](#hearThru) [`seeThru`](#seeThru) [`smellThru`](#smellThru) [`touchThru`](#touchThru)
 
 
 

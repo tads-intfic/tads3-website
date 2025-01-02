@@ -56,7 +56,7 @@ our FOOTNOTES settings item \[FOOTNOTE EXTENSION\]
 
 
 
-[`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
+[`settingFromText`](#settingFromText) [`settingToText`](#settingToText)
 
 <span id="_Properties_"></span>
 

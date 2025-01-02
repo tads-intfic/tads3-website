@@ -58,7 +58,7 @@ directions are valid.
 
 
 
-[`exitLister`](../object/exitLister.html)[`exitsMode`](../object/exitsMode.html)
+[`exitLister`](../object/exitLister.html) [`exitsMode`](../object/exitsMode.html)
 <span id="FunctionSummary_"></span>
 
 

@@ -36,7 +36,7 @@ Roberts.
 
 
 
-[`Doer`](../object/Doer.html)[`DoerCmd`](../object/DoerCmd.html)[`DoerParser`](../object/DoerParser.html)[`DoerParserTable`](../object/DoerParserTable.html)[`Redirector`](../object/Redirector.html)
+[`Doer`](../object/Doer.html) [`DoerCmd`](../object/DoerCmd.html) [`DoerParser`](../object/DoerParser.html) [`DoerParserTable`](../object/DoerParserTable.html) [`Redirector`](../object/Redirector.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -45,7 +45,7 @@ Roberts.
 
 
 
-[`default1Doer`](../object/default1Doer.html)[`default2Doer`](../object/default2Doer.html)[`default3Doer`](../object/default3Doer.html)[`default4Doer`](../object/default4Doer.html)[`doerPreinit`](../object/doerPreinit.html)
+[`default1Doer`](../object/default1Doer.html) [`default2Doer`](../object/default2Doer.html) [`default3Doer`](../object/default3Doer.html) [`default4Doer`](../object/default4Doer.html) [`doerPreinit`](../object/doerPreinit.html)
 <span id="FunctionSummary_"></span>
 
 

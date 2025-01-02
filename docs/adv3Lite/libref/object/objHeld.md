@@ -61,7 +61,7 @@ Inherited from `PreCondition` :
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
+[`checkPreCondition`](#checkPreCondition) [`verifyPreCondition`](#verifyPreCondition)
 
 
 

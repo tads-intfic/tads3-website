@@ -81,7 +81,7 @@ Base class for items (Actors and DefaultAgendaTopics) that can handle
 
 
 
-[`addToAgenda`](#addToAgenda)[`executeAgenda`](#executeAgenda)[`removeFromAgenda`](#removeFromAgenda)
+[`addToAgenda`](#addToAgenda) [`executeAgenda`](#executeAgenda) [`removeFromAgenda`](#removeFromAgenda)
 
 <span id="_Properties_"></span>
 

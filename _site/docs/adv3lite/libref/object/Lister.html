@@ -47,92 +47,60 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Lister is the class that displays lists of objects. This is used in room
+<p>Lister is the class that displays lists of objects. This is used in room
 descriptions, inventory lists, and EXAMINE descriptions of objects (to
-show the examined object's contents).
+show the examined object’s contents).</p>
 
-Showing a listing is basically a function call. The reason we make a
+<p>Showing a listing is basically a function call. The reason we make a
 whole class out of it is that we provide a number of options, and a
 class is a convenient way to specify options. The options are simply
 defined as properties of a lister object, so to create a certain kind of
 list, you just set up a Lister instance with the desired options. We
 provide pre-defined Lister objects for the common library listing types,
 but games can create their own custom list types by creating their own
-Lister objects for different sets of options.
+Lister objects for different sets of options.</p>
 
-*Modified in
-[english.t](../file/english.t.html)\[[2920](../source/english.t.html#2920)\]:*  
-List display routines
+<p><em>Modified in
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2920">2920</a>]:</em><br />
+List display routines</p>
 
-`class `**`Lister`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><br />
 <a href="../object/ItemLister.html"><code class="language-plaintext highlighter-rouge">ItemLister</code></a><br />
 <a href="../object/CustomRoomLister.html"><code class="language-plaintext highlighter-rouge">CustomRoomLister</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/ExitLister1.html"><code class="language-plaintext highlighter-rouge">ExitLister</code></a><a href="../object/finishOptionsLister.html"><code class="language-plaintext highlighter-rouge">finishOptionsLister</code></a><a href="../object/fullScoreLister.html"><code class="language-plaintext highlighter-rouge">fullScoreLister</code></a>
+<p><a href="../object/ExitLister1.html"><code class="language-plaintext highlighter-rouge">ExitLister</code></a> <a href="../object/finishOptionsLister.html"><code class="language-plaintext highlighter-rouge">finishOptionsLister</code></a> <a href="../object/fullScoreLister.html"><code class="language-plaintext highlighter-rouge">fullScoreLister</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#buildList"><code class="language-plaintext highlighter-rouge">buildList</code></a><a href="#listed"><code class="language-plaintext highlighter-rouge">listed</code></a><a href="#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a><a href="#show"><code class="language-plaintext highlighter-rouge">show</code></a><a href="#showList"><code class="language-plaintext highlighter-rouge">showList</code></a><a href="#showListEmpty"><code class="language-plaintext highlighter-rouge">showListEmpty</code></a><a href="#showListPrefix"><code class="language-plaintext highlighter-rouge">showListPrefix</code></a><a href="#showListSuffix"><code class="language-plaintext highlighter-rouge">showListSuffix</code></a></p>
+<p><a href="#buildList"><code class="language-plaintext highlighter-rouge">buildList</code></a> <a href="#listed"><code class="language-plaintext highlighter-rouge">listed</code></a> <a href="#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a> <a href="#show"><code class="language-plaintext highlighter-rouge">show</code></a> <a href="#showList"><code class="language-plaintext highlighter-rouge">showList</code></a> <a href="#showListEmpty"><code class="language-plaintext highlighter-rouge">showListEmpty</code></a> <a href="#showListPrefix"><code class="language-plaintext highlighter-rouge">showListPrefix</code></a> <a href="#showListSuffix"><code class="language-plaintext highlighter-rouge">showListSuffix</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="buildList"></span></p>
 
@@ -140,12 +108,8 @@ List display routines
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#100">100</a>]</p>
 
-<div class="desc">
-
-Return a string containing what this lister would display, minus the
-terminating paragraph break.
-
-</div>
+<p>Return a string containing what this lister would display, minus the
+terminating paragraph break.</p>
 
 <p><span id="listed"></span></p>
 
@@ -153,12 +117,8 @@ terminating paragraph break.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#84">84</a>]</p>
 
-<div class="desc">
-
-Should 'obj' be listed in this list? Returns true if so, nil if not. By
-default, we list any object whose 'listed' property is true.
-
-</div>
+<p>Should ‘obj’ be listed in this list? Returns true if so, nil if not. By
+default, we list any object whose ‘listed’ property is true.</p>
 
 <p><span id="listOrder"></span></p>
 
@@ -166,14 +126,10 @@ default, we list any object whose 'listed' property is true.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#92">92</a>]</p>
 
-<div class="desc">
-
-Get an item's sorting order. This returns an integer that gives the
+<p>Get an item’s sorting order. This returns an integer that gives the
 relative position in the list; we order the list in ascending order of
-this value. By default, we return the 'listOrder' property of the
-object.
-
-</div>
+this value. By default, we return the ‘listOrder’ property of the
+object.</p>
 
 <p><span id="show"></span></p>
 
@@ -181,17 +137,13 @@ object.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#39">39</a>]</p>
 
-<div class="desc">
+<p>Show a list of objects. ‘lst’ is the list of objects to show; ‘paraCnt’
+is the number of paragraph-style descriptions that we’ve already shown
+as part of this description.</p>
 
-Show a list of objects. 'lst' is the list of objects to show; 'paraCnt'
-is the number of paragraph-style descriptions that we've already shown
-as part of this description.
-
-Note that many specific listers replaced the 'paraCnt' parameter with a
-more useful 'parent' parameter, containing the identity of the object
-whose contents are being listed.
-
-</div>
+<p>Note that many specific listers replaced the ‘paraCnt’ parameter with a
+more useful ‘parent’ parameter, containing the identity of the object
+whose contents are being listed.</p>
 
 <p><span id="showList"></span></p>
 
@@ -199,13 +151,9 @@ whose contents are being listed.
 
 <p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2926">2926</a>]</p>
 
-<div class="desc">
-
-Show the list as an 'and' list, that is a list of the aNames of each
-item in lst formatted with commas between list elements and 'and'
-between the last two items in the list.
-
-</div>
+<p>Show the list as an ‘and’ list, that is a list of the aNames of each
+item in lst formatted with commas between list elements and ‘and’
+between the last two items in the list.</p>
 
 <p><span id="showListEmpty"></span></p>
 
@@ -213,11 +161,7 @@ between the last two items in the list.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#77">77</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="showListPrefix"></span></p>
 
@@ -225,11 +169,7 @@ between the last two items in the list.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#73">73</a>]</p>
 
-<div class="desc">
-
-add a paragraph break at the end, if it's requested
-
-</div>
+<p>add a paragraph break at the end, if it’s requested</p>
 
 <p><span id="showListSuffix"></span></p>
 
@@ -237,18 +177,11 @@ add a paragraph break at the end, if it's requested
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#75">75</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

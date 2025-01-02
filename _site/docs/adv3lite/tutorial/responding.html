@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="cockpit.html" class="nav">Cockpit Controls</a> \&gt; Responding to
-Actions  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="cockpit.html" class="nav">Cockpit Controls</a> &gt; Responding to
+Actions<br />
 <span class="navnp"><a href="actions.html" class="nav"><em>Prev:</em> Defining Actions</a>
     <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="responding-to-actions">Responding to Actions</h1>
 
@@ -79,68 +71,67 @@ of the default message we defined for the report() stage.</p>
 <p>The code to do all this is quite lengthy, but basically quite
 straightforward:</p>
 
-<p>`
-    +++ wheel: Fixture ‘wheel’
-        “The wheel can be turned to port or starboard to steer the aircraft. It’s
-        currently «angleDesc». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isTurnable = true
-    angle = 0
-    
-    angleDesc()
-    {
-        switch(angle)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +++ wheel: Fixture 'wheel'
+        "The wheel can be turned to port or starboard to steer the aircraft. It's
+        currently &lt;&lt;angleDesc&gt;&gt;. "
+        
+        isTurnable = true
+        angle = 0
+        
+        angleDesc()
         {
-        case -60:
-            "hard to port";
-            break;
-        case -30:
-            "slightly to port";
-            break;
-        case 0:
-            "amidships";
-            break;
-        case 30:
-            "slightly to starboard";
-            break;
-        case 60:
-            "hard to starboard";
-            break;
-        }
-    }
-    
-    dobjFor(TurnRight)
-    {
-        check()
-        {
-            if(angle &gt;= 60)
-                "It's already turned as far to starboard as it will go. ";
+            switch(angle)
+            {
+            case -60:
+                "hard to port";
+                break;
+            case -30:
+                "slightly to port";
+                break;
+            case 0:
+                "amidships";
+                break;
+            case 30:
+                "slightly to starboard";
+                break;
+            case 60:
+                "hard to starboard";
+                break;
+            }
         }
         
-        action()
+        dobjFor(TurnRight)
         {
-            angle += 30;
-            "You turn the wheel 30 degrees to starboard so that it ends up
-            &lt;&lt;angleDesc&gt;&gt;. ";
-        }
-    }
-    
-    dobjFor(TurnLeft)
-    {
-        check()
-        {
-            if(angle &lt;= -60)
-                "It's already turned as far to port as it will go. ";            
+            check()
+            {
+                if(angle &gt;= 60)
+                    "It's already turned as far to starboard as it will go. ";
+            }
+            
+            action()
+            {
+                angle += 30;
+                "You turn the wheel 30 degrees to starboard so that it ends up
+                &lt;&lt;angleDesc&gt;&gt;. ";
+            }
         }
         
-        action()
+        dobjFor(TurnLeft)
         {
-            angle -= 30;
-            "You turn the wheel 30 degrees to port so that it ends up
-            &lt;&lt;angleDesc&gt;&gt;. ";
+            check()
+            {
+                if(angle &lt;= -60)
+                    "It's already turned as far to port as it will go. ";            
+            }
+            
+            action()
+            {
+                angle -= 30;
+                "You turn the wheel 30 degrees to port so that it ends up
+                &lt;&lt;angleDesc&gt;&gt;. ";
+            }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>One new feature to note here is the use of <code class="language-plaintext highlighter-rouge">angle +=
@@ -161,16 +152,15 @@ PULL CONTROL COLUMN. It would therefore make sense to redirect pushing
 or pulling the wheel to pushing or pulling the control column (of which
 it is in any case a part), which we can do quite simply with remap:</p>
 
-<p>`
-        dobjFor(Push)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        dobjFor(Push)
         {
             remap = controlColumn
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobjFor(Pull)
-    {
-        remap = controlColumn
-    } `
+        }
+        
+        dobjFor(Pull)
+        {
+            remap = controlColumn
+        }
 </code></pre></div></div>
 
 <p>What <code class="language-plaintext highlighter-rouge">remap = controlColumn</code> does is simply to
@@ -187,47 +177,46 @@ The implementation of the Push and Pull actions on the control column
 can then proceed in a very similar manner to that of the turning actions
 on the wheel:</p>
 
-<p>`
-    ++ controlColumn: Fixture ‘control column;;stick’
-        “It’s basically a stick that can be pushed forward or pulled back, with a
-        wheel attached at the top. It’s currently «positionDesc». “
-        listOrder = 10</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    position = 0
-    
-    positionDesc = ['pulled right back', 'vertical', 
-      'pushed all the way forward'][position + 2]
-    
-    dobjFor(Push)
-    {
-        check()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ controlColumn: Fixture 'control column;;stick'
+        "It's basically a stick that can be pushed forward or pulled back, with a
+        wheel attached at the top. It's currently &lt;&lt;positionDesc&gt;&gt;. "
+        listOrder = 10
+        
+        position = 0
+        
+        positionDesc = ['pulled right back', 'vertical', 
+          'pushed all the way forward'][position + 2]
+        
+        dobjFor(Push)
         {
-            if(position &gt; 0)
-                "It's already pushed forward as far as it will go. ";
+            check()
+            {
+                if(position &gt; 0)
+                    "It's already pushed forward as far as it will go. ";
+            }
+            
+            action()
+            {
+                position++;
+                "You push the control column so that it's now &lt;&lt;positionDesc&gt;&gt;. ";
+            }
         }
         
-        action()
+        dobjFor(Pull)
         {
-            position++;
-            "You push the control column so that it's now &lt;&lt;positionDesc&gt;&gt;. ";
+            check()
+            {
+                if(position &lt; 0)
+                    "It's already pulled back as far as it will go. ";
+            }
+            
+            action()
+            {
+                position--;
+                "You pull the control column so that it's now &lt;&lt;positionDesc&gt;&gt;. ";
+            }
         }
-    }
-    
-    dobjFor(Pull)
-    {
-        check()
-        {
-            if(position &lt; 0)
-                "It's already pulled back as far as it will go. ";
-        }
-        
-        action()
-        {
-            position--;
-            "You pull the control column so that it's now &lt;&lt;positionDesc&gt;&gt;. ";
-        }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>This shouldn’t require a lot of comment. Note the use of
@@ -278,27 +267,26 @@ settings. Fortunately we can combine the two through multiple
 inheritance:</li>
 </ol>
 
-<p>`
-    ++ thrustLever: Settable, Lever ‘thrust lever’
-        “It’s a lever that can be pushed forward or pulled back. It’s currently
-        «settingDesc». “
-        listOrder = 20</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    settingDesc()
-    {
-        switch(curSetting)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ thrustLever: Settable, Lever 'thrust lever'
+        "It's a lever that can be pushed forward or pulled back. It's currently
+        &lt;&lt;settingDesc&gt;&gt;. "
+        listOrder = 20
+        
+        settingDesc()
         {
-        case '0':
-            return 'pulled all the way back to 0';
-        case '5':
-            return 'pushed all the way forward to 5';
-        default:
-            return 'in the &lt;&lt;curSetting&gt;&gt; position';
+            switch(curSetting)
+            {
+            case '0':
+                return 'pulled all the way back to 0';
+            case '5':
+                return 'pushed all the way forward to 5';
+            default:
+                return 'in the &lt;&lt;curSetting&gt;&gt; position';
+            }
         }
-    }
-    
-    curSetting = '0'
-; `
+        
+        curSetting = '0'
+    ;
 </code></pre></div></div>
 
 <p>Note that we use the <code class="language-plaintext highlighter-rouge">curSetting</code> property (a
@@ -325,14 +313,13 @@ from NumberedDial, since they’re just straightforward numerical
 properties we can define directly on our thrustLever. The definition of
 thrustLever can thus continue like this:</p>
 
-<p>`
-        minSetting = 0
-        maxSetting = 5</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isValidSetting(val)
-    {
-        return delegated NumberedDial(val);
-    } `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        minSetting = 0
+        maxSetting = 5
+        
+        isValidSetting(val)
+        {
+            return delegated NumberedDial(val);
+        }
 </code></pre></div></div>
 
 <p>For more information on the <code class="language-plaintext highlighter-rouge">delegated</code> keyword,
@@ -344,22 +331,21 @@ something a little less bland than “You set the thrust lever to n”,
 especially if the engine is running. We can do that by providing our
 custom message in the makeSetting() method:</p>
 
-<p>`
-        makeSetting(val)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        makeSetting(val)
         {
             local oldVal = curSetting;
             inherited(val);
-            “You «if oldVal &lt; val» push the thrust lever forward«else» pull the
-            lever back«end» to «curSetting». “;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if(ignitionButton.isOn)
-        {
-            "The whine of the engine &lt;&lt;if oldVal &lt; val&gt;&gt;increases &lt;&lt;else&gt;&gt;
-            decreases&lt;&lt;end&gt;&gt; in pitch and volume&lt;&lt;if val=='0'&gt;&gt;, dying away to
-            a barely perceptible whisper&lt;&lt;end&gt;&gt;. ";
+            "You &lt;&lt;if oldVal &lt; val&gt;&gt; push the thrust lever forward&lt;&lt;else&gt;&gt; pull the
+            lever back&lt;&lt;end&gt;&gt; to &lt;&lt;curSetting&gt;&gt;. ";
+            
+            if(ignitionButton.isOn)
+            {
+                "The whine of the engine &lt;&lt;if oldVal &lt; val&gt;&gt;increases &lt;&lt;else&gt;&gt;
+                decreases&lt;&lt;end&gt;&gt; in pitch and volume&lt;&lt;if val=='0'&gt;&gt;, dying away to
+                a barely perceptible whisper&lt;&lt;end&gt;&gt;. ";
+            }
+            
         }
-        
-    } `
 </code></pre></div></div>
 
 <p>Here we use the <code class="language-plaintext highlighter-rouge">oldVal</code> local variable to store
@@ -389,70 +375,68 @@ so we need to override those two properties to cancel that assumption,
 and completely change what the Lever’s
 <code class="language-plaintext highlighter-rouge">makePulled()</code> method normally does:</p>
 
-<p>`
-        makePulled(stat)
-        {      <br />
-            makeSetting(stat ? ‘0’ : ‘5’);
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isPulled = (curSetting == '0')
-    isPushed = (curSetting == '5') `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        makePulled(stat)
+        {        
+            makeSetting(stat ? '0' : '5');
+        }
+        
+        isPulled = (curSetting == '0')
+        isPushed = (curSetting == '5')
 </code></pre></div></div>
 
 <p>The complete definition of the thrustLever object now looks as follows:</p>
 
-<p>`
-    ++ thrustLever: Settable, Lever ‘thrust lever’
-        “It’s a lever that can be pushed forward or pulled back. It’s currently
-        «settingDesc». “
-        listOrder = 20</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    settingDesc()
-    {
-        switch(curSetting)
-        {
-        case '0':
-            return 'pulled all the way back to 0';
-        case '5':
-            return 'pushed all the way forward to 5';
-        default:
-            return 'in the &lt;&lt;curSetting&gt;&gt; position';
-        }
-    }
-    
-    curSetting = '0'
-    minSetting = 0
-    maxSetting = 5
-    
-    isValidSetting(val)
-    {
-        return delegated NumberedDial(val);
-    }
-    
-    makeSetting(val)
-    {
-        local oldVal = curSetting;
-        inherited(val);
-        "You &lt;&lt;if oldVal &lt; val&gt;&gt; push the thrust lever forward&lt;&lt;else&gt;&gt; pull the
-        lever back&lt;&lt;end&gt;&gt; to &lt;&lt;curSetting&gt;&gt;. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ thrustLever: Settable, Lever 'thrust lever'
+        "It's a lever that can be pushed forward or pulled back. It's currently
+        &lt;&lt;settingDesc&gt;&gt;. "
+        listOrder = 20
         
-        if(ignitionButton.isOn)
+        settingDesc()
         {
-            "The whine of the engine &lt;&lt;if oldVal &lt; val&gt;&gt;increases &lt;&lt;else&gt;&gt;
-            decreases&lt;&lt;end&gt;&gt; in pitch and volume&lt;&lt;if val=='0'&gt;&gt;, dying away to
-            a barely perceptible whisper&lt;&lt;end&gt;&gt;. ";
+            switch(curSetting)
+            {
+            case '0':
+                return 'pulled all the way back to 0';
+            case '5':
+                return 'pushed all the way forward to 5';
+            default:
+                return 'in the &lt;&lt;curSetting&gt;&gt; position';
+            }
         }
         
-    }
-    
-    makePulled(stat)
-    {        
-        makeSetting(stat ? '0' : '5');
-    }
-    
-    isPulled = (curSetting == '0')
-    isPushed = (curSetting == '5')
-; `
+        curSetting = '0'
+        minSetting = 0
+        maxSetting = 5
+        
+        isValidSetting(val)
+        {
+            return delegated NumberedDial(val);
+        }
+        
+        makeSetting(val)
+        {
+            local oldVal = curSetting;
+            inherited(val);
+            "You &lt;&lt;if oldVal &lt; val&gt;&gt; push the thrust lever forward&lt;&lt;else&gt;&gt; pull the
+            lever back&lt;&lt;end&gt;&gt; to &lt;&lt;curSetting&gt;&gt;. ";
+            
+            if(ignitionButton.isOn)
+            {
+                "The whine of the engine &lt;&lt;if oldVal &lt; val&gt;&gt;increases &lt;&lt;else&gt;&gt;
+                decreases&lt;&lt;end&gt;&gt; in pitch and volume&lt;&lt;if val=='0'&gt;&gt;, dying away to
+                a barely perceptible whisper&lt;&lt;end&gt;&gt;. ";
+            }
+            
+        }
+        
+        makePulled(stat)
+        {        
+            makeSetting(stat ? '0' : '5');
+        }
+        
+        isPulled = (curSetting == '0')
+        isPushed = (curSetting == '5')
+    ;
 </code></pre></div></div>
 
 <p>We still have one further job to do. At the moment the thrust lever will
@@ -461,12 +445,11 @@ MOVE LEVER TO 3, or PUSH LEVER TO 3 or PULL LEVER TO 3. We’ve already
 seen how to accomplish that sort of thing in another context, namely by
 modifying the appropriate VerbRule:</p>
 
-<p>`
-    modify VerbRule(SetTo)
-        (‘set’ | ‘move’ | ‘push’ | ‘pull’) singleDobj ‘to’ literalIobj
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify VerbRule(SetTo)
+        ('set' | 'move' | 'push' | 'pull') singleDobj 'to' literalIobj
         :
     ;
-`</p>
+</code></pre></div></div>
 
 <p>We’ve now got the controls to the point where they can be operated, even
 if we can’t yet fly the plane with them. In the next section we’ll make
@@ -474,17 +457,14 @@ it possible for the plane to take off.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="cockpit.html" class="nav">Cockpit Controls</a> \&gt; Responding to
-Actions  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="cockpit.html" class="nav">Cockpit Controls</a> &gt; Responding to
+Actions<br />
 <span class="navnp"><a href="actions.html" class="nav"><em>Prev:</em> Defining Actions</a>
     <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

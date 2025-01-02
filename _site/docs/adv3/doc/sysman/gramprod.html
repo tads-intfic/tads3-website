@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; GrammarProd  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; GrammarProd<br />
 <span class="navnp"><a href="filename.html" class="nav"><em>Prev:</em> FileName</a>
     <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="grammarprod">GrammarProd</h1>
 
@@ -130,119 +122,112 @@ phrase” as the collection of all of them.</p>
 keyword. A <code class="language-plaintext highlighter-rouge">grammar</code> statement is mostly like an
 ordinary object or class definition, but with a few added elements:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grammar prodName [ ( tag ) ]  : rules : superclass [ , superclass ... ] 
+  propsAndMethods
+;
+</code></pre></div></div>
 
-    grammar prodName [ ( tag ) ]  : rules : superclass [ , superclass ... ] 
-      propsAndMethods
-    ;
-
-
-
-The optional *tag* is a symbol or number token enclosed in parentheses.
-This isn't required - but if it's present, it provides a way to
+<p>The optional <em>tag</em> is a symbol or number token enclosed in parentheses.
+This isn’t required - but if it’s present, it provides a way to
 distinguish the rule from other rules associated with the same
-*prodName* at run-time, and to refer to the rule in
-`modify` and `replace`
-statements. This *tag* is also included in the string in the first
-element returned by the `grammarInfo()` method,
+<em>prodName</em> at run-time, and to refer to the rule in
+<code class="language-plaintext highlighter-rouge">modify</code> and <code class="language-plaintext highlighter-rouge">replace</code>
+statements. This <em>tag</em> is also included in the string in the first
+element returned by the <code class="language-plaintext highlighter-rouge">grammarInfo()</code> method,
 to distinguish a particular matched rule from other rules for the same
-production.
+production.</p>
 
-If the tag is present, the combination of the production name, tag, and
+<p>If the tag is present, the combination of the production name, tag, and
 parentheses forms the full name of the object. This combination must be
-globally unique, just as any other object name must be.
+globally unique, just as any other object name must be.</p>
 
-The list of superclasses and the list of properties and methods
-(*propsAndMethods*) are defined in exactly as for ordinary objects. The
-reason there's a superclass list and a property/method list is that the
-`grammar` statement actually does define an
+<p>The list of superclasses and the list of properties and methods
+(<em>propsAndMethods</em>) are defined in exactly as for ordinary objects. The
+reason there’s a superclass list and a property/method list is that the
+<code class="language-plaintext highlighter-rouge">grammar</code> statement actually does define an
 ordinary class, in addition to defining a GrammarProd object. The
-ordinary class that's defined has no name, but is otherwise like any
-other class.
+ordinary class that’s defined has no name, but is otherwise like any
+other class.</p>
 
-The *prodName* specifies the name of the GrammarProd object. A given
+<p>The <em>prodName</em> specifies the name of the GrammarProd object. A given
 production name can occur in any number of
-`grammar` statements; a
-`grammar` statement does not uniquely define a
+<code class="language-plaintext highlighter-rouge">grammar</code> statements; a
+<code class="language-plaintext highlighter-rouge">grammar</code> statement does not uniquely define a
 production object, but simply adds one or more alternative syntax rules
-to the production. (That's why the *tag* is so useful - it lets us
-identify the individual `grammar` statements
-making up a single GrammarProd object.)
+to the production. (That’s why the <em>tag</em> is so useful - it lets us
+identify the individual <code class="language-plaintext highlighter-rouge">grammar</code> statements
+making up a single GrammarProd object.)</p>
 
-The *rules* section is a set of one or more syntax rules to be
-associated with the production. Each alternative list looks like this:
+<p>The <em>rules</em> section is a set of one or more syntax rules to be
+associated with the production. Each alternative list looks like this:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>itemList [ | itemList ... ] 
+</code></pre></div></div>
 
-    itemList [ | itemList ... ] 
-
-</div>
-
-The vertical bar "\|" (the same symbol used for the bitwise-OR operator)
+<p>The vertical bar “|” (the same symbol used for the bitwise-OR operator)
 separates multiple item lists. Using a bar is equivalent to writing a
-separate `grammar` statement for each item list.
-The "\|" syntax is usually a lot more concise than writing each rule as
+separate <code class="language-plaintext highlighter-rouge">grammar</code> statement for each item list.
+The “|” syntax is usually a lot more concise than writing each rule as
 a separate statement, since all of the properties and methods you define
-for this `grammar` statement apply to each rule
-in the item list.
+for this <code class="language-plaintext highlighter-rouge">grammar</code> statement apply to each rule
+in the item list.</p>
 
-Each item list specifies a syntax rule for the production. An item list
-looks like this:
+<p>Each item list specifies a syntax rule for the production. An item list
+looks like this:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [ qualifiers ]  [ item [ item ... ]  ]  [ * ] 
+</code></pre></div></div>
 
-      [ qualifiers ]  [ item [ item ... ]  ]  [ * ] 
+<p>Each <em>item</em> in the list can be one of the following:</p>
 
-</div>
+<ul>
+  <li>A literal string, enclosed in single quotes. This simply matches the
+the text of an input token. If a default Dictionary object is in
+effect at compile-time when the rule is defined (via a
+<code class="language-plaintext highlighter-rouge">dictionary</code> statement), the compiler
+automatically enters the text into the Dictionary, associating it with
+the production object and the <code class="language-plaintext highlighter-rouge">miscVocab</code>
+property. Literals are matched using the same comparison rule as the
+Dictionary object used at the time of parsing; this means that any
+case folding, truncation, accent elisions, and other special matching
+rules that the Dictionary uses are applied in the same manner to
+grammar literals.</li>
+  <li>A literal string, enclosed in double quotes. This is identical to a
+string in single quotes. (Double quotes don’t have their usual special
+meaning here, because there’s only one kind of string in this context.
+This is intended mostly as a convenience for
+<code class="language-plaintext highlighter-rouge">addAlt()</code>, where the whole rule text is given
+as a single-quoted string: using double quotes for the quoted tokens
+within the string avoids the hassle of backslash-escaping the quote
+marks.)</li>
+  <li>A token type name - that is, an <code class="language-plaintext highlighter-rouge">enum token</code>
+symbol. A token type item tells the parser to match any input token of
+the given type. For example, the standard library tokenizer defines
+<code class="language-plaintext highlighter-rouge">tokInt</code> as the integer token type, so you can
+match any integer in the input with a <code class="language-plaintext highlighter-rouge">tokInt</code>
+item.</li>
+  <li>A dictionary property - a property previously declared with the
+<code class="language-plaintext highlighter-rouge">dictionary property</code> statement. This matches
+an input token that appears in the dictionary under the given
+property.</li>
+  <li>A list of dictionary properties enclosed in angle brackets
+(<code class="language-plaintext highlighter-rouge">\&lt; \&gt;</code>), and separated by spaces. This
+matches an input token that appears in the Dictionary under any of the
+listed properties.</li>
+  <li>A production object (a <em>prodName</em> symbol from another grammar
+statement, or even the name of the current statement’s production
+object). This matches if any of the alternatives defined for the
+sub-production match. Note that you must <strong>not</strong> use the “tagged”
+version of the name here: you must use only the <em>prodName</em> part. The
+reason is that a reference to a sub-production inherently incorporates
+<em>all</em> of the different rules associated with the sub-production.</li>
+  <li>A group of alternative sub-lists enclosed in parentheses, with the
+alternative sub-lists separated by vertical bars
+(<code class="language-plaintext highlighter-rouge">\|</code>).</li>
+</ul>
 
-Each *item* in the list can be one of the following:
-
-- A literal string, enclosed in single quotes. This simply matches the
-  the text of an input token. If a default Dictionary object is in
-  effect at compile-time when the rule is defined (via a
-  `dictionary` statement), the compiler
-  automatically enters the text into the Dictionary, associating it with
-  the production object and the `miscVocab`
-  property. Literals are matched using the same comparison rule as the
-  Dictionary object used at the time of parsing; this means that any
-  case folding, truncation, accent elisions, and other special matching
-  rules that the Dictionary uses are applied in the same manner to
-  grammar literals.
-- A literal string, enclosed in double quotes. This is identical to a
-  string in single quotes. (Double quotes don't have their usual special
-  meaning here, because there's only one kind of string in this context.
-  This is intended mostly as a convenience for
-  `addAlt()`, where the whole rule text is given
-  as a single-quoted string: using double quotes for the quoted tokens
-  within the string avoids the hassle of backslash-escaping the quote
-  marks.)
-- A token type name - that is, an `enum token`
-  symbol. A token type item tells the parser to match any input token of
-  the given type. For example, the standard library tokenizer defines
-  `tokInt` as the integer token type, so you can
-  match any integer in the input with a `tokInt`
-  item.
-- A dictionary property - a property previously declared with the
-  `dictionary property` statement. This matches
-  an input token that appears in the dictionary under the given
-  property.
-- A list of dictionary properties enclosed in angle brackets
-  (`\&lt; \&gt;`), and separated by spaces. This
-  matches an input token that appears in the Dictionary under any of the
-  listed properties.
-- A production object (a *prodName* symbol from another grammar
-  statement, or even the name of the current statement's production
-  object). This matches if any of the alternatives defined for the
-  sub-production match. Note that you must **not** use the "tagged"
-  version of the name here: you must use only the *prodName* part. The
-  reason is that a reference to a sub-production inherently incorporates
-  *all* of the different rules associated with the sub-production.
-- A group of alternative sub-lists enclosed in parentheses, with the
-  alternative sub-lists separated by vertical bars
-  (`\|`).
-
-Each item type can optionally be followed by an arrow symbol,
-`-\&gt;` (a hyphen followed by a greater-than
+<p>Each item type can optionally be followed by an arrow symbol,
+<code class="language-plaintext highlighter-rouge">-\&gt;</code> (a hyphen followed by a greater-than
 sign), then a property name. If this sequence is present, it indicates
 that, when the parser successfully matches the item, it will store the
 matching value in the given property of the object created to represent
@@ -250,694 +235,660 @@ the production match. For a token type or dictionary property item, the
 value stored in the property is simply the token value of the input
 token that matches the item. For a sub-production item, the value stored
 in the property is the object created to represent the sub-production
-match.
+match.</p>
 
-If an asterisk (`\*`) is present, it must be the
+<p>If an asterisk (<code class="language-plaintext highlighter-rouge">\*</code>) is present, it must be the
 last element of the item list. This symbol indicates that any input
 tokens that remain in the input after the tokens that match the syntax
 rule up to this point should simply be ignored. In a sense, the
-`\*` is a "wildcard" symbol that matches
-everything remaining in the input token list; however, you shouldn't
-think of it this way, because that's not really how it works. The
-`\*` doesn't actually match anything; instead,
+<code class="language-plaintext highlighter-rouge">\*</code> is a “wildcard” symbol that matches
+everything remaining in the input token list; however, you shouldn’t
+think of it this way, because that’s not really how it works. The
+<code class="language-plaintext highlighter-rouge">\*</code> doesn’t actually match anything; instead,
 it simply indicates that any remaining tokens should be ignored. If an
 alternative of the root production does not end with a
-`\*` symbol, either directly in the rule of the
+<code class="language-plaintext highlighter-rouge">\*</code> symbol, either directly in the rule of the
 alternative in the root production or indirectly in the last
 subproduction, the parser will match the alternative only if the root
 alternative matches the entire input token list. If the root alternative
-does end (directly or indirectly) with the `\*`
+does end (directly or indirectly) with the <code class="language-plaintext highlighter-rouge">\*</code>
 symbol, however, the parser will match the alternative even if extra
-input tokens remain after matching the alternative's items. The
-`\*` symbol, if present, must always be the last
-item in an alternative's list.
+input tokens remain after matching the alternative’s items. The
+<code class="language-plaintext highlighter-rouge">\*</code> symbol, if present, must always be the last
+item in an alternative’s list.</p>
 
-The optional *qualifiers*, if present, specify additional information
-about the alternative. Only one qualifier is currently valid:
+<p>The optional <em>qualifiers</em>, if present, specify additional information
+about the alternative. Only one qualifier is currently valid:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ badness integer ]
+</code></pre></div></div>
 
-    [ badness integer ]
-
-</div>
-
-This qualifier assigns the alternative a "badness" rating, which can be
-used to create catch-all syntax patterns that you don't want to use
-except as a last resort. The *integer* value gives the degree of
-badness; this value is meaningful only relative to other "badness"
+<p>This qualifier assigns the alternative a “badness” rating, which can be
+used to create catch-all syntax patterns that you don’t want to use
+except as a last resort. The <em>integer</em> value gives the degree of
+badness; this value is meaningful only relative to other “badness”
 values assigned to other productions. When GrammarProd is considering
 more than one rule with badness for a possible match, it picks the one
-with the lowest badness first.
+with the lowest badness first.</p>
 
-Assigning a badness rating tells the parser that the alternative should
+<p>Assigning a badness rating tells the parser that the alternative should
 be ignored until all other alternatives are exhausted. This is
 especially useful for handling syntax errors in the user input, because
 it allows you to create alternatives that match anything in particular
 parts of the input, which helps pinpoint where the problem is, which in
-turn lets you give the user better feedback about the problem.
+turn lets you give the user better feedback about the problem.</p>
 
-## Using `modify` and `replace` with grammar rules
+<h2 id="using-modify-and-replace-with-grammar-rules">Using <code class="language-plaintext highlighter-rouge">modify</code> and <code class="language-plaintext highlighter-rouge">replace</code> with grammar rules</h2>
 
-A grammar rule object can be replaced or modified by another grammar
+<p>A grammar rule object can be replaced or modified by another grammar
 rule, just as a normal object can be replaced or modified, using the
-`replace` and `modify`
+<code class="language-plaintext highlighter-rouge">replace</code> and <code class="language-plaintext highlighter-rouge">modify</code>
 keywords. For example, you might want to modify or replace a grammar
-rule when you're using a library, since the library might define
-general-purpose rules that don't exactly fit your needs.
+rule when you’re using a library, since the library might define
+general-purpose rules that don’t exactly fit your needs.</p>
 
-To use `modify` with a grammar rule, use this
-syntax:
+<p>To use <code class="language-plaintext highlighter-rouge">modify</code> with a grammar rule, use this
+syntax:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify grammar prodName ( tag ) : rules :
+  propsAndMethods
+;
+</code></pre></div></div>
 
-    modify grammar prodName ( tag ) : rules :
-      propsAndMethods
-    ;
-
-</div>
-
-This is *almost* the same as the normal
-`grammar` syntax, but note that no class list
+<p>This is <em>almost</em> the same as the normal
+<code class="language-plaintext highlighter-rouge">grammar</code> syntax, but note that no class list
 follows the colon after the rule list. No superclasses are specified
-with `modify`, because a modified object always
+with <code class="language-plaintext highlighter-rouge">modify</code>, because a modified object always
 has the same superclass or superclasses as the original object being
-modified. Note also that the *tag* is required, because this provides
+modified. Note also that the <em>tag</em> is required, because this provides
 the unique name for the match object that distinguishes it from other
-match objects defined for the same production name.
+match objects defined for the same production name.</p>
 
-Note that the *rules* list is optional: if you leave it out (so you just
+<p>Note that the <em>rules</em> list is optional: if you leave it out (so you just
 put two colons in a row after the name), then the compiler retains the
 original rule list for the object being modified. This lets you override
 just the properties or methods of the grammar rule object, without
-changing any of the grammar it matches.
+changing any of the grammar it matches.</p>
 
-To use `replace` with a grammar rule, use this
-syntax:
+<p>To use <code class="language-plaintext highlighter-rouge">replace</code> with a grammar rule, use this
+syntax:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>replace grammar prodName ( tag ) : rules : superclass [ , superclass ... ] 
+  propsAndMethods
+;
+</code></pre></div></div>
 
-    replace grammar prodName ( tag ) : rules : superclass [ , superclass ... ] 
-      propsAndMethods
-    ;
+<p>This is exactly the same as a normal <code class="language-plaintext highlighter-rouge">grammar</code>
+definition, except that the <code class="language-plaintext highlighter-rouge">replace</code> keyword
+precedes the definition.</p>
 
-</div>
-
-This is exactly the same as a normal `grammar`
-definition, except that the `replace` keyword
-precedes the definition.
-
-If you use `replace` or
-`modify` with a grammar rule, the original
+<p>If you use <code class="language-plaintext highlighter-rouge">replace</code> or
+<code class="language-plaintext highlighter-rouge">modify</code> with a grammar rule, the original
 grammar rule is completely replaced by the new grammar rule. In this
-respect, `replace` and
-`modify` behave exactly the same way. The
-differences between the two are their treatment of the original object's
-property list (in the case of `replace`, the
+respect, <code class="language-plaintext highlighter-rouge">replace</code> and
+<code class="language-plaintext highlighter-rouge">modify</code> behave exactly the same way. The
+differences between the two are their treatment of the original object’s
+property list (in the case of <code class="language-plaintext highlighter-rouge">replace</code>, the
 original list is completely lost; in the case of
-`modify`, the original properties are inherited
-by the modified object) and of the original's superclass
-(`replace` specifies a brand new superclass, and
-`modify` uses the original object's superclass).
+<code class="language-plaintext highlighter-rouge">modify</code>, the original properties are inherited
+by the modified object) and of the original’s superclass
+(<code class="language-plaintext highlighter-rouge">replace</code> specifies a brand new superclass, and
+<code class="language-plaintext highlighter-rouge">modify</code> uses the original object’s superclass).</p>
 
-If you want to delete an existing grammar rule entirely, you can use the
-`replace` syntax, and specify an unmatchable
+<p>If you want to delete an existing grammar rule entirely, you can use the
+<code class="language-plaintext highlighter-rouge">replace</code> syntax, and specify an unmatchable
 rule list. A rule list is unmatchable if it contains a token string that
 the tokenizer will never produce; for example, in most cases, tokenizers
 do not return spaces as tokens, so you can use the string
-`' '` as an unmatchable alternative:
+<code class="language-plaintext highlighter-rouge">' '</code> as an unmatchable alternative:</p>
 
-```
-    replace grammar nounPhrase(1): ' ': object;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    replace grammar nounPhrase(1): ' ': object;
+</code></pre></div></div>
 
-## `grammar` defines *two* objects
+<h2 id="grammar-defines-two-objects"><code class="language-plaintext highlighter-rouge">grammar</code> defines <em>two</em> objects</h2>
 
-The `grammar` statement is unusual in that it
-defines not one, but two separate objects.
+<p>The <code class="language-plaintext highlighter-rouge">grammar</code> statement is unusual in that it
+defines not one, but two separate objects.</p>
 
-First, a `grammar` statement defines - or adds
-to - a GrammarProd object. This object's name is given by the *prodName*
-in the `grammar` statement.
+<p>First, a <code class="language-plaintext highlighter-rouge">grammar</code> statement defines - or adds
+to - a GrammarProd object. This object’s name is given by the <em>prodName</em>
+in the <code class="language-plaintext highlighter-rouge">grammar</code> statement.</p>
 
-A `grammar` statement can "add to" a GrammarProd
-object. It's legal to write multiple `grammar`
-statements that define the same *prodName*, as long as they have
-distinct *tag* names. The compiler automatically gathers together all of
+<p>A <code class="language-plaintext highlighter-rouge">grammar</code> statement can “add to” a GrammarProd
+object. It’s legal to write multiple <code class="language-plaintext highlighter-rouge">grammar</code>
+statements that define the same <em>prodName</em>, as long as they have
+distinct <em>tag</em> names. The compiler automatically gathers together all of
 these different definitions and rolls them into a single GrammarProd
-object in the final program.
+object in the final program.</p>
 
-Second, the statement defines a separate class called the *match object
-class*. This class doesn't have a symbol name that you can refer to in
-your program, so you can't, for example, define a subclass of it.
-However, for the purposes of `modify` and
-`replace`, its name is *prodName*(*tag*), and at
-run-time the same name is used in string form to identify the rule.
+<p>Second, the statement defines a separate class called the <em>match object
+class</em>. This class doesn’t have a symbol name that you can refer to in
+your program, so you can’t, for example, define a subclass of it.
+However, for the purposes of <code class="language-plaintext highlighter-rouge">modify</code> and
+<code class="language-plaintext highlighter-rouge">replace</code>, its name is <em>prodName</em>(<em>tag</em>), and at
+run-time the same name is used in string form to identify the rule.</p>
 
-At run-time, you can call methods on the GrammarProd object. For
-example, the `parseTokens()` method is used to
-match an input string to the GrammarProd's rules. The
-`parseTokens()` method in turn returns a
+<p>At run-time, you can call methods on the GrammarProd object. For
+example, the <code class="language-plaintext highlighter-rouge">parseTokens()</code> method is used to
+match an input string to the GrammarProd’s rules. The
+<code class="language-plaintext highlighter-rouge">parseTokens()</code> method in turn returns a
 description of the match, if it can find one, that uses instances of the
-*match object class* to represent the precise
-`grammar` rules that the input was found to
-match. <span id="dynamics"></span>
+<em>match object class</em> to represent the precise
+<code class="language-plaintext highlighter-rouge">grammar</code> rules that the input was found to
+match. <span id="dynamics"></span></p>
 
-## Changing the grammar at run-time
+<h2 id="changing-the-grammar-at-run-time">Changing the grammar at run-time</h2>
 
-Starting in TADS 3.1, you can add new grammar rules and change existing
-rules at run-time.
+<p>Starting in TADS 3.1, you can add new grammar rules and change existing
+rules at run-time.</p>
 
-You can create an entirely new production object with the
-`new` operator:
+<p>You can create an entirely new production object with the
+<code class="language-plaintext highlighter-rouge">new</code> operator:</p>
 
-```
-    local prod = new GrammarProd();
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local prod = new GrammarProd();
+</code></pre></div></div>
 
-This creates an unnamed production with no rules. You can add rules to
-the new production with the [addAlt()](#addAlt) method. For example:
+<p>This creates an unnamed production with no rules. You can add rules to
+the new production with the <a href="#addAlt">addAlt()</a> method. For example:</p>
 
-```
-    prod.addAlt('noun-&gt;n1', new NounPhraseProd(), cmdDict, symtab);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    prod.addAlt('noun-&gt;n1', new NounPhraseProd(), cmdDict, symtab);
+</code></pre></div></div>
 
-Once you have a new production set up, you can use it as the root of the
+<p>Once you have a new production set up, you can use it as the root of the
 grammar for parsing purposes, simply by calling
-[parseTokens()](#parseTokens) on the production:
+<a href="#parseTokens">parseTokens()</a> on the production:</p>
 
-```
-    prod.parseTokens(toks, cmdDict);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    prod.parseTokens(toks, cmdDict);
+</code></pre></div></div>
 
-In many cases, after you create a new production, you'll want to refer
+<p>In many cases, after you create a new production, you’ll want to refer
 to it as a sub-production within other rules. Newly created rules are
 always defined symbolically, so the question is, how do we refer to an
 unnamed new object symbolically? The trick is that you can manually add
 the new object to your copy of the symbol table. A symbol table is just
-a LookupTable, after all, so you're free to invent new symbol names.
+a LookupTable, after all, so you’re free to invent new symbol names.</p>
 
-```
-    symtab['myNewProd'] = prod;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    symtab['myNewProd'] = prod;
     nounPhrase.addAlt('myNewProd-&gt;p1', new NounPhraseProd(), cmdDict, symtab);
-```
+</code></pre></div></div>
 
-`addAlt()` isn't limited to working with newly
+<p><code class="language-plaintext highlighter-rouge">addAlt()</code> isn’t limited to working with newly
 created productions. As you can see above, you can also use it to add to
-the grammar of productions defined statically in the program's source
-code, with `grammar` statements. What's more,
-the [`deleteAlt()`](#deleteAlt) and
-[`clearAlts()`](#clearAlts) methods let you
+the grammar of productions defined statically in the program’s source
+code, with <code class="language-plaintext highlighter-rouge">grammar</code> statements. What’s more,
+the <a href="#deleteAlt"><code class="language-plaintext highlighter-rouge">deleteAlt()</code></a> and
+<a href="#clearAlts"><code class="language-plaintext highlighter-rouge">clearAlts()</code></a> methods let you
 remove rules from an existing production. You can combine these methods
 to rewrite any part of the grammar on the fly.
-<span id="dynamicMatchObj"></span>
+<span id="dynamicMatchObj"></span></p>
 
-### Match objects for new rules
+<h3 id="match-objects-for-new-rules">Match objects for new rules</h3>
 
-When you define rules statically with `grammar`,
-remember that the compiler automatically creates a "match object class"
-for you. This object is unnamed, but it's not completely invisible:
-whenever `parseTokens()` matches input to that
-`grammar` rule, it creates an instance of the
+<p>When you define rules statically with <code class="language-plaintext highlighter-rouge">grammar</code>,
+remember that the compiler automatically creates a “match object class”
+for you. This object is unnamed, but it’s not completely invisible:
+whenever <code class="language-plaintext highlighter-rouge">parseTokens()</code> matches input to that
+<code class="language-plaintext highlighter-rouge">grammar</code> rule, it creates an instance of the
 match object, and returns that instance in the tree of objects
-representing the parsing match.
+representing the parsing match.</p>
 
-When you use `addAlt()` to create a new rule
-dynamically, there's no `grammar` statement
-involved, and the system doesn't automatically create a match object for
+<p>When you use <code class="language-plaintext highlighter-rouge">addAlt()</code> to create a new rule
+dynamically, there’s no <code class="language-plaintext highlighter-rouge">grammar</code> statement
+involved, and the system doesn’t automatically create a match object for
 you. But a match object is still needed - without a match object,
-there'd be no way to represent a match to the new rule in
-`parseTokens()` results. So where does the match
-object come from? It's up to you to create one, and pass it to
-`addAlt()` as a parameter.
+there’d be no way to represent a match to the new rule in
+<code class="language-plaintext highlighter-rouge">parseTokens()</code> results. So where does the match
+object come from? It’s up to you to create one, and pass it to
+<code class="language-plaintext highlighter-rouge">addAlt()</code> as a parameter.</p>
 
-You can in principle use any object for the match object in
-`addAlt()`, but there are two special guidelines
-you should keep in mind:
+<p>You can in principle use any object for the match object in
+<code class="language-plaintext highlighter-rouge">addAlt()</code>, but there are two special guidelines
+you should keep in mind:</p>
 
-- First, you should **create a new object for each
-  `addAlt()` call**.
-  `addAlt()` automatically adds some information
-  to the match object to describe the alternatives it's associated with.
-  It's important to keep this information separate for each
-  `addAlt()` call. In particular,
-  `addAlt()` adds a
-  `grammarAltProps` property, containing a list
-  of the "`-\&gt;`" properties used in the rules
-  being added.
-- Second, each dynamic match object should **inherit from DynamicProd**,
-  which is a class defined in the library file
-  `gramprod.t`. (You should include this file in
-  your project.) DynamicProd is a simple mix-in class, so you can
-  inherit from other classes as well. DynamicProd is important because
-  it defines a `grammarInfo()` method for
-  dynamic match objects parallel to the one that the compiler
-  automatically builds for statically defined match objects.
+<ul>
+  <li>First, you should <strong>create a new object for each
+<code class="language-plaintext highlighter-rouge">addAlt()</code> call</strong>.
+<code class="language-plaintext highlighter-rouge">addAlt()</code> automatically adds some information
+to the match object to describe the alternatives it’s associated with.
+It’s important to keep this information separate for each
+<code class="language-plaintext highlighter-rouge">addAlt()</code> call. In particular,
+<code class="language-plaintext highlighter-rouge">addAlt()</code> adds a
+<code class="language-plaintext highlighter-rouge">grammarAltProps</code> property, containing a list
+of the “<code class="language-plaintext highlighter-rouge">-\&gt;</code>” properties used in the rules
+being added.</li>
+  <li>Second, each dynamic match object should <strong>inherit from DynamicProd</strong>,
+which is a class defined in the library file
+<code class="language-plaintext highlighter-rouge">gramprod.t</code>. (You should include this file in
+your project.) DynamicProd is a simple mix-in class, so you can
+inherit from other classes as well. DynamicProd is important because
+it defines a <code class="language-plaintext highlighter-rouge">grammarInfo()</code> method for
+dynamic match objects parallel to the one that the compiler
+automatically builds for statically defined match objects.</li>
+</ul>
 
-## GrammarProd methods
+<h2 id="grammarprod-methods">GrammarProd methods</h2>
 
-<span id="addAlt"></span>
+<p><span id="addAlt"></span></p>
 
-`addAlt(*alt*, *matchObj*, *dict*?, *symtab*?)`
+<p><code class="language-plaintext highlighter-rouge">addAlt(*alt*, *matchObj*, *dict*?, *symtab*?)</code></p>
 
-<div class="fdef">
+<p>Add an alternative or set of alternatives to the production.</p>
 
-Add an alternative or set of alternatives to the production.
+<p><em>alt</em> is a string containing the alternative(s) to add. This uses the
+same syntax as “rules” list in a <code class="language-plaintext highlighter-rouge">grammar</code>
+statement. You can define multiple alternatives as usual using “|”
+symbols within the string.</p>
 
-*alt* is a string containing the alternative(s) to add. This uses the
-same syntax as "rules" list in a `grammar`
-statement. You can define multiple alternatives as usual using "\|"
-symbols within the string.
-
-*matchObj* is the match object class for the new rule(s). In a static
-`grammar` statement, the compiler creates the
+<p><em>matchObj</em> is the match object class for the new rule(s). In a static
+<code class="language-plaintext highlighter-rouge">grammar</code> statement, the compiler creates the
 match object class automatically, as an unnamed object with the
-superclasses listed in the `grammar` statement.
-When you add rules with `addAlt()`, you must
-explicitly supply the match object. See [above](#dynamicMatchObj) for
-guidelines on how to create this object.
+superclasses listed in the <code class="language-plaintext highlighter-rouge">grammar</code> statement.
+When you add rules with <code class="language-plaintext highlighter-rouge">addAlt()</code>, you must
+explicitly supply the match object. See <a href="#dynamicMatchObj">above</a> for
+guidelines on how to create this object.</p>
 
-The method adds the property `grammarAltProps`
-to *matchObj*. This property is set to a list of all
-"`-\&gt;`" properties used within the alternatives
-defined for the match object. The method *doesn't* add
-`grammarTag` or
-`grammarInfo` properties, but if *matchObj*
-inherits from DynamicProd as [recommended](#dynamicMatchObj), it will
-inherit a `grammarInfo` method that works the
+<p>The method adds the property <code class="language-plaintext highlighter-rouge">grammarAltProps</code>
+to <em>matchObj</em>. This property is set to a list of all
+“<code class="language-plaintext highlighter-rouge">-\&gt;</code>” properties used within the alternatives
+defined for the match object. The method <em>doesn’t</em> add
+<code class="language-plaintext highlighter-rouge">grammarTag</code> or
+<code class="language-plaintext highlighter-rouge">grammarInfo</code> properties, but if <em>matchObj</em>
+inherits from DynamicProd as <a href="#dynamicMatchObj">recommended</a>, it will
+inherit a <code class="language-plaintext highlighter-rouge">grammarInfo</code> method that works the
 same as in a statically defined match object. You can explicitly add a
-`grammarTag` property if you wish (it can be
-useful for debugging, for example), but it's not required.
+<code class="language-plaintext highlighter-rouge">grammarTag</code> property if you wish (it can be
+useful for debugging, for example), but it’s not required.</p>
 
-*dict* is an optional [Dictionary](dict.html) object, giving the
+<p><em>dict</em> is an optional <a href="dict.html">Dictionary</a> object, giving the
 dictionary associated with this grammar. If this is provided, and the
 new alternatives contain literal tokens,
-`addAlt()` automatically adds those literals to
+<code class="language-plaintext highlighter-rouge">addAlt()</code> automatically adds those literals to
 the dictionary. This keeps the dictionary in sync with the vocabulary
-used in dynamically added rules.
+used in dynamically added rules.</p>
 
-*symtab* is an optional lookup table containing the compiler's global
+<p><em>symtab</em> is an optional lookup table containing the compiler’s global
 symbols. If you use any symbol names in the alternative (such as
 property names or other GrammarProd object names as sub-productions),
 the symbol table is required for resolving those symbols. In most cases,
 you should simply use the same symbol table that
-[t3GetGlobalSymbols()](t3vm.html#t3GetGlobalSymbols) returns during
-preinit, since that reflects the global symbols defined in the program's
-source code.
+<a href="t3vm.html#t3GetGlobalSymbols">t3GetGlobalSymbols()</a> returns during
+preinit, since that reflects the global symbols defined in the program’s
+source code.</p>
 
-</div>
+<p><span id="clearAlts"></span></p>
 
-<span id="clearAlts"></span>
+<p><code class="language-plaintext highlighter-rouge">clearAlts(*dict*?)</code></p>
 
-`clearAlts(*dict*?)`
+<p>Delete all existing alternatives (token rules) in the production. This
+is equivalent to calling deleteAlt() for each alternative.</p>
 
-<div class="fdef">
-
-Delete all existing alternatives (token rules) in the production. This
-is equivalent to calling deleteAlt() for each alternative.
-
-*dict* is an optional [Dictionary](dict.html) object to be updated for
-the deletion. If this is provided and not `nil`,
+<p><em>dict</em> is an optional <a href="dict.html">Dictionary</a> object to be updated for
+the deletion. If this is provided and not <code class="language-plaintext highlighter-rouge">nil</code>,
 the dictionary will be updated to remove literal tokens associated with
 the production that are being deleted by this method. This keeps the
-dictionary in sync with the changes to the grammar.
+dictionary in sync with the changes to the grammar.</p>
 
-</div>
+<p><span id="deleteAlt"></span></p>
 
-<span id="deleteAlt"></span>
+<p><code class="language-plaintext highlighter-rouge">deleteAlt(*id*, *dict*?)</code></p>
 
-`deleteAlt(*id*, *dict*?)`
+<p>Delete one or more alternatives (token rules) from the production. <em>id</em>
+specifies which alternative(s) to delete:</p>
 
-<div class="fdef">
+<ul>
+  <li>By tag: if <em>id</em> is a string, the method deletes each alternative whose
+match object’s <code class="language-plaintext highlighter-rouge">grammarTag</code> property equals
+<em>id</em>. The compiler automatically sets the
+<code class="language-plaintext highlighter-rouge">grammarTag</code> property for each match object
+defined in a <code class="language-plaintext highlighter-rouge">grammar</code> statement to the
+statement’s tag, so this makes it easy to delete all of the rules
+defined in a single <code class="language-plaintext highlighter-rouge">grammar</code> statement.</li>
+  <li>By match object class: if <em>id</em> is an object, the method deletes each
+alternative whose match object is either equal to <em>id</em> or is a
+subclass of <em>id</em>.</li>
+  <li>By index: if <em>id</em> is an integer, it gives the index of the alternative
+to delete. This corresponds to an index in the list returned by
+<code class="language-plaintext highlighter-rouge">getGrammarInfo()</code>; the first alternative’s
+index is 1. This deletes one alternative.</li>
+</ul>
 
-Delete one or more alternatives (token rules) from the production. *id*
-specifies which alternative(s) to delete:
-
-- By tag: if *id* is a string, the method deletes each alternative whose
-  match object's `grammarTag` property equals
-  *id*. The compiler automatically sets the
-  `grammarTag` property for each match object
-  defined in a `grammar` statement to the
-  statement's tag, so this makes it easy to delete all of the rules
-  defined in a single `grammar` statement.
-- By match object class: if *id* is an object, the method deletes each
-  alternative whose match object is either equal to *id* or is a
-  subclass of *id*.
-- By index: if *id* is an integer, it gives the index of the alternative
-  to delete. This corresponds to an index in the list returned by
-  `getGrammarInfo()`; the first alternative's
-  index is 1. This deletes one alternative.
-
-*dict* is an optional [Dictionary](dict.html) object to be updated for
-the deletion. If this is provided and not `nil`,
+<p><em>dict</em> is an optional <a href="dict.html">Dictionary</a> object to be updated for
+the deletion. If this is provided and not <code class="language-plaintext highlighter-rouge">nil</code>,
 the dictionary will be updated to remove any literal tokens associated
 with the production that are being deleted by this method. This keeps
-the dictionary in sync with the changes to the grammar.
+the dictionary in sync with the changes to the grammar.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getGrammarInfo()</code></p>
 
-`getGrammarInfo()`
-
-<div class="fdef">
-
-The GrammarProd class provides access to the internal definition of a
+<p>The GrammarProd class provides access to the internal definition of a
 grammar production object via the
-`getGrammarInfo()` method. This gives you
-complete information on the `grammar` statements
+<code class="language-plaintext highlighter-rouge">getGrammarInfo()</code> method. This gives you
+complete information on the <code class="language-plaintext highlighter-rouge">grammar</code> statements
 in the program. You could in principle use this information to write a
-replacement for `parseTokens()`, since the
+replacement for <code class="language-plaintext highlighter-rouge">parseTokens()</code>, since the
 method provides access to all of the information available to the
-intrinsic class.
+intrinsic class.</p>
 
-You'll notice as you read through the descriptions below of the data
+<p>You’ll notice as you read through the descriptions below of the data
 structures that the data structures map directly to the parts of the
-`grammar` statement. This is no accident;
-`getGrammarInfo()` in essence just returns a
+<code class="language-plaintext highlighter-rouge">grammar</code> statement. This is no accident;
+<code class="language-plaintext highlighter-rouge">getGrammarInfo()</code> in essence just returns a
 run-time representation of the same information that you define in
-source code using the grammar statement.
+source code using the grammar statement.</p>
 
-This method returns a list, containing zero or more objects of class
-GrammarAltInfo (this name isn't actually anything special to the
-intrinsic class; it's rather an "imported" class that the basic run-time
+<p>This method returns a list, containing zero or more objects of class
+GrammarAltInfo (this name isn’t actually anything special to the
+intrinsic class; it’s rather an “imported” class that the basic run-time
 library defines in the source file gramprod.t). Each GrammarAltInfo
-object in the list defines one alternative in the production's
-alternative list.
+object in the list defines one alternative in the production’s
+alternative list.</p>
 
-(Recall that an alternative consists of a qualifier (such as a
-`\[badness\]` value) and a series of tokens, and
+<p>(Recall that an alternative consists of a qualifier (such as a
+<code class="language-plaintext highlighter-rouge">\[badness\]</code> value) and a series of tokens, and
 that multiple alternatives can be associated with one production, either
-by separating them with `\|` symbols or by
+by separating them with <code class="language-plaintext highlighter-rouge">\|</code> symbols or by
 writing multiple grammar statements associated with the same named
 production. Each GrammarAltInfo object represents one complete group of
-tokens-a run of tokens between `\|` symbols.
-Note that the compiler automatically "flattens" any parenthesized token
+tokens-a run of tokens between <code class="language-plaintext highlighter-rouge">\|</code> symbols.
+Note that the compiler automatically “flattens” any parenthesized token
 groups to construct equivalent completely un-parenthesized token lists.
-For example, if you write a rule that says `'a' ('b'
-\| 'c')`, the compiler automatically converts this to the
-equivalent `'a' 'b' \| 'a' 'c'`, leaving no
-parenthesized groups. This is why you won't find any representation of
-parenthesized groups in what getGrammarInfo() returns-there simply isn't
+For example, if you write a rule that says <code class="language-plaintext highlighter-rouge">'a' ('b'
+\| 'c')</code>, the compiler automatically converts this to the
+equivalent <code class="language-plaintext highlighter-rouge">'a' 'b' \| 'a' 'c'</code>, leaving no
+parenthesized groups. This is why you won’t find any representation of
+parenthesized groups in what getGrammarInfo() returns-there simply isn’t
 any such thing after the compiler has finished processing the source
 code. This greatly simplifies the information representation at
-run-time.)
+run-time.)</p>
 
-Here's what a GrammarAltInfo object looks like:
+<p>Here’s what a GrammarAltInfo object looks like:</p>
 
-```
-    class GrammarAltInfo: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class GrammarAltInfo: object
       gramBadness = 0
       gramMatchObj = nil
       gramTokens = []
     ;
-```
+</code></pre></div></div>
 
-The `gramBadness` property gives the "badness"
+<p>The <code class="language-plaintext highlighter-rouge">gramBadness</code> property gives the “badness”
 value for the alternative; this is the value specified in the
-`\[badness\]` qualifier in the grammar statement
+<code class="language-plaintext highlighter-rouge">\[badness\]</code> qualifier in the grammar statement
 that defined the alternative. If no
-`\[badness\]` qualifier is present, this value
-will be zero.
+<code class="language-plaintext highlighter-rouge">\[badness\]</code> qualifier is present, this value
+will be zero.</p>
 
-The `gramMatchObj` property gives the "match
-object" for the alternative. This is the class that
-`parseTokens()` will instantiate to represent
+<p>The <code class="language-plaintext highlighter-rouge">gramMatchObj</code> property gives the “match
+object” for the alternative. This is the class that
+<code class="language-plaintext highlighter-rouge">parseTokens()</code> will instantiate to represent
 the match when the input token list is found to match the alternative -
-that is, this is the object that's defined directly by the
-`grammar` statement itself. (Recall that each
+that is, this is the object that’s defined directly by the
+<code class="language-plaintext highlighter-rouge">grammar</code> statement itself. (Recall that each
 grammar statement actually defines two objects: the GrammarProd object
 and the match class. The GrammarProd object is only indirectly defined,
 in that multiple grammar statements can add alternatives to the same
 GrammarProd object, hence any one grammar statement only partially
 defines the associated GrammarProd object. The match object is a
-TadsObject class that's uniquely defined by the
-`grammar` statement.)
+TadsObject class that’s uniquely defined by the
+<code class="language-plaintext highlighter-rouge">grammar</code> statement.)</p>
 
-The `gramTokens` property gives a list of the
+<p>The <code class="language-plaintext highlighter-rouge">gramTokens</code> property gives a list of the
 token slots making up the alternative. This is a list of
-GrammarAltTokInfo objects (as with GrammarAltInfo, this class name isn't
-anything special to the intrinsic class; it's simply imported from the
+GrammarAltTokInfo objects (as with GrammarAltInfo, this class name isn’t
+anything special to the intrinsic class; it’s simply imported from the
 library, which defines the class in gramprod.t). The list is in the same
 order as the tokens appear in the grammar statement, which is the order
-in which they're matched to an input token list.
+in which they’re matched to an input token list.</p>
 
-Each GrammarAltTokInfo object describes one token slot. These correspond
-to the "items" in the "item lists" making up an alternative in a grammar
-statement. Here's what a GrammarAltTokInfo object looks like:
+<p>Each GrammarAltTokInfo object describes one token slot. These correspond
+to the “items” in the “item lists” making up an alternative in a grammar
+statement. Here’s what a GrammarAltTokInfo object looks like:</p>
 
-```
-    class GrammarAltTokInfo: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class GrammarAltTokInfo: object
       gramTargetProp = nil
       gramTokenType = nil
       gramTokenInfo = nil
     ;
-```
+</code></pre></div></div>
 
-The `gramTargetProp` property gives the property
-ID of the "target" property for the token slot. This is simply the
-property that appears following a `-\&gt;` symbol
+<p>The <code class="language-plaintext highlighter-rouge">gramTargetProp</code> property gives the property
+ID of the “target” property for the token slot. This is simply the
+property that appears following a <code class="language-plaintext highlighter-rouge">-\&gt;</code> symbol
 in a grammar statement. When GrammarProd.parseTokens() finds a match to
 a production, it constructs a match object to represent the match and
 then sets the property indicated here in the match object to the actual
-matched value for the token slot.
+matched value for the token slot.</p>
 
-The `gramTokenType` property gives the type of
+<p>The <code class="language-plaintext highlighter-rouge">gramTokenType</code> property gives the type of
 value this token slot matches, and gramTokenInfo gives extra information
 that depends on the type. This type will be one of the following (these
-values are defined in the system header file gramprod.h):
+values are defined in the system header file gramprod.h):</p>
 
-- `GramTokTypeProd`: the token slot is a
-  reference to a sub-production (that is, another GrammarProd object),
-  and the slot matches the corresponding part of the input token list if
-  and only if the sub-production matches the input tokens. For this type
-  of token slot, gramTokenInfo contains a reference to the
-  sub-production (a GrammarProd object).
-- `GramTokTypeSpeech`: the token slot matches a
-  specific "part of speech." This means that the token slot matches a
-  single input token, and matches if and only if the input token has the
-  same part of speech as the token slot. A part of speech is simply a
-  "dictionary property" value, and a token has a given part of speech if
-  it appears in the Dictionary passed to
-  `parseTokens()` under the same dictionary
-  property value. The `gramTokenInfo` in this
-  case will be the property ID of the dictionary property (e.g.,
-  `&amp;noun`).
-- `GramTokTypeNSpeech`: the token slot matches
-  any of several parts of speech. This is just like
-  `GramTokTypeSpeech`, but the slot will match
-  any one of a list of property values. The
-  `gramTokenInfo` value in this case will be a
-  list of property IDs.
-- `GramTokTypeLiteral`: the token slot matches a
-  literal string. In this case, an input token will match the token slot
-  only if the input token compares equal to the literal, using the
-  Dictionary's string comparator. In this case, the
-  `gramTokenInfo` value is a string giving the
-  literal text to be matched.
-- `GramTokTypeTokEnum`: the token slot matches a
-  token type. This means that an input token will match the token slot
-  only if the input token has the given token type. A token type is
-  simply an "enum" value defined with the "enum token" syntax; each
-  token in an input list has a token type, assigned by the tokenizer and
-  stored in the standard token list format. In this case, the
-  `gramTokenInfo` value will be the "enum" value
-  giving the token type that the slot matches.
-- `GramTokTypeStar`: the token slot matches all
-  remaining input tokens. This is used to create an alternative that
-  allows a match with more tokens left after the end of the
-  alternative's explicitly listed tokens. There's no extra information
-  for this token slot type, so `gramTokenInfo`
-  is simply `nil` in this case.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GramTokTypeProd</code>: the token slot is a
+reference to a sub-production (that is, another GrammarProd object),
+and the slot matches the corresponding part of the input token list if
+and only if the sub-production matches the input tokens. For this type
+of token slot, gramTokenInfo contains a reference to the
+sub-production (a GrammarProd object).</li>
+  <li><code class="language-plaintext highlighter-rouge">GramTokTypeSpeech</code>: the token slot matches a
+specific “part of speech.” This means that the token slot matches a
+single input token, and matches if and only if the input token has the
+same part of speech as the token slot. A part of speech is simply a
+“dictionary property” value, and a token has a given part of speech if
+it appears in the Dictionary passed to
+<code class="language-plaintext highlighter-rouge">parseTokens()</code> under the same dictionary
+property value. The <code class="language-plaintext highlighter-rouge">gramTokenInfo</code> in this
+case will be the property ID of the dictionary property (e.g.,
+<code class="language-plaintext highlighter-rouge">&amp;noun</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">GramTokTypeNSpeech</code>: the token slot matches
+any of several parts of speech. This is just like
+<code class="language-plaintext highlighter-rouge">GramTokTypeSpeech</code>, but the slot will match
+any one of a list of property values. The
+<code class="language-plaintext highlighter-rouge">gramTokenInfo</code> value in this case will be a
+list of property IDs.</li>
+  <li><code class="language-plaintext highlighter-rouge">GramTokTypeLiteral</code>: the token slot matches a
+literal string. In this case, an input token will match the token slot
+only if the input token compares equal to the literal, using the
+Dictionary’s string comparator. In this case, the
+<code class="language-plaintext highlighter-rouge">gramTokenInfo</code> value is a string giving the
+literal text to be matched.</li>
+  <li><code class="language-plaintext highlighter-rouge">GramTokTypeTokEnum</code>: the token slot matches a
+token type. This means that an input token will match the token slot
+only if the input token has the given token type. A token type is
+simply an “enum” value defined with the “enum token” syntax; each
+token in an input list has a token type, assigned by the tokenizer and
+stored in the standard token list format. In this case, the
+<code class="language-plaintext highlighter-rouge">gramTokenInfo</code> value will be the “enum” value
+giving the token type that the slot matches.</li>
+  <li><code class="language-plaintext highlighter-rouge">GramTokTypeStar</code>: the token slot matches all
+remaining input tokens. This is used to create an alternative that
+allows a match with more tokens left after the end of the
+alternative’s explicitly listed tokens. There’s no extra information
+for this token slot type, so <code class="language-plaintext highlighter-rouge">gramTokenInfo</code>
+is simply <code class="language-plaintext highlighter-rouge">nil</code> in this case.</li>
+</ul>
 
-You might be wondering what the difference is between
-`GrammarProd.getGrammarInfo()` and the match
-object's `grammarInfo()` method. The difference
-is that `GrammarProd.getGrammarInfo()` gives you
-information on the grammar itself, whereas the match object's
-`grammarInfo()` gives you information on the
-*matched* syntax - that is, it tells you how a particular input token
+<p>You might be wondering what the difference is between
+<code class="language-plaintext highlighter-rouge">GrammarProd.getGrammarInfo()</code> and the match
+object’s <code class="language-plaintext highlighter-rouge">grammarInfo()</code> method. The difference
+is that <code class="language-plaintext highlighter-rouge">GrammarProd.getGrammarInfo()</code> gives you
+information on the grammar itself, whereas the match object’s
+<code class="language-plaintext highlighter-rouge">grammarInfo()</code> gives you information on the
+<em>matched</em> syntax - that is, it tells you how a particular input token
 list matched a particular grammar using
-`parseTokens()`.
+<code class="language-plaintext highlighter-rouge">parseTokens()</code>.</p>
 
-So, the match object's `grammarInfo()` gives you
-information on the syntax of a *particular input token list*. In
-contrast, `GrammarProd.getGrammarInfo()` tells
+<p>So, the match object’s <code class="language-plaintext highlighter-rouge">grammarInfo()</code> gives you
+information on the syntax of a <em>particular input token list</em>. In
+contrast, <code class="language-plaintext highlighter-rouge">GrammarProd.getGrammarInfo()</code> tells
 you about the grammar itself, independent of any input token list; it
 returns a direct representation of the information defined in
-`grammar` statements that appeared in the source
-code.
+<code class="language-plaintext highlighter-rouge">grammar</code> statements that appeared in the source
+code.</p>
 
-</div>
+<p><span id="parseTokens"></span></p>
 
-<span id="parseTokens"></span>
+<p><code class="language-plaintext highlighter-rouge">parseTokens(*tokenList*, *dict*)</code></p>
 
-`parseTokens(*tokenList*, *dict*)`
+<p>This method matches input, in the form of a list of tokens, to the
+GrammarProd object’s rule list.</p>
 
-<div class="fdef">
-
-This method matches input, in the form of a list of tokens, to the
-GrammarProd object's rule list.
-
-*tokenList* is a list of input tokens to match to the rule. (This can be
-a list, a vector, or a [list-like object](opoverload.html#listlike).)
+<p><em>tokenList</em> is a list of input tokens to match to the rule. (This can be
+a list, a vector, or a <a href="opoverload.html#listlike">list-like object</a>.)
 Each entry in the list is a token specifier, which is a sublist
 consisting of at least two elements: the first element is the value of
-the token, and the second element is the type of the token. Each token's
+the token, and the second element is the type of the token. Each token’s
 sublist can include more elements if desired; the parser will preserve
-the additional elements, but doesn't currently use any beyond the first
+the additional elements, but doesn’t currently use any beyond the first
 two. This format is compatible with the format produced by the system
-library's Tokenizer class, so you can simply feed a token list produced
+library’s Tokenizer class, so you can simply feed a token list produced
 by a Tokenizer object directly into the
-`parseTokens()` method.
+<code class="language-plaintext highlighter-rouge">parseTokens()</code> method.</p>
 
-*dict* is a Dictionary object, or `nil` if no
+<p><em>dict</em> is a Dictionary object, or <code class="language-plaintext highlighter-rouge">nil</code> if no
 dictionary is to be used. If this argument is not
-`nil`, it must be an object of intrinsic class
+<code class="language-plaintext highlighter-rouge">nil</code>, it must be an object of intrinsic class
 Dictionary. If any of the syntax rules that the parser encounters
 include dictionary property items, the parser will look up the
 corresponding token in the given dictionary to determine the properties
 under which the word is defined. A dictionary is not required if no
 dictionary properties are used in the syntax rules to be examined. The
 dictionary also specifies how literals in grammar rules are matched to
-tokens: literals are matched using the Dictionary's "comparator" object,
+tokens: literals are matched using the Dictionary’s “comparator” object,
 so that literals are matched using the same rules that the Dictionary
-uses to match tokens against dictionary words.
+uses to match tokens against dictionary words.</p>
 
-You always call this method on the "root" production of the grammar you
-wish to match. There's nothing special about a root production object -
+<p>You always call this method on the “root” production of the grammar you
+wish to match. There’s nothing special about a root production object -
 you can use any production here. For example, if you want to parse just
-a noun phrase, you can call `parseTokens()` on
+a noun phrase, you can call <code class="language-plaintext highlighter-rouge">parseTokens()</code> on
 your noun phrase production object, even if the noun phrase production
-is used as a sub-production in other rules.
+is used as a sub-production in other rules.</p>
 
-This method returns a list of matches. If the return list is empty, it
+<p>This method returns a list of matches. If the return list is empty, it
 indicates that there were no matches at all. Otherwise, each entry in
-the list is the top object of a "match tree."
+the list is the top object of a “match tree.”</p>
 
-A match tree is a tree of objects that the parser dynamically creates to
+<p>A match tree is a tree of objects that the parser dynamically creates to
 represent the syntax structure of the match. Each object is an instance
-of one of the *match object classes* defined in a
-`grammar` statement. Each of these objects has
+of one of the <em>match object classes</em> defined in a
+<code class="language-plaintext highlighter-rouge">grammar</code> statement. Each of these objects has
 the properties that appear after arrow symbols
-(`-\&gt;`) in the grammar item list set to the
-actual values from the input token list.
+(<code class="language-plaintext highlighter-rouge">-\&gt;</code>) in the grammar item list set to the
+actual values from the input token list.</p>
 
-</div>
+<h2 id="finding-the-original-tokens">Finding the original tokens</h2>
 
-## Finding the original tokens
-
-As `parseTokens()` builds the match tree, it
+<p>As <code class="language-plaintext highlighter-rouge">parseTokens()</code> builds the match tree, it
 sets properties of each match object to indicate the indices of the
 first and last tokens involved in the match; these bounds are inclusive.
 The properties the parser sets are called
-`firstTokenIndex` and
-`lastTokenIndex`.
+<code class="language-plaintext highlighter-rouge">firstTokenIndex</code> and
+<code class="language-plaintext highlighter-rouge">lastTokenIndex</code>.</p>
 
-In addition, `parseTokens()` automatically sets
-the `tokenList` property of each match tree
+<p>In addition, <code class="language-plaintext highlighter-rouge">parseTokens()</code> automatically sets
+the <code class="language-plaintext highlighter-rouge">tokenList</code> property of each match tree
 object to a reference to the original token list passed into
-`parseTokens()`. So, for a given match tree
+<code class="language-plaintext highlighter-rouge">parseTokens()</code>. So, for a given match tree
 object match, the tokens matching the production can be obtained as
-follows:
+follows:</p>
 
-```
-    toks = match.tokenList.sublist(
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    toks = match.tokenList.sublist(
        match.firstTokenIndex, 
        match.lastTokenIndex - match.firstTokenIndex + 1);
-```
+</code></pre></div></div>
 
-In addition to the token list, `parseTokens()`
-stores a list of "match results" in each object in the match tree, in
-the property `tokenMatchList`. This list gives
-the result of the `matchValues()` method in the
-Dictionary's comparator object for each token that matched a literal in
+<p>In addition to the token list, <code class="language-plaintext highlighter-rouge">parseTokens()</code>
+stores a list of “match results” in each object in the match tree, in
+the property <code class="language-plaintext highlighter-rouge">tokenMatchList</code>. This list gives
+the result of the <code class="language-plaintext highlighter-rouge">matchValues()</code> method in the
+Dictionary’s comparator object for each token that matched a literal in
 a grammar rule. Each element of this list gives the match result for the
 corresponding element of the token list, so
-`tokenMatchList\[3\]` gives the
-`matchValues()` result for the third token. If a
+<code class="language-plaintext highlighter-rouge">tokenMatchList\[3\]</code> gives the
+<code class="language-plaintext highlighter-rouge">matchValues()</code> result for the third token. If a
 token matches a dictionary property rather than a literal, its
-`tokenMatchList` entry will be
-`nil`, since
-`matchValues()` is not used to match such
-tokens.
+<code class="language-plaintext highlighter-rouge">tokenMatchList</code> entry will be
+<code class="language-plaintext highlighter-rouge">nil</code>, since
+<code class="language-plaintext highlighter-rouge">matchValues()</code> is not used to match such
+tokens.</p>
 
-The `tokenMatchList` information can be used to
+<p>The <code class="language-plaintext highlighter-rouge">tokenMatchList</code> information can be used to
 find out how well a particular token matched a grammar literal. For
 example, this can be used to determine if the token matched with
 truncation, or with accent substitution using an equivalence mapping
-(see the [StringComparator class](strcomp.html) for more details on these
-types of matches).
+(see the <a href="strcomp.html">StringComparator class</a> for more details on these
+types of matches).</p>
 
-(Note: to be precise, the parser uses the properties exported under the
-global names "GrammarProd.firstTokenIndex" and
-"GrammarProd.lastTokenIndex" for the indices, "GrammarProd.tokenList"
-for the token list, and "GrammarProd.tokenMatchList" for the token match
+<p>(Note: to be precise, the parser uses the properties exported under the
+global names “GrammarProd.firstTokenIndex” and
+“GrammarProd.lastTokenIndex” for the indices, “GrammarProd.tokenList”
+for the token list, and “GrammarProd.tokenMatchList” for the token match
 result list. Since the GrammarProd header file,
-`\&lt;gramprod.h\&gt;`, defines these exports, most
-users can ignore this detail.)
+<code class="language-plaintext highlighter-rouge">\&lt;gramprod.h\&gt;</code>, defines these exports, most
+users can ignore this detail.)</p>
 
-## grammarTag
+<h2 id="grammartag">grammarTag</h2>
 
-Each match object class defines the property
-`grammarTag` as a string value containing the
-"tag" for the grammar rule that defined it. This property definition is
+<p>Each match object class defines the property
+<code class="language-plaintext highlighter-rouge">grammarTag</code> as a string value containing the
+“tag” for the grammar rule that defined it. This property definition is
 automatically supplied by the compiler for each match object defined by
-a `grammar` statement.
+a <code class="language-plaintext highlighter-rouge">grammar</code> statement.</p>
 
-Note that when you add a grammar rule dynamically with the
-`addAlt()` method, this property isn't
+<p>Note that when you add a grammar rule dynamically with the
+<code class="language-plaintext highlighter-rouge">addAlt()</code> method, this property isn’t
 automatically added to the match object class you supply. You can
-manually define the property on the match object if you wish.
+manually define the property on the match object if you wish.</p>
 
-## grammarInfo
+<h2 id="grammarinfo">grammarInfo</h2>
 
-The compiler automatically generates a method called
-`grammarInfo()` for each match object class.
+<p>The compiler automatically generates a method called
+<code class="language-plaintext highlighter-rouge">grammarInfo()</code> for each match object class.
 This method provides information that allows the program to traverse a
 match tree without knowing anything about the structure of the tree,
 which is useful for debugging as well as for searching a tree for
-particular types of matches.
+particular types of matches.</p>
 
-Note that when you add a grammar rule dynamically with the
-`addAlt()` method, the
-`grammarInfo()` method isn't automatically added
+<p>Note that when you add a grammar rule dynamically with the
+<code class="language-plaintext highlighter-rouge">addAlt()</code> method, the
+<code class="language-plaintext highlighter-rouge">grammarInfo()</code> method isn’t automatically added
 to the match object class you supply. You must manually define this
-method if you want it to be available for a dynamically added rule.
+method if you want it to be available for a dynamically added rule.</p>
 
-The `grammarInfo()` method returns a list. The
+<p>The <code class="language-plaintext highlighter-rouge">grammarInfo()</code> method returns a list. The
 first element in the list is the name of the match, which is simply the
 name of the production, plus the tag if one was specified. Each
 subsequent element is the value of one of the properties used after an
-arrow (`-\&gt;`) in the production's rule or rules;
+arrow (<code class="language-plaintext highlighter-rouge">-\&gt;</code>) in the production’s rule or rules;
 the properties appear in the list in the same order they are specified
 in the rule. If the rule contains multiple alternatives, each property
-appears only once in the list.
+appears only once in the list.</p>
 
-For example, suppose we define a rule like this:
+<p>For example, suppose we define a rule like this:</p>
 
-```
-    grammar nounPhrase(1): adjective-&gt;adj_ noun-&gt;noun_ : object;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    grammar nounPhrase(1): adjective-&gt;adj_ noun-&gt;noun_ : object;
+</code></pre></div></div>
 
-Now, suppose this rule matched the input "magic book." The
-`grammarInfo()` method for the match object
-would look like this:
+<p>Now, suppose this rule matched the input “magic book.” The
+<code class="language-plaintext highlighter-rouge">grammarInfo()</code> method for the match object
+would look like this:</p>
 
-```
-    ['nounPhrase(1)', 'magic', 'book']
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ['nounPhrase(1)', 'magic', 'book']
+</code></pre></div></div>
 
-The first element is the production name with its tag. The second
-element is the value of the `adj\_` property,
+<p>The first element is the production name with its tag. The second
+element is the value of the <code class="language-plaintext highlighter-rouge">adj\_</code> property,
 which in this case is the literal token matched; likewise, the third
-element is the value of the `noun\_` property,
-which is another literal token.
+element is the value of the <code class="language-plaintext highlighter-rouge">noun\_</code> property,
+which is another literal token.</p>
 
-The `grammarInfo()` method can be used to write
+<p>The <code class="language-plaintext highlighter-rouge">grammarInfo()</code> method can be used to write
 generic routines that traverse arbitrary match trees. For example, we
 could write a simple routine to display, for debugging purposes, the
-contents of a match tree:
+contents of a match tree:</p>
 
-```
-    showGrammar(match, indent)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showGrammar(match, indent)
     {
       local info;
 
@@ -955,7 +906,7 @@ contents of a match tree:
       else if (dataType(match) == TypeSString)
       {
         /* it's a literal token match - show it */
-        "'&lt;<match>&gt;'\n";
+        "'&lt;&lt;match&gt;&gt;'\n";
         return;
       }
 
@@ -983,37 +934,36 @@ contents of a match tree:
         "&lt;&lt;match.tokenList[i]&gt;&gt;";
       }
     }
-```
+</code></pre></div></div>
 
-## Sample Grammar Rules
+<h2 id="sample-grammar-rules">Sample Grammar Rules</h2>
 
-Let's define some grammar rules for a very simple noun phrase parser.
-For the purposes of this example, we'll keep things very simple: our
+<p>Let’s define some grammar rules for a very simple noun phrase parser.
+For the purposes of this example, we’ll keep things very simple: our
 noun phrases will consist of a noun, or an adjective and a noun, or an
-adjective and an adjective and a noun, or so on.
+adjective and an adjective and a noun, or so on.</p>
 
-The simplest way we could define these rules is by enumerating all of
+<p>The simplest way we could define these rules is by enumerating all of
 the different phrasings we could use. So, we could write something like
-this:
+this:</p>
 
-```
-    grammar nounPhrase: noun-&gt;noun_: object;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    grammar nounPhrase: noun-&gt;noun_: object;
     grammar nounPhrase: adjective-&gt;adj_ noun-&gt;noun_: object;
     grammar nounPhrase: adjective-&gt;adj1_ adjective-&gt;adj2_ noun-&gt;noun_:
       object;
     grammar nounPhrase: adjective-&gt;adj1_ adjective-&gt;adj2_
       adjective-&gt;adj3_ noun-&gt;noun_: object;
-```
+</code></pre></div></div>
 
-And so on, up to some fixed limit to the number of adjectives we'll
-allow.
+<p>And so on, up to some fixed limit to the number of adjectives we’ll
+allow.</p>
 
-Now, this will work, but it's not very flexible. If we stop at six
-adjectives, users might complain that they can't use eight. We could add
+<p>Now, this will work, but it’s not very flexible. If we stop at six
+adjectives, users might complain that they can’t use eight. We could add
 phrasings for seven and eight adjectives, but then users might complain
-about ten. Our work would never end.
+about ten. Our work would never end.</p>
 
-Fortunately, there is a more general approach. The recursion-minded
+<p>Fortunately, there is a more general approach. The recursion-minded
 reader might have by now observed that we could in principle express a
 rule for an unlimited number of adjectives by saying that a noun phrase
 is a noun, or an adjective followed by a noun phrase. This neatly
@@ -1021,125 +971,119 @@ subsumes any number of adjectives: with one adjective, we have a noun
 phrase consisting of an adjective followed by a noun phrase consisting
 of a noun; with two adjectives, we have an adjective followed by a noun
 phrase which consists of an adjective followed by a noun phrase which
-consists of a noun; and so on.
+consists of a noun; and so on.</p>
 
-Not only can we express our noun phrase syntax this way in principle, we
+<p>Not only can we express our noun phrase syntax this way in principle, we
 can express it this way in fact. This is precisely the kind of thing at
-which our production scheme excels. Here's the simpler and much more
-flexible noun phrase grammar:
+which our production scheme excels. Here’s the simpler and much more
+flexible noun phrase grammar:</p>
 
-```
-    grammar nounPhrase: noun-&gt;noun_: object;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    grammar nounPhrase: noun-&gt;noun_: object;
     grammar nounPhrase: adjective-&gt;adj_ nounPhrase-&gt;np_: object;
-```
+</code></pre></div></div>
 
-That's it - this completely solves our problem, no matter how many
-adjectives our verbose user types. Suppose the user types "little red
-wagon": we first match the second alternative (with adjective "little"),
-leaving "red wagon" still to be parsed; we then match the second
-alternative again (with adjective "red"), leaving just "wagon"
+<p>That’s it - this completely solves our problem, no matter how many
+adjectives our verbose user types. Suppose the user types “little red
+wagon”: we first match the second alternative (with adjective “little”),
+leaving “red wagon” still to be parsed; we then match the second
+alternative again (with adjective “red”), leaving just “wagon”
 remaining; and finally we match the first alternative (with noun
-"wagon"). Here's how we actually call the parser to parse this:
+“wagon”). Here’s how we actually call the parser to parse this:</p>
 
-```
-    match = nounPhrase.parseTokens(tokList, gDict);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    match = nounPhrase.parseTokens(tokList, gDict);
+</code></pre></div></div>
 
-(Where do we get the `tokList` value to pass
+<p>(Where do we get the <code class="language-plaintext highlighter-rouge">tokList</code> value to pass
 into the method? We can use the standard run-time library class
 Tokenizer, or a subclass, and call its
-`tokenize()` method to produce a token list from
-a simple string we want to parse.)
+<code class="language-plaintext highlighter-rouge">tokenize()</code> method to produce a token list from
+a simple string we want to parse.)</p>
 
-So, what good is all of this? Yes, we've built a set of rules that
+<p>So, what good is all of this? Yes, we’ve built a set of rules that
 define a syntax structure, and we know how to call the parser to scan
 the rules. However, how do we actually use this for anything? What do we
 know, apart from whether or not an input token list matches the syntax?
-It turns out we know a great deal.
+It turns out we know a great deal.</p>
 
-When the parser matches our syntax lists, it creates "match trees" that
+<p>When the parser matches our syntax lists, it creates “match trees” that
 give us the details of exactly how the input tokens are structured,
 according to our grammar. The match tree consists of objects that the
 parser creates dynamically; these objects are instances of our grammar
-objects-not of the production objects, but of the unnamed "processor"
-objects that go with the grammar statement.
+objects-not of the production objects, but of the unnamed “processor”
+objects that go with the grammar statement.</p>
 
-Let us, for the moment, assign some arbitrary labels to our processor
-objects. These aren't really class names - we're just using these to
-keep track of what's going on:
+<p>Let us, for the moment, assign some arbitrary labels to our processor
+objects. These aren’t really class names - we’re just using these to
+keep track of what’s going on:</p>
 
-```
-    grammar nounPhrase: noun-&gt;noun_: object; // pseudo-class "A"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    grammar nounPhrase: noun-&gt;noun_: object; // pseudo-class "A"
     grammar nounPhrase: adjective-&gt;adj_ nounPhrase-&gt;np_: 
       object; // pseudo-class "B"
-```
+</code></pre></div></div>
 
-When we call the `parseTokens()` method, the
-parser builds up match trees consisting of instances of "A" and "B". For
-our "little red wagon" example, here's what the match tree looks like,
-assigning arbitrary names to the objects (which wouldn't really happen,
-since they're dynamically created):
+<p>When we call the <code class="language-plaintext highlighter-rouge">parseTokens()</code> method, the
+parser builds up match trees consisting of instances of “A” and “B”. For
+our “little red wagon” example, here’s what the match tree looks like,
+assigning arbitrary names to the objects (which wouldn’t really happen,
+since they’re dynamically created):</p>
 
-```
-    obj1: B  adj_ = 'little'  np_ = obj2 ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj1: B  adj_ = 'little'  np_ = obj2 ;
     obj2: B  adj_ = 'red'     np_ = obj3 ;
     obj3: A  noun_ = 'wagon' ;
-```
+</code></pre></div></div>
 
-The "root" of the match tree is obj1. This example might make it more
-apparent why we call this a "tree": obj1 is the root, with an adjective
+<p>The “root” of the match tree is obj1. This example might make it more
+apparent why we call this a “tree”: obj1 is the root, with an adjective
 on one branch and obj2 on the other; obj2 in turn branches to an
-adjective and obj3; and obj3 has a noun.
+adjective and obj3; and obj3 has a noun.</p>
 
-The next step in making these match trees useful is to give them some
-methods.
+<p>The next step in making these match trees useful is to give them some
+methods.</p>
 
-The fact that a nounPhrase can be used in syntax anywhere a noun phrase
+<p>The fact that a nounPhrase can be used in syntax anywhere a noun phrase
 is required means that all of the different alternative forms of noun
-phrases should provide a common interface. Clearly, they don't right
+phrases should provide a common interface. Clearly, they don’t right
 now: each alternative has its own set of properties. However, these
-properties are not meant as a public interface; they're intended only
+properties are not meant as a public interface; they’re intended only
 for the use of the specific alternative processor object. What we must
 now do is define a public interface, which provides a common set of
 functionality for every nounPhrase alternative, and then specify an
 alternative-specific implementation of the public interface; the
 implementation effectively provides the bridge from the
 alternative-specific properties to the common information that any noun
-phrase must provide. For now, though, let's define a very simple public
+phrase must provide. For now, though, let’s define a very simple public
 interface that simply provides a debugging display of the object. To do
-this, we'll define a method, debugPrint(), that any nounPhrase processor
-object must provide. Here's how we could implement this:
+this, we’ll define a method, debugPrint(), that any nounPhrase processor
+object must provide. Here’s how we could implement this:</p>
 
-```
-    grammar nounPhrase: noun-&gt;noun_: object
-      debugPrint() { "noun phrase: noun = &lt;<noun_>&gt;\n"; }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    grammar nounPhrase: noun-&gt;noun_: object
+      debugPrint() { "noun phrase: noun = &lt;&lt;noun_&gt;&gt;\n"; }
     ;
     grammar nounPhrase: adjective-&gt;adj_ nounPhrase-&gt;np_: object
       debugPrint()
       {
-        "noun phrase: adjective = &lt;<adj_>&gt;, nounPhrase = {\n";
+        "noun phrase: adjective = &lt;&lt;adj_&gt;&gt;, nounPhrase = {\n";
         np_.debugPrint();
         "}\n";
 
       }
     ;
-```
+</code></pre></div></div>
 
-Note how the public interface method is implemented in every noun phrase
+<p>Note how the public interface method is implemented in every noun phrase
 processor object, but the actual implementation varies according to the
 underlying information in the processor object. We actually take
-advantage of this in the recursive call to np\_.debugPrint() in the
-second alternative: we know for a fact that np\_ refers to a noun phrase
+advantage of this in the recursive call to np_.debugPrint() in the
+second alternative: we know for a fact that np_ refers to a noun phrase
 processor object, because our syntax says so, so we can call its
 debugPrint() method without having to know what kind of nounPhrase it
-is. This is important in our "little red wagon" example, because we'll
-actually have both kinds of nounPhrase alternatives present.
+is. This is important in our “little red wagon” example, because we’ll
+actually have both kinds of nounPhrase alternatives present.</p>
 
-Here's some code that will parse a noun phrase and then show the
-debugging display for the result:
+<p>Here’s some code that will parse a noun phrase and then show the
+debugging display for the result:</p>
 
-```
-    local str;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local str;
     local toks;
     local match;
 
@@ -1156,88 +1100,83 @@ debugging display for the result:
     /* display the match tree */
     for (local i = 1, local cnt = match.length() ; i &lt;= cnt ; ++i)
     {
-      "Match #&lt;<i>&gt;:\n";
+      "Match #&lt;&lt;i&gt;&gt;:\n";
       match[i].debugPrint();
     }
-```
+</code></pre></div></div>
 
-For our "little red wagon" example, we'll see something like this:
+<p>For our “little red wagon” example, we’ll see something like this:</p>
 
-```
-    Match #1:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Match #1:
     noun phrase: adjective = little, nounPhrase = {
     noun phrase: adjective = red, nounPhrase = {
     noun phrase: noun = wagon
     }
     }
-```
+</code></pre></div></div>
 
-## Exported class construction
+<h2 id="exported-class-construction">Exported class construction</h2>
 
-The `getGrammarInfo()` method depends upon the
+<p>The <code class="language-plaintext highlighter-rouge">getGrammarInfo()</code> method depends upon the
 program to export the GramAltInfo and GramAltTokInfo classes. In most
-cases, you won't have to write these classes yourself, because you can
+cases, you won’t have to write these classes yourself, because you can
 simply use the implementations provided in the basic run-time library,
-in the source file gramprod.t. For reference purposes, we'll describe
-what GrammarProd requires of these classes.
+in the source file gramprod.t. For reference purposes, we’ll describe
+what GrammarProd requires of these classes.</p>
 
-First, the classes must be exported under the names
-'GrammarProd.GrammarAltInfo' and 'GrammarProd.GrammarAltTokInfo',
+<p>First, the classes must be exported under the names
+‘GrammarProd.GrammarAltInfo’ and ‘GrammarProd.GrammarAltTokInfo’,
 respectively. Second, GrammarProd requires the classes to define
 constructors that accept particular argument lists, because
 getGrammarInfo() uses the constructors to pass the grammar description
 information to the classes. The parameter lists for the constructors are
-as follows:
+as follows:</p>
 
-`GrammarAltInfo.construct(*score*, *badness*,
-*matchObj*, *tokList*)`  
-`GrammarAltTokInfo.construct(*prop*, *typ*,
-*info*)`
+<p><code class="language-plaintext highlighter-rouge">GrammarAltInfo.construct(*score*, *badness*,
+*matchObj*, *tokList*)</code><br />
+<code class="language-plaintext highlighter-rouge">GrammarAltTokInfo.construct(*prop*, *typ*,
+*info*)</code></p>
 
-The arguments are:
+<p>The arguments are:</p>
 
-- *score*: an integer value; this isn't currently used and can be
-  discarded
-- *badness*: an integer giving the \[badness\] attribute for the
-  alternative
-- *matchObj*: an object reference giving the match object class for the
-  alternative
-- *tokList*: a list of GrammarAltTokInfo objects
-- *prop*: a property ID giving the target property of the token slot
-- *typ*: an integer giving the token slot type (one of the
-  `GramTokTypeXxx` values)
-- *info*: extra information that depends on the token slot type; this is
-  the same information described earlier for the
-  `GrammarAltTokInfo.gramTokenInfo` property
+<ul>
+  <li><em>score</em>: an integer value; this isn’t currently used and can be
+discarded</li>
+  <li><em>badness</em>: an integer giving the [badness] attribute for the
+alternative</li>
+  <li><em>matchObj</em>: an object reference giving the match object class for the
+alternative</li>
+  <li><em>tokList</em>: a list of GrammarAltTokInfo objects</li>
+  <li><em>prop</em>: a property ID giving the target property of the token slot</li>
+  <li><em>typ</em>: an integer giving the token slot type (one of the
+<code class="language-plaintext highlighter-rouge">GramTokTypeXxx</code> values)</li>
+  <li><em>info</em>: extra information that depends on the token slot type; this is
+the same information described earlier for the
+<code class="language-plaintext highlighter-rouge">GrammarAltTokInfo.gramTokenInfo</code> property</li>
+</ul>
 
-To ensure compatibility with any future extensions to the GrammarProd
+<p>To ensure compatibility with any future extensions to the GrammarProd
 class, the implementations in the run-time library use variable argument
 lists in their constructors-they use the argument lists shown above, but
-add a "..." symbol at the end so that they'll accept arbitrary
+add a “…” symbol at the end so that they’ll accept arbitrary
 additional arguments. This ensures that code compiled with the current
 version of the library will continue to run under any future VMs that
 include updated GrammarProd classes that pass additional arguments to
-the GrammarAltInfo and/or GrammarAltTokInfo constructors.
+the GrammarAltInfo and/or GrammarAltTokInfo constructors.</p>
 
-In the run-time library implementation of the classes, the constructors
+<p>In the run-time library implementation of the classes, the constructors
 simply store the argument values in the corresponding instance
-properties, so that program code can refer to it as needed.
+properties, so that program code can refer to it as needed.</p>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; GrammarProd  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; GrammarProd<br />
 <span class="navnp"><a href="filename.html" class="nav"><em>Prev:</em> FileName</a>
     <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
-</span>
+</span></p>
 
-</div>
-</i></adj_></noun_></match></div>
 
 </main>
 <footer>

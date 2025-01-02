@@ -47,88 +47,56 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-TopicPhrase is a special kind of NounPhrase for topics (ASK ABOUT, TELL
-ABOUT, TALK ABOUT, LOOK UP, etc). These phrases aren't resolved to
+<p>TopicPhrase is a special kind of NounPhrase for topics (ASK ABOUT, TELL
+ABOUT, TALK ABOUT, LOOK UP, etc). These phrases aren’t resolved to
 game-world objects the way ordinary noun phrases are, but instead are
-resolved to conversation topic objects.
+resolved to conversation topic objects.</p>
 
-*Modified in
-[english.t](../file/english.t.html)\[[2026](../source/english.t.html#2026)\]:*  
+<p><em>Modified in
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2026">2026</a>]:</em><br />
 Modifications to TopicPhrase to make it work better with the
-English-specific part of the library.
+English-specific part of the library.</p>
 
-`class `**`TopicPhrase`**` :   `[`NounPhrase`](../object/NounPhrase.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TopicPhrase</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/NounPhrase.html"><code class="language-plaintext highlighter-rouge">NounPhrase</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TopicPhrase</code></strong><br />
 <a href="../object/NounPhrase.html"><code class="language-plaintext highlighter-rouge">NounPhrase</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhrase</code> :<br />
-<a href="../object/NounPhrase.html#contPrep"><code class="language-plaintext highlighter-rouge">contPrep</code></a><a href="../object/NounPhrase.html#contQual"><code class="language-plaintext highlighter-rouge">contQual</code></a><a href="../object/NounPhrase.html#coreProd"><code class="language-plaintext highlighter-rouge">coreProd</code></a><a href="../object/NounPhrase.html#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a><a href="../object/NounPhrase.html#disambigNameList"><code class="language-plaintext highlighter-rouge">disambigNameList</code></a><a href="../object/NounPhrase.html#errName"><code class="language-plaintext highlighter-rouge">errName</code></a><a href="../object/NounPhrase.html#errNameProd"><code class="language-plaintext highlighter-rouge">errNameProd</code></a><a href="../object/NounPhrase.html#exclusions"><code class="language-plaintext highlighter-rouge">exclusions</code></a><a href="../object/NounPhrase.html#locQual"><code class="language-plaintext highlighter-rouge">locQual</code></a><a href="../object/NounPhrase.html#locType"><code class="language-plaintext highlighter-rouge">locType</code></a><a href="../object/NounPhrase.html#matches"><code class="language-plaintext highlighter-rouge">matches</code></a><a href="../object/NounPhrase.html#objs"><code class="language-plaintext highlighter-rouge">objs</code></a><a href="../object/NounPhrase.html#ordinal"><code class="language-plaintext highlighter-rouge">ordinal</code></a><a href="../object/NounPhrase.html#parent"><code class="language-plaintext highlighter-rouge">parent</code></a><a href="../object/NounPhrase.html#possQual"><code class="language-plaintext highlighter-rouge">possQual</code></a><a href="../object/NounPhrase.html#prod"><code class="language-plaintext highlighter-rouge">prod</code></a><a href="../object/NounPhrase.html#pronoun"><code class="language-plaintext highlighter-rouge">pronoun</code></a><a href="../object/NounPhrase.html#quantifier"><code class="language-plaintext highlighter-rouge">quantifier</code></a><a href="../object/NounPhrase.html#role"><code class="language-plaintext highlighter-rouge">role</code></a><a href="../object/NounPhrase.html#tokens"><code class="language-plaintext highlighter-rouge">tokens</code></a></p>
+<a href="../object/NounPhrase.html#contPrep"><code class="language-plaintext highlighter-rouge">contPrep</code></a> <a href="../object/NounPhrase.html#contQual"><code class="language-plaintext highlighter-rouge">contQual</code></a> <a href="../object/NounPhrase.html#coreProd"><code class="language-plaintext highlighter-rouge">coreProd</code></a> <a href="../object/NounPhrase.html#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a> <a href="../object/NounPhrase.html#disambigNameList"><code class="language-plaintext highlighter-rouge">disambigNameList</code></a> <a href="../object/NounPhrase.html#errName"><code class="language-plaintext highlighter-rouge">errName</code></a> <a href="../object/NounPhrase.html#errNameProd"><code class="language-plaintext highlighter-rouge">errNameProd</code></a> <a href="../object/NounPhrase.html#exclusions"><code class="language-plaintext highlighter-rouge">exclusions</code></a> <a href="../object/NounPhrase.html#locQual"><code class="language-plaintext highlighter-rouge">locQual</code></a> <a href="../object/NounPhrase.html#locType"><code class="language-plaintext highlighter-rouge">locType</code></a> <a href="../object/NounPhrase.html#matches"><code class="language-plaintext highlighter-rouge">matches</code></a> <a href="../object/NounPhrase.html#objs"><code class="language-plaintext highlighter-rouge">objs</code></a> <a href="../object/NounPhrase.html#ordinal"><code class="language-plaintext highlighter-rouge">ordinal</code></a> <a href="../object/NounPhrase.html#parent"><code class="language-plaintext highlighter-rouge">parent</code></a> <a href="../object/NounPhrase.html#possQual"><code class="language-plaintext highlighter-rouge">possQual</code></a> <a href="../object/NounPhrase.html#prod"><code class="language-plaintext highlighter-rouge">prod</code></a> <a href="../object/NounPhrase.html#pronoun"><code class="language-plaintext highlighter-rouge">pronoun</code></a> <a href="../object/NounPhrase.html#quantifier"><code class="language-plaintext highlighter-rouge">quantifier</code></a> <a href="../object/NounPhrase.html#role"><code class="language-plaintext highlighter-rouge">role</code></a> <a href="../object/NounPhrase.html#tokens"><code class="language-plaintext highlighter-rouge">tokens</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#matchNameScope"><code class="language-plaintext highlighter-rouge">matchNameScope</code></a><a href="#matchVocab"><code class="language-plaintext highlighter-rouge">matchVocab</code></a><a href="#selectObjects"><code class="language-plaintext highlighter-rouge">selectObjects</code></a></p>
+<p><a href="#matchNameScope"><code class="language-plaintext highlighter-rouge">matchNameScope</code></a> <a href="#matchVocab"><code class="language-plaintext highlighter-rouge">matchVocab</code></a> <a href="#selectObjects"><code class="language-plaintext highlighter-rouge">selectObjects</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhrase</code> :<br />
-<a href="../object/NounPhrase.html#addContents"><code class="language-plaintext highlighter-rouge">addContents</code></a><a href="../object/NounPhrase.html#addExclusionItem"><code class="language-plaintext highlighter-rouge">addExclusionItem</code></a><a href="../object/NounPhrase.html#addLiteral"><code class="language-plaintext highlighter-rouge">addLiteral</code></a><a href="../object/NounPhrase.html#addLocation"><code class="language-plaintext highlighter-rouge">addLocation</code></a><a href="../object/NounPhrase.html#addMatches"><code class="language-plaintext highlighter-rouge">addMatches</code></a><a href="../object/NounPhrase.html#addOrdinal"><code class="language-plaintext highlighter-rouge">addOrdinal</code></a><a href="../object/NounPhrase.html#addPossessive"><code class="language-plaintext highlighter-rouge">addPossessive</code></a><a href="../object/NounPhrase.html#addQuantifier"><code class="language-plaintext highlighter-rouge">addQuantifier</code></a><a href="../object/NounPhrase.html#ambigError"><code class="language-plaintext highlighter-rouge">ambigError</code></a><a href="../object/NounPhrase.html#applyContQual"><code class="language-plaintext highlighter-rouge">applyContQual</code></a><a href="../object/NounPhrase.html#applyDisambig"><code class="language-plaintext highlighter-rouge">applyDisambig</code></a><a href="../object/NounPhrase.html#applyExclusion"><code class="language-plaintext highlighter-rouge">applyExclusion</code></a><a href="../object/NounPhrase.html#applyLocational"><code class="language-plaintext highlighter-rouge">applyLocational</code></a><a href="../object/NounPhrase.html#applyPossessive"><code class="language-plaintext highlighter-rouge">applyPossessive</code></a><a href="../object/NounPhrase.html#buildObjList"><code class="language-plaintext highlighter-rouge">buildObjList</code></a><a href="../object/NounPhrase.html#clone"><code class="language-plaintext highlighter-rouge">clone</code></a><a href="../object/NounPhrase.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/NounPhrase.html#contains"><code class="language-plaintext highlighter-rouge">contains</code></a><a href="../object/NounPhrase.html#disambiguate"><code class="language-plaintext highlighter-rouge">disambiguate</code></a><a href="../object/NounPhrase.html#expandErrName"><code class="language-plaintext highlighter-rouge">expandErrName</code></a><a href="../object/NounPhrase.html#isAllEquivalent"><code class="language-plaintext highlighter-rouge">isAllEquivalent</code></a><a href="../object/NounPhrase.html#isMultiple"><code class="language-plaintext highlighter-rouge">isMultiple</code></a><a href="../object/NounPhrase.html#matchVocabPoss"><code class="language-plaintext highlighter-rouge">matchVocabPoss</code></a><a href="../object/NounPhrase.html#resolveAll"><code class="language-plaintext highlighter-rouge">resolveAll</code></a><a href="../object/NounPhrase.html#resolveReflexives"><code class="language-plaintext highlighter-rouge">resolveReflexives</code></a></p>
+<a href="../object/NounPhrase.html#addContents"><code class="language-plaintext highlighter-rouge">addContents</code></a> <a href="../object/NounPhrase.html#addExclusionItem"><code class="language-plaintext highlighter-rouge">addExclusionItem</code></a> <a href="../object/NounPhrase.html#addLiteral"><code class="language-plaintext highlighter-rouge">addLiteral</code></a> <a href="../object/NounPhrase.html#addLocation"><code class="language-plaintext highlighter-rouge">addLocation</code></a> <a href="../object/NounPhrase.html#addMatches"><code class="language-plaintext highlighter-rouge">addMatches</code></a> <a href="../object/NounPhrase.html#addOrdinal"><code class="language-plaintext highlighter-rouge">addOrdinal</code></a> <a href="../object/NounPhrase.html#addPossessive"><code class="language-plaintext highlighter-rouge">addPossessive</code></a> <a href="../object/NounPhrase.html#addQuantifier"><code class="language-plaintext highlighter-rouge">addQuantifier</code></a> <a href="../object/NounPhrase.html#ambigError"><code class="language-plaintext highlighter-rouge">ambigError</code></a> <a href="../object/NounPhrase.html#applyContQual"><code class="language-plaintext highlighter-rouge">applyContQual</code></a> <a href="../object/NounPhrase.html#applyDisambig"><code class="language-plaintext highlighter-rouge">applyDisambig</code></a> <a href="../object/NounPhrase.html#applyExclusion"><code class="language-plaintext highlighter-rouge">applyExclusion</code></a> <a href="../object/NounPhrase.html#applyLocational"><code class="language-plaintext highlighter-rouge">applyLocational</code></a> <a href="../object/NounPhrase.html#applyPossessive"><code class="language-plaintext highlighter-rouge">applyPossessive</code></a> <a href="../object/NounPhrase.html#buildObjList"><code class="language-plaintext highlighter-rouge">buildObjList</code></a> <a href="../object/NounPhrase.html#clone"><code class="language-plaintext highlighter-rouge">clone</code></a> <a href="../object/NounPhrase.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/NounPhrase.html#contains"><code class="language-plaintext highlighter-rouge">contains</code></a> <a href="../object/NounPhrase.html#disambiguate"><code class="language-plaintext highlighter-rouge">disambiguate</code></a> <a href="../object/NounPhrase.html#expandErrName"><code class="language-plaintext highlighter-rouge">expandErrName</code></a> <a href="../object/NounPhrase.html#isAllEquivalent"><code class="language-plaintext highlighter-rouge">isAllEquivalent</code></a> <a href="../object/NounPhrase.html#isMultiple"><code class="language-plaintext highlighter-rouge">isMultiple</code></a> <a href="../object/NounPhrase.html#matchVocabPoss"><code class="language-plaintext highlighter-rouge">matchVocabPoss</code></a> <a href="../object/NounPhrase.html#resolveAll"><code class="language-plaintext highlighter-rouge">resolveAll</code></a> <a href="../object/NounPhrase.html#resolveReflexives"><code class="language-plaintext highlighter-rouge">resolveReflexives</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="matchNameScope"></span></p>
 
@@ -137,11 +105,7 @@ English-specific part of the library.
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3064">3064</a>],
 <a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2027">2027</a>]</p>
 
-<div class="desc">
-
-expand the error text to include the possessive qualifier
-
-</div>
+<p>expand the error text to include the possessive qualifier</p>
 
 <p><span id="matchVocab"></span></p>
 
@@ -149,15 +113,11 @@ expand the error text to include the possessive qualifier
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2963">2963</a>]</p>
 
-<div class="desc">
-
-Get the list of objects matching the vocabulary words in our noun
-phrase. Populates our 'matches' property with a vector of matching
-objects. This doesn't look at any of our qualifiers, or attempt to
+<p>Get the list of objects matching the vocabulary words in our noun
+phrase. Populates our ‘matches’ property with a vector of matching
+objects. This doesn’t look at any of our qualifiers, or attempt to
 disambiguate contextually; it simply finds everything in scope that the
-noun phrase could refer to.
-
-</div>
+noun phrase could refer to.</p>
 
 <p><span id="selectObjects"></span></p>
 
@@ -165,18 +125,11 @@ noun phrase could refer to.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3088">3088</a>]</p>
 
-<div class="desc">
+<p>return the list</p>
 
-return the list
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

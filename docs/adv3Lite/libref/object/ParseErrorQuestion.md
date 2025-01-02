@@ -69,7 +69,7 @@ An ErrorQuestion is a subclass of Question for curable parsing errors.
 
 
 
-[`err`](#err)[`priority`](#priority)
+[`err`](#err) [`priority`](#priority)
 
 Inherited from `Question` :  
 [`answerTemplate`](../object/Question.html#answerTemplate)
@@ -82,7 +82,7 @@ Inherited from `Question` :
 
 
 
-[`construct`](#construct)[`parseAnswer`](#parseAnswer)
+[`construct`](#construct) [`parseAnswer`](#parseAnswer)
 
 
 

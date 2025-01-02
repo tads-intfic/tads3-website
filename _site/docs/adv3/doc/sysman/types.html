@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Fundamental
-Datatypes  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Fundamental
+Datatypes<br />
 <span class="navnp"><a href="preproc.html" class="nav"><em>Prev:</em> The Preprocessor</a>
     <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="fundamental-datatypes">Fundamental Datatypes</h1>
 
@@ -122,73 +114,65 @@ two distinct enumerator names <code class="language-plaintext highlighter-rouge"
 <p>Enumerator symbols are defined with the <code class="language-plaintext highlighter-rouge">enum</code>
 statement:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>enum symbol [ , ... ]  ;
+</code></pre></div></div>
 
-    enum symbol [ , ... ]  ;
+<p>For example,</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    enum red, blue, green;
+</code></pre></div></div>
 
+<p>Once an enumerator symbol is defined, you can simply refer to it by name
+in expressions:</p>
 
-For example,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = red;
+</code></pre></div></div>
 
-```
-    enum red, blue, green;
-```
-
-Once an enumerator symbol is defined, you can simply refer to it by name
-in expressions:
-
-```
-    local x = red;
-```
-
-(Although enumerators are *represented* as integers internally, they're
-not integer values from the program's perspective. "Enumerator" is a
+<p>(Although enumerators are <em>represented</em> as integers internally, they’re
+not integer values from the program’s perspective. “Enumerator” is a
 distinct type from Integer. Enumerator values cannot be used with the
 arithmetic operators, for example, and comparing an enumerator to an
-integer value will always yield "unequal," *even if the enumerator's
-internal integer value happens to be equal to the given integer.*)
+integer value will always yield “unequal,” <em>even if the enumerator’s
+internal integer value happens to be equal to the given integer.</em>)</p>
 
-See the section on [enumerators](enum.html) for more details.
+<p>See the section on <a href="enum.html">enumerators</a> for more details.</p>
 
-## Property ID
+<h2 id="property-id">Property ID</h2>
 
-A property ID is an internal identifier that the compiler assigns to a
+<p>A property ID is an internal identifier that the compiler assigns to a
 property name symbol. The compiler assigns a unique, arbitrary ID to
-each property symbol used anywhere within a program.
+each property symbol used anywhere within a program.</p>
 
-You obtain a property ID value using the `&amp;`
-operator:
+<p>You obtain a property ID value using the <code class="language-plaintext highlighter-rouge">&amp;</code>
+operator:</p>
 
-```
-    local a = &getOwner;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = &amp;getOwner;
+</code></pre></div></div>
 
-This doesn't evaluate the property `getOwner` on
+<p>This doesn’t evaluate the property <code class="language-plaintext highlighter-rouge">getOwner</code> on
 any object; instead, it simply stores the ID of
-`getOwner` in the local variable
-`a`. This variable can be used to evaluate the
+<code class="language-plaintext highlighter-rouge">getOwner</code> in the local variable
+<code class="language-plaintext highlighter-rouge">a</code>. This variable can be used to evaluate the
 property on a particular object at a later time, using the
-`.` operator:
+<code class="language-plaintext highlighter-rouge">.</code> operator:</p>
 
-```
-    owner = someObj.(a);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    owner = someObj.(a);
+</code></pre></div></div>
 
-## Function pointer
+<h2 id="function-pointer">Function pointer</h2>
 
-A function pointer is an internal identifer that the compiler assigns to
+<p>A function pointer is an internal identifer that the compiler assigns to
 a function. The compiler assigns a unique, arbitrary ID to each function
-defined in a program.
+defined in a program.</p>
 
-You obtain a function pointer value by referring to the function name
-*without an argument list*, and without any parentheses after its name.
-This doesn't invoke the function, but rather simply yields a pointer to
+<p>You obtain a function pointer value by referring to the function name
+<em>without an argument list</em>, and without any parentheses after its name.
+This doesn’t invoke the function, but rather simply yields a pointer to
 the function, which you can store in a variable for later use. You can
 later invoke the function to which the pointer refers using the
-`( )` function-call operator.
+<code class="language-plaintext highlighter-rouge">( )</code> function-call operator.</p>
 
-```
-    times2(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    times2(x)
     {
       return x*2;
     }
@@ -201,355 +185,341 @@ later invoke the function to which the pointer refers using the
       // later... call through the pointer
       local x = (f)(7);
     }
-```
+</code></pre></div></div>
 
-You can also get a pointer to a function using the
-`&amp;` operator, although it's not required:
+<p>You can also get a pointer to a function using the
+<code class="language-plaintext highlighter-rouge">&amp;</code> operator, although it’s not required:</p>
 
-```
-    local f = &times2;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local f = &amp;times2;
+</code></pre></div></div>
 
-## Pointer to built-in function
+<h2 id="pointer-to-built-in-function">Pointer to built-in function</h2>
 
-Just as you can get a pointer to a function you've defined, you can get
+<p>Just as you can get a pointer to a function you’ve defined, you can get
 a pointer to a built-in function. In this case the
-`&amp;` operator is mandatory, because merely
+<code class="language-plaintext highlighter-rouge">&amp;</code> operator is mandatory, because merely
 writing the name of a built-in function has the effect of calling it,
-even without arguments. The `&amp;` operator tells
-the compiler that you don't actually want to call the function, but
-merely want a pointer to it:
+even without arguments. The <code class="language-plaintext highlighter-rouge">&amp;</code> operator tells
+the compiler that you don’t actually want to call the function, but
+merely want a pointer to it:</p>
 
-```
-    local f = &tadsSay;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local f = &amp;tadsSay;
+</code></pre></div></div>
 
-Once you have a built-in function pointer value, you can do the same
+<p>Once you have a built-in function pointer value, you can do the same
 sorts of things with it that you can do with a regular function pointer,
-such as calling the function via the pointer:
+such as calling the function via the pointer:</p>
 
-```
-    local f = &tadsSay;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local f = &amp;tadsSay;
     f('Hello, world, indirectly!\n');
-```
+</code></pre></div></div>
 
-## List
+<h2 id="list">List</h2>
 
-A list is an ordered collection of values. The elements in a list can
+<p>A list is an ordered collection of values. The elements in a list can
 contain any type of value, and types can be freely mixed (that is, the
-elements don't need to be of the same type).
+elements don’t need to be of the same type).</p>
 
-A list constant is written in source code by enclosing a comma-separated
-list of values in square brackets:
+<p>A list constant is written in source code by enclosing a comma-separated
+list of values in square brackets:</p>
 
-```
-    local lst = [5, 4, 3, 2, 1];
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local lst = [5, 4, 3, 2, 1];
+</code></pre></div></div>
 
-This creates a list of five elements, with the integer value 5 as the
-first element, 4 as the second element, and so on.
+<p>This creates a list of five elements, with the integer value 5 as the
+first element, 4 as the second element, and so on.</p>
 
-The elements of a list can be obtained by indexing the list with the
-`\[ \]` operator:
+<p>The elements of a list can be obtained by indexing the list with the
+<code class="language-plaintext highlighter-rouge">\[ \]</code> operator:</p>
 
-```
-    local a = lst[4];
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = lst[4];
+</code></pre></div></div>
 
-The expression inside the square brackets is the *index* expression;
+<p>The expression inside the square brackets is the <em>index</em> expression;
 this must evaluate to an integer from 1 to the number of elements in the
-list.
+list.</p>
 
-A list is a type of object, of class List, and provides a number of
+<p>A list is a type of object, of class List, and provides a number of
 methods that perform operations on the list. Lists can also be used with
-certain operators; the `+` operator can be used
-to create a new list by appending elements to an existing list's
-contents, for example.
+certain operators; the <code class="language-plaintext highlighter-rouge">+</code> operator can be used
+to create a new list by appending elements to an existing list’s
+contents, for example.</p>
 
-Lists are "immutable," meaning that a given list object's contents
+<p>Lists are “immutable,” meaning that a given list object’s contents
 cannot be changed during execution. Operations that manipulate lists
-therefore must create new lists any time a list's contents are to be
-amended.
+therefore must create new lists any time a list’s contents are to be
+amended.</p>
 
-Because lists are objects, a "list value" that's stored in a variable is
-actually a *reference* to a List object.
+<p>Because lists are objects, a “list value” that’s stored in a variable is
+actually a <em>reference</em> to a List object.</p>
 
-For more details on lists, see the section on the [List intrinsic
-type](list.html).
+<p>For more details on lists, see the section on the <a href="list.html">List intrinsic
+type</a>.</p>
 
-## String
+<h2 id="string">String</h2>
 
-A string is an ordered set of Unicode characters. A string constant is
+<p>A string is an ordered set of Unicode characters. A string constant is
 written in source code by enclosing a sequence of characters in
-single-quote marks:
+single-quote marks:</p>
 
-```
-    local str = 'Hello, world!';
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local str = 'Hello, world!';
+</code></pre></div></div>
 
-A string is a type of object, of class String, and provides a number of
+<p>A string is a type of object, of class String, and provides a number of
 methods that perform operations on the string. Strings can also be used
-with certain operators; the `+` operator can be
+with certain operators; the <code class="language-plaintext highlighter-rouge">+</code> operator can be
 used to create a new string by concatenating the contents of a given
-string with another string's contents, for example.
+string with another string’s contents, for example.</p>
 
-Strings are "immutable," meaning that a given string object's contents
+<p>Strings are “immutable,” meaning that a given string object’s contents
 cannot be changed during execution. Operations that manipulate strings
-therefore must create new strings any time a string's contents are to be
-amended.
+therefore must create new strings any time a string’s contents are to be
+amended.</p>
 
-Because strings are objects, a "string value" that's stored in a
-variable is actually a *reference* to a String object.
+<p>Because strings are objects, a “string value” that’s stored in a
+variable is actually a <em>reference</em> to a String object.</p>
 
-The [String Literals](strlit.html) chapter has details on how to enter
-strings in a program's source code. For information on manipulating
-string objects, see the [String intrinsic type](string.html) section.
+<p>The <a href="strlit.html">String Literals</a> chapter has details on how to enter
+strings in a program’s source code. For information on manipulating
+string objects, see the <a href="string.html">String intrinsic type</a> section.</p>
 
-## Object
+<h2 id="object">Object</h2>
 
-An object is a data structure that combines data values and procedural
-code into a single package. The data values are called "properties," and
-the procedural code elements are called "methods." Each property and
+<p>An object is a data structure that combines data values and procedural
+code into a single package. The data values are called “properties,” and
+the procedural code elements are called “methods.” Each property and
 method of an object is identified by a property ID, and can be retrieved
 (in the case of a property) or invoked (in the case of a method) by
-using the `.` operator to combine the object's
-reference with the property ID of the property or method.
+using the <code class="language-plaintext highlighter-rouge">.</code> operator to combine the object’s
+reference with the property ID of the property or method.</p>
 
-Each object has an internal identifier assigned by the VM; this is
-called a "reference" to the object. Variables and other value containers
-can store these reference values.
+<p>Each object has an internal identifier assigned by the VM; this is
+called a “reference” to the object. Variables and other value containers
+can store these reference values.</p>
 
-We sometimes say that a variable "contains an object," but when we say
+<p>We sometimes say that a variable “contains an object,” but when we say
 this we always actually mean that the variable contains a reference to
-that object. The actual *contents* of an object are always off in a
-private memory area managed by the VM; an object's contents are never
+that object. The actual <em>contents</em> of an object are always off in a
+private memory area managed by the VM; an object’s contents are never
 actually stored inside a variable (or a list element, object property,
-etc).
+etc).</p>
 
-Each object has one or more "superclasses." A superclass of an object is
-simply another object - typically a "class" object - from which the
-object "inherits" properties and mehods. An object is said to be a
-"subclass" of a given class if the given class is among the object's
-immediate superclasses, or if any of the object's immediate superclasses
-are subclasses of the given class.
+<p>Each object has one or more “superclasses.” A superclass of an object is
+simply another object - typically a “class” object - from which the
+object “inherits” properties and mehods. An object is said to be a
+“subclass” of a given class if the given class is among the object’s
+immediate superclasses, or if any of the object’s immediate superclasses
+are subclasses of the given class.</p>
 
-The syntax for defining objects is described in more detail in the
-section on [defining objects](objdef.html).
+<p>The syntax for defining objects is described in more detail in the
+section on <a href="objdef.html">defining objects</a>.</p>
 
-All objects are subclasses of the root object class, Object. This class
-provides a number of methods, which all objects inherit. See the [Object
-intrinsic class](objic.html) section for details
+<p>All objects are subclasses of the root object class, Object. This class
+provides a number of methods, which all objects inherit. See the <a href="objic.html">Object
+intrinsic class</a> section for details</p>
 
-## Intrinsic Classes
+<h2 id="intrinsic-classes">Intrinsic Classes</h2>
 
-In addition to the fundamental types above, the T3 VM has a number of
-"intrinsic" classes. These are object classes that are implemented
+<p>In addition to the fundamental types above, the T3 VM has a number of
+“intrinsic” classes. These are object classes that are implemented
 within the VM itself, which lets them provide special functionality that
 would be difficult or impossible to implement directly within TADS 3
 code. For the most part, the special functionality involves either
 access to the external operating system environment, or processing
-that's computationally intensive enough and frequent enough to justify
-being implemented in native machine code.
+that’s computationally intensive enough and frequent enough to justify
+being implemented in native machine code.</p>
 
-Intrinsic classes work essentially like ordinary objects, which lets
+<p>Intrinsic classes work essentially like ordinary objects, which lets
 them provide their special functionality through the same
-property/method interfaces that ordinary objects use.
+property/method interfaces that ordinary objects use.</p>
 
-The intrinsic classes are covered in detail in their own sections, but
-we'll provide a quick reference to them here.
+<p>The intrinsic classes are covered in detail in their own sections, but
+we’ll provide a quick reference to them here.</p>
 
-### BigNumber
+<h3 id="bignumber">BigNumber</h3>
 
-The BigNumber class provides high-precision integer and floating-point
-arithimetic.
+<p>The BigNumber class provides high-precision integer and floating-point
+arithimetic.</p>
 
-The compiler makes BigNumber look almost like a native type, in that you
+<p>The compiler makes BigNumber look almost like a native type, in that you
 can create BigNumber objects simply by writing floating-point constants
 in ordinary expressions, and you can use BigNumber values with the
 arithmetic operators. You can also combine integers and BigNumber values
 with the arithmetic operators; when you do, the result is a BigNumber
-with the same precision as the BigNumber operand.
+with the same precision as the BigNumber operand.</p>
 
-A floating-point constant is written in the following format:
+<p>A floating-point constant is written in the following format:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>digits [ . [ digits ]  ]  [ E [ + | - ]  digits ] 
+</code></pre></div></div>
 
-    digits [ . [ digits ]  ]  [ E [ + | - ]  digits ] 
+<p>The <code class="language-plaintext highlighter-rouge">E</code> (which can be upper- or lower-case) can
+be used for “scientific notation,” to specify a power of ten by which to
+multiply the part before the <code class="language-plaintext highlighter-rouge">E</code>. For example,
+<code class="language-plaintext highlighter-rouge">1.25e9</code> means 1.25×10<sup>9</sup>, or 1.25
+billion, and <code class="language-plaintext highlighter-rouge">7.20e-3</code> means
+7.20×10<sup>-3</sup>, or 0.00720.</p>
 
-</div>
-
-The `E` (which can be upper- or lower-case) can
-be used for "scientific notation," to specify a power of ten by which to
-multiply the part before the `E`. For example,
-`1.25e9` means 1.25×10<sup>9</sup>, or 1.25
-billion, and `7.20e-3` means
-7.20×10<sup>-3</sup>, or 0.00720.
-
-Zeros at the end of a floating-point constant are meaningful, because
+<p>Zeros at the end of a floating-point constant are meaningful, because
 they indicate additional precision. The compiler determines the
 precision of each floating-point constant in the source code by counting
-the number of digits starting with the first "significant" figure, and
-*including* trailing zeros. The first significant figure is the first
-non-zero digit. For example, `0.000010` has a
+the number of digits starting with the first “significant” figure, and
+<em>including</em> trailing zeros. The first significant figure is the first
+non-zero digit. For example, <code class="language-plaintext highlighter-rouge">0.000010</code> has a
 precision of 2, since the first significant figure is the 1, and the
-trailing zero counts as another.
+trailing zero counts as another.</p>
 
-See the [BigNumber](bignum.html) section for details.
+<p>See the <a href="bignum.html">BigNumber</a> section for details.</p>
 
-### ByteArray
+<h3 id="bytearray">ByteArray</h3>
 
-The ByteArray class provides an array of raw bytes ("octets"), which is
-useful for manipulating binary files.
+<p>The ByteArray class provides an array of raw bytes (“octets”), which is
+useful for manipulating binary files.</p>
 
-Refer to the [ByteArray](bytearr.html) section.
+<p>Refer to the <a href="bytearr.html">ByteArray</a> section.</p>
 
-### CharacterSet
+<h3 id="characterset">CharacterSet</h3>
 
-The CharacterSet class provides services for mapping between Unicode
+<p>The CharacterSet class provides services for mapping between Unicode
 (which the VM uses internally) and nearly any other character encoding.
-This is useful for reading and writing external text files.
+This is useful for reading and writing external text files.</p>
 
-Refer to the [CharacterSet](charset.html) section.
+<p>Refer to the <a href="charset.html">CharacterSet</a> section.</p>
 
-### Collection
+<h3 id="collection">Collection</h3>
 
-The Collection class is the common base class for List, Vector, and
+<p>The Collection class is the common base class for List, Vector, and
 LookupTable. This class defines a basic interface in common to all of
 the Collection classes, which lets you write certain code so that it
-works uniformly with any collection type.
+works uniformly with any collection type.</p>
 
-Refer to the [Collection](collect.html) section.
+<p>Refer to the <a href="collect.html">Collection</a> section.</p>
 
-### Dictionary
+<h3 id="dictionary">Dictionary</h3>
 
-The Dictionary class is a specialized lookup table that maintains
+<p>The Dictionary class is a specialized lookup table that maintains
 vocabulary data for input parsers built with the GrammarProd class. The
 compiler has special features that make it easier to populate a
-Dictionary object's contents.
+Dictionary object’s contents.</p>
 
-Refer to the [Dictionary](dict.html) section.
+<p>Refer to the <a href="dict.html">Dictionary</a> section.</p>
 
-### File
+<h3 id="file">File</h3>
 
-The File class provides input/output services for manipulating external
-files.
+<p>The File class provides input/output services for manipulating external
+files.</p>
 
-Refer to the [File](file.html) section.
+<p>Refer to the <a href="file.html">File</a> section.</p>
 
-### GrammarProd
+<h3 id="grammarprod">GrammarProd</h3>
 
-The GrammarProd class is a specialized pattern-matching class designed
+<p>The GrammarProd class is a specialized pattern-matching class designed
 for implementing input parsers. The compiler has special features
-(specifically the `grammar` object declaration
-statement) that make it easier to create GrammarProd objects.
+(specifically the <code class="language-plaintext highlighter-rouge">grammar</code> object declaration
+statement) that make it easier to create GrammarProd objects.</p>
 
-Refer to the [GrammarProd](gramprod.html) section.
+<p>Refer to the <a href="gramprod.html">GrammarProd</a> section.</p>
 
-### IntrinsicClass
+<h3 id="intrinsicclass">IntrinsicClass</h3>
 
-The IntrinsicClass class is an internal type that's used to represent an
+<p>The IntrinsicClass class is an internal type that’s used to represent an
 intrinsic class. For uniformity in the type system, each intrinsic class
 is itself represented by an object, and that object is of this class.
 For example, the Iterator class is represented by an object called
 Iterator, which is of class IntrinsicClass. Naturally, the
 IntrinsicClass class is represented by an object called IntrinsicClass
-of class IntrinsicClass.
+of class IntrinsicClass.</p>
 
-Refer to the [IntrinsicClass](icic.html) section.
+<p>Refer to the <a href="icic.html">IntrinsicClass</a> section.</p>
 
-### Iterator
+<h3 id="iterator">Iterator</h3>
 
-The Iterator class provides a generic interface for stepping through the
-contents of a Collection. The `foreach`
+<p>The Iterator class provides a generic interface for stepping through the
+contents of a Collection. The <code class="language-plaintext highlighter-rouge">foreach</code>
 statement uses an Iterator internally to carry out its iteration, but
-you can use these objects explicitly as well.
+you can use these objects explicitly as well.</p>
 
-Refer to the [Iterator](iter.html) section.
+<p>Refer to the <a href="iter.html">Iterator</a> section.</p>
 
-### LookupTable
+<h3 id="lookuptable">LookupTable</h3>
 
-The LookupTable class provides "hash table" functionality, also known as
-an "associative array." This is a collection that behaves like an array,
-except that the index values can be arbitrary "key" values, not just
-integers.
+<p>The LookupTable class provides “hash table” functionality, also known as
+an “associative array.” This is a collection that behaves like an array,
+except that the index values can be arbitrary “key” values, not just
+integers.</p>
 
-Refer to the [LookupTable](lookup.html) section.
+<p>Refer to the <a href="lookup.html">LookupTable</a> section.</p>
 
-### RexPattern
+<h3 id="rexpattern">RexPattern</h3>
 
-The RexPattern class stores a "compiled regular expression." A regular
+<p>The RexPattern class stores a “compiled regular expression.” A regular
 expression is a string written in a special format, representing a
 pattern that can be searched for in other strings. A compiled regular
 expression is a processed version of this type of string, which the VM
 uses internally to search for the pattern. The processing step takes
 some CPU time to perform, so you might be able to make your program run
 a little faster by pre-compiling regular expression patterns you use
-frequently.
+frequently.</p>
 
-Refer to the [RexPattern](rexpat.html) section.
+<p>Refer to the <a href="rexpat.html">RexPattern</a> section.</p>
 
-### StringComparator
+<h3 id="stringcomparator">StringComparator</h3>
 
-The StringComparator class is a fast, native-code implementation of the
-Dictionary class's special interface for comparing input text to
+<p>The StringComparator class is a fast, native-code implementation of the
+Dictionary class’s special interface for comparing input text to
 dictionary words. StringComparator offers a number of customizable
 options that let you control how input strings are interpreted. The
 customization options are especially useful for non-English languages
-where accented characters are common.
+where accented characters are common.</p>
 
-Refer to the [StringComparator](strcomp.html) section.
+<p>Refer to the <a href="strcomp.html">StringComparator</a> section.</p>
 
-### TadsObject
+<h3 id="tadsobject">TadsObject</h3>
 
-The TadsObject class is the base class for all objects defined in source
-code.
+<p>The TadsObject class is the base class for all objects defined in source
+code.</p>
 
-Refer to the [TadsObject](tadsobj.html) section.
+<p>Refer to the <a href="tadsobj.html">TadsObject</a> section.</p>
 
-### Vector
+<h3 id="vector">Vector</h3>
 
-The Vector class is similar to the basic List class, but with one
-important difference: Vectors are "mutable," meaning that the elements
-and length of a Vector can be changed dynamically during execution.
+<p>The Vector class is similar to the basic List class, but with one
+important difference: Vectors are “mutable,” meaning that the elements
+and length of a Vector can be changed dynamically during execution.</p>
 
-Refer to the [Vector](vector.html) section.
+<p>Refer to the <a href="vector.html">Vector</a> section.</p>
 
-### WeakRefLookupTable
+<h3 id="weakreflookuptable">WeakRefLookupTable</h3>
 
-A WeakRefLookupTable is a special type of LookupTable that only "weakly"
+<p>A WeakRefLookupTable is a special type of LookupTable that only “weakly”
 references its elements. (A weak reference is different from an ordinary
 reference in that the garbage collector is free to discard objects that
 are reachable only through weak references; when the garbage collector
 does discard such objects, it clears the weak references by setting them
-to `nil`.)
+to <code class="language-plaintext highlighter-rouge">nil</code>.)</p>
 
-Weak reference tables are useful for setting up caches and indices and
+<p>Weak reference tables are useful for setting up caches and indices and
 the like, since they let you create a table that maps objects as long as
-they're around, but doesn't itself force them to stay around.
+they’re around, but doesn’t itself force them to stay around.</p>
 
-Refer to the [WeakRefLookupTable](wlookup.html) section.
+<p>Refer to the <a href="wlookup.html">WeakRefLookupTable</a> section.</p>
 
-## Notes for TADS 2 Users
+<h2 id="notes-for-tads-2-users">Notes for TADS 2 Users</h2>
 
-In TADS 2, list constants could be specified by separating the elements
-with commas *or* spaces. TADS 3 requires commas to be used as separators
-in all cases.
-
-</div>
+<p>In TADS 2, list constants could be specified by separating the elements
+with commas <em>or</em> spaces. TADS 3 requires commas to be used as separators
+in all cases.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Fundamental
-Datatypes  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Fundamental
+Datatypes<br />
 <span class="navnp"><a href="preproc.html" class="nav"><em>Prev:</em> The Preprocessor</a>
     <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

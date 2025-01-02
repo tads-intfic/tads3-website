@@ -46,89 +46,61 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Base class for reflexive pronouns. These are pronouns like "himself"
+<p>Base class for reflexive pronouns. These are pronouns like “himself”
 that specifically refer to an antecedent in the same sentence, rather
 than to an earlier sentence: ASK BOB ABOUT HIMSELF is an inquiry about
 Bob, while ASK BOB ABOUT HIM refers to some male antecedent from an
-earlier statement.
+earlier statement.</p>
 
-Note that the first- and second-person reflexives are generally not
-needed in the parser. (We define them here anyway, because they're
+<p>Note that the first- and second-person reflexives are generally not
+needed in the parser. (We define them here anyway, because they’re
 useful for message generation.) The third-person reflexive pronouns have
 distinct meanings in input from the corresponding ordinary pronouns, in
 that they refer to noun phrases within the same command rather than in
 earlier exchanges. In contrast, the second-person pronouns have the same
 meaning in ordinary and reflexive forms, at least within the confines of
 the IF parser: EXAMINE ME and EXAMINE MYSELF mean the same thing in all
-typical IF command syntax.
+typical IF command syntax.</p>
 
-`class `**`ReflexivePronoun`**` :   `[`Pronoun`](../object/Pronoun.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ReflexivePronoun</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Pronoun.html"><code class="language-plaintext highlighter-rouge">Pronoun</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ReflexivePronoun</code></strong><br />
 <a href="../object/Pronoun.html"><code class="language-plaintext highlighter-rouge">Pronoun</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/Herself.html"><code class="language-plaintext highlighter-rouge">Herself</code></a><a href="../object/Himself.html"><code class="language-plaintext highlighter-rouge">Himself</code></a><a href="../object/Itself.html"><code class="language-plaintext highlighter-rouge">Itself</code></a><a href="../object/Myself.html"><code class="language-plaintext highlighter-rouge">Myself</code></a><a href="../object/Ourselves.html"><code class="language-plaintext highlighter-rouge">Ourselves</code></a><a href="../object/Themselves.html"><code class="language-plaintext highlighter-rouge">Themselves</code></a><a href="../object/Yourself.html"><code class="language-plaintext highlighter-rouge">Yourself</code></a><a href="../object/Yourselves.html"><code class="language-plaintext highlighter-rouge">Yourselves</code></a>
+<p><a href="../object/Herself.html"><code class="language-plaintext highlighter-rouge">Herself</code></a> <a href="../object/Himself.html"><code class="language-plaintext highlighter-rouge">Himself</code></a> <a href="../object/Itself.html"><code class="language-plaintext highlighter-rouge">Itself</code></a> <a href="../object/Myself.html"><code class="language-plaintext highlighter-rouge">Myself</code></a> <a href="../object/Ourselves.html"><code class="language-plaintext highlighter-rouge">Ourselves</code></a> <a href="../object/Themselves.html"><code class="language-plaintext highlighter-rouge">Themselves</code></a> <a href="../object/Yourself.html"><code class="language-plaintext highlighter-rouge">Yourself</code></a> <a href="../object/Yourselves.html"><code class="language-plaintext highlighter-rouge">Yourselves</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a><a href="#person"><code class="language-plaintext highlighter-rouge">person</code></a><a href="#pronoun"><code class="language-plaintext highlighter-rouge">pronoun</code></a></p>
+<p><a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="#person"><code class="language-plaintext highlighter-rouge">person</code></a> <a href="#pronoun"><code class="language-plaintext highlighter-rouge">pronoun</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
-<a href="../object/Pronoun.html#aName"><code class="language-plaintext highlighter-rouge">aName</code></a><a href="../object/Pronoun.html#ante"><code class="language-plaintext highlighter-rouge">ante</code></a><a href="../object/Pronoun.html#reflexive"><code class="language-plaintext highlighter-rouge">reflexive</code></a><a href="../object/Pronoun.html#theName"><code class="language-plaintext highlighter-rouge">theName</code></a><a href="../object/Pronoun.html#theObjName"><code class="language-plaintext highlighter-rouge">theObjName</code></a></p>
+<a href="../object/Pronoun.html#aName"><code class="language-plaintext highlighter-rouge">aName</code></a> <a href="../object/Pronoun.html#ante"><code class="language-plaintext highlighter-rouge">ante</code></a> <a href="../object/Pronoun.html#reflexive"><code class="language-plaintext highlighter-rouge">reflexive</code></a> <a href="../object/Pronoun.html#theName"><code class="language-plaintext highlighter-rouge">theName</code></a> <a href="../object/Pronoun.html#theObjName"><code class="language-plaintext highlighter-rouge">theObjName</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#resolve"><code class="language-plaintext highlighter-rouge">resolve</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#resolve"><code class="language-plaintext highlighter-rouge">resolve</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
-<a href="../object/Pronoun.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a><a href="../object/Pronoun.html#setAntecedents"><code class="language-plaintext highlighter-rouge">setAntecedents</code></a></p>
+<a href="../object/Pronoun.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="../object/Pronoun.html#setAntecedents"><code class="language-plaintext highlighter-rouge">setAntecedents</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="all"></span></p>
 
@@ -136,12 +108,8 @@ typical IF command syntax.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4863">4863</a>]</p>
 
-<div class="desc">
-
-Class property - list of all reflexive pronoun objects. This keeps the
-reflexive pronouns in a separate list from the base Pronoun list.
-
-</div>
+<p>Class property - list of all reflexive pronoun objects. This keeps the
+reflexive pronouns in a separate list from the base Pronoun list.</p>
 
 <p><span id="person"></span></p>
 
@@ -149,11 +117,7 @@ reflexive pronouns in a separate list from the base Pronoun list.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4856">4856</a>]</p>
 
-<div class="desc">
-
-my grammatical person is the same as my underlying pronoun's
-
-</div>
+<p>my grammatical person is the same as my underlying pronoun’s</p>
 
 <p><span id="pronoun"></span></p>
 
@@ -161,20 +125,12 @@ my grammatical person is the same as my underlying pronoun's
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4853">4853</a>]</p>
 
-<div class="desc">
-
-Get the corresponding ordinary (non-reflexive) form of the pronoun. For
-example, for HIMSELF we'd return HIM.
-
-</div>
+<p>Get the corresponding ordinary (non-reflexive) form of the pronoun. For
+example, for HIMSELF we’d return HIM.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -182,11 +138,7 @@ example, for HIMSELF we'd return HIM.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4832">4832</a>]</p>
 
-<div class="desc">
-
-during construction, set the regular pronoun to point back at me
-
-</div>
+<p>during construction, set the regular pronoun to point back at me</p>
 
 <p><span id="resolve"></span></p>
 
@@ -194,24 +146,17 @@ during construction, set the regular pronoun to point back at me
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4847">4847</a>]</p>
 
-<div class="desc">
-
-A reflexive pronoun binds to another noun phrase contained in the same
-command, so we resolve using the parser's "late binding" scheme. We
+<p>A reflexive pronoun binds to another noun phrase contained in the same
+command, so we resolve using the parser’s “late binding” scheme. We
 invoke this by returning the ordinary (non-reflexive) pronoun object
 representing the attributes that we match; upon seeing this, the parser
-will know to come back to this pronoun after it's finished resolving
+will know to come back to this pronoun after it’s finished resolving
 earlier phrases, and look for the appropriate pronoun binding within
-those other phrases.
+those other phrases.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

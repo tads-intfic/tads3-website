@@ -72,7 +72,7 @@ particuar those relating to opening and closing Goals and ExtraHints.
 
 
 
-[`closeWhen`](#closeWhen)[`closeWhenAchieved`](#closeWhenAchieved)[`closeWhenExamined`](#closeWhenExamined)[`closeWhenKnown`](#closeWhenKnown)[`closeWhenMoved`](#closeWhenMoved)[`closeWhenRevealed`](#closeWhenRevealed)[`closeWhenSeen`](#closeWhenSeen)[`closeWhenTrue`](#closeWhenTrue)[`openWhen`](#openWhen)[`openWhenAchieved`](#openWhenAchieved)[`openWhenExamined`](#openWhenExamined)[`openWhenKnown`](#openWhenKnown)[`openWhenMoved`](#openWhenMoved)[`openWhenRevealed`](#openWhenRevealed)[`openWhenSeen`](#openWhenSeen)[`openWhenTrue`](#openWhenTrue)
+[`closeWhen`](#closeWhen) [`closeWhenAchieved`](#closeWhenAchieved) [`closeWhenExamined`](#closeWhenExamined) [`closeWhenKnown`](#closeWhenKnown) [`closeWhenMoved`](#closeWhenMoved) [`closeWhenRevealed`](#closeWhenRevealed) [`closeWhenSeen`](#closeWhenSeen) [`closeWhenTrue`](#closeWhenTrue) [`openWhen`](#openWhen) [`openWhenAchieved`](#openWhenAchieved) [`openWhenExamined`](#openWhenExamined) [`openWhenKnown`](#openWhenKnown) [`openWhenMoved`](#openWhenMoved) [`openWhenRevealed`](#openWhenRevealed) [`openWhenSeen`](#openWhenSeen) [`openWhenTrue`](#openWhenTrue)
 
 <span id="_MethodSummary_"></span>
 

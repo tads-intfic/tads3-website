@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Doors  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Doors<br />
 <span class="navnp"><a href="roomdesc.html" class="nav"><em>Prev:</em>Room Descriptions</a>
     <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
-Barriers</a>     </span>
-
-</div>
+Barriers</a>     </span></p>
 
 <h1 id="doors">Doors</h1>
 
@@ -51,7 +43,7 @@ these are two sides of the same door it is further necessary to set the
 <strong>otherSide</strong> property of each Door object to point to the other Door
 object, for example:</p>
 
-<p>`
+<p>```
     hall: Room ‘Hall’ ‘hall’
        “The front door lies to the west. “
        west = frontDoor
@@ -86,36 +78,36 @@ lockability property just as we would on any other Thing.</p>
 
 <p>Another point to note is that in order to keep everything in sync we
 defined the <strong>otherSide</strong> property on both sides of the Door and
-<code class="language-plaintext highlighter-rouge">&lt;span id="doorlocked_idx"&gt;isLocked</code> =
+```<span id="doorlocked_idx">isLocked<code class="language-plaintext highlighter-rouge"> =
 true&lt;/span&gt; on both sides of the Door. While this is good practice, it
 is not absolutely necessary, however, since if we forget to do it the
 library will attempt to correct it for us. In particular, if we are
 compiling for debugging, the library will warn us at the start of the
 game if it finds any Doors with an otherSide of nil, and whether or not
-we’re compiling for debugging it will attempt to correct mismatched
+we're compiling for debugging it will attempt to correct mismatched
 otherSide and isLocked properties (with isLocked = true taking
 precedence over isLocked = nil). Note, however, that there is no need
 for the lockability properties of both sides of the same door to be the
 same. It is quite in order for each side of a door to have a different
 locking mechanism (e.g. a key on one side and a keypad on the other) or
 for only one side of the door to be lockable (and hence unlockable). IF
-you <em>deliberately</em> don’t want a door to have another side (for example,
-because it’s a fake door that’s never opened, or it’s one side of a lift
+you *deliberately* don't want a door to have another side (for example,
+because it's a fake door that's never opened, or it's one side of a lift
 door whose other side may change in the course of the game) you can
 suppress the warning messages by setting its
-<code class="language-plaintext highlighter-rouge">otherSide</code> property to
-<code class="language-plaintext highlighter-rouge">self</code> instead of <code class="language-plaintext highlighter-rouge">nil</code>.
+</code>otherSide<code class="language-plaintext highlighter-rouge"> property to
+</code>self<code class="language-plaintext highlighter-rouge"> instead of </code>nil<code class="language-plaintext highlighter-rouge">.
 In that case the exit leading through the door will be shown in the exit
 lister as visited, which may or may not be what you want; on the one
-hand it can betray the fact that the door doesn’t go anywhere, while on
-the other by so doing it may helpfully tell players that they don’t need
+hand it can betray the fact that the door doesn't go anywhere, while on
+the other by so doing it may helpfully tell players that they don't need
 to try to find a way through the door since it can never be opened. You
-may thus also want to override the <strong>destination</strong> property of such a
-door to <strong>unknownDest_</strong>, which will make it show up in the exit
+may thus also want to override the **destination** property of such a
+door to **unknownDest\_**, which will make it show up in the exit
 listing as an unvisited exit. You could then subsequently change the
-<code class="language-plaintext highlighter-rouge">destination</code> to getOutermostRoom (which will
+</code>destination` to getOutermostRoom (which will
 make it show up as a visited exit) once something happens to tell the
-player that there’s in fact no way through the door.</p>
+player that there’s in fact no way through the door.</span></p>
 
 <p>The library takes care of a few other details for us besides, in
 particular:</p>
@@ -161,18 +153,13 @@ explicitly include the symconn extension in your build.
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="core.html" class="nav">The Core Library</a> \&gt; Doors  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="core.html" class="nav">The Core Library</a> &gt; Doors<br />
 <span class="navnp"><a href="roomdesc.html" class="nav"><em>Prev:</em> Room Descriptions</a>
     <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
-Barriers</a>     </span>
+Barriers</a>     </span></p>
 
-
-
-</div>
 
 </main>
 <footer>

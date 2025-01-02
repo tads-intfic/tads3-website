@@ -71,7 +71,7 @@ object and the direction we saw it depart.
 
 
 
-[`connector`](#connector)[`obj`](#obj)[`sourceLocation`](#sourceLocation)
+[`connector`](#connector) [`obj`](#obj) [`sourceLocation`](#sourceLocation)
 
 <span id="_MethodSummary_"></span>
 

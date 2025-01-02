@@ -60,7 +60,7 @@ Inherited from `DefinitePluralProd` :
 
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -76,13 +76,13 @@ Inherited from `DefinitePluralProd` :
 [`resolveNouns`](../object/DefinitePluralProd.html#resolveNouns)
 
 Inherited from `PluralProd` :  
-[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)[`getVerifyKeepers`](../object/PluralProd.html#getVerifyKeepers)
+[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns) [`getVerifyKeepers`](../object/PluralProd.html#getVerifyKeepers)
 
 Inherited from `NounPhraseProd` :  
 [`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

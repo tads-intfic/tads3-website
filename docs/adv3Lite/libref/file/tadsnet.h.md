@@ -71,7 +71,7 @@ QUIT into the UI.
 
 
 
-[`connectWebUI`](#connectWebUI)[`getHostName`](#getHostName)[`getLaunchHostAddr`](#getLaunchHostAddr)[`getLocalIP`](#getLocalIP)[`getNetEvent`](#getNetEvent)[`getNetStorageURL`](#getNetStorageURL)[`sendNetRequest`](#sendNetRequest)
+[`connectWebUI`](#connectWebUI) [`getHostName`](#getHostName) [`getLaunchHostAddr`](#getLaunchHostAddr) [`getLocalIP`](#getLocalIP) [`getNetEvent`](#getNetEvent) [`getNetStorageURL`](#getNetStorageURL) [`sendNetRequest`](#sendNetRequest)
 
 <span id="_MacroSummary_"></span>
 
@@ -81,7 +81,7 @@ QUIT into the UI.
 
 
 
-[`NetEvDebugBreak`](#NetEvDebugBreak)[`NetEvReply`](#NetEvReply)[`NetEvReplyDone`](#NetEvReplyDone)[`NetEvRequest`](#NetEvRequest)[`NetEvTimeout`](#NetEvTimeout)[`NetEvUIClose`](#NetEvUIClose)[`NetReqNoRedirect`](#NetReqNoRedirect)
+[`NetEvDebugBreak`](#NetEvDebugBreak) [`NetEvReply`](#NetEvReply) [`NetEvReplyDone`](#NetEvReplyDone) [`NetEvRequest`](#NetEvRequest) [`NetEvTimeout`](#NetEvTimeout) [`NetEvUIClose`](#NetEvUIClose) [`NetReqNoRedirect`](#NetReqNoRedirect)
 
 <span id="_EnumSummary_"></span>
 

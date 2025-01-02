@@ -34,7 +34,7 @@ phrases in command input.
 
 
 
-[`DisambigException`](../object/DisambigException.html)[`DisambigOrdinalOutOfRangeException`](../object/DisambigOrdinalOutOfRangeException.html)[`DisambigRanking`](../object/DisambigRanking.html)[`DisambigResolver`](../object/DisambigResolver.html)[`DisambigResults`](../object/DisambigResults.html)[`Distinguisher`](../object/Distinguisher.html)[`InteractiveResolver`](../object/InteractiveResolver.html)[`StillAmbiguousException`](../object/StillAmbiguousException.html)[`UnmatchedDisambigException`](../object/UnmatchedDisambigException.html)
+[`DisambigException`](../object/DisambigException.html) [`DisambigOrdinalOutOfRangeException`](../object/DisambigOrdinalOutOfRangeException.html) [`DisambigRanking`](../object/DisambigRanking.html) [`DisambigResolver`](../object/DisambigResolver.html) [`DisambigResults`](../object/DisambigResults.html) [`Distinguisher`](../object/Distinguisher.html) [`InteractiveResolver`](../object/InteractiveResolver.html) [`StillAmbiguousException`](../object/StillAmbiguousException.html) [`UnmatchedDisambigException`](../object/UnmatchedDisambigException.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -43,7 +43,7 @@ phrases in command input.
 
 
 
-[`basicDistinguisher`](../object/basicDistinguisher.html)[`litUnlitDistinguisher`](../object/litUnlitDistinguisher.html)[`locationDistinguisher`](../object/locationDistinguisher.html)[`nullDistinguisher`](../object/nullDistinguisher.html)[`ownershipDistinguisher`](../object/ownershipDistinguisher.html)[`rankByDisambigOrdinals`](../object/rankByDisambigOrdinals.html)
+[`basicDistinguisher`](../object/basicDistinguisher.html) [`litUnlitDistinguisher`](../object/litUnlitDistinguisher.html) [`locationDistinguisher`](../object/locationDistinguisher.html) [`nullDistinguisher`](../object/nullDistinguisher.html) [`ownershipDistinguisher`](../object/ownershipDistinguisher.html) [`rankByDisambigOrdinals`](../object/rankByDisambigOrdinals.html)
 <span id="FunctionSummary_"></span>
 
 

@@ -38,7 +38,7 @@ declarations.
 
 
 
-[`Tokenizer`](../object/Tokenizer.html)[`TokenizerError`](../object/TokenizerError.html)[`TokErrorNoMatch`](../object/TokErrorNoMatch.html)
+[`Tokenizer`](../object/Tokenizer.html) [`TokenizerError`](../object/TokenizerError.html) [`TokErrorNoMatch`](../object/TokErrorNoMatch.html)
 <span id="_ObjectSummary_"></span>
 
 

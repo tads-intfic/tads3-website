@@ -74,7 +74,7 @@ object.
 
 
 
-[`path_`](#path_)[`target_`](#target_)
+[`path_`](#path_) [`target_`](#target_)
 
 
 
@@ -86,7 +86,7 @@ object.
 
 
 
-[`construct`](#construct)[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
+[`construct`](#construct) [`getReportPrefix`](#getReportPrefix) [`standardReport`](#standardReport)
 
 
 

@@ -40,78 +40,58 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The senses. We define sight, sound, smell, and touch. We do not define a
+<p>The senses. We define sight, sound, smell, and touch. We do not define a
 separate sense for taste, since it would add nothing to our model: you
-can taste something if and only if you can touch it.
+can taste something if and only if you can touch it.</p>
 
-To add a new sense, you must do the following:
+<p>To add a new sense, you must do the following:</p>
 
-\- Define the sense object itself, in parallel to the senses defined
-below.
+<p>- Define the sense object itself, in parallel to the senses defined
+below.</p>
 
-\- Modify class Material to set the default transparency level for this
+<p>- Modify class Material to set the default transparency level for this
 sense by defining the property xxxThru - for most senses, the default
-transparency level is 'opaque', but you must decide on the appropriate
-default for your new sense.
+transparency level is ‘opaque’, but you must decide on the appropriate
+default for your new sense.</p>
 
-\- Modify class Thing to set the default xxxSize setting, if desired.
+<p>- Modify class Thing to set the default xxxSize setting, if desired.</p>
 
-\- Modify class Thing to set the default xxxPresence setting, if
-desired.
+<p>- Modify class Thing to set the default xxxPresence setting, if
+desired.</p>
 
-\- Modify each instance of class 'Material' that should have a
+<p>- Modify each instance of class ‘Material’ that should have a
 non-default transparency for the sense by defining the property xxxThru
-for the material.
+for the material.</p>
 
-\- Modify class Actor to add the sense to the default mySenses list;
+<p>- Modify class Actor to add the sense to the default mySenses list;
 this is only necessary if the sense is one that all actors should have
-by default.
+by default.</p>
 
-**`sight`**` :   `[`Sense`](../object/Sense.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">sight</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Sense.html"><code class="language-plaintext highlighter-rouge">Sense</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">sight</code></strong><br />
 <a href="../object/Sense.html"><code class="language-plaintext highlighter-rouge">Sense</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#ambienceProp"><code class="language-plaintext highlighter-rouge">ambienceProp</code></a><a href="#presenceProp"><code class="language-plaintext highlighter-rouge">presenceProp</code></a><a href="#sizeProp"><code class="language-plaintext highlighter-rouge">sizeProp</code></a><a href="#thruProp"><code class="language-plaintext highlighter-rouge">thruProp</code></a></p>
+<p><a href="#ambienceProp"><code class="language-plaintext highlighter-rouge">ambienceProp</code></a> <a href="#presenceProp"><code class="language-plaintext highlighter-rouge">presenceProp</code></a> <a href="#sizeProp"><code class="language-plaintext highlighter-rouge">sizeProp</code></a> <a href="#thruProp"><code class="language-plaintext highlighter-rouge">thruProp</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Sense</code> :<br />
 <a href="../object/Sense.html#canObjBeSensed"><code class="language-plaintext highlighter-rouge">canObjBeSensed</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="ambienceProp"></span></p>
 
@@ -119,11 +99,7 @@ by default.
 
 <p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#256">256</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="presenceProp"></span></p>
 
@@ -131,11 +107,7 @@ by default.
 
 <p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#255">255</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="sizeProp"></span></p>
 
@@ -143,11 +115,7 @@ by default.
 
 <p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#254">254</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="thruProp"></span></p>
 
@@ -155,28 +123,17 @@ by default.
 
 <p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#253">253</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

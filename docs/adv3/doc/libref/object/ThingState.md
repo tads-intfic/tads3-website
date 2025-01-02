@@ -78,7 +78,7 @@ Language-specific modifications for ThingState.
 
 
 
-[`lightSourceStateOff`](../object/lightSourceStateOff.html)[`lightSourceStateOn`](../object/lightSourceStateOn.html)[`matchStateLit`](../object/matchStateLit.html)[`matchStateUnlit`](../object/matchStateUnlit.html)[`unwornState`](../object/unwornState.html)[`wornState`](../object/wornState.html)
+[`lightSourceStateOff`](../object/lightSourceStateOff.html) [`lightSourceStateOn`](../object/lightSourceStateOn.html) [`matchStateLit`](../object/matchStateLit.html) [`matchStateUnlit`](../object/matchStateUnlit.html) [`unwornState`](../object/unwornState.html) [`wornState`](../object/wornState.html)
 <span id="_PropSummary_"></span>
 
 
@@ -87,7 +87,7 @@ Language-specific modifications for ThingState.
 
 
 
-[`listingOrder`](#listingOrder)[`listName_`](#listName_)[`stateTokens`](#stateTokens)
+[`listingOrder`](#listingOrder) [`listName_`](#listName_) [`stateTokens`](#stateTokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,7 +97,7 @@ Language-specific modifications for ThingState.
 
 
 
-[`findStateToken`](#findStateToken)[`inventoryName`](#inventoryName)[`listName`](#listName)[`matchName`](#matchName)[`wornName`](#wornName)
+[`findStateToken`](#findStateToken) [`inventoryName`](#inventoryName) [`listName`](#listName) [`matchName`](#matchName) [`wornName`](#wornName)
 
 <span id="_Properties_"></span>
 

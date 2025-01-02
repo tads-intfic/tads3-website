@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; TadsObject  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; TadsObject<br />
 <span class="navnp"><a href="strcomp.html" class="nav"><em>Prev:</em> StringComparator</a>
     <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="tadsobject">TadsObject</h1>
 
@@ -60,45 +52,38 @@ methods, described below.</p>
 
 <p><code class="language-plaintext highlighter-rouge">createClone()</code></p>
 
-<div class="fdef">
-
-Creates a new object that is an identical copy of this object. The new
+<p>Creates a new object that is an identical copy of this object. The new
 object will have the same superclasses as the original, and the
-identical set of properties defined in the original.
+identical set of properties defined in the original.</p>
 
-No constructor is called in creating the new object, since the object is
+<p>No constructor is called in creating the new object, since the object is
 explicitly initialized by this method to have the exact property values
-of the original.
+of the original.</p>
 
-The clone is a "shallow" copy of the original, which means that the
+<p>The clone is a “shallow” copy of the original, which means that the
 clone refers to all of the same objects as the original. For example, if
 a property of the original points to a Vector, the corresponding
 property of the clone points to the same Vector, not a copy of the
-Vector.
+Vector.</p>
 
+<p><code class="language-plaintext highlighter-rouge">createInstance(...)</code></p>
 
-
-`createInstance(...)`
-
-<div class="fdef">
-
-Creates a new instance of the target object. This method's arguments are
+<p>Creates a new instance of the target object. This method’s arguments are
 passed directly to the constructor, if any, of the new object; this
-method doesn't make any other use of the arguments. The method creates
-the object, invokes the new object's constructor, then returns the new
-object.
+method doesn’t make any other use of the arguments. The method creates
+the object, invokes the new object’s constructor, then returns the new
+object.</p>
 
-This method can be especially useful in static methods defined in base
+<p>This method can be especially useful in static methods defined in base
 classes that are further subclassed, because it essentially allows a
-parameterized "new" operator. For example, suppose we had a base class,
+parameterized “new” operator. For example, suppose we had a base class,
 Coin, which you subclass into several types: GoldCoin, SilverCoin,
 CopperCoin. For each of these classes, you want to provide a method that
 creates a new instance of that kind of coin. Using the
-`new` operator, you'd have to write a separate
-method in each subclass:
+<code class="language-plaintext highlighter-rouge">new</code> operator, you’d have to write a separate
+method in each subclass:</p>
 
-```
-    class Coin: object;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Coin: object;
     class GoldCoin: Coin
       createCoin() { return new GoldCoin(); }
     ;
@@ -108,60 +93,53 @@ method in each subclass:
     class CopperCoin: Coin
       createCoin() { return new CopperCoin(); }
     ;
-```
+</code></pre></div></div>
 
-This gets increasingly tedious as we add new subclasses. What we'd
-really like to do is something like this:
+<p>This gets increasingly tedious as we add new subclasses. What we’d
+really like to do is something like this:</p>
 
-```
-    class Coin: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Coin: object
       createCoin() { return new self(); } // illegal!
     ;
-```
+</code></pre></div></div>
 
-This would let all the subclasses inherit this one implementation, which
+<p>This would let all the subclasses inherit this one implementation, which
 would create the appropriate kind of object depending on the subclass on
-which the method was invoked. We can't write exactly this code, though,
-because the `new` operator doesn't allow a
-variable like `self` to be used as its argument.
+which the method was invoked. We can’t write exactly this code, though,
+because the <code class="language-plaintext highlighter-rouge">new</code> operator doesn’t allow a
+variable like <code class="language-plaintext highlighter-rouge">self</code> to be used as its argument.</p>
 
-So, it's `createInstance()` to the rescue. This
-method lets us do exactly what we'd like: create an instance of the
+<p>So, it’s <code class="language-plaintext highlighter-rouge">createInstance()</code> to the rescue. This
+method lets us do exactly what we’d like: create an instance of the
 current class, writing the code only once in the base class. Using
-`createInstance(),` we can rewrite the method to
-get the effect we want:
+<code class="language-plaintext highlighter-rouge">createInstance(),</code> we can rewrite the method to
+get the effect we want:</p>
 
-```
-    class Coin: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Coin: object
       createCoin() { return createInstance(); }
     ;
-```
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">createInstanceOf(...)</code></p>
 
-`createInstanceOf(...)`
-
-<div class="fdef">
-
-Creates a new instance based on multiple superclasses. This is a static
+<p>Creates a new instance based on multiple superclasses. This is a static
 (class-level) method, so you can call it directly on TadsObject. With no
 arguments, this simply creates a basic TadsObject instance; this is
-equivalent to the `createInstance()` method.
+equivalent to the <code class="language-plaintext highlighter-rouge">createInstance()</code> method.</p>
 
-The arguments give the superclasses, in "dominance" order. The
+<p>The arguments give the superclasses, in “dominance” order. The
 superclasses appear in the argument list in the same order in which
-they'd appear in an object definition: the first argument corresponds to
+they’d appear in an object definition: the first argument corresponds to
 the leftmost superclass in an ordinary object definition. Each argument
 is either a class or a list. If an argument is a list, the first element
 of the list must be a class, and the remainder of the elements are the
-arguments to pass to that class's constructor. If an argument is simply
+arguments to pass to that class’s constructor. If an argument is simply
 a class (not a list), then the constructor for this superclass is not
-invoked at all.
+invoked at all.</p>
 
-For example, suppose we had the following class definitions:
+<p>For example, suppose we had the following class definitions:</p>
 
-```
-    class A: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class A: object
       construct(a, b) { ... }
     ;
 
@@ -181,141 +159,125 @@ For example, suppose we had the following class definitions:
 
       }
     ;
-```
+</code></pre></div></div>
 
-Now, suppose that we had never actually defined class D, but we want to
+<p>Now, suppose that we had never actually defined class D, but we want to
 create an instance dynamically as though it class D had been defined. We
-could obtain this effect like so:
+could obtain this effect like so:</p>
 
-```
-    local d = TadsObject.createInstanceOf([A, x, y], B, [C]);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local d = TadsObject.createInstanceOf([A, x, y], B, [C]);
+</code></pre></div></div>
 
-This creates a new instance with superclasses A, B, and C, in that
+<p>This creates a new instance with superclasses A, B, and C, in that
 dominance order. During construction of the new object, we will inherit
-A's constructor, passing `(x,y)` as arguments,
-and we'll inherit C's constructor with no arguments. Note that we pass a
+A’s constructor, passing <code class="language-plaintext highlighter-rouge">(x,y)</code> as arguments,
+and we’ll inherit C’s constructor with no arguments. Note that we pass a
 list containing C alone; this indicates that we do want to call the
 constructor, since the argument is passed as a list rather than as
-simply the object C, but that we have no arguments to send to C's
-constructor. Note also that we don't invoke B's constructor at all,
-since B is specified without being wrapped in a list.
+simply the object C, but that we have no arguments to send to C’s
+constructor. Note also that we don’t invoke B’s constructor at all,
+since B is specified without being wrapped in a list.</p>
 
-Note that if constructors are invoked at all, they can only be called in
-the same order in which they appear in the superclass list.
+<p>Note that if constructors are invoked at all, they can only be called in
+the same order in which they appear in the superclass list.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">createTransientInstance(...)</code></p>
 
-`createTransientInstance(...)`
+<p>This works like <code class="language-plaintext highlighter-rouge">createInstance()</code>, except that
+the new instance is transient.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">createTransientInstanceOf(...)</code></p>
 
-This works like `createInstance()`, except that
-the new instance is transient.
+<p>This works like <code class="language-plaintext highlighter-rouge">createInstanceOf()</code>, except
+that the new instance is transient.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getMethod(*prop*)</code></p>
 
-`createTransientInstanceOf(...)`
-
-<div class="fdef">
-
-This works like `createInstanceOf()`, except
-that the new instance is transient.
-
-</div>
-
-`getMethod(*prop*)`
-
-<div class="fdef">
-
-Gets a function pointer to one of the object's methods. *prop* is a
+<p>Gets a function pointer to one of the object’s methods. <em>prop</em> is a
 property pointer value giving the property of the object to retrieve. If
-this property contains a method, `getMethod()`
-returns a function pointer to the method's code. If the property
+this property contains a method, <code class="language-plaintext highlighter-rouge">getMethod()</code>
+returns a function pointer to the method’s code. If the property
 contains a self-printing string, the return value is an ordinary string
 value with the text of the printed string. If the property is any other
 type of data, or is undefined, the result is
-`nil`.
+<code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-Note that a double-quoted string that contains embedded ("interpolated")
-expressions with `\&lt;\&lt; \&gt;\&gt;` is really a
+<p>Note that a double-quoted string that contains embedded (“interpolated”)
+expressions with <code class="language-plaintext highlighter-rouge">\&lt;\&lt; \&gt;\&gt;</code> is really a
 function. This means that if you call
-`getMethod()` on a property containing a string
-with embedded expressions, you'll get back a function pointer result
-rather than a string expression.
+<code class="language-plaintext highlighter-rouge">getMethod()</code> on a property containing a string
+with embedded expressions, you’ll get back a function pointer result
+rather than a string expression.</p>
 
-When the returned value is a function, it can be called like an ordinary
-function. You wouldn't normally do this, though, because the call would
-have a `nil` value for
-`self`, which means that the method would
+<p>When the returned value is a function, it can be called like an ordinary
+function. You wouldn’t normally do this, though, because the call would
+have a <code class="language-plaintext highlighter-rouge">nil</code> value for
+<code class="language-plaintext highlighter-rouge">self</code>, which means that the method would
 trigger a run-time error if it tried to access any properties or other
-methods of `self`. Instead, the main use for the
+methods of <code class="language-plaintext highlighter-rouge">self</code>. Instead, the main use for the
 returned function pointer would be to assign the function as a different
 method of the same object, or as a method of another object, using
-`setMethod()`.
+<code class="language-plaintext highlighter-rouge">setMethod()</code>.</p>
 
-Note that `getMethod()` can also return an
+<p>Note that <code class="language-plaintext highlighter-rouge">getMethod()</code> can also return an
 anonymous function object. Methods originally defined in the source code
 will always be returned as regular function pointers (of type
 TypeFuncPtr). An anonymous function will be returned only for a method
 that was explicitly set to an anonymous functions via
-`setMethod()`. In this case, the same anonymous
-function object that was passed to `setMethod()`
-will be returned from `getMethod()`.
+<code class="language-plaintext highlighter-rouge">setMethod()</code>. In this case, the same anonymous
+function object that was passed to <code class="language-plaintext highlighter-rouge">setMethod()</code>
+will be returned from <code class="language-plaintext highlighter-rouge">getMethod()</code>.</p>
 
-(Ordinary methods are also "anonymous" functions in that they're not
-named. But these aren't what we normally call anonymous function
+<p>(Ordinary methods are also “anonymous” functions in that they’re not
+named. But these aren’t what we normally call anonymous function
 objects, which are the type of object created with the
-`function` syntax.)
+<code class="language-plaintext highlighter-rouge">function</code> syntax.)</p>
 
-</div>
+<p><span id="setMethod"></span></p>
 
-<span id="setMethod"></span>
+<p><code class="language-plaintext highlighter-rouge">setMethod(*prop*, *func*)</code></p>
 
-`setMethod(*prop*, *func*)`
+<p>Assigns the function <em>func</em> as a method of the object, using the
+property <em>prop</em>.</p>
 
-<div class="fdef">
-
-Assigns the function *func* as a method of the object, using the
-property *prop*.
-
-*prop* is the property pointer to assign. This specifies the property
+<p><em>prop</em> is the property pointer to assign. This specifies the property
 that will be used for the newly assigned method. Any previous method or
-data value for this property will be replaced with the new function.
+data value for this property will be replaced with the new function.</p>
 
-*func* can be:
+<p><em>func</em> can be:</p>
 
-- A regular (named) function pointer, which becomes a method with the
-  same arguments as the function. The function itself isn't changed by
-  this; you can also still call it directly as an ordinary function.
-- A [floating method](proccode.html#floatingMethods) pointer, which
-  becomes a method with the same arguments.
-- An anonymous function, which becomes a method with the same arguments
-  as the anonymous function. The anonymous function itself isn't changed
-  in any way by this; you can still call it directly, too.
-- An anonymous method, which becomes a method with the same arguments as
-  the anonymous method.
-- A [DynamicFunc](dynfunc.html), which becomes a method with the same
-  arguments as the dynamically compiled code.
-- A single-quoted string value, which will be displayed on evaluating
-  the property, as though it had been initially defined as a
-  double-quoted string property of the object.
-- Any value retrieved by a call to
-  `getMethod()`, on this object or any other
-  object.
+<ul>
+  <li>A regular (named) function pointer, which becomes a method with the
+same arguments as the function. The function itself isn’t changed by
+this; you can also still call it directly as an ordinary function.</li>
+  <li>A <a href="proccode.html#floatingMethods">floating method</a> pointer, which
+becomes a method with the same arguments.</li>
+  <li>An anonymous function, which becomes a method with the same arguments
+as the anonymous function. The anonymous function itself isn’t changed
+in any way by this; you can still call it directly, too.</li>
+  <li>An anonymous method, which becomes a method with the same arguments as
+the anonymous method.</li>
+  <li>A <a href="dynfunc.html">DynamicFunc</a>, which becomes a method with the same
+arguments as the dynamically compiled code.</li>
+  <li>A single-quoted string value, which will be displayed on evaluating
+the property, as though it had been initially defined as a
+double-quoted string property of the object.</li>
+  <li>Any value retrieved by a call to
+<code class="language-plaintext highlighter-rouge">getMethod()</code>, on this object or any other
+object.</li>
+</ul>
 
-After calling this method, invoking *prop* on this object will result in
-calling the function *func* as though it had always been a method of the
-object. `self` will be set, and the method can
-use `inherited` to inherit from this object's
-class structure.
+<p>After calling this method, invoking <em>prop</em> on this object will result in
+calling the function <em>func</em> as though it had always been a method of the
+object. <code class="language-plaintext highlighter-rouge">self</code> will be set, and the method can
+use <code class="language-plaintext highlighter-rouge">inherited</code> to inherit from this object’s
+class structure.</p>
 
-It's important to note how the naming works. The new method is callable
-under the name *prop* - **not** under the name of the function that was
-used to create it. For example:
+<p>It’s important to note how the naming works. The new method is callable
+under the name <em>prop</em> - <strong>not</strong> under the name of the function that was
+used to create it. For example:</p>
 
-```
-    method foo(x) { return x*x; }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    method foo(x) { return x*x; }
     obj: object;
 
     main(args)
@@ -323,61 +285,62 @@ used to create it. For example:
       obj.setMethod(&amp;square, foo);
       local x = obj.square(10);
     }
-```
+</code></pre></div></div>
 
-The name of the new method is `square`, *not*
-`foo`. `foo` is still
+<p>The name of the new method is <code class="language-plaintext highlighter-rouge">square</code>, <em>not</em>
+<code class="language-plaintext highlighter-rouge">foo</code>. <code class="language-plaintext highlighter-rouge">foo</code> is still
 just a floating method; the new, full-fledged method is established
-under the property name, not the function name.
+under the property name, not the function name.</p>
 
-The method relationship created by `setMethod()`
-is non-exclusive. You're free to use
-`setMethod()` to assign the same function
+<p>The method relationship created by <code class="language-plaintext highlighter-rouge">setMethod()</code>
+is non-exclusive. You’re free to use
+<code class="language-plaintext highlighter-rouge">setMethod()</code> to assign the same function
 pointer (or other value) as a method of multiple objects at once. The
-value doesn't lose its regular meaning, either: as we said above, if you
-supply a function pointer to `setMethod()`, you
-can still call the same function as an ordinary function, too.
+value doesn’t lose its regular meaning, either: as we said above, if you
+supply a function pointer to <code class="language-plaintext highlighter-rouge">setMethod()</code>, you
+can still call the same function as an ordinary function, too.</p>
 
-Note that when you define an ordinary function, the compiler doesn't let
-you refer to `self` or any other method context
-variables (such as `targetprop` or
-`definingobj`) within the function body, since
-these variables normally aren't valid in a function. This also means
-that you can't define a function that uses
-`inherited` or
-`delegated`. There are two ways of dealing with
-this:
+<p>Note that when you define an ordinary function, the compiler doesn’t let
+you refer to <code class="language-plaintext highlighter-rouge">self</code> or any other method context
+variables (such as <code class="language-plaintext highlighter-rouge">targetprop</code> or
+<code class="language-plaintext highlighter-rouge">definingobj</code>) within the function body, since
+these variables normally aren’t valid in a function. This also means
+that you can’t define a function that uses
+<code class="language-plaintext highlighter-rouge">inherited</code> or
+<code class="language-plaintext highlighter-rouge">delegated</code>. There are two ways of dealing with
+this:</p>
 
-- First, you can define a method of one object, and "move" it to a
-  different object: use `getMethod()` to
-  retrieve the method information from the original object, and pass the
-  result to `setMethod()` to add the method to
-  the other object. `self` and the other method
-  context variables are dynamic, so they'll automatically reflect the
-  new object context when you call the moved version of the method.
-  (This doesn't really move the method; it really just copies it. You
-  can still call it in the old object as well, where it will still
-  reflect its original context.) This is a good approach when you need
-  the same method functionality in an ordinary object anyway, since you
-  can simply copy it as needed to new objects.
-- Second, you can use the `method` syntax to
-  define a [floating method](proccode.html#floatingMethods), which is
-  really just an ordinary function that *does* have access to
-  `self`, `targetprop`,
-  and the others, and that can use `inherited`
-  and `delegated`. This is a good approach when
-  the function's only purpose is to be plugged into objects via
-  `setMethod()`, since it avoids creating a
-  dummy template object just to define a method.
+<ul>
+  <li>First, you can define a method of one object, and “move” it to a
+different object: use <code class="language-plaintext highlighter-rouge">getMethod()</code> to
+retrieve the method information from the original object, and pass the
+result to <code class="language-plaintext highlighter-rouge">setMethod()</code> to add the method to
+the other object. <code class="language-plaintext highlighter-rouge">self</code> and the other method
+context variables are dynamic, so they’ll automatically reflect the
+new object context when you call the moved version of the method.
+(This doesn’t really move the method; it really just copies it. You
+can still call it in the old object as well, where it will still
+reflect its original context.) This is a good approach when you need
+the same method functionality in an ordinary object anyway, since you
+can simply copy it as needed to new objects.</li>
+  <li>Second, you can use the <code class="language-plaintext highlighter-rouge">method</code> syntax to
+define a <a href="proccode.html#floatingMethods">floating method</a>, which is
+really just an ordinary function that <em>does</em> have access to
+<code class="language-plaintext highlighter-rouge">self</code>, <code class="language-plaintext highlighter-rouge">targetprop</code>,
+and the others, and that can use <code class="language-plaintext highlighter-rouge">inherited</code>
+and <code class="language-plaintext highlighter-rouge">delegated</code>. This is a good approach when
+the function’s only purpose is to be plugged into objects via
+<code class="language-plaintext highlighter-rouge">setMethod()</code>, since it avoids creating a
+dummy template object just to define a method.</li>
+</ul>
 
-When you use an anonymous function with
-`setMethod()`, you should keep in mind that
-`self` and the other method context variables
+<p>When you use an anonymous function with
+<code class="language-plaintext highlighter-rouge">setMethod()</code>, you should keep in mind that
+<code class="language-plaintext highlighter-rouge">self</code> and the other method context variables
 are shared with the scope where the function was defined. Consider this
-example:
+example:</p>
 
-```
-    obj1: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj1: object
        init()
        {
            obj2.setMethod(&amp;a, { x: self.prop = x; });
@@ -392,81 +355,69 @@ example:
         obj1.init();
         obj2.a(100);
     }
-```
+</code></pre></div></div>
 
-Here we've set up a new method for `obj2`, named
-`a`. We then invoke the new method. The question
-is: what's the value of `obj2.prop` when we're
+<p>Here we’ve set up a new method for <code class="language-plaintext highlighter-rouge">obj2</code>, named
+<code class="language-plaintext highlighter-rouge">a</code>. We then invoke the new method. The question
+is: what’s the value of <code class="language-plaintext highlighter-rouge">obj2.prop</code> when we’re
 done? At first glance you might think it should be 100, since the newly
-created method sets `self.prop` to the argument
-value, and the new method is part of `obj2`,
-ergo we must be setting `obj2.prop` to 100. But
-that's not what happens: the value of
-`obj2.prop` is `nil`
-when we're done.
+created method sets <code class="language-plaintext highlighter-rouge">self.prop</code> to the argument
+value, and the new method is part of <code class="language-plaintext highlighter-rouge">obj2</code>,
+ergo we must be setting <code class="language-plaintext highlighter-rouge">obj2.prop</code> to 100. But
+that’s not what happens: the value of
+<code class="language-plaintext highlighter-rouge">obj2.prop</code> is <code class="language-plaintext highlighter-rouge">nil</code>
+when we’re done.</p>
 
-The reason is the little detail we mentioned about how an anonymous
+<p>The reason is the little detail we mentioned about how an anonymous
 function shares its method context with its lexically enclosing scope.
 Because the anonymous function was created within the confines of
-`obj1.init`, the `self`
-in effect at the moment of the function's creation was
-`obj1`. And this is the
-`self` that the function will use forever, no
-matter how many times it's invoked. It's in the nature of an anonymous
+<code class="language-plaintext highlighter-rouge">obj1.init</code>, the <code class="language-plaintext highlighter-rouge">self</code>
+in effect at the moment of the function’s creation was
+<code class="language-plaintext highlighter-rouge">obj1</code>. And this is the
+<code class="language-plaintext highlighter-rouge">self</code> that the function will use forever, no
+matter how many times it’s invoked. It’s in the nature of an anonymous
 function: it shares everything with its lexically enclosing scope,
-including `self`.
+including <code class="language-plaintext highlighter-rouge">self</code>.</p>
 
-In this example, though, that's not the effect we're after. We'd like
+<p>In this example, though, that’s not the effect we’re after. We’d like
 instead to create a method that assigns a value to the property
-`prop` of whatever object we attach the method
+<code class="language-plaintext highlighter-rouge">prop</code> of whatever object we attach the method
 to. In other words, we want to create a real live method, not a function
-that's stuck to someone else's method context.
+that’s stuck to someone else’s method context.</p>
 
-The way to do this is to replace the anonymous function with an
-anonymous method. An anonymous method *isn't* stuck to the method
+<p>The way to do this is to replace the anonymous function with an
+anonymous method. An anonymous method <em>isn’t</em> stuck to the method
 context that was in effect when it was created, but instead uses the
-live context whenever it's called. This is an easy change to make: we
-just need to use the `method` syntax to define
-the anonymous method.
+live context whenever it’s called. This is an easy change to make: we
+just need to use the <code class="language-plaintext highlighter-rouge">method</code> syntax to define
+the anonymous method.</p>
 
-```
-    obj2.setMethod(&amp;a, method(x) { self.prop = x; });
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj2.setMethod(&amp;a, method(x) { self.prop = x; });
+</code></pre></div></div>
 
-With this change, running the program will indeed set
-`obj2.prop` to 100.
+<p>With this change, running the program will indeed set
+<code class="language-plaintext highlighter-rouge">obj2.prop</code> to 100.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">setSuperclassList(*lst*)</code></p>
 
-`setSuperclassList(*lst*)`
-
-<div class="fdef">
-
-Sets the object's superclasses to the values in *lst*, which must be a
-list (or [list-like object](opoverload.html#listlike)) containing
-objects. The object's superclass list is replaced with the given
-superclass list. The objects in *lst* must all be TadsObject objects,
+<p>Sets the object’s superclasses to the values in <em>lst</em>, which must be a
+list (or <a href="opoverload.html#listlike">list-like object</a>) containing
+objects. The object’s superclass list is replaced with the given
+superclass list. The objects in <em>lst</em> must all be TadsObject objects,
 with one exception: lst is allowed to be
-`\[TadsObject\]` (that is, a single-element list
+<code class="language-plaintext highlighter-rouge">\[TadsObject\]</code> (that is, a single-element list
 containing the TadsObject class itself), in which case the object
-becomes a root TadsObject object.
-
-</div>
-
-</div>
+becomes a root TadsObject object.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; TadsObject  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; TadsObject<br />
 <span class="navnp"><a href="strcomp.html" class="nav"><em>Prev:</em> StringComparator</a>
     <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

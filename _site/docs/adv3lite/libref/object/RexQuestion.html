@@ -46,72 +46,44 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A RexQuestion is a simple subclass of Question for parsing answers with
+regular expressions.</p>
 
-A RexQuestion is a simple subclass of Question for parsing answers with
-regular expressions.
-
-`class `**`RexQuestion`**` :   `[`Question`](../object/Question.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">RexQuestion</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Question.html"><code class="language-plaintext highlighter-rouge">Question</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RexQuestion</code></strong><br />
 <a href="../object/Question.html"><code class="language-plaintext highlighter-rouge">Question</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#answerFunc"><code class="language-plaintext highlighter-rouge">answerFunc</code></a><a href="#answerPat"><code class="language-plaintext highlighter-rouge">answerPat</code></a></p>
+<p><a href="#answerFunc"><code class="language-plaintext highlighter-rouge">answerFunc</code></a> <a href="#answerPat"><code class="language-plaintext highlighter-rouge">answerPat</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Question</code> :<br />
-<a href="../object/Question.html#answerTemplate"><code class="language-plaintext highlighter-rouge">answerTemplate</code></a><a href="../object/Question.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+<a href="../object/Question.html#answerTemplate"><code class="language-plaintext highlighter-rouge">answerTemplate</code></a> <a href="../object/Question.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#parseAnswer"><code class="language-plaintext highlighter-rouge">parseAnswer</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#parseAnswer"><code class="language-plaintext highlighter-rouge">parseAnswer</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="answerFunc"></span></p>
 
@@ -119,11 +91,7 @@ regular expressions.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1196">1196</a>]</p>
 
-<div class="desc">
-
-the callback to invoke on answering
-
-</div>
+<p>the callback to invoke on answering</p>
 
 <p><span id="answerPat"></span></p>
 
@@ -131,19 +99,11 @@ the callback to invoke on answering
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1193">1193</a>]</p>
 
-<div class="desc">
-
-the regular expression pattern to match
-
-</div>
+<p>the regular expression pattern to match</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -151,16 +111,12 @@ the regular expression pattern to match
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1167">1167</a>]</p>
 
-<div class="desc">
-
-Create - 'pat' is the regular expression pattern, as either a string or
-a RexPattern object. We'll parse an answer simply by matching it against
-the regular expression; if we match, we'll take it as an answer. 'func'
-is a callback function that we'll call to carry out the action of
-answering the question. We'll invoke this with one argument giving the
-literal text of the input.
-
-</div>
+<p>Create - ‘pat’ is the regular expression pattern, as either a string or
+a RexPattern object. We’ll parse an answer simply by matching it against
+the regular expression; if we match, we’ll take it as an answer. ‘func’
+is a callback function that we’ll call to carry out the action of
+answering the question. We’ll invoke this with one argument giving the
+literal text of the input.</p>
 
 <p><span id="parseAnswer"></span></p>
 
@@ -168,18 +124,11 @@ literal text of the input.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1173">1173</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

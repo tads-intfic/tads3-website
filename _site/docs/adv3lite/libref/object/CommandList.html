@@ -46,68 +46,40 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A CommandList is a set of potential parsings for a given input with a
+given grammar.</p>
 
-A CommandList is a set of potential parsings for a given input with a
-given grammar.
-
-`class `**`CommandList`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CommandList</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">CommandList</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a><a href="#cmdLst"><code class="language-plaintext highlighter-rouge">cmdLst</code></a><a href="#curable"><code class="language-plaintext highlighter-rouge">curable</code></a></p>
+<p><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a> <a href="#cmdLst"><code class="language-plaintext highlighter-rouge">cmdLst</code></a> <a href="#curable"><code class="language-plaintext highlighter-rouge">curable</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#acceptAny"><code class="language-plaintext highlighter-rouge">acceptAny</code></a><a href="#acceptCurable"><code class="language-plaintext highlighter-rouge">acceptCurable</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#getBestCmd"><code class="language-plaintext highlighter-rouge">getBestCmd</code></a><a href="#getResErr"><code class="language-plaintext highlighter-rouge">getResErr</code></a><a href="#length"><code class="language-plaintext highlighter-rouge">length</code></a></p>
+<p><a href="#acceptAny"><code class="language-plaintext highlighter-rouge">acceptAny</code></a> <a href="#acceptCurable"><code class="language-plaintext highlighter-rouge">acceptCurable</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getBestCmd"><code class="language-plaintext highlighter-rouge">getBestCmd</code></a> <a href="#getResErr"><code class="language-plaintext highlighter-rouge">getResErr</code></a> <a href="#length"><code class="language-plaintext highlighter-rouge">length</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="cmd"></span></p>
 
@@ -115,12 +87,8 @@ given grammar.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1002">1002</a>]</p>
 
-<div class="desc">
-
-Our resolved Command. This is the first parsing in our list that (in
-priority order) we were able to resolve with no errors.
-
-</div>
+<p>Our resolved Command. This is the first parsing in our list that (in
+priority order) we were able to resolve with no errors.</p>
 
 <p><span id="cmdLst"></span></p>
 
@@ -128,11 +96,7 @@ priority order) we were able to resolve with no errors.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#996">996</a>]</p>
 
-<div class="desc">
-
-our list of Command objects
-
-</div>
+<p>our list of Command objects</p>
 
 <p><span id="curable"></span></p>
 
@@ -140,21 +104,13 @@ our list of Command objects
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1009">1009</a>]</p>
 
-<div class="desc">
-
-Our semi-resolved Command. When we can't find a command that resolves
-without errors, we'll set this to the first one (in priority order) that
-resolves with a curable error.
-
-</div>
+<p>Our semi-resolved Command. When we can’t find a command that resolves
+without errors, we’ll set this to the first one (in priority order) that
+resolves with a curable error.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="acceptAny"></span></p>
 
@@ -162,14 +118,10 @@ resolves with a curable error.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#945">945</a>]</p>
 
-<div class="desc">
-
-Accept ANY command, with or without a resolution error, curable or not.
-We'll take the error-free resolution if we have one, otherwise the
+<p>Accept ANY command, with or without a resolution error, curable or not.
+We’ll take the error-free resolution if we have one, otherwise the
 resolution with a curable error, otherwise just the first parsing in
-priority order.
-
-</div>
+priority order.</p>
 
 <p><span id="acceptCurable"></span></p>
 
@@ -177,13 +129,9 @@ priority order.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#929">929</a>]</p>
 
-<div class="desc">
-
-Accept a curable resolution as the actual resolution. If we don't have
-an error-free resolution, we'll set 'cmd' to the curable resolution.
-Returns true if we have any resolution, nil if not.
-
-</div>
+<p>Accept a curable resolution as the actual resolution. If we don’t have
+an error-free resolution, we’ll set ‘cmd’ to the curable resolution.
+Returns true if we have any resolution, nil if not.</p>
 
 <p><span id="construct"></span></p>
 
@@ -191,18 +139,14 @@ Returns true if we have any resolution, nil if not.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#834">834</a>]</p>
 
-<div class="desc">
+<p>new CommandList(prod, toks, dict, wrapper) - construct a new CommandList
+object by parsing an input token list. ‘prod’ is the GrammarProd to
+parse against; ‘toks’ is the token list; ‘dict’ is the main parser
+dictionary; ‘wrapper’ is a callback function that maps a parse tree to a
+Command object.</p>
 
-new CommandList(prod, toks, dict, wrapper) - construct a new CommandList
-object by parsing an input token list. 'prod' is the GrammarProd to
-parse against; 'toks' is the token list; 'dict' is the main parser
-dictionary; 'wrapper' is a callback function that maps a parse tree to a
-Command object.
-
-new CommandList(Command) - construct a CommandList containing a single
-pre-resolved Command object.
-
-</div>
+<p>new CommandList(Command) - construct a CommandList containing a single
+pre-resolved Command object.</p>
 
 <p><span id="getBestCmd"></span></p>
 
@@ -210,14 +154,10 @@ pre-resolved Command object.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#957">957</a>]</p>
 
-<div class="desc">
-
-Get the most promising command from the available parsings. This returns
+<p>Get the most promising command from the available parsings. This returns
 the first successfully resolved command in priority order, if any;
 otherwise the first command with a curable error, if any; otherwise the
-first command in priority order.
-
-</div>
+first command in priority order.</p>
 
 <p><span id="getResErr"></span></p>
 
@@ -225,12 +165,8 @@ first command in priority order.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#980">980</a>]</p>
 
-<div class="desc">
-
-Get the resolution error, if any. If we parsed but didn't resolve, this
-returns the error from the first parsing in priority order.
-
-</div>
+<p>Get the resolution error, if any. If we parsed but didn’t resolve, this
+returns the error from the first parsing in priority order.</p>
 
 <p><span id="length"></span></p>
 
@@ -238,18 +174,11 @@ returns the error from the first parsing in priority order.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#922">922</a>]</p>
 
-<div class="desc">
+<p>number of parsings in the list</p>
 
-number of parsings in the list
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

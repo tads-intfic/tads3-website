@@ -58,7 +58,7 @@ programmatic interface - it doesn't have a user interface.
 
 
 
-[`restoreSettings`](#restoreSettings)[`retrieveSettings`](#retrieveSettings)[`saveSettings`](#saveSettings)[`storeSettings`](#storeSettings)
+[`restoreSettings`](#restoreSettings) [`retrieveSettings`](#retrieveSettings) [`saveSettings`](#saveSettings) [`storeSettings`](#storeSettings)
 
 <span id="_Properties_"></span>
 

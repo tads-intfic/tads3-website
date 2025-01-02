@@ -51,10 +51,10 @@ the special cover art resource
 [`vpath`](#vpath)
 
 Inherited from `WebResourceResFile` :  
-[`binaryExts`](../object/WebResourceResFile.html#binaryExts)[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)
+[`binaryExts`](../object/WebResourceResFile.html#binaryExts) [`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)
 
 Inherited from `WebResource` :  
-[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)
+[`group`](../object/WebResource.html#group) [`priority`](../object/WebResource.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -67,10 +67,10 @@ Inherited from `WebResource` :
 
 
 Inherited from `WebResourceResFile` :  
-[`isTextFile`](../object/WebResourceResFile.html#isTextFile)[`matchRequest`](../object/WebResourceResFile.html#matchRequest)[`processName`](../object/WebResourceResFile.html#processName)[`processRequest`](../object/WebResourceResFile.html#processRequest)
+[`isTextFile`](../object/WebResourceResFile.html#isTextFile) [`matchRequest`](../object/WebResourceResFile.html#matchRequest) [`processName`](../object/WebResourceResFile.html#processName) [`processRequest`](../object/WebResourceResFile.html#processRequest)
 
 Inherited from `WebResource` :  
-[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
+[`sendAck`](../object/WebResource.html#sendAck) [`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

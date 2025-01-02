@@ -56,10 +56,10 @@ actors, call commLink.disconnect()
 
 
 
-[`active`](#active)[`connectionList`](#connectionList)[`priority`](#priority)
+[`active`](#active) [`connectionList`](#connectionList) [`priority`](#priority)
 
 Inherited from `Special` :  
-[`all`](../object/Special.html#all)[`allActive_`](../object/Special.html#allActive_)
+[`all`](../object/Special.html#all) [`allActive_`](../object/Special.html#allActive_)
 
 <span id="_MethodSummary_"></span>
 
@@ -69,10 +69,10 @@ Inherited from `Special` :
 
 
 
-[`canHear`](#canHear)[`canSee`](#canSee)[`canTalkTo`](#canTalkTo)[`connectTo`](#connectTo)[`disconnect`](#disconnect)[`disconnectFrom`](#disconnectFrom)[`isConnectedTo`](#isConnectedTo)[`scopeList`](#scopeList)
+[`canHear`](#canHear) [`canSee`](#canSee) [`canTalkTo`](#canTalkTo) [`connectTo`](#connectTo) [`disconnect`](#disconnect) [`disconnectFrom`](#disconnectFrom) [`isConnectedTo`](#isConnectedTo) [`scopeList`](#scopeList)
 
 Inherited from `Special` :  
-[`allActive`](../object/Special.html#allActive)[`classInit`](../object/Special.html#classInit)[`first`](../object/Special.html#first)[`next`](../object/Special.html#next)
+[`allActive`](../object/Special.html#allActive) [`classInit`](../object/Special.html#classInit) [`first`](../object/Special.html#first) [`next`](../object/Special.html#next)
 
 <span id="_Properties_"></span>
 

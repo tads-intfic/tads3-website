@@ -47,87 +47,55 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Base class for resolvers used when answering interactive questions. This
-class doesn't do anything in the library directly, but it provides a
+<p>Base class for resolvers used when answering interactive questions. This
+class doesn’t do anything in the library directly, but it provides a
 structured point for language extensions to hook in as needed with
-'modify'.
+‘modify’.</p>
 
-*Modified in
-[en_us.t](../file/en_us.t.html)\[[3356](../source/en_us.t.html#3356)\]:*  
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3356">3356</a>]:</em><br />
 Custom interactive resolver. This is used for responses to
-disambiguation questions and prompts for missing noun phrases.
+disambiguation questions and prompts for missing noun phrases.</p>
 
-`class `**`InteractiveResolver`**` :   `[`ProxyResolver`](../object/ProxyResolver.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">InteractiveResolver</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ProxyResolver.html"><code class="language-plaintext highlighter-rouge">ProxyResolver</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">InteractiveResolver</code></strong><br />
 <a href="../object/ProxyResolver.html"><code class="language-plaintext highlighter-rouge">ProxyResolver</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">InteractiveResolver</code></strong><br />
 <a href="../object/DisambigResolver.html"><code class="language-plaintext highlighter-rouge">DisambigResolver</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#getReflexiveBinding"><code class="language-plaintext highlighter-rouge">getReflexiveBinding</code></a><a href="#resolvePronounAntecedent"><code class="language-plaintext highlighter-rouge">resolvePronounAntecedent</code></a><a href="#resolvePronounAsTargetActor"><code class="language-plaintext highlighter-rouge">resolvePronounAsTargetActor</code></a></p>
+<p><a href="#getReflexiveBinding"><code class="language-plaintext highlighter-rouge">getReflexiveBinding</code></a> <a href="#resolvePronounAntecedent"><code class="language-plaintext highlighter-rouge">resolvePronounAntecedent</code></a> <a href="#resolvePronounAsTargetActor"><code class="language-plaintext highlighter-rouge">resolvePronounAsTargetActor</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ProxyResolver</code> :<br />
-<a href="../object/ProxyResolver.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/ProxyResolver.html#getPossessiveResolver"><code class="language-plaintext highlighter-rouge">getPossessiveResolver</code></a><a href="../object/ProxyResolver.html#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a></p>
+<a href="../object/ProxyResolver.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/ProxyResolver.html#getPossessiveResolver"><code class="language-plaintext highlighter-rouge">getPossessiveResolver</code></a> <a href="../object/ProxyResolver.html#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getReflexiveBinding"></span></p>
 
@@ -135,19 +103,14 @@ disambiguation questions and prompts for missing noun phrases.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3396">3396</a>]</p>
 
-<div class="desc">
+<p>Get the reflexive third-person pronoun binding (himself, herself,
+itself, themselves). If the target actor isn’t the PC, and the gender of
+the pronoun matches, we’ll consider this as referring to the target
+actor. This allows exchanges of this form:</p>
 
-Get the reflexive third-person pronoun binding (himself, herself,
-itself, themselves). If the target actor isn't the PC, and the gender of
-the pronoun matches, we'll consider this as referring to the target
-actor. This allows exchanges of this form:
-
-  
-\&gt;bob, examine  
-What do you want Bob to examine? \*.  
-\&gt;himself
-
-</div>
+<p>&gt;bob, examine<br />
+What do you want Bob to examine? *.<br />
+&gt;himself</p>
 
 <p><span id="resolvePronounAntecedent"></span></p>
 
@@ -155,22 +118,17 @@ What do you want Bob to examine? \*.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3373">3373</a>]</p>
 
-<div class="desc">
-
-Resolve a pronoun antecedent. We'll resolve a third-person singular
+<p>Resolve a pronoun antecedent. We’ll resolve a third-person singular
 pronoun to the target actor if the target actor matches in gender, and
-the target actor isn't the PC. This allows exchanges like this:
+the target actor isn’t the PC. This allows exchanges like this:</p>
 
-  
-\&gt;bob, examine  
-What do you want Bob to look at? \*.  
-\&gt;his book
+<p>&gt;bob, examine<br />
+What do you want Bob to look at? *.<br />
+&gt;his book</p>
 
-In the above exchange, we'll treat "his" as referring to Bob, the target
+<p>In the above exchange, we’ll treat “his” as referring to Bob, the target
 actor of the action, because we have referred to Bob in the partial
-command (the "BOB, EXAMINE") that triggered the interactive question.
-
-</div>
+command (the “BOB, EXAMINE”) that triggered the interactive question.</p>
 
 <p><span id="resolvePronounAsTargetActor"></span></p>
 
@@ -178,21 +136,14 @@ command (the "BOB, EXAMINE") that triggered the interactive question.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3414">3414</a>]</p>
 
-<div class="desc">
+<p>Try matching the given pronoun type to the target actor. If it matches
+in gender, and the target actor isn’t the PC, we’ll return a resolve
+list consisting of the target actor. If we don’t have a match, we’ll
+return nil.</p>
 
-Try matching the given pronoun type to the target actor. If it matches
-in gender, and the target actor isn't the PC, we'll return a resolve
-list consisting of the target actor. If we don't have a match, we'll
-return nil.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

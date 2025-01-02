@@ -46,48 +46,40 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-MessageBuilder - this object provides a general text substitution
+<p>MessageBuilder - this object provides a general text substitution
 mechanism. Text to be substituted is enclosed in {curly braces}. Within
 the braces, we have the substitution parameter name, which can be in the
-following formats:
+following formats:</p>
 
-id  
-id obj  
-id1/id2 obj  
-id1 obj/id2
+<p>id<br />
+id obj<br />
+id1/id2 obj<br />
+id1 obj/id2</p>
 
-The ID string gives the type of substitution to perform. The ID's all
+<p>The ID string gives the type of substitution to perform. The ID’s all
 come from a table, which is specified by the language-specific subclass,
-so the ID's can vary by language (to allow for natural template-style
+so the ID’s can vary by language (to allow for natural template-style
 parameter names for each language). If the ID is in two pieces (id1 and
 id2), we concatenate the two pieces together with a slash between to
 form the name we seek in the table - so {the/he dobj} and {the dobj/he}
-are equivalent, and both look up the identifier 'the/he'. If a two-part
-identifier is given, and the identifier isn't found in the table, we'll
+are equivalent, and both look up the identifier ‘the/he’. If a two-part
+identifier is given, and the identifier isn’t found in the table, we’ll
 try looking it up with the parts reversed: if we see {he/the dobj},
-we'll first try finding 'he/the', and if that fails we'll look for
-'the/he'.
+we’ll first try finding ‘he/the’, and if that fails we’ll look for
+‘the/he’.</p>
 
-If 'obj' is present, it specificies the target object providing the text
+<p>If ‘obj’ is present, it specificies the target object providing the text
 to be substitutued; this is a string passed to the current Action, and
-is usually something like 'actor', 'dobj', or 'iobj'.
+is usually something like ‘actor’, ‘dobj’, or ‘iobj’.</p>
 
-One instance of this class, called langMessageBuilder, should be created
-by the language-specific library.
+<p>One instance of this class, called langMessageBuilder, should be created
+by the language-specific library.</p>
 
-`class `**`MessageBuilder`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MessageBuilder</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a> <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">MessageBuilder</code></strong><br />
 <a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
@@ -97,54 +89,34 @@ by the language-specific library.
 </code>                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><a href="../object/langMessageBuilder.html"><code class="language-plaintext highlighter-rouge">langMessageBuilder</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#lastParamObj_"><code class="language-plaintext highlighter-rouge">lastParamObj_</code></a><a href="#lastTargetObj_"><code class="language-plaintext highlighter-rouge">lastTargetObj_</code></a><a href="#nameTable_"><code class="language-plaintext highlighter-rouge">nameTable_</code></a><a href="#paramList_"><code class="language-plaintext highlighter-rouge">paramList_</code></a><a href="#paramTable_"><code class="language-plaintext highlighter-rouge">paramTable_</code></a><a href="#patAllCaps"><code class="language-plaintext highlighter-rouge">patAllCaps</code></a><a href="#patIdObj"><code class="language-plaintext highlighter-rouge">patIdObj</code></a><a href="#patIdObjSlashId"><code class="language-plaintext highlighter-rouge">patIdObjSlashId</code></a><a href="#patIdSlash"><code class="language-plaintext highlighter-rouge">patIdSlash</code></a><a href="#patUpper"><code class="language-plaintext highlighter-rouge">patUpper</code></a></p>
+<p><a href="#lastParamObj_"><code class="language-plaintext highlighter-rouge">lastParamObj_</code></a> <a href="#lastTargetObj_"><code class="language-plaintext highlighter-rouge">lastTargetObj_</code></a> <a href="#nameTable_"><code class="language-plaintext highlighter-rouge">nameTable_</code></a> <a href="#paramList_"><code class="language-plaintext highlighter-rouge">paramList_</code></a> <a href="#paramTable_"><code class="language-plaintext highlighter-rouge">paramTable_</code></a> <a href="#patAllCaps"><code class="language-plaintext highlighter-rouge">patAllCaps</code></a> <a href="#patIdObj"><code class="language-plaintext highlighter-rouge">patIdObj</code></a> <a href="#patIdObjSlashId"><code class="language-plaintext highlighter-rouge">patIdObjSlashId</code></a> <a href="#patIdSlash"><code class="language-plaintext highlighter-rouge">patIdSlash</code></a> <a href="#patUpper"><code class="language-plaintext highlighter-rouge">patUpper</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a><a href="#generateMessage"><code class="language-plaintext highlighter-rouge">generateMessage</code></a><a href="#genLiteral"><code class="language-plaintext highlighter-rouge">genLiteral</code></a><a href="#getTargetProp"><code class="language-plaintext highlighter-rouge">getTargetProp</code></a><a href="#langRewriteParam"><code class="language-plaintext highlighter-rouge">langRewriteParam</code></a><a href="#processResult"><code class="language-plaintext highlighter-rouge">processResult</code></a><a href="#quoteMessage"><code class="language-plaintext highlighter-rouge">quoteMessage</code></a></p>
+<p><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a> <a href="#generateMessage"><code class="language-plaintext highlighter-rouge">generateMessage</code></a> <a href="#genLiteral"><code class="language-plaintext highlighter-rouge">genLiteral</code></a> <a href="#getTargetProp"><code class="language-plaintext highlighter-rouge">getTargetProp</code></a> <a href="#langRewriteParam"><code class="language-plaintext highlighter-rouge">langRewriteParam</code></a> <a href="#processResult"><code class="language-plaintext highlighter-rouge">processResult</code></a> <a href="#quoteMessage"><code class="language-plaintext highlighter-rouge">quoteMessage</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="lastParamObj_"></span></p>
 
@@ -152,11 +124,7 @@ by the language-specific library.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1513">1513</a>]</p>
 
-<div class="desc">
-
-the parameter name of the last target object ('dobj', 'actor', etc)
-
-</div>
+<p>the parameter name of the last target object (‘dobj’, ‘actor’, etc)</p>
 
 <p><span id="lastTargetObj_"></span></p>
 
@@ -164,14 +132,10 @@ the parameter name of the last target object ('dobj', 'actor', etc)
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1510">1510</a>]</p>
 
-<div class="desc">
-
-The most recent target object. Each time we parse a substitution string,
-we'll remember the target object here; when a substitution string
-doesn't imply or specify a target object, we'll use the previous one by
-default.
-
-</div>
+<p>The most recent target object. Each time we parse a substitution string,
+we’ll remember the target object here; when a substitution string
+doesn’t imply or specify a target object, we’ll use the previous one by
+default.</p>
 
 <p><span id="nameTable_"></span></p>
 
@@ -179,11 +143,7 @@ default.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1519">1519</a>]</p>
 
-<div class="desc">
-
-our global name table - a LookupTable we set up during preinit
-
-</div>
+<p>our global name table - a LookupTable we set up during preinit</p>
 
 <p><span id="paramList_"></span></p>
 
@@ -191,53 +151,49 @@ our global name table - a LookupTable we set up during preinit
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1581">1581</a>]</p>
 
-<div class="desc">
+<p>our parameter list - this should be initialized in the language-specific
+subclass to a list like this:</p>
 
-our parameter list - this should be initialized in the language-specific
-subclass to a list like this:
+<p>[entry1, entry2, entry3, …]</p>
 
-\[entry1, entry2, entry3, ...\]
+<p>Each entry is a list like this:</p>
 
-Each entry is a list like this:
+<p>[paramName, &amp;prop, impliedTargetName, &lt;extra&gt;]</p>
 
-\[paramName, &amp;prop, impliedTargetName, \&lt;extra\&gt;\]
+<p>paramName is a string giving the substitution parameter name; this can
+be one word or two (‘the’ or ‘the obj’, for example).</p>
 
-paramName is a string giving the substitution parameter name; this can
-be one word or two ('the' or 'the obj', for example).
+<p>prop is a property identifier. This is the property invoked on the
+target object to obtain the substitution text.</p>
 
-prop is a property identifier. This is the property invoked on the
-target object to obtain the substitution text.
-
-impliedTargetName is a string giving the target object name to use. When
+<p>impliedTargetName is a string giving the target object name to use. When
 this is supplied, the paramName is normally used in message text with no
 object name. This should be nil for parameters that do not imply a
-particular target.
+particular target.</p>
 
-\&lt;extra\&gt; is any number of additional parameters for the
+<p>&lt;extra&gt; is any number of additional parameters for the
 language-specific subclass. The generic code ignores these extra
 parameters, but the langague-specific subclass can use them if it
-requires additional information.
+requires additional information.</p>
 
-Here's an example:
+<p>Here’s an example:</p>
 
-paramList\_ = \[  
-\['you', &amp;theDesc, nil, 'actor'\],  
-\['the obj' &amp;theObjDesc, &amp;itReflexive, nil\]  
-\]
+<p>paramList_ = [<br />
+[‘you’, &amp;theDesc, nil, ‘actor’],<br />
+[‘the obj’ &amp;theObjDesc, &amp;itReflexive, nil]<br />
+]</p>
 
-The first item specifies a substitution name of 'you', which is expanded
+<p>The first item specifies a substitution name of ‘you’, which is expanded
 by evaluating the property theDesc on the target object, and specifies
-an implied target object of 'actor'. When this is expanded, we'll call
-the current action to get the meaning of 'actor', then evaulate property
-theDesc on the result.
+an implied target object of ‘actor’. When this is expanded, we’ll call
+the current action to get the meaning of ‘actor’, then evaulate property
+theDesc on the result.</p>
 
-The second item specifies a substitution name of 'the obj', expanded by
-evaluating property theObjDesc on the target object. This one doesn't
+<p>The second item specifies a substitution name of ‘the obj’, expanded by
+evaluating property theObjDesc on the target object. This one doesn’t
 have an implied object, so the target object is the one explicitly given
-in the message source text or is the previous target object if one isn't
-specified in the message text.
-
-</div>
+in the message source text or is the previous target object if one isn’t
+specified in the message text.</p>
 
 <p><span id="paramTable_"></span></p>
 
@@ -245,11 +201,7 @@ specified in the message text.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1516">1516</a>]</p>
 
-<div class="desc">
-
-our parameter table - a LookupTable that we set up during preinit
-
-</div>
+<p>our parameter table - a LookupTable that we set up during preinit</p>
 
 <p><span id="patAllCaps"></span></p>
 
@@ -257,11 +209,7 @@ our parameter table - a LookupTable that we set up during preinit
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1073">1073</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="patIdObj"></span></p>
 
@@ -269,11 +217,7 @@ our parameter table - a LookupTable that we set up during preinit
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1076">1076</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="patIdObjSlashId"></span></p>
 
@@ -281,11 +225,7 @@ our parameter table - a LookupTable that we set up during preinit
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1074">1074</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="patIdSlash"></span></p>
 
@@ -293,11 +233,7 @@ our parameter table - a LookupTable that we set up during preinit
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1077">1077</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="patUpper"></span></p>
 
@@ -305,19 +241,11 @@ our parameter table - a LookupTable that we set up during preinit
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1072">1072</a>]</p>
 
-<div class="desc">
-
-pre-compile some regular expressions we use a lot
-
-</div>
+<p>pre-compile some regular expressions we use a lot</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="execute"></span></p>
 
@@ -325,11 +253,7 @@ pre-compile some regular expressions we use a lot
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1472">1472</a>]</p>
 
-<div class="desc">
-
-execute pre-initialization
-
-</div>
+<p>execute pre-initialization</p>
 
 <p><span id="filterText"></span></p>
 
@@ -337,12 +261,8 @@ execute pre-initialization
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1498">1498</a>]</p>
 
-<div class="desc">
-
-Our output filter method. We'll run each string written to the display
-through our parameter substitution method.
-
-</div>
+<p>Our output filter method. We’ll run each string written to the display
+through our parameter substitution method.</p>
 
 <p><span id="generateMessage"></span></p>
 
@@ -350,12 +270,8 @@ through our parameter substitution method.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1084">1084</a>]</p>
 
-<div class="desc">
-
-Given a source string with substitution parameters, generate the
-expanded message with the appropriate text in place of the parameters.
-
-</div>
+<p>Given a source string with substitution parameters, generate the
+expanded message with the appropriate text in place of the parameters.</p>
 
 <p><span id="genLiteral"></span></p>
 
@@ -363,12 +279,8 @@ expanded message with the appropriate text in place of the parameters.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1463">1463</a>]</p>
 
-<div class="desc">
-
-Internal routine - generate the literal text for the given source
-string. We'll remove any stuttered close braces.
-
-</div>
+<p>Internal routine - generate the literal text for the given source
+string. We’ll remove any stuttered close braces.</p>
 
 <p><span id="getTargetProp"></span></p>
 
@@ -376,24 +288,20 @@ string. We'll remove any stuttered close braces.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1410">1410</a>]</p>
 
-<div class="desc">
-
-Get the property to invoke on the target object for the given parameter
-information entry. By default, we simply return info\[2\], which is the
+<p>Get the property to invoke on the target object for the given parameter
+information entry. By default, we simply return info[2], which is the
 standard property to call on the target. This can be overridden by the
 language-specific subclass to provide a different property if
-appropriate.
+appropriate.</p>
 
-'targetObj' is the target object, and 'paramObj' is the parameter name
-of the target object. For example, 'paramObj' might be the string 'dobj'
-to represent the direct object, in which case 'targetObj' will be the
-gDobj object.
+<p>‘targetObj’ is the target object, and ‘paramObj’ is the parameter name
+of the target object. For example, ‘paramObj’ might be the string ‘dobj’
+to represent the direct object, in which case ‘targetObj’ will be the
+gDobj object.</p>
 
-The English version, for example, uses this routine to supply a
+<p>The English version, for example, uses this routine to supply a
 reflexive instead of the default entry when the target object matches
-the subject of the sentence.
-
-</div>
+the subject of the sentence.</p>
 
 <p><span id="langRewriteParam"></span></p>
 
@@ -401,16 +309,12 @@ the subject of the sentence.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1529">1529</a>]</p>
 
-<div class="desc">
-
-Rewrite the parameter string for any language-specific rules. By
-default, we'll return the original parameter string unchanged; the
+<p>Rewrite the parameter string for any language-specific rules. By
+default, we’ll return the original parameter string unchanged; the
 language-specific instance can override this to provide any special
 syntax extensions to the parameter string syntax desired by the
 language-specific library. The returned string must be in one of the
-formats recognized by the generic handler.
-
-</div>
+formats recognized by the generic handler.</p>
 
 <p><span id="processResult"></span></p>
 
@@ -418,32 +322,28 @@ formats recognized by the generic handler.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1442">1442</a>]</p>
 
-<div class="desc">
-
-Process result text. This takes some result text that we're about to add
+<p>Process result text. This takes some result text that we’re about to add
 and returns a processed version. This is called for all text as we add
-it to the result string.
+it to the result string.</p>
 
-The text we pass to this method has already had all parameter text fully
+<p>The text we pass to this method has already had all parameter text fully
 expanded, so this routine does not need to worry about { } sequences -
 all { } sequences will have been removed and replaced with the
-corresponding expansion text before this is called.
+corresponding expansion text before this is called.</p>
 
-This routine is called piecewise: the routine will be called once for
+<p>This routine is called piecewise: the routine will be called once for
 each parameter replacement text and once for each run of text between
 parameters, and is called in the order in which the text appears in the
-original string.
+original string.</p>
 
-By default we do nothing with the result text; we simply return the
+<p>By default we do nothing with the result text; we simply return the
 original text unchanged. The language-specific subclass can override
 this as desired to further modify the text for special language-specific
 parameterization outside of the { } mechanism. The subclass can also use
 this routine to maintain internal state that depends on sentence
 structure. For example, the English version looks for sentence-ending
 punctuation so that it can reset its internal notion of the subject of
-the sentence when a sentence appears to be ending.
-
-</div>
+the sentence when a sentence appears to be ending.</p>
 
 <p><span id="quoteMessage"></span></p>
 
@@ -451,25 +351,18 @@ the sentence when a sentence appears to be ending.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1454">1454</a>]</p>
 
-<div class="desc">
-
-"Quote" a message - double each open or close brace, so that braces in
+<p>“Quote” a message - double each open or close brace, so that braces in
 the message will be taken literally when run through the substitution
 replacer. This can be used when a message is expanded prior to being
-displayed to ensure that braces in the result won't be mistaken as
-substitution parameters requiring further expansion.
+displayed to ensure that braces in the result won’t be mistaken as
+substitution parameters requiring further expansion.</p>
 
-Note that only open braces need to be quoted, since lone close braces
-are ignored in the substitution process.
+<p>Note that only open braces need to be quoted, since lone close braces
+are ignored in the substitution process.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

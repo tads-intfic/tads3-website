@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="web.html" class="nav">Playing on the Web</a> \&gt; Setting up a
-custom TADS Web server  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="web.html" class="nav">Playing on the Web</a> &gt; Setting up a
+custom TADS Web server<br />
 <span class="navnp"><a href="webdeploy.html" class="nav"><em>Prev:</em> Deploying your Web UI
 game</a>    
 <a href="local.html" class="nav"><em>Next:</em> Translating and
-Localizing TADS</a>     </span>
-
-</div>
+Localizing TADS</a>     </span></p>
 
 <h1 id="setting-up-a-custom-tads-web-server">Setting up a custom TADS Web server</h1>
 
@@ -289,262 +281,264 @@ space usage back under the limit</li>
 root access, you can improve TADS server performance by adding the
 following line to the file /etc/sysctl.conf:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "0" &gt; /proc/sys/net/ipv4/tcp_slow_start_after_idle ```
+</code></pre></div></div>
 
-    echo "0" &gt; /proc/sys/net/ipv4/tcp_slow_start_after_idle
-```
-
-You'll need root privileges to edit that file, so use "su root", or log
-in as root to start with. Changes to /etc/sysctl.conf don't take effect
+<p>You’ll need root privileges to edit that file, so use “su root”, or log
+in as root to start with. Changes to /etc/sysctl.conf don’t take effect
 until you reboot the server, but you can put this change into effect
 immediately simply by running the command above as a shell command;
-again, you'll need root privileges. If you're running on a shared server
-and you don't have root access, you can skip this step, since it's only
-a performance optimization.
+again, you’ll need root privileges. If you’re running on a shared server
+and you don’t have root access, you can skip this step, since it’s only
+a performance optimization.</p>
 
-### Test your configuration
+<h3 id="test-your-configuration">Test your configuration</h3>
 
-First, check that your launch script starts up properly, by opening a
-Web browser and typing this in the address bar:
+<p>First, check that your launch script starts up properly, by opening a
+Web browser and typing this in the address bar:</p>
 
-```
-    http://address/t3launch/t3launch.php?ping
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    http://address/t3launch/t3launch.php?ping
+</code></pre></div></div>
 
-Replace *address* with your server's numeric IP address (or, if your
-server has a DNS name, you can use the domain name). If it's working
-correctly, you'll see a simple text page saying "OK". If that's not what
-appears, something's wrong with your configuration.
+<p>Replace <em>address</em> with your server’s numeric IP address (or, if your
+server has a DNS name, you can use the domain name). If it’s working
+correctly, you’ll see a simple text page saying “OK”. If that’s not what
+appears, something’s wrong with your configuration.</p>
 
-Next, check that your Apache server is correctly denying Web access to
-the supporting scripts in the "inc" directory, by trying this URL in
-your browser:
+<p>Next, check that your Apache server is correctly denying Web access to
+the supporting scripts in the “inc” directory, by trying this URL in
+your browser:</p>
 
-```
-    http://address/t3launch/inc/config.php
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    http://address/t3launch/inc/config.php
+</code></pre></div></div>
 
-Again, use your actual IP or domain in place of *address*. The result
-should be a "403 - Forbidden" error. If you *don't* get the 403 error,
-something's wrong. This is important for your site's security, because
-the "inc" scripts contain private configuration information, such as
+<p>Again, use your actual IP or domain in place of <em>address</em>. The result
+should be a “403 - Forbidden” error. If you <em>don’t</em> get the 403 error,
+something’s wrong. This is important for your site’s security, because
+the “inc” scripts contain private configuration information, such as
 your MySQL password. If you see php source code when you request that
 address, make sure that your Apache configuration file allows .htaccess
-overrides in the "inc" folder.
+overrides in the “inc” folder.</p>
 
-### Register your server with IFDB
+<h3 id="register-your-server-with-ifdb">Register your server with IFDB</h3>
 
-To participate in the IFDB switchboard system (which dispatches players
+<p>To participate in the IFDB switchboard system (which dispatches players
 to your server) and the IFDB storage server (which provides centralized
-"cloud" storage for saved games), you must register your server with
-IFDB. The process for this isn't currently formalized or automated,
-since we don't expect a huge number of servers. Simply send email to the
-IFDB administrators (see the [IFDB contact
-information](http://ifdb.tads.org/contact)) with the following:
+“cloud” storage for saved games), you must register your server with
+IFDB. The process for this isn’t currently formalized or automated,
+since we don’t expect a huge number of servers. Simply send email to the
+IFDB administrators (see the <a href="http://ifdb.tads.org/contact">IFDB contact
+information</a>) with the following:</p>
 
-- your name and contact information
-- the domain name of your server
-- the full URL path to the t3launch.php script you installed above
-- your server configuration - operating system, CPU, available memory
-  (this helps estimate how many sessions your server can handle at once,
-  so that the switchboard can distribute load more evenly across
-  servers)
+<ul>
+  <li>your name and contact information</li>
+  <li>the domain name of your server</li>
+  <li>the full URL path to the t3launch.php script you installed above</li>
+  <li>your server configuration - operating system, CPU, available memory
+(this helps estimate how many sessions your server can handle at once,
+so that the switchboard can distribute load more evenly across
+servers)</li>
+</ul>
 
-IFDB will assign your server a **server ID** and **storage API key**.
-You'll need this information in the next step.
+<p>IFDB will assign your server a <strong>server ID</strong> and <strong>storage API key</strong>.
+You’ll need this information in the next step.</p>
 
-Note that your storage API key is essentially a password, authenticating
+<p>Note that your storage API key is essentially a password, authenticating
 your server to the storage server for file transactions. You should keep
-this private; for example, be careful not to store it in a file that's
+this private; for example, be careful not to store it in a file that’s
 accessible via your Apache server. The API key is a security measure to
 limit access to the storage server to recognized game servers, to help
-protect user files against unauthorized access.
+protect user files against unauthorized access.</p>
 
-### Create a tadsweb.config file
+<h3 id="create-a-tadswebconfig-file">Create a tadsweb.config file</h3>
 
-Create a file called tadsweb.config in the directory containing your
+<p>Create a file called tadsweb.config in the directory containing your
 TADS interpreter program file. This is a simple text file; edit it with
 Notepad, emacs, vi, or any other text editor of your choice. Enter the
-following information, one variable per line:
+following information, one variable per line:</p>
 
-- serverid = *server ID assigned by IFDB*
-- storage.domain = storage.tads.org
-- storage.rootpath = /
-- storage.apikey = *storage API key assigned by IFDB*
-- watchdog = yes *or* no
+<ul>
+  <li>serverid = <em>server ID assigned by IFDB</em></li>
+  <li>storage.domain = storage.tads.org</li>
+  <li>storage.rootpath = /</li>
+  <li>storage.apikey = <em>storage API key assigned by IFDB</em></li>
+  <li>watchdog = yes <em>or</em> no</li>
+</ul>
 
-The server ID and storage API key are the values you receive when you
-register your server with IFDB. If you're setting up a private server
-that's not meant to be part of the TADS cloud, you can omit the server
-ID and storage server entries.
+<p>The server ID and storage API key are the values you receive when you
+register your server with IFDB. If you’re setting up a private server
+that’s not meant to be part of the TADS cloud, you can omit the server
+ID and storage server entries.</p>
 
-The "watchdog" setting is described further below.
+<p>The “watchdog” setting is described further below.</p>
 
-### The watchdog
+<h3 id="the-watchdog">The watchdog</h3>
 
-The interpreter has a self-monitoring feature called the watchdog. The
-watchdog looks for potential problems with the bytecode program's
+<p>The interpreter has a self-monitoring feature called the watchdog. The
+watchdog looks for potential problems with the bytecode program’s
 behavior, and terminates the program if it appears to be misbehaving.
 You can turn this setting on or off in your tadsweb.config file.
 Currently, the watchdog is implemented only on Unix and Linux platforms;
-the configuration setting is ignored on other systems.
+the configuration setting is ignored on other systems.</p>
 
-The watchdog looks for these conditions:
+<p>The watchdog looks for these conditions:</p>
 
-- High CPU usage: if the program uses more than 40% of CPU time over the
-  course of about a minute, the watchdog terminates the program. High
-  CPU usage for an extended period often means that the program is stuck
-  in a loop, so allowing it to continue running would bring the server
-  to a crawl for other users. The watchdog can't distinguish between a
-  program that's stuck in a loop and one that's intentionally doing
-  heavy-duty number-crunching, but it really doesn't matter: an
-  intentionally CPU-intensive program isn't appropriate for a shared
-  server either, since it's unfair to other users to bog down the server
-  with a compute-intensive task.
-  A program that has short bursts of heavy-duty computation from time to
-  time won't trigger the watchdog. The program has to use high CPU
-  continuously for about a minute to trigger this condition; using 100%
-  of CPU for a few seconds at a time will average out to safe levels
-  over the course of any given minute, even if repeated frequently.
+<ul>
+  <li>
+    <p>High CPU usage: if the program uses more than 40% of CPU time over the
+course of about a minute, the watchdog terminates the program. High
+CPU usage for an extended period often means that the program is stuck
+in a loop, so allowing it to continue running would bring the server
+to a crawl for other users. The watchdog can’t distinguish between a
+program that’s stuck in a loop and one that’s intentionally doing
+heavy-duty number-crunching, but it really doesn’t matter: an
+intentionally CPU-intensive program isn’t appropriate for a shared
+server either, since it’s unfair to other users to bog down the server
+with a compute-intensive task.
+A program that has short bursts of heavy-duty computation from time to
+time won’t trigger the watchdog. The program has to use high CPU
+continuously for about a minute to trigger this condition; using 100%
+of CPU for a few seconds at a time will average out to safe levels
+over the course of any given minute, even if repeated frequently.</p>
+  </li>
+  <li>
+    <p>Network inactivity: if the program doesn’t have any network client
+activity over the course of about six minutes, the watchdog terminates
+it. Shared TADS servers are meant for interactive game sessions, so
+when there a program’s network clients have all disconnected, it’s
+expected to shut itself down. The standard TADS Web UI library has its
+own activity monitor that normally takes care of this, but we can’t
+count on everyone to use the standard library or for every program to
+be bug-free, so the watchdog serves as a backup here. Some programs
+might even intentionally keep running without clients, so that they’re
+always on stand-by for incoming connections, the same way that regular
+Web servers run. However, that sort of application isn’t appropriate
+for a shared TADS server, since it consumes memory and other resources
+that could be given to an actual interactive user rather than set
+aside for possible future requests. So the watchdog doesn’t care
+whether a program is running without clients intentionally or
+inadvertently; in either case, we want to terminate the program.</p>
 
-- Network inactivity: if the program doesn't have any network client
-  activity over the course of about six minutes, the watchdog terminates
-  it. Shared TADS servers are meant for interactive game sessions, so
-  when there a program's network clients have all disconnected, it's
-  expected to shut itself down. The standard TADS Web UI library has its
-  own activity monitor that normally takes care of this, but we can't
-  count on everyone to use the standard library or for every program to
-  be bug-free, so the watchdog serves as a backup here. Some programs
-  might even intentionally keep running without clients, so that they're
-  always on stand-by for incoming connections, the same way that regular
-  Web servers run. However, that sort of application isn't appropriate
-  for a shared TADS server, since it consumes memory and other resources
-  that could be given to an actual interactive user rather than set
-  aside for possible future requests. So the watchdog doesn't care
-  whether a program is running without clients intentionally or
-  inadvertently; in either case, we want to terminate the program.
+    <p>It’s network activity that matters, not user activity. The watchdog
+won’t terminate a standard Web UI program just because the user hasn’t
+typed a command in a while. As long as the game session is still open
+in the user’s browser, the server will consider the network connection
+to be active. The user doesn’t have to type anything or otherwise
+interact with the game; it’s enough for the browser window to stay
+open. The javascript program on the client side and the server program
+automatically exchange messages periodically just to let each other
+know that everything’s still fine; these background exchanges are
+enough to keep the watchdog happy.</p>
+  </li>
+</ul>
 
-  It's network activity that matters, not user activity. The watchdog
-  won't terminate a standard Web UI program just because the user hasn't
-  typed a command in a while. As long as the game session is still open
-  in the user's browser, the server will consider the network connection
-  to be active. The user doesn't have to type anything or otherwise
-  interact with the game; it's enough for the browser window to stay
-  open. The javascript program on the client side and the server program
-  automatically exchange messages periodically just to let each other
-  know that everything's still fine; these background exchanges are
-  enough to keep the watchdog happy.
-
-If you plan to include your server in the TADS cloud, or you're
+<p>If you plan to include your server in the TADS cloud, or you’re
 otherwise going to allow people to run arbitrary third-party .t3
 programs, you should enable the watchdog. The watchdog is designed to
 minimize your server administration work by automatically detecting and
-killing buggy programs that you'd otherwise have to kill manually, such
-as programs stuck in infinite loops and programs that don't know when to
-quit.
+killing buggy programs that you’d otherwise have to kill manually, such
+as programs stuck in infinite loops and programs that don’t know when to
+quit.</p>
 
-If you're setting up a server to run just your own TADS programs, and
-you're not allowing third-party programs, you might or might not want to
-enable the watchdog. The watchdog is less important when you're running
-a known set of programs, since you can test the programs you're hosting
-to make sure they don't have any of the bugs that the watchdog would
+<p>If you’re setting up a server to run just your own TADS programs, and
+you’re not allowing third-party programs, you might or might not want to
+enable the watchdog. The watchdog is less important when you’re running
+a known set of programs, since you can test the programs you’re hosting
+to make sure they don’t have any of the bugs that the watchdog would
 catch. Of course, bugs can be fiendishly clever at slipping through
 testing, so you might still want the watchdog as a backup. On the other
 hand, you might specifically not want the watchdog if your programs
 intentionally do some of the things that the watchdog targets, such as
 heavy number-crunching or running without a client. Those are perfectly
 legitimate application behaviors; the watchdog only targets them because
-they're inappropriate for a shared, public server. If you're hosting
-your own programs on your own private server, you're of course free to
+they’re inappropriate for a shared, public server. If you’re hosting
+your own programs on your own private server, you’re of course free to
 number-crunch with abandon, or to host a Web server (or other continuous
 network service) written with TADS. Turning off the watchdog will allow
-such applications to run without interference.
+such applications to run without interference.</p>
 
-## How the launch process works
+<h2 id="how-the-launch-process-works">How the launch process works</h2>
 
-For those interested, here are the details of how the different machines
-and components interact. You might find this helpful if you're trying to
-write a non-LAMP replacement for the launch page.
+<p>For those interested, here are the details of how the different machines
+and components interact. You might find this helpful if you’re trying to
+write a non-LAMP replacement for the launch page.</p>
 
-There are three separate machines involved in playing a server-based
-TADS game:
+<p>There are three separate machines involved in playing a server-based
+TADS game:</p>
 
-- The player's machine, running a Web browser
-- IFDB, which serves as a switchboard to dispatch new player connections
-  to available TADS servers, and which provides the "cloud" storage for
-  saved game files
-- Your server machine, where TADS runs
+<ul>
+  <li>The player’s machine, running a Web browser</li>
+  <li>IFDB, which serves as a switchboard to dispatch new player connections
+to available TADS servers, and which provides the “cloud” storage for
+saved game files</li>
+  <li>Your server machine, where TADS runs</li>
+</ul>
 
-We're only concerned here with that last item, the TADS server. The
+<p>We’re only concerned here with that last item, the TADS server. The
 client is just a PC (or phone, pad, etc) with a browser; IFDB is managed
-by its own administrators, so we don't have to worry about that.
+by its own administrators, so we don’t have to worry about that.</p>
 
-On the TADS server machine, there are two main bits of software you have
+<p>On the TADS server machine, there are two main bits of software you have
 to install. The first is the TADS interpreter; the second is a
 conventional Web server, generally an Apache server with MySQL and php,
-as outlined above.
+as outlined above.</p>
 
-When a player decides to start a game session, they click on a link in
-their browser. That link might come from the game's IFDB page or from
-the game author's Web site; that's not really important, though, since
-all that matters is that they reach the "t3run" page on IFDB. This is
+<p>When a player decides to start a game session, they click on a link in
+their browser. That link might come from the game’s IFDB page or from
+the game author’s Web site; that’s not really important, though, since
+all that matters is that they reach the “t3run” page on IFDB. This is
 the IFDB switchboard for the game. It looks through its list of
 available game servers - a list that will include your server, once you
 register it - and selects one to handle the new session. It then sends
 the client an HTTP redirect with the Internet address of the selected
-server. Let's assume that your server is the one selected.
+server. Let’s assume that your server is the one selected.</p>
 
-The browser follows this redirect to your server. At this point, your
+<p>The browser follows this redirect to your server. At this point, your
 server is just sitting there idling, awaiting new connections. The TADS
-interpreter isn't running at all yet. So how does the server even know
+interpreter isn’t running at all yet. So how does the server even know
 about new connection requests? This is where your Apache Web server
-comes in. Apache's job is to continually monitor port 80 - the standard
+comes in. Apache’s job is to continually monitor port 80 - the standard
 port for Web servers - waiting for someone to send in an HTTP request.
-When the player's browser follows the redirect instructions from IFDB to
-your machine, what it's really doing is sending an HTTP request to port
-80 on your machine. Apache receives this request and handles it.
+When the player’s browser follows the redirect instructions from IFDB to
+your machine, what it’s really doing is sending an HTTP request to port
+80 on your machine. Apache receives this request and handles it.</p>
 
-Apache's response to the HTTP request from the client is to execute a
-php program that's part of the TADS server package, called t3launch.php.
+<p>Apache’s response to the HTTP request from the client is to execute a
+php program that’s part of the TADS server package, called t3launch.php.
 This program creates a new TADS process on the server machine, passing
 parameters to the new process that tell it which game (.t3 file) to run.
 The interpreter loads the .t3 file. Assuming that the .t3 file is a Web
 UI game, the game will set up its own internal Web server. This server
 opens a new network listener port - not port 80, which is already taken
-by Apache, but simply an arbitrary port number that's not being used by
+by Apache, but simply an arbitrary port number that’s not being used by
 someone else, as assigned by the operating system. TADS relays this
 information back to the t3launch program. t3launch in turn relays it
 back to the client browser, in the form of another HTTP redirect. This
-new redirect tells the browser how to connect to the game's internal Web
-server on its newly created port number.
+new redirect tells the browser how to connect to the game’s internal Web
+server on its newly created port number.</p>
 
-The client browser follows the new redirect, which connects it to the
-game's internal Web server. The game takes it from here; the Apache
-server's job is done for now, and it simply goes back to monitoring port
-80 for new connection requests.
+<p>The client browser follows the new redirect, which connects it to the
+game’s internal Web server. The game takes it from here; the Apache
+server’s job is done for now, and it simply goes back to monitoring port
+80 for new connection requests.</p>
 
-Here's a diagram showing the various steps. Note that the TADS
-Interpreter process doesn't exist initially - it doesn't exist until
-step 4, where Apache launches it.
+<p>Here’s a diagram showing the various steps. Note that the TADS
+Interpreter process doesn’t exist initially - it doesn’t exist until
+step 4, where Apache launches it.</p>
 
-![](web-connect-diagram.png)
-
-</div>
+<p><img src="web-connect-diagram.png" alt="" /></p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="web.html" class="nav">Playing on the Web</a> \&gt; Setting up a
-custom TADS Web server  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="web.html" class="nav">Playing on the Web</a> &gt; Setting up a
+custom TADS Web server<br />
 <span class="navnp"><a href="webdeploy.html" class="nav"><em>Prev:</em> Deploying your Web UI
 game</a>    
 <a href="local.html" class="nav"><em>Next:</em> Translating and
-Localizing TADS</a>     </span>
+Localizing TADS</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

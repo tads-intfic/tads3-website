@@ -46,25 +46,17 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The Relation class is used to define any kind of binary relation you
+<p>The Relation class is used to define any kind of binary relation you
 like between objects, or between items of any other kind, e.g. x love y,
-or a is the father of b, or c knows d.
+or a is the father of b, or c knows d.</p>
 
-REQUIRES THE RELATIONS EXTENSION.
+<p>REQUIRES THE RELATIONS EXTENSION.</p>
 
-`class `**`Relation`**` :   `[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Relation</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Relation</code></strong><br />
 <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
@@ -72,28 +64,16 @@ REQUIRES THE RELATIONS EXTENSION.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p>` <a href="../object/DerivedRelation.html"><code class="language-plaintext highlighter-rouge">DerivedRelation</code></a>  <a href="../object/Signal.html"><code class="language-plaintext highlighter-rouge">Signal</code></a>  `
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a>  <a href="#reciprocal"><code class="language-plaintext highlighter-rouge">reciprocal</code></a>  <a href="#relationType"><code class="language-plaintext highlighter-rouge">relationType</code></a>  <a href="#relTab"><code class="language-plaintext highlighter-rouge">relTab</code></a>  <a href="#reverseName"><code class="language-plaintext highlighter-rouge">reverseName</code></a>  `</p>
 
@@ -105,11 +85,7 @@ REQUIRES THE RELATIONS EXTENSION.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#addRelation"><code class="language-plaintext highlighter-rouge">addRelation</code></a>  <a href="#inverselyRelatedTo"><code class="language-plaintext highlighter-rouge">inverselyRelatedTo</code></a>  <a href="#isInverselyRelated"><code class="language-plaintext highlighter-rouge">isInverselyRelated</code></a>  <a href="#isRelated"><code class="language-plaintext highlighter-rouge">isRelated</code></a>  <a href="#makeUnique"><code class="language-plaintext highlighter-rouge">makeUnique</code></a>  <a href="#relatedTo"><code class="language-plaintext highlighter-rouge">relatedTo</code></a>  <a href="#removeRelation"><code class="language-plaintext highlighter-rouge">removeRelation</code></a>  `</p>
 
@@ -118,11 +94,7 @@ REQUIRES THE RELATIONS EXTENSION.
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="name"></span></p>
 
@@ -130,12 +102,8 @@ REQUIRES THE RELATIONS EXTENSION.
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#24">24</a>]</p>
 
-<div class="desc">
-
-A string name that can be used to refer to this relation, e.g. 'loves'
-or 'is the parent of' \[RELATIONS EXTENSION\]
-
-</div>
+<p>A string name that can be used to refer to this relation, e.g. ‘loves’
+or ‘is the parent of’ [RELATIONS EXTENSION]</p>
 
 <p><span id="reciprocal"></span></p>
 
@@ -143,13 +111,9 @@ or 'is the parent of' \[RELATIONS EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#43">43</a>]</p>
 
-<div class="desc">
-
-Flag: are we a reciprocal relation (i.e. does x relation b imply b
+<p>Flag: are we a reciprocal relation (i.e. does x relation b imply b
 relation x)? Note that only oneToOne and manyToMany relations can be
-reciprocal. \[RELATIONS EXTENSION\]
-
-</div>
+reciprocal. [RELATIONS EXTENSION]</p>
 
 <p><span id="relationType"></span></p>
 
@@ -157,12 +121,8 @@ reciprocal. \[RELATIONS EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#36">36</a>]</p>
 
-<div class="desc">
-
-The type of relation we are; this can be one of oneToOne, oneToMany,
-manyToOne or manyToMany. \[RELATIONS EXTENSION\]
-
-</div>
+<p>The type of relation we are; this can be one of oneToOne, oneToMany,
+manyToOne or manyToMany. [RELATIONS EXTENSION]</p>
 
 <p><span id="relTab"></span></p>
 
@@ -170,13 +130,9 @@ manyToOne or manyToMany. \[RELATIONS EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#50">50</a>]</p>
 
-<div class="desc">
-
-A LookupTable to hold data about the items related via this relation.
-This is maintained by the library code and shouldn't normally be
-directly accessed via game code. \[RELATIONS EXTENSION\]
-
-</div>
+<p>A LookupTable to hold data about the items related via this relation.
+This is maintained by the library code and shouldn’t normally be
+directly accessed via game code. [RELATIONS EXTENSION]</p>
 
 <p><span id="reverseName"></span></p>
 
@@ -184,20 +140,12 @@ directly accessed via game code. \[RELATIONS EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#30">30</a>]</p>
 
-<div class="desc">
-
-A string name that can be used to refer to this relation in reverse,
-e.g. 'loved by' or 'is a child of' \[RELATIONS EXTENSION\]
-
-</div>
+<p>A string name that can be used to refer to this relation in reverse,
+e.g. ‘loved by’ or ‘is a child of’ [RELATIONS EXTENSION]</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addRelation"></span></p>
 
@@ -205,13 +153,9 @@ e.g. 'loved by' or 'is a child of' \[RELATIONS EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#119">119</a>]</p>
 
-<div class="desc">
-
-Make two objects related via this relation. The objs should be supplied
-as a two-element list (e.g. \[a, b\]) such that a will be related to b.
-\[RELATIONS EXTENSION\]
-
-</div>
+<p>Make two objects related via this relation. The objs should be supplied
+as a two-element list (e.g. [a, b]) such that a will be related to b.
+[RELATIONS EXTENSION]</p>
 
 <p><span id="inverselyRelatedTo"></span></p>
 
@@ -219,13 +163,9 @@ as a two-element list (e.g. \[a, b\]) such that a will be related to b.
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#69">69</a>]</p>
 
-<div class="desc">
-
-Return a list of items inverselty related to a via this relation (e.g.
+<p>Return a list of items inverselty related to a via this relation (e.g.
 if this is loving relation, return a list of the people a is loved by.
-\[RELATIONS EXTENSION\]
-
-</div>
+[RELATIONS EXTENSION]</p>
 
 <p><span id="isInverselyRelated"></span></p>
 
@@ -233,12 +173,8 @@ if this is loving relation, return a list of the people a is loved by.
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#105">105</a>]</p>
 
-<div class="desc">
-
-Test whether a is inversely related to b via this relation. \[RELATIONS
-EXTENSION\]
-
-</div>
+<p>Test whether a is inversely related to b via this relation. [RELATIONS
+EXTENSION]</p>
 
 <p><span id="isRelated"></span></p>
 
@@ -246,12 +182,8 @@ EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#59">59</a>]</p>
 
-<div class="desc">
-
-Test whether a is related to b via this relation. \[RELATIONS
-EXTENSION\]
-
-</div>
+<p>Test whether a is related to b via this relation. [RELATIONS
+EXTENSION]</p>
 
 <p><span id="makeUnique"></span></p>
 
@@ -259,12 +191,8 @@ EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#298">298</a>]</p>
 
-<div class="desc">
-
-Ensure that key is the only entry in relTab with a value of \[val\].
-\[RELATIONS EXTENSION\]
-
-</div>
+<p>Ensure that key is the only entry in relTab with a value of [val].
+[RELATIONS EXTENSION]</p>
 
 <p><span id="relatedTo"></span></p>
 
@@ -272,12 +200,8 @@ Ensure that key is the only entry in relTab with a value of \[val\].
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#53">53</a>]</p>
 
-<div class="desc">
-
-Return a list of items related to a via this relation. \[RELATIONS
-EXTENSION\]
-
-</div>
+<p>Return a list of items related to a via this relation. [RELATIONS
+EXTENSION]</p>
 
 <p><span id="removeRelation"></span></p>
 
@@ -285,20 +209,13 @@ EXTENSION\]
 
 <p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#320">320</a>]</p>
 
-<div class="desc">
+<p>Remove this relation between the items specified in objs, which should
+be supplied as a two-element list [a, b], where a is the item that is
+no longer related to b. [RELATIONS EXTENSION]</p>
 
-Remove this relation between the items specified in objs, which should
-be supplied as a two-element list \[a, b\], where a is the item that is
-no longer related to b. \[RELATIONS EXTENSION\]
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

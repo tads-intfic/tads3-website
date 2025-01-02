@@ -49,10 +49,10 @@ not sitting on something, lying on something, or similar.
 
 
 
-[`msgVerbIPast`](#msgVerbIPast)[`msgVerbIPresent`](#msgVerbIPresent)[`msgVerbTPast`](#msgVerbTPast)[`msgVerbTPresent`](#msgVerbTPresent)[`participle`](#participle)
+[`msgVerbIPast`](#msgVerbIPast) [`msgVerbIPresent`](#msgVerbIPresent) [`msgVerbTPast`](#msgVerbTPast) [`msgVerbTPresent`](#msgVerbTPresent) [`participle`](#participle)
 
 Inherited from `Posture` :  
-[`msgVerbI`](../object/Posture.html#msgVerbI)[`msgVerbT`](../object/Posture.html#msgVerbT)
+[`msgVerbI`](../object/Posture.html#msgVerbI) [`msgVerbT`](../object/Posture.html#msgVerbT)
 
 <span id="_MethodSummary_"></span>
 
@@ -62,7 +62,7 @@ Inherited from `Posture` :
 
 
 
-[`setActorToPosture`](#setActorToPosture)[`tryMakingPosture`](#tryMakingPosture)
+[`setActorToPosture`](#setActorToPosture) [`tryMakingPosture`](#tryMakingPosture)
 
 
 

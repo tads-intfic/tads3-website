@@ -46,72 +46,44 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Implicit action context. This is passed to the message methods that
+<p>Implicit action context. This is passed to the message methods that
 generate implicit action announcements, to indicate the context in which
-the message is to be used.
+the message is to be used.</p>
 
-`class `**`ImplicitAnnouncementContext`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ImplicitAnnouncementContext</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ImplicitAnnouncementContext</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ImplicitAnnouncementContext</code></strong><br />
 <a href="../object/ListImpCtx.html"><code class="language-plaintext highlighter-rouge">ListImpCtx</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/standardImpCtx.html"><code class="language-plaintext highlighter-rouge">standardImpCtx</code></a><a href="../object/tryingImpCtx.html"><code class="language-plaintext highlighter-rouge">tryingImpCtx</code></a>
+<p><a href="../object/standardImpCtx.html"><code class="language-plaintext highlighter-rouge">standardImpCtx</code></a> <a href="../object/tryingImpCtx.html"><code class="language-plaintext highlighter-rouge">tryingImpCtx</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#getVerbCtx"><code class="language-plaintext highlighter-rouge">getVerbCtx</code></a><a href="#isInList"><code class="language-plaintext highlighter-rouge">isInList</code></a><a href="#isInSublist"><code class="language-plaintext highlighter-rouge">isInSublist</code></a><a href="#useInfPhrase"><code class="language-plaintext highlighter-rouge">useInfPhrase</code></a></p>
+<p><a href="#getVerbCtx"><code class="language-plaintext highlighter-rouge">getVerbCtx</code></a> <a href="#isInList"><code class="language-plaintext highlighter-rouge">isInList</code></a> <a href="#isInSublist"><code class="language-plaintext highlighter-rouge">isInSublist</code></a> <a href="#useInfPhrase"><code class="language-plaintext highlighter-rouge">useInfPhrase</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#buildImplicitAnnouncement"><code class="language-plaintext highlighter-rouge">buildImplicitAnnouncement</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="getVerbCtx"></span></p>
 
@@ -119,11 +91,7 @@ the message is to be used.
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8026">8026</a>]</p>
 
-<div class="desc">
-
-our getVerbPhrase context - by default, don't use one
-
-</div>
+<p>our getVerbPhrase context - by default, don’t use one</p>
 
 <p><span id="isInList"></span></p>
 
@@ -131,11 +99,7 @@ our getVerbPhrase context - by default, don't use one
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8016">8016</a>]</p>
 
-<div class="desc">
-
-is this message going in a list?
-
-</div>
+<p>is this message going in a list?</p>
 
 <p><span id="isInSublist"></span></p>
 
@@ -143,13 +107,9 @@ is this message going in a list?
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8023">8023</a>]</p>
 
-<div class="desc">
-
-Are we in a sublist of 'just trying' or 'just asking' messages? (We can
-only have sublist groupings one level deep, so we don't need to worry
-about what kind of sublist we're in.)
-
-</div>
+<p>Are we in a sublist of ‘just trying’ or ‘just asking’ messages? (We can
+only have sublist groupings one level deep, so we don’t need to worry
+about what kind of sublist we’re in.)</p>
 
 <p><span id="useInfPhrase"></span></p>
 
@@ -157,21 +117,13 @@ about what kind of sublist we're in.)
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8013">8013</a>]</p>
 
-<div class="desc">
-
-Should we use the infinitive form of the verb, or the participle form
+<p>Should we use the infinitive form of the verb, or the participle form
 for generating the announcement? By default, use use the participle
-form: "(first OPENING THE BOX)".
-
-</div>
+form: “(first OPENING THE BOX)”.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="buildImplicitAnnouncement"></span></p>
 
@@ -179,18 +131,11 @@ form: "(first OPENING THE BOX)".
 
 <p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8029">8029</a>]</p>
 
-<div class="desc">
+<p>generate the announcement message given the action description</p>
 
-generate the announcement message given the action description
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

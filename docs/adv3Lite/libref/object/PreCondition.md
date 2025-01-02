@@ -65,7 +65,7 @@ fulfilment of the condition it enforces via an implicit action.
 
 
 
-[`actorInStagingLocation`](../object/actorInStagingLocation.html)[`actorOutOfNested`](../object/actorOutOfNested.html)[`containerOpen`](../object/containerOpen.html)[`objAudible`](../object/objAudible.html)[`objClosed`](../object/objClosed.html)[`objDetached`](../object/objDetached.html)[`objHeld`](../object/objHeld.html)[`objNotWorn`](../object/objNotWorn.html)[`objOpen`](../object/objOpen.html)[`objSmellable`](../object/objSmellable.html)[`objUnlocked`](../object/objUnlocked.html)[`objVisible`](../object/objVisible.html)[`touchObj`](../object/touchObj.html)[`travelPermitted`](../object/travelPermitted.html)
+[`actorInStagingLocation`](../object/actorInStagingLocation.html) [`actorOutOfNested`](../object/actorOutOfNested.html) [`containerOpen`](../object/containerOpen.html) [`objAudible`](../object/objAudible.html) [`objClosed`](../object/objClosed.html) [`objDetached`](../object/objDetached.html) [`objHeld`](../object/objHeld.html) [`objNotWorn`](../object/objNotWorn.html) [`objOpen`](../object/objOpen.html) [`objSmellable`](../object/objSmellable.html) [`objUnlocked`](../object/objUnlocked.html) [`objVisible`](../object/objVisible.html) [`touchObj`](../object/touchObj.html) [`travelPermitted`](../object/travelPermitted.html)
 <span id="_PropSummary_"></span>
 
 
@@ -84,7 +84,7 @@ fulfilment of the condition it enforces via an implicit action.
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
+[`checkPreCondition`](#checkPreCondition) [`verifyPreCondition`](#verifyPreCondition)
 
 <span id="_Properties_"></span>
 

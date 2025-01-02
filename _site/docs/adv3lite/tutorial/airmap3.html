@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="airport.html" class="nav">Airport</a> \&gt; Aboard the Plane  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="airport.html" class="nav">Airport</a> &gt; Aboard the Plane<br />
 <span class="navnp"><a href="airmap2.html" class="nav"><em>Prev:</em> Extending the Map</a>
     <a href="doors.html" class="nav"><em>Next:</em> Doors and Locks</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="aboard-the-plane">Aboard the Plane</h1>
 
@@ -47,11 +39,10 @@ how to do this, refer to the instructions at the start of the <a href="airmap2.h
 section</a>). Remember to make sure you new source file begins
 with:</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h" `
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 </code></pre></div></div>
 
 <p>For the moment we’ll stick to a fairly skeletal layout. There’ll be
@@ -61,10 +52,9 @@ about to define have in common that they’re aboard an
 airplane/aeroplane, we’ll assign them to a common <strong>Region</strong>, which
 we’ll call planeRegion. We’ll start out by defining the Region itself:</p>
 
-<p>`
-    planeRegion: Region
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    planeRegion: Region
     ;
-`</p>
+</code></pre></div></div>
 
 <p>That’s all there is to it; it’s up to rooms to say what regions they
 belong to (by listing them in their <code class="language-plaintext highlighter-rouge">regions</code>
@@ -88,81 +78,80 @@ compass directions as silent synonyms.</p>
 
 <p>Here’s our initial skeletal layout for the plane:</p>
 
-<p>`
-    cockpit: Room ‘Cockpit’ ‘cockpit’</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cockpit: Room 'Cockpit' 'cockpit'
+        
+        aft = planeFront
+        south asExit(aft)
+        out asExit(aft)
+        
+        regions = [planeRegion]
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    aft = planeFront
-    south asExit(aft)
-    out asExit(aft)
-    
-    regions = [planeRegion]
-;
-
-planeFront: Room 'Front of Plane' 'front[n] of the plane;;airplane aeroplane'
-    "The main aisle comes to an end at the port exit of the plane, but continues
-    aft past the seating. A little further forward is a door that &lt;&lt;unless
-      me.hasSeen(cockpit)&gt;&gt;presumably&lt;&lt;end&gt;&gt; leads into the cockpit. "
-    
-    fore = cockpit
-    north asExit(fore)
-    port = jetway
-    west asExit(port)
-    out asExit(port)
-    aft = planeRear
-    south asExit(aft)
-    
-    regions = [planeRegion]
-;
-
-
-planeRear: Room 'Rear of Plane' 'rear[n] of the plane;;airplane aeroplane'
-    "The main aisle continues forward to the front of the plane and aft to the
-    bathroom between rows of red coloured seats. "
-    fore = planeFront
-    north asExit(fore)
-    aft = bathroom
-    south asExit(aft)
-    
-    regions = [planeRegion]    
-;
+    planeFront: Room 'Front of Plane' 'front[n] of the plane;;airplane aeroplane'
+        "The main aisle comes to an end at the port exit of the plane, but continues
+        aft past the seating. A little further forward is a door that &lt;&lt;unless
+          me.hasSeen(cockpit)&gt;&gt;presumably&lt;&lt;end&gt;&gt; leads into the cockpit. "
+        
+        fore = cockpit
+        north asExit(fore)
+        port = jetway
+        west asExit(port)
+        out asExit(port)
+        aft = planeRear
+        south asExit(aft)
+        
+        regions = [planeRegion]
+    ;
 
 
-bathroom: Room 'Bathroom' 'bathroom;;loo lavatory toilet wc cubicle'
-    "The bathroom is just a tiny cubicle with all the standard fittings you'd
-    expect. "
-    
-    fore = planeRear
-    north asExit(fore)
-    out asExit(fore)    
-    
-    regions = [planeRegion] 
-;
+    planeRear: Room 'Rear of Plane' 'rear[n] of the plane;;airplane aeroplane'
+        "The main aisle continues forward to the front of the plane and aft to the
+        bathroom between rows of red coloured seats. "
+        fore = planeFront
+        north asExit(fore)
+        aft = bathroom
+        south asExit(aft)
+        
+        regions = [planeRegion]    
+    ;
 
-+ Decoration 'fittings; wash; washbasin basin taps faucets bowl; them'
-     "At least the washbasin and the bowl look reasonably clean. "
-    
-    notImportantMsg = 'You have no need to make use of any of these facilities
-        right now. '
-;
 
-+ bucket: Container 'bucket; plain yellow plastic; pail'
-    "It's just a plain yellow plastic bucket. "
-    initSpecialDesc = "Some cleaner seems to have left all his things here:
-        &lt;&lt;list of location.listableContents.subset({x: x.moved == nil})&gt;&gt;. "
-    
-;
+    bathroom: Room 'Bathroom' 'bathroom;;loo lavatory toilet wc cubicle'
+        "The bathroom is just a tiny cubicle with all the standard fittings you'd
+        expect. "
+        
+        fore = planeRear
+        north asExit(fore)
+        out asExit(fore)    
+        
+        regions = [planeRegion] 
+    ;
 
-+ sponge: Thing 'sponge; turquoise'
-    "It's a kind of turquoise colour. "
-;
+    + Decoration 'fittings; wash; washbasin basin taps faucets bowl; them'
+         "At least the washbasin and the bowl look reasonably clean. "
+        
+        notImportantMsg = 'You have no need to make use of any of these facilities
+            right now. '
+    ;
 
-+ garbageBag: Container 'garbage bag; large green plastic rubbish; bag'
-    "It's basically just a large green plastic bag. "
-;
+    + bucket: Container 'bucket; plain yellow plastic; pail'
+        "It's just a plain yellow plastic bucket. "
+        initSpecialDesc = "Some cleaner seems to have left all his things here:
+            &lt;&lt;list of location.listableContents.subset({x: x.moved == nil})&gt;&gt;. "
+        
+    ;
 
-+ brassKey: Thing 'small brass key; yale'
-    "It's just like all the other yale keys you've ever seen. "    
-; `
+    + sponge: Thing 'sponge; turquoise'
+        "It's a kind of turquoise colour. "
+    ;
+
+    + garbageBag: Container 'garbage bag; large green plastic rubbish; bag'
+        "It's basically just a large green plastic bag. "
+    ;
+
+    + brassKey: Thing 'small brass key; yale'
+        "It's just like all the other yale keys you've ever seen. "    
+    ;
 </code></pre></div></div>
 
 <p>There’s only a couple of things to remark on here. The first is the use
@@ -194,21 +183,19 @@ you like you can think of it as equivalent to a hypothetical
 unMoved(location.listableContents)&gt;&gt;<code class="language-plaintext highlighter-rouge"> where
 </code>unMoved()` would be defined as:</p>
 
-<p>`
-     unMoved(lst)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     unMoved(lst)
      {
          local ret = [];
          for(local item in lst)
          {
             if(!item.moved)
                ret += item;
-         }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     return ret;
- }
+         }
+         
+         return ret;
+     }
+     
 </code></pre></div></div>
-
-<p>`</p>
 
 <p>The rather odd expression
 <code class="language-plaintext highlighter-rouge">location.listableContents.subset({x: x.moved ==
@@ -241,17 +228,16 @@ the same object twice and put it in two different locations, we’ll
 therefore take a shortcut and define the seating only once but put it in
 both locations. We can do that by means of the <strong>MultiLoc</strong> class:</p>
 
-<p>`</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MultiLoc, Decoration 'seats; red airline; seating seat; them'
-    "Like all airline seats, these ones look like they were designed for the
-    average-sized person of a century and a half ago. "
-    
-    notImportantMsg = 'All the seats round here seem to be taken, so you\'d best
-        leave them alone. '
-    
-    locationList = [planeFront, planeRear]
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
+    MultiLoc, Decoration 'seats; red airline; seating seat; them'
+        "Like all airline seats, these ones look like they were designed for the
+        average-sized person of a century and a half ago. "
+        
+        notImportantMsg = 'All the seats round here seem to be taken, so you\'d best
+            leave them alone. '
+        
+        locationList = [planeFront, planeRear]
+    ;
 </code></pre></div></div>
 
 <p>There’s a few points to note here. First of all, MultiLoc is what is
@@ -301,17 +287,16 @@ minimalist representation of the passengers on the plane. This time
 we’ll name the object since we’ll later want to remove these passengers
 from the plane.</p>
 
-<p>`</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>airlinePassengers: MultiLoc, Decoration 'passengers;;men women; them'
-    "You sense an air of impatience about them, as if they're all wondering when
-    the aircraft is finally going to leave. "
-    
-    notImportantMsg = 'Better leave them alone; you don\'t want to draw
-        attention to yourself. ' 
-    
-    locationList = [planeFront, planeRear]
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
+    airlinePassengers: MultiLoc, Decoration 'passengers;;men women; them'
+        "You sense an air of impatience about them, as if they're all wondering when
+        the aircraft is finally going to leave. "
+        
+        notImportantMsg = 'Better leave them alone; you don\'t want to draw
+            attention to yourself. ' 
+        
+        locationList = [planeFront, planeRear]
+    ;
 </code></pre></div></div>
 
 <h2 id="making-use-of-the-region">Making Use of the Region</h2>
@@ -330,17 +315,16 @@ these announcements wouldn’t be audible aboard the plane, so we can use
 <code class="language-plaintext highlighter-rouge">me.isIn(planeRegion)</code> to silence the
 announcements when the player character is aboard the plane:</p>
 
-<p>`
-    announcementObj: ShuffledEventList
-        …
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    announcementObj: ShuffledEventList
+        ...
         announce()
         {
             if(!me.isIn(planeRegion))
                doScript();
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    prefix = 'An announcement comes over the public address system: '
-; `
+        }
+        
+        prefix = 'An announcement comes over the public address system: '
+    ;
 </code></pre></div></div>
 
 <p>Secondly, we used shipboard directions (port, starboard, fore and aft)
@@ -349,17 +333,16 @@ meaningful anywhere else. In a previous chapter we saw how to use a Doer
 to block the use of these directions altogether. Now we can define one
 that blocks them <em>except</em> aboard the plane (i.e. in the planeRegion):</p>
 
-<p>`
-    Doer ‘go dir’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'go dir'
         exec(c)
         {
-            “Shipboard directions don’t have much meaning here. “;
+            "Shipboard directions don't have much meaning here. ";
             abort;
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    direction = [portDir, starboardDir, foreDir, aftDir]
-    when = (!me.isIn(planeRegion))
-; `
+        }
+        
+        direction = [portDir, starboardDir, foreDir, aftDir]
+        when = (!me.isIn(planeRegion))
+    ;
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">when</code> property of a Doer can be used to
@@ -371,16 +354,13 @@ game again to ensure that everything works as expected.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="airport.html" class="nav">Airport</a> \&gt; Aboard the Plane  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="airport.html" class="nav">Airport</a> &gt; Aboard the Plane<br />
 <span class="navnp"><a href="airmap2.html" class="nav"><em>Prev:</em> Extending the Map</a>
     <a href="doors.html" class="nav"><em>Next:</em> Doors and Locks</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

@@ -46,16 +46,14 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Our root class for grammar productions. (A “production” represents a
+match to a syntax rule, as defined with a ‘grammar’ template.)</p>
 
-Our root class for grammar productions. (A "production" represents a
-match to a syntax rule, as defined with a 'grammar' template.)
+<p>The language module’s grammar rules can define certain special
+properties on any production match object, and we’ll find them in the
+course of building the command from the match tree:</p>
 
-The language module's grammar rules can define certain special
-properties on any production match object, and we'll find them in the
-course of building the command from the match tree:
-
-endOfSentence=true - define this on a production for a sentence-ending
+<p>endOfSentence=true - define this on a production for a sentence-ending
 verb conjunction. In English (and most Western languages), this can be
 used with rules that match punctuation marks like periods, exclamation
 points, and question marks, since these marks typically end a sentence.
@@ -63,29 +61,19 @@ The parser distinguishes between the grammar rules for the first clause
 in a sentence vs subsequent clauses. It starts a new input line with the
 first-in-sentence rule, then uses the additional clause rule for each
 subsequent clause. When a clause ends with a sentence-ending mark,
-though, we'll treat the next clause as a sentence opener again.
+though, we’ll treat the next clause as a sentence opener again.</p>
 
-`class `**`Production`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Production</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Production</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Production</code></strong><br />
 <a href="../object/actorBadCommandPhrase(main).html"><code class="language-plaintext highlighter-rouge">actorBadCommandPhrase(main)</code></a><br />
@@ -557,39 +545,23 @@ though, we'll treat the next clause as a sentence opener again.
 <a href="../object/yesOrNoPhrase(yes).html"><code class="language-plaintext highlighter-rouge">yesOrNoPhrase(yes)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a><a href="#nounPhraseRole"><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></a><a href="#npClass"><code class="language-plaintext highlighter-rouge">npClass</code></a><a href="#parent"><code class="language-plaintext highlighter-rouge">parent</code></a></p>
+<p><a href="#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a> <a href="#nounPhraseRole"><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></a> <a href="#npClass"><code class="language-plaintext highlighter-rouge">npClass</code></a> <a href="#parent"><code class="language-plaintext highlighter-rouge">parent</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a><a href="#build"><code class="language-plaintext highlighter-rouge">build</code></a><a href="#findAction"><code class="language-plaintext highlighter-rouge">findAction</code></a><a href="#findChild"><code class="language-plaintext highlighter-rouge">findChild</code></a><a href="#findParent"><code class="language-plaintext highlighter-rouge">findParent</code></a><a href="#getNounPhraseRole"><code class="language-plaintext highlighter-rouge">getNounPhraseRole</code></a><a href="#getText"><code class="language-plaintext highlighter-rouge">getText</code></a><a href="#getTokens"><code class="language-plaintext highlighter-rouge">getTokens</code></a><a href="#grammarInfoForBuild"><code class="language-plaintext highlighter-rouge">grammarInfoForBuild</code></a><a href="#isChildOf"><code class="language-plaintext highlighter-rouge">isChildOf</code></a><a href="#noteEndOfSentence"><code class="language-plaintext highlighter-rouge">noteEndOfSentence</code></a><a href="#visitLiteral"><code class="language-plaintext highlighter-rouge">visitLiteral</code></a><a href="#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a></p>
+<p><a href="#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a> <a href="#build"><code class="language-plaintext highlighter-rouge">build</code></a> <a href="#findAction"><code class="language-plaintext highlighter-rouge">findAction</code></a> <a href="#findChild"><code class="language-plaintext highlighter-rouge">findChild</code></a> <a href="#findParent"><code class="language-plaintext highlighter-rouge">findParent</code></a> <a href="#getNounPhraseRole"><code class="language-plaintext highlighter-rouge">getNounPhraseRole</code></a> <a href="#getText"><code class="language-plaintext highlighter-rouge">getText</code></a> <a href="#getTokens"><code class="language-plaintext highlighter-rouge">getTokens</code></a> <a href="#grammarInfoForBuild"><code class="language-plaintext highlighter-rouge">grammarInfoForBuild</code></a> <a href="#isChildOf"><code class="language-plaintext highlighter-rouge">isChildOf</code></a> <a href="#noteEndOfSentence"><code class="language-plaintext highlighter-rouge">noteEndOfSentence</code></a> <a href="#visitLiteral"><code class="language-plaintext highlighter-rouge">visitLiteral</code></a> <a href="#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="determiner"></span></p>
 
@@ -597,14 +569,10 @@ though, we'll treat the next clause as a sentence opener again.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3487">3487</a>]</p>
 
-<div class="desc">
-
-The determiner that this production applies to the noun phrase it's part
+<p>The determiner that this production applies to the noun phrase it’s part
 of, as a Determiner object. If this is non-nil, this Determiner will be
 set in the current NounPhrase when we visit this production in the build
-process.
-
-</div>
+process.</p>
 
 <p><span id="nounPhraseRole"></span></p>
 
@@ -612,19 +580,15 @@ process.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3446">3446</a>]</p>
 
-<div class="desc">
-
-My assigned noun phrase role, as a NounRole object. This must be
+<p>My assigned noun phrase role, as a NounRole object. This must be
 explicitly set for the top node in a noun slot (which can be a noun list
-production, a single noun production, a topic, etc).
+production, a single noun production, a topic, etc).</p>
 
-In a positional language grammar, the predicate production will mark its
+<p>In a positional language grammar, the predicate production will mark its
 immediate child in each noun phrase slot by setting this according to
 the role that the sub-tree plays in the predicate grammar.
 Non-positional languages that use grammatical case or other ways of
-encoding the role information must set this some other way.
-
-</div>
+encoding the role information must set this some other way.</p>
 
 <p><span id="npClass"></span></p>
 
@@ -632,17 +596,13 @@ encoding the role information must set this some other way.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3432">3432</a>]</p>
 
-<div class="desc">
+<p>The NounPhrase subclass to use for noun phrases within this sub-tree. By
+default, we look to our parent; if we don’t have a parent, we use the
+base NounPhrase class.</p>
 
-The NounPhrase subclass to use for noun phrases within this sub-tree. By
-default, we look to our parent; if we don't have a parent, we use the
-base NounPhrase class.
-
-Special phrase types (topics, literals, and numbers) have their own
+<p>Special phrase types (topics, literals, and numbers) have their own
 NounPhrase subclasses. This is important because the resolution rules
-for these phrase types differ from the regular object resolution rules.
-
-</div>
+for these phrase types differ from the regular object resolution rules.</p>
 
 <p><span id="parent"></span></p>
 
@@ -650,28 +610,20 @@ for these phrase types differ from the regular object resolution rules.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3502">3502</a>]</p>
 
-<div class="desc">
-
-My parent production. The low-level GrammarProd mechanism doesn't set
+<p>My parent production. The low-level GrammarProd mechanism doesn’t set
 this up, so we set it up ourselves in the course of building out the
 tree. In build(), just before we visit each sub-production, we set the
-sub-production's 'parent' property to point back to the parent
-production. This property is therefore always set while we're traversing
-the child's tree, but won't necessarily be set yet if we're not
-currently working somewhere within the child's tree. That means that you
-can always look at 'parent' within your own build() routine or a child
-build() routine, but you can't necessarily look at it across the tree or
-within your own children.
-
-</div>
+sub-production’s ‘parent’ property to point back to the parent
+production. This property is therefore always set while we’re traversing
+the child’s tree, but won’t necessarily be set yet if we’re not
+currently working somewhere within the child’s tree. That means that you
+can always look at ‘parent’ within your own build() routine or a child
+build() routine, but you can’t necessarily look at it across the tree or
+within your own children.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addNounListItem"></span></p>
 
@@ -679,26 +631,22 @@ within your own children.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3404">3404</a>]</p>
 
-<div class="desc">
-
-Add a new NounPhrase item to the list under construction. Certain
+<p>Add a new NounPhrase item to the list under construction. Certain
 productions are associated with specific functional slots in the
 abstract command - direct object, indirect object, EXCEPT list, etc.
 This routine is for such production subclasses to override, to direct
 new noun phrases into the appropriate slot lists. In a grammar, the
 functional role is typically at a higher level in the tree, with
-ordinary noun phrases plugged in underneath.
+ordinary noun phrases plugged in underneath.</p>
 
-Our default handling is to first check our nounPhraseRole property; if
-it's set, it tells us the role that this sub-tree plays in the predicate
+<p>Our default handling is to first check our nounPhraseRole property; if
+it’s set, it tells us the role that this sub-tree plays in the predicate
 (direct object, indirect object, accessory). We use that information to
-add the new NounPhrase to the Command list that we're building for our
-assigned role.
+add the new NounPhrase to the Command list that we’re building for our
+assigned role.</p>
 
-If nounPhraseRole is nil, then we simply pass the request up to our
-parent. Eventually we should reach a node encoding the function slot.
-
-</div>
+<p>If nounPhraseRole is nil, then we simply pass the request up to our
+parent. Eventually we should reach a node encoding the function slot.</p>
 
 <p><span id="build"></span></p>
 
@@ -706,12 +654,8 @@ parent. Eventually we should reach a node encoding the function slot.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3329">3329</a>]</p>
 
-<div class="desc">
-
-Build the command for this production and its children. By default,
-we'll simply traverse into our children.
-
-</div>
+<p>Build the command for this production and its children. By default,
+we’ll simply traverse into our children.</p>
 
 <p><span id="findAction"></span></p>
 
@@ -719,12 +663,8 @@ we'll simply traverse into our children.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3538">3538</a>]</p>
 
-<div class="desc">
-
-Find the action. This finds the child of type VerbProduction, then
-retrieves the action from the verb production.
-
-</div>
+<p>Find the action. This finds the child of type VerbProduction, then
+retrieves the action from the verb production.</p>
 
 <p><span id="findChild"></span></p>
 
@@ -732,11 +672,7 @@ retrieves the action from the verb production.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3550">3550</a>]</p>
 
-<div class="desc">
-
-Find a child of a given class.
-
-</div>
+<p>Find a child of a given class.</p>
 
 <p><span id="findParent"></span></p>
 
@@ -744,13 +680,9 @@ Find a child of a given class.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3509">3509</a>]</p>
 
-<div class="desc">
-
-Find a parent matching a given test. We'll scan up the parent tree,
+<p>Find a parent matching a given test. We’ll scan up the parent tree,
 looking for the nearest parent p for which func(p) returns true,
-returning p. If we can't find one, we return nil.
-
-</div>
+returning p. If we can’t find one, we return nil.</p>
 
 <p><span id="getNounPhraseRole"></span></p>
 
@@ -758,12 +690,8 @@ returning p. If we can't find one, we return nil.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3452">3452</a>]</p>
 
-<div class="desc">
-
-Get our noun phrase role. If we don't have a role defined directly,
-we'll inherit the role from our parent node.
-
-</div>
+<p>Get our noun phrase role. If we don’t have a role defined directly,
+we’ll inherit the role from our parent node.</p>
 
 <p><span id="getText"></span></p>
 
@@ -771,11 +699,7 @@ we'll inherit the role from our parent node.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3304">3304</a>]</p>
 
-<div class="desc">
-
-get the original text of the command for this match
-
-</div>
+<p>get the original text of the command for this match</p>
 
 <p><span id="getTokens"></span></p>
 
@@ -783,11 +707,7 @@ get the original text of the command for this match
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3315">3315</a>]</p>
 
-<div class="desc">
-
-get my original token list, in canonical tokenizer format
-
-</div>
+<p>get my original token list, in canonical tokenizer format</p>
 
 <p><span id="grammarInfoForBuild"></span></p>
 
@@ -795,15 +715,11 @@ get my original token list, in canonical tokenizer format
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3379">3379</a>]</p>
 
-<div class="desc">
-
-Get the grammar match list for build() purposes. By default, this simply
+<p>Get the grammar match list for build() purposes. By default, this simply
 returns the grammarInfo() results, which are automatically generated by
-the compiler to return a list of the "-\&gt;prop" values from the matched
+the compiler to return a list of the “-&gt;prop” values from the matched
 grammar rule. Some rules might want to modify that default value list,
-so we provide this routine as an override hook.
-
-</div>
+so we provide this routine as an override hook.</p>
 
 <p><span id="isChildOf"></span></p>
 
@@ -811,11 +727,7 @@ so we provide this routine as an override hook.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3520">3520</a>]</p>
 
-<div class="desc">
-
-Is this production a child of the given production?
-
-</div>
+<p>Is this production a child of the given production?</p>
 
 <p><span id="noteEndOfSentence"></span></p>
 
@@ -823,12 +735,8 @@ Is this production a child of the given production?
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3416">3416</a>]</p>
 
-<div class="desc">
-
-Note an end-of-sentence marker. We'll simply notify our parent by
-default.
-
-</div>
+<p>Note an end-of-sentence marker. We’ll simply notify our parent by
+default.</p>
 
 <p><span id="visitLiteral"></span></p>
 
@@ -836,13 +744,9 @@ default.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3463">3463</a>]</p>
 
-<div class="desc">
-
-Visit a literal token child in our sub-tree. This is called during the
+<p>Visit a literal token child in our sub-tree. This is called during the
 build process for each literal token in our child list. By default, we
-add the token to the command's current noun phrase.
-
-</div>
+add the token to the command’s current noun phrase.</p>
 
 <p><span id="visitProd"></span></p>
 
@@ -850,20 +754,13 @@ add the token to the command's current noun phrase.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3475">3475</a>]</p>
 
-<div class="desc">
-
-Visit a production object in our list. This is called during the build
+<p>Visit a production object in our list. This is called during the build
 process for each production object in our child list. By default, we
-simply build the child production recursively.
+simply build the child production recursively.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

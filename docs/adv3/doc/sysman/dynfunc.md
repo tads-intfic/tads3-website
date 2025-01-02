@@ -269,7 +269,7 @@ The routine to implement this might look something like this:
     {
       // replace each {...} expression with its evaluated result
       tadsSay(rexReplace('<lbrace>(<^rbrace>*)<rbrace>', msg,
-              {m: Compiler.eval(rexGroup(1)[3])}));
+              {m: Compiler.eval(rexGroup(1) [3])}));
     }
 ```
 
@@ -336,7 +336,7 @@ our own local variables.
 
       // replace each {...} expression with its evaluated result
       tadsSay(rexReplace('<lbrace>(<^rbrace>*)<rbrace>', msg,
-              {m: Compiler.eval(rexGroup(1)[3], frame)}));
+              {m: Compiler.eval(rexGroup(1) [3], frame)}));
     }
 ```
 

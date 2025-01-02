@@ -56,7 +56,7 @@ This header defines the StringComparator intrinsic class.
 
 
 
-[`StrCompCaseFold`](#StrCompCaseFold)[`StrCompMatch`](#StrCompMatch)[`StrCompTrunc`](#StrCompTrunc)
+[`StrCompCaseFold`](#StrCompCaseFold) [`StrCompMatch`](#StrCompMatch) [`StrCompTrunc`](#StrCompTrunc)
 
 <span id="_EnumSummary_"></span>
 

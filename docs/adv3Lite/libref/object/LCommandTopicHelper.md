@@ -80,7 +80,7 @@ Details](#_Methods_)
 
 
 
-[`actionPhrase`](#actionPhrase)[`getName`](#getName)
+[`actionPhrase`](#actionPhrase) [`getName`](#getName)
 
 <span id="_Properties_"></span>
 

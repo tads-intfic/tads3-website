@@ -65,7 +65,7 @@ to the caller of the RuleBook. \[DEFINED IN RULES EXTENSION\]
 
 
 
-[`afterRules`](../object/afterRules.html)[`beforeRules`](../object/beforeRules.html)[`initRules`](../object/initRules.html)[`preinitRules`](../object/preinitRules.html)[`reportRules`](../object/reportRules.html)[`turnEndRules`](../object/turnEndRules.html)[`turnStartRules`](../object/turnStartRules.html)
+[`afterRules`](../object/afterRules.html) [`beforeRules`](../object/beforeRules.html) [`initRules`](../object/initRules.html) [`preinitRules`](../object/preinitRules.html) [`reportRules`](../object/reportRules.html) [`turnEndRules`](../object/turnEndRules.html) [`turnStartRules`](../object/turnStartRules.html)
 <span id="_PropSummary_"></span>
 
 
@@ -74,13 +74,13 @@ to the caller of the RuleBook. \[DEFINED IN RULES EXTENSION\]
 
 
 
-[`actor`](#actor)[`contents`](#contents)[`contValue`](#contValue)[`defaultVal`](#defaultVal)[`matchObj`](#matchObj)[`stopValue`](#stopValue)
+[`actor`](#actor) [`contents`](#contents) [`contValue`](#contValue) [`defaultVal`](#defaultVal) [`matchObj`](#matchObj) [`stopValue`](#stopValue)
 
 Inherited from `PreinitObject` :  
-[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe) [`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,12 +90,12 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`addToContents`](#addToContents)[`follow`](#follow)[`initBook`](#initBook)[`removeFromContents`](#removeFromContents)
+[`addToContents`](#addToContents) [`follow`](#follow) [`initBook`](#initBook) [`removeFromContents`](#removeFromContents)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)[`execute`](../object/ModuleExecObject.html#execute)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec) [`execute`](../object/ModuleExecObject.html#execute)
 
 <span id="_Properties_"></span>
 

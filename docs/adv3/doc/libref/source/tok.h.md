@@ -32,19 +32,19 @@ layout: docs
      *   it might be converted in some way (words are usually converted to
      *   lower-case, for example).  
      */
-    #define getTokVal(tok) ((tok)[1])
+    #define getTokVal(tok) ((tok) [1])
 
     /*
      *   Get the token type.  This is a token enum value describing the type of
      *   the token. 
      */
-    #define getTokType(tok) ((tok)[2])
+    #define getTokType(tok) ((tok) [2])
 
     /*
      *   Get the token's original text.  This is the original text matched from
      *   the tokenized string. 
      */
-    #define getTokOrig(tok) ((tok)[3])
+    #define getTokOrig(tok) ((tok) [3])
 
     /*
      *   Some internal convenience macros.  (These are meant for internal use

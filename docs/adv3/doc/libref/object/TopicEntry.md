@@ -158,7 +158,7 @@ cases.
 
 
 
-[`altTalkCount`](#altTalkCount)[`altTopicList`](#altTopicList)[`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)[`isActive`](#isActive)[`isConversational`](#isConversational)[`matchObj`](#matchObj)[`matchScore`](#matchScore)[`talkCount`](#talkCount)[`topicGroupActive`](#topicGroupActive)[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)[`topicResponse`](#topicResponse)
+[`altTalkCount`](#altTalkCount) [`altTopicList`](#altTopicList) [`impliesGreeting`](#impliesGreeting) [`includeInList`](#includeInList) [`isActive`](#isActive) [`isConversational`](#isConversational) [`matchObj`](#matchObj) [`matchScore`](#matchScore) [`talkCount`](#talkCount) [`topicGroupActive`](#topicGroupActive) [`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment) [`topicResponse`](#topicResponse)
 
 <span id="_MethodSummary_"></span>
 
@@ -168,7 +168,7 @@ cases.
 
 
 
-[`addAltTopic`](#addAltTopic)[`addSuggestedTopic`](#addSuggestedTopic)[`addTopic`](#addTopic)[`adjustScore`](#adjustScore)[`anyAltIsActive`](#anyAltIsActive)[`breakTopicTie`](#breakTopicTie)[`checkIsActive`](#checkIsActive)[`deferToEntry`](#deferToEntry)[`getActor`](#getActor)[`getTopicOwner`](#getTopicOwner)[`handleTopic`](#handleTopic)[`initializeTopicEntry`](#initializeTopicEntry)[`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`noteAltInvocation`](#noteAltInvocation)[`noteInvocation`](#noteInvocation)[`setTopicPronouns`](#setTopicPronouns)
+[`addAltTopic`](#addAltTopic) [`addSuggestedTopic`](#addSuggestedTopic) [`addTopic`](#addTopic) [`adjustScore`](#adjustScore) [`anyAltIsActive`](#anyAltIsActive) [`breakTopicTie`](#breakTopicTie) [`checkIsActive`](#checkIsActive) [`deferToEntry`](#deferToEntry) [`getActor`](#getActor) [`getTopicOwner`](#getTopicOwner) [`handleTopic`](#handleTopic) [`initializeTopicEntry`](#initializeTopicEntry) [`isMatchPossible`](#isMatchPossible) [`matchTopic`](#matchTopic) [`noteAltInvocation`](#noteAltInvocation) [`noteInvocation`](#noteInvocation) [`setTopicPronouns`](#setTopicPronouns)
 
 <span id="_Properties_"></span>
 

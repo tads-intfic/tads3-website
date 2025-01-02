@@ -40,33 +40,25 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Pre-condition: the indirect object must be able to touch the target
+<p>Pre-condition: the indirect object must be able to touch the target
 object. This can be used for actions where the direct object is going to
-be manipulated by an "agent" of the action (i.e., the indirect object),
-rather than directly by the actor: MOVE X WITH Y, for example.
+be manipulated by an “agent” of the action (i.e., the indirect object),
+rather than directly by the actor: MOVE X WITH Y, for example.</p>
 
-Note that the target object of this condition should be the direct
+<p>Note that the target object of this condition should be the direct
 object in most cases, so this condition should usually be used like
-this:
+this:</p>
 
-dobjFor(MoveWith) { preCond = \[iobjTouchObj\] }
+<p>dobjFor(MoveWith) { preCond = [iobjTouchObj] }</p>
 
-In other words, this is a precondition that we apply in most cases to
-the \*direct\* object.
+<p>In other words, this is a precondition that we apply in most cases to
+the *direct* object.</p>
 
-**`iobjTouchObj`**` :   `[`TouchObjCondition`](../object/TouchObjCondition.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">iobjTouchObj</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/TouchObjCondition.html"><code class="language-plaintext highlighter-rouge">TouchObjCondition</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">iobjTouchObj</code></strong><br />
 <a href="../object/TouchObjCondition.html"><code class="language-plaintext highlighter-rouge">TouchObjCondition</code></a><br />
@@ -74,11 +66,7 @@ the \*direct\* object.
 `                         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#sourceObj"><code class="language-plaintext highlighter-rouge">sourceObj</code></a></p>
 
@@ -87,22 +75,14 @@ the \*direct\* object.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TouchObjCondition</code> :<br />
-<a href="../object/TouchObjCondition.html#checkPreCondition"><code class="language-plaintext highlighter-rouge">checkPreCondition</code></a><a href="../object/TouchObjCondition.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/TouchObjCondition.html#verifyPreCondition"><code class="language-plaintext highlighter-rouge">verifyPreCondition</code></a></p>
+<a href="../object/TouchObjCondition.html#checkPreCondition"><code class="language-plaintext highlighter-rouge">checkPreCondition</code></a> <a href="../object/TouchObjCondition.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/TouchObjCondition.html#verifyPreCondition"><code class="language-plaintext highlighter-rouge">verifyPreCondition</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="sourceObj"></span></p>
 
@@ -110,28 +90,17 @@ the \*direct\* object.
 
 <p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#713">713</a>]</p>
 
-<div class="desc">
-
-the indirect object has to be able to touch the target object
-
-</div>
+<p>the indirect object has to be able to touch the target object</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

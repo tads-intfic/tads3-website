@@ -46,83 +46,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>‘RexPattern’ intrinsic class. This class encapsulates a compiled regular
+expression pattern.</p>
 
-'RexPattern' intrinsic class. This class encapsulates a compiled regular
-expression pattern.
-
-A RexPattern object can be passed to the regular expression functions
+<p>A RexPattern object can be passed to the regular expression functions
 (rexMatch, rexSearch, rexReplace) in place of a string pattern. Since
-compiling a regular expression takes a non-trivial amount of time, it's
+compiling a regular expression takes a non-trivial amount of time, it’s
 more efficient to compile a pattern to a RexPattern object if the same
-pattern will be used in multiple searches.
+pattern will be used in multiple searches.</p>
 
-`intrinsic class `**`RexPattern`**` :   `[`Object`](../object/Object.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">RexPattern</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">RexPattern</code></strong><br />
 <a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#getPatternString"><code class="language-plaintext highlighter-rouge">getPatternString</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
-<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a><a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a><a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a><a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a><a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a><a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a><a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a><a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a><a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a><a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a><a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a><a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a><a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a><a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a><a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a> <a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a> <a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a> <a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a> <a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a> <a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a> <a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getPatternString"></span></p>
 
@@ -130,18 +98,11 @@ pattern will be used in multiple searches.
 
 <p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1218">1218</a>]</p>
 
-<div class="desc">
+<p>retrieve the original pattern string used to construct the object</p>
 
-retrieve the original pattern string used to construct the object
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

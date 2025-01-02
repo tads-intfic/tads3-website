@@ -51,7 +51,7 @@ the response text that follows applies to the announced object.
 
 
 
-[`closeText`](#closeText)[`openText`](#openText)
+[`closeText`](#closeText) [`openText`](#openText)
 
 Inherited from `StyleTag` :  
 [`tagName`](../object/StyleTag.html#tagName)

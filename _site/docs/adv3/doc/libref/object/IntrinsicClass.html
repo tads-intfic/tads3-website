@@ -46,77 +46,45 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>The IntrinsicClass intrinsic class. Objects of this type represent the
+intrinsic classes themselves.</p>
 
-The IntrinsicClass intrinsic class. Objects of this type represent the
-intrinsic classes themselves.
-
-`intrinsic class `**`IntrinsicClass`**` :   `[`Object`](../object/Object.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">IntrinsicClass</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">IntrinsicClass</code></strong><br />
 <a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#isIntrinsicClass"><code class="language-plaintext highlighter-rouge">isIntrinsicClass</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
-<a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a><a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a><a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a><a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a><a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a><a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a><a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a><a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a><a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a><a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+<a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a> <a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="isIntrinsicClass"></span></p>
 
@@ -124,32 +92,25 @@ intrinsic classes themselves.
 
 <p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#127">127</a>]</p>
 
-<div class="desc">
+<p>Class method: is the given value an IntrinsicClass object? This returns
+true if so, nil if not.</p>
 
-Class method: is the given value an IntrinsicClass object? This returns
-true if so, nil if not.
-
-It's not possible to determine if an object is an IntrinsicClass object
+<p>It’s not possible to determine if an object is an IntrinsicClass object
 using x.ofKind(IntrinsicClass) or via x.getSuperclassList(). This is
-because those methods traverse the nominal class tree: \[1,2,3\] is a
+because those methods traverse the nominal class tree: [1,2,3] is a
 List, and List is an Object. However, List and Object themselves are
-represented by IntrinsicClass instances, and it's occasionally useful to
-know if you're dealing with such an object. That's where this method
-comes in.
+represented by IntrinsicClass instances, and it’s occasionally useful to
+know if you’re dealing with such an object. That’s where this method
+comes in.</p>
 
-This method returns nil for instances of an intrinsic class. For
-example, isIntrinsicClass(\[1,2,3\]) returns nil, because \[1,2,3\] is a
-List instance. If you get the superclass list for \[1,2,3\], though,
-that will be \[List\], and isIntrinsicClass(List) returns true.
+<p>This method returns nil for instances of an intrinsic class. For
+example, isIntrinsicClass([1,2,3]) returns nil, because [1,2,3] is a
+List instance. If you get the superclass list for [1,2,3], though,
+that will be [List], and isIntrinsicClass(List) returns true.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

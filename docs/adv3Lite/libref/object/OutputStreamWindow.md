@@ -86,7 +86,7 @@ window's layout in the broader UI to subclasses.
 
 
 
-[`captureOutput`](#captureOutput)[`createOutputStream`](#createOutputStream)[`createOutputStreamObj`](#createOutputStreamObj)[`setOutputStream`](#setOutputStream)
+[`captureOutput`](#captureOutput) [`createOutputStream`](#createOutputStream) [`createOutputStreamObj`](#createOutputStreamObj) [`setOutputStream`](#setOutputStream)
 
 <span id="_Properties_"></span>
 

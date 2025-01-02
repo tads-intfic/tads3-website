@@ -67,7 +67,7 @@ that the current actor can touch the current object.
 
 
 
-[`dobjTouchObj`](../object/dobjTouchObj.html)[`iobjTouchObj`](../object/iobjTouchObj.html)[`touchObj`](../object/touchObj.html)
+[`dobjTouchObj`](../object/dobjTouchObj.html) [`iobjTouchObj`](../object/iobjTouchObj.html) [`touchObj`](../object/touchObj.html)
 <span id="_PropSummary_"></span>
 
 
@@ -76,7 +76,7 @@ that the current actor can touch the current object.
 
 
 
-[`preCondOrder`](#preCondOrder)[`sourceObj`](#sourceObj)
+[`preCondOrder`](#preCondOrder) [`sourceObj`](#sourceObj)
 
 
 
@@ -88,7 +88,7 @@ that the current actor can touch the current object.
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)[`verifyPreCondition`](#verifyPreCondition)
+[`checkPreCondition`](#checkPreCondition) [`construct`](#construct) [`verifyPreCondition`](#verifyPreCondition)
 
 
 

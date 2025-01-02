@@ -66,7 +66,7 @@ Inherited from `CommandRankingByWeakness` :
 
 
 Inherited from `CommandRankingByWeakness` :  
-[`comparePass1`](../object/CommandRankingByWeakness.html#comparePass1)[`comparePass2`](../object/CommandRankingByWeakness.html#comparePass2)
+[`comparePass1`](../object/CommandRankingByWeakness.html#comparePass1) [`comparePass2`](../object/CommandRankingByWeakness.html#comparePass2)
 
 
 

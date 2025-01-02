@@ -52,10 +52,10 @@ accessory).
 
 
 
-[`curObjProp`](#curObjProp)[`matchProp`](#matchProp)[`missingReplyProp`](#missingReplyProp)[`name`](#name)[`npListProp`](#npListProp)[`objListProp`](#objListProp)[`objMatchProp`](#objMatchProp)[`objProp`](#objProp)[`order`](#order)
+[`curObjProp`](#curObjProp) [`matchProp`](#matchProp) [`missingReplyProp`](#missingReplyProp) [`name`](#name) [`npListProp`](#npListProp) [`objListProp`](#objListProp) [`objMatchProp`](#objMatchProp) [`objProp`](#objProp) [`order`](#order)
 
 Inherited from `NounRole` :  
-[`all`](../object/NounRole.html#all)[`allPredicate`](../object/NounRole.html#allPredicate)[`isPredicate`](../object/NounRole.html#isPredicate)
+[`all`](../object/NounRole.html#all) [`allPredicate`](../object/NounRole.html#allPredicate) [`isPredicate`](../object/NounRole.html#isPredicate)
 
 <span id="_MethodSummary_"></span>
 

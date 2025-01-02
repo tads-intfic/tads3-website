@@ -35,7 +35,7 @@ actor's response to certain conversational commands and other actions.
 ActorStates should always be located directly in the Actor to which they
 belong.
 
-`class `**`ActorState`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
+`class `**`ActorState`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html) [`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
 
 
 
@@ -77,12 +77,12 @@ belong.
 
 
 
-[`active`](#active)[`attentionSpan`](#attentionSpan)[`getActor`](#getActor)[`informOverheard`](#informOverheard)[`isInitState`](#isInitState)[`noResponse`](#noResponse)[`pcJustArrived`](#pcJustArrived)[`specialDesc`](#specialDesc)[`stateDesc`](#stateDesc)
+[`active`](#active) [`attentionSpan`](#attentionSpan) [`getActor`](#getActor) [`informOverheard`](#informOverheard) [`isInitState`](#isInitState) [`noResponse`](#noResponse) [`pcJustArrived`](#pcJustArrived) [`specialDesc`](#specialDesc) [`stateDesc`](#stateDesc)
 
 
 
 Inherited from `ActorTopicDatabase` :  
-[`askForTopics`](../object/ActorTopicDatabase.html#askForTopics)[`askTopics`](../object/ActorTopicDatabase.html#askTopics)[`commandTopics`](../object/ActorTopicDatabase.html#commandTopics)[`defaultAgendaTopic`](../object/ActorTopicDatabase.html#defaultAgendaTopic)[`giveTopics`](../object/ActorTopicDatabase.html#giveTopics)[`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics)[`miscTopics`](../object/ActorTopicDatabase.html#miscTopics)[`queryTopics`](../object/ActorTopicDatabase.html#queryTopics)[`sayTopics`](../object/ActorTopicDatabase.html#sayTopics)[`sceneEndTopics`](../object/ActorTopicDatabase.html#sceneEndTopics)[`sceneStartTopics`](../object/ActorTopicDatabase.html#sceneStartTopics)[`showTopics`](../object/ActorTopicDatabase.html#showTopics)[`talkTopics`](../object/ActorTopicDatabase.html#talkTopics)[`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
+[`askForTopics`](../object/ActorTopicDatabase.html#askForTopics) [`askTopics`](../object/ActorTopicDatabase.html#askTopics) [`commandTopics`](../object/ActorTopicDatabase.html#commandTopics) [`defaultAgendaTopic`](../object/ActorTopicDatabase.html#defaultAgendaTopic) [`giveTopics`](../object/ActorTopicDatabase.html#giveTopics) [`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics) [`miscTopics`](../object/ActorTopicDatabase.html#miscTopics) [`queryTopics`](../object/ActorTopicDatabase.html#queryTopics) [`sayTopics`](../object/ActorTopicDatabase.html#sayTopics) [`sceneEndTopics`](../object/ActorTopicDatabase.html#sceneEndTopics) [`sceneStartTopics`](../object/ActorTopicDatabase.html#sceneStartTopics) [`showTopics`](../object/ActorTopicDatabase.html#showTopics) [`talkTopics`](../object/ActorTopicDatabase.html#talkTopics) [`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
 
 
 
@@ -94,13 +94,13 @@ Inherited from `ActorTopicDatabase` :
 
 
 
-[`activateState`](#activateState)[`addToActor`](#addToActor)[`afterAction`](#afterAction)[`afterTravel`](#afterTravel)[`arrivingTurn`](#arrivingTurn)[`beforeAction`](#beforeAction)[`beforeTravel`](#beforeTravel)[`canEndConversation`](#canEndConversation)[`deactivateState`](#deactivateState)[`getBestMatch`](#getBestMatch)[`initializeActorState`](#initializeActorState)[`remoteSpecialDesc`](#remoteSpecialDesc)[`sayArriving`](#sayArriving)[`sayDeparting`](#sayDeparting)[`sayFollowing`](#sayFollowing)
+[`activateState`](#activateState) [`addToActor`](#addToActor) [`afterAction`](#afterAction) [`afterTravel`](#afterTravel) [`arrivingTurn`](#arrivingTurn) [`beforeAction`](#beforeAction) [`beforeTravel`](#beforeTravel) [`canEndConversation`](#canEndConversation) [`deactivateState`](#deactivateState) [`getBestMatch`](#getBestMatch) [`initializeActorState`](#initializeActorState) [`remoteSpecialDesc`](#remoteSpecialDesc) [`sayArriving`](#sayArriving) [`sayDeparting`](#sayDeparting) [`sayFollowing`](#sayFollowing)
 
 Inherited from `EndConvBlocker` :  
 [`blockEndConv`](../object/EndConvBlocker.html#blockEndConv)
 
 Inherited from `ActorTopicDatabase` :  
-[`initiateTopic`](../object/ActorTopicDatabase.html#initiateTopic)[`listableTopics`](../object/ActorTopicDatabase.html#listableTopics)
+[`initiateTopic`](../object/ActorTopicDatabase.html#initiateTopic) [`listableTopics`](../object/ActorTopicDatabase.html#listableTopics)
 
 Inherited from `TopicDatabase` :  
 [`addTopic`](../object/TopicDatabase.html#addTopic)

@@ -254,13 +254,13 @@ layout: docs
             rexMatch(patAlphaDashAlpha, txt);
 
             /* add the part before the hyphen */
-            toks.append([rexGroup(1)[3], typ, rexGroup(1)[3]]);
+            toks.append([rexGroup(1) [3], typ, rexGroup(1) [3]]);
 
             /* add the hyphen */
             toks.append(['-', typ, '-']);
 
             /* add the part after the hyphen */
-            toks.append([rexGroup(2)[3], typ, rexGroup(2)[3]]);
+            toks.append([rexGroup(2) [3], typ, rexGroup(2) [3]]);
         }
         patAlphaDashAlpha = static new RexPattern('(<alpha>+)-(<alpha>+)')
 

@@ -83,7 +83,7 @@ The English-specific modifications for directions.
 
 
 
-[`allDirections`](#allDirections)[`dirProp`](#dirProp)[`sortingOrder`](#sortingOrder)
+[`allDirections`](#allDirections) [`dirProp`](#dirProp) [`sortingOrder`](#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,7 +93,7 @@ The English-specific modifications for directions.
 
 
 
-[`defaultConnector`](#defaultConnector)[`initializeDirection`](#initializeDirection)[`initializeDirectionClass`](#initializeDirectionClass)[`sayArriving`](#sayArriving)[`sayDeparting`](#sayDeparting)
+[`defaultConnector`](#defaultConnector) [`initializeDirection`](#initializeDirection) [`initializeDirectionClass`](#initializeDirectionClass) [`sayArriving`](#sayArriving) [`sayDeparting`](#sayDeparting)
 
 <span id="_Properties_"></span>
 

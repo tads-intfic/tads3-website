@@ -78,7 +78,7 @@ before the implicit announcement.
 
 
 
-[`applyTransform`](#applyTransform)[`canGroupWith`](#canGroupWith)[`processDefaultAnnouncements`](#processDefaultAnnouncements)[`unstackRecursiveGroup`](#unstackRecursiveGroup)
+[`applyTransform`](#applyTransform) [`canGroupWith`](#canGroupWith) [`processDefaultAnnouncements`](#processDefaultAnnouncements) [`unstackRecursiveGroup`](#unstackRecursiveGroup)
 
 
 

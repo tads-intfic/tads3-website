@@ -76,7 +76,7 @@ language-specific part of the library.
 
 
 
-[`allowAction`](#allowAction)[`myAction`](#myAction)
+[`allowAction`](#allowAction) [`myAction`](#myAction)
 
 
 
@@ -91,7 +91,7 @@ language-specific part of the library.
 [`handleTopic`](#handleTopic)
 
 Inherited from `LCommandTopicHelper` :  
-[`actionPhrase`](../object/LCommandTopicHelper.html#actionPhrase)[`getName`](../object/LCommandTopicHelper.html#getName)
+[`actionPhrase`](../object/LCommandTopicHelper.html#actionPhrase) [`getName`](../object/LCommandTopicHelper.html#getName)
 
 <span id="_Properties_"></span>
 

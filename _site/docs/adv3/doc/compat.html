@@ -37,151 +37,88 @@ checking the Usenet newsgroup
 has run into the same problem, or you can go to
 <a href="http://www.tads.org">tads.org</a> for information on how to contact us.</p>
 
-<div class="bar1">
+<p>Workbench on Windows 95/98: “SHELL32.DLL:SHGetFolderPathA” Error</p>
 
-<div class="heading">
+<p>If you’re running TADS Workbench on Windows 95 or 98, launching
+Workbench might show the following error messages:</p>
 
-Workbench on Windows 95/98: "SHELL32.DLL:SHGetFolderPathA" Error
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error Starting Program
+The HTMLDB3.EXE file is linked to missing export SHELL32.DLL:SHGetFolderPathA.
+</code></pre></div></div>
 
-</div>
-
-<div class="content">
-
-If you're running TADS Workbench on Windows 95 or 98, launching
-Workbench might show the following error messages:
-
-<div class="indented">
-
-    Error Starting Program
-    The HTMLDB3.EXE file is linked to missing export SHELL32.DLL:SHGetFolderPathA.
-
-</div>
-
-If you get this error, you should be able to fix it by installing
+<p>If you get this error, you should be able to fix it by installing
 Microsoft Internet Explorer version 5 or later. The issue is that
 Workbench depends upon a newer version of a certain Windows system DLL
 than what comes with 95 and 98 by default. IE 5 and later automatically
 upgrade this DLL as part of their installation process, so updating the
-DLL is simply a matter of updating IE.
+DLL is simply a matter of updating IE.</p>
 
-</div>
+<p>Crash running HTML TADS</p>
 
-</div>
-
-<div class="bar2">
-
-<div class="heading">
-
-Crash running HTML TADS
-
-</div>
-
-<div class="content">
-
-If HTML TADS crashes, particularly when you select the "Options" item of
-the "Edit" menu or "Customize" on the "Themes" menu, you probably have
+<p>If HTML TADS crashes, particularly when you select the “Options” item of
+the “Edit” menu or “Customize” on the “Themes” menu, you probably have
 an out-of-date version of a Windows system file called COMCTL32.DLL. If
 you encounter this problem, you can fix it by downloading this file from
-the Microsoft web site:
+the Microsoft web site:</p>
 
-<div class="indented">
+<p><a href="ftp://ftp.microsoft.com/softlib/mslfiles/com32upd.exe">ftp://ftp.microsoft.com/softlib/mslfiles/com32upd.exe</a></p>
 
-&lt;ftp://ftp.microsoft.com/softlib/mslfiles/com32upd.exe&gt;
-
-</div>
-
-After downloading the file, double-click it to run the installation
+<p>After downloading the file, double-click it to run the installation
 program, which will install the upgraded DLL for you. Note that HTML
 TADS automatically checks to make sure you have the correct version
-installed and warns you at startup if you don't. Although you can choose
+installed and warns you at startup if you don’t. Although you can choose
 to continue running if TADS displays this warning, we strongly encourage
-you to upgrade your COMCTL32.DLL before running HTML TADS.
+you to upgrade your COMCTL32.DLL before running HTML TADS.</p>
 
-</div>
+<p>Crash using Wine (Windows emulator for Linux)</p>
 
-</div>
-
-<div class="bar1">
-
-<div class="heading">
-
-Crash using Wine (Windows emulator for Linux)
-
-</div>
-
-<div class="content">
-
-If you're running HTML TADS in the Wine environment (a Windows emulation
+<p>If you’re running HTML TADS in the Wine environment (a Windows emulation
 environment for Linux/Unix systems), you might need to use the
-"-noalphablend" command-line option when running htmltads.exe. Some
+“-noalphablend” command-line option when running htmltads.exe. Some
 versions of Wine have a bug that causes the program to crash immediately
 after startup. This has been reported in particular on the version known
-as WineX. If you're running on Wine, and the interpreter crashes
+as WineX. If you’re running on Wine, and the interpreter crashes
 immediately when you run it, try running it from the command line like
-this:
+this:</p>
 
-<div class="indented">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>htmltads -noalphablend
+</code></pre></div></div>
 
-    htmltads -noalphablend
+<p>Western European characters on localized (Non-English) Windows systems</p>
 
-</div>
-
-</div>
-
-</div>
-
-<div class="bar2">
-
-<div class="heading">
-
-Western European characters on localized (Non-English) Windows systems
-
-</div>
-
-<div class="content">
-
-If you're running a Windows system that uses a character set other than
+<p>If you’re running a Windows system that uses a character set other than
 US/Western Europe (such as Windows Eastern European or Cyrillic), please
-read this note.
+read this note.</p>
 
-If you have any problems with HTML TADS displaying characters that are
-**supposed** to be from the US/Western Europe character set, but are
-instead displayed as characters from your system's default character
-set, you might need to adjust your system configuration to remove "font
-substitutions." Many non-US/Western Europe systems use font
-substitutions as a way to work around older applications that don't have
+<p>If you have any problems with HTML TADS displaying characters that are
+<strong>supposed</strong> to be from the US/Western Europe character set, but are
+instead displayed as characters from your system’s default character
+set, you might need to adjust your system configuration to remove “font
+substitutions.” Many non-US/Western Europe systems use font
+substitutions as a way to work around older applications that don’t have
 proper localized character set support, but the substitutions can
 interfere with applications like HTML TADS that do properly support
-localized character sets.
+localized character sets.</p>
 
-To check for font substitutions, look at your WIN.INI file (usually in
+<p>To check for font substitutions, look at your WIN.INI file (usually in
 your C:\WINDOWS directory). Look for a line that starts with
-"\[fontsubstitutes\]", then look for lines like this:
+“[fontsubstitutes]”, then look for lines like this:</p>
 
-<div class="indented">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Arial,0=Arial,238
+</code></pre></div></div>
 
-    Arial,0=Arial,238
-
-</div>
-
-(The second number might be something other than 238.) If you find any
+<p>(The second number might be something other than 238.) If you find any
 lines like this, you might want to try deleting them or commenting them
-out (by putting a semicolon, ";", at the start of each line). You might
-need to reboot your system before your changes take effect.
+out (by putting a semicolon, “;”, at the start of each line). You might
+need to reboot your system before your changes take effect.</p>
 
-**Windows NT users:** On NT, the font substitutions are specified in the
+<p><strong>Windows NT users:</strong> On NT, the font substitutions are specified in the
 registry rather than in WIN.INI. Run REGEDIT and look for a registry key
-with this path:
+with this path:</p>
 
-<div class="indented">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
+</code></pre></div></div>
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
-
-</div>
-
-</div>
-
-</div>
 
 </main>
 <footer>

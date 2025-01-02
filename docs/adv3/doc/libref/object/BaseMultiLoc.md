@@ -104,7 +104,7 @@ locations by default.
 
 
 
-[`initialLocationClass`](#initialLocationClass)[`locationList`](#locationList)
+[`initialLocationClass`](#initialLocationClass) [`locationList`](#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -114,7 +114,7 @@ locations by default.
 
 
 
-[`buildLocationList`](#buildLocationList)[`isDirectlyIn`](#isDirectlyIn)[`isIn`](#isIn)[`isInitiallyIn`](#isInitiallyIn)[`isListedInContents`](#isListedInContents)[`isOrIsIn`](#isOrIsIn)
+[`buildLocationList`](#buildLocationList) [`isDirectlyIn`](#isDirectlyIn) [`isIn`](#isIn) [`isInitiallyIn`](#isInitiallyIn) [`isListedInContents`](#isListedInContents) [`isOrIsIn`](#isOrIsIn)
 
 <span id="_Properties_"></span>
 

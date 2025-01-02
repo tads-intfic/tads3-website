@@ -33,7 +33,7 @@ Eric Eve
 
 
 
-[`Consultable`](../object/Consultable.html)[`ConsultTopic`](../object/ConsultTopic.html)[`DefaultConsultTopic`](../object/DefaultConsultTopic.html)[`TopicDatabase`](../object/TopicDatabase.html)[`TopicEntry`](../object/TopicEntry.html)
+[`Consultable`](../object/Consultable.html) [`ConsultTopic`](../object/ConsultTopic.html) [`DefaultConsultTopic`](../object/DefaultConsultTopic.html) [`TopicDatabase`](../object/TopicDatabase.html) [`TopicEntry`](../object/TopicEntry.html)
 <span id="_ObjectSummary_"></span>
 
 

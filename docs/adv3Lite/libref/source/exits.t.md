@@ -554,8 +554,8 @@ layout: docs
                          str.toLower()) != nil)
             {
                 /* pull out the two variables from the regexp groups */
-                inStatusLine = (rexGroup(1)[3] == 'on');
-                inRoomDesc = (rexGroup(2)[3] == 'on');
+                inStatusLine = (rexGroup(1) [3] == 'on');
+                inRoomDesc = (rexGroup(2) [3] == 'on');
             }
         }
 

@@ -33,7 +33,7 @@ Eve
 
 
 
-[`CompassDirection`](../object/CompassDirection.html)[`Direction`](../object/Direction.html)[`Door`](../object/Door.html)[`Region`](../object/Region.html)[`Room`](../object/Room.html)[`ShipboardDirection`](../object/ShipboardDirection.html)[`TravelBarrier`](../object/TravelBarrier.html)[`TravelConnector`](../object/TravelConnector.html)[`UnlistedProxyConnector`](../object/UnlistedProxyConnector.html)
+[`CompassDirection`](../object/CompassDirection.html) [`Direction`](../object/Direction.html) [`Door`](../object/Door.html) [`Region`](../object/Region.html) [`Room`](../object/Room.html) [`ShipboardDirection`](../object/ShipboardDirection.html) [`TravelBarrier`](../object/TravelBarrier.html) [`TravelConnector`](../object/TravelConnector.html) [`UnlistedProxyConnector`](../object/UnlistedProxyConnector.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -42,7 +42,7 @@ Eve
 
 
 
-[`aftDir`](../object/aftDir.html)[`downDir`](../object/downDir.html)[`eastDir`](../object/eastDir.html)[`foreDir`](../object/foreDir.html)[`inDir`](../object/inDir.html)[`northDir`](../object/northDir.html)[`northeastDir`](../object/northeastDir.html)[`northwestDir`](../object/northwestDir.html)[`outDir`](../object/outDir.html)[`portDir`](../object/portDir.html)[`regionPreinit`](../object/regionPreinit.html)[`southDir`](../object/southDir.html)[`southeastDir`](../object/southeastDir.html)[`southwestDir`](../object/southwestDir.html)[`starboardDir`](../object/starboardDir.html)[`upDir`](../object/upDir.html)[`westDir`](../object/westDir.html)
+[`aftDir`](../object/aftDir.html) [`downDir`](../object/downDir.html) [`eastDir`](../object/eastDir.html) [`foreDir`](../object/foreDir.html) [`inDir`](../object/inDir.html) [`northDir`](../object/northDir.html) [`northeastDir`](../object/northeastDir.html) [`northwestDir`](../object/northwestDir.html) [`outDir`](../object/outDir.html) [`portDir`](../object/portDir.html) [`regionPreinit`](../object/regionPreinit.html) [`southDir`](../object/southDir.html) [`southeastDir`](../object/southeastDir.html) [`southwestDir`](../object/southwestDir.html) [`starboardDir`](../object/starboardDir.html) [`upDir`](../object/upDir.html) [`westDir`](../object/westDir.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -51,7 +51,7 @@ Eve
 
 
 
-[`inherited`](#inherited)[`inherited`](#inherited)[`nonTravel`](#nonTravel)
+[`inherited`](#inherited) [`inherited`](#inherited) [`nonTravel`](#nonTravel)
 
 <span id="_Functions_"></span>
 

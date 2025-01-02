@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; LookupTable  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; LookupTable<br />
 <span class="navnp"><a href="list.html" class="nav"><em>Prev:</em> List</a>
     <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="lookuptable">LookupTable</h1>
 
@@ -217,209 +209,152 @@ methods listed below.</p>
 
 <p><code class="language-plaintext highlighter-rouge">applyAll(*func*)</code></p>
 
-<div class="fdef">
-
-For each element in the table, this method invokes the callback function
-`(*func*)(*key*, *value*)`, and then changes the
-element's value to the return value of *func*. This allows you to modify
+<p>For each element in the table, this method invokes the callback function
+<code class="language-plaintext highlighter-rouge">(*func*)(*key*, *value*)</code>, and then changes the
+element’s value to the return value of <em>func</em>. This allows you to modify
 all of the values in the table according to the given function. The keys
 are not changed. The entries are visited in arbitrary order. No return
-value.
+value.</p>
 
+<p><code class="language-plaintext highlighter-rouge">forEach(*func*)</code></p>
 
+<p>For each element in the table, invokes the function
+<code class="language-plaintext highlighter-rouge">(*func*)(*value*)</code>. Any return value from
+<em>func</em> is ignored; the values and keys stored in the table are not
+changed. The entries are visited in arbitrary order. No return value.</p>
 
-`forEach(*func*)`
+<p><code class="language-plaintext highlighter-rouge">forEachAssoc(*func*)</code></p>
 
-<div class="fdef">
-
-For each element in the table, invokes the function
-`(*func*)(*value*)`. Any return value from
-*func* is ignored; the values and keys stored in the table are not
-changed. The entries are visited in arbitrary order. No return value.
-
-</div>
-
-`forEachAssoc(*func*)`
-
-<div class="fdef">
-
-For each element in the table, invokes the callback function
-`(*func*)(*key*, *value*)`. Any return value
-from *func* is ignored; the values and keys stored in the table are not
+<p>For each element in the table, invokes the callback function
+<code class="language-plaintext highlighter-rouge">(*func*)(*key*, *value*)</code>. Any return value
+from <em>func</em> is ignored; the values and keys stored in the table are not
 changed. The entries are visited in arbitrary order. This argument is
-the same as `forEach()`, except that this method
+the same as <code class="language-plaintext highlighter-rouge">forEach()</code>, except that this method
 provides the callback with the key in addition to the value for each
-element. No return value.
+element. No return value.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getBucketCount()</code></p>
 
-`getBucketCount()`
-
-<div class="fdef">
-
-Returns the number of "hash buckets" in the table. Since the number of
+<p>Returns the number of “hash buckets” in the table. Since the number of
 buckets is fixed over the life of the object, this simply returns the
-bucket count that was specified when the object was created.
+bucket count that was specified when the object was created.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getDefaultValue()</code></p>
 
-`getDefaultValue()`
-
-<div class="fdef">
-
-Returns the table's default value. This is the value returned when you
-index the table with a key that doesn't exist in the table. The default
+<p>Returns the table’s default value. This is the value returned when you
+index the table with a key that doesn’t exist in the table. The default
 value is initially nil, but you can change it with
-`setDefaultValue()`.
+<code class="language-plaintext highlighter-rouge">setDefaultValue()</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getEntryCount()</code></p>
 
-`getEntryCount()`
-
-<div class="fdef">
-
-Returns the number of key/value entries in the table. This returns the
+<p>Returns the number of key/value entries in the table. This returns the
 number of entries actually stored in the table, which is unrelated to
-the initial capacity that was specified when the object was created.
+the initial capacity that was specified when the object was created.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">isKeyPresent(*key*)</code></p>
 
-`isKeyPresent(*key*)`
+<p>Checks to see if an entry with the given key is present in the table.
+Returns <code class="language-plaintext highlighter-rouge">true</code> if the key is present,
+<code class="language-plaintext highlighter-rouge">nil</code> if not.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">keysToList()</code></p>
 
-Checks to see if an entry with the given key is present in the table.
-Returns `true` if the key is present,
-`nil` if not.
-
-</div>
-
-`keysToList()`
-
-<div class="fdef">
-
-Returns a list consisting of all of the keys in the table. The order of
+<p>Returns a list consisting of all of the keys in the table. The order of
 the keys is arbitrary, so callers must not assume any particular
-ordering.
+ordering.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">nthKey(*n*)</code></p>
 
-`nthKey(*n*)`
-
-<div class="fdef">
-
-Returns the key at the given index in the table. This returns the key
+<p>Returns the key at the given index in the table. This returns the key
 that appears at the given index in the
-`keysToList()` list, but if you just want one
-key it's more efficient to use this method, since it doesn't construct a
-list. If the index is out of range, an error occurs.
+<code class="language-plaintext highlighter-rouge">keysToList()</code> list, but if you just want one
+key it’s more efficient to use this method, since it doesn’t construct a
+list. If the index is out of range, an error occurs.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">nthVal(*n*)</code></p>
 
-`nthVal(*n*)`
-
-<div class="fdef">
-
-Returns the value at the given index in the table. This returns the
+<p>Returns the value at the given index in the table. This returns the
 value that appears at the given index in the
-`keysToList()` list, but if you just want one
-value it's more efficient to use this method, since it doesn't construct
-a list. If the index is out of range, an error occurs.
+<code class="language-plaintext highlighter-rouge">keysToList()</code> list, but if you just want one
+value it’s more efficient to use this method, since it doesn’t construct
+a list. If the index is out of range, an error occurs.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">removeElement(*key*)</code></p>
 
-`removeElement(*key*)`
-
-<div class="fdef">
-
-Removes the element with the given key, if any. If there is no element
+<p>Removes the element with the given key, if any. If there is no element
 with the given key in the table, this makes no change to the table and
 simply returns nil. If an element is found, the element is removed, and
-the value associated with the key (before the removal) is returned.
+the value associated with the key (before the removal) is returned.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">setDefaultValue(*val*)</code></p>
 
-`setDefaultValue(*val*)`
-
-<div class="fdef">
-
-Sets the default value for the table. The default value is returned when
-you index the table with a key that doesn't exist in the table. The
+<p>Sets the default value for the table. The default value is returned when
+you index the table with a key that doesn’t exist in the table. The
 default value is initially nil, but you can use this method to change it
-to any other value.
+to any other value.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">valsToList()</code></p>
 
-`valsToList()`
+<p>Returns a list consisting of all of the values in the table. The order
+of the values is arbitrary.</p>
 
-<div class="fdef">
+<h2 id="performance-considerations"><span id="details"></span>Performance considerations</h2>
 
-Returns a list consisting of all of the values in the table. The order
-of the values is arbitrary.
-
-</div>
-
-## <span id="details"></span>Performance considerations
-
-A LookupTable is implemented as a special data structure known as a hash
+<p>A LookupTable is implemented as a special data structure known as a hash
 table. You can find more on the theory of hash tables on the Web (for
-example, the [Wikipedia page](http://en.wikipedia.org/wiki/Hash_table)),
-so we won't go into that here. You don't really need to know anything
+example, the <a href="http://en.wikipedia.org/wiki/Hash_table">Wikipedia page</a>),
+so we won’t go into that here. You don’t really need to know anything
 about hash tables to use LookupTable objects, but if you do happen to be
 familiar with how they work, you can take advantage of a couple of
-parameters to optimize their performance.
+parameters to optimize their performance.</p>
 
-When you create a LookupTable, you can specify two sizes that control
-how the internal hash table is organized: the number of "buckets," and
+<p>When you create a LookupTable, you can specify two sizes that control
+how the internal hash table is organized: the number of “buckets,” and
 the initial capacity. These parameters affect performance in several
-ways.
+ways.</p>
 
-First, the larger the bucket count and initial capacity, the more memory
-the hash table consumes. It's best to choose sizes that aren't wildly
-greater than the actual needs of the table, to avoid wasting memory.
+<p>First, the larger the bucket count and initial capacity, the more memory
+the hash table consumes. It’s best to choose sizes that aren’t wildly
+greater than the actual needs of the table, to avoid wasting memory.</p>
 
-Second, it's generally faster to look up a value in a table when the
+<p>Second, it’s generally faster to look up a value in a table when the
 table has more hash buckets. This trend continues up to the point where
 the number of buckets is about equal to the number of entries in the
-table; beyond that, there's usually no benefit to adding more buckets.
+table; beyond that, there’s usually no benefit to adding more buckets.
 If you have a rough idea of the number of elements the table will
 ultimately have, you can use this to pick a bucket count when creating
-the table. It's not important to figure the number exactly; if there are
-only half as many hash buckets as entries, you'll still get pretty close
+the table. It’s not important to figure the number exactly; if there are
+only half as many hash buckets as entries, you’ll still get pretty close
 to ideal performance. And keep in mind that you need to balance this
-against the memory usage of more buckets.
+against the memory usage of more buckets.</p>
 
-Third, it's be faster to add new values to the table if the table
-doesn't have to be reallocated too frequently. The system must allocate
+<p>Third, it’s be faster to add new values to the table if the table
+doesn’t have to be reallocated too frequently. The system must allocate
 new memory for the table every time you exceed its current capacity. The
 table starts with the initial capacity you specify when you create it,
 and it automatically expands as needed when you add new values. Each
 expansion operation takes a little extra time. If you know roughly the
-number of values you'll ultimately be adding to the table, you should
+number of values you’ll ultimately be adding to the table, you should
 ideally make the initial capacity large enough to hold all of them,
-since that will make it unnecessary to add more memory later.
+since that will make it unnecessary to add more memory later.</p>
 
-For the most part, you shouldn't spend a lot of time worrying about any
+<p>For the most part, you shouldn’t spend a lot of time worrying about any
 of this. The LookupTable object manages its memory and internal
 structure automatically, and it will work fine if you always use the
-defaults. The only time you're likely to notice any difference at all by
+defaults. The only time you’re likely to notice any difference at all by
 tweaking the creation parameters is for large tables (with hundreds or
-thousands of elements) that you use frequently.
-
-</div>
+thousands of elements) that you use frequently.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; LookupTable  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; LookupTable<br />
 <span class="navnp"><a href="list.html" class="nav"><em>Prev:</em> List</a>
     <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

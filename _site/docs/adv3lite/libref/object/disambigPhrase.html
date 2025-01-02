@@ -27,69 +27,42 @@
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#989"><code class="language-plaintext highlighter-rouge">989</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-'all' \| 'everything' \| 'all' 'of' 'them'
-
-</div>
+<p>‘all’ | ‘everything’ | ‘all’ ‘of’ ‘them’</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/disambigPhrase(any).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(any)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#1003"><code class="language-plaintext highlighter-rouge">1003</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-'any' \| 'any' 'of' 'them'
-
-</div>
+<p>‘any’ | ‘any’ ‘of’ ‘them’</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/disambigPhrase(both).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(both)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/QuantifierProduction.html"><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#995"><code class="language-plaintext highlighter-rouge">995</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-'both' \| 'both' 'of' 'them'  
-
-</div>
+<p>‘both’ | ‘both’ ‘of’ ‘them’</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/disambigPhrase(list).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(list)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#1007"><code class="language-plaintext highlighter-rouge">1007</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-disambigList-\&gt;lst\_
-
-</div>
+<p>disambigList-&gt;lst_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/disambigPhrase(locational).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(locational)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/LocationalProduction.html"><code class="language-plaintext highlighter-rouge">LocationalProduction</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#1018"><code class="language-plaintext highlighter-rouge">1018</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-locationPrep-\&gt;prep\_ completeNounPhraseWithoutAll-\&gt;cont\_  
-
-</div>
+<p>locationPrep-&gt;prep_ completeNounPhraseWithoutAll-&gt;cont_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/disambigPhrase(ordinalList).html"><code class="language-plaintext highlighter-rouge">disambigPhrase(ordinalList)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
 
 <p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#1010"><code class="language-plaintext highlighter-rouge">1010</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
+<p>disambigOrdinalList-&gt;lst_ ‘ones’<br />
+| ‘the’ disambigOrdinalList-&gt;lst_ ‘ones’</p>
 
-disambigOrdinalList-\&gt;lst\_ 'ones'  
-\| 'the' disambigOrdinalList-\&gt;lst\_ 'ones'  
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

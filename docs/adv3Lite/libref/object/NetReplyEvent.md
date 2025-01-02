@@ -70,7 +70,7 @@ to a network request made with sendNetRequest().
 
 
 
-[`evType`](#evType)[`httpStatusLine`](#httpStatusLine)[`redirectLoc`](#redirectLoc)[`replyBody`](#replyBody)[`replyHeaders`](#replyHeaders)[`replyHeadersRaw`](#replyHeadersRaw)[`requestID`](#requestID)[`statusCode`](#statusCode)
+[`evType`](#evType) [`httpStatusLine`](#httpStatusLine) [`redirectLoc`](#redirectLoc) [`replyBody`](#replyBody) [`replyHeaders`](#replyHeaders) [`replyHeadersRaw`](#replyHeadersRaw) [`requestID`](#requestID) [`statusCode`](#statusCode)
 
 Inherited from `NetEvent` :  
 [`evArgs`](../object/NetEvent.html#evArgs)

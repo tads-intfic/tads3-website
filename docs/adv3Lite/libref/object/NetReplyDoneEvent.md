@@ -70,7 +70,7 @@ network reply (such as HTTPRequest.sendReplyAsync()) completes.
 
 
 
-[`errMsg`](#errMsg)[`evType`](#evType)[`requestObj`](#requestObj)[`socketErr`](#socketErr)
+[`errMsg`](#errMsg) [`evType`](#evType) [`requestObj`](#requestObj) [`socketErr`](#socketErr)
 
 Inherited from `NetEvent` :  
 [`evArgs`](../object/NetEvent.html#evArgs)
@@ -83,7 +83,7 @@ Inherited from `NetEvent` :
 
 
 
-[`construct`](#construct)[`isSuccessful`](#isSuccessful)
+[`construct`](#construct) [`isSuccessful`](#isSuccessful)
 
 
 

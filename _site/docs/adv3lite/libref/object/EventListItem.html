@@ -46,29 +46,21 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-An EventListItem is an object that can be used within an EventList but
+<p>An EventListItem is an object that can be used within an EventList but
 is only used when certain conditions are met (its isReady property
 evaluates to true, the game clock time is at or after any next firing
-time we have defined, and it hasn't already been used for any maximum
-number of times we care to define).
+time we have defined, and it hasn’t already been used for any maximum
+number of times we care to define).</p>
 
-EventListItems can be added to a regular EventList object by locating
-them within that object using the + notation. \[EVENTLISTITEM
-EXTENSION\]
+<p>EventListItems can be added to a regular EventList object by locating
+them within that object using the + notation. [EVENTLISTITEM
+EXTENSION]</p>
 
-`class `**`EventListItem`**` :   `[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">EventListItem</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">EventListItem</code></strong><br />
 <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
@@ -76,59 +68,39 @@ EXTENSION\]
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">EventListItem</code></strong><br />
 <a href="../object/ELI.html"><code class="language-plaintext highlighter-rouge">ELI</code></a><br />
 <a href="../object/ELI1.html"><code class="language-plaintext highlighter-rouge">ELI1</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#canRemoveWhenDone"><code class="language-plaintext highlighter-rouge">canRemoveWhenDone</code></a><a href="#doneWhen"><code class="language-plaintext highlighter-rouge">doneWhen</code></a><a href="#fireCt"><code class="language-plaintext highlighter-rouge">fireCt</code></a><a href="#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a><a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a><a href="#lastClock"><code class="language-plaintext highlighter-rouge">lastClock</code></a><a href="#maxFireCt"><code class="language-plaintext highlighter-rouge">maxFireCt</code></a><a href="#minInterval"><code class="language-plaintext highlighter-rouge">minInterval</code></a><a href="#missedTurn"><code class="language-plaintext highlighter-rouge">missedTurn</code></a><a href="#myListObj"><code class="language-plaintext highlighter-rouge">myListObj</code></a><a href="#readyTime"><code class="language-plaintext highlighter-rouge">readyTime</code></a><a href="#whichList"><code class="language-plaintext highlighter-rouge">whichList</code></a></p>
+<p><a href="#canRemoveWhenDone"><code class="language-plaintext highlighter-rouge">canRemoveWhenDone</code></a> <a href="#doneWhen"><code class="language-plaintext highlighter-rouge">doneWhen</code></a> <a href="#fireCt"><code class="language-plaintext highlighter-rouge">fireCt</code></a> <a href="#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a> <a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a> <a href="#lastClock"><code class="language-plaintext highlighter-rouge">lastClock</code></a> <a href="#maxFireCt"><code class="language-plaintext highlighter-rouge">maxFireCt</code></a> <a href="#minInterval"><code class="language-plaintext highlighter-rouge">minInterval</code></a> <a href="#missedTurn"><code class="language-plaintext highlighter-rouge">missedTurn</code></a> <a href="#myListObj"><code class="language-plaintext highlighter-rouge">myListObj</code></a> <a href="#readyTime"><code class="language-plaintext highlighter-rouge">readyTime</code></a> <a href="#whichList"><code class="language-plaintext highlighter-rouge">whichList</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
-<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#_invokeItem"><code class="language-plaintext highlighter-rouge">_invokeItem</code></a><a href="#addToList"><code class="language-plaintext highlighter-rouge">addToList</code></a><a href="#canFire"><code class="language-plaintext highlighter-rouge">canFire</code></a><a href="#doScript"><code class="language-plaintext highlighter-rouge">doScript</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#fallBack"><code class="language-plaintext highlighter-rouge">fallBack</code></a><a href="#fallBackResponse"><code class="language-plaintext highlighter-rouge">fallBackResponse</code></a><a href="#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a><a href="#setDelay"><code class="language-plaintext highlighter-rouge">setDelay</code></a><a href="#setDone"><code class="language-plaintext highlighter-rouge">setDone</code></a><a href="#underused"><code class="language-plaintext highlighter-rouge">underused</code></a></p>
+<p><a href="#_invokeItem"><code class="language-plaintext highlighter-rouge">_invokeItem</code></a> <a href="#addToList"><code class="language-plaintext highlighter-rouge">addToList</code></a> <a href="#canFire"><code class="language-plaintext highlighter-rouge">canFire</code></a> <a href="#doScript"><code class="language-plaintext highlighter-rouge">doScript</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#fallBack"><code class="language-plaintext highlighter-rouge">fallBack</code></a> <a href="#fallBackResponse"><code class="language-plaintext highlighter-rouge">fallBackResponse</code></a> <a href="#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a> <a href="#setDelay"><code class="language-plaintext highlighter-rouge">setDelay</code></a> <a href="#setDone"><code class="language-plaintext highlighter-rouge">setDone</code></a> <a href="#underused"><code class="language-plaintext highlighter-rouge">underused</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="canRemoveWhenDone"></span></p>
 
@@ -136,15 +108,11 @@ EXTENSION\]
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#194">194</a>]</p>
 
-<div class="desc">
-
-Flag: can this EventListItem be removed from its eventList once isDone =
+<p>Flag: can this EventListItem be removed from its eventList once isDone =
 true? By default it can, but note that this flag only has any effect
-when our EventList's resetEachCycle property is true. We might want to
+when our EventList’s resetEachCycle property is true. We might want to
 set this to nil if isDone might become nil again on this EventListItem,
-to avoid it being cleared out of its eventList.
-
-</div>
+to avoid it being cleared out of its eventList.</p>
 
 <p><span id="doneWhen"></span></p>
 
@@ -152,15 +120,11 @@ to avoid it being cleared out of its eventList.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#209">209</a>]</p>
 
-<div class="desc">
-
-An alternative condition (which could be defined as a method) which, if
+<p>An alternative condition (which could be defined as a method) which, if
 true, causes this EventListItem to be finished with (set to isDone =
 true). Note that isDone will be set to try either if this EventListItem
 exceeds its maaFireCt or if its doneWhen method/property evaluates to
-true.
-
-</div>
+true.</p>
 
 <p><span id="fireCt"></span></p>
 
@@ -168,11 +132,7 @@ true.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#186">186</a>]</p>
 
-<div class="desc">
-
-The number of times this EventListItem has fired.
-
-</div>
+<p>The number of times this EventListItem has fired.</p>
 
 <p><span id="isDone"></span></p>
 
@@ -180,11 +140,7 @@ The number of times this EventListItem has fired.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#177">177</a>]</p>
 
-<div class="desc">
-
-Have we finished with this EventListItem?
-
-</div>
+<p>Have we finished with this EventListItem?</p>
 
 <p><span id="isReady"></span></p>
 
@@ -192,12 +148,8 @@ Have we finished with this EventListItem?
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#165">165</a>]</p>
 
-<div class="desc">
-
-Is this EventListItem ready to fire? Note that this is addition to its
-not being done and having reached its ready time.
-
-</div>
+<p>Is this EventListItem ready to fire? Note that this is addition to its
+not being done and having reached its ready time.</p>
 
 <p><span id="lastClock"></span></p>
 
@@ -205,11 +157,7 @@ not being done and having reached its ready time.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#212">212</a>]</p>
 
-<div class="desc">
-
-The last turn on which this EventListItem fired
-
-</div>
+<p>The last turn on which this EventListItem fired</p>
 
 <p><span id="maxFireCt"></span></p>
 
@@ -217,14 +165,10 @@ The last turn on which this EventListItem fired
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#201">201</a>]</p>
 
-<div class="desc">
-
-The maximum number of times we want this EventListItem to fire. The
+<p>The maximum number of times we want this EventListItem to fire. The
 default value of nil means that this EventListItem can fire an unlimited
 unmber of times. For an EventListItem that fires only once, set
-maxFireCt to 1 or use the ELI1 subclass.
-
-</div>
+maxFireCt to 1 or use the ELI1 subclass.</p>
 
 <p><span id="minInterval"></span></p>
 
@@ -232,12 +176,8 @@ maxFireCt to 1 or use the ELI1 subclass.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#221">221</a>]</p>
 
-<div class="desc">
-
-The minimum interval (in number of turns) between repeated occurrences
-of this item.
-
-</div>
+<p>The minimum interval (in number of turns) between repeated occurrences
+of this item.</p>
 
 <p><span id="missedTurn"></span></p>
 
@@ -245,13 +185,9 @@ of this item.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#117">117</a>]</p>
 
-<div class="desc">
-
-This first turn on which we came up in our EventList but were unable to
+<p>This first turn on which we came up in our EventList but were unable to
 fire, or nil if we have either not missed or turn or fired on the
-previous occasion we could.
-
-</div>
+previous occasion we could.</p>
 
 <p><span id="myListObj"></span></p>
 
@@ -259,12 +195,8 @@ previous occasion we could.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#60">60</a>]</p>
 
-<div class="desc">
-
-The EventList object to which we are to belong. If this is left at nil,
-our location will be used.
-
-</div>
+<p>The EventList object to which we are to belong. If this is left at nil,
+our location will be used.</p>
 
 <p><span id="readyTime"></span></p>
 
@@ -272,13 +204,9 @@ our location will be used.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#218">218</a>]</p>
 
-<div class="desc">
-
-The turn count that must be reached before we're ready to fire. By
+<p>The turn count that must be reached before we’re ready to fire. By
 default this is 0, but game code can use this or set the setDelay()
-method to set/reset it.
-
-</div>
+method to set/reset it.</p>
 
 <p><span id="whichList"></span></p>
 
@@ -286,21 +214,13 @@ method to set/reset it.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#54">54</a>]</p>
 
-<div class="desc">
-
-we usually want to add objects to a ShuffledEventList's eventList
+<p>we usually want to add objects to a ShuffledEventList’s eventList
 property, but items/subclasses could change this to be added to
-firstEvents or some other alternate list within the EventList object
-
-</div>
+firstEvents or some other alternate list within the EventList object</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="_invokeItem"></span></p>
 
@@ -308,11 +228,7 @@ firstEvents or some other alternate list within the EventList object
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#84">84</a>]</p>
 
-<div class="desc">
-
-Otherwise, use our fallback routine.
-
-</div>
+<p>Otherwise, use our fallback routine.</p>
 
 <p><span id="addToList"></span></p>
 
@@ -320,16 +236,12 @@ Otherwise, use our fallback routine.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#270">270</a>]</p>
 
-<div class="desc">
-
-Add this EventListItem to the whichList list of myListObj\_. If
+<p>Add this EventListItem to the whichList list of myListObj_. If
 specificied, whichList must be supplied as a property, and otherwise
 defaults to &amp;eventList. A minimium interval between firings of this
-EventList item can optionally be specified in the minInterval\_
+EventList item can optionally be specified in the minInterval_
 parameter, but there is no need to do this if this EventList already
-defines its own minInterval or doesn't require one.
-
-</div>
+defines its own minInterval or doesn’t require one.</p>
 
 <p><span id="canFire"></span></p>
 
@@ -337,13 +249,9 @@ defines its own minInterval or doesn't require one.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#171">171</a>]</p>
 
-<div class="desc">
-
-Can this EventListItem item fire? By default it can if its isReady
+<p>Can this EventListItem item fire? By default it can if its isReady
 condition is true and it is not already done (isDone != true) and the
-turn count exceeds its ready time.
-
-</div>
+turn count exceeds its ready time.</p>
 
 <p><span id="doScript"></span></p>
 
@@ -351,12 +259,8 @@ turn count exceeds its ready time.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#66">66</a>]</p>
 
-<div class="desc">
-
-When the event list to which we've been added gets to us, it will call
-our doScript() method, so we use that to define what happens.
-
-</div>
+<p>When the event list to which we’ve been added gets to us, it will call
+our doScript() method, so we use that to define what happens.</p>
 
 <p><span id="execute"></span></p>
 
@@ -364,12 +268,8 @@ our doScript() method, so we use that to define what happens.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#26">26</a>]</p>
 
-<div class="desc">
-
-Add this EventListItem to the eventList of the EventList object with
-which is is to be associated.
-
-</div>
+<p>Add this EventListItem to the eventList of the EventList object with
+which is is to be associated.</p>
 
 <p><span id="fallBack"></span></p>
 
@@ -377,12 +277,8 @@ which is is to be associated.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#124">124</a>]</p>
 
-<div class="desc">
-
-The method that defines what this EventListItem does if it's invoked
-when it's not ready to fire.
-
-</div>
+<p>The method that defines what this EventListItem does if it’s invoked
+when it’s not ready to fire.</p>
 
 <p><span id="fallBackResponse"></span></p>
 
@@ -390,18 +286,14 @@ when it's not ready to fire.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#158">158</a>]</p>
 
-<div class="desc">
-
-The response to use if all else fails, that is if there we cannot fire
+<p>The response to use if all else fails, that is if there we cannot fire
 ourselves and there is no non-EventListItem (which could be used in our
 place) in the eventList to which we belong. This could, for exmple,
 display another message or it could just do nothing, which is the
 default. We only need to supply something here if we belong to an
 EventList that should display something every turn, for example as a
 response to a DefaultTopic or else if we are or may be the final item in
-a StopEventList.
-
-</div>
+a StopEventList.</p>
 
 <p><span id="invokeItem"></span></p>
 
@@ -409,13 +301,9 @@ a StopEventList.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#109">109</a>]</p>
 
-<div class="desc">
-
-Here goes the code (or a double-quoted string) that carries out what we
-do when we're invoked. Game code will need to define what should happen
-here.
-
-</div>
+<p>Here goes the code (or a double-quoted string) that carries out what we
+do when we’re invoked. Game code will need to define what should happen
+here.</p>
 
 <p><span id="setDelay"></span></p>
 
@@ -423,13 +311,9 @@ here.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#228">228</a>]</p>
 
-<div class="desc">
-
-Set the number of turns until this EventListItem can be used again. This
+<p>Set the number of turns until this EventListItem can be used again. This
 could, for example, be called from invokeItem() to set a minimum
-interval before this EventListItem is repeated.
-
-</div>
+interval before this EventListItem is repeated.</p>
 
 <p><span id="setDone"></span></p>
 
@@ -437,11 +321,7 @@ interval before this EventListItem is repeated.
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#180">180</a>]</p>
 
-<div class="desc">
-
-Set this EventListItem as having been done
-
-</div>
+<p>Set this EventListItem as having been done</p>
 
 <p><span id="underused"></span></p>
 
@@ -449,24 +329,17 @@ Set this EventListItem as having been done
 
 <p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#252">252</a>]</p>
 
-<div class="desc">
-
-Has this EventListItem been underused? By default it has if it hasn't
+<p>Has this EventListItem been underused? By default it has if it hasn’t
 been used at all or it missed out the last time it was called by not
 being ready, but game code can override if it wants to employ some other
-condition, such as the number of times we've been used in relation to
+condition, such as the number of times we’ve been used in relation to
 other items in our listObj. The purpose of this is to allow
 RandomFiringScripts to prioritize underused EventListItems once they
-become ready to fire.
+become ready to fire.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

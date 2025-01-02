@@ -47,7 +47,7 @@ show or schedule a topic inventory, as appropriate
 
 
 
-[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)[`unknownMsg`](#unknownMsg)
+[`defaultResponseProp`](#defaultResponseProp) [`topicListProp`](#topicListProp) [`unknownMsg`](#unknownMsg)
 
 
 

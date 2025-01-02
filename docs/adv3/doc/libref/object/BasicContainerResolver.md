@@ -85,10 +85,10 @@ container resolver and the "vague" container resolver.
 
 
 
-[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`getQualifierResolver`](#getQualifierResolver)
+[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase) [`getQualifierResolver`](#getQualifierResolver)
 
 Inherited from `ProxyResolver` :  
-[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
+[`construct`](../object/ProxyResolver.html#construct) [`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver) [`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

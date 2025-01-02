@@ -47,7 +47,7 @@ Details](#_Methods_)
 
 
 
-[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
+[`presenceProp`](#presenceProp) [`sizeProp`](#sizeProp) [`thruProp`](#thruProp)
 
 Inherited from `Sense` :  
 [`ambienceProp`](../object/Sense.html#ambienceProp)

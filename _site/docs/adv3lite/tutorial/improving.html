@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Improving the
-Game  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Improving the
+Game<br />
 <span class="navnp"><a href="making.html" class="nav"><em>Prev:</em> Making things happen</a>
    
 <a href="weightier.html" class="nav"><em>Next:</em> Weightier Matters</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="improving-the-game">Improving the Game</h1>
 
@@ -57,35 +49,34 @@ in the cave, even though in reality they’re just synonyms for the same
 exit. This is arguably a bit misleading. The solution is to use
 <code class="language-plaintext highlighter-rouge">asExit()</code>, as shown below:</p>
 
-<p>`
-    startroom: Room ‘Outside Cave’
-        desc = “You’re standing in the bright sunlight just outside of a large,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    startroom: Room 'Outside Cave'
+        desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
-            camp winds roughly southeast through the dense foliage. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    north = cave 
-    in asExit(north)
-    
-    southeast()
-    {
-        if(goldSkull.isIn(me))
+            camp winds roughly southeast through the dense foliage. " 
+        
+        north = cave 
+        in asExit(north)
+        
+        southeast()
         {
-            "Your mission complete, you head triumphantly back to your camp. ";
-            finishGameMsg(ftVictory, [finishOptionUndo]);
+            if(goldSkull.isIn(me))
+            {
+                "Your mission complete, you head triumphantly back to your camp. ";
+                finishGameMsg(ftVictory, [finishOptionUndo]);
+            }
+            else
+                "You've no intention of leaving till you've got what you came for.
+                ";
         }
-        else
-            "You've no intention of leaving till you've got what you came for.
-            ";
-    }
-;
+    ;
 
-cave: Room 'Cave'    
-    desc = "You're inside a dark and musty cave. Sunlight 
-    pours in from a passage to the south. " 
+    cave: Room 'Cave'    
+        desc = "You're inside a dark and musty cave. Sunlight 
+        pours in from a passage to the south. " 
 
-    south = startroom 
-    out asExit(south)
-; `
+        south = startroom 
+        out asExit(south)
+    ;
 </code></pre></div></div>
 
 <p>The construct <code class="language-plaintext highlighter-rouge">asExit(*dir*)</code> means “make this
@@ -111,14 +102,13 @@ StairwayUp to implement the tree in the Heidi game. In this case the
 class to use is called <code class="language-plaintext highlighter-rouge">Enterable</code>, and we can
 use it like this:</p>
 
-<p>`
-    + caveMouth: Enterable ‘cave; dark large foreboding uninviting of[prep];
-        mouth entrance’
-        “The mouth of the cave is easily large enough to allow entrance, but looks
-        dark and uninviting. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    destination = cave
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + caveMouth: Enterable 'cave; dark large foreboding uninviting of[prep];
+        mouth entrance'
+        "The mouth of the cave is easily large enough to allow entrance, but looks
+        dark and uninviting. "
+        
+        destination = cave
+    ;
 </code></pre></div></div>
 
 <p>The main point to note here is the use of the
@@ -148,13 +138,12 @@ sensible response (certainly the player shouldn’t be told “You see no
 foliage here”). At a first attempt we might define a foliage object
 thus:</p>
 
-<p>`
-    +  foliage: Thing ‘foliage; thick dense; jungle trees leaves’
-        “The foliage is so thick round here that it blocks every route but the one
-        you came by and the entrance to the cave. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isFixed = true    
-;    `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +  foliage: Thing 'foliage; thick dense; jungle trees leaves'
+        "The foliage is so thick round here that it blocks every route but the one
+        you came by and the entrance to the cave. "
+        
+        isFixed = true    
+    ;   
 </code></pre></div></div>
 
 <p>This will do the job, but if players try to do anything with the foliage
@@ -174,25 +163,23 @@ other code, we don’t even need to give it a name, we can define it as an
 names for decoration objects that have no real function beyond acting as
 a kind of backdrop:</p>
 
-<p>`
-    +  Thing ‘foliage; thick dense; jungle trees leaves’
-        “The foliage is so thick round here that it blocks every route but the one
-        you came by and the entrance to the cave. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isDecoration = true   
-;  `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +  Thing 'foliage; thick dense; jungle trees leaves'
+        "The foliage is so thick round here that it blocks every route but the one
+        you came by and the entrance to the cave. "
+        
+        isDecoration = true   
+    ; 
 </code></pre></div></div>
 
 <p>This type of situation is so common that the library defines another
 custom class, Decoration, to deal with it. This allows us to make the
 definition even briefer:</p>
 
-<p>`
-    +  Decoration ‘foliage; thick dense; jungle trees leaves’
-        “The foliage is so thick round here that it blocks every route but the one
-        you came by and the entrance to the cave. “  <br />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +  Decoration 'foliage; thick dense; jungle trees leaves'
+        "The foliage is so thick round here that it blocks every route but the one
+        you came by and the entrance to the cave. "    
     ; 
-`</p>
+</code></pre></div></div>
 
 <p>Now, whether you prefer that to the previous version is to some extent a
 matter of taste. The adv3Lite library is designed in such a way as to
@@ -230,11 +217,10 @@ class-inheritance features of the TADS 3 language.</p>
 <p>The sunlight is another candidate for a Decoration object, so we could
 define it like this:</p>
 
-<p>`
-    +  Decoration ‘sunlight; bright dazzling; sun light’
-        “It’s so bright it’s almost dazzling. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +  Decoration 'sunlight; bright dazzling; sun light'
+        "It's so bright it's almost dazzling. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>This works just fine, but you may feel that the response “The sunlight
 is not important” to attempts to take it, smell it, push it (and do
@@ -243,13 +229,12 @@ appropriate canned message. If so you can replace it with your own
 alternative by overriding the <code class="language-plaintext highlighter-rouge">notImportantMsg</code>
 property:</p>
 
-<p>`
-    +  Decoration ‘sunlight; bright dazzling; sun light’
-        “It’s so bright it’s almost dazzling. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    notImportantMsg = 'It\'s pointless even attempting that with something as
-        insubstantial as sunlight. '
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +  Decoration 'sunlight; bright dazzling; sun light'
+        "It's so bright it's almost dazzling. "
+        
+        notImportantMsg = 'It\'s pointless even attempting that with something as
+            insubstantial as sunlight. '
+    ;
 </code></pre></div></div>
 
 <p>That still leaves us with the path. This can’t quite be a Decoration,
@@ -261,12 +246,11 @@ commands like FOLLOW PATH and TAKE PATH (but not GET PATH) mean
 something like “go along the path” (a form of command not recognized by
 the libary). As a first attempt we might try this:</p>
 
-<p>`
-    + pathBack: PathPassage ‘overgrown path’
-        “The heavily overgrown path runs roughly southeast through the trees. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    destination = (location.southeast)    
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pathBack: PathPassage 'overgrown path'
+        "The heavily overgrown path runs roughly southeast through the trees. "
+        
+        destination = (location.southeast)    
+    ;
 </code></pre></div></div>
 
 <p>This makes the path lead wherever the southeast exit of its immediate
@@ -280,23 +264,22 @@ out of the cave can be left as exercises for the interested reader. But
 one thing we will change inside the cave is the definition of the
 pedestal object so that it makes use of classes rather than properties:</p>
 
-<p>`
-    + pedestal: Fixture, Surface ‘stone pedestal; smooth’
-        “The smooth stone pedestal is artfully positioned to catch the sunlight at
-        just this time of day. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    notifyRemove(obj)
-    {
-        if(contents.length &lt; 2)
-        {
-            "As &lt;&lt;obj.theName&gt;&gt; leaves the pedestal, a volley of poisonous
-            arrows is shot from the walls! You try to dodge  the arrows, but
-            they take you by surprise!";  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + pedestal: Fixture, Surface 'stone pedestal; smooth'
+        "The smooth stone pedestal is artfully positioned to catch the sunlight at
+        just this time of day. "
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);  
+        notifyRemove(obj)
+        {
+            if(contents.length &lt; 2)
+            {
+                "As &lt;&lt;obj.theName&gt;&gt; leaves the pedestal, a volley of poisonous
+                arrows is shot from the walls! You try to dodge  the arrows, but
+                they take you by surprise!";  
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);  
+            }
         }
-    }
-; `
+    ;
 </code></pre></div></div>
 
 <p>This may not save us a lot of typing, but it perhaps makes it easier to
@@ -305,18 +288,15 @@ substantial changes to the pedestal in the next section.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="goldskull.html" class="nav">Goldskull</a> \&gt; Improving the
-Game  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="goldskull.html" class="nav">Goldskull</a> &gt; Improving the
+Game<br />
 <span class="navnp"><a href="making.html" class="nav"><em>Prev:</em> Making things happen</a>
    
 <a href="weightier.html" class="nav"><em>Next:</em> Weightier Matters</a>
-    </span>
+    </span></p>
 
-</div>
 
 </main>
 <footer>

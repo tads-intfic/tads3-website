@@ -34,7 +34,7 @@ is language-independent.
 
 
 
-[`DistanceConnector`](../object/DistanceConnector.html)[`DropTypeShortThrow`](../object/DropTypeShortThrow.html)[`Material`](../object/Material.html)[`Occluder`](../object/Occluder.html)[`Sense`](../object/Sense.html)[`SenseConnector`](../object/SenseConnector.html)
+[`DistanceConnector`](../object/DistanceConnector.html) [`DropTypeShortThrow`](../object/DropTypeShortThrow.html) [`Material`](../object/Material.html) [`Occluder`](../object/Occluder.html) [`Sense`](../object/Sense.html) [`SenseConnector`](../object/SenseConnector.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -43,7 +43,7 @@ is language-independent.
 
 
 
-[`adventium`](../object/adventium.html)[`coarseMesh`](../object/coarseMesh.html)[`fineMesh`](../object/fineMesh.html)[`glass`](../object/glass.html)[`paper`](../object/paper.html)[`sight`](../object/sight.html)[`smell`](../object/smell.html)[`sound`](../object/sound.html)[`touch`](../object/touch.html)
+[`adventium`](../object/adventium.html) [`coarseMesh`](../object/coarseMesh.html) [`fineMesh`](../object/fineMesh.html) [`glass`](../object/glass.html) [`paper`](../object/paper.html) [`sight`](../object/sight.html) [`smell`](../object/smell.html) [`sound`](../object/sound.html) [`touch`](../object/touch.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -52,7 +52,7 @@ is language-independent.
 
 
 
-[`adjustBrightness`](#adjustBrightness)[`transparencyAdd`](#transparencyAdd)[`transparencyCompare`](#transparencyCompare)
+[`adjustBrightness`](#adjustBrightness) [`transparencyAdd`](#transparencyAdd) [`transparencyCompare`](#transparencyCompare)
 
 <span id="_Functions_"></span>
 

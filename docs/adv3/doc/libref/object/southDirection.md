@@ -53,7 +53,7 @@ Details](#_Methods_)
 
 
 Inherited from `Direction` :  
-[`allDirections`](../object/Direction.html#allDirections)[`dirProp`](../object/Direction.html#dirProp)[`sortingOrder`](../object/Direction.html#sortingOrder)
+[`allDirections`](../object/Direction.html#allDirections) [`dirProp`](../object/Direction.html#dirProp) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -66,10 +66,10 @@ Inherited from `Direction` :
 
 
 Inherited from `CompassDirection` :  
-[`sayArriving`](../object/CompassDirection.html#sayArriving)[`sayDeparting`](../object/CompassDirection.html#sayDeparting)
+[`sayArriving`](../object/CompassDirection.html#sayArriving) [`sayDeparting`](../object/CompassDirection.html#sayDeparting)
 
 Inherited from `Direction` :  
-[`defaultConnector`](../object/Direction.html#defaultConnector)[`initializeDirection`](../object/Direction.html#initializeDirection)[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)
+[`defaultConnector`](../object/Direction.html#defaultConnector) [`initializeDirection`](../object/Direction.html#initializeDirection) [`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)
 
 <span id="_Properties_"></span>
 

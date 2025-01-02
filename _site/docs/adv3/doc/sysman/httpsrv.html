@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; HTTPServer  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; HTTPServer<br />
 <span class="navnp"><a href="httpreq.html" class="nav"><em>Prev:</em> HTTPRequest</a>
     <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="httpserver">HTTPServer</h1>
 
@@ -275,125 +267,104 @@ you.</p>
 
 <p><code class="language-plaintext highlighter-rouge">getAddress()</code></p>
 
-<div class="fdef">
-
-Returns a string giving the original binding address specified when the
+<p>Returns a string giving the original binding address specified when the
 object was constructed. This is the address on which the server is
 listening for incoming connection requests from clients. This returns
 the same format originally specified in the constructor, which can be
 either a host name or a numeric IP address. Returns
-`nil` if no address is available.
+<code class="language-plaintext highlighter-rouge">nil</code> if no address is available.</p>
 
+<p><code class="language-plaintext highlighter-rouge">getIPAddress()</code></p>
 
-
-`getIPAddress()`
-
-<div class="fdef">
-
-Returns a string giving the numeric IP address on which the server is
+<p>Returns a string giving the numeric IP address on which the server is
 listening for connections. This is in the usual decimal format, as in
-'127.0.0.1'. Returns `nil` if no address is
-available.
+‘127.0.0.1’. Returns <code class="language-plaintext highlighter-rouge">nil</code> if no address is
+available.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getPortNum()</code></p>
 
-`getPortNum()`
+<p>Returns an integer giving the port number on which the server is
+listening.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">shutdown(*wait*?)</code></p>
 
-Returns an integer giving the port number on which the server is
-listening.
-
-</div>
-
-`shutdown(*wait*?)`
-
-<div class="fdef">
-
-Shuts down the server. This closes the network port on which the server
+<p>Shuts down the server. This closes the network port on which the server
 listens for connections, terminates the listener thread, and terminates
-any session threads that the server launched.
+any session threads that the server launched.</p>
 
-If *wait* is `true`, the method doesn't return
+<p>If <em>wait</em> is <code class="language-plaintext highlighter-rouge">true</code>, the method doesn’t return
 until all of the server threads have exited. This ensures that you can
-immediately reuse the server's port number with a new server object. If
-you omit *wait* specify `nil`, the method
+immediately reuse the server’s port number with a new server object. If
+you omit <em>wait</em> specify <code class="language-plaintext highlighter-rouge">nil</code>, the method
 signals the server to shut down, but then returns immediately, allowing
 the the server to carry out its termination in the background. You can
-use this option if you won't need to reuse the port number.
+use this option if you won’t need to reuse the port number.</p>
 
-Calling the `shutdown()` method is optional. If
+<p>Calling the <code class="language-plaintext highlighter-rouge">shutdown()</code> method is optional. If
 your program simply exits, the system will automatically shut down any
-servers that are still active.
+servers that are still active.</p>
 
-</div>
+<h2 id="save-restore-undo">Save, restore, undo</h2>
 
-## Save, restore, undo
-
-HTTPServer objects are inherently [transient](objdef.html#transient).
-This is because they're associated with live operating system resources
-(threads and network sockets) that can't be saved in a file. This means
+<p>HTTPServer objects are inherently <a href="objdef.html#transient">transient</a>.
+This is because they’re associated with live operating system resources
+(threads and network sockets) that can’t be saved in a file. This means
 that any object properties that refer to HTTPServer objects will be
-`nil` when you restore a previously saved
-session. Also, HTTPServer objects are not affected by Undo operations.
+<code class="language-plaintext highlighter-rouge">nil</code> when you restore a previously saved
+session. Also, HTTPServer objects are not affected by Undo operations.</p>
 
-## Automatic shutdown
+<h2 id="automatic-shutdown">Automatic shutdown</h2>
 
-HTTPServer objects work like any others with respect to garbage
+<p>HTTPServer objects work like any others with respect to garbage
 collection: if an HTTPServer object becomes unreachable, the system will
 delete it during the next garbage collection pass. When this happens,
 the object automatically shuts down the listener and any session threads
 started by the server. This means that you have to ensure that each
 HTTPServer instance remains reachable for as long as you want the server
 to continue running. You can accomplish this by storing a reference to
-the HTTPServer object in a named object's property, for example.
+the HTTPServer object in a named object’s property, for example.</p>
 
-If the server has posted any requests to the network event queue, and
+<p>If the server has posted any requests to the network event queue, and
 the garbage collector deletes the server object after those events have
 been posted but before you retrieve them via
-`getNetEvent()`, the events will *not* be
-deleted from the queue - they'll be returned as normal from
-`getNetEvent()`. If you use the
-`getServer()` method on one of these request
-objects, it will return `nil`, since the server
+<code class="language-plaintext highlighter-rouge">getNetEvent()</code>, the events will <em>not</em> be
+deleted from the queue - they’ll be returned as normal from
+<code class="language-plaintext highlighter-rouge">getNetEvent()</code>. If you use the
+<code class="language-plaintext highlighter-rouge">getServer()</code> method on one of these request
+objects, it will return <code class="language-plaintext highlighter-rouge">nil</code>, since the server
 object no longer exists. If you send a response to the request, it will
-fail with a network exception.
+fail with a network exception.</p>
 
-## Network safety levels
+<h2 id="network-safety-levels">Network safety levels</h2>
 
-The VM enforces a user-specified security setting called the "network
-safety level". The user interface for setting the level varies by
-interpreter; for command-line interpreters, for example, it's controlled
-by the `-ns` option when starting the program.
+<p>The VM enforces a user-specified security setting called the “network
+safety level”. The user interface for setting the level varies by
+interpreter; for command-line interpreters, for example, it’s controlled
+by the <code class="language-plaintext highlighter-rouge">-ns</code> option when starting the program.</p>
 
-The HTTPServer class is subject to the "server" component of the network
+<p>The HTTPServer class is subject to the “server” component of the network
 safety level. The VM enforces the safety level when you attempt to
-create an HTTPServer object with operator `new`.
-If the safety level doesn't allow the type of server you're trying to
-create, the `new` operator throws a
-NetSafetyException instead of creating the HTTPServer object.
+create an HTTPServer object with operator <code class="language-plaintext highlighter-rouge">new</code>.
+If the safety level doesn’t allow the type of server you’re trying to
+create, the <code class="language-plaintext highlighter-rouge">new</code> operator throws a
+NetSafetyException instead of creating the HTTPServer object.</p>
 
-When the server component of the net safety level is set to 0 ("minimum
-safety"), network access is unrestricted. When the safety level is 1, an
-HTTPServer can only be created if the host name is "localhost" or
-"127.0.0.1"; in other words, the server can only be created with local
+<p>When the server component of the net safety level is set to 0 (“minimum
+safety”), network access is unrestricted. When the safety level is 1, an
+HTTPServer can only be created if the host name is “localhost” or
+“127.0.0.1”; in other words, the server can only be created with local
 access, from applications on the same machine only. Higher safety levels
-prohibit creating an HTTPServer at all.
-
-</div>
+prohibit creating an HTTPServer at all.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; HTTPServer  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; HTTPServer<br />
 <span class="navnp"><a href="httpreq.html" class="nav"><em>Prev:</em> HTTPRequest</a>
     <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

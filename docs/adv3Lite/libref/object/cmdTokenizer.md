@@ -51,7 +51,7 @@ lexical elements.
 
 
 
-[`endAssert`](#endAssert)[`patAlphaDashAlpha`](#patAlphaDashAlpha)[`patPunct`](#patPunct)[`patSpelledTens`](#patSpelledTens)[`patSpelledUnits`](#patSpelledUnits)[`punctChars`](#punctChars)[`rules_`](#rules_)[`squote`](#squote)[`wordPunct`](#wordPunct)
+[`endAssert`](#endAssert) [`patAlphaDashAlpha`](#patAlphaDashAlpha) [`patPunct`](#patPunct) [`patSpelledTens`](#patSpelledTens) [`patSpelledUnits`](#patSpelledUnits) [`punctChars`](#punctChars) [`rules_`](#rules_) [`squote`](#squote) [`wordPunct`](#wordPunct)
 
 
 
@@ -63,10 +63,10 @@ lexical elements.
 
 
 
-[`acceptAbbrTok`](#acceptAbbrTok)[`buildOrigText`](#buildOrigText)[`tokCvtAbbr`](#tokCvtAbbr)[`tokCvtApostropheS`](#tokCvtApostropheS)[`tokCvtSpelledNumber`](#tokCvtSpelledNumber)
+[`acceptAbbrTok`](#acceptAbbrTok) [`buildOrigText`](#buildOrigText) [`tokCvtAbbr`](#tokCvtAbbr) [`tokCvtApostropheS`](#tokCvtApostropheS) [`tokCvtSpelledNumber`](#tokCvtSpelledNumber)
 
 Inherited from `Tokenizer` :  
-[`deleteRule`](../object/Tokenizer.html#deleteRule)[`deleteRuleAt`](../object/Tokenizer.html#deleteRuleAt)[`insertRule`](../object/Tokenizer.html#insertRule)[`insertRuleAt`](../object/Tokenizer.html#insertRuleAt)[`tokCvtLower`](../object/Tokenizer.html#tokCvtLower)[`tokCvtSkip`](../object/Tokenizer.html#tokCvtSkip)[`tokenize`](../object/Tokenizer.html#tokenize)
+[`deleteRule`](../object/Tokenizer.html#deleteRule) [`deleteRuleAt`](../object/Tokenizer.html#deleteRuleAt) [`insertRule`](../object/Tokenizer.html#insertRule) [`insertRuleAt`](../object/Tokenizer.html#insertRuleAt) [`tokCvtLower`](../object/Tokenizer.html#tokCvtLower) [`tokCvtSkip`](../object/Tokenizer.html#tokCvtSkip) [`tokenize`](../object/Tokenizer.html#tokenize)
 
 <span id="_Properties_"></span>
 

@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="cockpit.html" class="nav">Cockpit Controls</a> \&gt; Taking Off  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="cockpit.html" class="nav">Cockpit Controls</a> &gt; Taking Off<br />
 <span class="navnp"><a href="responding.html" class="nav"><em>Prev:</em> Responding to
 Actions</a>    
 <a href="character.html" class="nav"><em>Next:</em> Character
-Building</a>     </span>
-
-</div>
+Building</a>     </span></p>
 
 <h1 id="taking-off">Taking Off</h1>
 
@@ -50,27 +42,26 @@ plane to the start of the runway, leaving the plane ready for take-off.
 We’ll also reset the controls to their starting positions, and close off
 the exit from the plane to the walkway:</p>
 
-<p>`
-    takeoff: Scene
-        startsWhen = (ignitionButton.isOn == true)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    whenStarting()
-    {
-        "A few moments later a truck tows your plane away from the jetway, and
-        following the instructions from the control tower, you taxi the plane to 
-        the start of Runway 2 just as the sun finally disappears below the
-        horizon. About a minute later, you are cleared for take-off. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    takeoff: Scene
+        startsWhen = (ignitionButton.isOn == true)
         
-        /* reset all controls to their initial positions */
-        thrustLever.curSetting = '0';
-        wheel.angle = 0;
-        controlColumn.position = 0;
-        
-        /* close off the exit from the plane */
-        
-        planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
-            ';
-    } `
+        whenStarting()
+        {
+            "A few moments later a truck tows your plane away from the jetway, and
+            following the instructions from the control tower, you taxi the plane to 
+            the start of Runway 2 just as the sun finally disappears below the
+            horizon. About a minute later, you are cleared for take-off. ";
+            
+            /* reset all controls to their initial positions */
+            thrustLever.curSetting = '0';
+            wheel.angle = 0;
+            controlColumn.position = 0;
+            
+            /* close off the exit from the plane */
+            
+            planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
+                ';
+        }
 </code></pre></div></div>
 
 <p>We’ll use the <code class="language-plaintext highlighter-rouge">eachTurn()</code> method of the takeoff
@@ -97,40 +88,39 @@ player pulls back much too early then nothing much happens until the
 plane has picked up just enough speed to start taking off and then
 stall:</p>
 
-<p>`
-        /* The total distance traveled along the runway */
-        distanceTraveled = 0</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    eachTurn()
-    {
-        local oldSpeed = asi.airspeed;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        /* The total distance traveled along the runway */
+        distanceTraveled = 0
         
-        if(controlColumn.position &lt; 0)
+        eachTurn()
         {
-            if(asi.airspeed &gt;= 115)
+            local oldSpeed = asi.airspeed;
+            
+            if(controlColumn.position &lt; 0)
             {
-                "The aircraft leaves the ground and continues up into the sky,
-                climbing rapidly above the city. Once you've gained enough
-                height you turn the plane --- not south towards Bogota but north
-                towards Miami. Hopefully those hoodlums back in the passenger cabin
-                won't notice, though, at least, not until it's far too late. You
-                reach for the radio to call ahead and arrange a suitable
-                reception committee, and then settle back in your seat, content
-                with a job well done. ";
-                
-                finishGameMsg(ftVictory, [finishOptionUndo]);
+                if(asi.airspeed &gt;= 115)
+                {
+                    "The aircraft leaves the ground and continues up into the sky,
+                    climbing rapidly above the city. Once you've gained enough
+                    height you turn the plane --- not south towards Bogota but north
+                    towards Miami. Hopefully those hoodlums back in the passenger cabin
+                    won't notice, though, at least, not until it's far too late. You
+                    reach for the radio to call ahead and arrange a suitable
+                    reception committee, and then settle back in your seat, content
+                    with a job well done. ";
+                    
+                    finishGameMsg(ftVictory, [finishOptionUndo]);
+                }
+                else if(asi.airspeed &gt; 90)
+                {
+                    "The aircraft leaves the ground for a moment and then stalls,
+                    rapidly losing speed and bumping back down onto the runway. ";
+                    
+                    asi.airspeed -= 30;
+                }
+                else
+                    "The aircraft judders slightly but nothing else happens; it
+                    isn't traveling nearly fast enough to take off. ";
             }
-            else if(asi.airspeed &gt; 90)
-            {
-                "The aircraft leaves the ground for a moment and then stalls,
-                rapidly losing speed and bumping back down onto the runway. ";
-                
-                asi.airspeed -= 30;
-            }
-            else
-                "The aircraft judders slightly but nothing else happens; it
-                isn't traveling nearly fast enough to take off. ";
-        } `
 </code></pre></div></div>
 
 <p>We next need to do some calculations to determine how fast the plane is
@@ -149,15 +139,14 @@ traveled by the average of the new airspeed and the previous airspeed
 tutorial in applied mathematics, don’t worry if these details don’t make
 too much sense to you. In terms of code they look like:</p>
 
-<p>`
-            local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        asi.airspeed += (thrust/100);
-        
-        if(asi.airspeed &lt; 0)
-            asi.airspeed = 0;
-        
-        distanceTraveled += ((asi.airspeed + oldSpeed)/2); `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
+            
+            asi.airspeed += (thrust/100);
+            
+            if(asi.airspeed &lt; 0)
+                asi.airspeed = 0;
+            
+            distanceTraveled += ((asi.airspeed + oldSpeed)/2);
 </code></pre></div></div>
 
 <p>Here we’re simply assuming that one turn represents an appropriate unit
@@ -170,17 +159,16 @@ method the plane hasn’t taken off yet, so we need to check that it
 hasn’t overshot the runway. If it has, then a fatal crash occurs and we
 end the game in death:</p>
 
-<p>`
-           /* If we go too far, we run off the end of the runway */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           /* If we go too far, we run off the end of the runway */
             if(distanceTraveled &gt; 500)
             {
-                “The plane reaches the end of the runway, ploughs through the fences
+                "The plane reaches the end of the runway, ploughs through the fences
                 and crashes into some buildings. What happens after that you never
                 know, but it seems a terribly destructive way to dispose of a
-                plane-load of hoodlums. “;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            finishGameMsg(ftDeath, [finishOptionUndo]);
-        } `
+                plane-load of hoodlums. ";
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);
+            }
 </code></pre></div></div>
 
 <p>The figure of 500 for the length of the runway wasn’t arrived at by any
@@ -195,23 +183,22 @@ runway will send it to one side or the other with catastrophic effects,
 although in case the player tries this more than once we’ll introduce
 some slight variations into the description of the ensuing catastrophe:</p>
 
-<p>`
-            /* 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            /* 
              *   If we turn the wheel while the plane is moving along the runway,
              *   the results are likely to be catastrophic.
-             */</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
-        {
-            "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
-            starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
-            taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
-            collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
-            sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
-            Fortunately, you won't be around to answer for your incompetence. ";
+             */        
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);
-        } `
+            if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
+            {
+                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
+                starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
+                taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
+                collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
+                sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
+                Fortunately, you won't be around to answer for your incompetence. ";
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);
+            }
 </code></pre></div></div>
 
 <p>If you’ve been following the logic of what we’ve been doing up until now
@@ -234,23 +221,22 @@ the tools we have already covered.</p>
 is to provide the player with some feedback on what’s happening if
 nothing more dramatic has intervened:</p>
 
-<p>`
-            /* 
-             *   If nothing else dramatic has intervened, report what’s happening to
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            /* 
+             *   If nothing else dramatic has intervened, report what's happening to
              *   the speed.
-             */</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if(asi.airspeed &gt; oldSpeed &amp;&amp; oldSpeed == 0)
-            "The plane starts moving forward. ";
-        else if (asi.airspeed &gt; oldSpeed)
-            "The plane continues to pick up speed. ";
-        
-        if(asi.airspeed &lt; oldSpeed &amp;&amp; asi.airspeed == 0)
-            "The plane comes to a halt. ";
-        else if(asi.airspeed &lt; oldSpeed)
-            "The plane is losing speed. ";
-    }   
-; `
+             */
+            
+            if(asi.airspeed &gt; oldSpeed &amp;&amp; oldSpeed == 0)
+                "The plane starts moving forward. ";
+            else if (asi.airspeed &gt; oldSpeed)
+                "The plane continues to pick up speed. ";
+            
+            if(asi.airspeed &lt; oldSpeed &amp;&amp; asi.airspeed == 0)
+                "The plane comes to a halt. ";
+            else if(asi.airspeed &lt; oldSpeed)
+                "The plane is losing speed. ";
+        }   
+    ;
 </code></pre></div></div>
 
 <p>Hopefully the logic of this should be reasonably apparent. If the speed
@@ -263,121 +249,120 @@ whether the plane is still moving or has come to a halt.</p>
 takeoff scene (which does all the work of responding to the movement of
 the cockpit controls) looks like this:</p>
 
-<p>`
-    takeoff: Scene
-        startsWhen = (ignitionButton.isOn == true)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    whenStarting()
-    {
-        "A few moments later a truck tows your plane away from the jetway, and
-        following the instructions from the control tower, you taxi the plane to 
-        the start of Runway 2 just as the sun finally disappears below the
-        horizon. About a minute later, you are cleared for take-off. ";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    takeoff: Scene
+        startsWhen = (ignitionButton.isOn == true)
         
-        /* reset all controls to their initial positions */
-        thrustLever.curSetting = '0';
-        wheel.angle = 0;
-        controlColumn.position = 0;
-        
-        /* close off the exit from the plane */        
-        planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
-            ';
-    }
-    
-    /* The total distance traveled along the runway */
-    distanceTraveled = 0
-    
-    eachTurn()
-    {
-        local oldSpeed = asi.airspeed;
-        
-        if(controlColumn.position &lt; 0)
+        whenStarting()
         {
-            if(asi.airspeed &gt;= 115)
+            "A few moments later a truck tows your plane away from the jetway, and
+            following the instructions from the control tower, you taxi the plane to 
+            the start of Runway 2 just as the sun finally disappears below the
+            horizon. About a minute later, you are cleared for take-off. ";
+            
+            /* reset all controls to their initial positions */
+            thrustLever.curSetting = '0';
+            wheel.angle = 0;
+            controlColumn.position = 0;
+            
+            /* close off the exit from the plane */        
+            planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
+                ';
+        }
+        
+        /* The total distance traveled along the runway */
+        distanceTraveled = 0
+        
+        eachTurn()
+        {
+            local oldSpeed = asi.airspeed;
+            
+            if(controlColumn.position &lt; 0)
             {
-                "The aircraft leaves the ground and continues up into the sky,
-                climbing rapidly above the city. Once you've gained enough
-                height you turn the plane --- not south towards Bogota but north
-                towards Miami. Hopefully those hoodlums back in the passenger cabin
-                won't notice, though, at least, not until it's far too late. You
-                reach for the radio to call ahead and arrange a suitable
-                reception committee, and then settle back in your seat, content
-                with a job well done. ";
-                
-                finishGameMsg(ftVictory, [finishOptionUndo]);
+                if(asi.airspeed &gt;= 115)
+                {
+                    "The aircraft leaves the ground and continues up into the sky,
+                    climbing rapidly above the city. Once you've gained enough
+                    height you turn the plane --- not south towards Bogota but north
+                    towards Miami. Hopefully those hoodlums back in the passenger cabin
+                    won't notice, though, at least, not until it's far too late. You
+                    reach for the radio to call ahead and arrange a suitable
+                    reception committee, and then settle back in your seat, content
+                    with a job well done. ";
+                    
+                    finishGameMsg(ftVictory, [finishOptionUndo]);
+                }
+                else if(asi.airspeed &gt; 90)
+                {
+                    "The aircraft leaves the ground for a moment and then stalls,
+                    rapidly losing speed and bumping back down onto the runway. ";
+                    
+                    asi.airspeed -= 30;
+                }
+                else
+                    "The aircraft judders slightly but nothing else happens; it
+                    isn't traveling nearly fast enough to take off. ";
             }
-            else if(asi.airspeed &gt; 90)
+            
+            local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
+            
+            asi.airspeed += (thrust/100);
+            
+            if(asi.airspeed &lt; 0)
+                asi.airspeed = 0;
+            
+            distanceTraveled += ((asi.airspeed + oldSpeed)/2);        
+           
+            
+            /* The following commented-out lines were for testing purposes only */
+    //         "The aircraft has covered &lt;&lt;distanceTraveled&gt;&gt;m and is now travelling at
+    //        &lt;&lt;asi.airspeed&gt;&gt; knots. ";   
+            
+            
+            /* If we go too far, we run off the end of the runway */
+            if(distanceTraveled &gt; 500)
             {
-                "The aircraft leaves the ground for a moment and then stalls,
-                rapidly losing speed and bumping back down onto the runway. ";
+                "The plane reaches the end of the runway, ploughs through the fences
+                and crashes into some buildings. What happens after that you never
+                know, but it seems a terribly destructive way to dispose of a
+                plane-load of hoodlums. ";
                 
-                asi.airspeed -= 30;
+                finishGameMsg(ftDeath, [finishOptionUndo]);
             }
-            else
-                "The aircraft judders slightly but nothing else happens; it
-                isn't traveling nearly fast enough to take off. ";
-        }
-        
-        local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
-        
-        asi.airspeed += (thrust/100);
-        
-        if(asi.airspeed &lt; 0)
-            asi.airspeed = 0;
-        
-        distanceTraveled += ((asi.airspeed + oldSpeed)/2);        
-       
-        
-        /* The following commented-out lines were for testing purposes only */
-//         "The aircraft has covered &lt;&lt;distanceTraveled&gt;&gt;m and is now travelling at
-//        &lt;&lt;asi.airspeed&gt;&gt; knots. ";   
-        
-        
-        /* If we go too far, we run off the end of the runway */
-        if(distanceTraveled &gt; 500)
-        {
-            "The plane reaches the end of the runway, ploughs through the fences
-            and crashes into some buildings. What happens after that you never
-            know, but it seems a terribly destructive way to dispose of a
-            plane-load of hoodlums. ";
+                
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);
-        }
+            /* 
+             *   If we turn the wheel while the plane is moving along the runway,
+             *   the results are likely to be catastrophic.
+             */        
             
-        
-        /* 
-         *   If we turn the wheel while the plane is moving along the runway,
-         *   the results are likely to be catastrophic.
-         */        
-        
-        if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
-        {
-            "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
-            starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
-            taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
-            collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
-            sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
-            Fortunately, you won't be around to answer for your incompetence. ";
+            if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
+            {
+                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
+                starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
+                taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
+                collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
+                sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
+                Fortunately, you won't be around to answer for your incompetence. ";
+                
+                finishGameMsg(ftDeath, [finishOptionUndo]);
+            }
             
-            finishGameMsg(ftDeath, [finishOptionUndo]);
-        }
-        
-        /* 
-         *   If nothing else dramatic has intervened, report what's happening to
-         *   the speed.
-         */
-        
-        if(asi.airspeed &gt; oldSpeed &amp;&amp; oldSpeed == 0)
-            "The plane starts moving forward. ";
-        else if (asi.airspeed &gt; oldSpeed)
-            "The plane continues to pick up speed. ";
-        
-        if(asi.airspeed &lt; oldSpeed &amp;&amp; asi.airspeed == 0)
-            "The plane comes to a halt. ";
-        else if(asi.airspeed &lt; oldSpeed)
-            "The plane is losing speed. ";
-    }   
-; `
+            /* 
+             *   If nothing else dramatic has intervened, report what's happening to
+             *   the speed.
+             */
+            
+            if(asi.airspeed &gt; oldSpeed &amp;&amp; oldSpeed == 0)
+                "The plane starts moving forward. ";
+            else if (asi.airspeed &gt; oldSpeed)
+                "The plane continues to pick up speed. ";
+            
+            if(asi.airspeed &lt; oldSpeed &amp;&amp; asi.airspeed == 0)
+                "The plane comes to a halt. ";
+            else if(asi.airspeed &lt; oldSpeed)
+                "The plane is losing speed. ";
+        }   
+    ;
 </code></pre></div></div>
 
 <p>There is quite a lot happening on this Scene object, but it’s probably
@@ -394,35 +379,34 @@ depending on what’s happening, so perhaps the easiest approach is to
 make the windscreen’s <code class="language-plaintext highlighter-rouge">desc</code> property a method
 that calls a separate method when the takeoff scene is in progress:</p>
 
-<p>`
-    + windscreen: Fixture ‘windscreen;; window windshield’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + windscreen: Fixture 'windscreen;; window windshield'
         desc()
         {
             if(takeoff.isHappening)
                 takeoffDesc();
             else
-                “The light is starting to fade outside, but you can easily make out
+                "The light is starting to fade outside, but you can easily make out
                 the terminal off to the port side and the last-minute bustle of
-                preparations around your plane. “;          <br />
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    takeoffDesc()
-    {
-        local dt = takeoff.distanceTraveled/5;
+                preparations around your plane. ";            
+        }
         
-        "It's now quite dark outside, but you can see the landing lights marking
-        the course of the runway &lt;&lt;if asi.airspeed == 0&gt;&gt;stationary on either
-        side&lt;&lt;else if asi.airspeed &lt; 30&gt;&gt; moving slowly past&lt;&lt;else&gt;&gt; rushing
-        past&lt;&lt;end&gt;&gt;. &lt;&lt;if dt &lt; 10&gt;&gt; Virtually the whole length of the runway
-        stretches ahead of you&lt;&lt;else if dt &lt; 33&gt;&gt; Most of the runway still lies
-        ahead&lt;&lt; else if dt &lt; 67&gt;&gt; So far as you can judge only about half the
-        runway still lies ahead&lt;&lt;else if dt &lt; 85&gt;&gt; You're starting to run out of
-        runway&lt;&lt;else&gt;&gt; You're nearly at the end of the runway&lt;&lt;end&gt;&gt;. ";
-    }
-    
-    
-    dobjFor(LookThrough) asDobjFor(Examine)
-; `
+        takeoffDesc()
+        {
+            local dt = takeoff.distanceTraveled/5;
+            
+            "It's now quite dark outside, but you can see the landing lights marking
+            the course of the runway &lt;&lt;if asi.airspeed == 0&gt;&gt;stationary on either
+            side&lt;&lt;else if asi.airspeed &lt; 30&gt;&gt; moving slowly past&lt;&lt;else&gt;&gt; rushing
+            past&lt;&lt;end&gt;&gt;. &lt;&lt;if dt &lt; 10&gt;&gt; Virtually the whole length of the runway
+            stretches ahead of you&lt;&lt;else if dt &lt; 33&gt;&gt; Most of the runway still lies
+            ahead&lt;&lt; else if dt &lt; 67&gt;&gt; So far as you can judge only about half the
+            runway still lies ahead&lt;&lt;else if dt &lt; 85&gt;&gt; You're starting to run out of
+            runway&lt;&lt;else&gt;&gt; You're nearly at the end of the runway&lt;&lt;end&gt;&gt;. ";
+        }
+        
+        
+        dobjFor(LookThrough) asDobjFor(Examine)
+    ;
 </code></pre></div></div>
 
 <p>Defining <code class="language-plaintext highlighter-rouge">takeoff.distanceTraveled/5</code> at the
@@ -442,40 +426,39 @@ directly after the end of the windscreen object, assuming that the
 windscreen is the last of the cockpit contents objects you’ve defined in
 your source:</p>
 
-<p>`
-    + terminalBuilding: Distant ‘terminal building; shabby white large; structure’
-        “It’s a large white structure just off to port. In the fading light you
-        can’t really make out how shabby it actually looks. “
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + terminalBuilding: Distant 'terminal building; shabby white large; structure'
+        "It's a large white structure just off to port. In the fading light you
+        can't really make out how shabby it actually looks. "
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>landingLights: Distant 'landing lights; red green;;them'
-    "The red lights are to port and the greens ones to starboard. "
-;
+    landingLights: Distant 'landing lights; red green;;them'
+        "The red lights are to port and the greens ones to starboard. "
+    ;
 
-takeoff: Scene
-    startsWhen = (ignitionButton.isOn == true)
-    
-    whenStarting()
-    {
-        "A few moments later a truck tows your plane away from the jetway, and
-        following the instructions from the control tower, you taxi the plane to 
-        the start of Runway 2 just as the sun finally disappears below the
-        horizon. About a minute later, you are cleared for take-off. ";
+    takeoff: Scene
+        startsWhen = (ignitionButton.isOn == true)
         
-        /* reset all controls to their initial positions */
-        thrustLever.curSetting = '0';
-        wheel.angle = 0;
-        controlColumn.position = 0;
-        
-        /* close off the exit from the plane */
-        
-        planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
-            ';
-        
-        landingLights.moveInto(cockpit);
-        terminalBuilding.moveInto(nil);
-    }
-    ... `
+        whenStarting()
+        {
+            "A few moments later a truck tows your plane away from the jetway, and
+            following the instructions from the control tower, you taxi the plane to 
+            the start of Runway 2 just as the sun finally disappears below the
+            horizon. About a minute later, you are cleared for take-off. ";
+            
+            /* reset all controls to their initial positions */
+            thrustLever.curSetting = '0';
+            wheel.angle = 0;
+            controlColumn.position = 0;
+            
+            /* close off the exit from the plane */
+            
+            planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
+                ';
+            
+            landingLights.moveInto(cockpit);
+            terminalBuilding.moveInto(nil);
+        }
+        ...
 </code></pre></div></div>
 
 <p>By making the <code class="language-plaintext highlighter-rouge">terminalBuilding</code> and
@@ -512,17 +495,14 @@ game.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="cockpit.html" class="nav">Cockpit Controls</a> \&gt; Taking Off  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="cockpit.html" class="nav">Cockpit Controls</a> &gt; Taking Off<br />
 <span class="navnp"><a href="responding.html" class="nav"><em>Prev:</em> Responding to
 Actions</a>    
 <a href="character.html" class="nav"><em>Next:</em> Character
-Building</a>     </span>
+Building</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

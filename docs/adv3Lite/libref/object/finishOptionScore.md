@@ -50,10 +50,10 @@ end-of-game announcement message.
 
 
 
-[`listed`](#listed)[`listOrder`](#listOrder)[`showScoreInFinish`](#showScoreInFinish)
+[`listed`](#listed) [`listOrder`](#listOrder) [`showScoreInFinish`](#showScoreInFinish)
 
 Inherited from `FinishOption` :  
-[`desc`](../object/FinishOption.html#desc)[`responseChar`](../object/FinishOption.html#responseChar)[`responseKeyword`](../object/FinishOption.html#responseKeyword)
+[`desc`](../object/FinishOption.html#desc) [`responseChar`](../object/FinishOption.html#responseChar) [`responseKeyword`](../object/FinishOption.html#responseKeyword)
 
 <span id="_MethodSummary_"></span>
 

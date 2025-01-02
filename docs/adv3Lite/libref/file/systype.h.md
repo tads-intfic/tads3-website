@@ -40,7 +40,7 @@ String, Collection, List, and Iterator.
 
 
 
-[`AnonFuncPtr`](../object/AnonFuncPtr.html)[`Collection`](../object/Collection.html)[`IndexedIterator`](../object/IndexedIterator.html)[`IntrinsicClass`](../object/IntrinsicClass.html)[`IntrinsicClassModifier`](../object/IntrinsicClassModifier.html)[`Iterator`](../object/Iterator.html)[`List`](../object/List.html)[`Object`](../object/Object.html)[`RexPattern`](../object/RexPattern.html)[`StackFrameDesc`](../object/StackFrameDesc.html)[`StackFrameRef`](../object/StackFrameRef.html)[`String`](../object/String.html)[`TadsObject`](../object/TadsObject.html)
+[`AnonFuncPtr`](../object/AnonFuncPtr.html) [`Collection`](../object/Collection.html) [`IndexedIterator`](../object/IndexedIterator.html) [`IntrinsicClass`](../object/IntrinsicClass.html) [`IntrinsicClassModifier`](../object/IntrinsicClassModifier.html) [`Iterator`](../object/Iterator.html) [`List`](../object/List.html) [`Object`](../object/Object.html) [`RexPattern`](../object/RexPattern.html) [`StackFrameDesc`](../object/StackFrameDesc.html) [`StackFrameRef`](../object/StackFrameRef.html) [`String`](../object/String.html) [`TadsObject`](../object/TadsObject.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -57,7 +57,7 @@ String, Collection, List, and Iterator.
 
 
 
-[`HtmlifyTranslateNewlines`](#HtmlifyTranslateNewlines)[`HtmlifyTranslateSpaces`](#HtmlifyTranslateSpaces)[`HtmlifyTranslateTabs`](#HtmlifyTranslateTabs)[`HtmlifyTranslateWhitespace`](#HtmlifyTranslateWhitespace)[`PropDefAny`](#PropDefAny)[`PropDefDirectly`](#PropDefDirectly)[`PropDefGetClass`](#PropDefGetClass)[`PropDefInherits`](#PropDefInherits)[`ReplaceAll`](#ReplaceAll)[`ReplaceFollowCase`](#ReplaceFollowCase)[`ReplaceIgnoreCase`](#ReplaceIgnoreCase)[`ReplaceOnce`](#ReplaceOnce)[`ReplaceSerial`](#ReplaceSerial)[`SortAsc`](#SortAsc)[`SortDesc`](#SortDesc)[`TypeBifPtr`](#TypeBifPtr)[`TypeCode`](#TypeCode)[`TypeDString`](#TypeDString)[`TypeEnum`](#TypeEnum)[`TypeFuncPtr`](#TypeFuncPtr)[`TypeInt`](#TypeInt)[`TypeList`](#TypeList)[`TypeNativeCode`](#TypeNativeCode)[`TypeNil`](#TypeNil)[`TypeObject`](#TypeObject)[`TypeProp`](#TypeProp)[`TypeSString`](#TypeSString)[`TypeTrue`](#TypeTrue)
+[`HtmlifyTranslateNewlines`](#HtmlifyTranslateNewlines) [`HtmlifyTranslateSpaces`](#HtmlifyTranslateSpaces) [`HtmlifyTranslateTabs`](#HtmlifyTranslateTabs) [`HtmlifyTranslateWhitespace`](#HtmlifyTranslateWhitespace) [`PropDefAny`](#PropDefAny) [`PropDefDirectly`](#PropDefDirectly) [`PropDefGetClass`](#PropDefGetClass) [`PropDefInherits`](#PropDefInherits) [`ReplaceAll`](#ReplaceAll) [`ReplaceFollowCase`](#ReplaceFollowCase) [`ReplaceIgnoreCase`](#ReplaceIgnoreCase) [`ReplaceOnce`](#ReplaceOnce) [`ReplaceSerial`](#ReplaceSerial) [`SortAsc`](#SortAsc) [`SortDesc`](#SortDesc) [`TypeBifPtr`](#TypeBifPtr) [`TypeCode`](#TypeCode) [`TypeDString`](#TypeDString) [`TypeEnum`](#TypeEnum) [`TypeFuncPtr`](#TypeFuncPtr) [`TypeInt`](#TypeInt) [`TypeList`](#TypeList) [`TypeNativeCode`](#TypeNativeCode) [`TypeNil`](#TypeNil) [`TypeObject`](#TypeObject) [`TypeProp`](#TypeProp) [`TypeSString`](#TypeSString) [`TypeTrue`](#TypeTrue)
 
 <span id="_EnumSummary_"></span>
 

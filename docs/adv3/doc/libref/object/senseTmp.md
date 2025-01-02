@@ -58,7 +58,7 @@ to be saved or undone.
 
 
 
-[`notifyList`](#notifyList)[`pointOfView`](#pointOfView)
+[`notifyList`](#notifyList) [`pointOfView`](#pointOfView)
 
 <span id="_MethodSummary_"></span>
 

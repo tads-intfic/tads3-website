@@ -70,7 +70,7 @@ items in different states.
 
 
 
-[`stateNameProp`](#stateNameProp)[`stateObj`](#stateObj)[`stateVec`](#stateVec)
+[`stateNameProp`](#stateNameProp) [`stateObj`](#stateObj) [`stateVec`](#stateVec)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ items in different states.
 
 
 
-[`addEquivObj`](#addEquivObj)[`construct`](#construct)[`getEquivCount`](#getEquivCount)[`getEquivList`](#getEquivList)[`getName`](#getName)
+[`addEquivObj`](#addEquivObj) [`construct`](#construct) [`getEquivCount`](#getEquivCount) [`getEquivList`](#getEquivList) [`getName`](#getName)
 
 <span id="_Properties_"></span>
 

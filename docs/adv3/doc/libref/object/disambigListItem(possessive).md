@@ -70,7 +70,7 @@ Inherited from `NounPhraseProd` :
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
 [`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
@@ -90,22 +90,22 @@ Inherited from `AmbigResponseKeeper` :
 
 
 Inherited from `DisambigPossessiveProd` :  
-[`reduceDefinite`](../object/DisambigPossessiveProd.html#reduceDefinite)[`resolveNouns`](../object/DisambigPossessiveProd.html#resolveNouns)
+[`reduceDefinite`](../object/DisambigPossessiveProd.html#reduceDefinite) [`resolveNouns`](../object/DisambigPossessiveProd.html#resolveNouns)
 
 Inherited from `BasicPossessiveProd` :  
-[`construct`](../object/BasicPossessiveProd.html#construct)[`resolvePossessive`](../object/BasicPossessiveProd.html#resolvePossessive)[`selectWithPossessive`](../object/BasicPossessiveProd.html#selectWithPossessive)
+[`construct`](../object/BasicPossessiveProd.html#construct) [`resolvePossessive`](../object/BasicPossessiveProd.html#resolvePossessive) [`selectWithPossessive`](../object/BasicPossessiveProd.html#selectWithPossessive)
 
 Inherited from `DefiniteNounProd` :  
 [`resolveDefinite`](../object/DefiniteNounProd.html#resolveDefinite)
 
 Inherited from `NounPhraseProd` :  
-[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations) [`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse) [`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 Inherited from `DisambigProd` :  
 [`removeAmbigFlags`](../object/DisambigProd.html#removeAmbigFlags)

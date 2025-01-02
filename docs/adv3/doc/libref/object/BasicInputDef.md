@@ -74,7 +74,7 @@ via the constructor.
 
 
 Inherited from `InputDef` :  
-[`allowRealTime`](../object/InputDef.html#allowRealTime)[`promptFunc`](../object/InputDef.html#promptFunc)
+[`allowRealTime`](../object/InputDef.html#allowRealTime) [`promptFunc`](../object/InputDef.html#promptFunc)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ Inherited from `InputDef` :
 [`construct`](#construct)
 
 Inherited from `InputDef` :  
-[`beginInputFont`](../object/InputDef.html#beginInputFont)[`endInputFont`](../object/InputDef.html#endInputFont)
+[`beginInputFont`](../object/InputDef.html#beginInputFont) [`endInputFont`](../object/InputDef.html#endInputFont)
 
 <span id="_Properties_"></span>
 

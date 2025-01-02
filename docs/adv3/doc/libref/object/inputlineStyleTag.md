@@ -50,10 +50,10 @@ it's used only for the command-line text itself.
 
 
 
-[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)[`plainCloseText`](#plainCloseText)[`plainOpenText`](#plainOpenText)
+[`htmlCloseText`](#htmlCloseText) [`htmlOpenText`](#htmlOpenText) [`plainCloseText`](#plainCloseText) [`plainOpenText`](#plainOpenText)
 
 Inherited from `HtmlStyleTag` :  
-[`closeText`](../object/HtmlStyleTag.html#closeText)[`openText`](../object/HtmlStyleTag.html#openText)
+[`closeText`](../object/HtmlStyleTag.html#closeText) [`openText`](../object/HtmlStyleTag.html#openText)
 
 Inherited from `StyleTag` :  
 [`tagName`](../object/StyleTag.html#tagName)

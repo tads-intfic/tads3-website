@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; String  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; String<br />
 <span class="navnp"><a href="framedesc.html" class="nav"><em>Prev:</em> StackFrameDesc</a>
     <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="string">String</h1>
 
@@ -105,950 +97,880 @@ information.</p>
 
 <p><code class="language-plaintext highlighter-rouge">compareTo(*str*)</code></p>
 
-<div class="fdef">
+<p>Compares this string to the second string <em>str</em>, returning an integer
+less than 0 if this string sorts before <em>str</em>, 0 if the two strings are
+identical, or greater than 0 if this string sorts after <em>str</em>.</p>
 
-Compares this string to the second string *str*, returning an integer
-less than 0 if this string sorts before *str*, 0 if the two strings are
-identical, or greater than 0 if this string sorts after *str*.
-
-The comparison uses the Unicode character numbers as the collation
+<p>The comparison uses the Unicode character numbers as the collation
 order. As a result, strings using accented accented characters probably
-won't be sorted in the correct linguistic order for a given language.
-Different languages use different collation rules, which usually don't
-match the Unicode character order.
+won’t be sorted in the correct linguistic order for a given language.
+Different languages use different collation rules, which usually don’t
+match the Unicode character order.</p>
 
+<p><span id="compareIgnoreCase"></span></p>
 
+<p><code class="language-plaintext highlighter-rouge">compareIgnoreCase(*str*)</code></p>
 
-<span id="compareIgnoreCase"></span>
-
-`compareIgnoreCase(*str*)`
-
-<div class="fdef">
-
-Compares this string to the second string *str*, ignoring differences in
-upper/lower case. For example, "A" and "a" are treated as equal. Returns
-an integer less than 0 if this string sorts before *str*, 0 if the two
+<p>Compares this string to the second string <em>str</em>, ignoring differences in
+upper/lower case. For example, “A” and “a” are treated as equal. Returns
+an integer less than 0 if this string sorts before <em>str</em>, 0 if the two
 strings are identical, or greater than 0 if this string sorts after
-*str*.
+<em>str</em>.</p>
 
-The method compares the case-folded versions of the strings. See
-[toFoldedCase()](#toFoldedCase) for more on case folding. Case folding
+<p>The method compares the case-folded versions of the strings. See
+<a href="#toFoldedCase">toFoldedCase()</a> for more on case folding. Case folding
 is designed to erase case differences by converting both strings to a
-canonical lower-case format.
+canonical lower-case format.</p>
 
-The comparison uses the Unicode character numbers of the case-folded
+<p>The comparison uses the Unicode character numbers of the case-folded
 characters as the collation order. This means that strings using
-accented accented characters probably won't be sorted in the correct
+accented accented characters probably won’t be sorted in the correct
 linguistic order for a given language. Different languages use different
-collation rules, which usually don't match the Unicode character order.
+collation rules, which usually don’t match the Unicode character order.</p>
 
-</div>
+<p><span id="digestMD5"></span></p>
 
-<span id="digestMD5"></span>
+<p><code class="language-plaintext highlighter-rouge">digestMD5()</code></p>
 
-`digestMD5()`
+<p>Calculates the 128-bit RSA MD5 message digest of the string, returning a
+string of 32 hex digits representing the digest value.</p>
 
-<div class="fdef">
-
-Calculates the 128-bit RSA MD5 message digest of the string, returning a
-string of 32 hex digits representing the digest value.
-
-MD5 was originally designed for cryptographic applications, but it has
-some known weaknesses and is no longer considered secure. Even so, it's
-still considered a good checksum, and it's widely used for message
-integrity checking. It's also part of several Internet standards (e.g.,
+<p>MD5 was originally designed for cryptographic applications, but it has
+some known weaknesses and is no longer considered secure. Even so, it’s
+still considered a good checksum, and it’s widely used for message
+integrity checking. It’s also part of several Internet standards (e.g.,
 HTTP digest authentication). In an Interactive Fiction context,
-[Babel](http://babel.ifarchive.org/) uses MD5 to generate IFIDs for
-older games. If you're looking for a secure hash, consider SHA-2 (see
-[`sha256()`](#sha256)) instead of MD5.
+<a href="http://babel.ifarchive.org/">Babel</a> uses MD5 to generate IFIDs for
+older games. If you’re looking for a secure hash, consider SHA-2 (see
+<a href="#sha256"><code class="language-plaintext highlighter-rouge">sha256()</code></a>) instead of MD5.</p>
 
-</div>
+<p><span id="endsWith"></span></p>
 
-<span id="endsWith"></span>
+<p><code class="language-plaintext highlighter-rouge">endsWith(*str*)</code></p>
 
-`endsWith(*str*)`
+<p>Returns <code class="language-plaintext highlighter-rouge">true</code> if this string ends with <em>str</em>,
+<code class="language-plaintext highlighter-rouge">nil</code> if not. This string ends with <em>str</em> if
+this string is at least as long as <em>str</em>, and the last
+<code class="language-plaintext highlighter-rouge">str.length()</code> characters of this string are the
+same as the characters of <em>str</em>.</p>
 
-<div class="fdef">
+<p><span id="find"></span></p>
 
-Returns `true` if this string ends with *str*,
-`nil` if not. This string ends with *str* if
-this string is at least as long as *str*, and the last
-`str.length()` characters of this string are the
-same as the characters of *str*.
+<p><code class="language-plaintext highlighter-rouge">find(*target*, *index*?)</code></p>
 
-</div>
+<p>Finds the substring or regular expression <em>target</em> within this string.</p>
 
-<span id="find"></span>
-
-`find(*target*, *index*?)`
-
-<div class="fdef">
-
-Finds the substring or regular expression *target* within this string.
-
-If the search is successful, the method returns the character index
+<p>If the search is successful, the method returns the character index
 where the match starts (the first character of the string is at index
-1). If the target isn't found, the method returns
-`nil`. If *target* is a regular expression, the
+1). If the target isn’t found, the method returns
+<code class="language-plaintext highlighter-rouge">nil</code>. If <em>target</em> is a regular expression, the
 method has the side effect of updating the
-[rexGroup()](tadsgen.html#rexGroup) registers to reflect the search
-results.
+<a href="tadsgen.html#rexGroup">rexGroup()</a> registers to reflect the search
+results.</p>
 
-*target* can be a string value or a [RexPattern](rexpat.html) object. If
-it's a string, `find()` simply searches for the
-literal text of the string. If *target* is a RexPattern, the method
-searches for a match to the regular expression pattern.
+<p><em>target</em> can be a string value or a <a href="rexpat.html">RexPattern</a> object. If
+it’s a string, <code class="language-plaintext highlighter-rouge">find()</code> simply searches for the
+literal text of the string. If <em>target</em> is a RexPattern, the method
+searches for a match to the regular expression pattern.</p>
 
-For regular expression searches, you can get more detailed information
-on the match result using [rexGroup()](tadsgen.html#rexGroup). You can
-alternatively use the [rexSearch()](tadsgen.html#rexSearch) function,
-which directly returns more information on the match.
+<p>For regular expression searches, you can get more detailed information
+on the match result using <a href="tadsgen.html#rexGroup">rexGroup()</a>. You can
+alternatively use the <a href="tadsgen.html#rexSearch">rexSearch()</a> function,
+which directly returns more information on the match.</p>
 
-If *index* is given, it sets the starting index in the subject string
-for the search; an *index* of 1 means that the search starts at the
+<p>If <em>index</em> is given, it sets the starting index in the subject string
+for the search; an <em>index</em> of 1 means that the search starts at the
 first character. If the index value is omitted, the default value is 1.
 The starting index value can be used to search for another occurrence of
 the same target following a previous search, for example. A negative
-value for *index* is an index from the end of the string: -1 is the last
+value for <em>index</em> is an index from the end of the string: -1 is the last
 character, -2 the second to last, etc. Note that the return value is
 still an index from the start of the whole string, regardless of the
 starting index value. For regular expression searches, the start of the
-string for the purposes of "^" and other special operators is still the
-start of the overall string, regardless of the *index* value.
+string for the purposes of “^” and other special operators is still the
+start of the overall string, regardless of the <em>index</em> value.</p>
 
-Examples:
+<p>Examples:</p>
 
-```
-    'abcdef'.find('cd') yields 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'abcdef'.find('cd') yields 3
     'abcdef'.find('g') yields nil
     'abcdef'.find('c', 3) yields 3
     'abcdef'.find('c', 4) yields nil
     'abcabcabc'.find('c', 4) yields 6
     'abcabcabc'.find('c', 7) yields 9
     'abcdef123456'.find(R'%d+') yields 7
-```
+</code></pre></div></div>
 
-</div>
+<p><span id="findAll"></span></p>
 
-<span id="findAll"></span>
+<p><code class="language-plaintext highlighter-rouge">findAll(*target*, *func*?)</code></p>
 
-`findAll(*target*, *func*?)`
+<p>Searches the subject string (self) for all occurrences of a given
+substring or regular expression pattern, returning a list of matches.</p>
 
-<div class="fdef">
-
-Searches the subject string (self) for all occurrences of a given
-substring or regular expression pattern, returning a list of matches.
-
-On success, the return value is a list of the matches. If *func* is
+<p>On success, the return value is a list of the matches. If <em>func</em> is
 omitted, each element is a string with the text of the corresponding
-match. If *func* is provided, each element is the return value of *func*
-for the corresponding match.
+match. If <em>func</em> is provided, each element is the return value of <em>func</em>
+for the corresponding match.</p>
 
-*target* can be a string or a [RexPattern](rexpat.html) object. If it's a
-string, the function searches for exact matches to the string. If it's a
-pattern, the function searches for matches to the regular expression.
+<p><em>target</em> can be a string or a <a href="rexpat.html">RexPattern</a> object. If it’s a
+string, the function searches for exact matches to the string. If it’s a
+pattern, the function searches for matches to the regular expression.</p>
 
-*func* is an optional callback function. If provided, the method calls
-*func* for each match, and uses the value returned by *func* as the
-match's entry in the return list. *func* is invoked as
-`func(*match*, *index*, *group1*...)`, where
-*match* is a string with the text of the match, *index* is the character
-index in the subject string of the start of the match, and *group1* is
+<p><em>func</em> is an optional callback function. If provided, the method calls
+<em>func</em> for each match, and uses the value returned by <em>func</em> as the
+match’s entry in the return list. <em>func</em> is invoked as
+<code class="language-plaintext highlighter-rouge">func(*match*, *index*, *group1*...)</code>, where
+<em>match</em> is a string with the text of the match, <em>index</em> is the character
+index in the subject string of the start of the match, and <em>group1</em> is
 the text of the first parenthesized group in the regular expression, if
 there is one. Arguments are added for any additional parenthesized
-groups. All of the arguments are optional; the method calls *func* with
-as many arguments as its actually expects, so if you don't need to know
+groups. All of the arguments are optional; the method calls <em>func</em> with
+as many arguments as its actually expects, so if you don’t need to know
 the index or group values, you can simply omit the parameter variable
-for them. If *func* requires more group parameters than there are actual
-matching groups, the method passes `nil` values
-for the extra group parameters.
+for them. If <em>func</em> requires more group parameters than there are actual
+matching groups, the method passes <code class="language-plaintext highlighter-rouge">nil</code> values
+for the extra group parameters.</p>
 
-Examples:
+<p>Examples:</p>
 
-```
-    'one two three'.findAll(R'%w+') yields ['one', 'two', 'three']
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'one two three'.findAll(R'%w+') yields ['one', 'two', 'three']
     'one two three'.findAll(R'%w+', {m: m.toUpper()} yields ['ONE', 'TWO', 'THREE']
     'one two three'.findAll(R'%w+', {m, idx: idx}) yields [1, 5, 9]
     'one two three'.findAll(R'(%w)%w*', {m, i, g1: g1} yields ['o', 'w', 't']
     'one two three'.findAll(R'(%w)%w*', {m, i, g1, g2: g2} yields [nil, nil, nil]
-```
+</code></pre></div></div>
 
-</div>
+<p><span id="findLast"></span></p>
 
-<span id="findLast"></span>
+<p><code class="language-plaintext highlighter-rouge">findLast(*target*, *index*?)</code></p>
 
-`findLast(*target*, *index*?)`
-
-<div class="fdef">
-
-Searches the subject string (self) for the last (rightmost) match to a
+<p>Searches the subject string (self) for the last (rightmost) match to a
 given substring or regular expression pattern. This works like the
-[find()](#find) method, but searches backwards, starting at the end of
-the string and working towards the beginning.
+<a href="#find">find()</a> method, but searches backwards, starting at the end of
+the string and working towards the beginning.</p>
 
-On success, the return value is an integer giving the character index of
+<p>On success, the return value is an integer giving the character index of
 the start of the rightmost match. If no match is found, the result is
-`nil`. If *target* is a regular expression, the
+<code class="language-plaintext highlighter-rouge">nil</code>. If <em>target</em> is a regular expression, the
 method has the side effect of updating the
-[rexGroup()](tadsgen.html#rexGroup) registers to reflect the search
-results.
+<a href="tadsgen.html#rexGroup">rexGroup()</a> registers to reflect the search
+results.</p>
 
-*target* is a string containing the substring to find, or a
-[RexPattern](rexpat.html) object with a regular expression to match.
+<p><em>target</em> is a string containing the substring to find, or a
+<a href="rexpat.html">RexPattern</a> object with a regular expression to match.</p>
 
-For regular expression searches, you can get more detailed information
-on the match result using [rexGroup()](tadsgen.html#rexGroup). You can
-alternatively use the [rexSearchLast()](tadsgen.html#rexSearchLast)
-function, which directly returns more information on the match.
+<p>For regular expression searches, you can get more detailed information
+on the match result using <a href="tadsgen.html#rexGroup">rexGroup()</a>. You can
+alternatively use the <a href="tadsgen.html#rexSearchLast">rexSearchLast()</a>
+function, which directly returns more information on the match.</p>
 
-*index* is the optional starting position for the search. The function
+<p><em>index</em> is the optional starting position for the search. The function
 looks for a match before but not including the character at this index.
-If *index* is omitted, the default is to search the entire string from
-the end. Equivalently, you can set *index* to the length of the string
+If <em>index</em> is omitted, the default is to search the entire string from
+the end. Equivalently, you can set <em>index</em> to the length of the string
 plus one, to indicate the imaginary character position just after the
-end of the string. Specifying 0 for *index* means the same thing. If
-*index* is negative, it's an offset from the end of the string: -1 is
+end of the string. Specifying 0 for <em>index</em> means the same thing. If
+<em>index</em> is negative, it’s an offset from the end of the string: -1 is
 the last character, -2 is the second to last, and so on. Note that -1
-(or, equivalently, `self.length()`) means that
+(or, equivalently, <code class="language-plaintext highlighter-rouge">self.length()</code>) means that
 you want to search the portion of the string up to but not including the
-last character, since the match can't include the starting character.
+last character, since the match can’t include the starting character.</p>
 
-Examples:
+<p>Examples:</p>
 
-```
-    'abcdef'.findLast('cd') yields 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'abcdef'.findLast('cd') yields 3
     'abcdef'.findLast('g') yields nil
     'abcabcabc'.find('c') yields 9
     'abcabcabc'.find('c', 0) yields 9
     'abcabcabc'.find('c', 9) yields 6
     'abcabcabc'.find('c', -1) yields 6
     'abc123'.find(R'%d+') yields 4
-```
+</code></pre></div></div>
 
-For regular expression targets, the
-`\&lt;FirstBegin\&gt;` and
-`\&lt;FirstEnd\&gt;` modes (see [regular
-expressions](regex.html)) work in mirror image compared to ordinary
+<p>For regular expression targets, the
+<code class="language-plaintext highlighter-rouge">\&lt;FirstBegin\&gt;</code> and
+<code class="language-plaintext highlighter-rouge">\&lt;FirstEnd\&gt;</code> modes (see <a href="regex.html">regular
+expressions</a>) work in mirror image compared to ordinary
 forward searches. The easiest way to think about this is to picture the
 reverse search as a forward search viewed in a mirror. For a reverse
-search, `\&lt;FirstBegin\&gt;` means that the match
-with its *right* end closest to the starting point is selected as the
-winner, while `\&lt;FirstEnd\&gt;` means that the
-match with its *left* end closest to the starting point is selected.
+search, <code class="language-plaintext highlighter-rouge">\&lt;FirstBegin\&gt;</code> means that the match
+with its <em>right</em> end closest to the starting point is selected as the
+winner, while <code class="language-plaintext highlighter-rouge">\&lt;FirstEnd\&gt;</code> means that the
+match with its <em>left</em> end closest to the starting point is selected.
 Since the search proceeds right to left, closer to the starting point
-means further right, at a higher index.
+means further right, at a higher index.</p>
 
-Note that we use the terms right, left, and right-to-left loosely in the
-discussion above. In particular, we're ignoring that different languages
-and scripts are written on paper in different directions. We're talking
-purely about the order of characters in the string, using "left" to mean
-towards the beginning of the string and "right" to mean towards the end,
+<p>Note that we use the terms right, left, and right-to-left loosely in the
+discussion above. In particular, we’re ignoring that different languages
+and scripts are written on paper in different directions. We’re talking
+purely about the order of characters in the string, using “left” to mean
+towards the beginning of the string and “right” to mean towards the end,
 regardless of whether the string contains Roman characters or Arabic
-characters or anything else.
+characters or anything else.</p>
 
-</div>
+<p><span id="findReplace"></span></p>
 
-<span id="findReplace"></span>
+<p><code class="language-plaintext highlighter-rouge">findReplace(*oldStr*, *newStr*, *flags*?, *index*?,
+*limit*?)</code></p>
 
-`findReplace(*oldStr*, *newStr*, *flags*?, *index*?,
-*limit*?)`
+<p>Finds one or more instances of the substring <em>oldStr</em> within the subject
+string (i.e., <code class="language-plaintext highlighter-rouge">self</code>), and replaces them with
+the new substring <em>newStr</em>.</p>
 
-<div class="fdef">
+<p>The method returns a new string with the replacements performed. If
+<em>target</em> is a regular expression, the method also has the side effect of
+updating the <a href="tadsgen.html#rexGroup">rexGroup()</a> registers to reflect the
+search results.</p>
 
-Finds one or more instances of the substring *oldStr* within the subject
-string (i.e., `self`), and replaces them with
-the new substring *newStr*.
-
-The method returns a new string with the replacements performed. If
-*target* is a regular expression, the method also has the side effect of
-updating the [rexGroup()](tadsgen.html#rexGroup) registers to reflect the
-search results.
-
-*oldStr* is the search string. This can be a string value, in which case
+<p><em>oldStr</em> is the search string. This can be a string value, in which case
 the method searches for the literal text of the string, or a
-[RexPattern](rexpat.html) object, in which case the method searches for
-matches to the pattern.
+<a href="rexpat.html">RexPattern</a> object, in which case the method searches for
+matches to the pattern.</p>
 
-*newStr* is the replacement string. Matches to *oldStr* within the
-subject string are replaced with this value. *newStr* can be a string
+<p><em>newStr</em> is the replacement string. Matches to <em>oldStr</em> within the
+subject string are replaced with this value. <em>newStr</em> can be a string
 value, in which case the literal text of the string is used as the
 replacement text, or it can be a function to invoke to determine the
-replacement text ([see below](#findReplaceFuncs)).
+replacement text (<a href="#findReplaceFuncs">see below</a>).</p>
 
-If *oldStr* is a RexPattern, `%` characters in
-*newStr* have the same special meaning they have in the replacement text
-in the [rexReplace()](tadsgen.html#rexReplace) function:
-`%1` is replaced by the subject string text that
+<p>If <em>oldStr</em> is a RexPattern, <code class="language-plaintext highlighter-rouge">%</code> characters in
+<em>newStr</em> have the same special meaning they have in the replacement text
+in the <a href="tadsgen.html#rexReplace">rexReplace()</a> function:
+<code class="language-plaintext highlighter-rouge">%1</code> is replaced by the subject string text that
 matched the first parenthesized group in the regular expression,
-`%2` by the text matching the second group, and
-so on; `%\*` is replaced by the text matching
-the entire regular expression pattern; and `%%`
-is replaced by a single percent sign. When *oldStr* is a string value,
-`%` characters in *newStr* have no special
-meaning and are simply used literally as replacement text.
+<code class="language-plaintext highlighter-rouge">%2</code> by the text matching the second group, and
+so on; <code class="language-plaintext highlighter-rouge">%\*</code> is replaced by the text matching
+the entire regular expression pattern; and <code class="language-plaintext highlighter-rouge">%%</code>
+is replaced by a single percent sign. When <em>oldStr</em> is a string value,
+<code class="language-plaintext highlighter-rouge">%</code> characters in <em>newStr</em> have no special
+meaning and are simply used literally as replacement text.</p>
 
-*oldStr* and *newStr* can also be specified as lists; see
-[below](#findReplaceLists) for details.
+<p><em>oldStr</em> and <em>newStr</em> can also be specified as lists; see
+<a href="#findReplaceLists">below</a> for details.</p>
 
-*flags* is optional. If it's missing, the default is
-`ReplaceAll`, to replace all occurrences of the
-search string within the subject string. If provided, *flags* is a
-bitwise combination (with the `\|` operator) of
-the following flag values:
+<p><em>flags</em> is optional. If it’s missing, the default is
+<code class="language-plaintext highlighter-rouge">ReplaceAll</code>, to replace all occurrences of the
+search string within the subject string. If provided, <em>flags</em> is a
+bitwise combination (with the <code class="language-plaintext highlighter-rouge">\|</code> operator) of
+the following flag values:</p>
 
-- `ReplaceOnce`: replace only the first
-  occurrence of the search string. This is ignored if *limit* is
-  specified.
-- `ReplaceAll`: replace all occurrences of the
-  search string. This is ignored if *limit* is specified.
-  `ReplaceAll` is the default if
-  `ReplaceOnce` isn't specified, and it
-  supersedes `ReplaceOnce` if both are
-  specified.
-- `ReplaceIgnoreCase`: ignore case (that is,
-  capitalization) when searching for *oldStr*. By default, the search is
-  case-sensitive, so capitals can only match capitals and minuscules can
-  only match minuscules.
-- `ReplaceFollowCase`: each time a match is
-  replaced, change lower-case letters in the replacement text to follow
-  the capitalization pattern of the matched text. There are three
-  possibilities: if all of the letters in the matched text are capitals,
-  all letters in the replacement text are capitalized; if all of the
-  letters in the match are lower-case, the replacement text isn't
-  changed; if the match has a mix of capitals and lower-case letters,
-  the first lower-case letter in the replacement text is capitalized,
-  and the rest are left unchanged.
-- `ReplaceSerial`: use the serial replacement
-  mode. See [below](#findReplaceLists) for details.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ReplaceOnce</code>: replace only the first
+occurrence of the search string. This is ignored if <em>limit</em> is
+specified.</li>
+  <li><code class="language-plaintext highlighter-rouge">ReplaceAll</code>: replace all occurrences of the
+search string. This is ignored if <em>limit</em> is specified.
+<code class="language-plaintext highlighter-rouge">ReplaceAll</code> is the default if
+<code class="language-plaintext highlighter-rouge">ReplaceOnce</code> isn’t specified, and it
+supersedes <code class="language-plaintext highlighter-rouge">ReplaceOnce</code> if both are
+specified.</li>
+  <li><code class="language-plaintext highlighter-rouge">ReplaceIgnoreCase</code>: ignore case (that is,
+capitalization) when searching for <em>oldStr</em>. By default, the search is
+case-sensitive, so capitals can only match capitals and minuscules can
+only match minuscules.</li>
+  <li><code class="language-plaintext highlighter-rouge">ReplaceFollowCase</code>: each time a match is
+replaced, change lower-case letters in the replacement text to follow
+the capitalization pattern of the matched text. There are three
+possibilities: if all of the letters in the matched text are capitals,
+all letters in the replacement text are capitalized; if all of the
+letters in the match are lower-case, the replacement text isn’t
+changed; if the match has a mix of capitals and lower-case letters,
+the first lower-case letter in the replacement text is capitalized,
+and the rest are left unchanged.</li>
+  <li><code class="language-plaintext highlighter-rouge">ReplaceSerial</code>: use the serial replacement
+mode. See <a href="#findReplaceLists">below</a> for details.</li>
+</ul>
 
-Note that you should never use 0 as the *flags* value. For compatibility
+<p>Note that you should never use 0 as the <em>flags</em> value. For compatibility
 with older versions, 0 has a special meaning equivalent to
-`ReplaceOnce`. If you have no other flags to
-specify, always use either `ReplaceOnce` or
-`ReplaceAll`, or simply omit the *flags*
-argument entirely.
+<code class="language-plaintext highlighter-rouge">ReplaceOnce</code>. If you have no other flags to
+specify, always use either <code class="language-plaintext highlighter-rouge">ReplaceOnce</code> or
+<code class="language-plaintext highlighter-rouge">ReplaceAll</code>, or simply omit the <em>flags</em>
+argument entirely.</p>
 
-If *index* is specified, it gives the starting index in self for the
+<p>If <em>index</em> is specified, it gives the starting index in self for the
 search. Any matches that start before this starting point will not be
-replaced. If *index* is 1, the search starts at the first character;
-this is the default if *index* is omitted. A negative value is an index
+replaced. If <em>index</em> is 1, the search starts at the first character;
+this is the default if <em>index</em> is omitted. A negative value is an index
 from the end of the string: -1 is the last character, -2 the second to
-last, and so on. Note that a negative index doesn't change the direction
-of the search; it still runs left-to-right.
+last, and so on. Note that a negative index doesn’t change the direction
+of the search; it still runs left-to-right.</p>
 
-If *limit* is included, it specifies the maximum number of replacements
-to perform. This can be `nil` to indicate that
+<p>If <em>limit</em> is included, it specifies the maximum number of replacements
+to perform. This can be <code class="language-plaintext highlighter-rouge">nil</code> to indicate that
 all matches are to be replaced, or an integer giving the maximum number
 of matches to replace. 0 (zero) means that no matches are to be
 replaced, in which case the original subject string is returned
-unchanged. If a *limit* argument is present, it overrides the
-`ReplaceAll` and
-`ReplaceOnce` flags - those flags are ignored if
-*limit* is present. If *limit* is omitted, the limit is taken from the
-flags.
+unchanged. If a <em>limit</em> argument is present, it overrides the
+<code class="language-plaintext highlighter-rouge">ReplaceAll</code> and
+<code class="language-plaintext highlighter-rouge">ReplaceOnce</code> flags - those flags are ignored if
+<em>limit</em> is present. If <em>limit</em> is omitted, the limit is taken from the
+flags.</p>
 
-**<span id="findReplaceLists"></span>Search lists:** Instead of
+<p><strong><span id="findReplaceLists"></span>Search lists:</strong> Instead of
 searching for just a single search string, you can search for several
-strings at once, by using a list as the *oldStr* argument. This will
+strings at once, by using a list as the <em>oldStr</em> argument. This will
 search for each of the items in the list, and replace each one with the
-*newStr* replacement string.
+<em>newStr</em> replacement string.</p>
 
-If you supply a list for the search term, you can optionally also supply
-a list for the *newStr* replacement value. If you do, each match to an
-element of *oldStr* is replaced with the corresponding element of the
-*newStr* list - that is, the item at the same list index. If there are
-more *oldStr* elements than *newStr* elements, matches to the excess
-*oldStr* elements are replaced with empty strings. Excess *newStr*
-elements are simply ignored.
+<p>If you supply a list for the search term, you can optionally also supply
+a list for the <em>newStr</em> replacement value. If you do, each match to an
+element of <em>oldStr</em> is replaced with the corresponding element of the
+<em>newStr</em> list - that is, the item at the same list index. If there are
+more <em>oldStr</em> elements than <em>newStr</em> elements, matches to the excess
+<em>oldStr</em> elements are replaced with empty strings. Excess <em>newStr</em>
+elements are simply ignored.</p>
 
-If *newStr* isn't a list, it's used as the replacement for all of the
+<p>If <em>newStr</em> isn’t a list, it’s used as the replacement for all of the
 search strings. Note that this is different from passing a one-element
-list for *newStr*, because in that case it would only specify a
-replacement for *oldStr*\[1\], and the remaining *oldStr* elements would
-all be replaced with empty strings.
+list for <em>newStr</em>, because in that case it would only specify a
+replacement for <em>oldStr</em>[1], and the remaining <em>oldStr</em> elements would
+all be replaced with empty strings.</p>
 
-Here's an example that replaces each of the special HTML characters with
+<p>Here’s an example that replaces each of the special HTML characters with
 their markup codes, using a single
-`findReplace()` call:
+<code class="language-plaintext highlighter-rouge">findReplace()</code> call:</p>
 
-```
-    str = str.findReplace(['&amp;', '&lt;', '&gt;'], ['&amp;', '&lt;', '&gt;']);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    str = str.findReplace(['&amp;', '&lt;', '&gt;'], ['&amp;amp;', '&amp;lt;', '&amp;gt;']);
+</code></pre></div></div>
 
-When you use a list of search terms, there are two modes for iterating
-through the list. The default is "parallel" mode. In this mode,
-`findReplace()` starts by searching for all of
+<p>When you use a list of search terms, there are two modes for iterating
+through the list. The default is “parallel” mode. In this mode,
+<code class="language-plaintext highlighter-rouge">findReplace()</code> starts by searching for all of
 the search terms at once. It then replaces the single leftmost match
 with its corresponding replacement text. (If two of the search strings
-match at the same position, the one at the lower *oldStr* index takes
-precedence.) If `ReplaceOnce` was specified,
-we're done. Otherwise, `findReplace()` next
-repeats the search in the *remainder* of the string, after (to the right
+match at the same position, the one at the lower <em>oldStr</em> index takes
+precedence.) If <code class="language-plaintext highlighter-rouge">ReplaceOnce</code> was specified,
+we’re done. Otherwise, <code class="language-plaintext highlighter-rouge">findReplace()</code> next
+repeats the search in the <em>remainder</em> of the string, after (to the right
 of) that first replacement, again searching for all of the terms, and
 again replacing the single leftmost match among them. This repeats until
-there are no more matches.
+there are no more matches.</p>
 
-The other mode is "serial" mode, which you select by including
-`ReplaceSerial` in the flags. In this mode,
-`findReplace()` starts by searching *only* for
-the first *oldStr* element. It replaces every match for the first term,
-or just the first match if `ReplaceOnce` is
+<p>The other mode is “serial” mode, which you select by including
+<code class="language-plaintext highlighter-rouge">ReplaceSerial</code> in the flags. In this mode,
+<code class="language-plaintext highlighter-rouge">findReplace()</code> starts by searching <em>only</em> for
+the first <em>oldStr</em> element. It replaces every match for the first term,
+or just the first match if <code class="language-plaintext highlighter-rouge">ReplaceOnce</code> is
 specified. If a match was found and
-`ReplaceOnce` was specified, we're done.
-Otherwise, we start over with the *updated* string - containing all
+<code class="language-plaintext highlighter-rouge">ReplaceOnce</code> was specified, we’re done.
+Otherwise, we start over with the <em>updated</em> string - containing all
 replacements for the first term - and search this new string for the
-*second* search term. We once again replace all occurrences of this
-term. We repeat this process for each additional term in the *oldStr*
-list.
+<em>second</em> search term. We once again replace all occurrences of this
+term. We repeat this process for each additional term in the <em>oldStr</em>
+list.</p>
 
-The key difference between the parallel and serial modes is that serial
+<p>The key difference between the parallel and serial modes is that serial
 mode rescans each replaced result string for each term. This means that
 replacement text from the first search term is subject to further
-replacement by the second search term, and that's subject to yet more
+replacement by the second search term, and that’s subject to yet more
 replacement by the third term, and so on. In contrast, parallel mode
-never rescans replacement text, so once a replacement is made, it won't
-be further modified.
+never rescans replacement text, so once a replacement is made, it won’t
+be further modified.</p>
 
-<span id="findReplaceFuncs"></span>**Replacement function:** The
-replacement value *newStr* is normally given as a literal string to
+<p><span id="findReplaceFuncs"></span><strong>Replacement function:</strong> The
+replacement value <em>newStr</em> is normally given as a literal string to
 substitute for each occurrence of the search string. For more
 flexibility, though, you can instead provide a function, which
-`findReplace()` calls for each match to
+<code class="language-plaintext highlighter-rouge">findReplace()</code> calls for each match to
 determine the replacement text for that match. This allows you to vary
 the replacement text according to the exact text of the match (which can
-vary if you're using the `ReplaceIgnoreCase`
-flag or you're using a list of search strings), the position of the
+vary if you’re using the <code class="language-plaintext highlighter-rouge">ReplaceIgnoreCase</code>
+flag or you’re using a list of search strings), the position of the
 match within the subject string, or whatever other conditions you
-choose.
+choose.</p>
 
-The callback function can be a regular or anonymous function. It's
-called like this, once for each match found in the subject string:
+<p>The callback function can be a regular or anonymous function. It’s
+called like this, once for each match found in the subject string:</p>
 
-```
-    newStrFunc(match, index, orig);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    newStrFunc(match, index, orig);
+</code></pre></div></div>
 
-*match* is the text actually matched in the subject string. *index* is
+<p><em>match</em> is the text actually matched in the subject string. <em>index</em> is
 the character index within the string of the start of the match (the
-first character is at index 1, as usual). *orig* is the entire original
-subject string.
+first character is at index 1, as usual). <em>orig</em> is the entire original
+subject string.</p>
 
-You can omit one or more of the parameters when you define the callback
-function, because `findReplace` will only supply
+<p>You can omit one or more of the parameters when you define the callback
+function, because <code class="language-plaintext highlighter-rouge">findReplace</code> will only supply
 as many arguments as the function actually wants. The arguments are
-always in the same order, though - the names don't matter, just the
+always in the same order, though - the names don’t matter, just the
 order. This means that if you provide a callback that only takes one
-argument, it gets the match string value; with two arguments, they'll be
-assigned the match string and match index, respectively.
+argument, it gets the match string value; with two arguments, they’ll be
+assigned the match string and match index, respectively.</p>
 
-The function must return a string value giving the replacement text (it
-can alternatively return `nil`, which is treated
-as an empty string).
+<p>The function must return a string value giving the replacement text (it
+can alternatively return <code class="language-plaintext highlighter-rouge">nil</code>, which is treated
+as an empty string).</p>
 
-If you use a list of search strings and a list of corresponding
+<p>If you use a list of search strings and a list of corresponding
 replacements, each element of the replacement list can be a separate
 function. The replacement list can also be a mix of strings and
-functions.
+functions.</p>
 
-</div>
+<p><span id="htmlify"></span></p>
 
-<span id="htmlify"></span>
+<p><code class="language-plaintext highlighter-rouge">htmlify(*flags*?)</code></p>
 
-`htmlify(*flags*?)`
-
-<div class="fdef">
-
-Converts HTML markup-significant characters in the string to appropriate
+<p>Converts HTML markup-significant characters in the string to appropriate
 HTML sequences, and returns the resulting string. If the flags argument
 is not included, the method acts as though flags has the value 0 (zero).
 By default, this method scans the string for the characters
-`&amp;` (ampersand) and `\&lt;`
+<code class="language-plaintext highlighter-rouge">&amp;</code> (ampersand) and <code class="language-plaintext highlighter-rouge">\&lt;</code>
 (less than), and converts these characters to the sequences
-`&amp;` and `&lt;`
+<code class="language-plaintext highlighter-rouge">&amp;amp;</code> and <code class="language-plaintext highlighter-rouge">&amp;lt;</code>
 respectively. This conversion ensures that, when the string is rendered
 in HTML mode, the display shows ampersands and less-than signs where
-they appeared in the original string's text. In addition, you can
+they appeared in the original string’s text. In addition, you can
 specify a combination (using the bitwise OR operator,
-`\|`) of the following flags to perform
-additional conversions:
+<code class="language-plaintext highlighter-rouge">\|</code>) of the following flags to perform
+additional conversions:</p>
 
-- `HtmlifyTranslateSpaces`: converts each space
-  character after the first space in a run of multiple spaces to the
-  sequence `&nbsp;` (the HTML non-breaking space
-  character). This ensure that a run of multiple spaces will be rendered
-  visually with the same number of spaces as were in the original
-  string. Without this flag, a run of spaces will appear visually as a
-  single space when rendered as HTML, because HTML renderers combine
-  adjacent spaces in HTML source (each run of multiple spaces is
-  displayed as a single space). The method leaves the first space in a
-  run of whitespace as an ordinary space character so that the HTML
-  renderer can still break the line for word-wrapping purposes at the
-  space.
-- `HtmlifyTranslateTabs`: converts each tab
-  character (`\t`) in the string to the sequence
-  `\&lt;tab\&gt;`.
-- `HtmlifyTranslateNewlines`: converts each
-  newline character (`\n`) in the string to the
-  sequence `\&lt;br\&gt;`.
-- `HtmlifyTranslateWhitespace`: this is simply a
-  combination of `HtmlifyTranslateSpaces`,
-  `HtmlifyTranslateTabs`, and
-  `HtmlifyTranslateNewlines`.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">HtmlifyTranslateSpaces</code>: converts each space
+character after the first space in a run of multiple spaces to the
+sequence <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> (the HTML non-breaking space
+character). This ensure that a run of multiple spaces will be rendered
+visually with the same number of spaces as were in the original
+string. Without this flag, a run of spaces will appear visually as a
+single space when rendered as HTML, because HTML renderers combine
+adjacent spaces in HTML source (each run of multiple spaces is
+displayed as a single space). The method leaves the first space in a
+run of whitespace as an ordinary space character so that the HTML
+renderer can still break the line for word-wrapping purposes at the
+space.</li>
+  <li><code class="language-plaintext highlighter-rouge">HtmlifyTranslateTabs</code>: converts each tab
+character (<code class="language-plaintext highlighter-rouge">\t</code>) in the string to the sequence
+<code class="language-plaintext highlighter-rouge">\&lt;tab\&gt;</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">HtmlifyTranslateNewlines</code>: converts each
+newline character (<code class="language-plaintext highlighter-rouge">\n</code>) in the string to the
+sequence <code class="language-plaintext highlighter-rouge">\&lt;br\&gt;</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">HtmlifyTranslateWhitespace</code>: this is simply a
+combination of <code class="language-plaintext highlighter-rouge">HtmlifyTranslateSpaces</code>,
+<code class="language-plaintext highlighter-rouge">HtmlifyTranslateTabs</code>, and
+<code class="language-plaintext highlighter-rouge">HtmlifyTranslateNewlines</code>.</li>
+</ul>
 
-This method is useful if you obtain a string from an external source,
-such as from the user (via the `inputLine()`
+<p>This method is useful if you obtain a string from an external source,
+such as from the user (via the <code class="language-plaintext highlighter-rouge">inputLine()</code>
 function, for example) or from a text file, and you then want to display
 the string in HTML mode. Without conversions, any markup-significant
 characters in the string might not be displayed properly, since the HTML
 parser would attempt to interpret the characters as HTML formatting
 codes. You can use this method to ensure that a string obtained
-externally is displayed verbatim in HTML mode.
+externally is displayed verbatim in HTML mode.</p>
 
-</div>
+<p><span id="length"></span></p>
 
-<span id="length"></span>
+<p><code class="language-plaintext highlighter-rouge">length()</code></p>
 
-`length()`
+<p>Returns the number of characters in the string.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">mapToByteArray(*charset*?)</code></p>
 
-Returns the number of characters in the string.
+<p>Creates a <a href="bytearr.h">ByteArray</a> object based on the contents of the
+string. This is equivalent to calling <code class="language-plaintext highlighter-rouge">new
+ByteArray()</code> with this string and character set as arguments.</p>
 
-</div>
-
-`mapToByteArray(*charset*?)`
-
-<div class="fdef">
-
-Creates a [ByteArray](bytearr.h) object based on the contents of the
-string. This is equivalent to calling `new
-ByteArray()` with this string and character set as arguments.
-
-If a *charset* value is included and isn't
-`nil`, it must be either a
-[CharacterSet](charset.html) object, or a string giving the name of a
+<p>If a <em>charset</em> value is included and isn’t
+<code class="language-plaintext highlighter-rouge">nil</code>, it must be either a
+<a href="charset.html">CharacterSet</a> object, or a string giving the name of a
 character set. The method maps the string to bytes using the given
 character set, and creates a new ByteArray object with the mapped bytes
 as the contents. The usual default/missing character defined by the
-mapping is substituted for any unmappable characters.
+mapping is substituted for any unmappable characters.</p>
 
-If the character set represented by *charset* is unknown (i.e,. there's
+<p>If the character set represented by <em>charset</em> is unknown (i.e,. there’s
 no mapping available for the character set in the run-time TADS
-installation), an `UnknownCharSetException` is
+installation), an <code class="language-plaintext highlighter-rouge">UnknownCharSetException</code> is
 thrown. You can determine whether the the character set is known using
-the [isMappingKnown()](charset.html#isMappingKnown) method on the
-CharacterSet object.
+the <a href="charset.html#isMappingKnown">isMappingKnown()</a> method on the
+CharacterSet object.</p>
 
-If *charset* is omitted or `nil`, the method
+<p>If <em>charset</em> is omitted or <code class="language-plaintext highlighter-rouge">nil</code>, the method
 creates a ByteArray with one byte per character of the string, using the
 Unicode character code of each character as the byte value. Since a byte
 can only hold values from 0 to 255, a numeric overflow error will be
-thrown if the string contains any characters outside of this range.
+thrown if the string contains any characters outside of this range.</p>
 
-</div>
+<p><span id="match"></span></p>
 
-<span id="match"></span>
+<p><code class="language-plaintext highlighter-rouge">match(*target*, *index*?)</code></p>
 
-`match(*target*, *index*?)`
+<p>Checks for a match to the given <em>target</em> value, at the given starting
+position in the subject string (self).</p>
 
-<div class="fdef">
+<p>If <em>target</em> is a string, this method tries to match the literal text of
+the string; if <em>target</em> is a <a href="rexpat.html">RexPattern</a> object, the method
+tries to match the regular expression.</p>
 
-Checks for a match to the given *target* value, at the given starting
-position in the subject string (self).
-
-If *target* is a string, this method tries to match the literal text of
-the string; if *target* is a [RexPattern](rexpat.html) object, the method
-tries to match the regular expression.
-
-If *index* is specified, it's an integer giving the starting position to
+<p>If <em>index</em> is specified, it’s an integer giving the starting position to
 check for the match. 1 is the first character in the string; a negative
 index is from the end of the string (-1 is the last character, -2 is the
-second to last, and so on). If *index* is omitted, the method checks for
-a match at the start of the string (as though *index* were 1).
+second to last, and so on). If <em>index</em> is omitted, the method checks for
+a match at the start of the string (as though <em>index</em> were 1).</p>
 
-If *target* matches, the return value is an integer giving the length of
-the match. When *target* is a string, a successful match simply returns
-the length of *target*, since the entire target string must match
-exactly. When *target* is a RexPattern, a successful match returns the
+<p>If <em>target</em> matches, the return value is an integer giving the length of
+the match. When <em>target</em> is a string, a successful match simply returns
+the length of <em>target</em>, since the entire target string must match
+exactly. When <em>target</em> is a RexPattern, a successful match returns the
 number of characters of the subject string that the regular expression
 matches. The entire regular expression must match, but it need not match
 the entire subject string. (If you want to explicitly match the entire
-subject string, you can end the pattern with '\$', since that will allow
-the pattern to match only if the '\$' symbol lines up with the end of
-the subject string after the match.)
+subject string, you can end the pattern with ‘$’, since that will allow
+the pattern to match only if the ‘$’ symbol lines up with the end of
+the subject string after the match.)</p>
 
-If the string doesn't match *target*, the return value is
-`nil`. Note that it's possible for a successful
-match to return 0: if *target* is an empty string, that will match any
+<p>If the string doesn’t match <em>target</em>, the return value is
+<code class="language-plaintext highlighter-rouge">nil</code>. Note that it’s possible for a successful
+match to return 0: if <em>target</em> is an empty string, that will match any
 subject with a length of zero; and some regular expression patterns can
-match zero characters successfully (e.g., 'a\*', which matches zero or
-more 'a' characters).
+match zero characters successfully (e.g., ‘a*’, which matches zero or
+more ‘a’ characters).</p>
 
-This method is similar to [find()](#find). The difference between the
+<p>This method is similar to <a href="#find">find()</a>. The difference between the
 two is that match() only looks for a match at the specified starting
 position, without searching any further in the string, whereas find()
 searches for a match at each character of the string from the starting
-point onwards, until either finding a match or exhausting the string.
+point onwards, until either finding a match or exhausting the string.</p>
 
-</div>
+<p><span id="packBytes"></span></p>
 
-<span id="packBytes"></span>
+<p><code class="language-plaintext highlighter-rouge">packBytes(*format*, ...)</code></p>
 
-`packBytes(*format*, ...)`
-
-<div class="fdef">
-
-Packs a list of values into bytes, creating a new String object
+<p>Packs a list of values into bytes, creating a new String object
 representing the byte values. This is a static method that you call
-directly on the String class. For example:
+directly on the String class. For example:</p>
 
-```
-    local s = String.packBytes('s*', 1, 2, 3);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local s = String.packBytes('s*', 1, 2, 3);
+</code></pre></div></div>
 
-*format* is a format string describing the packed formats for the
-values. The remaining arguments are the values to be packed.
+<p><em>format</em> is a format string describing the packed formats for the
+values. The remaining arguments are the values to be packed.</p>
 
-The return value is a new String object containing the packed bytes. The
+<p>The return value is a new String object containing the packed bytes. The
 bytes are represented as characters, so each character in the new string
-will have a Unicode value from 0 to 255.
+will have a Unicode value from 0 to 255.</p>
 
-There are a couple of uses for packing bytes into strings. One is when
+<p>There are a couple of uses for packing bytes into strings. One is when
 you want to create a packed byte list that will eventually find its way
 into a file or other external object, but you need to create a temporary
 version in memory first. Packing the bytes into a string can be a
 convenient way to accomplish this. Another potential use is for
 generating text for a structured text format, such as for spreadsheet
 input. The byte packer makes it easy to generate formats with
-fixed-width text fields.
+fixed-width text fields.</p>
 
-Note that the string returned might not be particularly human-readable,
+<p>Note that the string returned might not be particularly human-readable,
 since many format codes generate binary byte values that will look like
-random gibberish if displayed.
+random gibberish if displayed.</p>
 
-See [Byte Packing](pack.html) for more information.
+<p>See <a href="pack.html">Byte Packing</a> for more information.</p>
 
-</div>
+<p><span id="sha256"></span></p>
 
-<span id="sha256"></span>
+<p><code class="language-plaintext highlighter-rouge">sha256()</code></p>
 
-`sha256()`
-
-<div class="fdef">
-
-Calculates the 256-bit SHA-2 (Secure Hash Algorithm 2) hash of the
+<p>Calculates the 256-bit SHA-2 (Secure Hash Algorithm 2) hash of the
 string, returning a string of 64 hex digits representing the hash value.
 SHA-2 is a one-way hash function designed for cryptographic
-applications. It computes a fixed-length hash value that's designed to
-be irreversible and effectively unique for any given input.
+applications. It computes a fixed-length hash value that’s designed to
+be irreversible and effectively unique for any given input.</p>
 
-Secure hashes are useful when you want to store or transmit information
+<p>Secure hashes are useful when you want to store or transmit information
 in such a way that another party can prove it knows the original
 information, without actually revealing the information. For example,
 passwords are often stored in a hashed format, because this prevents a
 third party who steals the password file from being able to recover the
 original password values, while still allowing password entries to be
-verified, by computing the matching hash value on an entered password.
+verified, by computing the matching hash value on an entered password.</p>
 
-</div>
+<p><span id="specialsToHtml"></span></p>
 
-<span id="specialsToHtml"></span>
+<p><code class="language-plaintext highlighter-rouge">specialsToHtml(*stateObject*?)</code></p>
 
-`specialsToHtml(*stateObject*?)`
-
-<div class="fdef">
-
-Returns a new string with any special TADS formatting characters in the
-"self" string translated to their standard HTML equivalents. The result
+<p>Returns a new string with any special TADS formatting characters in the
+“self” string translated to their standard HTML equivalents. The result
 string can then be used as HTML source code in a standard Web browser to
 achieve the same display effect as the original string when displayed in
-a TADS interpreter.
+a TADS interpreter.</p>
 
-The main purpose of this function is to make it easier to port games
+<p>The main purpose of this function is to make it easier to port games
 between the traditional TADS user interface and the Web UI. The TADS
-formatting characters, such as '\n' and '\b', are specific to TADS -
-they can't be used directly in a standard Web browser. The Web UI uses a
+formatting characters, such as ‘\n’ and ‘\b’, are specific to TADS -
+they can’t be used directly in a standard Web browser. The Web UI uses a
 standard browser as the user interface, though, so to write a game for
 the Web UI, you must either avoid the TADS formatting codes and use only
 standard HTML, or translate strings containing the TADS codes into
 standard HTML. The former option would require a lot of work for an
-existing game; it's inconvenient even for new work, since most TADS
+existing game; it’s inconvenient even for new work, since most TADS
 authors are in the habit of using the TADS codes, and the TADS codes are
 more concise than the HTML equivalents. This function makes it easy to
 implement the translation approach, allowing you to continue to use TADS
-formatting codes even with the Web UI.
+formatting codes even with the Web UI.</p>
 
-Note that game authors won't generally have to call this function
+<p>Note that game authors won’t generally have to call this function
 directly, because the Web UI library will do this automatically in most
-cases. You should only need this function if you're writing a library
-extension or creating a custom Web UI window type.
+cases. You should only need this function if you’re writing a library
+extension or creating a custom Web UI window type.</p>
 
-*stateObject* is an optional object, of class SpecialsToHtml. This keeps
+<p><em>stateObject</em> is an optional object, of class SpecialsToHtml. This keeps
 track of the state of the output stream from one call to the next. Many
-of the TADS formatting codes are context-sensitive, so when you're
-writing a series of strings to the display, it's important keep track of
+of the TADS formatting codes are context-sensitive, so when you’re
+writing a series of strings to the display, it’s important keep track of
 the global context across strings. You should use a separate object for
-each window or output stream.
+each window or output stream.</p>
 
-If you omit the state object or pass `nil`, the
+<p>If you omit the state object or pass <code class="language-plaintext highlighter-rouge">nil</code>, the
 function will treat each string as the start of a new stream, with no
 context from past calls to the function. To reset the stream context
 (for example, after clearing the window), call its
-`resetState()` method.
+<code class="language-plaintext highlighter-rouge">resetState()</code> method.</p>
 
-The function performs the following translations:
+<p>The function performs the following translations:</p>
 
-- `\n` is translated to
-  `\&lt;BR\&gt;` when it occurs within a line of text,
-  or nothing if it occurs at the start of a new line (ensuring that it
-  ends a line, but doesn't produce any blank lines).
-- `\b` is translated to
-  `\&lt;BR\&gt;` if it occurs at the start of a new
-  line, or `\&lt;BR\&gt;\&lt;BR\&gt;` if it occurs within a
-  line of text (ensuring that it always produces one blank line).
-- `\\` is removed, but causes the next
-  non-markup character to be converted to upper-case.
-- `\v` is removed, but causes the next
-  non-markup character to be converted to lower-case.
-- `\\`  (quoted space) is converted to
-  `&nbsp;` if it's followed by another quoted
-  space, or to a regular space if followed by anything else. This
-  reproduces the standard TADS quoted space behavior: a quoted space
-  doesn't combine with adjacent quoted spaces, but does allow a line
-  break. Any regular space characters adjacent to the quoted space in
-  the source string are removed.
-- `\t` is converted to a series of
-  `&nbsp;` characters followed by one regular
-  space, sufficient to pad the current line to the next multiple of four
-  characters in length. This is a very rough approximation of the way
-  `\t` works in the console UI, but note how the
-  algorithm merely counts *characters*, and doesn't take into account
-  font metrics.
-  (Because this doesn't take into account font metrics, it's mostly only
-  useful with monospaced fonts. But if you're using the Web UI, you have
-  access to the much greater capabilities of full HTML layout, so you
-  shouldn't have much use for tabs anyway.)
-- `\&lt;Q\&gt;`...`\&lt;/Q\&gt;` tag
-  sequences are converted to `&ldquo;...&rdquo;`
-  and `&lsquo;...&rsquo;` sequences, alternating
-  at each nesting level, with double quotes at the outermost level.
-- `\&lt;BR HEIGHT=N\&gt;` tags are converted to a
-  series of *N* `\&lt;BR\&gt;` tags when used at the
-  start of a line, or *N*+1 `\&lt;BR\&gt;` tags when
-  used within a line of text.
-- `\&lt;P\&gt;`, `\&lt;DIV\&gt;`,
-  `\&lt;CENTER\&gt;`,
-  `\&lt;TABLE\&gt;`, `\&lt;TD\&gt;`,
-  `\&lt;TH\&gt;`, and
-  `\&lt;CAPTION\&gt;` tags (both open and close tags)
-  are left exactly as given, but are recognized as line breaks for the
-  purposes of translating `\n`,
-  `\b`, and `\&lt;BR
-  HEIGHT=N\&gt;`.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">\n</code> is translated to
+<code class="language-plaintext highlighter-rouge">\&lt;BR\&gt;</code> when it occurs within a line of text,
+or nothing if it occurs at the start of a new line (ensuring that it
+ends a line, but doesn’t produce any blank lines).</li>
+  <li><code class="language-plaintext highlighter-rouge">\b</code> is translated to
+<code class="language-plaintext highlighter-rouge">\&lt;BR\&gt;</code> if it occurs at the start of a new
+line, or <code class="language-plaintext highlighter-rouge">\&lt;BR\&gt;\&lt;BR\&gt;</code> if it occurs within a
+line of text (ensuring that it always produces one blank line).</li>
+  <li><code class="language-plaintext highlighter-rouge">\\</code> is removed, but causes the next
+non-markup character to be converted to upper-case.</li>
+  <li><code class="language-plaintext highlighter-rouge">\v</code> is removed, but causes the next
+non-markup character to be converted to lower-case.</li>
+  <li><code class="language-plaintext highlighter-rouge">\\</code>  (quoted space) is converted to
+<code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> if it’s followed by another quoted
+space, or to a regular space if followed by anything else. This
+reproduces the standard TADS quoted space behavior: a quoted space
+doesn’t combine with adjacent quoted spaces, but does allow a line
+break. Any regular space characters adjacent to the quoted space in
+the source string are removed.</li>
+  <li><code class="language-plaintext highlighter-rouge">\t</code> is converted to a series of
+<code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> characters followed by one regular
+space, sufficient to pad the current line to the next multiple of four
+characters in length. This is a very rough approximation of the way
+<code class="language-plaintext highlighter-rouge">\t</code> works in the console UI, but note how the
+algorithm merely counts <em>characters</em>, and doesn’t take into account
+font metrics.
+(Because this doesn’t take into account font metrics, it’s mostly only
+useful with monospaced fonts. But if you’re using the Web UI, you have
+access to the much greater capabilities of full HTML layout, so you
+shouldn’t have much use for tabs anyway.)</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;Q\&gt;</code>…<code class="language-plaintext highlighter-rouge">\&lt;/Q\&gt;</code> tag
+sequences are converted to <code class="language-plaintext highlighter-rouge">&amp;ldquo;...&amp;rdquo;</code>
+and <code class="language-plaintext highlighter-rouge">&amp;lsquo;...&amp;rsquo;</code> sequences, alternating
+at each nesting level, with double quotes at the outermost level.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;BR HEIGHT=N\&gt;</code> tags are converted to a
+series of <em>N</em> <code class="language-plaintext highlighter-rouge">\&lt;BR\&gt;</code> tags when used at the
+start of a line, or <em>N</em>+1 <code class="language-plaintext highlighter-rouge">\&lt;BR\&gt;</code> tags when
+used within a line of text.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;P\&gt;</code>, <code class="language-plaintext highlighter-rouge">\&lt;DIV\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;CENTER\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code>, <code class="language-plaintext highlighter-rouge">\&lt;TD\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;TH\&gt;</code>, and
+<code class="language-plaintext highlighter-rouge">\&lt;CAPTION\&gt;</code> tags (both open and close tags)
+are left exactly as given, but are recognized as line breaks for the
+purposes of translating <code class="language-plaintext highlighter-rouge">\n</code>,
+<code class="language-plaintext highlighter-rouge">\b</code>, and <code class="language-plaintext highlighter-rouge">\&lt;BR
+HEIGHT=N\&gt;</code>.</li>
+</ul>
 
-The *stateObject* value is for internal use within the function, and you
-shouldn't have to access its properties directly. For reference, though,
-they are:
+<p>The <em>stateObject</em> value is for internal use within the function, and you
+shouldn’t have to access its properties directly. For reference, though,
+they are:</p>
 
-- `flags\_` is an integer containing a number of
-  bit fields:
-  - 0x0001 - on (non-zero) if the stream is in the midst of a line of
-    text, off (zero) at the start of a new line
-  - 0x0002 - on if the capitalization flag ('\\') is pending
-  - 0x0004 - on if the lower-case flag ('\v') is pending
-  - 0x0008 - on if an HTML tag is in progress
-  - 0x0010 - on if within a double-quoted attribute value in an HTML tag
-  - 0x0020 - on if within a single-quoted attribute value in an HTML tag
-  - 0x0040 - on if the last character was an ordinary space
-  - 0x0080 - on if the last character was a quoted space ('\\ ')
-  - 0x0100 - on if the \&lt;Q\&gt; tag quote nesting level is odd, off if the
-    level is even (at even levels, double quotes are used; at odd
-    levels, single quotes are used)
-  - 0x0200 - on if an HTML entity (&amp; sequence) is in progress (only used
-    with specialsToText())
-  - 0x3000 - the current tab stop column (shift this value right 12 bits
-    to get the integer value: that is, compute
-    `((obj.flags\_ &amp; 0x3000) \&gt;\&gt; 12)`. This is
-    the number of characters in the line since the last multiple of 4
-    columns.
-- `tag\_` is a string containing the text of the
-  tag in progress. When a string ends in mid-tag, this contains the
-  fragment of the tag up to the end of the string, so that the next call
-  can resume parsing the tag where the last call left off.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">flags\_</code> is an integer containing a number of
+bit fields:
+    <ul>
+      <li>0x0001 - on (non-zero) if the stream is in the midst of a line of
+text, off (zero) at the start of a new line</li>
+      <li>0x0002 - on if the capitalization flag (‘\’) is pending</li>
+      <li>0x0004 - on if the lower-case flag (‘\v’) is pending</li>
+      <li>0x0008 - on if an HTML tag is in progress</li>
+      <li>0x0010 - on if within a double-quoted attribute value in an HTML tag</li>
+      <li>0x0020 - on if within a single-quoted attribute value in an HTML tag</li>
+      <li>0x0040 - on if the last character was an ordinary space</li>
+      <li>0x0080 - on if the last character was a quoted space (‘\ ‘)</li>
+      <li>0x0100 - on if the &lt;Q&gt; tag quote nesting level is odd, off if the
+level is even (at even levels, double quotes are used; at odd
+levels, single quotes are used)</li>
+      <li>0x0200 - on if an HTML entity (&amp; sequence) is in progress (only used
+with specialsToText())</li>
+      <li>0x3000 - the current tab stop column (shift this value right 12 bits
+to get the integer value: that is, compute
+<code class="language-plaintext highlighter-rouge">((obj.flags\_ &amp; 0x3000) \&gt;\&gt; 12)</code>. This is
+the number of characters in the line since the last multiple of 4
+columns.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">tag\_</code> is a string containing the text of the
+tag in progress. When a string ends in mid-tag, this contains the
+fragment of the tag up to the end of the string, so that the next call
+can resume parsing the tag where the last call left off.</li>
+</ul>
 
-</div>
+<p><span id="specialsToText"></span></p>
 
-<span id="specialsToText"></span>
+<p><code class="language-plaintext highlighter-rouge">specialsToText(*stateObject*?)</code></p>
 
-`specialsToText(*stateObject*?)`
-
-<div class="fdef">
-
-Returns a new string with any special TADS formatting characters in the
-"self" string translated to their plain text equivalents. This function
+<p>Returns a new string with any special TADS formatting characters in the
+“self” string translated to their plain text equivalents. This function
 is similar to specialsToHtml(), but converts the string to plain text
 rather than HTML. The conversion is designed to replicate the effect of
 displaying the string through the TADS console output mechanism, as it
-would appear on a character-mode terminal.
+would appear on a character-mode terminal.</p>
 
-*stateObject* has the same meaning as in specialsToHtml().
+<p><em>stateObject</em> has the same meaning as in specialsToHtml().</p>
 
-This function performs the following conversions:
+<p>This function performs the following conversions:</p>
 
-- `\n` is translated to
-  `\n` when it occurs within a line of text, or
-  nothing if it occurs at the start of a new line (ensuring that it ends
-  a line, but doesn't produce any blank lines).
-- `\b` is translated to
-  `\n` if it occurs at the start of a new line,
-  or `\n\n` if it occurs within a line of text
-  (ensuring that it always produces one blank line).
-- `\\` is removed, but causes the next
-  non-markup character to be converted to upper-case.
-- `\v` is removed, but causes the next
-  non-markup character to be converted to lower-case.
-- `\\`  (quoted space) is converted to a regular
-  space.
-- `\&lt;Q\&gt;`...`\&lt;/Q\&gt;` tag
-  sequences are converted to `"..."` and
-  `'...'` sequences, alternating at each nesting
-  level, with double quotes at the outermost level.
-- `\&lt;BR HEIGHT=N\&gt;` tags are converted to a
-  series of *N* `\n` characters when used at the
-  start of a line, or *N*+1 `\n` characters when
-  used within a line of text.
-- `\&lt;P\&gt;` is converted to
-  `\n` if it appears at the start of a line, or
-  `\n\n` within a line.
-- `\&lt;DIV\&gt;`,
-  `\&lt;CENTER\&gt;`,
-  `\&lt;TABLE\&gt;`, `\&lt;TD\&gt;`,
-  `\&lt;TH\&gt;`, and
-  `\&lt;CAPTION\&gt;` tags (both open and close tags)
-  are converted to `\n`.
-- `\&lt;Tag\&gt;` for any tag not mentioned above is
-  simply stripped out.
-- `&nbsp;` is converted to a space.
-- `&gt;` is converted to \&gt;.
-- `&lt;` is converted to \&lt;.
-- `&amp;` is converted to &amp;.
-- `&quot;`, `&ldquo;`,
-  and `&rdquo;` are converted to " (a plain
-  double-quote).
-- `&lsquo;` and
-  `&rsquo;` are converted to ' (a plain
-  single-quote).
-- `&dddd;` (where the *d*s are digits) is
-  converted to the Unicode character with value *dddd*.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">\n</code> is translated to
+<code class="language-plaintext highlighter-rouge">\n</code> when it occurs within a line of text, or
+nothing if it occurs at the start of a new line (ensuring that it ends
+a line, but doesn’t produce any blank lines).</li>
+  <li><code class="language-plaintext highlighter-rouge">\b</code> is translated to
+<code class="language-plaintext highlighter-rouge">\n</code> if it occurs at the start of a new line,
+or <code class="language-plaintext highlighter-rouge">\n\n</code> if it occurs within a line of text
+(ensuring that it always produces one blank line).</li>
+  <li><code class="language-plaintext highlighter-rouge">\\</code> is removed, but causes the next
+non-markup character to be converted to upper-case.</li>
+  <li><code class="language-plaintext highlighter-rouge">\v</code> is removed, but causes the next
+non-markup character to be converted to lower-case.</li>
+  <li><code class="language-plaintext highlighter-rouge">\\</code>  (quoted space) is converted to a regular
+space.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;Q\&gt;</code>…<code class="language-plaintext highlighter-rouge">\&lt;/Q\&gt;</code> tag
+sequences are converted to <code class="language-plaintext highlighter-rouge">"..."</code> and
+<code class="language-plaintext highlighter-rouge">'...'</code> sequences, alternating at each nesting
+level, with double quotes at the outermost level.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;BR HEIGHT=N\&gt;</code> tags are converted to a
+series of <em>N</em> <code class="language-plaintext highlighter-rouge">\n</code> characters when used at the
+start of a line, or <em>N</em>+1 <code class="language-plaintext highlighter-rouge">\n</code> characters when
+used within a line of text.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;P\&gt;</code> is converted to
+<code class="language-plaintext highlighter-rouge">\n</code> if it appears at the start of a line, or
+<code class="language-plaintext highlighter-rouge">\n\n</code> within a line.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;DIV\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;CENTER\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code>, <code class="language-plaintext highlighter-rouge">\&lt;TD\&gt;</code>,
+<code class="language-plaintext highlighter-rouge">\&lt;TH\&gt;</code>, and
+<code class="language-plaintext highlighter-rouge">\&lt;CAPTION\&gt;</code> tags (both open and close tags)
+are converted to <code class="language-plaintext highlighter-rouge">\n</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">\&lt;Tag\&gt;</code> for any tag not mentioned above is
+simply stripped out.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> is converted to a space.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;gt;</code> is converted to &gt;.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;lt;</code> is converted to &lt;.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;amp;</code> is converted to &amp;.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;quot;</code>, <code class="language-plaintext highlighter-rouge">&amp;ldquo;</code>,
+and <code class="language-plaintext highlighter-rouge">&amp;rdquo;</code> are converted to “ (a plain
+double-quote).</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;lsquo;</code> and
+<code class="language-plaintext highlighter-rouge">&amp;rsquo;</code> are converted to ‘ (a plain
+single-quote).</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;dddd;</code> (where the <em>d</em>s are digits) is
+converted to the Unicode character with value <em>dddd</em>.</li>
+</ul>
 
-</div>
+<p><span id="splice"></span></p>
 
-<span id="splice"></span>
+<p><code class="language-plaintext highlighter-rouge">splice(*index*, *deleteLength*,
+*insertString*?)</code></p>
 
-`splice(*index*, *deleteLength*,
-*insertString*?)`
-
-<div class="fdef">
-
-Returns a new string consisting of the original text of this string with
-the following two edits: first, the *deleteLength* characters starting
-at index *index* are deleted; second, the string *insertString* is
-inserted in their place. The *insertString* argument is optional; if
+<p>Returns a new string consisting of the original text of this string with
+the following two edits: first, the <em>deleteLength</em> characters starting
+at index <em>index</em> are deleted; second, the string <em>insertString</em> is
+inserted in their place. The <em>insertString</em> argument is optional; if
 omitted, only the deletion is performed. If you only want to insert new
-text, simply pass 0 for *deleteLength*.
+text, simply pass 0 for <em>deleteLength</em>.</p>
 
-This function's effect can be achieved by concatenating together
+<p>This function’s effect can be achieved by concatenating together
 substrings of the original string, but
-`splice()` is more concise and somewhat clearer.
-It's also a little more efficient, since it bypasses the need to create
-the two intermediate substrings.
+<code class="language-plaintext highlighter-rouge">splice()</code> is more concise and somewhat clearer.
+It’s also a little more efficient, since it bypasses the need to create
+the two intermediate substrings.</p>
 
-</div>
+<p><span id="split"></span></p>
 
-<span id="split"></span>
+<p><code class="language-plaintext highlighter-rouge">split(*delim*?, *limit*?)</code></p>
 
-`split(*delim*?, *limit*?)`
+<p>Splits a string into substrings defined by the given delimiter. Returns
+a list of the substrings.</p>
 
-<div class="fdef">
+<p><em>delim</em> is the delimiter, which can be one of the following:</p>
 
-Splits a string into substrings defined by the given delimiter. Returns
-a list of the substrings.
+<ul>
+  <li>A string. <code class="language-plaintext highlighter-rouge">split</code> searches for exact matches
+to this substring within the subject string, and splits the string at
+each instance.</li>
+  <li>A <a href="rexpat.html">RexPattern</a> object. The method searches for matches to
+the regular expression, and splits the string at each match found.</li>
+  <li>An integer, which must be at least 1. The method splits the string
+into substrings of exactly this length (except that the last substring
+in the list might be shorter, since it’ll have whatever’s left over at
+the end).</li>
+</ul>
 
-*delim* is the delimiter, which can be one of the following:
+<p>If <em>delim</em> is omitted or <code class="language-plaintext highlighter-rouge">nil</code>, the default is 1
+(i.e., split the string into one-character substrings).</p>
 
-- A string. `split` searches for exact matches
-  to this substring within the subject string, and splits the string at
-  each instance.
-- A [RexPattern](rexpat.html) object. The method searches for matches to
-  the regular expression, and splits the string at each match found.
-- An integer, which must be at least 1. The method splits the string
-  into substrings of exactly this length (except that the last substring
-  in the list might be shorter, since it'll have whatever's left over at
-  the end).
-
-If *delim* is omitted or `nil`, the default is 1
-(i.e., split the string into one-character substrings).
-
-*limit* is an optional integer giving the maximum number of elements to
+<p><em>limit</em> is an optional integer giving the maximum number of elements to
 return in the result list. When the method reaches this limit, it stops
 searching and returns the remainder of the string after the last split
-as the final element of the list. If *limit* is 1, no splits are
+as the final element of the list. If <em>limit</em> is 1, no splits are
 possible, so the result is simply a single-element list containing the
-entire original string. If *limit* is omitted or
-`nil`, the method splits the string at every
-instance of the delimiter without a limit.
+entire original string. If <em>limit</em> is omitted or
+<code class="language-plaintext highlighter-rouge">nil</code>, the method splits the string at every
+instance of the delimiter without a limit.</p>
 
-The delimiter string or pattern **isn't** included in the result list.
+<p>The delimiter string or pattern <strong>isn’t</strong> included in the result list.</p>
 
-Examples:
+<p>Examples:</p>
 
-`'one,two,three'.split(',')` returns
-`\['one', 'two', 'three'\]`  
-`'one,two, three, four'.split(R',\&lt;space\&gt;\*')`
-returns `\['one', 'two', 'three', 'four'\]`  
-`'one,two,three'.split(',', 2)` returns
-`\['one', 'two,three'\]`  
-`'abcdefghi'.split(2)` returns
-`\['ab', 'cd', 'ef', 'gh', 'i'\]`
+<p><code class="language-plaintext highlighter-rouge">'one,two,three'.split(',')</code> returns
+<code class="language-plaintext highlighter-rouge">\['one', 'two', 'three'\]</code><br />
+<code class="language-plaintext highlighter-rouge">'one,two, three, four'.split(R',\&lt;space\&gt;\*')</code>
+returns <code class="language-plaintext highlighter-rouge">\['one', 'two', 'three', 'four'\]</code><br />
+<code class="language-plaintext highlighter-rouge">'one,two,three'.split(',', 2)</code> returns
+<code class="language-plaintext highlighter-rouge">\['one', 'two,three'\]</code><br />
+<code class="language-plaintext highlighter-rouge">'abcdefghi'.split(2)</code> returns
+<code class="language-plaintext highlighter-rouge">\['ab', 'cd', 'ef', 'gh', 'i'\]</code></p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">startsWith(*str*)</code></p>
 
-`startsWith(*str*)`
+<p>Returns true if this string starts with <em>str</em>,
+<code class="language-plaintext highlighter-rouge">nil</code> if not. This string starts with <em>str</em> if
+this string is at least as long as <em>str</em>, and the first
+<code class="language-plaintext highlighter-rouge">str.length()</code> characters match the characters
+of <em>str</em>.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">substr(*start*, *length*?)</code></p>
 
-Returns true if this string starts with *str*,
-`nil` if not. This string starts with *str* if
-this string is at least as long as *str*, and the first
-`str.length()` characters match the characters
-of *str*.
+<p>Returns a new string consisting of a substring of this string. The
+substring starts at character index <em>start</em> (the first character in the
+string is at index 1). If <em>length</em> is specified, the result string is at
+most <em>length</em> characters long; if <em>length</em> is not specified, the result
+runs to the end of the source string.</p>
 
-</div>
-
-`substr(*start*, *length*?)`
-
-<div class="fdef">
-
-Returns a new string consisting of a substring of this string. The
-substring starts at character index *start* (the first character in the
-string is at index 1). If *length* is specified, the result string is at
-most *length* characters long; if *length* is not specified, the result
-runs to the end of the source string.
-
-If *start* is negative, it indicates an offset from the end of the
+<p>If <em>start</em> is negative, it indicates an offset from the end of the
 string: -1 indicates that the substring is to start at the last
-character, -2 at the second-to-last, and so on.
+character, -2 at the second-to-last, and so on.</p>
 
-If *length* is negative, it indicates the number of characters to
-*discard* from the end of the string. With a *length* of -1, the result
-is the whole rest of the string starting at *start* minus the last
-character; with -2, it's the rest after *start* minus the last 2
-characters; and so on.
+<p>If <em>length</em> is negative, it indicates the number of characters to
+<em>discard</em> from the end of the string. With a <em>length</em> of -1, the result
+is the whole rest of the string starting at <em>start</em> minus the last
+character; with -2, it’s the rest after <em>start</em> minus the last 2
+characters; and so on.</p>
 
-Examples:
+<p>Examples:</p>
 
-```
-    'abcdef'.substr(3) yields 'cdef'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'abcdef'.substr(3) yields 'cdef'
     'abcdef'.substr(3, 2) yields 'cd'
     'abcdefghi'.substr(-3) yields 'ghi'
     'abcdefghi'.substr(-3, 2) yields 'gh'
@@ -1057,217 +979,181 @@ Examples:
     'abcdefghi'.substr(4, -2) yields 'defg'
     'abcdefghi'.substr(4, -4) yields 'de'
     'abcdefghi'.substr(-4, -2) yields 'fg'
-```
+</code></pre></div></div>
 
-</div>
+<p><span id="toFoldedCase"></span></p>
 
-<span id="toFoldedCase"></span>
+<p><code class="language-plaintext highlighter-rouge">toFoldedCase()</code></p>
 
-`toFoldedCase()`
-
-<div class="fdef">
-
-Returns a new string consisting of the characters of the original string
-converted to "folded" case, as defined in the Unicode character
+<p>Returns a new string consisting of the characters of the original string
+converted to “folded” case, as defined in the Unicode character
 database. Folded case is designed to erase case differences between
 strings, so that two or more strings can be matched or sorted without
-regard to case differences.
+regard to case differences.</p>
 
-The case folding of each character is defined by the Unicode character
+<p>The case folding of each character is defined by the Unicode character
 tables, but the result is usually the same as converting the character
 to upper case and then to lower case. For most characters, this is the
 same as simply converting to lower case, but it differs for a few cases
 where the upper-case mapping of a lower-case character results in more
 than one character. For example, the German sharp S, ß, converts to
-upper case as 'SS', so its case folding is lower case 'ss'. This allows
-the strings 'WEISS' and 'weiß' to match when case-folded, for example.
+upper case as ‘SS’, so its case folding is lower case ‘ss’. This allows
+the strings ‘WEISS’ and ‘weiß’ to match when case-folded, for example.
 There are a number of other ligatures and accented characters that
-undergo similar expansions when case-folded.
+undergo similar expansions when case-folded.</p>
 
-</div>
+<p><span id="toLower"></span></p>
 
-<span id="toLower"></span>
+<p><code class="language-plaintext highlighter-rouge">toLower()</code></p>
 
-`toLower()`
-
-<div class="fdef">
-
-Returns a new string consisting of the characters of the original string
+<p>Returns a new string consisting of the characters of the original string
 converted to lower-case. Only alphabetic characters are affected; other
 characters are copied to the new string unchanged. The conversion uses
 the case conversions specified in the Unicode character database, so
-accented and non-Roman alphabetic characters are properly converted.
+accented and non-Roman alphabetic characters are properly converted.</p>
 
-</div>
+<p><span id="toTitleCase"></span></p>
 
-<span id="toTitleCase"></span>
+<p><code class="language-plaintext highlighter-rouge">toTitleCase()</code></p>
 
-`toTitleCase()`
-
-<div class="fdef">
-
-Returns a new string consisting of the characters of the original string
+<p>Returns a new string consisting of the characters of the original string
 converted to title case. Title case is the same as upper case for most
 characters. It differs for characters that represent multiple visual
 characters with a single Unicode character unit, such as ligatures. The
 title case conversion of a ligature consists of the first character of
 the ligature in upper case and the rest in lower case. For example, the
-"ffi" ligature, U+FB03, converts to title case as the letters F, f, i
+“ffi” ligature, U+FB03, converts to title case as the letters F, f, i
 (capital F, small f, small i), and the German sharp S, ß, converts as
-Ss.
+Ss.</p>
 
-Note that this routine isn't designed to render a string with the
+<p>Note that this routine isn’t designed to render a string with the
 correct capitalization for a title. This method simply converts each
 character individually to title case, without regard to word boundaries.
 This is meant to be used as a building block for a full title converter;
 you can use this routine to convert the first character of each word to
 title case once you identify the word boundaries, identify words that
-aren't capitalized, etc.
+aren’t capitalized, etc.</p>
 
-</div>
+<p><span id="toUnicode"></span></p>
 
-<span id="toUnicode"></span>
+<p><code class="language-plaintext highlighter-rouge">toUnicode(*idx*?)</code></p>
 
-`toUnicode(*idx*?)`
+<p>Converts one or all of the characters of this string to Unicode
+character codes.</p>
 
-<div class="fdef">
-
-Converts one or all of the characters of this string to Unicode
-character codes.
-
-If the *idx* argument is provided, it specifies the character index
+<p>If the <em>idx</em> argument is provided, it specifies the character index
 within the string of the single character to convert (the first
 character is at index 1), and the method returns an integer containing
 the Unicode code point for the character at that index. A negative value
-for *idx* is an index from the end of the string: -1 is the last
-character, -2 the second to last, and so on.
+for <em>idx</em> is an index from the end of the string: -1 is the last
+character, -2 the second to last, and so on.</p>
 
-If *idx* is omitted, the function returns a list of character codes.
+<p>If <em>idx</em> is omitted, the function returns a list of character codes.
 Each element in the list is an integer giving the Unicode code point
 value for the corresponding character in the source string. The list has
-one element per character in the source string.
+one element per character in the source string.</p>
 
-This function can be used to decompose a string into its individual
+<p>This function can be used to decompose a string into its individual
 characters, which is sometimes an easier or more efficient way to
 manipulate a string. You can convert a list of Unicode code point values
-back into a string using the `makeString()`
-function in the [tads-gen](tadsgen.html) function set.
+back into a string using the <code class="language-plaintext highlighter-rouge">makeString()</code>
+function in the <a href="tadsgen.html">tads-gen</a> function set.</p>
 
-</div>
+<p><span id="toUpper"></span></p>
 
-<span id="toUpper"></span>
+<p><code class="language-plaintext highlighter-rouge">toUpper()</code></p>
 
-`toUpper()`
-
-<div class="fdef">
-
-Returns a new string consisting of the characters of the original string
+<p>Returns a new string consisting of the characters of the original string
 converted to upper-case. Only alphabetic characters are affected; other
 characters are copied to the new string unchanged. The conversion uses
 the case conversions specified in the Unicode character database, so
-accented and non-Roman alphabetic characters are properly converted.
+accented and non-Roman alphabetic characters are properly converted.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">unpackBytes(*format*)</code></p>
 
-`unpackBytes(*format*)`
+<p>Unpacks the string, treating the string’s characters as byte values and
+interpreting the bytes according to the format string.</p>
 
-<div class="fdef">
-
-Unpacks the string, treating the string's characters as byte values and
-interpreting the bytes according to the format string.
-
-The string must only contain characters with Unicode values from 0 to
+<p>The string must only contain characters with Unicode values from 0 to
 255, since the unpacker treats each character as a byte value. If the
-unpacker encounters any characters outside this range, it'll throw an
-error.
+unpacker encounters any characters outside this range, it’ll throw an
+error.</p>
 
-*format* is the format string describing the byte formats of the values
-to unpack. The return value is a list containing the unpacked values.
+<p><em>format</em> is the format string describing the byte formats of the values
+to unpack. The return value is a list containing the unpacked values.</p>
 
-The string to be unpacked can be one that you previously created with
-String.packBytes(), but it doesn't have to be. As long as the source
-string's characters are all in the 0-255 range, the unpacker will be
+<p>The string to be unpacked can be one that you previously created with
+String.packBytes(), but it doesn’t have to be. As long as the source
+string’s characters are all in the 0-255 range, the unpacker will be
 able to interpret each character as a byte. For example, you can use
-this method to parse plain text strings that use fixed-width fields:
+this method to parse plain text strings that use fixed-width fields:</p>
 
-```
-    local lst = '123456'.unpack('a3 a3');
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local lst = '123456'.unpack('a3 a3');
+</code></pre></div></div>
 
-This returns the list \['123', '456'\].
+<p>This returns the list [‘123’, ‘456’].</p>
 
-See [Byte Packing](pack.html) for more information.
+<p>See <a href="pack.html">Byte Packing</a> for more information.</p>
 
-</div>
+<p><span id="urlDecode"></span></p>
 
-<span id="urlDecode"></span>
+<p><code class="language-plaintext highlighter-rouge">urlDecode()</code></p>
 
-`urlDecode()`
-
-<div class="fdef">
-
-Translates a URL-encoded string to plaintext, returning a new string
+<p>Translates a URL-encoded string to plaintext, returning a new string
 containing the translated text. This reverses the effect of
-`urlEncode()`:
+<code class="language-plaintext highlighter-rouge">urlEncode()</code>:</p>
 
-- %xx sequences are converted to the corresponding characters
-- \+ is converted to a space character
-- everything else is left as-is
+<ul>
+  <li>%xx sequences are converted to the corresponding characters</li>
+  <li>+ is converted to a space character</li>
+  <li>everything else is left as-is</li>
+</ul>
 
-In addition, the method converts any multi-byte %xx sequences that form
+<p>In addition, the method converts any multi-byte %xx sequences that form
 valid UTF-8 characters into the corresponding characters. For example,
-the sequence %C3%A1 represents the character 'á', so
-`'%C3%A1'.urlDecode()` returns
-`'á'`. Any %xx sequence that doesn't form a
-valid UTF-8 character is converted to '?'.
+the sequence %C3%A1 represents the character ‘á’, so
+<code class="language-plaintext highlighter-rouge">'%C3%A1'.urlDecode()</code> returns
+<code class="language-plaintext highlighter-rouge">'á'</code>. Any %xx sequence that doesn’t form a
+valid UTF-8 character is converted to ‘?’.</p>
 
-</div>
+<p><span id="urlEncode"></span></p>
 
-<span id="urlEncode"></span>
+<p><code class="language-plaintext highlighter-rouge">urlEncode()</code></p>
 
-`urlEncode()`
-
-<div class="fdef">
-
-Encodes a string for use in a URL parameter value, returning a new
+<p>Encodes a string for use in a URL parameter value, returning a new
 string containing the encoded text. This function performs the following
-substitutions:
+substitutions:</p>
 
-- Plain ASCII letters, digits, '-', and '\_' characters are left
-  unchanged
-- Space characters are converted to '+'
-- Other characters are converted to their "%xx" representations
+<ul>
+  <li>Plain ASCII letters, digits, ‘-‘, and ‘_’ characters are left
+unchanged</li>
+  <li>Space characters are converted to ‘+’</li>
+  <li>Other characters are converted to their “%xx” representations</li>
+</ul>
 
-The "%xx" representation encodes a special character using its
-hexadecimal ASCII or Unicode byte value. For example, a comma "," is
-encoded as "%2C". Characters outside of the plain ASCII range (\u0000 to
+<p>The “%xx” representation encodes a special character using its
+hexadecimal ASCII or Unicode byte value. For example, a comma “,” is
+encoded as “%2C”. Characters outside of the plain ASCII range (\u0000 to
 \u007F) are encoded using the multi-byte UTF-8 representation. For
-example, 'á' is encoded as '%C3%A1'.
+example, ‘á’ is encoded as ‘%C3%A1’.</p>
 
-Note that this method is appropriate for encoding *components* of URL
-strings, not *entire* URL strings. Applying this method to an entire URL
-would encode all of the scheme and path characters (such as the ":" and
-"//" in the "http://" prefix), which would make the string unusable as a
+<p>Note that this method is appropriate for encoding <em>components</em> of URL
+strings, not <em>entire</em> URL strings. Applying this method to an entire URL
+would encode all of the scheme and path characters (such as the “:” and
+“//” in the “http://” prefix), which would make the string unusable as a
 URL. This method is intended only for encoding the building blocks of
-URL strings, such as the value portion of a "?name=value" query
-parameter.
-
-</div>
-
-</div>
+URL strings, such as the value portion of a “?name=value” query
+parameter.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; String  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; String<br />
 <span class="navnp"><a href="framedesc.html" class="nav"><em>Prev:</em> StackFrameDesc</a>
     <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

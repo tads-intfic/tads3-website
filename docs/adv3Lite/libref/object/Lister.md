@@ -79,7 +79,7 @@ List display routines
 
 
 
-[`ExitLister`](../object/ExitLister1.html)[`finishOptionsLister`](../object/finishOptionsLister.html)[`fullScoreLister`](../object/fullScoreLister.html)
+[`ExitLister`](../object/ExitLister1.html) [`finishOptionsLister`](../object/finishOptionsLister.html) [`fullScoreLister`](../object/fullScoreLister.html)
 <span id="_PropSummary_"></span>
 
 
@@ -98,7 +98,7 @@ List display routines
 
 
 
-[`buildList`](#buildList)[`listed`](#listed)[`listOrder`](#listOrder)[`show`](#show)[`showList`](#showList)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
+[`buildList`](#buildList) [`listed`](#listed) [`listOrder`](#listOrder) [`show`](#show) [`showList`](#showList) [`showListEmpty`](#showListEmpty) [`showListPrefix`](#showListPrefix) [`showListSuffix`](#showListSuffix)
 
 <span id="_Properties_"></span>
 

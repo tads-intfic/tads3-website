@@ -60,7 +60,7 @@ Inherited from `CommandProd` :
 [`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -73,13 +73,13 @@ Inherited from `BasicProd` :
 
 
 Inherited from `CommandProdWithDefiniteConj` :  
-[`countCommands`](../object/CommandProdWithDefiniteConj.html#countCommands)[`getCommandSepIndex`](../object/CommandProdWithDefiniteConj.html#getCommandSepIndex)[`getNextCommandIndex`](../object/CommandProdWithDefiniteConj.html#getNextCommandIndex)[`isEndOfSentence`](../object/CommandProdWithDefiniteConj.html#isEndOfSentence)[`resolveFirstAction`](../object/CommandProdWithDefiniteConj.html#resolveFirstAction)[`resolveNouns`](../object/CommandProdWithDefiniteConj.html#resolveNouns)
+[`countCommands`](../object/CommandProdWithDefiniteConj.html#countCommands) [`getCommandSepIndex`](../object/CommandProdWithDefiniteConj.html#getCommandSepIndex) [`getNextCommandIndex`](../object/CommandProdWithDefiniteConj.html#getNextCommandIndex) [`isEndOfSentence`](../object/CommandProdWithDefiniteConj.html#isEndOfSentence) [`resolveFirstAction`](../object/CommandProdWithDefiniteConj.html#resolveFirstAction) [`resolveNouns`](../object/CommandProdWithDefiniteConj.html#resolveNouns)
 
 Inherited from `CommandProd` :  
-[`execActorPhrase`](../object/CommandProd.html#execActorPhrase)[`hasTargetActor`](../object/CommandProd.html#hasTargetActor)
+[`execActorPhrase`](../object/CommandProd.html#execActorPhrase) [`hasTargetActor`](../object/CommandProd.html#hasTargetActor)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

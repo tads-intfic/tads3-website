@@ -70,10 +70,10 @@ waiting for the player character to follow him/her/it.
 
 
 
-[`agendaOrder`](#agendaOrder)[`connectorList`](#connectorList)[`nextConnector`](#nextConnector)[`nextConnNum`](#nextConnNum)[`nextDirection`](#nextDirection)[`travelBlockReported`](#travelBlockReported)[`traveledThisTurn`](#traveledThisTurn)
+[`agendaOrder`](#agendaOrder) [`connectorList`](#connectorList) [`nextConnector`](#nextConnector) [`nextConnNum`](#nextConnNum) [`nextDirection`](#nextDirection) [`travelBlockReported`](#travelBlockReported) [`traveledThisTurn`](#traveledThisTurn)
 
 Inherited from `AgendaItem` :  
-[`calledBy`](../object/AgendaItem.html#calledBy)[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`invokedByActor`](../object/AgendaItem.html#invokedByActor)[`isDone`](../object/AgendaItem.html#isDone)[`isReady`](../object/AgendaItem.html#isReady)[`name`](../object/AgendaItem.html#name)
+[`calledBy`](../object/AgendaItem.html#calledBy) [`initiallyActive`](../object/AgendaItem.html#initiallyActive) [`invokedByActor`](../object/AgendaItem.html#invokedByActor) [`isDone`](../object/AgendaItem.html#isDone) [`isReady`](../object/AgendaItem.html#isReady) [`name`](../object/AgendaItem.html#name)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `AgendaItem` :
 
 
 
-[`arrivingDesc`](#arrivingDesc)[`beforeTravel`](#beforeTravel)[`cancel`](#cancel)[`execute`](#execute)[`invokeItem`](#invokeItem)[`noteArrival`](#noteArrival)[`registerItem`](#registerItem)[`resetItem`](#resetItem)[`sayDeparting`](#sayDeparting)[`showSpecialDesc`](#showSpecialDesc)[`specialDesc`](#specialDesc)[`travelBlocked`](#travelBlocked)
+[`arrivingDesc`](#arrivingDesc) [`beforeTravel`](#beforeTravel) [`cancel`](#cancel) [`execute`](#execute) [`invokeItem`](#invokeItem) [`noteArrival`](#noteArrival) [`registerItem`](#registerItem) [`resetItem`](#resetItem) [`sayDeparting`](#sayDeparting) [`showSpecialDesc`](#showSpecialDesc) [`specialDesc`](#specialDesc) [`travelBlocked`](#travelBlocked)
 
 Inherited from `AgendaItem` :  
-[`getActor`](../object/AgendaItem.html#getActor)[`invokeItemBase`](../object/AgendaItem.html#invokeItemBase)[`report`](../object/AgendaItem.html#report)
+[`getActor`](../object/AgendaItem.html#getActor) [`invokeItemBase`](../object/AgendaItem.html#invokeItemBase) [`report`](../object/AgendaItem.html#report)
 
 <span id="_Properties_"></span>
 

@@ -62,7 +62,7 @@ values.
 
 
 
-[`scoreNotifySettingsItem`](../object/scoreNotifySettingsItem.html)[`tipMode`](../object/tipMode.html)[`verboseModeSettingsItem`](../object/verboseModeSettingsItem.html)
+[`scoreNotifySettingsItem`](../object/scoreNotifySettingsItem.html) [`tipMode`](../object/tipMode.html) [`verboseModeSettingsItem`](../object/verboseModeSettingsItem.html)
 <span id="_PropSummary_"></span>
 
 
@@ -74,7 +74,7 @@ values.
 [`isOn`](#isOn)
 
 Inherited from `SettingsItem` :  
-[`factoryDefault`](../object/SettingsItem.html#factoryDefault)[`includeInListing`](../object/SettingsItem.html#includeInListing)[`settingDesc`](../object/SettingsItem.html#settingDesc)[`settingID`](../object/SettingsItem.html#settingID)
+[`factoryDefault`](../object/SettingsItem.html#factoryDefault) [`includeInListing`](../object/SettingsItem.html#includeInListing) [`settingDesc`](../object/SettingsItem.html#settingDesc) [`settingID`](../object/SettingsItem.html#settingID)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `SettingsItem` :
 
 
 
-[`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
+[`settingFromText`](#settingFromText) [`settingToText`](#settingToText)
 
 Inherited from `SettingsItem` :  
-[`restoreItem`](../object/SettingsItem.html#restoreItem)[`saveItem`](../object/SettingsItem.html#saveItem)
+[`restoreItem`](../object/SettingsItem.html#restoreItem) [`saveItem`](../object/SettingsItem.html#saveItem)
 
 <span id="_Properties_"></span>
 

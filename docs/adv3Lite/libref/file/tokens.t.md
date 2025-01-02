@@ -48,7 +48,7 @@ layout: docs
 
 
 
-[`concatTokens`](#concatTokens)[`isWordToken`](#isWordToken)
+[`concatTokens`](#concatTokens) [`isWordToken`](#isWordToken)
 
 <span id="_Functions_"></span>
 

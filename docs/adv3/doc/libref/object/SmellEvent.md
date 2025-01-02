@@ -69,7 +69,7 @@ Smell event
 
 
 
-[`notifyProp`](#notifyProp)[`sense`](#sense)
+[`notifyProp`](#notifyProp) [`sense`](#sense)
 
 
 

@@ -54,7 +54,7 @@ Details](#_Methods_)
 
 
 Inherited from `MyAdjProd` :  
-[`canBeAnaphor`](../object/MyAdjProd.html#canBeAnaphor)[`pronounType`](../object/MyAdjProd.html#pronounType)
+[`canBeAnaphor`](../object/MyAdjProd.html#canBeAnaphor) [`pronounType`](../object/MyAdjProd.html#pronounType)
 
 Inherited from `PossessivePronounAdjProd` :  
 [`isPossessive`](../object/PossessivePronounAdjProd.html#isPossessive)
@@ -66,7 +66,7 @@ Inherited from `NounPhraseProd` :
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,16 +81,16 @@ Inherited from `BasicProd` :
 
 
 Inherited from `PossessivePronounAdjProd` :  
-[`checkAnaphoricBinding`](../object/PossessivePronounAdjProd.html#checkAnaphoricBinding)[`getOrigMainText`](../object/PossessivePronounAdjProd.html#getOrigMainText)
+[`checkAnaphoricBinding`](../object/PossessivePronounAdjProd.html#checkAnaphoricBinding) [`getOrigMainText`](../object/PossessivePronounAdjProd.html#getOrigMainText)
 
 Inherited from `PronounProd` :  
 [`resolveNouns`](../object/PronounProd.html#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations) [`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

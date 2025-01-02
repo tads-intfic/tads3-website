@@ -73,10 +73,10 @@ reshuffle the set of integers and start over.
 
 
 
-[`rangeMax`](#rangeMax)[`rangeMin`](#rangeMin)[`valueList`](#valueList)
+[`rangeMax`](#rangeMax) [`rangeMin`](#rangeMin) [`valueList`](#valueList)
 
 Inherited from `ShuffledList` :  
-[`suppressRepeats`](../object/ShuffledList.html#suppressRepeats)[`valuesAvail`](../object/ShuffledList.html#valuesAvail)[`valuesVec`](../object/ShuffledList.html#valuesVec)
+[`suppressRepeats`](../object/ShuffledList.html#suppressRepeats) [`valuesAvail`](../object/ShuffledList.html#valuesAvail) [`valuesVec`](../object/ShuffledList.html#valuesVec)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Inherited from `ShuffledList` :
 
 
 
-[`construct`](#construct)[`getNextValue`](#getNextValue)
+[`construct`](#construct) [`getNextValue`](#getNextValue)
 
 Inherited from `ShuffledList` :  
 [`reshuffle`](../object/ShuffledList.html#reshuffle)

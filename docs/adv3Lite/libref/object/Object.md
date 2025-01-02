@@ -119,7 +119,7 @@ Modify the basic Object class to provide a to-symbol mapping
 
 
 
-[`callInherited`](#callInherited)[`createIterator`](#createIterator)[`createLiveIterator`](#createLiveIterator)[`forEach`](#forEach)[`getPropList`](#getPropList)[`getPropParams`](#getPropParams)[`getSuperclassList`](#getSuperclassList)[`isClass`](#isClass)[`isTransient`](#isTransient)[`mapAll`](#mapAll)[`ofKind`](#ofKind)[`propDefined`](#propDefined)[`propInherited`](#propInherited)[`propType`](#propType)[`valToSymbol`](#valToSymbol)
+[`callInherited`](#callInherited) [`createIterator`](#createIterator) [`createLiveIterator`](#createLiveIterator) [`forEach`](#forEach) [`getPropList`](#getPropList) [`getPropParams`](#getPropParams) [`getSuperclassList`](#getSuperclassList) [`isClass`](#isClass) [`isTransient`](#isTransient) [`mapAll`](#mapAll) [`ofKind`](#ofKind) [`propDefined`](#propDefined) [`propInherited`](#propInherited) [`propType`](#propType) [`valToSymbol`](#valToSymbol)
 
 <span id="_Properties_"></span>
 

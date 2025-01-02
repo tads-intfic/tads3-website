@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="optional.html" class="nav">Optional Modules</a> \&gt; Newbie Help  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="optional.html" class="nav">Optional Modules</a> &gt; Newbie Help<br />
 <span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instructions</a>
     <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="help-for-new-players">Help for New Players</h1>
 
@@ -82,27 +74,26 @@ helpMessage object in your own code to override one or more of these
 methods. For example, you might want to display a transcript that’s more
 relevant to your own game you might do something like this:</p>
 
-<p>`
-    modify helpMsg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify helpMsg
       showSample()
       {
-        “A typical game (not this particular one) might start something like
-            this:\b”;
+        "A typical game (not this particular one) might start something like
+            this:\b";
             inputManager.pauseForMore();
-            “<b>&gt;x me</b>\n
-            You’re a fearsome dragon, the last of the Galvanax clan.\b
-            <b>&gt;i</b>\n
-            Dragons carry nothing but their scales and their claws.\b <br />
-            <b>&gt;fly</b>\n
+            "&lt;b&gt;&gt;x me&lt;/b&gt;\n
+            You're a fearsome dragon, the last of the Galvanax clan.\b
+            &lt;b&gt;&gt;i&lt;/b&gt;\n
+            Dragons carry nothing but their scales and their claws.\b   
+            &lt;b&gt;&gt;fly&lt;/b&gt;\n
             Which way do you want to fly?\b
-            <b>&gt;N</b>\v
-            With a great flapping of wings you soar up into the sky…”;
+            &lt;b&gt;&gt;N&lt;/b&gt;\v
+            With a great flapping of wings you soar up into the sky...";
             inputManager.pauseForMore();
-            “And now back to the game you're actually playing….\b”;
-            gPlayerChar.getOutermostRoom.lookAroundWithin();        <br />
+            "And now back to the game you\'re actually playing....\b";
+            gPlayerChar.getOutermostRoom.lookAroundWithin();          
       }
     ;
-`</p>
+</code></pre></div></div>
 
 <p><span id="trapping"></span></p>
 
@@ -165,11 +156,10 @@ Unthing. If you find the bodyParts object a nuisance (perhaps because
 your game actually uses a lot of body parts) you can banish it
 altogether like so:</p>
 
-<p>`
-    modify bodyParts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify bodyParts
       initialLocationClass = nil
     ;
-`</p>
+</code></pre></div></div>
 
 <p><span id="playerhelper"></span></p>
 
@@ -258,11 +248,10 @@ threshold to somewhere else, the simplest check might be whether the
 player character is still in his/her starting location, for which we can
 just write this:</p>
 
-<p>`
-    modify playerHelper
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify playerHelper
         firstCheckCriterion() { return gLocation == startLocation; }
     ;
-`</p>
+</code></pre></div></div>
 
 <p>This would, however, be quite inappropriate in a one-room game or a game
 where there’s a lot to interact with in the starting location. In such a
@@ -277,16 +266,15 @@ of the game if s/he hasn’t managed at least two out of those four
 obvious actions after ten turns. We might then write the
 firstCheckCriterion thus:</p>
 
-<p>`
-    modify playerHelper
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify playerHelper
         firstCheckCriterion() 
         { 
             local checkList = [gPlayerChar.examined, document.examined,
-                chest.examined, chest.opened ];</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        return checkList.countWhich({x: x == true}) &lt; 2; 
-    }    
-; `
+                chest.examined, chest.opened ];
+                
+            return checkList.countWhich({x: x == true}) &lt; 2; 
+        }    
+    ;
 </code></pre></div></div>
 
 <p>One other thing we can do if the player appears to be getting stuck is
@@ -295,14 +283,13 @@ in our game, by calling extraHintManager.startDaemon(). We could, for
 example, override firstCheckMsg to do this rather than displaying a
 message telling players that they’re not making much progress:</p>
 
-<p>`
-    modify playerHelper
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify playerHelper
         firstCheckMsg() 
         { 
             extraHintManager.activate();
-        }  <br />
+        }    
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Some game authors may prefer this as a less intrusive (or less
 belittling) approach.</p>
@@ -314,18 +301,13 @@ command.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="optional.html" class="nav">Optional Modules</a> \&gt; Newbie Help  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="optional.html" class="nav">Optional Modules</a> &gt; Newbie Help<br />
 <span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instuctions</a>
     <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
-    </span>
+    </span></p>
 
-
-
-</div>
 
 </main>
 <footer>

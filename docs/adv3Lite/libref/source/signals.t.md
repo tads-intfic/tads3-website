@@ -319,7 +319,7 @@ layout: docs
      */
     connect(sender, signal, receiver, handler?)
     {
-        signal = relationTable.getRelation(signal)[1];
+        signal = relationTable.getRelation(signal) [1];
         
         relate(sender, signal, receiver);
         if(handler)
@@ -333,7 +333,7 @@ layout: docs
      */
     unconnect(sender, signal, receiver)
     {
-        signal = relationTable.getRelation(signal)[1];
+        signal = relationTable.getRelation(signal) [1];
         unrelate(sender, signal, receiver);
         
         if(receiver.propDefined(&removeSenderHandler))

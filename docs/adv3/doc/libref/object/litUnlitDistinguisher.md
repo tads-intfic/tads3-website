@@ -60,10 +60,10 @@ if one is lit (i.e., its isLit property is true) and the other isn't.
 
 
 
-[`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`name`](#name)[`theName`](#theName)
+[`aName`](#aName) [`canDistinguish`](#canDistinguish) [`countName`](#countName) [`name`](#name) [`theName`](#theName)
 
 Inherited from `Distinguisher` :  
-[`matchName`](../object/Distinguisher.html#matchName)[`notePrompt`](../object/Distinguisher.html#notePrompt)[`objInScope`](../object/Distinguisher.html#objInScope)
+[`matchName`](../object/Distinguisher.html#matchName) [`notePrompt`](../object/Distinguisher.html#notePrompt) [`objInScope`](../object/Distinguisher.html#objInScope)
 
 <span id="_Properties_"></span>
 

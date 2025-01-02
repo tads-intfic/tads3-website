@@ -86,7 +86,7 @@ object is known to the actor.
 [`objInScope`](#objInScope)
 
 Inherited from `ProxyResolver` :  
-[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
+[`construct`](../object/ProxyResolver.html#construct) [`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver) [`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

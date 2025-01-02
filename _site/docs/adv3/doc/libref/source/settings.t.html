@@ -220,7 +220,7 @@ class BinarySettingsItem: SettingsItem
     {
         /* convert to lower-case and strip off spaces */
         if (rexMatch('&lt;space&gt;*(&lt;alpha&gt;+)', str.toLower()) != nil)
-            str = rexGroup(1)[3];
+            str = rexGroup(1) [3];
 
         /* get the new setting */
         isOn = (str.toLower() == 'on');
@@ -262,7 +262,7 @@ class StringSettingsItem: SettingsItem
         {
             /* no leading quote; just trim spaces */
             rexMatch(trimSpPat, str);
-            val = rexGroup(1)[3];
+            val = rexGroup(1) [3];
         }
     }
 
@@ -436,7 +436,7 @@ settingsManager: object
                  *   it parsed - add the variable and its value to the
                  *   contents object 
                  */
-                s.addItem(rexGroup(1)[3], rexGroup(2)[3]);
+                s.addItem(rexGroup(1) [3], rexGroup(2) [3]);
             }
             else
             {
@@ -630,12 +630,9 @@ class SettingsFileComment: object
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

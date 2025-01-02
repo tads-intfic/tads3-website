@@ -54,7 +54,7 @@ getEvent requests, and reply to each one with the event we want to send.
 [`vpath`](#vpath)
 
 Inherited from `WebResource` :  
-[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)
+[`group`](../object/WebResource.html#group) [`priority`](../object/WebResource.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,10 +64,10 @@ Inherited from `WebResource` :
 
 
 
-[`processRequest`](#processRequest)[`sendEvent`](#sendEvent)[`sendEventTo`](#sendEventTo)
+[`processRequest`](#processRequest) [`sendEvent`](#sendEvent) [`sendEventTo`](#sendEventTo)
 
 Inherited from `WebResource` :  
-[`matchRequest`](../object/WebResource.html#matchRequest)[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
+[`matchRequest`](../object/WebResource.html#matchRequest) [`sendAck`](../object/WebResource.html#sendAck) [`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

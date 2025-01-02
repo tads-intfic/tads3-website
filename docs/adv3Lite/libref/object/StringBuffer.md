@@ -100,7 +100,7 @@ string from a section of the buffer using the substr() method.
 
 
 
-[`append`](#append)[`charAt`](#charAt)[`copyChars`](#copyChars)[`deleteChars`](#deleteChars)[`insert`](#insert)[`length`](#length)[`splice`](#splice)[`substr`](#substr)
+[`append`](#append) [`charAt`](#charAt) [`copyChars`](#copyChars) [`deleteChars`](#deleteChars) [`insert`](#insert) [`length`](#length) [`splice`](#splice) [`substr`](#substr)
 
 <span id="_Properties_"></span>
 

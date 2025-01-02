@@ -55,7 +55,7 @@ shuffled - it's always shown in exactly the order given.
 [eventListItem.t](../file/eventListItem.t.html)\[[362](../source/eventListItem.t.html#362)\]:*  
 Mofiications to ShuffledEventList for EventListItem extension
 
-`class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
+`class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html) [`EventList`](../object/EventList.html)
 
 
 
@@ -97,13 +97,13 @@ Mofiications to ShuffledEventList for EventListItem extension
 
 
 
-[`firstEvents`](#firstEvents)[`shuffledList_`](#shuffledList_)[`shuffleFirst`](#shuffleFirst)[`suppressRepeats`](#suppressRepeats)
+[`firstEvents`](#firstEvents) [`shuffledList_`](#shuffledList_) [`shuffleFirst`](#shuffleFirst) [`suppressRepeats`](#suppressRepeats)
 
 Inherited from `RandomFiringScript` :  
-[`eventPercent`](../object/RandomFiringScript.html#eventPercent)[`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter)[`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)
+[`eventPercent`](../object/RandomFiringScript.html#eventPercent) [`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter) [`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)
 
 Inherited from `EventList` :  
-[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)[`resetEachCycle`](../object/EventList.html#resetEachCycle)
+[`curScriptState`](../object/EventList.html#curScriptState) [`eventList`](../object/EventList.html#eventList) [`eventListLen`](../object/EventList.html#eventListLen) [`resetEachCycle`](../object/EventList.html#resetEachCycle)
 
 
 
@@ -115,13 +115,13 @@ Inherited from `EventList` :
 
 
 
-[`addItem`](#addItem)[`doScript`](#doScript)[`getNextRandom`](#getNextRandom)[`resetList`](#resetList)
+[`addItem`](#addItem) [`doScript`](#doScript) [`getNextRandom`](#getNextRandom) [`resetList`](#resetList)
 
 Inherited from `RandomFiringScript` :  
-[`checkEventOdds`](../object/RandomFiringScript.html#checkEventOdds)[`underusedReadyELIidx`](../object/RandomFiringScript.html#underusedReadyELIidx)
+[`checkEventOdds`](../object/RandomFiringScript.html#checkEventOdds) [`underusedReadyELIidx`](../object/RandomFiringScript.html#underusedReadyELIidx)
 
 Inherited from `EventList` :  
-[`advanceState`](../object/EventList.html#advanceState)[`construct`](../object/EventList.html#construct)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`scriptDone`](../object/EventList.html#scriptDone)
+[`advanceState`](../object/EventList.html#advanceState) [`construct`](../object/EventList.html#construct) [`doScriptEvent`](../object/EventList.html#doScriptEvent) [`scriptDone`](../object/EventList.html#scriptDone)
 
 Inherited from `Script` :  
 [`getScriptState`](../object/Script.html#getScriptState)

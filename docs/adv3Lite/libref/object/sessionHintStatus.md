@@ -50,7 +50,7 @@ persistent object, so that it's saved and restored along with the game.
 
 
 
-[`hintsDisabled`](#hintsDisabled)[`hintWarning`](#hintWarning)
+[`hintsDisabled`](#hintsDisabled) [`hintWarning`](#hintWarning)
 
 <span id="_MethodSummary_"></span>
 

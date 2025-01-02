@@ -56,7 +56,7 @@ This header defines the FileName intrinsic class.
 
 
 
-[`FileAttrHidden`](#FileAttrHidden)[`FileAttrRead`](#FileAttrRead)[`FileAttrSystem`](#FileAttrSystem)[`FileAttrWrite`](#FileAttrWrite)[`FileTypeBlock`](#FileTypeBlock)[`FileTypeChar`](#FileTypeChar)[`FileTypeDir`](#FileTypeDir)[`FileTypeFile`](#FileTypeFile)[`FileTypeLink`](#FileTypeLink)[`FileTypeParentLink`](#FileTypeParentLink)[`FileTypePipe`](#FileTypePipe)[`FileTypeSelfLink`](#FileTypeSelfLink)[`FileTypeSocket`](#FileTypeSocket)
+[`FileAttrHidden`](#FileAttrHidden) [`FileAttrRead`](#FileAttrRead) [`FileAttrSystem`](#FileAttrSystem) [`FileAttrWrite`](#FileAttrWrite) [`FileTypeBlock`](#FileTypeBlock) [`FileTypeChar`](#FileTypeChar) [`FileTypeDir`](#FileTypeDir) [`FileTypeFile`](#FileTypeFile) [`FileTypeLink`](#FileTypeLink) [`FileTypeParentLink`](#FileTypeParentLink) [`FileTypePipe`](#FileTypePipe) [`FileTypeSelfLink`](#FileTypeSelfLink) [`FileTypeSocket`](#FileTypeSocket)
 
 <span id="_EnumSummary_"></span>
 

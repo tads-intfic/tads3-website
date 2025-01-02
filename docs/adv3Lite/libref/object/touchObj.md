@@ -62,7 +62,7 @@ the Query object.
 
 
 
-[`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
+[`checkPreCondition`](#checkPreCondition) [`verifyPreCondition`](#verifyPreCondition)
 
 
 

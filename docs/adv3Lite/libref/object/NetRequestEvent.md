@@ -77,7 +77,7 @@ classes for the server types you create in your program.
 
 
 
-[`evRequest`](#evRequest)[`evType`](#evType)
+[`evRequest`](#evRequest) [`evType`](#evType)
 
 Inherited from `NetEvent` :  
 [`evArgs`](../object/NetEvent.html#evArgs)

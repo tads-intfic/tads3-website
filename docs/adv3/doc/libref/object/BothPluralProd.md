@@ -90,7 +90,7 @@ Inherited from `NounPhraseProd` :
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
 [`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
@@ -106,10 +106,10 @@ Inherited from `AmbigResponseKeeper` :
 [`getQuantity`](#getQuantity)
 
 Inherited from `ExactQuantifiedPluralProd` :  
-[`getVerifyKeepers`](../object/ExactQuantifiedPluralProd.html#getVerifyKeepers)[`selectExactCount`](../object/ExactQuantifiedPluralProd.html#selectExactCount)
+[`getVerifyKeepers`](../object/ExactQuantifiedPluralProd.html#getVerifyKeepers) [`selectExactCount`](../object/ExactQuantifiedPluralProd.html#selectExactCount)
 
 Inherited from `QuantifiedPluralProd` :  
-[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)
+[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase) [`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)
 
 Inherited from `PluralProd` :  
 [`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)
@@ -118,10 +118,10 @@ Inherited from `NounPhraseProd` :
 [`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse) [`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

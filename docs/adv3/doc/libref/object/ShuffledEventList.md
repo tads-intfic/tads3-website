@@ -50,7 +50,7 @@ list, showing it one time through in its given order, then shuffling it
 and running through it again, and so on. The firstEvents list is never
 shuffled - it's always shown in exactly the order given.
 
-`class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
+`class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html) [`EventList`](../object/EventList.html)
 
 
 
@@ -92,13 +92,13 @@ shuffled - it's always shown in exactly the order given.
 
 
 
-[`firstEvents`](#firstEvents)[`shuffledList_`](#shuffledList_)[`shuffleFirst`](#shuffleFirst)[`suppressRepeats`](#suppressRepeats)
+[`firstEvents`](#firstEvents) [`shuffledList_`](#shuffledList_) [`shuffleFirst`](#shuffleFirst) [`suppressRepeats`](#suppressRepeats)
 
 Inherited from `RandomFiringScript` :  
-[`eventPercent`](../object/RandomFiringScript.html#eventPercent)[`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter)[`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)
+[`eventPercent`](../object/RandomFiringScript.html#eventPercent) [`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter) [`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)
 
 Inherited from `EventList` :  
-[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)
+[`curScriptState`](../object/EventList.html#curScriptState) [`eventList`](../object/EventList.html#eventList) [`eventListLen`](../object/EventList.html#eventListLen)
 
 
 
@@ -110,13 +110,13 @@ Inherited from `EventList` :
 
 
 
-[`doScript`](#doScript)[`getNextRandom`](#getNextRandom)
+[`doScript`](#doScript) [`getNextRandom`](#getNextRandom)
 
 Inherited from `RandomFiringScript` :  
 [`checkEventOdds`](../object/RandomFiringScript.html#checkEventOdds)
 
 Inherited from `EventList` :  
-[`advanceState`](../object/EventList.html#advanceState)[`construct`](../object/EventList.html#construct)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`scriptDone`](../object/EventList.html#scriptDone)
+[`advanceState`](../object/EventList.html#advanceState) [`construct`](../object/EventList.html#construct) [`doScriptEvent`](../object/EventList.html#doScriptEvent) [`scriptDone`](../object/EventList.html#scriptDone)
 
 Inherited from `Script` :  
 [`getScriptState`](../object/Script.html#getScriptState)

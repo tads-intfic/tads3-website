@@ -46,75 +46,46 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A Test object can be used to create a series of testing commands in your
+game, for example:</p>
 
-A Test object can be used to create a series of testing commands in your
-game, for example:
+<p>Test ‘foo’ [‘x me’, ‘i’, ‘wear uniform’] [uniform];</p>
 
-  
-Test 'foo' \['x me', 'i', 'wear uniform'\] \[uniform\];
-
-Would cause the uniform to be moved into the player character's
+<p>Would cause the uniform to be moved into the player character’s
 inventory and then the commands X ME and then I and WEAR UNIFORM to be
-executed in response to TEST FOO.
+executed in response to TEST FOO.</p>
 
-`class `**`Test`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Test</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Test</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a><a href="#reportHolding"><code class="language-plaintext highlighter-rouge">reportHolding</code></a><a href="#reportMove"><code class="language-plaintext highlighter-rouge">reportMove</code></a><a href="#testHolding"><code class="language-plaintext highlighter-rouge">testHolding</code></a><a href="#testList"><code class="language-plaintext highlighter-rouge">testList</code></a><a href="#testName"><code class="language-plaintext highlighter-rouge">testName</code></a></p>
+<p><a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a> <a href="#reportHolding"><code class="language-plaintext highlighter-rouge">reportHolding</code></a> <a href="#reportMove"><code class="language-plaintext highlighter-rouge">reportMove</code></a> <a href="#testHolding"><code class="language-plaintext highlighter-rouge">testHolding</code></a> <a href="#testList"><code class="language-plaintext highlighter-rouge">testList</code></a> <a href="#testName"><code class="language-plaintext highlighter-rouge">testName</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#getHolding"><code class="language-plaintext highlighter-rouge">getHolding</code></a><a href="#run"><code class="language-plaintext highlighter-rouge">run</code></a></p>
+<p><a href="#getHolding"><code class="language-plaintext highlighter-rouge">getHolding</code></a> <a href="#run"><code class="language-plaintext highlighter-rouge">run</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="location"></span></p>
 
@@ -122,12 +93,8 @@ executed in response to TEST FOO.
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#495">495</a>]</p>
 
-<div class="desc">
-
-The location to move the player character to before running the test
-script
-
-</div>
+<p>The location to move the player character to before running the test
+script</p>
 
 <p><span id="reportHolding"></span></p>
 
@@ -135,12 +102,8 @@ script
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#513">513</a>]</p>
 
-<div class="desc">
-
-Flag: do we want to report on what items were added to inventory? By
-default we do.
-
-</div>
+<p>Flag: do we want to report on what items were added to inventory? By
+default we do.</p>
 
 <p><span id="reportMove"></span></p>
 
@@ -148,12 +111,8 @@ default we do.
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#501">501</a>]</p>
 
-<div class="desc">
-
-Flag: Do we want to report any change of location by looking around in
-the new one? By default we will.
-
-</div>
+<p>Flag: Do we want to report any change of location by looking around in
+the new one? By default we will.</p>
 
 <p><span id="testHolding"></span></p>
 
@@ -161,12 +120,8 @@ the new one? By default we will.
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#507">507</a>]</p>
 
-<div class="desc">
-
-The objects to move into the player character's inventory before running
-the test script.
-
-</div>
+<p>The objects to move into the player character’s inventory before running
+the test script.</p>
 
 <p><span id="testList"></span></p>
 
@@ -174,11 +129,7 @@ the test script.
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#489">489</a>]</p>
 
-<div class="desc">
-
-The list commands to be executed when running this test.
-
-</div>
+<p>The list commands to be executed when running this test.</p>
 
 <p><span id="testName"></span></p>
 
@@ -186,19 +137,11 @@ The list commands to be executed when running this test.
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#486">486</a>]</p>
 
-<div class="desc">
-
-The name of this test
-
-</div>
+<p>The name of this test</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getHolding"></span></p>
 
@@ -206,11 +149,7 @@ The name of this test
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#517">517</a>]</p>
 
-<div class="desc">
-
-Move everything in the testHolding list into the actor's inventory
-
-</div>
+<p>Move everything in the testHolding list into the actor’s inventory</p>
 
 <p><span id="run"></span></p>
 
@@ -218,19 +157,12 @@ Move everything in the testHolding list into the actor's inventory
 
 <p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#535">535</a>]</p>
 
-<div class="desc">
+<p>Run this test by passing the commands in testList through
+Parser.parse().</p>
 
-Run this test by passing the commands in testList through
-Parser.parse().
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

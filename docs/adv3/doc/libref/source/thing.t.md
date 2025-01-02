@@ -6715,7 +6715,7 @@ layout: docs
             local info;
 
             /* get the sense information from the table */
-            info = senseInfoTable(sense)[obj];
+            info = senseInfoTable(sense) [obj];
 
             /* if we couldn't find the object, return an 'opaque' indication */
             if (info == nil)

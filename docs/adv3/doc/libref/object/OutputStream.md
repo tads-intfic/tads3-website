@@ -73,7 +73,7 @@ UI state should not be saved either.
 
 
 
-[`mainOutputStream`](../object/mainOutputStream.html)[`menuOutputStream`](../object/menuOutputStream.html)[`statusLeftOutputStream`](../object/statusLeftOutputStream.html)[`statusRightOutputStream`](../object/statusRightOutputStream.html)[`statusTagOutputStream`](../object/statusTagOutputStream.html)
+[`mainOutputStream`](../object/mainOutputStream.html) [`menuOutputStream`](../object/menuOutputStream.html) [`statusLeftOutputStream`](../object/statusLeftOutputStream.html) [`statusRightOutputStream`](../object/statusRightOutputStream.html) [`statusTagOutputStream`](../object/statusTagOutputStream.html)
 <span id="_PropSummary_"></span>
 
 
@@ -82,12 +82,12 @@ UI state should not be saved either.
 
 
 
-[`filterList_`](#filterList_)[`justDidPara`](#justDidPara)[`justDidParaSuppressor`](#justDidParaSuppressor)[`myInputManager`](#myInputManager)
+[`filterList_`](#filterList_) [`justDidPara`](#justDidPara) [`justDidParaSuppressor`](#justDidParaSuppressor) [`myInputManager`](#myInputManager)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,12 +97,12 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`addOutputFilter`](#addOutputFilter)[`addOutputFilterBelow`](#addOutputFilterBelow)[`applyFilters`](#applyFilters)[`applyTextFilters`](#applyTextFilters)[`captureOutput`](#captureOutput)[`construct`](#construct)[`execute`](#execute)[`inputLineEnd`](#inputLineEnd)[`removeOutputFilter`](#removeOutputFilter)[`watchForOutput`](#watchForOutput)[`writeFromStream`](#writeFromStream)[`writeToStream`](#writeToStream)
+[`addOutputFilter`](#addOutputFilter) [`addOutputFilterBelow`](#addOutputFilterBelow) [`applyFilters`](#applyFilters) [`applyTextFilters`](#applyTextFilters) [`captureOutput`](#captureOutput) [`construct`](#construct) [`execute`](#execute) [`inputLineEnd`](#inputLineEnd) [`removeOutputFilter`](#removeOutputFilter) [`watchForOutput`](#watchForOutput) [`writeFromStream`](#writeFromStream) [`writeToStream`](#writeToStream)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

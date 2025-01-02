@@ -69,7 +69,7 @@ the configuration file.
 
 
 
-[`lst_`](#lst_)[`tab_`](#tab_)
+[`lst_`](#lst_) [`tab_`](#tab_)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ the configuration file.
 
 
 
-[`addComment`](#addComment)[`addItem`](#addItem)[`construct`](#construct)[`delItem`](#delItem)[`forEach`](#forEach)[`getItem`](#getItem)[`setItem`](#setItem)
+[`addComment`](#addComment) [`addItem`](#addItem) [`construct`](#construct) [`delItem`](#delItem) [`forEach`](#forEach) [`getItem`](#getItem) [`setItem`](#setItem)
 
 <span id="_Properties_"></span>
 

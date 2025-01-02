@@ -39,7 +39,7 @@ This header defines the File intrinsic class.
 
 
 
-[`File`](../object/File.html)[`TemporaryFile`](../object/TemporaryFile.html)
+[`File`](../object/File.html) [`TemporaryFile`](../object/TemporaryFile.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -56,7 +56,7 @@ This header defines the File intrinsic class.
 
 
 
-[`FileAccessRead`](#FileAccessRead)[`FileAccessReadWriteKeep`](#FileAccessReadWriteKeep)[`FileAccessReadWriteTrunc`](#FileAccessReadWriteTrunc)[`FileAccessWrite`](#FileAccessWrite)[`FileModeData`](#FileModeData)[`FileModeRaw`](#FileModeRaw)[`FileModeText`](#FileModeText)[`LibraryDefaultsFile`](#LibraryDefaultsFile)[`WebUIPrefsFile`](#WebUIPrefsFile)
+[`FileAccessRead`](#FileAccessRead) [`FileAccessReadWriteKeep`](#FileAccessReadWriteKeep) [`FileAccessReadWriteTrunc`](#FileAccessReadWriteTrunc) [`FileAccessWrite`](#FileAccessWrite) [`FileModeData`](#FileModeData) [`FileModeRaw`](#FileModeRaw) [`FileModeText`](#FileModeText) [`LibraryDefaultsFile`](#LibraryDefaultsFile) [`WebUIPrefsFile`](#WebUIPrefsFile)
 
 <span id="_EnumSummary_"></span>
 

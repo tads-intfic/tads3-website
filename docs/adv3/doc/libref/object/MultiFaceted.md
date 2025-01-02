@@ -99,10 +99,10 @@ refers to the new facet in the new location.
 [`instanceMixIn`](#instanceMixIn)
 
 Inherited from `MultiInstance` :  
-[`instanceList`](../object/MultiInstance.html#instanceList)[`instanceObject`](../object/MultiInstance.html#instanceObject)
+[`instanceList`](../object/MultiInstance.html#instanceList) [`instanceObject`](../object/MultiInstance.html#instanceObject)
 
 Inherited from `BaseMultiLoc` :  
-[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass)[`locationList`](../object/BaseMultiLoc.html#locationList)
+[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass) [`locationList`](../object/BaseMultiLoc.html#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -115,10 +115,10 @@ Inherited from `BaseMultiLoc` :
 [`getFacets`](#getFacets)
 
 Inherited from `MultiInstance` :  
-[`addInstance`](../object/MultiInstance.html#addInstance)[`addToContents`](../object/MultiInstance.html#addToContents)[`getInstanceIn`](../object/MultiInstance.html#getInstanceIn)[`initializeLocation`](../object/MultiInstance.html#initializeLocation)[`moveInto`](../object/MultiInstance.html#moveInto)[`moveIntoAdd`](../object/MultiInstance.html#moveIntoAdd)[`moveOutOf`](../object/MultiInstance.html#moveOutOf)[`removeFromContents`](../object/MultiInstance.html#removeFromContents)
+[`addInstance`](../object/MultiInstance.html#addInstance) [`addToContents`](../object/MultiInstance.html#addToContents) [`getInstanceIn`](../object/MultiInstance.html#getInstanceIn) [`initializeLocation`](../object/MultiInstance.html#initializeLocation) [`moveInto`](../object/MultiInstance.html#moveInto) [`moveIntoAdd`](../object/MultiInstance.html#moveIntoAdd) [`moveOutOf`](../object/MultiInstance.html#moveOutOf) [`removeFromContents`](../object/MultiInstance.html#removeFromContents)
 
 Inherited from `BaseMultiLoc` :  
-[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList)[`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn)[`isIn`](../object/BaseMultiLoc.html#isIn)[`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn)[`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents)[`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
+[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList) [`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn) [`isIn`](../object/BaseMultiLoc.html#isIn) [`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn) [`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents) [`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
 
 <span id="_Properties_"></span>
 

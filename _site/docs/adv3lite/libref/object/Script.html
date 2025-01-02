@@ -46,38 +46,26 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Generic script object. This class can be used to implement a simple
+state machine.</p>
 
-Generic script object. This class can be used to implement a simple
-state machine.
-
-We define Script in misc.t rather than eventList.t so that other parts
+<p>We define Script in misc.t rather than eventList.t so that other parts
 of the library can safely test whether something is ofKind(Script) even
 it eventList.t is not present. The various types and subclasses of
 script are defined in eventList.t to allow them to be optionally
-excluded from the build if they're not needed in a particular game.
+excluded from the build if they’re not needed in a particular game.</p>
 
-`class `**`Script`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Script</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Script</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Script</code></strong><br />
 <a href="../object/EventList.html"><code class="language-plaintext highlighter-rouge">EventList</code></a><br />
@@ -89,39 +77,23 @@ excluded from the build if they're not needed in a particular game.
 <a href="../object/SyncEventList.html"><code class="language-plaintext highlighter-rouge">SyncEventList</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#curScriptState"><code class="language-plaintext highlighter-rouge">curScriptState</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#doScript"><code class="language-plaintext highlighter-rouge">doScript</code></a><a href="#getScriptState"><code class="language-plaintext highlighter-rouge">getScriptState</code></a></p>
+<p><a href="#doScript"><code class="language-plaintext highlighter-rouge">doScript</code></a> <a href="#getScriptState"><code class="language-plaintext highlighter-rouge">getScriptState</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="curScriptState"></span></p>
 
@@ -129,23 +101,15 @@ excluded from the build if they're not needed in a particular game.
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#565">565</a>]</p>
 
-<div class="desc">
-
-Property giving our current state. This should never be used directly;
+<p>Property giving our current state. This should never be used directly;
 instead, getScriptState() should always be used, since getScriptState()
 can be overridden so that the state depends on something other than this
 internal state property. The meaning of the state identifier is specific
-to each subclass.
-
-</div>
+to each subclass.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="doScript"></span></p>
 
@@ -153,17 +117,13 @@ to each subclass.
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#553">553</a>]</p>
 
-<div class="desc">
-
-Process the next step of the script. This routine must be overridden to
-perform the action of the script. This routine's action should call
+<p>Process the next step of the script. This routine must be overridden to
+perform the action of the script. This routine’s action should call
 getScriptState() to get our current state, and should update the
 internal state appropriately to take us to the next step after the
-current one.
+current one.</p>
 
-By default, we don't do anything at all.
-
-</div>
+<p>By default, we don’t do anything at all.</p>
 
 <p><span id="getScriptState"></span></p>
 
@@ -171,19 +131,12 @@ By default, we don't do anything at all.
 
 <p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#538">538</a>]</p>
 
-<div class="desc">
+<p>Get the current state. This returns a value that gives the current state
+of the script, which is usually simply an integer.</p>
 
-Get the current state. This returns a value that gives the current state
-of the script, which is usually simply an integer.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

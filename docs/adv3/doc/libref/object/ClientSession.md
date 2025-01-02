@@ -77,7 +77,7 @@ session we previously set up.
 
 
 
-[`clientKey`](#clientKey)[`downloads`](#downloads)[`ifdbTuid`](#ifdbTuid)[`isAlive`](#isAlive)[`isPrimary`](#isPrimary)[`lastEventTime`](#lastEventTime)[`pendingEvts`](#pendingEvts)[`pendingReqs`](#pendingReqs)[`screenName`](#screenName)[`storageSID`](#storageSID)[`uiPrefs`](#uiPrefs)
+[`clientKey`](#clientKey) [`downloads`](#downloads) [`ifdbTuid`](#ifdbTuid) [`isAlive`](#isAlive) [`isPrimary`](#isPrimary) [`lastEventTime`](#lastEventTime) [`pendingEvts`](#pendingEvts) [`pendingReqs`](#pendingReqs) [`screenName`](#screenName) [`storageSID`](#storageSID) [`uiPrefs`](#uiPrefs)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ session we previously set up.
 
 
 
-[`addDownload`](#addDownload)[`allDownloads`](#allDownloads)[`broadcastDownload`](#broadcastDownload)[`broadcastEvent`](#broadcastEvent)[`cancelDownload`](#cancelDownload)[`checkDisconnect`](#checkDisconnect)[`construct`](#construct)[`disconnectAll`](#disconnectAll)[`find`](#find)[`flushEvents`](#flushEvents)[`getPrimary`](#getPrimary)[`processQueues`](#processQueues)[`requestEvent`](#requestEvent)[`sendEvent`](#sendEvent)[`sendKeepAlive`](#sendKeepAlive)[`setDefaultScreenName`](#setDefaultScreenName)[`shutdownWait`](#shutdownWait)[`updateEventTime`](#updateEventTime)
+[`addDownload`](#addDownload) [`allDownloads`](#allDownloads) [`broadcastDownload`](#broadcastDownload) [`broadcastEvent`](#broadcastEvent) [`cancelDownload`](#cancelDownload) [`checkDisconnect`](#checkDisconnect) [`construct`](#construct) [`disconnectAll`](#disconnectAll) [`find`](#find) [`flushEvents`](#flushEvents) [`getPrimary`](#getPrimary) [`processQueues`](#processQueues) [`requestEvent`](#requestEvent) [`sendEvent`](#sendEvent) [`sendKeepAlive`](#sendKeepAlive) [`setDefaultScreenName`](#setDefaultScreenName) [`shutdownWait`](#shutdownWait) [`updateEventTime`](#updateEventTime)
 
 <span id="_Properties_"></span>
 

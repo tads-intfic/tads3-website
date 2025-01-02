@@ -92,7 +92,7 @@ Thing-derived) superclasses.
 
 
 
-[`filterResolveList`](#filterResolveList)[`isCollectiveFor`](#isCollectiveFor)
+[`filterResolveList`](#filterResolveList) [`isCollectiveFor`](#isCollectiveFor)
 
 <span id="_Properties_"></span>
 

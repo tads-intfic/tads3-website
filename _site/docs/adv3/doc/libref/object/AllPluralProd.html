@@ -46,30 +46,22 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A plural phrase that explicitly selects all of matching objects. For
-English, this would be a phrase like "all of the marbles". This type of
+<p>A plural phrase that explicitly selects all of matching objects. For
+English, this would be a phrase like “all of the marbles”. This type of
 phrase matches all of the objects that match the name in the plural,
 except that if we have a collective object and we also have objects that
 are part of the collective (such as a bag of marbles and some individual
-marbles), we'll omit the collective, and match only the individual
-items.
+marbles), we’ll omit the collective, and match only the individual
+items.</p>
 
-Grammar rule instantiations in language modules should set property np\_
-to the plural phrase match tree.
+<p>Grammar rule instantiations in language modules should set property np_
+to the plural phrase match tree.</p>
 
-`class `**`AllPluralProd`**` :   `[`PluralProd`](../object/PluralProd.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">AllPluralProd</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PluralProd.html"><code class="language-plaintext highlighter-rouge">PluralProd</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">AllPluralProd</code></strong><br />
 <a href="../object/PluralProd.html"><code class="language-plaintext highlighter-rouge">PluralProd</code></a><br />
@@ -78,45 +70,29 @@ to the plural phrase match tree.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">AllPluralProd</code></strong><br />
 <a href="../object/explicitDetPluralOnlyNounPhrase(definite).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(definite)</code></a><br />
 <a href="../object/qualifiedPluralNounPhrase(all).html"><code class="language-plaintext highlighter-rouge">qualifiedPluralNounPhrase(all)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#filterForCollectives"><code class="language-plaintext highlighter-rouge">filterForCollectives</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a><a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
+<p><a href="#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a> <a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PluralProd</code> :<br />
 <a href="../object/PluralProd.html#basicPluralResolveNouns"><code class="language-plaintext highlighter-rouge">basicPluralResolveNouns</code></a></p>
@@ -125,15 +101,11 @@ to the plural phrase match tree.
 <a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="filterForCollectives"></span></p>
 
@@ -141,19 +113,11 @@ to the plural phrase match tree.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2187">2187</a>]</p>
 
-<div class="desc">
-
-prefer to keep individuals over collectives
-
-</div>
+<p>prefer to keep individuals over collectives</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="getVerifyKeepers"></span></p>
 
@@ -161,12 +125,8 @@ prefer to keep individuals over collectives
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2184">2184</a>]</p>
 
-<div class="desc">
-
-since the player explicitly told us to use ALL of the matching objects,
-keep everything in the verify list, logical or not
-
-</div>
+<p>since the player explicitly told us to use ALL of the matching objects,
+keep everything in the verify list, logical or not</p>
 
 <p><span id="resolveNouns"></span></p>
 
@@ -174,18 +134,11 @@ keep everything in the verify list, logical or not
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2174">2174</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

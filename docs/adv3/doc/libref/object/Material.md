@@ -61,7 +61,7 @@ pass through objects.
 
 
 
-[`adventium`](../object/adventium.html)[`coarseMesh`](../object/coarseMesh.html)[`fineMesh`](../object/fineMesh.html)[`glass`](../object/glass.html)[`paper`](../object/paper.html)
+[`adventium`](../object/adventium.html) [`coarseMesh`](../object/coarseMesh.html) [`fineMesh`](../object/fineMesh.html) [`glass`](../object/glass.html) [`paper`](../object/paper.html)
 <span id="_PropSummary_"></span>
 
 
@@ -70,7 +70,7 @@ pass through objects.
 
 
 
-[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
+[`hearThru`](#hearThru) [`seeThru`](#seeThru) [`smellThru`](#smellThru) [`touchThru`](#touchThru)
 
 <span id="_MethodSummary_"></span>
 

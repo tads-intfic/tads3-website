@@ -40,30 +40,22 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A special OutputStream for the right half of the status line (the
+<p>A special OutputStream for the right half of the status line (the
 score/turn count area) in text mode. We use a separate stream for this
 because we have to write this text with the special statusRight()
-intrinsic in text mode.
+intrinsic in text mode.</p>
 
-We only use this stream when we use the old-style text-mode status line
+<p>We only use this stream when we use the old-style text-mode status line
 interface, which explicitly separates the status line into a left part
 and a right part. When we have the banner API available in the
-interpreter, we'll use banners instead, since banners give us much more
-flexibility.
+interpreter, we’ll use banners instead, since banners give us much more
+flexibility.</p>
 
-`transient `**`statusRightOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">statusRightOutputStream</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">statusRightOutputStream</code></strong><br />
 <a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a><br />
@@ -72,43 +64,31 @@ flexibility.
 `                                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#buf_"><code class="language-plaintext highlighter-rouge">buf_</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
-<a href="../object/OutputStream.html#filterList_"><code class="language-plaintext highlighter-rouge">filterList_</code></a><a href="../object/OutputStream.html#justDidPara"><code class="language-plaintext highlighter-rouge">justDidPara</code></a><a href="../object/OutputStream.html#justDidParaSuppressor"><code class="language-plaintext highlighter-rouge">justDidParaSuppressor</code></a><a href="../object/OutputStream.html#myInputManager"><code class="language-plaintext highlighter-rouge">myInputManager</code></a></p>
+<a href="../object/OutputStream.html#filterList_"><code class="language-plaintext highlighter-rouge">filterList_</code></a> <a href="../object/OutputStream.html#justDidPara"><code class="language-plaintext highlighter-rouge">justDidPara</code></a> <a href="../object/OutputStream.html#justDidParaSuppressor"><code class="language-plaintext highlighter-rouge">justDidParaSuppressor</code></a> <a href="../object/OutputStream.html#myInputManager"><code class="language-plaintext highlighter-rouge">myInputManager</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#flushStream"><code class="language-plaintext highlighter-rouge">flushStream</code></a><a href="#writeFromStream"><code class="language-plaintext highlighter-rouge">writeFromStream</code></a></p>
+<p><a href="#flushStream"><code class="language-plaintext highlighter-rouge">flushStream</code></a> <a href="#writeFromStream"><code class="language-plaintext highlighter-rouge">writeFromStream</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
-<a href="../object/OutputStream.html#addOutputFilter"><code class="language-plaintext highlighter-rouge">addOutputFilter</code></a><a href="../object/OutputStream.html#addOutputFilterBelow"><code class="language-plaintext highlighter-rouge">addOutputFilterBelow</code></a><a href="../object/OutputStream.html#applyFilters"><code class="language-plaintext highlighter-rouge">applyFilters</code></a><a href="../object/OutputStream.html#applyTextFilters"><code class="language-plaintext highlighter-rouge">applyTextFilters</code></a><a href="../object/OutputStream.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a><a href="../object/OutputStream.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/OutputStream.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="../object/OutputStream.html#inputLineEnd"><code class="language-plaintext highlighter-rouge">inputLineEnd</code></a><a href="../object/OutputStream.html#removeOutputFilter"><code class="language-plaintext highlighter-rouge">removeOutputFilter</code></a><a href="../object/OutputStream.html#watchForOutput"><code class="language-plaintext highlighter-rouge">watchForOutput</code></a><a href="../object/OutputStream.html#writeToStream"><code class="language-plaintext highlighter-rouge">writeToStream</code></a></p>
+<a href="../object/OutputStream.html#addOutputFilter"><code class="language-plaintext highlighter-rouge">addOutputFilter</code></a> <a href="../object/OutputStream.html#addOutputFilterBelow"><code class="language-plaintext highlighter-rouge">addOutputFilterBelow</code></a> <a href="../object/OutputStream.html#applyFilters"><code class="language-plaintext highlighter-rouge">applyFilters</code></a> <a href="../object/OutputStream.html#applyTextFilters"><code class="language-plaintext highlighter-rouge">applyTextFilters</code></a> <a href="../object/OutputStream.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a> <a href="../object/OutputStream.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/OutputStream.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/OutputStream.html#inputLineEnd"><code class="language-plaintext highlighter-rouge">inputLineEnd</code></a> <a href="../object/OutputStream.html#removeOutputFilter"><code class="language-plaintext highlighter-rouge">removeOutputFilter</code></a> <a href="../object/OutputStream.html#watchForOutput"><code class="language-plaintext highlighter-rouge">watchForOutput</code></a> <a href="../object/OutputStream.html#writeToStream"><code class="language-plaintext highlighter-rouge">writeToStream</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="buf_"></span></p>
 
@@ -116,19 +96,11 @@ flexibility.
 
 <p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#109">109</a>]</p>
 
-<div class="desc">
-
-our buffered text
-
-</div>
+<p>our buffered text</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="flushStream"></span></p>
 
@@ -136,12 +108,8 @@ our buffered text
 
 <p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#99">99</a>]</p>
 
-<div class="desc">
-
-Flush the buffer. This writes whatever we've buffered up to the right
-half of the text-mode status line.
-
-</div>
+<p>Flush the buffer. This writes whatever we’ve buffered up to the right
+half of the text-mode status line.</p>
 
 <p><span id="writeFromStream"></span></p>
 
@@ -149,19 +117,12 @@ half of the text-mode status line.
 
 <p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#89">89</a>]</p>
 
-<div class="desc">
+<p>Write from the stream. We simply buffer up text until we’re asked to
+display the final data.</p>
 
-Write from the stream. We simply buffer up text until we're asked to
-display the final data.
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

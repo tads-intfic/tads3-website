@@ -93,7 +93,7 @@ grammar rules based on this class.
 
 
 
-[`topicList_`](#topicList_)[`topicQualResolver_`](#topicQualResolver_)[`topicResolver_`](#topicResolver_)
+[`topicList_`](#topicList_) [`topicQualResolver_`](#topicQualResolver_) [`topicResolver_`](#topicResolver_)
 
 <span id="_MethodSummary_"></span>
 
@@ -103,7 +103,7 @@ grammar rules based on this class.
 
 
 
-[`createTopicResolver`](#createTopicResolver)[`getMessageParam`](#getMessageParam)[`getTopic`](#getTopic)[`getTopicQualifierResolver`](#getTopicQualifierResolver)[`getTopicResolver`](#getTopicResolver)[`reparseMatchAsTopic`](#reparseMatchAsTopic)[`resolveTopic`](#resolveTopic)[`setResolvedTopic`](#setResolvedTopic)[`setTopicMatch`](#setTopicMatch)
+[`createTopicResolver`](#createTopicResolver) [`getMessageParam`](#getMessageParam) [`getTopic`](#getTopic) [`getTopicQualifierResolver`](#getTopicQualifierResolver) [`getTopicResolver`](#getTopicResolver) [`reparseMatchAsTopic`](#reparseMatchAsTopic) [`resolveTopic`](#resolveTopic) [`setResolvedTopic`](#setResolvedTopic) [`setTopicMatch`](#setTopicMatch)
 
 <span id="_Properties_"></span>
 

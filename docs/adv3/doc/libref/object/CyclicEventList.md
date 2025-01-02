@@ -74,7 +74,7 @@ returning to the first element when we pass the last element.
 
 
 Inherited from `EventList` :  
-[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)
+[`curScriptState`](../object/EventList.html#curScriptState) [`eventList`](../object/EventList.html#eventList) [`eventListLen`](../object/EventList.html#eventListLen)
 
 
 
@@ -89,7 +89,7 @@ Inherited from `EventList` :
 [`advanceState`](#advanceState)
 
 Inherited from `EventList` :  
-[`construct`](../object/EventList.html#construct)[`doScript`](../object/EventList.html#doScript)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`scriptDone`](../object/EventList.html#scriptDone)
+[`construct`](../object/EventList.html#construct) [`doScript`](../object/EventList.html#doScript) [`doScriptEvent`](../object/EventList.html#doScriptEvent) [`scriptDone`](../object/EventList.html#scriptDone)
 
 Inherited from `Script` :  
 [`getScriptState`](../object/Script.html#getScriptState)

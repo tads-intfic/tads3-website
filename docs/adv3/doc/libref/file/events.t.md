@@ -37,7 +37,7 @@ a particular interval of time has elapsed.
 
 
 
-[`BasicEvent`](../object/BasicEvent.html)[`BasicEventManager`](../object/BasicEventManager.html)[`Daemon`](../object/Daemon.html)[`Event`](../object/Event.html)[`EventAction`](../object/EventAction.html)[`Fuse`](../object/Fuse.html)[`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)[`PromptDaemon`](../object/PromptDaemon.html)[`RealTimeDaemon`](../object/RealTimeDaemon.html)[`RealTimeEvent`](../object/RealTimeEvent.html)[`RealTimeFuse`](../object/RealTimeFuse.html)[`RealTimeSenseDaemon`](../object/RealTimeSenseDaemon.html)[`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html)[`Schedulable`](../object/Schedulable.html)[`SenseDaemon`](../object/SenseDaemon.html)[`SenseFuse`](../object/SenseFuse.html)
+[`BasicEvent`](../object/BasicEvent.html) [`BasicEventManager`](../object/BasicEventManager.html) [`Daemon`](../object/Daemon.html) [`Event`](../object/Event.html) [`EventAction`](../object/EventAction.html) [`Fuse`](../object/Fuse.html) [`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html) [`PromptDaemon`](../object/PromptDaemon.html) [`RealTimeDaemon`](../object/RealTimeDaemon.html) [`RealTimeEvent`](../object/RealTimeEvent.html) [`RealTimeFuse`](../object/RealTimeFuse.html) [`RealTimeSenseDaemon`](../object/RealTimeSenseDaemon.html) [`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html) [`Schedulable`](../object/Schedulable.html) [`SenseDaemon`](../object/SenseDaemon.html) [`SenseFuse`](../object/SenseFuse.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -46,7 +46,7 @@ a particular interval of time has elapsed.
 
 
 
-[`eventManager`](../object/eventManager.html)[`realTimeManager`](../object/realTimeManager.html)
+[`eventManager`](../object/eventManager.html) [`realTimeManager`](../object/realTimeManager.html)
 <span id="FunctionSummary_"></span>
 
 

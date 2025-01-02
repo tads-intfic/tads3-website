@@ -55,7 +55,7 @@ Details](#_Methods_)
 
 
 
-[`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
+[`getAdjustedTokens`](#getAdjustedTokens) [`getVocabMatchList`](#getVocabMatchList)
 
 <span id="_Properties_"></span>
 

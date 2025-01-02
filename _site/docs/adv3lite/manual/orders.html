@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Giving Orders to NPCs  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Giving Orders to NPCs<br />
 <span class="navnp"><a href="knowledge.html" class="nav"><em>Prev:</em> Player Character and
 NPC Knowledge</a>    
 <a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
-Tags</a>     </span>
-
-</div>
+Tags</a>     </span></p>
 
 <h1 id="giving-orders-to-npcs">Giving Orders to NPCs</h1>
 
@@ -112,17 +104,16 @@ a good idea to call the inherited handling at the end, so your
 overridden method still ends by trying to deal with the order via a
 CommandTopic object, for example:</p>
 
-<p>`
-    modify Actor
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Actor
         handleCommand(action)
         {
            if(action.ofKind(ThinkAbout) || action.ofKind(AskAbout))
-              “I’m afraid that’s a bit too convoluted. “;
+              "I'm afraid that's a bit too convoluted. ";
            else
               inherited(action);
         }
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Note that if a command is directed to an inanimate object (e.g. BALL,
 JUMP!) that object’s handleCommand() method is also called, but in this
@@ -131,33 +122,32 @@ to direct commands at inanimate objects. But you could always override
 this if, for example, you wanted some objects to respond to a magic
 word. For example:</p>
 
-<p>`
-    modify Thing  <br />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing    
         handleCommand(action)
         {
             if(isOpenable &amp;&amp; !isOpen &amp;&amp; action = Xyzzy)
             {
-                “\^«theName» flies open! “;
+                "\^&lt;&lt;theName&gt;&gt; flies open! ";
                 makeOpen(true);
             }
             else
                 inherited(action);
         }
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DefineIAction(Xyzzy)
-    execAction(cmd)
-    {
-        "Your spell falls limp on the air. ";
-    }
-;
+    DefineIAction(Xyzzy)
+        execAction(cmd)
+        {
+            "Your spell falls limp on the air. ";
+        }
+    ;
 
-VerbRule(Xyzzy)
-    'xyzzy'
-    : VerbProduction
-    action = Xyzzy
-    verbPhrase = 'say/saying XYZZY'
-; `
+    VerbRule(Xyzzy)
+        'xyzzy'
+        : VerbProduction
+        action = Xyzzy
+        verbPhrase = 'say/saying XYZZY'
+    ;
 </code></pre></div></div>
 
 <h2 id="commandtopics"><span id="commandtopic">CommandTopics</span></h2>
@@ -200,27 +190,26 @@ refinement before it’s completely reliable.</li>
 picked up by our CommandTopics. A simple example of how this might all
 work in practice might be:</p>
 
-<p>`
-    + CommandTopic @Jump
-        “<q>Jump!</q> you cry.\b
-        <q>Very well then,</q> he agrees. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + CommandTopic @Jump
+        "&lt;q&gt;Jump!&lt;/q&gt; you cry.\b
+        &lt;q&gt;Very well then,&lt;/q&gt; he agrees. "
         allowAction = true
-    ;</p>
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ CommandTopic @Take
-    "&lt;q&gt;Bob, be a good fellow and pick up that red ball will you?&lt;/q&gt; you
-    request.\b
-    &lt;q&gt;Very well,&lt;/q&gt; he agrees.&lt;.p&gt;"
-    
-    allowAction = true
-    matchDobj = redBall
-    isActive = !redBall.isIn(bob)
-;
+    + CommandTopic @Take
+        "&lt;q&gt;Bob, be a good fellow and pick up that red ball will you?&lt;/q&gt; you
+        request.\b
+        &lt;q&gt;Very well,&lt;/q&gt; he agrees.&lt;.p&gt;"
+        
+        allowAction = true
+        matchDobj = redBall
+        isActive = !redBall.isIn(bob)
+    ;
 
-+ DefaultCommandTopic
-    "&lt;q&gt;Bob, would you &lt;&lt;actionPhrase&gt;&gt; please?&lt;/q&gt; you ask.\b
-    &lt;q&gt;No, I don't think I will,&lt;/q&gt; he replies. "
-; `
+    + DefaultCommandTopic
+        "&lt;q&gt;Bob, would you &lt;&lt;actionPhrase&gt;&gt; please?&lt;/q&gt; you ask.\b
+        &lt;q&gt;No, I don't think I will,&lt;/q&gt; he replies. "
+    ;
 </code></pre></div></div>
 
 <p>If you want the actor to whom you’ve given the command to perform some
@@ -229,46 +218,41 @@ other action than the one the player orders him to, you can use
 command. For example, to make an actor jump when he’s told to wait you
 could do this:</p>
 
-<p>`
-    + CommandTopic @Wait
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + CommandTopic @Wait
         topicResponse()
         {
-            “<q>Would you wait a moment?</q> you request.\b
-            <q>If you don’t mind my keeping warm while I do,</q> he replies.\b”;
+            "&lt;q&gt;Would you wait a moment?&lt;/q&gt; you request.\b
+            &lt;q&gt;If you don't mind my keeping warm while I do,&lt;/q&gt; he replies.\b";
             doNested(Jump);
         }
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Note, this works in a CommandTopic since the actor being addressed is
 considered the current actor of the command. If you want any other kind
 of TopicEntry to make an actor react, you need to use
 <code class="language-plaintext highlighter-rouge">nestedActorAction()</code> instead; e.g.:</p>
 
-<p>`
-    + TellTopic @george
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic @george
         topicResponse()
         {
-            “<q>You’re not looking very active,</q> you complain.\b
-            <q>How about this then?</q> he asks.\b”;
-            nestedActorAction(getActor, Jump);  <br />
-        }  <br />
+            "&lt;q&gt;You're not looking very active,&lt;/q&gt; you complain.\b
+            &lt;q&gt;How about this then?&lt;/q&gt; he asks.\b";
+            nestedActorAction(getActor, Jump);    
+        }    
     ;
-`</p>
+</code></pre></div></div>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Giving Orders to NPCs  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Giving Orders to NPCs<br />
 <span class="navnp"><a href="knowledge.html" class="nav"><em>Prev:</em> Player Character and
 NPC Knowledge</a>    
 <a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
-Tags</a>     </span>
+Tags</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

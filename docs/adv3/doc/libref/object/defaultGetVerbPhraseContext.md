@@ -65,7 +65,7 @@ Inherited from `GetVerbPhraseContext` :
 [`setPronounObj`](#setPronounObj)
 
 Inherited from `GetVerbPhraseContext` :  
-[`isObjPronoun`](../object/GetVerbPhraseContext.html#isObjPronoun)[`objNameObj`](../object/GetVerbPhraseContext.html#objNameObj)
+[`isObjPronoun`](../object/GetVerbPhraseContext.html#isObjPronoun) [`objNameObj`](../object/GetVerbPhraseContext.html#objNameObj)
 
 <span id="_Properties_"></span>
 

@@ -61,7 +61,7 @@ The compass directions
 
 
 
-[`eastDir`](../object/eastDir.html)[`northDir`](../object/northDir.html)[`northeastDir`](../object/northeastDir.html)[`northwestDir`](../object/northwestDir.html)[`southDir`](../object/southDir.html)[`southeastDir`](../object/southeastDir.html)[`southwestDir`](../object/southwestDir.html)[`westDir`](../object/westDir.html)
+[`eastDir`](../object/eastDir.html) [`northDir`](../object/northDir.html) [`northeastDir`](../object/northeastDir.html) [`northwestDir`](../object/northwestDir.html) [`southDir`](../object/southDir.html) [`southeastDir`](../object/southeastDir.html) [`southwestDir`](../object/southwestDir.html) [`westDir`](../object/westDir.html)
 <span id="_PropSummary_"></span>
 
 
@@ -73,7 +73,7 @@ The compass directions
 
 
 Inherited from `Direction` :  
-[`allDirections`](../object/Direction.html#allDirections)[`departureName`](../object/Direction.html#departureName)[`dirProp`](../object/Direction.html#dirProp)[`name`](../object/Direction.html#name)[`nameTab`](../object/Direction.html#nameTab)[`opposite`](../object/Direction.html#opposite)[`sortingOrder`](../object/Direction.html#sortingOrder)
+[`allDirections`](../object/Direction.html#allDirections) [`departureName`](../object/Direction.html#departureName) [`dirProp`](../object/Direction.html#dirProp) [`name`](../object/Direction.html#name) [`nameTab`](../object/Direction.html#nameTab) [`opposite`](../object/Direction.html#opposite) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Inherited from `Direction` :
 [`initializeDirection`](#initializeDirection)
 
 Inherited from `Direction` :  
-[`classInit`](../object/Direction.html#classInit)[`oppositeProp`](../object/Direction.html#oppositeProp)[`propDir`](../object/Direction.html#propDir)
+[`classInit`](../object/Direction.html#classInit) [`oppositeProp`](../object/Direction.html#oppositeProp) [`propDir`](../object/Direction.html#propDir)
 
 <span id="_Properties_"></span>
 

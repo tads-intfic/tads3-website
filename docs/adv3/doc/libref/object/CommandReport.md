@@ -130,7 +130,7 @@ are ordered before and after (respectively) a main report.
 
 
 
-[`action_`](#action_)[`isFailure`](#isFailure)[`isQuestion`](#isQuestion)[`iter_`](#iter_)
+[`action_`](#action_) [`isFailure`](#isFailure) [`isQuestion`](#isQuestion) [`iter_`](#iter_)
 
 <span id="_MethodSummary_"></span>
 
@@ -140,7 +140,7 @@ are ordered before and after (respectively) a main report.
 
 
 
-[`construct`](#construct)[`getAction`](#getAction)[`isActionImplicit`](#isActionImplicit)[`isActionNestedIn`](#isActionNestedIn)[`isPartOf`](#isPartOf)[`setAction`](#setAction)
+[`construct`](#construct) [`getAction`](#getAction) [`isActionImplicit`](#isActionImplicit) [`isActionNestedIn`](#isActionNestedIn) [`isPartOf`](#isPartOf) [`setAction`](#setAction)
 
 <span id="_Properties_"></span>
 

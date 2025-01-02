@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="local.html" class="nav">Translating and Localizing TADS</a> \&gt;
-Translating Error Messages  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="local.html" class="nav">Translating and Localizing TADS</a> &gt;
+Translating Error Messages<br />
 <span class="navnp"><a href="local.html" class="nav"><em>Prev:</em> Translating and
 Localizing TADS</a>    
 <a href="cmap.html" class="nav"><em>Next:</em> Creating a
-Character-Mapping File</a>     </span>
-
-</div>
+Character-Mapping File</a>     </span></p>
 
 <h1 id="translating-error-messages">Translating Error Messages</h1>
 
@@ -137,38 +129,31 @@ file you wish to create. For example, suppose you created a source file
 called “vm_deu.txt” with German messages for the interpreter, and you
 wish to compile it to create vm_deu.msg. You’d use a command like this:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t3msgc vm_deu.txt vm_deu.msg
+</code></pre></div></div>
 
-    t3msgc vm_deu.txt vm_deu.msg
-
-
-
-The compiler has one option: -strict, which displays a warning for every
+<p>The compiler has one option: -strict, which displays a warning for every
 defined symbolic message ID that has no message. You can use this option
 to ensure that you have defined a message for every symbolic ID (if you
-didn't do this, the interpreter or compiler would display a "message not
-found" error if it should ever have to display one of the messages you
-didn't defined).
+didn’t do this, the interpreter or compiler would display a “message not
+found” error if it should ever have to display one of the messages you
+didn’t defined).</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t3msgc -strict vm_deu.txt vm_deu.msg
+</code></pre></div></div>
 
-    t3msgc -strict vm_deu.txt vm_deu.msg
-
-</div>
-
-To install the message file so that the interpreter or compiler actually
+<p>To install the message file so that the interpreter or compiler actually
 starts using it, simply copy it to the appropriate filename for the type
-of message file ("t3_vm.msg" or "t3make.msg") and place it in the same
-directory as the interpreter or compiler executable.
+of message file (“t3_vm.msg” or “t3make.msg”) and place it in the same
+directory as the interpreter or compiler executable.</p>
 
-## Sample Message File
+<h2 id="sample-message-file">Sample Message File</h2>
 
-Here's an example of a message file. This file only defines two
+<p>Here’s an example of a message file. This file only defines two
 messages, so a real message file would obviously be a lot longer, but
-this file has all of the essential elements and will compile properly.
+this file has all of the essential elements and will compile properly.</p>
 
-```
-    #charset "cp1252"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "cp1252"
     #include "vmerrnum.h"
 
     VMERR_IMAGE_NO_CODE image contains no code
@@ -180,55 +165,50 @@ this file has all of the essential elements and will compile properly.
     This image file has an incompatible method header format.
      This is an older image file version which this interpreter
      does not support.
-```
+</code></pre></div></div>
 
-The first line specifies the character set, which in this case is
-Windows code page 1252 (the Windows US/Western Europe code page).
+<p>The first line specifies the character set, which in this case is
+Windows code page 1252 (the Windows US/Western Europe code page).</p>
 
-The second line includes "vmerrnum.h"; this is an interpreter message
-file, so this is the appropriate header for this file.
+<p>The second line includes “vmerrnum.h”; this is an interpreter message
+file, so this is the appropriate header for this file.</p>
 
-Next, after the blank line, we have our first message. The message ID is
-"VMERR_IMAGE_NO_CODE", a symbolic message identifier that you will find
+<p>Next, after the blank line, we have our first message. The message ID is
+“VMERR_IMAGE_NO_CODE”, a symbolic message identifier that you will find
 in vmerrnum.h. Immediately following the identifier on the same line is
 the short message text. The next line begins the long message, which
-goes on for two lines.
+goes on for two lines.</p>
 
-Note that the second line of the long message starts with a space. When
+<p>Note that the second line of the long message starts with a space. When
 the compiler reads your messages, it keeps all of the whitespace at the
 beginnings and ends of the long message lines, except that it removes
 any embedded newlines (line breaks). In other words, the compiler
 strings together all of the lines of the long message into a single line
 of text; we must therefore explicitly put in any spacing we want between
 words across lines. We could just as well have put the space at the end
-of the previous line, but it's much easier to see whitespace when it's
-at the beginning of a line, which is why we've done so here.
+of the previous line, but it’s much easier to see whitespace when it’s
+at the beginning of a line, which is why we’ve done so here.</p>
 
-The second message follows the blank line after the first long message.
-Messages are always separated by blank lines.
+<p>The second message follows the blank line after the first long message.
+Messages are always separated by blank lines.</p>
 
-Note that we have chosen to put the identifier for the second message on
+<p>Note that we have chosen to put the identifier for the second message on
 one line, and the short message on the next line. This is equivalent to
 putting both on one line, but in this case the short message is a bit
-lengthy, so it's easier to read when it's on a separate line from the
-message ID.
-
-</div>
+lengthy, so it’s easier to read when it’s on a separate line from the
+message ID.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="local.html" class="nav">Translating and Localizing TADS</a> \&gt;
-Translating Error Messages  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="local.html" class="nav">Translating and Localizing TADS</a> &gt;
+Translating Error Messages<br />
 <span class="navnp"><a href="local.html" class="nav"><em>Prev:</em> Translating and
 Localizing TADS</a>    
 <a href="cmap.html" class="nav"><em>Next:</em> Creating a
-Character-Mapping File</a>     </span>
+Character-Mapping File</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

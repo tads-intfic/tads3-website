@@ -57,7 +57,7 @@ fixes for patIsHTMLTag and patIsFormatTag from \*\* Matt McGlone \*\*
 
 
 
-[`//`](#//)[`//`](#//)[`filterText`](#filterText)[`if`](#if)[`if`](#if)[`if`](#if)
+[`//`](#//) [`//`](#//) [`filterText`](#filterText) [`if`](#if) [`if`](#if) [`if`](#if)
 
 <span id="_Functions_"></span>
 

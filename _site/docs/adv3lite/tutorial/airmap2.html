@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="airport.html" class="nav">Airport</a> \&gt; Extending the Map  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="airport.html" class="nav">Airport</a> &gt; Extending the Map<br />
 <span class="navnp"><a href="airmap1.html" class="nav"><em>Prev:</em> Starting the Map</a>
    
 <a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="extending-the-map">Extending the Map</h1>
 
@@ -71,33 +63,28 @@ Workbench use your text editor to create a new blank file called
 “gatearea.t”, then edit your copy of airport.t3m to add the following
 line at the end:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-source gatearea
+</code></pre></div></div>
 
-    -source gatearea
+<p>Whichever way you used to create the new file, the next step is to make
+sure it starts with the following three lines:</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-
-Whichever way you used to create the new file, the next step is to make
-sure it starts with the following three lines:
-
-`
-    #charset "us-ascii"
-
-    #include <tads.h>
+    #include &lt;tads.h&gt;
     #include "advlite.h"
-`
+</code></pre></div></div>
 
-The easiest way to do that is probably to copy these lines from start.t
-and paste them into gatearea.t. Once you've done that, you're good to
-go.
+<p>The easiest way to do that is probably to copy these lines from start.t
+and paste them into gatearea.t. Once you’ve done that, you’re good to
+go.</p>
 
-There's not much new about the first version of this area of the map, so
-we'll just go straight away and list it:
+<p>There’s not much new about the first version of this area of the map, so
+we’ll just go straight away and list it:</p>
 
-`
-    #charset "us-ascii"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-    #include <tads.h>
+    #include &lt;tads.h&gt;
     #include "advlite.h"
 
 
@@ -117,10 +104,10 @@ we'll just go straight away and list it:
 
     + Distant 'display board; departure'
         "The display imparts the following information:\b
-        TI 179 to Buenos Aires <FONT COLOR="GREEN">BOARDING GATE 3</FONT>\n
-        RO 359 to Mexico City <FONT COLOR="RED">DELAYED</FONT>\n
-        PZ 87 to Houston <FONT COLOR="RED">DELAYED</FONT>\n
-        BU 4567 to Bogota <FONT COLOR="RED">DELAYED</FONT>"
+        TI 179 to Buenos Aires &lt;FONT COLOR=GREEN&gt;BOARDING GATE 3&lt;/FONT&gt;\n
+        RO 359 to Mexico City &lt;FONT COLOR=RED&gt;DELAYED&lt;/FONT&gt;\n
+        PZ 87 to Houston &lt;FONT COLOR=RED&gt;DELAYED&lt;/FONT&gt;\n
+        BU 4567 to Bogota &lt;FONT COLOR=RED&gt;DELAYED&lt;/FONT&gt;"
         
     ;
 
@@ -186,67 +173,66 @@ we'll just go straight away and list it:
     //    east = planeFront
         
     ;
-`
+</code></pre></div></div>
 
-Note that we've commented out the line `east =
-planeFront` on the jetway, since the planeFront room hasn't been
-implemented yet. At this stage you should *uncomment* the line
-`north = gateArea` on the concourse room,
-otherwise this new section of map won't have a connection from the old
-one.
+<p>Note that we’ve commented out the line <code class="language-plaintext highlighter-rouge">east =
+planeFront</code> on the jetway, since the planeFront room hasn’t been
+implemented yet. At this stage you should <em>uncomment</em> the line
+<code class="language-plaintext highlighter-rouge">north = gateArea</code> on the concourse room,
+otherwise this new section of map won’t have a connection from the old
+one.</p>
 
-Note also how we use \[n\] and \[adj\] in the vocab properties of the
+<p>Note also how we use [n] and [adj] in the vocab properties of the
 three gates, where the usual order of adjective and noun is reversed, so
-we have to mark which is which. The use of \&lt;FONT COLOR=GREEN\&gt;BOARDING
-GATE 3\&lt;/FONT\&gt; and the like in the description of the display board
+we have to mark which is which. The use of &lt;FONT COLOR=GREEN&gt;BOARDING
+GATE 3&lt;/FONT&gt; and the like in the description of the display board
 illustrate how we can use (a subset of) HTML markup to format the text
 we display to the player. The difference between \b and \n in the same
 description is that \b leaves a blank line following while \n just moves
-to a new line.
+to a new line.</p>
 
-Also noteworthy is our first use of the Distant class. This is almost
+<p>Also noteworthy is our first use of the Distant class. This is almost
 identical to the Decoration class, except that it responds to any
-command except Examine with "The Whatever is too far away"; here we're
+command except Examine with “The Whatever is too far away”; here we’re
 using this to represent the fact that the display board is mounted high
-up on the wall.
+up on the wall.</p>
 
-Let's think a moment more about this Distant display board. As things
-stand the player can EXAMINE it, and that's all, but you may think that
+<p>Let’s think a moment more about this Distant display board. As things
+stand the player can EXAMINE it, and that’s all, but you may think that
 players should equally well be able to READ it and get the same response
 as they do for examining. But if you try adding
-`dobjFor(Read) asDobjFor(Examine)` to the
-definition of the display board you'll find that nothing has changed.
-That's because the handling for all actions apart from Examine is
+<code class="language-plaintext highlighter-rouge">dobjFor(Read) asDobjFor(Examine)</code> to the
+definition of the display board you’ll find that nothing has changed.
+That’s because the handling for all actions apart from Examine is
 carried out by dobjFor(Default) before any more specific action-handling
-gets a look-in.
+gets a look-in.</p>
 
-To change this, we need to override the **decorationActions** property
+<p>To change this, we need to override the <strong>decorationActions</strong> property
 of the display board. This contains the list of actions the display
 board will respond to specifically, instead of simply using the
-dobjFor(Default) handling (which displays the "too far away" message).
-The display board should then look like this:
+dobjFor(Default) handling (which displays the “too far away” message).
+The display board should then look like this:</p>
 
-`
-    + Distant 'display board; departure'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Distant 'display board; departure'
         "The display imparts the following information:\b
-        TI 179 to Buenos Aires <FONT COLOR="GREEN">BOARDING GATE 3</FONT>\n
-        RO 359 to Mexico City <FONT COLOR="RED">DELAYED</FONT>\n
-        PZ 87 to Houston <FONT COLOR="RED">DELAYED</FONT>\n
-        BU 4567 to Bogota <FONT COLOR="RED">DELAYED</FONT>"
+        TI 179 to Buenos Aires &lt;FONT COLOR=GREEN&gt;BOARDING GATE 3&lt;/FONT&gt;\n
+        RO 359 to Mexico City &lt;FONT COLOR=RED&gt;DELAYED&lt;/FONT&gt;\n
+        PZ 87 to Houston &lt;FONT COLOR=RED&gt;DELAYED&lt;/FONT&gt;\n
+        BU 4567 to Bogota &lt;FONT COLOR=RED&gt;DELAYED&lt;/FONT&gt;"
         
         decorationActions = [Examine, GoTo, Read]
         
         readDesc = desc
     ;
-`
+</code></pre></div></div>
 
-We have included GoTo in the list of decorationActions because a player
+<p>We have included GoTo in the list of decorationActions because a player
 might reasonably issue the command GO TO DISPLAY BOARD from another
-location, and there's no reason why we should not allow it to work. The
+location, and there’s no reason why we should not allow it to work. The
 Decoration class includes GoTo in its decorationActions list by default
 (since players may often wish to go to the location of a Decoration),
-but the Distant class does not, since it's often used to represent
-something that's too far away for the player character to go to (such as
+but the Distant class does not, since it’s often used to represent
+something that’s too far away for the player character to go to (such as
 the sun, moon, sky or a distant mountain). For the display board,
 however, it is appropriate to include GoTo among the actions that can be
 handled. Where a Distant object is used to represent an object in a
@@ -254,43 +240,42 @@ neighbouring location, handling the GoTo action on it may require more
 care, since it may be that GO TO CABIN (when the cabin is a Distant
 object representing a cabin in a neighbouring location) should take the
 player character to that neighbouring location; it may well be easiest
-to handle such cases with Doers.
+to handle such cases with Doers.</p>
 
-Overall the implementation of this part of the airport is a little
+<p>Overall the implementation of this part of the airport is a little
 sparse; we shall be returning to parts of it later to fill in more
 details, but the description of the seats and passengers at Gate 1 is
-left as an exercise for the reader. Instead we'll introduce something
+left as an exercise for the reader. Instead we’ll introduce something
 quite new at this point: a series of announcements over the public
 address system (most of them the last call for passengers boarding at
 Gate 3, in a variety of languages, just to add a little more sense of
-urgency to the proceedings). To do this we'll define a special object
+urgency to the proceedings). To do this we’ll define a special object
 just to provide the announcements; this can be put right at the end of
-the gatearea.t file:
+the gatearea.t file:</p>
 
-`
-    announcementObj: ShuffledEventList
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    announcementObj: ShuffledEventList
         eventList =
         [
-            '&lt;<prefix>&gt;<q>Last call for passengers on Flight TI 179 to Buenos Aires;
-            this flight is now boarding at Gate 3.</q> ',
+            '&lt;&lt;prefix&gt;&gt;&lt;q&gt;Last call for passengers on Flight TI 179 to Buenos Aires;
+            this flight is now boarding at Gate 3.&lt;/q&gt; ',
             
-            '&lt;<prefix>&gt;<q>Ultima llamada a pasajeros en Vuelo TI 179 a Buenos Aires;
-            este vuelo se aloja ahora en la Puerta 3.</q> ',
+            '&lt;&lt;prefix&gt;&gt;&lt;q&gt;Ultima llamada a pasajeros en Vuelo TI 179 a Buenos Aires;
+            este vuelo se aloja ahora en la Puerta 3.&lt;/q&gt; ',
             
-            '&lt;<prefix>&gt;<q>La derni&egrave;re demande des passagers sur le Vol TI 179
-            &agrave; Buenos Aires; ce vol est maintenant boarding &agrave; la Porte
-            3.</q> ',
+            '&lt;&lt;prefix&gt;&gt;&lt;q&gt;La derni&amp;egrave;re demande des passagers sur le Vol TI 179
+            &amp;agrave; Buenos Aires; ce vol est maintenant boarding &amp;agrave; la Porte
+            3.&lt;/q&gt; ',
             
-            '&lt;<prefix>&gt;<q>Chamada &uacute;ltima a passageiros em TI de V&ocirc;o
-            179 a Buenos Aires; este v&ocirc;o est&acute; embarcando agora na Porta
-            3.</q> ',
+            '&lt;&lt;prefix&gt;&gt;&lt;q&gt;Chamada &amp;uacute;ltima a passageiros em TI de V&amp;ocirc;o
+            179 a Buenos Aires; este v&amp;ocirc;o est&amp;acute; embarcando agora na Porta
+            3.&lt;/q&gt; ',
             
-            '&lt;<prefix>&gt;<q>Will passenger Quixote please report to the airport
-            information desk.</q> ',
+            '&lt;&lt;prefix&gt;&gt;&lt;q&gt;Will passenger Quixote please report to the airport
+            information desk.&lt;/q&gt; ',
             
-            '&lt;<prefix>&gt;<q>This is a security announcement. Any unattended baggage
+            '&lt;&lt;prefix&gt;&gt;&lt;q&gt;This is a security announcement. Any unattended baggage
             will be removed and auctioned for the airport security personnel
-            benevolent fund.</q> '
+            benevolent fund.&lt;/q&gt; '
             
         ]
         
@@ -323,100 +308,99 @@ the gatearea.t file:
         
         prefix = 'An announcement comes over the public address system: '
     ;
-`
+</code></pre></div></div>
 
-Okay, so let's explain this one step at a time.
+<p>Okay, so let’s explain this one step at a time.</p>
 
-First off, we've created an object of the **ShuffledEventList** class.
-This is one of a number of [EventList](../manual/eventlist.html) classes
-that you can read about in more detail in the *adv3Lite Library Manual*.
+<p>First off, we’ve created an object of the <strong>ShuffledEventList</strong> class.
+This is one of a number of <a href="../manual/eventlist.html">EventList</a> classes
+that you can read about in more detail in the <em>adv3Lite Library Manual</em>.
 In brief, an EventList is an object which steps through each item in its
-`eventList` property in turn when its
-`doScript()` method is called. A ShuffledEvent
+<code class="language-plaintext highlighter-rouge">eventList</code> property in turn when its
+<code class="language-plaintext highlighter-rouge">doScript()</code> method is called. A ShuffledEvent
 list steps through its items in random order, then shuffles the list
 into a new random order when it gets to the end before repeating the
 process. If an item in the eventList property is a single-quoted string,
-it is simply displayed.
+it is simply displayed.</p>
 
-To prevent these messages from becoming too tedious through
-over-exposure we can control how often they're displayed. The
-`eventPercent` property determines the frequency
+<p>To prevent these messages from becoming too tedious through
+over-exposure we can control how often they’re displayed. The
+<code class="language-plaintext highlighter-rouge">eventPercent</code> property determines the frequency
 of turns (as a percentage) on which an item will be displayed. Here
-we've chosen a value of 67, meaning we'll see a message on roughly
-two-thirds of turns. The `eventReduceTo`
+we’ve chosen a value of 67, meaning we’ll see a message on roughly
+two-thirds of turns. The <code class="language-plaintext highlighter-rouge">eventReduceTo</code>
 property is the frequency of occurrence this will eventually drop to,
 here 33 (i.e. roughly one third of the time). The
-`eventReduceAfter` property determines when this
-reduction in frequency takes place. Here we've defined it to take place
+<code class="language-plaintext highlighter-rouge">eventReduceAfter</code> property determines when this
+reduction in frequency takes place. Here we’ve defined it to take place
 after every item in the eventList has been displayed once. The
-expression `eventList.length()` gives the number
-of items in the list. The `static` keyword
+expression <code class="language-plaintext highlighter-rouge">eventList.length()</code> gives the number
+of items in the list. The <code class="language-plaintext highlighter-rouge">static</code> keyword
 preceding it means that this number is calculated at compile time and
-then stored in the compiled game file.
+then stored in the compiled game file.</p>
 
-Second, we need some way of driving this ShuffledEventList, and to that
-end we use a **Daemon** to keep calling its
-`doScript()` method each turn. You can read all
-about Daemons and Fuses in the [Events](../manual/event.html) section of
-the *adv3Lite Library Manual*. In brief, a Daemon is a special kind of
+<p>Second, we need some way of driving this ShuffledEventList, and to that
+end we use a <strong>Daemon</strong> to keep calling its
+<code class="language-plaintext highlighter-rouge">doScript()</code> method each turn. You can read all
+about Daemons and Fuses in the <a href="../manual/event.html">Events</a> section of
+the <em>adv3Lite Library Manual</em>. In brief, a Daemon is a special kind of
 object that calls a specified method on a specified object at a
-specified interval. The definition above, `new
-Daemon(self, &amp;announce, 1)` creates a new Daemon that calls the
-`announce` method of the
-`self` object (i.e. announcementObj) every turn
+specified interval. The definition above, <code class="language-plaintext highlighter-rouge">new
+Daemon(self, &amp;announce, 1)</code> creates a new Daemon that calls the
+<code class="language-plaintext highlighter-rouge">announce</code> method of the
+<code class="language-plaintext highlighter-rouge">self</code> object (i.e. announcementObj) every turn
 (i.e. with an interval of 1). We store a reference to this Daemon in the
-`daemonID` property both so that the
-`start()` method can be prevented from creating
-another new Daemon if it has already created one that's still running,
-and so that the `stopDaemon()` method can call
-the Daemon's `removeEvent()` method if and when
-we want to stop it running. The `stopDaemon()`
-method also checks that `daemonID` is not nil
-before trying to call its `removeEvent()` method
-(so that it doesn't try to stop a non-existent Daemon) and finally
-resets `daemonID` to nil in case either
-`stopDaemon()` or
-`start()` is called again. \[Note: in earlier
-versions of this Tutorial the `stopDaemon()`
-method was simply called `stop()`, but from
-version 1.4 of adv3Lite onwards `stop` has
+<code class="language-plaintext highlighter-rouge">daemonID</code> property both so that the
+<code class="language-plaintext highlighter-rouge">start()</code> method can be prevented from creating
+another new Daemon if it has already created one that’s still running,
+and so that the <code class="language-plaintext highlighter-rouge">stopDaemon()</code> method can call
+the Daemon’s <code class="language-plaintext highlighter-rouge">removeEvent()</code> method if and when
+we want to stop it running. The <code class="language-plaintext highlighter-rouge">stopDaemon()</code>
+method also checks that <code class="language-plaintext highlighter-rouge">daemonID</code> is not nil
+before trying to call its <code class="language-plaintext highlighter-rouge">removeEvent()</code> method
+(so that it doesn’t try to stop a non-existent Daemon) and finally
+resets <code class="language-plaintext highlighter-rouge">daemonID</code> to nil in case either
+<code class="language-plaintext highlighter-rouge">stopDaemon()</code> or
+<code class="language-plaintext highlighter-rouge">start()</code> is called again. [Note: in earlier
+versions of this Tutorial the <code class="language-plaintext highlighter-rouge">stopDaemon()</code>
+method was simply called <code class="language-plaintext highlighter-rouge">stop()</code>, but from
+version 1.4 of adv3Lite onwards <code class="language-plaintext highlighter-rouge">stop</code> has
 another meaning as a macro, so it can no longer be used as a method
-name\].
+name].</p>
 
-Note how the second parameter of the call to new Daemon() is specified
-as `&amp;announce` and not just
-`announce`. Placing the ampersand (&amp;) in front
-of the property/method name makes it a *property pointer*. We use a
+<p>Note how the second parameter of the call to new Daemon() is specified
+as <code class="language-plaintext highlighter-rouge">&amp;announce</code> and not just
+<code class="language-plaintext highlighter-rouge">announce</code>. Placing the ampersand (&amp;) in front
+of the property/method name makes it a <em>property pointer</em>. We use a
 property pointer in a context like this when what we want to pass to a
-method isn't the value of a property, but a reference to the property.
-Here, we're telling Daemon to call the
-`announce()` method each turn, so we need to
-pass a pointer to `announce()` so it knows which
-method to call. You may be wondering why we couldn't simply have passed
-`&amp;doScript`, since all the
-`announce()` method does is to call
-`doScript()`. The answer is that we could
-perfectly well have done here, but that we'll shortly be tweaking the
-`announce()` method in the next section.
+method isn’t the value of a property, but a reference to the property.
+Here, we’re telling Daemon to call the
+<code class="language-plaintext highlighter-rouge">announce()</code> method each turn, so we need to
+pass a pointer to <code class="language-plaintext highlighter-rouge">announce()</code> so it knows which
+method to call. You may be wondering why we couldn’t simply have passed
+<code class="language-plaintext highlighter-rouge">&amp;doScript</code>, since all the
+<code class="language-plaintext highlighter-rouge">announce()</code> method does is to call
+<code class="language-plaintext highlighter-rouge">doScript()</code>. The answer is that we could
+perfectly well have done here, but that we’ll shortly be tweaking the
+<code class="language-plaintext highlighter-rouge">announce()</code> method in the next section.</p>
 
-The `prefix` property simply defines some text
-we can use in each element of the `eventList`
+<p>The <code class="language-plaintext highlighter-rouge">prefix</code> property simply defines some text
+we can use in each element of the <code class="language-plaintext highlighter-rouge">eventList</code>
 without having to type it out in full each time. Note the use of various
-HTML entities (e.g. &agrave; for à or &ocir; for ô) for accented letters
+HTML entities (e.g. à for à or &amp;ocir; for ô) for accented letters
 that might otherwise be hard to display or for the compiler to deal with
 if it found them in your source file. By the way, the translations into
 Spanish, French and Portugeese of the last call for passengers boarding
 at Gate 3 were carried out using an online automated translation
-facility, so they're not guaranteed to be correct! By all means feel
-free to correct them.
+facility, so they’re not guaranteed to be correct! By all means feel
+free to correct them.</p>
 
-Finally, we need some means of starting this Daemon. A convenient point
+<p>Finally, we need some means of starting this Daemon. A convenient point
 at which to do so might be when the player character passes through the
-metal detector, so we'll make a small adjustment to the method's
-`travelDesc` method to make this happen:
+metal detector, so we’ll make a small adjustment to the method’s
+<code class="language-plaintext highlighter-rouge">travelDesc</code> method to make this happen:</p>
 
-`
-    + metalDetector: Passage 'metal detector; crude; frame'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
         destination = concourse
@@ -444,33 +428,27 @@ metal detector, so we'll make a small adjustment to the method's
             announcementObj.start();
         }
     ;
-`
+</code></pre></div></div>
 
-The fact that the player character may pass through the metal detector
-several times doesn't really matter, since once the Daemon is running,
-`announcementObj.start()` doesn't actually do
-anything. In the next section we'll set about laying out the plane.
+<p>The fact that the player character may pass through the metal detector
+several times doesn’t really matter, since once the Daemon is running,
+<code class="language-plaintext highlighter-rouge">announcementObj.start()</code> doesn’t actually do
+anything. In the next section we’ll set about laying out the plane.</p>
 
-Once you've made all the necessary changes to your versions of start.t
+<p>Once you’ve made all the necessary changes to your versions of start.t
 and gatearea.t, try compiling and running the game again and moving
-round the now extended map to make sure everything works as it should.
+round the now extended map to make sure everything works as it should.</p>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="airport.html" class="nav">Airport</a> \&gt; Extending the Map  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="airport.html" class="nav">Airport</a> &gt; Extending the Map<br />
 <span class="navnp"><a href="airmap1.html" class="nav"><em>Prev:</em> Starting the Map</a>
    
 <a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
-    </span>
+    </span></p>
 
-</div>
-</prefix></prefix></prefix></prefix></prefix></prefix></tads.h></tads.h></div>
 
 </main>
 <footer>

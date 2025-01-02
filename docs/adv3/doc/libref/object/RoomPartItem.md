@@ -98,7 +98,7 @@ way, but will only be in effect until the object is moved.
 
 
 
-[`useSpecialDescInContents`](#useSpecialDescInContents)[`useSpecialDescInRoom`](#useSpecialDescInRoom)[`useSpecialDescInRoomPart`](#useSpecialDescInRoomPart)
+[`useSpecialDescInContents`](#useSpecialDescInContents) [`useSpecialDescInRoom`](#useSpecialDescInRoom) [`useSpecialDescInRoomPart`](#useSpecialDescInRoomPart)
 
 <span id="_Properties_"></span>
 

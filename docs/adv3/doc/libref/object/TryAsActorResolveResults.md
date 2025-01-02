@@ -76,7 +76,7 @@ failures; instead we simply allow empty match lists.
 
 
 
-[`allowActionRemapping`](#allowActionRemapping)[`allowEquivalentFiltering`](#allowEquivalentFiltering)
+[`allowActionRemapping`](#allowActionRemapping) [`allowEquivalentFiltering`](#allowEquivalentFiltering)
 
 
 
@@ -88,7 +88,7 @@ failures; instead we simply allow empty match lists.
 
 
 
-[`allNotAllowed`](#allNotAllowed)[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingLiteral`](#askMissingLiteral)[`askMissingObject`](#askMissingObject)[`beginSingleObjSlot`](#beginSingleObjSlot)[`beginTopicSlot`](#beginTopicSlot)[`emptyNounPhrase`](#emptyNounPhrase)[`endSingleObjSlot`](#endSingleObjSlot)[`endTopicSlot`](#endTopicSlot)[`getImpliedObject`](#getImpliedObject)[`incCommandCount`](#incCommandCount)[`insufficientQuantity`](#insufficientQuantity)[`noMatch`](#noMatch)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchForListBut`](#noMatchForListBut)[`noMatchForLocation`](#noMatchForLocation)[`noMatchForPossessive`](#noMatchForPossessive)[`noMatchForPronoun`](#noMatchForPronoun)[`noMatchPossessive`](#noMatchPossessive)[`noteActorSpecified`](#noteActorSpecified)[`noteAdjEnding`](#noteAdjEnding)[`noteBadPrep`](#noteBadPrep)[`noteEmptyBut`](#noteEmptyBut)[`noteIndefinite`](#noteIndefinite)[`noteLiteral`](#noteLiteral)[`noteMatches`](#noteMatches)[`noteMiscWord`](#noteMiscWord)[`noteNounSlots`](#noteNounSlots)[`notePlural`](#notePlural)[`notePronoun`](#notePronoun)[`noteWeakPhrasing`](#noteWeakPhrasing)[`nothingInLocation`](#nothingInLocation)[`noVocabMatch`](#noVocabMatch)[`reflexiveNotAllowed`](#reflexiveNotAllowed)[`singleObjectRequired`](#singleObjectRequired)[`uniqueObjectRequired`](#uniqueObjectRequired)[`unknownNounPhrase`](#unknownNounPhrase)[`wrongReflexive`](#wrongReflexive)[`zeroQuantity`](#zeroQuantity)
+[`allNotAllowed`](#allNotAllowed) [`ambiguousNounPhrase`](#ambiguousNounPhrase) [`askMissingLiteral`](#askMissingLiteral) [`askMissingObject`](#askMissingObject) [`beginSingleObjSlot`](#beginSingleObjSlot) [`beginTopicSlot`](#beginTopicSlot) [`emptyNounPhrase`](#emptyNounPhrase) [`endSingleObjSlot`](#endSingleObjSlot) [`endTopicSlot`](#endTopicSlot) [`getImpliedObject`](#getImpliedObject) [`incCommandCount`](#incCommandCount) [`insufficientQuantity`](#insufficientQuantity) [`noMatch`](#noMatch) [`noMatchForAll`](#noMatchForAll) [`noMatchForAllBut`](#noMatchForAllBut) [`noMatchForListBut`](#noMatchForListBut) [`noMatchForLocation`](#noMatchForLocation) [`noMatchForPossessive`](#noMatchForPossessive) [`noMatchForPronoun`](#noMatchForPronoun) [`noMatchPossessive`](#noMatchPossessive) [`noteActorSpecified`](#noteActorSpecified) [`noteAdjEnding`](#noteAdjEnding) [`noteBadPrep`](#noteBadPrep) [`noteEmptyBut`](#noteEmptyBut) [`noteIndefinite`](#noteIndefinite) [`noteLiteral`](#noteLiteral) [`noteMatches`](#noteMatches) [`noteMiscWord`](#noteMiscWord) [`noteNounSlots`](#noteNounSlots) [`notePlural`](#notePlural) [`notePronoun`](#notePronoun) [`noteWeakPhrasing`](#noteWeakPhrasing) [`nothingInLocation`](#nothingInLocation) [`noVocabMatch`](#noVocabMatch) [`reflexiveNotAllowed`](#reflexiveNotAllowed) [`singleObjectRequired`](#singleObjectRequired) [`uniqueObjectRequired`](#uniqueObjectRequired) [`unknownNounPhrase`](#unknownNounPhrase) [`wrongReflexive`](#wrongReflexive) [`zeroQuantity`](#zeroQuantity)
 
 
 

@@ -1772,8 +1772,8 @@ modify Thing
              *   part we'll actually pluralize, and the rest is a suffix
              *   we'll stick on the end of the pluralized part.
              */
-            str = rexGroup(1)[3];
-            ofSuffix = rexGroup(2)[3];
+            str = rexGroup(1) [3];
+            ofSuffix = rexGroup(2) [3];
 
             /*
              *   now pluralize the part up to the 'of' using the normal
@@ -2748,7 +2748,7 @@ modify specialTopicPreParser
 
         /* if it starts with "A" or "T", strip off the leading verb */
         if (rexMatch(aOrTPat, str) != nil)
-            str = rexGroup(1)[3];
+            str = rexGroup(1) [3];
 
         /* return the processed result */
         return str;
@@ -4222,7 +4222,7 @@ langMessageBuilder: MessageBuilder
          */
         if (exclam)
         {
-            local exclamInd = rexGroup(1)[1];
+            local exclamInd = rexGroup(1) [1];
             paramStr = paramStr.substr(1, exclamInd - 1)
                        + paramStr.substr(exclamInd + 1);
         }
@@ -4231,13 +4231,13 @@ langMessageBuilder: MessageBuilder
         if (rexMatch(patIdObjSlashIdApostS, paramStr) != nil)
         {
             /* rewrite with the "'s" moved to the preceding parameter name */
-            paramStr = rexGroup(1)[3] + '\'s'
-                       + rexGroup(2)[3] + rexGroup(3)[3];
+            paramStr = rexGroup(1) [3] + '\'s'
+                       + rexGroup(2) [3] + rexGroup(3) [3];
         }
         else if (rexMatch(patIdObjApostS, paramStr) != nil)
         {
             /* rewrite with the "'s" moved to the preceding parameter name */
-            paramStr = rexGroup(1)[3] + '\'s' + rexGroup(2)[3];
+            paramStr = rexGroup(1) [3] + '\'s' + rexGroup(2) [3];
         }
 
         /*
@@ -4249,7 +4249,7 @@ langMessageBuilder: MessageBuilder
              *   It does - remember the past verb ending, and rewrite the
              *   parameter literally as 's/?ed'.
              */
-            pastEnding_ = rexGroup(1)[3];
+            pastEnding_ = rexGroup(1) [3];
             paramStr = 's/?ed';
         }
 
@@ -4978,13 +4978,13 @@ cmdTokenizer: Tokenizer
         rexMatch(patAlphaDashAlpha, txt);
 
         /* add the part before the hyphen */
-        toks.append([rexGroup(1)[3], typ, rexGroup(1)[3]]);
+        toks.append([rexGroup(1) [3], typ, rexGroup(1) [3]]);
 
         /* add the hyphen */
         toks.append(['-', typ, '-']);
 
         /* add the part after the hyphen */
-        toks.append([rexGroup(2)[3], typ, rexGroup(2)[3]]);
+        toks.append([rexGroup(2) [3], typ, rexGroup(2) [3]]);
     }
     patAlphaDashAlpha = static new RexPattern('(&lt;alpha&gt;+)-(&lt;alpha&gt;+)')
 
@@ -7467,7 +7467,7 @@ class DisambigOrdProd: DisambigProd
          *   that each ordinalWord is unique, since we only create one of
          *   each)
          */
-        idx = cmdDict.findWord(ordTok, &amp;ordinalWord)[1].numval;
+        idx = cmdDict.findWord(ordTok, &amp;ordinalWord) [1].numval;
 
         /*
          *   if it's the special value -1, it indicates that we should
@@ -7762,7 +7762,7 @@ grammar spelledSmallNumber(digit): digitWord-&gt;num_ : NumberProd
          *   object's numeric value property 'numval', which gives the
          *   number for the name.
          */
-        return cmdDict.findWord(num_, &amp;digitWord)[1].numval;
+        return cmdDict.findWord(num_, &amp;digitWord) [1].numval;
     }
 ;
 
@@ -7770,7 +7770,7 @@ grammar spelledSmallNumber(teen): teenWord-&gt;num_ : NumberProd
     getval()
     {
         /* look up the dictionary word for the number */
-        return cmdDict.findWord(num_, &amp;teenWord)[1].numval;
+        return cmdDict.findWord(num_, &amp;teenWord) [1].numval;
     }
 ;
 
@@ -7778,7 +7778,7 @@ grammar spelledSmallNumber(tens): tensWord-&gt;num_ : NumberProd
     getval()
     {
         /* look up the dictionary word for the number */
-        return cmdDict.findWord(num_, &amp;tensWord)[1].numval;
+        return cmdDict.findWord(num_, &amp;tensWord) [1].numval;
     }
 ;
 
@@ -7789,8 +7789,8 @@ grammar spelledSmallNumber(tensAndUnits):
     getval()
     {
         /* look up the words, and add up the values */
-        return cmdDict.findWord(tens_, &amp;tensWord)[1].numval
-            + cmdDict.findWord(units_, &amp;digitWord)[1].numval;
+        return cmdDict.findWord(tens_, &amp;tensWord) [1].numval
+            + cmdDict.findWord(units_, &amp;digitWord) [1].numval;
     }
 ;
 
@@ -8414,12 +8414,12 @@ modify Action
              *   infinitive - we want the part before the slash, plus the
              *   extra prepositions (or whatever) after the switched part
              */
-            return rexGroup(1)[3] + rexGroup(3)[3];
+            return rexGroup(1) [3] + rexGroup(3) [3];
         }
         else
         {
             /* participle - it's the part after the slash */
-            return rexGroup(2)[3] + rexGroup(3)[3];
+            return rexGroup(2) [3] + rexGroup(3) [3];
         }
     }
 
@@ -8454,7 +8454,7 @@ modify TAction
          *   last word enclosed in parentheses in our verbPhrase string.
          */
         rexSearch('&lt;lparen&gt;.*?(&lt;alpha&gt;+)&lt;rparen&gt;', verbPhrase);
-        return whatTranslate(rexGroup(1)[3]);
+        return whatTranslate(rexGroup(1) [3]);
     }
 
     /* announce a default object used with this action */
@@ -8465,7 +8465,7 @@ modify TAction
          *   the "(what)" specifier parens, excluding the last word
          */
         rexSearch('&lt;lparen&gt;(.*&lt;space&gt;+)?&lt;alpha&gt;+&lt;rparen&gt;', verbPhrase);
-        local prep = (rexGroup(1) == nil ? '' : rexGroup(1)[3]);
+        local prep = (rexGroup(1) == nil ? '' : rexGroup(1) [3]);
 
         /* do any verb-specific adjustment of the preposition */
         if (prep != nil)
@@ -8511,8 +8511,8 @@ modify TAction
         rexSearch('(.*)/&lt;alphanum|-|squote&gt;+(.*?)&lt;space&gt;+'
                   + '&lt;lparen&gt;(.*?)&lt;space&gt;*?&lt;alpha&gt;+&lt;rparen&gt;',
                   verbPhrase);
-        return rexGroup(1)[3] + spPrefix(rexGroup(2)[3])
-            + spPrefix(rexGroup(3)[3]);
+        return rexGroup(1) [3] + spPrefix(rexGroup(2) [3])
+            + spPrefix(rexGroup(3) [3]);
     }
 
     /* get the verb phrase in infinitive or participle form */
@@ -8576,15 +8576,15 @@ modify TAction
 
         /* start off with the infinitive or participle, as desired */
         if (inf)
-            ret = rexGroup(1)[3];
+            ret = rexGroup(1) [3];
         else
-            ret = rexGroup(2)[3];
+            ret = rexGroup(2) [3];
 
         /* get the prepositional complementizer */
-        vcomp = rexGroup(3)[3];
+        vcomp = rexGroup(3) [3];
 
         /* get the direct object preposition */
-        dprep = rexGroup(4)[3];
+        dprep = rexGroup(4) [3];
 
         /* do any verb-specific adjustment of the preposition */
         if (dprep != nil)
@@ -8614,7 +8614,7 @@ modify TAction
          *   if there's any suffix following the direct object
          *   placeholder, add it at the end of the phrase
          */
-        ret += rexGroup(5)[3];
+        ret += rexGroup(5) [3];
 
         /* return the complete phrase string */
         return ret;
@@ -8731,7 +8731,7 @@ modify TIAction
         }
 
         /* show the group match */
-        return whatTranslate(rexGroup(1)[3]);
+        return whatTranslate(rexGroup(1) [3]);
     }
 
     /* announce a default object used with this action */
@@ -8758,7 +8758,7 @@ modify TIAction
              *   complementizer phrase)
              */
             rexSearch('/(&lt;^lparen&gt;+) &lt;lparen&gt;', verbPhrase);
-            verb = rexGroup(1)[3] + ' ';
+            verb = rexGroup(1) [3] + ' ';
         }
 
         /* get the preposition to use, if any */
@@ -8767,14 +8767,14 @@ modify TIAction
         case DirectObject:
             /* use the preposition in the first "(what)" phrase */
             rexSearch('&lt;lparen&gt;(.*?)&lt;space&gt;*&lt;alpha&gt;+&lt;rparen&gt;', verbPhrase);
-            prep = rexGroup(1)[3];
+            prep = rexGroup(1) [3];
             break;
 
         case IndirectObject:
             /* use the preposition in the second "(what)" phrase */
             rexSearch('&lt;rparen&gt;.*&lt;lparen&gt;(.*?)&lt;space&gt;*&lt;alpha&gt;+&lt;rparen&gt;',
                       verbPhrase);
-            prep = rexGroup(1)[3];
+            prep = rexGroup(1) [3];
             break;
         }
 
@@ -8837,14 +8837,14 @@ modify TIAction
                  verbPhrase);
 
         /* pull out the verb */
-        ret = rexGroup(1)[3];
+        ret = rexGroup(1) [3];
 
         /* pull out the verb complementizer */
-        vcomp = (rexGroup(2) == nil ? '' : rexGroup(2)[3]);
+        vcomp = (rexGroup(2) == nil ? '' : rexGroup(2) [3]);
 
         /* pull out the direct and indirect object prepositions */
-        dprep = rexGroup(3)[3];
-        iprep = rexGroup(4)[3];
+        dprep = rexGroup(3) [3];
+        iprep = rexGroup(4) [3];
 
         /* get the pronoun for the other object phrase */
         pro = getOtherMessageObjectPronoun(which);
@@ -8965,16 +8965,16 @@ modify TIAction
 
         /* start off with the infinitive or participle, as desired */
         if (inf)
-            ret = rexGroup(1)[3];
+            ret = rexGroup(1) [3];
         else
-            ret = rexGroup(2)[3];
+            ret = rexGroup(2) [3];
 
         /* get the complementizer */
-        vcomp = (rexGroup(3) == nil ? '' : rexGroup(3)[3]);
+        vcomp = (rexGroup(3) == nil ? '' : rexGroup(3) [3]);
 
         /* get the direct and indirect object prepositions */
-        dprep = rexGroup(4)[3];
-        iprep = rexGroup(5)[3];
+        dprep = rexGroup(4) [3];
+        iprep = rexGroup(5) [3];
 
         /*
          *   add the complementizer BEFORE the direct object, if the
@@ -10870,12 +10870,9 @@ VerbRule(Debug)
 #endif /* __DEBUG */
 </code></pre></div></div>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

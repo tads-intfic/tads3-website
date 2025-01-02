@@ -46,36 +46,24 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-The base class for commands. A command is the root of the grammar match
+<p>The base class for commands. A command is the root of the grammar match
 tree for a single action. A command line can consist of a number of
 commands joined with command separators; in English, command separators
-are things like periods, semicolons, commas, and the words "and" and
-"then".
+are things like periods, semicolons, commas, and the words “and” and
+“then”.</p>
 
-`class `**`CommandProd`**` :   `[`BasicProd`](../object/BasicProd.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CommandProd</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/BasicProd.html"><code class="language-plaintext highlighter-rouge">BasicProd</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">CommandProd</code></strong><br />
 <a href="../object/BasicProd.html"><code class="language-plaintext highlighter-rouge">BasicProd</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">CommandProd</code></strong><br />
 <a href="../object/CommandProdWithActor.html"><code class="language-plaintext highlighter-rouge">CommandProdWithActor</code></a><br />
@@ -95,45 +83,29 @@ are things like periods, semicolons, commas, and the words "and" and
 <a href="../object/firstCommandPhrase(withActor).html"><code class="language-plaintext highlighter-rouge">firstCommandPhrase(withActor)</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#getActorPhrase"><code class="language-plaintext highlighter-rouge">getActorPhrase</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a><a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a><a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#execActorPhrase"><code class="language-plaintext highlighter-rouge">execActorPhrase</code></a><a href="#hasTargetActor"><code class="language-plaintext highlighter-rouge">hasTargetActor</code></a></p>
+<p><a href="#execActorPhrase"><code class="language-plaintext highlighter-rouge">execActorPhrase</code></a> <a href="#hasTargetActor"><code class="language-plaintext highlighter-rouge">hasTargetActor</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
-<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a><a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a><a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a><a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="getActorPhrase"></span></p>
 
@@ -141,20 +113,12 @@ are things like periods, semicolons, commas, and the words "and" and
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#674">674</a>]</p>
 
-<div class="desc">
-
-Get the match tree for the target actor phrase, if any. By default, we
-have no target actor phrase, so just return nil.
-
-</div>
+<p>Get the match tree for the target actor phrase, if any. By default, we
+have no target actor phrase, so just return nil.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="execActorPhrase"></span></p>
 
@@ -162,15 +126,11 @@ have no target actor phrase, so just return nil.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#683">683</a>]</p>
 
-<div class="desc">
-
-"Execute" the actor phrase. This lets us know that the parser has
-decided to use our phrasing to specify the target actor. We're not
-required to do anything here; it's just a notification for subclass use.
-Since we don't have a target actor phrase at all, we obviously don't
-need to do anything here.
-
-</div>
+<p>“Execute” the actor phrase. This lets us know that the parser has
+decided to use our phrasing to specify the target actor. We’re not
+required to do anything here; it’s just a notification for subclass use.
+Since we don’t have a target actor phrase at all, we obviously don’t
+need to do anything here.</p>
 
 <p><span id="hasTargetActor"></span></p>
 
@@ -178,18 +138,11 @@ need to do anything here.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#659">659</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

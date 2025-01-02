@@ -92,10 +92,10 @@ Inherited from `BasicContainerResolver` :
 [`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)
 
 Inherited from `BasicContainerResolver` :  
-[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)[`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)
+[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase) [`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)
 
 Inherited from `ProxyResolver` :  
-[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
+[`construct`](../object/ProxyResolver.html#construct) [`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver) [`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

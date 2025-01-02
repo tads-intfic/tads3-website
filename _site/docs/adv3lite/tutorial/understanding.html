@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Understanding the Source File  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Understanding the Source File<br />
 <span class="navnp"><a href="basicsource.html" class="nav"><em>Prev:</em> Creating the Basic
 Source File</a>    
-<a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
-Locations</a>     </span>
-
-</div>
+<a href="locations.html" class="nav"><em>Next:</em> Defining the Game’s
+Locations</a>     </span></p>
 
 <h1 id="understanding-the-source-file">Understanding the Source File</h1>
 
@@ -46,11 +38,10 @@ Locations</a>     </span>
 <p>You may recall that the source file begins with the following three
 lines:</p>
 
-<p>`
-    #charset “us-ascii”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
-#include "advlite.h" `
+    #include &lt;tads.h&gt;
+    #include "advlite.h"
 </code></pre></div></div>
 
 <p><em>Every</em> source file you create for use with an adv3Lite game should
@@ -62,9 +53,8 @@ source files with the same three lines as above.</p>
 
 <p>The first line is:</p>
 
-<p>`
-    #charset “us-ascii”
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
+</code></pre></div></div>
 
 <p>This tells the compiler which <em>character set</em> you are using in your
 source file (in this case, us-ascii), so that it knows how to translate
@@ -84,10 +74,9 @@ comment or whitespace.</p>
 
 <p>The next two lines are also compiler directives. These are:</p>
 
-<p>`
-    #include <tads.h>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include &lt;tads.h&gt;
     #include "advlite.h"
-`</tads.h></p>
+</code></pre></div></div>
 
 <p>The #include directive tells the compiler to copy the contents of
 whatever file is specified immediately afterwards into that place in
@@ -136,17 +125,16 @@ comments that span multiple lines.</li>
 <p>The following are thus examples of comments in the source file we have
 just created:</p>
 
-<p>`
-       // obtain IFID from http://www.tads.org/ifidgen/ifidgen</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /* Define the initial player character; this is compulsory */
-   
-   
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */ `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+       
+       /* Define the initial player character; this is compulsory */
+       
+       
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 </code></pre></div></div>
 
 <h2 id="object-definitions">Object Definitions</h2>
@@ -160,21 +148,20 @@ or two other things), but we needn’t worry about any of those for now.
 Most of what you’ll be doing when writing IF in TADS 3 is defining
 objects. Let’s take a closer look at the first one in our source file:</p>
 
-<p>`
-    versionInfo: GameID
-        IFID = ‘’ // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-        name = ‘The Adventures of Heidi’
-        byline = ‘by A.N. Author’
-        htmlByline = ‘by <a href="mailto:an.author@somemail.com">
-                      A.N. Author</a>’
-        version = ‘1’
-        authorEmail = ‘A.N. Author <a href="mailto:an.author@somemail.com">an.author@somemail.com</a>’
-        desc = ‘A simple game borrowed from the Inform Beginner's Guide by Roger
-            Firth and Sonja Kesserich.’
-        htmlDesc = ‘A simple game borrowed from the <i>Inform Beginner's Guide</i>
-            by Roger Firth and Sonja Kesserich.’</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    versionInfo: GameID
+        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+        name = 'The Adventures of Heidi'
+        byline = 'by A.N. Author'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
+        version = '1'
+        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+        desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
+            Firth and Sonja Kesserich.'
+        htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
+            by Roger Firth and Sonja Kesserich.'    
+        
+    ;
 </code></pre></div></div>
 
 <p>The object definition begins with the name of the object (here
@@ -236,12 +223,11 @@ single quote marks after <code class="language-plaintext highlighter-rouge">IFID
 
 <p>The next object in our source file is:</p>
 
-<p>`
-    gameMain: GameMainDef
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
     ;
-`</p>
+</code></pre></div></div>
 
 <p>This is where you can define certain other basic information about your
 game, such as certain options and what it does on start-up. For the full
@@ -259,26 +245,25 @@ gameMain as it is.</p>
 and the object representing the player character. These must be present
 for your game to compile correctly:</p>
 
-<p>`
-    /* The starting location; this can be called anything you like */</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* The starting location; this can be called anything you like */
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>beforeCottage: Room 'In front of a Cottage'
-    "You stand outside a cottage. The forest stretches east. "
-;
+    beforeCottage: Room 'In front of a Cottage'
+        "You stand outside a cottage. The forest stretches east. "
+    ;
 
-/* 
- *   The player character object. This doesn't have to be called me, but me is a
- *   convenient name. If you change it to something else, rememember to change
- *   gameMain.initialPlayerChar accordingly.
- */
+    /* 
+     *   The player character object. This doesn't have to be called me, but me is a
+     *   convenient name. If you change it to something else, rememember to change
+     *   gameMain.initialPlayerChar accordingly.
+     */
 
-+ me: Thing 'you;;heidi'   
-    isFixed = true    
-    proper = true
-    ownsContents = true
-    person = 2   
-    contType = Carrier    
-; `
+    + me: Thing 'you;;heidi'   
+        isFixed = true    
+        proper = true
+        ownsContents = true
+        person = 2   
+        contType = Carrier    
+    ;
 </code></pre></div></div>
 
 <p>Note the use of the + sign to indicate the me object is located inside
@@ -293,18 +278,15 @@ in what follows.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \&gt;
-Understanding the Source File  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> &gt;
+Understanding the Source File<br />
 <span class="navnp"><a href="basicsource.html" class="nav"><em>Prev:</em> Creating the Basic
 Source File</a>    
-<a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
-Locations</a>     </span>
+<a href="locations.html" class="nav"><em>Next:</em> Defining the Game’s
+Locations</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

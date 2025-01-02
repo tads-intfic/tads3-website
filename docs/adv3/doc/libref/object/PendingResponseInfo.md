@@ -68,7 +68,7 @@ Pending response information structure
 
 
 
-[`args_`](#args_)[`issuer_`](#issuer_)[`prop_`](#prop_)
+[`args_`](#args_) [`issuer_`](#issuer_) [`prop_`](#prop_)
 
 <span id="_MethodSummary_"></span>
 

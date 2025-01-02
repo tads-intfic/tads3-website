@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; List  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; List<br />
 <span class="navnp"><a href="iter.html" class="nav"><em>Prev:</em> Iterator</a>
     <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="list">List</h1>
 
@@ -93,647 +85,505 @@ Collection methods. In addition, List defines the methods shown below.</p>
 
 <p><code class="language-plaintext highlighter-rouge">append(*val*)</code></p>
 
-<div class="fdef">
+<p>Appends the value <em>val</em> to this list, returning the resulting list. This
+is almost the same as using the <code class="language-plaintext highlighter-rouge">+</code> operator to
+append <em>val</em> to the list, but differs in that this method always treats
+<em>val</em> as a single new element, even if <em>val</em> is a list. Consider the
+following:</p>
 
-Appends the value *val* to this list, returning the resulting list. This
-is almost the same as using the `+` operator to
-append *val* to the list, but differs in that this method always treats
-*val* as a single new element, even if *val* is a list. Consider the
-following:
-
-```
-    local x = [1, 2, 3];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = [1, 2, 3];
     local y = x + [4, 5];
     local z = x.append([4, 5]);
-```
+</code></pre></div></div>
 
-In this example, the value of `y` is the list
-`\[1, 2, 3, 4, 5\]`: if the value on the right
-of a `+` operator is a list, the
-`+` operator appends each value of the list as a
-separate element. In contrast, the value of `z`
-is `\[1, 2, 3, \[4, 5\]\]`, because the
-`append()` method always treats its argument as
-a single element of the new list.
+<p>In this example, the value of <code class="language-plaintext highlighter-rouge">y</code> is the list
+<code class="language-plaintext highlighter-rouge">\[1, 2, 3, 4, 5\]</code>: if the value on the right
+of a <code class="language-plaintext highlighter-rouge">+</code> operator is a list, the
+<code class="language-plaintext highlighter-rouge">+</code> operator appends each value of the list as a
+separate element. In contrast, the value of <code class="language-plaintext highlighter-rouge">z</code>
+is <code class="language-plaintext highlighter-rouge">\[1, 2, 3, \[4, 5\]\]</code>, because the
+<code class="language-plaintext highlighter-rouge">append()</code> method always treats its argument as
+a single element of the new list.</p>
 
-Note that you can achieve the same effect using the
-`+` operator by constructing a new list for the
-right operand:
+<p>Note that you can achieve the same effect using the
+<code class="language-plaintext highlighter-rouge">+</code> operator by constructing a new list for the
+right operand:</p>
 
-```
-    local y2 = x + [[4, 5]];
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local y2 = x + [[4, 5]];
+</code></pre></div></div>
 
-This will ensure that the value of `y2` is the
-same as the value of `z`:
-`\[1, 2, 3, \[4, 5\]\]`. However, the
-`append()` method is more efficient than
+<p>This will ensure that the value of <code class="language-plaintext highlighter-rouge">y2</code> is the
+same as the value of <code class="language-plaintext highlighter-rouge">z</code>:
+<code class="language-plaintext highlighter-rouge">\[1, 2, 3, \[4, 5\]\]</code>. However, the
+<code class="language-plaintext highlighter-rouge">append()</code> method is more efficient than
 constructing a new list for the right operand of
-`+`, because it's not necessary to construct the
-intermediate list using `append()`.
+<code class="language-plaintext highlighter-rouge">+</code>, because it’s not necessary to construct the
+intermediate list using <code class="language-plaintext highlighter-rouge">append()</code>.</p>
 
+<p><code class="language-plaintext highlighter-rouge">appendUnique(*lst*)</code></p>
 
-
-`appendUnique(*lst*)`
-
-<div class="fdef">
-
-Appends the elements of the list *lst* to this list, returning a new
+<p>Appends the elements of the list <em>lst</em> to this list, returning a new
 list consisting only of the unique elements of the combination. Each
 value appearing in the result list will appear in the result list only
 once. (The same effect could be obtained by concatenating the two lists
-with the `+` operator then applying
-`getUnique()` to the result, but this method is
+with the <code class="language-plaintext highlighter-rouge">+</code> operator then applying
+<code class="language-plaintext highlighter-rouge">getUnique()</code> to the result, but this method is
 more efficient because it avoids constructing the fully concatenated
-list as an intermediate value.)
+list as an intermediate value.)</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">car()</code></p>
 
-`car()`
+<p>Returns the first element of the list. If the list has no elements,
+returns <code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-<div class="fdef">
-
-Returns the first element of the list. If the list has no elements,
-returns `nil`.
-
-(The names "car" and "cdr" are historical; they come from the Lisp
+<p>(The names “car” and “cdr” are historical; they come from the Lisp
 programming language, which borrowed them from an old IBM mainframe
-instruction set.)
+instruction set.)</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">cdr()</code></p>
 
-`cdr()`
-
-<div class="fdef">
-
-Returns the "tail" of the list; that is, the rest of the list after
+<p>Returns the “tail” of the list; that is, the rest of the list after
 removing the first element. If the list has no elements, returns
-`nil`. This function is almost the same as
-`sublist(2)`, except that
-`sublist()` would return an empty list if given
-an empty list, whereas `cdr()` returns
-`nil` in this case.
+<code class="language-plaintext highlighter-rouge">nil</code>. This function is almost the same as
+<code class="language-plaintext highlighter-rouge">sublist(2)</code>, except that
+<code class="language-plaintext highlighter-rouge">sublist()</code> would return an empty list if given
+an empty list, whereas <code class="language-plaintext highlighter-rouge">cdr()</code> returns
+<code class="language-plaintext highlighter-rouge">nil</code> in this case.</p>
 
-(The names "car" and "cdr" are historical; they come from the Lisp
+<p>(The names “car” and “cdr” are historical; they come from the Lisp
 programming language, which borrowed them from an old IBM mainframe
-instruction set.)
+instruction set.)</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">countOf(*val*)</code></p>
 
-`countOf(*val*)`
+<p>Returns the number of elements whose values equal <em>val</em>.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">countWhich(*cond*)</code></p>
 
-Returns the number of elements whose values equal *val*.
-
-</div>
-
-`countWhich(*cond*)`
-
-<div class="fdef">
-
-Returns the number of elements for which the callback function *cond*
-returns a non-false value (anything but `nil` or
+<p>Returns the number of elements for which the callback function <em>cond</em>
+returns a non-false value (anything but <code class="language-plaintext highlighter-rouge">nil</code> or
 0). For each element, this method calls the callback, passing the
 current element as the argument. If the callback returns anything but
-`nil` or 0, the method counts the element. After
+<code class="language-plaintext highlighter-rouge">nil</code> or 0, the method counts the element. After
 invoking the callback for each element, the method returns the resulting
-count.
+count.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">forEach(*func*)</code></p>
 
-`forEach(*func*)`
-
-<div class="fdef">
-
-Invokes the callback function
-`(*func*)(*value*)` for each element, in order
-from first to last, passing the value of one element as *value* to the
+<p>Invokes the callback function
+<code class="language-plaintext highlighter-rouge">(*func*)(*value*)</code> for each element, in order
+from first to last, passing the value of one element as <em>value</em> to the
 callback on each invocation. The callback function takes one argument,
 which is the current element, and returns no value. This method returns
 no value. This method is a convenient means of executing some code for
-each element of the list.
+each element of the list.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">forEachAssoc(*func*)</code></p>
 
-`forEachAssoc(*func*)`
-
-<div class="fdef">
-
-Invokes the callback function `(*func*)(*index*,
-*value*)` for each element, in order from first to last, passing
-each element's index and value to the function *func*. The callback
+<p>Invokes the callback function <code class="language-plaintext highlighter-rouge">(*func*)(*index*,
+*value*)</code> for each element, in order from first to last, passing
+each element’s index and value to the function <em>func</em>. The callback
 function returns no value. This method returns no value. This method is
 a convenient means of executing some code for each element of the list;
-unlike `forEach()`, this method provides its
-callback with the index as well as the value for each element it visits.
+unlike <code class="language-plaintext highlighter-rouge">forEach()</code>, this method provides its
+callback with the index as well as the value for each element it visits.</p>
 
-</div>
+<p><span id="generate"></span></p>
 
-<span id="generate"></span>
+<p><code class="language-plaintext highlighter-rouge">generate(*func*, *n*)</code></p>
 
-`generate(*func*, *n*)`
-
-<div class="fdef">
-
-Creates a new list containing *n* elements by invoking the callback
-function *func* once for each element, and using the return value as the
+<p>Creates a new list containing <em>n</em> elements by invoking the callback
+function <em>func</em> once for each element, and using the return value as the
 element value. This is a class method that you call on the List class
-directly, as in `List.generate(f, 10)`.
+directly, as in <code class="language-plaintext highlighter-rouge">List.generate(f, 10)</code>.</p>
 
-*func* is a callback function, which can be a regular function or an
-anonymous function. *func* can take zero or one argument. The
+<p><em>func</em> is a callback function, which can be a regular function or an
+anonymous function. <em>func</em> can take zero or one argument. The
 one-argument form is invoked with the index of the current element as
-the argument on each call.
+the argument on each call.</p>
 
-`generate()` is convenient for creating a list
+<p><code class="language-plaintext highlighter-rouge">generate()</code> is convenient for creating a list
 of values based on a formula. For example, this creates a list of the
-first ten positive even integers:
+first ten positive even integers:</p>
 
-```
-    local e = List.generate({i: i*2}, 10);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local e = List.generate({i: i*2}, 10);
+</code></pre></div></div>
 
-That creates a list containing ten elements. Each element's value is
+<p>That creates a list containing ten elements. Each element’s value is
 determined by calling the anonymous function ` {i:
-i\*2}` with the index of that element. So the value of the first
+i*2}<code class="language-plaintext highlighter-rouge"> with the index of that element. So the value of the first
 element, at index 1, is determined by calling the anonymous function
-with `i=1`. In this case the function returns
-`i\*2` == `1\*2` ==
-`2`. The second element is determined by calling
-the function again with `i=2`, which returns 4,
-and so on for the remaining elements.
+with </code>i=1<code class="language-plaintext highlighter-rouge">. In this case the function returns
+</code>i*2<code class="language-plaintext highlighter-rouge"> == </code>1*2<code class="language-plaintext highlighter-rouge"> ==
+</code>2<code class="language-plaintext highlighter-rouge">. The second element is determined by calling
+the function again with </code>i=2`, which returns 4,
+and so on for the remaining elements.</p>
 
-This creates a list of the first 20 Fibonacci numbers:
+<p>This creates a list of the first 20 Fibonacci numbers:</p>
 
-```
-    local a = 0, b = 1;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = 0, b = 1;
     local fib = List.generate({: local f = a, a = b, b = f + a, f }, 20);
-```
+</code></pre></div></div>
 
-(For a simple way of generating a list consisting of a repeated fixed
-value, see the [makeList()](tadsgen.html#makeList) function.)
+<p>(For a simple way of generating a list consisting of a repeated fixed
+value, see the <a href="tadsgen.html#makeList">makeList()</a> function.)</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getUnique()</code></p>
 
-`getUnique()`
-
-<div class="fdef">
-
-Returns a new list consisting of the unique elements of the original
+<p>Returns a new list consisting of the unique elements of the original
 list. For each value in the original list, the value will appear in the
 new list only once. The order of the elements in the new list is that of
 the first appearances of the unique elements of the original list. For
-example, if the original list is `\[1, 5, 2, 5, 3, 5,
-4, 5\]`, this method will return `\[1, 5, 2, 3,
-4\]`.
+example, if the original list is <code class="language-plaintext highlighter-rouge">\[1, 5, 2, 5, 3, 5,
+4, 5\]</code>, this method will return <code class="language-plaintext highlighter-rouge">\[1, 5, 2, 3,
+4\]</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">indexOf(*val*)</code></p>
 
-`indexOf(*val*)`
+<p>Returns the index of the first element of the list equal to the given
+value. If <em>val</em> does not appear anywhere in the list, the method returns
+<code class="language-plaintext highlighter-rouge">nil</code>. The first element is at index 1.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">indexOfMax(*func*?)</code></p>
 
-Returns the index of the first element of the list equal to the given
-value. If *val* does not appear anywhere in the list, the method returns
-`nil`. The first element is at index 1.
-
-</div>
-
-`indexOfMax(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns the index of the element with the maximum
+<p>If <em>func</em> is omitted, returns the index of the element with the maximum
 value, comparing values to one another as though using the
-`\&gt;` operator.
+<code class="language-plaintext highlighter-rouge">\&gt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the list, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the list, passing the element’s value as
 the function argument. The function must return a value. The result of
-`indexOfMax` in this case is the index of the
-element for which *func*() returned the maximum value.
+<code class="language-plaintext highlighter-rouge">indexOfMax</code> in this case is the index of the
+element for which <em>func</em>() returned the maximum value.</p>
 
-For example, if `lst` is a list of string
-values, `lst.indexOfMax({x: x.length()})`
-returns the index of the longest string in the list.
+<p>For example, if <code class="language-plaintext highlighter-rouge">lst</code> is a list of string
+values, <code class="language-plaintext highlighter-rouge">lst.indexOfMax({x: x.length()})</code>
+returns the index of the longest string in the list.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">indexOfMin(*func*?)</code></p>
 
-`indexOfMin(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns the index of the element with the minimum
+<p>If <em>func</em> is omitted, returns the index of the element with the minimum
 value, comparing values to one another as though using the
-`\&lt;` operator.
+<code class="language-plaintext highlighter-rouge">\&lt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the list, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the list, passing the element’s value as
 the function argument. The function must return a value. The result of
-`indexOfMin` in this case is the index of the
-element for which *func*() returned the minimum value.
+<code class="language-plaintext highlighter-rouge">indexOfMin</code> in this case is the index of the
+element for which <em>func</em>() returned the minimum value.</p>
 
-For example, if `lst` is a list of string
-values, `lst.indexOfMin({x: x.length()})`
-returns the index of the shortest string in the list.
+<p>For example, if <code class="language-plaintext highlighter-rouge">lst</code> is a list of string
+values, <code class="language-plaintext highlighter-rouge">lst.indexOfMin({x: x.length()})</code>
+returns the index of the shortest string in the list.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code></p>
 
-`indexWhich(*cond*)`
-
-<div class="fdef">
-
-Finds the first element for which the given condition is true. The
+<p>Finds the first element for which the given condition is true. The
 method iterates through the elements of the list, starting at the first
 element and proceeding in order, and applies the callback function
-*cond* to each element. The callback takes one argument, which is the
+<em>cond</em> to each element. The callback takes one argument, which is the
 value of the list element, and returns a condition result value. For
 each element, if the callback function returns a non-false value (i.e.,
-any value except `nil` or 0), the method
+any value except <code class="language-plaintext highlighter-rouge">nil</code> or 0), the method
 immediately stops the iteration and returns the index of that element.
-If the callback returns a false value (`nil` or
+If the callback returns a false value (<code class="language-plaintext highlighter-rouge">nil</code> or
 0) for every element of the list, the method returns
-`nil`.
+<code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">insertAt(*index*, *val1*, *val2*, …)</code></p>
 
-`insertAt(*index*, *val1*, *val2*, …)`
-
-<div class="fdef">
-
-Returns a new list which results from inserting the given values
-(*val1*, *val2*, and so on) into the existing list before the element at
-the position given by *index*. At least one value argument is required;
+<p>Returns a new list which results from inserting the given values
+(<em>val1</em>, <em>val2</em>, and so on) into the existing list before the element at
+the position given by <em>index</em>. At least one value argument is required;
 if multiple value arguments are provided, the values are inserted into
-the list in the same order in which they appear in the arguments.
+the list in the same order in which they appear in the arguments.</p>
 
-If *index* is 1, the values are inserted before the first element of the
-existing list (this means that `insertAt(1, x)`
-is equivalent to `prepend(x)`), and if *index*
+<p>If <em>index</em> is 1, the values are inserted before the first element of the
+existing list (this means that <code class="language-plaintext highlighter-rouge">insertAt(1, x)</code>
+is equivalent to <code class="language-plaintext highlighter-rouge">prepend(x)</code>), and if <em>index</em>
 is equal to the number of elements in the original list plus 1, the
 values are inserted after the last element of the existing list (so
-`lst.insertAt(lst.length() + 1, x)` is
-equivalent to `lst.append(x)`). If *index* is
+<code class="language-plaintext highlighter-rouge">lst.insertAt(lst.length() + 1, x)</code> is
+equivalent to <code class="language-plaintext highlighter-rouge">lst.append(x)</code>). If <em>index</em> is
 negative, it counts backwards from the end of the list: -1 inserts
 before the last element, -2 inserts before the second to last, and so
-on. If *index* is zero, elements are inserted after the existing last
-element.
+on. If <em>index</em> is zero, elements are inserted after the existing last
+element.</p>
 
-Because the new elements are inserted before any existing element at the
+<p>Because the new elements are inserted before any existing element at the
 insertion point, the index in the result list of the first element
-inserted always equals *index*. For example, consider this statement:
+inserted always equals <em>index</em>. For example, consider this statement:</p>
 
-```
-    lst = lst.insertAt(5, 'a', 'b', 'c');
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lst = lst.insertAt(5, 'a', 'b', 'c');
+</code></pre></div></div>
 
-After this statement is executed, `lst\[5\]`
-will be `'a'`.
+<p>After this statement is executed, <code class="language-plaintext highlighter-rouge">lst\[5\]</code>
+will be <code class="language-plaintext highlighter-rouge">'a'</code>.</p>
 
-Note that, if any of the values to be inserted are themselves lists,
+<p>Note that, if any of the values to be inserted are themselves lists,
 each one is inserted as a single list-valued element, in the same manner
-as `append(*val*)` and
-`prepend(*val*)`.
+as <code class="language-plaintext highlighter-rouge">append(*val*)</code> and
+<code class="language-plaintext highlighter-rouge">prepend(*val*)</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">intersect(*lst2*)</code></p>
 
-`intersect(*lst2*)`
-
-<div class="fdef">
-
-Returns a new list consisting of the intersection of this list and
-*lst2*; that is, a list consisting of the elements common to both this
-list and *lst2*. *lst2* must also be a list. If the two lists have no
+<p>Returns a new list consisting of the intersection of this list and
+<em>lst2</em>; that is, a list consisting of the elements common to both this
+list and <em>lst2</em>. <em>lst2</em> must also be a list. If the two lists have no
 elements in common, the result is an empty list. If an element of the
 shorter list (or, if the lists are of equal length, this list) appears
 more than once in the shorter list, and that element value also appears
 in the longer list, then the element will be in the result list the same
 number of times that it is in the shorter list. An element repeated in
-the longer list will not be repeated in the result list.
+the longer list will not be repeated in the result list.</p>
 
-</div>
+<p><span id="join"></span></p>
 
-<span id="join"></span>
+<p><code class="language-plaintext highlighter-rouge">join(*sep*?)</code></p>
 
-`join(*sep*?)`
+<p>Returns a string made by concatenating the elements of the list together
+in index order. If <em>sep</em> is provided, it’s a string that’s interposed
+between elements as a separator. If <em>sep</em> is omitted, the elements are
+concatenated with no separation.</p>
 
-<div class="fdef">
+<p>Each element is converted to a string using the usual automatic
+conversions before it’s concatenated. If an element can’t be converted
+to string, the method throws an error.</p>
 
-Returns a string made by concatenating the elements of the list together
-in index order. If *sep* is provided, it's a string that's interposed
-between elements as a separator. If *sep* is omitted, the elements are
-concatenated with no separation.
+<p><code class="language-plaintext highlighter-rouge">lastIndexOf(*val*)</code></p>
 
-Each element is converted to a string using the usual automatic
-conversions before it's concatenated. If an element can't be converted
-to string, the method throws an error.
+<p>Returns the index of the last element in the list whose value equals
+<em>val</em>. If no element in the list equals <em>val</em>, this method returns
+<code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">lastIndexWhich(*cond*)</code></p>
 
-`lastIndexOf(*val*)`
-
-<div class="fdef">
-
-Returns the index of the last element in the list whose value equals
-*val*. If no element in the list equals *val*, this method returns
-`nil`.
-
-</div>
-
-`lastIndexWhich(*cond*)`
-
-<div class="fdef">
-
-Returns the index of the last element in the list for which the callback
-function *cond* returns a non-false value (anything except
-`nil` or 0). This method is similar to
-`indexWhich(*cond*)`, but scans the list in
+<p>Returns the index of the last element in the list for which the callback
+function <em>cond</em> returns a non-false value (anything except
+<code class="language-plaintext highlighter-rouge">nil</code> or 0). This method is similar to
+<code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code>, but scans the list in
 reverse order, starting at the last element and working towards the
-first. Returns `nil` if the callback returns
-`nil` or 0 for every element.
+first. Returns <code class="language-plaintext highlighter-rouge">nil</code> if the callback returns
+<code class="language-plaintext highlighter-rouge">nil</code> or 0 for every element.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">lastValWhich(*cond*)</code></p>
 
-`lastValWhich(*cond*)`
-
-<div class="fdef">
-
-Returns the value of the last element in the list for which the callback
-function *cond* returns a non-false value. This method is similar to
-`lastIndexWhich(*cond*)`, but returns the value
+<p>Returns the value of the last element in the list for which the callback
+function <em>cond</em> returns a non-false value. This method is similar to
+<code class="language-plaintext highlighter-rouge">lastIndexWhich(*cond*)</code>, but returns the value
 of the matching element rather than its index. Returns
-`nil` if the callback returns
-`nil` or 0 for every element.
+<code class="language-plaintext highlighter-rouge">nil</code> if the callback returns
+<code class="language-plaintext highlighter-rouge">nil</code> or 0 for every element.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">length()</code></p>
 
-`length()`
+<p>Returns the number of elements in the list.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">mapAll(*func*)</code></p>
 
-Returns the number of elements in the list.
-
-</div>
-
-`mapAll(*func*)`
-
-<div class="fdef">
-
-For each element of the list, this method invokes the callback function
-*func*, passing the current element as the single argument, then adds
-the callback's return value to a new list. The method returns the
+<p>For each element of the list, this method invokes the callback function
+<em>func</em>, passing the current element as the single argument, then adds
+the callback’s return value to a new list. The method returns the
 resulting new list, which has the same number of elements as the
 original list. Each element of the returned list contains the result
 returned by func for the corresponding element of the original list.
-This method does not modify the original list, but creates a new list.
+This method does not modify the original list, but creates a new list.</p>
 
-Here's an example that creates a new list consisting of multiplying each
+<p>Here’s an example that creates a new list consisting of multiplying each
 element of an original list by 2 (naturally, for this to work, the
-original list must consist entirely of integer values):
+original list must consist entirely of integer values):</p>
 
-```
-    x = [1, 2, 3, 4];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = [1, 2, 3, 4];
     y = x.applyAll({x: x*2});
-```
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">maxVal(*func*?)</code></p>
 
-`maxVal(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns the maximum of the element values in the
+<p>If <em>func</em> is omitted, returns the maximum of the element values in the
 list, comparing values to one another as though using the
-`\&gt;` operator.
+<code class="language-plaintext highlighter-rouge">\&gt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the list, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the list, passing the element’s value as
 the function argument. The function must return a value. The result of
-`maxVal` in this case is the value of the
-element which maximizes *func*. Note that the **element value** is
-returned, *not* the return value of *func*.
+<code class="language-plaintext highlighter-rouge">maxVal</code> in this case is the value of the
+element which maximizes <em>func</em>. Note that the <strong>element value</strong> is
+returned, <em>not</em> the return value of <em>func</em>.</p>
 
-For example, if `lst` is a list of string
-values, `lst.maxVal({x: x.length()})` returns
-the longest string in the list.
+<p>For example, if <code class="language-plaintext highlighter-rouge">lst</code> is a list of string
+values, <code class="language-plaintext highlighter-rouge">lst.maxVal({x: x.length()})</code> returns
+the longest string in the list.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">minVal(*func*?)</code></p>
 
-`minVal(*func*?)`
-
-<div class="fdef">
-
-If *func* is omitted, returns minimum of the element values in the list,
+<p>If <em>func</em> is omitted, returns minimum of the element values in the list,
 comparing values to one another as though using the
-`\&lt;` operator.
+<code class="language-plaintext highlighter-rouge">\&lt;</code> operator.</p>
 
-If *func* is specified, it must be a function pointer. The method calls
-*func*() for each element in the list, passing the element's value as
+<p>If <em>func</em> is specified, it must be a function pointer. The method calls
+<em>func</em>() for each element in the list, passing the element’s value as
 the function argument. The function must return a value. The result of
-`minVal` in this case is the element that
-minimizes *func*(). Note that the **element value** is returned, *not*
-the return value of *func*.
+<code class="language-plaintext highlighter-rouge">minVal</code> in this case is the element that
+minimizes <em>func</em>(). Note that the <strong>element value</strong> is returned, <em>not</em>
+the return value of <em>func</em>.</p>
 
-For example, if `lst` is a list of string
-values, `lst.minVal({x: x.length()})` returns
-the shortest string in the list.
+<p>For example, if <code class="language-plaintext highlighter-rouge">lst</code> is a list of string
+values, <code class="language-plaintext highlighter-rouge">lst.minVal({x: x.length()})</code> returns
+the shortest string in the list.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">prepend(*val*)</code></p>
 
-`prepend(*val*)`
-
-<div class="fdef">
-
-Returns a new list which results from inserting the value *val* before
+<p>Returns a new list which results from inserting the value <em>val</em> before
 the first element of the existing list. This method is similar to
-`append(*val*)`, but this method inserts the new
+<code class="language-plaintext highlighter-rouge">append(*val*)</code>, but this method inserts the new
 element at the beginning of the list rather than at the end. Note that
-if *val* is a list, it is prepended as a single list-valued element.
+if <em>val</em> is a list, it is prepended as a single list-valued element.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">removeElementAt(*index*)</code></p>
 
-`removeElementAt(*index*)`
+<p>Returns a new list which results from deleting the element at the given
+index. For example, <code class="language-plaintext highlighter-rouge">\[100, 200,
+300\].removeElementAt(2)</code> yields <code class="language-plaintext highlighter-rouge">\[100,
+300\]</code>.</p>
 
-<div class="fdef">
-
-Returns a new list which results from deleting the element at the given
-index. For example, `\[100, 200,
-300\].removeElementAt(2)` yields `\[100,
-300\]`.
-
-If *index* is negative, it counts from the end of the list: -1 is the
-last element, -2 is the second to last, and so on. Otherwise, *index*
+<p>If <em>index</em> is negative, it counts from the end of the list: -1 is the
+last element, -2 is the second to last, and so on. Otherwise, <em>index</em>
 must be at least 1 and at most the number of elements in the list; if
-*index* is outside this range, the method throws an "index out of range"
-exception.
+<em>index</em> is outside this range, the method throws an “index out of range”
+exception.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">removeRange(*startIndex*, *endIndex*)</code></p>
 
-`removeRange(*startIndex*, *endIndex*)`
+<p>Returns a new list which results from deleting the elements starting at
+<em>startIndex</em> and ending with (and including) <em>endIndex</em>. If <em>endIndex</em>
+equals <em>startIndex</em>, only one value is deleted, so
+<code class="language-plaintext highlighter-rouge">removeRange(*x*, *x*)</code> is equivalent to
+<code class="language-plaintext highlighter-rouge">removeElementAt(*x*)</code>.</p>
 
-<div class="fdef">
-
-Returns a new list which results from deleting the elements starting at
-*startIndex* and ending with (and including) *endIndex*. If *endIndex*
-equals *startIndex*, only one value is deleted, so
-`removeRange(*x*, *x*)` is equivalent to
-`removeElementAt(*x*)`.
-
-If either index is negative, it counts from the end of the list: -1 is
+<p>If either index is negative, it counts from the end of the list: -1 is
 the last element, -2 is the second to last, and so on. Otherwise,
-*startIndex* and *endIndex* must be at least 1 and at most the number of
-elements in the list, and *endIndex* must be greater than or equal to
-*startIndex*.
+<em>startIndex</em> and <em>endIndex</em> must be at least 1 and at most the number of
+elements in the list, and <em>endIndex</em> must be greater than or equal to
+<em>startIndex</em>.</p>
 
-</div>
+<p><span id="sort"></span></p>
 
-<span id="sort"></span>
+<p><code class="language-plaintext highlighter-rouge">sort(*descending*?, *comparisonFunction*?)</code></p>
 
-`sort(*descending*?, *comparisonFunction*?)`
-
-<div class="fdef">
-
-Returns a new list consisting of the elements of this list rearranged
+<p>Returns a new list consisting of the elements of this list rearranged
 into a sorted order. By default, this method sorts the elements of the
 list into ascending order, but you can reverse this ordering by
-specifying `true` for the *descending*
-parameter.
+specifying <code class="language-plaintext highlighter-rouge">true</code> for the <em>descending</em>
+parameter.</p>
 
-The optional *comparisonFunction* can be used to specify the ordering of
+<p>The optional <em>comparisonFunction</em> can be used to specify the ordering of
 the result. If this argument is not specified (or is
-`nil`), the method will sort the elements
+<code class="language-plaintext highlighter-rouge">nil</code>), the method will sort the elements
 according to the standard system ordering of values; hence, the elements
 must be of comparable types (such as all integers or all strings). By
 specifying a comparison function, you can provide your own special
 ordering, and you can also sort values that have no system-defined
-order, such as object values.
+order, such as object values.</p>
 
-If provided, the *comparisonFunction* value is a pointer to a function
+<p>If provided, the <em>comparisonFunction</em> value is a pointer to a function
 taking two arguments, which are two values from the list to be compared.
 The function returns an integer less than zero if the first value is
 less than the second, zero if the two values are equal, or an integer
-greater than zero if the first value is greater than the second.
+greater than zero if the first value is greater than the second.</p>
 
-For example, if you wanted to sort a list of objects so that the objects
-are placed into descending order of their "priority" property values,
-where the "priority" property has an integer value, you could do this:
+<p>For example, if you wanted to sort a list of objects so that the objects
+are placed into descending order of their “priority” property values,
+where the “priority” property has an integer value, you could do this:</p>
 
-```
-    lst = [obj1, obj2, obj3];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lst = [obj1, obj2, obj3];
     sortedLst = lst.sort(true, { a, b: a.priority - b.priority });
-```
+</code></pre></div></div>
 
-</div>
+<p><span id="splice"></span></p>
 
-<span id="splice"></span>
+<p><code class="language-plaintext highlighter-rouge">splice(*startIndex*, *deleteCount*, ...)</code></p>
 
-`splice(*startIndex*, *deleteCount*, ...)`
-
-<div class="fdef">
-
-Returns a new list which results from deleting the *deleteCount*
-elements starting at *startIndex*, then inserting any additional
-argument values as new list elements in their place. If *deleteCount* is
+<p>Returns a new list which results from deleting the <em>deleteCount</em>
+elements starting at <em>startIndex</em>, then inserting any additional
+argument values as new list elements in their place. If <em>deleteCount</em> is
 zero, no elements are deleted. If there are no additional arguments, no
-new elements are inserted.
+new elements are inserted.</p>
 
-If *startIndex* is negative, it counts from the end of the list: -1 is
+<p>If <em>startIndex</em> is negative, it counts from the end of the list: -1 is
 the last element, -2 is the second to last, and so on. Use 0 to indicate
 one past the last element, to insert the new elements after the last
-existing element.
+existing element.</p>
 
-You can get the same effect as this method using a combination of
-`removeRange()` and
-`insertAt()`. `splice()`
+<p>You can get the same effect as this method using a combination of
+<code class="language-plaintext highlighter-rouge">removeRange()</code> and
+<code class="language-plaintext highlighter-rouge">insertAt()</code>. <code class="language-plaintext highlighter-rouge">splice()</code>
 is clearer and more concise for cases where you want to replace a range
-with new values. It's also a little more efficient, since it doesn't
+with new values. It’s also a little more efficient, since it doesn’t
 have to construct an extra list to hold the intermediate result between
-the deletion and insertion.
+the deletion and insertion.</p>
 
-</div>
+<p><span id="sublist"></span></p>
 
-<span id="sublist"></span>
+<p><code class="language-plaintext highlighter-rouge">sublist(*start*, *length*?)</code></p>
 
-`sublist(*start*, *length*?)`
-
-<div class="fdef">
-
-Creates and returns a new list consisting of a sublist of this list
-starting at the element of this list at index *start*, and continuing
-for the number of elements given by *length*, if present, or to the end
-of this list if not. If *start* is negative, it counts from the end of
+<p>Creates and returns a new list consisting of a sublist of this list
+starting at the element of this list at index <em>start</em>, and continuing
+for the number of elements given by <em>length</em>, if present, or to the end
+of this list if not. If <em>start</em> is negative, it counts from the end of
 the list: -1 is the last element, -2 is the second to last, and so on.
-If *length* is negative, it gives the number of items to omit from the
+If <em>length</em> is negative, it gives the number of items to omit from the
 end of the result list; -1 omits the last element of the source list, -2
-omits the last two elements, and so on.
+omits the last two elements, and so on.</p>
 
-Examples:
+<p>Examples:</p>
 
-```
-    [1, 2, 3].sublist(2) yields [2, 3]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    [1, 2, 3].sublist(2) yields [2, 3]
     [1, 2, 3].sublist(2, 1) yields [2]
     [1, 2, 3, 4, 5].sublist(1, -2) yields [1, 2, 3]
     [1, 2, 3, 4, 5].sublist(2, -2) yields [2, 3]
-```
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">subset(*func*)</code></p>
 
-`subset(*func*)`
-
-<div class="fdef">
-
-Creates and returns a new list containing the elements of this list for
-which the callback function *func* returns true (i.e., any value other
-than `nil` or 0). For each element of the source
+<p>Creates and returns a new list containing the elements of this list for
+which the callback function <em>func</em> returns true (i.e., any value other
+than <code class="language-plaintext highlighter-rouge">nil</code> or 0). For each element of the source
 list, this method invokes the callback function, passing the value of
-the current element as the callback function's single argument. If the
-callback returns `nil` or 0, the method omits
+the current element as the callback function’s single argument. If the
+callback returns <code class="language-plaintext highlighter-rouge">nil</code> or 0, the method omits
 the element from the result; otherwise, the method includes the element
-in the result list. The new list's elements will be in the same order as
-the selected elements from the source list.
+in the result list. The new list’s elements will be in the same order as
+the selected elements from the source list.</p>
 
-This method does not modify the original list.
+<p>This method does not modify the original list.</p>
 
-This example uses a short-form anonymous function to create a new list
+<p>This example uses a short-form anonymous function to create a new list
 that contains only the elements from an original list whose values are
-greater than 10.
+greater than 10.</p>
 
-```
-    x = [5, 10, 15, 20];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = [5, 10, 15, 20];
     y = x.subset({x: x &gt; 10});
-```
+</code></pre></div></div>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">valWhich(*cond*)</code></p>
 
-`valWhich(*cond*)`
-
-<div class="fdef">
-
-Returns the value of the first element for which the callback function
-*cond* returns non-false (i.e., anything except
-`nil` or 0). This method is similar to
-`indexWhich(*cond*)`, but returns the value of
-the first matching element rather than its index. If *cond* returns
-`nil` or 0 for every element of the list, this
-method returns `nil`.
-
-</div>
-
-</div>
+<p>Returns the value of the first element for which the callback function
+<em>cond</em> returns non-false (i.e., anything except
+<code class="language-plaintext highlighter-rouge">nil</code> or 0). This method is similar to
+<code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code>, but returns the value of
+the first matching element rather than its index. If <em>cond</em> returns
+<code class="language-plaintext highlighter-rouge">nil</code> or 0 for every element of the list, this
+method returns <code class="language-plaintext highlighter-rouge">nil</code>.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; List  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; List<br />
 <span class="navnp"><a href="iter.html" class="nav"><em>Prev:</em> Iterator</a>
     <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

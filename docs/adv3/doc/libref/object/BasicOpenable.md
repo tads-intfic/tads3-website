@@ -85,7 +85,7 @@ of internal open/closed state.
 
 
 
-[`cannotMoveThroughMsg`](#cannotMoveThroughMsg)[`cannotTouchThroughMsg`](#cannotTouchThroughMsg)[`initiallyOpen`](#initiallyOpen)[`isOpen_`](#isOpen_)[`openDesc`](#openDesc)
+[`cannotMoveThroughMsg`](#cannotMoveThroughMsg) [`cannotTouchThroughMsg`](#cannotTouchThroughMsg) [`initiallyOpen`](#initiallyOpen) [`isOpen_`](#isOpen_) [`openDesc`](#openDesc)
 
 
 
@@ -97,7 +97,7 @@ of internal open/closed state.
 
 
 
-[`initializeThing`](#initializeThing)[`isOpen`](#isOpen)[`makeOpen`](#makeOpen)[`tryImplicitRemoveObstructor`](#tryImplicitRemoveObstructor)
+[`initializeThing`](#initializeThing) [`isOpen`](#isOpen) [`makeOpen`](#makeOpen) [`tryImplicitRemoveObstructor`](#tryImplicitRemoveObstructor)
 
 Inherited from `Linkable` :  
 [`masterObject`](../object/Linkable.html#masterObject)

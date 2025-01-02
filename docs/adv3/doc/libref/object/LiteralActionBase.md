@@ -97,7 +97,7 @@ specific kinds of literal actions.
 
 
 
-[`getLiteral`](#getLiteral)[`getMessageParam`](#getMessageParam)[`setObjectMatches`](#setObjectMatches)[`setResolvedObjects`](#setResolvedObjects)
+[`getLiteral`](#getLiteral) [`getMessageParam`](#getMessageParam) [`setObjectMatches`](#setObjectMatches) [`setResolvedObjects`](#setResolvedObjects)
 
 <span id="_Properties_"></span>
 

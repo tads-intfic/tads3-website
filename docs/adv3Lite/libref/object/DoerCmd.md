@@ -70,7 +70,7 @@ is represented by one of these objects.
 
 
 
-[`cmd`](#cmd)[`doer`](#doer)[`doerTab`](#doerTab)[`seqno`](#seqno)
+[`cmd`](#cmd) [`doer`](#doer) [`doerTab`](#doerTab) [`seqno`](#seqno)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ is represented by one of these objects.
 
 
 
-[`compareTo`](#compareTo)[`construct`](#construct)[`findDoers`](#findDoers)[`matchCmd`](#matchCmd)[`matchConditions`](#matchConditions)
+[`compareTo`](#compareTo) [`construct`](#construct) [`findDoers`](#findDoers) [`matchCmd`](#matchCmd) [`matchConditions`](#matchConditions)
 
 <span id="_Properties_"></span>
 

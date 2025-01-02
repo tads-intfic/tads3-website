@@ -37,53 +37,33 @@
 <a href="#_FunctionSummary_">Summary</a><br />
 <a href="#_Functions_">Details</a></p>
 
-<div class="fdesc">
+<p>TADS 3 Library: events</p>
 
-TADS 3 Library: events
-
-This module defines the event framework. An event is a programmed
+<p>This module defines the event framework. An event is a programmed
 operation that occurs at a particular point in the game; an event can be
 turn-based, in which case it occurs after a given number of turns has
 elapsed, or it can occur in real time, which means that it occurs after
-a particular interval of time has elapsed.
-
-</div>
+a particular interval of time has elapsed.</p>
 
 <p><span id="_ClassSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Classes</span>  </p>
 
-<span class="hdln">Summary of Classes</span>  
-
-</div>
-
-<p><a href="../object/BasicEvent.html"><code class="language-plaintext highlighter-rouge">BasicEvent</code></a><a href="../object/BasicEventManager.html"><code class="language-plaintext highlighter-rouge">BasicEventManager</code></a><a href="../object/Daemon.html"><code class="language-plaintext highlighter-rouge">Daemon</code></a><a href="../object/Event.html"><code class="language-plaintext highlighter-rouge">Event</code></a><a href="../object/EventAction.html"><code class="language-plaintext highlighter-rouge">EventAction</code></a><a href="../object/Fuse.html"><code class="language-plaintext highlighter-rouge">Fuse</code></a><a href="../object/OneTimePromptDaemon.html"><code class="language-plaintext highlighter-rouge">OneTimePromptDaemon</code></a><a href="../object/PromptDaemon.html"><code class="language-plaintext highlighter-rouge">PromptDaemon</code></a><a href="../object/RealTimeDaemon.html"><code class="language-plaintext highlighter-rouge">RealTimeDaemon</code></a><a href="../object/RealTimeEvent.html"><code class="language-plaintext highlighter-rouge">RealTimeEvent</code></a><a href="../object/RealTimeFuse.html"><code class="language-plaintext highlighter-rouge">RealTimeFuse</code></a><a href="../object/RealTimeSenseDaemon.html"><code class="language-plaintext highlighter-rouge">RealTimeSenseDaemon</code></a><a href="../object/RealTimeSenseFuse.html"><code class="language-plaintext highlighter-rouge">RealTimeSenseFuse</code></a><a href="../object/Schedulable.html"><code class="language-plaintext highlighter-rouge">Schedulable</code></a><a href="../object/SenseDaemon.html"><code class="language-plaintext highlighter-rouge">SenseDaemon</code></a><a href="../object/SenseFuse.html"><code class="language-plaintext highlighter-rouge">SenseFuse</code></a>
+<p><a href="../object/BasicEvent.html"><code class="language-plaintext highlighter-rouge">BasicEvent</code></a> <a href="../object/BasicEventManager.html"><code class="language-plaintext highlighter-rouge">BasicEventManager</code></a> <a href="../object/Daemon.html"><code class="language-plaintext highlighter-rouge">Daemon</code></a> <a href="../object/Event.html"><code class="language-plaintext highlighter-rouge">Event</code></a> <a href="../object/EventAction.html"><code class="language-plaintext highlighter-rouge">EventAction</code></a> <a href="../object/Fuse.html"><code class="language-plaintext highlighter-rouge">Fuse</code></a> <a href="../object/OneTimePromptDaemon.html"><code class="language-plaintext highlighter-rouge">OneTimePromptDaemon</code></a> <a href="../object/PromptDaemon.html"><code class="language-plaintext highlighter-rouge">PromptDaemon</code></a> <a href="../object/RealTimeDaemon.html"><code class="language-plaintext highlighter-rouge">RealTimeDaemon</code></a> <a href="../object/RealTimeEvent.html"><code class="language-plaintext highlighter-rouge">RealTimeEvent</code></a> <a href="../object/RealTimeFuse.html"><code class="language-plaintext highlighter-rouge">RealTimeFuse</code></a> <a href="../object/RealTimeSenseDaemon.html"><code class="language-plaintext highlighter-rouge">RealTimeSenseDaemon</code></a> <a href="../object/RealTimeSenseFuse.html"><code class="language-plaintext highlighter-rouge">RealTimeSenseFuse</code></a> <a href="../object/Schedulable.html"><code class="language-plaintext highlighter-rouge">Schedulable</code></a> <a href="../object/SenseDaemon.html"><code class="language-plaintext highlighter-rouge">SenseDaemon</code></a> <a href="../object/SenseFuse.html"><code class="language-plaintext highlighter-rouge">SenseFuse</code></a>
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Global Objects</span>  </p>
 
-<span class="hdln">Summary of Global Objects</span>  
-
-</div>
-
-<p><a href="../object/eventManager.html"><code class="language-plaintext highlighter-rouge">eventManager</code></a><a href="../object/realTimeManager.html"><code class="language-plaintext highlighter-rouge">realTimeManager</code></a>
+<p><a href="../object/eventManager.html"><code class="language-plaintext highlighter-rouge">eventManager</code></a> <a href="../object/realTimeManager.html"><code class="language-plaintext highlighter-rouge">realTimeManager</code></a>
 <span id="FunctionSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Global Functions</span>  
-
-</div>
+<p><span class="hdln">Summary of Global Functions</span>  </p>
 
 <p><a href="#runScheduler"><code class="language-plaintext highlighter-rouge">runScheduler</code></a></p>
 
 <p><span id="_Functions_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Functions</span>  
-
-</div>
+<p><span class="hdln">Global Functions</span>  </p>
 
 <p><span id="runScheduler"></span></p>
 
@@ -91,20 +71,13 @@ a particular interval of time has elapsed.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#26">26</a>]</p>
 
-<div class="desc">
-
-Run the main scheduling loop. This continues until we encounter an
+<p>Run the main scheduling loop. This continues until we encounter an
 end-of-file error reading from the console, or a QuitException is thrown
-to terminate the game.
+to terminate the game.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

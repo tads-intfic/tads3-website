@@ -40,71 +40,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Q is the general-purpose global Query object. Its various methods are
+used to ask questions about the game state.</p>
 
-Q is the general-purpose global Query object. Its various methods are
-used to ask questions about the game state.
-
-For any query, there are two sources of answers. First, there's the
-standard answer based on the basic "physics" of the adventure world
+<p>For any query, there are two sources of answers. First, there’s the
+standard answer based on the basic “physics” of the adventure world
 model. Second, there are any number of custom answers from Special
 objects, which define customizations that apply to specific combinations
 of actors, locations, objects, times, or just about anything else that
-the game can model.
+the game can model.</p>
 
-The standard physics-based answer is the default. It provides the answer
-if there are no active Special objects that provide custom answers.
+<p>The standard physics-based answer is the default. It provides the answer
+if there are no active Special objects that provide custom answers.</p>
 
-If there are active Specials, the only ones that matter for a particular
-query are the ones that define that query's method. If there are any
+<p>If there are active Specials, the only ones that matter for a particular
+query are the ones that define that query’s method. If there are any
 active Special objects that define a query method, calling Q.foo()
-actually calls the highest-priority Special's version of the foo()
+actually calls the highest-priority Special’s version of the foo()
 method. That Special method can in turn call the next lower priority
 Special using next(). If there are no active Special objects defining a
 query method, the default handler in QDefaults will be used
-automatically.
+automatically.</p>
 
-**`Q`**` :   object`
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">Q</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Q</code></strong><br />
 `         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#dynamicSpecials"><code class="language-plaintext highlighter-rouge">dynamicSpecials</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#canHear"><code class="language-plaintext highlighter-rouge">canHear</code></a><a href="#canReach"><code class="language-plaintext highlighter-rouge">canReach</code></a><a href="#canSee"><code class="language-plaintext highlighter-rouge">canSee</code></a><a href="#canSmell"><code class="language-plaintext highlighter-rouge">canSmell</code></a><a href="#canTalkTo"><code class="language-plaintext highlighter-rouge">canTalkTo</code></a><a href="#canThrowTo"><code class="language-plaintext highlighter-rouge">canThrowTo</code></a><a href="#inLight"><code class="language-plaintext highlighter-rouge">inLight</code></a><a href="#knownScopeList"><code class="language-plaintext highlighter-rouge">knownScopeList</code></a><a href="#reachBlocker"><code class="language-plaintext highlighter-rouge">reachBlocker</code></a><a href="#reachProblem"><code class="language-plaintext highlighter-rouge">reachProblem</code></a><a href="#reachProblemCheck"><code class="language-plaintext highlighter-rouge">reachProblemCheck</code></a><a href="#reachProblemVerify"><code class="language-plaintext highlighter-rouge">reachProblemVerify</code></a><a href="#scentBlocker"><code class="language-plaintext highlighter-rouge">scentBlocker</code></a><a href="#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a><a href="#sightBlocker"><code class="language-plaintext highlighter-rouge">sightBlocker</code></a><a href="#soundBlocker"><code class="language-plaintext highlighter-rouge">soundBlocker</code></a><a href="#topicScopeList"><code class="language-plaintext highlighter-rouge">topicScopeList</code></a></p>
+<p><a href="#canHear"><code class="language-plaintext highlighter-rouge">canHear</code></a> <a href="#canReach"><code class="language-plaintext highlighter-rouge">canReach</code></a> <a href="#canSee"><code class="language-plaintext highlighter-rouge">canSee</code></a> <a href="#canSmell"><code class="language-plaintext highlighter-rouge">canSmell</code></a> <a href="#canTalkTo"><code class="language-plaintext highlighter-rouge">canTalkTo</code></a> <a href="#canThrowTo"><code class="language-plaintext highlighter-rouge">canThrowTo</code></a> <a href="#inLight"><code class="language-plaintext highlighter-rouge">inLight</code></a> <a href="#knownScopeList"><code class="language-plaintext highlighter-rouge">knownScopeList</code></a> <a href="#reachBlocker"><code class="language-plaintext highlighter-rouge">reachBlocker</code></a> <a href="#reachProblem"><code class="language-plaintext highlighter-rouge">reachProblem</code></a> <a href="#reachProblemCheck"><code class="language-plaintext highlighter-rouge">reachProblemCheck</code></a> <a href="#reachProblemVerify"><code class="language-plaintext highlighter-rouge">reachProblemVerify</code></a> <a href="#scentBlocker"><code class="language-plaintext highlighter-rouge">scentBlocker</code></a> <a href="#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a> <a href="#sightBlocker"><code class="language-plaintext highlighter-rouge">sightBlocker</code></a> <a href="#soundBlocker"><code class="language-plaintext highlighter-rouge">soundBlocker</code></a> <a href="#topicScopeList"><code class="language-plaintext highlighter-rouge">topicScopeList</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="dynamicSpecials"></span></p>
 
@@ -112,21 +92,13 @@ automatically.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#159">159</a>]</p>
 
-<div class="desc">
-
-Are the active conditions on Specials dynamic (i.e. such as to change
-during the course of the game)? By default we'll assume that some of
-them may be.
-
-</div>
+<p>Are the active conditions on Specials dynamic (i.e. such as to change
+during the course of the game)? By default we’ll assume that some of
+them may be.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="canHear"></span></p>
 
@@ -134,11 +106,7 @@ them may be.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#115">115</a>]</p>
 
-<div class="desc">
-
-Can A hear B?
-
-</div>
+<p>Can A hear B?</p>
 
 <p><span id="canReach"></span></p>
 
@@ -146,12 +114,8 @@ Can A hear B?
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#84">84</a>]</p>
 
-<div class="desc">
-
-Can we reach from A to B? We return true if there's nothing in the way,
-nil otherwise.
-
-</div>
+<p>Can we reach from A to B? We return true if there’s nothing in the way,
+nil otherwise.</p>
 
 <p><span id="canSee"></span></p>
 
@@ -159,11 +123,7 @@ nil otherwise.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#66">66</a>]</p>
 
-<div class="desc">
-
-Can A see B?
-
-</div>
+<p>Can A see B?</p>
 
 <p><span id="canSmell"></span></p>
 
@@ -171,11 +131,7 @@ Can A see B?
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#131">131</a>]</p>
 
-<div class="desc">
-
-Can A smell B?
-
-</div>
+<p>Can A smell B?</p>
 
 <p><span id="canTalkTo"></span></p>
 
@@ -183,11 +139,7 @@ Can A smell B?
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#147">147</a>]</p>
 
-<div class="desc">
-
-Determine if A can talk to B.
-
-</div>
+<p>Determine if A can talk to B.</p>
 
 <p><span id="canThrowTo"></span></p>
 
@@ -195,11 +147,7 @@ Determine if A can talk to B.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#151">151</a>]</p>
 
-<div class="desc">
-
-Determine if A can Throw something to B.
-
-</div>
+<p>Determine if A can Throw something to B.</p>
 
 <p><span id="inLight"></span></p>
 
@@ -207,12 +155,8 @@ Determine if A can Throw something to B.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#60">60</a>]</p>
 
-<div class="desc">
-
-Is A in the light? This determines if there's light shining on the
-exterior surface of A.
-
-</div>
+<p>Is A in the light? This determines if there’s light shining on the
+exterior surface of A.</p>
 
 <p><span id="knownScopeList"></span></p>
 
@@ -220,11 +164,7 @@ exterior surface of A.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#50">50</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="reachBlocker"></span></p>
 
@@ -232,15 +172,11 @@ exterior surface of A.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#94">94</a>]</p>
 
-<div class="desc">
-
-Determine if A can reach B, and if not, what stands in the way. Returns
+<p>Determine if A can reach B, and if not, what stands in the way. Returns
 a list of containers along the path between A and B that obstruct the
 reach. If the two objects are in separate rooms, the top-level room
-containing A is in the list to represent the room separation. If there's
-no obstruction, we return an empty list.
-
-</div>
+containing A is in the list to represent the room separation. If there’s
+no obstruction, we return an empty list.</p>
 
 <p><span id="reachProblem"></span></p>
 
@@ -248,13 +184,9 @@ no obstruction, we return an empty list.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#103">103</a>]</p>
 
-<div class="desc">
-
-Determine if there is a problem with A reaching B, and if so what it is.
+<p>Determine if there is a problem with A reaching B, and if so what it is.
 If there is a problem return a ReachProblem object describing what the
-problem is, otherwise return nil.
-
-</div>
+problem is, otherwise return nil.</p>
 
 <p><span id="reachProblemCheck"></span></p>
 
@@ -262,11 +194,7 @@ problem is, otherwise return nil.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#109">109</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="reachProblemVerify"></span></p>
 
@@ -274,11 +202,7 @@ problem is, otherwise return nil.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#106">106</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="scentBlocker"></span></p>
 
@@ -286,14 +210,10 @@ problem is, otherwise return nil.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#141">141</a>]</p>
 
-<div class="desc">
-
-Determine if A can smell B, and if not, what stands in the way. Returns
+<p>Determine if A can smell B, and if not, what stands in the way. Returns
 a list of obstructions to scent between A and B. If the two objects are
 in separate rooms, the outermost room containing A represents the room
-separation. If there are no obstructions, returns an empty list.
-
-</div>
+separation. If there are no obstructions, returns an empty list.</p>
 
 <p><span id="scopeList"></span></p>
 
@@ -301,13 +221,9 @@ separation. If there are no obstructions, returns an empty list.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#46">46</a>]</p>
 
-<div class="desc">
-
-Get the list of objects that are in scope for the given actor. Returns a
+<p>Get the list of objects that are in scope for the given actor. Returns a
 ScopeList object containing the scope. You can convert the ScopeList to
-an ordinary list of objects via toList().
-
-</div>
+an ordinary list of objects via toList().</p>
 
 <p><span id="sightBlocker"></span></p>
 
@@ -315,15 +231,11 @@ an ordinary list of objects via toList().
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#77">77</a>]</p>
 
-<div class="desc">
-
-Determine if there's anything blocking the sight path from A to B.
-Returns a list of objects blocking sight; if there's no obstruction,
+<p>Determine if there’s anything blocking the sight path from A to B.
+Returns a list of objects blocking sight; if there’s no obstruction,
 returns an empty list. If the two objects are in separate rooms, the
-outermost room containing 'a' represents the room separation. If there's
-no obstruction, returns an empty list.
-
-</div>
+outermost room containing ‘a’ represents the room separation. If there’s
+no obstruction, returns an empty list.</p>
 
 <p><span id="soundBlocker"></span></p>
 
@@ -331,15 +243,11 @@ no obstruction, returns an empty list.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#125">125</a>]</p>
 
-<div class="desc">
-
-Determine if A can hear B, and if not, what stands in the way. We return
+<p>Determine if A can hear B, and if not, what stands in the way. We return
 a list of the obstructions to sound between A and B. If the two objects
 are in separate rooms, the top level room containing A represents the
 room separation. If there are no sound obstructions, returns an empty
-list.
-
-</div>
+list.</p>
 
 <p><span id="topicScopeList"></span></p>
 
@@ -347,18 +255,11 @@ list.
 
 <p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#53">53</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

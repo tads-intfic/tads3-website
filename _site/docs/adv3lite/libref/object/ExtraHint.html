@@ -46,108 +46,80 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>FRAMEWORK FOR THE EXTRA HINTS MECHANISM</p>
 
-FRAMEWORK FOR THE EXTRA HINTS MECHANISM
-
-The ExtraHint class provides a framework for providing players
+<p>The ExtraHint class provides a framework for providing players
 (especially novice players) with extra hints, nudges, and tips during
 the course of play. When it is activated (either at player request, or
 because the player appears to be having trouble), a hint or tip can be
 displayed at the end of the turn in response to what the player has just
 typed, or some condition that has just become true, or which became true
-a certain number of turns ago.
+a certain number of turns ago.</p>
 
-It is also possible to define conditions (typically the achievement of
+<p>It is also possible to define conditions (typically the achievement of
 some goal) that render a particular ExtraHint otiose, so that it is not
-displayed if it is no longer needed.
+displayed if it is no longer needed.</p>
 
-We simply need to define objects of the ExtraHint class to encapsulate
-the extra hints we want displayed.
+<p>We simply need to define objects of the ExtraHint class to encapsulate
+the extra hints we want displayed.</p>
 
-A series of ExtraHints can be defined using a template if desired.
+<p>A series of ExtraHints can be defined using a template if desired.</p>
 
-The first (optional) element in the template (e.g. -\&gt;doorAchievement)
+<p>The first (optional) element in the template (e.g. -&gt;doorAchievement)
 is the achievement we check to see if this ExtraHint has become
 redundant. For example, if the player has already taken the flyer,
-flyer.achievement has been achieved, and so we don't need this first
-ExtraHint.
+flyer.achievement has been achieved, and so we don’t need this first
+ExtraHint.</p>
 
-The second (optional) element in the template (e.g. +1) is the
+<p>The second (optional) element in the template (e.g. +1) is the
 hintDelay; this is number of turns that should elapse between the
 openWhen condition (see below) becoming true and the hint being offered.
 This optionally allows the player a few turns to work on the solution
-before being offered a gratuitous hint.
+before being offered a gratuitous hint.</p>
 
-The third element in the template is simply the text of the extra hint
-to display.
+<p>The third element in the template is simply the text of the extra hint
+to display.</p>
 
-The openWhen property holds the condition that must be true before this
+<p>The openWhen property holds the condition that must be true before this
 ExtraHint is displayed. In the case of the first ExtraHint, the
 condition is that the player char has visited the location that contains
-the telephone pole.
+the telephone pole.</p>
 
-`class `**`ExtraHint`**` :   `[`HintOpener`](../object/HintOpener.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ExtraHint</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/HintOpener.html"><code class="language-plaintext highlighter-rouge">HintOpener</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ExtraHint</code></strong><br />
 <a href="../object/HintOpener.html"><code class="language-plaintext highlighter-rouge">HintOpener</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#hintDelay"><code class="language-plaintext highlighter-rouge">hintDelay</code></a><a href="#hintDone"><code class="language-plaintext highlighter-rouge">hintDone</code></a><a href="#hintText"><code class="language-plaintext highlighter-rouge">hintText</code></a><a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a><a href="#openedWhen"><code class="language-plaintext highlighter-rouge">openedWhen</code></a><a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+<p><a href="#hintDelay"><code class="language-plaintext highlighter-rouge">hintDelay</code></a> <a href="#hintDone"><code class="language-plaintext highlighter-rouge">hintDone</code></a> <a href="#hintText"><code class="language-plaintext highlighter-rouge">hintText</code></a> <a href="#location"><code class="language-plaintext highlighter-rouge">location</code></a> <a href="#openedWhen"><code class="language-plaintext highlighter-rouge">openedWhen</code></a> <a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">HintOpener</code> :<br />
-<a href="../object/HintOpener.html#closeWhen"><code class="language-plaintext highlighter-rouge">closeWhen</code></a><a href="../object/HintOpener.html#closeWhenAchieved"><code class="language-plaintext highlighter-rouge">closeWhenAchieved</code></a><a href="../object/HintOpener.html#closeWhenExamined"><code class="language-plaintext highlighter-rouge">closeWhenExamined</code></a><a href="../object/HintOpener.html#closeWhenKnown"><code class="language-plaintext highlighter-rouge">closeWhenKnown</code></a><a href="../object/HintOpener.html#closeWhenMoved"><code class="language-plaintext highlighter-rouge">closeWhenMoved</code></a><a href="../object/HintOpener.html#closeWhenRevealed"><code class="language-plaintext highlighter-rouge">closeWhenRevealed</code></a><a href="../object/HintOpener.html#closeWhenSeen"><code class="language-plaintext highlighter-rouge">closeWhenSeen</code></a><a href="../object/HintOpener.html#closeWhenTrue"><code class="language-plaintext highlighter-rouge">closeWhenTrue</code></a><a href="../object/HintOpener.html#openWhen"><code class="language-plaintext highlighter-rouge">openWhen</code></a><a href="../object/HintOpener.html#openWhenAchieved"><code class="language-plaintext highlighter-rouge">openWhenAchieved</code></a><a href="../object/HintOpener.html#openWhenExamined"><code class="language-plaintext highlighter-rouge">openWhenExamined</code></a><a href="../object/HintOpener.html#openWhenKnown"><code class="language-plaintext highlighter-rouge">openWhenKnown</code></a><a href="../object/HintOpener.html#openWhenMoved"><code class="language-plaintext highlighter-rouge">openWhenMoved</code></a><a href="../object/HintOpener.html#openWhenRevealed"><code class="language-plaintext highlighter-rouge">openWhenRevealed</code></a><a href="../object/HintOpener.html#openWhenSeen"><code class="language-plaintext highlighter-rouge">openWhenSeen</code></a><a href="../object/HintOpener.html#openWhenTrue"><code class="language-plaintext highlighter-rouge">openWhenTrue</code></a></p>
+<a href="../object/HintOpener.html#closeWhen"><code class="language-plaintext highlighter-rouge">closeWhen</code></a> <a href="../object/HintOpener.html#closeWhenAchieved"><code class="language-plaintext highlighter-rouge">closeWhenAchieved</code></a> <a href="../object/HintOpener.html#closeWhenExamined"><code class="language-plaintext highlighter-rouge">closeWhenExamined</code></a> <a href="../object/HintOpener.html#closeWhenKnown"><code class="language-plaintext highlighter-rouge">closeWhenKnown</code></a> <a href="../object/HintOpener.html#closeWhenMoved"><code class="language-plaintext highlighter-rouge">closeWhenMoved</code></a> <a href="../object/HintOpener.html#closeWhenRevealed"><code class="language-plaintext highlighter-rouge">closeWhenRevealed</code></a> <a href="../object/HintOpener.html#closeWhenSeen"><code class="language-plaintext highlighter-rouge">closeWhenSeen</code></a> <a href="../object/HintOpener.html#closeWhenTrue"><code class="language-plaintext highlighter-rouge">closeWhenTrue</code></a> <a href="../object/HintOpener.html#openWhen"><code class="language-plaintext highlighter-rouge">openWhen</code></a> <a href="../object/HintOpener.html#openWhenAchieved"><code class="language-plaintext highlighter-rouge">openWhenAchieved</code></a> <a href="../object/HintOpener.html#openWhenExamined"><code class="language-plaintext highlighter-rouge">openWhenExamined</code></a> <a href="../object/HintOpener.html#openWhenKnown"><code class="language-plaintext highlighter-rouge">openWhenKnown</code></a> <a href="../object/HintOpener.html#openWhenMoved"><code class="language-plaintext highlighter-rouge">openWhenMoved</code></a> <a href="../object/HintOpener.html#openWhenRevealed"><code class="language-plaintext highlighter-rouge">openWhenRevealed</code></a> <a href="../object/HintOpener.html#openWhenSeen"><code class="language-plaintext highlighter-rouge">openWhenSeen</code></a> <a href="../object/HintOpener.html#openWhenTrue"><code class="language-plaintext highlighter-rouge">openWhenTrue</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkClose"><code class="language-plaintext highlighter-rouge">checkClose</code></a><a href="#doHint"><code class="language-plaintext highlighter-rouge">doHint</code></a><a href="#setDelay"><code class="language-plaintext highlighter-rouge">setDelay</code></a><a href="#showHint"><code class="language-plaintext highlighter-rouge">showHint</code></a></p>
+<p><a href="#checkClose"><code class="language-plaintext highlighter-rouge">checkClose</code></a> <a href="#doHint"><code class="language-plaintext highlighter-rouge">doHint</code></a> <a href="#setDelay"><code class="language-plaintext highlighter-rouge">setDelay</code></a> <a href="#showHint"><code class="language-plaintext highlighter-rouge">showHint</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="hintDelay"></span></p>
 
@@ -155,12 +127,8 @@ the telephone pole.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#778">778</a>]</p>
 
-<div class="desc">
-
-The number of turns between openWhen becoming true and this hint being
-displayed.
-
-</div>
+<p>The number of turns between openWhen becoming true and this hint being
+displayed.</p>
 
 <p><span id="hintDone"></span></p>
 
@@ -168,12 +136,8 @@ displayed.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#856">856</a>]</p>
 
-<div class="desc">
-
-For internal use only: Flag; have we done with this hint (because we've
-displayed it)?
-
-</div>
+<p>For internal use only: Flag; have we done with this hint (because we’ve
+displayed it)?</p>
 
 <p><span id="hintText"></span></p>
 
@@ -181,11 +145,7 @@ displayed it)?
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#814">814</a>]</p>
 
-<div class="desc">
-
-The text to display in relation to this ExtraHint
-
-</div>
+<p>The text to display in relation to this ExtraHint</p>
 
 <p><span id="location"></span></p>
 
@@ -193,11 +153,7 @@ The text to display in relation to this ExtraHint
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#762">762</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="openedWhen"></span></p>
 
@@ -205,11 +161,7 @@ The text to display in relation to this ExtraHint
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#859">859</a>]</p>
 
-<div class="desc">
-
-The turn on which this ExtraHint was first opened
-
-</div>
+<p>The turn on which this ExtraHint was first opened</p>
 
 <p><span id="priority"></span></p>
 
@@ -217,20 +169,12 @@ The turn on which this ExtraHint was first opened
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#865">865</a>]</p>
 
-<div class="desc">
-
-Our priority. When two ExtraHints become available on the same term, the
-one with the higher priority will be displayed.
-
-</div>
+<p>Our priority. When two ExtraHints become available on the same term, the
+one with the higher priority will be displayed.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkClose"></span></p>
 
@@ -238,12 +182,8 @@ one with the higher priority will be displayed.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#768">768</a>]</p>
 
-<div class="desc">
-
-The condition under which we close this ExtraHint. By default we close
-it if either hintDone becomes true or our closeWhen condition is true.
-
-</div>
+<p>The condition under which we close this ExtraHint. By default we close
+it if either hintDone becomes true or our closeWhen condition is true.</p>
 
 <p><span id="doHint"></span></p>
 
@@ -251,18 +191,14 @@ it if either hintDone becomes true or our closeWhen condition is true.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#791">791</a>]</p>
 
-<div class="desc">
-
-If the closeWhen condition is true we remove this ExtraHint from the
+<p>If the closeWhen condition is true we remove this ExtraHint from the
 list of potentially active ExtraHints and return nil to tell the caller
 that this ExtraHint was not displayed. Otherwise we check if this
 ExtraHint (a) meets its openWhen conditions to be displayed and (b) is
 due to be displayed because hintDelay turns have passed since it was
 open. If both conditions are met we show our text and return true to
 tell our caller that an ExtraHint has been displayed (important since we
-display at most one ExtraHint per turn). Otherwise we return nil.
-
-</div>
+display at most one ExtraHint per turn). Otherwise we return nil.</p>
 
 <p><span id="setDelay"></span></p>
 
@@ -270,11 +206,7 @@ display at most one ExtraHint per turn). Otherwise we return nil.
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#846">846</a>]</p>
 
-<div class="desc">
-
-Set the number of turns that must elapse before we display this hint
-
-</div>
+<p>Set the number of turns that must elapse before we display this hint</p>
 
 <p><span id="showHint"></span></p>
 
@@ -282,18 +214,11 @@ Set the number of turns that must elapse before we display this hint
 
 <p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#817">817</a>]</p>
 
-<div class="desc">
+<p>Show the text related to this ExtraHint</p>
 
-Show the text related to this ExtraHint
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

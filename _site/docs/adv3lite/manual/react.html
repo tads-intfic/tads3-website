@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Reacting to Actions  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Reacting to Actions<br />
 <span class="navnp"><a href="implicit.html" class="nav"><em>Prev:</em> Implicit Actions</a>
    
 <a href="define.html" class="nav"><em>Next:</em> Defining New Actions</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="reacting-to-actions">Reacting to Actions</h1>
 
@@ -79,48 +71,45 @@ define Scene-specific action responses, or else to rule our certain
 actions together during a Scene by using the exit macro in that Scene’s
 beforeAction method, for example:</p>
 
-<p>`
-    interviewScene: Scene
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    interviewScene: Scene
        beforeAction()
        {
           if(gActionIs(Jump))
           {
-             “It will hardly help your employment prospects if you start leaping around
-              in front of your prospective employer. “;
+             "It will hardly help your employment prospects if you start leaping around
+              in front of your prospective employer. ";
               exit;
           }
         }
-    ;  <br />
-`</p>
+    ;    
+</code></pre></div></div>
 
 <p>As illustrated in the foregoing example, if you want your code to react
 to an Action, you probably need to test what action it is. You can do
 this with the <strong>gActionIs(<em>action</em>)</strong> macro. For example, to prevent
 someone jumping in a room with a low ceiling you might write:</p>
 
-<p>`
-        roomBeforeAction()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        roomBeforeAction()
         {
             if(gActionIs(Jump))
             {
-                “Better not, you might bang your head!”;
+                "Better not, you might bang your head!";
                 exit;
             }
         }
-`</p>
+</code></pre></div></div>
 
 <p>Note how we use the <strong>exit</strong> macro to veto the action here.</p>
 
 <p>Alternatively you might allow the jumping to go ahead and then report
 that the player character has banged his head on the ceiling:</p>
 
-<p>`
-        roomAfterAction()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        roomAfterAction()
         {
             if(gActionIs(Jump))
-                “You bang your head on the ceiling. “;
+                "You bang your head on the ceiling. ";
         }
-`</p>
+</code></pre></div></div>
 
 <p>If you want to test whether the current action is one among several
 actions, you can use the macro gActionIn(<em>action1, action2, …</em>)
@@ -143,13 +132,12 @@ direct objects involved it’s safer to use gActionList, which contains a
 list of all the direct objects that made it to the action stage (i.e.
 all the direct objects for which the action succeeded. For example:</p>
 
-<p>`
-        afterAction()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        afterAction()
         {
             if(gActionList.indexOf(redBall) != nil)
-                “You’ve just done something to the red ball. “;
+                "You've just done something to the red ball. ";
         }
-`</p>
+</code></pre></div></div>
 
 <p>The <strong>actorAction()</strong> method is called on the current actor (carrying
 out the action) just before any of the other before notifications. This
@@ -157,19 +145,18 @@ can be useful if you temporarily want to prevent an actor (in particular
 the player character) from carrying out certain kinds of action because
 s/he’s temporarily incapacitated or tied up; for example:</p>
 
-<p>`
-    actorAction()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    actorAction()
     {
         /* Be careful not to disable the system actions! */
        if(gAction.ofKind(SystemAction))
-         return;</p>
+         return;
+         
+       if(gActionIn(Examine, ListenTo, Smell,  Listen, SmellSomething))
+         return;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   if(gActionIn(Examine, ListenTo, Smell,  Listen, SmellSomething))
-     return;
-
-    "You can't do that while you're bound and gagged!";
-       exit;   
-}  `
+        "You can't do that while you're bound and gagged!";
+           exit;   
+    } 
 </code></pre></div></div>
 
 <h2 id="reacting-to-travel"><span id="travel">Reacting to Travel</span></h2>
@@ -180,16 +167,14 @@ gActionIs(Travel), but that only tells you that the player character
 went (or tried to go) somewhere. If you want to test for which way s/he
 went you can combine a test for the action and the direction like so:</p>
 
-<p>`
-       if(gActionIs(Travel) &amp;&amp; gAction.direction == eastDir)
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       if(gActionIs(Travel) &amp;&amp; gAction.direction == eastDir)
+</code></pre></div></div>
 
 <p>But to make this a little easier adv3Lite provides the
 gTravelActionIs(dir) macro, which you could use like this:</p>
 
-<p>`
-       if(gTravelActionIs(east))
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       if(gTravelActionIs(east))
+</code></pre></div></div>
 
 <p>But there’s a problem with testing for travel actions this way.
 Consider, for example, the case where going east would take the player
@@ -197,9 +182,8 @@ character through a door. In this case the player would get the same
 result from the commands EAST and GO THROUGH DOOR, so to make sure we
 covered both eventualities we’d have to test for:</p>
 
-<p>`
-       if(gTravelActionIs(east) || (gActionIs(GoThrough) &amp;&amp; gDobj == frontDoor))
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       if(gTravelActionIs(east) || (gActionIs(GoThrough) &amp;&amp; gDobj == frontDoor))
+</code></pre></div></div>
 
 <p><span id="beforetravel"></span>A better way of doing this is to test not
 for what direction an actor travelled in, but what TravelConnector was
@@ -219,13 +203,12 @@ destination once the traveler has arrived there.</p>
 afterAction() method, it’s normally better to use the beforeTravel() and
 afterTravel() methods and test for the connector, e.g.:</p>
 
-<p>`
-    beforeTravel(traveler, connector)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeTravel(traveler, connector)
     {
         if(traveler == gPlayerChar &amp;&amp; connector == frontDoor)
-          …
+          ...
     }
-`</p>
+</code></pre></div></div>
 
 <p>The limitation on this is that the notifications are only called where
 there’s a TravelConnector (Room, Door or other TravelConnector object)
@@ -276,19 +259,14 @@ and by the room.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="action.html" class="nav">Actions</a> \&gt; Reacting to Actions  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="action.html" class="nav">Actions</a> &gt; Reacting to Actions<br />
 <span class="navnp"><a href="implicit.html" class="nav"><em>Prev:</em> Implicit Actions</a>
    
 <a href="define.html" class="nav"><em>Next:</em> Defining New Actions</a>
-    </span>
+    </span></p>
 
-
-
-</div>
 
 </main>
 <footer>

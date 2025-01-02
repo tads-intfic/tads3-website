@@ -262,7 +262,7 @@ layout: docs
         {
             /* convert to lower-case and strip off spaces */
             if (rexMatch('<space>*(<alpha>+)', str.toLower()) != nil)
-                str = rexGroup(1)[3];
+                str = rexGroup(1) [3];
             
             /* check the keyword */
             switch (str)

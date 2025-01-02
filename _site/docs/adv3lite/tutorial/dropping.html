@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="revisit.html" class="nav">Heidi Revisited</a> \&gt; Dropping
-objects from the tree  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="revisit.html" class="nav">Heidi Revisited</a> &gt; Dropping
+objects from the tree<br />
 <span class="navnp"><a href="climbing.html" class="nav"><em>Prev:</em> Climbing the tree</a>
    
 <a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
-nest?</a>     </span>
-
-</div>
+nest?</a>     </span></p>
 
 <h1 id="dropping-objects-from-the-tree">Dropping objects from the tree</h1>
 
@@ -49,15 +41,14 @@ were. One solution might be to assume that anything dropped at the top
 of the tree is put on the branch, and we could implement that. This
 would be another good use of a Doer:</p>
 
-<p>`
-    Doer ‘drop Thing’
-        execAction(curCmd)  <br />
-        {      <br />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'drop Thing'
+        execAction(curCmd)    
+        {        
             doInstead(PutOn, gDobj, branch);
-        }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    where = topOfTree
-; `
+        }
+        
+        where = topOfTree
+    ;
 </code></pre></div></div>
 
 <p>Here ‘drop Thing’ will match the attempt to drop any Thing (in this
@@ -108,27 +99,26 @@ We could use a Doer to do this, but here we’ll illustrate another way,
 using the <code class="language-plaintext highlighter-rouge">roomBeforeAction()</code> method of the
 location to intercept an action just before it takes place:</p>
 
-<p>`
-    topOfTree: Room ‘At the top of the tree’
-        “You cling precariously to the trunk. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    down = clearing
-    
-    cannotGoThatWay(dir)
-    {
-        "The only way from here is down. ";
-    }
-    
-    roomBeforeAction()
-    {
-        if(gActionIs(Drop))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    topOfTree: Room 'At the top of the tree'
+        "You cling precariously to the trunk. "
+        
+        down = clearing
+        
+        cannotGoThatWay(dir)
         {
-            gDobj.actionMoveInto(clearing);
-            "{The subj dobj} {falls} to the ground below. ";
-            exit;
+            "The only way from here is down. ";
         }
-    }
-; `
+        
+        roomBeforeAction()
+        {
+            if(gActionIs(Drop))
+            {
+                gDobj.actionMoveInto(clearing);
+                "{The subj dobj} {falls} to the ground below. ";
+                exit;
+            }
+        }
+    ;
 </code></pre></div></div>
 
 <p>Now let’s explain how this works. The
@@ -210,18 +200,15 @@ once again behaves as you expect.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="revisit.html" class="nav">Heidi Revisited</a> \&gt; Dropping
-objects from the tree  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="revisit.html" class="nav">Heidi Revisited</a> &gt; Dropping
+objects from the tree<br />
 <span class="navnp"><a href="climbing.html" class="nav"><em>Prev:</em> Climbing the tree</a>
    
 <a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
-nest?</a>     </span>
+nest?</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

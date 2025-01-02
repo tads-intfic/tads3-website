@@ -79,7 +79,7 @@ superclass list.
 
 
 
-[`autoUnlockOnOpen`](#autoUnlockOnOpen)[`initiallyLocked`](#initiallyLocked)[`isLocked_`](#isLocked_)[`lockedDesc`](#lockedDesc)[`lockStatusObvious`](#lockStatusObvious)[`lockStatusReportable`](#lockStatusReportable)
+[`autoUnlockOnOpen`](#autoUnlockOnOpen) [`initiallyLocked`](#initiallyLocked) [`isLocked_`](#isLocked_) [`lockedDesc`](#lockedDesc) [`lockStatusObvious`](#lockStatusObvious) [`lockStatusReportable`](#lockStatusReportable)
 
 
 
@@ -91,7 +91,7 @@ superclass list.
 
 
 
-[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(Open)`](#dobjFor(Open))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))[`examineStatus`](#examineStatus)[`initializeThing`](#initializeThing)[`isLocked`](#isLocked)[`makeLocked`](#makeLocked)
+[`dobjFor(Lock)`](#dobjFor(Lock)) [`dobjFor(LockWith)`](#dobjFor(LockWith)) [`dobjFor(Open)`](#dobjFor(Open)) [`dobjFor(Unlock)`](#dobjFor(Unlock)) [`dobjFor(UnlockWith)`](#dobjFor(UnlockWith)) [`examineStatus`](#examineStatus) [`initializeThing`](#initializeThing) [`isLocked`](#isLocked) [`makeLocked`](#makeLocked)
 
 Inherited from `Linkable` :  
 [`masterObject`](../object/Linkable.html#masterObject)

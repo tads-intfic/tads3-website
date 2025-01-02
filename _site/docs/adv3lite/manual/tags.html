@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; String Tags and Object
-Tags  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; String Tags and Object
+Tags<br />
 <span class="navnp"><a href="orders.html" class="nav"><em>Prev:</em> Giving Orders to
 NPCs</a>    
 <a href="initiate.html" class="nav"><em>Next:</em> NPC-Initiated
-Conversation</a>     </span>
-
-</div>
+Conversation</a>     </span></p>
 
 <h1 id="string-tags-and-object-tags">String Tags and Object Tags</h1>
 
@@ -103,21 +95,20 @@ tag can be used in the <em>txt</em> parameter).</li>
 context is likely both not to work as expected and to give rise to
 hard-to-find bugs. For example, it might be tempting to write:</p>
 
-<p>`
-    bob: Actor ‘Bob;;man;him’ @somewhere
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob;;man;him' @somewhere
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ bobWatchingState: ActorState
-    isInitState = true
-    
-    /* DON'T DO THIS! */
-    afterAction()
-    {
-        if(gActionIs(Take) &amp;&amp; gDobj == crown)
-           "&lt;q&gt;Hey!&lt;/q&gt; cries Bob. &lt;q&gt;Only the lawful king can take that crown!
-            Are you claiming to be our king?&lt;/q&gt; &lt;.convnodet you-king&gt; ";  
-    }
-; `
+    + bobWatchingState: ActorState
+        isInitState = true
+        
+        /* DON'T DO THIS! */
+        afterAction()
+        {
+            if(gActionIs(Take) &amp;&amp; gDobj == crown)
+               "&lt;q&gt;Hey!&lt;/q&gt; cries Bob. &lt;q&gt;Only the lawful king can take that crown!
+                Are you claiming to be our king?&lt;/q&gt; &lt;.convnodet you-king&gt; ";  
+        }
+    ;
 </code></pre></div></div>
 
 <p>It’s tempting to do this because it’s so much shorter and easier than
@@ -142,21 +133,20 @@ current interlocutor when this code is triggered.</li>
 method has been introduced into the library. The correct (and safe) way
 to write the code fragment above would be:</p>
 
-<p>`
-    bob: Actor ‘Bob;;man;him’ @somewhere
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob;;man;him' @somewhere
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ bobWatchingState: ActorState
-    isInitState = true
-    
-    afterAction()
-    {
-        if(gActionIs(Take) &amp;&amp; gDobj == crown)
-           getActor.actorSay('&lt;q&gt;Hey!&lt;/q&gt; cries Bob. &lt;q&gt;Only the lawful king
-            can take that crown! Are you claiming to be our king?&lt;/q&gt; 
-            &lt;.convnodet you-king&gt; ');  
-    }
-; `
+    + bobWatchingState: ActorState
+        isInitState = true
+        
+        afterAction()
+        {
+            if(gActionIs(Take) &amp;&amp; gDobj == crown)
+               getActor.actorSay('&lt;q&gt;Hey!&lt;/q&gt; cries Bob. &lt;q&gt;Only the lawful king
+                can take that crown! Are you claiming to be our king?&lt;/q&gt; 
+                &lt;.convnodet you-king&gt; ');  
+        }
+    ;
 </code></pre></div></div>
 
 <p>This is safe because it’s now clear which actor’s conversation node will
@@ -173,18 +163,15 @@ current interlocutor after such an interjection.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; String Tags and Object
-Tags  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; String Tags and Object
+Tags<br />
 <span class="navnp"><a href="orders.html" class="nav"><em>Prev:</em> Giving Orders to
 NPCs</a>    
 <a href="initiate.html" class="nav"><em>Next:</em> NPC-Initiated
-Conversation</a>     </span>
+Conversation</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

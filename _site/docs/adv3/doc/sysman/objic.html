@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Object  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Object<br />
 <span class="navnp"><a href="lookup.html" class="nav"><em>Prev:</em> LookupTable</a>
     <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="object">Object</h1>
 
@@ -56,260 +48,221 @@ classes.</p>
 
 <p><code class="language-plaintext highlighter-rouge">getSuperclassList()</code></p>
 
-<div class="fdef">
-
-Returns a list containing the immediate superclasses of the object. The
-list contains only the object's direct superclasses, which are the
-superclasses that were explicitly listed in the object's declaration for
-static objects, or the class used with the `new`
+<p>Returns a list containing the immediate superclasses of the object. The
+list contains only the object’s direct superclasses, which are the
+superclasses that were explicitly listed in the object’s declaration for
+static objects, or the class used with the <code class="language-plaintext highlighter-rouge">new</code>
 operator for dynamic objects. This function returns an empty list for an
 object with no superclass. For an object with more than one direct
 superclass, the list contains the superclasses in the same order in
-which they were specified in the object's declaration.
+which they were specified in the object’s declaration.</p>
 
-For example, consider these definitions:
+<p>For example, consider these definitions:</p>
 
-```
-    class A: object;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class A: object;
     class B: object;
     class C: B;
     myObj: C, A;
-```
+</code></pre></div></div>
 
-The result of `myObj.getSuperclassList()` will
-be the list `\[C, A\]`. Note that class B is not
+<p>The result of <code class="language-plaintext highlighter-rouge">myObj.getSuperclassList()</code> will
+be the list <code class="language-plaintext highlighter-rouge">\[C, A\]</code>. Note that class B is not
 included in the list, because it is not a direct superclass of myObj,
-but is a superclass only indirectly through class C.
+but is a superclass only indirectly through class C.</p>
 
+<p><code class="language-plaintext highlighter-rouge">getPropList()</code></p>
 
-
-`getPropList()`
-
-<div class="fdef">
-
-Returns a list of the properties directly defined by this object. Each
+<p>Returns a list of the properties directly defined by this object. Each
 entry in the list is a property pointer value. The returned list
 contains only properties directly defined by the object; inherited
 properties are not included, but may be obtained by explicitly
 traversing the superclass list and calling this method on each
-superclass.
+superclass.</p>
 
-</div>
+<p><span id="getPropParams"></span></p>
 
-<span id="getPropParams"></span>
+<p><code class="language-plaintext highlighter-rouge">getPropParams(*prop*)</code></p>
 
-`getPropParams(*prop*)`
+<p>Returns information on the parameters taken by the given property or
+method of this object. The return value is a list with three elements:</p>
 
-<div class="fdef">
+<ul>
+  <li>[1] is the minimum number of arguments taken by the method;</li>
+  <li>[2] is the number of additional optional arguments taken by the
+method;</li>
+  <li>[3] is true if the method accepts any number of additional
+arguments, <code class="language-plaintext highlighter-rouge">nil</code> if not.</li>
+</ul>
 
-Returns information on the parameters taken by the given property or
-method of this object. The return value is a list with three elements:
-
-- \[1\] is the minimum number of arguments taken by the method;
-- \[2\] is the number of additional optional arguments taken by the
-  method;
-- \[3\] is true if the method accepts any number of additional
-  arguments, `nil` if not.
-
-The second element gives the number of optional arguments; only
+<p>The second element gives the number of optional arguments; only
 intrinsic methods will ever yield a non-zero value for this element,
 because regular methods cannot specify optional arguments. For example,
-the `substring()` method of the String intrinsic
+the <code class="language-plaintext highlighter-rouge">substring()</code> method of the String intrinsic
 class can take either one or two arguments, so its return list is
-`\[1, 1, nil\]`, indicating that the function
+<code class="language-plaintext highlighter-rouge">\[1, 1, nil\]</code>, indicating that the function
 takes a minimum of one argument, can take one additional optional
 argument, but does not take an unlimited varying argument list after
-those arguments.
+those arguments.</p>
 
-If the third element is `true`, it indicates
-that the method was defined with the "..." varying argument list
-notation.
+<p>If the third element is <code class="language-plaintext highlighter-rouge">true</code>, it indicates
+that the method was defined with the “…” varying argument list
+notation.</p>
 
-If the specified property is not defined for the object, the method
-returns `\[0, 0, nil\]`, because it's valid to
-invoke the property with no arguments in this case.
+<p>If the specified property is not defined for the object, the method
+returns <code class="language-plaintext highlighter-rouge">\[0, 0, nil\]</code>, because it’s valid to
+invoke the property with no arguments in this case.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">isClass()</code></p>
 
-`isClass()`
+<p>Returns <code class="language-plaintext highlighter-rouge">true</code> if the object was declared as a
+“class”, <code class="language-plaintext highlighter-rouge">nil</code> otherwise.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">isTransient()</code></p>
 
-Returns `true` if the object was declared as a
-"class", `nil` otherwise.
-
-</div>
-
-`isTransient()`
-
-<div class="fdef">
-
-Returns `true` if the object is transient,
-`nil` otherwise. A transient object is one that
-was created with `new transient`
-*`classname`*, or with a class-specific method
+<p>Returns <code class="language-plaintext highlighter-rouge">true</code> if the object is transient,
+<code class="language-plaintext highlighter-rouge">nil</code> otherwise. A transient object is one that
+was created with <code class="language-plaintext highlighter-rouge">new transient</code>
+<em><code class="language-plaintext highlighter-rouge">classname</code></em>, or with a class-specific method
 that creates transient instances (such as
-`TadsObject.createTransientInstance()` or
-`TadsObject.createTransientInstanceOf()`).
+<code class="language-plaintext highlighter-rouge">TadsObject.createTransientInstance()</code> or
+<code class="language-plaintext highlighter-rouge">TadsObject.createTransientInstanceOf()</code>).</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">ofKind(*cls*)</code></p>
 
-`ofKind(*cls*)`
+<p>Determines if the object is an instance of the class <em>cls</em>, or an
+instance of any subclass of <em>cls</em>. Returns
+<code class="language-plaintext highlighter-rouge">true</code> if so, <code class="language-plaintext highlighter-rouge">nil</code> if
+not. This method always returns true if <em>cls</em> is Object, since every
+object ultimately derives from the Object intrinsic class.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">propDefined(*prop*, *flags*?)</code></p>
 
-Determines if the object is an instance of the class *cls*, or an
-instance of any subclass of *cls*. Returns
-`true` if so, `nil` if
-not. This method always returns true if *cls* is Object, since every
-object ultimately derives from the Object intrinsic class.
-
-</div>
-
-`propDefined(*prop*, *flags*?)`
-
-<div class="fdef">
-
-Determines if the object defines or inherits the property *prop* (a
+<p>Determines if the object defines or inherits the property <em>prop</em> (a
 property pointer value - specify this by applying an ampersand prefix
-(`&amp;`) to a property name), according to the
-*flags* value. If *flags* is not specified, a default value of
-`PropDefAny` is used. The valid *flags* values
-are:
+(<code class="language-plaintext highlighter-rouge">&amp;</code>) to a property name), according to the
+<em>flags</em> value. If <em>flags</em> is not specified, a default value of
+<code class="language-plaintext highlighter-rouge">PropDefAny</code> is used. The valid <em>flags</em> values
+are:</p>
 
-- `PropDefAny` - the function returns
-  `true` if the object defines or inherits the
-  property.
-- `PropDefDirectly` - the function returns
-  `true` only if the object directly defines the
-  property; if it inherits the property from a superclass, the function
-  returns `nil`.
-- `PropDefInherits` - the function returns
-  `true` only if the object inherits the
-  property from a superclass; if it defines the property directly, or
-  doesn't define or inherit the property at all, the function returns
-  `nil`.
-- `PropDefGetClass` - the function returns the
-  superclass object from which the property is inherited, or this object
-  if the object defines the property directly. If the object doesn't
-  define or inherit the property, the function returns
-  `nil`.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PropDefAny</code> - the function returns
+<code class="language-plaintext highlighter-rouge">true</code> if the object defines or inherits the
+property.</li>
+  <li><code class="language-plaintext highlighter-rouge">PropDefDirectly</code> - the function returns
+<code class="language-plaintext highlighter-rouge">true</code> only if the object directly defines the
+property; if it inherits the property from a superclass, the function
+returns <code class="language-plaintext highlighter-rouge">nil</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">PropDefInherits</code> - the function returns
+<code class="language-plaintext highlighter-rouge">true</code> only if the object inherits the
+property from a superclass; if it defines the property directly, or
+doesn’t define or inherit the property at all, the function returns
+<code class="language-plaintext highlighter-rouge">nil</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">PropDefGetClass</code> - the function returns the
+superclass object from which the property is inherited, or this object
+if the object defines the property directly. If the object doesn’t
+define or inherit the property, the function returns
+<code class="language-plaintext highlighter-rouge">nil</code>.</li>
+</ul>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">propInherited(*prop*, *origTargetObj*, *definingObj*,
+*flags*?)</code></p>
 
-`propInherited(*prop*, *origTargetObj*, *definingObj*,
-*flags*?)`
-
-<div class="fdef">
-
-Determines if the object inherits the property *prop* (a property
-pointer value). *origTargetObj* is the "original target object," which
-is the object on which the method was originally invoked; that is, it's
-the object on the left-hand side of the `.`
+<p>Determines if the object inherits the property <em>prop</em> (a property
+pointer value). <em>origTargetObj</em> is the “original target object,” which
+is the object on which the method was originally invoked; that is, it’s
+the object on the left-hand side of the <code class="language-plaintext highlighter-rouge">.</code>
 operator in the expression that originally invoked the method.
-*definingObj* is the "defining object," which is the object defining the
-method which will be inheriting the superclass implementation.
+<em>definingObj</em> is the “defining object,” which is the object defining the
+method which will be inheriting the superclass implementation.</p>
 
-The return value depends on the value of the *flags* argument:
+<p>The return value depends on the value of the <em>flags</em> argument:</p>
 
-- `PropDefAny` - the function returns
-  `true` if the object inherits the property,
-  `nil` otherwise.
-- `PropDefGetClass` - the function returns the
-  class object from which the property is inherited, or
-  `nil` if the property is not inherited.
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PropDefAny</code> - the function returns
+<code class="language-plaintext highlighter-rouge">true</code> if the object inherits the property,
+<code class="language-plaintext highlighter-rouge">nil</code> otherwise.</li>
+  <li><code class="language-plaintext highlighter-rouge">PropDefGetClass</code> - the function returns the
+class object from which the property is inherited, or
+<code class="language-plaintext highlighter-rouge">nil</code> if the property is not inherited.</li>
+</ul>
 
-This method is most useful for determining if the currently active
+<p>This method is most useful for determining if the currently active
 method will invoke an inherited version of the method if it uses the
 inherited operator; this is done by passing
-`targetprop` for the *prop* parameter,
-`targetobj` for the *origTargetObj* parameter,
-and `definingobj` for the *definingObj*
-parameter. When a class is designed as a "mix in" (which means that the
+<code class="language-plaintext highlighter-rouge">targetprop</code> for the <em>prop</em> parameter,
+<code class="language-plaintext highlighter-rouge">targetobj</code> for the <em>origTargetObj</em> parameter,
+and <code class="language-plaintext highlighter-rouge">definingobj</code> for the <em>definingObj</em>
+parameter. When a class is designed as a “mix in” (which means that the
 class is designed to be used with multiple inheritance as one of several
-base classes, and adds some isolated functionality that is "mixed" with
+base classes, and adds some isolated functionality that is “mixed” with
 the functionality of the other base classes), it sometimes useful to be
 able to check to see if the method is inherited from any other base
 classes involved in multiple inheritance. This method allows the caller
-to determine exactly what inherited will do.
+to determine exactly what inherited will do.</p>
 
-Note that the inheritance order is deterministic (i.e., it will always
+<p>Note that the inheritance order is deterministic (i.e., it will always
 be the same for a given situation), and that it depends on the full
 class tree of the original target object. For example, suppose we have a
-set of class definitions like this:
+set of class definitions like this:</p>
 
-```
-    class A: object  x() { "A.x\n"; inherited(); }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class A: object  x() { "A.x\n"; inherited(); }
     class B: object  x() { "B.x\n"; inherited(); }
 
     class C: B, A    x() { "C.x\n"; inherited(); }
-```
+</code></pre></div></div>
 
-Now suppose we run some code like so:
+<p>Now suppose we run some code like so:</p>
 
-```
-    new B().x();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    new B().x();
     new C().x();
-```
+</code></pre></div></div>
 
-The first line will simply display "B.x". B inherits directly from
-TadsObject, so when B.x() calls `inherited()`,
-it will find no definition of `x()` in any base
-class (since TadsObject doesn't define it), so inherited() will do
-nothing.
+<p>The first line will simply display “B.x”. B inherits directly from
+TadsObject, so when B.x() calls <code class="language-plaintext highlighter-rouge">inherited()</code>,
+it will find no definition of <code class="language-plaintext highlighter-rouge">x()</code> in any base
+class (since TadsObject doesn’t define it), so inherited() will do
+nothing.</p>
 
-The second line, however, will display this:
+<p>The second line, however, will display this:</p>
 
-```
-    C.x
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    C.x
     B.x
     A.x
-```
+</code></pre></div></div>
 
-So, even though the call to `inherited()` in
-`B.x()` went straight to TadsObject when
-`B.x()` was invoked from the first line above,
-the same call to inherited() in `B.x()` proceeds
-to `A.x()` when invoked from the second line
+<p>So, even though the call to <code class="language-plaintext highlighter-rouge">inherited()</code> in
+<code class="language-plaintext highlighter-rouge">B.x()</code> went straight to TadsObject when
+<code class="language-plaintext highlighter-rouge">B.x()</code> was invoked from the first line above,
+the same call to inherited() in <code class="language-plaintext highlighter-rouge">B.x()</code> proceeds
+to <code class="language-plaintext highlighter-rouge">A.x()</code> when invoked from the second line
 above. The difference is that C inherits from both B and A. B is the
-first superclass, so the call to `inherited()`
-in `C.x()` proceeds to
-`B.x(`). But C also inherits from A, and the
-superclass order is defined so that A comes after B in C's superclass
-list. So, the call to `inherited()` in
-`B.x()` proceeds to
-`A.x()` this time, since that's the next
-superclass in inheritance order for the original target object.
+first superclass, so the call to <code class="language-plaintext highlighter-rouge">inherited()</code>
+in <code class="language-plaintext highlighter-rouge">C.x()</code> proceeds to
+<code class="language-plaintext highlighter-rouge">B.x(</code>). But C also inherits from A, and the
+superclass order is defined so that A comes after B in C’s superclass
+list. So, the call to <code class="language-plaintext highlighter-rouge">inherited()</code> in
+<code class="language-plaintext highlighter-rouge">B.x()</code> proceeds to
+<code class="language-plaintext highlighter-rouge">A.x()</code> this time, since that’s the next
+superclass in inheritance order for the original target object.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">propType(*prop*)</code></p>
 
-`propType(*prop*)`
-
-<div class="fdef">
-
-Returns the datatype of the given property of the given object, or
-`nil` if the object does not define or inherit
+<p>Returns the datatype of the given property of the given object, or
+<code class="language-plaintext highlighter-rouge">nil</code> if the object does not define or inherit
 the property. This function does not evaluate the property, but merely
 determines its type. The return value is one of the
-`TYPE_xxx` values (see the
-[reflection](reflect.html) section for the list).
-
-</div>
-
-</div>
+<code class="language-plaintext highlighter-rouge">TYPE_xxx</code> values (see the
+<a href="reflect.html">reflection</a> section for the list).</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Object  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Object<br />
 <span class="navnp"><a href="lookup.html" class="nav"><em>Prev:</em> LookupTable</a>
     <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

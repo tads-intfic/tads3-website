@@ -33,7 +33,7 @@ plural, but has the additional requirement of matching an unambiguous
 set of the exact given number ("the five books" means that we expect to
 find exactly five books matching the phrase - no fewer, and no more).
 
-`class `**`ExactQuantifiedPluralProd`**` :   `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
+`class `**`ExactQuantifiedPluralProd`**` :   `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html) [`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
 
 
 
@@ -93,7 +93,7 @@ Inherited from `NounPhraseProd` :
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
 [`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
@@ -106,10 +106,10 @@ Inherited from `AmbigResponseKeeper` :
 
 
 
-[`getVerifyKeepers`](#getVerifyKeepers)[`selectExactCount`](#selectExactCount)
+[`getVerifyKeepers`](#getVerifyKeepers) [`selectExactCount`](#selectExactCount)
 
 Inherited from `QuantifiedPluralProd` :  
-[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)
+[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity) [`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase) [`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)
 
 Inherited from `PluralProd` :  
 [`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)
@@ -118,10 +118,10 @@ Inherited from `NounPhraseProd` :
 [`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse) [`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

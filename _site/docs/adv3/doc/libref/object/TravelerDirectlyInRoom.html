@@ -46,86 +46,58 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Pre-condition: the traveler is directly in the given room. This will
+<p>Pre-condition: the traveler is directly in the given room. This will
 attempt to remove the traveler from any nested rooms within the given
 room, but cannot perform travel between rooms not related by
-containment.
+containment.</p>
 
-Note that the traveler is not necessarily the actor, because the actor
-could be in a vehicle.
+<p>Note that the traveler is not necessarily the actor, because the actor
+could be in a vehicle.</p>
 
-This is a class, because it has to be instantiated with more parameters
-than just a single 'obj' passed by default when evaluating
+<p>This is a class, because it has to be instantiated with more parameters
+than just a single ‘obj’ passed by default when evaluating
 preconditions. In particular, we need to know the actor performing the
 travel, the connector being traversed, and the room we need to be
-directly in.
+directly in.</p>
 
-`class `**`TravelerDirectlyInRoom`**` :   `[`PreCondition`](../object/PreCondition.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TravelerDirectlyInRoom</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreCondition.html"><code class="language-plaintext highlighter-rouge">PreCondition</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TravelerDirectlyInRoom</code></strong><br />
 <a href="../object/PreCondition.html"><code class="language-plaintext highlighter-rouge">PreCondition</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#actor_"><code class="language-plaintext highlighter-rouge">actor_</code></a><a href="#conn_"><code class="language-plaintext highlighter-rouge">conn_</code></a><a href="#loc_"><code class="language-plaintext highlighter-rouge">loc_</code></a></p>
+<p><a href="#actor_"><code class="language-plaintext highlighter-rouge">actor_</code></a> <a href="#conn_"><code class="language-plaintext highlighter-rouge">conn_</code></a> <a href="#loc_"><code class="language-plaintext highlighter-rouge">loc_</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreCondition</code> :<br />
 <a href="../object/PreCondition.html#preCondOrder"><code class="language-plaintext highlighter-rouge">preCondOrder</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkPreCondition"><code class="language-plaintext highlighter-rouge">checkPreCondition</code></a><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+<p><a href="#checkPreCondition"><code class="language-plaintext highlighter-rouge">checkPreCondition</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">PreCondition</code> :<br />
 <a href="../object/PreCondition.html#verifyPreCondition"><code class="language-plaintext highlighter-rouge">verifyPreCondition</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="actor_"></span></p>
 
@@ -133,11 +105,7 @@ directly in.
 
 <p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#294">294</a>]</p>
 
-<div class="desc">
-
-the actor doing the travel
-
-</div>
+<p>the actor doing the travel</p>
 
 <p><span id="conn_"></span></p>
 
@@ -145,11 +113,7 @@ the actor doing the travel
 
 <p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#297">297</a>]</p>
 
-<div class="desc">
-
-the connector being traversed
-
-</div>
+<p>the connector being traversed</p>
 
 <p><span id="loc_"></span></p>
 
@@ -157,19 +121,11 @@ the connector being traversed
 
 <p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#300">300</a>]</p>
 
-<div class="desc">
-
-the room we need to be directly in
-
-</div>
+<p>the room we need to be directly in</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkPreCondition"></span></p>
 
@@ -177,11 +133,7 @@ the room we need to be directly in
 
 <p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#286">286</a>]</p>
 
-<div class="desc">
-
-remember the actor, connector, and room
-
-</div>
+<p>remember the actor, connector, and room</p>
 
 <p><span id="construct"></span></p>
 
@@ -189,18 +141,11 @@ remember the actor, connector, and room
 
 <p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#278">278</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

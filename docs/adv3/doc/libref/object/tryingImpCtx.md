@@ -50,7 +50,7 @@ the "just trying" implicit action announcement context
 [`useInfPhrase`](#useInfPhrase)
 
 Inherited from `ImplicitAnnouncementContext` :  
-[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)
+[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx) [`isInList`](../object/ImplicitAnnouncementContext.html#isInList) [`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)
 
 <span id="_MethodSummary_"></span>
 

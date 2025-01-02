@@ -71,7 +71,7 @@ has been refueled. \[PART OF FUELED EXTENSION\]
 
 
 
-[`burnedOutMsg`](#burnedOutMsg)[`fuelDaemonID`](#fuelDaemonID)[`fuelLevel`](#fuelLevel)[`fuelSource`](#fuelSource)[`plungedIntoDarknessMsg`](#plungedIntoDarknessMsg)[`wontLightMsg`](#wontLightMsg)
+[`burnedOutMsg`](#burnedOutMsg) [`fuelDaemonID`](#fuelDaemonID) [`fuelLevel`](#fuelLevel) [`fuelSource`](#fuelSource) [`plungedIntoDarknessMsg`](#plungedIntoDarknessMsg) [`wontLightMsg`](#wontLightMsg)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ has been refueled. \[PART OF FUELED EXTENSION\]
 
 
 
-[`fuelDaemon`](#fuelDaemon)[`makeLit`](#makeLit)[`removeFuelSource`](#removeFuelSource)[`sayBurnedOut`](#sayBurnedOut)[`showWarning`](#showWarning)[`startFuelDaemon`](#startFuelDaemon)[`stopFuelDaemon`](#stopFuelDaemon)
+[`fuelDaemon`](#fuelDaemon) [`makeLit`](#makeLit) [`removeFuelSource`](#removeFuelSource) [`sayBurnedOut`](#sayBurnedOut) [`showWarning`](#showWarning) [`startFuelDaemon`](#startFuelDaemon) [`stopFuelDaemon`](#stopFuelDaemon)
 
 <span id="_Properties_"></span>
 

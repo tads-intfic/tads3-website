@@ -86,10 +86,10 @@ game-world objects.
 
 
 
-[`np`](#np)[`txt`](#txt)
+[`np`](#np) [`txt`](#txt)
 
 Inherited from `ParseError` :  
-[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable) [`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -102,13 +102,13 @@ Inherited from `Exception` :
 
 
 
-[`construct`](#construct)[`rankCorrection`](#rankCorrection)
+[`construct`](#construct) [`rankCorrection`](#rankCorrection)
 
 Inherited from `ParseError` :  
-[`display`](../object/ParseError.html#display)[`tryCuring`](../object/ParseError.html#tryCuring)
+[`display`](../object/ParseError.html#display) [`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

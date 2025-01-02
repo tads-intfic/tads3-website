@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="fund.html" class="nav">Fundamentals</a> \&gt; Bibliographic
-Metadata - the GameInfo Format  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="fund.html" class="nav">Fundamentals</a> &gt; Bibliographic
+Metadata - the GameInfo Format<br />
 <span class="navnp"><a href="t3iautohot.html" class="nav"><em>Prev:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>    
 <a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="bibliographic-metadata-the-gameinfo-format">Bibliographic Metadata: The GameInfo Format</h1>
 
@@ -176,251 +168,251 @@ step for you automatically because of the way you set things up back in
 Step 1.) Run the T3 Resource Compiler (t3res) and bind the generated
 GameInfo.txt file into your game:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t3res mygame.t3 -add GameInfo.txt
+</code></pre></div></div>
 
-    t3res mygame.t3 -add GameInfo.txt
-
-
-
-(Optional) If you want to include cover art in your game, save your
+<p>(Optional) If you want to include cover art in your game, save your
 image as either a JPEG or PNG image. On the tadsrsc command line above,
 add that filename at the end of the command, after GameInfo.txt, but
-list it like this:
+list it like this:</p>
 
-       image.jpg=.system/CoverArt.jpg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   image.jpg=.system/CoverArt.jpg
+</code></pre></div></div>
 
-Replace "image.jpg" with the actual name of your file, but leave the
-rest exactly as shown. The "=" sign says that you want to give the file
-the special name ".system/CoverArt.jpg" (or .png) in the resource
+<p>Replace “image.jpg” with the actual name of your file, but leave the
+rest exactly as shown. The “=” sign says that you want to give the file
+the special name “.system/CoverArt.jpg” (or .png) in the resource
 catalog - the catalog name has to be exactly as shown for tools to
-recognize its special purpose.
+recognize its special purpose.</p>
 
-That's it! Your game information is now stored in your compiled game
-file.
+<p>That’s it! Your game information is now stored in your compiled game
+file.</p>
 
-## <span id="fields">The Standard Name/Value Pairs</span>
+<h2 id="the-standard-namevalue-pairs"><span id="fields">The Standard Name/Value Pairs</span></h2>
 
-A GameInfo record is simply a list of name/value pairs defining specific
+<p>A GameInfo record is simply a list of name/value pairs defining specific
 bits of information about the game. Each name/value pair consists of a
-standard identifier - the "name" - and an associated value. Each name
+standard identifier - the “name” - and an associated value. Each name
 has a specific meaning, and defines a specific format for its value. For
-example, to specify a game's title, you specify value for the "Name"
+example, to specify a game’s title, you specify value for the “Name”
 identifier; the value is simply a string giving the full title of the
-game.
+game.</p>
 
-When using the Adv3 library, you can use the versionInfo object to
+<p>When using the Adv3 library, you can use the versionInfo object to
 define your metadata values instead of writing a gameinfo.txt file by
-hand. Each entry in the list below includes a "TADS 3 versionInfo
-example" showing what you'd add to your versionInfo object definition to
-define that key.
+hand. Each entry in the list below includes a “TADS 3 versionInfo
+example” showing what you’d add to your versionInfo object definition to
+define that key.</p>
 
-## Name/Value pairs every game should have
+<h2 id="namevalue-pairs-every-game-should-have">Name/Value pairs every game should have</h2>
 
-All of the name/value pairs are optional. However, to improve
+<p>All of the name/value pairs are optional. However, to improve
 interoperability with the IF Archive and various tools, we recommend
-that you minimally define the following in every game:
+that you minimally define the following in every game:</p>
 
-- IFID
-- Name
-- AuthorEmail
+<ul>
+  <li>IFID</li>
+  <li>Name</li>
+  <li>AuthorEmail</li>
+</ul>
 
-The [iFiction standard](#ifiction) *requires* the information that these
+<p>The <a href="#ifiction">iFiction standard</a> <em>requires</em> the information that these
 tags define, so to interoperate properly with the IF Archive and other
-iFiction-based systems, you should always define these tags.
+iFiction-based systems, you should always define these tags.</p>
 
-## The Name/Value pairs in detail
+<h2 id="the-namevalue-pairs-in-detail">The Name/Value pairs in detail</h2>
 
-The standard, pre-defined Name/Value pairs are as follows:
+<p>The standard, pre-defined Name/Value pairs are as follows:</p>
 
-**IFID**  
-Format: xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
-Example: `IFID: 17AF6C-990E-7220-06F7-3962AA61F09A`  
+<p><strong>IFID</strong><br />
+Format: xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx<br />
+Example: <code class="language-plaintext highlighter-rouge">IFID: 17AF6C-990E-7220-06F7-3962AA61F09A</code><br />
 TADS 3 versionInfo example:
-`IFID = '17AF6C-990E-7220-06F7-3962AA61F09A'`  
-  
-The IFID is the game's universally unique identifier. Refer to the [IFID
-section](#ifids) for full details on this field. Note that you can
+<code class="language-plaintext highlighter-rouge">IFID = '17AF6C-990E-7220-06F7-3962AA61F09A'</code></p>
+
+<p>The IFID is the game’s universally unique identifier. Refer to the <a href="#ifids">IFID
+section</a> for full details on this field. Note that you can
 specify multiple IFIDs here by separating them with commas - but do this
-**only** to encode legacy IFIDs for past releases that didn't include
-IFIDs, as described in the [IFID section](#ifids).
+<strong>only</strong> to encode legacy IFIDs for past releases that didn’t include
+IFIDs, as described in the <a href="#ifids">IFID section</a>.</p>
 
-**Name**  
-Format: Any text  
-Example: `Name: Mars by Night`  
-TADS 3 versionInfo example: `name = 'Mars by Night'`  
-  
-The full title of the game, as it should appear in plain text.
+<p><strong>Name</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Name: Mars by Night</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">name = 'Mars by Night'</code></p>
 
-**Headline**  
-Format: Any text  
-Example: `Headline: An Interactive Rescue`  
-TADS 3 versionInfo example: `headline = 'An Interactive Rescue'`  
-  
-A subtitle for the game, following the tradition set by the Infocom
-games. This is usually something like "An Interactive Mystery" that you
-display just after the title of your game at startup.
+<p>The full title of the game, as it should appear in plain text.</p>
 
-**Byline**  
-Format: Any text  
-Example: `Byline: by S.F. Author`  
-TADS 3 versionInfo example: `byline = 'by S.F. Author'`  
-  
-Name of the author or authors of the game, as it should appear in a
+<p><strong>Headline</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Headline: An Interactive Rescue</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">headline = 'An Interactive Rescue'</code></p>
+
+<p>A subtitle for the game, following the tradition set by the Infocom
+games. This is usually something like “An Interactive Mystery” that you
+display just after the title of your game at startup.</p>
+
+<p><strong>Byline</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Byline: by S.F. Author</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">byline = 'by S.F. Author'</code></p>
+
+<p>Name of the author or authors of the game, as it should appear in a
 plain text credit. The byline is meant to be displayed after the name of
-the game, so it can include phrasing like "by *author*" if desired.
+the game, so it can include phrasing like “by <em>author</em>” if desired.</p>
 
-**HtmlByline**  
-Format: HTML source text  
-Example: `HtmlByline: by S.F.&nbsp;Author`  
-TADS 3 versionInfo example: `htmlByline = 'by S.F.&nbsp;Author'`  
-  
-Name of the author or authors of the game, as it should appear in HTML.
-This should contain roughly the same information as the "Byline" field,
+<p><strong>HtmlByline</strong><br />
+Format: HTML source text<br />
+Example: <code class="language-plaintext highlighter-rouge">HtmlByline: by S.F.&amp;nbsp;Author</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">htmlByline = 'by S.F.&amp;nbsp;Author'</code></p>
+
+<p>Name of the author or authors of the game, as it should appear in HTML.
+This should contain roughly the same information as the “Byline” field,
 but can include HTML markups in its value. It is desirable (although not
-required) for this field to incorporate \&lt;A HREF='mailto:'\&gt; tags to
+required) for this field to incorporate &lt;A HREF=’mailto:’&gt; tags to
 provide email address hyperlinks for the authors. Note that if the
 HtmlByline field is present, a regular Byline field should be included
 as well, so that the plain text version of the information is available
-to tools that can't handle HTML.
+to tools that can’t handle HTML.</p>
 
-**AuthorEmail**  
-Format: *Name* `&lt;`*email*`&gt;&lt;`*email*`&gt;;` ...  
-Example: `AuthorEmail: S.F. Author &lt;sfauthor@mywebsite.org&gt;`  
+<p><strong>AuthorEmail</strong><br />
+Format: <em>Name</em> <code class="language-plaintext highlighter-rouge">&lt;</code><em>email</em><code class="language-plaintext highlighter-rouge">&gt;&lt;</code><em>email</em><code class="language-plaintext highlighter-rouge">&gt;;</code> …<br />
+Example: <code class="language-plaintext highlighter-rouge">AuthorEmail: S.F. Author &lt;sfauthor@mywebsite.org&gt;</code><br />
 TADS 3 versionInfo example:
-`authorEmail = 'S.F. Author &lt;sfauthor@mywebsite.org&gt;'`  
-  
-Names and email addresses of the authors. Each author can have one or
-more email addresses listed in angle brackets after the author's
+<code class="language-plaintext highlighter-rouge">authorEmail = 'S.F. Author &lt;sfauthor@mywebsite.org&gt;'</code></p>
+
+<p>Names and email addresses of the authors. Each author can have one or
+more email addresses listed in angle brackets after the author’s
 human-readable name. Multiple authors can be listed by separating the
 entries with semicolons. You should only include email addresses that
 are likely to be valid for the foreseeable future, since games uploaded
-to the IF Archive will be stored indefinitely.
+to the IF Archive will be stored indefinitely.</p>
 
-**Url**  
-Format: http://...  
-Example: `Url: http://mywebsite.org/marsbynight.html`  
+<p><strong>Url</strong><br />
+Format: http://…<br />
+Example: <code class="language-plaintext highlighter-rouge">Url: http://mywebsite.org/marsbynight.html</code><br />
 TADS 3 versionInfo example:
-`gameUrl = 'http://mywebsite.org/marsbynight.html'`  
-  
-The URL for the game's web site. This must be an absolute URL with http:
+<code class="language-plaintext highlighter-rouge">gameUrl = 'http://mywebsite.org/marsbynight.html'</code></p>
+
+<p>The URL for the game’s web site. This must be an absolute URL with http:
 as the protocol. Since IF games that are uploaded to the Archive will be
 stored indefinitely, people might be looking at this information well
 into the future; so we recommend that you only include a URL if your
-site is likely to be around for a while.
+site is likely to be around for a while.</p>
 
-**Desc**  
-Format: Any text  
-Example: `Desc: All contact lost with the first manned mission...`  
+<p><strong>Desc</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Desc: All contact lost with the first manned mission...</code><br />
 TADS 3 versionInfo example:
-`desc = 'All contact lost with the first manned mission...'`  
-  
-A plain text description of the game. This is a "blurb" describing the
-game - the sort of thing you'd find on the inside jacket of a book, or
-on the back of the box for a computer game. This is "plain" text in the
-sense that it can't contain any formatting - HTML markups aren't
-allowed, for example. There's one exception: if you want to include a
-paragraph break, you can write `\n` - that is, a backslash followed by a
-lower-case 'n'. When displayed, this will usually appear as *two* line
-breaks in a row, so that there's a blank line between paragraphs. If you
-want to write just a backslash, use two in a row (`\\`) - this is so
+<code class="language-plaintext highlighter-rouge">desc = 'All contact lost with the first manned mission...'</code></p>
+
+<p>A plain text description of the game. This is a “blurb” describing the
+game - the sort of thing you’d find on the inside jacket of a book, or
+on the back of the box for a computer game. This is “plain” text in the
+sense that it can’t contain any formatting - HTML markups aren’t
+allowed, for example. There’s one exception: if you want to include a
+paragraph break, you can write <code class="language-plaintext highlighter-rouge">\n</code> - that is, a backslash followed by a
+lower-case ‘n’. When displayed, this will usually appear as <em>two</em> line
+breaks in a row, so that there’s a blank line between paragraphs. If you
+want to write just a backslash, use two in a row (<code class="language-plaintext highlighter-rouge">\\</code>) - this is so
 that there will be no confusion if the backslash happens to be followed
-by an 'n', and also so that we can safely add new backslash sequences in
-the future if they're ever needed.
+by an ‘n’, and also so that we can safely add new backslash sequences in
+the future if they’re ever needed.</p>
 
-**HtmlDesc**  
-Format: HTML source text  
-Example: `HtmlDesc: <i>All contact lost</i> with the first...`  
+<p><strong>HtmlDesc</strong><br />
+Format: HTML source text<br />
+Example: <code class="language-plaintext highlighter-rouge">HtmlDesc: &lt;i&gt;All contact lost&lt;/i&gt; with the first...</code><br />
 TADS 3 versionInfo example:
-`htmlDesc = '<i>All contact lost</i> with the first...'`  
-  
-HTML description of the game. This should contain roughly the same
-information as the "Desc" field, but this field can contain HTML markups
+<code class="language-plaintext highlighter-rouge">htmlDesc = '&lt;i&gt;All contact lost&lt;/i&gt; with the first...'</code></p>
+
+<p>HTML description of the game. This should contain roughly the same
+information as the “Desc” field, but this field can contain HTML markups
 in its value. Note that if an HtmlDesc is given, a regular Desc should
 be given as well, because some tools that use the game information are
-not capable of handling HTML.
+not capable of handling HTML.</p>
 
-**Version**  
-Format: Any text  
-Example: `Version: 2`  
-TADS 3 versionInfo example: `version = '2'`  
-  
-The version number string for the game. This is usually just a number,
-like "2" for version 2. There's a tradition in computer software of
-using elaborate "dotted" version numbers with a multitude of sub-parts,
-as in "2.5.7.11.14B"; but most IF games see only a handful of releases,
-so a simple one-part version number ("2") is usually quite adequate. You
-shouldn't include the word "version" in this string - just include the
-version number information.
+<p><strong>Version</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Version: 2</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">version = '2'</code></p>
 
-**FirstPublished**  
-Format: YYYY *or* YYYY-MM-DD  
-Example: `FirstPublished: 2003`  
-TADS 3 versionInfo example: `firstPublished = '2003'`  
-  
-The date of *first* publication for the game's original edition. This
+<p>The version number string for the game. This is usually just a number,
+like “2” for version 2. There’s a tradition in computer software of
+using elaborate “dotted” version numbers with a multitude of sub-parts,
+as in “2.5.7.11.14B”; but most IF games see only a handful of releases,
+so a simple one-part version number (“2”) is usually quite adequate. You
+shouldn’t include the word “version” in this string - just include the
+version number information.</p>
+
+<p><strong>FirstPublished</strong><br />
+Format: YYYY <em>or</em> YYYY-MM-DD<br />
+Example: <code class="language-plaintext highlighter-rouge">FirstPublished: 2003</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">firstPublished = '2003'</code></p>
+
+<p>The date of <em>first</em> publication for the game’s original edition. This
 can be either a year, or a full year-month-day (March 5, 2001 would be
-written "2001-03-05"). The date of first publication of a work is
+written “2001-03-05”). The date of first publication of a work is
 sometimes important for copyright purposes, and can be of interest to
-archivists. Note that this does **not** change with version updates -
+archivists. Note that this does <strong>not</strong> change with version updates -
 this reflects the original publication date of the original version of
-the game.
+the game.</p>
 
-**ReleaseDate**  
-Format: YYYY-MM-DD  
-Example: `ReleaseDate: 2006-04-10`  
-TADS 3 versionInfo example: `releaseDate = '2006-04-10'`  
-  
-The release date of this version of the game. (Note that the format
+<p><strong>ReleaseDate</strong><br />
+Format: YYYY-MM-DD<br />
+Example: <code class="language-plaintext highlighter-rouge">ReleaseDate: 2006-04-10</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">releaseDate = '2006-04-10'</code></p>
+
+<p>The release date of this version of the game. (Note that the format
 specifies the year, month, and day of release in numeric format: March
-5, 2001 is rendered as "2001-03-05".)
+5, 2001 is rendered as “2001-03-05”.)</p>
 
-**Language**  
-Format: [RFC3066](http://www.ietf.org/rfc/rfc3066.txt) language
-specifier  
-Example: `Language: en-US`  
-TADS 3 versionInfo example: `languageCode = 'en-US'`  
-  
-The language in which the work's text is written (or primarily written,
+<p><strong>Language</strong><br />
+Format: <a href="http://www.ietf.org/rfc/rfc3066.txt">RFC3066</a> language
+specifier<br />
+Example: <code class="language-plaintext highlighter-rouge">Language: en-US</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">languageCode = 'en-US'</code></p>
+
+<p>The language in which the work’s text is written (or primarily written,
 if the work uses multiple languages). This information can help
 potential users identify works written in languages they know, and could
 also be used as a hint to text-to-speech converters or other natural
 language analysis tools. For simplicity, it is recommended that the
 language identifier string consist of an
-[ISO-639](http://www.loc.gov/standards/iso639-2) two- or three-letter
+<a href="http://www.loc.gov/standards/iso639-2">ISO-639</a> two- or three-letter
 language code, followed by a hyphen and an
-[ISO-3166](http://www.din.de/gremien/nas/nabd/iso3166ma) two-letter
+<a href="http://www.din.de/gremien/nas/nabd/iso3166ma">ISO-3166</a> two-letter
 country code, but any valid RFC3066 specifier is allowed. For English,
 typical specifiers would be en-US (for US English) or en-GB (for British
-English).
+English).</p>
 
-**Series**  
-Format: Any text  
-Example: `Series: The Lost Mars Trilogy`  
-TADS 3 versionInfo example: `seriesName = 'The Lost Mars Trilogy'`  
-  
-If this work is part of a series, this gives the name of the series. For
-example, "The Enchanter Trilogy". If you specify this tag, you might
+<p><strong>Series</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Series: The Lost Mars Trilogy</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">seriesName = 'The Lost Mars Trilogy'</code></p>
+
+<p>If this work is part of a series, this gives the name of the series. For
+example, “The Enchanter Trilogy”. If you specify this tag, you might
 also want to specify SeriesNumber to indicate the position of this work
-in the series, but that's optional - some series are just groups of
-related works with no canonical ordering.
+in the series, but that’s optional - some series are just groups of
+related works with no canonical ordering.</p>
 
-**SeriesNumber**  
-Format: Integer  
-Example: `SeriesNumber: 1`  
-TADS 3 versionInfo example: `seriesNumber = '1'`  
-  
-The sequence number of this work in its series. This should be a simple
-integer value - 1 or 2 or 3, not "Part One" or "The Second Book". This
+<p><strong>SeriesNumber</strong><br />
+Format: Integer<br />
+Example: <code class="language-plaintext highlighter-rouge">SeriesNumber: 1</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">seriesNumber = '1'</code></p>
+
+<p>The sequence number of this work in its series. This should be a simple
+integer value - 1 or 2 or 3, not “Part One” or “The Second Book”. This
 is optional, even if the Series is specified, since a series might just
 be a group of works with no defined ordering. If this tag is specified,
-the Series must be defined as well.
+the Series must be defined as well.</p>
 
-**Genre**  
-Format: Any text  
-Example: `Genre: Science Fiction`  
-TADS 3 versionInfo example: `genreName = 'Science Fiction'`  
-  
-The genre that, in the author's opinion, best describes the work. We
+<p><strong>Genre</strong><br />
+Format: Any text<br />
+Example: <code class="language-plaintext highlighter-rouge">Genre: Science Fiction</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">genreName = 'Science Fiction'</code></p>
+
+<p>The genre that, in the author’s opinion, best describes the work. We
 recognize that not everyone thinks genre labeling is a good idea - a lot
 of authors dislike the whole idea; many works are impossible to
 pigeonhole; and if you ask three people the genre of a particular game,
@@ -428,190 +420,198 @@ you might well get three different answers. Even so, realistically, it
 seems just about inevitable that players and archivists will try to
 force even the most singular works into genre straitjackets. So, we
 define this tag to give the author the option of stating her own opinion
-on the subject.
+on the subject.</p>
 
-If you dislike genre tagging, you can just omit this tag. Otherwise, you
+<p>If you dislike genre tagging, you can just omit this tag. Otherwise, you
 can use any text you want here, but we suggest that you keep it short (a
-word or two) and use a genre label that's generally recognized as such.
-We particularly recommend choosing an entry from [Baf's Guide's genre
-list](http://www.wurb.com/if/genre).
+word or two) and use a genre label that’s generally recognized as such.
+We particularly recommend choosing an entry from <a href="http://www.wurb.com/if/genre">Baf’s Guide’s genre
+list</a>.</p>
 
-**Forgiveness**  
-Format: Text  
-Example: `Forgiveness: Polite`  
-TADS 3 versionInfo example: `forgivenessLevel = 'Polite'`  
-  
-This gives the author's estimation of the game's forgiveness level on
+<p><strong>Forgiveness</strong><br />
+Format: Text<br />
+Example: <code class="language-plaintext highlighter-rouge">Forgiveness: Polite</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">forgivenessLevel = 'Polite'</code></p>
+
+<p>This gives the author’s estimation of the game’s forgiveness level on
 the Zarfian scale (as propounded by Andrew Plotkin on
 rec.arts.int-fiction. This must have one of these values, in the exact
-case shown:
+case shown:</p>
 
-- **Merciful** - the player cannot get stuck, the PC cannot die
-- **Polite** - you can get stuck or the PC can die, but it's immediately
-  obvious when you're stuck or dead
-- **Tough** - you can get stuck, but it's immediately obvious that
-  you're about to do something irrevocable
-- **Nasty** - you can get stuck, but after you do something irrevocable,
-  it's clear
-- **Cruel** - you can get stuck by doing something that isn't obviously
-  irrevocable, even after doing it
+<ul>
+  <li><strong>Merciful</strong> - the player cannot get stuck, the PC cannot die</li>
+  <li><strong>Polite</strong> - you can get stuck or the PC can die, but it’s immediately
+obvious when you’re stuck or dead</li>
+  <li><strong>Tough</strong> - you can get stuck, but it’s immediately obvious that
+you’re about to do something irrevocable</li>
+  <li><strong>Nasty</strong> - you can get stuck, but after you do something irrevocable,
+it’s clear</li>
+  <li><strong>Cruel</strong> - you can get stuck by doing something that isn’t obviously
+irrevocable, even after doing it</li>
+</ul>
 
-**LicenseType**  
-Format: Text  
-Example: `LicenseType: Freeware`  
-TADS 3 versionInfo example: `licenseType = 'Freeware'`  
-  
-The type of copyright license under which the game is distributed. This
+<p><strong>LicenseType</strong><br />
+Format: Text<br />
+Example: <code class="language-plaintext highlighter-rouge">LicenseType: Freeware</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">licenseType = 'Freeware'</code></p>
+
+<p>The type of copyright license under which the game is distributed. This
 field is not meant to capture all possible license information, but is
-meant to indicate in broad terms how the work is distributed.
+meant to indicate in broad terms how the work is distributed.</p>
 
-The value should be chosen from the following keywords:
+<p>The value should be chosen from the following keywords:</p>
 
-- **Public Domain** for a work that is not copyrighted;
-- **Freeware** for a work that is made available without charge, but
-  whose author nonetheless retains copyright;
-- **Shareware** for a work distributed on a free-trial basis but with
-  some degree of suggestion or requirement that users pay the author if
-  they choose to use the software;
-- **Commercial** for a work that is distributed only to paying customers
-- **Commercial Demo** for a limited-functionality version, which may be
-  freely distributed, of a full work distributed commercially;
-- **Other** for a work that does not fit any of these categories.
+<ul>
+  <li><strong>Public Domain</strong> for a work that is not copyrighted;</li>
+  <li><strong>Freeware</strong> for a work that is made available without charge, but
+whose author nonetheless retains copyright;</li>
+  <li><strong>Shareware</strong> for a work distributed on a free-trial basis but with
+some degree of suggestion or requirement that users pay the author if
+they choose to use the software;</li>
+  <li><strong>Commercial</strong> for a work that is distributed only to paying customers</li>
+  <li><strong>Commercial Demo</strong> for a limited-functionality version, which may be
+freely distributed, of a full work distributed commercially;</li>
+  <li><strong>Other</strong> for a work that does not fit any of these categories.</li>
+</ul>
 
-Cases that are substantially similar to one of the categories enumerated
-above should use the nearest category; for example, "postcard-ware,"
+<p>Cases that are substantially similar to one of the categories enumerated
+above should use the nearest category; for example, “postcard-ware,”
 where users are requested to send postcards to the author if they like
 the game, could be considered Shareware, because the game is distributed
 freely but with a request for sending something (token though it is) to
-the author. Note that this field does **not** grant or imply any license
-rights, and is not meant to provide a "digital rights management" system
+the author. Note that this field does <strong>not</strong> grant or imply any license
+rights, and is not meant to provide a “digital rights management” system
 or the like; authors should always include full license terms in a
 separate text file accompanying the game or in-line as part of the
-game's displayed text.
+game’s displayed text.</p>
 
-**CopyingRules**  
-Format: Text  
-Example: `CopyingRules: Nominal Cost Only; Compilations Allowed`  
+<p><strong>CopyingRules</strong><br />
+Format: Text<br />
+Example: <code class="language-plaintext highlighter-rouge">CopyingRules: Nominal Cost Only; Compilations Allowed</code><br />
 TADS 3 versionInfo example:
-`copyingRules = 'Nominal Cost Only; Compilations Allowed'`  
-  
-Information on the rules under which the author allows the work to be
+<code class="language-plaintext highlighter-rouge">copyingRules = 'Nominal Cost Only; Compilations Allowed'</code></p>
+
+<p>Information on the rules under which the author allows the work to be
 copied and redistributed. Most new works of IF these days are freeware,
-which means that they're distributed for free but the authors retain
+which means that they’re distributed for free but the authors retain
 copyright and place some restrictions on redistribution; this field is
-meant to provide some guidance, in general terms, about the author's
-copying rules.
+meant to provide some guidance, in general terms, about the author’s
+copying rules.</p>
 
-This field's value should be chosen from the following keywords:
+<p>This field’s value should be chosen from the following keywords:</p>
 
-- **Prohibited** if no copying or redistribution of any kind is allowed
-- **No Restrictions** if the game may be copied without restriction
-- **No-Cost Only** if the game may be redistributed but only with
-  absolutely no fees to recipients;
-- **At-Cost Only** if the game may be redistributed with a maximum
-  charge to recipients of the actual cost of the physical distribution,
-  such as media, mailing, or connection charges, but with no profit or
-  other benefit to the distributor;
-- **Nominal Cost Only** if the game may be redistributed for a small
-  charge to recipients to cover the actual cost of the physical
-  distribution and some small compensation to the distributor for the
-  work involved in providing the distribution;
-- **Other** for rules that don't fit into any of these categories.
+<ul>
+  <li><strong>Prohibited</strong> if no copying or redistribution of any kind is allowed</li>
+  <li><strong>No Restrictions</strong> if the game may be copied without restriction</li>
+  <li><strong>No-Cost Only</strong> if the game may be redistributed but only with
+absolutely no fees to recipients;</li>
+  <li><strong>At-Cost Only</strong> if the game may be redistributed with a maximum
+charge to recipients of the actual cost of the physical distribution,
+such as media, mailing, or connection charges, but with no profit or
+other benefit to the distributor;</li>
+  <li><strong>Nominal Cost Only</strong> if the game may be redistributed for a small
+charge to recipients to cover the actual cost of the physical
+distribution and some small compensation to the distributor for the
+work involved in providing the distribution;</li>
+  <li><strong>Other</strong> for rules that don’t fit into any of these categories.</li>
+</ul>
 
-In addition to the keywords above, one of the keywords "**Compilations
-Prohibited**" or "**Compilations Allowed**" may be added, after a
+<p>In addition to the keywords above, one of the keywords “<strong>Compilations
+Prohibited</strong>” or “<strong>Compilations Allowed</strong>” may be added, after a
 semicolon, to indicate whether or not the game may be distributed as
 part of a group of freeware and shareware games compiled by a third
 party, such as a compilation CD offered for sale or included with a
 magazine. Like the LicenseType field, this field provides guidance only
-and is **not** definitive: users must consult the license text that
-accompanies the game to learn the author's full, official copying rules.
+and is <strong>not</strong> definitive: users must consult the license text that
+accompanies the game to learn the author’s full, official copying rules.</p>
 
-**PresentationProfile**  
-Format: Text  
-Example: `PresentationProfile: Multimedia`  
-TADS 3 versionInfo example: `presentationProfile = 'Multimedia'`  
-  
-The name of the recommended "presentation profile" for the game. This is
+<p><strong>PresentationProfile</strong><br />
+Format: Text<br />
+Example: <code class="language-plaintext highlighter-rouge">PresentationProfile: Multimedia</code><br />
+TADS 3 versionInfo example: <code class="language-plaintext highlighter-rouge">presentationProfile = 'Multimedia'</code></p>
+
+<p>The name of the recommended “presentation profile” for the game. This is
 a hint that gives the run-time interpreter an idea of the style of the
-game's user interface; interpreters can use this information to choose
+game’s user interface; interpreters can use this information to choose
 the most appropriate display settings, such as fonts and colors.
-Interpreters need not use this information at all; it's purely advisory.
+Interpreters need not use this information at all; it’s purely advisory.</p>
 
-This value can be a user-defined profile name, or one of these
-pre-defined values:
+<p>This value can be a user-defined profile name, or one of these
+pre-defined values:</p>
 
-- **Plain Text** indicates that the game is entirely text, with no
-  graphics and with text formatting limited to "highlighted" text (i.e.,
-  the traditional TADS 2 highlighting, which is usually rendered as
-  bold-face or equivalent).
-- **Multimedia** indicates that the game makes use of HTML text
-  formatting effects (such as fonts, text colors, text sizes, italics,
-  and tables) and/or displays graphics.
-- **Default** isn't a true profile, but rather explicitly selects the
-  default profile. Some interpreters let the user choose a particular
-  profile as the default, in which case this will select that profile.
+<ul>
+  <li><strong>Plain Text</strong> indicates that the game is entirely text, with no
+graphics and with text formatting limited to “highlighted” text (i.e.,
+the traditional TADS 2 highlighting, which is usually rendered as
+bold-face or equivalent).</li>
+  <li><strong>Multimedia</strong> indicates that the game makes use of HTML text
+formatting effects (such as fonts, text colors, text sizes, italics,
+and tables) and/or displays graphics.</li>
+  <li><strong>Default</strong> isn’t a true profile, but rather explicitly selects the
+default profile. Some interpreters let the user choose a particular
+profile as the default, in which case this will select that profile.</li>
+</ul>
 
-Authors can, if they wish, specify custom profile names of their own
+<p>Authors can, if they wish, specify custom profile names of their own
 creation here, but authors doing so are advised that (1) interpreters
 will not generally be able to infer anything from profile names other
 than ones defined here, and (2) other standard profile names may be
 added here in the future, so custom names that authors choose could
-conceivably collide with future additions.
+conceivably collide with future additions.</p>
 
-The profile name isn't sensitive to case (that is, "multimedia" is
-treated as equivalent to "MULTIMEDIA"). However, we recommend that if
-you're using one of the pre-defined profile names listed above, you
-should use the exact capitalization as shown.
+<p>The profile name isn’t sensitive to case (that is, “multimedia” is
+treated as equivalent to “MULTIMEDIA”). However, we recommend that if
+you’re using one of the pre-defined profile names listed above, you
+should use the exact capitalization as shown.</p>
 
-In practical terms, the presentation profile is used by some
+<p>In practical terms, the presentation profile is used by some
 interpreters to select a default set of visual settings to use when
 starting the game. For example, HTML TADS for Windows looks for a
-"theme" that has the same name as the presentation profile, and uses the
+“theme” that has the same name as the presentation profile, and uses the
 matching theme, if any, when starting the game. An HTML TADS theme is
 simply a set of font, color, and other visual settings. Other
 interpreters, including all of the current text-only interpreters,
-completely ignore the presentation profile setting. Authors mustn't
+completely ignore the presentation profile setting. Authors mustn’t
 expect a presentation profile to select any particular color or font
-scheme or to have any other specific effects, because it's up to each
-interpreter to determine how to use the profile setting, if at all.
+scheme or to have any other specific effects, because it’s up to each
+interpreter to determine how to use the profile setting, if at all.</p>
 
-Note that the presentation profile does **not** have any effect at all
-on the capabilities of the interpreter: the profile setting doesn't turn
-off any features an interpreter would otherwise offer, and it doesn't
+<p>Note that the presentation profile does <strong>not</strong> have any effect at all
+on the capabilities of the interpreter: the profile setting doesn’t turn
+off any features an interpreter would otherwise offer, and it doesn’t
 limit what kind of interpreter can be used to play the game. Selecting
-the "plain text" profile, for example, does not disable graphics or
+the “plain text” profile, for example, does not disable graphics or
 sound in an interpreter; it simply gives the interpreter guidance that
 the author feels the game will look best when displayed in a style
 (fonts, colors, etc.) suitable for traditional text-only games.
-Similarly, selecting the "multimedia" profile doesn't prevent the game
+Similarly, selecting the “multimedia” profile doesn’t prevent the game
 from being played on text-only interpreters; it merely hints to
 interpreters that they should use a visual style suited for a more
-diverse mixture of text effects and/or graphics.
+diverse mixture of text effects and/or graphics.</p>
 
-## Adding more keys
+<h2 id="adding-more-keys">Adding more keys</h2>
 
-When you define your versionInfo object as shown above, here's what's
+<p>When you define your versionInfo object as shown above, here’s what’s
 really going on internally: at pre-init time, the library looks for
 certain property names in your versionInfo object, and writes their
-values to the "gameinfo.txt" file using the associated keys. The library
-creates the gameinfo.txt file itself, so you don't ever need to edit
-this file directly. In fact, you *can't* edit it directly even if you
+values to the “gameinfo.txt” file using the associated keys. The library
+creates the gameinfo.txt file itself, so you don’t ever need to edit
+this file directly. In fact, you <em>can’t</em> edit it directly even if you
 wanted to, because any changes you make would be lost the next time you
 compile - the library overwrites the file with its
-automatically-generated copy on every build.
+automatically-generated copy on every build.</p>
 
-Since you can't edit gameinfo.txt directly, you might wonder how you go
-about defining key/value pairs other than those we've shown in the
-example above.
+<p>Since you can’t edit gameinfo.txt directly, you might wonder how you go
+about defining key/value pairs other than those we’ve shown in the
+example above.</p>
 
-The first thing to do is to look at the list of [standard name/value
-pairs](#fields) above. For each one, notice that there's a "TADS 3
-versionInfo example" listed. That shows you the format to use for that
+<p>The first thing to do is to look at the list of <a href="#fields">standard name/value
+pairs</a> above. For each one, notice that there’s a “TADS 3
+versionInfo example” listed. That shows you the format to use for that
 name/value pair. So, if you can find the key that you want to use in the
-standard list above, just add it to your versionInfo object as shown.
+standard list above, just add it to your versionInfo object as shown.</p>
 
-If you *can't* find the key you're looking for in the list above, either
+<p>If you <em>can’t</em> find the key you’re looking for in the list above, either
 because the key was added to the list since the last time we updated
 this article, or because you want to add a custom key rather than a
 standard key, you have to perform an extra step. What you need to do is
@@ -620,104 +620,103 @@ key name. To do this, you simply override the metadataKeys property of
 your versionInfo object to add your new key. The metadataKeys property
 contains a list of alternating GameInfo key names and versionInfo
 property IDs. Each pair creates one association, so you just need to add
-one pair for each new key you want to use.
+one pair for each new key you want to use.</p>
 
-For example, suppose you want to use a custom key called
-"kids.age-range". You could accomplish this like so:
+<p>For example, suppose you want to use a custom key called
+“kids.age-range”. You could accomplish this like so:</p>
 
-       versionInfo: GameID
-         metadataKeys = (inherited + ['kids.age-range', &amp;ageRange])
-         ageRange = '5-11'
-         IFID = '64d2c120-c80b-11da-a94d-0800200c9a66'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   versionInfo: GameID
+     metadataKeys = (inherited + ['kids.age-range', &amp;ageRange])
+     ageRange = '5-11'
+     IFID = '64d2c120-c80b-11da-a94d-0800200c9a66'
 
-         // etc with the same definitions as before...
-       ;
+     // etc with the same definitions as before...
+   ;
+</code></pre></div></div>
 
-We've overridden the metadataKeys property, first inheriting the default
+<p>We’ve overridden the metadataKeys property, first inheriting the default
 value and then adding in our new key-name-to-property association -
-specifically, we've associated the custom GameInfo key called
-"kids.age-range" with the versionInfo property ageRange. Once we've done
-that, we can set the "kids.age-range" value simply by setting the
-property we've associated with it.
+specifically, we’ve associated the custom GameInfo key called
+“kids.age-range” with the versionInfo property ageRange. Once we’ve done
+that, we can set the “kids.age-range” value simply by setting the
+property we’ve associated with it.</p>
 
-For full details on how the versionInfo object works, you should look at
+<p>For full details on how the versionInfo object works, you should look at
 its Adv3 library superclasses: in particular, its immediate superclass,
-GameID; and that class's superclass, GameInfoModuleID.
+GameID; and that class’s superclass, GameInfoModuleID.</p>
 
-## <span id="coverArt">Cover Art</span>
+<h2 id="cover-art"><span id="coverArt">Cover Art</span></h2>
 
-You can include a piece of "cover art" with your game. This is a PNG or
-JPEG image that you'd like to associate with your game when it appears
-in a listing, such as in IF Archive game browsers.
+<p>You can include a piece of “cover art” with your game. This is a PNG or
+JPEG image that you’d like to associate with your game when it appears
+in a listing, such as in IF Archive game browsers.</p>
 
-To include cover art, simply add to the game file a resource called
-".system/CoverArt.jpg" or ".system/CoverArt.png". The name must match
-the file format - if you call it ".system/CoverArt.jpg", it has to be a
-JPEG image, and if you call it ".system/CoverArt.png" then it has to be
+<p>To include cover art, simply add to the game file a resource called
+“.system/CoverArt.jpg” or “.system/CoverArt.png”. The name must match
+the file format - if you call it “.system/CoverArt.jpg”, it has to be a
+JPEG image, and if you call it “.system/CoverArt.png” then it has to be
 a PNG image. Use the TADS resource compiler to embed the image; use the
-exact resource name ".system/CoverArt.jpg" or ".system/CoverArt.png",
-with no other path prefix.
+exact resource name “.system/CoverArt.jpg” or “.system/CoverArt.png”,
+with no other path prefix.</p>
 
-To ensure maximum compatibility with third-party tools that want to use
+<p>To ensure maximum compatibility with third-party tools that want to use
 your cover art, there are some limitations you should observe when
-preparing your image. The image *must* be at least 120x120 pixels, and
-it *should* be no larger than 1200x1200; 960x960 is the preferred size.
+preparing your image. The image <em>must</em> be at least 120x120 pixels, and
+it <em>should</em> be no larger than 1200x1200; 960x960 is the preferred size.
 The image should be roughly square. You can use any color depth or other
-variation that's valid in your chosen format.
+variation that’s valid in your chosen format.</p>
 
-### Displaying cover art within the game
+<h3 id="displaying-cover-art-within-the-game">Displaying cover art within the game</h3>
 
-When you bundle a cover art image into your game as we've just
+<p>When you bundle a cover art image into your game as we’ve just
 described, the image is stored within the compiled game file just like
 any other multimedia resource. This means that you can display it within
-your game, using the standard HTML \&lt;IMG\&gt; tag. Just refer to the image
-by the special resource name ".system/CoverArt.jpg" (or ".png", if you
-used a PNG image).
+your game, using the standard HTML &lt;IMG&gt; tag. Just refer to the image
+by the special resource name “.system/CoverArt.jpg” (or “.png”, if you
+used a PNG image).</p>
 
-For example, here's how you could show the image in your ABOUT message
-in TADS 3:
+<p>For example, here’s how you could show the image in your ABOUT message
+in TADS 3:</p>
 
-    versionInfo: GameID
-       name = 'My Game'
-       // ...other versionInfo definitions...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>versionInfo: GameID
+   name = 'My Game'
+   // ...other versionInfo definitions...
 
-       showAbout()
-       {
-          "<center>
-          <img src=".system/CoverArt.jpg" width="256" height="256" />
-          </center>
-          &lt;.p&gt;Welcome to <i>My Game</i>! ";
-       }
-    ;
+   showAbout()
+   {
+      "&lt;center&gt;
+      &lt;img src='.system/CoverArt.jpg' width=256 height=256&gt;
+      &lt;/center&gt;
+      &lt;.p&gt;Welcome to &lt;i&gt;My Game&lt;/i&gt;! ";
+   }
+;
+</code></pre></div></div>
 
-## <span id="ifiction"></span>The Treaty of Babel
+<h2 id="the-treaty-of-babel"><span id="ifiction"></span>The Treaty of Babel</h2>
 
-The so-called [Treaty of Babel](http://babel.ifarchive.org) is a
-standard that the developers of the major IF systems agreed upon in
-2006. The Treaty defines an interoperability standard that lets anyone
+<p>The so-called <a href="http://babel.ifarchive.org">Treaty of Babel</a> is a
+standard that the developers of the major IF systems agreed upon in</p>
+<ol>
+  <li>The Treaty defines an interoperability standard that lets anyone
 extract a basic set of bibliographic metadata from any game written in
 any participating system. GameInfo is the TADS mechanism for defining
 this metadata, so if you use GameInfo, the IF Archive and other third
 parties will be able to extract the information you define. This will
 let the Archive and other tools do a better job of indexing your game
-and presenting it to users.
-
-</div>
+and presenting it to users.</li>
+</ol>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 Technical Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="fund.html" class="nav">Fundamentals</a> \&gt; Bibliographic
-Metadata - the GameInfo Format  
+<p><em>TADS 3 Technical Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="fund.html" class="nav">Fundamentals</a> &gt; Bibliographic
+Metadata - the GameInfo Format<br />
 <span class="navnp"><a href="t3iautohot.html" class="nav"><em>Prev:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>    
 <a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
-</span>
+</span></p>
 
-</div>
 
 </main>
 <footer>

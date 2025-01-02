@@ -33,7 +33,7 @@ Eve
 
 
 
-[`Action`](../object/Action.html)[`IAction`](../object/IAction.html)[`LiteralAction`](../object/LiteralAction.html)[`LiteralTAction`](../object/LiteralTAction.html)[`NumericAction`](../object/NumericAction.html)[`NumericTAction`](../object/NumericTAction.html)[`PostRestoreObject`](../object/PostRestoreObject.html)[`PostUndoObject`](../object/PostUndoObject.html)[`PreRestartObject`](../object/PreRestartObject.html)[`PreSaveObject`](../object/PreSaveObject.html)[`SystemAction`](../object/SystemAction.html)[`TAction`](../object/TAction.html)[`TIAction`](../object/TIAction.html)[`TopicAction`](../object/TopicAction.html)[`TopicTAction`](../object/TopicTAction.html)[`TravelAction`](../object/TravelAction.html)[`VerifyResult`](../object/VerifyResult.html)
+[`Action`](../object/Action.html) [`IAction`](../object/IAction.html) [`LiteralAction`](../object/LiteralAction.html) [`LiteralTAction`](../object/LiteralTAction.html) [`NumericAction`](../object/NumericAction.html) [`NumericTAction`](../object/NumericTAction.html) [`PostRestoreObject`](../object/PostRestoreObject.html) [`PostUndoObject`](../object/PostUndoObject.html) [`PreRestartObject`](../object/PreRestartObject.html) [`PreSaveObject`](../object/PreSaveObject.html) [`SystemAction`](../object/SystemAction.html) [`TAction`](../object/TAction.html) [`TIAction`](../object/TIAction.html) [`TopicAction`](../object/TopicAction.html) [`TopicTAction`](../object/TopicTAction.html) [`TravelAction`](../object/TravelAction.html) [`VerifyResult`](../object/VerifyResult.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -50,7 +50,7 @@ Eve
 
 
 
-[`askChooseObject`](#askChooseObject)[`askMissingObject`](#askMissingObject)[`execNestedAction`](#execNestedAction)[`nestedAction`](#nestedAction)[`nestedActorAction`](#nestedActorAction)[`noHalt`](#noHalt)[`notePronounAntecedent`](#notePronounAntecedent)[`replaceAction`](#replaceAction)[`replaceActorAction`](#replaceActorAction)[`tryImplicitAction`](#tryImplicitAction)[`tryImplicitActorAction`](#tryImplicitActorAction)
+[`askChooseObject`](#askChooseObject) [`askMissingObject`](#askMissingObject) [`execNestedAction`](#execNestedAction) [`nestedAction`](#nestedAction) [`nestedActorAction`](#nestedActorAction) [`noHalt`](#noHalt) [`notePronounAntecedent`](#notePronounAntecedent) [`replaceAction`](#replaceAction) [`replaceActorAction`](#replaceActorAction) [`tryImplicitAction`](#tryImplicitAction) [`tryImplicitActorAction`](#tryImplicitActorAction)
 
 <span id="_Functions_"></span>
 

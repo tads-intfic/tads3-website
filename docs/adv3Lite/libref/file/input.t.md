@@ -38,7 +38,7 @@ the player.
 
 
 
-[`BasicInputDef`](../object/BasicInputDef.html)[`EndOfFileException`](../object/EndOfFileException.html)[`InputDef`](../object/InputDef.html)[`QuittingException`](../object/QuittingException.html)[`StringPreParser`](../object/StringPreParser.html)
+[`BasicInputDef`](../object/BasicInputDef.html) [`EndOfFileException`](../object/EndOfFileException.html) [`InputDef`](../object/InputDef.html) [`QuittingException`](../object/QuittingException.html) [`StringPreParser`](../object/StringPreParser.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -47,7 +47,7 @@ the player.
 
 
 
-[`commentPreParser`](../object/commentPreParser.html)[`inputManager`](../object/inputManager.html)
+[`commentPreParser`](../object/commentPreParser.html) [`inputManager`](../object/inputManager.html)
 <span id="FunctionSummary_"></span>
 
 

@@ -71,10 +71,10 @@ after a list of miscellaneous items in a room description.
 
 
 
-[`prefix_`](#prefix_)[`showSubListing`](#showSubListing)[`suffix_`](#suffix_)
+[`prefix_`](#prefix_) [`showSubListing`](#showSubListing) [`suffix_`](#suffix_)
 
 Inherited from `ItemLister` :  
-[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)[`listRecursively`](../object/ItemLister.html#listRecursively)[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)[`showWornInfo`](../object/ItemLister.html#showWornInfo)
+[`contentsListedProp`](../object/ItemLister.html#contentsListedProp) [`listRecursively`](../object/ItemLister.html#listRecursively) [`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo) [`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
 
 
@@ -86,13 +86,13 @@ Inherited from `ItemLister` :
 
 
 
-[`construct`](#construct)[`listed`](#listed)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
+[`construct`](#construct) [`listed`](#listed) [`showListPrefix`](#showListPrefix) [`showListSuffix`](#showListSuffix)
 
 Inherited from `ItemLister` :  
-[`listName`](../object/ItemLister.html#listName)[`show`](../object/ItemLister.html#show)[`showList`](../object/ItemLister.html#showList)
+[`listName`](../object/ItemLister.html#listName) [`show`](../object/ItemLister.html#show) [`showList`](../object/ItemLister.html#showList)
 
 Inherited from `Lister` :  
-[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)[`showListEmpty`](../object/Lister.html#showListEmpty)
+[`buildList`](../object/Lister.html#buildList) [`listOrder`](../object/Lister.html#listOrder) [`showListEmpty`](../object/Lister.html#showListEmpty)
 
 <span id="_Properties_"></span>
 

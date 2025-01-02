@@ -51,7 +51,7 @@ Details](#_Methods_)
 
 
 Inherited from `Doer` :  
-[`cmd`](../object/Doer.html#cmd)[`handleAction`](../object/Doer.html#handleAction)[`ignoreError`](../object/Doer.html#ignoreError)[`priority`](../object/Doer.html#priority)[`strict`](../object/Doer.html#strict)
+[`cmd`](../object/Doer.html#cmd) [`handleAction`](../object/Doer.html#handleAction) [`ignoreError`](../object/Doer.html#ignoreError) [`priority`](../object/Doer.html#priority) [`strict`](../object/Doer.html#strict)
 
 
 
@@ -66,10 +66,10 @@ Inherited from `Doer` :
 [`execAction`](#execAction)
 
 Inherited from `Doer` :  
-[`checkDirection`](../object/Doer.html#checkDirection)[`exec`](../object/Doer.html#exec)[`redirect`](../object/Doer.html#redirect)
+[`checkDirection`](../object/Doer.html#checkDirection) [`exec`](../object/Doer.html#exec) [`redirect`](../object/Doer.html#redirect)
 
 Inherited from `Redirector` :  
-[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
+[`doInstead`](../object/Redirector.html#doInstead) [`doNested`](../object/Redirector.html#doNested) [`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

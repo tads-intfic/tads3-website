@@ -70,7 +70,7 @@ it ranks by our selection criteria.
 
 
 
-[`editDist`](#editDist)[`ranking`](#ranking)[`replCnt`](#replCnt)[`tokenList`](#tokenList)[`wordIdx`](#wordIdx)
+[`editDist`](#editDist) [`ranking`](#ranking) [`replCnt`](#replCnt) [`tokenList`](#tokenList) [`wordIdx`](#wordIdx)
 
 <span id="_MethodSummary_"></span>
 

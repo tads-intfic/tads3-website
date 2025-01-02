@@ -59,10 +59,10 @@ List interface for showing the full score list
 
 
 
-[`listed`](#listed)[`showList`](#showList)[`showListPrefix`](#showListPrefix)
+[`listed`](#listed) [`showList`](#showList) [`showListPrefix`](#showListPrefix)
 
 Inherited from `Lister` :  
-[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)[`show`](../object/Lister.html#show)[`showListEmpty`](../object/Lister.html#showListEmpty)[`showListSuffix`](../object/Lister.html#showListSuffix)
+[`buildList`](../object/Lister.html#buildList) [`listOrder`](../object/Lister.html#listOrder) [`show`](../object/Lister.html#show) [`showListEmpty`](../object/Lister.html#showListEmpty) [`showListSuffix`](../object/Lister.html#showListSuffix)
 
 <span id="_Properties_"></span>
 

@@ -274,13 +274,13 @@ cmdTokenizer: Tokenizer
         rexMatch(patAlphaDashAlpha, txt);
 
         /* add the part before the hyphen */
-        toks.append([rexGroup(1)[3], typ, rexGroup(1)[3]]);
+        toks.append([rexGroup(1) [3], typ, rexGroup(1) [3]]);
 
         /* add the hyphen */
         toks.append(['-', typ, '-']);
 
         /* add the part after the hyphen */
-        toks.append([rexGroup(2)[3], typ, rexGroup(2)[3]]);
+        toks.append([rexGroup(2) [3], typ, rexGroup(2) [3]]);
     }
     patAlphaDashAlpha = static new RexPattern('(&lt;alpha&gt;+)-(&lt;alpha&gt;+)')
 
@@ -403,12 +403,9 @@ cmdTokenizer: Tokenizer
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

@@ -74,7 +74,7 @@ specific part of the library.
 
 
 
-[`aName`](#aName)[`getBestMatch`](#getBestMatch)[`getTopicText`](#getTopicText)[`name`](#name)[`person`](#person)[`theName`](#theName)[`tokens`](#tokens)[`topicList`](#topicList)
+[`aName`](#aName) [`getBestMatch`](#getBestMatch) [`getTopicText`](#getTopicText) [`name`](#name) [`person`](#person) [`theName`](#theName) [`tokens`](#tokens) [`topicList`](#topicList)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ specific part of the library.
 
 
 
-[`construct`](#construct)[`getTopicText`](#getTopicText)
+[`construct`](#construct) [`getTopicText`](#getTopicText)
 
 <span id="_Properties_"></span>
 

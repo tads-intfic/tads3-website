@@ -21,22 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; The Preprocessor  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; The Preprocessor<br />
 <span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Source File Character
 Sets</a>    
 <a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="the-preprocessor">The Preprocessor</h1>
 
@@ -98,340 +90,316 @@ anything, not even a comment or whitespace.</p>
 
 <p>The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#charset "name"
+</code></pre></div></div>
 
-    #charset "name"
-
-
-
-where *name* is the character set name. You can use one of the built-in
-character sets ("us-ascii", "latin1") or any of the available mappings.
+<p>where <em>name</em> is the character set name. You can use one of the built-in
+character sets (“us-ascii”, “latin1”) or any of the available mappings.
 On most platforms, the TADS 3 distribution includes a large set of
 common mappings, including the ISO-8859-n character sets, many of the
-8-bit Windows code pages, and the Macintosh sets.
+8-bit Windows code pages, and the Macintosh sets.</p>
 
-### \#define
+<h3 id="define">#define</h3>
 
-This directive defines a macro. It has two forms: one that defines a
+<p>This directive defines a macro. It has two forms: one that defines a
 simple constant symbol, and one that defines a function-like macro with
-parameters.
+parameters.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define simpleMacro text
+#define funcMacro( [ param1 [ , param2 ... ]  ]  ) textWithParameters
+</code></pre></div></div>
 
-    #define simpleMacro text
-    #define funcMacro( [ param1 [ , param2 ... ]  ]  ) textWithParameters
-
-</div>
-
-The first form defines a "simple" macro, which simply associates a
+<p>The first form defines a “simple” macro, which simply associates a
 symbol name with some replacement text. Each time the macro symbol name
-appears in subsequent source text, it's simply replaced with the
-expansion text.
+appears in subsequent source text, it’s simply replaced with the
+expansion text.</p>
 
-The second form defines a "function-like" macro. This means that the
+<p>The second form defines a “function-like” macro. This means that the
 macro is syntactically like a function, in that a list of arguments,
-enclosed in parentheses, must appear after the macro name each time it's
+enclosed in parentheses, must appear after the macro name each time it’s
 used. The parameter list can include zero, one, or more parameters,
 separated by commas; each parameter name must be a symbol token, and a
 name cannot be repeated within the list. Whenever the macro name appears
 in the source text, it must be followed by a parenthesized list of
 values; these values will be substituted into the replacement text where
-the names of the parameters appear in the replacement text.
+the names of the parameters appear in the replacement text.</p>
 
-Note that if you define a parameter list, there must be no whitespace
+<p>Note that if you define a parameter list, there must be no whitespace
 between the macro symbol name and the open parenthesis. The parenthesis
-must appear *immediately* after the macro name.
+must appear <em>immediately</em> after the macro name.</p>
 
-Macro processing is described in more detail [below.](#macros)
+<p>Macro processing is described in more detail <a href="#macros">below.</a></p>
 
-### \#error
+<h3 id="error">#error</h3>
 
-This macro lets you generate a compiler error with your own custom
+<p>This macro lets you generate a compiler error with your own custom
 message. The message is displayed on the console in the same format as
 an actual compiler message. This is most useful with conditional
 compilation, such as to flag build configurations or module combinations
-that you don't wish to allow.
+that you don’t wish to allow.</p>
 
-The syntax is:
+<p>The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#error token [ token2 ... ] 
+</code></pre></div></div>
 
-    #error token [ token2 ... ] 
-
-</div>
-
-The token list can contain any number of tokens of any kind. However,
+<p>The token list can contain any number of tokens of any kind. However,
 note that macro expansion is performed on the line, so in most cases,
-you'll want to enclose your message text in quotes so that it's
+you’ll want to enclose your message text in quotes so that it’s
 displayed literally, rather than being expanded into any macros that
-happen to match the words in the message text.
+happen to match the words in the message text.</p>
 
-Here's an example that checks to make sure an included library header
-has a suitable version number:
+<p>Here’s an example that checks to make sure an included library header
+has a suitable version number:</p>
 
-```
-    #include "MyLib.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include "MyLib.h"
     #if MYLIB_VSN &lt; 5
     #error "This module requires MyLib version 5 or higher."
     #endif
-```
+</code></pre></div></div>
 
-### \#if, \#ifdef, \#elif, \#else, \#endif
+<h3 id="if-ifdef-elif-else-endif">#if, #ifdef, #elif, #else, #endif</h3>
 
-These directives allow you to include or exclude code conditionally.
+<p>These directives allow you to include or exclude code conditionally.</p>
 
-The syntax of these macros is as follows:
+<p>The syntax of these macros is as follows:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#if expression
+#ifdef macroName
+#elif expression
+#else
+#endif
+</code></pre></div></div>
 
-    #if expression
-    #ifdef macroName
-    #elif expression
-    #else
-    #endif
+<p>The <em>macro</em> of an #ifdef is simply a macro symbol.</p>
 
-</div>
-
-The *macro* of an \#ifdef is simply a macro symbol.
-
-The *expression* of an \#if or \#elif can evaluate to a string constant,
-an integer constant, or the tokens `true` or `nil`. You can use the
-standard arithmetic operators (+, -, \*, /, %, \&lt;\&lt;, \&gt;\&gt;, !, &amp;, \|, &amp;&amp;,
-\|\|, ?:) within integer and boolean expressions. In addition, the
-special operator `defined(`*`macro`*`)` evalutes to 1 if the given macro
-symbol is currently defined, 0 if not. An \#if or \#elif expression is
+<p>The <em>expression</em> of an #if or #elif can evaluate to a string constant,
+an integer constant, or the tokens <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">nil</code>. You can use the
+standard arithmetic operators (+, -, *, /, %, &lt;&lt;, &gt;&gt;, !, &amp;, |, &amp;&amp;,
+||, ?:) within integer and boolean expressions. In addition, the
+special operator <code class="language-plaintext highlighter-rouge">defined(</code><em><code class="language-plaintext highlighter-rouge">macro</code></em><code class="language-plaintext highlighter-rouge">)</code> evalutes to 1 if the given macro
+symbol is currently defined, 0 if not. An #if or #elif expression is
 considered true if it evaluates to a non-zero integer, or to any string
-value, or to the special value `true`.
+value, or to the special value <code class="language-plaintext highlighter-rouge">true</code>.</p>
 
-Each \#if or \#ifdef must be matched by exactly one \#endif.
+<p>Each #if or #ifdef must be matched by exactly one #endif.</p>
 
-Within a \#if...#endif or \#ifdef...#endif block, you can include any
-number of \#elif directives, and you can optionally include a single
-\#else directive that follows any \#elif directives. \#elif stands for
-"else if"; it takes effect only if its expression evaluates to true
-*and* the controlling \#if or \#ifdef evaluated to false *and* all
-preceding \#elif's in the same block evaluated to false.
+<p>Within a #if…#endif or #ifdef…#endif block, you can include any
+number of #elif directives, and you can optionally include a single
+#else directive that follows any #elif directives. #elif stands for
+“else if”; it takes effect only if its expression evaluates to true
+<em>and</em> the controlling #if or #ifdef evaluated to false <em>and</em> all
+preceding #elif’s in the same block evaluated to false.</p>
 
-The preprocessor handles an \#if...#endif block as follows. It first
+<p>The preprocessor handles an #if…#endif block as follows. It first
 expands any macros in the expression, then evaluates the result as a
-constant expression (taking into account arithmetic operators). Then:
+constant expression (taking into account arithmetic operators). Then:</p>
 
-- If the expression evaluates to true (as defined above), the source
-  text between the \#if and the matching \#elif, \#else, or \#endif -
-  whichever comes first - is retained; all text after the matching
-  \#elif or \#else is discarded and replaced with whitespace, up to the
-  matching \#endif.
-- If, on the other hand, the expression evaluates to false, the source
-  text between the \#if and the matching \#elif, \#else, or \#endif is
-  discarded and replaced with whitespace. If the next thing is an
-  \#elif, its condition is evaluated, and the process is repeated as
-  though it were the original \#if. If the next thing is instead an
-  \#else, the text between the \#else and the \#endif is retained.
+<ul>
+  <li>If the expression evaluates to true (as defined above), the source
+text between the #if and the matching #elif, #else, or #endif -
+whichever comes first - is retained; all text after the matching
+#elif or #else is discarded and replaced with whitespace, up to the
+matching #endif.</li>
+  <li>If, on the other hand, the expression evaluates to false, the source
+text between the #if and the matching #elif, #else, or #endif is
+discarded and replaced with whitespace. If the next thing is an
+#elif, its condition is evaluated, and the process is repeated as
+though it were the original #if. If the next thing is instead an
+#else, the text between the #else and the #endif is retained.</li>
+</ul>
 
-\#ifdef is handled much the same way, except that its condition is
+<p>#ifdef is handled much the same way, except that its condition is
 simply the existence or absence of a definition for the given macro
-symbol. The \#ifdef condition is true if the given macro symbol has been
-defined, false if not.
+symbol. The #ifdef condition is true if the given macro symbol has been
+defined, false if not.</p>
 
-Note that there's no such thing as "#elifdef" - that is,
-else-if-defined - but you can get the same effect by using "#elif
-defined(*macro*)".
+<p>Note that there’s no such thing as “#elifdef” - that is,
+else-if-defined - but you can get the same effect by using “#elif
+defined(<em>macro</em>)”.</p>
 
-\#if and \#ifdef blocks can be nested to any depth.
+<p>#if and #ifdef blocks can be nested to any depth.</p>
 
-Here's an example Note that the defined() preprocessor operator can be
+<p>Here’s an example Note that the defined() preprocessor operator can be
 used within an expression in these directives to test to determine if a
 preprocessor symbol is defined. This allows for tests of combinations of
-defined symbols: \#if defined(MSDOS) \|\| defined(AMIGA) \|\|
-defined(UNIX)
+defined symbols: #if defined(MSDOS) || defined(AMIGA) ||
+defined(UNIX)</p>
 
-### \#include
+<h3 id="include">#include</h3>
 
-This directive inserts the contents of another source file into the
+<p>This directive inserts the contents of another source file into the
 compilation unit at the current point. The contents of the included file
-effectively replace the \#include directive in the preprocessor output.
+effectively replace the #include directive in the preprocessor output.</p>
 
-\#include has two forms.
+<p>#include has two forms.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include "filename"
+</code></pre></div></div>
 
-    #include "filename"
-
-</div>
-
-This form searches for a file with the given name, starting the search
-in the directory containing the *including* file, then in the directory
+<p>This form searches for a file with the given name, starting the search
+in the directory containing the <em>including</em> file, then in the directory
 containing the file that included the including file, and so on up the
 list of includers until reaching the original source file. We search in
 this order and stop at the first matching file we find. If we still
-can't find the file after looking in the directory containing the
-top-level source file, then we proceed as for an angle-bracketed file.
+can’t find the file after looking in the directory containing the
+top-level source file, then we proceed as for an angle-bracketed file.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;filename&gt;
+</code></pre></div></div>
 
-    #include <filename>
-
-&lt;/div&gt;
-
-This form searches for the given file in each directory in the "include
-path," as specified in the compiler command options. For the
+<p>This form searches for the given file in each directory in the “include
+path,” as specified in the compiler command options. For the
 command-line t3make program, this is the list of directories specified
 with -I options. The directories are searched in the order of the -I (or
 equivalent) options, and we stop and use the first matching file we
 find. If we exhast the include path without finding the file, we search
-in the compiler's install directory - this is where the standard system
-headers are usually located.
+in the compiler’s install directory - this is where the standard system
+headers are usually located.</p>
 
-In both cases above, if the file still can't be found after searching
+<p>In both cases above, if the file still can’t be found after searching
 all of the directories described, and the filename appears to be an
-"absolute" path (according to local path naming conventions, which vary
+“absolute” path (according to local path naming conventions, which vary
 by system), the compiler tries again, this time treating the name as an
 absolute path. An absolute path is one that fully specifies the location
-of the file; on Unix, for example, this is a path starting with a "/",
-and on Windows it's a path starting with a drive specifier (such as
-"C:").
+of the file; on Unix, for example, this is a path starting with a “/”,
+and on Windows it’s a path starting with a drive specifier (such as
+“C:”).</p>
 
-The file can be specified with a macro symbol or a combination of macro
+<p>The file can be specified with a macro symbol or a combination of macro
 symbols. If you use a macro expression, the expansion must match one of
-the formats shown above.
+the formats shown above.</p>
 
-#### Specifying relative directory paths in include file names
+<h4 id="specifying-relative-directory-paths-in-include-file-names">Specifying relative directory paths in include file names</h4>
 
-Filenames in \#include directives can refer to relative paths (such as
+<p>Filenames in #include directives can refer to relative paths (such as
 to subdirectories) using relative URL-style notation. (A URL is a
-"uniform resource locator," which is a World Wide Web standard mechanism
+“uniform resource locator,” which is a World Wide Web standard mechanism
 for specifying names of things like files.) In particular, you can use a
-forward slash, "/", as the path separator character, regardless of your
-local system's filename conventions. Even if you're running on Windows
-(which uses "\\ as the path separator) or Macintosh (which uses ":" as
+forward slash, “/”, as the path separator character, regardless of your
+local system’s filename conventions. Even if you’re running on Windows
+(which uses “\ as the path separator) or Macintosh (which uses “:” as
 the separator and has rather different rules than Unix-style systems),
-you can use "/" to specify relative paths, and your source will compile
-correctly on all systems.
+you can use “/” to specify relative paths, and your source will compile
+correctly on all systems.</p>
 
-For example, suppose you're using a Macintosh, and you have your source
-files in a folder called "My HD:My TADS Games:Caverns of Gloom". Now,
-suppose you decide that you'd like to keep your include files in a
-subfolder of this folder called "Include Files". You could write your
-\#include lines like so:
+<p>For example, suppose you’re using a Macintosh, and you have your source
+files in a folder called “My HD:My TADS Games:Caverns of Gloom”. Now,
+suppose you decide that you’d like to keep your include files in a
+subfolder of this folder called “Include Files”. You could write your
+#include lines like so:</p>
 
-```
-    #include ":Include Files:defs.h"
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include ":Include Files:defs.h"
+</code></pre></div></div>
 
-But if you did this, and then you gave a copy of your source code to a
-friend running Windows, your friend wouldn't be able to compile the code
-without changing that \#include directive to match Windows path name
-conventions.
+<p>But if you did this, and then you gave a copy of your source code to a
+friend running Windows, your friend wouldn’t be able to compile the code
+without changing that #include directive to match Windows path name
+conventions.</p>
 
-The solution to this problem is to use URL-style path names. A URL-style
+<p>The solution to this problem is to use URL-style path names. A URL-style
 path name works the same on every system, so your friend on Windows will
 be able to compile your code without changes if you use this notation.
-To use URL notation, use "/" as the path separator, and - regardless of
+To use URL notation, use “/” as the path separator, and - regardless of
 local conventions - place slashes only between path elements, never at
-the beginning of the filename. So, we'd rewrite the example above like
-this:
+the beginning of the filename. So, we’d rewrite the example above like
+this:</p>
 
-```
-    #include "Include Files/defs.h"
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include "Include Files/defs.h"
+</code></pre></div></div>
 
-Even though this doesn't look a thing like a Mac path name, the Mac
+<p>Even though this doesn’t look a thing like a Mac path name, the Mac
 version of the TADS 3 compiler will happily find your file in the
 correct directory, because the Mac version knows how to convert
 URL-style path names to the correct Mac conventions, just like the
 Windows and Unix versions know how to convert URL-style names to their
-own local conventions.
+own local conventions.</p>
 
-In all include file searches, when the filename looks like a URL-style
+<p>In all include file searches, when the filename looks like a URL-style
 path, the compiler takes the following steps to look for the file. It
 takes these steps at each point in the include path search before moving
-on to the next directory in the list:
+on to the next directory in the list:</p>
 
-- First, the compiler tries treating the filename as a URL-style path.
-  This means that the compiler converts all "/" characters to the local
-  path separator characters, and performs any other transformations
-  required to make the name appear relative. For example, on the Mac,
-  the compiler would convert "Include Files/defs.h" to ":Include
-  Files:defs.h", then would try looking for that file relative to the
-  current directory being searched.
-- If the first step fails to find a file, and the file does not use an
-  absolute path (according to the local file system rules), the compiler
-  tries again, this time treating the name as a native name, rather than
-  URL path. That is, the compiler simply uses the name exactly as given,
-  without any syntax conversions, and looks for a file with that name in
-  the directory currently being searched.
+<ul>
+  <li>First, the compiler tries treating the filename as a URL-style path.
+This means that the compiler converts all “/” characters to the local
+path separator characters, and performs any other transformations
+required to make the name appear relative. For example, on the Mac,
+the compiler would convert “Include Files/defs.h” to “:Include
+Files:defs.h”, then would try looking for that file relative to the
+current directory being searched.</li>
+  <li>If the first step fails to find a file, and the file does not use an
+absolute path (according to the local file system rules), the compiler
+tries again, this time treating the name as a native name, rather than
+URL path. That is, the compiler simply uses the name exactly as given,
+without any syntax conversions, and looks for a file with that name in
+the directory currently being searched.</li>
+</ul>
 
-Even though the compiler accepts local filenames, we strongly encourage
-using URL-style filenames for all \#include files that specify paths,
+<p>Even though the compiler accepts local filenames, we strongly encourage
+using URL-style filenames for all #include files that specify paths,
 since this will ensure that your source code will compile without
-changes on other platforms.
+changes on other platforms.</p>
 
-### \#line
+<h3 id="line">#line</h3>
 
-As the preprocessor reads through the source and include files, it
+<p>As the preprocessor reads through the source and include files, it
 automatically keeps track of where it is in the file - the filename and
 the current line number in the file. This lets the compiler tell you
 where it was looking whenever it encounters a syntax error or other
 problem in your code, to make it easier to pinpoint the source of a
-problem so you can fix it.
+problem so you can fix it.</p>
 
-This directive lets you override the compiler's internal notion of its
-current position in the source text. The syntax is:
+<p>This directive lets you override the compiler’s internal notion of its
+current position in the source text. The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#line number 'filename'
+</code></pre></div></div>
 
-    #line number 'filename'
+<p>This tells the compiler that it should pretend that it’s reading from
+the file named <em>file</em> at line number <em>number</em>.</p>
 
-</div>
-
-This tells the compiler that it should pretend that it's reading from
-the file named *file* at line number *number*.
-
-Note that this directive doesn't change where the compiler is *actually*
-reading from. In particular, it doesn't force the compiler to jump ahead
+<p>Note that this directive doesn’t change where the compiler is <em>actually</em>
+reading from. In particular, it doesn’t force the compiler to jump ahead
 to a different line in the file, or change to a different file. The
-directive merely overrides the location that the compiler will *report*
-on subsequent error messages.
+directive merely overrides the location that the compiler will <em>report</em>
+on subsequent error messages.</p>
 
-The \#line directive is mainly of interest to people writing their own
+<p>The #line directive is mainly of interest to people writing their own
 pre-compiler tools. A pre-compiler is a tool that runs before the
 compiler, reading from a user-prepared source file and writing out a
 temporary file, and then passing the temporary file to t3make as the
-TADS 3 source file. For tools like this, the \#line directive lets the
+TADS 3 source file. For tools like this, the #line directive lets the
 tool apprise the TADS compiler of the original source code location
 associated with the generated code in the temporary file. This in turn
 causes the TADS compiler to report error messages at locations that will
 be meaningful to the user. Since the user is working with the original
 pre-compiler input file, it will be a lot more helpful to report errors
-in terms of the original input file than in terms of the temporary file.
+in terms of the original input file than in terms of the temporary file.</p>
 
-### \#pragma message
+<h3 id="pragma-message">#pragma message</h3>
 
-This directive lets you display a message on the console while the
-compiler is running. The syntax is:
+<p>This directive lets you display a message on the console while the
+compiler is running. The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#pragma message ( token ... )
+</code></pre></div></div>
 
-    #pragma message ( token ... )
-
-</div>
-
-Each *token* can be a single-quoted string, a double-quoted string, a
+<p>Each <em>token</em> can be a single-quoted string, a double-quoted string, a
 symbol token, or an integer. Any macro symbols you use are expanded as
-in normal program text.
+in normal program text.</p>
 
-### \#pragma newline_spacing
+<h3 id="pragma-newline_spacing">#pragma newline_spacing</h3>
 
-Unlike C and Java, a string in TADS 3 doesn't have to fit all on one
-line. You can instead write a string that spans several lines:
+<p>Unlike C and Java, a string in TADS 3 doesn’t have to fit all on one
+line. You can instead write a string that spans several lines:</p>
 
-```
-    "This is a string
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "This is a string
     that spans several
     lines of source code. ";
-```
+</code></pre></div></div>
 
-By default, the compiler treats this as though you had written it all on
+<p>By default, the compiler treats this as though you had written it all on
 one line. It converts each line break into a single space character. If
 a line break is immediately followed by one or more whitespace
 characters (spaces, tabs, and so on), the compiler collapses the line
@@ -440,230 +408,217 @@ each line break turns into a single space, no matter how many spaces are
 at the start of the next line. This is important because most people
 like to use indentation to make their source code easier to read;
 ignoring the leading whitespace on each extra line within a string means
-that you don't have to worry about indentation affecting the appearance
-of a string.
+that you don’t have to worry about indentation affecting the appearance
+of a string.</p>
 
-This default handling is called "collapse" mode, because each newline
+<p>This default handling is called “collapse” mode, because each newline
 and subsequent run of whitespace is collapsed into a single space. You
 can explicitly set this mode by writing this directive in your source
-file:
+file:</p>
 
-```
-    #pragma newline_spacing(collapse)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #pragma newline_spacing(collapse)
+</code></pre></div></div>
 
-(Prior to TADS 3.1.3, this mode's name was "on" instead of "collapse".
-The compiler still accepts `\#pragma
-newline_spacing(on)` as equivalent, so existing code will work
-without any changes.)
+<p>(Prior to TADS 3.1.3, this mode’s name was “on” instead of “collapse”.
+The compiler still accepts <code class="language-plaintext highlighter-rouge">\#pragma
+newline_spacing(on)</code> as equivalent, so existing code will work
+without any changes.)</p>
 
-In some written languages, such as Chinese, there isn't typically any
-whitespace between words. In such languages, the normal "collapse" mode
-described above isn't convenient, since it introduces unwanted spacing
+<p>In some written languages, such as Chinese, there isn’t typically any
+whitespace between words. In such languages, the normal “collapse” mode
+described above isn’t convenient, since it introduces unwanted spacing
 between words wherever you happen to put a line break in the source
 code. To accommodate languages without inter-word spacing, the compiler
-has another newline spacing mode, called "delete" mode:
+has another newline spacing mode, called “delete” mode:</p>
 
-```
-    #pragma newline_spacing(delete)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #pragma newline_spacing(delete)
+</code></pre></div></div>
 
-(The pre-3.1.3 name for this mode was "off", which is also still
-accepted and is equivalent to "delete" mode.)
+<p>(The pre-3.1.3 name for this mode was “off”, which is also still
+accepted and is equivalent to “delete” mode.)</p>
 
-In "delete" mode, when the compiler encounters a line break within a
+<p>In “delete” mode, when the compiler encounters a line break within a
 string, it simply deletes the newline and all immediately subsequent
 whitespace. This mashes the text on the two lines together without any
-spacing.
+spacing.</p>
 
-There's one additional mode, "preserve" mode, for times when you want
-precise control over the contents of strings.
+<p>There’s one additional mode, “preserve” mode, for times when you want
+precise control over the contents of strings.</p>
 
-```
-    #pragma newline_spacing(preserve)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #pragma newline_spacing(preserve)
+</code></pre></div></div>
 
-In "preserve" mode, the compiler keeps the string exactly as you wrote
-it, with each line break turning into a `\n`
+<p>In “preserve” mode, the compiler keeps the string exactly as you wrote
+it, with each line break turning into a <code class="language-plaintext highlighter-rouge">\n</code>
 (newline) character, and all subsequent spacing left intact. This can be
-useful if you're constructing multi-line strings for special purposes,
-such as storing in external files.
+useful if you’re constructing multi-line strings for special purposes,
+such as storing in external files.</p>
 
-The newline_spacing pragma only affects strings following the pragma in
+<p>The newline_spacing pragma only affects strings following the pragma in
 the source file, so you can change the mode at any time within the same
 source file. Whenever you change the mode, the new mode is in effect
 until you change it with another pragma, or until the end of the current
 source file. This means that if you change the mode within a header
 file, the mode will revert to its previous setting at the end of the
-header file. This lets you \#include a file without worrying about mode
+header file. This lets you #include a file without worrying about mode
 changes, because even if the included file changes the mode, the mode
-will revert back once the compiler finishes with the included file.
+will revert back once the compiler finishes with the included file.</p>
 
-### \#pragma sourceTextGroup
+<h3 id="pragma-sourcetextgroup">#pragma sourceTextGroup</h3>
 
-This directive lets you control the generation of
-[sourceTextGroup](objdef.html#sourceTextGroup) property values. You can
-also control this with the compiler's "-Gstg" command-line option, but
-the \#pragma gives you finer-grained control, since it lets you turn
+<p>This directive lets you control the generation of
+<a href="objdef.html#sourceTextGroup">sourceTextGroup</a> property values. You can
+also control this with the compiler’s “-Gstg” command-line option, but
+the #pragma gives you finer-grained control, since it lets you turn
 generation on and off within particular modules, or even within sections
-of a module.
+of a module.</p>
 
-To turn on sourceTextGroup generation, include this directive in your
-source code:
+<p>To turn on sourceTextGroup generation, include this directive in your
+source code:</p>
 
-```
-    #pragma sourceTextGroup(on)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #pragma sourceTextGroup(on)
+</code></pre></div></div>
 
-This tells the compiler to generate sourceTextGroup values for objects
-defined after this point in the current module's source code.
+<p>This tells the compiler to generate sourceTextGroup values for objects
+defined after this point in the current module’s source code.</p>
 
-You can turn sourceTextGroup generation off with this directive:
+<p>You can turn sourceTextGroup generation off with this directive:</p>
 
-```
-    #pragma sourceTextGroup(off)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #pragma sourceTextGroup(off)
+</code></pre></div></div>
 
-This disables sourceTextGroup generation for subsequent object
-definitions.
+<p>This disables sourceTextGroup generation for subsequent object
+definitions.</p>
 
-Note that the effect of `#pragma sourceTextGroup` lasts only within the
-source module where it appears. The directive doesn't carry over to
+<p>Note that the effect of <code class="language-plaintext highlighter-rouge">#pragma sourceTextGroup</code> lasts only within the
+source module where it appears. The directive doesn’t carry over to
 other modules that are part of the same build - at the start of each new
 module, the compiler resets to the status specified in the command line
-makefile (off by default, or on if the "-Gstg" option is specifed).
+makefile (off by default, or on if the “-Gstg” option is specifed).</p>
 
-### \#pragma once
+<h3 id="pragma-once">#pragma once</h3>
 
-This directive adds the current file (i.e., the file in which the
-\#pragma directly appears) to the "once-only" list. After a file is in
-the once-only list, subsequent \#include directives that attempt to
-include the file will be ignored.
+<p>This directive adds the current file (i.e., the file in which the
+#pragma directly appears) to the “once-only” list. After a file is in
+the once-only list, subsequent #include directives that attempt to
+include the file will be ignored.</p>
 
-This is sometimes useful to ensure that a header file isn't included
+<p>This is sometimes useful to ensure that a header file isn’t included
 redundantly. For example, suppose you are creating a library that has
 several header files for different subsystems in the library, and all of
 these main subsystem headers in turn depend on a common header for the
-overall library. Each of the subsystem headers would need to \#include
-the common header. However, you can't predict in advance which of the
-subsystem headers a user might need to \#include in her own program: the
+overall library. Each of the subsystem headers would need to #include
+the common header. However, you can’t predict in advance which of the
+subsystem headers a user might need to #include in her own program: the
 user might want to include only one of your subsystem headers, but also
 might be using several of your subsystems and thus would need to include
-several of the headers. That's where the problem comes up: if the user
+several of the headers. That’s where the problem comes up: if the user
 includes three of your subsystem headers, and each of the subsystem
 headers includes the common header, the common header will end up being
 included three times. This could cause compiler errors due to the
 repeated inclusions of the definitions in the common header. You can
-avoid this by putting a "#pragma once" directive in the common header;
+avoid this by putting a “#pragma once” directive in the common header;
 if you do this, it will ensure that only the first inclusion of the file
 will have any effect, and the subsequent redundant inclusions will be
-harmlessly ignored.
+harmlessly ignored.</p>
 
-Note that C/C++ programmers usually solve this same problem by enclosing
+<p>Note that C/C++ programmers usually solve this same problem by enclosing
 the entire contents of each header file in a protective series of
-\#ifdef-type directives. Each header file follows this pattern:
+#ifdef-type directives. Each header file follows this pattern:</p>
 
-```
-    #ifndef MY_HEADER_NAME_H
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #ifndef MY_HEADER_NAME_H
     #define MY_HEADER_NAME_H
 
     // the rest of the contents of the header go here
 
     #endif
-```
+</code></pre></div></div>
 
-The idea is that, the first time this file is included, the preprocessor
+<p>The idea is that, the first time this file is included, the preprocessor
 symbol MY_HEADER_NAME_H (which is usually based on the name of the
-header file: for myheader.h, we'd use MYHEADER_H) will be undefined, so
-the \#ifndef ("if not defined") would succeed. Thus, everything between
-the \#ifndef and the matching \#endif would be compiled, including the
-\#define for the same symbol. If the same file is included again,
-MY_HEADER_NAME_H would be defined this time, because of the \#define
-that got compiled the first time around; so the \#ifndef would fail, so
-the compiler would skip everything up to the matching \#endif.
+header file: for myheader.h, we’d use MYHEADER_H) will be undefined, so
+the #ifndef (“if not defined”) would succeed. Thus, everything between
+the #ifndef and the matching #endif would be compiled, including the
+#define for the same symbol. If the same file is included again,
+MY_HEADER_NAME_H would be defined this time, because of the #define
+that got compiled the first time around; so the #ifndef would fail, so
+the compiler would skip everything up to the matching #endif.</p>
 
-### \#pragma all_once
+<h3 id="pragma-all_once">#pragma all_once</h3>
 
-This directive turns "all-once" mode on or off. "#pragma all_once +"
-turns all-once mode on, and "#pragma all_once -" turns it off.
+<p>This directive turns “all-once” mode on or off. “#pragma all_once +”
+turns all-once mode on, and “#pragma all_once -“ turns it off.</p>
 
-By default, all-once mode is off. When all-once mode is on, the
+<p>By default, all-once mode is off. When all-once mode is on, the
 preprocessor automatically adds each included file to the once-only list
-at the moment when the \#include for the file is encountered.
+at the moment when the #include for the file is encountered.</p>
 
-Once activated, all-once mode remains in effect until explicitly turned
-off.
+<p>Once activated, all-once mode remains in effect until explicitly turned
+off.</p>
 
-### \#undef
+<h3 id="undef">#undef</h3>
 
-This directive deletes - "undefines" - a macro that was previously
+<p>This directive deletes - “undefines” - a macro that was previously
 defined. This is useful because it lets you redefine a macro with a new
-value. The syntax is:
+value. The syntax is:</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#undef macroName
+</code></pre></div></div>
 
-    #undef macroName
+<p>It’s perfectly legal to undefine a macro that was never defined. This is
+silently ignored; it doesn’t even generate a warning.</p>
 
-</div>
+<h2 id="macros"><span id="macros">Macros</span></h2>
 
-It's perfectly legal to undefine a macro that was never defined. This is
-silently ignored; it doesn't even generate a warning.
+<h3 id="substitution-parameters">Substitution parameters</h3>
 
-## <span id="macros">Macros</span>
+<p>When you define a macro with a parameter list, any occurrences of the
+parameter names in the macro’s expansion text are replaced with the
+actual values in each usage of the macro.</p>
 
-### Substitution parameters
+<p>For example, suppose we define this macro:</p>
 
-When you define a macro with a parameter list, any occurrences of the
-parameter names in the macro's expansion text are replaced with the
-actual values in each usage of the macro.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define ERROR(msg)  tadsSay('An error occurred: ' + msg + '\n')
+</code></pre></div></div>
 
-For example, suppose we define this macro:
+<p>Now suppose we write this in our code somewhere:</p>
 
-```
-    #define ERROR(msg)  tadsSay('An error occurred: ' + msg + '\n')
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ERROR('invalid value');
+</code></pre></div></div>
 
-Now suppose we write this in our code somewhere:
-
-```
-    ERROR('invalid value');
-```
-
-During compilation, the preprocessor will expand this macro invocation,
+<p>During compilation, the preprocessor will expand this macro invocation,
 substituting the actual parameter value when msg appears in the
-replacement text. The resulting expansion is:
+replacement text. The resulting expansion is:</p>
 
-```
-    tadsSay('An error occurred: ' + 'invalid value' + '\n');
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tadsSay('An error occurred: ' + 'invalid value' + '\n');
+</code></pre></div></div>
 
-(It is worth pointing out that the compiler will subsequently compute
+<p>(It is worth pointing out that the compiler will subsequently compute
 the constant value of this string concatenation, so this will not result
-in any string concatenation at run-time.)
+in any string concatenation at run-time.)</p>
 
-### Macros referencing macros
+<h3 id="macros-referencing-macros">Macros referencing macros</h3>
 
-It's perfectly legal for a macro's expansion text to refer to other
-macros.
+<p>It’s perfectly legal for a macro’s expansion text to refer to other
+macros.</p>
 
-Macro references within a macro's definition are expanded when a macro
-is *expanded*, rather than when it's defined. This is important, because
-it means that a macro's full, final expansion isn't set in stone at the
-moment the macro is defined. It's not until the macro is actually used
-that the full implications of its expansion can be known. What's more,
+<p>Macro references within a macro’s definition are expanded when a macro
+is <em>expanded</em>, rather than when it’s defined. This is important, because
+it means that a macro’s full, final expansion isn’t set in stone at the
+moment the macro is defined. It’s not until the macro is actually used
+that the full implications of its expansion can be known. What’s more,
 different occurrences of the same macro could have radically different
 expansions due to changes in the other macros that the first macro
-references.
+references.</p>
 
-Here's how this works: each time the preprocessor expands a macro - that
-is, substitutes the macro's definition for an occurrence of the macro
-name in the source text - the preprocessor "re-scans" the expansion text
-to see if it contains any macros that need to be expanded.
+<p>Here’s how this works: each time the preprocessor expands a macro - that
+is, substitutes the macro’s definition for an occurrence of the macro
+name in the source text - the preprocessor “re-scans” the expansion text
+to see if it contains any macros that need to be expanded.</p>
 
-For example, consider the following:
+<p>For example, consider the following:</p>
 
-```
-    #define SUM(a, b)  (VAL(a) + VAL(b))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define SUM(a, b)  (VAL(a) + VAL(b))
     #define VAL(a)     (a)
 
     local x = SUM(1, 2);
@@ -672,584 +627,548 @@ For example, consider the following:
     #define VAL(a)     (-(a))
 
     local y = SUM(1, 2);
-```
+</code></pre></div></div>
 
-There are two important things to note about this example. The first is
-that our macro SUM references a macro named VAL that isn't even defined
+<p>There are two important things to note about this example. The first is
+that our macro SUM references a macro named VAL that isn’t even defined
 yet at the point where SUM is defined. This is perfectly okay, because
-of the delayed expansion behavior: since we won't try to expand macros
-in SUM's definition until SUM is actually used, it doesn't matter
+of the delayed expansion behavior: since we won’t try to expand macros
+in SUM’s definition until SUM is actually used, it doesn’t matter
 whether or not VAL is defined at the point where SUM is defined. The
 second thing to notice is that we redefine VAL before using SUM for the
-second time. Since SUM's expansion is re-scanned for other macros each
-and every time it's used, this means that we've effectively changed the
-definition of SUM when we change the definition of VAL.
+second time. Since SUM’s expansion is re-scanned for other macros each
+and every time it’s used, this means that we’ve effectively changed the
+definition of SUM when we change the definition of VAL.</p>
 
-The code above will expand as follows:
+<p>The code above will expand as follows:</p>
 
-```
-    local x = ((1) + (2));
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = ((1) + (2));
     local y = ((-(1)) + (-(2)));
-```
+</code></pre></div></div>
 
-### Recursive macros
+<h3 id="recursive-macros">Recursive macros</h3>
 
-Despite the re-scanning rule for macro expansion, the preprocessor
-doesn't expand macros recursively - that is, if a macro's expansion
-contains a mention of the macro's own name, the recursive self-reference
-is *not* expanded. Similarly, the preprocessor won't expand circular
-references, where macro A's expansion contains macro B, and macro B's
-expansion contains macro A.
+<p>Despite the re-scanning rule for macro expansion, the preprocessor
+doesn’t expand macros recursively - that is, if a macro’s expansion
+contains a mention of the macro’s own name, the recursive self-reference
+is <em>not</em> expanded. Similarly, the preprocessor won’t expand circular
+references, where macro A’s expansion contains macro B, and macro B’s
+expansion contains macro A.</p>
 
-There's no rule against writing a recursive-*looking* macro. Rather, the
+<p>There’s no rule against writing a recursive-<em>looking</em> macro. Rather, the
 prohibition on recursion is embodied in the ANSI C rules of macro
 expansion. Basically, when a macro is being expanded, the preprocessor
-temporarily "forgets" the macro, then remembers it again as soon as the
-expansion is finished. So, for example, suppose you write this:
+temporarily “forgets” the macro, then remembers it again as soon as the
+expansion is finished. So, for example, suppose you write this:</p>
 
-```
-    #define hello(x) hello((x)+1)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define hello(x) hello((x)+1)
+</code></pre></div></div>
 
-This macro *looks* like it would expand forever. If we wrote hello(1),
-we'd naively expect this to expand to hello((1)+1), which would in turn
-expand to hello(((1)+1)+1), then to hello((((1)+1)+1)+1), and so on *ad
-infinitum*. However, the rule against recursive macros prevents this.
+<p>This macro <em>looks</em> like it would expand forever. If we wrote hello(1),
+we’d naively expect this to expand to hello((1)+1), which would in turn
+expand to hello(((1)+1)+1), then to hello((((1)+1)+1)+1), and so on <em>ad
+infinitum</em>. However, the rule against recursive macros prevents this.
 Instead, the preprocessor simply forgets about the definition of hello()
-while expanding it, so we simply get hello((1)+1) - and then we're done.
+while expanding it, so we simply get hello((1)+1) - and then we’re done.</p>
 
-The TADS 3 preprocessor uses the detailed ANSI C rules with regard to
+<p>The TADS 3 preprocessor uses the detailed ANSI C rules with regard to
 recursive and circular macro definitions. These rules are quite complex
-and only rarely come into play in real-world situations, so we won't try
+and only rarely come into play in real-world situations, so we won’t try
 to explain them in full here. Instead, we invite authors who feel the
 need to know the full gory details to refer to an ANSI C programming
-book.
+book.</p>
 
-### Macros with variable-length argument lists
+<h3 id="macros-with-variable-length-argument-lists">Macros with variable-length argument lists</h3>
 
-A macro can be defined to take a varying number of arguments, which is
+<p>A macro can be defined to take a varying number of arguments, which is
 especially useful when the macro calls a function or method with a
 varying number of parameters. Although the 1999 ANSI C specification
 includes a varying macro argument feature, the ANSI C version is quite
 limited. TADS 3 diverges here from the ANSI definition to provide a more
-powerful facility.
+powerful facility.</p>
 
-To define a macro with varying arguments, place an ellipsis ("...")
-immediately after the last parameter in the macro's formal parameter
-list:
+<p>To define a macro with varying arguments, place an ellipsis (“…”)
+immediately after the last parameter in the macro’s formal parameter
+list:</p>
 
-```
-    #define ERROR(msg, args...) displayError('Error:', msg, args)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define ERROR(msg, args...) displayError('Error:', msg, args)
+</code></pre></div></div>
 
-The "..." after the last argument tells the preprocessor that the macro
+<p>The “…” after the last argument tells the preprocessor that the macro
 allows zero or more arguments in place of the last parameter, so the
 ERROR() macro defined above will accept one or more arguments. We call
-this the "varying argument" - this single parameter name stands in for
-zero, one, or more actual arguments each time the macro is used.
+this the “varying argument” - this single parameter name stands in for
+zero, one, or more actual arguments each time the macro is used.</p>
 
-#### Simple expansion with the variable list parameter
+<h4 id="simple-expansion-with-the-variable-list-parameter">Simple expansion with the variable list parameter</h4>
 
-During expansion, the parameter name of the varying argument will be
+<p>During expansion, the parameter name of the varying argument will be
 replaced by the entire varying part of the argument list, including the
 commas between adjacent arguments, but not including the comma before
-the first varying argument. For example:
+the first varying argument. For example:</p>
 
-```
-    #define VAR(a, b...) { b }
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define VAR(a, b...) { b }
+</code></pre></div></div>
 
-This macro will expand as follows:
+<p>This macro will expand as follows:</p>
 
-```
-    VAR(1) expands to { }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VAR(1) expands to { }
     VAR(1,2) expands to { 2 }
     VAR(1,2,3,4) expands to { 2,3,4 }
-```
+</code></pre></div></div>
 
-#### Expansion with no variable arguments, and deleting the extra comma
+<h4 id="expansion-with-no-variable-arguments-and-deleting-the-extra-comma">Expansion with no variable arguments, and deleting the extra comma</h4>
 
-If the varying part of the list contains zero arguments, note that it is
+<p>If the varying part of the list contains zero arguments, note that it is
 replaced by nothing at all. In some cases, this can be problematic; for
-example, in the ERROR macro defined above, consider this expansion:
+example, in the ERROR macro defined above, consider this expansion:</p>
 
-```
-    ERROR('syntax error') -&gt; displayError('Error:', 'syntax error', )
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ERROR('syntax error') -&gt; displayError('Error:', 'syntax error', )
+</code></pre></div></div>
 
-Note the extra comma after the last argument to displayError - the comma
+<p>Note the extra comma after the last argument to displayError - the comma
 is from the original expansion text in the macro definition, not from
-the parameter "args", which is empty in this case because no varying
+the parameter “args”, which is empty in this case because no varying
 arguments were supplied. The extra comma will cause a syntax error when
 the function call is compiled, so the macro as written is not compatible
 with an empty varying argument list, even though the preprocessor will
-allow it.
+allow it.</p>
 
-To correct this problem, we can use a special feature of the
-token-pasting operator (described in more detail below), "##". This
+<p>To correct this problem, we can use a special feature of the
+token-pasting operator (described in more detail below), “##”. This
 operator has a special meaning when it appears after a comma and before
 a varying-argument macro parameter: when (and only when) the varying
-list is empty, the "##" operator deletes the preceding comma. This only
-works with commas - if anything else precedes the "##" operator, the
+list is empty, the “##” operator deletes the preceding comma. This only
+works with commas - if anything else precedes the “##” operator, the
 operator works as it would in normal (non-varying arguments) cases. We
-can use this feature to rewrite the ERROR macro:
+can use this feature to rewrite the ERROR macro:</p>
 
-```
-    #define ERROR(msg, args...) displayError('Error:', msg, ## args)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define ERROR(msg, args...) displayError('Error:', msg, ## args)
+</code></pre></div></div>
 
-Now when we expand this macro with no additional arguments, the extra
-comma is deleted:
+<p>Now when we expand this macro with no additional arguments, the extra
+comma is deleted:</p>
 
-ERROR('syntax error') expands to displayError('Error:', 'syntax
-error')  
-ERROR('token error', 1) expand to displayError('Error:', 'token error',
-1)
+<p>ERROR(‘syntax error’) expands to displayError(‘Error:’, ‘syntax
+error’)<br />
+ERROR(‘token error’, 1) expand to displayError(‘Error:’, ‘token error’,
+1)</p>
 
-(In case you're wondering where this bizarre kludge came from, the idea
-is borrowed from the Gnu C compiler, which has the same feature. It's
+<p>(In case you’re wondering where this bizarre kludge came from, the idea
+is borrowed from the Gnu C compiler, which has the same feature. It’s
 not some random thing we invented, even though it might look that way.
-It's a reasonably simple solution for the most common case, and it
-doesn't seem to create any significant complications for other cases, so
+It’s a reasonably simple solution for the most common case, and it
+doesn’t seem to create any significant complications for other cases, so
 we included support for it. Read on for our more general alternative
-approach, though.)
+approach, though.)</p>
 
-#### Iterative expansion with \#foreach
+<h4 id="iterative-expansion-with-foreach">Iterative expansion with #foreach</h4>
 
-The comma-deleting feature of the "##" operator is useful as far as it
-goes, but sometimes it's necessary to construct more elaborate
+<p>The comma-deleting feature of the “##” operator is useful as far as it
+goes, but sometimes it’s necessary to construct more elaborate
 expansions from varying arguments. For example, suppose we wanted to
 concatenate the arguments to the ERROR macro together - in other words,
-we'd like the expansion to look like this:
+we’d like the expansion to look like this:</p>
 
-ERROR('token error', 1, 2) expands to displayError('Error:' + 'token
-error' + 1 + 2)
+<p>ERROR(‘token error’, 1, 2) expands to displayError(‘Error:’ + ‘token
+error’ + 1 + 2)</p>
 
-This is clearly beyond the scope of what we've seen so far. Fortunately,
+<p>This is clearly beyond the scope of what we’ve seen so far. Fortunately,
 the TADS 3 preprocessor has another feature that makes this sort of
-construction possible: the \#foreach operator. This operator must
+construction possible: the #foreach operator. This operator must
 immediately follow - with no intervening spaces - the varying argument
-name, and must be immediately followed with a "delimiter" character.
+name, and must be immediately followed with a “delimiter” character.
 Following the delimiter is the main iteration expansion, which ends at
 the next instance of the delimiter character. Following the second
-delimiter is the "interim" expansion, which itself ends at the next
-instance of the delimiter.
+delimiter is the “interim” expansion, which itself ends at the next
+instance of the delimiter.</p>
 
-You can choose any non-symbol character for the delimiter, as long as it
-doesn't appear in any of the expansion text - a non-symbol character is
-anything that can't appear in a symbol, specifically alphabetic
+<p>You can choose any non-symbol character for the delimiter, as long as it
+doesn’t appear in any of the expansion text - a non-symbol character is
+anything that can’t appear in a symbol, specifically alphabetic
 characters, numerals, and underscores. The point of letting you choose
 your own delimiter is to allow you to use anything in the expansion text
-by choosing a delimiter that doesn't collide with the expansion.
+by choosing a delimiter that doesn’t collide with the expansion.</p>
 
-Note that you should be careful if you choose a forward slash ("/") as
+<p>Note that you should be careful if you choose a forward slash (“/”) as
 the delimiter - the preprocessor removes comments before processing
 macros, so if you have an empty section, the compiler will completely
 remove two consecutive slashes because it will think it indicates a
-comment. You're probably better off avoiding using "/" as the delimiter.
+comment. You’re probably better off avoiding using “/” as the delimiter.</p>
 
-This sounds a bit complicated, so let's see an example:
+<p>This sounds a bit complicated, so let’s see an example:</p>
 
-```
-    #define ERROR(msg, arg...) displayError('Error: ' + msg arg#foreach: +arg ::)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define ERROR(msg, arg...) displayError('Error: ' + msg arg#foreach: +arg ::)
+</code></pre></div></div>
 
-The first part of the macro is simple:
+<p>The first part of the macro is simple:</p>
 
-```
-    displayError('Error: ' + msg
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    displayError('Error: ' + msg
+</code></pre></div></div>
 
-This part expands in the familiar way. Now we come to this sequence:
+<p>This part expands in the familiar way. Now we come to this sequence:</p>
 
-```
-    arg#foreach: +arg ::
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    arg#foreach: +arg ::
+</code></pre></div></div>
 
-Remember that the \#foreach operator must appear immediately after the
-varying argument name, as we see here. After the \#foreach operator, we
-have the delimiter; in this case, we've chosen ":", since we don't need
+<p>Remember that the #foreach operator must appear immediately after the
+varying argument name, as we see here. After the #foreach operator, we
+have the delimiter; in this case, we’ve chosen “:”, since we don’t need
 any colons in our expansion text. We could just as well have chosen any
-other character; all that matters is that we don't need the character
+other character; all that matters is that we don’t need the character
 anywhere in our expansion, since the next appearance of this character
-terminates the expansion.
+terminates the expansion.</p>
 
-So, we have two sub-parts, delimited by colons. The first subpart is "
-+arg ", and the second subpart is empty.
+<p>So, we have two sub-parts, delimited by colons. The first subpart is “
++arg “, and the second subpart is empty.</p>
 
-The first subpart is the main iteration expansion. The preprocessor
+<p>The first subpart is the main iteration expansion. The preprocessor
 expands this part once for each actual varying argument, expanding the
 varying argument name in this part to merely the current argument in the
 varying list. In the rest of the macro, remember that the varying
-argument name expands to the full varying list; in a \#foreach, though,
+argument name expands to the full varying list; in a #foreach, though,
 the varying argument name expands merely to the single, current
-argument.
+argument.</p>
 
-The second subpart is the interim iteration expansion. The preprocessor
+<p>The second subpart is the interim iteration expansion. The preprocessor
 expands this part once for each actual varying argument except for the
-last one. This is why we call it the "interim" expansion - it's expanded
-between iterations.
+last one. This is why we call it the “interim” expansion - it’s expanded
+between iterations.</p>
 
-Let's look at how the macro expands. Consider this invocation:
+<p>Let’s look at how the macro expands. Consider this invocation:</p>
 
-```
-    ERROR('syntax error')
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ERROR('syntax error')
+</code></pre></div></div>
 
-In this case, we have no varying arguments at all, so the entire
-\#foreach sequence - from the "arg#foreach" part to the final colon - is
+<p>In this case, we have no varying arguments at all, so the entire
+#foreach sequence - from the “arg#foreach” part to the final colon - is
 iterated zero times, and hence expands to nothing at all. The expansion
-is thus:
+is thus:</p>
 
-```
-    displayError('Error:' + 'syntax error' )
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    displayError('Error:' + 'syntax error' )
+</code></pre></div></div>
 
-Note that we don't have any problem handling the zero varying arguments,
-since the entire iteration simply occurs zero times in this case.
+<p>Note that we don’t have any problem handling the zero varying arguments,
+since the entire iteration simply occurs zero times in this case.</p>
 
-Now consider what happens when we include some arguments:
+<p>Now consider what happens when we include some arguments:</p>
 
-```
-    ERROR('token error', 1, 2)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ERROR('token error', 1, 2)
+</code></pre></div></div>
 
-This time, the \#foreach sequence is iterated twice. The first time,
-"arg" expands to "1", since that's the first varying argument, and the
-second time, "arg" expands to "2". The two iterations are expanded like
-this:
+<p>This time, the #foreach sequence is iterated twice. The first time,
+“arg” expands to “1”, since that’s the first varying argument, and the
+second time, “arg” expands to “2”. The two iterations are expanded like
+this:</p>
 
-```
-    +1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    +1
     +2
-```
+</code></pre></div></div>
 
-These are concatenated together, so the result looks like this:
+<p>These are concatenated together, so the result looks like this:</p>
 
-```
-    displayError('Error: ' + 'token error' +1 +2)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    displayError('Error: ' + 'token error' +1 +2)
+</code></pre></div></div>
 
-The "interim" portion is useful for solving the same kinds of problems
-as the "##" comma deletion feature, but is more general. Since the
+<p>The “interim” portion is useful for solving the same kinds of problems
+as the “##” comma deletion feature, but is more general. Since the
 interim portion appears only between each adjacent pair of varying
 arguments, it is useful for building lists of zero or more arguments.
 For example, suppose we want to write a macro that adds zero or more
-values:
+values:</p>
 
-```
-    #define ADD(val...) val#foreach:val:+:
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define ADD(val...) val#foreach:val:+:
+</code></pre></div></div>
 
-If we call this with no arguments, the expansion will be empty, because
-we'll iterate the \#foreach zero times. If we call this with one
-argument, the result will simply be the argument: we'll iterate the
-\#foreach one time, but we won't include the interim expansion at all,
+<p>If we call this with no arguments, the expansion will be empty, because
+we’ll iterate the #foreach zero times. If we call this with one
+argument, the result will simply be the argument: we’ll iterate the
+#foreach one time, but we won’t include the interim expansion at all,
 because we skip the interim expansion after the last argument. With two
-arguments, we'll expand the interim once, between the two. Here are some
-sample expansions:
+arguments, we’ll expand the interim once, between the two. Here are some
+sample expansions:</p>
 
-```
-    ADD() expands to nothing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ADD() expands to nothing
     ADD(1) expands to 1
     ADD(1,2) expands to 1+2
     ADD(1,2,3) expands to 1+2+3
-```
+</code></pre></div></div>
 
-#### Conditional expansion with \#ifempty and \#ifnempty
+<h4 id="conditional-expansion-with-ifempty-and-ifnempty">Conditional expansion with #ifempty and #ifnempty</h4>
 
-In some cases, it's necessary to include a block of text immediately
+<p>In some cases, it’s necessary to include a block of text immediately
 before or after the variable arguments, but only when the argument list
-is non-empty. In other cases, it's necessary to provide some text
+is non-empty. In other cases, it’s necessary to provide some text
 instead of the variable arguments when the variable argument list is
-empty. A pair of operators, \#ifempty and \#ifnempty, provide these
-types of conditional expansion.
+empty. A pair of operators, #ifempty and #ifnempty, provide these
+types of conditional expansion.</p>
 
-The \#ifempty and \#ifnempty operators are similar in syntax to
-\#foreach: these operators must appear in macro expansion text directly
+<p>The #ifempty and #ifnempty operators are similar in syntax to
+#foreach: these operators must appear in macro expansion text directly
 after the name of the variable argument formal parameter, with no
 intervening spaces, and the operator is immediately followed by a
 delimiter character. After the delimiter comes the conditional expansion
-text, which is terminated by another copy of the delimiter character.
+text, which is terminated by another copy of the delimiter character.</p>
 
-\#ifempty includes its expansion text in the macro's expansion only when
-the variable argument list is empty, and \#ifnempty includes the text
-only when the variable argument list is non-empty.
+<p>#ifempty includes its expansion text in the macro’s expansion only when
+the variable argument list is empty, and #ifnempty includes the text
+only when the variable argument list is non-empty.</p>
 
-For example, suppose you want to define a macro that expands its
+<p>For example, suppose you want to define a macro that expands its
 variable arguments into a concatenated list, and then passes the
 concatenated list as the second argument to another function. We might
-try defining this using \#foreach:
+try defining this using #foreach:</p>
 
-```
-    #define CALL_CONCAT(firstArg, args...) \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define CALL_CONCAT(firstArg, args...) \
        myFunc(firstArg, args#foreach#args#+#)
-```
+</code></pre></div></div>
 
-However, this has a problem: if the varying argument part of the list is
-empty, we have an unnecessary comma in the expansion:
+<p>However, this has a problem: if the varying argument part of the list is
+empty, we have an unnecessary comma in the expansion:</p>
 
-```
-    CALL_CONCAT(test) -&gt; myFunc(test, )
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    CALL_CONCAT(test) -&gt; myFunc(test, )
+</code></pre></div></div>
 
-This is similar to the problem that we mentioned earlier in describing
-the "##" operator, but we can't use the "##" operator to delete the
-comma in this case, because the "##" comma deletion works only when the
-variable list argument appears directly after the ", \##" sequence.
+<p>This is similar to the problem that we mentioned earlier in describing
+the “##” operator, but we can’t use the “##” operator to delete the
+comma in this case, because the “##” comma deletion works only when the
+variable list argument appears directly after the “, ##” sequence.</p>
 
-This is where the \#ifempty and \#ifnempty operators come in. In this
+<p>This is where the #ifempty and #ifnempty operators come in. In this
 case, we want to include the comma after firstArg in the expansion only
-when the argument list isn't empty, so we can change the macro like
-this:
+when the argument list isn’t empty, so we can change the macro like
+this:</p>
 
-```
-    #define CALL_CONCAT(firstArg, args...) \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define CALL_CONCAT(firstArg, args...) \
        myFunc(firstArg args#ifnempty#,# args#foreach#args#+#)
-```
+</code></pre></div></div>
 
-This does what we want: when the variable argument list is empty, the
-\#ifnempty expansion text is omitted, so we have no extra comma; when we
-have one or more varying arguments, the \#ifnempty expansion is
-included, so the comma is included in the expansion.
+<p>This does what we want: when the variable argument list is empty, the
+#ifnempty expansion text is omitted, so we have no extra comma; when we
+have one or more varying arguments, the #ifnempty expansion is
+included, so the comma is included in the expansion.</p>
 
-#### Getting the variable argument count with \#argcount
+<h4 id="getting-the-variable-argument-count-with-argcount">Getting the variable argument count with #argcount</h4>
 
-There's one more feature for varying argument lists: you can obtain the
-number of varying arguments with the \#argcount operator. Like
-\#foreach, the \#argcount operator must appear immediately after the
+<p>There’s one more feature for varying argument lists: you can obtain the
+number of varying arguments with the #argcount operator. Like
+#foreach, the #argcount operator must appear immediately after the
 name of the varying parameter, without any spaces. This operator expands
 to a token giving the number of arguments in the varying list. For
-example:
+example:</p>
 
-```
-    #define MAKELIST(ret, val...) ret = [val#argcount val#foreach#,val##]
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define MAKELIST(ret, val...) ret = [val#argcount val#foreach#,val##]
+</code></pre></div></div>
 
-This expands as follows:
+<p>This expands as follows:</p>
 
-MAKELIST(lst) expands to lst = \[0\]  
-MAKELIST(lst, 'a') expands to lst = \[1,'a'\]  
-MAKELIST(lst, 'a', 'b') expands to lst = \[2,'a','b'\]
+<p>MAKELIST(lst) expands to lst = [0]<br />
+MAKELIST(lst, ‘a’) expands to lst = [1,’a’]<br />
+MAKELIST(lst, ‘a’, ‘b’) expands to lst = [2,’a’,’b’]</p>
 
-Note that \#argcount expands to the number of arguments in the varying
-part of the list only, and doesn't count any fixed arguments.
+<p>Note that #argcount expands to the number of arguments in the varying
+part of the list only, and doesn’t count any fixed arguments.</p>
 
-### Stringizing
+<h3 id="stringizing">Stringizing</h3>
 
-It's sometimes useful to write a macro that uses the actual text of a
+<p>It’s sometimes useful to write a macro that uses the actual text of a
 substitution parameter as a string constant. This can be accomplished
-using the "stringizing" operators. The \# operator, when it precedes the
+using the “stringizing” operators. The # operator, when it precedes the
 name of a macro formal parameter in macro expansion text, is replaced by
-the text of the actual argument value enclosed in double quotes. The \#@
+the text of the actual argument value enclosed in double quotes. The #@
 operator has a similar effect, but encloses the text in single quotes.
 For example, suppose we wanted to write a debugging macro that displays
-the value of an arbitrary expression:
+the value of an arbitrary expression:</p>
 
-```
-    #define printval(val) tadsSay(#@val + ' = ' + toString(val))
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define printval(val) tadsSay(#@val + ' = ' + toString(val))
+</code></pre></div></div>
 
-We could use this macro in our code like this:
+<p>We could use this macro in our code like this:</p>
 
-```
-    printval(MyObject.codeNum);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    printval(MyObject.codeNum);
+</code></pre></div></div>
 
-This would expand as follows:
+<p>This would expand as follows:</p>
 
-```
-    tadsSay('MyObject.codeNum' + ' = ' + toString(MyObject.codeNum));
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tadsSay('MyObject.codeNum' + ' = ' + toString(MyObject.codeNum));
+</code></pre></div></div>
 
-### Token Pasting
+<h3 id="token-pasting">Token Pasting</h3>
 
-In some cases, it's useful to be able to construct a new symbol out of
-different parts. This can be accomplished with "token pasting," which
+<p>In some cases, it’s useful to be able to construct a new symbol out of
+different parts. This can be accomplished with “token pasting,” which
 constructs a single token from what were originally several tokens. The
-token pasting operator, \##, when it appears in a macro's expansion
+token pasting operator, ##, when it appears in a macro’s expansion
 text, takes the text of the token to the left of the operator and the
 text of the token to the right of the operator and pastes them together
 to form a single token. If the token on either side is a formal
 parameter to the macro, the operator first expands the formal parameter,
-then performs pasting on the result.
+then performs pasting on the result.</p>
 
-For example, suppose we wanted to construct a method call based on a
-partial method name:
+<p>For example, suppose we wanted to construct a method call based on a
+partial method name:</p>
 
-```
-    #define callDo(verb, actor)  do##verb(actor)
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define callDo(verb, actor)  do##verb(actor)
+</code></pre></div></div>
 
-We could use the macro like this:
+<p>We could use the macro like this:</p>
 
-```
-    dobj.callDo(Take, Me);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobj.callDo(Take, Me);
+</code></pre></div></div>
 
-This would expand into this text:
+<p>This would expand into this text:</p>
 
-```
-    dobj.doTake(Me);
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobj.doTake(Me);
+</code></pre></div></div>
 
-The preprocessor scans a pasted token for further expansion, so if the
+<p>The preprocessor scans a pasted token for further expansion, so if the
 pasted token is itself another macro, the preprocessor expands that as
-well:
+well:</p>
 
-```
-    #define PASTE(a, b) a##b
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define PASTE(a, b) a##b
     #define FOOBAR 123
     PASTE(FOO, BAR)
-```
+</code></pre></div></div>
 
-The macro above expands as follows. First, the preprocessor expands the
+<p>The macro above expands as follows. First, the preprocessor expands the
 PASTE macro, pasting the two arguments together to yield the token
-FOOBAR. The preprocessor then scans that and finds that it's another
-macro, so it expands it. The final text is simply 123.
+FOOBAR. The preprocessor then scans that and finds that it’s another
+macro, so it expands it. The final text is simply 123.</p>
 
-Token pasting only works within macro expansion text; the token pasting
-operator is ignored if it appears anywhere outside of a \#define.
+<p>Token pasting only works within macro expansion text; the token pasting
+operator is ignored if it appears anywhere outside of a #define.</p>
 
-#### String Concatenation
+<h4 id="string-concatenation">String Concatenation</h4>
 
-When you use the \## operator to paste two tokens together, the
+<p>When you use the ## operator to paste two tokens together, the
 preprocessor checks to see if both of the tokens being pasted together
 are strings of the same kind (i.e., they both have the same type of
 quotes). If they are, the preprocessor combines the strings by removing
 the closing quote of the first string and the opening quote of the
-second string.
+second string.</p>
 
-If either operand of the \## operator is itself modified by the \#
-operator, the preprocessor first applies the \# operator or operators,
-and then applies the \## operator. So, if you paste together two
-stringized parameters, the result is a single string.
+<p>If either operand of the ## operator is itself modified by the #
+operator, the preprocessor first applies the # operator or operators,
+and then applies the ## operator. So, if you paste together two
+stringized parameters, the result is a single string.</p>
 
-Here are some examples:
+<p>Here are some examples:</p>
 
-```
-    #define PAREN_STR(a) "(" ## a ")"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #define PAREN_STR(a) "(" ## a ")"
     #define CONCAT(a, b) a ## b
     #define CONCAT_STR(a, b) #a ## #b
-    #define DEBUG_PRINT(a) "value of " ## #a ## " = &lt;<a>&gt;"
+    #define DEBUG_PRINT(a) "value of " ## #a ## " = &lt;&lt;a&gt;&gt;"
 
     1: PAREN_STR("parens")
     2: CONCAT("abc", "def")
     3: CONCAT_STR(uvw, xyz)
     4: DEBUG_PRINT(obj.prop[3])
-```
+</code></pre></div></div>
 
-After preprocessing, the file above would appear as follows:
+<p>After preprocessing, the file above would appear as follows:</p>
 
-```
-    1: "(parens)"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1: "(parens)"
     2: "abcdef"
     3: "uvwxyz"
     4: "value of obj.prop[3] = &lt;&lt;obj.prop[3]&gt;&gt;"
-```
+</code></pre></div></div>
 
-Note that string concatenation is a TADS extension, and is not found in
-ANSI C preprocessors. The C preprocessor doesn't provide a way of
+<p>Note that string concatenation is a TADS extension, and is not found in
+ANSI C preprocessors. The C preprocessor doesn’t provide a way of
 combining string tokens because the C language (not the preprocessor,
 but the language itself) has a different way of accomplishing the same
 thing: in C, two adjacent string tokens are always treated as a single
 string formed by concatenating the two strings together. The TADS
-language doesn't allow this kind of implicit string pasting, because
+language doesn’t allow this kind of implicit string pasting, because
 (unlike in C) there are times when it is valid to use two or more
 adjacent string tokens, such as in dictionary property lists. The TADS
 preprocessor therefore provides its own mechanism for concatenating
-string tokens.
+string tokens.</p>
 
-#### Pre-defined Macros
+<h4 id="pre-defined-macros">Pre-defined Macros</h4>
 
-The compiler provides several pre-defined macros that you can use to get
+<p>The compiler provides several pre-defined macros that you can use to get
 information about the compilation environment. Note that these macros
-are defined by the **compiler** - they don't necessarily tell you
-anything about the run-time environment, since they're fixed at compile
-time, and don't change while the program is running.
+are defined by the <strong>compiler</strong> - they don’t necessarily tell you
+anything about the run-time environment, since they’re fixed at compile
+time, and don’t change while the program is running.</p>
 
-**\_\_DEBUG** is defined as 1 for debug-mode builds, and is undefined
-for release-mode builds. This means that you can use `#ifdef __DEBUG` to
+<p><strong>__DEBUG</strong> is defined as 1 for debug-mode builds, and is undefined
+for release-mode builds. This means that you can use <code class="language-plaintext highlighter-rouge">#ifdef __DEBUG</code> to
 conditionally include code for debug builds only, excluding the code for
 versions that you release to users. The Adv3 library uses this feature
 to include some debugging verbs in games only in debug builds, so that
-the verbs are available while you're testing the game but won't be
-included in releases.
+the verbs are available while you’re testing the game but won’t be
+included in releases.</p>
 
-**\_\_TADS_SYSTEM_NAME** is defined as a symbol giving the name of the
+<p><strong>__TADS_SYSTEM_NAME</strong> is defined as a symbol giving the name of the
 operating system where the compiler is running. (Note that this only
-tells you where you **compiled** your program - it doesn't tell you
+tells you where you <strong>compiled</strong> your program - it doesn’t tell you
 which system the program is actually executing on at run-time.) This
-varies by operating system; on Windows, it's WIN32.
+varies by operating system; on Windows, it’s WIN32.</p>
 
-**\_\_TADS_SYS_xxx** is defined as 1, where **xxx** is the current
-operating system symbol defined for \_\_TADS_SYSTEM_NAME. For example,
-when compiling on Windows, \_\_TADS_SYS_WIN32 is defined as 1.
+<p><strong>__TADS_SYS_xxx</strong> is defined as 1, where <strong>xxx</strong> is the current
+operating system symbol defined for __TADS_SYSTEM_NAME. For example,
+when compiling on Windows, __TADS_SYS_WIN32 is defined as 1.</p>
 
-**\_\_TADS_VERSION_MAJOR** is the major version number of the compiler -
-this will always be 3 for TADS 3.
+<p><strong>__TADS_VERSION_MAJOR</strong> is the major version number of the compiler -
+this will always be 3 for TADS 3.</p>
 
-**\_\_TADS_VERSION_MINOR** is the minor version number. This is the
+<p><strong>__TADS_VERSION_MINOR</strong> is the minor version number. This is the
 second element of the dotted version string for the compiler: for
-example, for TADS 3.0.15, this is 0; for 3.11.22, this would be 11.
+example, for TADS 3.0.15, this is 0; for 3.11.22, this would be 11.</p>
 
-**\_\_TADS3** is defined as 1. This provides an easy way to detect that
+<p><strong>__TADS3</strong> is defined as 1. This provides an easy way to detect that
 the compiler is a TADS 3 compiler (as opposed to a TADS 2 compiler,
-say). (This is essentially redundant with \_\_TADS_SYSTEM_MAJOR, except
+say). (This is essentially redundant with __TADS_SYSTEM_MAJOR, except
 that if for some reason you wanted to write single-sourced code that
 compiled under TADS 2 and TADS 3, using conditional compilation to
-handle the syntax differences in the languages, you wouldn't have been
-able to use \_\_TADS_SYSTEM_MAJOR, because TADS 2 doesn't have an
-equivalent of the \#if feature for macro expression evaluation.)
+handle the syntax differences in the languages, you wouldn’t have been
+able to use __TADS_SYSTEM_MAJOR, because TADS 2 doesn’t have an
+equivalent of the #if feature for macro expression evaluation.)</p>
 
-**\_\_DATE\_\_** is defined as a single-quoted string giving the date at
-which the compilation started, in the format 'MMM dd yyyy', where MMM is
+<p><strong>__DATE__</strong> is defined as a single-quoted string giving the date at
+which the compilation started, in the format ‘MMM dd yyyy’, where MMM is
 the three-letter month abbreviation, dd is the day of the month in a
 two-digit format, and yyyy is the four-digit year. For example, August
-15, 2008 would be represented as 'Aug 15 2008'.
+15, 2008 would be represented as ‘Aug 15 2008’.</p>
 
-**\_\_TIME\_\_** is defined as a single-quoted string giving the time at
-which compilation started, in the format 'hh:mm:ss', where hh is the
+<p><strong>__TIME__</strong> is defined as a single-quoted string giving the time at
+which compilation started, in the format ‘hh:mm:ss’, where hh is the
 two-digit hour on the 24-hour clock (midnight is 00, noon is 12, eleven
 PM is 23, etc.), mm is the two-digit minute of the hour, and ss is the
 two-digit second within the minute. For example, half past noon is
-represented as '12:30:00'.
+represented as ‘12:30:00’.</p>
 
-**\_\_LINE\_\_** is a always defined as the current line number within
+<p><strong>__LINE__</strong> is a always defined as the current line number within
 the current source file that the compiler is scanning. The line
 numbering starts at 1 in each file, and increases by 1 at each newline
 (usually a carriage-return, line-feed, or combination of the two,
-depending on local conventions).
+depending on local conventions).</p>
 
-**\_\_FILE\_\_** is always defined as a single-quoted string giving the
-name of the source file that the compiler is scanning.
+<p><strong>__FILE__</strong> is always defined as a single-quoted string giving the
+name of the source file that the compiler is scanning.</p>
 
-\_\_FILE\_\_ and \_\_LINE\_\_ sometimes come in handy for debugging
+<p>__FILE__ and __LINE__ sometimes come in handy for debugging
 purposes, since they let you flag the source file location of a
 particular bit of code for examination at run-time. This is especially
-useful within macros, because \_\_FILE\_\_ and \_\_LINE\_\_ are always
+useful within macros, because __FILE__ and __LINE__ are always
 expanded at the last possible moment - if you use them within a macro,
-they won't be expanded until the containing macro is itself expanded,
-which means they'll yield the source location of the code that
+they won’t be expanded until the containing macro is itself expanded,
+which means they’ll yield the source location of the code that
 ultimately invoked the macro rather than the location of the definition
-of the macro.
+of the macro.</p>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; The Preprocessor  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; The Preprocessor<br />
 <span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Source File Character
 Sets</a>    
 <a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
-    </span>
+    </span></p>
 
-</div>
-</a></filename></div></div>
 
 </main>
 <footer>

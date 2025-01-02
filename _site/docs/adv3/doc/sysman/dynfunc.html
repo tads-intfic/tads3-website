@@ -21,20 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; DynamicFunc  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; DynamicFunc<br />
 <span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
-    <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
-
-</div>
+    <a href="file.html" class="nav"><em>Next:</em> File</a>     </span></p>
 
 <h1 id="dynamicfunc">DynamicFunc</h1>
 
@@ -278,7 +270,7 @@ thing a lot more readable:</p>
     {
       // replace each {...} expression with its evaluated result
       tadsSay(rexReplace('&lt;lbrace&gt;(&lt;^rbrace&gt;*)&lt;rbrace&gt;', msg,
-              {m: Compiler.eval(rexGroup(1)[3])}));
+              {m: Compiler.eval(rexGroup(1) [3])}));
     }
 </code></pre></div></div>
 
@@ -343,7 +335,7 @@ our own local variables.</p>
 
       // replace each {...} expression with its evaluated result
       tadsSay(rexReplace('&lt;lbrace&gt;(&lt;^rbrace&gt;*)&lt;rbrace&gt;', msg,
-              {m: Compiler.eval(rexGroup(1)[3], frame)}));
+              {m: Compiler.eval(rexGroup(1) [3], frame)}));
     }
 </code></pre></div></div>
 
@@ -556,165 +548,152 @@ exception object.</p>
 
 <p><code class="language-plaintext highlighter-rouge">getSource()</code></p>
 
-<div class="fdef">
+<p>Returns a string containing the source code originally used to create
+the object via the <code class="language-plaintext highlighter-rouge">new DynamicFunc()</code>
+constructor.</p>
 
-Returns a string containing the source code originally used to create
-the object via the `new DynamicFunc()`
-constructor.
+<h2 id="uses">Uses</h2>
 
-
-
-## Uses
-
-Dynamic code creation is common in modern interpreted languages,
+<p>Dynamic code creation is common in modern interpreted languages,
 especially scripting languages like Javascript and PHP. People have
 found all sorts of uses for it, but the best use is probably for
 creating miniature extension languages as parts of code libraries.
 Dynamic compilation can be used as a sort of super macro feature, since
 it lets you bring to bear the full string-processing and procedural
-power of the main language.
+power of the main language.</p>
 
-In a TADS context, dynamic code is particularly interesting for string
+<p>In a TADS context, dynamic code is particularly interesting for string
 and message processing. Text generation is obviously a huge part of IF
 programming, and one of the key tasks for libraries and extensions is to
 provide tools and automation for text creation. Dynamic code creates
 many possibilities for these tools, by making it possible to embed quasi
 source code text inside strings, which are then processed by library
 routines into actual source code, which is then compiled and executed on
-the fly.
+the fly.</p>
 
-## DynamicFunc vs. anonymous functions
+<h2 id="dynamicfunc-vs-anonymous-functions">DynamicFunc vs. anonymous functions</h2>
 
-Dynamic functions and anonymous functions might seem a lot alike, but
+<p>Dynamic functions and anonymous functions might seem a lot alike, but
 there are some significant differences. The big one is that anonymous
-functions can only be created from static source code that's part of
-your project's source files, whereas DynamicFunc objects are created
+functions can only be created from static source code that’s part of
+your project’s source files, whereas DynamicFunc objects are created
 dynamically from strings at run-time. This makes anonymous functions a
-bit more efficient, since they're compiled in advance; a DynamicFunc
+bit more efficient, since they’re compiled in advance; a DynamicFunc
 must be compiled while the program runs, which adds some run-time work
 and resource consumption. On the other hand, you can do things with
-DynamicFunc that you simply can't do with anonymous functions, by making
-it possible to create code on the fly while the program runs.
+DynamicFunc that you simply can’t do with anonymous functions, by making
+it possible to create code on the fly while the program runs.</p>
 
-In general, if you can write out the function you want to perform in
+<p>In general, if you can write out the function you want to perform in
 advance, as part of your source code, a regular or anonymous function is
 the way to go. Dynamic functions are best for situations where the
 source code must be assembled dynamically - based on input from the
-user, for example, or based on data read from a file.
+user, for example, or based on data read from a file.</p>
 
-Because an anonymous function is statically compiled, it's syntactically
+<p>Because an anonymous function is statically compiled, it’s syntactically
 part of the surrounding code. This allows an anonymous function to
-access local variables in the enclosing scope. For example:
+access local variables in the enclosing scope. For example:</p>
 
-```
-    local lst = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local lst = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
     local cnt = 0;
     lst.forEach(function(val) { if (val.length() &gt; 3) ++cnt; });
-```
+</code></pre></div></div>
 
-This function refers to the local variable
-`cnt`, which isn't defined as part of the
-anonymous function, but rather in the enclosing scope.
+<p>This function refers to the local variable
+<code class="language-plaintext highlighter-rouge">cnt</code>, which isn’t defined as part of the
+anonymous function, but rather in the enclosing scope.</p>
 
-A DynamicFunc, in contrast, doesn't automatically have access to its
-enclosing scope. In fact, a DynamicFunc doesn't even really have an
+<p>A DynamicFunc, in contrast, doesn’t automatically have access to its
+enclosing scope. In fact, a DynamicFunc doesn’t even really have an
 enclosing lexical scope: a lexical scope is essentially the text
-surrounding the function, but a DynamicFunc's source is a run-time
-string, which isn't part of the source code at all.
+surrounding the function, but a DynamicFunc’s source is a run-time
+string, which isn’t part of the source code at all.</p>
 
-However, a DynamicFunc has something analogous to an enclosing scope: it
+<p>However, a DynamicFunc has something analogous to an enclosing scope: it
 has a dynamic call stack. The call stack is the chain of callers that
-were actually invoked at run-time to reach the function that's creating
+were actually invoked at run-time to reach the function that’s creating
 the DynamicFunc. Each caller in that chain has local variables of its
 own. You can arrange it so that the DynamicFunc has access to the local
-variables in one or more of these callers.
+variables in one or more of these callers.</p>
 
-This access to caller locals isn't automatic. If you don't make explicit
-arrangements, a DynamicFunc can't access any locals in its callers. That
-means that something like this won't work:
+<p>This access to caller locals isn’t automatic. If you don’t make explicit
+arrangements, a DynamicFunc can’t access any locals in its callers. That
+means that something like this won’t work:</p>
 
-```
-    local cnt = 0;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local cnt = 0;
     local f = new DynamicFunc('function(val) { if (val &gt; 3) ++cnt; }'); // WON'T WORK!
-```
+</code></pre></div></div>
 
-To make that work, you'd have to explicitly grant the DynamicFunc access
+<p>To make that work, you’d have to explicitly grant the DynamicFunc access
 to the current local frame. You do this by passing in the StackFrameDesc
-object for the current frame, like so:
+object for the current frame, like so:</p>
 
-```
-    local cnt = 0;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local cnt = 0;
     local frame = t3GetStackTrace(1, T3GetStackDesc).frameDesc_;
     local f = new DynamicFunc('function(val) { if (val &gt; 3) ++cnt; }', nil, frame);
-```
+</code></pre></div></div>
 
-For more details, see the section on [accessing a caller's
-locals](#localFrames) above.
+<p>For more details, see the section on <a href="#localFrames">accessing a caller’s
+locals</a> above.</p>
 
-## Limitations
+<h2 id="limitations">Limitations</h2>
 
-The debugger can't stop in dynamic code, so you can't set breakpoints or
-single-step through a DynamicFunc's contents.
+<p>The debugger can’t stop in dynamic code, so you can’t set breakpoints or
+single-step through a DynamicFunc’s contents.</p>
 
-As described above, dynamic code can't automatically refer to variables
-defined in the scope that calls `new
-DynamicFunc()`. You can, however, explicitly give the code access
-to a frame's locals by supplying a StackFrameDesc object when compiling
-the dynamic code.
+<p>As described above, dynamic code can’t automatically refer to variables
+defined in the scope that calls <code class="language-plaintext highlighter-rouge">new
+DynamicFunc()</code>. You can, however, explicitly give the code access
+to a frame’s locals by supplying a StackFrameDesc object when compiling
+the dynamic code.</p>
 
-You can't define a multimethod from dynamic code. This is due in part to
-the same reasons that you can't add to the global symbol table, but
-there's the additional complication that multimethods use a separate set
+<p>You can’t define a multimethod from dynamic code. This is due in part to
+the same reasons that you can’t add to the global symbol table, but
+there’s the additional complication that multimethods use a separate set
 of run-time tables built by the system library during preinit. It would
 be possible in principle to manipulate these tables to add new
-multimethods on the fly, but there's not currently any API support for
-that, so we don't recommend it.
+multimethods on the fly, but there’s not currently any API support for
+that, so we don’t recommend it.</p>
 
-Dynamic code can't define new **named** functions, objects, or
+<p>Dynamic code can’t define new <strong>named</strong> functions, objects, or
 properties. The dynamic compiler treats the global symbol table that you
 pass in as read-only, so the syntax for defining named items is
-disabled.
+disabled.</p>
 
-Note that even though you can't create a named function or object using
-the normal source code syntax, you *can* get the same result by
+<p>Note that even though you can’t create a named function or object using
+the normal source code syntax, you <em>can</em> get the same result by
 manipulating the LookupTable containing the symbols. To define a new
 function, first use the unnamed function syntax to create a new
 DynamicFunc with the function body, then simply add the DynamicFunc to
-the symbol table under the function name of your choosing. Once you've
+the symbol table under the function name of your choosing. Once you’ve
 added the function to the symbol table, you can call it from other
-dynamic code strings as though it were part of the original source code.
+dynamic code strings as though it were part of the original source code.</p>
 
-The `Compiler` helper object even provides a
-method that does all of this for you:
+<p>The <code class="language-plaintext highlighter-rouge">Compiler</code> helper object even provides a
+method that does all of this for you:</p>
 
-```
-    // define a new function, square(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // define a new function, square(x)
     Compiler.defineFunc('square', 'function(x) { return x*x; }');
 
     // we can now call it from subsequent code
     local x = Compiler.eval('square(10)');
-```
+</code></pre></div></div>
 
-Note that this only updates the `Compiler`
-object's copy of the symbol table. It doesn't change the original symbol
-table used by the running program. This means you're free to redefine
-the name of an existing function, but doing so will only affect *future*
-compilations - it won't affect any code previously compiled, including
-the statically compiled code of the main program.
-
-</div>
+<p>Note that this only updates the <code class="language-plaintext highlighter-rouge">Compiler</code>
+object’s copy of the symbol table. It doesn’t change the original symbol
+table used by the running program. This means you’re free to redefine
+the name of an existing function, but doing so will only affect <em>future</em>
+compilations - it won’t affect any code previously compiled, including
+the statically compiled code of the main program.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; DynamicFunc  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; DynamicFunc<br />
 <span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
-    <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
+    <a href="file.html" class="nav"><em>Next:</em> File</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

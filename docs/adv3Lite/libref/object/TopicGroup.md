@@ -75,7 +75,7 @@ TopicGroup.
 
 
 
-[`active`](#active)[`convKeys`](#convKeys)[`getActor`](#getActor)[`isActive`](#isActive)[`scoreBoost`](#scoreBoost)
+[`active`](#active) [`convKeys`](#convKeys) [`getActor`](#getActor) [`isActive`](#isActive) [`scoreBoost`](#scoreBoost)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ TopicGroup.
 
 
 
-[`addTopic`](#addTopic)[`nodeActive`](#nodeActive)[`scoreBooster`](#scoreBooster)
+[`addTopic`](#addTopic) [`nodeActive`](#nodeActive) [`scoreBooster`](#scoreBooster)
 
 <span id="_Properties_"></span>
 

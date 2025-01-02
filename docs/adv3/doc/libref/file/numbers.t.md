@@ -48,7 +48,7 @@ for converting numbers to strings in various formats.
 
 
 
-[`intToBinary`](#intToBinary)[`intToRoman`](#intToRoman)
+[`intToBinary`](#intToBinary) [`intToRoman`](#intToRoman)
 
 <span id="_Functions_"></span>
 

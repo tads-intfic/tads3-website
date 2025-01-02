@@ -46,75 +46,47 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Output stream window.</p>
 
-Output stream window.
-
-This is an abstract base class for UI widgets that have output streams,
+<p>This is an abstract base class for UI widgets that have output streams,
 such as Banner Windows and Web UI windows. This base class essentially
 handles the interior of the window, and leaves the details of the
-window's layout in the broader UI to subclasses.
+window’s layout in the broader UI to subclasses.</p>
 
-`class `**`OutputStreamWindow`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></strong><br />
 <a href="../object/BannerWindow.html"><code class="language-plaintext highlighter-rouge">BannerWindow</code></a><br />
 <a href="../object/WebBannerWin.html"><code class="language-plaintext highlighter-rouge">WebBannerWin</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#outputStream_"><code class="language-plaintext highlighter-rouge">outputStream_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a><a href="#createOutputStream"><code class="language-plaintext highlighter-rouge">createOutputStream</code></a><a href="#createOutputStreamObj"><code class="language-plaintext highlighter-rouge">createOutputStreamObj</code></a><a href="#setOutputStream"><code class="language-plaintext highlighter-rouge">setOutputStream</code></a></p>
+<p><a href="#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a> <a href="#createOutputStream"><code class="language-plaintext highlighter-rouge">createOutputStream</code></a> <a href="#createOutputStreamObj"><code class="language-plaintext highlighter-rouge">createOutputStreamObj</code></a> <a href="#setOutputStream"><code class="language-plaintext highlighter-rouge">setOutputStream</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="outputStream_"></span></p>
 
@@ -122,21 +94,13 @@ window's layout in the broader UI to subclasses.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#2015">2015</a>]</p>
 
-<div class="desc">
-
-My output stream - this is a transient OutputStream instance. Subclasses
+<p>My output stream - this is a transient OutputStream instance. Subclasses
 must create this explicitly by calling createOutputStream() when the
-underlying UI window is first created.
-
-</div>
+underlying UI window is first created.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="captureOutput"></span></p>
 
@@ -144,14 +108,10 @@ underlying UI window is first created.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1955">1955</a>]</p>
 
-<div class="desc">
-
-Invoke the given callback function, setting the default output stream to
-the window's output stream for the duration of the call. This allows
+<p>Invoke the given callback function, setting the default output stream to
+the window’s output stream for the duration of the call. This allows
 invoking any code that writes to the current default output stream and
-displaying the result in the window.
-
-</div>
+displaying the result in the window.</p>
 
 <p><span id="createOutputStream"></span></p>
 
@@ -159,13 +119,9 @@ displaying the result in the window.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1990">1990</a>]</p>
 
-<div class="desc">
-
-Create our output stream. We'll create the appropriate output stream
+<p>Create our output stream. We’ll create the appropriate output stream
 subclass and set it up with our default output filters. Subclasses can
-override this as needed to customize the filters.
-
-</div>
+override this as needed to customize the filters.</p>
 
 <p><span id="createOutputStreamObj"></span></p>
 
@@ -173,13 +129,9 @@ override this as needed to customize the filters.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#2007">2007</a>]</p>
 
-<div class="desc">
-
-Create the output stream object. Subclasses can override this to create
+<p>Create the output stream object. Subclasses can override this to create
 the appropriate stream subclass. Note that the stream should always be
-created as a transient object.
-
-</div>
+created as a transient object.</p>
 
 <p><span id="setOutputStream"></span></p>
 
@@ -187,21 +139,14 @@ created as a transient object.
 
 <p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1979">1979</a>]</p>
 
-<div class="desc">
-
-Make my output stream the default in the output manager. Returns the
+<p>Make my output stream the default in the output manager. Returns the
 previous default output stream; the caller can note the return value and
 use it later to restore the original output stream via a call to
-outputManager.setOutputStream(), if desired.
+outputManager.setOutputStream(), if desired.</p>
 
-</div>
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

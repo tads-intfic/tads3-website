@@ -70,7 +70,7 @@ one of these objects.
 
 
 
-[`canMatchLiterally`](#canMatchLiterally)[`inScopeList`](#inScopeList)[`likelyList`](#likelyList)[`otherList`](#otherList)[`resInfoTab`](#resInfoTab)[`topicProd`](#topicProd)
+[`canMatchLiterally`](#canMatchLiterally) [`inScopeList`](#inScopeList) [`likelyList`](#likelyList) [`otherList`](#otherList) [`resInfoTab`](#resInfoTab) [`topicProd`](#topicProd)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ one of these objects.
 
 
 
-[`canMatchObject`](#canMatchObject)[`construct`](#construct)[`getBestMatch`](#getBestMatch)[`getResolveInfo`](#getResolveInfo)[`getTopicText`](#getTopicText)[`getTopicTokens`](#getTopicTokens)[`getTopicWords`](#getTopicWords)[`wrapActionObject`](#wrapActionObject)[`wrapObject`](#wrapObject)
+[`canMatchObject`](#canMatchObject) [`construct`](#construct) [`getBestMatch`](#getBestMatch) [`getResolveInfo`](#getResolveInfo) [`getTopicText`](#getTopicText) [`getTopicTokens`](#getTopicTokens) [`getTopicWords`](#getTopicWords) [`wrapActionObject`](#wrapActionObject) [`wrapObject`](#wrapObject)
 
 <span id="_Properties_"></span>
 

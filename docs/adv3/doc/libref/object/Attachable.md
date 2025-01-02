@@ -140,7 +140,7 @@ Close actions whenever the lamp is inside the object being closed.
 
 
 
-[`attachedObjects`](#attachedObjects)[`attachmentLister`](#attachmentLister)[`majorAttachmentLister`](#majorAttachmentLister)
+[`attachedObjects`](#attachedObjects) [`attachmentLister`](#attachmentLister) [`majorAttachmentLister`](#majorAttachmentLister)
 
 <span id="_MethodSummary_"></span>
 
@@ -150,7 +150,7 @@ Close actions whenever the lamp is inside the object being closed.
 
 
 
-[`attachTo`](#attachTo)[`beforeTravel`](#beforeTravel)[`canAttachTo`](#canAttachTo)[`canDetachFrom`](#canDetachFrom)[`cannotDetachMsgFor`](#cannotDetachMsgFor)[`detachFrom`](#detachFrom)[`dobjFor(AttachTo)`](#dobjFor(AttachTo))[`dobjFor(Detach)`](#dobjFor(Detach))[`dobjFor(DetachFrom)`](#dobjFor(DetachFrom))[`dobjFor(TakeFrom)`](#dobjFor(TakeFrom))[`examineStatus`](#examineStatus)[`explainCannotAttachTo`](#explainCannotAttachTo)[`getNonPermanentAttachments`](#getNonPermanentAttachments)[`handleAttach`](#handleAttach)[`handleDetach`](#handleDetach)[`initializeThing`](#initializeThing)[`iobjFor(AttachTo)`](#iobjFor(AttachTo))[`iobjFor(DetachFrom)`](#iobjFor(DetachFrom))[`iobjFor(TakeFrom)`](#iobjFor(TakeFrom))[`isAttachedTo`](#isAttachedTo)[`isListedAsAttachedTo`](#isListedAsAttachedTo)[`isListedAsMajorFor`](#isListedAsMajorFor)[`isMajorItemFor`](#isMajorItemFor)[`isPermanentlyAttachedTo`](#isPermanentlyAttachedTo)[`mainMoveInto`](#mainMoveInto)[`maybeHandleAttach`](#maybeHandleAttach)[`maybeHandleDetach`](#maybeHandleDetach)[`moveWhileAttached`](#moveWhileAttached)[`travelWhileAttached`](#travelWhileAttached)
+[`attachTo`](#attachTo) [`beforeTravel`](#beforeTravel) [`canAttachTo`](#canAttachTo) [`canDetachFrom`](#canDetachFrom) [`cannotDetachMsgFor`](#cannotDetachMsgFor) [`detachFrom`](#detachFrom) [`dobjFor(AttachTo)`](#dobjFor(AttachTo)) [`dobjFor(Detach)`](#dobjFor(Detach)) [`dobjFor(DetachFrom)`](#dobjFor(DetachFrom)) [`dobjFor(TakeFrom)`](#dobjFor(TakeFrom)) [`examineStatus`](#examineStatus) [`explainCannotAttachTo`](#explainCannotAttachTo) [`getNonPermanentAttachments`](#getNonPermanentAttachments) [`handleAttach`](#handleAttach) [`handleDetach`](#handleDetach) [`initializeThing`](#initializeThing) [`iobjFor(AttachTo)`](#iobjFor(AttachTo)) [`iobjFor(DetachFrom)`](#iobjFor(DetachFrom)) [`iobjFor(TakeFrom)`](#iobjFor(TakeFrom)) [`isAttachedTo`](#isAttachedTo) [`isListedAsAttachedTo`](#isListedAsAttachedTo) [`isListedAsMajorFor`](#isListedAsMajorFor) [`isMajorItemFor`](#isMajorItemFor) [`isPermanentlyAttachedTo`](#isPermanentlyAttachedTo) [`mainMoveInto`](#mainMoveInto) [`maybeHandleAttach`](#maybeHandleAttach) [`maybeHandleDetach`](#maybeHandleDetach) [`moveWhileAttached`](#moveWhileAttached) [`travelWhileAttached`](#travelWhileAttached)
 
 <span id="_Properties_"></span>
 

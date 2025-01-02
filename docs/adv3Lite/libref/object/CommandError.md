@@ -74,10 +74,10 @@ process for a Command object.
 
 
 
-[`cmd`](#cmd)[`errStage`](#errStage)
+[`cmd`](#cmd) [`errStage`](#errStage)
 
 Inherited from `ParseError` :  
-[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable)
 
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
@@ -93,10 +93,10 @@ Inherited from `Exception` :
 [`construct`](#construct)
 
 Inherited from `ParseError` :  
-[`display`](../object/ParseError.html#display)[`rankCorrection`](../object/ParseError.html#rankCorrection)[`tryCuring`](../object/ParseError.html#tryCuring)
+[`display`](../object/ParseError.html#display) [`rankCorrection`](../object/ParseError.html#rankCorrection) [`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

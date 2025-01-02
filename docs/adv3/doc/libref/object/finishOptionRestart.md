@@ -47,10 +47,10 @@ RESTART option for finishGame
 
 
 
-[`desc`](#desc)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)
+[`desc`](#desc) [`responseChar`](#responseChar) [`responseKeyword`](#responseKeyword)
 
 Inherited from `FinishOption` :  
-[`isListed`](../object/FinishOption.html#isListed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
+[`isListed`](../object/FinishOption.html#isListed) [`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 

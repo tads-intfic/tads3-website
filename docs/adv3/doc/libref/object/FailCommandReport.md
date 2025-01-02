@@ -73,17 +73,17 @@ failure report
 
 
 
-[`isFailure`](#isFailure)[`seqNum`](#seqNum)
+[`isFailure`](#isFailure) [`seqNum`](#seqNum)
 
 
 
 
 
 Inherited from `CommandReport` :  
-[`action_`](../object/CommandReport.html#action_)[`isQuestion`](../object/CommandReport.html#isQuestion)[`iter_`](../object/CommandReport.html#iter_)
+[`action_`](../object/CommandReport.html#action_) [`isQuestion`](../object/CommandReport.html#isQuestion) [`iter_`](../object/CommandReport.html#iter_)
 
 Inherited from `MessageResult` :  
-[`messageProp_`](../object/MessageResult.html#messageProp_)[`messageText_`](../object/MessageResult.html#messageText_)
+[`messageProp_`](../object/MessageResult.html#messageProp_) [`messageText_`](../object/MessageResult.html#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -101,10 +101,10 @@ Inherited from `CommandReportMessage` :
 [`construct`](../object/CommandReportMessage.html#construct)
 
 Inherited from `CommandReport` :  
-[`getAction`](../object/CommandReport.html#getAction)[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)[`isPartOf`](../object/CommandReport.html#isPartOf)[`setAction`](../object/CommandReport.html#setAction)
+[`getAction`](../object/CommandReport.html#getAction) [`isActionImplicit`](../object/CommandReport.html#isActionImplicit) [`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn) [`isPartOf`](../object/CommandReport.html#isPartOf) [`setAction`](../object/CommandReport.html#setAction)
 
 Inherited from `MessageResult` :  
-[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)[`setMessage`](../object/MessageResult.html#setMessage)[`showMessage`](../object/MessageResult.html#showMessage)
+[`resolveMessageText`](../object/MessageResult.html#resolveMessageText) [`setMessage`](../object/MessageResult.html#setMessage) [`showMessage`](../object/MessageResult.html#showMessage)
 
 <span id="_Properties_"></span>
 

@@ -46,21 +46,13 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>A noun phrase is ambiguous, so we’ll have to ask for clarification.</p>
 
-A noun phrase is ambiguous, so we'll have to ask for clarification.
-
-`class `**`AmbiguousError`**` :   `[`ResolutionError`](../object/ResolutionError.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">AmbiguousError</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ResolutionError.html"><code class="language-plaintext highlighter-rouge">ResolutionError</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">AmbiguousError</code></strong><br />
 <a href="../object/ResolutionError.html"><code class="language-plaintext highlighter-rouge">ResolutionError</code></a><br />
@@ -69,32 +61,20 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#allowOnRespell"><code class="language-plaintext highlighter-rouge">allowOnRespell</code></a><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a><a href="#curable"><code class="language-plaintext highlighter-rouge">curable</code></a><a href="#nameList"><code class="language-plaintext highlighter-rouge">nameList</code></a></p>
+<p><a href="#allowOnRespell"><code class="language-plaintext highlighter-rouge">allowOnRespell</code></a> <a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a> <a href="#curable"><code class="language-plaintext highlighter-rouge">curable</code></a> <a href="#nameList"><code class="language-plaintext highlighter-rouge">nameList</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ResolutionError</code> :<br />
-<a href="../object/ResolutionError.html#np"><code class="language-plaintext highlighter-rouge">np</code></a><a href="../object/ResolutionError.html#txt"><code class="language-plaintext highlighter-rouge">txt</code></a></p>
+<a href="../object/ResolutionError.html#np"><code class="language-plaintext highlighter-rouge">np</code></a> <a href="../object/ResolutionError.html#txt"><code class="language-plaintext highlighter-rouge">txt</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
 <a href="../object/ParseError.html#errStage"><code class="language-plaintext highlighter-rouge">errStage</code></a></p>
@@ -104,27 +84,19 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#display"><code class="language-plaintext highlighter-rouge">display</code></a><a href="#tryCuring"><code class="language-plaintext highlighter-rouge">tryCuring</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#display"><code class="language-plaintext highlighter-rouge">display</code></a> <a href="#tryCuring"><code class="language-plaintext highlighter-rouge">tryCuring</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ResolutionError</code> :<br />
 <a href="../object/ResolutionError.html#rankCorrection"><code class="language-plaintext highlighter-rouge">rankCorrection</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
-<a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a><a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a><a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
+<a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a> <a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a> <a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="allowOnRespell"></span></p>
 
@@ -132,15 +104,11 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5622">5622</a>]</p>
 
-<div class="desc">
-
-Accept spelling corrections that trigger an ambiguous noun error. If we
+<p>Accept spelling corrections that trigger an ambiguous noun error. If we
 find an ambiguous noun it means that we have valid overall verb syntax
-\*and\* we have noun phrases that match in-scope objects - in fact, they
+*and* we have noun phrases that match in-scope objects - in fact, they
 match too many objects. This is pretty good evidence that the respelling
-is valid.
-
-</div>
+is valid.</p>
 
 <p><span id="cmd"></span></p>
 
@@ -148,11 +116,7 @@ is valid.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5665">5665</a>]</p>
 
-<div class="desc">
-
-the original Command that we were trying to resolve
-
-</div>
+<p>the original Command that we were trying to resolve</p>
 
 <p><span id="curable"></span></p>
 
@@ -160,12 +124,8 @@ the original Command that we were trying to resolve
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5629">5629</a>]</p>
 
-<div class="desc">
-
-this is a curable error, since the player can fix the problem by
-answering the disambiguation question
-
-</div>
+<p>this is a curable error, since the player can fix the problem by
+answering the disambiguation question</p>
 
 <p><span id="nameList"></span></p>
 
@@ -173,20 +133,12 @@ answering the disambiguation question
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5671">5671</a>]</p>
 
-<div class="desc">
-
-The list of object names, with distinguisher information. This is the
-same information returned from Distinguisher.getNames().
-
-</div>
+<p>The list of object names, with distinguisher information. This is the
+same information returned from Distinguisher.getNames().</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -194,11 +146,7 @@ same information returned from Distinguisher.getNames().
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5601">5601</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="display"></span></p>
 
@@ -206,11 +154,7 @@ same information returned from Distinguisher.getNames().
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5608">5608</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="tryCuring"></span></p>
 
@@ -218,20 +162,13 @@ same information returned from Distinguisher.getNames().
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5637">5637</a>]</p>
 
-<div class="desc">
-
-Try curing the error. After an ambiguous noun error, the player can type
+<p>Try curing the error. After an ambiguous noun error, the player can type
 a partial noun phrase that clarifies which object was intended: a
-distinguishing adjective, a locational phrase, a possessive, etc.
+distinguishing adjective, a locational phrase, a possessive, etc.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

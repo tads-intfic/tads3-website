@@ -46,23 +46,15 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A TravelAction is one that moves (or at least tries to move) the player
+<p>A TravelAction is one that moves (or at least tries to move) the player
 character from one place to another via a command like GO NORTH, or
-EAST.
+EAST.</p>
 
-`class `**`TravelAction`**` :   `[`Action`](../object/Action.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TravelAction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">TravelAction</code></strong><br />
 <a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a><br />
@@ -71,60 +63,40 @@ EAST.
 `                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/Go.html"><code class="language-plaintext highlighter-rouge">Go</code></a><a href="../object/GoIn.html"><code class="language-plaintext highlighter-rouge">GoIn</code></a><a href="../object/GoOut.html"><code class="language-plaintext highlighter-rouge">GoOut</code></a><a href="../object/KeepGoing.html"><code class="language-plaintext highlighter-rouge">KeepGoing</code></a><a href="../object/Travel.html"><code class="language-plaintext highlighter-rouge">Travel</code></a>
+<p><a href="../object/Go.html"><code class="language-plaintext highlighter-rouge">Go</code></a> <a href="../object/GoIn.html"><code class="language-plaintext highlighter-rouge">GoIn</code></a> <a href="../object/GoOut.html"><code class="language-plaintext highlighter-rouge">GoOut</code></a> <a href="../object/KeepGoing.html"><code class="language-plaintext highlighter-rouge">KeepGoing</code></a> <a href="../object/Travel.html"><code class="language-plaintext highlighter-rouge">Travel</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#baseActionClass"><code class="language-plaintext highlighter-rouge">baseActionClass</code></a><a href="#canUndo"><code class="language-plaintext highlighter-rouge">canUndo</code></a><a href="#direction"><code class="language-plaintext highlighter-rouge">direction</code></a><a href="#predefinedDirection"><code class="language-plaintext highlighter-rouge">predefinedDirection</code></a></p>
+<p><a href="#baseActionClass"><code class="language-plaintext highlighter-rouge">baseActionClass</code></a> <a href="#canUndo"><code class="language-plaintext highlighter-rouge">canUndo</code></a> <a href="#direction"><code class="language-plaintext highlighter-rouge">direction</code></a> <a href="#predefinedDirection"><code class="language-plaintext highlighter-rouge">predefinedDirection</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
-<a href="../object/Action.html#actionFailed"><code class="language-plaintext highlighter-rouge">actionFailed</code></a><a href="../object/Action.html#advanceOnFailure"><code class="language-plaintext highlighter-rouge">advanceOnFailure</code></a><a href="../object/Action.html#againRepeatsParse"><code class="language-plaintext highlighter-rouge">againRepeatsParse</code></a><a href="../object/Action.html#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a><a href="../object/Action.html#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a><a href="../object/Action.html#failCheckMsg"><code class="language-plaintext highlighter-rouge">failCheckMsg</code></a><a href="../object/Action.html#failedActionCountsAsTurn"><code class="language-plaintext highlighter-rouge">failedActionCountsAsTurn</code></a><a href="../object/Action.html#implicitTimeTaken"><code class="language-plaintext highlighter-rouge">implicitTimeTaken</code></a><a href="../object/Action.html#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a><a href="../object/Action.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a><a href="../object/Action.html#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a><a href="../object/Action.html#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a><a href="../object/Action.html#oldRoom"><code class="language-plaintext highlighter-rouge">oldRoom</code></a><a href="../object/Action.html#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a><a href="../object/Action.html#parentAllowAll"><code class="language-plaintext highlighter-rouge">parentAllowAll</code></a><a href="../object/Action.html#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a><a href="../object/Action.html#redirectParent"><code class="language-plaintext highlighter-rouge">redirectParent</code></a><a href="../object/Action.html#reportImplicitActions"><code class="language-plaintext highlighter-rouge">reportImplicitActions</code></a><a href="../object/Action.html#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a><a href="../object/Action.html#spellingPriority"><code class="language-plaintext highlighter-rouge">spellingPriority</code></a><a href="../object/Action.html#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a><a href="../object/Action.html#timeTaken"><code class="language-plaintext highlighter-rouge">timeTaken</code></a><a href="../object/Action.html#turnsTaken"><code class="language-plaintext highlighter-rouge">turnsTaken</code></a><a href="../object/Action.html#unhides"><code class="language-plaintext highlighter-rouge">unhides</code></a><a href="../object/Action.html#verifyObj"><code class="language-plaintext highlighter-rouge">verifyObj</code></a><a href="../object/Action.html#wasIlluminated"><code class="language-plaintext highlighter-rouge">wasIlluminated</code></a></p>
+<a href="../object/Action.html#actionFailed"><code class="language-plaintext highlighter-rouge">actionFailed</code></a> <a href="../object/Action.html#advanceOnFailure"><code class="language-plaintext highlighter-rouge">advanceOnFailure</code></a> <a href="../object/Action.html#againRepeatsParse"><code class="language-plaintext highlighter-rouge">againRepeatsParse</code></a> <a href="../object/Action.html#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a> <a href="../object/Action.html#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a> <a href="../object/Action.html#failCheckMsg"><code class="language-plaintext highlighter-rouge">failCheckMsg</code></a> <a href="../object/Action.html#failedActionCountsAsTurn"><code class="language-plaintext highlighter-rouge">failedActionCountsAsTurn</code></a> <a href="../object/Action.html#implicitTimeTaken"><code class="language-plaintext highlighter-rouge">implicitTimeTaken</code></a> <a href="../object/Action.html#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a> <a href="../object/Action.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="../object/Action.html#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a> <a href="../object/Action.html#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a> <a href="../object/Action.html#oldRoom"><code class="language-plaintext highlighter-rouge">oldRoom</code></a> <a href="../object/Action.html#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a> <a href="../object/Action.html#parentAllowAll"><code class="language-plaintext highlighter-rouge">parentAllowAll</code></a> <a href="../object/Action.html#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a> <a href="../object/Action.html#redirectParent"><code class="language-plaintext highlighter-rouge">redirectParent</code></a> <a href="../object/Action.html#reportImplicitActions"><code class="language-plaintext highlighter-rouge">reportImplicitActions</code></a> <a href="../object/Action.html#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a> <a href="../object/Action.html#spellingPriority"><code class="language-plaintext highlighter-rouge">spellingPriority</code></a> <a href="../object/Action.html#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a> <a href="../object/Action.html#timeTaken"><code class="language-plaintext highlighter-rouge">timeTaken</code></a> <a href="../object/Action.html#turnsTaken"><code class="language-plaintext highlighter-rouge">turnsTaken</code></a> <a href="../object/Action.html#unhides"><code class="language-plaintext highlighter-rouge">unhides</code></a> <a href="../object/Action.html#verifyObj"><code class="language-plaintext highlighter-rouge">verifyObj</code></a> <a href="../object/Action.html#wasIlluminated"><code class="language-plaintext highlighter-rouge">wasIlluminated</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#doTravel"><code class="language-plaintext highlighter-rouge">doTravel</code></a><a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a><a href="#execCycle"><code class="language-plaintext highlighter-rouge">execCycle</code></a></p>
+<p><a href="#doTravel"><code class="language-plaintext highlighter-rouge">doTravel</code></a> <a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a> <a href="#execCycle"><code class="language-plaintext highlighter-rouge">execCycle</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
-<a href="../object/Action.html#acknowledgeNotifyStatus"><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus</code></a><a href="../object/Action.html#addExtraScopeItems"><code class="language-plaintext highlighter-rouge">addExtraScopeItems</code></a><a href="../object/Action.html#addImplicitTime"><code class="language-plaintext highlighter-rouge">addImplicitTime</code></a><a href="../object/Action.html#advanceTime"><code class="language-plaintext highlighter-rouge">advanceTime</code></a><a href="../object/Action.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a><a href="../object/Action.html#announceObject"><code class="language-plaintext highlighter-rouge">announceObject</code></a><a href="../object/Action.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a><a href="../object/Action.html#buildImplicitActionAnnouncement"><code class="language-plaintext highlighter-rouge">buildImplicitActionAnnouncement</code></a><a href="../object/Action.html#buildScopeList"><code class="language-plaintext highlighter-rouge">buildScopeList</code></a><a href="../object/Action.html#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a><a href="../object/Action.html#checkActionPreconditions"><code class="language-plaintext highlighter-rouge">checkActionPreconditions</code></a><a href="../object/Action.html#commandNotPresent"><code class="language-plaintext highlighter-rouge">commandNotPresent</code></a><a href="../object/Action.html#exec"><code class="language-plaintext highlighter-rouge">exec</code></a><a href="../object/Action.html#execGroup"><code class="language-plaintext highlighter-rouge">execGroup</code></a><a href="../object/Action.html#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a><a href="../object/Action.html#getAllUnhidden"><code class="language-plaintext highlighter-rouge">getAllUnhidden</code></a><a href="../object/Action.html#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a><a href="../object/Action.html#implicitAnnouncement"><code class="language-plaintext highlighter-rouge">implicitAnnouncement</code></a><a href="../object/Action.html#reportAction"><code class="language-plaintext highlighter-rouge">reportAction</code></a><a href="../object/Action.html#scoreObjects"><code class="language-plaintext highlighter-rouge">scoreObjects</code></a><a href="../object/Action.html#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a><a href="../object/Action.html#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a><a href="../object/Action.html#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a><a href="../object/Action.html#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a><a href="../object/Action.html#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a><a href="../object/Action.html#turnSequence"><code class="language-plaintext highlighter-rouge">turnSequence</code></a><a href="../object/Action.html#verify"><code class="language-plaintext highlighter-rouge">verify</code></a><a href="../object/Action.html#verifyObjRole"><code class="language-plaintext highlighter-rouge">verifyObjRole</code></a><a href="../object/Action.html#wrapObjectsNP"><code class="language-plaintext highlighter-rouge">wrapObjectsNP</code></a></p>
+<a href="../object/Action.html#acknowledgeNotifyStatus"><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus</code></a> <a href="../object/Action.html#addExtraScopeItems"><code class="language-plaintext highlighter-rouge">addExtraScopeItems</code></a> <a href="../object/Action.html#addImplicitTime"><code class="language-plaintext highlighter-rouge">addImplicitTime</code></a> <a href="../object/Action.html#advanceTime"><code class="language-plaintext highlighter-rouge">advanceTime</code></a> <a href="../object/Action.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="../object/Action.html#announceObject"><code class="language-plaintext highlighter-rouge">announceObject</code></a> <a href="../object/Action.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="../object/Action.html#buildImplicitActionAnnouncement"><code class="language-plaintext highlighter-rouge">buildImplicitActionAnnouncement</code></a> <a href="../object/Action.html#buildScopeList"><code class="language-plaintext highlighter-rouge">buildScopeList</code></a> <a href="../object/Action.html#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a> <a href="../object/Action.html#checkActionPreconditions"><code class="language-plaintext highlighter-rouge">checkActionPreconditions</code></a> <a href="../object/Action.html#commandNotPresent"><code class="language-plaintext highlighter-rouge">commandNotPresent</code></a> <a href="../object/Action.html#exec"><code class="language-plaintext highlighter-rouge">exec</code></a> <a href="../object/Action.html#execGroup"><code class="language-plaintext highlighter-rouge">execGroup</code></a> <a href="../object/Action.html#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a> <a href="../object/Action.html#getAllUnhidden"><code class="language-plaintext highlighter-rouge">getAllUnhidden</code></a> <a href="../object/Action.html#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a> <a href="../object/Action.html#implicitAnnouncement"><code class="language-plaintext highlighter-rouge">implicitAnnouncement</code></a> <a href="../object/Action.html#reportAction"><code class="language-plaintext highlighter-rouge">reportAction</code></a> <a href="../object/Action.html#scoreObjects"><code class="language-plaintext highlighter-rouge">scoreObjects</code></a> <a href="../object/Action.html#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a> <a href="../object/Action.html#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a> <a href="../object/Action.html#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a> <a href="../object/Action.html#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a> <a href="../object/Action.html#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a> <a href="../object/Action.html#turnSequence"><code class="language-plaintext highlighter-rouge">turnSequence</code></a> <a href="../object/Action.html#verify"><code class="language-plaintext highlighter-rouge">verify</code></a> <a href="../object/Action.html#verifyObjRole"><code class="language-plaintext highlighter-rouge">verifyObjRole</code></a> <a href="../object/Action.html#wrapObjectsNP"><code class="language-plaintext highlighter-rouge">wrapObjectsNP</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
 <a href="../object/ReplaceRedirector.html#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
-<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a><a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a><a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="baseActionClass"></span></p>
 
@@ -132,11 +104,7 @@ EAST.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1184">1184</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="canUndo"></span></p>
 
@@ -144,11 +112,7 @@ EAST.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1533">1533</a>]</p>
 
-<div class="desc">
-
-It's generally possible to undo a travel command.
-
-</div>
+<p>It’s generally possible to undo a travel command.</p>
 
 <p><span id="direction"></span></p>
 
@@ -156,13 +120,9 @@ It's generally possible to undo a travel command.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1530">1530</a>]</p>
 
-<div class="desc">
-
-The direction the actor wants to travel in. This is placed here by the
+<p>The direction the actor wants to travel in. This is placed here by the
 execCycle method and takes the form of A Direction object, e.g.
-northDir.
-
-</div>
+northDir.</p>
 
 <p><span id="predefinedDirection"></span></p>
 
@@ -170,21 +130,13 @@ northDir.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1214">1214</a>]</p>
 
-<div class="desc">
-
-Does this TravelAction already define a set direction on its direction
-property (so we don't need to look to what direction object the command
-refers)?
-
-</div>
+<p>Does this TravelAction already define a set direction on its direction
+property (so we don’t need to look to what direction object the command
+refers)?</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="doTravel"></span></p>
 
@@ -192,21 +144,17 @@ refers)?
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1299">1299</a>]</p>
 
-<div class="desc">
-
-Carry out travel in direction. For this purpose we first have to define
-what the corresponding direction property of the actor's current
-location refers to. If it's nil, no travel is possible, and we simply
-display a refusal message. If it's an object we execute its travelVia()
-method for the current actor. If it's a double-quoted string or a method
+<p>Carry out travel in direction. For this purpose we first have to define
+what the corresponding direction property of the actor’s current
+location refers to. If it’s nil, no travel is possible, and we simply
+display a refusal message. If it’s an object we execute its travelVia()
+method for the current actor. If it’s a double-quoted string or a method
 we execute it and make a note of where the actor ends up, if the actor
-is the player character. If it's a single-quoted string we display it.
+is the player character. If it’s a single-quoted string we display it.</p>
 
-Note that we only display the various messages announcing failure of
-travel if the actor is the player character. We presumably don't want to
-see these messages as the result of NPCs trying to move around the map.
-
-</div>
+<p>Note that we only display the various messages announcing failure of
+travel if the actor is the player character. We presumably don’t want to
+see these messages as the result of NPCs trying to move around the map.</p>
 
 <p><span id="execAction"></span></p>
 
@@ -214,12 +162,8 @@ see these messages as the result of NPCs trying to move around the map.
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1220">1220</a>]</p>
 
-<div class="desc">
-
-Execute the travel command, first carrying out any implicit actions
-needed to facilitate travel
-
-</div>
+<p>Execute the travel command, first carrying out any implicit actions
+needed to facilitate travel</p>
 
 <p><span id="execCycle"></span></p>
 
@@ -227,19 +171,12 @@ needed to facilitate travel
 
 <p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1190">1190</a>]</p>
 
-<div class="desc">
+<p>Use the inherited handling but first make a note of the direction the
+actor wants to travel in.</p>
 
-Use the inherited handling but first make a note of the direction the
-actor wants to travel in.
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

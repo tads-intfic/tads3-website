@@ -47,10 +47,10 @@ Settings item - show defaults in status line
 
 
 
-[`inRoomDesc`](#inRoomDesc)[`inStatusLine`](#inStatusLine)[`settingDesc`](#settingDesc)[`settingID`](#settingID)
+[`inRoomDesc`](#inRoomDesc) [`inStatusLine`](#inStatusLine) [`settingDesc`](#settingDesc) [`settingID`](#settingID)
 
 Inherited from `SettingsItem` :  
-[`factoryDefault`](../object/SettingsItem.html#factoryDefault)[`includeInListing`](../object/SettingsItem.html#includeInListing)
+[`factoryDefault`](../object/SettingsItem.html#factoryDefault) [`includeInListing`](../object/SettingsItem.html#includeInListing)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `SettingsItem` :
 
 
 
-[`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
+[`settingFromText`](#settingFromText) [`settingToText`](#settingToText)
 
 Inherited from `SettingsItem` :  
-[`restoreItem`](../object/SettingsItem.html#restoreItem)[`saveItem`](../object/SettingsItem.html#saveItem)
+[`restoreItem`](../object/SettingsItem.html#restoreItem) [`saveItem`](../object/SettingsItem.html#saveItem)
 
 <span id="_Properties_"></span>
 

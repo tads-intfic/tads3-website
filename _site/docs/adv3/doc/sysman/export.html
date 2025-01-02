@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Exporting
-Symbols  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Exporting
+Symbols<br />
 <span class="navnp"><a href="icext.html" class="nav"><em>Prev:</em> Extending Intrinsic
 Classes</a>    
 <a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
-Codes</a>     </span>
-
-</div>
+Codes</a>     </span></p>
 
 <h1 id="exported-symbols">Exported Symbols</h1>
 
@@ -73,106 +65,97 @@ VM.</p>
 
 <p>To export a symbol, you use the export statement.</p>
 
-<div class="syntax">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export symbol [ 'externalName' ]  ;
+</code></pre></div></div>
 
-    export symbol [ 'externalName' ]  ;
-
-
-
-The <span class="synPar">symbol</span> is the object or property name
+<p>The <span class="synPar">symbol</span> is the object or property name
 you wish to export. The <span class="synPar">externalName</span>, if
 present, gives the name by which the VM knows the entity. If the
 external_name is not present, the symbol name is used as the external
-name. For example:
+name. For example:</p>
 
-```
-    export RuntimeError;
-```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    export RuntimeError;
+</code></pre></div></div>
 
-This statement exports the `RuntimeError` object
-defined in the program, using 'RuntimeError' as the external name as
-well.
+<p>This statement exports the <code class="language-plaintext highlighter-rouge">RuntimeError</code> object
+defined in the program, using ‘RuntimeError’ as the external name as
+well.</p>
 
-The statement allows you to specify an external name so that you can use
+<p>The statement allows you to specify an external name so that you can use
 a different name for the entity within the program. If you provide an
-external name in the statement, the VM doesn't care that your program
+external name in the statement, the VM doesn’t care that your program
 uses a different name internally. Some libraries have their own naming
 conventions, so they might want not want to use the VM-defined symbol
-names internally.
+names internally.</p>
 
-An `export` statement can appear anywhere a
+<p>An <code class="language-plaintext highlighter-rouge">export</code> statement can appear anywhere a
 top-level statement (such as an object or function definition) can. It
-doesn't matter if an `export` comes before or
+doesn’t matter if an <code class="language-plaintext highlighter-rouge">export</code> comes before or
 after the actual definition of the object or property it exports; all of
 the exports are resolved during linking, so where they appear within the
-source code is unimportant.
+source code is unimportant.</p>
 
-A given internal symbol can be exported multiple times with different
+<p>A given internal symbol can be exported multiple times with different
 external names; if you do this, the VM will use the same entity for each
 different purpose it associates with an external name. A given external
 name can only be associated with a single internal entity, though - it
 is an error to export multiple objects or properties with the same
-external name.
+external name.</p>
 
-## VM Symbols
+<h2 id="vm-symbols">VM Symbols</h2>
 
-The VM looks for the external names listed below to be exported by the
+<p>The VM looks for the external names listed below to be exported by the
 program. (The VM also looks for the symbols supplied automatically by
 the compiler, as explained below, but library code only provides the
-ones listed here.)
+ones listed here.)</p>
 
-`RuntimeError` - the exception class for
+<p><code class="language-plaintext highlighter-rouge">RuntimeError</code> - the exception class for
 run-time error exceptions. The basic system library provides an exported
-definition for this object.
+definition for this object.</p>
 
-`exceptionMessage` - the property to which to
+<p><code class="language-plaintext highlighter-rouge">exceptionMessage</code> - the property to which to
 assign an explanatory message string in a run-time error exception
 object. The basic system library provides an exported definition for
-this property.
+this property.</p>
 
-`propNotDefined` - a method which the VM invokes
+<p><code class="language-plaintext highlighter-rouge">propNotDefined</code> - a method which the VM invokes
 when a call is made to an undefined property. This method is invoked
 with the original property ID as the first argument, and the original
 argument list as the remaining arguments. The adv3 library provides an
-exported definition for this proeprty. See the section on [capturing
-undefined method calls](undef.html).
+exported definition for this proeprty. See the section on <a href="undef.html">capturing
+undefined method calls</a>.</p>
 
-## Compiler-Supplied Exports
+<h2 id="compiler-supplied-exports">Compiler-Supplied Exports</h2>
 
-The compiler automatically provides a number of exports. Libraries do
+<p>The compiler automatically provides a number of exports. Libraries do
 not need to provide exports for these; they are listed here only for
-completeness.
+completeness.</p>
 
-`Constructor` - the property invoked to
+<p><code class="language-plaintext highlighter-rouge">Constructor</code> - the property invoked to
 construct new object. The compiler exports the
-`construct` property for this symbol.
+<code class="language-plaintext highlighter-rouge">construct</code> property for this symbol.</p>
 
-`Destructor` - the property invoked to finalize
+<p><code class="language-plaintext highlighter-rouge">Destructor</code> - the property invoked to finalize
 an object during garbage collection. The compiler exports the
-`finalize` property for this symbol.
+<code class="language-plaintext highlighter-rouge">finalize</code> property for this symbol.</p>
 
-`LastProp` - the highest property ID value
-allocated by the compiler.
+<p><code class="language-plaintext highlighter-rouge">LastProp</code> - the highest property ID value
+allocated by the compiler.</p>
 
-`ObjectCallProp` - a property assigned for
-invocation of anonymous function pointers.
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">ObjectCallProp</code> - a property assigned for
+invocation of anonymous function pointers.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="langsec.html" class="nav">The Language</a> \&gt; Exporting
-Symbols  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="langsec.html" class="nav">The Language</a> &gt; Exporting
+Symbols<br />
 <span class="navnp"><a href="icext.html" class="nav"><em>Prev:</em> Extending Intrinsic
 Classes</a>    
 <a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
-Codes</a>     </span>
+Codes</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

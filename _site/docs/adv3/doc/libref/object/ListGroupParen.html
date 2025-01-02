@@ -46,26 +46,18 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>List Group implementation: parenthesized sublist. Displays the number of
+items collectively, then displays the list of items in parentheses.</p>
 
-List Group implementation: parenthesized sublist. Displays the number of
-items collectively, then displays the list of items in parentheses.
+<p>Note that this is a ListGroupSorted subclass. If our subclass defines a
+compareGroupItems() method, we’ll show the list in the order specified
+by compareGroupItems().</p>
 
-Note that this is a ListGroupSorted subclass. If our subclass defines a
-compareGroupItems() method, we'll show the list in the order specified
-by compareGroupItems().
-
-`class `**`ListGroupParen`**` :   `[`ListGroupSorted`](../object/ListGroupSorted.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ListGroupParen</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ListGroupSorted.html"><code class="language-plaintext highlighter-rouge">ListGroupSorted</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ListGroupParen</code></strong><br />
 <a href="../object/ListGroupSorted.html"><code class="language-plaintext highlighter-rouge">ListGroupSorted</code></a><br />
@@ -73,27 +65,15 @@ by compareGroupItems().
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#groupDisplaysSublist"><code class="language-plaintext highlighter-rouge">groupDisplaysSublist</code></a></p>
 
@@ -102,27 +82,19 @@ by compareGroupItems().
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#showGroupCountName"><code class="language-plaintext highlighter-rouge">showGroupCountName</code></a><a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a></p>
+<p><a href="#showGroupCountName"><code class="language-plaintext highlighter-rouge">showGroupCountName</code></a> <a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ListGroupSorted</code> :<br />
-<a href="../object/ListGroupSorted.html#compareGroupItems"><code class="language-plaintext highlighter-rouge">compareGroupItems</code></a><a href="../object/ListGroupSorted.html#sortListGroup"><code class="language-plaintext highlighter-rouge">sortListGroup</code></a></p>
+<a href="../object/ListGroupSorted.html#compareGroupItems"><code class="language-plaintext highlighter-rouge">compareGroupItems</code></a> <a href="../object/ListGroupSorted.html#sortListGroup"><code class="language-plaintext highlighter-rouge">sortListGroup</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ListGroup</code> :<br />
-<a href="../object/ListGroup.html#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a><a href="../object/ListGroup.html#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a><a href="../object/ListGroup.html#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a><a href="../object/ListGroup.html#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a><a href="../object/ListGroup.html#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a></p>
+<a href="../object/ListGroup.html#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a> <a href="../object/ListGroup.html#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a> <a href="../object/ListGroup.html#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a> <a href="../object/ListGroup.html#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a> <a href="../object/ListGroup.html#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="groupDisplaysSublist"></span></p>
 
@@ -130,19 +102,11 @@ by compareGroupItems().
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2167">2167</a>]</p>
 
-<div class="desc">
-
-we don't add a sublist, since we enclose our list in parentheses
-
-</div>
+<p>we don’t add a sublist, since we enclose our list in parentheses</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="showGroupCountName"></span></p>
 
@@ -150,15 +114,11 @@ we don't add a sublist, since we enclose our list in parentheses
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2160">2160</a>]</p>
 
-<div class="desc">
-
-Show the collective count for the list of objects. By default, we'll
+<p>Show the collective count for the list of objects. By default, we’ll
 simply display the countName of the first item in the list, on the
 assumption that each object has the same plural description. However, in
 most cases this should be overridden to provide a more general
-collective name for the group.
-
-</div>
+collective name for the group.</p>
 
 <p><span id="showGroupList"></span></p>
 
@@ -166,18 +126,11 @@ collective name for the group.
 
 <p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#2120">2120</a>]</p>
 
-<div class="desc">
+<p>show the group list</p>
 
-show the group list
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

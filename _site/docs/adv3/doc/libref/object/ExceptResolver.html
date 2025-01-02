@@ -46,79 +46,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Exception list resolver. We use this type of resolution for noun phrases
+in the “but” list of an “all but” construct.</p>
 
-Exception list resolver. We use this type of resolution for noun phrases
-in the "but" list of an "all but" construct.
-
-We scope the "all but" list to the objects in the "all" list, since
-there's no point in excluding objects that aren't in the "all" list. In
+<p>We scope the “all but” list to the objects in the “all” list, since
+there’s no point in excluding objects that aren’t in the “all” list. In
 addition, if a phrase in the exclusion list matches more than one object
-in the "all" list, we consider it a match to all of those objects, even
-if it's a definite phrase - this means that items in the "but" list are
-never ambiguous.
+in the “all” list, we consider it a match to all of those objects, even
+if it’s a definite phrase - this means that items in the “but” list are
+never ambiguous.</p>
 
-`class `**`ExceptResolver`**` :   `[`ProxyResolver`](../object/ProxyResolver.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ExceptResolver</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ProxyResolver.html"><code class="language-plaintext highlighter-rouge">ProxyResolver</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">ExceptResolver</code></strong><br />
 <a href="../object/ProxyResolver.html"><code class="language-plaintext highlighter-rouge">ProxyResolver</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#isSubResolver"><code class="language-plaintext highlighter-rouge">isSubResolver</code></a><a href="#mainList"><code class="language-plaintext highlighter-rouge">mainList</code></a><a href="#mainListText"><code class="language-plaintext highlighter-rouge">mainListText</code></a><a href="#origResolver"><code class="language-plaintext highlighter-rouge">origResolver</code></a></p>
+<p><a href="#isSubResolver"><code class="language-plaintext highlighter-rouge">isSubResolver</code></a> <a href="#mainList"><code class="language-plaintext highlighter-rouge">mainList</code></a> <a href="#mainListText"><code class="language-plaintext highlighter-rouge">mainListText</code></a> <a href="#origResolver"><code class="language-plaintext highlighter-rouge">origResolver</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#filterAmbiguousEquivalents"><code class="language-plaintext highlighter-rouge">filterAmbiguousEquivalents</code></a><a href="#filterAmbiguousNounPhrase"><code class="language-plaintext highlighter-rouge">filterAmbiguousNounPhrase</code></a><a href="#filterPluralPhrase"><code class="language-plaintext highlighter-rouge">filterPluralPhrase</code></a><a href="#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a><a href="#getQualifierResolver"><code class="language-plaintext highlighter-rouge">getQualifierResolver</code></a><a href="#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a><a href="#objInScope"><code class="language-plaintext highlighter-rouge">objInScope</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#filterAmbiguousEquivalents"><code class="language-plaintext highlighter-rouge">filterAmbiguousEquivalents</code></a> <a href="#filterAmbiguousNounPhrase"><code class="language-plaintext highlighter-rouge">filterAmbiguousNounPhrase</code></a> <a href="#filterPluralPhrase"><code class="language-plaintext highlighter-rouge">filterPluralPhrase</code></a> <a href="#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a> <a href="#getQualifierResolver"><code class="language-plaintext highlighter-rouge">getQualifierResolver</code></a> <a href="#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a> <a href="#objInScope"><code class="language-plaintext highlighter-rouge">objInScope</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ProxyResolver</code> :<br />
-<a href="../object/ProxyResolver.html#getPossessiveResolver"><code class="language-plaintext highlighter-rouge">getPossessiveResolver</code></a><a href="../object/ProxyResolver.html#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a></p>
+<a href="../object/ProxyResolver.html#getPossessiveResolver"><code class="language-plaintext highlighter-rouge">getPossessiveResolver</code></a> <a href="../object/ProxyResolver.html#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="isSubResolver"></span></p>
 
@@ -126,11 +98,7 @@ never ambiguous.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6790">6790</a>]</p>
 
-<div class="desc">
-
-we're a sub-phrase resolver
-
-</div>
+<p>we’re a sub-phrase resolver</p>
 
 <p><span id="mainList"></span></p>
 
@@ -138,11 +106,7 @@ we're a sub-phrase resolver
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6855">6855</a>]</p>
 
-<div class="desc">
-
-the main list from which we're excluding things
-
-</div>
+<p>the main list from which we’re excluding things</p>
 
 <p><span id="mainListText"></span></p>
 
@@ -150,11 +114,7 @@ the main list from which we're excluding things
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6858">6858</a>]</p>
 
-<div class="desc">
-
-the original text for the main list
-
-</div>
+<p>the original text for the main list</p>
 
 <p><span id="origResolver"></span></p>
 
@@ -162,19 +122,11 @@ the original text for the main list
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6861">6861</a>]</p>
 
-<div class="desc">
-
-the original underlying resolver
-
-</div>
+<p>the original underlying resolver</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -182,11 +134,7 @@ the original underlying resolver
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6779">6779</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="filterAmbiguousEquivalents"></span></p>
 
@@ -194,11 +142,7 @@ the original underlying resolver
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6826">6826</a>]</p>
 
-<div class="desc">
-
-filter ambiguous equivalents
-
-</div>
+<p>filter ambiguous equivalents</p>
 
 <p><span id="filterAmbiguousNounPhrase"></span></p>
 
@@ -206,11 +150,7 @@ filter ambiguous equivalents
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6837">6837</a>]</p>
 
-<div class="desc">
-
-filter an ambiguous noun list
-
-</div>
+<p>filter an ambiguous noun list</p>
 
 <p><span id="filterPluralPhrase"></span></p>
 
@@ -218,11 +158,7 @@ filter an ambiguous noun list
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6848">6848</a>]</p>
 
-<div class="desc">
-
-filter a plural noun list
-
-</div>
+<p>filter a plural noun list</p>
 
 <p><span id="getAll"></span></p>
 
@@ -230,11 +166,7 @@ filter a plural noun list
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6820">6820</a>]</p>
 
-<div class="desc">
-
-for 'all', simply return the whole original list
-
-</div>
+<p>for ‘all’, simply return the whole original list</p>
 
 <p><span id="getQualifierResolver"></span></p>
 
@@ -242,13 +174,9 @@ for 'all', simply return the whole original list
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6808">6808</a>]</p>
 
-<div class="desc">
-
-Resolve qualifiers in the enclosing main scope, since qualifier phrases
+<p>Resolve qualifiers in the enclosing main scope, since qualifier phrases
 are not part of the narrowed list - qualifiers apply to the main phrase
-from which we're excluding, not to the exclusion list itself.
-
-</div>
+from which we’re excluding, not to the exclusion list itself.</p>
 
 <p><span id="matchName"></span></p>
 
@@ -256,13 +184,9 @@ from which we're excluding, not to the exclusion list itself.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6797">6797</a>]</p>
 
-<div class="desc">
-
-match an object's name - we'll use the disambiguation name resolver, so
+<p>match an object’s name - we’ll use the disambiguation name resolver, so
 that they can give us partial names just like in answer to a
-disambiguation question
-
-</div>
+disambiguation question</p>
 
 <p><span id="objInScope"></span></p>
 
@@ -270,19 +194,12 @@ disambiguation question
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6814">6814</a>]</p>
 
-<div class="desc">
+<p>determine if an object is in scope - it’s in scope if it’s in the
+original main list</p>
 
-determine if an object is in scope - it's in scope if it's in the
-original main list
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

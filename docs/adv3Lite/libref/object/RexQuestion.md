@@ -70,10 +70,10 @@ regular expressions.
 
 
 
-[`answerFunc`](#answerFunc)[`answerPat`](#answerPat)
+[`answerFunc`](#answerFunc) [`answerPat`](#answerPat)
 
 Inherited from `Question` :  
-[`answerTemplate`](../object/Question.html#answerTemplate)[`priority`](../object/Question.html#priority)
+[`answerTemplate`](../object/Question.html#answerTemplate) [`priority`](../object/Question.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ Inherited from `Question` :
 
 
 
-[`construct`](#construct)[`parseAnswer`](#parseAnswer)
+[`construct`](#construct) [`parseAnswer`](#parseAnswer)
 
 
 

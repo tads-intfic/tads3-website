@@ -67,7 +67,7 @@ Inherited from `PreCondition` :
 
 
 Inherited from `SameLocationCondition` :  
-[`checkPreCondition`](../object/SameLocationCondition.html#checkPreCondition)[`construct`](../object/SameLocationCondition.html#construct)
+[`checkPreCondition`](../object/SameLocationCondition.html#checkPreCondition) [`construct`](../object/SameLocationCondition.html#construct)
 
 Inherited from `PreCondition` :  
 [`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)

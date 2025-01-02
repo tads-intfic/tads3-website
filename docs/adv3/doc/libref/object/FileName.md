@@ -135,10 +135,10 @@ links on Unix or apply working directories to local paths.
 
 
 
-[`addToPath`](#addToPath)[`createDirectory`](#createDirectory)[`deleteFile`](#deleteFile)[`forEachFile`](#forEachFile)[`getAbsolutePath`](#getAbsolutePath)[`getBaseName`](#getBaseName)[`getFileInfo`](#getFileInfo)[`getFileType`](#getFileType)[`getName`](#getName)[`getPath`](#getPath)[`isAbsolute`](#isAbsolute)[`listDir`](#listDir)[`removeDirectory`](#removeDirectory)[`renameFile`](#renameFile)[`toUniversal`](#toUniversal)
+[`addToPath`](#addToPath) [`createDirectory`](#createDirectory) [`deleteFile`](#deleteFile) [`forEachFile`](#forEachFile) [`getAbsolutePath`](#getAbsolutePath) [`getBaseName`](#getBaseName) [`getFileInfo`](#getFileInfo) [`getFileType`](#getFileType) [`getName`](#getName) [`getPath`](#getPath) [`isAbsolute`](#isAbsolute) [`listDir`](#listDir) [`removeDirectory`](#removeDirectory) [`renameFile`](#renameFile) [`toUniversal`](#toUniversal)
 
 Inherited from `Object` :  
-[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
+[`getPropList`](../object/Object.html#getPropList) [`getPropParams`](../object/Object.html#getPropParams) [`getSuperclassList`](../object/Object.html#getSuperclassList) [`isClass`](../object/Object.html#isClass) [`isTransient`](../object/Object.html#isTransient) [`ofKind`](../object/Object.html#ofKind) [`propDefined`](../object/Object.html#propDefined) [`propInherited`](../object/Object.html#propInherited) [`propType`](../object/Object.html#propType) [`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

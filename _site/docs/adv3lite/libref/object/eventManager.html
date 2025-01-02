@@ -40,52 +40,32 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>The eventManager is the object that manages the execution of Events such
+as Fuses and Daemons.</p>
 
-The eventManager is the object that manages the execution of Events such
-as Fuses and Daemons.
-
-**`eventManager`**` :   object`
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">eventManager</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">eventManager</code></strong><br />
 `         object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#curEvent_"><code class="language-plaintext highlighter-rouge">curEvent_</code></a><a href="#eventList"><code class="language-plaintext highlighter-rouge">eventList</code></a><a href="#schedulableList"><code class="language-plaintext highlighter-rouge">schedulableList</code></a></p>
+<p><a href="#curEvent_"><code class="language-plaintext highlighter-rouge">curEvent_</code></a> <a href="#eventList"><code class="language-plaintext highlighter-rouge">eventList</code></a> <a href="#schedulableList"><code class="language-plaintext highlighter-rouge">schedulableList</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#addEvent"><code class="language-plaintext highlighter-rouge">addEvent</code></a><a href="#executeList"><code class="language-plaintext highlighter-rouge">executeList</code></a><a href="#executePrompt"><code class="language-plaintext highlighter-rouge">executePrompt</code></a><a href="#executeTurn"><code class="language-plaintext highlighter-rouge">executeTurn</code></a><a href="#removeCurrentEvent"><code class="language-plaintext highlighter-rouge">removeCurrentEvent</code></a><a href="#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a><a href="#removeMatchingEvents"><code class="language-plaintext highlighter-rouge">removeMatchingEvents</code></a></p>
+<p><a href="#addEvent"><code class="language-plaintext highlighter-rouge">addEvent</code></a> <a href="#executeList"><code class="language-plaintext highlighter-rouge">executeList</code></a> <a href="#executePrompt"><code class="language-plaintext highlighter-rouge">executePrompt</code></a> <a href="#executeTurn"><code class="language-plaintext highlighter-rouge">executeTurn</code></a> <a href="#removeCurrentEvent"><code class="language-plaintext highlighter-rouge">removeCurrentEvent</code></a> <a href="#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a> <a href="#removeMatchingEvents"><code class="language-plaintext highlighter-rouge">removeMatchingEvents</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="curEvent_"></span></p>
 
@@ -93,11 +73,7 @@ as Fuses and Daemons.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#192">192</a>]</p>
 
-<div class="desc">
-
-restore the enclosing current event
-
-</div>
+<p>restore the enclosing current event</p>
 
 <p><span id="eventList"></span></p>
 
@@ -105,11 +81,7 @@ restore the enclosing current event
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#194">194</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="schedulableList"></span></p>
 
@@ -117,24 +89,16 @@ restore the enclosing current event
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#205">205</a>]</p>
 
-<div class="desc">
-
-A list of 'schedulables'. These are objects whose executeEvent() method
+<p>A list of ‘schedulables’. These are objects whose executeEvent() method
 should be called each turn prior to other events such as Fuses and
 Daemons. The main use for this in the library is to provide a mechanism
 for the takeTurn method of each Actor to be called before Fuses and
 Daemons are run, mainly in case an AgendaItem sets up a Fuse or Daemon
-that may need to execute on the same turn, or if a Scene wants to do so.
-
-</div>
+that may need to execute on the same turn, or if a Scene wants to do so.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="addEvent"></span></p>
 
@@ -142,11 +106,7 @@ that may need to execute on the same turn, or if a Scene wants to do so.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#23">23</a>]</p>
 
-<div class="desc">
-
-Add an event to the list of events to be executed.
-
-</div>
+<p>Add an event to the list of events to be executed.</p>
 
 <p><span id="executeList"></span></p>
 
@@ -154,12 +114,8 @@ Add an event to the list of events to be executed.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#143">143</a>]</p>
 
-<div class="desc">
-
-internal service routine - execute the fuses and daemons in the given
-list, in eventOrder priority order
-
-</div>
+<p>internal service routine - execute the fuses and daemons in the given
+list, in eventOrder priority order</p>
 
 <p><span id="executePrompt"></span></p>
 
@@ -167,12 +123,8 @@ list, in eventOrder priority order
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#133">133</a>]</p>
 
-<div class="desc">
-
-Execute a command prompt turn. We'll execute each per-command-prompt
-daemon.
-
-</div>
+<p>Execute a command prompt turn. We’ll execute each per-command-prompt
+daemon.</p>
 
 <p><span id="executeTurn"></span></p>
 
@@ -180,12 +132,8 @@ daemon.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#98">98</a>]</p>
 
-<div class="desc">
-
-Execute a turn. We'll execute each fuse and each daemon that is
-currently schedulable.
-
-</div>
+<p>Execute a turn. We’ll execute each fuse and each daemon that is
+currently schedulable.</p>
 
 <p><span id="removeCurrentEvent"></span></p>
 
@@ -193,16 +141,12 @@ currently schedulable.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#88">88</a>]</p>
 
-<div class="desc">
+<p>Remove the current event - this is provided for convenience so that an
+event can cancel itself in the course of its execution.</p>
 
-Remove the current event - this is provided for convenience so that an
-event can cancel itself in the course of its execution.
-
-Note that this has no effect on the current event execution - this
+<p>Note that this has no effect on the current event execution - this
 simply prevents the event from receiving additional notifications in the
-future.
-
-</div>
+future.</p>
 
 <p><span id="removeEvent"></span></p>
 
@@ -210,11 +154,7 @@ future.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#29">29</a>]</p>
 
-<div class="desc">
-
-Remove an event from the list of events to be executed.
-
-</div>
+<p>Remove an event from the list of events to be executed.</p>
 
 <p><span id="removeMatchingEvents"></span></p>
 
@@ -222,32 +162,25 @@ Remove an event from the list of events to be executed.
 
 <p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#52">52</a>]</p>
 
-<div class="desc">
-
-Remove events matching the given object and property combination. We
+<p>Remove events matching the given object and property combination. We
 remove all events that match both the object and property (events
-matching only the object or only the property are not affected).
+matching only the object or only the property are not affected).</p>
 
-This is provided mostly as a convenience for cases where an event is
+<p>This is provided mostly as a convenience for cases where an event is
 known to be uniquely identifiable by its object and property values;
 this saves the caller the trouble of keeping track of the Event object
-created when the event was first registered.
+created when the event was first registered.</p>
 
-When a particular object/property combination might be used in several
-different events, it's better to keep a reference to the Event object
+<p>When a particular object/property combination might be used in several
+different events, it’s better to keep a reference to the Event object
 representing each event, and use removeEvent() to remove the specific
-Event object of interest.
+Event object of interest.</p>
 
-Returns true if we find any matching events, nil if not.
+<p>Returns true if we find any matching events, nil if not.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

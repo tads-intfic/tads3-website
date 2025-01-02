@@ -111,10 +111,10 @@ open it.
 
 
 
-[`allowAction`](#allowAction)[`excludePluralMatches`](#excludePluralMatches)[`resultRank`](#resultRank)
+[`allowAction`](#allowAction) [`excludePluralMatches`](#excludePluralMatches) [`resultRank`](#resultRank)
 
 Inherited from `MessageResult` :  
-[`messageProp_`](../object/MessageResult.html#messageProp_)[`messageText_`](../object/MessageResult.html#messageText_)
+[`messageProp_`](../object/MessageResult.html#messageProp_) [`messageText_`](../object/MessageResult.html#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -124,10 +124,10 @@ Inherited from `MessageResult` :
 
 
 
-[`compareTo`](#compareTo)[`identicalTo`](#identicalTo)[`isWorseThan`](#isWorseThan)[`shouldInsertBefore`](#shouldInsertBefore)
+[`compareTo`](#compareTo) [`identicalTo`](#identicalTo) [`isWorseThan`](#isWorseThan) [`shouldInsertBefore`](#shouldInsertBefore)
 
 Inherited from `MessageResult` :  
-[`construct`](../object/MessageResult.html#construct)[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)[`setMessage`](../object/MessageResult.html#setMessage)[`showMessage`](../object/MessageResult.html#showMessage)
+[`construct`](../object/MessageResult.html#construct) [`resolveMessageText`](../object/MessageResult.html#resolveMessageText) [`setMessage`](../object/MessageResult.html#setMessage) [`showMessage`](../object/MessageResult.html#showMessage)
 
 <span id="_Properties_"></span>
 

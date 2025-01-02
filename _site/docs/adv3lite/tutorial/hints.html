@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="finish.html" class="nav">Finishing Touches</a> \&gt; Hints  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="finish.html" class="nav">Finishing Touches</a> &gt; Hints<br />
 <span class="navnp"><a href="scoring.html" class="nav"><em>Prev:</em> Scoring</a>
     <a href="whatmore.html" class="nav"><em>Next:</em> What More?</a>    
-</span>
-
-</div>
+</span></p>
 
 <h1 id="hints">Hints</h1>
 
@@ -92,24 +84,23 @@ ticketAchievement (a condition that the Goal class happens to make it
 easy to test for). We might accordingly define the start of our hint
 system thus:</p>
 
-<p>`
-    TopHintMenu;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    TopHintMenu;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ Goal 'Where can I find a plane ticket?'
-    [
-        'You don\'t have the wherewithal to buy one. ',
-        'But perhaps someone else may have mislaid theirs. ',
-        'If you hunt around a bit you may find it. ',
-        'Where might people go in an airport when awaiting a flight? ',
-        'Especially if they\'re a bit peckish. ',
-        'Have you visited the snack bar? ',
-        'Has anything been left lying around there? ',
-        'Try taking a closer look at that newspaper. '
-    ]
-    
-    openWhenSeen = angela
-    closeWhenAchieved = ticketAchievement
-; `
+    + Goal 'Where can I find a plane ticket?'
+        [
+            'You don\'t have the wherewithal to buy one. ',
+            'But perhaps someone else may have mislaid theirs. ',
+            'If you hunt around a bit you may find it. ',
+            'Where might people go in an airport when awaiting a flight? ',
+            'Especially if they\'re a bit peckish. ',
+            'Have you visited the snack bar? ',
+            'Has anything been left lying around there? ',
+            'Try taking a closer look at that newspaper. '
+        ]
+        
+        openWhenSeen = angela
+        closeWhenAchieved = ticketAchievement
+    ;
 </code></pre></div></div>
 
 <p>Note that we can use the Goal template to specify both its
@@ -144,78 +135,77 @@ through the maintenance room door. We can do that by defining a separate
 <strong>Hint</strong> object that opens the secondary Goal when the corresponding
 hint is displayed, like this:</p>
 
-<p>`
-    + Goal ‘How do I get the ID card through the metal detector?’
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Goal 'How do I get the ID card through the metal detector?'
         [
-            ‘Did you take a good look at the ID card? ‘,
-            ‘Have you found it again after it was confiscated? ‘,
-            ‘If not, where do you think the other security guard may have taken it?
-            ‘,
-            ‘Might it have been left for its owner to collect? ‘,
-            ‘Might that be why it was left there in the first place? ‘,
-            ‘What might the magnetic stripe on the card do to the metal detector? ‘,
-            ‘How closely have you examined the metal detector? ‘,
-            ‘What does the power cable leading to the metal detector suggest? ‘,
-            powerHint</p>
+            'Did you take a good look at the ID card? ',
+            'Have you found it again after it was confiscated? ',
+            'If not, where do you think the other security guard may have taken it?
+            ',
+            'Might it have been left for its owner to collect? ',
+            'Might that be why it was left there in the first place? ',
+            'What might the magnetic stripe on the card do to the metal detector? ',
+            'How closely have you examined the metal detector? ',
+            'What does the power cable leading to the metal detector suggest? ',
+            powerHint
+            
+        ]
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ]
+        openWhenRevealed = 'card-confiscated'
+        closeWhenAchieved = powerAchievement
+    ;
 
-    openWhenRevealed = 'card-confiscated'
-    closeWhenAchieved = powerAchievement
-;
+    ++ powerHint: Hint 
+        'Might there be a way of cutting the power to the metal detector?'
+        [powerGoal]
+    ;
 
-++ powerHint: Hint 
-    'Might there be a way of cutting the power to the metal detector?'
-    [powerGoal]
-;
+    + powerGoal: Goal 'How do I cut the power to the metal detector? '
+        [
+            'Which direction does the power cable lead in? ',
+            'What else lies in roughly that direction? ',
+            'What lies beyond the metal detector? ',
+            'Where might the power be controlled from? ',
+            maintenanceHint
+        ]
+        
+        closeWhenAchieved = powerAchievement
+    ;
 
-+ powerGoal: Goal 'How do I cut the power to the metal detector? '
-    [
-        'Which direction does the power cable lead in? ',
-        'What else lies in roughly that direction? ',
-        'What lies beyond the metal detector? ',
-        'Where might the power be controlled from? ',
-        maintenanceHint
-    ]
-    
-    closeWhenAchieved = powerAchievement
-;
+    ++ maintenanceHint: Hint
+        'What might the Maintenance Room be for? '
+        [maintenanceGoal]
+    ;
 
-++ maintenanceHint: Hint
-    'What might the Maintenance Room be for? '
-    [maintenanceGoal]
-;
+    + maintenanceGoal: Goal 'How do I open the door to the Maintenance Room?'
+        [
+            'What\'s preventing the door from being opened? ',
+            'Who might have the key to it? ',
+            'What sort of places might such a person visit in his work? ',
+            'Where might he clean? ',
+            'Where might you find a bathroom or toilet? ',
+            'Could there be one aboard the plane? '    
+        ]
+        openWhenRevealed = 'maintenance-door-locked'
+        closeWhenSeen = maintenanceRoom
+    ;
 
-+ maintenanceGoal: Goal 'How do I open the door to the Maintenance Room?'
-    [
-        'What\'s preventing the door from being opened? ',
-        'Who might have the key to it? ',
-        'What sort of places might such a person visit in his work? ',
-        'Where might he clean? ',
-        'Where might you find a bathroom or toilet? ',
-        'Could there be one aboard the plane? '    
-    ]
-    openWhenRevealed = 'maintenance-door-locked'
-    closeWhenSeen = maintenanceRoom
-;
-
-+ Goal 'Where can I find the power switch for the metal detector?'
-    [
-        'Which room might you expect to find it in? ',
-        'What can you see in that room? ',
-        'You are looking in the Maintenance Room, aren\'t you? ',
-        'What might be in those cabinets? ',
-        'Where might someone hide the cabinet key? ',
-        'What\'s on top of the shorter cabinet? ',
-        'What might be under the pot plant? ',
-        'What\'s inside the shorter cabinet? '
-    ]
-    
-    openWhenTrue = maintenanceRoom.seen &amp;&amp; gRevealed('card-confiscated') 
-    &amp;&amp; (powerCable.examined || powerGoal.goalState == OpenGoal)
-    
-    closeWhenAchieved = powerAchievement
-; `
+    + Goal 'Where can I find the power switch for the metal detector?'
+        [
+            'Which room might you expect to find it in? ',
+            'What can you see in that room? ',
+            'You are looking in the Maintenance Room, aren\'t you? ',
+            'What might be in those cabinets? ',
+            'Where might someone hide the cabinet key? ',
+            'What\'s on top of the shorter cabinet? ',
+            'What might be under the pot plant? ',
+            'What\'s inside the shorter cabinet? '
+        ]
+        
+        openWhenTrue = maintenanceRoom.seen &amp;&amp; gRevealed('card-confiscated') 
+        &amp;&amp; (powerCable.examined || powerGoal.goalState == OpenGoal)
+        
+        closeWhenAchieved = powerAchievement
+    ;
 </code></pre></div></div>
 
 <p>There’s nothing magical about locating the Hint objects within the Goal
@@ -255,17 +245,16 @@ is to add a <code class="language-plaintext highlighter-rouge">\&lt;.reveal
 maintenance-door-locked\&gt;</code> tag to the end of the message that says
 the door is locked:</p>
 
-<p>`
-    + maintenanceRoomDoor: Door ‘metal door’
-        “It’s marked <q>Personal de Mantenimiento Sólo</q>, and «if isOpen»
-        is currently open«else» looks firmly closed«end». “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    otherSide = mrDoorOut
-    lockability = lockableWithKey
-    isLocked = true
-    
-    lockedMsg = (inherited + '&lt;.reveal maintenance-door-locked&gt;')
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + maintenanceRoomDoor: Door 'metal door'
+        "It's marked &lt;q&gt;Personal de Mantenimiento S&amp;oacute;lo&lt;/q&gt;, and &lt;&lt;if isOpen&gt;&gt;
+        is currently open&lt;&lt;else&gt;&gt; looks firmly closed&lt;&lt;end&gt;&gt;. "
+        
+        otherSide = mrDoorOut
+        lockability = lockableWithKey
+        isLocked = true
+        
+        lockedMsg = (inherited + '&lt;.reveal maintenance-door-locked&gt;')
+    ;
 </code></pre></div></div>
 
 <p>We have gone far enough now to illustrate the main principles of
@@ -275,18 +264,13 @@ reader.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="finish.html" class="nav">Finishing Touches</a> \&gt; Hints  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="finish.html" class="nav">Finishing Touches</a> &gt; Hints<br />
 <span class="navnp"><a href="scoring.html" class="nav"><em>Prev:</em> Scoring</a>
     <a href="whatmore.html" class="nav"><em>Next:</em> What More?</a>    
-</span>
+</span></p>
 
-
-
-</div>
 
 </main>
 <footer>

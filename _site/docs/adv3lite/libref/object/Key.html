@@ -46,23 +46,15 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Key is any object that can be used to lock or lock selected items
+<p>A Key is any object that can be used to lock or lock selected items
 whose lockabilty is lockableWithKey. We define all the special handling
-on the Key class rather than on the items to be locked and/or unlocked.
+on the Key class rather than on the items to be locked and/or unlocked.</p>
 
-`class `**`Key`**` :   `[`Thing`](../object/Thing.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Key</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Thing.html"><code class="language-plaintext highlighter-rouge">Thing</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Key</code></strong><br />
 <a href="../object/Thing.html"><code class="language-plaintext highlighter-rouge">Thing</code></a><br />
@@ -74,27 +66,15 @@ on the Key class rather than on the items to be locked and/or unlocked.
 </code>                                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#actualLockList"><code class="language-plaintext highlighter-rouge">actualLockList</code></a>  <a href="#canUnlockWithMe"><code class="language-plaintext highlighter-rouge">canUnlockWithMe</code></a>  <a href="#keyDoesntFitMsg"><code class="language-plaintext highlighter-rouge">keyDoesntFitMsg</code></a>  <a href="#knownLockList"><code class="language-plaintext highlighter-rouge">knownLockList</code></a>  <a href="#notAPlausibleKeyMsg"><code class="language-plaintext highlighter-rouge">notAPlausibleKeyMsg</code></a>  <a href="#okayLockWithMsg"><code class="language-plaintext highlighter-rouge">okayLockWithMsg</code></a>  <a href="#okayUnlockWithMsg"><code class="language-plaintext highlighter-rouge">okayUnlockWithMsg</code></a>  <a href="#plausibleLockList"><code class="language-plaintext highlighter-rouge">plausibleLockList</code></a>  `</p>
 
@@ -109,11 +89,7 @@ on the Key class rather than on the items to be locked and/or unlocked.
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#iobjFor(LockWith)"><code class="language-plaintext highlighter-rouge">iobjFor(LockWith)</code></a>  <a href="#iobjFor(UnlockWith)"><code class="language-plaintext highlighter-rouge">iobjFor(UnlockWith)</code></a>  <a href="#isPossibleKeyFor"><code class="language-plaintext highlighter-rouge">isPossibleKeyFor</code></a>  <a href="#preinitThing"><code class="language-plaintext highlighter-rouge">preinitThing</code></a>  `</p>
 
@@ -134,11 +110,7 @@ on the Key class rather than on the items to be locked and/or unlocked.
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="actualLockList"></span></p>
 
@@ -146,11 +118,7 @@ on the Key class rather than on the items to be locked and/or unlocked.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9262">9262</a>]</p>
 
-<div class="desc">
-
-The list of things this key can actually be used to lock and unlock.
-
-</div>
+<p>The list of things this key can actually be used to lock and unlock.</p>
 
 <p><span id="canUnlockWithMe"></span></p>
 
@@ -158,11 +126,7 @@ The list of things this key can actually be used to lock and unlock.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9309">9309</a>]</p>
 
-<div class="desc">
-
-A key is something we can unlock with.
-
-</div>
+<p>A key is something we can unlock with.</p>
 
 <p><span id="keyDoesntFitMsg"></span></p>
 
@@ -170,11 +134,7 @@ A key is something we can unlock with.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9441">9441</a>]</p>
 
-<div class="desc">
-
-The message to say that this key doesn\\t in fact fit the dobj.
-
-</div>
+<p>The message to say that this key doesn\t in fact fit the dobj.</p>
 
 <p><span id="knownLockList"></span></p>
 
@@ -182,15 +142,11 @@ The message to say that this key doesn\\t in fact fit the dobj.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9278">9278</a>]</p>
 
-<div class="desc">
-
-The list of all the things the player character knows this key can lock
+<p>The list of all the things the player character knows this key can lock
 and unlock. Items are automatically added to this list when this key is
 successfully used to lock or unlock them, but game code can also use
 this property to list items the player character starts out knowing,
-such as the door locked by his/her own front door key.
-
-</div>
+such as the door locked by his/her own front door key.</p>
 
 <p><span id="notAPlausibleKeyMsg"></span></p>
 
@@ -198,13 +154,9 @@ such as the door locked by his/her own front door key.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9438">9438</a>]</p>
 
-<div class="desc">
-
-The message to say that this key clearly won\\t work on the dobj
-(because it\\s the wrong sort of key for the lock; e.g. a yale key
-clearly won\\t fit the lock on a small jewel box).
-
-</div>
+<p>The message to say that this key clearly won\t work on the dobj
+(because it\s the wrong sort of key for the lock; e.g. a yale key
+clearly won\t fit the lock on a small jewel box).</p>
 
 <p><span id="okayLockWithMsg"></span></p>
 
@@ -212,11 +164,7 @@ clearly won\\t fit the lock on a small jewel box).
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9431">9431</a>]</p>
 
-<div class="desc">
-
-The message to say that the actor has lock the dobj with this key.
-
-</div>
+<p>The message to say that the actor has lock the dobj with this key.</p>
 
 <p><span id="okayUnlockWithMsg"></span></p>
 
@@ -224,11 +172,7 @@ The message to say that the actor has lock the dobj with this key.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9374">9374</a>]</p>
 
-<div class="desc">
-
-If the dobj is not already in our knownLockList, add it there.
-
-</div>
+<p>If the dobj is not already in our knownLockList, add it there.</p>
 
 <p><span id="plausibleLockList"></span></p>
 
@@ -236,21 +180,13 @@ If the dobj is not already in our knownLockList, add it there.
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9269">9269</a>]</p>
 
-<div class="desc">
-
-The list of things this key plausibly looks like it might lock and
-unlock (e.g. if we're a yale key, we might list all the doors in the
-game that have yale locks here).
-
-</div>
+<p>The list of things this key plausibly looks like it might lock and
+unlock (e.g. if we’re a yale key, we might list all the doors in the
+game that have yale locks here).</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="iobjFor(LockWith)"></span></p>
 
@@ -258,11 +194,7 @@ game that have yale locks here).
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9376">9376</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="iobjFor(UnlockWith)"></span></p>
 
@@ -270,11 +202,7 @@ game that have yale locks here).
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9311">9311</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="isPossibleKeyFor"></span></p>
 
@@ -282,12 +210,8 @@ game that have yale locks here).
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9284">9284</a>]</p>
 
-<div class="desc">
-
-Determine whether we're a possible key for obj (i.e. whether we might be
-able to lock or unlock obj).
-
-</div>
+<p>Determine whether we’re a possible key for obj (i.e. whether we might be
+able to lock or unlock obj).</p>
 
 <p><span id="preinitThing"></span></p>
 
@@ -295,18 +219,11 @@ able to lock or unlock obj).
 
 <p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#9443">9443</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

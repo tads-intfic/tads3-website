@@ -95,10 +95,10 @@ Inherited from `OutputStreamWindow` :
 
 
 
-[`createOutputStreamObj`](#createOutputStreamObj)[`flushBanner`](#flushBanner)[`init`](#init)[`setSize`](#setSize)[`sizeToContents`](#sizeToContents)[`writeToBanner`](#writeToBanner)
+[`createOutputStreamObj`](#createOutputStreamObj) [`flushBanner`](#flushBanner) [`init`](#init) [`setSize`](#setSize) [`sizeToContents`](#sizeToContents) [`writeToBanner`](#writeToBanner)
 
 Inherited from `OutputStreamWindow` :  
-[`captureOutput`](../object/OutputStreamWindow.html#captureOutput)[`createOutputStream`](../object/OutputStreamWindow.html#createOutputStream)[`setOutputStream`](../object/OutputStreamWindow.html#setOutputStream)
+[`captureOutput`](../object/OutputStreamWindow.html#captureOutput) [`createOutputStream`](../object/OutputStreamWindow.html#createOutputStream) [`setOutputStream`](../object/OutputStreamWindow.html#setOutputStream)
 
 <span id="_Properties_"></span>
 

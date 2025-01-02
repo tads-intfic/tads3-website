@@ -85,10 +85,10 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 
 
-[`endsWith`](#endsWith)[`find`](#find)[`findReplace`](#findReplace)[`htmlify`](#htmlify)[`length`](#length)[`mapToByteArray`](#mapToByteArray)[`startsWith`](#startsWith)[`substr`](#substr)[`toLower`](#toLower)[`toUnicode`](#toUnicode)[`toUpper`](#toUpper)[`valToSymbol`](#valToSymbol)
+[`endsWith`](#endsWith) [`find`](#find) [`findReplace`](#findReplace) [`htmlify`](#htmlify) [`length`](#length) [`mapToByteArray`](#mapToByteArray) [`startsWith`](#startsWith) [`substr`](#substr) [`toLower`](#toLower) [`toUnicode`](#toUnicode) [`toUpper`](#toUpper) [`valToSymbol`](#valToSymbol)
 
 Inherited from `Object` :  
-[`getPropList`](../object/Object1.html#getPropList)[`getPropParams`](../object/Object1.html#getPropParams)[`getSuperclassList`](../object/Object1.html#getSuperclassList)[`isClass`](../object/Object1.html#isClass)[`isTransient`](../object/Object1.html#isTransient)[`ofKind`](../object/Object1.html#ofKind)[`propDefined`](../object/Object1.html#propDefined)[`propInherited`](../object/Object1.html#propInherited)[`propType`](../object/Object1.html#propType)
+[`getPropList`](../object/Object1.html#getPropList) [`getPropParams`](../object/Object1.html#getPropParams) [`getSuperclassList`](../object/Object1.html#getSuperclassList) [`isClass`](../object/Object1.html#isClass) [`isTransient`](../object/Object1.html#isTransient) [`ofKind`](../object/Object1.html#ofKind) [`propDefined`](../object/Object1.html#propDefined) [`propInherited`](../object/Object1.html#propInherited) [`propType`](../object/Object1.html#propType)
 
 <span id="_Properties_"></span>
 

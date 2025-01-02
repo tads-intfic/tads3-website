@@ -27,84 +27,53 @@
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5798"><code class="language-plaintext highlighter-rouge">5798</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-('anything' \| 'one') ('that' ('is' \| 'was') \| 'that' tokApostropheS
-\| )  
-('in' \| 'inside' \| 'inside' 'of' \| 'on' \| 'from')  
-completeNounPhraseWithoutAll-\&gt;cont\_  
-
-</div>
+<p>(‘anything’ | ‘one’) (‘that’ (‘is’ | ‘was’) | ‘that’ tokApostropheS
+| )<br />
+(‘in’ | ‘inside’ | ‘inside’ ‘of’ | ‘on’ | ‘from’)<br />
+completeNounPhraseWithoutAll-&gt;cont_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/qualifiedSingularNounPhrase(anyPlural).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(anyPlural)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ArbitraryNounProd.html"><code class="language-plaintext highlighter-rouge">ArbitraryNounProd</code></a></p>
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5772"><code class="language-plaintext highlighter-rouge">5772</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-'any' 'of' explicitDetPluralNounPhrase-\&gt;np\_  
-
-</div>
+<p>‘any’ ‘of’ explicitDetPluralNounPhrase-&gt;np_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/qualifiedSingularNounPhrase(arbitrary).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(arbitrary)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ArbitraryNounProd.html"><code class="language-plaintext highlighter-rouge">ArbitraryNounProd</code></a></p>
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5754"><code class="language-plaintext highlighter-rouge">5754</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-('any' \| 'one' \| '1' \| 'any' ('one' \| '1'))
-indetSingularNounPhrase-\&gt;np\_  
-
-</div>
+<p>(‘any’ | ‘one’ | ‘1’ | ‘any’ (‘one’ | ‘1’))
+indetSingularNounPhrase-&gt;np_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/qualifiedSingularNounPhrase(definite).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(definite)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/DefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></a></p>
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5737"><code class="language-plaintext highlighter-rouge">5737</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-('the' \| 'the' 'one' \| 'the' '1' \| ) indetSingularNounPhrase-\&gt;np\_  
-
-</div>
+<p>(‘the’ | ‘the’ ‘one’ | ‘the’ ‘1’ | ) indetSingularNounPhrase-&gt;np_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/qualifiedSingularNounPhrase(indefinite).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(indefinite)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/IndefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">IndefiniteNounProd</code></a></p>
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5745"><code class="language-plaintext highlighter-rouge">5745</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-('a' \| 'an') indetSingularNounPhrase-\&gt;np\_  
-
-</div>
+<p>(‘a’ | ‘an’) indetSingularNounPhrase-&gt;np_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/qualifiedSingularNounPhrase(possessive).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(possessive)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PossessiveNounProd.html"><code class="language-plaintext highlighter-rouge">PossessiveNounProd</code></a></p>
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5762"><code class="language-plaintext highlighter-rouge">5762</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
-
-possessiveAdjPhrase-\&gt;poss\_ indetSingularNounPhrase-\&gt;np\_  
-
-</div>
+<p>possessiveAdjPhrase-&gt;poss_ indetSingularNounPhrase-&gt;np_</p>
 
 <p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/qualifiedSingularNounPhrase(theOneIn).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(theOneIn)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/VagueContainerDefiniteNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">VagueContainerDefiniteNounPhraseProd</code></a></p>
 
 <p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5781"><code class="language-plaintext highlighter-rouge">5781</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
 
-<div class="gramrule">
+<p>‘the’ ‘one’ (‘that’ (‘is’ | ‘was’) | ‘that’ tokApostropheS | )<br />
+(‘in’ | ‘inside’ | ‘inside’ ‘of’ | ‘on’ | ‘from’)<br />
+completeNounPhraseWithoutAll-&gt;cont_</p>
 
-'the' 'one' ('that' ('is' \| 'was') \| 'that' tokApostropheS \| )  
-('in' \| 'inside' \| 'inside' 'of' \| 'on' \| 'from')  
-completeNounPhraseWithoutAll-\&gt;cont\_  
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

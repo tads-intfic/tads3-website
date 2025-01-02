@@ -55,10 +55,10 @@ language might want to use the accusative form here).
 
 
 Inherited from `CommandProduction` :  
-[`actor_`](../object/CommandProduction.html#actor_)[`actorPerson`](../object/CommandProduction.html#actorPerson)
+[`actor_`](../object/CommandProduction.html#actor_) [`actorPerson`](../object/CommandProduction.html#actorPerson)
 
 Inherited from `Production` :  
-[`determiner`](../object/Production.html#determiner)[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`npClass`](../object/Production.html#npClass)[`parent`](../object/Production.html#parent)
+[`determiner`](../object/Production.html#determiner) [`nounPhraseRole`](../object/Production.html#nounPhraseRole) [`npClass`](../object/Production.html#npClass) [`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -71,10 +71,10 @@ Inherited from `Production` :
 
 
 Inherited from `CommandProduction` :  
-[`build`](../object/CommandProduction.html#build)[`noteEndOfSentence`](../object/CommandProduction.html#noteEndOfSentence)[`visitProd`](../object/CommandProduction.html#visitProd)
+[`build`](../object/CommandProduction.html#build) [`noteEndOfSentence`](../object/CommandProduction.html#noteEndOfSentence) [`visitProd`](../object/CommandProduction.html#visitProd)
 
 Inherited from `Production` :  
-[`addNounListItem`](../object/Production.html#addNounListItem)[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`visitLiteral`](../object/Production.html#visitLiteral)
+[`addNounListItem`](../object/Production.html#addNounListItem) [`findAction`](../object/Production.html#findAction) [`findChild`](../object/Production.html#findChild) [`findParent`](../object/Production.html#findParent) [`getNounPhraseRole`](../object/Production.html#getNounPhraseRole) [`getText`](../object/Production.html#getText) [`getTokens`](../object/Production.html#getTokens) [`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild) [`isChildOf`](../object/Production.html#isChildOf) [`visitLiteral`](../object/Production.html#visitLiteral)
 
 <span id="_Properties_"></span>
 

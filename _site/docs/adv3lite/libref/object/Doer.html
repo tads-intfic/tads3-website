@@ -46,80 +46,52 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A Doer is a command handler for a specific action acting on particular
+<p>A Doer is a command handler for a specific action acting on particular
 objects under a given set of conditions. We use these for all of the
-levels of customization in command handling.
+levels of customization in command handling.</p>
 
-Doer objects are inherently static. All Doer objects should be defined
-at compile time; they're not designed to be created dynamically during
+<p>Doer objects are inherently static. All Doer objects should be defined
+at compile time; they’re not designed to be created dynamically during
 execution. Rather than creating and removing Doer objects as conditions
 in the game change, use the Doer conditions to define when a given Doer
-is active and when it's dormant.
+is active and when it’s dormant.</p>
 
-`class `**`Doer`**` :   `[`Redirector`](../object/Redirector.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Doer</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Redirector.html"><code class="language-plaintext highlighter-rouge">Redirector</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Doer</code></strong><br />
 <a href="../object/Redirector.html"><code class="language-plaintext highlighter-rouge">Redirector</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/default1Doer.html"><code class="language-plaintext highlighter-rouge">default1Doer</code></a><a href="../object/default2Doer.html"><code class="language-plaintext highlighter-rouge">default2Doer</code></a><a href="../object/default3Doer.html"><code class="language-plaintext highlighter-rouge">default3Doer</code></a><a href="../object/default4Doer.html"><code class="language-plaintext highlighter-rouge">default4Doer</code></a><a href="../object/getOnGroundDoer.html"><code class="language-plaintext highlighter-rouge">getOnGroundDoer</code></a><a href="../object/putOnGroundDoer.html"><code class="language-plaintext highlighter-rouge">putOnGroundDoer</code></a><a href="../object/removeDoer.html"><code class="language-plaintext highlighter-rouge">removeDoer</code></a><a href="../object/reverseAttachableDoer.html"><code class="language-plaintext highlighter-rouge">reverseAttachableDoer</code></a><a href="../object/takePathDoer.html"><code class="language-plaintext highlighter-rouge">takePathDoer</code></a>
+<p><a href="../object/default1Doer.html"><code class="language-plaintext highlighter-rouge">default1Doer</code></a> <a href="../object/default2Doer.html"><code class="language-plaintext highlighter-rouge">default2Doer</code></a> <a href="../object/default3Doer.html"><code class="language-plaintext highlighter-rouge">default3Doer</code></a> <a href="../object/default4Doer.html"><code class="language-plaintext highlighter-rouge">default4Doer</code></a> <a href="../object/getOnGroundDoer.html"><code class="language-plaintext highlighter-rouge">getOnGroundDoer</code></a> <a href="../object/putOnGroundDoer.html"><code class="language-plaintext highlighter-rouge">putOnGroundDoer</code></a> <a href="../object/removeDoer.html"><code class="language-plaintext highlighter-rouge">removeDoer</code></a> <a href="../object/reverseAttachableDoer.html"><code class="language-plaintext highlighter-rouge">reverseAttachableDoer</code></a> <a href="../object/takePathDoer.html"><code class="language-plaintext highlighter-rouge">takePathDoer</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a><a href="#handleAction"><code class="language-plaintext highlighter-rouge">handleAction</code></a><a href="#ignoreError"><code class="language-plaintext highlighter-rouge">ignoreError</code></a><a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a><a href="#strict"><code class="language-plaintext highlighter-rouge">strict</code></a></p>
+<p><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a> <a href="#handleAction"><code class="language-plaintext highlighter-rouge">handleAction</code></a> <a href="#ignoreError"><code class="language-plaintext highlighter-rouge">ignoreError</code></a> <a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a> <a href="#strict"><code class="language-plaintext highlighter-rouge">strict</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#checkDirection"><code class="language-plaintext highlighter-rouge">checkDirection</code></a><a href="#exec"><code class="language-plaintext highlighter-rouge">exec</code></a><a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a><a href="#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
+<p><a href="#checkDirection"><code class="language-plaintext highlighter-rouge">checkDirection</code></a> <a href="#exec"><code class="language-plaintext highlighter-rouge">exec</code></a> <a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a> <a href="#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
-<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a><a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a><a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="cmd"></span></p>
 
@@ -127,59 +99,51 @@ is active and when it's dormant.
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#213">213</a>]</p>
 
-<div class="desc">
+<p>The command that the object handles. This is a string describing the
+action and object combination that this handler recognizes.</p>
 
-The command that the object handles. This is a string describing the
-action and object combination that this handler recognizes.
-
-The command string specifies a verb and its objects, generally using the
+<p>The command string specifies a verb and its objects, generally using the
 same verb phrase syntax that a player would use to enter a command to
 the game. The exact verb syntax is up to the language library to define;
 for English, we replicate the same verb phrases used to parse command
-input.
+input.</p>
 
-The verb phrase syntax is generally the same as for regular player
+<p>The verb phrase syntax is generally the same as for regular player
 commands, but the noun syntax is different. Each noun is written as the
 SOURCE CODE name of a game object or class. That is, not a
 noun-and-adjective phrase as the player would type it, but the program
 symbol name as it appears in the source code. If you use a class name,
 the command matches any object of the class. For example, to handle
-putting any treasure in any container:
+putting any treasure in any container:</p>
 
-  
-cmd = 'put Treasure in Container'
+<p>cmd = ‘put Treasure in Container’</p>
 
-You can match multiple objects or classes in a single noun slot (and you
+<p>You can match multiple objects or classes in a single noun slot (and you
 can freely mix objects and classes). For example, to handle putting any
-treasure or magic item in a container:
+treasure or magic item in a container:</p>
 
-  
-cmd = 'put Treasure\|Magical in Container'
+<p>cmd = ‘put Treasure|Magical in Container’</p>
 
-You can't use the '\|' syntax with verbs, because the verb syntax covers
+<p>You can’t use the ‘|’ syntax with verbs, because the verb syntax covers
 the entire phrase. You can match multiple verbs by writing out the
-entire phrasing for each verb, separating each phrase with a semicolon:
+entire phrasing for each verb, separating each phrase with a semicolon:</p>
 
-  
-cmd = 'take skull; put skull in Thing'
+<p>cmd = ‘take skull; put skull in Thing’</p>
 
-You can also write a command that matches ANY verb, by using "\*" as the
-verb. You can follow the "\*" with any number of objects; the first is
+<p>You can also write a command that matches ANY verb, by using “*” as the
+verb. You can follow the “*” with any number of objects; the first is
 the direct object, the second is the indirect, and the third is the
 accessory. This phrasing will match any verb that matches the given
-objects AND the given number of objects. For example, '\* Thing' will
-match any verb with a direct object that's of class Thing, but it won't
+objects AND the given number of objects. For example, ‘* Thing’ will
+match any verb with a direct object that’s of class Thing, but it won’t
 match verbs without any objects or verbs with an indirect object. Using
-"\*" as a noun will match any object as well as no object at all. So to
-write a handler for every possible command, you'd write:
+“*” as a noun will match any object as well as no object at all. So to
+write a handler for every possible command, you’d write:</p>
 
-  
-cmd = '\* \* \* \*'
+<p>cmd = ‘* * * *’</p>
 
-That is, match any verb, with or without any direct object, indirect
-object, and accessory object.
-
-</div>
+<p>That is, match any verb, with or without any direct object, indirect
+object, and accessory object.</p>
 
 <p><span id="handleAction"></span></p>
 
@@ -187,14 +151,10 @@ object, and accessory object.
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#368">368</a>]</p>
 
-<div class="desc">
-
-If this Doer is handling a complete action (instead of stopping one or
-replacing it with another) this should either be true (if it's the same
-action that we've matched) or some other action (if that's the one we're
-simulating and it's not the one we matched).
-
-</div>
+<p>If this Doer is handling a complete action (instead of stopping one or
+replacing it with another) this should either be true (if it’s the same
+action that we’ve matched) or some other action (if that’s the one we’re
+simulating and it’s not the one we matched).</p>
 
 <p><span id="ignoreError"></span></p>
 
@@ -202,13 +162,9 @@ simulating and it's not the one we matched).
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#470">470</a>]</p>
 
-<div class="desc">
-
-Flag, do we want to ignore (i.e. not report) an error in the
+<p>Flag, do we want to ignore (i.e. not report) an error in the
 construction of this Doer. We may want to do this when the error is
-simply due to the exclusion of a module like extras.t
-
-</div>
+simply due to the exclusion of a module like extras.t</p>
 
 <p><span id="priority"></span></p>
 
@@ -216,70 +172,66 @@ simply due to the exclusion of a module like extras.t
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#280">280</a>]</p>
 
-<div class="desc">
-
-The priority of this handler. You can use this when it's necessary to
+<p>The priority of this handler. You can use this when it’s necessary to
 override the default precedence order, which is figured according to the
-specialization rules described below.
+specialization rules described below.</p>
 
-Most of the time, you shouldn't need to set a priority manually. If you
-don't, the library determines the precedence automatically according to
+<p>Most of the time, you shouldn’t need to set a priority manually. If you
+don’t, the library determines the precedence automatically according to
 the degree of specialization. However, the way the library figures
-specialization is a heuristic, so it's not always right. In cases where
+specialization is a heuristic, so it’s not always right. In cases where
 the heuristic produces the wrong results, you can bypass the rules by
 setting a priority manually. A manual priority takes precedence over all
-of the standard rules.
+of the standard rules.</p>
 
-Our basic approach is to process Doers in order from most specific to
+<p>Our basic approach is to process Doers in order from most specific to
 most general. This creates a natural hierarchy of handlers where more
 specific rules override the generic, default handlers. Here are the
-degrees of specialization, in order of importance:
+degrees of specialization, in order of importance:</p>
 
-1\. A Doer with a higher 'priority' value takes precedence over one with
-a lower value.
+<p>1. A Doer with a higher ‘priority’ value takes precedence over one with
+a lower value.</p>
 
-2\. A Doer with a 'when' condition is more specific than a Doer without
-one. A 'when' condition means that the Doer is designed to operate only
-at specific times, so it's inherently more specialized than one that
-always operates.
+<p>2. A Doer with a ‘when’ condition is more specific than a Doer without
+one. A ‘when’ condition means that the Doer is designed to operate only
+at specific times, so it’s inherently more specialized than one that
+always operates.</p>
 
-3\. A Doer with a 'where' condition is more specific than a Doer without
-one. A 'where' condition means that the Doer only applies to a limited
-geographical area.
+<p>3. A Doer with a ‘where’ condition is more specific than a Doer without
+one. A ‘where’ condition means that the Doer only applies to a limited
+geographical area.</p>
 
-4\. A Doer that matches a particular Action is more specific than one
-that matches any Action.
+<p>4. A Doer that matches a particular Action is more specific than one
+that matches any Action.</p>
 
-5\. If two Doer commands are for the same Action, the Doer that matches
+<p>5. If two Doer commands are for the same Action, the Doer that matches
 a more specialized subclass (or just a single object instance) for a
 noun phrase is more specific than one that matches a base class for the
-same noun phrase. For example, 'take Container' is more specific than
-'take Thing', because Container is a subclass of Thing, and 'take
-backpack' (where the 'backpack' is a Container) is more specific than
+same noun phrase. For example, ‘take Container’ is more specific than
+‘take Thing’, because Container is a subclass of Thing, and ‘take
+backpack’ (where the ‘backpack’ is a Container) is more specific than
 either. This type of specialization applies in the canonical object role
 order: direct object, indirect object, accessory. For example, we
-consider 'put Container in Thing' to be more specific than 'put Thing in
-Container', because we look at the direct object by itself before we
+consider ‘put Container in Thing’ to be more specific than ‘put Thing in
+Container’, because we look at the direct object by itself before we
 even consider the indirect object. This rule only applies when the
-Action is the same: 'put Thing in Container' and 'open Door' are equal
-for the purposes of this rule.
+Action is the same: ‘put Thing in Container’ and ‘open Door’ are equal
+for the purposes of this rule.</p>
 
-It's important to understand that each degree of specialization is
+<p>It’s important to understand that each degree of specialization is
 considered independently of the others, in the order above. For example,
-if you have a Doer with just a 'when' condition, and another with only a
-'where' condition, the one with the 'when' condition has higher
-priority. This is because we look at the presence of a 'when' condition
-first, before even considering whether there's a 'where' condition.
+if you have a Doer with just a ‘when’ condition, and another with only a
+‘where’ condition, the one with the ‘when’ condition has higher
+priority. This is because we look at the presence of a ‘when’ condition
+first, before even considering whether there’s a ‘where’ condition.</p>
 
-The library has no way to gauge the specificity of a 'when' or 'where'
-condition, so there's no finer-grained priority to the conditions than
-simply their presence or absence.
+<p>The library has no way to gauge the specificity of a ‘when’ or ‘where’
+condition, so there’s no finer-grained priority to the conditions than
+simply their presence or absence.</p>
 
-If two Doers have the same priority based on the rules above, the one
-that's defined LATER in the source code has priority. This means that
-Doers defined in the game take priority over library definitions.
-
-</div>
+<p>If two Doers have the same priority based on the rules above, the one
+that’s defined LATER in the source code has priority. This means that
+Doers defined in the game take priority over library definitions.</p>
 
 <p><span id="strict"></span></p>
 
@@ -287,21 +239,13 @@ Doers defined in the game take priority over library definitions.
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#463">463</a>]</p>
 
-<div class="desc">
-
-Set this property to true for this Doer to match only if the wording
+<p>Set this property to true for this Doer to match only if the wording
 corresponds (and not just the action). At the moment the check is only
-on the first word of the command, but this may usually be enough
-
-</div>
+on the first word of the command, but this may usually be enough</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="checkDirection"></span></p>
 
@@ -309,12 +253,8 @@ on the first word of the command, but this may usually be enough
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#389">389</a>]</p>
 
-<div class="desc">
-
-Check whether the direction associatated with this command is valid for
-the actor's current location.
-
-</div>
+<p>Check whether the direction associatated with this command is valid for
+the actor’s current location.</p>
 
 <p><span id="exec"></span></p>
 
@@ -322,13 +262,9 @@ the actor's current location.
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#291">291</a>]</p>
 
-<div class="desc">
-
-ECSE ADDED a curCmd parameter (the command being added) to give the Doer
-access to what it's meant to be acting on, together with a default
-handling (execute the action associated with the current command).
-
-</div>
+<p>ECSE ADDED a curCmd parameter (the command being added) to give the Doer
+access to what it’s meant to be acting on, together with a default
+handling (execute the action associated with the current command).</p>
 
 <p><span id="execAction"></span></p>
 
@@ -336,13 +272,9 @@ handling (execute the action associated with the current command).
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#376">376</a>]</p>
 
-<div class="desc">
-
-We separate out execAction() as a separate method from exec() so that
+<p>We separate out execAction() as a separate method from exec() so that
 custom Doers can readily override this for the player character while
-leaving commands directed to other actors (or objects) to be handle by
-
-</div>
+leaving commands directed to other actors (or objects) to be handle by</p>
 
 <p><span id="redirect"></span></p>
 
@@ -350,21 +282,14 @@ leaving commands directed to other actors (or objects) to be handle by
 
 <p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#433">433</a>]</p>
 
-<div class="desc">
-
-Utility method that can be called from execAction() to redirect the
+<p>Utility method that can be called from execAction() to redirect the
 command to a new action with the same (or new) objects. This will
 normally be called via the doInstead()/doNested() interface defined on
-our Redirector superclass.
+our Redirector superclass.</p>
 
-</div>
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

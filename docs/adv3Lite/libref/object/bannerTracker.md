@@ -34,7 +34,7 @@ execute() method whenever we restore a saved state using RESTORE or
 UNDO. When we restore a saved state, we'll restore the banner display
 conditions as they existed in the saved state.
 
-**`bannerTracker`**` :   `[`PostRestoreObject`](../object/PostRestoreObject.html)[`PostUndoObject`](../object/PostUndoObject.html)
+**`bannerTracker`**` :   `[`PostRestoreObject`](../object/PostRestoreObject.html) [`PostUndoObject`](../object/PostUndoObject.html)
 
 
 
@@ -67,7 +67,7 @@ Inherited from `PostRestoreObject` :
 [`restoreCode`](../object/PostRestoreObject.html#restoreCode)
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 
 
@@ -81,12 +81,12 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`addBanner`](#addBanner)[`execute`](#execute)[`removeBanner`](#removeBanner)[`restoreDisplayState`](#restoreDisplayState)[`skipDescendants`](#skipDescendants)
+[`addBanner`](#addBanner) [`execute`](#execute) [`removeBanner`](#removeBanner) [`restoreDisplayState`](#restoreDisplayState) [`skipDescendants`](#skipDescendants)
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 
 

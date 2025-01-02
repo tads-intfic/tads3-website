@@ -70,7 +70,7 @@ Keyboard input parameter definition.
 
 
 
-[`allowRealTime`](#allowRealTime)[`promptFunc`](#promptFunc)
+[`allowRealTime`](#allowRealTime) [`promptFunc`](#promptFunc)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ Keyboard input parameter definition.
 
 
 
-[`beginInputFont`](#beginInputFont)[`endInputFont`](#endInputFont)
+[`beginInputFont`](#beginInputFont) [`endInputFont`](#endInputFont)
 
 <span id="_Properties_"></span>
 

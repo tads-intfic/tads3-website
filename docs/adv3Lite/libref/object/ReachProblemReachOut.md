@@ -86,7 +86,7 @@ Inherited from `ReachProblem` :
 [`check`](#check)
 
 Inherited from `ReachProblem` :  
-[`construct`](../object/ReachProblem.html#construct)[`verify`](../object/ReachProblem.html#verify)
+[`construct`](../object/ReachProblem.html#construct) [`verify`](../object/ReachProblem.html#verify)
 
 <span id="_Properties_"></span>
 

@@ -94,7 +94,7 @@ high-priority agenda items.
 
 
 
-[`agendaOrder`](#agendaOrder)[`initiallyActive`](#initiallyActive)[`isDone`](#isDone)[`isReady`](#isReady)
+[`agendaOrder`](#agendaOrder) [`initiallyActive`](#initiallyActive) [`isDone`](#isDone) [`isReady`](#isReady)
 
 <span id="_MethodSummary_"></span>
 
@@ -104,7 +104,7 @@ high-priority agenda items.
 
 
 
-[`execute`](#execute)[`getActor`](#getActor)[`invokeItem`](#invokeItem)[`resetItem`](#resetItem)
+[`execute`](#execute) [`getActor`](#getActor) [`invokeItem`](#invokeItem) [`resetItem`](#resetItem)
 
 <span id="_Properties_"></span>
 

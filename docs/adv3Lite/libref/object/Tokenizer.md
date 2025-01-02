@@ -79,7 +79,7 @@ Tokenizer base class
 
 
 
-[`deleteRule`](#deleteRule)[`deleteRuleAt`](#deleteRuleAt)[`insertRule`](#insertRule)[`insertRuleAt`](#insertRuleAt)[`tokCvtLower`](#tokCvtLower)[`tokCvtSkip`](#tokCvtSkip)[`tokenize`](#tokenize)
+[`deleteRule`](#deleteRule) [`deleteRuleAt`](#deleteRuleAt) [`insertRule`](#insertRule) [`insertRuleAt`](#insertRuleAt) [`tokCvtLower`](#tokCvtLower) [`tokCvtSkip`](#tokCvtSkip) [`tokenize`](#tokenize)
 
 <span id="_Properties_"></span>
 

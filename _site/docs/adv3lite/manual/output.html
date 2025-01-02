@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="final.html" class="nav">Final Moves</a> \&gt; Some Output and Input
-Issues  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="final.html" class="nav">Final Moves</a> &gt; Some Output and Input
+Issues<br />
 <span class="navnp"><a href="final.html" class="nav"><em>Prev:</em> Final Moves</a>
    
 <a href="utility.html" class="nav"><em>Next:</em> Utility Functions</a>
-    </span>
-
-</div>
+    </span></p>
 
 <h1 id="some-output-and-input-issues">Some Output and Input Issues</h1>
 
@@ -69,11 +61,10 @@ else that needs to preserve the straight quotes.</p>
 double-quoted string, is to disable and enable the cquotes output filter
 before and after outputting your text, like this:</p>
 
-<p>`
-    cquoteOutputFilter.deactivate();
-    “<FONT name="Verdana">No curly quotes here!</FONT>”;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cquoteOutputFilter.deactivate();
+    "&lt;FONT name='Verdana'&gt;No curly quotes here!&lt;/FONT&gt;";
     cquoteOutputFilter.activate();
-`</p>
+</code></pre></div></div>
 
 <p>The library makes use of a number of other output filters which you may
 occasionally find useful in your own game code. The most convenient way
@@ -93,17 +84,15 @@ Return a string containing the captured text.</li>
 
 <p>A simple example of the second of these might be:</p>
 
-<p>`
-      local str = gOutStream( {: “Hello World!” } );</p>
-
-<p>`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      local str = gOutStream( {: "Hello World!" } );
+      
+</code></pre></div></div>
 
 <p>Which would result in str containing ‘Hello World!’. A more practical
 example might be:</p>
 
-<p>`
-      local str = gOutStream( {: myObj.doSomething() } );
-`</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      local str = gOutStream( {: myObj.doSomething() } );
+</code></pre></div></div>
 
 <p>When we don’t know in advance what output doSomething() will produce.</p>
 
@@ -128,40 +117,32 @@ to the query or a fresh command.</p>
 
 <p>For example, consider the following exchange:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt;X WALL
+ Which do you mean, the east wall or the west wall?
+ 
+ &gt;EAST
+</code></pre></div></div>
 
-     
-     &gt;X WALL
-     Which do you mean, the east wall or the west wall?
-     
-     &gt;EAST
-
-
-
-  
-Is the player tellling the parser than s/he means the east wall, or is
-s/he issuing a new command to go east? The parser's interpretation here
-is governed by the **priority** property of the **ParseErrorQuestion**
+<p>Is the player tellling the parser than s/he means the east wall, or is
+s/he issuing a new command to go east? The parser’s interpretation here
+is governed by the <strong>priority</strong> property of the <strong>ParseErrorQuestion</strong>
 class. If this is set to true (the default) then the parser will assume
 that in such cases the player is responding to the immediately preceding
 query (e.g., that s/he means to refer to the east wall). If game code
-overrides it to nil, then the parser will make the opposite assumption.
+overrides it to nil, then the parser will make the opposite assumption.</p>
 
-Note that this only applies if the player's input could be interpreted
+<p>Note that this only applies if the player’s input could be interpreted
 either way. So, for example, if instead of typing EAST the player typed
-GO EAST this would be taken as a command to GO EAST in any case.
+GO EAST this would be taken as a command to GO EAST in any case.</p>
 
-  
+<h2 id="stringpreparser">StringPreParser</h2>
 
-## StringPreParser
-
-It is sometimes useful to alter the player's input before passing it to
+<p>It is sometimes useful to alter the player’s input before passing it to
 the Parser to interpret. For this purpose you can use a
-`StringPreParser` and define its **doParsing()**
-method:
+<code class="language-plaintext highlighter-rouge">StringPreParser</code> and define its <strong>doParsing()</strong>
+method:</p>
 
-`
-     myPreParser: StringPreParser
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     myPreParser: StringPreParser
         doParsing(str, which)
         {
             /* do stuff here */
@@ -170,38 +151,39 @@ method:
         }
      
      
-`
+</code></pre></div></div>
 
-Here, *str* is the string typed by the player (possibly adjusted by one
-or more previous StringPreParsers). The *which* parameter gives some
+<p>Here, <em>str</em> is the string typed by the player (possibly adjusted by one
+or more previous StringPreParsers). The <em>which</em> parameter gives some
 indication of the context of what the player just typed and can be one
-of:
+of:</p>
 
-- **rmcDisambig**: the player has just responded to a disambiguation
-  prompt.
-- **rmcAskObject**: the player has just responded to a request to supply
-  a missing object to complete a command.
-- **rmcCommand**: the player has entered a new command at the command
-  prompt.
+<ul>
+  <li><strong>rmcDisambig</strong>: the player has just responded to a disambiguation
+prompt.</li>
+  <li><strong>rmcAskObject</strong>: the player has just responded to a request to supply
+a missing object to complete a command.</li>
+  <li><strong>rmcCommand</strong>: the player has entered a new command at the command
+prompt.</li>
+</ul>
 
-Note that even if *which* is `rmcDisambig` or
-`rmcAskObject` the player may have entered a
+<p>Note that even if <em>which</em> is <code class="language-plaintext highlighter-rouge">rmcDisambig</code> or
+<code class="language-plaintext highlighter-rouge">rmcAskObject</code> the player may have entered a
 complete new command instead of responding to the request to
 disambiguate or to supply a missing noun. You code will need to check
-for this possibility.
+for this possibility.</p>
 
-<span id="comment"></span>
+<p><span id="comment"></span></p>
 
-The `doParsing()` method should then return the
+<p>The <code class="language-plaintext highlighter-rouge">doParsing()</code> method should then return the
 (same or adjusted) string which will passed on to the Parser to
 interpret. Alternatively it can return nil to signal that the
-StringPreParser has dealt with the player's input in full, so the Parser
+StringPreParser has dealt with the player’s input in full, so the Parser
 can ignore it. For example, the adv3Lite library defines a
-**commentPreParser** thus (in order to field play-testers' comments on
-beta versions of your game):
+<strong>commentPreParser</strong> thus (in order to field play-testers’ comments on
+beta versions of your game):</p>
 
-`
-     /* ------------------------------------------------------------------------ */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     /* ------------------------------------------------------------------------ */
     /*
      *   The "comment" pre-parser.  If the command line starts with a special
      *   prefix string (by default, "*", but this can be changed via our
@@ -271,7 +253,7 @@ beta versions of your game):
          *   an empty string always matches zero characters, so it will prevent
          *   us from skipping any leading charactres in the player's input.  
          */
-        leadPat = static new RexPattern('<space>*')
+        leadPat = static new RexPattern('&lt;space&gt;*')
 
         /* warning count for entering comments without SCRIPT in effect */
         warningCount = 0
@@ -290,32 +272,31 @@ beta versions of your game):
          */
         runOrder = 50
      
-`
+</code></pre></div></div>
 
-Note the use of the **runOrder** property to determine the order in
+<p>Note the use of the <strong>runOrder</strong> property to determine the order in
 which this StringPreParser is consulted in relation to any other
 StringPreParsers that have been defined. StringPreParsers are run in
-ascending order of their `runOrder` property
+ascending order of their <code class="language-plaintext highlighter-rouge">runOrder</code> property
 (i.e. lowest first); the default value of
-`runOrder` is 100.
+<code class="language-plaintext highlighter-rouge">runOrder</code> is 100.</p>
 
-Note that StringPreParsers also have an **isActive** property; this can
+<p>Note that StringPreParsers also have an <strong>isActive</strong> property; this can
 be set to nil on individual StringPreParsers if you want to temporarily
-disable them.
+disable them.</p>
 
-Finally, note how the **commentPrefix** property of the
-`commentPreParser` defined above can be
+<p>Finally, note how the <strong>commentPrefix</strong> property of the
+<code class="language-plaintext highlighter-rouge">commentPreParser</code> defined above can be
 overridden to change the character (or characters) used to introduce a
-play-tester's comments.
+play-tester’s comments.</p>
 
-As an example of a StringPreParser that (sometimes) changes the text
-passed to it into something else, here's the
-`queryPreParser` defined in the adv3Lite library
-(its function is to change commands like WHERE'S THE SALT into a form
-like WHERE IS THE SALT, that the parser can more easily understand):
+<p>As an example of a StringPreParser that (sometimes) changes the text
+passed to it into something else, here’s the
+<code class="language-plaintext highlighter-rouge">queryPreParser</code> defined in the adv3Lite library
+(its function is to change commands like WHERE’S THE SALT into a form
+like WHERE IS THE SALT, that the parser can more easily understand):</p>
 
-`
-    /* 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* 
      *   For queries, turn an apostrophe-s form into the underlying qtype plus is so
      *   that the grammar defined immediately above can be matched.
      */
@@ -342,25 +323,19 @@ like WHERE IS THE SALT, that the parser can more easily understand):
     ;
      
      
-`
+</code></pre></div></div>
 
-&lt;/div&gt;
+<hr />
 
-------------------------------------------------------------------------
-
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="final.html" class="nav">Final Moves</a> \&gt; Some Output and Input
-Issues  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="final.html" class="nav">Final Moves</a> &gt; Some Output and Input
+Issues<br />
 <span class="navnp"><a href="final.html" class="nav"><em>Prev:</em> Final Moves</a>
    
 <a href="utility.html" class="nav"><em>Next:</em> Utility Functions</a>
-    </span>
+    </span></p>
 
-</div>
-</space></div>
 
 </main>
 <footer>

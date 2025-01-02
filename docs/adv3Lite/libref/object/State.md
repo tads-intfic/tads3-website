@@ -78,7 +78,7 @@ states as needed, of course.
 
 
 
-[`DirState`](../object/DirState.html)[`LitUnlit`](../object/LitUnlit.html)[`OpenClosed`](../object/OpenClosed.html)
+[`DirState`](../object/DirState.html) [`LitUnlit`](../object/LitUnlit.html) [`OpenClosed`](../object/OpenClosed.html)
 <span id="_PropSummary_"></span>
 
 
@@ -87,7 +87,7 @@ states as needed, of course.
 
 
 
-[`adjectives`](#adjectives)[`all`](#all)[`stateProp`](#stateProp)[`vocabTab`](#vocabTab)[`vocabWords`](#vocabWords)
+[`adjectives`](#adjectives) [`all`](#all) [`stateProp`](#stateProp) [`vocabTab`](#vocabTab) [`vocabWords`](#vocabWords)
 
 Inherited from `LState` :  
 [`additionalInfo`](../object/LState.html#additionalInfo)
@@ -100,10 +100,10 @@ Inherited from `LState` :
 
 
 
-[`appliesTo`](#appliesTo)[`classInit`](#classInit)[`construct`](#construct)[`getVocab`](#getVocab)[`matchName`](#matchName)
+[`appliesTo`](#appliesTo) [`classInit`](#classInit) [`construct`](#construct) [`getVocab`](#getVocab) [`matchName`](#matchName)
 
 Inherited from `LState` :  
-[`addToName`](../object/LState.html#addToName)[`getAdditionalInfo`](../object/LState.html#getAdditionalInfo)[`initWord`](../object/LState.html#initWord)
+[`addToName`](../object/LState.html#addToName) [`getAdditionalInfo`](../object/LState.html#getAdditionalInfo) [`initWord`](../object/LState.html#initWord)
 
 <span id="_Properties_"></span>
 

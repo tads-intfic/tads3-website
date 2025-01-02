@@ -142,7 +142,7 @@ output an appropriate response.
 
 
 
-[`active`](#active)[`includeInList`](#includeInList)[`isActive`](#isActive)[`matchExactCase`](#matchExactCase)[`matchObj`](#matchObj)[`matchPattern`](#matchPattern)[`matchScore`](#matchScore)[`scoreBoost`](#scoreBoost)[`topicMatched`](#topicMatched)
+[`active`](#active) [`includeInList`](#includeInList) [`isActive`](#isActive) [`matchExactCase`](#matchExactCase) [`matchObj`](#matchObj) [`matchPattern`](#matchPattern) [`matchScore`](#matchScore) [`scoreBoost`](#scoreBoost) [`topicMatched`](#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -152,7 +152,7 @@ output an appropriate response.
 
 
 
-[`addTopic`](#addTopic)[`initializeTopicEntry`](#initializeTopicEntry)[`matchTopic`](#matchTopic)[`scoreBooster`](#scoreBooster)[`topicResponse`](#topicResponse)
+[`addTopic`](#addTopic) [`initializeTopicEntry`](#initializeTopicEntry) [`matchTopic`](#matchTopic) [`scoreBooster`](#scoreBooster) [`topicResponse`](#topicResponse)
 
 <span id="_Properties_"></span>
 

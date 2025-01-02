@@ -46,26 +46,18 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-A HelloTopic is a TopicEntry that handles an explicit greeting (the
+<p>A HelloTopic is a TopicEntry that handles an explicit greeting (the
 player character explicitly saying Hello to this actor). It also handles
 implicit greetings (triggered when the player enters a conversational
 command when a conversation with this actor is not already going on),
 unless we have also defined an ImpHelloTopic, which will then take
-preference.
+preference.</p>
 
-`class `**`HelloTopic`**` :   `[`GreetingTopic`](../object/GreetingTopic.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">HelloTopic</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/GreetingTopic.html"><code class="language-plaintext highlighter-rouge">GreetingTopic</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">HelloTopic</code></strong><br />
 <a href="../object/GreetingTopic.html"><code class="language-plaintext highlighter-rouge">GreetingTopic</code></a><br />
@@ -78,49 +70,33 @@ preference.
 </code>                                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">HelloTopic</code></strong><br />
 <a href="../object/ActorHelloTopic.html"><code class="language-plaintext highlighter-rouge">ActorHelloTopic</code></a><br />
 <a href="../object/ImpHelloTopic.html"><code class="language-plaintext highlighter-rouge">ImpHelloTopic</code></a><br />
 <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">GreetingTopic</code> :<br />
-<a href="../object/GreetingTopic.html#changeToState"><code class="language-plaintext highlighter-rouge">changeToState</code></a><a href="../object/GreetingTopic.html#impliesGreeting"><code class="language-plaintext highlighter-rouge">impliesGreeting</code></a><a href="../object/GreetingTopic.html#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a></p>
+<a href="../object/GreetingTopic.html#changeToState"><code class="language-plaintext highlighter-rouge">changeToState</code></a> <a href="../object/GreetingTopic.html#impliesGreeting"><code class="language-plaintext highlighter-rouge">impliesGreeting</code></a> <a href="../object/GreetingTopic.html#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicEntry</code> :<br />
-<a href="../object/ActorTopicEntry.html#activated"><code class="language-plaintext highlighter-rouge">activated</code></a><a href="../object/ActorTopicEntry.html#active"><code class="language-plaintext highlighter-rouge">active</code></a><a href="../object/ActorTopicEntry.html#autoName"><code class="language-plaintext highlighter-rouge">autoName</code></a><a href="../object/ActorTopicEntry.html#convKeys"><code class="language-plaintext highlighter-rouge">convKeys</code></a><a href="../object/ActorTopicEntry.html#curiosityAroused"><code class="language-plaintext highlighter-rouge">curiosityAroused</code></a><a href="../object/ActorTopicEntry.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a><a href="../object/ActorTopicEntry.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a><a href="../object/ActorTopicEntry.html#keyTopics"><code class="language-plaintext highlighter-rouge">keyTopics</code></a><a href="../object/ActorTopicEntry.html#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a><a href="../object/ActorTopicEntry.html#name"><code class="language-plaintext highlighter-rouge">name</code></a><a href="../object/ActorTopicEntry.html#suggestAs"><code class="language-plaintext highlighter-rouge">suggestAs</code></a><a href="../object/ActorTopicEntry.html#timesInvoked"><code class="language-plaintext highlighter-rouge">timesInvoked</code></a></p>
+<a href="../object/ActorTopicEntry.html#activated"><code class="language-plaintext highlighter-rouge">activated</code></a> <a href="../object/ActorTopicEntry.html#active"><code class="language-plaintext highlighter-rouge">active</code></a> <a href="../object/ActorTopicEntry.html#autoName"><code class="language-plaintext highlighter-rouge">autoName</code></a> <a href="../object/ActorTopicEntry.html#convKeys"><code class="language-plaintext highlighter-rouge">convKeys</code></a> <a href="../object/ActorTopicEntry.html#curiosityAroused"><code class="language-plaintext highlighter-rouge">curiosityAroused</code></a> <a href="../object/ActorTopicEntry.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="../object/ActorTopicEntry.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="../object/ActorTopicEntry.html#keyTopics"><code class="language-plaintext highlighter-rouge">keyTopics</code></a> <a href="../object/ActorTopicEntry.html#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a> <a href="../object/ActorTopicEntry.html#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="../object/ActorTopicEntry.html#suggestAs"><code class="language-plaintext highlighter-rouge">suggestAs</code></a> <a href="../object/ActorTopicEntry.html#timesInvoked"><code class="language-plaintext highlighter-rouge">timesInvoked</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
-<a href="../object/TopicEntry.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a><a href="../object/TopicEntry.html#matchExactCase"><code class="language-plaintext highlighter-rouge">matchExactCase</code></a><a href="../object/TopicEntry.html#matchPattern"><code class="language-plaintext highlighter-rouge">matchPattern</code></a><a href="../object/TopicEntry.html#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a><a href="../object/TopicEntry.html#scoreBoost"><code class="language-plaintext highlighter-rouge">scoreBoost</code></a><a href="../object/TopicEntry.html#topicMatched"><code class="language-plaintext highlighter-rouge">topicMatched</code></a></p>
+<a href="../object/TopicEntry.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="../object/TopicEntry.html#matchExactCase"><code class="language-plaintext highlighter-rouge">matchExactCase</code></a> <a href="../object/TopicEntry.html#matchPattern"><code class="language-plaintext highlighter-rouge">matchPattern</code></a> <a href="../object/TopicEntry.html#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a> <a href="../object/TopicEntry.html#scoreBoost"><code class="language-plaintext highlighter-rouge">scoreBoost</code></a> <a href="../object/TopicEntry.html#topicMatched"><code class="language-plaintext highlighter-rouge">topicMatched</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a></p>
 
@@ -128,24 +104,20 @@ preference.
 <a href="../object/MiscTopic.html#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicEntry</code> :<br />
-<a href="../object/ActorTopicEntry.html#activate"><code class="language-plaintext highlighter-rouge">activate</code></a><a href="../object/ActorTopicEntry.html#addToConvKeyTable"><code class="language-plaintext highlighter-rouge">addToConvKeyTable</code></a><a href="../object/ActorTopicEntry.html#buildName"><code class="language-plaintext highlighter-rouge">buildName</code></a><a href="../object/ActorTopicEntry.html#curiositySatisfied"><code class="language-plaintext highlighter-rouge">curiositySatisfied</code></a><a href="../object/ActorTopicEntry.html#deactivate"><code class="language-plaintext highlighter-rouge">deactivate</code></a><a href="../object/ActorTopicEntry.html#getKeyTopics"><code class="language-plaintext highlighter-rouge">getKeyTopics</code></a><a href="../object/ActorTopicEntry.html#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a><a href="../object/ActorTopicEntry.html#isReachable"><code class="language-plaintext highlighter-rouge">isReachable</code></a><a href="../object/ActorTopicEntry.html#nodeActive"><code class="language-plaintext highlighter-rouge">nodeActive</code></a><a href="../object/ActorTopicEntry.html#showKeyTopics"><code class="language-plaintext highlighter-rouge">showKeyTopics</code></a><a href="../object/ActorTopicEntry.html#timesToSuggest"><code class="language-plaintext highlighter-rouge">timesToSuggest</code></a></p>
+<a href="../object/ActorTopicEntry.html#activate"><code class="language-plaintext highlighter-rouge">activate</code></a> <a href="../object/ActorTopicEntry.html#addToConvKeyTable"><code class="language-plaintext highlighter-rouge">addToConvKeyTable</code></a> <a href="../object/ActorTopicEntry.html#buildName"><code class="language-plaintext highlighter-rouge">buildName</code></a> <a href="../object/ActorTopicEntry.html#curiositySatisfied"><code class="language-plaintext highlighter-rouge">curiositySatisfied</code></a> <a href="../object/ActorTopicEntry.html#deactivate"><code class="language-plaintext highlighter-rouge">deactivate</code></a> <a href="../object/ActorTopicEntry.html#getKeyTopics"><code class="language-plaintext highlighter-rouge">getKeyTopics</code></a> <a href="../object/ActorTopicEntry.html#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a> <a href="../object/ActorTopicEntry.html#isReachable"><code class="language-plaintext highlighter-rouge">isReachable</code></a> <a href="../object/ActorTopicEntry.html#nodeActive"><code class="language-plaintext highlighter-rouge">nodeActive</code></a> <a href="../object/ActorTopicEntry.html#showKeyTopics"><code class="language-plaintext highlighter-rouge">showKeyTopics</code></a> <a href="../object/ActorTopicEntry.html#timesToSuggest"><code class="language-plaintext highlighter-rouge">timesToSuggest</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
 <a href="../object/ReplaceRedirector.html#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
-<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a><a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a><a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
-<a href="../object/TopicEntry.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a><a href="../object/TopicEntry.html#scoreBooster"><code class="language-plaintext highlighter-rouge">scoreBooster</code></a><a href="../object/TopicEntry.html#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
+<a href="../object/TopicEntry.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="../object/TopicEntry.html#scoreBooster"><code class="language-plaintext highlighter-rouge">scoreBooster</code></a> <a href="../object/TopicEntry.html#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="matchObj"></span></p>
 
@@ -153,19 +125,11 @@ preference.
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3811">3811</a>]</p>
 
-<div class="desc">
-
-A HelloTopic matches either helloTopicObj or impHelloTopicObj
-
-</div>
+<p>A HelloTopic matches either helloTopicObj or impHelloTopicObj</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="handleTopic"></span></p>
 
@@ -173,18 +137,11 @@ A HelloTopic matches either helloTopicObj or impHelloTopicObj
 
 <p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3813">3813</a>]</p>
 
-<div class="desc">
+<p><em>no description available</em></p>
 
-*no description available*
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

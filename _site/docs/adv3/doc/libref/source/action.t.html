@@ -4296,7 +4296,7 @@ class TIAction: TAction
         if (self.(objList1).length() == 1)
         {
             /* set the current first-resolved object */
-            self.(objCur1) = self.(objList1)[1].obj_;
+            self.(objCur1) = self.(objList1) [1].obj_;
 
             /* if remapping is allowed at this point, look for a remapping */
             if (results.allowActionRemapping)
@@ -5633,7 +5633,7 @@ class TopicActionBase: object
                     issuingActor, targetActor, true);
                 
                 /* sort it and return the best match */
-                return CommandRanking.sortByRanking(match, resolver)[1].match;
+                return CommandRanking.sortByRanking(match, resolver) [1].match;
             }
             else if (match != nil &amp;&amp; match.length() &gt; 0)
             {
@@ -6696,12 +6696,9 @@ class ActionRemappingTooComplexError: Exception
 ;
 </code></pre></div></div>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

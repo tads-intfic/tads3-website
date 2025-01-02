@@ -69,7 +69,7 @@ articles in input.
 
 
 
-[`All`](../object/All.html)[`Definite`](../object/Definite.html)[`Indefinite`](../object/Indefinite.html)[`Unqualified`](../object/Unqualified.html)
+[`All`](../object/All.html) [`Definite`](../object/Definite.html) [`Indefinite`](../object/Indefinite.html) [`Unqualified`](../object/Unqualified.html)
 <span id="_PropSummary_"></span>
 
 

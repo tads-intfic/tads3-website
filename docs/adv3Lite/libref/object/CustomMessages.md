@@ -77,7 +77,7 @@ up during preinit.
 
 
 
-[`active`](#active)[`all`](#all)[`messages`](#messages)[`msgTab`](#msgTab)[`priority`](#priority)
+[`active`](#active) [`all`](#all) [`messages`](#messages) [`msgTab`](#msgTab) [`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 

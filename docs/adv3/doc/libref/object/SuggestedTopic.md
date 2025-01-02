@@ -135,7 +135,7 @@ actors.
 
 
 
-[`associatedTopic`](#associatedTopic)[`curiositySatisfied`](#curiositySatisfied)[`fullName`](#fullName)[`location`](#location)[`name`](#name)[`suggestionGroup`](#suggestionGroup)[`suggestTo`](#suggestTo)[`timesToSuggest`](#timesToSuggest)
+[`associatedTopic`](#associatedTopic) [`curiositySatisfied`](#curiositySatisfied) [`fullName`](#fullName) [`location`](#location) [`name`](#name) [`suggestionGroup`](#suggestionGroup) [`suggestTo`](#suggestTo) [`timesToSuggest`](#timesToSuggest)
 
 <span id="_MethodSummary_"></span>
 
@@ -145,7 +145,7 @@ actors.
 
 
 
-[`associatedTopicCanMatch`](#associatedTopicCanMatch)[`associatedTopicIsActive`](#associatedTopicIsActive)[`associatedTopicTalkCount`](#associatedTopicTalkCount)[`findEnclosingSuggestedTopic`](#findEnclosingSuggestedTopic)[`findOuterSuggestedTopic`](#findOuterSuggestedTopic)[`fromEnclosingSuggestedTopic`](#fromEnclosingSuggestedTopic)[`initializeSuggestedTopic`](#initializeSuggestedTopic)[`isSuggestionActive`](#isSuggestionActive)[`noteSuggestion`](#noteSuggestion)
+[`associatedTopicCanMatch`](#associatedTopicCanMatch) [`associatedTopicIsActive`](#associatedTopicIsActive) [`associatedTopicTalkCount`](#associatedTopicTalkCount) [`findEnclosingSuggestedTopic`](#findEnclosingSuggestedTopic) [`findOuterSuggestedTopic`](#findOuterSuggestedTopic) [`fromEnclosingSuggestedTopic`](#fromEnclosingSuggestedTopic) [`initializeSuggestedTopic`](#initializeSuggestedTopic) [`isSuggestionActive`](#isSuggestionActive) [`noteSuggestion`](#noteSuggestion)
 
 <span id="_Properties_"></span>
 

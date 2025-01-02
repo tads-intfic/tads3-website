@@ -73,16 +73,16 @@ within the web UI.
 
 
 
-[`isInputOpen`](#isInputOpen)[`lastInput`](#lastInput)[`lastInputClient`](#lastInputClient)[`lastInputReady`](#lastInputReady)[`mode`](#mode)[`moreMode`](#moreMode)[`outbuf`](#outbuf)[`scrollback`](#scrollback)[`scrollbackLimit`](#scrollbackLimit)[`src`](#src)[`textbuf`](#textbuf)[`vpath`](#vpath)
+[`isInputOpen`](#isInputOpen) [`lastInput`](#lastInput) [`lastInputClient`](#lastInputClient) [`lastInputReady`](#lastInputReady) [`mode`](#mode) [`moreMode`](#moreMode) [`outbuf`](#outbuf) [`scrollback`](#scrollback) [`scrollbackLimit`](#scrollbackLimit) [`src`](#src) [`textbuf`](#textbuf) [`vpath`](#vpath)
 
 Inherited from `WebWindow` :  
-[`name`](../object/WebWindow.html#name)[`pathName`](../object/WebWindow.html#pathName)[`sthCtx`](../object/WebWindow.html#sthCtx)
+[`name`](../object/WebWindow.html#name) [`pathName`](../object/WebWindow.html#pathName) [`sthCtx`](../object/WebWindow.html#sthCtx)
 
 Inherited from `WebResourceResFile` :  
-[`binaryExts`](../object/WebResourceResFile.html#binaryExts)[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)
+[`binaryExts`](../object/WebResourceResFile.html#binaryExts) [`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)
 
 Inherited from `WebResource` :  
-[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)
+[`group`](../object/WebResource.html#group) [`priority`](../object/WebResource.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,16 +92,16 @@ Inherited from `WebResource` :
 
 
 
-[`cancelInputLine`](#cancelInputLine)[`clearWindow`](#clearWindow)[`endMoreMode`](#endMoreMode)[`flushWin`](#flushWin)[`getInputLine`](#getInputLine)[`getState`](#getState)[`receiveInput`](#receiveInput)[`showMorePrompt`](#showMorePrompt)[`textbufToScrollback`](#textbufToScrollback)[`write`](#write)
+[`cancelInputLine`](#cancelInputLine) [`clearWindow`](#clearWindow) [`endMoreMode`](#endMoreMode) [`flushWin`](#flushWin) [`getInputLine`](#getInputLine) [`getState`](#getState) [`receiveInput`](#receiveInput) [`showMorePrompt`](#showMorePrompt) [`textbufToScrollback`](#textbufToScrollback) [`write`](#write)
 
 Inherited from `WebWindow` :  
-[`processName`](../object/WebWindow.html#processName)[`sendWinEvent`](../object/WebWindow.html#sendWinEvent)[`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)[`winFromPath`](../object/WebWindow.html#winFromPath)
+[`processName`](../object/WebWindow.html#processName) [`sendWinEvent`](../object/WebWindow.html#sendWinEvent) [`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo) [`winFromPath`](../object/WebWindow.html#winFromPath)
 
 Inherited from `WebResourceResFile` :  
-[`isTextFile`](../object/WebResourceResFile.html#isTextFile)[`matchRequest`](../object/WebResourceResFile.html#matchRequest)[`processRequest`](../object/WebResourceResFile.html#processRequest)
+[`isTextFile`](../object/WebResourceResFile.html#isTextFile) [`matchRequest`](../object/WebResourceResFile.html#matchRequest) [`processRequest`](../object/WebResourceResFile.html#processRequest)
 
 Inherited from `WebResource` :  
-[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
+[`sendAck`](../object/WebResource.html#sendAck) [`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

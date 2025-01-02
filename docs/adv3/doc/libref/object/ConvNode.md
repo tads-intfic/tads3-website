@@ -81,13 +81,13 @@ flexibility arranging source code.
 
 
 
-[`activeSpecialTopic`](#activeSpecialTopic)[`isSticky`](#isSticky)[`name`](#name)[`npcContinueList`](#npcContinueList)[`npcContinueMsg`](#npcContinueMsg)[`npcGreetingList`](#npcGreetingList)[`patDelim`](#patDelim)[`patWhitespace`](#patWhitespace)
+[`activeSpecialTopic`](#activeSpecialTopic) [`isSticky`](#isSticky) [`name`](#name) [`npcContinueList`](#npcContinueList) [`npcContinueMsg`](#npcContinueMsg) [`npcGreetingList`](#npcGreetingList) [`patDelim`](#patDelim) [`patWhitespace`](#patWhitespace)
 
 Inherited from `ActorTopicDatabase` :  
-[`askForTopics`](../object/ActorTopicDatabase.html#askForTopics)[`askTopics`](../object/ActorTopicDatabase.html#askTopics)[`commandTopics`](../object/ActorTopicDatabase.html#commandTopics)[`giveTopics`](../object/ActorTopicDatabase.html#giveTopics)[`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics)[`miscTopics`](../object/ActorTopicDatabase.html#miscTopics)[`showTopics`](../object/ActorTopicDatabase.html#showTopics)[`specialTopics`](../object/ActorTopicDatabase.html#specialTopics)[`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
+[`askForTopics`](../object/ActorTopicDatabase.html#askForTopics) [`askTopics`](../object/ActorTopicDatabase.html#askTopics) [`commandTopics`](../object/ActorTopicDatabase.html#commandTopics) [`giveTopics`](../object/ActorTopicDatabase.html#giveTopics) [`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics) [`miscTopics`](../object/ActorTopicDatabase.html#miscTopics) [`showTopics`](../object/ActorTopicDatabase.html#showTopics) [`specialTopics`](../object/ActorTopicDatabase.html#specialTopics) [`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
 
 Inherited from `TopicDatabase` :  
-[`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions)[`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics)[`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)
+[`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions) [`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics) [`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive) [`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,13 +97,13 @@ Inherited from `TopicDatabase` :
 
 
 
-[`autoShowTopics`](#autoShowTopics)[`canEndConversation`](#canEndConversation)[`endConversation`](#endConversation)[`getActor`](#getActor)[`getTopicOwner`](#getTopicOwner)[`handleConversation`](#handleConversation)[`noteActive`](#noteActive)[`noteActiveReason`](#noteActiveReason)[`noteLeaving`](#noteLeaving)[`npcContinueConversation`](#npcContinueConversation)[`npcGreetingMsg`](#npcGreetingMsg)[`npcInitiateConversation`](#npcInitiateConversation)[`processSpecialCmd`](#processSpecialCmd)[`saySpecialTopic`](#saySpecialTopic)
+[`autoShowTopics`](#autoShowTopics) [`canEndConversation`](#canEndConversation) [`endConversation`](#endConversation) [`getActor`](#getActor) [`getTopicOwner`](#getTopicOwner) [`handleConversation`](#handleConversation) [`noteActive`](#noteActive) [`noteActiveReason`](#noteActiveReason) [`noteLeaving`](#noteLeaving) [`npcContinueConversation`](#npcContinueConversation) [`npcGreetingMsg`](#npcGreetingMsg) [`npcInitiateConversation`](#npcInitiateConversation) [`processSpecialCmd`](#processSpecialCmd) [`saySpecialTopic`](#saySpecialTopic)
 
 Inherited from `ActorTopicDatabase` :  
-[`initiateTopic`](../object/ActorTopicDatabase.html#initiateTopic)[`showTopicResponse`](../object/ActorTopicDatabase.html#showTopicResponse)
+[`initiateTopic`](../object/ActorTopicDatabase.html#initiateTopic) [`showTopicResponse`](../object/ActorTopicDatabase.html#showTopicResponse)
 
 Inherited from `TopicDatabase` :  
-[`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic)[`addTopic`](../object/TopicDatabase.html#addTopic)[`addTopicToList`](../object/TopicDatabase.html#addTopicToList)[`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch)[`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse)[`handleTopic`](../object/TopicDatabase.html#handleTopic)[`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic)[`removeTopic`](../object/TopicDatabase.html#removeTopic)[`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList)[`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)
+[`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic) [`addTopic`](../object/TopicDatabase.html#addTopic) [`addTopicToList`](../object/TopicDatabase.html#addTopicToList) [`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch) [`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse) [`handleTopic`](../object/TopicDatabase.html#handleTopic) [`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic) [`removeTopic`](../object/TopicDatabase.html#removeTopic) [`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList) [`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)
 
 <span id="_Properties_"></span>
 

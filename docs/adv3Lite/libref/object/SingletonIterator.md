@@ -72,7 +72,7 @@ the loop once with the loop variable set to the singleton value.
 
 
 
-[`more_`](#more_)[`val_`](#val_)
+[`more_`](#more_) [`val_`](#val_)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ the loop once with the loop variable set to the singleton value.
 
 
 
-[`construct`](#construct)[`getCurVal`](#getCurVal)[`getKey`](#getKey)[`getNext`](#getNext)[`isNextAvailable`](#isNextAvailable)[`resetIterator`](#resetIterator)
+[`construct`](#construct) [`getCurVal`](#getCurVal) [`getKey`](#getKey) [`getNext`](#getNext) [`isNextAvailable`](#isNextAvailable) [`resetIterator`](#resetIterator)
 
 <span id="_Properties_"></span>
 

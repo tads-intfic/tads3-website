@@ -21,20 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Iterator  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Iterator<br />
 <span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
-    <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
-
-</div>
+    <a href="list.html" class="nav"><em>Next:</em> List</a>     </span></p>
 
 <h1 id="iterator">Iterator</h1>
 
@@ -58,95 +50,72 @@ the Iterator do not affect the iteration.</p>
 
 <p><code class="language-plaintext highlighter-rouge">getCurKey()</code></p>
 
-<div class="fdef">
-
-Returns the key for the current item in the iteration. For List and
+<p>Returns the key for the current item in the iteration. For List and
 Vector objects, this returns the index of the current value; for
-LookupTable objects, this returns the key. Throws an error ("index out
-of range") if the iteration has not been started yet (that is,
-`getNext()` has never been called on this
-Iterator) or has moved past the last item.
+LookupTable objects, this returns the key. Throws an error (“index out
+of range”) if the iteration has not been started yet (that is,
+<code class="language-plaintext highlighter-rouge">getNext()</code> has never been called on this
+Iterator) or has moved past the last item.</p>
 
+<p><code class="language-plaintext highlighter-rouge">getCurVal()</code></p>
 
-
-`getCurVal()`
-
-<div class="fdef">
-
-Returns the value of the current item in the iteration (this is the same
+<p>Returns the value of the current item in the iteration (this is the same
 value that the most recent call to getNext() returned). Throws an error
-("index out of range") if the iteration has not been started yet or has
-moved past the last item.
+(“index out of range”) if the iteration has not been started yet or has
+moved past the last item.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">getNext()</code></p>
 
-`getNext()`
+<p>Returns the next element of the collection. The order in which the
+iterator returns the collection’s elements varies by the collection
+type:</p>
 
-<div class="fdef">
+<ul>
+  <li>For List objects, the elements of the list are returned in order of
+the index values; the first item returned is the item at index 1, the
+second is the item at index 2, and so forth.</li>
+  <li>For LookupTable objects, the elements are returned in an arbitrary
+order that depends on the internal arrangement of the table’s
+elements.</li>
+  <li>For Vector objects, the elements are returned in order of index
+values.</li>
+</ul>
 
-Returns the next element of the collection. The order in which the
-iterator returns the collection's elements varies by the collection
-type:
-
-- For List objects, the elements of the list are returned in order of
-  the index values; the first item returned is the item at index 1, the
-  second is the item at index 2, and so forth.
-- For LookupTable objects, the elements are returned in an arbitrary
-  order that depends on the internal arrangement of the table's
-  elements.
-- For Vector objects, the elements are returned in order of index
-  values.
-
-Each time you call `getNext()`, the iterator
+<p>Each time you call <code class="language-plaintext highlighter-rouge">getNext()</code>, the iterator
 updates its internal state to refer to the next element of the
 collection, so the next call will return the next item. When you first
-create an Iterator (by calling a Collection object's
-`createIterator()` method), the Iterator is
+create an Iterator (by calling a Collection object’s
+<code class="language-plaintext highlighter-rouge">createIterator()</code> method), the Iterator is
 initialized so that the first call to
-`getNext()` will return the first element of the
-collection.
+<code class="language-plaintext highlighter-rouge">getNext()</code> will return the first element of the
+collection.</p>
 
-After all of the collection's elements have been exhausted, calling
-`getNext()` will cause an error ("out of
-bounds") to be thrown.
+<p>After all of the collection’s elements have been exhausted, calling
+<code class="language-plaintext highlighter-rouge">getNext()</code> will cause an error (“out of
+bounds”) to be thrown.</p>
 
-</div>
+<p><code class="language-plaintext highlighter-rouge">isNextAvailable()</code></p>
 
-`isNextAvailable()`
+<p>Returns <code class="language-plaintext highlighter-rouge">true</code> if calling
+<code class="language-plaintext highlighter-rouge">getNext()</code> will yield a valid item,
+<code class="language-plaintext highlighter-rouge">nil</code> if not. You can call this prior to calling
+<code class="language-plaintext highlighter-rouge">getNext()</code> to ensure that
+<code class="language-plaintext highlighter-rouge">getNext()</code> will not throw an error.</p>
 
-<div class="fdef">
+<p><code class="language-plaintext highlighter-rouge">resetIterator()</code></p>
 
-Returns `true` if calling
-`getNext()` will yield a valid item,
-`nil` if not. You can call this prior to calling
-`getNext()` to ensure that
-`getNext()` will not throw an error.
-
-</div>
-
-`resetIterator()`
-
-<div class="fdef">
-
-Resets the iteration to its first element. After calling this method,
-the next call to `getNext()` will yield the
-first element of the collection.
-
-</div>
-
-</div>
+<p>Resets the iteration to its first element. After calling this method,
+the next call to <code class="language-plaintext highlighter-rouge">getNext()</code> will yield the
+first element of the collection.</p>
 
 <hr />
 
-<div class="navb">
-
-*TADS 3 System Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="builtins.html" class="nav">The Intrinsics</a> \&gt; Iterator  
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Iterator<br />
 <span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
-    <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
+    <a href="list.html" class="nav"><em>Next:</em> List</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

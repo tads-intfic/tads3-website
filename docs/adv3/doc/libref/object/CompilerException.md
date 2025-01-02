@@ -82,10 +82,10 @@ class if an error occurs compiling the source code of the new object.
 
 
 
-[`construct`](#construct)[`displayException`](#displayException)
+[`construct`](#construct) [`displayException`](#displayException)
 
 Inherited from `Exception` :  
-[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

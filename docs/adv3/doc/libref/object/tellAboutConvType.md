@@ -47,7 +47,7 @@ Details](#_Methods_)
 
 
 
-[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)
+[`defaultResponseProp`](#defaultResponseProp) [`topicListProp`](#topicListProp)
 
 Inherited from `ConvType` :  
 [`unknownMsg`](../object/ConvType.html#unknownMsg)

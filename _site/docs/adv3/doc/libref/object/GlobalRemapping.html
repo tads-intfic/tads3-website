@@ -46,42 +46,34 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-GlobalRemapping makes it possible to transform one action into another
+<p>GlobalRemapping makes it possible to transform one action into another
 globally - as opposed to the remapTo mechanism, which lets an object
 involved in the command perform a remapping. The key difference between
-global remappings and remapTo is that the latter can't happen until
+global remappings and remapTo is that the latter can’t happen until
 after the objects are resolved (for fairly obvious reasons: each remapTo
-mapping is associated with an object, so you can't know which mapping to
+mapping is associated with an object, so you can’t know which mapping to
 apply until you know which object is involved). In contrast, global
-remappings are performed \*before\* object resolution - this is possible
-because the mappings don't depend on the objects involved in the action.
+remappings are performed *before* object resolution - this is possible
+because the mappings don’t depend on the objects involved in the action.</p>
 
-Whenever an action is about to be executed, the parser runs through all
+<p>Whenever an action is about to be executed, the parser runs through all
 of the defined global remappings, and gives each one a chance to remap
 the command. If any remapping succeeds, we replace the original command
 with the remapped version, then repeat the scan of the global remapping
 list from the start - we do another complete scan of the list in case
-there's another global mapping that applies to the remapped version of
+there’s another global mapping that applies to the remapped version of
 the command. We repeat this process until we make it through the whole
-list without finding a remapping.
+list without finding a remapping.</p>
 
-GlobalRemapping instances are added to the master list of mappings
+<p>GlobalRemapping instances are added to the master list of mappings
 automatically at pre-init time, and any time you construct one
-dynamically with 'new'.
+dynamically with ‘new’.</p>
 
-`class `**`GlobalRemapping`**` :   `[`PreinitObject`](../object/PreinitObject.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">GlobalRemapping</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">GlobalRemapping</code></strong><br />
 <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
@@ -89,54 +81,34 @@ dynamically with 'new'.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><a href="../object/giveMeToAskFor.html"><code class="language-plaintext highlighter-rouge">giveMeToAskFor</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#allGlobalRemappings"><code class="language-plaintext highlighter-rouge">allGlobalRemappings</code></a><a href="#listNeedsSorting"><code class="language-plaintext highlighter-rouge">listNeedsSorting</code></a><a href="#remappingOrder"><code class="language-plaintext highlighter-rouge">remappingOrder</code></a></p>
+<p><a href="#allGlobalRemappings"><code class="language-plaintext highlighter-rouge">allGlobalRemappings</code></a> <a href="#listNeedsSorting"><code class="language-plaintext highlighter-rouge">listNeedsSorting</code></a> <a href="#remappingOrder"><code class="language-plaintext highlighter-rouge">remappingOrder</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a><a href="#findGlobalRemapping"><code class="language-plaintext highlighter-rouge">findGlobalRemapping</code></a><a href="#getRemapping"><code class="language-plaintext highlighter-rouge">getRemapping</code></a><a href="#registerGlobalRemapping"><code class="language-plaintext highlighter-rouge">registerGlobalRemapping</code></a><a href="#unregisterGlobalRemapping"><code class="language-plaintext highlighter-rouge">unregisterGlobalRemapping</code></a></p>
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#findGlobalRemapping"><code class="language-plaintext highlighter-rouge">findGlobalRemapping</code></a> <a href="#getRemapping"><code class="language-plaintext highlighter-rouge">getRemapping</code></a> <a href="#registerGlobalRemapping"><code class="language-plaintext highlighter-rouge">registerGlobalRemapping</code></a> <a href="#unregisterGlobalRemapping"><code class="language-plaintext highlighter-rouge">unregisterGlobalRemapping</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="allGlobalRemappings"></span></p>
 
@@ -144,12 +116,8 @@ dynamically with 'new'.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#771">771</a>]</p>
 
-<div class="desc">
-
-Static class property: the master list of remappings. We build this
-automatically at preinit time, and manipulate it via our constructor.
-
-</div>
+<p>Static class property: the master list of remappings. We build this
+automatically at preinit time, and manipulate it via our constructor.</p>
 
 <p><span id="listNeedsSorting"></span></p>
 
@@ -157,13 +125,9 @@ automatically at preinit time, and manipulate it via our constructor.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#778">778</a>]</p>
 
-<div class="desc">
-
-static class property: the master list needs to be sorted; this is set
+<p>static class property: the master list needs to be sorted; this is set
 to true each time we update the list, so that the list scanner knows to
-sort it before doing its scan
-
-</div>
+sort it before doing its scan</p>
 
 <p><span id="remappingOrder"></span></p>
 
@@ -171,25 +135,17 @@ sort it before doing its scan
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#661">661</a>]</p>
 
-<div class="desc">
-
-Remapping order - the parser applies global remappings in ascending
-order of this value. In most cases, the order shouldn't matter, since
+<p>Remapping order - the parser applies global remappings in ascending
+order of this value. In most cases, the order shouldn’t matter, since
 most remappings should be narrow enough that a given command will only
 be subject to one remapping rule. However, in some cases you might need
 to define rules that overlap, so the ordering lets you specify which one
-goes first. In most cases you'll want to apply the more specific rule
-first.
-
-</div>
+goes first. In most cases you’ll want to apply the more specific rule
+first.</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -197,11 +153,7 @@ first.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#740">740</a>]</p>
 
-<div class="desc">
-
-construction: add myself to the master list
-
-</div>
+<p>construction: add myself to the master list</p>
 
 <p><span id="execute"></span></p>
 
@@ -209,11 +161,7 @@ construction: add myself to the master list
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#733">733</a>]</p>
 
-<div class="desc">
-
-pre-initialization: add each instance to the master list
-
-</div>
+<p>pre-initialization: add each instance to the master list</p>
 
 <p><span id="findGlobalRemapping"></span></p>
 
@@ -221,22 +169,18 @@ pre-initialization: add each instance to the master list
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#678">678</a>]</p>
 
-<div class="desc">
-
-Static class method: look for a remapping. This runs through the master
+<p>Static class method: look for a remapping. This runs through the master
 list of mappings, looking for a mapping that applies to the given
-command. If we find one, we'll replace the command with the remapped
+command. If we find one, we’ll replace the command with the remapped
 version, then start over with a fresh scan of the entire list to see if
-there's a remapping for the \*new\* version of the command. We repeat
-this until we get through the whole list without finding a remapping.
+there’s a remapping for the *new* version of the command. We repeat
+this until we get through the whole list without finding a remapping.</p>
 
-The return value is a list, \[targetActor, action\], giving the
-resulting target actor and new action object. If we don't find any
+<p>The return value is a list, [targetActor, action], giving the
+resulting target actor and new action object. If we don’t find any
 remapping, this will simply be the original values passed in as our
 arguments; if we do find a remapping, this will be the new version of
-the command.
-
-</div>
+the command.</p>
 
 <p><span id="getRemapping"></span></p>
 
@@ -244,33 +188,29 @@ the command.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#642">642</a>]</p>
 
-<div class="desc">
+<p>Check for and apply a remapping. This method must be implemented in each
+GlobalRemapping instance to perform the actual remapping work.</p>
 
-Check for and apply a remapping. This method must be implemented in each
-GlobalRemapping instance to perform the actual remapping work.
-
-This routine should first check to see if the command is relevant to
+<p>This routine should first check to see if the command is relevant to
 this remapping. In most cases, this means checking that the command
 matches some template, such as having a particular action (verb) and
-combination of potential objects. Note that the objects aren't fully
+combination of potential objects. Note that the objects aren’t fully
 resolved during global remapping - the whole point of global remapping
 is to catch certain phrasings before we get to the noun resolution
-phase - but the \*phrases\* involved will be known, so the range of
-potential matches is knowable.
+phase - but the *phrases* involved will be known, so the range of
+potential matches is knowable.</p>
 
-If the routine decides that the action isn't relevant to this remapping,
-it should simply return nil.
+<p>If the routine decides that the action isn’t relevant to this remapping,
+it should simply return nil.</p>
 
-If the action decides to remap the action, it must create a new Action
+<p>If the action decides to remap the action, it must create a new Action
 object representing the replacement version of the command. Then, return
-a list, \[targetActor, action\], giving the new target actor and the new
-action. You don't have to change the target actor, of course, but it's
+a list, [targetActor, action], giving the new target actor and the new
+action. You don’t have to change the target actor, of course, but it’s
 included in the result so that you can change it if you want to. For
-example, you could use this to remap a command of the form "X, GIVE ME
-Y" to "ME, ASK X FOR Y" - note that the target actor changes from X to
-ME.
-
-</div>
+example, you could use this to remap a command of the form “X, GIVE ME
+Y” to “ME, ASK X FOR Y” - note that the target actor changes from X to
+ME.</p>
 
 <p><span id="registerGlobalRemapping"></span></p>
 
@@ -278,11 +218,7 @@ ME.
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#747">747</a>]</p>
 
-<div class="desc">
-
-register myself with the global list, making this an active mapping
-
-</div>
+<p>register myself with the global list, making this an active mapping</p>
 
 <p><span id="unregisterGlobalRemapping"></span></p>
 
@@ -290,20 +226,13 @@ register myself with the global list, making this an active mapping
 
 <p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#761">761</a>]</p>
 
-<div class="desc">
+<p>unregister - this removes me from the global list, making this mapping
+inactive: after being unregistered, the parser won’t apply this mapping
+to new commands</p>
 
-unregister - this removes me from the global list, making this mapping
-inactive: after being unregistered, the parser won't apply this mapping
-to new commands
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

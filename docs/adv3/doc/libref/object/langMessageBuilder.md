@@ -51,17 +51,17 @@ The English-specific message builder.
 
 
 
-[`fixedTenseProp_`](#fixedTenseProp_)[`lastSubject_`](#lastSubject_)[`lastSubjectName_`](#lastSubjectName_)[`paramList_`](#paramList_)[`pastEnding_`](#pastEnding_)[`patEndOfSentence`](#patEndOfSentence)[`patIdObjApostS`](#patIdObjApostS)[`patIdObjSlashIdApostS`](#patIdObjSlashIdApostS)[`patParamWithExclam`](#patParamWithExclam)[`patSpecial`](#patSpecial)[`patSSlashLetterEd`](#patSSlashLetterEd)[`patTenseSwitching`](#patTenseSwitching)
+[`fixedTenseProp_`](#fixedTenseProp_) [`lastSubject_`](#lastSubject_) [`lastSubjectName_`](#lastSubjectName_) [`paramList_`](#paramList_) [`pastEnding_`](#pastEnding_) [`patEndOfSentence`](#patEndOfSentence) [`patIdObjApostS`](#patIdObjApostS) [`patIdObjSlashIdApostS`](#patIdObjSlashIdApostS) [`patParamWithExclam`](#patParamWithExclam) [`patSpecial`](#patSpecial) [`patSSlashLetterEd`](#patSSlashLetterEd) [`patTenseSwitching`](#patTenseSwitching)
 
 Inherited from `MessageBuilder` :  
-[`lastParamObj_`](../object/MessageBuilder.html#lastParamObj_)[`lastTargetObj_`](../object/MessageBuilder.html#lastTargetObj_)[`nameTable_`](../object/MessageBuilder.html#nameTable_)[`paramTable_`](../object/MessageBuilder.html#paramTable_)[`patAllCaps`](../object/MessageBuilder.html#patAllCaps)[`patIdObj`](../object/MessageBuilder.html#patIdObj)[`patIdObjSlashId`](../object/MessageBuilder.html#patIdObjSlashId)[`patIdSlash`](../object/MessageBuilder.html#patIdSlash)[`patUpper`](../object/MessageBuilder.html#patUpper)
+[`lastParamObj_`](../object/MessageBuilder.html#lastParamObj_) [`lastTargetObj_`](../object/MessageBuilder.html#lastTargetObj_) [`nameTable_`](../object/MessageBuilder.html#nameTable_) [`paramTable_`](../object/MessageBuilder.html#paramTable_) [`patAllCaps`](../object/MessageBuilder.html#patAllCaps) [`patIdObj`](../object/MessageBuilder.html#patIdObj) [`patIdObjSlashId`](../object/MessageBuilder.html#patIdObjSlashId) [`patIdSlash`](../object/MessageBuilder.html#patIdSlash) [`patUpper`](../object/MessageBuilder.html#patUpper)
 
 
 
 
 
 Inherited from `ModuleExecObject` :  
-[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -71,17 +71,17 @@ Inherited from `ModuleExecObject` :
 
 
 
-[`generateMessage`](#generateMessage)[`getTargetProp`](#getTargetProp)[`langRewriteParam`](#langRewriteParam)[`processOrig`](#processOrig)[`processResult`](#processResult)
+[`generateMessage`](#generateMessage) [`getTargetProp`](#getTargetProp) [`langRewriteParam`](#langRewriteParam) [`processOrig`](#processOrig) [`processResult`](#processResult)
 
 Inherited from `MessageBuilder` :  
-[`execute`](../object/MessageBuilder.html#execute)[`filterText`](../object/MessageBuilder.html#filterText)[`genLiteral`](../object/MessageBuilder.html#genLiteral)[`quoteMessage`](../object/MessageBuilder.html#quoteMessage)
+[`execute`](../object/MessageBuilder.html#execute) [`filterText`](../object/MessageBuilder.html#filterText) [`genLiteral`](../object/MessageBuilder.html#genLiteral) [`quoteMessage`](../object/MessageBuilder.html#quoteMessage)
 
 
 
 
 
 Inherited from `ModuleExecObject` :  
-[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
+[`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

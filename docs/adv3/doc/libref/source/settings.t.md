@@ -200,7 +200,7 @@ layout: docs
         {
             /* convert to lower-case and strip off spaces */
             if (rexMatch('<space>*(<alpha>+)', str.toLower()) != nil)
-                str = rexGroup(1)[3];
+                str = rexGroup(1) [3];
 
             /* get the new setting */
             isOn = (str.toLower() == 'on');
@@ -242,7 +242,7 @@ layout: docs
             {
                 /* no leading quote; just trim spaces */
                 rexMatch(trimSpPat, str);
-                val = rexGroup(1)[3];
+                val = rexGroup(1) [3];
             }
         }
 
@@ -416,7 +416,7 @@ layout: docs
                      *   it parsed - add the variable and its value to the
                      *   contents object 
                      */
-                    s.addItem(rexGroup(1)[3], rexGroup(2)[3]);
+                    s.addItem(rexGroup(1) [3], rexGroup(2) [3]);
                 }
                 else
                 {

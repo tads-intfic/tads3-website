@@ -25,7 +25,7 @@ Details](#_Methods_)
 Event Manager. This is a schedulable object that keeps track of fuses
 and daemons, and schedules their execution.
 
-**`eventManager`**` :   `[`BasicEventManager`](../object/BasicEventManager.html)[`Schedulable`](../object/Schedulable.html)
+**`eventManager`**` :   `[`BasicEventManager`](../object/BasicEventManager.html) [`Schedulable`](../object/Schedulable.html)
 
 
 
@@ -50,12 +50,12 @@ and daemons, and schedules their execution.
 
 
 
-[`curEvent_`](#curEvent_)[`events_`](#events_)[`scheduleOrder`](#scheduleOrder)
+[`curEvent_`](#curEvent_) [`events_`](#events_) [`scheduleOrder`](#scheduleOrder)
 
 
 
 Inherited from `Schedulable` :  
-[`allSchedulables`](../object/Schedulable.html#allSchedulables)[`gameClockTime`](../object/Schedulable.html#gameClockTime)[`nextRunTime`](../object/Schedulable.html#nextRunTime)
+[`allSchedulables`](../object/Schedulable.html#allSchedulables) [`gameClockTime`](../object/Schedulable.html#gameClockTime) [`nextRunTime`](../object/Schedulable.html#nextRunTime)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,13 +65,13 @@ Inherited from `Schedulable` :
 
 
 
-[`executeList`](#executeList)[`executePrompt`](#executePrompt)[`executeTurn`](#executeTurn)[`getNextRunTime`](#getNextRunTime)
+[`executeList`](#executeList) [`executePrompt`](#executePrompt) [`executeTurn`](#executeTurn) [`getNextRunTime`](#getNextRunTime)
 
 Inherited from `BasicEventManager` :  
-[`addEvent`](../object/BasicEventManager.html#addEvent)[`removeCurrentEvent`](../object/BasicEventManager.html#removeCurrentEvent)[`removeEvent`](../object/BasicEventManager.html#removeEvent)[`removeMatchingEvents`](../object/BasicEventManager.html#removeMatchingEvents)
+[`addEvent`](../object/BasicEventManager.html#addEvent) [`removeCurrentEvent`](../object/BasicEventManager.html#removeCurrentEvent) [`removeEvent`](../object/BasicEventManager.html#removeEvent) [`removeMatchingEvents`](../object/BasicEventManager.html#removeMatchingEvents)
 
 Inherited from `Schedulable` :  
-[`calcScheduleOrder`](../object/Schedulable.html#calcScheduleOrder)[`construct`](../object/Schedulable.html#construct)[`execute`](../object/Schedulable.html#execute)[`incNextRunTime`](../object/Schedulable.html#incNextRunTime)
+[`calcScheduleOrder`](../object/Schedulable.html#calcScheduleOrder) [`construct`](../object/Schedulable.html#construct) [`execute`](../object/Schedulable.html#execute) [`incNextRunTime`](../object/Schedulable.html#incNextRunTime)
 
 <span id="_Properties_"></span>
 

@@ -46,72 +46,44 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Web UI preferences. This object contains the in-memory version of the
+display style preferences file.</p>
 
-Web UI preferences. This object contains the in-memory version of the
-display style preferences file.
-
-Each client session has its own copy of this object, because each client
+<p>Each client session has its own copy of this object, because each client
 can be associated with a different user, and each user has their own
-preferences file.
+preferences file.</p>
 
-`class `**`WebUIPrefs`**` :   object`
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">WebUIPrefs</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">WebUIPrefs</code></strong><br />
 `         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>` <a href="#clientSession"><code class="language-plaintext highlighter-rouge">clientSession</code></a>  <a href="#curProfile"><code class="language-plaintext highlighter-rouge">curProfile</code></a>  <a href="#curProPat"><code class="language-plaintext highlighter-rouge">curProPat</code></a>  <a href="#profileTab"><code class="language-plaintext highlighter-rouge">profileTab</code></a>  <a href="#proItemPat"><code class="language-plaintext highlighter-rouge">proItemPat</code></a>  `</p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>` <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a>  <a href="#getSettingsFile"><code class="language-plaintext highlighter-rouge">getSettingsFile</code></a>  <a href="#getXML"><code class="language-plaintext highlighter-rouge">getXML</code></a>  <a href="#loadSettings"><code class="language-plaintext highlighter-rouge">loadSettings</code></a>  <a href="#openSettingsFile"><code class="language-plaintext highlighter-rouge">openSettingsFile</code></a>  <a href="#readSettings"><code class="language-plaintext highlighter-rouge">readSettings</code></a>  <a href="#saveSettings"><code class="language-plaintext highlighter-rouge">saveSettings</code></a>  `</p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="clientSession"></span></p>
 
@@ -119,11 +91,7 @@ preferences file.
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2558">2558</a>]</p>
 
-<div class="desc">
-
-the client session for this preference list
-
-</div>
+<p>the client session for this preference list</p>
 
 <p><span id="curProfile"></span></p>
 
@@ -131,11 +99,7 @@ the client session for this preference list
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2567">2567</a>]</p>
 
-<div class="desc">
-
-current active profile selected by the user
-
-</div>
+<p>current active profile selected by the user</p>
 
 <p><span id="curProPat"></span></p>
 
@@ -143,11 +107,7 @@ current active profile selected by the user
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2434">2434</a>]</p>
 
-<div class="desc">
-
-current profile ID pattern - current-profile:xxx
-
-</div>
+<p>current profile ID pattern - current-profile:xxx</p>
 
 <p><span id="profileTab"></span></p>
 
@@ -155,12 +115,8 @@ current profile ID pattern - current-profile:xxx
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2564">2564</a>]</p>
 
-<div class="desc">
-
-profile table - this is a LookupTable of WebUIProfile objects keyed by
-profile name
-
-</div>
+<p>profile table - this is a LookupTable of WebUIProfile objects keyed by
+profile name</p>
 
 <p><span id="proItemPat"></span></p>
 
@@ -168,19 +124,11 @@ profile name
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2437">2437</a>]</p>
 
-<div class="desc">
-
-setting ID pattern for profile items - nnn.xxx=yyy
-
-</div>
+<p>setting ID pattern for profile items - nnn.xxx=yyy</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="construct"></span></p>
 
@@ -188,11 +136,7 @@ setting ID pattern for profile items - nnn.xxx=yyy
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2368">2368</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="getSettingsFile"></span></p>
 
@@ -200,11 +144,7 @@ setting ID pattern for profile items - nnn.xxx=yyy
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2504">2504</a>]</p>
 
-<div class="desc">
-
-get the settings file path
-
-</div>
+<p>get the settings file path</p>
 
 <p><span id="getXML"></span></p>
 
@@ -212,11 +152,7 @@ get the settings file path
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2523">2523</a>]</p>
 
-<div class="desc">
-
-get the current settings as XML, to send to the web UI
-
-</div>
+<p>get the current settings as XML, to send to the web UI</p>
 
 <p><span id="loadSettings"></span></p>
 
@@ -224,11 +160,7 @@ get the current settings as XML, to send to the web UI
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2378">2378</a>]</p>
 
-<div class="desc">
-
-read the settings file
-
-</div>
+<p>read the settings file</p>
 
 <p><span id="openSettingsFile"></span></p>
 
@@ -236,11 +168,7 @@ read the settings file
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2483">2483</a>]</p>
 
-<div class="desc">
-
-open the settings file
-
-</div>
+<p>open the settings file</p>
 
 <p><span id="readSettings"></span></p>
 
@@ -248,11 +176,7 @@ open the settings file
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2393">2393</a>]</p>
 
-<div class="desc">
-
-read settings from a file
-
-</div>
+<p>read settings from a file</p>
 
 <p><span id="saveSettings"></span></p>
 
@@ -260,18 +184,11 @@ read settings from a file
 
 <p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2440">2440</a>]</p>
 
-<div class="desc">
+<p>save the current settings to the user’s config file</p>
 
-save the current settings to the user's config file
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

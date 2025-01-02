@@ -46,74 +46,46 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>PostRestoreObject - every instance of this class is notified, via its
+execute() method, immediately after we restore the game.</p>
 
-PostRestoreObject - every instance of this class is notified, via its
-execute() method, immediately after we restore the game.
-
-`class `**`PostRestoreObject`**` :   `[`ModuleExecObject`](../object/ModuleExecObject.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PostRestoreObject</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">PostRestoreObject</code></strong><br />
 <a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Global Objects</span>  </p>
 
-<span class="hdln">Global Objects</span>  
-
-</div>
-
-<p><a href="../object/bannerTracker.html"><code class="language-plaintext highlighter-rouge">bannerTracker</code></a><a href="../object/inputManager.html"><code class="language-plaintext highlighter-rouge">inputManager</code></a><a href="../object/tipManager.html"><code class="language-plaintext highlighter-rouge">tipManager</code></a>
+<p><a href="../object/bannerTracker.html"><code class="language-plaintext highlighter-rouge">bannerTracker</code></a> <a href="../object/inputManager.html"><code class="language-plaintext highlighter-rouge">inputManager</code></a> <a href="../object/tipManager.html"><code class="language-plaintext highlighter-rouge">tipManager</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#restoreCode"><code class="language-plaintext highlighter-rouge">restoreCode</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a><a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a><a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a><a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a><a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
-<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a><a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a><a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="restoreCode"></span></p>
 
@@ -121,41 +93,30 @@ execute() method, immediately after we restore the game.
 
 <p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#217">217</a>]</p>
 
-<div class="desc">
-
-The "restore code," which is the (normally integer) value passed as the
+<p>The “restore code,” which is the (normally integer) value passed as the
 second argument to restoreGame(). The restore code gives us some idea of
 what triggered the restoration. By default, we define the following
-restore codes:
+restore codes:</p>
 
-1 - the system is restoring a game as part of interpreter startup,
+<p>1 - the system is restoring a game as part of interpreter startup,
 usually because the user explicitly specified a game to restore on the
 interpreter command line or via a GUI shell mechanism, such as
-double-clicking on a saved game file from the desktop.
+double-clicking on a saved game file from the desktop.</p>
 
-2 - the user is explicitly restoring a game via a RESTORE command.
+<p>2 - the user is explicitly restoring a game via a RESTORE command.</p>
 
-Games and library extensions can use their own additional restore codes
-in their calls to restoreGame().
-
-</div>
+<p>Games and library extensions can use their own additional restore codes
+in their calls to restoreGame().</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

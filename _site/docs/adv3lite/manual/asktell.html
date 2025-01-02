@@ -21,21 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Basic Ask/Tell  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Basic Ask/Tell<br />
 <span class="navnp"><a href="agenda.html" class="nav"><em>Prev:</em> AgendaItems</a>
     <a href="actortopicentry.html" class="nav"><em>Next:</em>
-ActorTopicEntry</a>     </span>
-
-</div>
+ActorTopicEntry</a>     </span></p>
 
 <h1 id="basic-asktell">Basic Ask/Tell</h1>
 
@@ -72,29 +64,28 @@ TopicEntries located directly in the actor.</p>
 
 <p>To give a simple example:</p>
 
-<p>`
-    bob: Actor ‘Bob; short; man; him’
-       “He’s a short man, with a permanently worried-looking expression. “
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob; short; man; him'
+       "He's a short man, with a permanently worried-looking expression. "
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ AskTopic @darkTower
-   "&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
-    &lt;q&gt;You don't want to go there,&lt;/q&gt; he tells you with a little shudder,
-    &lt;q&gt;you really don't.&lt;/q&gt; "
-;
+    + AskTopic @darkTower
+       "&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
+        &lt;q&gt;You don't want to go there,&lt;/q&gt; he tells you with a little shudder,
+        &lt;q&gt;you really don't.&lt;/q&gt; "
+    ;
 
-+ TellTopic [tVisit, darkTower]
-   "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
-   Bob shakes his head and looks distinctively uncomfortable.\b
-   &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
-    you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
-    at night!&lt;/q&gt; "
-;
+    + TellTopic [tVisit, darkTower]
+       "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
+       Bob shakes his head and looks distinctively uncomfortable.\b
+       &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
+        you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
+        at night!&lt;/q&gt; "
+    ;
 
-+ AskTellTopic @tWeather
-   "&lt;q&gt;Nice weather we're having, don't you think?&lt;/q&gt; you ask.\b
-   &lt;q&gt;Not bad,&lt;/q&gt; he concurs. "
-; `
+    + AskTellTopic @tWeather
+       "&lt;q&gt;Nice weather we're having, don't you think?&lt;/q&gt; you ask.\b
+       &lt;q&gt;Not bad,&lt;/q&gt; he concurs. "
+    ;
 </code></pre></div></div>
 
 <p><span id="varying"></span></p>
@@ -113,25 +104,23 @@ a list of different responses, each of which can be used in turn. Once
 again the TopicEntry template makes it possible to do this in a succinct
 way, for example:</p>
 
-<p>`
-     + AskTopic, StopEventList @darkTower
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + AskTopic, StopEventList @darkTower
        [
-          ‘<q>What do you know about the dark tower?</q> you ask.\b
-          <q>You really don't want to go there,</q> he tells you with a little shudder,
-          <q>you really don’t.</q>’,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      '&lt;q&gt;What\'s so bad about the dark tower?&lt;/q&gt; you want to know.\b
-       &lt;q&gt;It all goes back to -- no, it\'s best not to talk about it,&lt;/q&gt; he breaks
-       off. ',
-       
-      '&lt;q&gt;Why don\'t you want to talk about the dark tower?&lt;/q&gt; you ask.\b
-       In reply Bob merely shakes his head and mutters something inaudible. '
-      
-   ]
-;
+          '&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
+          &lt;q&gt;You really don\'t want to go there,&lt;/q&gt; he tells you with a little shudder,
+          &lt;q&gt;you really don't.&lt;/q&gt;',
+          
+          '&lt;q&gt;What\'s so bad about the dark tower?&lt;/q&gt; you want to know.\b
+           &lt;q&gt;It all goes back to -- no, it\'s best not to talk about it,&lt;/q&gt; he breaks
+           off. ',
+           
+          '&lt;q&gt;Why don\'t you want to talk about the dark tower?&lt;/q&gt; you ask.\b
+           In reply Bob merely shakes his head and mutters something inaudible. '
+          
+       ]
+    ;
+     
 </code></pre></div></div>
-
-<p>`</p>
 
 <p>A TopicEntry can be mixed-in with any EventList class like this, but for
 this type of situation a StopEventList is usually the most appropriate.</p>
@@ -150,24 +139,24 @@ way: defining multiple TopicEntries that match the same objects but
 using a combination of there matchScore and isActive properties to
 determine which one is chosen. For example:</p>
 
-<p>`
-    + TellTopic [tVisit, darkTower]
-       “<q>I’m thinking of making a visit to the dark tower later today,</q> you
-        announce. <q>I’ve heard so much about it, I want to see it for myself.</q>\b
-        <q>No you don’t,</q> he warns you. <q>Curiosity killed the cat, and there
-        are some things worse than death – <i>much</i> worse. If you value your
-        immortal soul you won’t go anywhere near that evil place!</q>”
-    ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic [tVisit, darkTower]
+       "&lt;q&gt;I'm thinking of making a visit to the dark tower later today,&lt;/q&gt; you
+        announce. &lt;q&gt;I've heard so much about it, I want to see it for myself.&lt;/q&gt;\b
+        &lt;q&gt;No you don't,&lt;/q&gt; he warns you. &lt;q&gt;Curiosity killed the cat, and there
+        are some things worse than death -- &lt;i&gt;much&lt;/i&gt; worse. If you value your
+        immortal soul you won't go anywhere near that evil place!&lt;/q&gt;"
+    ;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ TellTopic +110 [tVisit, darkTower]
-   "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
-   Bob shakes his head and looks distinctively uncomfortable.\b
-   &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
-    you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
-    at night!&lt;/q&gt; "
-    
-    isActive = (gPlayerChar.hasSeen(darkTower))
-; `
+
+    + TellTopic +110 [tVisit, darkTower]
+       "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
+       Bob shakes his head and looks distinctively uncomfortable.\b
+       &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
+        you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
+        at night!&lt;/q&gt; "
+        
+        isActive = (gPlayerChar.hasSeen(darkTower))
+    ;
 </code></pre></div></div>
 
 <p>In this above example, if the player types TELL BOB ABOUT VISIT or T
@@ -212,11 +201,10 @@ NPC is to your game. For a minor NPC or a game which in primarily
 puzzle-driven as opposed to character-driven (say) it might suffice to
 do this:</p>
 
-<p>`
-    + DefaultAskTellTopic
-        “Bob merely shrugs and shakes his head. “
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAskTellTopic
+        "Bob merely shrugs and shakes his head. "
     ;
-`</p>
+</code></pre></div></div>
 
 <p>In a game where the characters are more important, and you want to give
 them a bit more personality and make them a bit more lifelike, you’ll
@@ -230,79 +218,69 @@ characterization of your NPCs.</p>
 <p>Writing the DefaultTellTopic is probably easier, since here you can have
 the NPC apparently react to what the player character supposedly says:</p>
 
-<p>`
-    + DefaultTellTopic, ShuffledEventList
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultTellTopic, ShuffledEventList
       [
-         ‘<q>Fascinating!</q> Bob declares. ‘,
-         ‘<q>Well I never!</q> says Bob. ‘,
-         ‘<q>How interesting!</q> Bob remarks. ‘,
-         ‘Bob listens intently to your every word. ‘,
-         ‘<q>Yes, indeed!</q>, says Bob. ‘
+         '&lt;q&gt;Fascinating!&lt;/q&gt; Bob declares. ',
+         '&lt;q&gt;Well I never!&lt;/q&gt; says Bob. ',
+         '&lt;q&gt;How interesting!&lt;/q&gt; Bob remarks. ',
+         'Bob listens intently to your every word. ',
+         '&lt;q&gt;Yes, indeed!&lt;/q&gt;, says Bob. '
       ]
     ;
-`</p>
+</code></pre></div></div>
 
 <p>Defining the DefaultAskTopic follows the same principles, but can be a
 little trickier, since you have to give the NPC a plausible reason for
 refusing to answer, but you can’t have him plead ignorance, otherwise
 you might end up with exchanges like the following:</p>
 
-<div class="cmdline">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;ask bob about his mother.
+"I wouldn't know about that," he tells you.
 
-    &gt;ask bob about his mother.
-    "I wouldn't know about that," he tells you.
+&gt;ask bob about himself
+"I haven't the foggiest notion," Bob confesses.
 
-    &gt;ask bob about himself
-    "I haven't the foggiest notion," Bob confesses.
+&gt;ask bob about the weather
+"I don't know anything about it," he insists.
+</code></pre></div></div>
 
-    &gt;ask bob about the weather
-    "I don't know anything about it," he insists.
+<p>A DefaultAskTopic might look like this:</p>
 
-
-
-A DefaultAskTopic might look like this:
-
-`
-    + DefaultAskTopic
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAskTopic
        [
-          '<q>Let\'s change the subject,</q> he suggests with a wry smile. ',
+          '&lt;q&gt;Let\'s change the subject,&lt;/q&gt; he suggests with a wry smile. ',
           'Halfway through your question Bob erupts into a fit of coughing. ',
           'He responds with an expressive shrug. ',
-          '<q>Let me see,</q> he begins, suddenly breaking off with a deep frown 
+          '&lt;q&gt;Let me see,&lt;/q&gt; he begins, suddenly breaking off with a deep frown 
            as some random train of thought apparently leads him off in another direction. ',
-          '<q>Where would you like me to start?</q> he riposts, smiling gently.
-          <q>Maybe some other time.</q> '
+          '&lt;q&gt;Where would you like me to start?&lt;/q&gt; he riposts, smiling gently.
+          &lt;q&gt;Maybe some other time.&lt;/q&gt; '
           
        ]
     ;
-`
+</code></pre></div></div>
 
-You may still get some incongruous responses, that's almost impossible
+<p>You may still get some incongruous responses, that’s almost impossible
 to avoid given that the player is free to type absolutely anything, but
-on the whole this type of approach should be acceptable.
+on the whole this type of approach should be acceptable.</p>
 
-One final point to note: if you put a DefaultTopic in an ActorState it
+<p>One final point to note: if you put a DefaultTopic in an ActorState it
 will mask any corresponding TopicEntries located directly in the Actor
 (which that ActorState is current). For example, if you put a
 DefaultAskTopic in the BobAnimatedState ActorState, then while
 BobAnimatedState is the current ActorState, no AskTopics directly
 located in Bob will be reachable. This may or may not be what you want.
-If it isn't, don't put any DefaultTopics in the ActorState.
-
-</div>
+If it isn’t, don’t put any DefaultTopics in the ActorState.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Manual*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="actor.html" class="nav">Actors</a> \&gt; Basic Ask/Tell  
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="actor.html" class="nav">Actors</a> &gt; Basic Ask/Tell<br />
 <span class="navnp"><a href="agenda.html" class="nav"><em>Prev:</em> AgendaItems</a>
     <a href="actortopicentry.html" class="nav"><em>Next:</em>
-ActorTopicEntry</a>     </span>
+ActorTopicEntry</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

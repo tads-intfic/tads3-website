@@ -46,93 +46,61 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Web Banner Window. This is designed as a \*partial\* drop-in replacement
+<p>Web Banner Window. This is designed as a *partial* drop-in replacement
 for the BannerWindow class, using Web UI windows as implemented in the
-core TADS javascript client.
+core TADS javascript client.</p>
 
-This class is designed to be mixed with a WebWindow subclass.
+<p>This class is designed to be mixed with a WebWindow subclass.</p>
 
-This isn't a complete replacement for BannerWindow, because the layout
+<p>This isn’t a complete replacement for BannerWindow, because the layout
 model for the Web UI is different from the banner window model (the Web
 UI model is better and more flexible). This class implements the parts
 of the BannerWindow API related to the stream-oriented output to the
-window, so you shouldn't have to change anything that writes HTML text
+window, so you shouldn’t have to change anything that writes HTML text
 to the window. However, you will have to rework code that sets up the
-window's layout to use the Web UI model.
+window’s layout to use the Web UI model.</p>
 
-`class `**`WebBannerWin`**` :   `[`OutputStreamWindow`](../object/OutputStreamWindow.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">WebBannerWin</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputStreamWindow.html"><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">WebBannerWin</code></strong><br />
 <a href="../object/OutputStreamWindow.html"><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></a><br />
 `                 object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><a href="../object/statuslineBanner.html"><code class="language-plaintext highlighter-rouge">statuslineBanner</code></a>
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
 <a href="../object/OutputStreamWindow.html#outputStream_"><code class="language-plaintext highlighter-rouge">outputStream_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Methods</span>  </p>
 
-<span class="hdln">Summary of Methods</span>  
-
-</div>
-
-<p><a href="#createOutputStreamObj"><code class="language-plaintext highlighter-rouge">createOutputStreamObj</code></a><a href="#flushBanner"><code class="language-plaintext highlighter-rouge">flushBanner</code></a><a href="#init"><code class="language-plaintext highlighter-rouge">init</code></a><a href="#setSize"><code class="language-plaintext highlighter-rouge">setSize</code></a><a href="#sizeToContents"><code class="language-plaintext highlighter-rouge">sizeToContents</code></a><a href="#writeToBanner"><code class="language-plaintext highlighter-rouge">writeToBanner</code></a></p>
+<p><a href="#createOutputStreamObj"><code class="language-plaintext highlighter-rouge">createOutputStreamObj</code></a> <a href="#flushBanner"><code class="language-plaintext highlighter-rouge">flushBanner</code></a> <a href="#init"><code class="language-plaintext highlighter-rouge">init</code></a> <a href="#setSize"><code class="language-plaintext highlighter-rouge">setSize</code></a> <a href="#sizeToContents"><code class="language-plaintext highlighter-rouge">sizeToContents</code></a> <a href="#writeToBanner"><code class="language-plaintext highlighter-rouge">writeToBanner</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
-<a href="../object/OutputStreamWindow.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a><a href="../object/OutputStreamWindow.html#createOutputStream"><code class="language-plaintext highlighter-rouge">createOutputStream</code></a><a href="../object/OutputStreamWindow.html#setOutputStream"><code class="language-plaintext highlighter-rouge">setOutputStream</code></a></p>
+<a href="../object/OutputStreamWindow.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a> <a href="../object/OutputStreamWindow.html#createOutputStream"><code class="language-plaintext highlighter-rouge">createOutputStream</code></a> <a href="../object/OutputStreamWindow.html#setOutputStream"><code class="language-plaintext highlighter-rouge">setOutputStream</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><em>(none)</em> <span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="createOutputStreamObj"></span></p>
 
@@ -140,11 +108,7 @@ window's layout to use the Web UI model.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#748">748</a>]</p>
 
-<div class="desc">
-
-create our output stream subclass
-
-</div>
+<p>create our output stream subclass</p>
 
 <p><span id="flushBanner"></span></p>
 
@@ -152,11 +116,7 @@ create our output stream subclass
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#754">754</a>]</p>
 
-<div class="desc">
-
-flush output
-
-</div>
+<p>flush output</p>
 
 <p><span id="init"></span></p>
 
@@ -164,11 +124,7 @@ flush output
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#741">741</a>]</p>
 
-<div class="desc">
-
-Initialize. Call this when first displaying the window in the UI.
-
-</div>
+<p>Initialize. Call this when first displaying the window in the UI.</p>
 
 <p><span id="setSize"></span></p>
 
@@ -176,13 +132,9 @@ Initialize. Call this when first displaying the window in the UI.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#770">770</a>]</p>
 
-<div class="desc">
-
-Banner window size settings. We simply ignore these; callers must rework
+<p>Banner window size settings. We simply ignore these; callers must rework
 their layout logic for the Web UI, since the javascript layout system is
-so different.
-
-</div>
+so different.</p>
 
 <p><span id="sizeToContents"></span></p>
 
@@ -190,11 +142,7 @@ so different.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#771">771</a>]</p>
 
-<div class="desc">
-
-*no description available*
-
-</div>
+<p><em>no description available</em></p>
 
 <p><span id="writeToBanner"></span></p>
 
@@ -202,18 +150,11 @@ so different.
 
 <p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#760">760</a>]</p>
 
-<div class="desc">
+<p>write text</p>
 
-write text
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-</div>
-
-<div class="ftr">
-
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

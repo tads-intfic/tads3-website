@@ -46,7 +46,7 @@ Browser globals
 
 
 
-[`httpServer`](#httpServer)[`logFile`](#logFile)[`logFileType`](#logFileType)
+[`httpServer`](#httpServer) [`logFile`](#logFile) [`logFileType`](#logFileType)
 
 <span id="_MethodSummary_"></span>
 

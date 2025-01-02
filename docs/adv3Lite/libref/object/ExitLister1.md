@@ -47,7 +47,7 @@ show the list
 
 
 
-[`exitsPrefix`](#exitsPrefix)[`listerShowsDest`](#listerShowsDest)
+[`exitsPrefix`](#exitsPrefix) [`listerShowsDest`](#listerShowsDest)
 
 
 
@@ -62,7 +62,7 @@ show the list
 [`showListAll`](#showListAll)
 
 Inherited from `Lister` :  
-[`buildList`](../object/Lister.html#buildList)[`listed`](../object/Lister.html#listed)[`listOrder`](../object/Lister.html#listOrder)[`show`](../object/Lister.html#show)[`showList`](../object/Lister.html#showList)[`showListEmpty`](../object/Lister.html#showListEmpty)[`showListPrefix`](../object/Lister.html#showListPrefix)[`showListSuffix`](../object/Lister.html#showListSuffix)
+[`buildList`](../object/Lister.html#buildList) [`listed`](../object/Lister.html#listed) [`listOrder`](../object/Lister.html#listOrder) [`show`](../object/Lister.html#show) [`showList`](../object/Lister.html#showList) [`showListEmpty`](../object/Lister.html#showListEmpty) [`showListPrefix`](../object/Lister.html#showListPrefix) [`showListSuffix`](../object/Lister.html#showListSuffix)
 
 <span id="_Properties_"></span>
 

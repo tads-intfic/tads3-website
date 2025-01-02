@@ -39,7 +39,7 @@ This header defines the Date and TimeZone intrinsic classes.
 
 
 
-[`Date`](../object/Date.html)[`TimeZone`](../object/TimeZone.html)
+[`Date`](../object/Date.html) [`TimeZone`](../object/TimeZone.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -56,7 +56,7 @@ This header defines the Date and TimeZone intrinsic classes.
 
 
 
-[`DateAMPM`](#DateAMPM)[`DateEra`](#DateEra)[`DateFmt12Hour`](#DateFmt12Hour)[`DateFmt24Hour`](#DateFmt24Hour)[`DateFmt24HourSecs`](#DateFmt24HourSecs)[`DateFmtDate`](#DateFmtDate)[`DateFmtShortDate`](#DateFmtShortDate)[`DateFmtTime`](#DateFmtTime)[`DateFmtTimestamp`](#DateFmtTimestamp)[`DateMonthAbbrs`](#DateMonthAbbrs)[`DateMonthNames`](#DateMonthNames)[`DateOrdSuffixes`](#DateOrdSuffixes)[`DateParseFilter`](#DateParseFilter)[`DateWeekdayAbbrs`](#DateWeekdayAbbrs)[`DateWeekdayNames`](#DateWeekdayNames)
+[`DateAMPM`](#DateAMPM) [`DateEra`](#DateEra) [`DateFmt12Hour`](#DateFmt12Hour) [`DateFmt24Hour`](#DateFmt24Hour) [`DateFmt24HourSecs`](#DateFmt24HourSecs) [`DateFmtDate`](#DateFmtDate) [`DateFmtShortDate`](#DateFmtShortDate) [`DateFmtTime`](#DateFmtTime) [`DateFmtTimestamp`](#DateFmtTimestamp) [`DateMonthAbbrs`](#DateMonthAbbrs) [`DateMonthNames`](#DateMonthNames) [`DateOrdSuffixes`](#DateOrdSuffixes) [`DateParseFilter`](#DateParseFilter) [`DateWeekdayAbbrs`](#DateWeekdayAbbrs) [`DateWeekdayNames`](#DateWeekdayNames)
 
 <span id="_EnumSummary_"></span>
 

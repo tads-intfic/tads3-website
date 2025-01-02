@@ -46,31 +46,23 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
-
-Verification result - command is logical and allowed, but is non-obvious
+<p>Verification result - command is logical and allowed, but is non-obvious
 on this object. This should be used when the command is logical, but
 should not be obvious to the player. When this verification result is
 present, the command is allowed when performed explicitly but will never
-be taken as a default.
+be taken as a default.</p>
 
-In cases of ambiguity, a non-obvious object is equivalent to an
-always-illogical object. A non-obvious object \*appears\* to be
+<p>In cases of ambiguity, a non-obvious object is equivalent to an
+always-illogical object. A non-obvious object *appears* to be
 illogical at first glance, so we want to treat it the same as an
-ordinarily illogical object if we're trying to choose among ambiguous
-objects.
+ordinarily illogical object if we’re trying to choose among ambiguous
+objects.</p>
 
-`class `**`NonObviousVerifyResult`**` :   `[`VerifyResult`](../object/VerifyResult.html)
-
-</div>
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">NonObviousVerifyResult</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/VerifyResult.html"><code class="language-plaintext highlighter-rouge">VerifyResult</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">NonObviousVerifyResult</code></strong><br />
 <a href="../object/VerifyResult.html"><code class="language-plaintext highlighter-rouge">VerifyResult</code></a><br />
@@ -78,57 +70,37 @@ objects.
 `                         object`<br />
 <span id="_SubClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Subclass Tree</span>  
-
-</div>
+<p><span class="hdln">Subclass Tree</span>  </p>
 
 <p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Global Objects</span>  
-
-</div>
+<p><span class="hdln">Global Objects</span>  </p>
 
 <p><em>(none)</em> <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
+<p><span class="hdln">Summary of Properties</span>  </p>
 
-<span class="hdln">Summary of Properties</span>  
-
-</div>
-
-<p><a href="#allowImplicit"><code class="language-plaintext highlighter-rouge">allowImplicit</code></a><a href="#resultRank"><code class="language-plaintext highlighter-rouge">resultRank</code></a></p>
+<p><a href="#allowImplicit"><code class="language-plaintext highlighter-rouge">allowImplicit</code></a> <a href="#resultRank"><code class="language-plaintext highlighter-rouge">resultRank</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">VerifyResult</code> :<br />
-<a href="../object/VerifyResult.html#allowAction"><code class="language-plaintext highlighter-rouge">allowAction</code></a><a href="../object/VerifyResult.html#excludePluralMatches"><code class="language-plaintext highlighter-rouge">excludePluralMatches</code></a></p>
+<a href="../object/VerifyResult.html#allowAction"><code class="language-plaintext highlighter-rouge">allowAction</code></a> <a href="../object/VerifyResult.html#excludePluralMatches"><code class="language-plaintext highlighter-rouge">excludePluralMatches</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
-<a href="../object/MessageResult.html#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a><a href="../object/MessageResult.html#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
+<a href="../object/MessageResult.html#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a> <a href="../object/MessageResult.html#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">VerifyResult</code> :<br />
-<a href="../object/VerifyResult.html#compareTo"><code class="language-plaintext highlighter-rouge">compareTo</code></a><a href="../object/VerifyResult.html#identicalTo"><code class="language-plaintext highlighter-rouge">identicalTo</code></a><a href="../object/VerifyResult.html#isWorseThan"><code class="language-plaintext highlighter-rouge">isWorseThan</code></a><a href="../object/VerifyResult.html#shouldInsertBefore"><code class="language-plaintext highlighter-rouge">shouldInsertBefore</code></a></p>
+<a href="../object/VerifyResult.html#compareTo"><code class="language-plaintext highlighter-rouge">compareTo</code></a> <a href="../object/VerifyResult.html#identicalTo"><code class="language-plaintext highlighter-rouge">identicalTo</code></a> <a href="../object/VerifyResult.html#isWorseThan"><code class="language-plaintext highlighter-rouge">isWorseThan</code></a> <a href="../object/VerifyResult.html#shouldInsertBefore"><code class="language-plaintext highlighter-rouge">shouldInsertBefore</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
-<a href="../object/MessageResult.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/MessageResult.html#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a><a href="../object/MessageResult.html#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a><a href="../object/MessageResult.html#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
+<a href="../object/MessageResult.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/MessageResult.html#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a> <a href="../object/MessageResult.html#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a> <a href="../object/MessageResult.html#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="allowImplicit"></span></p>
 
@@ -136,12 +108,8 @@ objects.
 
 <p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#386">386</a>]</p>
 
-<div class="desc">
-
-don't allow non-obvious actions to be undertaken implicitly - we allow
-these actions, but only when explicitly requested
-
-</div>
+<p>don’t allow non-obvious actions to be undertaken implicitly - we allow
+these actions, but only when explicitly requested</p>
 
 <p><span id="resultRank"></span></p>
 
@@ -149,29 +117,18 @@ these actions, but only when explicitly requested
 
 <p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#392">392</a>]</p>
 
-<div class="desc">
-
-non-obvious objects are illogical at first glance, so rank them the same
-as objects that are actually illogical
-
-</div>
+<p>non-obvious objects are illogical at first glance, so rank them the same
+as objects that are actually illogical</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><em>(none)</em></p>
 
-<div class="ftr">
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
 
-TADS 3 Library Manual  
-Generated on 5/16/2013 from TADS version 3.1.3
-
-</div>
 
 </main>
 <footer>

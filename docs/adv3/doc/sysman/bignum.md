@@ -276,7 +276,7 @@ the target number. For example, to get the remainder of dividing 10 by
 ```
     x = new BigNumber('10.0000');
     y = new BigNumber('3.00000');
-    rem = x.divideBy(y)[2];  // second list item is remainder
+    rem = x.divideBy(y) [2];  // second list item is remainder
 ```
 
 ## BigNumber methods

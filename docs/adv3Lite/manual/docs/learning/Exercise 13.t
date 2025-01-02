@@ -815,8 +815,8 @@ class PaperTowel: Thing 'paper towel; plain paper white square (kitchen)'
     
     showTime()
     {
-        local minute = getTime()[7];
-        local hour = getTime()[6];
+        local minute = getTime() [7];
+        local hour = getTime() [6];
         
         /* 
          *   If the minute is more than 30, then we want to report the time 

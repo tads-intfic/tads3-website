@@ -40,71 +40,51 @@ Details</a></p>
 <p><a href="#_Methods_">Method<br />
 Details</a></p>
 
-<div class="fdesc">
+<p>Me - the first-person singular. ME always binds to the player character.</p>
 
-Me - the first-person singular. ME always binds to the player character.
-
-The discussion about the validity of binding YOU to the PC applies in
-mirror image here. In a second-person game, the PC is the narrator's YOU
-and the player's ME; in a first-person game, she's the narrator's ME and
-the player's YOU. But there is no game-world object for ME to bind to in
+<p>The discussion about the validity of binding YOU to the PC applies in
+mirror image here. In a second-person game, the PC is the narrator’s YOU
+and the player’s ME; in a first-person game, she’s the narrator’s ME and
+the player’s YOU. But there is no game-world object for ME to bind to in
 commands in a first-person game - if anything, ME would be the player
 (not the player character, but the actual player), who is clearly not a
-game-world entity. Since that's not meaningful, we can assume that a
+game-world entity. Since that’s not meaningful, we can assume that a
 player talking about ME in a first-person game is being literal-minded
-and just using the same pronouns the narrator does, or that they're so
-accustomed to the second-person convention of most IF that they're
-saying ME out of habit. In either case, the PC is the one they're
-talking about.
+and just using the same pronouns the narrator does, or that they’re so
+accustomed to the second-person convention of most IF that they’re
+saying ME out of habit. In either case, the PC is the one they’re
+talking about.</p>
 
-**`Me`**` :   `[`Pronoun`](../object/Pronoun.html)
-
-</div>
+<p><strong><code class="language-plaintext highlighter-rouge">Me</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Pronoun.html"><code class="language-plaintext highlighter-rouge">Pronoun</code></a></p>
 
 <p><span id="_SuperClassTree_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Superclass Tree</span>   (in declaration order)
-
-</div>
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">Me</code></strong><br />
 <a href="../object/Pronoun.html"><code class="language-plaintext highlighter-rouge">Pronoun</code></a><br />
 `                 object`<br />
 <span id="_PropSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Properties</span>  
-
-</div>
+<p><span class="hdln">Summary of Properties</span>  </p>
 
 <p><a href="#person"><code class="language-plaintext highlighter-rouge">person</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
-<a href="../object/Pronoun.html#all"><code class="language-plaintext highlighter-rouge">all</code></a><a href="../object/Pronoun.html#aName"><code class="language-plaintext highlighter-rouge">aName</code></a><a href="../object/Pronoun.html#ante"><code class="language-plaintext highlighter-rouge">ante</code></a><a href="../object/Pronoun.html#reflexive"><code class="language-plaintext highlighter-rouge">reflexive</code></a><a href="../object/Pronoun.html#theName"><code class="language-plaintext highlighter-rouge">theName</code></a><a href="../object/Pronoun.html#theObjName"><code class="language-plaintext highlighter-rouge">theObjName</code></a></p>
+<a href="../object/Pronoun.html#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="../object/Pronoun.html#aName"><code class="language-plaintext highlighter-rouge">aName</code></a> <a href="../object/Pronoun.html#ante"><code class="language-plaintext highlighter-rouge">ante</code></a> <a href="../object/Pronoun.html#reflexive"><code class="language-plaintext highlighter-rouge">reflexive</code></a> <a href="../object/Pronoun.html#theName"><code class="language-plaintext highlighter-rouge">theName</code></a> <a href="../object/Pronoun.html#theObjName"><code class="language-plaintext highlighter-rouge">theObjName</code></a></p>
 
 <p><span id="_MethodSummary_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Summary of Methods</span>  
-
-</div>
+<p><span class="hdln">Summary of Methods</span>  </p>
 
 <p><a href="#resolve"><code class="language-plaintext highlighter-rouge">resolve</code></a></p>
 
 <p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
-<a href="../object/Pronoun.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a><a href="../object/Pronoun.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a><a href="../object/Pronoun.html#setAntecedents"><code class="language-plaintext highlighter-rouge">setAntecedents</code></a></p>
+<a href="../object/Pronoun.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/Pronoun.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="../object/Pronoun.html#setAntecedents"><code class="language-plaintext highlighter-rouge">setAntecedents</code></a></p>
 
 <p><span id="_Properties_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Properties</span>  
-
-</div>
+<p><span class="hdln">Properties</span>  </p>
 
 <p><span id="person"></span></p>
 
@@ -112,19 +92,11 @@ talking about.
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4792">4792</a>]</p>
 
-<div class="desc">
-
-this is a first-person pronoun
-
-</div>
+<p>this is a first-person pronoun</p>
 
 <p><span id="_Methods_"></span></p>
 
-<div class="mjhd">
-
-<span class="hdln">Methods</span>  
-
-</div>
+<p><span class="hdln">Methods</span>  </p>
 
 <p><span id="resolve"></span></p>
 
@@ -132,19 +104,12 @@ this is a first-person pronoun
 
 <p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4789">4789</a>]</p>
 
-<div class="desc">
+<p>the first person always resolves to the player character, regardless of
+context</p>
 
-the first person always resolves to the player character, regardless of
-context
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
 
-</div>
-
-<div class="ftr">
-
-Adv3Lite Library Reference Manual  
-Generated on 15/03/2023 from adv3Lite version 1.6.1
-
-</div>
 
 </main>
 <footer>

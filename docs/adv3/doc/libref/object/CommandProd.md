@@ -92,7 +92,7 @@ are things like periods, semicolons, commas, and the words "and" and
 [`getActorPhrase`](#getActorPhrase)
 
 Inherited from `BasicProd` :  
-[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -102,10 +102,10 @@ Inherited from `BasicProd` :
 
 
 
-[`execActorPhrase`](#execActorPhrase)[`hasTargetActor`](#hasTargetActor)
+[`execActorPhrase`](#execActorPhrase) [`hasTargetActor`](#hasTargetActor)
 
 Inherited from `BasicProd` :  
-[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
+[`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

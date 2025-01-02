@@ -76,7 +76,7 @@ paying any attention to us.
 [`agendaOrder`](#agendaOrder)
 
 Inherited from `AgendaItem` :  
-[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`isDone`](../object/AgendaItem.html#isDone)[`isReady`](../object/AgendaItem.html#isReady)
+[`initiallyActive`](../object/AgendaItem.html#initiallyActive) [`isDone`](../object/AgendaItem.html#isDone) [`isReady`](../object/AgendaItem.html#isReady)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `AgendaItem` :
 
 
 
-[`construct`](#construct)[`invokeItem`](#invokeItem)[`isReady`](#isReady)
+[`construct`](#construct) [`invokeItem`](#invokeItem) [`isReady`](#isReady)
 
 Inherited from `AgendaItem` :  
-[`execute`](../object/AgendaItem.html#execute)[`getActor`](../object/AgendaItem.html#getActor)[`resetItem`](../object/AgendaItem.html#resetItem)
+[`execute`](../object/AgendaItem.html#execute) [`getActor`](../object/AgendaItem.html#getActor) [`resetItem`](../object/AgendaItem.html#resetItem)
 
 <span id="_Properties_"></span>
 

@@ -21,23 +21,15 @@
   </div>  </header>
 <body>
 <main id="content">
-<div class="topbar">
+<p><img src="topbar.jpg" data-border="0" /></p>
 
-<img src="topbar.jpg" data-border="0" />
-
-</div>
-
-<div class="nav">
-
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="conversation.html" class="nav">The Art of Conversation</a> \&gt;
-Hello and Goodbye  
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="conversation.html" class="nav">The Art of Conversation</a> &gt;
+Hello and Goodbye<br />
 <span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Queries and
 Suggestions</a>    
 <a href="convnode.html" class="nav"><em>Next:</em> Angela Wants
-Answers</a>     </span>
-
-</div>
+Answers</a>     </span></p>
 
 <h1 id="hello-and-goodbye">Hello and Goodbye</h1>
 
@@ -98,20 +90,19 @@ player character starts addressing her on the Jetway. The following
 definition should be placed immediately after that of the
 <code class="language-plaintext highlighter-rouge">angelaAssistingState</code> object:</p>
 
-<p>`
-    ++ HelloTopic, StopEventList
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ HelloTopic, StopEventList
         [
-            ‘<q>Excuse me, might I have a word?</q> you say.\b
+            '&lt;q&gt;Excuse me, might I have a word?&lt;/q&gt; you say.\b
             {The subj angela} turns to you with a fixed smile, no doubt mentally
-            preparing herself for another barrage of complaints. <q>Yes; how can I
-            help?</q> she replies. ‘,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;Might I have another word?&lt;/q&gt; you ask.\b
-        &lt;q&gt;Yes?&lt;/q&gt; she replies, turning to you just a little warily. '
-    ]
-    
-    changeToState = angelaTalkingState
-; `
+            preparing herself for another barrage of complaints. &lt;q&gt;Yes; how can I
+            help?&lt;/q&gt; she replies. ',
+            
+            '&lt;q&gt;Might I have another word?&lt;/q&gt; you ask.\b
+            &lt;q&gt;Yes?&lt;/q&gt; she replies, turning to you just a little warily. '
+        ]
+        
+        changeToState = angelaTalkingState
+    ;
 </code></pre></div></div>
 
 <p>Here we’ve combined the HelloTopic with a StopEventList to vary the
@@ -136,14 +127,13 @@ ByeTopic needs to be located in the
 that Angela switches back to her former ActorState at the end of the
 conversation:</p>
 
-<p>`
-    ++ ByeTopic
-        “<q>Well, cheerio for now then,</q> you say.\b
-        <q>Goodbye,</q> she replies with a brisk nod, before turning to yet another
-        importuning displaced passenger anxious for her attention. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    changeToState = angelaAssistingState
-; `
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ ByeTopic
+        "&lt;q&gt;Well, cheerio for now then,&lt;/q&gt; you say.\b
+        &lt;q&gt;Goodbye,&lt;/q&gt; she replies with a brisk nod, before turning to yet another
+        importuning displaced passenger anxious for her attention. "
+        
+        changeToState = angelaAssistingState
+    ;
 </code></pre></div></div>
 
 <p>As we’ve defined it this ByeTopic will be triggered however the player
@@ -152,14 +142,13 @@ simply if the player character walks away. It may be that we’d rather
 the latter case was handled a bit differently, in which case we can
 define a separate LeaveByeTopic to handle it:</p>
 
-<p>`
-    ++ LeaveByeTopic
-        “{The subj angela} looks momentarily taken aback at your somewhat abrupt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ LeaveByeTopic
+        "{The subj angela} looks momentarily taken aback at your somewhat abrupt
         departure, but quickly turns back to the other passengers clamouring for
-        her attention. “</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    changeToState = angelaAssistingState
-; `
+        her attention. "
+        
+        changeToState = angelaAssistingState
+    ;
 </code></pre></div></div>
 
 <p>That covers most of what you need to know about Greeting Protocols in
@@ -168,18 +157,15 @@ and Goodbye</a> in the <em>adv3Lite Library Manual</em>.</p>
 
 <hr />
 
-<div class="navb">
-
-*adv3Lite Library Tutorial*  
-<a href="toc.html" class="nav">Table of Contents</a> \|
-<a href="conversation.html" class="nav">The Art of Conversation</a> \&gt;
-Hello and Goodbye  
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="conversation.html" class="nav">The Art of Conversation</a> &gt;
+Hello and Goodbye<br />
 <span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Queries and
 Suggestions</a>    
 <a href="convnode.html" class="nav"><em>Next:</em> Angela Wants
-Answers</a>     </span>
+Answers</a>     </span></p>
 
-</div>
 
 </main>
 <footer>

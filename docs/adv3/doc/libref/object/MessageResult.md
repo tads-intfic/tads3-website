@@ -90,7 +90,7 @@ command reports, which must keep track of messages to display.
 
 
 
-[`messageProp_`](#messageProp_)[`messageText_`](#messageText_)
+[`messageProp_`](#messageProp_) [`messageText_`](#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,7 +100,7 @@ command reports, which must keep track of messages to display.
 
 
 
-[`construct`](#construct)[`resolveMessageText`](#resolveMessageText)[`setMessage`](#setMessage)[`showMessage`](#showMessage)
+[`construct`](#construct) [`resolveMessageText`](#resolveMessageText) [`setMessage`](#setMessage) [`showMessage`](#showMessage)
 
 <span id="_Properties_"></span>
 

@@ -76,10 +76,10 @@ performing the command.
 
 
 Inherited from `TopicResolver` :  
-[`isGlobalScope`](../object/TopicResolver.html#isGlobalScope)[`qualifierResolver_`](../object/TopicResolver.html#qualifierResolver_)[`topicProd`](../object/TopicResolver.html#topicProd)
+[`isGlobalScope`](../object/TopicResolver.html#isGlobalScope) [`qualifierResolver_`](../object/TopicResolver.html#qualifierResolver_) [`topicProd`](../object/TopicResolver.html#topicProd)
 
 Inherited from `Resolver` :  
-[`action_`](../object/Resolver.html#action_)[`actor_`](../object/Resolver.html#actor_)[`equivs_`](../object/Resolver.html#equivs_)[`isSubResolver`](../object/Resolver.html#isSubResolver)[`issuer_`](../object/Resolver.html#issuer_)[`scope_`](../object/Resolver.html#scope_)[`whichMessageObject`](../object/Resolver.html#whichMessageObject)[`whichObject`](../object/Resolver.html#whichObject)
+[`action_`](../object/Resolver.html#action_) [`actor_`](../object/Resolver.html#actor_) [`equivs_`](../object/Resolver.html#equivs_) [`isSubResolver`](../object/Resolver.html#isSubResolver) [`issuer_`](../object/Resolver.html#issuer_) [`scope_`](../object/Resolver.html#scope_) [`whichMessageObject`](../object/Resolver.html#whichMessageObject) [`whichObject`](../object/Resolver.html#whichObject)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,13 +89,13 @@ Inherited from `Resolver` :
 
 
 
-[`objInConvScope`](#objInConvScope)[`resolveTopic`](#resolveTopic)
+[`objInConvScope`](#objInConvScope) [`resolveTopic`](#resolveTopic)
 
 Inherited from `TopicResolver` :  
-[`construct`](../object/TopicResolver.html#construct)[`filterAmbiguousNounPhrase`](../object/TopicResolver.html#filterAmbiguousNounPhrase)[`filterPluralPhrase`](../object/TopicResolver.html#filterPluralPhrase)[`filterPossRank`](../object/TopicResolver.html#filterPossRank)[`getAll`](../object/TopicResolver.html#getAll)[`getAllDefaults`](../object/TopicResolver.html#getAllDefaults)[`getDefaultObject`](../object/TopicResolver.html#getDefaultObject)[`getPossessiveResolver`](../object/TopicResolver.html#getPossessiveResolver)[`getQualifierResolver`](../object/TopicResolver.html#getQualifierResolver)[`noMatch`](../object/TopicResolver.html#noMatch)[`noMatchPoss`](../object/TopicResolver.html#noMatchPoss)[`noVocabMatch`](../object/TopicResolver.html#noVocabMatch)[`objInPhysicalScope`](../object/TopicResolver.html#objInPhysicalScope)[`objInScope`](../object/TopicResolver.html#objInScope)[`packageTopicList`](../object/TopicResolver.html#packageTopicList)[`resetResolver`](../object/TopicResolver.html#resetResolver)[`resolveUnknownNounPhrase`](../object/TopicResolver.html#resolveUnknownNounPhrase)
+[`construct`](../object/TopicResolver.html#construct) [`filterAmbiguousNounPhrase`](../object/TopicResolver.html#filterAmbiguousNounPhrase) [`filterPluralPhrase`](../object/TopicResolver.html#filterPluralPhrase) [`filterPossRank`](../object/TopicResolver.html#filterPossRank) [`getAll`](../object/TopicResolver.html#getAll) [`getAllDefaults`](../object/TopicResolver.html#getAllDefaults) [`getDefaultObject`](../object/TopicResolver.html#getDefaultObject) [`getPossessiveResolver`](../object/TopicResolver.html#getPossessiveResolver) [`getQualifierResolver`](../object/TopicResolver.html#getQualifierResolver) [`noMatch`](../object/TopicResolver.html#noMatch) [`noMatchPoss`](../object/TopicResolver.html#noMatchPoss) [`noVocabMatch`](../object/TopicResolver.html#noVocabMatch) [`objInPhysicalScope`](../object/TopicResolver.html#objInPhysicalScope) [`objInScope`](../object/TopicResolver.html#objInScope) [`packageTopicList`](../object/TopicResolver.html#packageTopicList) [`resetResolver`](../object/TopicResolver.html#resetResolver) [`resolveUnknownNounPhrase`](../object/TopicResolver.html#resolveUnknownNounPhrase)
 
 Inherited from `Resolver` :  
-[`allowAll`](../object/Resolver.html#allowAll)[`cacheScopeList`](../object/Resolver.html#cacheScopeList)[`filterAll`](../object/Resolver.html#filterAll)[`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents)[`getAction`](../object/Resolver.html#getAction)[`getPronounDefault`](../object/Resolver.html#getPronounDefault)[`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent)[`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding)[`getScopeList`](../object/Resolver.html#getScopeList)[`getTargetActor`](../object/Resolver.html#getTargetActor)[`matchName`](../object/Resolver.html#matchName)[`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent)[`selectIndefinite`](../object/Resolver.html#selectIndefinite)[`withGlobals`](../object/Resolver.html#withGlobals)
+[`allowAll`](../object/Resolver.html#allowAll) [`cacheScopeList`](../object/Resolver.html#cacheScopeList) [`filterAll`](../object/Resolver.html#filterAll) [`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents) [`getAction`](../object/Resolver.html#getAction) [`getPronounDefault`](../object/Resolver.html#getPronounDefault) [`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent) [`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding) [`getScopeList`](../object/Resolver.html#getScopeList) [`getTargetActor`](../object/Resolver.html#getTargetActor) [`matchName`](../object/Resolver.html#matchName) [`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent) [`selectIndefinite`](../object/Resolver.html#selectIndefinite) [`withGlobals`](../object/Resolver.html#withGlobals)
 
 <span id="_Properties_"></span>
 

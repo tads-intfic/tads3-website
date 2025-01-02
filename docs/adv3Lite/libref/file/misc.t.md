@@ -37,7 +37,7 @@ justify modules of their own.
 
 
 
-[`ArgumentMismatchError`](../object/ArgumentMismatchError.html)[`FinishOption`](../object/FinishOption.html)[`FinishType`](../object/FinishType.html)[`GameMainDef`](../object/GameMainDef.html)[`LCS`](../object/LCS.html)[`LibraryError`](../object/LibraryError.html)[`Script`](../object/Script.html)[`SingletonIterator`](../object/SingletonIterator.html)
+[`ArgumentMismatchError`](../object/ArgumentMismatchError.html) [`FinishOption`](../object/FinishOption.html) [`FinishType`](../object/FinishType.html) [`GameMainDef`](../object/GameMainDef.html) [`LCS`](../object/LCS.html) [`LibraryError`](../object/LibraryError.html) [`Script`](../object/Script.html) [`SingletonIterator`](../object/SingletonIterator.html)
 <span id="_ObjectSummary_"></span>
 
 
@@ -46,7 +46,7 @@ justify modules of their own.
 
 
 
-[`adv3LibInit`](../object/adv3LibInit.html)[`adv3LibPreinit`](../object/adv3LibPreinit.html)[`finishOptionAmusing`](../object/finishOptionAmusing.html)[`finishOptionCredits`](../object/finishOptionCredits.html)[`finishOptionFullScore`](../object/finishOptionFullScore.html)[`finishOptionQuit`](../object/finishOptionQuit.html)[`finishOptionRestart`](../object/finishOptionRestart.html)[`finishOptionRestore`](../object/finishOptionRestore.html)[`finishOptionScore`](../object/finishOptionScore.html)[`finishOptionUndo`](../object/finishOptionUndo.html)[`ftDeath`](../object/ftDeath.html)[`ftFailure`](../object/ftFailure.html)[`ftGameOver`](../object/ftGameOver.html)[`ftVictory`](../object/ftVictory.html)[`libGlobal`](../object/libGlobal.html)[`libObjectInitializer`](../object/libObjectInitializer.html)[`restoreOptionRestoreAnother`](../object/restoreOptionRestoreAnother.html)[`restoreOptionStartOver`](../object/restoreOptionStartOver.html)[`unknownDest_`](../object/unknownDest_.html)[`varDest_`](../object/varDest_.html)
+[`adv3LibInit`](../object/adv3LibInit.html) [`adv3LibPreinit`](../object/adv3LibPreinit.html) [`finishOptionAmusing`](../object/finishOptionAmusing.html) [`finishOptionCredits`](../object/finishOptionCredits.html) [`finishOptionFullScore`](../object/finishOptionFullScore.html) [`finishOptionQuit`](../object/finishOptionQuit.html) [`finishOptionRestart`](../object/finishOptionRestart.html) [`finishOptionRestore`](../object/finishOptionRestore.html) [`finishOptionScore`](../object/finishOptionScore.html) [`finishOptionUndo`](../object/finishOptionUndo.html) [`ftDeath`](../object/ftDeath.html) [`ftFailure`](../object/ftFailure.html) [`ftGameOver`](../object/ftGameOver.html) [`ftVictory`](../object/ftVictory.html) [`libGlobal`](../object/libGlobal.html) [`libObjectInitializer`](../object/libObjectInitializer.html) [`restoreOptionRestoreAnother`](../object/restoreOptionRestoreAnother.html) [`restoreOptionStartOver`](../object/restoreOptionStartOver.html) [`unknownDest_`](../object/unknownDest_.html) [`varDest_`](../object/varDest_.html)
 <span id="FunctionSummary_"></span>
 
 
@@ -55,7 +55,7 @@ justify modules of their own.
 
 
 
-[`cls`](#cls)[`failedRestoreOptions`](#failedRestoreOptions)[`findMatchingTopic`](#findMatchingTopic)[`finishGame`](#finishGame)[`finishGameMsg`](#finishGameMsg)[`isEmptyStr`](#isEmptyStr)[`isListSubset`](#isListSubset)[`makeMentioned`](#makeMentioned)[`matchCase`](#matchCase)[`nilToList`](#nilToList)[`objOfKind`](#objOfKind)[`overrides`](#overrides)[`partitionList`](#partitionList)[`processOptions`](#processOptions)[`setPlayer`](#setPlayer)[`tryInt`](#tryInt)[`tryNum`](#tryNum)[`valToList`](#valToList)
+[`cls`](#cls) [`failedRestoreOptions`](#failedRestoreOptions) [`findMatchingTopic`](#findMatchingTopic) [`finishGame`](#finishGame) [`finishGameMsg`](#finishGameMsg) [`isEmptyStr`](#isEmptyStr) [`isListSubset`](#isListSubset) [`makeMentioned`](#makeMentioned) [`matchCase`](#matchCase) [`nilToList`](#nilToList) [`objOfKind`](#objOfKind) [`overrides`](#overrides) [`partitionList`](#partitionList) [`processOptions`](#processOptions) [`setPlayer`](#setPlayer) [`tryInt`](#tryInt) [`tryNum`](#tryNum) [`valToList`](#valToList)
 
 <span id="_Functions_"></span>
 

@@ -86,7 +86,7 @@ that adds a restriction to what can be contained.
 
 
 
-[`canPutIn`](#canPutIn)[`checkPutDobj`](#checkPutDobj)
+[`canPutIn`](#canPutIn) [`checkPutDobj`](#checkPutDobj)
 
 <span id="_Properties_"></span>
 

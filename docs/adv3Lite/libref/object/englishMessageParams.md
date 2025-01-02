@@ -51,10 +51,10 @@ parameter names and expansion functions.
 
 
 
-[`params`](#params)[`sentenceOrder`](#sentenceOrder)[`sLetters`](#sLetters)[`verbTab`](#verbTab)
+[`params`](#params) [`sentenceOrder`](#sentenceOrder) [`sLetters`](#sLetters) [`verbTab`](#verbTab)
 
 Inherited from `MessageParams` :  
-[`langObj`](../object/MessageParams.html#langObj)[`paramTab`](../object/MessageParams.html#paramTab)
+[`langObj`](../object/MessageParams.html#langObj) [`paramTab`](../object/MessageParams.html#paramTab)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,10 +64,10 @@ Inherited from `MessageParams` :
 
 
 
-[`awkwardEnding`](#awkwardEnding)[`cmdInfoReflexive`](#cmdInfoReflexive)[`construct`](#construct)
+[`awkwardEnding`](#awkwardEnding) [`cmdInfoReflexive`](#cmdInfoReflexive) [`construct`](#construct)
 
 Inherited from `MessageParams` :  
-[`cmdInfo`](../object/MessageParams.html#cmdInfo)[`expand`](../object/MessageParams.html#expand)[`findStrParam`](../object/MessageParams.html#findStrParam)
+[`cmdInfo`](../object/MessageParams.html#cmdInfo) [`expand`](../object/MessageParams.html#expand) [`findStrParam`](../object/MessageParams.html#findStrParam)
 
 <span id="_Properties_"></span>
 

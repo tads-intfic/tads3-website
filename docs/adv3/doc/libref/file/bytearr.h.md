@@ -56,7 +56,7 @@ This header defines the ByteArray intrinsic class.
 
 
 
-[`FmtBigEndian`](#FmtBigEndian)[`FmtInt16BE`](#FmtInt16BE)[`FmtInt16LE`](#FmtInt16LE)[`FmtInt32BE`](#FmtInt32BE)[`FmtInt32LE`](#FmtInt32LE)[`FmtInt8`](#FmtInt8)[`FmtLittleEndian`](#FmtLittleEndian)[`FmtSigned`](#FmtSigned)[`FmtSize16`](#FmtSize16)[`FmtSize32`](#FmtSize32)[`FmtSize8`](#FmtSize8)[`FmtUInt16BE`](#FmtUInt16BE)[`FmtUInt16LE`](#FmtUInt16LE)[`FmtUInt8`](#FmtUInt8)[`FmtUnsigned`](#FmtUnsigned)
+[`FmtBigEndian`](#FmtBigEndian) [`FmtInt16BE`](#FmtInt16BE) [`FmtInt16LE`](#FmtInt16LE) [`FmtInt32BE`](#FmtInt32BE) [`FmtInt32LE`](#FmtInt32LE) [`FmtInt8`](#FmtInt8) [`FmtLittleEndian`](#FmtLittleEndian) [`FmtSigned`](#FmtSigned) [`FmtSize16`](#FmtSize16) [`FmtSize32`](#FmtSize32) [`FmtSize8`](#FmtSize8) [`FmtUInt16BE`](#FmtUInt16BE) [`FmtUInt16LE`](#FmtUInt16LE) [`FmtUInt8`](#FmtUInt8) [`FmtUnsigned`](#FmtUnsigned)
 
 <span id="_EnumSummary_"></span>
 

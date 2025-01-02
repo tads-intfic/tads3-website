@@ -948,7 +948,7 @@ layout: docs
                 local afterStr;
                 
                 /* ask the formatter to translate it */
-                xlat = translateTag(rexGroup(1)[3]);
+                xlat = translateTag(rexGroup(1) [3]);
 
                 /* get the part of the string that follows the tag */
                 afterOfs = idx[1] + idx[2];
@@ -1223,14 +1223,14 @@ layout: docs
                 if (rexMatch(patIdObjSlashId, paramStr) != nil)
                 {
                     /* we have the id1 obj/id2 format */
-                    paramName = rexGroup(1)[3] + rexGroup(3)[3];
-                    paramObj = rexGroup(2)[3];
+                    paramName = rexGroup(1) [3] + rexGroup(3) [3];
+                    paramObj = rexGroup(2) [3];
                 }
                 else if (rexMatch(patIdObj, paramStr) != nil)
                 {
                     /* we have 'id obj' or 'id1/id2 obj' */
-                    paramName = rexGroup(1)[3];
-                    paramObj = rexGroup(2)[3];
+                    paramName = rexGroup(1) [3];
+                    paramObj = rexGroup(2) [3];
                 }
                 else
                 {
@@ -1253,7 +1253,7 @@ layout: docs
                      *   rebuild the name with the order of the parts
                      *   reversed, and look up the result 
                      */
-                    info = paramTable_[rexGroup(2)[3] + '/' + rexGroup(1)[3]];
+                    info = paramTable_[rexGroup(2) [3] + '/' + rexGroup(1) [3]];
                 }
 
                 /*
@@ -1696,7 +1696,7 @@ layout: docs
                     txt = txt.substr(match[1] + match[2]);
 
                     /* get the tag name */
-                    tag = rexGroup(1)[3];
+                    tag = rexGroup(1) [3];
                 }
 
                 /* process the plain text up to the tag, if any */
