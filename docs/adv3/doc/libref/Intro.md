@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 <div class="fdesc">
 
@@ -94,7 +94,7 @@ used and redistributed without charge, subject to the condition that it
 not be altered, and that no copyright or authorship notices be removed
 or modified.
 
-</div>
+
 
 <div class="ftr">
 

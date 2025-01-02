@@ -19,7 +19,7 @@ Function Set
 
 </div>
 
-<div class="main">
+
 
 # tads-gen Function Set
 
@@ -49,7 +49,7 @@ or a BigNumber value; the result has the same type as *val*. If *val* is
 positive or zero, the result is *val*; if *val* is negative, the result
 is -*val*. For example, `abs(-3)` returns 3.
 
-</div>
+
 
 <span id="concat"></span>
 

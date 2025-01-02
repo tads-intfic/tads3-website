@@ -38,25 +38,23 @@ Codes
 
 </div>
 
-<div class="main">
+<h1 id="vm-run-time-error-codes">VM Run-Time Error Codes</h1>
 
-# VM Run-Time Error Codes
-
-When the VM encounters an error in the user program, it throws an
+<p>When the VM encounters an error in the user program, it throws an
 exception of class RuntimeError. This exception object always contains
-an integer value its <span class="code">errno\_</span> property giving
+an integer value its <code class="language-plaintext highlighter-rouge">errno\_</code> property giving
 the VM error code for the error condition. Programs that need to apply
 special handling for certain types of errors can determine the specific
-VM error condition via the error code <span class="code">errno\_</span>.
+VM error condition via the error code <code class="language-plaintext highlighter-rouge">errno\_</code>.</p>
 
-<span class="errid">101: error reading file</span>
+<p><span class="errid">101: error reading file</span></p>
 
 <div class="errvb">
 
 Error reading file. The file might be corrupted or a media error might
 have occurred.
 
-</div>
+
 
 <span class="errid">102: error writing file</span>
 

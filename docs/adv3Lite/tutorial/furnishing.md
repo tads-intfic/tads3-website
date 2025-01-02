@@ -19,7 +19,7 @@ Cockpit
 
 </div>
 
-<div class="main">
+
 
 # Furnishing the Cockpit
 
@@ -323,7 +323,7 @@ In the next section we'll start discussing how to make the controls
 respond to commands, which will involve our learning how to define
 actions.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

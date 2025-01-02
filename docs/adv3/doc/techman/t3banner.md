@@ -18,7 +18,7 @@ API
 
 </div>
 
-<div class="main">
+
 
 # Using the Banner API
 
@@ -1136,7 +1136,7 @@ support for, in that a RESTORE or UNDO will not automatically return
 what's displayed in a window to the result of the output from these
 methods.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

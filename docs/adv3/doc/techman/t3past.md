@@ -19,7 +19,7 @@ for TADS</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Writing a Game in the Past Tense
 
@@ -495,7 +495,7 @@ me.conjugateRegularVerb('carry')})` would return the string
 `'carried'` no matter what the current narrative
 tense is.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

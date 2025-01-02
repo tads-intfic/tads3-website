@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](crossingthestream.html)
@@ -586,4 +586,4 @@ been.
 *[\[Previous\]](crossingthestream.html)
   [\[Next\]](callingaspadeaspade.html)*
 
-</div>
+

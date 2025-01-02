@@ -37,55 +37,53 @@
 
 </div>
 
-<div class="main">
+<h1 id="httprequest">HTTPRequest</h1>
 
-# HTTPRequest
-
-The HTTPRequest intrinsic class represents a request from a client
+<p>The HTTPRequest intrinsic class represents a request from a client
 connected to an HTTP server your program created. This object provides
 methods for getting information on the request the client sent, and for
-sending your reply.
+sending your reply.</p>
 
-The TADS HTTP package is designed to handle all of the low-level network
+<p>The TADS HTTP package is designed to handle all of the low-level network
 plumbing automatically, while giving your program full control over how
 the server responds to client requests. HTTPRequest is a key part of
 this design. It handles the details of the network data transmission and
 the standard protocol interpretation, and presents you with the parsed
 information in a readily usable format. Your program can then interpret
-the request and determine the appropriate action; once you've determined
+the request and determine the appropriate action; once you’ve determined
 the response, the HTTPRequest object handles the details of transmitting
-the bytes back to the client.
+the bytes back to the client.</p>
 
-For more on how to create an HTTP server in a TADS program, refer to the
-[HTTPServer](httpsrv.html) documentation.
+<p>For more on how to create an HTTP server in a TADS program, refer to the
+<a href="httpsrv.html">HTTPServer</a> documentation.</p>
 
-## Headers and library files
+<h2 id="headers-and-library-files">Headers and library files</h2>
 
-To use the HTTPRequest class, you must <span class="code">\#include
-\&lt;httpreq.h\&gt;</span> in your program. In addition, we recommend that you
-add the library file <span class="code">tadsnet.t</span> to your build
+<p>To use the HTTPRequest class, you must <code class="language-plaintext highlighter-rouge">\#include
+\&lt;httpreq.h\&gt;</code> in your program. In addition, we recommend that you
+add the library file <code class="language-plaintext highlighter-rouge">tadsnet.t</code> to your build
 (by adding it to your project .t3m file), since this file defines some
-helper classes often used with HTTPRequest.
+helper classes often used with HTTPRequest.</p>
 
-## Receiving requests
+<h2 id="receiving-requests">Receiving requests</h2>
 
-You can't create an HTTPRequest object with the
-<span class="code">new</span> operator. Instead, the system creates
+<p>You can’t create an HTTPRequest object with the
+<code class="language-plaintext highlighter-rouge">new</code> operator. Instead, the system creates
 these automatically for you. The HTTP server creates an HTTPRequest
 whenever a request arrives from the network client, and places the
 HTTPRequest in the network message queue. Your program retrieves the
 request object by calling the
-[<span class="code">getNetEvent()</span>](tadsnet.html#getNetEvent)
-function.
+<a href="tadsnet.html#getNetEvent"><code class="language-plaintext highlighter-rouge">getNetEvent()</code></a>
+function.</p>
 
-The basic structure of a TADS program that creates an HTTP server is an
-event loop: you call <span class="code">getNetEvent()</span> to wait for
+<p>The basic structure of a TADS program that creates an HTTP server is an
+event loop: you call <code class="language-plaintext highlighter-rouge">getNetEvent()</code> to wait for
 an event, then you interpreter and respond to the event. You repeat this
-process as long as the server is running.
+process as long as the server is running.</p>
 
-## HTTPRequest methods
+<h2 id="httprequest-methods">HTTPRequest methods</h2>
 
-<span class="code">endChunkedReply(*headers*?)</span>
+<p><code class="language-plaintext highlighter-rouge">endChunkedReply(*headers*?)</code></p>
 
 <div class="fdef">
 
@@ -94,9 +92,9 @@ been sent and that the reply is completed.
 
 The optional *headers* argument is a list of HTTP headers. This works
 the same way as the corresponding argument to
-<span class="code">sendReply()</span>. With a chunked reply, you can
+`sendReply()`. With a chunked reply, you can
 send headers at the beginning of the reply when you call
-<span class="code">startChunkedReply()</span>, at the end of the reply
+`startChunkedReply()`, at the end of the reply
 when you call this method, or both. Sending headers at the end of the
 reply is useful when there's a header you can't determine until you've
 generated the whole reply body.
@@ -105,9 +103,9 @@ This method must be called exactly once for a chunked reply, after
 sending all of the pieces of a chunked reply. After calling this method,
 the request is completed, and no further reply can be sent.
 
-</div>
 
-<span class="code">getBody()</span>
+
+`getBody()`
 
 <div class="fdef">
 
@@ -118,12 +116,12 @@ includes posted form data), or in "raw" mode for non-text MIME types.
 Note that the client determines the Content-Type header, and this is
 often just a guess based on heuristics (such as the filename suffix), so
 it's not necessarily reliable. You can override the initial file mode if
-necessary via the file's <span class="code">setFileMode</span> method.
+necessary via the file's `setFileMode` method.
 
 If the request doesn't have a message body, the method returns
-<span class="code">nil</span>. If the message body exceeds the upload
+`nil`. If the message body exceeds the upload
 size limit set in the [HTTPServer](httpsrv.html) object, the method
-returns the string <span class="code">'overflow'</span>.
+returns the string `'overflow'`.
 
 Some HTTP requests, such as POST and PUT, can include additional data in
 the form of a message body. This is essentially a file or other data
@@ -133,14 +131,14 @@ a form.
 
 Note that you won't usually need to access the raw message body for a
 POST, since it's much more convenient to use
-[<span class="code">getFormFields</span>](#getFormFields), which parses
+[`getFormFields`](#getFormFields), which parses
 the message body using the standard HTTP encodings for form fields. The
 unparsed POST body is useful mostly if you're handling requests from
 custom clients that use custom form encodings.
 
 </div>
 
-<span class="code">getClientAddress()</span>
+`getClientAddress()`
 
 <div class="fdef">
 
@@ -154,7 +152,7 @@ return value is a list:
 
 </div>
 
-<span class="code">getCookie(*name*)</span>
+`getCookie(*name*)`
 
 <div class="fdef">
 
@@ -162,11 +160,11 @@ Returns a string containing the value of the cookie identified by the
 given *name* string. This searches the cookies sent by the client with
 the request for the given name; if a cookie with this name is found, its
 text is returned, otherwise the return value is
-<span class="code">nil</span>.
+`nil`.
 
 </div>
 
-<span class="code">getCookies()</span>
+`getCookies()`
 
 <div class="fdef">
 
@@ -203,7 +201,7 @@ HTTP reference materials on the Web.
 
 <span id="getFormFields"></span>
 
-<span class="code">getFormFields()</span>
+`getFormFields()`
 
 <div class="fdef">
 
@@ -214,40 +212,40 @@ attribute of an \&lt;INPUT\&gt; tag on the form), and the corresponding value
 is the value of the field. All field values are represented as strings.
 
 If there's no message body, the method returns
-<span class="code">nil</span>. If there's a message body, but it exceeds
+`nil`. If there's a message body, but it exceeds
 the maximum upload size for the [HTTPServer](httpsrv.html) object, the
-method returns the string <span class="code">'overflow'</span>.
+method returns the string `'overflow'`.
 
 If the form includes uploaded files, via \&lt;INPUT TYPE=FILE\&gt; fields, the
 lookup table value for each TYPE=FILE field is a FileUpload object
-instead of a string, or <span class="code">nil</span> if the user didn't
+instead of a string, or `nil` if the user didn't
 select a file for the field. The FileUpload object has the following
 properties:
 
-- <span class="code">file</span>: a File object representing the
+- `file`: a File object representing the
   uploaded data. This is open with read-only access.
   If the content type parameter in the upload is a text type
   ("text/html", "text/plain", etc.), and the content type specifies a
   valid character set mapping, the file is opened in text mode;
   otherwise it's open in raw binary mode. You can change the mode and/or
   the character set, if desired, using the
-  <span class="code">setFileMode()</span> method on the File object.
-- <span class="code">txtfile</span>: a second File object representing
+  `setFileMode()` method on the File object.
+- `txtfile`: a second File object representing
   the data, also with read-only access, but open in "text" mode. This
   object is included *only* if the Content-Type specified in the POST is
   a text type ("text/plain" or "text/html", for example), and the
   interpreter recognizes the character set parameter in the
   Content-Type. Otherwise, this property is
-  <span class="code">nil</span>.
-  Note that the <span class="code">file</span> property is *always* set
+  `nil`.
+  Note that the `file` property is *always* set
   to a raw File object, even when there's also a
-  <span class="code">txtfile</span> object. This is because you might
+  `txtfile` object. This is because you might
   still want access to the raw bytes of the file even if the client
   indicated that the upload is textual, such as if you want to save an
   exact copy on disk. The text-mode File reader doesn't give you access
   to the exact bytes in the file because of the translations it applies
   for character sets and newline conventions.
-- <span class="code">filename</span>: a string giving the name of the
+- `filename`: a string giving the name of the
   file on the client side (that is, on the machine that originated the
   upload). This name isn't meaningful within the local file system on
   the server side, for obvious reasons. It's not even necessarily the
@@ -259,7 +257,7 @@ properties:
   to make a guess about the content type, although again, you can't
   count on the name being accurate, so at best you can use it as
   guidance that you'll need to verify by inspecting the actual data.
-- <span class="code">contentType</span>: a string giving the
+- `contentType`: a string giving the
   Content-Type specified by the client for the uploaded file. Note that
   you can't rely on this to be accurate. Most browsers just guess at the
   content type based on the filename suffix (e.g., they assume a file
@@ -275,7 +273,7 @@ properties:
 
 Note that the information that this method parses is actually just the
 message body, which you can retrieve in unparsed format via
-<span class="code">getBody()</span>. Parsing form data is moderately
+`getBody()`. Parsing form data is moderately
 complex, though, so this method is convenient when you don't have any
 special needs outside of the standard formats. This method can handle
 the two most common formats used by Web browsers to submit forms, which
@@ -286,7 +284,7 @@ to check before calling it.
 
 </div>
 
-<span class="code">getHeaders()</span>
+`getHeaders()`
 
 <div class="fdef">
 
@@ -311,7 +309,7 @@ identifier.
 
 </div>
 
-<span class="code">getQuery()</span>
+`getQuery()`
 
 <div class="fdef">
 
@@ -327,7 +325,7 @@ are also left as-is.
 
 </div>
 
-<span class="code">getQueryParam(*name*)</span>
+`getQueryParam(*name*)`
 
 <div class="fdef">
 
@@ -336,25 +334,25 @@ searches for the given parameter name. If the specified parameter is
 present, the method returns a string giving the value of the parameter
 (with any "%" sequences decoded, and with any improperly formed UTF-8
 characters replaced with "?"). If not, it returns
-<span class="code">nil</span>.
+`nil`.
 
 Note that *name* is case-sensitive: the specified name must exactly
 match the name in the URL string.
 
 This method does the same parsing work as
-<span class="code">parseQuery()</span>, but rather than constructing a
+`parseQuery()`, but rather than constructing a
 LookupTable with all of the parameter values, it simply returns the
 value of the single specified parameter. This is more efficient (and
 slightly simpler to code) when you only need to look up one or two
 parameters in a given query string, since it skips creating the lookup
-table. <span class="code">parseQuery()</span> is more efficient if you
+table. `parseQuery()` is more efficient if you
 reuse the table to look up several parameters, since
-<span class="code">getQueryParam()</span> repeats the parsing work each
+`getQueryParam()` repeats the parsing work each
 time it's called.
 
 </div>
 
-<span class="code">getServer()</span>
+`getServer()`
 
 <div class="fdef">
 
@@ -362,22 +360,22 @@ Returns the [HTTPServer](httpsrv.html) object for the HTTP server that
 received the network request that this HTTPRequest object represents.
 
 Note that it's *possible*, although unlikely, for the return value to be
-<span class="code">nil</span>. This can only happen if the HTTPServer
+`nil`. This can only happen if the HTTPServer
 becomes unreachable and the garbage collector deletes it while the
 request is pending. The server automatically shuts down if the
 HTTPServer object is deleted by the garbage collector, so no new
 requests can occur after that point; however, any requests previously
 received but not yet processed will remain in the
-[<span class="code">getNetEvent()</span>](tadsnet.html#getNetEvent)
+[`getNetEvent()`](tadsnet.html#getNetEvent)
 queue. When you read one of these pending messages in this situation,
-its <span class="code">getServer()</span> return value will be
-<span class="code">nil</span>. You can ensure this never happens simply
+its `getServer()` return value will be
+`nil`. You can ensure this never happens simply
 by making sure that the HTTPServer object remains referenced until you
 explicitly shut it down.
 
 </div>
 
-<span class="code">getVerb()</span>
+`getVerb()`
 
 <div class="fdef">
 
@@ -396,12 +394,12 @@ WebDAV clients.
 
 </div>
 
-<span class="code">parseQuery()</span>
+`parseQuery()`
 
 <div class="fdef">
 
 This method parses the query string (the string returned by
-<span class="code">getQuery()</span>) and returns the result. First, it
+`getQuery()`) and returns the result. First, it
 looks for query parameters, and parses them into name/value pairs.
 Second, it replaces any "%" sequences in the main resource name or in
 the query parameters with the corresponding characters. Finally, it
@@ -422,27 +420,23 @@ that parameter, as a string.
 
 For example, if we parse this query string:
 
-<div class="code">
-
+```
     http://www.tads.org:1234/path/resource?a=one&amp;b=two&amp;c=three&amp;d
-
-</div>
+```
 
 we'll get this LookupTable:
 
-<div class="code">
-
+```
     table[1] = '/path/resource'
     table['a'] = 'one'
     table['b'] = 'two'
     table['c'] = 'three'
     table['d'] = ''
+```
 
 </div>
 
-</div>
-
-<span class="code">setCookie(*name*, *val*)</span>
+`setCookie(*name*, *val*)`
 
 <div class="fdef">
 
@@ -455,8 +449,8 @@ sent with the header information at the start of the reply. Calling this
 method doesn't actually send any data to the client immediately;
 instead, it simply stores the cookie information internally with the
 pending request, to be sent when you call
-<span class="code">sendReply()</span> or
-<span class="code">startChunkedReply()</span>.
+`sendReply()` or
+`startChunkedReply()`.
 
 If you set two cookies with identical names, paths, and domains, the
 later setting supersedes the earlier one. Cookies with distinct paths
@@ -471,7 +465,7 @@ HTTP protocol, so for full details you should see your favorite HTTP
 reference material, but for the sake of convenience here's a quick
 overview:
 
-- <span class="code">expires=</span>*date*, where *date* is a date in
+- `expires=`*date*, where *date* is a date in
   Unix format (e.g., "Fri, 31-Dec-2010 23:59:59 GMT"). This specifies
   the expiration date for a persistent cookie, which is a cookie that
   the browser is meant to store on disk so that the cookie survives even
@@ -479,20 +473,20 @@ overview:
   the cookie is a "session" cookie, which is meant to be stored in
   memory only and should be automatically deleted when the user closes
   the browser.
-- <span class="code">domain=</span>*site*, where *site* is a domain
+- `domain=`*site*, where *site* is a domain
   name. This scopes the cookie to the site: it will be sent on
   subsequent requests to this site only. The domain is usually specified
   with a leading period, as in ".tads.org"; this means that the cookie
   also applies to subdomains. If you don't specify the domain, the
   browser will default to the domain of this request.
-- <span class="code">path=</span>*path*, where *path* is a URL-style
+- `path=`*path*, where *path* is a URL-style
   path prefix, starting with a slash '/' character. This scopes the
   cookie to resources within the domain starting with the given path
-  prefix. For example, <span class="code">path=/home/</span> makes the
-  cookie apply only to resources in the <span class="code">/home</span>
+  prefix. For example, `path=/home/` makes the
+  cookie apply only to resources in the `/home`
   directory on the server. If you don't specify a path, the browser will
   default to the path of the resource in this request.
-- <span class="code">httponly</span> specifies that the cookie is for
+- `httponly` specifies that the cookie is for
   HTTP use only, and should be hidden from Javascript and other
   client-side scripting languages. This is useful for cookies containing
   privileged information, such as passwords, because it prevents
@@ -504,7 +498,7 @@ overview:
   sensitive information in cookies in the first place. Rather than
   storing a password, for example, it's better to store a session key
   with a limited lifetime.)
-- <span class="code">secure</span> specifies that the cookie is only to
+- `secure` specifies that the cookie is only to
   be transmitted across a secure socket connection (https://...). As
   with HttpOnly, this affords a modest level of protection for cookies
   with sensitive contents, by telling the browser not to send the value
@@ -515,8 +509,8 @@ overview:
 
 <span id="sendReply"></span>
 
-<span class="code">sendReply(*body*, *contentType*?, *status*?,
-*headers*?)</span>
+`sendReply(*body*, *contentType*?, *status*?,
+*headers*?)`
 
 <div class="fdef">
 
@@ -617,8 +611,8 @@ this request.
 
 <span id="sendReplyAsync"></span>
 
-<span class="code">sendReplyAsync(*body*, *contentType*?, *status*?,
-*headers*?)</span>
+`sendReplyAsync(*body*, *contentType*?, *status*?,
+*headers*?)`
 
 <div class="fdef">
 
@@ -660,8 +654,7 @@ your updates until the completion event (described above) is posted. A
 simpler (but slower) way is to create a temporary copy of the file for
 sendReplyAsync(). For example:
 
-<div class="code">
-
+```
     // send the current contents of a file we're actively
     // updating - 'fp' is a File object, 'req' is the request
     // we're replying to
@@ -686,8 +679,7 @@ sendReplyAsync(). For example:
         // we're done with the temporary file
         fptemp.closeFile();
     }
-
-</div>
+```
 
 When the *body* is a File, you're free to close the file any time after
 the method returns. (You can also keep it open if you plan to continue
@@ -718,32 +710,32 @@ free to respond to new requests.
 
 </div>
 
-<span class="code">sendReplyChunk(*chunk*)</span>
+`sendReplyChunk(*chunk*)`
 
 <div class="fdef">
 
 Sends one piece of a "chunked" reply. The *chunk* argument works the
 same way as the *body* argument to
-<span class="code">sendReply()</span>, so it can be a string,
+`sendReply()`, so it can be a string,
 StringBuffer, or ByteArray.
 
 This method can be called repeatedly to send a reply in pieces. You must
-call <span class="code">startChunkedReply()</span> before the first call
-to <span class="code">sendReplyChunk()</span> for a request, and you
-must call <span class="code">endChunkedReply()</span> after sending the
+call `startChunkedReply()` before the first call
+to `sendReplyChunk()` for a request, and you
+must call `endChunkedReply()` after sending the
 last chunk for the request. See
-<span class="code">startChunkedReply()</span> for more details.
+`startChunkedReply()` for more details.
 
 </div>
 
-<span class="code">startChunkedReply(*contentType*, *resultCode*?,
-*headers*?)</span>
+`startChunkedReply(*contentType*, *resultCode*?,
+*headers*?)`
 
 <div class="fdef">
 
 Starts sending a "chunked" reply to the request. A chunked reply is one
 that's sent in pieces, rather than all at once. When you use
-<span class="code">sendReply()</span>, you must have the entire reply
+`sendReply()`, you must have the entire reply
 ready to go as a single unit at the time you call the method. In
 contrast, the chunked reply methods let you assemble the reply a little
 bit at a time, sending each piece as soon as it's ready. This is
@@ -753,23 +745,23 @@ generated data stream in memory at one time.
 
 Sending a chunked reply involves three steps:
 
-- Call <span class="code">startChunkedReply()</span> to begin the reply.
-- Call <span class="code">sendReplyChunk()</span> for each chunk - each
+- Call `startChunkedReply()` to begin the reply.
+- Call `sendReplyChunk()` for each chunk - each
   piece of data you wish to send in the reply.
-- Call <span class="code">endChunkedReply()</span> to finish the reply.
+- Call `endChunkedReply()` to finish the reply.
 
 The *contentType*, *resultCode*, and *headers* arguments work almost the
-same way they do with <span class="code">sendReply()</span> - see that
+same way they do with `sendReply()` - see that
 method for full details. There are two small differences, though. First,
 *contentType* is required with this method, whereas it's optional with
-<span class="code">sendReply()</span>. The reason is that this method
+`sendReply()`. The reason is that this method
 doesn't have the reply content to work with - that'll be sent later, in
 pieces, via one or more calls to
-<span class="code">sendReplyChunk()</span>, so there's no way for
-<span class="code">startChunkedReply()</span> to infer the content type
+`sendReplyChunk()`, so there's no way for
+`startChunkedReply()` to infer the content type
 from the data. The second difference is that any headers you include in
 this call aren't the last word: you'll get another chance to send more
-headers with <span class="code">endChunkedReply()</span>. This is useful
+headers with `endChunkedReply()`. This is useful
 if some of the headers depend on the content you're going to send, which
 you might not have generated yet.
 
@@ -788,7 +780,7 @@ processing a request from the original session at that time.
 When you shut down an HTTPServer object, all of the client sessions are
 terminated and the open requests aborted. This is true whether you shut
 down a server by explicitly calling the HTTPServer
-<span class="code">shutdown()</span> method, or by allowing the
+`shutdown()` method, or by allowing the
 HTTPServer object to go out of scope and be collected by the garbage
 collector. Replying to an aborted request is invalid and will throw a
 NetException error.

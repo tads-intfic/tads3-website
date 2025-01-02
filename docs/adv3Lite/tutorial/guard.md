@@ -18,7 +18,7 @@ Security Guard
 
 </div>
 
-<div class="main">
+
 
 # The Security Guard — A Really Simple NPC
 
@@ -91,7 +91,7 @@ implement some NPC conversation.
 For the full story on defining the basic [Actor
 Object](../manual/actorobj.html), consult the *adv3Lite Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

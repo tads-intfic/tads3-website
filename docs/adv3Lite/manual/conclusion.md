@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Conclusion
 
@@ -45,7 +45,7 @@ some of your IF needs either now or in the future.
 Oxford, England  
 November 2013*
 
-</div>
+
 
 ------------------------------------------------------------------------
 

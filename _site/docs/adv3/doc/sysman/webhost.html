@@ -39,250 +39,260 @@ Localizing TADS</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="setting-up-a-custom-tads-web-server">Setting up a custom TADS Web server</h1>
 
-# Setting up a custom TADS Web server
-
-If you have your own Web server machine, and you have some expertise at
+<p>If you have your own Web server machine, and you have some expertise at
 setting up Apache Web servers and related software, you can contribute
-computing power to the TADS "cloud" by setting up a TADS Web server on
-your machine. This chapter explains how.
+computing power to the TADS “cloud” by setting up a TADS Web server on
+your machine. This chapter explains how.</p>
 
-Note that you **don't** need to set up a TADS server if all you want to
-do is deploy your TADS Web UI game. There's an existing public cloud of
+<p>Note that you <strong>don’t</strong> need to set up a TADS server if all you want to
+do is deploy your TADS Web UI game. There’s an existing public cloud of
 servers for any player running any game. To deploy your game, you merely
 have to upload it to the IF Archive and create an IFDB page for it. The
-[Web deployment chapter](webdeploy.html) has the details.
+<a href="webdeploy.html">Web deployment chapter</a> has the details.</p>
 
-The TADS Web Play system is designed to work as a flexible "cloud"
+<p>The TADS Web Play system is designed to work as a flexible “cloud”
 utility service where any number of servers can be added to the network.
 Each player is dispatched at game startup to an available server, so
 that the CPU load is distributed throughout the network. Servers are
-only called upon to contribute CPU power to the network - they don't
+only called upon to contribute CPU power to the network - they don’t
 have to worry about storing any long-term data, because the games (.t3
 files) are downloaded dynamically at start-up, and saved files are
 stored on IFDB. This means that each server only has to install a
 generic set of software (namely, the TADS interpreter and a basic
-Apache/php/MySQL suite); servers don't have to worry about hosting games
-or user files. Running a TADS server doesn't require a lot of disk
-space.
+Apache/php/MySQL suite); servers don’t have to worry about hosting games
+or user files. Running a TADS server doesn’t require a lot of disk
+space.</p>
 
-If you prefer, you can use SQLite instead of MySQL as the database
+<p>If you prefer, you can use SQLite instead of MySQL as the database
 engine. SQLite is smaller in terms of memory footprint and CPU load, so
-it might be preferable if you're using a low-cost VPS, where memory and
-CPU time are rationed.
+it might be preferable if you’re using a low-cost VPS, where memory and
+CPU time are rationed.</p>
 
-If you don't already run your own Web server, but you're still
+<p>If you don’t already run your own Web server, but you’re still
 interested in contributing to the TADS server cloud, look into getting a
 VPS (Virtual Private Server) from a commercial Web hosting service. Lots
 of hosting companies offer VPS plans, and they can be quite cheap if you
-shop around - as of this writing, it's easy to find one for under \$10 a
-month with enough horsepower for TADS Web serving.
+shop around - as of this writing, it’s easy to find one for under $10 a
+month with enough horsepower for TADS Web serving.</p>
 
-## Requirements
+<h2 id="requirements">Requirements</h2>
 
-**TADS Interpreter**: You'll obviously need a TADS interpreter that has
+<p><strong>TADS Interpreter</strong>: You’ll obviously need a TADS interpreter that has
 the full networking functionality, so your server will have to run a
-supported operating system, such as Windows or Linux.
+supported operating system, such as Windows or Linux.</p>
 
-**Root/administrator access:** You'll generally need full administrator
-(root) access to your machine, since you'll have to configure the
+<p><strong>Root/administrator access:</strong> You’ll generally need full administrator
+(root) access to your machine, since you’ll have to configure the
 regular Web server on the machine (e.g., Apache) and install the TADS
-interpreter software. (This usually rules out "shared hosting" plans
-with Web hosts. A VPS or dedicated server is recommended.)
+interpreter software. (This usually rules out “shared hosting” plans
+with Web hosts. A VPS or dedicated server is recommended.)</p>
 
-**Static, public network address:** In order to act as a server on the
-public Internet, your machine must have a network address that's static
+<p><strong>Static, public network address:</strong> In order to act as a server on the
+public Internet, your machine must have a network address that’s static
 (that is, permanently assigned to your machine) and public (visible on
 the Internet, not just on a local subnet). This can be a static numeric
-IP address, or a registered domain name.
+IP address, or a registered domain name.</p>
 
-If your machine is on a home network with a broadband router, it
+<p>If your machine is on a home network with a broadband router, it
 probably uses a private subnet address, such as a 192.168.x.x address;
 and if you have home broadband service through a phone or cable company,
 you probably have a dynamic public IP address for your router that
-changes from time to time. It's possible to work around both of these
+changes from time to time. It’s possible to work around both of these
 conditions; there are services that let you assign a DNS name to a
 dynamic IP address, for example, and some broadband routers have
 advanced configuration settings for exposing servers. The details are
-beyond the scope of this chapter, so you'll need the relevant expertise
-if you want to attempt this type of configuration.
+beyond the scope of this chapter, so you’ll need the relevant expertise
+if you want to attempt this type of configuration.</p>
 
-**(L)AMP:** The TADS server package is based on the popular free
-software stack known as "LAMP" - Linux, Apache, MySQL (or SQLite), php.
+<p><strong>(L)AMP:</strong> The TADS server package is based on the popular free
+software stack known as “LAMP” - Linux, Apache, MySQL (or SQLite), php.
 TADS runs on Linux as well as other operating systems, so the actual
-required stack is just the "AMP" part. The instructions below assume
-you're using an Apache server with php and MySQL or SQLite installed,
-but leave the choice of operating system up to you.
+required stack is just the “AMP” part. The instructions below assume
+you’re using an Apache server with php and MySQL or SQLite installed,
+but leave the choice of operating system up to you.</p>
 
-## Step-by-step instructions
+<h2 id="step-by-step-instructions">Step-by-step instructions</h2>
 
-### Install the TADS Interpreter
+<h3 id="install-the-tads-interpreter">Install the TADS Interpreter</h3>
 
-The first step is to install a TADS interpreter. For Linux, install
-FrobTADS. Build and install exactly as you would for local play.
+<p>The first step is to install a TADS interpreter. For Linux, install
+FrobTADS. Build and install exactly as you would for local play.</p>
 
-### Install Apache, MySQL/SQLite, and php
+<h3 id="install-apache-mysqlsqlite-and-php">Install Apache, MySQL/SQLite, and php</h3>
 
-Some Linux distros come with the LAMP components pre-installed, so you
-might not need to install anything manually. If your Linux doesn't
-include LAMP out of the box, you should be able to use your system's
+<p>Some Linux distros come with the LAMP components pre-installed, so you
+might not need to install anything manually. If your Linux doesn’t
+include LAMP out of the box, you should be able to use your system’s
 package manager to install them from the command shell. The command
-syntax varies by Linux variety, so you'll have to consult your system's
-manuals for specific instructions.
+syntax varies by Linux variety, so you’ll have to consult your system’s
+manuals for specific instructions.</p>
 
-For more information about the specific components, here's where to go:
+<p>For more information about the specific components, here’s where to go:</p>
 
-- MySQL: [www.mysql.com](http://www.mysql.com). MySQL is available in
-  free (open source) and commercial versions. The free version is called
-  the Community Edition, which you can download from the mysql site.
-- SQLite: [www.sqlite.org](http://www.sqlite.org). This is a lightweight
-  database engine that you can use instead of MySQL, if you prefer. If
-  you're using a low-cost VPS, SQLite might be preferable because it
-  uses less memory than MySQL.
-- Apache: [www.apache.org](http://www.apache.org). The Apache site
-  encompasses a huge suite of projects beyond the basic Web server, and
-  the site isn't the easiest to navigate. It might be quicker to do a
-  generic Web search for something along the lines of "install apache on
-  ubuntu".
-- php: [www.php.net](http://www.php.net). Note that some Apache
-  distributions include php, so you might not have to install php
-  separately if you install Apache first.
+<ul>
+  <li>MySQL: <a href="http://www.mysql.com">www.mysql.com</a>. MySQL is available in
+free (open source) and commercial versions. The free version is called
+the Community Edition, which you can download from the mysql site.</li>
+  <li>SQLite: <a href="http://www.sqlite.org">www.sqlite.org</a>. This is a lightweight
+database engine that you can use instead of MySQL, if you prefer. If
+you’re using a low-cost VPS, SQLite might be preferable because it
+uses less memory than MySQL.</li>
+  <li>Apache: <a href="http://www.apache.org">www.apache.org</a>. The Apache site
+encompasses a huge suite of projects beyond the basic Web server, and
+the site isn’t the easiest to navigate. It might be quicker to do a
+generic Web search for something along the lines of “install apache on
+ubuntu”.</li>
+  <li>php: <a href="http://www.php.net">www.php.net</a>. Note that some Apache
+distributions include php, so you might not have to install php
+separately if you install Apache first.</li>
+</ul>
 
-### Configure Apache
+<h3 id="configure-apache">Configure Apache</h3>
 
-Follow the instructions in your Apache distribution to set up the basic
-Web server. The t3launch scripts don't have any special configuration
+<p>Follow the instructions in your Apache distribution to set up the basic
+Web server. The t3launch scripts don’t have any special configuration
 requirements for Apache and should work with a typical default
-installation.
+installation.</p>
 
-Here are the key things to check in your Apache configuration file
-(usually called httpd.conf or apache2.conf):
+<p>Here are the key things to check in your Apache configuration file
+(usually called httpd.conf or apache2.conf):</p>
 
-- Ensure that .php files are processed as php scripts. This is usually
-  the default, but if it's not, you might have to add a directive like
-  this to the Apache configuration:
-  <div class="code">
+<ul>
+  <li>
+    <p>Ensure that .php files are processed as php scripts. This is usually
+the default, but if it’s not, you might have to add a directive like
+this to the Apache configuration:
+```
+    &lt;FilesMatch “.php$”&gt;
+       SetHandler application/x-httpd-php
+    &lt;/FilesMatch&gt;</p>
+  </li>
+  <li>
+    <p>Ensure that .htaccess files can override allow/deny settings. This
+might require adding <code class="language-plaintext highlighter-rouge">AllowOverride All</code> in
+the section for the directory tree where you’re placing the TADS php
+files.</p>
+  </li>
+</ul>
 
-      &lt;FilesMatch "\.php$"&gt;
-         SetHandler application/x-httpd-php
-      &lt;/FilesMatch&gt;
+<h3 id="install-the-t3launch-scripts">Install the t3launch scripts</h3>
 
-  </div>
-- Ensure that .htaccess files can override allow/deny settings. This
-  might require adding <span class="code">AllowOverride All</span> in
-  the section for the directory tree where you're placing the TADS php
-  files.
+<p>Download the t3launch.zip package from
+<a href="http://www.tads.org">www.tads.org</a>. Install as follows:</p>
 
-### Install the t3launch scripts
+<ul>
+  <li>Unzip the contents of t3launch.zip into a private directory (not part
+of the Web server’s document tree)</li>
+  <li>Move the t3launch subdirectory and all of its contents to your Apache
+document root directory (as listed in the Apache httpd.conf file under
+the DocumentRoot variable)</li>
+</ul>
 
-Download the t3launch.zip package from
-[www.tads.org](http://www.tads.org). Install as follows:
+<h3 id="configure-your-database">Configure your database</h3>
 
-- Unzip the contents of t3launch.zip into a private directory (not part
-  of the Web server's document tree)
-- Move the t3launch subdirectory and all of its contents to your Apache
-  document root directory (as listed in the Apache httpd.conf file under
-  the DocumentRoot variable)
-
-### Configure your database
-
-The t3launch scripts need a database engine to manage a local "cache" of
+<p>The t3launch scripts need a database engine to manage a local “cache” of
 .t3 files downloaded from other servers. The .t3 files that your server
 runs will generally be hosted on another server, such as the IF Archive
-([www.ifarchive.org](http://www.ifarchive.org)). When a player starts a
+(<a href="http://www.ifarchive.org">www.ifarchive.org</a>). When a player starts a
 game, your server has to transfer the .t3 file from the hosting site to
-your server's local disk, via an HTTP GET, so that the TADS interpreter
+your server’s local disk, via an HTTP GET, so that the TADS interpreter
 can load it. If the file has been transfered previously, though,
 t3launch simply re-uses the existing local copy; it uses a MySQL table
-to keep track of this.
+to keep track of this.</p>
 
-You can use either MySQL or SQLite as the database engine.
+<p>You can use either MySQL or SQLite as the database engine.</p>
 
-**MySQL:** Set up a t3launch database and user account on your MySQL
+<p><strong>MySQL:</strong> Set up a t3launch database and user account on your MySQL
 database. You can do this by entering the following commands using the
-<span class="code">mysql</span> command-line tool:
+<code class="language-plaintext highlighter-rouge">mysql</code> command-line tool:</p>
 
-- <span class="code">create user t3launch identified by
-  'password';</span>
-- <span class="code">create database t3launch;</span>
-- <span class="code">use t3launch;</span>
-- <span class="code">grant all on t3launch.\* to t3launch;</span>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">create user t3launch identified by
+'password';</code></li>
+  <li><code class="language-plaintext highlighter-rouge">create database t3launch;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">use t3launch;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">grant all on t3launch.\* to t3launch;</code></li>
+</ul>
 
-You can substitute different values for the user name, password, and
+<p>You can substitute different values for the user name, password, and
 database name. Use the names you choose here for the DB_USERNAME,
 DB_PASSWORD, and DB_SCHEMA parameters in the configuration file setup
-below.
+below.</p>
 
-**SQLite:** SQLite uses a binary file to store its database tables.
-You'll have to choose a directory where this file will be stored. The
+<p><strong>SQLite:</strong> SQLite uses a binary file to store its database tables.
+You’ll have to choose a directory where this file will be stored. The
 directory must be readable and writable by the Web server process, which
-typically runs as user "nobody".
+typically runs as user “nobody”.</p>
 
-The following commands (entered at the Unix command line) will configure
+<p>The following commands (entered at the Unix command line) will configure
 the directory permissions and create an empty file for the database. Log
-in as root (or use "su root") to run these commands.
+in as root (or use “su root”) to run these commands.</p>
 
-- <span class="code">mkdir /home/db</span>
-- <span class="code">chown nobody.nobody /home/db</span>
-- <span class="code">touch /home/db/t3launch.db</span>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mkdir /home/db</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chown nobody.nobody /home/db</code></li>
+  <li><code class="language-plaintext highlighter-rouge">touch /home/db/t3launch.db</code></li>
+</ul>
 
-You can substitute a different directory and/or database file name of
+<p>You can substitute a different directory and/or database file name of
 your choosing. Use the file name and location you choose here for the
-DB_FILE parameter in the configuration file setup below.
+DB_FILE parameter in the configuration file setup below.</p>
 
-### Configure the t3launch scripts
+<h3 id="configure-the-t3launch-scripts">Configure the t3launch scripts</h3>
 
-The t3launch scripts need to be customized for your machine's specific
+<p>The t3launch scripts need to be customized for your machine’s specific
 configuration. The configuration variables are in the file
-**t3launch/inc/config.php** within your Apache Document Root directory.
-Edit this file, and adjust the following variables as needed:
+<strong>t3launch/inc/config.php</strong> within your Apache Document Root directory.
+Edit this file, and adjust the following variables as needed:</p>
 
-- DB_ENGINE - set this to "mysql" if you're using MySQL as the database
-  engine, or "sqlite" if you're using SQLite
-- DB_HOST (MySQL only) - "localhost" by default; if you're running MySQL
-  on a separate server machine, set this to the host name of that server
-  on your network
-- DB_SCHEMA (MySQL only) - the name of the MySQL database you created in
-  the database configuration step above
-- DB_USERNAME (MySQL only) - the name of the MySQL account you created
-  in the database configuration step
-- DB_PASSWORD (MySQL only) - the password you selected for your t3launch
-  database user
-- DB_FILE (SQLite only) - the SQLite database file name you selected in
-  the database configuration step above; use the full, absolute path
-  (e.g., on Unix, the full path starting with "/")
-- T3RUN_EXE - the TADS interpreter executable file; use a full, absolute
-  path (e.g., on Unix, use the full path starting with "/")
-- T3RUN_OPTS, T3RUN_OPT_WEBHOST, T3RUN_OPT_WEBSIB - if you're running on
-  Windows or using FrobTADS on Linux, simply uncomment the appropriate
-  set of **define** statements and comment the others. If you're using a
-  different platform, you'll have to determine the appropriate option
-  syntax for your TADS Interpreter version
-- T3RUN_OPT_WEBHOST_NAME - the host name of the server where the game
-  will be running; this is normally the same server that's running the
-  launch script, which is what the default setting
-  <span class="code">\$\_SERVER\['SERVER_NAME'\]</span> yields
-- IFDB_ROOT - the default "http://ifdb.tads.org" should be appropriate
-  for all installations
-- T3_CACHE_DIR - the directory where downloaded .t3 files will be
-  stored; use a full, absolute path, and end the path with a "/"
-- T3_CACHE_MAX - the maximum size in bytes for the cache directory; when
-  adding a new file would push the total used space over this limit, the
-  least recently used file(s) in the cache will be deleted to get the
-  space usage back under the limit
+<ul>
+  <li>DB_ENGINE - set this to “mysql” if you’re using MySQL as the database
+engine, or “sqlite” if you’re using SQLite</li>
+  <li>DB_HOST (MySQL only) - “localhost” by default; if you’re running MySQL
+on a separate server machine, set this to the host name of that server
+on your network</li>
+  <li>DB_SCHEMA (MySQL only) - the name of the MySQL database you created in
+the database configuration step above</li>
+  <li>DB_USERNAME (MySQL only) - the name of the MySQL account you created
+in the database configuration step</li>
+  <li>DB_PASSWORD (MySQL only) - the password you selected for your t3launch
+database user</li>
+  <li>DB_FILE (SQLite only) - the SQLite database file name you selected in
+the database configuration step above; use the full, absolute path
+(e.g., on Unix, the full path starting with “/”)</li>
+  <li>T3RUN_EXE - the TADS interpreter executable file; use a full, absolute
+path (e.g., on Unix, use the full path starting with “/”)</li>
+  <li>T3RUN_OPTS, T3RUN_OPT_WEBHOST, T3RUN_OPT_WEBSIB - if you’re running on
+Windows or using FrobTADS on Linux, simply uncomment the appropriate
+set of <strong>define</strong> statements and comment the others. If you’re using a
+different platform, you’ll have to determine the appropriate option
+syntax for your TADS Interpreter version</li>
+  <li>T3RUN_OPT_WEBHOST_NAME - the host name of the server where the game
+will be running; this is normally the same server that’s running the
+launch script, which is what the default setting
+<code class="language-plaintext highlighter-rouge">\$\_SERVER\['SERVER_NAME'\]</code> yields</li>
+  <li>IFDB_ROOT - the default “http://ifdb.tads.org” should be appropriate
+for all installations</li>
+  <li>T3_CACHE_DIR - the directory where downloaded .t3 files will be
+stored; use a full, absolute path, and end the path with a “/”</li>
+  <li>T3_CACHE_MAX - the maximum size in bytes for the cache directory; when
+adding a new file would push the total used space over this limit, the
+least recently used file(s) in the cache will be deleted to get the
+space usage back under the limit</li>
+</ul>
 
-### Tweak your Linux configuration
+<h3 id="tweak-your-linux-configuration">Tweak your Linux configuration</h3>
 
-This step is optional. If you're running a Linux server, and you have
+<p>This step is optional. If you’re running a Linux server, and you have
 root access, you can improve TADS server performance by adding the
-following line to the file /etc/sysctl.conf:
+following line to the file /etc/sysctl.conf:</p>
 
 <div class="code">
 
     echo "0" &gt; /proc/sys/net/ipv4/tcp_slow_start_after_idle
-
-</div>
+```
 
 You'll need root privileges to edit that file, so use "su root", or log
 in as root to start with. Changes to /etc/sysctl.conf don't take effect
@@ -297,11 +307,9 @@ a performance optimization.
 First, check that your launch script starts up properly, by opening a
 Web browser and typing this in the address bar:
 
-<div class="code">
-
+```
     http://address/t3launch/t3launch.php?ping
-
-</div>
+```
 
 Replace *address* with your server's numeric IP address (or, if your
 server has a DNS name, you can use the domain name). If it's working
@@ -312,11 +320,9 @@ Next, check that your Apache server is correctly denying Web access to
 the supporting scripts in the "inc" directory, by trying this URL in
 your browser:
 
-<div class="code">
-
+```
     http://address/t3launch/inc/config.php
-
-</div>
+```
 
 Again, use your actual IP or domain in place of *address*. The result
 should be a "403 - Forbidden" error. If you *don't* get the 403 error,

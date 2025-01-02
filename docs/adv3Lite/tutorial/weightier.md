@@ -18,7 +18,7 @@ place</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Weightier Matters
 
@@ -486,7 +486,7 @@ confusing at first. As you work through this tutorial this kind of thing
 should gradually become more familiar to you and you'll gradually gain
 confidence with it.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

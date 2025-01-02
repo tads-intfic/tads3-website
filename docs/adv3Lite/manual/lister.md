@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Lists and Listers
 
@@ -495,7 +495,7 @@ also available to user code:
   indefinite article that occurs at the beginning of *txt*, and returns
   the resultant string in lower case.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

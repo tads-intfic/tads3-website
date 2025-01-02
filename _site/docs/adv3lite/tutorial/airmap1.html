@@ -38,59 +38,52 @@ game</a>    
 
 </div>
 
-<div class="main">
+<h1 id="starting-the-map">Starting the Map</h1>
 
-# Starting the Map
-
-The first step is to create a new project. Follow the steps in [Chapter
-Two](setting.html) above, but this time create a new folder/directory
-called 'aiport' to hold contain this new project, and when you've copied
+<p>The first step is to create a new project. Follow the steps in <a href="setting.html">Chapter
+Two</a> above, but this time create a new folder/directory
+called ‘aiport’ to hold contain this new project, and when you’ve copied
 the template files to it rename the relevant template files to
-airport.t3m. Or, if you're using Workbench, use the New Project wizard
+airport.t3m. Or, if you’re using Workbench, use the New Project wizard
 to create a new adv3Lite project called airport. Then open the start.t
 (or airport.t) file either in Workbench or in whatever other text editor
-you're using.
+you’re using.</p>
 
-We'll start by creating the first area (roughly speaking, the southern
+<p>We’ll start by creating the first area (roughly speaking, the southern
 part) of the map described in the previous section, along with some of
-the more obvious objects it contains. You'll learn more if you type most
-of the code in yourself, but it's quite understandable if you prefer to
-copy and paste some of the longer descriptions. There's not a great deal
-that's new here, except that we'll be defining the vocab property on
+the more obvious objects it contains. You’ll learn more if you type most
+of the code in yourself, but it’s quite understandable if you prefer to
+copy and paste some of the longer descriptions. There’s not a great deal
+that’s new here, except that we’ll be defining the vocab property on
 each room we define (the second single-quoted string in the object
-definition template). I'll explain why when we get to the end. I'll also
+definition template). I’ll explain why when we get to the end. I’ll also
 interrupt the program listing every now and again to explain particular
-points as they arise.
+points as they arise.</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-    #charset "us-ascii"
-
-    #include <tads.h>
+    #include &lt;tads.h&gt;
     #include "advlite.h"
 
     versionInfo: GameID
         IFID = 'bcb7d5c4-81ee-30b0-5aec-7672b10e2cd6' 
         name = 'Airport'
         byline = 'by Michael Roberts (and Eric Eve)'
-        htmlByline = 'by <a href="mailto:an.author@somemail.com">
-                      A.N. Author</a>'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
         version = '1'
         authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
         desc = 'A brief demonstration of game design in TADS 3.'
         htmlDesc = 'A brief demonstration of game design in TADS 3.'    
         
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
+<p>Note that we’ve filled in some of the properties of versionInfo,
+including the IFID, from those shown in the game design article we’re
+borrowing from in the <em>TADS 3 Technical Menual</em>.</p>
 
-Note that we've filled in some of the properties of versionInfo,
-including the IFID, from those shown in the game design article we're
-borrowing from in the *TADS 3 Technical Menual*.
-
-<div class="code">
-
-    gameMain: GameMainDef
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
     ;
@@ -164,18 +157,15 @@ borrowing from in the *TADS 3 Technical Menual*.
             from the card, and it would almost certainly render the card useless if
             you did so. '
     ;
+</code></pre></div></div>
 
-</div>
-
-Note how we've made the magnetic stripe a part of the ID card, by making
-it a Fixture (so it can't be taken separately) and then providing a
+<p>Note how we’ve made the magnetic stripe a part of the ID card, by making
+it a Fixture (so it can’t be taken separately) and then providing a
 custom cannotTakeMsg. The description also hints both that the card
 might be useful in a card lock and that it might trigger a metal
-detector.
+detector.</p>
 
-<div class="code">
-
-    + Decoration 'people; of[prep]; line queue tourists businesspeople; them'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Decoration 'people; of[prep]; line queue tourists businesspeople; them'
         "A motley collection of tourists and businesspeople, so far as you can
         tell, many of them looking increasingly frustrated at the length of the
         queue. "
@@ -192,21 +182,18 @@ detector.
         
         notImportantMsg = 'Unfortunately you can\'t get anywhere near any of them. '
     ;
+</code></pre></div></div>
 
-</div>
-
-Here we've simply used the Decoration class to implement people the
-player character isn't meant to interact with. Even this minimal
+<p>Here we’ve simply used the Decoration class to implement people the
+player character isn’t meant to interact with. Even this minimal
 implementation helps to make the airport feel a little more populated,
-as well as filling in some of the details of why it's impossible for the
-player character to purchase a ticket, but also why no one's paying much
-attention to the ID card that's been left lying around. We'll see how to
+as well as filling in some of the details of why it’s impossible for the
+player character to purchase a ticket, but also why no one’s paying much
+attention to the ID card that’s been left lying around. We’ll see how to
 implement rather livelier and more responsive non-player characters in
-later chapters.
+later chapters.</p>
 
-<div class="code">
-
-    securityGate: Room 'Security Gate' 'security gate'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    securityGate: Room 'Security Gate' 'security gate'
         "You are at the security gate leading into the main
         concourse and boarding gate areas. The concourse lies to the
         north, through a metal detector. The terminal is back to the
@@ -249,35 +236,32 @@ later chapters.
         notImportantMsg = 'You\'re morally certain the security guard won\'t let you
             get anywhere near it. '
     ;
+</code></pre></div></div>
 
-</div>
-
-The main point of note here is the use of the Passage class (yet another
+<p>The main point of note here is the use of the Passage class (yet another
 combination of TravelConnector and Thing) to implement the metal
 detector. This has two uses: first it allows commands like GO THROUGH
 METAL DETECTOR and ENTER METAL DETECTOR to work just the same as NORTH
 in this context; second it enables us to put conditions on the travel
-(in the <span class="code">canTravelerPass()</span> method) to stop the
+(in the <code class="language-plaintext highlighter-rouge">canTravelerPass()</code> method) to stop the
 player character carrying the ID card through the metal detector when
-the detector is on. Note that we've added a custom
-<span class="code">isOn</span> property to metalDetector to represent
-whether it is on or off, but at the moment there's no mechanism for
+the detector is on. Note that we’ve added a custom
+<code class="language-plaintext highlighter-rouge">isOn</code> property to metalDetector to represent
+whether it is on or off, but at the moment there’s no mechanism for
 turning it on or off (that will follow in the next chapter). The
-<span class="code">explainTravelBarrier()</span> method not only
-explains why passage through the metal detector hasn't been allowed, it
-also returns the ID card to the ticket counter (as in Mike Roberts'
+<code class="language-plaintext highlighter-rouge">explainTravelBarrier()</code> method not only
+explains why passage through the metal detector hasn’t been allowed, it
+also returns the ID card to the ticket counter (as in Mike Roberts’
 specification). Once we add the security guard as an object in his own
 right, we can probably improve on this implementation, but it will do
 for now. Finally, note the power cable trailing across the floor from
 the metal detector. This is a hint that preventing power from reaching
 the metal detector might be a way to disable it, but its
-<span class="code">notImportantMsg</span> should make it reasonably
-clear that interfering directly with the cable isn't the way to go about
-it.
+<code class="language-plaintext highlighter-rouge">notImportantMsg</code> should make it reasonably
+clear that interfering directly with the cable isn’t the way to go about
+it.</p>
 
-<div class="code">
-
-    concourse: Room 'Concourse' 'concourse; long; hallway'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    concourse: Room 'Concourse' 'concourse; long; hallway'
         "You are in a long hallway connecting the terminal
         building (which lies to the south) to the boarding gates (which are
         to the north). To the east is a snack bar, and a door leads west.
@@ -293,18 +277,15 @@ it.
         "The slot appears to accept special ID cards with magnetic encoding. If you
         had an appropriate ID card, you could put it in the slot to open the door. "
     ;   
+</code></pre></div></div>
 
-</div>
-
-Note that we've commented out the line <span class="code">north =
-gateArea</span> for now, since gateArea hasn't been implemented yet.
+<p>Note that we’ve commented out the line <code class="language-plaintext highlighter-rouge">north =
+gateArea</code> for now, since gateArea hasn’t been implemented yet.
 This will allow us to test this part of the map without first completing
 the rest of the map. The implementation of the card slot is obviously
-incomplete, but it will do for now.
+incomplete, but it will do for now.</p>
 
-<div class="code">
-
-    snackBar: Room 'Snack Bar' 'snack bar'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    snackBar: Room 'Snack Bar' 'snack bar'
         "The snack bar seems to be full of passengers jostling one another to get at
         the serving counter, or consuming their homogenized snacks at the crowded
         tables, though for some reason, one table remains free. To the west lies
@@ -317,7 +298,7 @@ incomplete, but it will do for now.
     + Decoration 'passengers; ; locals americans people; them'
         "From the sound of their voices they seem to be a mixture of Americans and
         locals, all alike casually dressed&lt;&lt; if darkSuits.isIn(location)&gt;&gt; -- except
-        for a handful of men in dark suits&lt;<end>&gt;. "
+        for a handful of men in dark suits&lt;&lt;end&gt;&gt;. "
     ;
 
     + darkSuits: Decoration 'men[n] in[prep] dark suits; sinister senior; 
@@ -341,7 +322,7 @@ incomplete, but it will do for now.
     ;
 
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
-        "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
+        "It's a copy of the latest edition of the &lt;i&gt;Narcosia Herald&lt;/i&gt;. "
         
         readDesc = "A quick skim of the paper reveals nothing unusual for this part
             of the world. Yet another government minister is denying charges of
@@ -361,29 +342,26 @@ incomplete, but it will do for now.
             failed to make any arrests of the enterprising drug barons who are
             largely funding their pension pots. All in all, it's business as usual
             -- except for some editorial speculation that El Diablo may be planning
-            something <i>big</i>, but you knew that anyway; that's what brought you
+            something &lt;i&gt;big&lt;/i&gt;, but you knew that anyway; that's what brought you
             to this godforsaken hell-hole. "   
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Once again we've used Decoration objects to represent people we don't
+<p>Once again we’ve used Decoration objects to represent people we don’t
 want the player character to interact with, although the description of
 the men in dark suits also provides the player with a bit more plot
-information. We've named the darkSuits Decoration object so we can later
+information. We’ve named the darkSuits Decoration object so we can later
 move it out of the snack bar when these sinister characters board the
-plane; we've also defined the description of the general tourists so it
+plane; we’ve also defined the description of the general tourists so it
 will no longer mention the men in dark suits once the latter are moved.
 The newspaper provides another example of the use of the
-<span class="code">readDesc</span> property to give a suitable response
+<code class="language-plaintext highlighter-rouge">readDesc</code> property to give a suitable response
 to a READ command; it also potentially provides the player with some
-more information about the game's setting. It does not yet provide an
-airline ticket when taken, but we'll be coming back to that in the next
-chapter.
+more information about the game’s setting. It does not yet provide an
+airline ticket when taken, but we’ll be coming back to that in the next
+chapter.</p>
 
-<div class="code">
-
-    securityArea: Room 'Security Area' 'security area'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    securityArea: Room 'Security Area' 'security area'
         "This somewhat bare room seems to be a lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
         door to the east. "    
@@ -427,71 +405,68 @@ chapter.
         east = securityArea
         out asExit(east)
     ;
+</code></pre></div></div>
 
-</div>
-
-These last three rooms are quite sparsely implemented for now, and will
+<p>These last three rooms are quite sparsely implemented for now, and will
 need to be filled out more later, but we do at least have the suitcase
-and pilot's uniform in place. Note the use of the OpenableContainer
-class. This is equivalent to defining <span class="code">contType =
-In</span> and <span class="code">isOpenable = true</span> on the
+and pilot’s uniform in place. Note the use of the OpenableContainer
+class. This is equivalent to defining <code class="language-plaintext highlighter-rouge">contType =
+In</code> and <code class="language-plaintext highlighter-rouge">isOpenable = true</code> on the
 suitcase, and provides us with an object that can be open and closed and
-which can contain things that are only accessible when it's open. By
-default an OpenableContainer starts out closed.
+which can contain things that are only accessible when it’s open. By
+default an OpenableContainer starts out closed.</p>
 
-## Further Explanations
+<h2 id="further-explanations">Further Explanations</h2>
 
-A minor point to note is the way in which we've used the
-<span class="code">asExit()</span> construct to make OUT a synonym for
-whichever seems the most natural way out wherever it's appropriate. This
+<p>A minor point to note is the way in which we’ve used the
+<code class="language-plaintext highlighter-rouge">asExit()</code> construct to make OUT a synonym for
+whichever seems the most natural way out wherever it’s appropriate. This
 can make for a smoother playing experience when OUT seems the most
-natural thing to the player to type, even when it isn't explicitly
-listed as an exit.
+natural thing to the player to type, even when it isn’t explicitly
+listed as an exit.</p>
 
-Of more importance is the defining of the vocab property on each of the
+<p>Of more importance is the defining of the vocab property on each of the
 rooms (via the second single-quoted string in each of our room
 definitions). At first sight this might look redundant, since in
 virtually every single case it simply appears to duplicate the roomTitle
 property defined in the first single-quoted string. It does give us
 something new, however, namely a means for the player to refer to rooms
-in commands, which wouldn't otherwise be possible. The main reason for
+in commands, which wouldn’t otherwise be possible. The main reason for
 this is to allow the player to move round the map using commands like GO
 TO TERMINAL or GO TO SNACK BAR. Since the map for this game will end up
 being quite a bit biggger than those for the previous two games we
 wrote, some players might find it a little tedious or cumbersome to be
-forced to use compass directions to move around areas they've already
-explored. GO TO *wherever* provides such players with an alternative
+forced to use compass directions to move around areas they’ve already
+explored. GO TO <em>wherever</em> provides such players with an alternative
 means of getting round the map. A player can type GO TO SNACK BAR for
 example, and the player character will move one step in the appropriate
 direction (i.e. to the next room along the shortest route to the snack
 bar from his present location). The player can then keep entering the
 command CONTINUE (which can be abbreviated to C) until either the player
 character reaches his chosen destination, or something happens to
-interrupt the journey.
+interrupt the journey.</p>
 
-You don't have to do anything extra to provide this method of
-navigation; it's built into the adv3Lite library. But it's more
+<p>You don’t have to do anything extra to provide this method of
+navigation; it’s built into the adv3Lite library. But it’s more
 effective if players can refer directly to the rooms they want the
 player character to travel to. GO TO does also work with the name of
 objects within a room, but this is less direct since if the player
-wanted to get to the snack bar s/he'd have to remember the name of an
+wanted to get to the snack bar s/he’d have to remember the name of an
 object that was there (and not named like an object anywhere else).
 Being able to type GO TO SNACK BAR is far more intuitive and direct than
-having to type GO TO FREE TABLE or the like.
+having to type GO TO FREE TABLE or the like.</p>
 
-Note that this GO TO mechanism doesn't remove the need to explore the
+<p>Note that this GO TO mechanism doesn’t remove the need to explore the
 map. It only works with rooms and objects the player character had
-already visited (or is meant to know the location of in advance).
+already visited (or is meant to know the location of in advance).</p>
 
-Now try compiling and running the game. You should be able to move
+<p>Now try compiling and running the game. You should be able to move
 around the map, try out what happens when you attempt to go through the
-metal detector carrying the ID card, and find and wear the pilot's
+metal detector carrying the ID card, and find and wear the pilot’s
 uniform. You can also experiment with using GO TO to move around. In the
-next section, we'll sketch in the rest of the airport map.
+next section, we’ll sketch in the rest of the airport map.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -504,7 +479,6 @@ game</a>    
     </span>
 
 </div>
-</end></div></tads.h></div></div>
 
 </main>
 <footer>

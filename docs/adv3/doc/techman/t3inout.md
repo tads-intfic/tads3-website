@@ -19,7 +19,7 @@ Configurations</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Some Common Input/Output Issues
 
@@ -532,7 +532,7 @@ We could then use the following code to display our ASCII diagram:
     showDiag(diag);
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

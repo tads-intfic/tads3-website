@@ -20,7 +20,7 @@ Game</a>    
 
 </div>
 
-<div class="main">
+
 
 # IF Design: In Practice
 
@@ -792,7 +792,7 @@ game starts to take shape, and you want to add more ambitious features,
 the examples of advanced TADS programming techniques shown, for example,
 in the *TADS 3 Tour Guide* should be helpful.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -27,34 +27,31 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="messages.html">[Previous]</a>   <a href="settingthescene.html">[Next]</a></em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](messages.html)   [\[Next\]](settingthescene.html)*
+<h3 id="other-responses-to-actions">Other Responses to Actions</h3>
 
-### Other Responses to Actions
-
-So far we have concentrated on how you can customise the responses to
+<p>So far we have concentrated on how you can customise the responses to
 actions on objects directly involved in those actions as direct or
 indirect object, and that will probably be the most common type of
-action customisation you'll perform. But there are other types of
-response we should look at for the sake of completeness. (**NOTE**: This
-discussion assumes that `gameMain.beforeRunsBeforeCheck` is `nil`,
-otherwise stopping an action in `check()` will not prevent
-`beforeAction()` and `roomBeforeAction()` from being called on other
-objects, although everything else will be the same).
+action customisation you’ll perform. But there are other types of
+response we should look at for the sake of completeness. (<strong>NOTE</strong>: This
+discussion assumes that <code class="language-plaintext highlighter-rouge">gameMain.beforeRunsBeforeCheck</code> is <code class="language-plaintext highlighter-rouge">nil</code>,
+otherwise stopping an action in <code class="language-plaintext highlighter-rouge">check()</code> will not prevent
+<code class="language-plaintext highlighter-rouge">beforeAction()</code> and <code class="language-plaintext highlighter-rouge">roomBeforeAction()</code> from being called on other
+objects, although everything else will be the same).</p>
 
-  
-If you want an object not directly involved in a command to respond to
-it, you can use `beforeAction()` or `afterAction()`. As their names
-suggest, the first of these responds to the action just before it's
+<p>If you want an object not directly involved in a command to respond to
+it, you can use <code class="language-plaintext highlighter-rouge">beforeAction()</code> or <code class="language-plaintext highlighter-rouge">afterAction()</code>. As their names
+suggest, the first of these responds to the action just before it’s
 performed (i.e. just before the appropriate action routine is invoked)
 while afterAction() is called just after an action is performed. These
-two routines are called on every object that's in the actor's scope when
+two routines are called on every object that’s in the actor’s scope when
 the action is performed, but only if the command reaches the action
-stage (i.e. it hasn't already been ruled out by verify(), check(), or
+stage (i.e. it hasn’t already been ruled out by verify(), check(), or
 preCond). Thus, if you want another object to respond to an action that
-fails, you must make it fail in `action()`, rather than before, e.g.  
+fails, you must make it fail in <code class="language-plaintext highlighter-rouge">action()</code>, rather than before, e.g.</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -70,23 +67,34 @@ fails, you must make it fail in `action()`, rather than before, e.g.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-wickedWitch: Person 'wicked ugly witch' 'wicked witch'  
-  "Boy is she ugly! "  
-  isHer = true  
-  dobjFor(Kiss)  
-  {  
-     verify() { }  
-     action()  
-     {  
-         reportFailure('You move your lips towards hers, but your  
-           nerve fails you at the last moment. ');  
-     }  
-  }  
-;  
+<p>wickedWitch: Person ’wicked ugly witch’ ’wicked witch’<br />
+  ”Boy is she ugly! ”<br />
+  isHer = true<br />
+  dobjFor(Kiss)<br />
+  {<br />
+     verify() { }<br />
+     action()<br />
+     {<br />
+         reportFailure(‘You move your lips towards hers, but your<br />
+           nerve fails you at the last moment. ’);<br />
+     }<br />
+  }<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -102,26 +110,37 @@ wickedWitch: Person 'wicked ugly witch' 'wicked witch'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-bob: Person ' fine young man /bob'  'Bob'  
-   "He looks a fine young man. "  
-   isHim = true  
-   isProperName = true  
-   beforeAction()  
-   {  
-       if(gActionIs(Kiss) &amp;&amp; gDobj == wickedWitch)  
-       {  
-           "\&lt;q\&gt;Hey, what do you  think you\\re doing!\&lt;/q\&gt; cries Bob,  
-            grabbing you by the arm and pulling you back, \&lt;q\&gt;Don\\t you  
-           know that kissing her will turn you into a lump of vile green  
-           blancmange?\&lt;/q\&gt; ";        
-           exit;  
-       }  
-   }  
-;  
+<p>bob: Person ’ fine young man /bob’  ’Bob’<br />
+   ”He looks a fine young man. ”<br />
+   isHim = true<br />
+   isProperName = true<br />
+   beforeAction()<br />
+   {<br />
+       if(gActionIs(Kiss) &amp;&amp; gDobj == wickedWitch)<br />
+       {<br />
+           ”&lt;q&gt;Hey, what do you  think you\re doing!&lt;/q&gt; cries Bob,<br />
+            grabbing you by the arm and pulling you back, &lt;q&gt;Don\t you<br />
+           know that kissing her will turn you into a lump of vile green<br />
+           blancmange?&lt;/q&gt; ”;      <br />
+           exit;<br />
+       }<br />
+   }<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -137,12 +156,23 @@ bob: Person ' fine young man /bob'  'Bob'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-If the PC tries to kiss the wicked witch while Bob is present we'll
-get:  
+<p>If the PC tries to kiss the wicked witch while Bob is present we’ll
+get:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -158,14 +188,25 @@ get:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-**\&gt;kiss witch  
-**"Hey, what do you think you're doing!" cries Bob, grabbing you by the
-arm and pulling you back, "Don't you know that kissing her will turn you
-into a lump of vile green blancmange?"  
+<p>**&gt;kiss witch<br />
+**“Hey, what do you think you’re doing!” cries Bob, grabbing you by the
+arm and pulling you back, “Don’t you know that kissing her will turn you
+into a lump of vile green blancmange?”</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -181,11 +222,22 @@ into a lump of vile green blancmange?"
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Whereas if the PC tries to kiss her when Bob is elsewhere we'll get:  
+<p>Whereas if the PC tries to kiss her when Bob is elsewhere we’ll get:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -201,13 +253,24 @@ Whereas if the PC tries to kiss her when Bob is elsewhere we'll get:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-**\&gt;kiss witch  
+<p>**&gt;kiss witch<br />
 **You move your lips towards hers, but your nerve fails you at the last
-moment.  
+moment.</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -223,13 +286,24 @@ moment.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Note the use of the exit macro in Bob's beforeAction() routine to veto
+<p>Note the use of the exit macro in Bob’s beforeAction() routine to veto
 the action before it takes place. We could alternatively have given Bob
-an afterAction() routine to give his reaction after the event:  
+an afterAction() routine to give his reaction after the event:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -245,19 +319,30 @@ an afterAction() routine to give his reaction after the event:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-  afterAction()  
-   {  
-       if(gActionIs(Kiss) &amp;&amp; gDobj == wickedWitch)  
-       {  
-           "\&lt;q\&gt;Wise decision\&lt;/q\&gt; Bob approves, \&lt;q\&gt;I suppose you realize  
-            that if you had gone ahead and kissed her you\\d have been  
-            turned into a lump of vile green blancmange!\&lt;/q\&gt; ";        
-       }  
-   }  
+<p>  afterAction()<br />
+   {<br />
+       if(gActionIs(Kiss) &amp;&amp; gDobj == wickedWitch)<br />
+       {<br />
+           ”&lt;q&gt;Wise decision&lt;/q&gt; Bob approves, &lt;q&gt;I suppose you realize<br />
+            that if you had gone ahead and kissed her you\d have been<br />
+            turned into a lump of vile green blancmange!&lt;/q&gt; ”;      <br />
+       }<br />
+   }</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -273,13 +358,24 @@ an afterAction() routine to give his reaction after the event:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-You can also allow the actor's location (Room or NestedRoom) to respond
+<p>You can also allow the actor’s location (Room or NestedRoom) to respond
 to actions in a similar way, but in that case you need to use
-roomBeforeAction() or roomAfterAction, e.g.:  
+roomBeforeAction() or roomAfterAction, e.g.:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -295,30 +391,41 @@ roomBeforeAction() or roomAfterAction, e.g.:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-topOfTree : OutdoorRoom 'At the top of the tree'  
-   "You cling precariously to the trunk, next to a firm, narrow branch."  
-    down = clearing       
-    enteringRoom(traveler)   
-    {         
-      if(!traveler.hasSeen(self) &amp;&amp; traveler == gPlayerChar)     
-          addToScore(1, 'reaching the top of the tree. ');                
-    }  
-    roomBeforeAction()  
-    {  
-      if(gActionIs(Jump))  
-         failCheck('Not here -- you might fall to the ground and  
-            hurt yourself. ');    
-    }  
-    roomAfterAction()  
-    {  
-       if(gActionIs(Yell))  
-         "Your shout is lost on the breeze. ";            
-    }  
-;  
+<p>topOfTree : OutdoorRoom ’At the top of the tree’<br />
+   ”You cling precariously to the trunk, next to a firm, narrow branch.”<br />
+    down = clearing     <br />
+    enteringRoom(traveler) <br />
+    {       <br />
+      if(!traveler.hasSeen(self) &amp;&amp; traveler == gPlayerChar)   <br />
+          addToScore(1, ’reaching the top of the tree. ’);              <br />
+    }<br />
+    roomBeforeAction()<br />
+    {<br />
+      if(gActionIs(Jump))<br />
+         failCheck(‘Not here – you might fall to the ground and<br />
+            hurt yourself. ’);  <br />
+    }<br />
+    roomAfterAction()<br />
+    {<br />
+       if(gActionIs(Yell))<br />
+         ”Your shout is lost on the breeze. ”;          <br />
+    }<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -334,45 +441,58 @@ topOfTree : OutdoorRoom 'At the top of the tree'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Finally, you can also use the actorAction() method on the actor
+<p>Finally, you can also use the actorAction() method on the actor
 performing the action to interfere with or otherwise repond to an action
 the actor is about to perform. For example, suppose at some point in
-your game your player character is tied up, and while he's tied up he
-can't perform any actions other that system actions (like **quit**,
-**save** and **undo**) and **look**, **inventory** or **examine**; you
+your game your player character is tied up, and while he’s tied up he
+can’t perform any actions other that system actions (like <strong>quit</strong>,
+<strong>save</strong> and <strong>undo</strong>) and <strong>look</strong>, <strong>inventory</strong> or <strong>examine</strong>; you
 might achieve this by adding an isTiedUp property to your Player
 Character object (normally me), and then adding the following
-actorAction() routine:
+actorAction() routine:</p>
 
-    actorAction(){    if(isTiedUp &amp;&amp; !gAction.ofKind(SystemAction)        &amp;&amp; !gActionIn(Look, Inventory, Examine)     {           "You can't do that while you're tied up. ";            exit;     } }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>actorAction(){    if(isTiedUp &amp;&amp; !gAction.ofKind(SystemAction)        &amp;&amp; !gActionIn(Look, Inventory, Examine)     {           "You can't do that while you're tied up. ";            exit;     } }
+</code></pre></div></div>
 
-Finally, note that we've introduced a few more of those things beginning
-with g in the last page or so. Remember that `gAction` means the current
-action; `gActionIs(Whatever)` tests whether `gAction` is `Whatever` and
-returns true or nil accordingly; `gActionIn(Foo, Bar, Whatsit)` tests
-whether `gAction` is either `Foo` or `Bar` or `Whatsit` and returns true
-if it is or nil otherwise. The other one, `gMessageParams(obj)`, is a
-bit different; it's used to allow `obj` to be used in message parameter
-strings (like `'{the obj/him}'`) where `obj` is the name of an existing
-local variable. This allows us to write:
+<p>Finally, note that we’ve introduced a few more of those things beginning
+with g in the last page or so. Remember that <code class="language-plaintext highlighter-rouge">gAction</code> means the current
+action; <code class="language-plaintext highlighter-rouge">gActionIs(Whatever)</code> tests whether <code class="language-plaintext highlighter-rouge">gAction</code> is <code class="language-plaintext highlighter-rouge">Whatever</code> and
+returns true or nil accordingly; <code class="language-plaintext highlighter-rouge">gActionIn(Foo, Bar, Whatsit)</code> tests
+whether <code class="language-plaintext highlighter-rouge">gAction</code> is either <code class="language-plaintext highlighter-rouge">Foo</code> or <code class="language-plaintext highlighter-rouge">Bar</code> or <code class="language-plaintext highlighter-rouge">Whatsit</code> and returns true
+if it is or nil otherwise. The other one, <code class="language-plaintext highlighter-rouge">gMessageParams(obj)</code>, is a
+bit different; it’s used to allow <code class="language-plaintext highlighter-rouge">obj</code> to be used in message parameter
+strings (like <code class="language-plaintext highlighter-rouge">'{the obj/him}'</code>) where <code class="language-plaintext highlighter-rouge">obj</code> is the name of an existing
+local variable. This allows us to write:</p>
 
-    cannotPutComponentMsg(obj){    gMessageParams(obj);    return 'You can\'t do that, because it\'s part of {the obj/him}. ';}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cannotPutComponentMsg(obj){    gMessageParams(obj);    return 'You can\'t do that, because it\'s part of {the obj/him}. ';}
+</code></pre></div></div>
 
-Instead of:
+<p>Instead of:</p>
 
-    cannotPutComponentMsg(obj){    return 'You can\'t do that, because it\'s part of '        + obj.theName + '. ';}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cannotPutComponentMsg(obj){    return 'You can\'t do that, because it\'s part of '        + obj.theName + '. ';}
+</code></pre></div></div>
 
-------------------------------------------------------------------------
+<hr />
 
-*Getting Started in TADS 3*  
-[\[Main\]](index.html)  
-*[\[Previous\]](messages.html)   [\[Next\]](settingthescene.html)*
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="messages.html">[Previous]</a>   <a href="settingthescene.html">[Next]</a></em></p>
 
-</div>
 
 </main>
 <footer>

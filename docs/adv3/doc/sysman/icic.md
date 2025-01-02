@@ -18,7 +18,7 @@ IntrinsicClass
 
 </div>
 
-<div class="main">
+
 
 # IntrinsicClass
 
@@ -141,7 +141,7 @@ occasionally useful to know when you're dealing with an intrinsic class
 representation object, and the normal means of class relationship
 testing don't work for this test.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

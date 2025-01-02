@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
   
   
@@ -21,7 +21,7 @@ layout: docs
 
 <a href="intro.html" class="toc">Chapter 1: Introduction</a>
 
-</div>
+
 
 <div class="toc2">
 

@@ -17,7 +17,7 @@ Show</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Chapter 11: The Art of Conversation
 
@@ -33,7 +33,7 @@ can be implemented in adv3Lite.
 [Diverse Defaults](defaults.html)  
 [Summary](convsumm.html)  
 
-</div>
+
 
 </div>
 

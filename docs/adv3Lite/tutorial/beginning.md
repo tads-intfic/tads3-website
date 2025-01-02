@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Beginnings
 
@@ -258,7 +258,7 @@ using **PreinitObject** and **InitObject**, which are definined in the
 System Library, and which you can read about in the "Program
 Initialization" section of the *TADS 3 System Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

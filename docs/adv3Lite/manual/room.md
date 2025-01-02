@@ -19,7 +19,7 @@ Regions
 
 </div>
 
-<div class="main">
+
 
 <span id="rooms"></span>
 
@@ -704,7 +704,7 @@ property of X can be used to define the regions that X is in, while the
 (or Regions) that are in X, and that these provide alternative means for
 defining the same relationship.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

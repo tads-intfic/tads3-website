@@ -18,7 +18,7 @@ Interpreter</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Stand-Alone Executables
 
@@ -114,7 +114,7 @@ You run maketrx32 like this:
 
     maketrx32 -t3 mygame.t3
 
-</div>
+
 
 This creates a new file called mygame.exe which combines your image file
 (mygame.t3) and the TADS 3 text-only interpreter (the "console mode"

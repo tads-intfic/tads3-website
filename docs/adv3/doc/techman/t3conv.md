@@ -20,7 +20,7 @@ System</a>    
 
 </div>
 
-<div class="main">
+
 
 # Programming Conversations with NPCs
 
@@ -2034,7 +2034,7 @@ So, you can start with a simple, standard Actor object, without worrying
 about any of this dynamic stuff; later on, you can learn about and add
 dynamic features as you need them.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

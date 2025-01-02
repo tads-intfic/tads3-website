@@ -19,7 +19,7 @@ Source File</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Creating the Basic Source File
 
@@ -162,7 +162,7 @@ chapter). The interpreter should then display something like this:
     In front of a Cottage
     You stand outside a cottage. The forest stretches east.
 
-</div>
+
 
 If you don't get this, check very carefully that your version of the
 code in start.t corresponds *exactly* to that given immediately above

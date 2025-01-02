@@ -19,7 +19,7 @@ Conventions</a>    
 
 </div>
 
-<div class="main">
+
 
 # Naming Conventions
 
@@ -59,7 +59,7 @@ of capital letters. For example, the regular expression functions use
 (rexMatch, rexSearch, etc.), and the String method "htmlify" doesn't
 capitalize the letters "HTML."
 
-</div>
+
 
 ------------------------------------------------------------------------
 

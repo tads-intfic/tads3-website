@@ -38,484 +38,437 @@ Sensory
 
 </div>
 
-<div class="main">
+<h1 id="signals">Signals</h1>
 
-# Signals
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [signals.t](../signals.t) extension is to provide a
+<p>The purpose of the <a href="../signals.t">signals.t</a> extension is to provide a
 means for one object to send signals to another (which can then respond
 to them) and to provide a mechanism for establishing and breaking
 signalling links between objects. This mechanism employs the
-[Relations](relations.html) extension, which must also be present.
+<a href="relations.html">Relations</a> extension, which must also be present.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Objects and Methods
+<h2 id="new-classes-objects-and-methods">New Classes, Objects and Methods</h2>
 
-In addition to a number of methods intended purely for internal use,
-this extension defines the following new classes, objects and methods:
+<p>In addition to a number of methods intended purely for internal use,
+this extension defines the following new classes, objects and methods:</p>
 
-- *Classes*: **Signal**
-- *Objects*: litSignal, unlitSignal, discoverSignal, undiscoverSignal,
-  lockSignal, unlockSignal, onSignal, offSignal, wornSignal, doffSignal,
-  moveSignal, seenSignal, examineSignal, takeSignal, dropSignal,
-  openSignal, closeSignal, pushSignal, pullSignal, feelSignal
-- *Methods on Signal*: <span class="code">emit()</span>.
-- *New methods on Thing*: <span class="code">emit()</span>,
-  <span class="code">handle()</span>.
+<ul>
+  <li><em>Classes</em>: <strong>Signal</strong></li>
+  <li><em>Objects</em>: litSignal, unlitSignal, discoverSignal, undiscoverSignal,
+lockSignal, unlockSignal, onSignal, offSignal, wornSignal, doffSignal,
+moveSignal, seenSignal, examineSignal, takeSignal, dropSignal,
+openSignal, closeSignal, pushSignal, pullSignal, feelSignal</li>
+  <li><em>Methods on Signal</em>: <code class="language-plaintext highlighter-rouge">emit()</code>.</li>
+  <li><em>New methods on Thing</em>: <code class="language-plaintext highlighter-rouge">emit()</code>,
+<code class="language-plaintext highlighter-rouge">handle()</code>.</li>
+</ul>
 
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the signals.t file after the library files but before your game
-source files. The [Relations](relations.html) extensions (relations.t)
-must also be present.
+<p>Include the signals.t file after the library files but before your game
+source files. The <a href="relations.html">Relations</a> extensions (relations.t)
+must also be present.</p>
 
-The basic mechanism is that an object (the sender) sends a signal by
-calling its **emit()** method with the signal as the argument, for
-example:
+<p>The basic mechanism is that an object (the sender) sends a signal by
+calling its <strong>emit()</strong> method with the signal as the argument, for
+example:</p>
 
-<div class="code">
-
-    emit(openSignal);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    emit(openSignal);
      
+</code></pre></div></div>
 
-</div>
+<p>Any interested objects can then handle this signal in their <strong>handle()</strong>
+method, which takes two arguments, the sender and the signal that’s just
+been sent:</p>
 
-Any interested objects can then handle this signal in their **handle()**
-method, which takes two arguments, the sender and the signal that's just
-been sent:
-
-<div class="code">
-
-    handle(sender, signal)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    handle(sender, signal)
     {
        if(sender == safeDoor &amp;&amp; signal == openSignal)
          ...
     }   
      
+</code></pre></div></div>
 
-</div>
-
-To register that an object (the receiver) is interested in receiving a
+<p>To register that an object (the receiver) is interested in receiving a
 particular signal from a particular sender, we establish a relation
-between them using the **connect()** function:
+between them using the <strong>connect()</strong> function:</p>
 
-<div class="code">
-
-    connect(sender, signal, receiver); 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    connect(sender, signal, receiver); 
      
+</code></pre></div></div>
 
-</div>
+<p>The relation between sender and receiver can be severed using the
+<strong>unconnect()</strong><sup><a href="#note1">[1]</a></sup> function:</p>
 
-The relation between sender and receiver can be severed using the
-**unconnect()**<sup>[\[1\]](#note1)</sup> function:
-
-<div class="code">
-
-    unconnect(sender, signal, receiver); 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    unconnect(sender, signal, receiver); 
      
+</code></pre></div></div>
 
-</div>
-
-A sender will send signals only to those receivers that have been
+<p>A sender will send signals only to those receivers that have been
 related to it through the relevant Signal/Relation using the
-<span class="code">connect()</span> function.
+<code class="language-plaintext highlighter-rouge">connect()</code> function.</p>
 
-Defining a new signal is usually very straightforward. Since a Signal is
+<p>Defining a new signal is usually very straightforward. Since a Signal is
 a kind of Relation, it can be defined using the Relation template, e.g.
-to define a signal an object might send when it's cut:
+to define a signal an object might send when it’s cut:</p>
 
-<div class="code">
-
-    cutSignal: Signal 'cut';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cutSignal: Signal 'cut';
      
+</code></pre></div></div>
 
-</div>
-
-Here the 'cut' in the template defines the signal's name property, which
-may be used in the <span class="code">connect()</span> and
-<span class="code">unconnect()</span> functions in place of the Signal's
+<p>Here the ‘cut’ in the template defines the signal’s name property, which
+may be used in the <code class="language-plaintext highlighter-rouge">connect()</code> and
+<code class="language-plaintext highlighter-rouge">unconnect()</code> functions in place of the Signal’s
 programmatic name. Thus these two statements do precisely the same
-thing:
+thing:</p>
 
-<div class="code">
-
-    connect(wire, cutSignal, alarm);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    connect(wire, cutSignal, alarm);
     connect(wire, 'cut', alarm);
      
+</code></pre></div></div>
 
-</div>
+<p><span id="defsignal"></span></p>
 
-<span id="defsignal"></span>
+<p>That all said, there is an easier and better way do define a Signal,
+using the <strong>DefSignal</strong> macro. Using this macro the foregoing definition
+cutSignal becomes:</p>
 
-That all said, there is an easier and better way do define a Signal,
-using the **DefSignal** macro. Using this macro the foregoing definition
-cutSignal becomes:
-
-<div class="code">
-
-     DefSignal(cut, cut); 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     DefSignal(cut, cut); 
      
+</code></pre></div></div>
 
-</div>
+<p>This expands to:</p>
 
-This expands to:
-
-<div class="code">
-
-    cutSignal: Signal 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cutSignal: Signal 
       name = 'cut'
       handleProp = &amp;handle_cut
     ;
      
+</code></pre></div></div>
 
-</div>
+<p>The purpose of the <code class="language-plaintext highlighter-rouge">handleProp</code> property will be
+explained <a href="#complex">below</a>; in the meantime the point to remember is
+that the macro <code class="language-plaintext highlighter-rouge">DefSignal(sig, nam)</code> expands to:</p>
 
-The purpose of the <span class="code">handleProp</span> property will be
-explained [below](#complex); in the meantime the point to remember is
-that the macro <span class="code">DefSignal(sig, nam)</span> expands to:
-
-<div class="code">
-
-    sigSignal: Signal 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sigSignal: Signal 
       name = 'nam'
       handleProp = &amp;handle_sig
+</code></pre></div></div>
 
-</div>
-
-A Signal may be defined with additional properties which the sender can
+<p>A Signal may be defined with additional properties which the sender can
 set to convey additional information to the sender. For example this
-extension defines:
+extension defines:</p>
 
-<div class="code">
-
-     DefSignal(move, move) destination = nil;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     DefSignal(move, move) destination = nil;
      
+</code></pre></div></div>
 
-</div>
-
-This (the destination property) allows
-<span class="code">moveSignal</span> to convey information about where
+<p>This (the destination property) allows
+<code class="language-plaintext highlighter-rouge">moveSignal</code> to convey information about where
 the sender was moved to, as well as the fact that it was moved. How it
-does so will be discussed further below.
+does so will be discussed further below.</p>
 
-Note that there is no need to define the
-<span class="code">relationType</span> of a Signal since this extension
-already defines it as manyToMany.
+<p>Note that there is no need to define the
+<code class="language-plaintext highlighter-rouge">relationType</code> of a Signal since this extension
+already defines it as manyToMany.</p>
 
-Note also that simply defining a signal doesn't make anything happen.
-Your code still has to emit it somewhere, and it won't be handled
-anywhere until you've related it to the relevant receivers using the
-<span class="code">connect()</span> function. Some signals come
+<p>Note also that simply defining a signal doesn’t make anything happen.
+Your code still has to emit it somewhere, and it won’t be handled
+anywhere until you’ve related it to the relevant receivers using the
+<code class="language-plaintext highlighter-rouge">connect()</code> function. Some signals come
 predefinined in this extension, however, along with the code to emit
-them at appropriate points. These are described below.
+them at appropriate points. These are described below.</p>
 
-<span id="note1"></span>\[Note 1: The name 'unconnect' is used rather
-than the more normal 'disconnect' mainly because 'disconnect' is already
+<p><span id="note1"></span>[Note 1: The name ‘unconnect’ is used rather
+than the more normal ‘disconnect’ mainly because ‘disconnect’ is already
 used as a method name elsewhere in the library and so cannot also be
 used as the name of a function. Also, the use of the names
-<span class="code">connect()</span> and
-<span class="code">unconnect()</span> better parallels that of the names
-<span class="code">relate()</span> and
-<span class="code">unrelate()</span> to establish and break relations,
+<code class="language-plaintext highlighter-rouge">connect()</code> and
+<code class="language-plaintext highlighter-rouge">unconnect()</code> better parallels that of the names
+<code class="language-plaintext highlighter-rouge">relate()</code> and
+<code class="language-plaintext highlighter-rouge">unrelate()</code> to establish and break relations,
 which is more or less what these functions do as well. Indeed, in many
-instances, <span class="code">relate()</span> and
-<span class="code">unrelate()</span> could be used for Signals as well,
-but the <span class="code">connect()</span> and
-<span class="code">unconnect()</span> functions do some additional work
+instances, <code class="language-plaintext highlighter-rouge">relate()</code> and
+<code class="language-plaintext highlighter-rouge">unrelate()</code> could be used for Signals as well,
+but the <code class="language-plaintext highlighter-rouge">connect()</code> and
+<code class="language-plaintext highlighter-rouge">unconnect()</code> functions do some additional work
 that is needed in more complex cases, so it is probably best to stick to
-their use consistently in relation to Signals.\]
+their use consistently in relation to Signals.]</p>
 
-  
-<span id="defined"></span>
+<p><span id="defined"></span></p>
 
-## Signals Defined in this Extension
+<h2 id="signals-defined-in-this-extension">Signals Defined in this Extension</h2>
 
-This extension defines the following signals and causes them to be
-emitted as appropriate:
+<p>This extension defines the following signals and causes them to be
+emitted as appropriate:</p>
 
-- **litSignal**: Signal 'lit'; - emitted when an object becomes lit via
-  a call to <span class="code">makeLit(true)</span>.
-- **unlitSignal**: Signal 'unlit'; - emitted when an object becomes
-  unlit via a call to <span class="code">makeLit(nil)</span>.
-- **discoverSignal**: Signal 'discovered'; - emitted when an object
-  becomes discovered via a call to
-  <span class="code">discover(true)</span>.
-- **undiscoverSignal**: Signal 'lost'; - emitted when an object becomes
-  undiscovered via a call to <span class="code">discover(nil)</span>
-- **lockSignal**: Signal 'locked'; - emitted when an object becomes
-  locked via a call to <span class="code">makeLocked(true)</span>.
-- **unlockSignal**: Signal 'unlocked'; - emitted when an object becomes
-  unlocked via a call to <span class="code">makeLocked(nil)</span>.
-- **onSignal**: Signal 'turned on'; - emitted when an object becomes
-  switched on via a call to <span class="code">makeOn(true)</span>.
-- **offSignal**: Signal 'turned off'; - emitted when an object becomes
-  switched on via a call to <span class="code">makeOn(nil)</span>.
-- **openSignal**: Signal 'open'; - emitted when an object becomes open
-  via a call to <span class="code">makeOpen(true)</span>.
-- **closeSignal**: Signal 'closed'; - emitted when an object becomes
-  closed via a call to <span class="code">makeOpen(nil)</span>.
-- **wornSignal**: Signal 'worn' wearer = nil; - emitted when an object
-  becomes worn via a call to
-  <span class="code">makeWorn(*wearer*)</span>.
-- **doffSignal**: Signal 'doffed'; - emitted when an object becomes not
-  worn via a call to <span class="code">makeWorn(nil)</span>.
-- **moveSignal**: Signal 'moved' destination = nil; - emitted when an
-  object is moved via a call to <span class="code">moveInto(dest)</span>
-- **actmoveSignal**: Signal 'action moved' destination = nil; - emitted
-  when an object is moved via a call to
-  <span class="code">actionMoveInto(dest)</span>. Note that if an
-  <span class="code">actmoveSignal</span> is sent a
-  <span class="code">moveSignal</span> will also be sent, but the
-  reverse is not necessarily the case. An
-  <span class="code">actmoveSignal</span> is only sent if the sender is
-  moved as the direct result of some player or NPC action, whereas a
-  <span class="code">moveSignal</span> may also be sent if the sender is
-  moved by authorial fiat for some other reason.
-- **seenSignal**: Signal 'seen' location = nil; - emitted when
-  <span class="code">noteSeen()</span> is called on the object.
-- **examineSignal**: Signal 'examine'; - emitted when the EXAMINE action
-  is carried out on the object.
-- **takeSignal**: Signal 'take'; - emitted when the TAKE action is
-  carried out on the object.
-- **dropSignal**: Signal 'drop'; - emitted when the DROP action is
-  carried out on the object.
-- **pushSignal**: Signal 'push'; - emitted when the PUSH action is
-  carried out on the object.
-- **pullSignal**: Signal 'pull'; - emitted when the PULL action is
-  carried out on the object.
-- **feelSignal**: Signal 'feel'; - emitted when the FEEL action is
-  carried out on the object.
+<ul>
+  <li><strong>litSignal</strong>: Signal ‘lit’; - emitted when an object becomes lit via
+a call to <code class="language-plaintext highlighter-rouge">makeLit(true)</code>.</li>
+  <li><strong>unlitSignal</strong>: Signal ‘unlit’; - emitted when an object becomes
+unlit via a call to <code class="language-plaintext highlighter-rouge">makeLit(nil)</code>.</li>
+  <li><strong>discoverSignal</strong>: Signal ‘discovered’; - emitted when an object
+becomes discovered via a call to
+<code class="language-plaintext highlighter-rouge">discover(true)</code>.</li>
+  <li><strong>undiscoverSignal</strong>: Signal ‘lost’; - emitted when an object becomes
+undiscovered via a call to <code class="language-plaintext highlighter-rouge">discover(nil)</code></li>
+  <li><strong>lockSignal</strong>: Signal ‘locked’; - emitted when an object becomes
+locked via a call to <code class="language-plaintext highlighter-rouge">makeLocked(true)</code>.</li>
+  <li><strong>unlockSignal</strong>: Signal ‘unlocked’; - emitted when an object becomes
+unlocked via a call to <code class="language-plaintext highlighter-rouge">makeLocked(nil)</code>.</li>
+  <li><strong>onSignal</strong>: Signal ‘turned on’; - emitted when an object becomes
+switched on via a call to <code class="language-plaintext highlighter-rouge">makeOn(true)</code>.</li>
+  <li><strong>offSignal</strong>: Signal ‘turned off’; - emitted when an object becomes
+switched on via a call to <code class="language-plaintext highlighter-rouge">makeOn(nil)</code>.</li>
+  <li><strong>openSignal</strong>: Signal ‘open’; - emitted when an object becomes open
+via a call to <code class="language-plaintext highlighter-rouge">makeOpen(true)</code>.</li>
+  <li><strong>closeSignal</strong>: Signal ‘closed’; - emitted when an object becomes
+closed via a call to <code class="language-plaintext highlighter-rouge">makeOpen(nil)</code>.</li>
+  <li><strong>wornSignal</strong>: Signal ‘worn’ wearer = nil; - emitted when an object
+becomes worn via a call to
+<code class="language-plaintext highlighter-rouge">makeWorn(*wearer*)</code>.</li>
+  <li><strong>doffSignal</strong>: Signal ‘doffed’; - emitted when an object becomes not
+worn via a call to <code class="language-plaintext highlighter-rouge">makeWorn(nil)</code>.</li>
+  <li><strong>moveSignal</strong>: Signal ‘moved’ destination = nil; - emitted when an
+object is moved via a call to <code class="language-plaintext highlighter-rouge">moveInto(dest)</code></li>
+  <li><strong>actmoveSignal</strong>: Signal ‘action moved’ destination = nil; - emitted
+when an object is moved via a call to
+<code class="language-plaintext highlighter-rouge">actionMoveInto(dest)</code>. Note that if an
+<code class="language-plaintext highlighter-rouge">actmoveSignal</code> is sent a
+<code class="language-plaintext highlighter-rouge">moveSignal</code> will also be sent, but the
+reverse is not necessarily the case. An
+<code class="language-plaintext highlighter-rouge">actmoveSignal</code> is only sent if the sender is
+moved as the direct result of some player or NPC action, whereas a
+<code class="language-plaintext highlighter-rouge">moveSignal</code> may also be sent if the sender is
+moved by authorial fiat for some other reason.</li>
+  <li><strong>seenSignal</strong>: Signal ‘seen’ location = nil; - emitted when
+<code class="language-plaintext highlighter-rouge">noteSeen()</code> is called on the object.</li>
+  <li><strong>examineSignal</strong>: Signal ‘examine’; - emitted when the EXAMINE action
+is carried out on the object.</li>
+  <li><strong>takeSignal</strong>: Signal ‘take’; - emitted when the TAKE action is
+carried out on the object.</li>
+  <li><strong>dropSignal</strong>: Signal ‘drop’; - emitted when the DROP action is
+carried out on the object.</li>
+  <li><strong>pushSignal</strong>: Signal ‘push’; - emitted when the PUSH action is
+carried out on the object.</li>
+  <li><strong>pullSignal</strong>: Signal ‘pull’; - emitted when the PULL action is
+carried out on the object.</li>
+  <li><strong>feelSignal</strong>: Signal ‘feel’; - emitted when the FEEL action is
+carried out on the object.</li>
+</ul>
 
-Note that the last six signals are emitted as a result of *actions*
-being carried out, while all the rest are emitted by *state changes*.
+<p>Note that the last six signals are emitted as a result of <em>actions</em>
+being carried out, while all the rest are emitted by <em>state changes</em>.
 This difference is reflected in the (string) name properties assigned to
-each signal; state-change signals have names like 'closed' or 'locked'
+each signal; state-change signals have names like ‘closed’ or ‘locked’
 that reflect the state just attained, while action signals have (string)
-names like 'take' or 'drop' that reflect the name of the action just
-carried out.
+names like ‘take’ or ‘drop’ that reflect the name of the action just
+carried out.</p>
 
-Some of these signals have additional properties, like
-<span class="code">destination</span> on
-<span class="code">moveSignal</span> or
-<span class="code">location</span> on
-<span class="code">seenSignal</span>. These are ways of passing
+<p>Some of these signals have additional properties, like
+<code class="language-plaintext highlighter-rouge">destination</code> on
+<code class="language-plaintext highlighter-rouge">moveSignal</code> or
+<code class="language-plaintext highlighter-rouge">location</code> on
+<code class="language-plaintext highlighter-rouge">seenSignal</code>. These are ways of passing
 additional information via the signal. The recipient may want to know
-not simply that the sender has moved, but where it's moved to; the
-**destination** property supplies this information. In a similar way the
-**location** property of <span class="code">seenSignal</span> specifies
+not simply that the sender has moved, but where it’s moved to; the
+<strong>destination</strong> property supplies this information. In a similar way the
+<strong>location</strong> property of <code class="language-plaintext highlighter-rouge">seenSignal</code> specifies
 where the target has just been seen. The extension sets these properties
 when the relevant signals are emitted, but in the next section we look
-at *how* such properties are set so you can do the same on any
-additional signals you define in your own game.
+at <em>how</em> such properties are set so you can do the same on any
+additional signals you define in your own game.</p>
 
-Note that defining additional signals that are automatically emitted by
+<p>Note that defining additional signals that are automatically emitted by
 TActions is very straightforward: you just define the new Signal and
-assign it to the **signal** property of the action in question, e.g.:
+assign it to the <strong>signal</strong> property of the action in question, e.g.:</p>
 
-<div class="code">
-
-    DefSignal(clean, clean);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefSignal(clean, clean);
      
     modify Clean
       signal = cleanSignal
     ;
      
+</code></pre></div></div>
 
-</div>
-
-This will result in a cleanSignal being emitted by the direct object of
+<p>This will result in a cleanSignal being emitted by the direct object of
 a CLEAN action. Note, however, that this short-cut is only available for
 TActions, and not for any other kind of action (TIActions included). If
-you want signals to be triggered by any other kind of action you'll need
-insert your own call to the <span class="code">emit()</span> method at
+you want signals to be triggered by any other kind of action you’ll need
+insert your own call to the <code class="language-plaintext highlighter-rouge">emit()</code> method at
 some appropriate point in the code that handles the action. For anything
 other than a TAction it is probably better for game code to decide what
 the appropriate point is in individual cases (whereas for a TAction it
 makes good sense simply to emit the relevant signal from the direct
-object immediately after the action has taken place).
+object immediately after the action has taken place).</p>
 
-  
-<span id="additional"></span>
+<p><span id="additional"></span></p>
 
-## Sending Additional Information via Signal Properties
+<h2 id="sending-additional-information-via-signal-properties">Sending Additional Information via Signal Properties</h2>
 
-In order to add information about where the sender is being moved to
-when the <span class="code">moveSignal</span> is emitted from
-<span class="code">moveInto()</span>, this extension defines
-<span class="code">moveInto(</span>) as follows:
+<p>In order to add information about where the sender is being moved to
+when the <code class="language-plaintext highlighter-rouge">moveSignal</code> is emitted from
+<code class="language-plaintext highlighter-rouge">moveInto()</code>, this extension defines
+<code class="language-plaintext highlighter-rouge">moveInto(</code>) as follows:</p>
 
-<div class="code">
-
-     moveInto(newCont)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     moveInto(newCont)
      {
             inherited(newCont);
             
             emit(moveSignal, newCont);
      } 
      
+</code></pre></div></div>
 
-</div>
-
-*newCont* is the new container into which the object is being moved.
+<p><em>newCont</em> is the new container into which the object is being moved.
 This is the value that needs to be assigned to the
-<span class="code">destination</span> property of moveSignal. But how
+<code class="language-plaintext highlighter-rouge">destination</code> property of moveSignal. But how
 does newSignal know which property to set to this value? This is defined
-in the **propList** property of the Signal. The
-<span class="code">propList</span> property contains a list of property
+in the <strong>propList</strong> property of the Signal. The
+<code class="language-plaintext highlighter-rouge">propList</code> property contains a list of property
 pointers, which define the properties to which successive arguments of
-the <span class="code">emit()</span> method are to be assigned. For
-example, <span class="code">moveSignal</span> defines
-<span class="code">propList = \[&amp;destination\]</span>; this means that
-the first argument of the <span class="code">emit()</span> method
+the <code class="language-plaintext highlighter-rouge">emit()</code> method are to be assigned. For
+example, <code class="language-plaintext highlighter-rouge">moveSignal</code> defines
+<code class="language-plaintext highlighter-rouge">propList = \[&amp;destination\]</code>; this means that
+the first argument of the <code class="language-plaintext highlighter-rouge">emit()</code> method
 following the signal name is assigned to the destination property. If
-fooSignal defined propList as <span class="code">\[&amp;foobar, &amp;bar,
-&amp;thingy\]</span>, then a call to <span class="code">emit(fooSignal, x,
-y, z)</span> would set <span class="code">fooSignal.foobar</span> to x,
-<span class="code">fooSignal.bar</span> to y, and
-<span class="code">fooSignal.thingy</span> to z.
+fooSignal defined propList as <code class="language-plaintext highlighter-rouge">\[&amp;foobar, &amp;bar,
+&amp;thingy\]</code>, then a call to <code class="language-plaintext highlighter-rouge">emit(fooSignal, x,
+y, z)</code> would set <code class="language-plaintext highlighter-rouge">fooSignal.foobar</code> to x,
+<code class="language-plaintext highlighter-rouge">fooSignal.bar</code> to y, and
+<code class="language-plaintext highlighter-rouge">fooSignal.thingy</code> to z.</p>
 
-Since this relies on matching the argument list in the call to
-<span class="code">emit()</span> to the order of properties defined in
-the Signal's propList property (which may not always be easy to
+<p>Since this relies on matching the argument list in the call to
+<code class="language-plaintext highlighter-rouge">emit()</code> to the order of properties defined in
+the Signal’s propList property (which may not always be easy to
 remember), an alternative syntax is also available that allows values to
 be assigned to properties by supplying lists of property pointers
 followed by the value to be assigned to the corresponding property. So,
-for example, <span class="code">emit(moveSignal, newCont)</span> could
-instead be written as <span class="code">emit(moveSignal,
-\[&amp;destination, newCont\])</span>, which makes it explicit that the
-value of <span class="code">newCont</span> is to be assigned to the
-<span class="code">destination</span> property, and which doesn't depend
+for example, <code class="language-plaintext highlighter-rouge">emit(moveSignal, newCont)</code> could
+instead be written as <code class="language-plaintext highlighter-rouge">emit(moveSignal,
+\[&amp;destination, newCont\])</code>, which makes it explicit that the
+value of <code class="language-plaintext highlighter-rouge">newCont</code> is to be assigned to the
+<code class="language-plaintext highlighter-rouge">destination</code> property, and which doesn’t depend
 on getting the order of properties right. Thus the fooSignal example
-could be written as <span class="code">emit(fooSignal, \[&amp;thingy, z\],
-\[&amp;bar, y\], \[&amp;foo, x\])</span> and the end result would be the same.
+could be written as <code class="language-plaintext highlighter-rouge">emit(fooSignal, \[&amp;thingy, z\],
+\[&amp;bar, y\], \[&amp;foo, x\])</code> and the end result would be the same.</p>
 
-You can mix the two ways of assigning values to properties, but only if
+<p>You can mix the two ways of assigning values to properties, but only if
 the lists come after the positional properties. Thus
-<span class="code">emit(fooSignal, x, \[&amp;thingy, z\], \[&amp;bar,
-y\])</span> would be fine, but not <span class="code">emit(fooSignal,
-\[&amp;thingy, z\], \[&amp;bar, y\], x)</span>. Also, you should not attempt to
-do something like this:
+<code class="language-plaintext highlighter-rouge">emit(fooSignal, x, \[&amp;thingy, z\], \[&amp;bar,
+y\])</code> would be fine, but not <code class="language-plaintext highlighter-rouge">emit(fooSignal,
+\[&amp;thingy, z\], \[&amp;bar, y\], x)</code>. Also, you should not attempt to
+do something like this:</p>
 
-<div class="code">
-
-        fooSignal.foobar = x; //DON'T DO THIS!!
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        fooSignal.foobar = x; //DON'T DO THIS!!
         fooSignal.bar = y;
         fooSignal.thingy = z;
         emit(fooSignal); 
      
+</code></pre></div></div>
 
-</div>
-
-The reason for *not* doing this is that the call to
-<span class="code">emit()</span> will overwrite all the properties in
-the <span class="code">propList</span> list to
-<span class="code">null</span> before assigning any values passed as
+<p>The reason for <em>not</em> doing this is that the call to
+<code class="language-plaintext highlighter-rouge">emit()</code> will overwrite all the properties in
+the <code class="language-plaintext highlighter-rouge">propList</code> list to
+<code class="language-plaintext highlighter-rouge">null</code> before assigning any values passed as
 parameters. This is to prevent spurious values left over from a previous
-<span class="code">emit()</span> call being sent to the wrong handler.
-We use <span class="code">null</span> rather than
-<span class="code">nil</span> as the non-value, since in some
+<code class="language-plaintext highlighter-rouge">emit()</code> call being sent to the wrong handler.
+We use <code class="language-plaintext highlighter-rouge">null</code> rather than
+<code class="language-plaintext highlighter-rouge">nil</code> as the non-value, since in some
 circumstances a value of nil could be significant; for example a call to
-<span class="code">moveInto(nil)</span> would cause a moveSignal to be
-emitted with a destination of <span class="code">nil</span>, which might
-be important information for any handler that receives the signal.
+<code class="language-plaintext highlighter-rouge">moveInto(nil)</code> would cause a moveSignal to be
+emitted with a destination of <code class="language-plaintext highlighter-rouge">nil</code>, which might
+be important information for any handler that receives the signal.</p>
 
-  
-<span id="complex"></span>
+<p><span id="complex"></span></p>
 
-## More Complex Handling
+<h2 id="more-complex-handling">More Complex Handling</h2>
 
-So far we have assumed that a signal will be handled by the
-<span class="code">handle()</span> method on any interested recipient.
-In fact <span class="code">handle()</span> is just the fall-back (or
+<p>So far we have assumed that a signal will be handled by the
+<code class="language-plaintext highlighter-rouge">handle()</code> method on any interested recipient.
+In fact <code class="language-plaintext highlighter-rouge">handle()</code> is just the fall-back (or
 default) method that is used if no more specific handler method has been
 defined. In fact each Signal can have its own handler method. You may
 recall that when a Signal is defined with the
-<span class="code">DefSignal()</span> macro, this automatically
-initializes its **handleProp** property with a property pointer like
-<span class="code">&amp;handle_sig</span> for a Signal called
-<span class="code">sigSignal</span> (e.g.
-<span class="code">handleProp</span> is
-<span class="code">&amp;handle_move</span> for the
-<span class="code">moveSignal</span>). This means that when a receiver
-gets a <span class="code">moveSignal</span> (say), it will call its
-<span class="code">handle_move()</span> method to handle it if one is
-defined, and fall back on the <span class="code">handle()</span> method
-otherwise.
+<code class="language-plaintext highlighter-rouge">DefSignal()</code> macro, this automatically
+initializes its <strong>handleProp</strong> property with a property pointer like
+<code class="language-plaintext highlighter-rouge">&amp;handle_sig</code> for a Signal called
+<code class="language-plaintext highlighter-rouge">sigSignal</code> (e.g.
+<code class="language-plaintext highlighter-rouge">handleProp</code> is
+<code class="language-plaintext highlighter-rouge">&amp;handle_move</code> for the
+<code class="language-plaintext highlighter-rouge">moveSignal</code>). This means that when a receiver
+gets a <code class="language-plaintext highlighter-rouge">moveSignal</code> (say), it will call its
+<code class="language-plaintext highlighter-rouge">handle_move()</code> method to handle it if one is
+defined, and fall back on the <code class="language-plaintext highlighter-rouge">handle()</code> method
+otherwise.</p>
 
-There's also a third possibility: the handler to be used can be
-overridden by the call to the <span class="code">connect()</span>
-function. If <span class="code">connect()</span> is called with a fourth
+<p>There’s also a third possibility: the handler to be used can be
+overridden by the call to the <code class="language-plaintext highlighter-rouge">connect()</code>
+function. If <code class="language-plaintext highlighter-rouge">connect()</code> is called with a fourth
 argument (which should then be a property pointer), the method specified
 by that fourth argument will be used as the signal handler. A call to
-<span class="code">connect(sender, signal, receiver,
-&amp;special_handler</span>) will cause *signal* to be handled on *receiver*
-by <span class="code">receiver.special_handler(sender, signal)</span>,
-provided that *receiver* defines the
-<span class="code">special_handler()</span> method. The receiver's
-**dispatchSignal()** method takes care of assigning a handler to a
-signal, and what it does may be summarized as follows:
+<code class="language-plaintext highlighter-rouge">connect(sender, signal, receiver,
+&amp;special_handler</code>) will cause <em>signal</em> to be handled on <em>receiver</em>
+by <code class="language-plaintext highlighter-rouge">receiver.special_handler(sender, signal)</code>,
+provided that <em>receiver</em> defines the
+<code class="language-plaintext highlighter-rouge">special_handler()</code> method. The receiver’s
+<strong>dispatchSignal()</strong> method takes care of assigning a handler to a
+signal, and what it does may be summarized as follows:</p>
 
-1.  If the call to <span class="code">connect()</span> has established a
-    special handler for this signal on this *receiver*, assign that
-    special handler to *prop*.
-2.  Otherwise, if the signal has a property pointer assigned to its
-    <span class="code">handleProp</span> property (as any Signal defined
-    with the <span class="code">DefSignal()</span> macro will have),
-    then assign that property to *prop*.
-3.  Otherwise, assign the default handler
-    <span class="code">&amp;handle</span> to *prop*.
-4.  If *prop* now points to a method that's actually defined on the
-    *receiver*, then call *prop* (with *sender* and *signal* as its
-    arguments); otherwise call <span class="code">handle(sender,
-    signal)</span>.
+<ol>
+  <li>If the call to <code class="language-plaintext highlighter-rouge">connect()</code> has established a
+special handler for this signal on this <em>receiver</em>, assign that
+special handler to <em>prop</em>.</li>
+  <li>Otherwise, if the signal has a property pointer assigned to its
+<code class="language-plaintext highlighter-rouge">handleProp</code> property (as any Signal defined
+with the <code class="language-plaintext highlighter-rouge">DefSignal()</code> macro will have),
+then assign that property to <em>prop</em>.</li>
+  <li>Otherwise, assign the default handler
+<code class="language-plaintext highlighter-rouge">&amp;handle</code> to <em>prop</em>.</li>
+  <li>If <em>prop</em> now points to a method that’s actually defined on the
+<em>receiver</em>, then call <em>prop</em> (with <em>sender</em> and <em>signal</em> as its
+arguments); otherwise call <code class="language-plaintext highlighter-rouge">handle(sender,
+signal)</code>.</li>
+</ol>
 
-Note that this means that the special_handler method passed as the
-optional fourth argument to <span class="code">connect()</span> can be
+<p>Note that this means that the special_handler method passed as the
+optional fourth argument to <code class="language-plaintext highlighter-rouge">connect()</code> can be
 either an existing standard handler or a new custom one, but it must be
-defined with two parameters corresponding to *sender* and *signal*. So,
-for example, you can't call something like
-<span class="code">connect(redLever, pullSignal, trapdoor,
-&amp;makeOpen)</span>, since instead of opening the trapdoor it will simply
+defined with two parameters corresponding to <em>sender</em> and <em>signal</em>. So,
+for example, you can’t call something like
+<code class="language-plaintext highlighter-rouge">connect(redLever, pullSignal, trapdoor,
+&amp;makeOpen)</code>, since instead of opening the trapdoor it will simply
 cause a run-time error due to argument mismatch. You would instead need
-to call <span class="code">makeOpen(true)</span> from within the
-trapdoor's handle() or handle_pull() method.
+to call <code class="language-plaintext highlighter-rouge">makeOpen(true)</code> from within the
+trapdoor’s handle() or handle_pull() method.</p>
 
-  
-<span id="example"></span>
+<p><span id="example"></span></p>
 
-## Example
+<h2 id="example">Example</h2>
 
-Suppose that somewhere in our game there's a big red switch (in the hall
-cupboard, say) that's meant to control a light in another location (the
+<p>Suppose that somewhere in our game there’s a big red switch (in the hall
+cupboard, say) that’s meant to control a light in another location (the
 cellar, say), except that before it will work some cable needs to be
 reconnected. In the code for reconnecting the cable we might include the
-statements:
+statements:</p>
 
-<div class="code">
-
-     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
      connect(redSwitch, onSignal, cellarLight);
      connect(redSwitch, offSignal, cellarLight);
      
-
-</div>
-
-</div>
+</code></pre></div></div>
 
 <p>Since onSignal and offSignal will be emitted by the switch in any case,
 the only other step is to handle them on the cellar light. If we know
 that these are the only signals the cellar light is ever going to
 handle, we could simply do this:</p>
 
-<div class="code">
-
-    + cellarLight: Fixture 'light'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cellarLight: Fixture 'light'
       ...
       handle(sender, signal)
       {
@@ -525,8 +478,7 @@ handle, we could simply do this:</p>
              makeLit(nil);
       }
     ;
-
-</div>
+</code></pre></div></div>
 
 <p>But suppose it’s possible to cut the cable after it’s been reconnected.
 Presumably that would cause the light to go out again (if it was on).
@@ -534,25 +486,20 @@ Also we might want to describe the light going out differently if the
 cable is cut from the way we describe it if the switch is turned off.
 First we need to define a cutSignal:</p>
 
-<div class="code">
-
-     defSignal(cut, cut);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     defSignal(cut, cut);
      
      modify Cut
        signal = cutSignal
      ;
      
-
-</div>
+</code></pre></div></div>
 
 <p>Then, somewhere in the code that handles the cutting action on the
 cable, we need to register both the sending of the cutSignal from the
 cable to the light, and at the same time sever the sending of any signal
 from the switch to the light:</p>
 
-<div class="code">
-
-     cable: Fixture 'cable'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     cable: Fixture 'cable'
         ...
         
         isCut = nil
@@ -578,15 +525,12 @@ from the switch to the light:</p>
         }
     ;
      
-
-</div>
+</code></pre></div></div>
 
 <p>Then we have to write a rather more complicated handler on the cellar
 light:</p>
 
-<div class="code">
-
-    + cellarLight: Fixture 'light'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cellarLight: Fixture 'light'
       ...
       handle(sender, signal)
       {
@@ -607,8 +551,7 @@ light:</p>
           }      
       }
     ;
-
-</div>
+</code></pre></div></div>
 
 <p>The <strong>senseSay()</strong> function is used here to ensure that the message
 about the light going on or off is only displayed if the player
@@ -616,11 +559,9 @@ character can see the cellar light. But the main point here is that the
 handle() method is beginning to become a little cumbersome. At this
 point it might be better to split the handling up between the various
 specialized handlers rather than using the catch-all default
-<span class="code">handle()</span> method:</p>
+<code class="language-plaintext highlighter-rouge">handle()</code> method:</p>
 
-<div class="code">
-
-    + cellarLight: Fixture 'light'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cellarLight: Fixture 'light'
       ...
       handle_on(sender, signal)
       {
@@ -643,8 +584,7 @@ specialized handlers rather than using the catch-all default
          }      
       }
     ;
-
-</div>
+</code></pre></div></div>
 
 <p>Finally, suppose that it’s possible to reconnect the cable after it’s
 been cut, but that this reconnects things the wrong way round so that
@@ -652,14 +592,11 @@ turning on the switch turns off the light and vice versa. If we’ve split
 the handlers into separate methods as above, we can then just write the
 relevant part of the re-connection code like so:</p>
 
-<div class="code">
-
-       connect(redSwitch, onSignal, cellarLight, &amp;handle_off);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       connect(redSwitch, onSignal, cellarLight, &amp;handle_off);
        connect(redSwitch, offSignal, cellarLight, &amp;handle_on);
      
      
-
-</div>
+</code></pre></div></div>
 
 <p>This will then make turning the switch on turn off the light, and
 turning the switch off turn on the light, sincce we’ve swapped over the

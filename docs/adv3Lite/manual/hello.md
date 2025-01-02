@@ -18,7 +18,7 @@ NPC Knowledge</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Hello and Goodbye
 
@@ -265,7 +265,7 @@ being terminated:
 3.  On the actorCanEndConversation(reason) method of an
     [Actor](actorobj.html) object.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

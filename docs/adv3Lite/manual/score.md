@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Scoring
 
@@ -99,6 +99,6 @@ calculation of the maximum available points.
     <a href="senseregion.html" class="nav"><em>Next:</em> SenseRegion</a>
     </span>
 
-</div>
+
 
 </div>

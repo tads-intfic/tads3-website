@@ -7,13 +7,13 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](generalintroduction.html)
   [\[Next\]](programmingprolegomena.html)*
 
-</div>
+
 
 ## Creating your First TADS 3 Project
 

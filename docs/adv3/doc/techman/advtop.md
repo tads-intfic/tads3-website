@@ -17,7 +17,7 @@ Changing) Awkward Messages</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Part III: Advanced Topics
 
@@ -38,7 +38,7 @@ game, but might encounter as you think about trickier customizations.
 [Internet Media Types for TADS](mediatypes.html)  
 [Workbench Project Starter Templates](t3projectStarters.html)  
 
-</div>
+
 
 </div>
 

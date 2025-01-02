@@ -19,7 +19,7 @@ Cycle</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Banishing (and Changing) Awkward Messages
 
@@ -559,7 +559,7 @@ As we've seen, there's a number of possible techniques available here;
 which you use depends on which suits the particular circumstances you're
 trying to deal with.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

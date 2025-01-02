@@ -18,7 +18,7 @@ Initialization
 
 </div>
 
-<div class="main">
+
 
 # Program Initialization
 
@@ -402,7 +402,7 @@ Similarly, the TADS 2 `init()` function is
 replaced in TADS 3 with InitObject objects, which make it easy to write
 modular run-time initialization code.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

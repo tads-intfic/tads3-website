@@ -19,7 +19,7 @@ Basics</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Finishing Touches
 
@@ -345,7 +345,7 @@ game should now look like:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

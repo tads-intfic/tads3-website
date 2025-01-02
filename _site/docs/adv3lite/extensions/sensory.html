@@ -38,143 +38,140 @@ Sensory
 
 </div>
 
-<div class="main">
+<h1 id="sensory">Sensory</h1>
 
-# Sensory
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [sensory.t](../sensory.t) extension is first to
+<p>The purpose of the <a href="../sensory.t">sensory.t</a> extension is first to
 provide more sophisticated handling of sounds and smells, and second to
 add SensoryEvents, which can represent sudden noises, smells or visible
-events that nearby objects (and actors) can react to.
+events that nearby objects (and actors) can react to.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Objects and Properties
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
 
-In addition to a number of properties intended purely for internal use,
+<p>In addition to a number of properties intended purely for internal use,
 this extension defines the following new classes, objects and
-properties:
+properties:</p>
 
-- *Classes*: **SensoryEvent**, **SimpleNoise**, **SimpleOdor**,
-  **SoundEvent**, **SmellEvent** and **SightEvent**.
-- *Expanded Classes*: **SensoryEmanation**, **Noise** and **Odor**
-- *Objects*: emanationControl.
-- *Additional properties/methods on Thing*:
-  <span class="code">smellDescWithSource</span>,
-  <span class="code">smellDescWithoutSource</span>,
-  <span class="code">listenDescWithSource</span>,
-  <span class="code">listenDescWithoutSource</span>,
-  <span class="code">notifySoundEvent(event, source)</span>,
-  <span class="code">notifySmellEvent(event, source)</span>,
-  <span class="code">notifySightEvent(event, source)</span>,
-  <span class="code">notifyEvent(event, source)</span>.
-- *Properties/methods on SensoryEmanation*:
-  <span class="code">descWithSource</span>,
-  <span class="code">descWithoutSource</span>,
-  <span class="code">isEmanating</span>,
-  <span class="code">emanationDesc()</span>,
-  <span class="code">schedule</span>.
-- *Methods on SensoryEvent*: <span class="code">triggerEvent(obj)</span>
+<ul>
+  <li><em>Classes</em>: <strong>SensoryEvent</strong>, <strong>SimpleNoise</strong>, <strong>SimpleOdor</strong>,
+<strong>SoundEvent</strong>, <strong>SmellEvent</strong> and <strong>SightEvent</strong>.</li>
+  <li><em>Expanded Classes</em>: <strong>SensoryEmanation</strong>, <strong>Noise</strong> and <strong>Odor</strong></li>
+  <li><em>Objects</em>: emanationControl.</li>
+  <li><em>Additional properties/methods on Thing</em>:
+<code class="language-plaintext highlighter-rouge">smellDescWithSource</code>,
+<code class="language-plaintext highlighter-rouge">smellDescWithoutSource</code>,
+<code class="language-plaintext highlighter-rouge">listenDescWithSource</code>,
+<code class="language-plaintext highlighter-rouge">listenDescWithoutSource</code>,
+<code class="language-plaintext highlighter-rouge">notifySoundEvent(event, source)</code>,
+<code class="language-plaintext highlighter-rouge">notifySmellEvent(event, source)</code>,
+<code class="language-plaintext highlighter-rouge">notifySightEvent(event, source)</code>,
+<code class="language-plaintext highlighter-rouge">notifyEvent(event, source)</code>.</li>
+  <li><em>Properties/methods on SensoryEmanation</em>:
+<code class="language-plaintext highlighter-rouge">descWithSource</code>,
+<code class="language-plaintext highlighter-rouge">descWithoutSource</code>,
+<code class="language-plaintext highlighter-rouge">isEmanating</code>,
+<code class="language-plaintext highlighter-rouge">emanationDesc()</code>,
+<code class="language-plaintext highlighter-rouge">schedule</code>.</li>
+  <li><em>Methods on SensoryEvent</em>: <code class="language-plaintext highlighter-rouge">triggerEvent(obj)</code></li>
+</ul>
 
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the sensory.t file after the library files but before your game
-source files.
+<p>Include the sensory.t file after the library files but before your game
+source files.</p>
 
-### Noises and Odors
+<h3 id="noises-and-odors">Noises and Odors</h3>
 
-With this extension in place you now have more control over the workings
-of sounds and smells in your game.
+<p>With this extension in place you now have more control over the workings
+of sounds and smells in your game.</p>
 
-First, if the player characters smells or listens to an object, you can
+<p>First, if the player characters smells or listens to an object, you can
 distinguish the response the player gets depending on whether the object
 being smelt or listened to is visible to the player character, for
-example "The clock is ticking loudly" when the clock is visible and "The
-sound of loud ticking is coming from somewhere" when it's not. To do
-this, use **smellDescWithSource** or **soundDescWithSource** to describe
+example “The clock is ticking loudly” when the clock is visible and “The
+sound of loud ticking is coming from somewhere” when it’s not. To do
+this, use <strong>smellDescWithSource</strong> or <strong>soundDescWithSource</strong> to describe
 the smell or sound when the object is visible, and
-**smellDescWithoutSource** or **soundDescWithoutSource** to describe the
-smell or sound when it's not. Where you don't need to make this
-distinction, you can just define the **soundDesc** and/or **smellDesc**
-directly as before.
+<strong>smellDescWithoutSource</strong> or <strong>soundDescWithoutSource</strong> to describe the
+smell or sound when it’s not. Where you don’t need to make this
+distinction, you can just define the <strong>soundDesc</strong> and/or <strong>smellDesc</strong>
+directly as before.</p>
 
-You can make a similar distinction on <span class="code">Odor</span> and
-<span class="code">Noise</span> objects by using the **descWithSource**
-and **descWithoutSource** properties. Remember these are the responses
+<p>You can make a similar distinction on <code class="language-plaintext highlighter-rouge">Odor</code> and
+<code class="language-plaintext highlighter-rouge">Noise</code> objects by using the <strong>descWithSource</strong>
+and <strong>descWithoutSource</strong> properties. Remember these are the responses
 to examining or listening to/smelling the Noise/Odor itself, rather than
-the object that's causing the smell or sound. Here the with or without
+the object that’s causing the smell or sound. Here the with or without
 source distinction refers to whether the source of the smell or sound is
 visible to the player character, this source being the location of the
-Odor or Noise. Again, if you don't need this distinction, you can just
-define the **desc** property directly as before.
+Odor or Noise. Again, if you don’t need this distinction, you can just
+define the <strong>desc</strong> property directly as before.</p>
 
-You can control whether the Noise or Odor is effectively present at all
-through its **isEmanating** property. If
-<span class="code">isEmanating</span> is nil then the Noise or Odor
-can't be sensed and, moreover, the object in which the Noise or Odor is
+<p>You can control whether the Noise or Odor is effectively present at all
+through its <strong>isEmanating</strong> property. If
+<code class="language-plaintext highlighter-rouge">isEmanating</code> is nil then the Noise or Odor
+can’t be sensed and, moreover, the object in which the Noise or Odor is
 located will be treated as no longer having a noise/smell. Note, for
-this to work, ***don't*** override the **isProminentNoise** or
-**isProminentSmell** properties of an object to be just true, though
-it's safe to override these properties to be nil if you never want the
+this to work, <strong><em>don’t</em></strong> override the <strong>isProminentNoise</strong> or
+<strong>isProminentSmell</strong> properties of an object to be just true, though
+it’s safe to override these properties to be nil if you never want the
 object to show up in response to an intransitive LISTEN or SMELL
 command. (Remember that isProminentNoise and isProminentSmell are
 properties of ordinary Things that might be listened to or smelled, not
-of Noise or Odor).
+of Noise or Odor).</p>
 
-The other thing a Noise or Odor can do is to display a message every so
+<p>The other thing a Noise or Odor can do is to display a message every so
 many turns announcing the presence of a noise or smell. The message
-that's shown is that defined in the **emanationDesc** property. You can
+that’s shown is that defined in the <strong>emanationDesc</strong> property. You can
 override this with your own message if you wish, or you may find the
 default perfectly acceptable. The default is either to show the
-smellDesc/listenDesc of the Odor's/Noise's location, or to display the
-next item in the Odor's/Noise's **eventList** if the Odor/Noise is also
-an EventList of some sort.
+smellDesc/listenDesc of the Odor’s/Noise’s location, or to display the
+next item in the Odor’s/Noise’s <strong>eventList</strong> if the Odor/Noise is also
+an EventList of some sort.</p>
 
-The frequency with which the <span class="code">emanationDesc</span> is
-displayed is controlled by the **schedule** property. This can either be
+<p>The frequency with which the <code class="language-plaintext highlighter-rouge">emanationDesc</code> is
+displayed is controlled by the <strong>schedule</strong> property. This can either be
 nil (in which case no emanation messages are displayed at all) or a list
 of numbers, which can optionally end in nil. If schedule were defined,
-say, as \[1, 1, 2, 2, 4\] then the interval between the display of the
+say, as [1, 1, 2, 2, 4] then the interval between the display of the
 emanationDesc would be one turn each for the first two times it was
 displayed, then two turns each for the next two turns, and then four
 turns thereafter. If the schedule list ends in nil then the
 emanationDesc will stop being displayed when the end of the schedule is
-reached.
+reached.</p>
 
-Emanation desc messages are only displayed when the player is in a
+<p>Emanation desc messages are only displayed when the player is in a
 position to hear/smell the object in question. Once the player character
 leaves the room, all SensoryEmanations in the room are reset to their
-initial state (this works a little differently if there's a SenseRegion
-present, in which case it's all the SensoryEmanations the player can no
-longer sense that are reset).
+initial state (this works a little differently if there’s a SenseRegion
+present, in which case it’s all the SensoryEmanations the player can no
+longer sense that are reset).</p>
 
-<span id="simple"></span>
+<p><span id="simple"></span></p>
 
-The **SimpleNoise** and **SimpleOdor** classes can be used for sounds
+<p>The <strong>SimpleNoise</strong> and <strong>SimpleOdor</strong> classes can be used for sounds
 and smells associated with a location rather than with any particular
 object within that location. These may be particularly helpful for
 defining atmospheric sounds and smells. For a
-<span class="code">SimpleNoise</span> or
-<span class="code">SimpleOdor</span> we simply define either the
-<span class="code">desc</span> property (for a noise or smell whose
-description never varies) or the <span class="code">eventList</span>
-property (for a SimpleNoise or SimpleOdor that's mixed in with an
+<code class="language-plaintext highlighter-rouge">SimpleNoise</code> or
+<code class="language-plaintext highlighter-rouge">SimpleOdor</code> we simply define either the
+<code class="language-plaintext highlighter-rouge">desc</code> property (for a noise or smell whose
+description never varies) or the <code class="language-plaintext highlighter-rouge">eventList</code>
+property (for a SimpleNoise or SimpleOdor that’s mixed in with an
 EventList class, to display a range of messages). The desc or messages
 in the eventList will then be displayed as atmospheric messages (in
-accordance with the <span class="code">schedule</span> property) or in
+accordance with the <code class="language-plaintext highlighter-rouge">schedule</code> property) or in
 response to a LISTEN or SMELL command as appropriate. Either way we can
 use the SensoryEmanation template to define the
-<span class="code">desc</span> property or
-<span class="code">eventList</span> property implicitly, for example:
+<code class="language-plaintext highlighter-rouge">desc</code> property or
+<code class="language-plaintext highlighter-rouge">eventList</code> property implicitly, for example:</p>
 
-<div class="code">
-
-    + SimpleOdor 'smell of fresh pine needles'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + SimpleOdor 'smell of fresh pine needles'
        "There's a smell of fresh pine needles in the air. "
     ;
 
@@ -188,49 +185,42 @@ use the SensoryEmanation template to define the
       schedule = [1, 1, 2]
     ; 
      
+</code></pre></div></div>
 
-</div>
+<p>For a <code class="language-plaintext highlighter-rouge">SimpleNoise</code> or
+<code class="language-plaintext highlighter-rouge">SimpleOdor</code> that can be sensed from elsewhere
+in a <a href="../../docs/manual/senseregion.html">SenseRegion</a> you may also want
+to define the <code class="language-plaintext highlighter-rouge">remoteListenDesc(pov)</code> method or
+<code class="language-plaintext highlighter-rouge">remoteSmellDesc(pov)</code> method as appropriate, to
+describe its presence at a distance.</p>
 
-For a <span class="code">SimpleNoise</span> or
-<span class="code">SimpleOdor</span> that can be sensed from elsewhere
-in a [SenseRegion](../../docs/manual/senseregion.html) you may also want
-to define the <span class="code">remoteListenDesc(pov)</span> method or
-<span class="code">remoteSmellDesc(pov)</span> method as appropriate, to
-describe its presence at a distance.
+<p><code class="language-plaintext highlighter-rouge">SimpleNoise</code> and
+<code class="language-plaintext highlighter-rouge">SimpleOdor</code> can also be mixed in with
+<a href="../../docs/manual/multiloc.html">MultiLoc</a> (which must then come first
+in the class list) to define an atmospheric sound or smell that’s
+present in more than one location.</p>
 
-<span class="code">SimpleNoise</span> and
-<span class="code">SimpleOdor</span> can also be mixed in with
-[MultiLoc](../../docs/manual/multiloc.html) (which must then come first
-in the class list) to define an atmospheric sound or smell that's
-present in more than one location.
+<p><span id="events"></span></p>
 
-  
-<span id="events"></span>
+<h3 id="sensoryevents">SensoryEvents</h3>
 
-### SensoryEvents
-
-A SensoryEvent is an event that occurs at a particular point in time and
+<p>A SensoryEvent is an event that occurs at a particular point in time and
 which can cause objects and actors that can sense the event to react to
-it. There are three kinds of SensoryEvent: **SoundEvent**,
-**SmellEvent** and **SightEvent**. To define such events we just need to
-give them a name and class, e.g.:
+it. There are three kinds of SensoryEvent: <strong>SoundEvent</strong>,
+<strong>SmellEvent</strong> and <strong>SightEvent</strong>. To define such events we just need to
+give them a name and class, e.g.:</p>
 
-<div class="code">
-
-     bangEvent: SoundEvent;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     bangEvent: SoundEvent;
      stinkEvent: SmellEvent;
      doorOpeningEvent: SightEvent; 
      
+</code></pre></div></div>
 
-</div>
-
-It's up to game code to define when SensoryEvents actually take place;
+<p>It’s up to game code to define when SensoryEvents actually take place;
 we do this by calling their triggerEvent(obj) method, where obj is the
-physical game object with which the event is associated, for example:
+physical game object with which the event is associated, for example:</p>
 
-<div class="code">
-
-     bangEvent.triggerEvent(table); // the player just struck the table
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     bangEvent.triggerEvent(table); // the player just struck the table
      stinkEvent.triggerEvent(stinkBomb);
      doorOpeningEvent.triggerEvent(self);
      
@@ -245,30 +235,29 @@ physical game object with which the event is associated, for example:
         }
     ;    
      
+</code></pre></div></div>
 
-</div>
+<p>When any of these events is triggered, the appropriate notify routine is
+called on any object that can sense them. In particular:</p>
 
-When any of these events is triggered, the appropriate notify routine is
-called on any object that can sense them. In particular:
+<ul>
+  <li><strong>notifySoundEvent(event, source)</strong> is called on every object that can
+hear <em>source</em> when <em>event</em> is the SoundEvent that’s just been
+triggered.</li>
+  <li><strong>notifySmellEvent(event, source)</strong> is called on every object that can
+smell <em>source</em> when <em>event</em> is the SmellEvent that’s just been
+triggered.</li>
+  <li><strong>notifySightEvent(event, source)</strong> is called on every object that can
+see <em>source</em> when <em>event</em> is the SightEvent that’s just been
+triggered.</li>
+</ul>
 
-- **notifySoundEvent(event, source)** is called on every object that can
-  hear *source* when *event* is the SoundEvent that's just been
-  triggered.
-- **notifySmellEvent(event, source)** is called on every object that can
-  smell *source* when *event* is the SmellEvent that's just been
-  triggered.
-- **notifySightEvent(event, source)** is called on every object that can
-  see *source* when *event* is the SightEvent that's just been
-  triggered.
-
-The default behaviour of each of these notify methods is simply to call
+<p>The default behaviour of each of these notify methods is simply to call
 notifyEvent(event, source), so, if you want, you can have a single
 handler for all of them. One pattern might be to use the event to
-trigger an InitiateTopic on the sensing actor, for example:
+trigger an InitiateTopic on the sensing actor, for example:</p>
 
-<div class="code">
-
-    mavis: Actor 'Aunt Mavis; old; woman; her' @lounge
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    mavis: Actor 'Aunt Mavis; old; woman; her' @lounge
       ...
       notifyEvent(event, source)
       {
@@ -278,19 +267,16 @@ trigger an InitiateTopic on the sensing actor, for example:
     ;
 
     + InitiateTopic @doorOpeningEvent
-       "<q>Close that door! There's a draft in here!</q> Aunt Mavis commands
+       "&lt;q&gt;Close that door! There's a draft in here!&lt;/q&gt; Aunt Mavis commands
         imperiously. "
     ;
       
       
+</code></pre></div></div>
 
-</div>
-
-This covers most of what you need to know to use this extension. For
+<p>This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
-[sensory.t](../sensory.t) file.
-
-</div>
+<a href="../sensory.t">sensory.t</a> file.</p>
 
 <hr />
 

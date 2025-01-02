@@ -58,7 +58,7 @@ makes either trigger the Push action. This is what it might look like:
         verbPhrase = 'push/pushing forward (what)'
         missingQ = 'what do you want to push forward'
     ;
-```<div class="code">\n\n((.|\n)*?)\n\</div>
+```       
 
 Let's take this piece by piece. First we begin our specification of the
 new grammar for the Push action with

@@ -39,43 +39,41 @@ Finalization</a>    
 
 </div>
 
-<div class="main">
+<h1 id="expressions-and-operators">Expressions and Operators</h1>
 
-# Expressions and Operators
-
-The TADS 3 language uses an algebraic style of notation for expressions.
+<p>The TADS 3 language uses an algebraic style of notation for expressions.
 Constants (strings, integers, floating point values), variables, and
 object references can be combined with operators to form expressions.
 Most operators are written with punctuation marks, and many of these
-come from ordinary arithmetic, such as "+" to add two values and "\*" to
+come from ordinary arithmetic, such as “+” to add two values and “*” to
 multiply. C/C++ and Java programmers will find that the operators are
-almost entirely the same as in those languages.
+almost entirely the same as in those languages.</p>
 
-The way to think about expressions is that every expression is a
+<p>The way to think about expressions is that every expression is a
 miniature program. An expression specifies a precise, step-by-step
 procedure for carrying out a calculation. Every expression has a
 well-defined, single-threaded order of operations: to carry out the
 formula, you just do one thing at a time, from the first step to the
-last step, until you've carried out the whole procedure expressed in the
-formula.
+last step, until you’ve carried out the whole procedure expressed in the
+formula.</p>
 
-The steps in the procedure embodied in an expression are the operators.
-To carry out an expression's procedure, you figure out which operator to
+<p>The steps in the procedure embodied in an expression are the operators.
+To carry out an expression’s procedure, you figure out which operator to
 apply first, based on the precedence order and the associativity
 (left-to-right or right-to-left) of the operators; the operator with the
 highest precedence goes first. You apply this operator to its operand or
 operands. This yields a value - for example, if our expression is
-3+4\*5, we'd first carry out the multiplication, computing 4 times 5,
+3+4*5, we’d first carry out the multiplication, computing 4 times 5,
 which yields 20. You replace the sub-expression in the overall formula
 with its yielded value, and then continue to the operator with the next
-highest precedence: so we'd rewrite the formula as 3+20 and proceed to
-the addition. This would yield 23, so we'd use this to replace the 3+20.
+highest precedence: so we’d rewrite the formula as 3+20 and proceed to
+the addition. This would yield 23, so we’d use this to replace the 3+20.
 Our whole formula would now be down to 23 - there are no more operators
-left, so we're done.
+left, so we’re done.</p>
 
-The main reason that it's important to look at expressions this way, and
+<p>The main reason that it’s important to look at expressions this way, and
 important to understand the order of evaluation, is that parts of
-expressions can trigger "side effects." For example, the function-call
+expressions can trigger “side effects.” For example, the function-call
 operator invokes a function, which could display something in the output
 window, play some music, create a disk file, or any manner of thing that
 a function can do. Other side effects are more direct: some operators
@@ -83,226 +81,221 @@ assign values to variables, so evaluating such an operator has the side
 effect of changing the value in a variable. The important thing to
 understand is that if any part of an expression does have a side effect,
 the effect will occur precisely at the step in the expression-procedure
-where that operator is reached.
+where that operator is reached.</p>
 
-## Operator placement: prefix, postfix, binary, ternary
+<h2 id="operator-placement-prefix-postfix-binary-ternary">Operator placement: prefix, postfix, binary, ternary</h2>
 
-The operators fall into four positioning categories that determine how
-an operator is placed relative to the value or values it acts upon.
+<p>The operators fall into four positioning categories that determine how
+an operator is placed relative to the value or values it acts upon.</p>
 
-A **unary prefix** operator acts on a single value, and the operator
+<p>A <strong>unary prefix</strong> operator acts on a single value, and the operator
 comes just before the value. For example, logical negation:
-<span class="code">!a</span>
+<code class="language-plaintext highlighter-rouge">!a</code></p>
 
-A **unary postfix** operator acts on a single value, which the operator
-immediately *follows*. For example, list indexing:
-<span class="code">a\[7\]</span>
+<p>A <strong>unary postfix</strong> operator acts on a single value, which the operator
+immediately <em>follows</em>. For example, list indexing:
+<code class="language-plaintext highlighter-rouge">a\[7\]</code></p>
 
-Note that most unary operators are *either* prefix or postfix operators,
+<p>Note that most unary operators are <em>either</em> prefix or postfix operators,
 but two can be used both ways: the increment and decrement operators,
-<span class="code">++</span> and <span class="code">--</span>.
+<code class="language-plaintext highlighter-rouge">++</code> and <code class="language-plaintext highlighter-rouge">--</code>.</p>
 
-A **binary** operator acts on two values. The operator is placed between
+<p>A <strong>binary</strong> operator acts on two values. The operator is placed between
 the two values it acts upon. For example, arithmetic addition:
-<span class="code">a + b</span>
+<code class="language-plaintext highlighter-rouge">a + b</code></p>
 
-There's one **ternary** operator, the conditional operator, which acts
-on three values. This operator comes in two pieces: a "?", which goes
-between the first and second operands, and a ":", which goes between the
-second and third operands: <span class="code">x ? 'yes' : 'no'</span>
+<p>There’s one <strong>ternary</strong> operator, the conditional operator, which acts
+on three values. This operator comes in two pieces: a “?”, which goes
+between the first and second operands, and a “:”, which goes between the
+second and third operands: <code class="language-plaintext highlighter-rouge">x ? 'yes' : 'no'</code></p>
 
-## Operator precedence
+<h2 id="operator-precedence">Operator precedence</h2>
 
-The operators are arranged in a hierarchy of precedence. The precedence
+<p>The operators are arranged in a hierarchy of precedence. The precedence
 order of the arithmetic operators is generally the same as in ordinary
-algebra; for example, 3+4\*2 evalutes to 11, because the multiplication
-operator has higher precedence than the addition operator.
+algebra; for example, 3+4*2 evalutes to 11, because the multiplication
+operator has higher precedence than the addition operator.</p>
 
-You can override the standard order of evaluation by explicitly grouping
-part of an expression in parentheses. For example, (3+4)\*2 evaluates to
+<p>You can override the standard order of evaluation by explicitly grouping
+part of an expression in parentheses. For example, (3+4)*2 evaluates to
 14, since the parentheses tell the compiler to evaluate the addition
 first, even though the multiplication would normally have higher
-precedence.
+precedence.</p>
 
-The order of precedence is shown below. The operators are listed in
+<p>The order of precedence is shown below. The operators are listed in
 order of decreasing precedence. When multiple operators are listed
 together on a line, those operators are all at the same precedence
-level.
+level.</p>
 
-Primary
+<p>Primary</p>
 
-[new](#new)  
-[inherited](#inherited)  
-[delegated](#delegated)  
-[defined](#defined)  
-[\_\_objref](#__objref)  
-[&amp;<span class="opnote">x</span>](#addressof)  
+<p><a href="#new">new</a><br />
+<a href="#inherited">inherited</a><br />
+<a href="#delegated">delegated</a><br />
+<a href="#defined">defined</a><br />
+<a href="#__objref">__objref</a><br />
+<a href="#addressof">&amp;<span class="opnote">x</span></a></p>
 
-Postfix
+<p>Postfix</p>
 
-[<span class="opnote">x</span>++](#postinc)  
-[<span class="opnote">x</span>––](#postdec)  
-[\[\]](#index)  
-[.](#getprop)  
-[<span class="opnote">x</span>()](#call)  
+<p><a href="#postinc"><span class="opnote">x</span>++</a><br />
+<a href="#postdec"><span class="opnote">x</span>––</a><br />
+<a href="#index">[]</a><br />
+<a href="#getprop">.</a><br />
+<a href="#call"><span class="opnote">x</span>()</a></p>
 
-Unary
+<p>Unary</p>
 
-[++<span class="opnote">x</span>](#preinc)  
-[––<span class="opnote">x</span>](#predec)  
-[!](#lognot)  
-[~](#bitnot)  
-[+<span class="opnote">x</span>](#pos)  
-[–<span class="opnote">x</span>](#neg)  
+<p><a href="#preinc">++<span class="opnote">x</span></a><br />
+<a href="#predec">––<span class="opnote">x</span></a><br />
+<a href="#lognot">!</a><br />
+<a href="#bitnot">~</a><br />
+<a href="#pos">+<span class="opnote">x</span></a><br />
+<a href="#neg">–<span class="opnote">x</span></a></p>
 
-Multiplicative
+<p>Multiplicative</p>
 
-[\*](#times)  
-[/](#divide)  
-[%](#mod)  
+<p><a href="#times">*</a><br />
+<a href="#divide">/</a><br />
+<a href="#mod">%</a></p>
 
-Additive
+<p>Additive</p>
 
-[+](#plus)  
-[–](#minus)  
+<p><a href="#plus">+</a><br />
+<a href="#minus">–</a></p>
 
-Bit-shift
+<p>Bit-shift</p>
 
-[\&lt;\&lt;](#shl)  
-[\&gt;\&gt;](#ashr)  
-[\&gt;\&gt;\&gt;](#lshr)  
+<p><a href="#shl">&lt;&lt;</a><br />
+<a href="#ashr">&gt;&gt;</a><br />
+<a href="#lshr">&gt;&gt;&gt;</a></p>
 
-Comparison
+<p>Comparison</p>
 
-[\&lt;](#lt)  
-[\&lt;=](#le)  
-[\&gt;](#gt)  
-[\&gt;=](#ge)  
+<p><a href="#lt">&lt;</a><br />
+<a href="#le">&lt;=</a><br />
+<a href="#gt">&gt;</a><br />
+<a href="#ge">&gt;=</a></p>
 
-Equality
+<p>Equality</p>
 
-[==](#eq)  
-[!=](#ne)  
-[is in](#isin)  
-[not in](#notin)  
+<p><a href="#eq">==</a><br />
+<a href="#ne">!=</a><br />
+<a href="#isin">is in</a><br />
+<a href="#notin">not in</a></p>
 
-Bitwise AND
+<p>Bitwise AND</p>
 
-[&amp;](#bitand)  
+<p><a href="#bitand">&amp;</a></p>
 
-Bitwise XOR
+<p>Bitwise XOR</p>
 
-[^](#bitxor)  
+<p>[^](#bitxor)</p>
 
-Bitwise OR
+<p>Bitwise OR</p>
 
-[\|](#bitor)  
+<p><a href="#bitor">|</a></p>
 
-Conditional AND
+<p>Conditional AND</p>
 
-[&amp;&amp;](#logand)  
+<p><a href="#logand">&amp;&amp;</a></p>
 
-Conditional OR
+<p>Conditional OR</p>
 
-[\|\|](#logor)  
+<p><a href="#logor">||</a></p>
 
-If-nil
+<p>If-nil</p>
 
-[??](#ifnil)  
+<p><a href="#ifnil">??</a></p>
 
-Conditional
+<p>Conditional</p>
 
-[? :](#cond)  
+<p><a href="#cond">? :</a></p>
 
-Expression chaining
+<p>Expression chaining</p>
 
-[,](#comma)  
+<p><a href="#comma">,</a></p>
 
-Assignment
+<p>Assignment</p>
 
-[=](#asi)  
-[+=](#asi)  
-[–=](#asi)  
-[\*=](#asi)  
-[/=](#asi)  
-[%=](#asi)  
-[&amp;=](#asi)  
-[\|=](#asi)  
-[^=](#asi)  
-[\&lt;\&lt;=](#asi)  
-[\&gt;\&gt;=](#asi)  
-[\&gt;\&gt;\&gt;=](#asi)  
+<p><a href="#asi">=</a><br />
+<a href="#asi">+=</a><br />
+<a href="#asi">–=</a><br />
+<a href="#asi">*=</a><br />
+<a href="#asi">/=</a><br />
+<a href="#asi">%=</a><br />
+<a href="#asi">&amp;=</a><br />
+<a href="#asi">|=</a><br />
+[^=](#asi)<br />
+<a href="#asi">&lt;&lt;=</a><br />
+<a href="#asi">&gt;&gt;=</a><br />
+<a href="#asi">&gt;&gt;&gt;=</a></p>
 
-## Operator associativity
+<h2 id="operator-associativity">Operator associativity</h2>
 
-Each operator has a standard "associativity," which controls the default
+<p>Each operator has a standard “associativity,” which controls the default
 order of evaluation when two operators at the same precedence level are
 used consecutively. In almost all most cases, the standard associativity
-will produce the results you'd expect from ordinary arithmetic, so most
-of the time you won't even notice it; but it's worth going over the
-precise rules, to help explain any odd cases that might come up.
+will produce the results you’d expect from ordinary arithmetic, so most
+of the time you won’t even notice it; but it’s worth going over the
+precise rules, to help explain any odd cases that might come up.</p>
 
-When binary operators at the same precedence level are combined,
-evaluation proceeds in left-to-right order, *except* for the assignment
-operators (=, +=, \*=, etc). For example, 6-3-2 is evaluated as (6-3)-2.
+<p>When binary operators at the same precedence level are combined,
+evaluation proceeds in left-to-right order, <em>except</em> for the assignment
+operators (=, +=, *=, etc). For example, 6-3-2 is evaluated as (6-3)-2.
 This is true of all binary operators except the assignment operators,
 which work right to left: a=b=3 is evaluated as a=(b=3) - that is, the
 value 3 is first assigned to b, yielding the assigned value (3) as the
 result of the overall sub-expression, and then this result is assigned
-to a.
+to a.</p>
 
-The conditional operator is right-associative. This comes into play in
-an expression like this: <span class="code">a ? b : c ? d : e</span>.
+<p>The conditional operator is right-associative. This comes into play in
+an expression like this: <code class="language-plaintext highlighter-rouge">a ? b : c ? d : e</code>.
 Because the conditional operator groups right to left, the expression is
-evaluated as <span class="code">a ? b : (c ? d : e)</span>. This might
+evaluated as <code class="language-plaintext highlighter-rouge">a ? b : (c ? d : e)</code>. This might
 look backwards at first, but it yields the grouping that most people
 would intuitively assume by thinking about it as a series of
-if-then-else branches: if *a* then *b*, else if *c* then *d*, else *e*.
-Don't let the parentheses confuse you into thinking that the
-parenthesized part has to be evaluated first, by the way - it doesn't.
-In fact, <span class="code">a</span> is evaluated first here, because we
+if-then-else branches: if <em>a</em> then <em>b</em>, else if <em>c</em> then <em>d</em>, else <em>e</em>.
+Don’t let the parentheses confuse you into thinking that the
+parenthesized part has to be evaluated first, by the way - it doesn’t.
+In fact, <code class="language-plaintext highlighter-rouge">a</code> is evaluated first here, because we
 always evaluate the controlling expression of a condition before
 evaluating either of the two result operands. Associativity and order of
-evaluation are different things.
+evaluation are different things.</p>
 
-You can always override the default associativity by using parentheses.
-For example:
+<p>You can always override the default associativity by using parentheses.
+For example:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = b - (c - d);
+</code></pre></div></div>
 
-    local a = b - (c - d);
-
-</div>
-
-Without the parentheses, the calculation would have proceeded from left
+<p>Without the parentheses, the calculation would have proceeded from left
 to right, so we would first have calculated (b-c) and then subtracted d
 from the result. The parentheses override this, ensuring that the
-calculation begins by calculating (c-d), then subtracting this from b.
+calculation begins by calculating (c-d), then subtracting this from b.</p>
 
-## Operators in detail
+<h2 id="operators-in-detail">Operators in detail</h2>
 
-This section describes each operator's syntax and usage.
+<p>This section describes each operator’s syntax and usage.</p>
 
-### <span id="new"></span>new
+<h3 id="new"><span id="new"></span>new</h3>
 
-The <span class="code">new</span> operator is used to create a new
-instance of a class dynamically. The syntax is:
+<p>The <code class="language-plaintext highlighter-rouge">new</code> operator is used to create a new
+instance of a class dynamically. The syntax is:</p>
 
 <div class="syntax">
 
     new className [ argumentList ] 
 
-</div>
+
 
 If the argument list is omitted entirely, it's equivalent to using an
 empty argument list - so the following two lines are equivalent:
 
-<div class="code">
-
+```
     x = new MyClass;
     x = new MyClass();
-
-</div>
+```
 
 When this operator is evaluated, the VM creates an instance of the given
 class, and immediately invokes the method named "construct" of the new
@@ -320,7 +313,7 @@ The result value of the expression is the new object reference.
 
 ### <span id="inherited"></span>inherited
 
-The <span class="code">inherited</span> operator invokes the method that
+The `inherited` operator invokes the method that
 the currently executing method overrides.
 
 <div class="syntax">
@@ -361,23 +354,21 @@ This operator can only be used within a method.
 
 Example:
 
-<div class="code">
-
+```
     myObject: Thing
       test(x)
       {
         return inherited(x) + 1;
       }
     ;
-
-</div>
+```
 
 Refer to the [inheritance model](inherit.html) section for information on
 inheritance order.
 
 ### <span id="delegated"></span>delegated
 
-This operator is similar to <span class="code">inherited</span>, but
+This operator is similar to `inherited`, but
 allows you to specify an unrelated object to specify the target object,
 and further allows you to delegate to any object, regardless of any
 inheritance relationship with the current method's defining object.
@@ -400,29 +391,27 @@ some dynamic state in the object. Or, you might wish to create a
 specialized set of inheritance relationships that don't fit into the
 usual class tree model.
 
-<span class="code">delegated</span> invokes a method in another object
+`delegated` invokes a method in another object
 while retaining the same "self" object as the caller.
 
 For example:
 
-<div class="code">
-
+```
     myObj: MyClass
       handler = myOtherObj
       test(x) { return delegated handler.test(x); }
     ;
+```
 
-</div>
-
-In this example, the <span class="code">test()</span> method delegates
-its processing to the <span class="code">test()</span> method of the
-object given by the <span class="code">handler</span> property of the
-<span class="code">self</span> object, which in this case is the
-<span class="code">myOtherObj</span> object. When
-<span class="code">myObj.test()</span> executes, its
-<span class="code">self</span> object will be the same as it was in
-<span class="code">myObj.test()</span>, because delegated preserves the
-<span class="code">self</span> object in the delegatee.
+In this example, the `test()` method delegates
+its processing to the `test()` method of the
+object given by the `handler` property of the
+`self` object, which in this case is the
+`myOtherObj` object. When
+`myObj.test()` executes, its
+`self` object will be the same as it was in
+`myObj.test()`, because delegated preserves the
+`self` object in the delegatee.
 
 In the delegatee, the targetobj pseudo-variable contains the object that
 was the target of the delegated expression.
@@ -432,54 +421,52 @@ was the target of the delegated expression.
 This operator tests whether or not a symbol is defined. If *sym* is
 defined in the program's global symbol table (as a function, property,
 or object name),
-<span class="code">defined(</span>*sym*<span class="code">)</span>
-yields <span class="code">true</span>, otherwise it yields
-<span class="code">nil</span>.
+`defined(`*sym*`)`
+yields `true`, otherwise it yields
+`nil`.
 
-Note that <span class="code">defined</span> has a separate meaning
-within an <span class="code">\#if</span> preprocessor directive. In an
-<span class="code">\#if</span> directive,
-<span class="code">defined(x)</span> determines if
-<span class="code">x</span> is defined among the **preprocessor**
-(<span class="code">\#define</span>) symbols. Outside of
-<span class="code">\#if</span> expressions,
-<span class="code">defined</span> tests to see if a symbol is defined in
+Note that `defined` has a separate meaning
+within an `\#if` preprocessor directive. In an
+`\#if` directive,
+`defined(x)` determines if
+`x` is defined among the **preprocessor**
+(`\#define`) symbols. Outside of
+`\#if` expressions,
+`defined` tests to see if a symbol is defined in
 the compiler's global symbol table, among the objects, functions, and
 properties.
 
-<span class="code">defined</span> has a constant value at compile-time.
+`defined` has a constant value at compile-time.
 This means that if it's used as the controlling expression of a
-condition (such as in an <span class="code">if</span> statement or the
-<span class="code">?:</span> operator), the compiler applies the
+condition (such as in an `if` statement or the
+`?:` operator), the compiler applies the
 condition at compile time, not at run time. In particular, if
-<span class="code">x</span> isn't defined,
-<span class="code">defined(x)</span> is <span class="code">nil</span>,
-so any code that's conditional on <span class="code">defined(x)</span>
+`x` isn't defined,
+`defined(x)` is `nil`,
+so any code that's conditional on `defined(x)`
 is simply factored out - the compiler effectively strips that code out
 of the final program. This property is extremely useful, in that you can
 "hide" a reference to a symbol behind
-<span class="code">defined()</span>, and that reference will be stripped
+`defined()`, and that reference will be stripped
 out of the program if the symbol isn't defined. For example:
 
-<div class="code">
-
+```
     if (defined(foo) &amp;&amp; foo.isOpen)
        ...
+```
 
-</div>
-
-If <span class="code">foo</span> is defined, this turns into simply
-<span class="code">if (foo.isOpen</span>). Otherwise, it turns into
-<span class="code">if (nil)</span>, because of the short-circuit feature
-of the <span class="code">&amp;&amp;</span> operator (when the first operand of
-<span class="code">&amp;&amp;</span> is a constant <span class="code">nil</span>
+If `foo` is defined, this turns into simply
+`if (foo.isOpen`). Otherwise, it turns into
+`if (nil)`, because of the short-circuit feature
+of the `&amp;&amp;` operator (when the first operand of
+`&amp;&amp;` is a constant `nil`
 value, the compiler skips the second operand entirely). This means that
-the <span class="code">foo.isOpen</span> part of the expression won't
-cause an "unknown symbol" error when <span class="code">foo</span> isn't
+the `foo.isOpen` part of the expression won't
+cause an "unknown symbol" error when `foo` isn't
 defined, since that part of the expression will be skipped entirely. In
 this example, the compiler will also skip the entire body of the
-<span class="code">if</span>, since the controlling is
-<span class="code">nil</span>.
+`if`, since the controlling is
+`nil`.
 
 This operator is especially useful in libraries where you want to make a
 module optional, but still want to be able to reference that optional
@@ -491,30 +478,28 @@ status line can display the current score. The tricky thing about this
 situation is that a direct reference to the object in the status line
 module will effectively make the score module required, since omitting
 the score module would also omit that referenced object, causing a link
-error. The <span class="code">defined()</span> operator solves the
+error. The `defined()` operator solves the
 problem: rather than referencing the score object directly, we can make
 the reference conditional on the object's existence:
 
-<div class="code">
-
+```
     local score = (defined(libScore) ? libScore.totalScore : nil);
-
-</div>
+```
 
 This solves the problem because defined(libScore) has a constant value
 during compilation. If the score module is included, the
-<span class="code">libScore</span> object is present, so
-<span class="code">defined(libScore)</span> turns into
-<span class="code">true</span>; if the score module is omitted,
-<span class="code">defined(libScore)</span> becomes
-<span class="code">nil</span>. In either case, when the control
-expression of the <span class="code">?:</span> operator is a constant,
+`libScore` object is present, so
+`defined(libScore)` turns into
+`true`; if the score module is omitted,
+`defined(libScore)` becomes
+`nil`. In either case, when the control
+expression of the `?:` operator is a constant,
 the compiler knows it only has to compile one branch or the other; so
-when <span class="code">defined(libScore)</span> is nil, the compiler
+when `defined(libScore)` is nil, the compiler
 entirely omits the first branch, eliminating the problematic reference
-to <span class="code">libScore</span>. But when
-<span class="code">libScore</span> *is* included in the build, the
-expression turns into <span class="code">libScore.totalScore</span>,
+to `libScore`. But when
+`libScore` *is* included in the build, the
+expression turns into `libScore.totalScore`,
 allowing the status line module to get access to the score information
 as we wanted. We've thus succeeded in making the score module optional,
 but without giving up extra features in other parts of the library that
@@ -527,30 +512,28 @@ object references. If *sym* is the name of a defined object, the result
 of the operator is the object reference value, as though you had written
 simply *sym* in the first place. If the symbol isn't defined, or refers
 to something other than an object (such as a property or function name),
-the result of the expression is <span class="code">nil</span>.
+the result of the expression is `nil`.
 
 The *mode* element is optional. If specified, this must be the literal
-text <span class="code">warn</span> or <span class="code">error</span>.
-If it's <span class="code">warn</span>, the compiler will display a
+text `warn` or `error`.
+If it's `warn`, the compiler will display a
 warning message if the symbol isn't a defined object; if it's
-<span class="code">error</span>, the compiler displays an error message.
+`error`, the compiler displays an error message.
 (The message is the same in either case; the difference is that warnings
 allow the build to proceed to completion, while errors stop it at the
 end of the current source file.) If *mode* isn't specified at all,
 there's no message of any kind of the symbol isn't a defined object; the
-expression simply yields <span class="code">nil</span> as its value.
+expression simply yields `nil` as its value.
 
-<div class="code">
-
+```
     local x = __objref(Action, warn);
     if (x == nil)
        "Action isn't defined in this build!\n";
-
-</div>
+```
 
 ### <span id="addressof"></span>&amp;<span class="opnote">x</span>
 
-The unary <span class="code">&amp;</span> operator yields a property ID
+The unary `&amp;` operator yields a property ID
 value for a given property name, *or* a pointer to a function, *or* a
 pointer to a built-in function. The syntax is:
 
@@ -586,7 +569,7 @@ the iteration part works. It makes for a very clean division of labor.
 
 ### <span id="postinc"></span> <span id="postdec"></span> <span id="preinc"></span> <span id="predec"></span> ++, ––
 
-The <span class="code">++</span> and <span class="code">--</span>
+The `++` and `--`
 operators increment or decrement the contents of their operand. The
 operand must be an [lvalue](#lvalue), which is any expression that you
 can assign a value to.
@@ -604,21 +587,19 @@ Whether used as prefix or postfix operators, these operators have the
 side effect of changing the target lvalue at the time at which the
 operator is evaluated.
 
-<div class="code">
-
+```
     local x = 5;
     local a = x++;
     local b = ++x;
-
-</div>
+```
 
 In the example above, we first assign a value of 5 to the local variable
-x. Then we evaluate <span class="code">x++</span>: since this is the
+x. Then we evaluate `x++`: since this is the
 postfix form, it first saves the old value of x, then increments the
 contents of x, then yields the old value as the result of the
 expression - so x is changed to 6, but the value yielded by the
 expression is 5, so 5 is assigned to a. Next, we evaluate
-<span class="code">++x</span>: this first increment x, then yields the
+`++x`: this first increment x, then yields the
 new value of x as the result - so x is changed to 7, and the value
 yielded is 7, so 7 is stored in b. So, when we're done, x is 7, a is 5,
 and b is 7.
@@ -635,7 +616,7 @@ final b
 
 15
 
-<span class="code">b = ++a;</span>
+`b = ++a;`
 
 16
 
@@ -643,7 +624,7 @@ final b
 
 22
 
-<span class="code">b = a++;</span>
+`b = a++;`
 
 23
 
@@ -651,7 +632,7 @@ final b
 
 17
 
-<span class="code">b = --a;</span>
+`b = --a;`
 
 16
 
@@ -659,7 +640,7 @@ final b
 
 99
 
-<span class="code">b = a--;</span>
+`b = a--;`
 
 98
 
@@ -690,12 +671,10 @@ no error in this case - it's perfectly legal).
 
 Example:
 
-<div class="code">
-
+```
     local x = ['a', 'b', 'c', 'd'];
     local y = x[3];  // stores 'c' in y
-
-</div>
+```
 
 ### <span id="getprop"></span>.
 
@@ -728,11 +707,9 @@ result of the expression is the property value.
 
 Example:
 
-<div class="code">
-
+```
     local x = myObject.test(3);
-
-</div>
+```
 
 ### <span id="call"></span>( )
 
@@ -754,16 +731,14 @@ name without the function call operator (i.e., with no argument list).
 For example, this code stores a pointer to the function MyFunc in a
 local variable, then invokes the function through the local variable:
 
-<div class="code">
-
+```
     local x = MyFunc;
     local y = x(1, 2, 3);
-
-</div>
+```
 
 ### <span id="lognot"></span>!
 
-The <span class="code">!</span> operator yields the logical negation of
+The `!` operator yields the logical negation of
 an expression. This is a unary prefix operator: it goes immediately
 before its operand value.
 
@@ -777,16 +752,14 @@ The logical negation of a value depends upon its type:
 
 Example:
 
-<div class="code">
-
+```
     local x = true;
     local y = !x;  // stores nil in y
-
-</div>
+```
 
 ### <span id="bitnot"></span>~
 
-The <span class="code">~</span> operator yields the bitwise inverse of
+The `~` operator yields the bitwise inverse of
 an integer value. The bitwise inverse is the value that results from
 reversing each bit of the value's binary representation (i.e., changing
 each 0 to 1 and each 1 to 0).
@@ -797,24 +770,22 @@ hex, or, as a signed decimal value, -18.
 
 This operator is particularly useful for manipulating bit-mask values,
 where a set of bit flags are combined with the
-<span class="code">\|</span> (bitwise-OR) operator.
+`\|` (bitwise-OR) operator.
 
 Example:
 
-<div class="code">
-
+```
     #define FLAG_A    0x0001
     #define FLAG_B    0x0002
     #define FLAG_C    0x0004
 
     local x = FLAG_A | FLAG_B;
     x = ~x;
-
-</div>
+```
 
 ### <span id="pos"></span>+<span class="opnote">x</span>
 
-The <span class="code">+</span> operator, when used as a unary prefix
+The `+` operator, when used as a unary prefix
 operator (that is, immediately preceding a single operand expression),
 simply evaluates and yields its operand value. It has no other effect.
 
@@ -825,16 +796,14 @@ simply has no effect other than to evaluate its operand.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = +x;
-
-</div>
+```
 
 ### <span id="neg"></span>–<span class="opnote">x</span>
 
-The <span class="code">-</span> operator, when used as a unary prefix
+The `-` operator, when used as a unary prefix
 operator (that is, immediately preceding a single operand expression),
 yields the arithmetic negative of a numeric value. It can be applied to
 integers and BigNumber values; applying it to any other type causes a
@@ -845,12 +814,10 @@ BigNumber, the result has the same precision as the operand.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = -x;
-
-</div>
+```
 
 ### <span id="times"></span>\*
 
@@ -862,13 +829,11 @@ are handled.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 1.7;
     local z = x * y;
-
-</div>
+```
 
 ### <span id="divide"></span>/
 
@@ -887,13 +852,11 @@ If the right-hand operand is zero, a run-time error results.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 12;
     local z = x / y;
-
-</div>
+```
 
 ### <span id="mod"></span>%
 
@@ -907,13 +870,11 @@ both positive and negative values.
 
 If the right-hand operand is zero, a run-time error results.
 
-<div class="code">
-
+```
     local x = 37;
     local y = 12;
     local z = x % y;
-
-</div>
+```
 
 ### <span id="plus"></span>+
 
@@ -948,8 +909,7 @@ strings, and appends values to lists.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 12;
     local z = x + y;
@@ -959,8 +919,7 @@ Example:
 
     local str = 'testing';
     str = str + y;
-
-</div>
+```
 
 ### <span id="minus"></span>–
 
@@ -978,7 +937,7 @@ removes elements from a list or Vector.
   operand that **do not** appear in the second list or Vector. This
   effectively "subtracts" the elements from the first operand. The
   elements are compared using the same rules as the
-  <span class="code">==</span> operator. The original operands are
+  `==` operator. The original operands are
   **not** modified. For example, \[1, 2, 3, 4, 4, 4\] - \[2, 4\] yields
   \[1, 3\].
 - If the first operand is a list or a Vector, and the second is any type
@@ -987,26 +946,24 @@ removes elements from a list or Vector.
   original first operand that **do not** equal the second operand value.
   This effectively "subtracts" the second operand value from the list.
   The elements are compared using the same rules as the
-  <span class="code">==</span> operator. The original operands are
+  `==` operator. The original operands are
   **not** modified. For example, \[1, 2, 3, 4\] - 3 yields \[1, 2, 4\].
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 12;
     local z = x + y;
 
     local lst = [12, 37, 42, 54];
     lst = lst - x;
-
-</div>
+```
 
 ### <span id="shl"></span>\&lt;\&lt;
 
 Left shift. Both operands must be integers. *a*
-<span class="code">\&lt;\&lt;</span> *n* shifts the bits of the binary
+`\&lt;\&lt;` *n* shifts the bits of the binary
 representation of *a* left (towards the most significant bit) by *n*
 places. The high-order *n* bits are simply discarded; the low-order *n*
 bits are filled with zeros. This is equivalent to multiplying *a* by
@@ -1015,25 +972,23 @@ there's no error; the overflowing high-order bits are simply discarded.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 2;
     local z = x &lt;&lt; y;
-
-</div>
+```
 
 TADS doesn't have separate operators for arithmetic and logical left
 shifts, because both always yield the same results. This is in contrast
 to the right shift, where we have separate operators for arithmetic
-right shift (<span class="code">\&gt;\&gt;</span>) and logical right shift
-(<span class="code">\&gt;\&gt;\&gt;</span>) because of the difference in results
+right shift (`\&gt;\&gt;`) and logical right shift
+(`\&gt;\&gt;\&gt;`) because of the difference in results
 for negative values.
 
 ### <span id="ashr"></span>\&gt;\&gt;
 
 Arithmetic right shift. Both operands must be integers. *a*
-<span class="code">\&gt;\&gt;</span> *n* shifts the bits of the binary
+`\&gt;\&gt;` *n* shifts the bits of the binary
 representation of *a* right (toward the least significant bit position)
 by *n* bits. The least significant *n* bits of *a* are discarded, and
 the *n* vacated high-order bits are filled in with the original
@@ -1041,31 +996,29 @@ high-order bit of *a*. If *a* is positive, this is equivalent to
 dividing *a* by 2<sup>*n*</sup>. If *a* is negative, the result is
 equivalent to to dividing *a* by 2<sup>*n*</sup> and then rounding
 towards negative infinity (note that this differs from the
-<span class="code">/</span> operator, which rounds towards zero: -3/2 ==
+`/` operator, which rounds towards zero: -3/2 ==
 -1, whereas -3\&gt;\&gt;1 == -2).
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 2;
     local z = x &gt;&gt; y;
-
-</div>
+```
 
 The difference between the arithmetic right shift and the logical right
 shift is the treatment of the vacated high-order bits. The arithmetic
 shift preserves the sign of the original value by filling the vacated
 bits with the original value's most significant bit; the logical shift
 always fills the vacated bits with zeros. If *a* is positive, *a*
-<span class="code">\&gt;\&gt;</span> *n* and *a*
-<span class="code">\&gt;\&gt;\&gt;</span> *n* have the same result.
+`\&gt;\&gt;` *n* and *a*
+`\&gt;\&gt;\&gt;` *n* have the same result.
 
 ### <span id="lshr"></span>\&gt;\&gt;\&gt;
 
 Logical right shift. Both operands must be integers. *a*
-<span class="code">\&gt;\&gt;\&gt;</span> *n* shifts the bits of the binary
+`\&gt;\&gt;\&gt;` *n* shifts the bits of the binary
 representation of *a* right (toward the least significant bit position)
 by *n* bits. The least significant *n* bits of *a* are discarded, and
 the *n* vacated high-order bits are filled with zeros. If *a* is
@@ -1075,21 +1028,19 @@ by 2<sup>*n*</sup>.
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 2;
     local z = x &gt;&gt;&gt; y;
-
-</div>
+```
 
 The difference between the arithmetic right shift and the logical right
 shift is the treatment of the vacated high-order bits. The arithmetic
 shift preserves the sign of the original value by filling the vacated
 bits with the original value's most significant bit; the logical shift
 always fills the vacated bits with zeros. For positive values of *a*,
-*a* <span class="code">\&gt;\&gt;</span> *n* and *a*
-<span class="code">\&gt;\&gt;\&gt;</span> *n* have the same result.
+*a* `\&gt;\&gt;` *n* and *a*
+`\&gt;\&gt;\&gt;` *n* have the same result.
 
 ### <span id="lt"></span>\&gt;   <span id="le"></span>\&lt;   <span id="gt"></span>\&gt;=   <span id="ge"></span>\&lt;=
 
@@ -1128,19 +1079,17 @@ compared:
 
 Example:
 
-<div class="code">
-
+```
     local x = 37;
     local y = 2;
     local z = x &gt; y; // stores true in z
-
-</div>
+```
 
 ### <span id="isin"></span>is in   <span id="notin"></span>not in
 
 These operators compare one value to each value in a set of values.
-<span class="code">is in</span> yields true if the first value is equal
-to any of the values in the set, and <span class="code">not in</span>
+`is in` yields true if the first value is equal
+to any of the values in the set, and `not in`
 yields true if the first value is **not** equal to any of the values in
 the set.
 
@@ -1169,8 +1118,8 @@ This type of operator proceeds as follows. First, it evaluates the
 left-hand expression. It then evaluates the first expression in the set,
 and compares it to the left-hand value. If the two values are equal, the
 operator immediately stops and yields its value (true in the case of
-<span class="code">is in</span>, nil in the case of
-<span class="code">not in</span>. If the two values are unequal, the
+`is in`, nil in the case of
+`not in`. If the two values are unequal, the
 operator evaluates the second expression in the set, and repeats the
 comparison.
 
@@ -1186,19 +1135,17 @@ set expressions must be compared.
 
 Example:
 
-<div class="code">
-
+```
     local x = 17;
     local y = 5;
     local y = (x + 3) is in (y*1, y*2, y*3, y*4, y*5);
-
-</div>
+```
 
 ### <span id="eq"></span>==   <span id="ne"></span>!=
 
 These operators test for equality and inequality, respectively.
-<span class="code">==</span> yields true if the two values being
-compared are equal, nil if not. <span class="code">!=</span> yields nil
+`==` yields true if the two values being
+compared are equal, nil if not. `!=` yields nil
 if the two values are equal, true if not.
 
 The meaning of the comparison varies according to the types of the
@@ -1225,8 +1172,8 @@ values being compared:
   first element of the first list or vector is compared to the first
   element of the second, then the second elements are compared to one
   another, and so on). Each pair of elements is compared using these
-  same rules, as though a stand-alone <span class="code">==</span> or
-  <span class="code">!=</span> test were being performed on that pair of
+  same rules, as though a stand-alone `==` or
+  `!=` test were being performed on that pair of
   values. If the two lists/Vectors are of the same length, and all of
   the elements are equal, the overall result is "equal," otherwise "not
   equal."
@@ -1251,13 +1198,11 @@ values being compared:
 
 Example:
 
-<div class="code">
-
+```
     local a = 17;
     local b = 34.0 / 2.0;
     local c = (a == b);  // assigns true to c, since 17 == 17.0
-
-</div>
+```
 
 ### <span id="bitand"></span>&amp;
 
@@ -1307,13 +1252,11 @@ a &amp; b
 
 Example:
 
-<div class="code">
-
+```
     local a = 0x00FF; // all 1's in the low-order 8 bits
     local b = 123456; // in hex, this is 0x1E240
     local c = a &amp; b;  // yields 0x40, or decimal 64
-
-</div>
+```
 
 ### <span id="bitxor"></span>^
 
@@ -1367,13 +1310,11 @@ a ^ b
 
 Example:
 
-<div class="code">
-
+```
     local a = 0x00FF; // all 1's in the low-order 8 bits
     local b = 123456; // in hex, this is 0x1E240
     local c = a ^ b;  // yields 0x1E200, or 123392 decimal
-
-</div>
+```
 
 ### <span id="bitor"></span>\|
 
@@ -1423,13 +1364,11 @@ a \| b
 
 Example:
 
-<div class="code">
-
+```
     local a = 0x00FF; // all 1's in the low-order 8 bits
     local b = 123456; // in hex, this is 0x1E240
     local c = a | b;  // yields 0x1E2FF, or 123647 decimal
-
-</div>
+```
 
 ### <span id="logand"></span>&amp;&amp;
 
@@ -1488,21 +1427,19 @@ triggering its side effects - in order to determine the outcome.
 
 Example:
 
-<div class="code">
-
+```
     local a = 0;
     local b = 1;
     local c = (a != 0 &amp;&amp; b++ == 17);
-
-</div>
+```
 
 After running the code above, the value of b will be 1. Look at that
-carefully: that <span class="code">b++</span> is never executed, because
-the <span class="code">&amp;&amp;</span> operator short-circuits that part of
+carefully: that `b++` is never executed, because
+the `&amp;&amp;` operator short-circuits that part of
 the expression - it never bothers to evaluate the
-<span class="code">b++</span>, because it can see that the overall AND
-expression will be nil just by evaluating the <span class="code">a !=
-0</span> part.
+`b++`, because it can see that the overall AND
+expression will be nil just by evaluating the `a !=
+0` part.
 
 ### <span id="logor"></span>\|\|
 
@@ -1543,9 +1480,9 @@ true
 
 true
 
-As with <span class="code">&amp;&amp;</span>, this is a "short-circuit"
-operator - see the description of <span class="code">&amp;&amp;</span> for
-details. In the case of <span class="code">\|\|</span>, the operator
+As with `&amp;&amp;`, this is a "short-circuit"
+operator - see the description of `&amp;&amp;` for
+details. In the case of `\|\|`, the operator
 stops after evaluating the first operand if the first operand value is
 "true" - since the result will necessarily be true in this case,
 regardless of the value of the second operand, the operator bypasses the
@@ -1553,101 +1490,93 @@ evaluation of the second operand entirely.
 
 Example:
 
-<div class="code">
-
+```
     local a = 0;
     local b = 1;
     local c = (a == 0 || b++ == 17);
-
-</div>
+```
 
 After running the code above, the value of b will be 1 - the
-<span class="code">b++</span> evaluation is skipped because the
-<span class="code">\|\|</span> operator can tell that its result will be
-true as soon as it evaluates the first operand, <span class="code">a ==
-0</span>.
+`b++` evaluation is skipped because the
+`\|\|` operator can tell that its result will be
+true as soon as it evaluates the first operand, `a ==
+0`.
 
 ### <span id="ifnil"></span>??
 
 This operator tests a value to see if it's
-<span class="code">nil</span>, and yields a second value if so. It takes
+`nil`, and yields a second value if so. It takes
 two operands:
 
-<div class="code">
-
+```
     a ?? b
+```
 
-</div>
-
-If *a* is any value other than <span class="code">nil</span>, the result
-is *a*. If *a* is <span class="code">nil</span>, the result is *b*. The
+If *a* is any value other than `nil`, the result
+is *a*. If *a* is `nil`, the result is *b*. The
 operator evaluates *a* exactly once, and it evaluates *b* **only if**
-*a* is <span class="code">nil</span>.
+*a* is `nil`.
 
 One way to read this operator verbally is "*a* else *b*".
 
-<span class="code">??</span> is concise and efficient for the common
+`??` is concise and efficient for the common
 situation where you want to substitute a suitable default value if
-another value is <span class="code">nil</span>. This comes up a lot with
+another value is `nil`. This comes up a lot with
 function and method arguments, return values from functions you call,
 and property values you're using that were originally assigned by other
 parts of the code.
 
-For example, suppose the property <span class="code">location</span>
-gives an object's container, and <span class="code">nil</span> means
+For example, suppose the property `location`
+gives an object's container, and `nil` means
 that the object isn't currently in any location. Now suppose we have
 some code that wants to check if an object's location is lit. If we just
-wrote <span class="code">obj.location.isLit</span>, we'd trigger a
-run-time error when the location is <span class="code">nil</span>, since
-it's an error to get a property of <span class="code">nil</span>. The
-traditional way to handle this is an <span class="code">if</span> test:
+wrote `obj.location.isLit`, we'd trigger a
+run-time error when the location is `nil`, since
+it's an error to get a property of `nil`. The
+traditional way to handle this is an `if` test:
 
-<div class="code">
-
+```
     local lit;
     if (obj.location == nil)
        lit = nil;
     else
        lib = obj.location.isLit;
+```
 
-</div>
+We can simplify this with the `??` operator:
 
-We can simplify this with the <span class="code">??</span> operator:
-
-<div class="code">
-
+```
     local lit = (obj.location ?? limbo).isLit;
+```
 
-</div>
-
-If <span class="code">obj.location</span> is a valid object, the
-<span class="code">??</span> operator yields that object as the result,
-so we take its <span class="code">isLit</span> property. If the location
-is <span class="code">nil</span>, though, the
-<span class="code">??</span> operator returns the right operand,
-<span class="code">limbo</span>, which we've defined separately as an
+If `obj.location` is a valid object, the
+`??` operator yields that object as the result,
+so we take its `isLit` property. If the location
+is `nil`, though, the
+`??` operator returns the right operand,
+`limbo`, which we've defined separately as an
 object representing where objects go when they're not in play. Since
-<span class="code">limbo</span> is an ordinary object, the property
+`limbo` is an ordinary object, the property
 evaluation succeeds without triggering an error.
 
-The <span class="code">??</span> approach is not only shorter to write
-than the <span class="code">if</span> test, but it's also more
-efficient. The <span class="code">if</span> test evaluates
-<span class="code">obj.location</span> twice - once to test if the
-location is <span class="code">nil</span>, and again to get the
-<span class="code">isLit</span> property if it isn't. The
-<span class="code">??</span> operator skips this extra step.
+The `??` approach is not only shorter to write
+than the `if` test, but it's also more
+efficient. The `if` test evaluates
+`obj.location` twice - once to test if the
+location is `nil`, and again to get the
+`isLit` property if it isn't. The
+`??` operator skips this extra step.
 
-Note that <span class="code">(a ?? b)</span> **isn't** quite the same as
-<span class="code">(a != nil ? a : b)</span>, which might appear to be
-equivalent at first glance. The <span class="code">??</span> operator
+Note that `(a ?? b)` **isn't** quite the same as
+`(a != nil ? a : b)`, which might appear to be
+equivalent at first glance. The `??` operator
 only evaluates *a* **once**, regardless of the outcome. The version
-using <span class="code">? :</span> evaluates *a* **twice**, because
+using `? :` evaluates *a* **twice**, because
 that operator always evaluates the condition, and then always evaluates
 either the "true" or "false" operand. If *a* has side effects (such as a
-function call, assignment, <span class="code">++</span> operator, etc.),
+function call, assignment, `++` operator, etc.),
 the side effects will only be triggered once when using the
-<span class="code">??</span> operator.
+`??` operator.
 
 ### <span id="cond"></span>? :
 
@@ -1678,15 +1607,13 @@ Because this operator has so many parts, this can be confusing. Some
 people mistakenly take it to mean that a nested conditional is executed
 first:
 
-<div class="code">
-
+```
     local x = a ? b ? c : d : e;  // which do we evaluate first, a or b???
-
-</div>
+```
 
 At first glance, you might look at this and think that the right-to-left
 association means that we'd have to evaluate b first. After all, we have
-two <span class="code">?</span> operators in a row, and those operators
+two `?` operators in a row, and those operators
 associate right-to-left, so we have to do the one on the right first,
 right? Actually, that's wrong. Here, we do **not** have a case of
 associativity at all - we have a simple case of nesting. If you look at
@@ -1696,43 +1623,37 @@ the expression. Try putting parentheses into the expression to control
 the order of evaluation - you'll find that there's only one way you can
 do it:
 
-<div class="code">
-
+```
     local x = a ? (b ? c : d) : e;
-
-</div>
+```
 
 There's simply no other distinct and valid way to parenthesize this
 expression. There's no question of associativity, so instead we simply
-rely on the basic rule of the <span class="code">?:</span> operator:
+rely on the basic rule of the `?:` operator:
 *the condition expression is always evaluated first*, before either of
 the other parts. So the answer to the question posed above is that we
 evaluate a first.
 
 So where does the right-to-left associativity even matter? The answer is
-that it comes into play when the second <span class="code">?:</span>
+that it comes into play when the second `?:`
 operator occurs in the "else" part of the expression:
 
-<div class="code">
-
+```
     local x = a ? b : c ? d : e;
-
-</div>
+```
 
 In this case, there really is some ambiguity in how to parenthesize
 this. Here are the two possibilities:
 
-<div class="code">
-
+```
     local x = (a ? b : c) ? d : e;
     local x = a ? b : (c ? d : e);
-
-</div>
+```
 
 See the difference? In the first case, we treat the whole first
-conditional <span class="code">a ? b : c</span> as the condition
+conditional `a ? b : c` as the condition
 expression of the second conditional. In the second case, we treat the
-second conditional <span class="code">c ? d : e</span> as the "else"
+second conditional `c ? d : e` as the "else"
 part of the first conditional.
 
 So which is it? Since we know that this operator has right-to-left
@@ -1754,7 +1675,7 @@ the right operand.
 
 This operator might seem strangely pointless, but it comes in handy in a
 number of situations. For one, this operator is useful in
-<span class="code">for</span> statements, since it lets you write a
+`for` statements, since it lets you write a
 whole series of initializers or re-initializers in a slot that's
 nominally designed for a single expression. Another place where the
 comma operator is often used is in macros, since it allows you to write
@@ -1764,12 +1685,10 @@ arbitrary expression.
 
 Example:
 
-<div class="code">
-
+```
     local a = 7;
     local b = a++, a++, a++, a/2;
-
-</div>
+```
 
 When this code is done, a has the value 10, since the second line
 incremented it three separate times; and b has the value 5, since the
@@ -1781,52 +1700,46 @@ subexpression.)
 
 ### <span id="asi"></span>=   *op*=
 
-The simple assignment operator, <span class="code">=</span>, evaluates
+The simple assignment operator, `=`, evaluates
 its right-hand operand first, then assigns the resulting value to the
 "lvalue" on the left. (See [below](#commonEles) for an explanation of
 lvalues.)
 
-The <span class="code">op=</span> operators combine a calculation and an
-assignment. An expression of the form <span class="code">*a* *op*=
-*b*</span> is equivalent to <span class="code">*a* = *a* *op*
-*b*</span>. These operators evaluate the left operand first, then the
+The `op=` operators combine a calculation and an
+assignment. An expression of the form `*a* *op*=
+*b*` is equivalent to `*a* = *a* *op*
+*b*`. These operators evaluate the left operand first, then the
 right operand; they then perform the implied calculation exactly as
 though it were written as a separate calculation, and finally assign the
 result to the lvalue.
 
-The valid <span class="code">*op*=</span> operators are:
+The valid `*op*=` operators are:
 
-<div class="code">
-
+```
     +=  -=  *=  /=  %=  &amp;=  |=  ^=  &gt;&gt;=  &gt;&gt;&gt;=  &lt;&lt;=
-
-</div>
+```
 
 In addition to performing an assignment, an assignment operator yields a
 result value. The result is simply the value assigned. For example:
 
-<div class="code">
-
+```
     local a = 10, b = 20;
     local c = (a = 7) + (b += 5);
+```
 
-</div>
-
-The subexpression <span class="code">(a = 7)</span> yields the value
-assigned, in this case 7. The subexpression <span class="code">(b +=
-5)</span> yields 25, because that's the result of adding 5 to b. So,
+The subexpression `(a = 7)` yields the value
+assigned, in this case 7. The subexpression `(b +=
+5)` yields 25, because that's the result of adding 5 to b. So,
 after this code finishes, c has the value 32.
 
 The assignment operators are right-to-left associative. For example:
 
-<div class="code">
-
+```
     local a = b = 7;
+```
 
-</div>
-
-This is equivalent to <span class="code">a = (b = 7)</span>: first, the
-<span class="code">b = 7</span> sub-expression is evaluated, which
+This is equivalent to `a = (b = 7)`: first, the
+`b = 7` sub-expression is evaluated, which
 assigns the value 7 to b and yields 7 as the result; then the result is
 assigned to a.
 
@@ -1845,7 +1758,7 @@ There are several kinds of lvalues. You can assign to:
 
 - a local variable
 - an element of a list or a lookup table, indexed with the
-  <span class="code">\[ \]</span> operator
+  `\[ \]` operator
 - a property of self or of another specified object
 
 The syntax of an *lvalue* is:
@@ -1873,13 +1786,11 @@ collector.
 
 For example:
 
-<div class="code">
-
+```
     local l1 = [1, 2, 3];
     local l2 = l1;
     l1[2] = 10;
-
-</div>
+```
 
 The first line assigns a list to local variable l1, and the second line
 sets l2 to refer to the same list. The two variables contain the same
@@ -1966,10 +1877,10 @@ individual arithmetic operators.
 ### Integer overflow and automatic promotion
 
 When you use the basic arithmetic operators
-(<span class="code">+</span>, <span class="code">-</span>,
-<span class="code">\*</span>, <span class="code">/</span>, and the
-corresponding compound operators such as <span class="code">++</span>
-and <span class="code">+=</span>) with integer operands, the result is
+(`+`, `-`,
+`\*`, `/`, and the
+corresponding compound operators such as `++`
+and `+=`) with integer operands, the result is
 normally an integer as well. However, the integer type has a limited
 range, from -2,147,483,648 to +2,147,483,647. If you perform a
 computation with a result outside of this range, it's called an integer
@@ -1991,9 +1902,9 @@ bounds for the integer type. For the most part, TADS lets you use
 integer and BigNumber values interchangeably, so you probably won't even
 notice in most cases.
 
-The bit-oriented operators, such as <span class="code">&amp;</span>,
-<span class="code">\|</span>, <span class="code">~</span>,
-<span class="code">\&lt;\&lt;</span>, and <span class="code">\&gt;\&gt;</span>,
+The bit-oriented operators, such as `&amp;`,
+`\|`, `~`,
+`\&lt;\&lt;`, and `\&gt;\&gt;`,
 don't perform any promotions. These operators are specifically intended
 for manipulating bit patterns stored as integers, so promotions don't
 make sense for them.
@@ -2057,13 +1968,12 @@ currently executing.
 
 ### self
 
-The <span class="code">self</span> pseudo-variable provides a reference
+The `self` pseudo-variable provides a reference
 to the object whose method was *originally* invoked to reach the current
 method. Because of inheritance, this is not necessarily the object or
 class where the current method is actually defined. For example:
 
-<div class="code">
-
+```
     class Base: object
       name = 'Base'
       test()
@@ -2082,24 +1992,22 @@ class where the current method is actually defined. For example:
       obj.name = 'my new object';
       obj.test();
     }
+```
 
-&lt;/div&gt;
-
-In this example, when we invoke <span class="code">obj.test()</span>,
+In this example, when we invoke `obj.test()`,
 the VM will see that the object inherits the method from the class
 Base - there are no overriding definitions of the method, so we invoke
 this inherited definition. Even though the method is *defined* in class
-Base, though, <span class="code">self</span> will still be the object
-that was in the variable <span class="code">obj</span>, so the name
+Base, though, `self` will still be the object
+that was in the variable `obj`, so the name
 displayed will be "my new object".
 
-<span class="code">self</span> remains unchanged when you use
-<span class="code">inherited</span> or
-<span class="code">delegated</span>. For example, suppose we change the
+`self` remains unchanged when you use
+`inherited` or
+`delegated`. For example, suppose we change the
 class Sub in the example above as follows:
 
-<div class="code">
-
+```
     class Sub: Base
       name = 'Sub'
       test()
@@ -2108,29 +2016,27 @@ class Sub in the example above as follows:
         inherited();
       }
     ;
+```
 
-&lt;/div&gt;
-
-Now when we run this code, calling <span class="code">obj.test()</span>
+Now when we run this code, calling `obj.test()`
 will invoke the method in class Sub, since this overrides the one
 defined in class Base. This method will display the name of the object,
 and as before, this will be "my new object", since
-<span class="code">self</span> is the original target of the method
+`self` is the original target of the method
 invocation. After displaying the message, the Sub method will inherit
 the base class method, so we'll now proceed to the original one in class
 Base. This will display the object name a second time, and it will
 *still* be the same name - "my new object" - because
-<span class="code">self</span> is not changed by an
-<span class="code">inherited</span> call. The same would apply if we
-used <span class="code">delegated</span>.
+`self` is not changed by an
+`inherited` call. The same would apply if we
+used `delegated`.
 
 The "self" object is implied any time you call a method or evaluate a
 property without explicitly specifying which object is to be targeted.
 For example, we could rewrite the "test" method in class Base above as
 follows:
 
-<div class="code">
-
+```
     class Base: object
       name = 'Base'
       test()
@@ -2138,8 +2044,7 @@ follows:
         "Base.test: self = &lt;<name>&gt;\n";
       }
     ;
-
-&lt;/div&gt;
+```
 
 Notice how we've removed the "self." prefix from the "name" property
 evaluation. Even though we've removed the explicit mention of "self" as
@@ -2147,42 +2052,42 @@ the target object, the new version works exactly like the original,
 because "self" implied any time there's a method or property call with
 no target object specified.
 
-<span class="code">self</span> is valid only in method contexts - that
+`self` is valid only in method contexts - that
 is, within methods defined in objects or classes. It's not valid within
 functions; a function isn't associated with any object, and thus a call
 to a function doesn't involve targeting any object.
 
 ### targetprop
 
-The pseudo-variable <span class="code">targetprop</span> provides access
+The pseudo-variable `targetprop` provides access
 at run-time to the current target property, which is the property that
 was invoked to reach the current method. This complements
-<span class="code">self</span>, which gives the object whose property
+`self`, which gives the object whose property
 was invoked.
 
 You can use this variable only in contexts where
-<span class="code">self</span> is valid.
+`self` is valid.
 
 ### targetobj
 
-The pseudo-variable <span class="code">targetobj</span> provides access
+The pseudo-variable `targetobj` provides access
 at run-time to the original target object of the current method. This is
 the object that was specified in the method call that reached the
 current method. The target object remains unchanged when you use
-<span class="code">inherited</span> to inherit a superclass method,
+`inherited` to inherit a superclass method,
 because the method is still executing in the context of the original
 call to the inheriting method.
 
-The <span class="code">targetobj</span> value is the same as
-<span class="code">self</span> in normal method calls, but *not* in
-calls initiated with the <span class="code">delegated</span> keyword.
-When <span class="code">delegated</span> is used, the value of
-<span class="code">self</span> stays the same as it was in the
-delegating method, and <span class="code">targetobj</span> gives the
-target of the <span class="code">delegated</span> call.
+The `targetobj` value is the same as
+`self` in normal method calls, but *not* in
+calls initiated with the `delegated` keyword.
+When `delegated` is used, the value of
+`self` stays the same as it was in the
+delegating method, and `targetobj` gives the
+target of the `delegated` call.
 
 You can use this variable only in contexts where
-<span class="code">self</span> is valid.
+`self` is valid.
 
 ### definingobj
 
@@ -2192,7 +2097,7 @@ executing; in most cases, this is the object that defined the current
 method code in the source code of the program.
 
 You can use this variable only in contexts where
-<span class="code">self</span> is valid.
+`self` is valid.
 
 ### argcount
 
@@ -2200,67 +2105,63 @@ This pseudo-variable contains an integer value giving the number of
 arguments that the caller supplied to the current function or method.
 This value is valid whether or not the current method or function takes
 varying arguments (although it's probably not particularly useful
-otherwise). The <span class="code">argcount</span> value is always the
+otherwise). The `argcount` value is always the
 **total** number of arguments - for a varying-parameter function or
 method, this means that any named arguments are included in the total.
 
 ### <span id="invokee">invokee</span>
 
-<span class="code">invokee</span> provides a pointer to the currently
+`invokee` provides a pointer to the currently
 executing function.
 
-For a regular function, <span class="code">invokee</span> is a pointer
+For a regular function, `invokee` is a pointer
 to the function. The same value can be obtained by using the name of the
 function without an argument list.
 
-<div class="code">
-
+```
     myfunc(x)
     {
        // f and g will have the same values
        local f = invokee, g = myfunc;
     }
+```
 
-</div>
-
-For an anonymous function, <span class="code">invokee</span> is the
+For an anonymous function, `invokee` is the
 anonymous function object. This lets an anonymous function invoke itself
 recursively.
 
-<div class="code">
-
+```
     local factorial = new function(x) {
        if (x &lt;= 0)
            return 1;
        else
            return x * invokee(x-1);
     };
+```
 
-</div>
-
-For a dynamic function, <span class="code">invokee</span> is the dynamic
+For a dynamic function, `invokee` is the dynamic
 function object. As with anonymous functions, this can be used for
 recursive invocation.
 
 For an ordinary method, defined as part of an object definition in the
-source code, <span class="code">invokee</span> is a function pointer to
+source code, `invokee` is a function pointer to
 the method's code. Unlike regular function pointers, it's not usually a
 good idea to invoke a method function pointer directly, since doing so
 would call the method code with a nil value for
-<span class="code">self</span>. This will cause a run-time error if the
-method tries to evaluate a property of <span class="code">self</span>,
-inherit, or otherwise reference <span class="code">self</span>. The main
+`self`. This will cause a run-time error if the
+method tries to evaluate a property of `self`,
+inherit, or otherwise reference `self`. The main
 way to use this kind of function pointer is with
-[<span class="code">setMethod</span>](tadsobj.html).
+[`setMethod`](tadsobj.html).
 
 For a dynamic method defined with
-[<span class="code">setMethod</span>](tadsobj.html),
-<span class="code">invokee</span> yields the original value passed to
-<span class="code">setMethod</span> when the method was created. As with
+[`setMethod`](tadsobj.html),
+`invokee` yields the original value passed to
+`setMethod` when the method was created. As with
 oridinary method pointers, it's not always safe to invoke this value
 directly as a function pointer, since doing so passes a nil value for
-<span class="code">self</span>, and the underlying code of a method
-usually assumes that there's a valid <span class="code">self</span> in
+`self`, and the underlying code of a method
+usually assumes that there's a valid `self` in
 effect.
 
 ## Notes for TADS 2 users
@@ -2332,7 +2233,7 @@ Finalization</a>    
     </span>
 
 </div>
-</name></div></self.name></div></self.name></div></div>
+</name></self.name></self.name></div>
 
 </main>
 <footer>

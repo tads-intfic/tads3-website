@@ -39,90 +39,85 @@ ActorTopicEntry</a>    
 
 </div>
 
-<div class="main">
+<h1 id="suggesting-conversational-topics">Suggesting Conversational Topics</h1>
 
-# Suggesting Conversational Topics
-
-Many players hate 'guess the topic' puzzles almost as much as they hate
-'guess the verb'. One way to avoid such annoyances is to provide the
+<p>Many players hate ‘guess the topic’ puzzles almost as much as they hate
+‘guess the verb’. One way to avoid such annoyances is to provide the
 player a list of conversational topics s/he can fruitfully pursue,
 either in response to a specific request (the TOPICS command) or when
-the library or the game code thinks it a good idea. You certainly don't
-need to provide the player with a list of *every* available topic, since
+the library or the game code thinks it a good idea. You certainly don’t
+need to provide the player with a list of <em>every</em> available topic, since
 in a game with quite fully-implemented NPCs the list of every available
 topic might be overwhelming. Moreover, in some games the topics to be
-pursued may be so obvious that there's no need to suggest them at all
-(in which case there's no need to use the facility to suggest topics).
+pursued may be so obvious that there’s no need to suggest them at all
+(in which case there’s no need to use the facility to suggest topics).
 Often, however, it may be helpful to nudge the player towards the most
 fruitful topics of conversation at any one moment, and the best way to
 do that may be to provide a list of topics. If we are using any
 SayTopics and/or QueryTopics in our game, we must do this in any case,
 since the player cannot be expected to guess the wording that would
-trigger them.
+trigger them.</p>
 
-The <span class="code">suggestedTopicLister</span> has a
-**hyperlinkSuggestions** property. If this is set to true then (provided
+<p>The <code class="language-plaintext highlighter-rouge">suggestedTopicLister</code> has a
+<strong>hyperlinkSuggestions</strong> property. If this is set to true then (provided
 the player is using an HTML-capable interpreter) the list of topic
 suggestions will be hyperlinked, allowing players to select a suggested
 topic just by clicking on the link. By default this property is nil
-unless the [Command Help](../../extensions/docs/cmdhelp.html) extension
-is present.
+unless the <a href="../../extensions/docs/cmdhelp.html">Command Help</a> extension
+is present.</p>
 
-In the adv3 library you have to mix in your TopicEntry class with a
+<p>In the adv3 library you have to mix in your TopicEntry class with a
 SuggestedTopic class in order for it to be suggested. In adv3Lite you
 simply define the name property of the TopicEntry in question. This can
-be done in either one of two ways:
+be done in either one of two ways:</p>
 
-1.  Define the name property explicitly, e.g. <span class="code">name =
-    'the troubles'</span>.
-2.  Define the name implicitly by setting the **autoName** property to
-    true. This sets the name property of the TopicEntry to the theName
-    property of its matchObj (or of the first object in its matchObj
-    list if matchObj is defined as a list). If you've explicitly defined
-    the name property or there is no matchObj, setting autoName to true
-    has no effect.
+<ol>
+  <li>Define the name property explicitly, e.g. <code class="language-plaintext highlighter-rouge">name =
+'the troubles'</code>.</li>
+  <li>Define the name implicitly by setting the <strong>autoName</strong> property to
+true. This sets the name property of the TopicEntry to the theName
+property of its matchObj (or of the first object in its matchObj
+list if matchObj is defined as a list). If you’ve explicitly defined
+the name property or there is no matchObj, setting autoName to true
+has no effect.</li>
+</ol>
 
-The following two definitions are therefore equivalent (assuming the
-darkTower object has a name of 'dark tower'):
+<p>The following two definitions are therefore equivalent (assuming the
+darkTower object has a name of ‘dark tower’):</p>
 
-<div class="code">
-
-    + AskTopic @darkTower
-       "<q>Tell me about the dark tower,</q> you insist.\b
-        <q>Oh no!</q> says Bob. <q>We don't talk about that -- ever!</q>"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTopic @darkTower
+       "&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+        &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;"
         
         name = 'the dark tower'
     ;
 
     + AskTopic @darkTower
-       "<q>Tell me about the dark tower,</q> you insist.\b
-        <q>Oh no!</q> says Bob. <q>We don't talk about that -- ever!</q>"
+       "&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+        &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;"
         
         autoName = true
     ;
+</code></pre></div></div>
 
-</div>
+<p><span id="suggestas"></span></p>
 
-<span id="suggestas"></span>
-
-In either of the above examples the dark tower would be presented as
-something the player could ask about ('You could ask Bob about the dark
-tower...'), because it's obvious that an AskTopic has to be asked about.
-With compound types of ActorTopicEntry (e.g. AskTellTopic) it's not so
+<p>In either of the above examples the dark tower would be presented as
+something the player could ask about (‘You could ask Bob about the dark
+tower…’), because it’s obvious that an AskTopic has to be asked about.
+With compound types of ActorTopicEntry (e.g. AskTellTopic) it’s not so
 obvious whether it should be suggested as something to ask about or tell
 about. In cases such as these the library simply makes a default choice
 (for example, an AskTellTopic would be suggested as something to ask
-about), but if the library's default choice isn't what you want in any
-particular case you can override it by using the TopicEntry's
-**suggestAs** property to indicate how the topic should be suggested.
-For example, to make the game suggest 'You could tell Bob about your
-visit' with an AskTellTopic you could so the following:
+about), but if the library’s default choice isn’t what you want in any
+particular case you can override it by using the TopicEntry’s
+<strong>suggestAs</strong> property to indicate how the topic should be suggested.
+For example, to make the game suggest ‘You could tell Bob about your
+visit’ with an AskTellTopic you could so the following:</p>
 
-<div class="code">
-
-    + AskTellTopic @tVisit
-       "<q>I visited the dark tower this morning,</q> you announce.\b
-        <q>You shouldn't have done that, you really shouldn't,</q> Bob
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + AskTellTopic @tVisit
+       "&lt;q&gt;I visited the dark tower this morning,&lt;/q&gt; you announce.\b
+        &lt;q&gt;You shouldn't have done that, you really shouldn't,&lt;/q&gt; Bob
         replies with a shudder. "
         
         autoName = true
@@ -132,115 +127,116 @@ visit' with an AskTellTopic you could so the following:
     ....
 
     tVisit: Topic '()your visit; my;' ;
+</code></pre></div></div>
 
-</div>
+<p><span id="listorder"></span></p>
 
-<span id="listorder"></span>
-
-If you want to control the order in which topics are suggested, you can
-do so by using the **listOrder** property of an ActorTopicEntry; the
+<p>If you want to control the order in which topics are suggested, you can
+do so by using the <strong>listOrder</strong> property of an ActorTopicEntry; the
 higher this number, the later the topic will be placed in a list of
 suggestions relative to other topics of the same time (e.g. an AskTopic
-with a <span class="code">listOrder</span> of 110 will be suggested
-after an AskTopic of a <span class="code">listOrder</span> of 100, the
+with a <code class="language-plaintext highlighter-rouge">listOrder</code> of 110 will be suggested
+after an AskTopic of a <code class="language-plaintext highlighter-rouge">listOrder</code> of 100, the
 default value). Note that this re-ordering only takes place within each
 group (e.g. suggested topics to ask about or suggested topics to tell
 about). If you wish to change the order in which the groups (say, query,
-ask, tell, etc.) are suggested, you can override the **typeInfo**
-property of the **suggestedTopicLister** to change the order of
-elements.
+ask, tell, etc.) are suggested, you can override the <strong>typeInfo</strong>
+property of the <strong>suggestedTopicLister</strong> to change the order of
+elements.</p>
 
-  
-<span id="conditions"></span>
+<p><span id="conditions"></span></p>
 
-## The Conditions Under Which Topics are Suggested
+<h2 id="the-conditions-under-which-topics-are-suggested">The Conditions Under Which Topics are Suggested</h2>
 
-Defining the name or autoName property on an ActorTopicEntry does not
+<p>Defining the name or autoName property on an ActorTopicEntry does not
 mean it will necessarily be suggested. For a conversational topic to be
-suggested each of the following conditions must also be true:
+suggested each of the following conditions must also be true:</p>
 
-1.  The **isActive** property must be true.
-2.  The **activated** property must be true.
-3.  The **curiosityAroused** property must be true (it is true by
-    default).
-4.  The **curiositySatisfied** method must return nil.
-5.  The ActorTopicEntry in question must be reachable.
+<ol>
+  <li>The <strong>isActive</strong> property must be true.</li>
+  <li>The <strong>activated</strong> property must be true.</li>
+  <li>The <strong>curiosityAroused</strong> property must be true (it is true by
+default).</li>
+  <li>The <strong>curiositySatisfied</strong> method must return nil.</li>
+  <li>The ActorTopicEntry in question must be reachable.</li>
+</ol>
 
-The **curiosityAroused** property is defined in addition to the isActive
+<p>The <strong>curiosityAroused</strong> property is defined in addition to the isActive
 property to allow for topics that you want the player to be able to
-refer to, but you don't want to suggest them yet (because they're not
+refer to, but you don’t want to suggest them yet (because they’re not
 that important to suggest until something else happens). To make use of
 the curiosityAroused property you can either define it declaratively
-(e.g. <span class="code">curiosityAroused =
-me.hasSeen(darkTower)</span>) or set it to nil initially on one or more
-TopicEntries and then use the **\&lt;.arouse key\&gt;** tag to set the
+(e.g. <code class="language-plaintext highlighter-rouge">curiosityAroused =
+me.hasSeen(darkTower)</code>) or set it to nil initially on one or more
+TopicEntries and then use the <strong>&lt;.arouse key&gt;</strong> tag to set the
 curiosityAroused property to true for every ActorTopicEntry belonging to
 the current interlocutor whose convKeys property matches (or contains)
-*key*. You can achieve the same effect by calling arouse(key) on the
-actor (which is what the \&lt;.arouse key\&gt; tag does).
+<em>key</em>. You can achieve the same effect by calling arouse(key) on the
+actor (which is what the &lt;.arouse key&gt; tag does).</p>
 
-The **curiositySatisfied** property allows the topic to stop being
+<p>The <strong>curiositySatisfied</strong> property allows the topic to stop being
 suggested once the player character has seen the response enough times.
-What counts as enough times is defined on the **timesToSuggest**
+What counts as enough times is defined on the <strong>timesToSuggest</strong>
 property. By default this is 1 unless the TopicEntry is an EventList, in
 which case timesToSuggest is the number of items in the eventList
 property (eventList.length). You can easily override these defaults if
 you wish or else set timesToSuggest to nil if you want the TopicEntry to
 carry on being suggested indefinitely. Alternatively, you could override
 curiositySatisfied so that it becomes true according to some other
-condition.
+condition.</p>
 
-If, however, an ActorTopicEntry defines a non-nil keyTopics property,
-then <span class="code">curiositySatisfied</span> works a little
+<p>If, however, an ActorTopicEntry defines a non-nil keyTopics property,
+then <code class="language-plaintext highlighter-rouge">curiositySatisfied</code> works a little
 differently. In this case, the function of the ActorTopicEntry is simply
 to suggest one or more further subtopics, so its curiosity is considered
 satisfied if and only if it has no subtopics to suggest (usually because
-they all have their curiositySatisfied).
+they all have their curiositySatisfied).</p>
 
-An ActorTopicEntry is *<span id="reachable_idx">reachable</span>* if
-using the suggestion (e.g. ASK BOB ABOUT DARK TOWER when told 'you could
-ask Bob about the dark tower' would actually trigger this particular
-TopicEntry. Reasons why it might not do so include:
+<p>An ActorTopicEntry is <em><span id="reachable_idx">reachable</span></em> if
+using the suggestion (e.g. ASK BOB ABOUT DARK TOWER when told ‘you could
+ask Bob about the dark tower’ would actually trigger this particular
+TopicEntry. Reasons why it might not do so include:</p>
 
-- The isActive property is nil.
-- The activated property is nil.
-- The player character does not know about the matchObj.
-- The ActorTopicEntry is masked by another ActorTopicEntry (possibly a
-  DefaultTopic) defined under the current ActorState.
-- The ActorTopicEntry is masked by another ActorTopicEntry with a higher
-  matchScore.
+<ul>
+  <li>The isActive property is nil.</li>
+  <li>The activated property is nil.</li>
+  <li>The player character does not know about the matchObj.</li>
+  <li>The ActorTopicEntry is masked by another ActorTopicEntry (possibly a
+DefaultTopic) defined under the current ActorState.</li>
+  <li>The ActorTopicEntry is masked by another ActorTopicEntry with a higher
+matchScore.</li>
+</ul>
 
-The isReachable() method of ActorTopicEntry attempts to test for all
+<p>The isReachable() method of ActorTopicEntry attempts to test for all
 these conditions (ultimately by testing whether the current
 ActorTopicEntry is currently the best match for its matchObj, if it
-doesn't fail other tests first) to try to ensure that the player is not
-presented with conversation suggestions that are currently unavailable.
+doesn’t fail other tests first) to try to ensure that the player is not
+presented with conversation suggestions that are currently unavailable.</p>
 
-Note that while the five numbered conditions above are jointly
-*necessary* for a topic to be suggested, they may not be jointly
-*sufficient*, since there are other restrictions that game authors can
-place on what topics are suggested at any given moment.
+<p>Note that while the five numbered conditions above are jointly
+<em>necessary</em> for a topic to be suggested, they may not be jointly
+<em>sufficient</em>, since there are other restrictions that game authors can
+place on what topics are suggested at any given moment.</p>
 
-Normally, all the topics that meet the five numbered conditions would be
+<p>Normally, all the topics that meet the five numbered conditions would be
 displayed in response to an explicit TOPICS command (or TALK TO X
 command), but game authors can restrict even this by overriding the
-actor's **suggestionKey** property. If this is set to something other
+actor’s <strong>suggestionKey</strong> property. If this is set to something other
 than nil, then only those TopicEntries whose convKeys property matches
 or contains the suggestionKey (and that also meet all the other
 conditions) will be listed as suggestions. We shall now go on to discuss
 one situation in which this might be useful (although game authors may
-of course think of others).
+of course think of others).</p>
 
-  
-<span id="other"></span>
+<p><span id="other"></span></p>
 
-## TopicEntries that Suggest Other Topics
+<h2 id="topicentries-that-suggest-other-topics">TopicEntries that Suggest Other Topics</h2>
 
-When an ActorTopicEntry matches a player's conversational command, it
+<p>When an ActorTopicEntry matches a player’s conversational command, it
 normally responds by displaying its topicResponse (or by executing its
 topicResponse method). An ActorTopicEntry can instead be defined to
 display a further list of more specific topics. We saw an example of
-this in the previous section:
+this in the previous section:</p>
 
 <div class="cmdline">
 
@@ -248,15 +244,14 @@ this in the previous section:
     You could ask Bob when the tower was built, or why the tower is scary, or tell him
     about your visit, or say you think he's exaggerating.
 
-</div>
+
 
 Setting this up is quite straightfoward. You just define the
 **keyTopics** property on the ActorTopicEntry to contain a key or a list
 of keys (single-quoted strings) that will be matched by the convKeys
 property of the TopicEntries you want to suggest. For example:
 
-<div class="code">
-
+```
     + AskTellTalkTopic @darkTower
         keyTopics = 'dark-tower'
         autoName = true
@@ -270,8 +265,7 @@ property of the TopicEntries you want to suggest. For example:
     ;
 
     ...
-
-&lt;/div&gt;
+```
 
 One potential problem with this is that both the AskTellTalkTopic and
 the topics it suggests would be listed in response to a TOPICS command,
@@ -286,8 +280,7 @@ To implement this scheme you would give all your top-level topics a
 common convKey (such as 'top') and then define that key on the
 **suggestionKey** property of the actor. For example:
 
-<div class="code">
-
+```
     bob: Actor 'Bob; worried; man; him' @store
       ...
       suggestionKey = 'top'
@@ -306,14 +299,13 @@ common convKey (such as 'top') and then define that key on the
         autoName = true    
     ; 
     ... 
-
-&lt;/div&gt;
+```
 
 Note that if you do this, bob's suggestionKey isn't set in stone; it can
 be changed at run-time to anything else (including nil, which removes
 the restriction on what topics to suggest) simply by executing the
-statement <span class="code">bob.suggestionKey = 'another-key'</span> or
-<span class="code">bob.suggestionKey = nil</span>, or equivalently using
+statement `bob.suggestionKey = 'another-key'` or
+`bob.suggestionKey = nil`, or equivalently using
 the tag **\&lt;.sugkey another-key\&gt;** or **\&lt;.sugkey nil\&gt;**.
 
 It should be emphasized once again that there is absolutely no reason to
@@ -338,8 +330,7 @@ defining a top-level suggestionKey on bob, we could make the dark
 tower's subtopics initially inactive and then have the darkTower
 activate them just prior to suggesting them, like this:
 
-<div class="code">
-
+```
     bob: Actor 'Bob; worried; man; him' @store
       ...
       
@@ -359,8 +350,7 @@ activate them just prior to suggesting them, like this:
         activated = nil    
     ; 
     ... 
-
-&lt;/div&gt;
+```
 
 This would cause all the topic entries with 'dark-tower' as one of their
 convKeys to be activated just prior to their being suggested from the
@@ -405,7 +395,7 @@ ActorTopicEntry</a>    
     </span>
 
 </div>
-</q></div></q></div></q></div></div>
+</q></q></q></div>
 
 </main>
 <footer>

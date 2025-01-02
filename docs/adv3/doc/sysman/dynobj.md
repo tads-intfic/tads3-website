@@ -18,7 +18,7 @@ Finalization</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Dynamic Object Creation
 
@@ -211,7 +211,7 @@ garbage collector deletes an object, because deleting a reachable object
 would create a dangling reference - indeed, this is the definition of a
 dangling reference).
 
-</div>
+
 
 ------------------------------------------------------------------------
 

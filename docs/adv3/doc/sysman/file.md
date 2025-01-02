@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # File
 
@@ -199,7 +199,7 @@ indicating which type of error occurred:
   set a safety level that is too restrictive for the requested
   operation.
 
-</div>
+
 
 `openTextResource(*resName*, *charset*?)`  
 `openRawResource(*resName*)`

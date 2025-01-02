@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Input Scripts
 
@@ -298,7 +298,7 @@ file on each run, so no interactive prompt is necessary. Note that
 adding the "overwrite" attribute doesn't *require* the file to exist -
 it merely suppresses the warning if it does.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

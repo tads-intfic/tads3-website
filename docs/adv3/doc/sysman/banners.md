@@ -19,7 +19,7 @@ Function</a>    
 
 </div>
 
-<div class="main">
+
 
 # The Banner Window Display Model
 
@@ -527,7 +527,7 @@ important ways:
   grid windows allow the program to write text at any position within
   the window, and to overwrite text previously displayed.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

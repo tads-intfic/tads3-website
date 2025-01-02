@@ -38,63 +38,60 @@ TIAAction
 
 </div>
 
-<div class="main">
+<h1 id="tiaaction">TIAAction</h1>
 
-# TIAAction
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [tiaaction.t](../tiaaction.t) extension is to allow
+<p>The purpose of the <a href="../tiaaction.t">tiaaction.t</a> extension is to allow
 game authors to define actions involving three objects, such as PUT COIN
 IN SLOT WITH TWEEZERS. Note that you only need this extension if you
 want to define an action involving three physical objects. Actions
 involving two objects and a literal or topic, say, can be defined using
-[other techniques](../../docs/manual/define.html#threeobjects).
+<a href="../../docs/manual/define.html#threeobjects">other techniques</a>.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Objects and Properties
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
 
-In addition to a number of properties intended purely for internal use,
+<p>In addition to a number of properties intended purely for internal use,
 this extension defines the following new classes, objects and
-properties:
+properties:</p>
 
-- *Classes*: **TIAAction**.
+<ul>
+  <li><em>Classes</em>: <strong>TIAAction</strong>.</li>
+</ul>
 
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the tiaaction.t file after the library files but before your
+<p>Include the tiaaction.t file after the library files but before your
 game source files. This will allow you to define actions involving three
 objects. The macros needed to support this are already defined in
-advLite.html for your convenience.
+advLite.html for your convenience.</p>
 
-The third object involved in a three-object command is the **Accessory
-Object**, normally abbreviated to **aobj** (although in many contexts
-the abbreviation **acc** may also be used, since this is what is used by
+<p>The third object involved in a three-object command is the <strong>Accessory
+Object</strong>, normally abbreviated to <strong>aobj</strong> (although in many contexts
+the abbreviation <strong>acc</strong> may also be used, since this is what is used by
 the Mercury parser on which adv3Lite is based). Thus, for example, do
-refer to the accessory object of the current command you'd use
-**gAobj**. To define action handling on an object in its role as
-accessory object you'd use **aobjFor(WhateverAction)**. In a message
-parameter substitution you'd use <span class="code">aobj</span> to refer
-to the accessory object (e.g. <span class="code">{the aobj}</span> or
-<span class="code">{the subj aobj}</span>). In a VerbRule you'd use
-**singleAobj** or **multiAobj** (in practice nearly always the former)
-as the marker for the accessory object in the player's command, and when
-defining a TIAAction you'd use the **DefineTIAAction()** macro. You use
-all these in much the same way as you'd use the dobj and iobj
-equivalents when defining a new TIAction.
+refer to the accessory object of the current command you’d use
+<strong>gAobj</strong>. To define action handling on an object in its role as
+accessory object you’d use <strong>aobjFor(WhateverAction)</strong>. In a message
+parameter substitution you’d use <code class="language-plaintext highlighter-rouge">aobj</code> to refer
+to the accessory object (e.g. <code class="language-plaintext highlighter-rouge">{the aobj}</code> or
+<code class="language-plaintext highlighter-rouge">{the subj aobj}</code>). In a VerbRule you’d use
+<strong>singleAobj</strong> or <strong>multiAobj</strong> (in practice nearly always the former)
+as the marker for the accessory object in the player’s command, and when
+defining a TIAAction you’d use the <strong>DefineTIAAction()</strong> macro. You use
+all these in much the same way as you’d use the dobj and iobj
+equivalents when defining a new TIAction.</p>
 
-This is best explained by means of an example. Suppose we wanted to
+<p>This is best explained by means of an example. Suppose we wanted to
 implement an action that could handle commands of the form PUT COIN IN
-SLOT WITH TWEEZERS. First we'd define the action and its associated
-VerbRule:
+SLOT WITH TWEEZERS. First we’d define the action and its associated
+VerbRule:</p>
 
-<div class="code">
-
-    DefineTIAAction(PutInWith)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineTIAAction(PutInWith)
     ;
 
     VerbRule(PutInWith)
@@ -106,17 +103,14 @@ VerbRule:
             what do you want to put it in with'
     ;
      
+</code></pre></div></div>
 
-</div>
+<p>Next, we’d define the default handling for this new action on the Thing
+class, as normal. In this simple example we’ll assume that PutInWith
+acts much like PutIn, except that by default we can’t use a Thing to put
+other things in with:</p>
 
-Next, we'd define the default handling for this new action on the Thing
-class, as normal. In this simple example we'll assume that PutInWith
-acts much like PutIn, except that by default we can't use a Thing to put
-other things in with:
-
-<div class="code">
-
-     modify Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     modify Thing
         dobjFor(PutInWith) asDobjFor(PutIn)
         iobjFor(PutInWith) asIobjFor(PutIn)
         aobjFor(PutInWith)
@@ -130,16 +124,13 @@ other things in with:
         }
     ;
      
+</code></pre></div></div>
 
-</div>
-
-Finally, we'd probably go on to define the slot, the coin and tweezers
+<p>Finally, we’d probably go on to define the slot, the coin and tweezers
 in such a way that the player has to use the tweezers to put the coin in
-the slot:
+the slot:</p>
 
-<div class="code">
-
-     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
     + coinSlot: Container, Fixture 'coin slot'
         bulkCapacity = 1
             
@@ -185,14 +176,11 @@ the slot:
     ;  
       
      
+</code></pre></div></div>
 
-</div>
-
-This covers most of what you need to know to use this extension. For
+<p>This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
-[tiaaction.t](../tiaaction.t) file.
-
-</div>
+<a href="../tiaaction.t">tiaaction.t</a> file.</p>
 
 <hr />
 

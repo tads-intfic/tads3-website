@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Byte Packing
 
@@ -744,7 +744,7 @@ The ranges for the integer types are as follows:
 
 Code
 
-</div>
+
 
 Description
 

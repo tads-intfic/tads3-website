@@ -19,7 +19,7 @@ Bookshelf</a> <a href="#" class="nav-element current">Adv3 Bookshelf</a>
 
 </div>
 
-<div class="main">
+
 
 # The Books
 
@@ -192,7 +192,7 @@ Workbench Change History</strong></a>. This is a log of changes to the
 HTML TADS user interface, which includes the HTML TADS Interpreter and
 the Workbench development environment on Windows.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

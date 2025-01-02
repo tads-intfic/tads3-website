@@ -15,7 +15,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Introduction
 
@@ -75,7 +75,7 @@ editions: <http://www.tads.org/t3techlist.html>.
 
 *September, 2006*
 
-</div>
+
 
 ------------------------------------------------------------------------
 

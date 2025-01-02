@@ -19,7 +19,7 @@ System</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Creating Dynamic Characters
 
@@ -818,7 +818,7 @@ There are times when you might want to customize group travel so much
 that every move is special. This isn't hard; it's just a matter of
 creating a series of custom state objects, one for each travel action.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

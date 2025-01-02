@@ -18,7 +18,7 @@ Building</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Taking Off
 
@@ -492,7 +492,7 @@ can be used to model inanimate objects. Over the course of the next two
 chapters we'll be looking at how it can be used to model people in your
 game.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

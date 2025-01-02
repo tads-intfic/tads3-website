@@ -19,7 +19,7 @@ Modification and Overriding</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Methods, Functions and Statements
 
@@ -47,7 +47,7 @@ The syntax for defining a function is:
        functionBody
     }
 
-</div>
+
 
 This means that to define a function you start with the function name,
 then put an opening parenthesis, then a list of parameters the function

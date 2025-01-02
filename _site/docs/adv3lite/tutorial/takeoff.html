@@ -38,23 +38,19 @@ Building</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="taking-off">Taking Off</h1>
 
-# Taking Off
-
-Now that we have a bunch of controls in the cockpit and an aircraft on
+<p>Now that we have a bunch of controls in the cockpit and an aircraft on
 the tarmac, we just need to make the plane move and take off. Again
 there are now several ways we could go about this, but one convenient
-way is to use a Scene. To keep things simple we'll have the Scene
+way is to use a Scene. To keep things simple we’ll have the Scene
 triggered by pushing the engine start button. The start of the scene
 will consist of a short cut-scene in which the protagonist taxis the
 plane to the start of the runway, leaving the plane ready for take-off.
-We'll also reset the controls to their starting positions, and close off
-the exit from the plane to the walkway:
+We’ll also reset the controls to their starting positions, and close off
+the exit from the plane to the walkway:</p>
 
-<div class="code">
-
-    takeoff: Scene
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    takeoff: Scene
         startsWhen = (ignitionButton.isOn == true)
         
         whenStarting()
@@ -74,24 +70,23 @@ the exit from the plane to the walkway:
             planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
                 ';
         }
+</code></pre></div></div>
 
-</div>
-
-We'll use the <span class="code">eachTurn()</span> method of the takeoff
-scene to control just about everything else. A scene's
-<span class="code">eachTurn()</span> method is executed every turn the
+<p>We’ll use the <code class="language-plaintext highlighter-rouge">eachTurn()</code> method of the takeoff
+scene to control just about everything else. A scene’s
+<code class="language-plaintext highlighter-rouge">eachTurn()</code> method is executed every turn the
 scene is happening. We can therefore use it to check the state of the
 controls at the end of every turn after the button is pushed and make
 the plane respond accordingly. To do this we need to check how fast the
 plane is travelling, and how far down the runway it has gone. If it goes
-too far it'll go past the end of the runway, presumably with dire
-consequences as it ploughs into whatever lies beyond. We'll define a
-custom <span class="code">distanceTraveled</span> property on the
+too far it’ll go past the end of the runway, presumably with dire
+consequences as it ploughs into whatever lies beyond. We’ll define a
+custom <code class="language-plaintext highlighter-rouge">distanceTraveled</code> property on the
 takeoff scene to keep track of how far the plane has travelled down the
-runway. We can used <span class="code">asi.airspeed</span> to keep track
-of its speed.
+runway. We can used <code class="language-plaintext highlighter-rouge">asi.airspeed</code> to keep track
+of its speed.</p>
 
-The first thing to check for is whether the plane should now take off.
+<p>The first thing to check for is whether the plane should now take off.
 It should do so if the control column has been pulled back and the
 airspeed is sufficient for takeoff; we then display a message describing
 the successful take-off and end the game in victory. If the player
@@ -99,11 +94,9 @@ character pulls back on the stick a little prematurely, then the plane
 starts to take off but then stalls, coming back down with a bump. If the
 player pulls back much too early then nothing much happens until the
 plane has picked up just enough speed to start taking off and then
-stall:
+stall:</p>
 
-<div class="code">
-
-        /* The total distance traveled along the runway */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        /* The total distance traveled along the runway */
         distanceTraveled = 0
         
         eachTurn()
@@ -136,28 +129,25 @@ stall:
                     "The aircraft judders slightly but nothing else happens; it
                     isn't traveling nearly fast enough to take off. ";
             }
+</code></pre></div></div>
 
-</div>
-
-We next need to do some calculations to determine how fast the plane is
-now travelling and how far down the runway it has travelled. There's no
+<p>We next need to do some calculations to determine how fast the plane is
+now travelling and how far down the runway it has travelled. There’s no
 attempt to create equations of motion that exactly model real-world
-physics here; some very rough approximations will do. We'll assume that
-the engines provide thrust that's proportional to the setting of the
-thrust lever, but that there's also some drag proportional to the
+physics here; some very rough approximations will do. We’ll assume that
+the engines provide thrust that’s proportional to the setting of the
+thrust lever, but that there’s also some drag proportional to the
 current speed. We then increase the airspeed in proportion to the net
 thrust. Since in principle this could be negative if the drag exceeds
 the engine thrust (e.g. because the player pulls back the thrust lever
 to zero after setting the plane in motion) we add a test to ensure that
-the airspeed doesn't become negative. We then increment the distance
+the airspeed doesn’t become negative. We then increment the distance
 traveled by the average of the new airspeed and the previous airspeed
-(assuming constant acceleration over the turn). Since this isn't a
-tutorial in applied mathematics, don't worry if these details don't make
-too much sense to you. In terms of code they look like:
+(assuming constant acceleration over the turn). Since this isn’t a
+tutorial in applied mathematics, don’t worry if these details don’t make
+too much sense to you. In terms of code they look like:</p>
 
-<div class="code">
-
-            local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
             
             asi.airspeed += (thrust/100);
             
@@ -165,22 +155,19 @@ too much sense to you. In terms of code they look like:
                 asi.airspeed = 0;
             
             distanceTraveled += ((asi.airspeed + oldSpeed)/2);
+</code></pre></div></div>
 
-</div>
-
-Here we're simply assuming that one turn represents an appropriate unit
-of time. Note the use of the **toInteger()** function to convert the
+<p>Here we’re simply assuming that one turn represents an appropriate unit
+of time. Note the use of the <strong>toInteger()</strong> function to convert the
 current setting of the thrust lever (a string property) into a number we
-can use in calculations.
+can use in calculations.</p>
 
-If we've reached this point in the <span class="code">eachTurn()</span>
-method the plane hasn't taken off yet, so we need to check that it
-hasn't overshot the runway. If it has, then a fatal crash occurs and we
-end the game in death:
+<p>If we’ve reached this point in the <code class="language-plaintext highlighter-rouge">eachTurn()</code>
+method the plane hasn’t taken off yet, so we need to check that it
+hasn’t overshot the runway. If it has, then a fatal crash occurs and we
+end the game in death:</p>
 
-<div class="code">
-
-           /* If we go too far, we run off the end of the runway */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           /* If we go too far, we run off the end of the runway */
             if(distanceTraveled &gt; 500)
             {
                 "The plane reaches the end of the runway, ploughs through the fences
@@ -190,46 +177,42 @@ end the game in death:
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
+</code></pre></div></div>
 
-</div>
-
-The figure of 500 for the length of the runway wasn't arrived at by any
+<p>The figure of 500 for the length of the runway wasn’t arrived at by any
 kind of calculation, by the way; I simply ran the previous code to get
 an idea of how much length of runway was needed to allow the plane to
 take off and then added a safety margin by rounding it up to a nice
-round number.
+round number.</p>
 
-The final check we need to make is on the wheel position. Here we'll
+<p>The final check we need to make is on the wheel position. Here we’ll
 simply assume that turning the wheel while the plane is moving down the
 runway will send it to one side or the other with catastrophic effects,
-although in case the player tries this more than once we'll introduce
-some slight variations into the description of the ensuing catastrophe:
+although in case the player tries this more than once we’ll introduce
+some slight variations into the description of the ensuing catastrophe:</p>
 
-<div class="code">
-
-            /* 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            /* 
              *   If we turn the wheel while the plane is moving along the runway,
              *   the results are likely to be catastrophic.
              */        
             
             if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
             {
-                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;<else>&gt;
-                starboard&lt;<end>&gt; side of the runway &lt;<one of="">&gt;into the path of a
-                taxying airliner &lt;<or>&gt; and smashes into a hangar &lt;<or>&gt; and
-                collides with a stationary airliner &lt;<or>&gt; and runs into a group of
-                sheds &lt;<purely at="" random="">&gt; with predictably disastrous consequences.
+                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
+                starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
+                taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
+                collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
+                sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
                 Fortunately, you won't be around to answer for your incompetence. ";
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-If you've been following the logic of what we've been doing up until now
-at all closely, you'll have noticed that this is the only effect that
+<p>If you’ve been following the logic of what we’ve been doing up until now
+at all closely, you’ll have noticed that this is the only effect that
 turning the wheel can have in the game, which may make it seem a little
-pointless. In a way that's true, but even this most minimalistic
+pointless. In a way that’s true, but even this most minimalistic
 implementation of the cockpit controls needs some means by which the
 aircraft could in theory be steered; the absence of any wheel would
 probably stretch player credulity too far. An alternative would have
@@ -240,15 +223,13 @@ but either of these approaches would rob the player of even more agency
 in controlling the plane than our minimal implementation already does.
 If you feel one of the other approaches would be preferable, however,
 you can always try to implement one or the other of them yourself, using
-the tools we have already covered.
+the tools we have already covered.</p>
 
-The final task for this <span class="code">eachTurn()</span> to perform
-is to provide the player with some feedback on what's happening if
-nothing more dramatic has intervened:
+<p>The final task for this <code class="language-plaintext highlighter-rouge">eachTurn()</code> to perform
+is to provide the player with some feedback on what’s happening if
+nothing more dramatic has intervened:</p>
 
-<div class="code">
-
-            /* 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            /* 
              *   If nothing else dramatic has intervened, report what's happening to
              *   the speed.
              */
@@ -264,22 +245,19 @@ nothing more dramatic has intervened:
                 "The plane is losing speed. ";
         }   
     ;
+</code></pre></div></div>
 
-</div>
-
-Hopefully the logic of this should be reasonably apparent. If the speed
+<p>Hopefully the logic of this should be reasonably apparent. If the speed
 has increased since the previous turn, we select a message depending on
 whether the plane has just started to move or is continuing to move. If
 the speed has decreased we likewise select a message depending on
-whether the plane is still moving or has come to a halt.
+whether the plane is still moving or has come to a halt.</p>
 
-If we now put all the pieces together, the complete definition of the
+<p>If we now put all the pieces together, the complete definition of the
 takeoff scene (which does all the work of responding to the movement of
-the cockpit controls) looks like this:
+the cockpit controls) looks like this:</p>
 
-<div class="code">
-
-    takeoff: Scene
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    takeoff: Scene
         startsWhen = (ignitionButton.isOn == true)
         
         whenStarting()
@@ -344,8 +322,8 @@ the cockpit controls) looks like this:
            
             
             /* The following commented-out lines were for testing purposes only */
-    //         "The aircraft has covered &lt;<distanceTraveled>&gt;m and is now travelling at
-    //        &lt;<asi.airspeed>&gt; knots. ";   
+    //         "The aircraft has covered &lt;&lt;distanceTraveled&gt;&gt;m and is now travelling at
+    //        &lt;&lt;asi.airspeed&gt;&gt; knots. ";   
             
             
             /* If we go too far, we run off the end of the runway */
@@ -367,11 +345,11 @@ the cockpit controls) looks like this:
             
             if(wheel.angle != 0 &amp;&amp; asi.airspeed &gt; 0)
             {
-                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;<else>&gt;
-                starboard&lt;<end>&gt; side of the runway &lt;<one of="">&gt;into the path of a
-                taxying airliner &lt;<or>&gt; and smashes into a hangar &lt;<or>&gt; and
-                collides with a stationary airliner &lt;<or>&gt; and runs into a group of
-                sheds &lt;<purely at="" random="">&gt; with predictably disastrous consequences.
+                "The plane lurches off the &lt;&lt;if wheel.angle &lt; 0&gt;&gt; port &lt;&lt;else&gt;&gt;
+                starboard&lt;&lt;end&gt;&gt; side of the runway &lt;&lt;one of&gt;&gt;into the path of a
+                taxying airliner &lt;&lt;or&gt;&gt; and smashes into a hangar &lt;&lt;or&gt;&gt; and
+                collides with a stationary airliner &lt;&lt;or&gt;&gt; and runs into a group of
+                sheds &lt;&lt;purely at random&gt;&gt; with predictably disastrous consequences.
                 Fortunately, you won't be around to answer for your incompetence. ";
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
@@ -393,26 +371,23 @@ the cockpit controls) looks like this:
                 "The plane is losing speed. ";
         }   
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-There is quite a lot happening on this Scene object, but it's probably
+<p>There is quite a lot happening on this Scene object, but it’s probably
 easier to co-ordinate it all there rather than distribute the effects of
-manipulating the controls during takeoff over the various controls.
+manipulating the controls during takeoff over the various controls.</p>
 
-## The Windscreen
+<h2 id="the-windscreen">The Windscreen</h2>
 
-The one object in the cockpit that remains totally unimplemented is the
+<p>The one object in the cockpit that remains totally unimplemented is the
 windscreen. Really all the player needs to do with it is EXAMINE it or
 LOOK THROUGH IT, and both actions may as well do the same thing. The
 complication is that the view through the windscreen will change
-depending on what's happening, so perhaps the easiest approach is to
-make the windscreen's <span class="code">desc</span> property a method
-that calls a separate method when the takeoff scene is in progress:
+depending on what’s happening, so perhaps the easiest approach is to
+make the windscreen’s <code class="language-plaintext highlighter-rouge">desc</code> property a method
+that calls a separate method when the takeoff scene is in progress:</p>
 
-<div class="code">
-
-    + windscreen: Fixture 'windscreen;; window windshield'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + windscreen: Fixture 'windscreen;; window windshield'
         desc()
         {
             if(takeoff.isHappening)
@@ -429,40 +404,37 @@ that calls a separate method when the takeoff scene is in progress:
             
             "It's now quite dark outside, but you can see the landing lights marking
             the course of the runway &lt;&lt;if asi.airspeed == 0&gt;&gt;stationary on either
-            side&lt;&lt;else if asi.airspeed &lt; 30&gt;&gt; moving slowly past&lt;<else>&gt; rushing
-            past&lt;<end>&gt;. &lt;&lt;if dt &lt; 10&gt;&gt; Virtually the whole length of the runway
+            side&lt;&lt;else if asi.airspeed &lt; 30&gt;&gt; moving slowly past&lt;&lt;else&gt;&gt; rushing
+            past&lt;&lt;end&gt;&gt;. &lt;&lt;if dt &lt; 10&gt;&gt; Virtually the whole length of the runway
             stretches ahead of you&lt;&lt;else if dt &lt; 33&gt;&gt; Most of the runway still lies
             ahead&lt;&lt; else if dt &lt; 67&gt;&gt; So far as you can judge only about half the
             runway still lies ahead&lt;&lt;else if dt &lt; 85&gt;&gt; You're starting to run out of
-            runway&lt;<else>&gt; You're nearly at the end of the runway&lt;<end>&gt;. ";
+            runway&lt;&lt;else&gt;&gt; You're nearly at the end of the runway&lt;&lt;end&gt;&gt;. ";
         }
         
         
         dobjFor(LookThrough) asDobjFor(Examine)
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Defining <span class="code">takeoff.distanceTraveled/5</span> at the
-start of the <span class="code">takeoffDesc</span> method not only saves
+<p>Defining <code class="language-plaintext highlighter-rouge">takeoff.distanceTraveled/5</code> at the
+start of the <code class="language-plaintext highlighter-rouge">takeoffDesc</code> method not only saves
 us a lot of repetitive typing of an awkwardly long name, it turns dt
 into a percentage of the runway traversed (through dividing by 5), which
 makes it a bit easier to decide at what points to change the text
-describing how much runway is left.
+describing how much runway is left.</p>
 
-Unfortunately we've now created another little problem for ourselves.
-Although we've kept the descriptions of what can be seen through the
+<p>Unfortunately we’ve now created another little problem for ourselves.
+Although we’ve kept the descriptions of what can be seen through the
 windscreen as minimalist as possible, they do mention a couple of
 objects that players might try to examine, so for the sake of
 completeness we need to implement those two objects and then swap one
 for the other at the start of the takeoff scene. This code might come
 directly after the end of the windscreen object, assuming that the
-windscreen is the last of the cockpit contents objects you've defined in
-your source:
+windscreen is the last of the cockpit contents objects you’ve defined in
+your source:</p>
 
-<div class="code">
-
-    + terminalBuilding: Distant 'terminal building; shabby white large; structure'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + terminalBuilding: Distant 'terminal building; shabby white large; structure'
         "It's a large white structure just off to port. In the fading light you
         can't really make out how shabby it actually looks. "
     ;
@@ -495,44 +467,41 @@ your source:
             terminalBuilding.moveInto(nil);
         }
         ...
+</code></pre></div></div>
 
-</div>
-
-By making the <span class="code">terminalBuilding</span> and
-<span class="code">landingLights</span> both of the
-<span class="code">Distant</span> class, we ensure that all the player
+<p>By making the <code class="language-plaintext highlighter-rouge">terminalBuilding</code> and
+<code class="language-plaintext highlighter-rouge">landingLights</code> both of the
+<code class="language-plaintext highlighter-rouge">Distant</code> class, we ensure that all the player
 can do with them is EXAMINE them. Any other command will be met with a
-response that they're too far away.
+response that they’re too far away.</p>
 
-## Conclusion
+<h2 id="conclusion">Conclusion</h2>
 
-I'm not suggesting that what we've done here is necessarily the best way
-to implement an aircraft cockpit in a piece of IF, although it's
+<p>I’m not suggesting that what we’ve done here is necessarily the best way
+to implement an aircraft cockpit in a piece of IF, although it’s
 probably adequate for our Airport game. The points to pick up on here
 are not the details of this particular implementation, but the library
 tools and features used. The main lesson of this chapter has been how to
-customize responses to actions and how to create new actions. What we've
+customize responses to actions and how to create new actions. What we’ve
 covered is really only an introduction to these topics, but it should be
 enough to get you started. For the full story on actions you will need
-to study the complete [Actions](../manual/action.html) part of the
-*adv3Lite Library Manual*. In particular, remember that the [Action
-Reference](../manual/actionref.html) is your friend when you want to know
-about the actions defined in the library.
+to study the complete <a href="../manual/action.html">Actions</a> part of the
+<em>adv3Lite Library Manual</em>. In particular, remember that the <a href="../manual/actionref.html">Action
+Reference</a> is your friend when you want to know
+about the actions defined in the library.</p>
 
-In the final section of this chapter we also illustrated how a Scene
+<p>In the final section of this chapter we also illustrated how a Scene
 might provide a convenient way of further customising responses to
 actions, especially where several different objects may be interacting
 so that it could become quite complex and messy to write the code
-directly in those object's action-handling routines.
+directly in those object’s action-handling routines.</p>
 
-Up until now we have been almost exclusively concerned with how adv3Lite
+<p>Up until now we have been almost exclusively concerned with how adv3Lite
 can be used to model inanimate objects. Over the course of the next two
-chapters we'll be looking at how it can be used to model people in your
-game.
+chapters we’ll be looking at how it can be used to model people in your
+game.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -545,7 +514,6 @@ Actions</a>    
 Building</a>     </span>
 
 </div>
-</end></else></end></else></div></purely></or></or></or></one></end></else></asi.airspeed></distanceTraveled></div></purely></or></or></or></one></end></else></div></div>
 
 </main>
 <footer>

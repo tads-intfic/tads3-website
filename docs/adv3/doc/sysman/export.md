@@ -19,7 +19,7 @@ Codes</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Exported Symbols
 
@@ -59,7 +59,7 @@ To export a symbol, you use the export statement.
 
     export symbol [ 'externalName' ]  ;
 
-</div>
+
 
 The <span class="synPar">symbol</span> is the object or property name
 you wish to export. The <span class="synPar">externalName</span>, if

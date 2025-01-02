@@ -38,38 +38,34 @@
 
 </div>
 
-<div class="main">
+<h1 id="doors-and-locks">Doors and Locks</h1>
 
-# Doors and Locks
-
-In a couple of places the room descriptions above mention a locked door.
+<p>In a couple of places the room descriptions above mention a locked door.
 You might also expect to find some doors aboard the plane: at least
 between the rear of the plane and the bathroom, and probably between the
-front of the plane and the cockpit as well. In the present section we'll
+front of the plane and the cockpit as well. In the present section we’ll
 see how to go about implementing doors and locks, and add the relevant
-ones to our game map.
+ones to our game map.</p>
 
-## The Maintenance Room Door
+<h2 id="the-maintenance-room-door">The Maintenance Room Door</h2>
 
-We'll start with the door to the Maintenance Room, since this is the
+<p>We’ll start with the door to the Maintenance Room, since this is the
 most common or standard case: a door that can be locked or unlocked
-using an ordinary key. We'll start by defining the door, and then add
-the lock.
+using an ordinary key. We’ll start by defining the door, and then add
+the lock.</p>
 
-In adv3Lite a door is actually composed of two objects, each
+<p>In adv3Lite a door is actually composed of two objects, each
 representing one side of the door (apart from anything else, this makes
 it easy to make one side different from the other). Each side of the
 door is placed in the room in which is located, and connected to the
-other side of the door via its <span class="code">otherSide</span>
+other side of the door via its <code class="language-plaintext highlighter-rouge">otherSide</code>
 property. Since a Door is yet another TravelConnector (albeit a slightly
 unusual one) we also follow the usual step of pointing the appropriate
 direction property of the relevant room to the door through which it
-leads. This should become clear with the particular example we're
-implemented here:
+leads. This should become clear with the particular example we’re
+implemented here:</p>
 
-<div class="code">
-
-    gateArea: Room 'Gate Area' 'gate area'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gateArea: Room 'Gate Area' 'gate area'
         "The ways to Gates 1, 2 and 3 are signposted to the northwest, north and
         northeast respectively, while a display board mounted high up on the wall
         indicates what flights are boarding and departing where and when.
@@ -85,8 +81,8 @@ implemented here:
 
 
     + maintenanceRoomDoor: Door 'metal door'
-        "It's marked <q>Personal de Mantenimiento S&oacute;lo</q>, and &lt;<if isOpen="">&gt;
-        is currently open&lt;<else>&gt; looks firmly closed&lt;<end>&gt;. "
+        "It's marked &lt;q&gt;Personal de Mantenimiento S&amp;oacute;lo&lt;/q&gt;, and &lt;&lt;if isOpen&gt;&gt;
+        is currently open&lt;&lt;else&gt;&gt; looks firmly closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = mrDoorOut
     ;
@@ -100,68 +96,67 @@ implemented here:
     ;
 
     + mrDoorOut: Door 'metal door; plain'
-        "It's just a plain metal door, currently &lt;<if isOpen="">&gt; open&lt;<else>&gt;
-        closed&lt;<end>&gt;. "
+        "It's just a plain metal door, currently &lt;&lt;if isOpen&gt;&gt; open&lt;&lt;else&gt;&gt;
+        closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = maintenanceRoomDoor
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Note that we handle the description of whether the doors are open or
+<p>Note that we handle the description of whether the doors are open or
 closed manually, via embedded expressions and the
-<span class="code">isOpen</span> property (which, as you might expect,
-is true if the door is open and nil if the door is closed). You *can*
+<code class="language-plaintext highlighter-rouge">isOpen</code> property (which, as you might expect,
+is true if the door is open and nil if the door is closed). You <em>can</em>
 have the game do this for you automatically by overriding
-<span class="code">openStatusReportable</span> to be true (either on the
+<code class="language-plaintext highlighter-rouge">openStatusReportable</code> to be true (either on the
 Door class or on individual doors), but then it can be awkward to write
 descriptions of doors that read naturally (unless all you want the
-player to see is "The door is open/closed"), so it's generally better to
-handle this yourself to get the effect you want.
+player to see is “The door is open/closed”), so it’s generally better to
+handle this yourself to get the effect you want.</p>
 
-Make the changes in gatearea.t and then try compiling and running the
+<p>Make the changes in gatearea.t and then try compiling and running the
 game and try out the door. You should find that it automatically opens
-for you if you try to go through it when closed (it's rather annoying to
+for you if you try to go through it when closed (it’s rather annoying to
 players to be told they need to do something as basic as opening a door
 before going through it, so the library handles it for them via an
-*implied action*; this makes for a smoother playing experience). You
+<em>implied action</em>; this makes for a smoother playing experience). You
 should also find that the game automatically keeps both sides of the
 door in sync for you: when one side of the door is opened, both are
-opened, and when one is closed, both are closed.
+opened, and when one is closed, both are closed.</p>
 
-But this door is meant to be *lockable*. You might think that we could
-make it so by defining <span class="code">isLockable = true</span> on
-it, but in fact this won't work. Lockability isn't just a binary
-true/false state, since even if something is lockable there's the
+<p>But this door is meant to be <em>lockable</em>. You might think that we could
+make it so by defining <code class="language-plaintext highlighter-rouge">isLockable = true</code> on
+it, but in fact this won’t work. Lockability isn’t just a binary
+true/false state, since even if something is lockable there’s the
 question of the locking mechanism involved. So instead of using an
-isLockable property we use a **lockability** property, which can take
-one of four values:
+isLockable property we use a <strong>lockability</strong> property, which can take
+one of four values:</p>
 
-- **notLockable** This object can't be locked or unlocked (the default).
-- **lockableWithoutKey** This object can be locked and unlocked, but you
-  don't need a key to do it (because the locking mechanism is a simple
-  paddle, knob or bolt).
-- **lockableWithKey** This object can be locked and unlocked with a key.
-- **indirectLockable** This object can be locked and unlocked, but via
-  some other mechanism (perhaps you have to pull a lever or press a
-  switch somewhere, or perhaps you need to enter a combination on a
-  keypad).
+<ul>
+  <li><strong>notLockable</strong> This object can’t be locked or unlocked (the default).</li>
+  <li><strong>lockableWithoutKey</strong> This object can be locked and unlocked, but you
+don’t need a key to do it (because the locking mechanism is a simple
+paddle, knob or bolt).</li>
+  <li><strong>lockableWithKey</strong> This object can be locked and unlocked with a key.</li>
+  <li><strong>indirectLockable</strong> This object can be locked and unlocked, but via
+some other mechanism (perhaps you have to pull a lever or press a
+switch somewhere, or perhaps you need to enter a combination on a
+keypad).</li>
+</ul>
 
-Note that you don't have to define the same locking mechanism on both
-sides of a door. It's perfectly in order, say, for the outside of a
+<p>Note that you don’t have to define the same locking mechanism on both
+sides of a door. It’s perfectly in order, say, for the outside of a
 front door to be lockableWithKey and the inside to be
 lockableWithoutKey. Note also that as well as being defined on doors,
-lockability can be defined on openable containers (a strongbox, say).
+lockability can be defined on openable containers (a strongbox, say).</p>
 
-Clearly, we want the maintenance room door to be lockableWithKey. We
+<p>Clearly, we want the maintenance room door to be lockableWithKey. We
 also want it to start out locked. We therefore need to make the
-following changes:
+following changes:</p>
 
-<div class="code">
-
-    + maintenanceRoomDoor: Door 'metal door'
-        "It's marked <q>Personal de Mantenimiento S&oacute;lo</q>, and &lt;<if isOpen="">&gt;
-        is currently open&lt;<else>&gt; looks firmly closed&lt;<end>&gt;. "
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + maintenanceRoomDoor: Door 'metal door'
+        "It's marked &lt;q&gt;Personal de Mantenimiento S&amp;oacute;lo&lt;/q&gt;, and &lt;&lt;if isOpen&gt;&gt;
+        is currently open&lt;&lt;else&gt;&gt; looks firmly closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = mrDoorOut
         lockability = lockableWithKey
@@ -171,80 +166,74 @@ following changes:
     ...
 
     + mrDoorOut: Door 'metal door; plain'
-        "It's just a plain metal door, currently &lt;<if isOpen="">&gt; open&lt;<else>&gt;
-        closed&lt;<end>&gt;. "
+        "It's just a plain metal door, currently &lt;&lt;if isOpen&gt;&gt; open&lt;&lt;else&gt;&gt;
+        closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = maintenanceRoomDoor    
         lockability = lockableWithKey
         isLocked = true
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-That's all very well, but we still haven't defined *which* key or keys
+<p>That’s all very well, but we still haven’t defined <em>which</em> key or keys
 can be used to unlock this door. In fact, in adv3Lite, we have to do it
 the other way round: we need to tell the key which things it can lock
-and unlock. We do that by assigning anything that's going to act as a
-key to the Key class, and defining a couple of properties on it thus:
+and unlock. We do that by assigning anything that’s going to act as a
+key to the Key class, and defining a couple of properties on it thus:</p>
 
-<div class="code">
-
-    + brassKey: Key 'small brass key; yale'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + brassKey: Key 'small brass key; yale'
         "It's just like all the other yale keys you've ever seen. "    
         
         actualLockList = [maintenanceRoomDoor, mrDoorOut]
         plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
     ;
+</code></pre></div></div>
 
-</div>
-
-The **actualLockList** property contains a list of the objects this key
+<p>The <strong>actualLockList</strong> property contains a list of the objects this key
 in fact locks and unlocks. Note that if we want it to work on both sides
-of the door, we have to list both sides of the door.
+of the door, we have to list both sides of the door.</p>
 
-The **plausibleLockList** property lists the objects this key looks as
-if it might be able to lock and unlock. Since it's described as a Yale
+<p>The <strong>plausibleLockList</strong> property lists the objects this key looks as
+if it might be able to lock and unlock. Since it’s described as a Yale
 key that looks much like any other, the player character would
-presumably assume that it *might* work in any Yale lock. Although we
-haven't explicitly said so, presumably there must be a Yale lock on the
-maintenance room door (otherwise the key couldn't work on it). Other
+presumably assume that it <em>might</em> work in any Yale lock. Although we
+haven’t explicitly said so, presumably there must be a Yale lock on the
+maintenance room door (otherwise the key couldn’t work on it). Other
 things being equal, then, the player character is likely to assume that
 this key is at least worth trying on the maintenance room door. The
 purpose of this is if the player simply types UNLOCK DOOR (without
 specifying any key) or UNLOCK DOOR WITH KEY (without being very specific
 about which key), the parser can make an intelligent guess about which
-key to try using. Although this isn't actually essential, it does once
-again make for a smoother playing experience.
+key to try using. Although this isn’t actually essential, it does once
+again make for a smoother playing experience.</p>
 
-Once a key has been tried and found to work, the key will "remember"
+<p>Once a key has been tried and found to work, the key will “remember”
 what it works on, so the parser can make an even better choice. You can
-find the full story on [keys](../manual/key.html) in the *adv3Lite
-Library Manual*.
+find the full story on <a href="../manual/key.html">keys</a> in the <em>adv3Lite
+Library Manual</em>.</p>
 
-Now try compiling and running the game once more and see if you can gain
-access to the maintenance room.
+<p>Now try compiling and running the game once more and see if you can gain
+access to the maintenance room.</p>
 
-<span id="planedoors"></span>
+<p><span id="planedoors"></span></p>
 
-## Doors aboard the Plane
+<h2 id="doors-aboard-the-plane">Doors aboard the Plane</h2>
 
-We might expect the two doors we need to implement aboard the plane
+<p>We might expect the two doors we need to implement aboard the plane
 (leading into the cockpit and into the bathroom) to be broadly similar.
 Within the cockpit or the bathroom one should be able to lock and unlock
 the door without a key (using a knob or bolt or paddle). One probably
-wouldn't be able to lock or unlock these doors from the other side. So
+wouldn’t be able to lock or unlock these doors from the other side. So
 in each case we want one side of the door to have a lockability of
 lockableWithoutKey, and the other to be indirectLockable with a message
 explaining that the door can only be locked and unlocked from the other
 side (this is probably better than making it notLockable, which might
 result in a potentially misleading response). To save ourselves a bit of
 repetitious work we can therefore define a couple of custom classes that
-can be used to implement both pairs of doors:
+can be used to implement both pairs of doors:</p>
 
-<div class="code">
-
-    class PlaneDoor: Door 
-        desc = "It's &lt;<if isOpen="">&gt;open&lt;<else>&gt;closed&lt;<end>&gt;. "
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class PlaneDoor: Door 
+        desc = "It's &lt;&lt;if isOpen&gt;&gt;open&lt;&lt;else&gt;&gt;closed&lt;&lt;end&gt;&gt;. "
         lockability = indirectLockable
         indirectLockableMsg = 'It looks like this door can only be locked and
             unlocked from the other side. '
@@ -253,29 +242,26 @@ can be used to implement both pairs of doors:
     ;
 
     class LockablePlaneDoor: Door
-        desc = "It's currently &lt;<if isOpen="">&gt;open&lt;<else>&gt;closed and &lt;<if isLocked="">&gt;
-            locked&lt;<else>&gt;unlocked&lt;<end>&gt;&lt;<end>&gt;. "
+        desc = "It's currently &lt;&lt;if isOpen&gt;&gt;open&lt;&lt;else&gt;&gt;closed and &lt;&lt;if isLocked&gt;&gt;
+            locked&lt;&lt;else&gt;&gt;unlocked&lt;&lt;end&gt;&gt;&lt;&lt;end&gt;&gt;. "
         lockability = lockableWithoutKey
         
         isLocked = nil
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Note the use of the nested \&lt;\&lt;if \&gt;\&gt; on the LockablePlaneDoor class.
-If the door is open there's not a lot of point in reporting whether it's
+<p>Note the use of the nested &lt;&lt;if &gt;&gt; on the LockablePlaneDoor class.
+If the door is open there’s not a lot of point in reporting whether it’s
 locked or unlocked. Note also that we explicitly defined
-<span class="code">isLocked = nil</span> on both classes of Door; this
+<code class="language-plaintext highlighter-rouge">isLocked = nil</code> on both classes of Door; this
 is because things that are lockable start out locked by default, but we
 want the doors aboard the plane to start out unlocked, otherwise the
-game won't be winnable.
+game won’t be winnable.</p>
 
-Armed with these class defintions we can now implement the doors aboard
-the plane as follows:
+<p>Armed with these class defintions we can now implement the doors aboard
+the plane as follows:</p>
 
-<div class="code">
-
-    cockpit: Room 'Cockpit' 'cockpit'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cockpit: Room 'Cockpit' 'cockpit'
         
         aft = cabinDoor
         south asExit(aft)
@@ -291,7 +277,7 @@ the plane as follows:
     planeFront: Room 'Front of Plane' 'front[n] of the plane;;airplane aeroplane'
         "The main ailse comes to an end at the port exit of the plane, but continues
         aft past the seating. A little further forward is a door that &lt;&lt;unless
-          me.hasSeen(cockpit)&gt;&gt;presumably&lt;<end>&gt; leads into the cockpit. "
+          me.hasSeen(cockpit)&gt;&gt;presumably&lt;&lt;end&gt;&gt; leads into the cockpit. "
         
         fore = cockpitDoor
         north asExit(fore)
@@ -338,24 +324,21 @@ the plane as follows:
     + bathroomDoorInside: LockablePlaneDoor 'cabin door'
         otherSide = bathroomDoor
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
+<p>If you compile and run the game now, after making these changes, you
+should be able to try these doors out.</p>
 
-If you compile and run the game now, after making these changes, you
-should be able to try these doors out.
+<h2 id="the-door-to-the-security-area">The Door to the Security Area</h2>
 
-## The Door to the Security Area
-
-Finally, we need to implement the door between the Concourse and the
+<p>Finally, we need to implement the door between the Concourse and the
 Security Area. Since this is unlocked by an ID card placed in a slot, it
 might seem a case where we should make the door indirectLockable. On the
 other hand, it would not be unreasonable for the player to try to UNLOCK
 DOOR WITH CARD, so we shall instead make it lockableWithKey, making the
-IDCard the appropriate key:
+IDCard the appropriate key:</p>
 
-<div class="code">
-
-    ++ IDcard: Key 'an ID Card; identification poor; photo'     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ IDcard: Key 'an ID Card; identification poor; photo'     
         "According to what's on the front it apparently belongs to one Antonio
         Velaquez. Fortunately the accompanying photo is so poor it could be of
         almost anyone, even you. A magnetic stripe runs down the back. "
@@ -380,24 +363,21 @@ IDCard the appropriate key:
     ;
 
     + securityDoor: Door 'door'
-        "It's clearly marked PRIVADO and is &lt;<if isOpen="">&gt; currently open&lt;<else>&gt;
-        firmly closed&lt;<end>&gt;. "
+        "It's clearly marked PRIVADO and is &lt;&lt;if isOpen&gt;&gt; currently open&lt;&lt;else&gt;&gt;
+        firmly closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = concourseDoor
         
         lockability = lockableWithKey    
         isLocked = true    
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-The other side of this door can just be a simple door, since we'll
+<p>The other side of this door can just be a simple door, since we’ll
 assume that no special steps ever need be taken to lock it and unlock it
-from the Security Area side:
+from the Security Area side:</p>
 
-<div class="code">
-
-    securityArea: Room 'Security Area' 'security area'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    securityArea: Room 'Security Area' 'security area'
         "This somewhat bare room seems to be lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
         door to the east. "
@@ -410,89 +390,80 @@ from the Security Area side:
     ;
 
     + concourseDoor: Door 'door'
-        "It's currently &lt;<if isOpen="">&gt;open &lt;<else>&gt;closed&lt;<end>&gt;. "
+        "It's currently &lt;&lt;if isOpen&gt;&gt;open &lt;&lt;else&gt;&gt;closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = securityDoor
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-This will work well enough if the player types UNLOCK DOOR WITH CARD,
+<p>This will work well enough if the player types UNLOCK DOOR WITH CARD,
 but not so well if the equally plausible PUT CARD IN SLOT is used.
 Probably the best way to deal with that is to intercept PUT CARD IN SLOT
-and turn it into UNLOCK DOOR WITH KEY by using a Doer:
+and turn it into UNLOCK DOOR WITH KEY by using a Doer:</p>
 
-<div class="code">
-
-    Doer 'put IDcard in cardslot'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'put IDcard in cardslot'
         execAction(c)
         {
             doInstead(UnlockWith, securityDoor, IDcard);
         }
     ;
+</code></pre></div></div>
 
-</div>
-
-If you recall our previous use of Doers you should probably recognize
-that this means "If the player's command matches PUT IDcard IN cardslot,
+<p>If you recall our previous use of Doers you should probably recognize
+that this means “If the player’s command matches PUT IDcard IN cardslot,
 then redirect the command to use the UnlockWith action, with
 securityDoor as the direct object and IDCard as the indirect object (in
-other words UNLOCK securityDoor WITH IDCard)."
+other words UNLOCK securityDoor WITH IDCard).”</p>
 
-We also want to make it clear to the player that the ID Card is the only
+<p>We also want to make it clear to the player that the ID Card is the only
 thing that should be put in the slot, which we can do by customizing the
-cannotPutInMsg on the cardSlot object:
+cannotPutInMsg on the cardSlot object:</p>
 
-<div class="code">
-
-    + cardslot: Fixture 'card slot'  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cardslot: Fixture 'card slot'  
         "The slot appears to accept special ID cards with magnetic encoding. If you
         had an appropriate ID card, you could put it in the slot to open the door. "
         
         cannotPutInMsg = '{The subj dobj} {does}n\'t look as if {he dobj}{\'s} meant
             to fit in there. '
     ;
+</code></pre></div></div>
 
-</div>
-
-If you recompile and run this game you should be able to check that it
+<p>If you recompile and run this game you should be able to check that it
 all works as expected; at least you could if you get the IDCard through
-the metal detector to try it on the security door, but since we haven't
+the metal detector to try it on the security door, but since we haven’t
 yet implemented a way of disabling the metal detector it may seem that
-we're a bit stuck. Fear not; help is at hand! If you compile your game
-for debugging (the default in Workbench; use the **-d** option if
+we’re a bit stuck. Fear not; help is at hand! If you compile your game
+for debugging (the default in Workbench; use the <strong>-d</strong> option if
 compiling using t3Make from the command line) you get a number of
 debugging commands for free. If you arrive outside the security room
 door and type PURLOIN CARD (which you can abbreviate to PN CARD) you
 should find the ID card pops into your hand (or rather, the player
-character's hand) so you can try it out. Another useful debugging
+character’s hand) so you can try it out. Another useful debugging
 command is GONEAR (which can be abbreviated to GN) which you can use to
-jump around the map, e.g. GN BATHROOM. There's also an EVAL command
+jump around the map, e.g. GN BATHROOM. There’s also an EVAL command
 which can be used to evaluate any expression you like, within reason;
 e.g. EVAL me.location would tell you the current location of the player
 character, while EVAL securityDoor.makeLocked(nil) would magically
-unlock the security door (use with care!). Obviously you don't want your
+unlock the security door (use with care!). Obviously you don’t want your
 players to have access to these commands, so when you come to compile
-your game for release you should use the 'Compile for Release' option in
-Workbench, and not use the <span class="code">-d</span> option when
-compiling from the command line. For further information on [debugging
-commands](../manual/debug.html), consult the *adv3Lite Library Manual*.
+your game for release you should use the ‘Compile for Release’ option in
+Workbench, and not use the <code class="language-plaintext highlighter-rouge">-d</code> option when
+compiling from the command line. For further information on <a href="../manual/debug.html">debugging
+commands</a>, consult the <em>adv3Lite Library Manual</em>.</p>
 
-So, try running the game and using the PURLOIN command to get hold of
-the ID card (after you've passed through the metal detector!), and then
-try it on the security door.
+<p>So, try running the game and using the PURLOIN command to get hold of
+the ID card (after you’ve passed through the metal detector!), and then
+try it on the security door.</p>
 
-There are a couple of further refinements we could implement on the
+<p>There are a couple of further refinements we could implement on the
 security door. We might expect unlocking the door with the card to open
 it, or at least make it pop open a fraction, and closing the door to
 lock it. We can implement these refinements by overriding the makeOpen()
-and makeLocked() method of the door like so:
+and makeLocked() method of the door like so:</p>
 
-<div class="code">
-
-    + securityDoor: Door 'door'
-        "It's clearly marked PRIVADO and is &lt;<if isOpen="">&gt; currently open&lt;<else>&gt;
-        firmly closed&lt;<end>&gt;. "
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + securityDoor: Door 'door'
+        "It's clearly marked PRIVADO and is &lt;&lt;if isOpen&gt;&gt; currently open&lt;&lt;else&gt;&gt;
+        firmly closed&lt;&lt;end&gt;&gt;. "
         
         otherSide = concourseDoor
         
@@ -521,95 +492,89 @@ and makeLocked() method of the door like so:
             
         }
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-The messages that we've just added would look a bit awkward if they
+<p>The messages that we’ve just added would look a bit awkward if they
 appeared alongside the default messages we get for unlocking and closing
-a door, but if you try the door out now you'll find that these are no
-longer displayed; the library assumes that since you're displaying your
-own message you don't want its default one as well. This is always the
+a door, but if you try the door out now you’ll find that these are no
+longer displayed; the library assumes that since you’re displaying your
+own message you don’t want its default one as well. This is always the
 case when a default message is produced at the
-<span class="code">report()</span> stage of an action, a point we shall
-return to in more detail in a later chapter. Finally, note that we've
-avoided a potential "deadly embrace" in which our overridden versions of
-<span class="code">makeOpen(stat)</span> and
-<span class="code">makeLocked(stat)</span> keep on calling each other
+<code class="language-plaintext highlighter-rouge">report()</code> stage of an action, a point we shall
+return to in more detail in a later chapter. Finally, note that we’ve
+avoided a potential “deadly embrace” in which our overridden versions of
+<code class="language-plaintext highlighter-rouge">makeOpen(stat)</code> and
+<code class="language-plaintext highlighter-rouge">makeLocked(stat)</code> keep on calling each other
 for all eternity, since one only calls the other when
-<span class="code">stat</span> is nil, and then always passes the value
-true to the <span class="code">stat</span> parameter of the other. Note
-also that our custom code on <span class="code">makeOpen(stat)</span>
-isn't used when the current action is an implicit one; this prevents the
+<code class="language-plaintext highlighter-rouge">stat</code> is nil, and then always passes the value
+true to the <code class="language-plaintext highlighter-rouge">stat</code> parameter of the other. Note
+also that our custom code on <code class="language-plaintext highlighter-rouge">makeOpen(stat)</code>
+isn’t used when the current action is an implicit one; this prevents the
 mess that would otherwise result when the door was implicitly closed as
-part of a LOCK action.
+part of a LOCK action.</p>
 
-We can improve our implementation of this self-locking door (one that
+<p>We can improve our implementation of this self-locking door (one that
 locks itself when closed) by using a Doer to redirect the LOCK action to
-a CLOSE action:
+a CLOSE action:</p>
 
-<div class="code">
-
-    Doer 'lock securityDoor; lock securityDoor with IDcard'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'lock securityDoor; lock securityDoor with IDcard'
         execAction(c)
         {
             doInstead(Close, securityDoor);
         }    
     ;
+</code></pre></div></div>
 
-</div>
-
-Note that some care is needed in choosing where to place such a
+<p>Note that some care is needed in choosing where to place such a
 definition in your source code. In particular, you need to avoid putting
 it somewhere were it might disrupt the containment hierarchy.In other
-words, don't put a Doer before any object whose location is defined
-using the + syntax, since you don't want to locate the object in the
-Doer. It's safest to define Doers either at the start or end of your
+words, don’t put a Doer before any object whose location is defined
+using the + syntax, since you don’t want to locate the object in the
+Doer. It’s safest to define Doers either at the start or end of your
 source file or in a separate source file altogether, well clear of the
-definitions of Rooms and physical objects in your game.
+definitions of Rooms and physical objects in your game.</p>
 
-  
+<h2 id="reprise">Reprise</h2>
 
-## Reprise
-
-In this chapter we've managed to cover quite a bit of new ground while
+<p>In this chapter we’ve managed to cover quite a bit of new ground while
 ostensibly just laying out a map. The current section explained how to
 implement doors and keys, and gave a few examples of customizing the
 former to meet particular requirements. Other new adv3Lite/TADS 3
-features we've encountered include:
+features we’ve encountered include:</p>
 
-- Defining the **vocab** property on Rooms to enable the player to make
-  use of the GO TO command (and other reasons besides).
-- The **Passage** class (representing things the player character can go
-  through to get from one location to another), as a further example of
-  a TravelConnector.
-- The **OpenableContainer** class to define containers that can be
-  opened and closed.
-- The use of **Separate Compilation** to split the source code of a game
-  over several files.
-- The **ShuffledEventList** class used to provide a stream of
-  randomly-sequenced messages.
-- The use of a **Daemon** to drive events at regular intervals.
-- The use of the **hasSeen(obj)** method to test whether the player
-  character has seen *obj* yet.
-- The use of **Regions** to group rooms in a common area, and of
-  **obj.isIn(reg)** to test whether *obj* is somewhere in the Region
-  *reg*.
-- The use of the mix-in **MultiLoc** class to define objects that can be
-  in several rooms at once.
-- The use of **debugging** commands like PURLOIN, GONEAR and EVAL to
-  help with testing.
+<ul>
+  <li>Defining the <strong>vocab</strong> property on Rooms to enable the player to make
+use of the GO TO command (and other reasons besides).</li>
+  <li>The <strong>Passage</strong> class (representing things the player character can go
+through to get from one location to another), as a further example of
+a TravelConnector.</li>
+  <li>The <strong>OpenableContainer</strong> class to define containers that can be
+opened and closed.</li>
+  <li>The use of <strong>Separate Compilation</strong> to split the source code of a game
+over several files.</li>
+  <li>The <strong>ShuffledEventList</strong> class used to provide a stream of
+randomly-sequenced messages.</li>
+  <li>The use of a <strong>Daemon</strong> to drive events at regular intervals.</li>
+  <li>The use of the <strong>hasSeen(obj)</strong> method to test whether the player
+character has seen <em>obj</em> yet.</li>
+  <li>The use of <strong>Regions</strong> to group rooms in a common area, and of
+<strong>obj.isIn(reg)</strong> to test whether <em>obj</em> is somewhere in the Region
+<em>reg</em>.</li>
+  <li>The use of the mix-in <strong>MultiLoc</strong> class to define objects that can be
+in several rooms at once.</li>
+  <li>The use of <strong>debugging</strong> commands like PURLOIN, GONEAR and EVAL to
+help with testing.</li>
+</ul>
 
-While none of these would count as a basic feature of adv3Lite, they are
-all sufficiently common that they're well worth getting to know, so if
-you're a bit uncertain about any of them it may be worth going back to
-take another look, or else perhaps looking them up in the *adv3Lite
-Library Manual*. As we continue to implement the Airport game in the
+<p>While none of these would count as a basic feature of adv3Lite, they are
+all sufficiently common that they’re well worth getting to know, so if
+you’re a bit uncertain about any of them it may be worth going back to
+take another look, or else perhaps looking them up in the <em>adv3Lite
+Library Manual</em>. As we continue to implement the Airport game in the
 next chapter, we shall be introducing some more as yet unfamiliar
-features of adv3Lite.
+features of adv3Lite.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -622,7 +587,6 @@ features of adv3Lite.
     </span>
 
 </div>
-</end></else></if></div></end></else></if></div></end></else></if></div></end></div></end></end></else></if></else></if></end></else></if></div></end></else></if></end></else></if></div></end></else></if></end></else></if></div></div>
 
 </main>
 <footer>

@@ -17,7 +17,7 @@ Descriptions
 
 </div>
 
-<div class="main">
+
 
 # Room Descriptions
 
@@ -164,7 +164,7 @@ then see something like this:
 
     George is watching you carefully, waiting for you to speak.
 
-</div>
+
 
 This is okay, insofar as it gets the job done by telling the player what
 s/he needs to know about the room's contents, but it's not terribly

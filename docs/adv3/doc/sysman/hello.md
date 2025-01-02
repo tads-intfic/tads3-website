@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Hello, World!
 
@@ -54,7 +54,7 @@ your program by typing this:
 
     t3make hello.t
 
-</div>
+
 
 This will compile and link the program, producing a file called
 hello.t3. We call this an "image file" - not in the sense of a picture

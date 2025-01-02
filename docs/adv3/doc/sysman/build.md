@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Compiling and Linking
 
@@ -170,7 +170,7 @@ To read options from a file, use the -f compiler option:
 
     t3make -f calc.t3m
 
-</div>
+
 
 The options read from an options file are appended after any options on
 the command line, so you can mix options from a file and the command

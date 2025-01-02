@@ -19,7 +19,7 @@ Modules</a>    
 
 </div>
 
-<div class="main">
+
 
 <span id="mingamedef"></span>
 
@@ -375,7 +375,7 @@ on your system. The good news, though, is that this change only needs to
 be done in one place, since all links from the adv3Lite documentation to
 the System Manual are routed through sysman.html.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

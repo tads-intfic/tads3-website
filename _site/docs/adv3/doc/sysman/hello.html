@@ -37,46 +37,41 @@
 
 </div>
 
-<div class="main">
+<h1 id="hello-world">Hello, World!</h1>
 
-# Hello, World!
-
-Ever since Kernighan and Ritchie published their manual on C, it's been
+<p>Ever since Kernighan and Ritchie published their manual on C, it’s been
 obligatory in programming language books to start with an example called
 Hello World. Hello World is a program that simply displays the text
-"hello, world!" and terminates. What you're reading now isn't exactly a
+“hello, world!” and terminates. What you’re reading now isn’t exactly a
 book, but Hello World is still a good place to start. So, without
 further ado, here it is. Start by creating a text file called hello.t
-and typing this into the file:
+and typing this into the file:</p>
 
-<div class="code">
-
-    #include "tads.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include "tads.h"
 
     main(args)
     {
       "Hello from TADS 3!!!\b";
     }
+</code></pre></div></div>
 
-</div>
-
-After you've saved the file, open a command line window and change your
+<p>After you’ve saved the file, open a command line window and change your
 working directory to the directory containing the file - on Windows, for
-example, use the CD command. Of course, you'll have to have installed
+example, use the CD command. Of course, you’ll have to have installed
 the TADS authoring tools at this point; that process varies by system,
 so you should look for a README file or the like in your system-specific
-distribution for installation instructions. If you're on Windows or
+distribution for installation instructions. If you’re on Windows or
 Unix, you might also have to set up the PATH variable so that it
-includes the directory where you installed the TADS tools.
+includes the directory where you installed the TADS tools.</p>
 
-Once you have everything set up tool-wise, you should be able to compile
-your program by typing this:
+<p>Once you have everything set up tool-wise, you should be able to compile
+your program by typing this:</p>
 
 <div class="cmdline">
 
     t3make hello.t
 
-</div>
+
 
 This will compile and link the program, producing a file called
 hello.t3. We call this an "image file" - not in the sense of a picture

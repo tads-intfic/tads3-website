@@ -19,7 +19,7 @@ Maintenance Room
 
 </div>
 
-<div class="main">
+
 
 # The Maintenance Room
 
@@ -424,7 +424,7 @@ For further details of the concepts and features introduced in this
 section, refer to the [Containment](../manual/thing.html#containment)
 section of the article on Thing in the *adv3Lite Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

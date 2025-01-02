@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # AgendaItems
 
@@ -390,7 +390,7 @@ character does not attempt to follow the actor anywhere. The messages
 defined on the FollowAgendaItem will take precedence over any defined on
 the current ActorState.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

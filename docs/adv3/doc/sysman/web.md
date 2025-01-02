@@ -18,7 +18,7 @@ Display Model</a>    
 
 </div>
 
-<div class="main">
+
 
 # Part VII: Playing on the Web
 
@@ -68,7 +68,7 @@ on Web Server Setup explains how to set this up.
 [Deploying your Web UI game](webdeploy.html)  
 [Setting up a custom TADS Web server](webhost.html)  
 
-</div>
+
 
 </div>
 

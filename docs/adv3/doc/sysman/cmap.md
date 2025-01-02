@@ -17,7 +17,7 @@ Messages</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Creating a Character-Mapping File
 
@@ -75,7 +75,7 @@ file into the format that TADS uses:
 
     mkchrtab cp1250.txt cp1250.tcm
 
-</div>
+
 
 The first argument is the source file that you downloaded from the
 Unicode site. The second argument is the name of the "tcm" file (TADS

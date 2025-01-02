@@ -19,7 +19,7 @@ Statements</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Object Containment
 
@@ -233,7 +233,7 @@ person (such as the player character object, me) then you should define
 `contType = Carrier` on it yourself, as we've
 already seen.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

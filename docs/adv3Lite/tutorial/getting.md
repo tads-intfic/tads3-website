@@ -19,7 +19,7 @@ Need
 
 </div>
 
-<div class="main">
+
 
 # Getting What You Need
 
@@ -73,7 +73,7 @@ adv3Lite folder to the same location; this should avoid any problems
 that might arise from remnants of an older version interfering with the
 newer version.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

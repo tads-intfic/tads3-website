@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](precond.html)   [\[Next\]](messages.html)*
@@ -272,7 +272,7 @@ gate: Door 'gate'  'gate'
 
 The underlying code here is in fact:   
 
-</div>
+
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>

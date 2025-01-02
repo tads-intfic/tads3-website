@@ -27,27 +27,25 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="callingaspadeaspade.html">[Previous]</a>   <a href="rowmyboat.html">[Next]</a></em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](callingaspadeaspade.html)   [\[Next\]](rowmyboat.html)*
+<h1 id="chapter-7---pushing-the-boat-out">Chapter 7 - Pushing the Boat Out</h1>
 
-# Chapter 7 - Pushing the Boat Out
+<h2 id="let-there-be-light">Let There be Light</h2>
 
-## Let There be Light
-
-This is the last chapter in which we'll try to make things more
-difficult for poor Heidi. The complication we'll add is quite simple:
-simply change the class of insideCave from Room to DarkRoom. As you'll
+<p>This is the last chapter in which we’ll try to make things more
+difficult for poor Heidi. The complication we’ll add is quite simple:
+simply change the class of insideCave from Room to DarkRoom. As you’ll
 find if you now try to pay the cave a visit, Heidi now needs a light
-source to see what's going on there. The next task, then, is to plant a
-torch (which American readers may call a flashlight) somewhere. We can't
+source to see what’s going on there. The next task, then, is to plant a
+torch (which American readers may call a flashlight) somewhere. We can’t
 put it inside the cottage, since that would make the game unwinnable
 (you need to dig up the boots to get to the key to get into the
-cottage). So instead we'll put the torch/flashlight in a garden shed.
-We'll also be creating a stream, a jetty, and a shop that Heidi will
+cottage). So instead we’ll put the torch/flashlight in a garden shed.
+We’ll also be creating a stream, a jetty, and a shop that Heidi will
 eventually need to visit in order to buy some batteries for the
-torch/flashlight.  
+torch/flashlight.</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -63,17 +61,27 @@ torch/flashlight.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Again, before seeing how this guide tackles all this, you might like to
+<p>Again, before seeing how this guide tackles all this, you might like to
 have a go at adding some of this for yourself. First of all, you need to
 add four more locations to the map: the garden, the inside of the shed,
 the jetty, and the shop, bearing in mind that the player may want to use
-the commands **enter shed** and **enter shop** as an alternative to
-other movement commands:  
-  
+the commands <strong>enter shed</strong> and <strong>enter shop</strong> as an alternative to
+other movement commands:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -89,36 +97,45 @@ other movement commands:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-  
-  
-You'll also need to put a pair of oars and a torch (without batteries)
-inside the shed, perhaps placing the latter in a cupboard. There'll need
+<p>You’ll also need to put a pair of oars and a torch (without batteries)
+inside the shed, perhaps placing the latter in a cupboard. There’ll need
 to be an object representing the stream at both locations, and a
-customised response to **cross stream** explaining why Heidi can't
+customised response to <strong>cross stream</strong> explaining why Heidi can’t
 simply cross it at that point. It would be especially neat if the player
-got the same response from a **north** command issued by the stream. You
+got the same response from a <strong>north</strong> command issued by the stream. You
 might also want to add some FakeConnectors or NoTravelMessages to
-explain why Heidi can't go west from the Garden or either east or west
-from the Jetty.  
-  
-Your biggest challenge, however, will be to get Heidi from the Cottage
+explain why Heidi can’t go west from the Garden or either east or west
+from the Jetty.</p>
+
+<p>Your biggest challenge, however, will be to get Heidi from the Cottage
 Garden to the Jetty, since the map shows no direct connection. The idea
 is that Heidi gets there by rowing a boat down the stream (hence the
-oars), so you'll need a boat that Heidi can enter, a means of moving it
-between the Garden and the Jetty (and back), and a new **row** verb,
+oars), so you’ll need a boat that Heidi can enter, a means of moving it
+between the Garden and the Jetty (and back), and a new <strong>row</strong> verb,
 which will require Heidi to be sitting in the boat holding the oars
 before it all works. Maybe the boat will need more than one object, such
 as an inside boat room that Heidi actually enters and a boat object to
 represent the boat from outside, just as you may create a shed object to
-represent the shed from outside.  
-  
-If you can't manage all this by yourself, not to worry; once you've got
+represent the shed from outside.</p>
+
+<p>If you can’t manage all this by yourself, not to worry; once you’ve got
 as far as you can get, you can read on to see at least one way this can
-all be implemented.  
+all be implemented.</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -134,13 +151,24 @@ all be implemented.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-First, then, we need to create the garden and its shed, using the
-opportunity to introduce a few more TADS 3 features we haven't come
-across yet:  
+<p>First, then, we need to create the garden and its shed, using the
+opportunity to introduce a few more TADS 3 features we haven’t come
+across yet:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -156,67 +184,78 @@ across yet:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-cottageGarden : OutdoorRoom 'Cottage Garden'  
-  "This neat little garden is situated on the north side of the cottage. A  
-  stream runs along the bottom of the garden, while a short path disappears  
-  through a gap in the fence to the southeast, and another leads westwards   
-  down to the road. Next to the fence stands a small garden shed. "    
-  southeast = outsideCottage  
-  north : NoTravelMessage {"\&lt;\&lt;gardenStream.cannotCrossMsg\&gt;\&gt;"}  
-  east : NoTravelMessage {"You can't walk through the fence. "}  
-  west : FakeConnector {"That path leads down to the road, and you don't   
-    fancy going near all those nasty, smelly, noisy cars right now. " }  
-  in = insideShed    
-;  
-  
-+ Decoration 'wooden fence' 'wooden fence'  
-  "The tall wooden fence runs along the eastern side of the garden, with  
-   a small gap at its southern end. "  
-;  
-  
-+ gardenStream: Fixture 'stream' 'stream'  
-  "\&lt;\&lt;cannotCrossMsg\&gt;\&gt;"  
-  dobjFor(Cross)  
-  {  
-    verify() {}  
-    check() { failCheck(cannotCrossMsg); }  
-  }  
-  cannotCrossMsg = ' The stream is quite wide at   
-    this point, and too deep to cross. '  
-;  
-  
-+ Enterable -\&gt; insideShed 'garden shed' 'garden shed'    
-  "It's a small, wooden shed. "    
-  matchNameCommon(origTokens, adjustedTokens)  
-  {  
-    if(adjustedTokens.indexOf('shed'))  
-      return self;  
-    else  
-      return cottageGarden;  
-  }  
-;  
-  
-insideShed : Room 'Inside the Garden Shed'  
- "The inside of the shed is full of garden implements, leaving just about  
-  enough room for one person to stand. An old cupboard stands   
-  in the corner. "  
- out = cottageGarden  
-;  
-  
-+ Decoration 'garden implements/hoe/rake/shears' 'garden implements'  
-  "There's a hoe, a rake, some shears, and several other bits and pieces. "  
-  isPlural = true  
-;  
-  
-+ oars : Thing 'pair/oars' 'pair of oars'  
-  "The oars look like they're meant for a small rowing-boat. "  
-  bulk = 10  
-  initSpecialDesc = "A pair of oars leans against the wall. "  
-;  
+<p>cottageGarden : OutdoorRoom ’Cottage Garden’<br />
+  ”This neat little garden is situated on the north side of the cottage. A<br />
+  stream runs along the bottom of the garden, while a short path disappears<br />
+  through a gap in the fence to the southeast, and another leads westwards <br />
+  down to the road. Next to the fence stands a small garden shed. ”  <br />
+  southeast = outsideCottage<br />
+  north : NoTravelMessage {“&lt;&lt;gardenStream.cannotCrossMsg&gt;&gt;”}<br />
+  east : NoTravelMessage {“You can’t walk through the fence. ”}<br />
+  west : FakeConnector {“That path leads down to the road, and you don’t <br />
+    fancy going near all those nasty, smelly, noisy cars right now. ” }<br />
+  in = insideShed  <br />
+;</p>
+
+<p>+ Decoration ’wooden fence’ ’wooden fence’<br />
+  ”The tall wooden fence runs along the eastern side of the garden, with<br />
+   a small gap at its southern end. ”<br />
+;</p>
+
+<p>+ gardenStream: Fixture ’stream’ ’stream’<br />
+  ”&lt;&lt;cannotCrossMsg&gt;&gt;”<br />
+  dobjFor(Cross)<br />
+  {<br />
+    verify() {}<br />
+    check() { failCheck(cannotCrossMsg); }<br />
+  }<br />
+  cannotCrossMsg = ’ The stream is quite wide at <br />
+    this point, and too deep to cross. ’<br />
+;</p>
+
+<p>+ Enterable -&gt; insideShed ’garden shed’ ’garden shed’  <br />
+  ”It’s a small, wooden shed. ”  <br />
+  matchNameCommon(origTokens, adjustedTokens)<br />
+  {<br />
+    if(adjustedTokens.indexOf(‘shed’))<br />
+      return self;<br />
+    else<br />
+      return cottageGarden;<br />
+  }<br />
+;</p>
+
+<p>insideShed : Room ’Inside the Garden Shed’<br />
+ ”The inside of the shed is full of garden implements, leaving just about<br />
+  enough room for one person to stand. An old cupboard stands <br />
+  in the corner. ”<br />
+ out = cottageGarden<br />
+;</p>
+
+<p>+ Decoration ’garden implements/hoe/rake/shears’ ’garden implements’<br />
+  ”There’s a hoe, a rake, some shears, and several other bits and pieces. ”<br />
+  isPlural = true<br />
+;</p>
+
+<p>+ oars : Thing ’pair/oars’ ’pair of oars’<br />
+  ”The oars look like they’re meant for a small rowing-boat. ”<br />
+  bulk = 10<br />
+  initSpecialDesc = ”A pair of oars leans against the wall. ”<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -232,16 +271,27 @@ insideShed : Room 'Inside the Garden Shed'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-To take the simple points first, we add isPlural = true to the
+<p>To take the simple points first, we add isPlural = true to the
 definition of the Decoration object so that an attempt to take, say, the
-hoe results in "The garden implements aren't important" rather than "The
-garden implements isn't important." The other simple point is that the
--\&gt;insideShed on the Enterable object is a shorthand way of specifying
-its connector property (through use of a template).  
+hoe results in “The garden implements aren’t important” rather than “The
+garden implements isn’t important.” The other simple point is that the
+-&gt;insideShed on the Enterable object is a shorthand way of specifying
+its connector property (through use of a template).</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -257,19 +307,30 @@ its connector property (through use of a template).
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-The more complex point involves the garden shed. Since it's called
-'garden shed', the player could in principle refer to it either as
-'shed', 'garden shed' or just 'garden', and all three forms would match.
-Yet one may feel that the last of these forms *shouldn't* match. The
-player character is standing in a garden, so logically the command **x
-garden** should result in a description of the garden, not the shed.  
-  
-The matchNameCommon method is the way we get round this. To quote from
-the comments in the library source code:  
+<p>The more complex point involves the garden shed. Since it’s called
+‘garden shed’, the player could in principle refer to it either as
+‘shed’, ‘garden shed’ or just ‘garden’, and all three forms would match.
+Yet one may feel that the last of these forms <em>shouldn’t</em> match. The
+player character is standing in a garden, so logically the command <strong>x
+garden</strong> should result in a description of the garden, not the shed.</p>
+
+<p>The matchNameCommon method is the way we get round this. To quote from
+the comments in the library source code:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -285,9 +346,20 @@ the comments in the library source code:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -347,9 +419,24 @@ phrase is "red book", the list might look like ['red', &amp;adjective,
 </tbody>
 </table>
 
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -365,28 +452,39 @@ phrase is "red book", the list might look like ['red', &amp;adjective,
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-For our purposes all we need to know is that adjustedTokens will be a
+<p>For our purposes all we need to know is that adjustedTokens will be a
 list that will include all the tokens the player typed, so we can test
-whether or not 'shed' is among them. If not, the player must have typed
-'garden' but not 'shed'. Since adjustedTokens is a list, we can use its
-indexOf method to find where in the list the string 'shed' is; if 'shed'
-is in the list then adjustedTokens.indexOf('shed') will return a
-non-zero number which the test (with if) will treat as true; if it isn't
-then the test will fail. If the test succeeds, the tokens include 'shed'
+whether or not ‘shed’ is among them. If not, the player must have typed
+‘garden’ but not ‘shed’. Since adjustedTokens is a list, we can use its
+indexOf method to find where in the list the string ‘shed’ is; if ‘shed’
+is in the list then adjustedTokens.indexOf(‘shed’) will return a
+non-zero number which the test (with if) will treat as true; if it isn’t
+then the test will fail. If the test succeeds, the tokens include ‘shed’
 and we return self (i.e. the shed) as the object matched. Otherwise the
-player typed 'garden' but not shed, so we return cottageGarden as the
-object matched. Thus, if the player types **x garden shed** or **x
-shed** the game will describe the shed, but if he or she types **x
-garden** it will describe the garden.  
-  
-We could have implemented some of this functionality by using a *weak
-token* in the definition of the garden shed; we'd do this by enclosing
-the word 'garden' in parentheses in the list of vocabulary words,
-i.e.:  
+player typed ‘garden’ but not shed, so we return cottageGarden as the
+object matched. Thus, if the player types <strong>x garden shed</strong> or <strong>x
+shed</strong> the game will describe the shed, but if he or she types <strong>x
+garden</strong> it will describe the garden.</p>
+
+<p>We could have implemented some of this functionality by using a <em>weak
+token</em> in the definition of the garden shed; we’d do this by enclosing
+the word ‘garden’ in parentheses in the list of vocabulary words,
+i.e.:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -402,16 +500,27 @@ i.e.:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-+ Enterable -\&gt; insideShed '(garden) shed' 'garden shed'  
-  
-This would prevent the garden shed from responding to commands that just
-use the word 'garden' but would not remap such commands to the garden
+<p>+ Enterable -&gt; insideShed ’(garden) shed’ ’garden shed’</p>
+
+<p>This would prevent the garden shed from responding to commands that just
+use the word ‘garden’ but would not remap such commands to the garden
 object. This, however, could easily be achieved by adding a
-vocabWords property to the definition of the cottage garden thus:-  
+vocabWords property to the definition of the cottage garden thus:-</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -455,23 +564,34 @@ vocabWords property to the definition of the cottage garden thus:-
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Note that once again we can use the weak token feature, so that the
-garden can be referred to by **x garden** or **x cottage garden** but
-not simply **x cottage** (you might want to add a cottage decoration
+<p>Note that once again we can use the weak token feature, so that the
+garden can be referred to by <strong>x garden</strong> or <strong>x cottage garden</strong> but
+not simply <strong>x cottage</strong> (you might want to add a cottage decoration
 object to respond to the latter). In practice one would probably use the
 weak tokens method rather than defining a custom matchNameCommon method
 to achieve the result desired here, but the detour through
-matchNameCommon has illustrated how to use it.  
-  
-There's a couple more things we may want to do with the Enterable
-representing the outside of this garden shed. If the player types **open
-shed** or **look in shed**, the standard library responses may be not
+matchNameCommon has illustrated how to use it.</p>
+
+<p>There’s a couple more things we may want to do with the Enterable
+representing the outside of this garden shed. If the player types <strong>open
+shed</strong> or <strong>look in shed</strong>, the standard library responses may be not
 just unhelpful but potentially misleading (perhaps suggesting that the
-shed is only a decoration object):  
+shed is only a decoration object):</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -571,19 +691,30 @@ shed is only a decoration object):
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-We can solve the first problem simply by making the shed an Openable as
+<p>We can solve the first problem simply by making the shed an Openable as
 well as an Enterable. The second is perhaps most easily solved by having
-**look in shed** treated as **enter shed**, on the grounds that someone
-wanting to find out what's in the shed would go inside it. A final
+<strong>look in shed</strong> treated as <strong>enter shed</strong>, on the grounds that someone
+wanting to find out what’s in the shed would go inside it. A final
 problem is that if the player examines the shed it will be described as
-a 'small wooden shed', but that, as things stand, **x small wooden
-shed** will provoke the response, 'You see no small wooden shed here';
-we need to add 'small' and 'wooden' to the vocabWords of this object.
-Our revised shed exterior thus becomes:  
+a ‘small wooden shed’, but that, as things stand, <strong>x small wooden
+shed</strong> will provoke the response, ‘You see no small wooden shed here’;
+we need to add ‘small’ and ‘wooden’ to the vocabWords of this object.
+Our revised shed exterior thus becomes:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -599,15 +730,26 @@ Our revised shed exterior thus becomes:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-+ Openable, Enterable -\&gt; insideShed 'small wooden (garden) shed'   
-  'garden shed'     
-  "It's a small, wooden shed. "    
-  dobjFor(LookIn) asDobjFor(Enter)  
-;  
+<p>+ Openable, Enterable -&gt; insideShed ’small wooden (garden) shed’ <br />
+  ’garden shed’   <br />
+  ”It’s a small, wooden shed. ”  <br />
+  dobjFor(LookIn) asDobjFor(Enter)<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -623,22 +765,33 @@ Our revised shed exterior thus becomes:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-You may have noticed that the description of the shed's interior
+<p>You may have noticed that the description of the shed’s interior
 includes mention of an old cupboard. What we want to do next is to put a
-tin on the cupboard and a torch inside it. On the face of it we can't do
+tin on the cupboard and a torch inside it. On the face of it we can’t do
 this, since an object can be either a container (something you can put
 things in) or a surface (something you put things on) but not both at
 the same time. We could get round this by laboriously making our
 cupboard out of separate objects, but fortunately the TADS 3 library has
 already done most of this work for us with a class called
 ComplexContainer. For the details of how ComplexContainer works, you can
-consult the *Library Reference Manual* and the *TADS 3 Tour Guide* but
-there's no need to do so right now; the implementation of our cupboard
-using this class becomes quite straightforward:  
+consult the <em>Library Reference Manual</em> and the <em>TADS 3 Tour Guide</em> but
+there’s no need to do so right now; the implementation of our cupboard
+using this class becomes quite straightforward:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -654,17 +807,28 @@ using this class becomes quite straightforward:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-+ cupboard: ComplexContainer, Heavy 'battered old wooden cupboard'   
-  'old cupboard'  
-  "The cupboard is a battered old wooden thing, with chipped blue and  
-   white paint. "  
-   subContainer : ComplexComponent, OpenableContainer { }  
-   subSurface : ComplexComponent, Surface { }  
-;  
+<p>+ cupboard: ComplexContainer, Heavy ’battered old wooden cupboard’ <br />
+  ’old cupboard’<br />
+  ”The cupboard is a battered old wooden thing, with chipped blue and<br />
+   white paint. ”<br />
+   subContainer : ComplexComponent, OpenableContainer { }<br />
+   subSurface : ComplexComponent, Surface { }<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -680,21 +844,32 @@ using this class becomes quite straightforward:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Basically, the ComplexContainer delegates putting-in and putting-on type
+<p>Basically, the ComplexContainer delegates putting-in and putting-on type
 behaviour to the anonymous nested objects defined in its subContainer
 and subSurface properties. These nested objects must be of class
 ComplexComponent, but you can then mix-in whatever classed you want
 (which, logically, will normally be something like Container and Surface
-respectively). The empty braces {} then contain the space where we'd
+respectively). The empty braces {} then contain the space where we’d
 define any properties or methods of these nested objects; but here we
-don't need to, since all the relevant behaviour has already been defined
-on their superclasses.  
-  
-The next task is to put objects in and on the cupboard:  
+don’t need to, since all the relevant behaviour has already been defined
+on their superclasses.</p>
+
+<p>The next task is to put objects in and on the cupboard:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -710,28 +885,39 @@ The next task is to put objects in and on the cupboard:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-++ tin : OpenableContainer 'small square tin' 'small tin'     
-  "It's a small square tin with a lid. "  
-  subLocation = &amp;subSurface  
-  bulkCapacity = 5  
-;  
-  
-+++ battery : Thing 'small red battery' 'small red battery'  
-  "It's a small red battery, 1.5v, manufactured by ElectroLeax  
-  and made in the People's Republic of Erewhon. "  
-  bulk = 1  
-;  
-  
-++ torch : Flashlight, OpenableContainer 'small blue torch/flashlight'  
-   'small blue torch'  
-  "It's just a small blue torch. "  
-  subLocation = &amp;subContainer  
-  bulkCapacity = 1  
-;  
+<p>++ tin : OpenableContainer ’small square tin’ ’small tin’   <br />
+  ”It’s a small square tin with a lid. ”<br />
+  subLocation = &amp;subSurface<br />
+  bulkCapacity = 5<br />
+;</p>
+
+<p>+++ battery : Thing ’small red battery’ ’small red battery’<br />
+  ”It’s a small red battery, 1.5v, manufactured by ElectroLeax<br />
+  and made in the People’s Republic of Erewhon. ”<br />
+  bulk = 1<br />
+;</p>
+
+<p>++ torch : Flashlight, OpenableContainer ’small blue torch/flashlight’<br />
+   ’small blue torch’<br />
+  ”It’s just a small blue torch. ”<br />
+  subLocation = &amp;subContainer<br />
+  bulkCapacity = 1<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -747,31 +933,42 @@ The next task is to put objects in and on the cupboard:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-The main thing to note here is the special syntax for specifying the
+<p>The main thing to note here is the special syntax for specifying the
 initial location of objects inside a ComplexContainer. We can still use
 the + syntax to show that an object is on or in (or under or behind) a
 ComplexContainer, but we need to specify which subobject of the
 ComplexContainer the object is actually located in. To do this we use
-the special subLocation property which can be used *only* for
+the special subLocation property which can be used <em>only</em> for
 initialization. If we subsquently wanted to move an object into a part
-of a ComplexContainer we'd need to do so with an explicit moveInto, e.g.
+of a ComplexContainer we’d need to do so with an explicit moveInto, e.g.
 torch.moveInto(cupboard.subContainer). Note also that what we assign to
-`subLocation` must be a property *pointer* (a property name preceded by
-&amp;).  
-  
-We make the torch an OpenableContainer so that we can insert the
+<code class="language-plaintext highlighter-rouge">subLocation</code> must be a property <em>pointer</em> (a property name preceded by
+&amp;).</p>
+
+<p>We make the torch an OpenableContainer so that we can insert the
 battery. The behaviour of the torch requires a little thought. By
-default an object of the Flashlight class will provide light if it's
-switched on and will stop doing so if it's switched off. This is what we
+default an object of the Flashlight class will provide light if it’s
+switched on and will stop doing so if it’s switched off. This is what we
 want, with the added complication that it should only be possible to
 turn the torch on if the battery is in it. A further complication is
 that if the player insists on removing the battery while the torch is
-on, it should at once go out again. Here's the definition of the torch
-with all that extra handling added:  
+on, it should at once go out again. Here’s the definition of the torch
+with all that extra handling added:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -787,53 +984,64 @@ with all that extra handling added:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-++ torch : Flashlight, OpenableContainer 'small blue torch/flashlight' 'small blue torch'  
-  "It's just a small blue torch. "  
-  subLocation = &amp;subContainer  
-  bulkCapacity = 1    
-  dobjFor(TurnOn)  
-  {  
-    check()  
-    {  
-      if(! battery.isIn(self))  
-      {  
-        "Nothing happens. ";  
-        exit;  
-      }  
-    }  
-  }  
-  iobjFor(PutIn)  
-  {  
-    check()  
-    {  
-      if(gDobj != battery)  
-      {  
-        "{The dobj/he} doesn't fit in the torch. ";  
-        exit;  
-      }  
-    }  
-    action()  
-    {        
-      inherited;  
-      makeOpen(nil);  
-      achieve.addToScoreOnce(1);  
-    }  
-  }  
-  notifyRemove(obj)  
-  {      
-    if(isOn)  
-    {   
-      "Removing the battery causes the torch to go out. ";  
-      makeOn(nil);          
-    }      
-  }  
-  achieve: Achievement  
-    { desc = "fitting the battery into the torch"  }  
-;  
+<p>++ torch : Flashlight, OpenableContainer ’small blue torch/flashlight’ ’small blue torch’<br />
+  ”It’s just a small blue torch. ”<br />
+  subLocation = &amp;subContainer<br />
+  bulkCapacity = 1  <br />
+  dobjFor(TurnOn)<br />
+  {<br />
+    check()<br />
+    {<br />
+      if(! battery.isIn(self))<br />
+      {<br />
+        ”Nothing happens. ”;<br />
+        exit;<br />
+      }<br />
+    }<br />
+  }<br />
+  iobjFor(PutIn)<br />
+  {<br />
+    check()<br />
+    {<br />
+      if(gDobj != battery)<br />
+      {<br />
+        ”{The dobj/he} doesn’t fit in the torch. ”;<br />
+        exit;<br />
+      }<br />
+    }<br />
+    action()<br />
+    {      <br />
+      inherited;<br />
+      makeOpen(nil);<br />
+      achieve.addToScoreOnce(1);<br />
+    }<br />
+  }<br />
+  notifyRemove(obj)<br />
+  {    <br />
+    if(isOn)<br />
+    { <br />
+      ”Removing the battery causes the torch to go out. ”;<br />
+      makeOn(nil);        <br />
+    }    <br />
+  }<br />
+  achieve: Achievement<br />
+    { desc = ”fitting the battery into the torch”  }<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -849,30 +1057,41 @@ with all that extra handling added:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-There's nothing very difficult here, but note that we take the
+<p>There’s nothing very difficult here, but note that we take the
 opportunity to make sure that the battery is the only object that can be
 put in the torch; we automatically close the torch after the battery is
 inserted to avoid getting the battery mentioned in response to an
-**inventory** command when we're carrying the torch. The most important
+<strong>inventory</strong> command when we’re carrying the torch. The most important
 thing to note is the use of the notifyRemove method to handle the
-battery being removed from the torch; we use this since we can't be sure
-which command a player might use to do this, e.g. **take battery** or
-**remove battery from torch**. The other thing we do is to award a point
+battery being removed from the torch; we use this since we can’t be sure
+which command a player might use to do this, e.g. <strong>take battery</strong> or
+<strong>remove battery from torch</strong>. The other thing we do is to award a point
 for inserting the battery into the torch for the first time only. To do
 this we define an Achievement object nested on the (custom) achieve
 property, and call its addToScoreOnce(points) method in our
 iObjFor(PutIn) action method. We do it this way since there is no
-freestanding AddToScoreOnce *function* we can call, and we need the
+freestanding AddToScoreOnce <em>function</em> we can call, and we need the
 Achievement object so that it can keep track of whether its been used to
-award points before.  
-  
-At this point, we need to adjust the original location, first to
-indicate that there's a path round to the side of the cottage, and
-second to provide the relevant connection:  
+award points before.</p>
+
+<p>At this point, we need to adjust the original location, first to
+indicate that there’s a path round to the side of the cottage, and
+second to provide the relevant connection:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -1043,19 +1262,27 @@ check that it still works. <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-  
+<hr />
 
-------------------------------------------------------------------------
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="callingaspadeaspade.html">[Previous]</a>   <a href="rowmyboat.html">[Next]</a></em></p>
 
-*Getting Started in TADS 3*  
-[\[Main\]](index.html)  
-*[\[Previous\]](callingaspadeaspade.html)   [\[Next\]](rowmyboat.html)*
-
-</div>
 
 </main>
 <footer>

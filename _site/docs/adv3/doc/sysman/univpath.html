@@ -37,110 +37,165 @@ Executables</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="universal-paths">Universal Paths</h1>
 
-# Universal Paths
-
-TADS has a "universal" syntax for file names that include directory
+<p>TADS has a “universal” syntax for file names that include directory
 paths. TADS translates from the universal notation to the local file
-system syntax automatically, so you don't have to worry about whether
-your Windows "X:\Y\Z" paths will work on a Linux machine, or vice versa.
+system syntax automatically, so you don’t have to worry about whether
+your Windows “X:\Y\Z” paths will work on a Linux machine, or vice versa.</p>
 
-TADS accepts the universal path syntax in several places:
+<p>TADS accepts the universal path syntax in several places:</p>
 
-- <span class="code">\#include</span> directives in TADS source files
-- File names in [.t3m project files](build.html#projects)
-- File and directory option arguments in .t3m files (-I, -o, -Os, -FL,
-  -FI, -Fs, -Fy, -Fo, -Fa)
-- [File.universalToLocal()](file.html#universalToLocal)
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">\#include</code> directives in TADS source files</li>
+  <li>File names in <a href="build.html#projects">.t3m project files</a></li>
+  <li>File and directory option arguments in .t3m files (-I, -o, -Os, -FL,
+-FI, -Fs, -Fy, -Fo, -Fa)</li>
+  <li><a href="file.html#universalToLocal">File.universalToLocal()</a></li>
+</ul>
 
-In all of these situations, when you specify a directory path to a file,
-you should use the universal notation instead of your local system's
+<p>In all of these situations, when you specify a directory path to a file,
+you should use the universal notation instead of your local system’s
 file path syntax. TADS will translate for you, using the appropriate
 local conventions. This will make your code work the same way everywhere
 TADS runs, without having to make changes when moving the code to a new
-system.
+system.</p>
 
-## Universal path rules
+<h2 id="universal-path-rules">Universal path rules</h2>
 
-**Path separators:** "/" is the path separator. For example, to include
-a file <span class="code">defs.h</span> from subdirectory
-<span class="code">inc</span>, you'd write <span class="code">\#include
-"inc/defs.h"</span>.
+<p><strong>Path separators:</strong> “/” is the path separator. For example, to include
+a file <code class="language-plaintext highlighter-rouge">defs.h</code> from subdirectory
+<code class="language-plaintext highlighter-rouge">inc</code>, you’d write <code class="language-plaintext highlighter-rouge">\#include
+"inc/defs.h"</code>.</p>
 
-**Relative paths:** For portability, use relative paths whenever
-possible. "Relative" means that the path is interpreted starting from
+<p><strong>Relative paths:</strong> For portability, use relative paths whenever
+possible. “Relative” means that the path is interpreted starting from
 the current working directory or some other context. In the case of
-<span class="code">\#include</span>, relative paths are relative to the
+<code class="language-plaintext highlighter-rouge">\#include</code>, relative paths are relative to the
 folder containing the source file with the
-<span class="code">\#include</span> directive; for .t3m files, paths are
-relative to the .t3m file's location.
+<code class="language-plaintext highlighter-rouge">\#include</code> directive; for .t3m files, paths are
+relative to the .t3m file’s location.</p>
 
-Relative paths improve portability because they adapt automatically to
-different machines' directory structures. If you move the program to a
+<p>Relative paths improve portability because they adapt automatically to
+different machines’ directory structures. If you move the program to a
 new machine, you only have to reproduce the subdirectories of the main
-program folder - everything is relative to that folder, so it's all
-self-contained. Importantly, it doesn't matter where that main folder is
-situated within the system's overall directory structure. If you keep
-the project in <span class="code">C:\My Documents\games\tads</span> on
+program folder - everything is relative to that folder, so it’s all
+self-contained. Importantly, it doesn’t matter where that main folder is
+situated within the system’s overall directory structure. If you keep
+the project in <code class="language-plaintext highlighter-rouge">C:\My Documents\games\tads</code> on
 your Windows machine, and you send it to someone who puts it in
-<span class="code">/home/projects</span> on her Linux machine, the
-difference in absolute location doesn't matter; it's only what's inside
-that directory that matters.
+<code class="language-plaintext highlighter-rouge">/home/projects</code> on her Linux machine, the
+difference in absolute location doesn’t matter; it’s only what’s inside
+that directory that matters.</p>
 
-**Current and parent paths:** The universal notation defines "." and
-".." to have the same meanings they do on Unix and Windows. "." is the
+<p><strong>Current and parent paths:</strong> The universal notation defines “.” and
+“..” to have the same meanings they do on Unix and Windows. “.” is the
 current directory; as part of a path, it just reiterates the preceding
 element, and as the first element of a path it explicitly refers to the
-current directory. ".." is the parent of the preceding path element, or
-the parent of the current directory when ".." appears at the start of a
-path.
+current directory. “..” is the parent of the preceding path element, or
+the parent of the current directory when “..” appears at the start of a
+path.</p>
 
-For example, <span class="code">../games/deep.gam</span> in the
+<p>For example, <code class="language-plaintext highlighter-rouge">../games/deep.gam</code> in the
 universal path notation will translate on classic Mac OS to
-<span class="code">::games:deep.gam</span>.
+<code class="language-plaintext highlighter-rouge">::games:deep.gam</code>.</p>
 
-**Absolute paths:** In some cases it's not possible to use a relative
-path. You should use relative paths when you can, but when you can't,
-the universal notation can also accommodate "absolute" paths. An
+<p><strong>Absolute paths:</strong> In some cases it’s not possible to use a relative
+path. You should use relative paths when you can, but when you can’t,
+the universal notation can also accommodate “absolute” paths. An
 absolute path specifies an exact, fixed location in the local file
-system.
+system.</p>
 
-In the universal notation, an absolute path always starts with "/". On
-systems like Windows that use a volume prefix (e.g., "C:"), write the
+<p>In the universal notation, an absolute path always starts with “/”. On
+systems like Windows that use a volume prefix (e.g., “C:”), write the
 volume prefix as the first path element. Include the full local syntax -
 in the case of a Windows drive letter, include the colon. For example,
-the Windows path <span class="code">C:\games\deep.gam</span> becomes
-<span class="code">/C:/games/deep.gam</span> in the universal notation.
+the Windows path <code class="language-plaintext highlighter-rouge">C:\games\deep.gam</code> becomes
+<code class="language-plaintext highlighter-rouge">/C:/games/deep.gam</code> in the universal notation.</p>
 
-The reason you should avoid absolute paths is that they're inherently
+<p>The reason you should avoid absolute paths is that they’re inherently
 non-portable - not just between operating systems, but even between two
 machines running the same OS. An absolute path is dependent upon the
 exact disk layout of your machine; if you take a file containing an
-absolute path to someone else's machine, chances are that their disk
-layout will be slightly different, so you'll probably have to rewrite
+absolute path to someone else’s machine, chances are that their disk
+layout will be slightly different, so you’ll probably have to rewrite
 the absolute path to match their directory structure. That largely
 defeats the purpose of using the universal path syntax in the first
-place.
+place.</p>
 
-## Examples
+<h2 id="examples">Examples</h2>
 
-| System | Local Path | Universal Path |
-|----|----|----|
-| Windows | games\deep\deep.gam | games/deep/deep.gam |
-| Linux | games/deep/deep.gam | games/deep/deep.gam |
-| Windows | ..\deep.gam | ../deep.gam |
-| Classic Mac OS | ::deep.gam | ../deep.gam |
-| Classic Mac OS | :: | .. |
-| Classic Mac OS | ::: | ../.. |
-| VMS | \[-.DOCS\]DEEP.GAM | ../DOCS/DEEP.GAM |
-| Linux | /home/games/deep.gam | /home/games/deep.gam |
-| Windows | c:\user\games\deep\deep.gam | /c:/user/games/deep/deep.gam |
-| Windows | \\SERVER\SHARE\games\deep.gam | /\\SERVER/SHARE/games/deep.gam |
-| Classic Mac OS | Mac HD:games:deep.gam | /Mac HD:/games/deep.gam |
-| VMS | SYS\$DISK:\[USER.DOCS\]DEEP.GAM | /SYS\$DISK:/USER/DOCS/DEEP.GAM |
-
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Local Path</th>
+      <th>Universal Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Windows</td>
+      <td>games\deep\deep.gam</td>
+      <td>games/deep/deep.gam</td>
+    </tr>
+    <tr>
+      <td>Linux</td>
+      <td>games/deep/deep.gam</td>
+      <td>games/deep/deep.gam</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>..\deep.gam</td>
+      <td>../deep.gam</td>
+    </tr>
+    <tr>
+      <td>Classic Mac OS</td>
+      <td>::deep.gam</td>
+      <td>../deep.gam</td>
+    </tr>
+    <tr>
+      <td>Classic Mac OS</td>
+      <td>::</td>
+      <td>..</td>
+    </tr>
+    <tr>
+      <td>Classic Mac OS</td>
+      <td>:::</td>
+      <td>../..</td>
+    </tr>
+    <tr>
+      <td>VMS</td>
+      <td>[-.DOCS]DEEP.GAM</td>
+      <td>../DOCS/DEEP.GAM</td>
+    </tr>
+    <tr>
+      <td>Linux</td>
+      <td>/home/games/deep.gam</td>
+      <td>/home/games/deep.gam</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>c:\user\games\deep\deep.gam</td>
+      <td>/c:/user/games/deep/deep.gam</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>\SERVER\SHARE\games\deep.gam</td>
+      <td>/\SERVER/SHARE/games/deep.gam</td>
+    </tr>
+    <tr>
+      <td>Classic Mac OS</td>
+      <td>Mac HD:games:deep.gam</td>
+      <td>/Mac HD:/games/deep.gam</td>
+    </tr>
+    <tr>
+      <td>VMS</td>
+      <td>SYS$DISK:[USER.DOCS]DEEP.GAM</td>
+      <td>/SYS$DISK:/USER/DOCS/DEEP.GAM</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 

@@ -17,7 +17,7 @@ Touches
 
 </div>
 
-<div class="main">
+
 
 # Chapter 12: Finishing Touches
 
@@ -32,7 +32,7 @@ bring the tutorial to its conclusion.
 [What More?](whatmore.html)  
 [Conclusion](conclusion.html)  
 
-</div>
+
 
 </div>
 

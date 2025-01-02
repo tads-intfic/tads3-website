@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # NPC Overview
 
@@ -177,7 +177,7 @@ are necessary restrictions on where most of these tags can be safely
 used*; these will be explained in the section on [actor-specific
 tags](tags.html) below.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

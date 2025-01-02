@@ -38,138 +38,127 @@ IntrinsicClass
 
 </div>
 
-<div class="main">
+<h1 id="intrinsicclass">IntrinsicClass</h1>
 
-# IntrinsicClass
-
-Each intrinsic class that a program uses is represented by an instance
-of the intrinsic class IntrinsicClass. If you didn't major in college in
-computer science, don't worry if contemplating the circularity of this
+<p>Each intrinsic class that a program uses is represented by an instance
+of the intrinsic class IntrinsicClass. If you didn’t major in college in
+computer science, don’t worry if contemplating the circularity of this
 notion induces a slight spinning sensation; the IntrinsicClass intrinsic
 class has only a couple of practical applications, which are pretty
-straightforward.
+straightforward.</p>
 
-Each time you use the <span class="code">intrinsic class</span>
+<p>Each time you use the <code class="language-plaintext highlighter-rouge">intrinsic class</code>
 statement to define an intrinsic class, the compiler implicitly creates
 an instance of IntrinsicClass to represent the intrinsic class.
-(Actually, *you* probably won't ever use the
-<span class="code">intrinsic class</span> statement; you'll probably
-just <span class="code">\#include</span> system header files that use
+(Actually, <em>you</em> probably won’t ever use the
+<code class="language-plaintext highlighter-rouge">intrinsic class</code> statement; you’ll probably
+just <code class="language-plaintext highlighter-rouge">\#include</code> system header files that use
 it.) The compiler gives this instance the same name as the class. For
-example, consider the following statement:
+example, consider the following statement:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    intrinsic class BigNumber 'bignumber' { }
+</code></pre></div></div>
 
-    intrinsic class BigNumber 'bignumber' { }
-
-</div>
-
-This defines an intrinsic class called BigNumber. It also creates an
+<p>This defines an intrinsic class called BigNumber. It also creates an
 object of intrinsic class IntrinsicClass, and calls the object
-BigNumber.
+BigNumber.</p>
 
-## Using IntrinsicClass instances
+<h2 id="using-intrinsicclass-instances">Using IntrinsicClass instances</h2>
 
-IntrinsicClass objects exist simply to serve as identifiers for the
+<p>IntrinsicClass objects exist simply to serve as identifiers for the
 classes of the built-in object types, such as String, List, Vector,
-LookupTable, and so on. There are two main situations where it's
-important to have this kind of identifiers:
+LookupTable, and so on. There are two main situations where it’s
+important to have this kind of identifiers:</p>
 
-- with the ofKind() method
-- with the getSuperclassList() method
+<ul>
+  <li>with the ofKind() method</li>
+  <li>with the getSuperclassList() method</li>
+</ul>
 
-## The ofKind() method
+<h2 id="the-ofkind-method">The ofKind() method</h2>
 
-ofKind() returns <span class="code">true</span> if the argument is the
+<p>ofKind() returns <code class="language-plaintext highlighter-rouge">true</code> if the argument is the
 IntrinsicClass object representing the intrinsic class of the first
-argument. For example:
+argument. For example:</p>
 
-<div class="code">
-
-    local x = new BigNumber('100');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = new BigNumber('100');
       
     tadsSay(x.ofKind(BigNumber) ? 'yes' : 'no'); "; ";
     tadsSay(x.ofKind(Dictionary) ? 'yes' : 'no'); "\n";
+</code></pre></div></div>
 
-</div>
-
-This will display "yes; no", because the object is an instance of the
+<p>This will display “yes; no”, because the object is an instance of the
 BigNumber intrinsic class, and is not an instance of the Dictionary
-intrinsic class.
+intrinsic class.</p>
 
-## The getSuperclassList() method
+<h2 id="the-getsuperclasslist-method">The getSuperclassList() method</h2>
 
-getSuperclassList() returns a list of the immediate superclasses of a
+<p>getSuperclassList() returns a list of the immediate superclasses of a
 given object. If the object is an instance of an intrinsic class, the
 list will have one element, which is the IntrinsicClass object
-representing the intrinsic class. For example:
+representing the intrinsic class. For example:</p>
 
-<div class="code">
-
-    x = new BigNumber('100');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = new BigNumber('100');
     y = x.getSuperclassList();
+</code></pre></div></div>
 
-</div>
+<p>The value of <code class="language-plaintext highlighter-rouge">y</code> will be
+<code class="language-plaintext highlighter-rouge">\[BigNumber\]</code>.</p>
 
-The value of <span class="code">y</span> will be
-<span class="code">\[BigNumber\]</span>.
-
-Most intrinsic classes derive from an "abstract" intrinsic class called
+<p>Most intrinsic classes derive from an “abstract” intrinsic class called
 Object, so, for example,
-<span class="code">BigNumber.getSuperclassList()</span> will return
-<span class="code">\[Object\]</span>. Object itself has no superclass,
-so <span class="code">Object.getSuperclassList()</span> will return an
-empty list.
+<code class="language-plaintext highlighter-rouge">BigNumber.getSuperclassList()</code> will return
+<code class="language-plaintext highlighter-rouge">\[Object\]</code>. Object itself has no superclass,
+so <code class="language-plaintext highlighter-rouge">Object.getSuperclassList()</code> will return an
+empty list.</p>
 
-## IntrinsicClass methods
+<h2 id="intrinsicclass-methods">IntrinsicClass methods</h2>
 
-<span class="code">isIntrinsicClass(*val*)</span>
+<p><code class="language-plaintext highlighter-rouge">isIntrinsicClass(*val*)</code></p>
 
 <div class="fdef">
 
-Returns <span class="code">true</span> if *val* is an IntrinsicClass
-object, <span class="code">nil</span> if not.
+Returns `true` if *val* is an IntrinsicClass
+object, `nil` if not.
 
 This is a class method, so you call this method directly on
 IntrinsicClass itself:
 
-<div class="code">
-
+```
     if (IntrinsicClass.isIntrinsicClass(x))
       "x is an intrinsic class instance!\n";
-
-</div>
+```
 
 At first glance, this method might seem redundant with
-<span class="code">ofKind()</span> and
-<span class="code">getSuperclassList()</span>. It's not, though: those
+`ofKind()` and
+`getSuperclassList()`. It's not, though: those
 methods don't let you determine if you're dealing with an IntrinsicClass
 object, because they instead yield information about the *inheritance*
 structure for the intrinsic types. IntrinsicClass is used only for the
 *representation* of these objects, and isn't involved in the inheritance
 structure.
 
-For example, <span class="code">\[1,2,3\].getSuperclassList()</span>
-yields <span class="code">\[List\]</span>, and
-<span class="code">List.getSuperclassList()</span> yields
-<span class="code">\[Object\]</span>. Since
-<span class="code">Object</span> is the root object,
-<span class="code">Object.getSuperclassList()</span> yields an empty
+For example, `\[1,2,3\].getSuperclassList()`
+yields `\[List\]`, and
+`List.getSuperclassList()` yields
+`\[Object\]`. Since
+`Object` is the root object,
+`Object.getSuperclassList()` yields an empty
 list. In order for the type system to be internally consistent,
-<span class="code">ofKind()</span> must report information that's
-consistent with <span class="code">getSuperclassList()</span>, so
-<span class="code">List.ofKind(IntrinsicClass)</span> must return
-<span class="code">nil</span>: IntrinsicClass isn't anywhere in
-<span class="code">List</span>'s superclass tree, so
-<span class="code">List</span> must not be of kind
-<span class="code">IntrinsicClass</span>.
+`ofKind()` must report information that's
+consistent with `getSuperclassList()`, so
+`List.ofKind(IntrinsicClass)` must return
+`nil`: IntrinsicClass isn't anywhere in
+`List`'s superclass tree, so
+`List` must not be of kind
+`IntrinsicClass`.
 
-That's why <span class="code">isIntrinsicClass()</span> is needed. It's
+That's why `isIntrinsicClass()` is needed. It's
 occasionally useful to know when you're dealing with an intrinsic class
 representation object, and the normal means of class relationship
 testing don't work for this test.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

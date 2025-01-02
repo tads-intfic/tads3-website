@@ -17,7 +17,7 @@ ActorTopicEntry</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Basic Ask/Tell
 
@@ -243,7 +243,7 @@ you might end up with exchanges like the following:
     >ask bob about the weather
     "I don't know anything about it," he insists.
 
-</div>
+
 
 A DefaultAskTopic might look like this:
 

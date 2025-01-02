@@ -38,99 +38,94 @@ Display Model</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="the-default-display-function">The Default Display Function</h1>
 
-# The Default Display Function
-
-The T3 VM does not have a built-in input/output system; as far as the VM
+<p>The T3 VM does not have a built-in input/output system; as far as the VM
 is concerned, input/output operations are part of the host environment,
-and not part of the VM. As a result, T3 doesn't know what to do with
+and not part of the VM. As a result, T3 doesn’t know what to do with
 self-printing strings (strings enclosed in double quotes in a TADS
-program's source code) or embedded expressions (expressions contained in
-<span class="code">\&lt;\&lt; \&gt;\&gt;</span> sequences within double-quoted
+program’s source code) or embedded expressions (expressions contained in
+<code class="language-plaintext highlighter-rouge">\&lt;\&lt; \&gt;\&gt;</code> sequences within double-quoted
 strings). To enable implicit display operations, the VM has a mechanism
 that lets the running program specify a function, defined in the program
 code, to call to display self-printing strings and embedded expressions.
-This is the "default display function." The program can also define a
-method to be called on the active <span class="code">self</span> object
-at the time a string is to be displayed; this is the "default display
-method."
+This is the “default display function.” The program can also define a
+method to be called on the active <code class="language-plaintext highlighter-rouge">self</code> object
+at the time a string is to be displayed; this is the “default display
+method.”</p>
 
-Note: if you're using the adv3 library, the library will take care of
-the VM-level display function registration. You'll generally want to
+<p>Note: if you’re using the adv3 library, the library will take care of
+the VM-level display function registration. You’ll generally want to
 work with the adv3 output manager instead of directly with the VM-level
-display mechanism.
+display mechanism.</p>
 
-The program can define a default display function and method
+<p>The program can define a default display function and method
 simultaneously. The VM chooses whether to call the method or the
-function on a case-by-case basis, each time a value is to be displayed:
+function on a case-by-case basis, each time a value is to be displayed:</p>
 
-- If all of the following conditions are true, the VM calls the default
-  display *method*:
-  - A default display method has been defined (via the
-    <span class="code">t3SetSay()</span> function)
-  - There is a valid <span class="code">self</span> object that is
-    displaying the string or embedded value
-  - The <span class="code">self</span> object defines or inherits the
-    default display method
-- If any of the necessary conditions for invoking the default display
-  method aren't met, then the VM invokes the default display *function*
-  instead. If no default display function has been defined (via the
-  <span class="code">t3SetSay()</span> function), the VM throws an
-  error.
+<ul>
+  <li>If all of the following conditions are true, the VM calls the default
+display <em>method</em>:
+    <ul>
+      <li>A default display method has been defined (via the
+<code class="language-plaintext highlighter-rouge">t3SetSay()</code> function)</li>
+      <li>There is a valid <code class="language-plaintext highlighter-rouge">self</code> object that is
+displaying the string or embedded value</li>
+      <li>The <code class="language-plaintext highlighter-rouge">self</code> object defines or inherits the
+default display method</li>
+    </ul>
+  </li>
+  <li>If any of the necessary conditions for invoking the default display
+method aren’t met, then the VM invokes the default display <em>function</em>
+instead. If no default display function has been defined (via the
+<code class="language-plaintext highlighter-rouge">t3SetSay()</code> function), the VM throws an
+error.</li>
+</ul>
 
-To set the default display function, call the
-<span class="code">t3SetSay()</span> function in the [t3vm](t3vm.html)
+<p>To set the default display function, call the
+<code class="language-plaintext highlighter-rouge">t3SetSay()</code> function in the <a href="t3vm.html">t3vm</a>
 function set, passing a function pointer argument (this must be a
 program-defined function, not an intrinsic function). To set the default
-display method, call <span class="code">t3SetSay()</span> with a
-property pointer argument.
+display method, call <code class="language-plaintext highlighter-rouge">t3SetSay()</code> with a
+property pointer argument.</p>
 
-Most programs can simply set up the default display function and method
+<p>Most programs can simply set up the default display function and method
 once at program startup. However, some programs might wish to change the
 function from time to time. For example, a program might wish to use
 special output filtering at some times but not others; this can be
 achieved by switching between a version of the display function that
 performs the filtering, and another version that displays unfiltered
-output.
+output.</p>
 
-## Writing a display function
+<h2 id="writing-a-display-function">Writing a display function</h2>
 
-A default display function takes a single argument, which is the value
+<p>A default display function takes a single argument, which is the value
 to be displayed, and returns no value. The simplest implementation is to
-simply pass the value to the <span class="code">tadsSay()</span>
-function (in the [tads-io](tadsio.html) function set) to display the
-value on the console:
+simply pass the value to the <code class="language-plaintext highlighter-rouge">tadsSay()</code>
+function (in the <a href="tadsio.html">tads-io</a> function set) to display the
+value on the console:</p>
 
-<div class="code">
-
-    myDispFunction(val)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myDispFunction(val)
     {
       tadsSay(val);
     }
+</code></pre></div></div>
 
-</div>
+<p>To establish <code class="language-plaintext highlighter-rouge">myDispFunction()</code> as the default
+display function, you’d write a line of code like this:</p>
 
-To establish <span class="code">myDispFunction()</span> as the default
-display function, you'd write a line of code like this:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    t3SetSay(myDispFunction);
+</code></pre></div></div>
 
-<div class="code">
-
-    t3SetSay(myDispFunction);
-
-</div>
-
-t3SetSay() call in your <span class="code">main()</span> routine, since
+<p>t3SetSay() call in your <code class="language-plaintext highlighter-rouge">main()</code> routine, since
 this would establish the display function during start-up. Of course,
 you can also switch display functions at any time during program
 execution, which can be useful for certain special effects. For example,
 if you wanted to display text in all capitals at certain times (such as
 when the player is in a particular location), you could switch to a
-capitalizing display function:
+capitalizing display function:</p>
 
-<div class="code">
-
-    dispAllCaps(val)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dispAllCaps(val)
     {
       tadsSay(val.toUpper());
     }
@@ -140,44 +135,38 @@ capitalizing display function:
 
     // when leaving all-caps room
     t3SetSay(myDispFunction);
+</code></pre></div></div>
 
-</div>
+<h2 id="writing-a-display-method">Writing a display method</h2>
 
-## Writing a display method
-
-The default display method works just like the default display function,
-but it's a method on an object or class rather than a function. If you
+<p>The default display method works just like the default display function,
+but it’s a method on an object or class rather than a function. If you
 use a default display method, you will in most cases define one method
 in one of your classes that is near the root of your class hierarchy, so
-that most or all of your other objects and classes inherit the method.
+that most or all of your other objects and classes inherit the method.</p>
 
-Like the default display function, the default display method takes a
+<p>Like the default display function, the default display method takes a
 single argument, which is a value to be displayed, and returns no value.
 The method should simply display the value using whatever mechanism you
-wish.
+wish.</p>
 
-<div class="code">
-
-    class Item: object
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Item: object
       myDispMethod(val) { tadsSay(val); }
     ;
+</code></pre></div></div>
 
-</div>
-
-The benefit of using a default display method instead of (or in addition
+<p>The benefit of using a default display method instead of (or in addition
 to) a display function is that the method can use properties of the
-"self" object to customize the display. For example, suppose that you
+“self” object to customize the display. For example, suppose that you
 defined a class of objects that all have a color attribute, and you
 wanted to create a mechanism that lets you write generic messages
 describing instances of the class, while still customizing the color
 name in the messages. You could do this by defining a substitution
-string - let's say it's "COLOR" - then looking for that string in
-display values and substituting the color attribute. Here's some code
-that would accomplish this.
+string - let’s say it’s “COLOR” - then looking for that string in
+display values and substituting the color attribute. Here’s some code
+that would accomplish this.</p>
 
-<div class="code">
-
-    class ColorItem: Item
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class ColorItem: Item
       myDispMethod(val)
       {
         /* substitute color placeholder strings */
@@ -193,69 +182,57 @@ that would accomplish this.
 
     redItem: ColorItem colorName='red';
     blueItem: ColorItem colorName='blue';
+</code></pre></div></div>
 
-</div>
-
-The implementation of <span class="code">myDispMethod()</span> in the
+<p>The implementation of <code class="language-plaintext highlighter-rouge">myDispMethod()</code> in the
 ColorItem class, which is inherited by redItem and blueItem, checks the
 datatype of the value to be displayed. If the value is a string, the
 method performs a replacement on the string, substituting the string in
-the <span class="code">self</span> object's colorName property for any
-instance of the text "COLOR" in the original string.
+the <code class="language-plaintext highlighter-rouge">self</code> object’s colorName property for any
+instance of the text “COLOR” in the original string.</p>
 
-## How the VM calls the display function
+<h2 id="how-the-vm-calls-the-display-function">How the VM calls the display function</h2>
 
-The VM calls the current display method or function each time your
+<p>The VM calls the current display method or function each time your
 program evaluates a double-quoted string, and each time the program
 evaluates an expression embedded in a double-quoted string with the
-<span class="code">\&lt;\&lt; \&gt;\&gt;</span> syntax.
+<code class="language-plaintext highlighter-rouge">\&lt;\&lt; \&gt;\&gt;</code> syntax.</p>
 
-The argument to the display function can be of any type. When you
+<p>The argument to the display function can be of any type. When you
 evaluate a double-quoted string, the VM calls the display function with
 a single-quoted string containing the same text as the double-quoted
 string. However, when you evaluate an expression embedded in a
-double-quoted string using the <span class="code">\&lt;\&lt; \&gt;\&gt;</span>
+double-quoted string using the <code class="language-plaintext highlighter-rouge">\&lt;\&lt; \&gt;\&gt;</code>
 syntax, the VM calls the display function with the result of evaluating
-the expression. This value can be of any type.
+the expression. This value can be of any type.</p>
 
-Note that the display function should generally display nothing when
-called with a <span class="code">nil</span> argument. This allows you to
+<p>Note that the display function should generally display nothing when
+called with a <code class="language-plaintext highlighter-rouge">nil</code> argument. This allows you to
 use expressions that have side effects, but which return no value, as
-embedded expressions. We will see an example of this a little later.
+embedded expressions. We will see an example of this a little later.</p>
 
-By way of explanation, we could rewrite any double-quoted string in the
+<p>By way of explanation, we could rewrite any double-quoted string in the
 program as a call to the display function with the string value as the
-argument. So, we could rewrite this:
+argument. So, we could rewrite this:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    f1() { "Hello!"; }
+</code></pre></div></div>
 
-    f1() { "Hello!"; }
+<p>like this:</p>
 
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    f1() { myDispFunction('Hello!'); }
+</code></pre></div></div>
 
-like this:
-
-<div class="code">
-
-    f1() { myDispFunction('Hello!'); }
-
-</div>
-
-Similarly, any time there is an embedded expression in a string, we
+<p>Similarly, any time there is an embedded expression in a string, we
 could rewrite the entire string as a series of calls to the display
-function. We could thus rewrite this:
+function. We could thus rewrite this:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    f2() { "Hello &lt;&lt;Me.nameString&gt;&gt;!  Your age is &lt;&lt;Me.age&gt;&gt;."; }
+</code></pre></div></div>
 
-    f2() { "Hello &lt;<Me.nameString>&gt;!  Your age is &lt;<Me.age>&gt;."; }
+<p>like so:</p>
 
-&lt;/div&gt;
-
-like so:
-
-<div class="code">
-
-    f2()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    f2()
     {
       myDispFunction('Hello ');
       myDispFunction(Me.nameString);
@@ -263,28 +240,22 @@ like so:
       myDispFunction(Me.age);
       myDispFunction('.');
     }
+</code></pre></div></div>
 
-</div>
-
-When a default display method is in effect, and you display a string or
+<p>When a default display method is in effect, and you display a string or
 embedded expression from an object that defines or inherits the display
 method, double-quoted strings are displayed by calls to the method. For
 example, assume that we have a class named DispItem that defines the
-current default display method. We could then rewrite this:
+current default display method. We could then rewrite this:</p>
 
-<div class="code">
-
-    obj1: DispItem
-      sdesc = "My name is &lt;<nameString>&gt;."
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj1: DispItem
+      sdesc = "My name is &lt;&lt;nameString&gt;&gt;."
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
+<p>as this:</p>
 
-as this:
-
-<div class="code">
-
-    obj1: DispItem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj1: DispItem
       sdesc
       {
         self.myDispMethod('My name is ');
@@ -293,39 +264,33 @@ as this:
 
       }
     ;
+</code></pre></div></div>
 
-</div>
-
-When the VM calls the display method, <span class="code">self</span> is
+<p>When the VM calls the display method, <code class="language-plaintext highlighter-rouge">self</code> is
 the object that actually defines the property or method displaying the
 string. This applies even for embedded expressions. Consider this
-example:
+example:</p>
 
-<div class="code">
-
-    obj2: DispItem
-      sdesc = "The other object is &lt;<obj3.openDesc>&gt;"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj2: DispItem
+      sdesc = "The other object is &lt;&lt;obj3.openDesc&gt;&gt;"
     ;
 
     obj3: DispItem
       openDesc { isOpen ? "open" : "closed"; }
       isOpen = true
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-This is a bit complicated, because we are evaluating a double-quoted
+<p>This is a bit complicated, because we are evaluating a double-quoted
 string which has an embedded expression, which in turn evaluates a
 double-quoted string in a different object. So, what
-<span class="code">self</span> object is in effect when we display
-"open" or "closed"?
+<code class="language-plaintext highlighter-rouge">self</code> object is in effect when we display
+“open” or “closed”?</p>
 
-This is easier to answer if we use our rewriting rules. We can rewrite
-the example like this:
+<p>This is easier to answer if we use our rewriting rules. We can rewrite
+the example like this:</p>
 
-<div class="code">
-
-    obj2: DispItem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    obj2: DispItem
       sdesc 
       {
         self.myDispMethod('The other object is ');
@@ -341,36 +306,33 @@ the example like this:
       }
       isOpen = true
     ;
+</code></pre></div></div>
 
-</div>
-
-We can see that we start out in <span class="code">obj2.sdesc</span>,
-and display the first fragment of the string ("The other object is ");
-<span class="code">self</span> is clearly obj2 for this display method
-call. We then evaluate <span class="code">obj3.openDesc</span> (using
-the normal TADS order of evaluation rules, we must evaluate a function's
+<p>We can see that we start out in <code class="language-plaintext highlighter-rouge">obj2.sdesc</code>,
+and display the first fragment of the string (“The other object is “);
+<code class="language-plaintext highlighter-rouge">self</code> is clearly obj2 for this display method
+call. We then evaluate <code class="language-plaintext highlighter-rouge">obj3.openDesc</code> (using
+the normal TADS order of evaluation rules, we must evaluate a function’s
 arguments before we can call the function). So, we find ourselves in
-<span class="code">obj3.openDesc</span>. This method chooses to display
-either "open" or "closed", depending on its isOpen property value. Once
-again, the rewrite makes it fairly obvious what's going on: we call
-myDispMethod to display "open" or "closed", with
-<span class="code">self</span> set to obj3. This method returns no
+<code class="language-plaintext highlighter-rouge">obj3.openDesc</code>. This method chooses to display
+either “open” or “closed”, depending on its isOpen property value. Once
+again, the rewrite makes it fairly obvious what’s going on: we call
+myDispMethod to display “open” or “closed”, with
+<code class="language-plaintext highlighter-rouge">self</code> set to obj3. This method returns no
 value, which means that its effective return value is
-<span class="code">nil</span>. Finally, we return back to where we came
-from in <span class="code">obj2.sdesc</span>, where we call
-<span class="code">myDisplayMethod()</span> with the
-<span class="code">nil</span> return value from
-<span class="code">obj3.openDesc</span>, using obj2 for the
-<span class="code">self</span> object.
+<code class="language-plaintext highlighter-rouge">nil</code>. Finally, we return back to where we came
+from in <code class="language-plaintext highlighter-rouge">obj2.sdesc</code>, where we call
+<code class="language-plaintext highlighter-rouge">myDisplayMethod()</code> with the
+<code class="language-plaintext highlighter-rouge">nil</code> return value from
+<code class="language-plaintext highlighter-rouge">obj3.openDesc</code>, using obj2 for the
+<code class="language-plaintext highlighter-rouge">self</code> object.</p>
 
-It should be noted that the compiler does not actually make the
+<p>It should be noted that the compiler does not actually make the
 transformations above; the actual compiled representation is a lot more
 compact than this, since the T3 byte-code has dedicated instructions for
-displaying strings and expressions. The effect, however, is the same.
+displaying strings and expressions. The effect, however, is the same.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -383,7 +345,6 @@ Display Function
 Display Model</a>     </span>
 
 </div>
-</obj3.openDesc></div></nameString></div></Me.age></Me.nameString></div></div>
 
 </main>
 <footer>

@@ -17,7 +17,7 @@ Model</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Topic Actions
 
@@ -257,7 +257,7 @@ blue beach ball, but she has Topic Entries for both, it's probably a
 good idea to define the gala ball TopicEntry with a higher matchScore so
 that it's the one that ends up getting chosen in cases of ambiguity.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

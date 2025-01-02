@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](abasicburner.html)
@@ -177,4 +177,4 @@ him, and so forth. That is what we shall try to do next.
 *[\[Previous\]](abasicburner.html)
   [\[Next\]](theartofconversation.html)*
 
-</div>
+

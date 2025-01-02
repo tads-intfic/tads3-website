@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Scenes
 
@@ -180,6 +180,6 @@ different actions).
     <a href="score.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
-</div>
+
 
 </div>

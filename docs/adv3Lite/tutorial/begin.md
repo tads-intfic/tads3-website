@@ -15,7 +15,7 @@ Overview</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Part I: Opening Moves
 
@@ -27,7 +27,7 @@ This section introduces the adv3Lite Library.
 [Core and Optional Modules](modules.html)  
 [Starting Out — A Minimal Game Definition](mingame.html)  
 
-</div>
+
 
 </div>
 

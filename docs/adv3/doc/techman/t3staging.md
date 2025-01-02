@@ -19,7 +19,7 @@ Phrases</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Using Nested Rooms as Staging Locations
 
@@ -556,7 +556,7 @@ you might want to set it only if the player character stands on the
 staging object when the staging object is in the same location as the
 otherwise inaccessible exit.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

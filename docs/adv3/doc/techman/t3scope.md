@@ -19,7 +19,7 @@ Transcript</a>    
 
 </div>
 
-<div class="main">
+
 
 # Redefining Scope
 
@@ -571,7 +571,7 @@ the dark. We could achieve this with getExtraScopeItems:
 
   
 
-</div>
+
 
 ------------------------------------------------------------------------
 

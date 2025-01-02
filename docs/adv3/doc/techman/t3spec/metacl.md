@@ -19,7 +19,7 @@ Set</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -488,7 +488,7 @@ in the table.
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

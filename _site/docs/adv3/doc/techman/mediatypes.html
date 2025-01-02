@@ -39,42 +39,40 @@ Project Starter Templates</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="internet-media-types-for-tads">Internet Media Types for TADS</h1>
 
-# Internet Media Types for TADS
+<p><em>by Andreas Sewe</em></p>
 
-*by Andreas Sewe*
-
-Both TADS 2 and 3 define quite a few file formats used by their
+<p>Both TADS 2 and 3 define quite a few file formats used by their
 corresponding interpreters and development tools like compilers and
 linkers. This article describes how to utilize media types when
 distributing files in those formats via the Internet. Media or MIME
 types were originally designed for Internet mail, but have been adopted
 by a number of other protocols of which HTTP is probably the most
 prominent one. All these protocols use media types to specify format and
-purpose of the data transmitted.
+purpose of the data transmitted.</p>
 
-If you already know what media types are all about, and you just want to
+<p>If you already know what media types are all about, and you just want to
 look up a particular media type for a file format defined by TADS,
-select one from the following list:
+select one from the following list:</p>
 
-- [TADS 2 Game](#gam)
-- [TADS 2 Saved Game](#sav)
-- [TADS 2 Saved Resource](#rs)
-- [TADS 3 Executable](#t3x)
-- [TADS 3 Saved Position](#t3v)
-- [TADS 3 Resource](#t3r)
-- [TADS 3 Project](#t3m)
-- [TADS 3 Library](#tl)
-- [TADS Source](#t)
-
-  
+<ul>
+  <li><a href="#gam">TADS 2 Game</a></li>
+  <li><a href="#sav">TADS 2 Saved Game</a></li>
+  <li><a href="#rs">TADS 2 Saved Resource</a></li>
+  <li><a href="#t3x">TADS 3 Executable</a></li>
+  <li><a href="#t3v">TADS 3 Saved Position</a></li>
+  <li><a href="#t3r">TADS 3 Resource</a></li>
+  <li><a href="#t3m">TADS 3 Project</a></li>
+  <li><a href="#tl">TADS 3 Library</a></li>
+  <li><a href="#t">TADS Source</a></li>
+</ul>
 
 <div class="section_title">
 
 Background: Media Type Syntax
 
-</div>
+
 
 While media or MIME types were originally introduced by RFC 1341 their
 current incarnation is defined by a set of five core RFCs, some of which
@@ -869,9 +867,7 @@ done by the web server’s administrator.</p>
 appropriate directives, you can add the following to the respective
 configuration file:</p>
 
-<div class="code">
-
-    # TADS 2 Game
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # TADS 2 Game
     AddType application/x-tads .gam
     # TADS 2 Saved Game
     AddType application/x-tads-save .sav
@@ -893,8 +889,7 @@ configuration file:</p>
     AddCharset us-ascii .tl
     # TADS Source
     AddType text/plain .t .h
-
-</div>
+</code></pre></div></div>
 
 <p>Additionally, in case all your <a href="#t">TADS Source</a> files are encoded in a
 single charset, e.g. <code class="language-plaintext highlighter-rouge">us-ascii</code>, you might want to add a directive like

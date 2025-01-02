@@ -19,7 +19,7 @@ Operators</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Automatic Garbage Collection and Finalization
 
@@ -178,7 +178,7 @@ the CPU, so we're essentially using "free" CPU time. It's up to
 individual VMs to take advantage of this, and whether they do or not
 makes no difference to the program.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

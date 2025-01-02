@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Vector
 
@@ -285,7 +285,7 @@ the `+` operator, this method modifies the
 Vector object, rather than creating a new Vector to store the result.
 Returns `self`.
 
-</div>
+
 
 `appendAll(*val*)`
 

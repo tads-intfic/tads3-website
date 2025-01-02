@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Extending the Map
 
@@ -57,7 +57,7 @@ line at the end:
 
     -source gatearea
 
-</div>
+
 
 Whichever way you used to create the new file, the next step is to make
 sure it starts with the following three lines:

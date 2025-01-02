@@ -18,7 +18,7 @@ Creation</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Multi-Methods
 
@@ -171,7 +171,7 @@ syntax is:
         methodCode
     }
 
-</div>
+
 
 Each type specification (*type1* and so on) is the name of a class. You
 can use intrinsic class names to match special types: String for

@@ -18,7 +18,7 @@ Substitutions</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Custom Preconditions
 
@@ -453,7 +453,7 @@ With these changes, our new `objNotHeld` precondition becomes:
         }
     ;
 
-</div>
+
 
 ------------------------------------------------------------------------
 

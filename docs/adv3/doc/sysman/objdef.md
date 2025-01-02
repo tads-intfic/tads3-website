@@ -19,7 +19,7 @@ Model</a>    
 
 </div>
 
-<div class="main">
+
 
 # Object Definitions
 
@@ -82,7 +82,7 @@ The most general way to define an object is like this:
        methodName ( arg1 [ , arg2 ... ]  ) { methodBody }
     ;
 
-</div>
+
 
 The first line names the object, and defines its superclass list. An
 object must always have at least one superclass, but you can use the

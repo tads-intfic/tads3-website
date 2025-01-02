@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Feedback
 
@@ -113,7 +113,7 @@ than as part of the core library. Maintenance work will continue to fix
 any bugs that come to light and/or to improve existing features if the
 need to do so becomes apparent.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

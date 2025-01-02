@@ -20,7 +20,7 @@ Conversations with NPCs</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Choosing a Conversation System
 
@@ -881,7 +881,7 @@ to answer out of sheer orneriness. Used this way, default responses can
 be a good opportunity to flesh out a character, so at least they're not
 a complete waste for the player.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

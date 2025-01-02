@@ -19,7 +19,7 @@ Compilation</a>    
 
 </div>
 
-<div class="main">
+
 
 # Using AutoHotKey with the Workbench Editor (Windows)
 
@@ -202,4 +202,4 @@ adding the following to the file and then saving it:
 
 ```
 
-</div>
+

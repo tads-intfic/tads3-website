@@ -38,86 +38,81 @@ Undefined Methods
 
 </div>
 
-<div class="main">
+<h1 id="capturing-calls-to-undefined-properties">Capturing Calls to Undefined Properties</h1>
 
-# Capturing Calls to Undefined Properties
-
-The TADS 3 language doesn't require you to specify the types of
+<p>The TADS 3 language doesn’t require you to specify the types of
 variables, functions, and properties when you declare them - in fact,
-the language doesn't have any way of making these declarations even if
-you wanted to. This means that the language isn't "statically typed":
-you can't tell the type of a variable with certainty just by looking at
-the variable's definition.
+the language doesn’t have any way of making these declarations even if
+you wanted to. This means that the language isn’t “statically typed”:
+you can’t tell the type of a variable with certainty just by looking at
+the variable’s definition.</p>
 
-(This isn't to say the language is "weakly typed", by the way, which is
+<p>(This isn’t to say the language is “weakly typed”, by the way, which is
 a common misconception about this type of language. TADS is actually a
 strongly typed language with run-time typing. A weakly typed language is
 one where values can be reinterpreted as different types at the byte
 storage level, such as the way an integer can be reinterpreted as a
 pointer, or vice versa, in C. C could be considered a weakly typed
 language with static typing; TADS is the opposite, a strongly typed
-language with run-time typing.)
+language with run-time typing.)</p>
 
-Because the compiler doesn't know in advance what kind of object a
-variable might contain, the compiler can't determine whether or not a
+<p>Because the compiler doesn’t know in advance what kind of object a
+variable might contain, the compiler can’t determine whether or not a
 particular property will be defined for the object. For example,
-consider this code:
+consider this code:</p>
 
-<div class="code">
-
-    local x;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x;
     x = getSomeObject();
     x.name;
+</code></pre></div></div>
 
-</div>
+<p>Because the compiler can’t tell what kind of object x will contain when
+this code is executed, the compiler can’t know whether or not that
+object will define the property “name.”</p>
 
-Because the compiler can't tell what kind of object x will contain when
-this code is executed, the compiler can't know whether or not that
-object will define the property "name."
+<p>When you call a property (or, equivalently, a method) on an object, and
+the object doesn’t define that property and doesn’t inherit it from any
+superclass, the VM will do one of two things:</p>
 
-When you call a property (or, equivalently, a method) on an object, and
-the object doesn't define that property and doesn't inherit it from any
-superclass, the VM will do one of two things:
+<ul>
+  <li>If the program exports a property called
+<code class="language-plaintext highlighter-rouge">propNotDefined</code>, and the object defines or
+inherits this property, the VM invokes
+<code class="language-plaintext highlighter-rouge">propNotDefined</code> with the original property ID
+as the first argument, followed by all of the other arguments of the
+original invocation.</li>
+  <li>Otherwise, the undefined property invocation returns nil.</li>
+</ul>
 
-- If the program exports a property called
-  <span class="code">propNotDefined</span>, and the object defines or
-  inherits this property, the VM invokes
-  <span class="code">propNotDefined</span> with the original property ID
-  as the first argument, followed by all of the other arguments of the
-  original invocation.
-- Otherwise, the undefined property invocation returns nil.
-
-The basic system library doesn't export any symbol called
-<span class="code">propNotDefined</span>, so in a low-level TADS 3
+<p>The basic system library doesn’t export any symbol called
+<code class="language-plaintext highlighter-rouge">propNotDefined</code>, so in a low-level TADS 3
 program, you must explicitly export this symbol if you want to use the
-<span class="code">propNotDefined</span> mechanism. However, note that
-the adv3 library **does** export
-<span class="code">propNotDefined</span>, so the mechanism is enabled
-automatically if you're writing a library-based game.
+<code class="language-plaintext highlighter-rouge">propNotDefined</code> mechanism. However, note that
+the adv3 library <strong>does</strong> export
+<code class="language-plaintext highlighter-rouge">propNotDefined</code>, so the mechanism is enabled
+automatically if you’re writing a library-based game.</p>
 
-Refer to the section on [exporting symbols](export.html) for details on
-the export mechanism.
+<p>Refer to the section on <a href="export.html">exporting symbols</a> for details on
+the export mechanism.</p>
 
-## Throwing an Exception for Undefined Properties
+<h2 id="throwing-an-exception-for-undefined-properties">Throwing an Exception for Undefined Properties</h2>
 
-Calling an undefined property is perfectly legal in TADS, so there are
+<p>Calling an undefined property is perfectly legal in TADS, so there are
 no error messages or other negative consequences when a program does so.
-It's possible, though, to use the propNotDefined mechanism described
+It’s possible, though, to use the propNotDefined mechanism described
 above to introduce your own error on undefined property evaluation, if
 you wish to modify the language to make such calls illegal. Of course,
-doing so is only suitable if you're using TADS to create something
-highly customized. Be aware that you'll have to replace all of the
-standard Adv and system library components if you don't want to allow
+doing so is only suitable if you’re using TADS to create something
+highly customized. Be aware that you’ll have to replace all of the
+standard Adv and system library components if you don’t want to allow
 undefined property calls, since the standard components all operate
 within the standard rule that calls to undefined properties are legal.
-This sort of change is thus only possible if you're creating a complete
-replacement library.
+This sort of change is thus only possible if you’re creating a complete
+replacement library.</p>
 
-Here's an example of how you might do this:
+<p>Here’s an example of how you might do this:</p>
 
-<div class="code">
-
-    // this export is needed only if the library doesn't
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // this export is needed only if the library doesn't
     // otherwise define it
     property propNotDefined;
     export propNotDefined;
@@ -138,26 +133,23 @@ Here's an example of how you might do this:
         throw new PropNotDefinedException(prop, args);
       }
     ;
+</code></pre></div></div>
 
-</div>
+<h2 id="proxy-objects">Proxy Objects</h2>
 
-## Proxy Objects
-
-It's frequently useful to define one object as a "proxy" for another, so
+<p>It’s frequently useful to define one object as a “proxy” for another, so
 that the proxy object redirects most method calls to its underlying
 object. This allows the proxy to provide its own definitions for a few
 particular properties, while letting the original object do everything
-else. The <span class="code">propNotDefined</span> mechanism makes this
-easy to implement.
+else. The <code class="language-plaintext highlighter-rouge">propNotDefined</code> mechanism makes this
+easy to implement.</p>
 
-<div class="code">
-
-    // redirect everything but 'name' to the original
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // redirect everything but 'name' to the original
     class Proxy: object
       construct(original) { orig_ = original; }
 
       // change the name
-      name = "proxy for &lt;<orig_.name>&gt;"
+      name = "proxy for &lt;&lt;orig_.name&gt;&gt;"
 
       // redirect everything we don't define ourselves
       propNotDefined(prop, [args])
@@ -169,12 +161,9 @@ easy to implement.
       // my underlying object
       orig_ = nil
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -187,7 +176,6 @@ Undefined Methods
 </span>
 
 </div>
-</orig_.name></div></div>
 
 </main>
 <footer>

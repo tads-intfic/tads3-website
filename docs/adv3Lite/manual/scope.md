@@ -18,7 +18,7 @@ Model</a>    
 
 </div>
 
-<div class="main">
+
 
 # Scope
 
@@ -112,7 +112,7 @@ Sixth (and probably most trickily), you could override the
 buildScopeList(role) method on the action to define some totally
 different way of defining scope for that particular action.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

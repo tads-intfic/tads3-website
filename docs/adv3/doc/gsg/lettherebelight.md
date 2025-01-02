@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](callingaspadeaspade.html)   [\[Next\]](rowmyboat.html)*
@@ -1036,4 +1036,4 @@ check that it still works. <br />
 [\[Main\]](index.html)  
 *[\[Previous\]](callingaspadeaspade.html)   [\[Next\]](rowmyboat.html)*
 
-</div>
+

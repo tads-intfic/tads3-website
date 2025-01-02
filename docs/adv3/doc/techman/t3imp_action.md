@@ -19,7 +19,7 @@ Substitutions</a>    
 
 </div>
 
-<div class="main">
+
 
 # Implicit Action Reports
 
@@ -474,7 +474,7 @@ we can be pretty confident about the context in which it will be used,
 defining a custom method on libMessages and using it via a call to
 tryImplicitActionMsg may be the way to go.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

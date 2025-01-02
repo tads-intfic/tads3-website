@@ -19,7 +19,7 @@ ActorTopicEntry</a>    
 
 </div>
 
-<div class="main">
+
 
 # Suggesting Conversational Topics
 
@@ -224,7 +224,7 @@ this in the previous section:
     You could ask Bob when the tower was built, or why the tower is scary, or tell him
     about your visit, or say you think he's exaggerating.
 
-</div>
+
 
 Setting this up is quite straightfoward. You just define the
 **keyTopics** property on the ActorTopicEntry to contain a key or a list

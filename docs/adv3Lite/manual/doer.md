@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Doers
 
@@ -775,6 +775,6 @@ Doers defined in the game take priority over library definitions.
 <a href="implicit.html" class="nav"><em>Next:</em> Implicit Actions</a>
     </span>
 
-</div>
+
 
 </div>

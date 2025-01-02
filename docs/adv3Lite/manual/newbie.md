@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Help for New Players
 
@@ -301,6 +301,6 @@ command.
     <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
     </span>
 
-</div>
+
 
 </div>

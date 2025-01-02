@@ -18,7 +18,7 @@ Right
 
 </div>
 
-<div class="main">
+
 
 # Starting Out Right
 
@@ -89,6 +89,6 @@ Right
     <a href="scoring.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
-</div>
+
 
 </div>

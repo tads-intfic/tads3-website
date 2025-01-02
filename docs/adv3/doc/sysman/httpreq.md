@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # HTTPRequest
 
@@ -85,7 +85,7 @@ This method must be called exactly once for a chunked reply, after
 sending all of the pieces of a chunked reply. After calling this method,
 the request is completed, and no further reply can be sent.
 
-</div>
+
 
 `getBody()`
 

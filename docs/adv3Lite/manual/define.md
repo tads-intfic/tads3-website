@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Defining New Actions
 
@@ -113,7 +113,7 @@ player issues a command that lacks the appropriate object, e.g.:
     >ball
     You take the red ball.
 
-</div>
+
 
 (If you're used to adv3 you'll notice that the adv3Lite way of defining
 a VerbRule is quite similar but a little different in some details).

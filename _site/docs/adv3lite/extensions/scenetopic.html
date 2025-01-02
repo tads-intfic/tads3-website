@@ -38,59 +38,55 @@ SceneTopic
 
 </div>
 
-<div class="main">
+<h1 id="scenetopic">SceneTopic</h1>
 
-# SceneTopic
+<h2 id="overview">Overview</h2>
 
-## Overview
+<p>The purpose of this extension is to allow the definition of
+ActorTopicEntries that are triggered when Scenes begin or end.</p>
 
-The purpose of this extension is to allow the definition of
-ActorTopicEntries that are triggered when Scenes begin or end.
+<p>This extension is based on work by Donald Smith.</p>
 
-This extension is based on work by Donald Smith.
+<p><span id="classes"></span></p>
 
-  
-<span id="classes"></span>
+<h2 id="new-classes-methods-and-properties">New Classes, Methods and Properties</h2>
 
-## New Classes, Methods and Properties
-
-In addition to a number of objects, properties and methods intended
+<p>In addition to a number of objects, properties and methods intended
 purely for internal use, this extension defines the following new
-classes, methods and properties:
+classes, methods and properties:</p>
 
-- *Classes*: **SceneTopic**, **SceneStartTopic**, **SceneEndTopic**.
-- *Methods on SceneTopic*: <span class="code">beforeResponse()</span>,
-  <span class="code">afterResponse()</span>.
-- *New Property on Scene*: <span class="code">notifySingleActor</span>.
-- *Otherwise Unused Property on Actor*:
-  <span class="code">notificationOrder</span>
+<ul>
+  <li><em>Classes</em>: <strong>SceneTopic</strong>, <strong>SceneStartTopic</strong>, <strong>SceneEndTopic</strong>.</li>
+  <li><em>Methods on SceneTopic</em>: <code class="language-plaintext highlighter-rouge">beforeResponse()</code>,
+<code class="language-plaintext highlighter-rouge">afterResponse()</code>.</li>
+  <li><em>New Property on Scene</em>: <code class="language-plaintext highlighter-rouge">notifySingleActor</code>.</li>
+  <li><em>Otherwise Unused Property on Actor</em>:
+<code class="language-plaintext highlighter-rouge">notificationOrder</code></li>
+</ul>
 
-  
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the scenetopic.t file after the library files but before your
+<p>Include the scenetopic.t file after the library files but before your
 game source files. Your game must also contain the actor.t and scene.t
-modules.
+modules.</p>
 
-SceneTopics can be used very much like other
-[ActorTopicEntries](../../docs/manual/actortopicentry.html). The main
+<p>SceneTopics can be used very much like other
+<a href="../../docs/manual/actortopicentry.html">ActorTopicEntries</a>. The main
 difference is that they are triggered by the start or end of a scene
 that takes place when the player character can talk to the actor for
-whom the SceneTopic is defined.
+whom the SceneTopic is defined.</p>
 
-The SceneTopic class is not used directly. Instead use
-<span class="code">SceneStartTopic</span> for a topic entry that is to
+<p>The SceneTopic class is not used directly. Instead use
+<code class="language-plaintext highlighter-rouge">SceneStartTopic</code> for a topic entry that is to
 be triggered by the start of a scene, and
-<span class="code">SceneEndTopic</span> for one that is to be triggered
+<code class="language-plaintext highlighter-rouge">SceneEndTopic</code> for one that is to be triggered
 by the end of the scene. In either case, the scene or scenes whose
 beginning or ending is to trigger the SceneTopic are defined on its
-<span class="code">matchObj</span> property in the normal way, e.g.
+<code class="language-plaintext highlighter-rouge">matchObj</code> property in the normal way, e.g.</p>
 
-<div class="code">
-
-     jane: Actor 'Jane;;;her' @hall;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     jane: Actor 'Jane;;;her' @hall;
 
     + janeState: ActorState
         isInitState = true
@@ -98,27 +94,26 @@ beginning or ending is to trigger the SceneTopic are defined on its
     ;
 
     ++ SceneStartTopic @scene1
-        "<q>So, the scene has started,</q> Jane remarks. "
+        "&lt;q&gt;So, the scene has started,&lt;/q&gt; Jane remarks. "
     ;
      
     ++ SceneEndTopic [scene1, scene2]
-        "<q>Well, that was quite a scene!</q> Jane declares. "
+        "&lt;q&gt;Well, that was quite a scene!&lt;/q&gt; Jane declares. "
     ; 
      
+</code></pre></div></div>
 
-</div>
+<p><span id="before"></span></p>
 
-<span id="before"></span>
-
-Additional control over how a SceneTopic responds to the beginning or
-ending of a scene is provided by its **beforeResponse()** and
-**afterResponse()** methods, which can be used to define additional
+<p>Additional control over how a SceneTopic responds to the beginning or
+ending of a scene is provided by its <strong>beforeResponse()</strong> and
+<strong>afterResponse()</strong> methods, which can be used to define additional
 behaviour that is to occur before or after the response displayed by the
-SceneTopic. By default the <span class="code">beforeResponse()</span>
+SceneTopic. By default the <code class="language-plaintext highlighter-rouge">beforeResponse()</code>
 simply outputs a spacing paragraph break and the
-<span class="code">afterResponse()</span> method does nothing.
+<code class="language-plaintext highlighter-rouge">afterResponse()</code> method does nothing.</p>
 
-Note that the same matching rules apply to SceneTopics as to other
+<p>Note that the same matching rules apply to SceneTopics as to other
 TopicEntries; that is, if an Actor has several SceneTopics that could
 match the start or end of a scene, only one will be triggered, namely
 the one that is considered the best match according to the same
@@ -128,23 +123,19 @@ that when a scene starts or ends there may be several Actors in scope
 than one of those Actors could have a SceneTopic that would be triggered
 by the beginning or ending of the Scene, but should all these Actors
 respond, or only one of them, and if so, which one? By default, only one
-Actor's SceneTopic is triggered, but this can be changed by overriding
-the Scene's **notifySingleActor** property to nil. In any case before
-any Actor's SceneTopic is triggered the relevant Actors are sorted in
-ascending order of their **notificationOrder** property. This means that
-if only one Actor's SceneTopic is used, it will be the one that has the
-lowest <span class="code">notificationOrder</span> (out of those that
+Actor’s SceneTopic is triggered, but this can be changed by overriding
+the Scene’s <strong>notifySingleActor</strong> property to nil. In any case before
+any Actor’s SceneTopic is triggered the relevant Actors are sorted in
+ascending order of their <strong>notificationOrder</strong> property. This means that
+if only one Actor’s SceneTopic is used, it will be the one that has the
+lowest <code class="language-plaintext highlighter-rouge">notificationOrder</code> (out of those that
 have a matching SceneTopic), while if every relevant Actor with a
 matching SceneTopic is allowed to respond, they will respond in order of
-their <span class="code">notificationOrder</span> property.
+their <code class="language-plaintext highlighter-rouge">notificationOrder</code> property.</p>
 
-  
-
-This covers most of what you need to know to use this extension. For
+<p>This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
-[scenetopic.t](../scenetopic.t) file.
-
-</div>
+<a href="../scenetopic.t">scenetopic.t</a> file.</p>
 
 <hr />
 

@@ -18,7 +18,7 @@ Room</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Just the Ticket
 
@@ -197,7 +197,7 @@ Now try compiling and running the game again to test that the newspaper
 and ticket work as expected. Use whichever version of
 `revealOnMove()` you prefer.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

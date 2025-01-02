@@ -19,7 +19,7 @@ nest?</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Dropping objects from the tree
 
@@ -190,7 +190,7 @@ doesn't even count as a turn).
 Now try compiling and running the game again to check that everything
 once again behaves as you expect.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

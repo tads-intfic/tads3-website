@@ -37,84 +37,73 @@
 
 </div>
 
-<div class="main">
+<h1 id="string">String</h1>
 
-# String
-
-"String" is a native TADS 3 datatype, but it's also an intrinsic class.
+<p>“String” is a native TADS 3 datatype, but it’s also an intrinsic class.
 Any string value is an instance of the String class, so you can call
-methods defined by the class on any string value.
+methods defined by the class on any string value.</p>
 
-## Value semantics
+<h2 id="value-semantics">Value semantics</h2>
 
-Strings have "value semantics". This means that a given string value's
-text is immutable: once you've created a string, the text within that
+<p>Strings have “value semantics”. This means that a given string value’s
+text is immutable: once you’ve created a string, the text within that
 string never changes. All of the methods and operators that might appear
 to change the value of a string actually create a new string with the
 modified value, leaving the original value intact. For example, consider
-this code:
+this code:</p>
 
-<div class="code">
-
-    local x = 'foo';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = 'foo';
     local y = x;
     x += 'bar';
+</code></pre></div></div>
 
-</div>
-
-Superficially, it appears that the last line changes the string in
-<span class="code">x</span>. In fact, the original string is not
-changed - if we display the value of <span class="code">y</span>, we'll
-see that <span class="code">y</span> still contains
-<span class="code">'foo'</span>. When the the last line above is
+<p>Superficially, it appears that the last line changes the string in
+<code class="language-plaintext highlighter-rouge">x</code>. In fact, the original string is not
+changed - if we display the value of <code class="language-plaintext highlighter-rouge">y</code>, we’ll
+see that <code class="language-plaintext highlighter-rouge">y</code> still contains
+<code class="language-plaintext highlighter-rouge">'foo'</code>. When the the last line above is
 executed, it creates a new string to hold the concatenated value, and
-assigns the result to <span class="code">x</span>.
+assigns the result to <code class="language-plaintext highlighter-rouge">x</code>.</p>
 
-Value semantics make it very easy to work with strings, because you
-don't have to worry about whether a function might modify a string you
-pass to it: this can never happen, because a given string's text is
-constant.
+<p>Value semantics make it very easy to work with strings, because you
+don’t have to worry about whether a function might modify a string you
+pass to it: this can never happen, because a given string’s text is
+constant.</p>
 
-## Operators
+<h2 id="operators">Operators</h2>
 
-The addition operator <span class="code">+</span> can be used to
+<p>The addition operator <code class="language-plaintext highlighter-rouge">+</code> can be used to
 concatenate two strings yielding a string that consists of the contents
 of the right-hand string appended to the end of the contents of the
-left-hand string.
+left-hand string.</p>
 
-<div class="code">
-
-    local x = 'foo';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = 'foo';
     local y = 'bar';
     local z = x + y;  // z = 'foobar'
+</code></pre></div></div>
 
-</div>
+<p>You can use the <code class="language-plaintext highlighter-rouge">+=</code> operator to replace the
+left-hand variable with the resulting string.</p>
 
-You can use the <span class="code">+=</span> operator to replace the
-left-hand variable with the resulting string.
-
-<div class="code">
-
-    local x = 'foo';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local x = 'foo';
     local y = 'bar';
     x += y;  // x = 'foobar'
+</code></pre></div></div>
 
-</div>
+<h2 id="string-vs-stringbuffer">String vs StringBuffer</h2>
 
-## String vs StringBuffer
-
-There's a related class called [StringBuffer](strbuf.html), that's
+<p>There’s a related class called <a href="strbuf.html">StringBuffer</a>, that’s
 designed especially for complex string construction tasks. StringBuffer
 objects can be edited in place, meaning that you can change the text
 contained in a StringBuffer object, rather than creating a new object
 for every modification. Refer to the StringBuffer documentation for more
-information.
+information.</p>
 
-## String methods
+<h2 id="string-methods">String methods</h2>
 
-<span id="compareTo"></span>
+<p><span id="compareTo"></span></p>
 
-<span class="code">compareTo(*str*)</span>
+<p><code class="language-plaintext highlighter-rouge">compareTo(*str*)</code></p>
 
 <div class="fdef">
 
@@ -128,11 +117,11 @@ won't be sorted in the correct linguistic order for a given language.
 Different languages use different collation rules, which usually don't
 match the Unicode character order.
 
-</div>
+
 
 <span id="compareIgnoreCase"></span>
 
-<span class="code">compareIgnoreCase(*str*)</span>
+`compareIgnoreCase(*str*)`
 
 <div class="fdef">
 
@@ -157,7 +146,7 @@ collation rules, which usually don't match the Unicode character order.
 
 <span id="digestMD5"></span>
 
-<span class="code">digestMD5()</span>
+`digestMD5()`
 
 <div class="fdef">
 
@@ -171,27 +160,27 @@ integrity checking. It's also part of several Internet standards (e.g.,
 HTTP digest authentication). In an Interactive Fiction context,
 [Babel](http://babel.ifarchive.org/) uses MD5 to generate IFIDs for
 older games. If you're looking for a secure hash, consider SHA-2 (see
-[<span class="code">sha256()</span>](#sha256)) instead of MD5.
+[`sha256()`](#sha256)) instead of MD5.
 
 </div>
 
 <span id="endsWith"></span>
 
-<span class="code">endsWith(*str*)</span>
+`endsWith(*str*)`
 
 <div class="fdef">
 
-Returns <span class="code">true</span> if this string ends with *str*,
-<span class="code">nil</span> if not. This string ends with *str* if
+Returns `true` if this string ends with *str*,
+`nil` if not. This string ends with *str* if
 this string is at least as long as *str*, and the last
-<span class="code">str.length()</span> characters of this string are the
+`str.length()` characters of this string are the
 same as the characters of *str*.
 
 </div>
 
 <span id="find"></span>
 
-<span class="code">find(*target*, *index*?)</span>
+`find(*target*, *index*?)`
 
 <div class="fdef">
 
@@ -200,13 +189,13 @@ Finds the substring or regular expression *target* within this string.
 If the search is successful, the method returns the character index
 where the match starts (the first character of the string is at index
 1). If the target isn't found, the method returns
-<span class="code">nil</span>. If *target* is a regular expression, the
+`nil`. If *target* is a regular expression, the
 method has the side effect of updating the
 [rexGroup()](tadsgen.html#rexGroup) registers to reflect the search
 results.
 
 *target* can be a string value or a [RexPattern](rexpat.html) object. If
-it's a string, <span class="code">find()</span> simply searches for the
+it's a string, `find()` simply searches for the
 literal text of the string. If *target* is a RexPattern, the method
 searches for a match to the regular expression pattern.
 
@@ -229,8 +218,7 @@ start of the overall string, regardless of the *index* value.
 
 Examples:
 
-<div class="code">
-
+```
     'abcdef'.find('cd') yields 3
     'abcdef'.find('g') yields nil
     'abcdef'.find('c', 3) yields 3
@@ -238,14 +226,13 @@ Examples:
     'abcabcabc'.find('c', 4) yields 6
     'abcabcabc'.find('c', 7) yields 9
     'abcdef123456'.find(R'%d+') yields 7
-
-</div>
+```
 
 </div>
 
 <span id="findAll"></span>
 
-<span class="code">findAll(*target*, *func*?)</span>
+`findAll(*target*, *func*?)`
 
 <div class="fdef">
 
@@ -264,7 +251,7 @@ pattern, the function searches for matches to the regular expression.
 *func* is an optional callback function. If provided, the method calls
 *func* for each match, and uses the value returned by *func* as the
 match's entry in the return list. *func* is invoked as
-<span class="code">func(*match*, *index*, *group1*...)</span>, where
+`func(*match*, *index*, *group1*...)`, where
 *match* is a string with the text of the match, *index* is the character
 index in the subject string of the start of the match, and *group1* is
 the text of the first parenthesized group in the regular expression, if
@@ -273,26 +260,24 @@ groups. All of the arguments are optional; the method calls *func* with
 as many arguments as its actually expects, so if you don't need to know
 the index or group values, you can simply omit the parameter variable
 for them. If *func* requires more group parameters than there are actual
-matching groups, the method passes <span class="code">nil</span> values
+matching groups, the method passes `nil` values
 for the extra group parameters.
 
 Examples:
 
-<div class="code">
-
+```
     'one two three'.findAll(R'%w+') yields ['one', 'two', 'three']
     'one two three'.findAll(R'%w+', {m: m.toUpper()} yields ['ONE', 'TWO', 'THREE']
     'one two three'.findAll(R'%w+', {m, idx: idx}) yields [1, 5, 9]
     'one two three'.findAll(R'(%w)%w*', {m, i, g1: g1} yields ['o', 'w', 't']
     'one two three'.findAll(R'(%w)%w*', {m, i, g1, g2: g2} yields [nil, nil, nil]
-
-</div>
+```
 
 </div>
 
 <span id="findLast"></span>
 
-<span class="code">findLast(*target*, *index*?)</span>
+`findLast(*target*, *index*?)`
 
 <div class="fdef">
 
@@ -303,7 +288,7 @@ the string and working towards the beginning.
 
 On success, the return value is an integer giving the character index of
 the start of the rightmost match. If no match is found, the result is
-<span class="code">nil</span>. If *target* is a regular expression, the
+`nil`. If *target* is a regular expression, the
 method has the side effect of updating the
 [rexGroup()](tadsgen.html#rexGroup) registers to reflect the search
 results.
@@ -324,14 +309,13 @@ plus one, to indicate the imaginary character position just after the
 end of the string. Specifying 0 for *index* means the same thing. If
 *index* is negative, it's an offset from the end of the string: -1 is
 the last character, -2 is the second to last, and so on. Note that -1
-(or, equivalently, <span class="code">self.length()</span>) means that
+(or, equivalently, `self.length()`) means that
 you want to search the portion of the string up to but not including the
 last character, since the match can't include the starting character.
 
 Examples:
 
-<div class="code">
-
+```
     'abcdef'.findLast('cd') yields 3
     'abcdef'.findLast('g') yields nil
     'abcabcabc'.find('c') yields 9
@@ -339,18 +323,17 @@ Examples:
     'abcabcabc'.find('c', 9) yields 6
     'abcabcabc'.find('c', -1) yields 6
     'abc123'.find(R'%d+') yields 4
-
-</div>
+```
 
 For regular expression targets, the
-<span class="code">\&lt;FirstBegin\&gt;</span> and
-<span class="code">\&lt;FirstEnd\&gt;</span> modes (see [regular
+`\&lt;FirstBegin\&gt;` and
+`\&lt;FirstEnd\&gt;` modes (see [regular
 expressions](regex.html)) work in mirror image compared to ordinary
 forward searches. The easiest way to think about this is to picture the
 reverse search as a forward search viewed in a mirror. For a reverse
-search, <span class="code">\&lt;FirstBegin\&gt;</span> means that the match
+search, `\&lt;FirstBegin\&gt;` means that the match
 with its *right* end closest to the starting point is selected as the
-winner, while <span class="code">\&lt;FirstEnd\&gt;</span> means that the
+winner, while `\&lt;FirstEnd\&gt;` means that the
 match with its *left* end closest to the starting point is selected.
 Since the search proceeds right to left, closer to the starting point
 means further right, at a higher index.
@@ -367,13 +350,13 @@ characters or anything else.
 
 <span id="findReplace"></span>
 
-<span class="code">findReplace(*oldStr*, *newStr*, *flags*?, *index*?,
-*limit*?)</span>
+`findReplace(*oldStr*, *newStr*, *flags*?, *index*?,
+*limit*?)`
 
 <div class="fdef">
 
 Finds one or more instances of the substring *oldStr* within the subject
-string (i.e., <span class="code">self</span>), and replaces them with
+string (i.e., `self`), and replaces them with
 the new substring *newStr*.
 
 The method returns a new string with the replacements performed. If
@@ -392,41 +375,41 @@ value, in which case the literal text of the string is used as the
 replacement text, or it can be a function to invoke to determine the
 replacement text ([see below](#findReplaceFuncs)).
 
-If *oldStr* is a RexPattern, <span class="code">%</span> characters in
+If *oldStr* is a RexPattern, `%` characters in
 *newStr* have the same special meaning they have in the replacement text
 in the [rexReplace()](tadsgen.html#rexReplace) function:
-<span class="code">%1</span> is replaced by the subject string text that
+`%1` is replaced by the subject string text that
 matched the first parenthesized group in the regular expression,
-<span class="code">%2</span> by the text matching the second group, and
-so on; <span class="code">%\*</span> is replaced by the text matching
-the entire regular expression pattern; and <span class="code">%%</span>
+`%2` by the text matching the second group, and
+so on; `%\*` is replaced by the text matching
+the entire regular expression pattern; and `%%`
 is replaced by a single percent sign. When *oldStr* is a string value,
-<span class="code">%</span> characters in *newStr* have no special
+`%` characters in *newStr* have no special
 meaning and are simply used literally as replacement text.
 
 *oldStr* and *newStr* can also be specified as lists; see
 [below](#findReplaceLists) for details.
 
 *flags* is optional. If it's missing, the default is
-<span class="code">ReplaceAll</span>, to replace all occurrences of the
+`ReplaceAll`, to replace all occurrences of the
 search string within the subject string. If provided, *flags* is a
-bitwise combination (with the <span class="code">\|</span> operator) of
+bitwise combination (with the `\|` operator) of
 the following flag values:
 
-- <span class="code">ReplaceOnce</span>: replace only the first
+- `ReplaceOnce`: replace only the first
   occurrence of the search string. This is ignored if *limit* is
   specified.
-- <span class="code">ReplaceAll</span>: replace all occurrences of the
+- `ReplaceAll`: replace all occurrences of the
   search string. This is ignored if *limit* is specified.
-  <span class="code">ReplaceAll</span> is the default if
-  <span class="code">ReplaceOnce</span> isn't specified, and it
-  supersedes <span class="code">ReplaceOnce</span> if both are
+  `ReplaceAll` is the default if
+  `ReplaceOnce` isn't specified, and it
+  supersedes `ReplaceOnce` if both are
   specified.
-- <span class="code">ReplaceIgnoreCase</span>: ignore case (that is,
+- `ReplaceIgnoreCase`: ignore case (that is,
   capitalization) when searching for *oldStr*. By default, the search is
   case-sensitive, so capitals can only match capitals and minuscules can
   only match minuscules.
-- <span class="code">ReplaceFollowCase</span>: each time a match is
+- `ReplaceFollowCase`: each time a match is
   replaced, change lower-case letters in the replacement text to follow
   the capitalization pattern of the matched text. There are three
   possibilities: if all of the letters in the matched text are capitals,
@@ -435,14 +418,14 @@ the following flag values:
   changed; if the match has a mix of capitals and lower-case letters,
   the first lower-case letter in the replacement text is capitalized,
   and the rest are left unchanged.
-- <span class="code">ReplaceSerial</span>: use the serial replacement
+- `ReplaceSerial`: use the serial replacement
   mode. See [below](#findReplaceLists) for details.
 
 Note that you should never use 0 as the *flags* value. For compatibility
 with older versions, 0 has a special meaning equivalent to
-<span class="code">ReplaceOnce</span>. If you have no other flags to
-specify, always use either <span class="code">ReplaceOnce</span> or
-<span class="code">ReplaceAll</span>, or simply omit the *flags*
+`ReplaceOnce`. If you have no other flags to
+specify, always use either `ReplaceOnce` or
+`ReplaceAll`, or simply omit the *flags*
 argument entirely.
 
 If *index* is specified, it gives the starting index in self for the
@@ -454,13 +437,13 @@ last, and so on. Note that a negative index doesn't change the direction
 of the search; it still runs left-to-right.
 
 If *limit* is included, it specifies the maximum number of replacements
-to perform. This can be <span class="code">nil</span> to indicate that
+to perform. This can be `nil` to indicate that
 all matches are to be replaced, or an integer giving the maximum number
 of matches to replace. 0 (zero) means that no matches are to be
 replaced, in which case the original subject string is returned
 unchanged. If a *limit* argument is present, it overrides the
-<span class="code">ReplaceAll</span> and
-<span class="code">ReplaceOnce</span> flags - those flags are ignored if
+`ReplaceAll` and
+`ReplaceOnce` flags - those flags are ignored if
 *limit* is present. If *limit* is omitted, the limit is taken from the
 flags.
 
@@ -486,34 +469,32 @@ all be replaced with empty strings.
 
 Here's an example that replaces each of the special HTML characters with
 their markup codes, using a single
-<span class="code">findReplace()</span> call:
+`findReplace()` call:
 
-<div class="code">
-
+```
     str = str.findReplace(['&amp;', '&lt;', '&gt;'], ['&amp;', '&lt;', '&gt;']);
-
-</div>
+```
 
 When you use a list of search terms, there are two modes for iterating
 through the list. The default is "parallel" mode. In this mode,
-<span class="code">findReplace()</span> starts by searching for all of
+`findReplace()` starts by searching for all of
 the search terms at once. It then replaces the single leftmost match
 with its corresponding replacement text. (If two of the search strings
 match at the same position, the one at the lower *oldStr* index takes
-precedence.) If <span class="code">ReplaceOnce</span> was specified,
-we're done. Otherwise, <span class="code">findReplace()</span> next
+precedence.) If `ReplaceOnce` was specified,
+we're done. Otherwise, `findReplace()` next
 repeats the search in the *remainder* of the string, after (to the right
 of) that first replacement, again searching for all of the terms, and
 again replacing the single leftmost match among them. This repeats until
 there are no more matches.
 
 The other mode is "serial" mode, which you select by including
-<span class="code">ReplaceSerial</span> in the flags. In this mode,
-<span class="code">findReplace()</span> starts by searching *only* for
+`ReplaceSerial` in the flags. In this mode,
+`findReplace()` starts by searching *only* for
 the first *oldStr* element. It replaces every match for the first term,
-or just the first match if <span class="code">ReplaceOnce</span> is
+or just the first match if `ReplaceOnce` is
 specified. If a match was found and
-<span class="code">ReplaceOnce</span> was specified, we're done.
+`ReplaceOnce` was specified, we're done.
 Otherwise, we start over with the *updated* string - containing all
 replacements for the first term - and search this new string for the
 *second* search term. We once again replace all occurrences of this
@@ -532,10 +513,10 @@ be further modified.
 replacement value *newStr* is normally given as a literal string to
 substitute for each occurrence of the search string. For more
 flexibility, though, you can instead provide a function, which
-<span class="code">findReplace()</span> calls for each match to
+`findReplace()` calls for each match to
 determine the replacement text for that match. This allows you to vary
 the replacement text according to the exact text of the match (which can
-vary if you're using the <span class="code">ReplaceIgnoreCase</span>
+vary if you're using the `ReplaceIgnoreCase`
 flag or you're using a list of search strings), the position of the
 match within the subject string, or whatever other conditions you
 choose.
@@ -543,11 +524,9 @@ choose.
 The callback function can be a regular or anonymous function. It's
 called like this, once for each match found in the subject string:
 
-<div class="code">
-
+```
     newStrFunc(match, index, orig);
-
-</div>
+```
 
 *match* is the text actually matched in the subject string. *index* is
 the character index within the string of the start of the match (the
@@ -555,7 +534,7 @@ first character is at index 1, as usual). *orig* is the entire original
 subject string.
 
 You can omit one or more of the parameters when you define the callback
-function, because <span class="code">findReplace</span> will only supply
+function, because `findReplace` will only supply
 as many arguments as the function actually wants. The arguments are
 always in the same order, though - the names don't matter, just the
 order. This means that if you provide a callback that only takes one
@@ -563,7 +542,7 @@ argument, it gets the match string value; with two arguments, they'll be
 assigned the match string and match index, respectively.
 
 The function must return a string value giving the replacement text (it
-can alternatively return <span class="code">nil</span>, which is treated
+can alternatively return `nil`, which is treated
 as an empty string).
 
 If you use a list of search strings and a list of corresponding
@@ -575,7 +554,7 @@ functions.
 
 <span id="htmlify"></span>
 
-<span class="code">htmlify(*flags*?)</span>
+`htmlify(*flags*?)`
 
 <div class="fdef">
 
@@ -583,19 +562,19 @@ Converts HTML markup-significant characters in the string to appropriate
 HTML sequences, and returns the resulting string. If the flags argument
 is not included, the method acts as though flags has the value 0 (zero).
 By default, this method scans the string for the characters
-<span class="code">&amp;</span> (ampersand) and <span class="code">\&lt;</span>
+`&amp;` (ampersand) and `\&lt;`
 (less than), and converts these characters to the sequences
-<span class="code">&amp;</span> and <span class="code">&lt;</span>
+`&amp;` and `&lt;`
 respectively. This conversion ensures that, when the string is rendered
 in HTML mode, the display shows ampersands and less-than signs where
 they appeared in the original string's text. In addition, you can
 specify a combination (using the bitwise OR operator,
-<span class="code">\|</span>) of the following flags to perform
+`\|`) of the following flags to perform
 additional conversions:
 
-- <span class="code">HtmlifyTranslateSpaces</span>: converts each space
+- `HtmlifyTranslateSpaces`: converts each space
   character after the first space in a run of multiple spaces to the
-  sequence <span class="code">&nbsp;</span> (the HTML non-breaking space
+  sequence `&nbsp;` (the HTML non-breaking space
   character). This ensure that a run of multiple spaces will be rendered
   visually with the same number of spaces as were in the original
   string. Without this flag, a run of spaces will appear visually as a
@@ -605,19 +584,19 @@ additional conversions:
   run of whitespace as an ordinary space character so that the HTML
   renderer can still break the line for word-wrapping purposes at the
   space.
-- <span class="code">HtmlifyTranslateTabs</span>: converts each tab
-  character (<span class="code">\t</span>) in the string to the sequence
-  <span class="code">\&lt;tab\&gt;</span>.
-- <span class="code">HtmlifyTranslateNewlines</span>: converts each
-  newline character (<span class="code">\n</span>) in the string to the
-  sequence <span class="code">\&lt;br\&gt;</span>.
-- <span class="code">HtmlifyTranslateWhitespace</span>: this is simply a
-  combination of <span class="code">HtmlifyTranslateSpaces</span>,
-  <span class="code">HtmlifyTranslateTabs</span>, and
-  <span class="code">HtmlifyTranslateNewlines</span>.
+- `HtmlifyTranslateTabs`: converts each tab
+  character (`\t`) in the string to the sequence
+  `\&lt;tab\&gt;`.
+- `HtmlifyTranslateNewlines`: converts each
+  newline character (`\n`) in the string to the
+  sequence `\&lt;br\&gt;`.
+- `HtmlifyTranslateWhitespace`: this is simply a
+  combination of `HtmlifyTranslateSpaces`,
+  `HtmlifyTranslateTabs`, and
+  `HtmlifyTranslateNewlines`.
 
 This method is useful if you obtain a string from an external source,
-such as from the user (via the <span class="code">inputLine()</span>
+such as from the user (via the `inputLine()`
 function, for example) or from a text file, and you then want to display
 the string in HTML mode. Without conversions, any markup-significant
 characters in the string might not be displayed properly, since the HTML
@@ -629,7 +608,7 @@ externally is displayed verbatim in HTML mode.
 
 <span id="length"></span>
 
-<span class="code">length()</span>
+`length()`
 
 <div class="fdef">
 
@@ -637,16 +616,16 @@ Returns the number of characters in the string.
 
 </div>
 
-<span class="code">mapToByteArray(*charset*?)</span>
+`mapToByteArray(*charset*?)`
 
 <div class="fdef">
 
 Creates a [ByteArray](bytearr.h) object based on the contents of the
-string. This is equivalent to calling <span class="code">new
-ByteArray()</span> with this string and character set as arguments.
+string. This is equivalent to calling `new
+ByteArray()` with this string and character set as arguments.
 
 If a *charset* value is included and isn't
-<span class="code">nil</span>, it must be either a
+`nil`, it must be either a
 [CharacterSet](charset.html) object, or a string giving the name of a
 character set. The method maps the string to bytes using the given
 character set, and creates a new ByteArray object with the mapped bytes
@@ -655,12 +634,12 @@ mapping is substituted for any unmappable characters.
 
 If the character set represented by *charset* is unknown (i.e,. there's
 no mapping available for the character set in the run-time TADS
-installation), an <span class="code">UnknownCharSetException</span> is
+installation), an `UnknownCharSetException` is
 thrown. You can determine whether the the character set is known using
 the [isMappingKnown()](charset.html#isMappingKnown) method on the
 CharacterSet object.
 
-If *charset* is omitted or <span class="code">nil</span>, the method
+If *charset* is omitted or `nil`, the method
 creates a ByteArray with one byte per character of the string, using the
 Unicode character code of each character as the byte value. Since a byte
 can only hold values from 0 to 255, a numeric overflow error will be
@@ -670,7 +649,7 @@ thrown if the string contains any characters outside of this range.
 
 <span id="match"></span>
 
-<span class="code">match(*target*, *index*?)</span>
+`match(*target*, *index*?)`
 
 <div class="fdef">
 
@@ -699,7 +678,7 @@ the pattern to match only if the '\$' symbol lines up with the end of
 the subject string after the match.)
 
 If the string doesn't match *target*, the return value is
-<span class="code">nil</span>. Note that it's possible for a successful
+`nil`. Note that it's possible for a successful
 match to return 0: if *target* is an empty string, that will match any
 subject with a length of zero; and some regular expression patterns can
 match zero characters successfully (e.g., 'a\*', which matches zero or
@@ -715,7 +694,7 @@ point onwards, until either finding a match or exhausting the string.
 
 <span id="packBytes"></span>
 
-<span class="code">packBytes(*format*, ...)</span>
+`packBytes(*format*, ...)`
 
 <div class="fdef">
 
@@ -723,11 +702,9 @@ Packs a list of values into bytes, creating a new String object
 representing the byte values. This is a static method that you call
 directly on the String class. For example:
 
-<div class="code">
-
+```
     local s = String.packBytes('s*', 1, 2, 3);
-
-</div>
+```
 
 *format* is a format string describing the packed formats for the
 values. The remaining arguments are the values to be packed.
@@ -755,7 +732,7 @@ See [Byte Packing](pack.html) for more information.
 
 <span id="sha256"></span>
 
-<span class="code">sha256()</span>
+`sha256()`
 
 <div class="fdef">
 
@@ -777,7 +754,7 @@ verified, by computing the matching hash value on an entered password.
 
 <span id="specialsToHtml"></span>
 
-<span class="code">specialsToHtml(*stateObject*?)</span>
+`specialsToHtml(*stateObject*?)`
 
 <div class="fdef">
 
@@ -813,67 +790,67 @@ writing a series of strings to the display, it's important keep track of
 the global context across strings. You should use a separate object for
 each window or output stream.
 
-If you omit the state object or pass <span class="code">nil</span>, the
+If you omit the state object or pass `nil`, the
 function will treat each string as the start of a new stream, with no
 context from past calls to the function. To reset the stream context
 (for example, after clearing the window), call its
-<span class="code">resetState()</span> method.
+`resetState()` method.
 
 The function performs the following translations:
 
-- <span class="code">\n</span> is translated to
-  <span class="code">\&lt;BR\&gt;</span> when it occurs within a line of text,
+- `\n` is translated to
+  `\&lt;BR\&gt;` when it occurs within a line of text,
   or nothing if it occurs at the start of a new line (ensuring that it
   ends a line, but doesn't produce any blank lines).
-- <span class="code">\b</span> is translated to
-  <span class="code">\&lt;BR\&gt;</span> if it occurs at the start of a new
-  line, or <span class="code">\&lt;BR\&gt;\&lt;BR\&gt;</span> if it occurs within a
+- `\b` is translated to
+  `\&lt;BR\&gt;` if it occurs at the start of a new
+  line, or `\&lt;BR\&gt;\&lt;BR\&gt;` if it occurs within a
   line of text (ensuring that it always produces one blank line).
-- <span class="code">\\</span> is removed, but causes the next
+- `\\` is removed, but causes the next
   non-markup character to be converted to upper-case.
-- <span class="code">\v</span> is removed, but causes the next
+- `\v` is removed, but causes the next
   non-markup character to be converted to lower-case.
-- <span class="code">\\</span>  (quoted space) is converted to
-  <span class="code">&nbsp;</span> if it's followed by another quoted
+- `\\`  (quoted space) is converted to
+  `&nbsp;` if it's followed by another quoted
   space, or to a regular space if followed by anything else. This
   reproduces the standard TADS quoted space behavior: a quoted space
   doesn't combine with adjacent quoted spaces, but does allow a line
   break. Any regular space characters adjacent to the quoted space in
   the source string are removed.
-- <span class="code">\t</span> is converted to a series of
-  <span class="code">&nbsp;</span> characters followed by one regular
+- `\t` is converted to a series of
+  `&nbsp;` characters followed by one regular
   space, sufficient to pad the current line to the next multiple of four
   characters in length. This is a very rough approximation of the way
-  <span class="code">\t</span> works in the console UI, but note how the
+  `\t` works in the console UI, but note how the
   algorithm merely counts *characters*, and doesn't take into account
   font metrics.
   (Because this doesn't take into account font metrics, it's mostly only
   useful with monospaced fonts. But if you're using the Web UI, you have
   access to the much greater capabilities of full HTML layout, so you
   shouldn't have much use for tabs anyway.)
-- <span class="code">\&lt;Q\&gt;</span>...<span class="code">\&lt;/Q\&gt;</span> tag
-  sequences are converted to <span class="code">&ldquo;...&rdquo;</span>
-  and <span class="code">&lsquo;...&rsquo;</span> sequences, alternating
+- `\&lt;Q\&gt;`...`\&lt;/Q\&gt;` tag
+  sequences are converted to `&ldquo;...&rdquo;`
+  and `&lsquo;...&rsquo;` sequences, alternating
   at each nesting level, with double quotes at the outermost level.
-- <span class="code">\&lt;BR HEIGHT=N\&gt;</span> tags are converted to a
-  series of *N* <span class="code">\&lt;BR\&gt;</span> tags when used at the
-  start of a line, or *N*+1 <span class="code">\&lt;BR\&gt;</span> tags when
+- `\&lt;BR HEIGHT=N\&gt;` tags are converted to a
+  series of *N* `\&lt;BR\&gt;` tags when used at the
+  start of a line, or *N*+1 `\&lt;BR\&gt;` tags when
   used within a line of text.
-- <span class="code">\&lt;P\&gt;</span>, <span class="code">\&lt;DIV\&gt;</span>,
-  <span class="code">\&lt;CENTER\&gt;</span>,
-  <span class="code">\&lt;TABLE\&gt;</span>, <span class="code">\&lt;TD\&gt;</span>,
-  <span class="code">\&lt;TH\&gt;</span>, and
-  <span class="code">\&lt;CAPTION\&gt;</span> tags (both open and close tags)
+- `\&lt;P\&gt;`, `\&lt;DIV\&gt;`,
+  `\&lt;CENTER\&gt;`,
+  `\&lt;TABLE\&gt;`, `\&lt;TD\&gt;`,
+  `\&lt;TH\&gt;`, and
+  `\&lt;CAPTION\&gt;` tags (both open and close tags)
   are left exactly as given, but are recognized as line breaks for the
-  purposes of translating <span class="code">\n</span>,
-  <span class="code">\b</span>, and <span class="code">\&lt;BR
-  HEIGHT=N\&gt;</span>.
+  purposes of translating `\n`,
+  `\b`, and `\&lt;BR
+  HEIGHT=N\&gt;`.
 
 The *stateObject* value is for internal use within the function, and you
 shouldn't have to access its properties directly. For reference, though,
 they are:
 
-- <span class="code">flags\_</span> is an integer containing a number of
+- `flags\_` is an integer containing a number of
   bit fields:
   - 0x0001 - on (non-zero) if the stream is in the midst of a line of
     text, off (zero) at the start of a new line
@@ -891,10 +868,10 @@ they are:
     with specialsToText())
   - 0x3000 - the current tab stop column (shift this value right 12 bits
     to get the integer value: that is, compute
-    <span class="code">((obj.flags\_ &amp; 0x3000) \&gt;\&gt; 12)</span>. This is
+    `((obj.flags\_ &amp; 0x3000) \&gt;\&gt; 12)`. This is
     the number of characters in the line since the last multiple of 4
     columns.
-- <span class="code">tag\_</span> is a string containing the text of the
+- `tag\_` is a string containing the text of the
   tag in progress. When a string ends in mid-tag, this contains the
   fragment of the tag up to the end of the string, so that the next call
   can resume parsing the tag where the last call left off.
@@ -903,7 +880,7 @@ they are:
 
 <span id="specialsToText"></span>
 
-<span class="code">specialsToText(*stateObject*?)</span>
+`specialsToText(*stateObject*?)`
 
 <div class="fdef">
 
@@ -918,58 +895,58 @@ would appear on a character-mode terminal.
 
 This function performs the following conversions:
 
-- <span class="code">\n</span> is translated to
-  <span class="code">\n</span> when it occurs within a line of text, or
+- `\n` is translated to
+  `\n` when it occurs within a line of text, or
   nothing if it occurs at the start of a new line (ensuring that it ends
   a line, but doesn't produce any blank lines).
-- <span class="code">\b</span> is translated to
-  <span class="code">\n</span> if it occurs at the start of a new line,
-  or <span class="code">\n\n</span> if it occurs within a line of text
+- `\b` is translated to
+  `\n` if it occurs at the start of a new line,
+  or `\n\n` if it occurs within a line of text
   (ensuring that it always produces one blank line).
-- <span class="code">\\</span> is removed, but causes the next
+- `\\` is removed, but causes the next
   non-markup character to be converted to upper-case.
-- <span class="code">\v</span> is removed, but causes the next
+- `\v` is removed, but causes the next
   non-markup character to be converted to lower-case.
-- <span class="code">\\</span>  (quoted space) is converted to a regular
+- `\\`  (quoted space) is converted to a regular
   space.
-- <span class="code">\&lt;Q\&gt;</span>...<span class="code">\&lt;/Q\&gt;</span> tag
-  sequences are converted to <span class="code">"..."</span> and
-  <span class="code">'...'</span> sequences, alternating at each nesting
+- `\&lt;Q\&gt;`...`\&lt;/Q\&gt;` tag
+  sequences are converted to `"..."` and
+  `'...'` sequences, alternating at each nesting
   level, with double quotes at the outermost level.
-- <span class="code">\&lt;BR HEIGHT=N\&gt;</span> tags are converted to a
-  series of *N* <span class="code">\n</span> characters when used at the
-  start of a line, or *N*+1 <span class="code">\n</span> characters when
+- `\&lt;BR HEIGHT=N\&gt;` tags are converted to a
+  series of *N* `\n` characters when used at the
+  start of a line, or *N*+1 `\n` characters when
   used within a line of text.
-- <span class="code">\&lt;P\&gt;</span> is converted to
-  <span class="code">\n</span> if it appears at the start of a line, or
-  <span class="code">\n\n</span> within a line.
-- <span class="code">\&lt;DIV\&gt;</span>,
-  <span class="code">\&lt;CENTER\&gt;</span>,
-  <span class="code">\&lt;TABLE\&gt;</span>, <span class="code">\&lt;TD\&gt;</span>,
-  <span class="code">\&lt;TH\&gt;</span>, and
-  <span class="code">\&lt;CAPTION\&gt;</span> tags (both open and close tags)
-  are converted to <span class="code">\n</span>.
-- <span class="code">\&lt;Tag\&gt;</span> for any tag not mentioned above is
+- `\&lt;P\&gt;` is converted to
+  `\n` if it appears at the start of a line, or
+  `\n\n` within a line.
+- `\&lt;DIV\&gt;`,
+  `\&lt;CENTER\&gt;`,
+  `\&lt;TABLE\&gt;`, `\&lt;TD\&gt;`,
+  `\&lt;TH\&gt;`, and
+  `\&lt;CAPTION\&gt;` tags (both open and close tags)
+  are converted to `\n`.
+- `\&lt;Tag\&gt;` for any tag not mentioned above is
   simply stripped out.
-- <span class="code">&nbsp;</span> is converted to a space.
-- <span class="code">&gt;</span> is converted to \&gt;.
-- <span class="code">&lt;</span> is converted to \&lt;.
-- <span class="code">&amp;</span> is converted to &amp;.
-- <span class="code">&quot;</span>, <span class="code">&ldquo;</span>,
-  and <span class="code">&rdquo;</span> are converted to " (a plain
+- `&nbsp;` is converted to a space.
+- `&gt;` is converted to \&gt;.
+- `&lt;` is converted to \&lt;.
+- `&amp;` is converted to &amp;.
+- `&quot;`, `&ldquo;`,
+  and `&rdquo;` are converted to " (a plain
   double-quote).
-- <span class="code">&lsquo;</span> and
-  <span class="code">&rsquo;</span> are converted to ' (a plain
+- `&lsquo;` and
+  `&rsquo;` are converted to ' (a plain
   single-quote).
-- <span class="code">&dddd;</span> (where the *d*s are digits) is
+- `&dddd;` (where the *d*s are digits) is
   converted to the Unicode character with value *dddd*.
 
 </div>
 
 <span id="splice"></span>
 
-<span class="code">splice(*index*, *deleteLength*,
-*insertString*?)</span>
+`splice(*index*, *deleteLength*,
+*insertString*?)`
 
 <div class="fdef">
 
@@ -982,7 +959,7 @@ text, simply pass 0 for *deleteLength*.
 
 This function's effect can be achieved by concatenating together
 substrings of the original string, but
-<span class="code">splice()</span> is more concise and somewhat clearer.
+`splice()` is more concise and somewhat clearer.
 It's also a little more efficient, since it bypasses the need to create
 the two intermediate substrings.
 
@@ -990,7 +967,7 @@ the two intermediate substrings.
 
 <span id="split"></span>
 
-<span class="code">split(*delim*?, *limit*?)</span>
+`split(*delim*?, *limit*?)`
 
 <div class="fdef">
 
@@ -999,7 +976,7 @@ a list of the substrings.
 
 *delim* is the delimiter, which can be one of the following:
 
-- A string. <span class="code">split</span> searches for exact matches
+- A string. `split` searches for exact matches
   to this substring within the subject string, and splits the string at
   each instance.
 - A [RexPattern](rexpat.html) object. The method searches for matches to
@@ -1009,7 +986,7 @@ a list of the substrings.
   in the list might be shorter, since it'll have whatever's left over at
   the end).
 
-If *delim* is omitted or <span class="code">nil</span>, the default is 1
+If *delim* is omitted or `nil`, the default is 1
 (i.e., split the string into one-character substrings).
 
 *limit* is an optional integer giving the maximum number of elements to
@@ -1018,37 +995,37 @@ searching and returns the remainder of the string after the last split
 as the final element of the list. If *limit* is 1, no splits are
 possible, so the result is simply a single-element list containing the
 entire original string. If *limit* is omitted or
-<span class="code">nil</span>, the method splits the string at every
+`nil`, the method splits the string at every
 instance of the delimiter without a limit.
 
 The delimiter string or pattern **isn't** included in the result list.
 
 Examples:
 
-<span class="code">'one,two,three'.split(',')</span> returns
-<span class="code">\['one', 'two', 'three'\]</span>  
-<span class="code">'one,two, three, four'.split(R',\&lt;space\&gt;\*')</span>
-returns <span class="code">\['one', 'two', 'three', 'four'\]</span>  
-<span class="code">'one,two,three'.split(',', 2)</span> returns
-<span class="code">\['one', 'two,three'\]</span>  
-<span class="code">'abcdefghi'.split(2)</span> returns
-<span class="code">\['ab', 'cd', 'ef', 'gh', 'i'\]</span>
+`'one,two,three'.split(',')` returns
+`\['one', 'two', 'three'\]`  
+`'one,two, three, four'.split(R',\&lt;space\&gt;\*')`
+returns `\['one', 'two', 'three', 'four'\]`  
+`'one,two,three'.split(',', 2)` returns
+`\['one', 'two,three'\]`  
+`'abcdefghi'.split(2)` returns
+`\['ab', 'cd', 'ef', 'gh', 'i'\]`
 
 </div>
 
-<span class="code">startsWith(*str*)</span>
+`startsWith(*str*)`
 
 <div class="fdef">
 
 Returns true if this string starts with *str*,
-<span class="code">nil</span> if not. This string starts with *str* if
+`nil` if not. This string starts with *str* if
 this string is at least as long as *str*, and the first
-<span class="code">str.length()</span> characters match the characters
+`str.length()` characters match the characters
 of *str*.
 
 </div>
 
-<span class="code">substr(*start*, *length*?)</span>
+`substr(*start*, *length*?)`
 
 <div class="fdef">
 
@@ -1070,8 +1047,7 @@ characters; and so on.
 
 Examples:
 
-<div class="code">
-
+```
     'abcdef'.substr(3) yields 'cdef'
     'abcdef'.substr(3, 2) yields 'cd'
     'abcdefghi'.substr(-3) yields 'ghi'
@@ -1081,14 +1057,13 @@ Examples:
     'abcdefghi'.substr(4, -2) yields 'defg'
     'abcdefghi'.substr(4, -4) yields 'de'
     'abcdefghi'.substr(-4, -2) yields 'fg'
-
-</div>
+```
 
 </div>
 
 <span id="toFoldedCase"></span>
 
-<span class="code">toFoldedCase()</span>
+`toFoldedCase()`
 
 <div class="fdef">
 
@@ -1113,7 +1088,7 @@ undergo similar expansions when case-folded.
 
 <span id="toLower"></span>
 
-<span class="code">toLower()</span>
+`toLower()`
 
 <div class="fdef">
 
@@ -1127,7 +1102,7 @@ accented and non-Roman alphabetic characters are properly converted.
 
 <span id="toTitleCase"></span>
 
-<span class="code">toTitleCase()</span>
+`toTitleCase()`
 
 <div class="fdef">
 
@@ -1153,7 +1128,7 @@ aren't capitalized, etc.
 
 <span id="toUnicode"></span>
 
-<span class="code">toUnicode(*idx*?)</span>
+`toUnicode(*idx*?)`
 
 <div class="fdef">
 
@@ -1175,14 +1150,14 @@ one element per character in the source string.
 This function can be used to decompose a string into its individual
 characters, which is sometimes an easier or more efficient way to
 manipulate a string. You can convert a list of Unicode code point values
-back into a string using the <span class="code">makeString()</span>
+back into a string using the `makeString()`
 function in the [tads-gen](tadsgen.html) function set.
 
 </div>
 
 <span id="toUpper"></span>
 
-<span class="code">toUpper()</span>
+`toUpper()`
 
 <div class="fdef">
 
@@ -1194,7 +1169,7 @@ accented and non-Roman alphabetic characters are properly converted.
 
 </div>
 
-<span class="code">unpackBytes(*format*)</span>
+`unpackBytes(*format*)`
 
 <div class="fdef">
 
@@ -1215,11 +1190,9 @@ string's characters are all in the 0-255 range, the unpacker will be
 able to interpret each character as a byte. For example, you can use
 this method to parse plain text strings that use fixed-width fields:
 
-<div class="code">
-
+```
     local lst = '123456'.unpack('a3 a3');
-
-</div>
+```
 
 This returns the list \['123', '456'\].
 
@@ -1229,13 +1202,13 @@ See [Byte Packing](pack.html) for more information.
 
 <span id="urlDecode"></span>
 
-<span class="code">urlDecode()</span>
+`urlDecode()`
 
 <div class="fdef">
 
 Translates a URL-encoded string to plaintext, returning a new string
 containing the translated text. This reverses the effect of
-<span class="code">urlEncode()</span>:
+`urlEncode()`:
 
 - %xx sequences are converted to the corresponding characters
 - \+ is converted to a space character
@@ -1244,15 +1217,15 @@ containing the translated text. This reverses the effect of
 In addition, the method converts any multi-byte %xx sequences that form
 valid UTF-8 characters into the corresponding characters. For example,
 the sequence %C3%A1 represents the character 'á', so
-<span class="code">'%C3%A1'.urlDecode()</span> returns
-<span class="code">'á'</span>. Any %xx sequence that doesn't form a
+`'%C3%A1'.urlDecode()` returns
+`'á'`. Any %xx sequence that doesn't form a
 valid UTF-8 character is converted to '?'.
 
 </div>
 
 <span id="urlEncode"></span>
 
-<span class="code">urlEncode()</span>
+`urlEncode()`
 
 <div class="fdef">
 

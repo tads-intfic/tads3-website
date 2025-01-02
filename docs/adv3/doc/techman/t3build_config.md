@@ -19,7 +19,7 @@ Compilation</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Using Build Configurations
 
@@ -220,7 +220,7 @@ reflect.t's code is still being compiled separately from that of your
 other source modules; it's just that it's being pulled in indirectly,
 through your new file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

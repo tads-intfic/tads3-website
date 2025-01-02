@@ -37,59 +37,59 @@ Descriptions
 
 </div>
 
-<div class="main">
+<h1 id="room-descriptions">Room Descriptions</h1>
 
-# Room Descriptions
-
-In a typical room description (which occurs when the player character
-enters a new room or enters an explicit LOOK command), provided there's
+<p>In a typical room description (which occurs when the player character
+enters a new room or enters an explicit LOOK command), provided there’s
 enough light, the player will see the room name (usually in bold)
 followed by a description of the room itself, followed by a listing of
 the items the room contains. This item listing typically contains four
 parts (although not all these parts are necessarily present in every
-room listing):
+room listing):</p>
 
-1.  A paragraph for each item with a specialDesc or initSpecialDesc
-    (where useSpecialDesc or useInitSpecialDesc is true).
-2.  A list of miscellaneous items (for which lookListed is true).
-3.  Lists of the visible contents of any objects in the room.
-4.  A paragraph for each NPC (non-player character) present in the room.
+<ol>
+  <li>A paragraph for each item with a specialDesc or initSpecialDesc
+(where useSpecialDesc or useInitSpecialDesc is true).</li>
+  <li>A list of miscellaneous items (for which lookListed is true).</li>
+  <li>Lists of the visible contents of any objects in the room.</li>
+  <li>A paragraph for each NPC (non-player character) present in the room.</li>
+</ol>
 
-(If the room belongs to a [SenseRegion](senseregion.html), then this list
+<p>(If the room belongs to a <a href="senseregion.html">SenseRegion</a>, then this list
 will be complicated by the listing of items in other rooms in the
-SenseRegion, but we'll ignore that complication for now).
+SenseRegion, but we’ll ignore that complication for now).</p>
 
-We have some control over the order in which the items appear within
-each of these sections by using the following properties:
+<p>We have some control over the order in which the items appear within
+each of these sections by using the following properties:</p>
 
-<span id="descorder"></span>
+<p><span id="descorder"></span></p>
 
-- **listOrder**: (integer) controls the order in which miscellaneous
-  items appear in the second part of the listing; the higher the number,
-  the later the item will appears relative to any others in this list.
-- **specialDescBeforeContents**: (true or nil) determines whether the
-  specialDesc or initSpecialDesc appears before the miscellaneous items
-  (i.e. at stage one, the default for most Things) or after (i.e. at
-  stage 4, the default for Actors/NPCs).
-- **specialDescOrder**: (integer) determines the relative order of the
-  specialDesc or initSpecialDesc within stage 1 or 4.
-- **lookListed**: (true or nil) determines whether or not this item is
-  included in the list of miscellaneous items at stages 2 and 3. By
-  default lookListed takes its value from isListed which in turn takes
-  its value from !isFixed (i.e. portable items are listed and
-  non-portable ones aren't). Note that this property has no effect for
-  items with an active specialDesc or initSpecialDesc.
-- **contentsListedInLook**: (true or nil) determines whether this item's
-  contents (if any) are listed when showing a room description. By
-  default contentsListedInLook takes its value from contentsListed,
-  which is true by default.
+<ul>
+  <li><strong>listOrder</strong>: (integer) controls the order in which miscellaneous
+items appear in the second part of the listing; the higher the number,
+the later the item will appears relative to any others in this list.</li>
+  <li><strong>specialDescBeforeContents</strong>: (true or nil) determines whether the
+specialDesc or initSpecialDesc appears before the miscellaneous items
+(i.e. at stage one, the default for most Things) or after (i.e. at
+stage 4, the default for Actors/NPCs).</li>
+  <li><strong>specialDescOrder</strong>: (integer) determines the relative order of the
+specialDesc or initSpecialDesc within stage 1 or 4.</li>
+  <li><strong>lookListed</strong>: (true or nil) determines whether or not this item is
+included in the list of miscellaneous items at stages 2 and 3. By
+default lookListed takes its value from isListed which in turn takes
+its value from !isFixed (i.e. portable items are listed and
+non-portable ones aren’t). Note that this property has no effect for
+items with an active specialDesc or initSpecialDesc.</li>
+  <li><strong>contentsListedInLook</strong>: (true or nil) determines whether this item’s
+contents (if any) are listed when showing a room description. By
+default contentsListedInLook takes its value from contentsListed,
+which is true by default.</li>
+</ul>
 
-Thus, for example, suppose we had a room defined along the following
-lines:
+<p>Thus, for example, suppose we had a room defined along the following
+lines:</p>
 
-<div class="code">
-
-    study: Room 'Study' 'study'   
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
         the north. "
@@ -128,7 +128,7 @@ lines:
         bulk = 3
         bulkCapacity = 3
         
-        lockedMsg = '\^&lt;<theNameIs>&gt; locked; you keep it that way to stop thieving
+        lockedMsg = '\^&lt;&lt;theNameIs&gt;&gt; locked; you keep it that way to stop thieving
             little hands pinching your odds and ends. '
         
        
@@ -162,13 +162,12 @@ lines:
             you why this rubbish would be best consigned to the flames. "
           
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Suppose further that an NPC called George follows the player character
+<p>Suppose further that an NPC called George follows the player character
 into the room, and the player character opens the desk drawer, drops a
 couple of objects, and then executes a LOOK command. The player would
-then see something like this:
+then see something like this:</p>
 
 <div class="cmdline">
 
@@ -186,7 +185,7 @@ then see something like this:
 
     George is watching you carefully, waiting for you to speak.
 
-</div>
+
 
 This is okay, insofar as it gets the job done by telling the player what
 s/he needs to know about the room's contents, but it's not terribly
@@ -230,15 +229,14 @@ otherwise have listed things:
 
 The first three of these can be immediately followed by the *{prev}* tag
 to make any verb that follows agree, for example
-<span class="code">"\\\&lt;\&lt;list of contents\&gt;\&gt; {prev} {lie} strewn
-across the desk. "</span>
+`"\\\&lt;\&lt;list of contents\&gt;\&gt; {prev} {lie} strewn
+across the desk. "`
 
 Armed with these tools we can, for example, amend the specialDesc of the
 desk so that the desk lists its contents in any way we please. For
 example:
 
-<div class="code">
-
+```
     + desk: Thing 'desk; fine old'
         "It's a fine old desk with a single drawer. "
         
@@ -256,8 +254,7 @@ example:
         
         remapIn = deskDrawer    
     ;
-
-&lt;/div&gt;
+```
 
 Which would give us:
 
@@ -296,8 +293,7 @@ can see a note and a blue ball here. " One way we could change this is
 by incorporating a list of miscellaneous items into the room description
 itself, for example:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -312,8 +308,7 @@ itself, for example:
         
         regions = downstairs
     ;
-
-&lt;/div&gt;
+```
 
 This works after a fashion, but it's less than ideal, not least because
 you may not want this list of miscellaneous items to appear before the
@@ -333,8 +328,7 @@ listing. To use a CustomRoomLister you attach it to the
 roomContentsLister property of the room in question and pass the prefix
 and suffix text you want to use via its constructor, thus:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -350,14 +344,13 @@ and suffix text you want to use via its constructor, thus:
         roomContentsLister = new CustomRoomLister('Someone\'s left ', suffix: '
             lying on the floor. ')
     ;
-
-</div>
+```
 
 Note that here the first parameter we pass to the CustomRoomLister's
 constructor is always the prefix string (since this is the most common
 case). Any other parameters we want to pass to this constructor are
 *optional named* paramaters, hence the need to include
-<span class="code">suffix:</span> before the suffix string we want to
+`suffix:` before the suffix string we want to
 use. If we didn't pass a suffix string the lister would simply use a
 full stop at the end of the list.
 
@@ -390,8 +383,7 @@ need to name the parameter, use the **method** keyword to define a
 method with three parameters, and then write our method definition
 within curly braces, for example:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -408,15 +400,13 @@ within curly braces, for example:
                                                   method (lst, pl, irName) 
             {"Lying on the floor &lt;<if pl="">&gt;are&lt;<else>&gt;is&lt;<end>&gt; ";})
     ;
-
-&lt;/div&gt;
+```
 
 Note that since we don't need a prefix string here, we supply the first
 parameter as nil. We'd define a suffix method in much the same way, for
 example:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -433,8 +423,7 @@ example:
                                                   method (lst, pl, irName) 
             {" &lt;<if pl="">&gt;are&lt;<else>&gt;is&lt;<end>&gt; lying on the floor. ";})
     ;
-
-&lt;/div&gt;
+```
 
 Note that in this case we supply '\\' as the prefix string to make sure
 that the sentence listing the room contents starts with a capital
@@ -465,7 +454,7 @@ resulted in a listing like:
 
 There are two further options you can set to change the way this basic
 listing is presented. The first is to change
-**gameMain.paraBrksBtwnSubcontents** to <span class="code">nil</span>,
+**gameMain.paraBrksBtwnSubcontents** to `nil`,
 which will remove the paragraph breaks between the sentences that list
 the contents of the items in the room. In the above example, this would
 mean that the final three sentences would be run together into a single
@@ -525,7 +514,7 @@ resulting in output like:
 
 </div>
 
-If you increased the <span class="code">maxNestingDepth</span> to 4,
+If you increased the `maxNestingDepth` to 4,
 say, you might potentially see something like:
 
 <div class="cmdline">
@@ -542,8 +531,8 @@ say, you might potentially see something like:
 
 </div>
 
-If you set both <span class="code">paraBrksBtwnSubcontents</span> and
-<span class="code">useParentheticalListing</span> to true, your output
+If you set both `paraBrksBtwnSubcontents` and
+`useParentheticalListing` to true, your output
 might look like:
 
 <div class="cmdline">
@@ -576,22 +565,22 @@ when its parent is EXAMINED, or when its parent is searched (with SEARCH
 or LOOK IN/UNDER/BEHIND) respectively. The second three determine
 whether the contents of the item on which it is defined are listed in
 response to a LOOK, EXAMINE or SEARCH command. By default
-<span class="code">examineListed</span>,
-<span class="code">lookListed</span> and
-<span class="code">searchListed</span> all take their value from the
-<span class="code">isListed</span> property. The
-<span class="code">contentsListedInLook</span> and
-<span class="code">contentsListedInExamine</span> properties both take
-their default values from the <span class="code">contentsListed</span>
+`examineListed`,
+`lookListed` and
+`searchListed` all take their value from the
+`isListed` property. The
+`contentsListedInLook` and
+`contentsListedInExamine` properties both take
+their default values from the `contentsListed`
 property (which is true by default). The default value of
-<span class="code">contentsListedInSearch</span>, however, is simply
-<span class="code">true</span>, since it's hard to think of many cases
+`contentsListedInSearch`, however, is simply
+`true`, since it's hard to think of many cases
 where you wouldn't want an object to reveal its contents when explicitly
 searched; the property is nevertheless provided for completeness.
 
-The <span class="code">inventoryListed</span> property determines
+The `inventoryListed` property determines
 whether an object is listed in response to an INVENTORY command. It too
-takes its default value from <span class="code">isListed</span>.
+takes its default value from `isListed`.
 
 &lt;/div&gt;
 
@@ -607,7 +596,7 @@ Descriptions
     <a href="door.html" class="nav"><em>Next:</em> Doors</a>     </span>
 
 </div>
-</end></else></if></div></end></else></if></div></end></list></if></div></list></end></list></div></theNameIs></div></div>
+</end></else></if></end></else></if></end></list></if></list></end></list></div>
 
 </main>
 <footer>

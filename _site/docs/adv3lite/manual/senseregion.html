@@ -38,28 +38,24 @@
 
 </div>
 
-<div class="main">
+<h1 id="senseregion">SenseRegion</h1>
 
-# SenseRegion
-
-The optional SenseRegion class can be used to define regions with
+<p>The optional SenseRegion class can be used to define regions with
 sensory connections, that is regions where it is possible to see (and
 possibly smell and hear) objects in one room from another. If your game
-doesn't need to do this you can safely exclude the senseRegion.t module.
+doesn’t need to do this you can safely exclude the senseRegion.t module.
 The complications in using a SenseRegion come not from setting up the
 SenseRegion itself but in defining what particular objects can be
-[sensed](#sensing) remotely, and if so, how they are to be
-[described](#descriptions).
+<a href="#sensing">sensed</a> remotely, and if so, how they are to be
+<a href="#descriptions">described</a>.</p>
 
-## The SenseRegion class
+<h2 id="the-senseregion-class">The SenseRegion class</h2>
 
-Setting up a SenseRegion is easy. You define a SenseRegion like any
+<p>Setting up a SenseRegion is easy. You define a SenseRegion like any
 other kind of Region, and then assign rooms to it by listing the
-SenseRegion in their regions property, for example:
+SenseRegion in their regions property, for example:</p>
 
-<div class="code">
-
-    countryside: Region
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    countryside: Region
     ;
 
     meadowRegion: SenseRegion
@@ -71,8 +67,8 @@ SenseRegion in their regions property, for example:
     ;
         
     meadow: Room 'Meadow' 'meadow'
-        "&lt;<first time="">&gt;You've no idea how you got here, nor do you recognize this
-        place.&lt;<only>&gt; Tall grass and wild flowers grow in profusion, forming an
+        "&lt;&lt;first time&gt;&gt;You've no idea how you got here, nor do you recognize this
+        place.&lt;&lt;only&gt;&gt; Tall grass and wild flowers grow in profusion, forming an
         even carpet that slopes down towards a riverbank to what you instinctively
         think of as the east. To the south lies a thick band of trees, a large
         wood or perhaps even a forest. To the north is another field, while a steep
@@ -97,105 +93,106 @@ SenseRegion in their regions property, for example:
             
         regions = [countryside, meadowRegion]                                                
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-By default you can see, hear and smell (but not touch) objects in one
+<p>By default you can see, hear and smell (but not touch) objects in one
 room from any other room in the SenseRegion (subject to further
-limitations discussed in the section on [remote sensing](#sensing)
+limitations discussed in the section on <a href="#sensing">remote sensing</a>
 below). You can, however, customize this (and some other behaviour) via
-the following properties on the SenseRegion:
+the following properties on the SenseRegion:</p>
 
-<span id="srprops"></span>
+<p><span id="srprops"></span></p>
 
-- **canSeeAcross**: if this is true (the default) then it's possible to
-  see items in one room in this SenseRegion from the other rooms in this
-  SenseRegion.
-- **canHearAcross**: if this is true (the default) then it's possible to
-  hear items in one room in this SenseRegion from the other rooms in
-  this SenseRegion.
-- **canSmellAcross**: if this is true (the default) then it's possible
-  to smell items in one room in this SenseRegion from the other rooms in
-  this SenseRegion.
-- **canTalkAcross**: being able to hear from one room to another is a
-  necessary but not sufficient condition of being able to conduct a
-  conversation across rooms. Normally two actors need to be in the same
-  room in order to be able to converse with each other, so this property
-  is nil by default. If the SenseRegion represents a sufficiently small
-  space, however, such as the two ends of the same room, then
-  conversation between rooms can be enabled by setting this property to
-  true.
-- **canThrowAcross**: if this is true (not the default), an object can
-  be thrown from one room to another in the SenseRegion (i.e. an object
-  thrown from one room at a target in another room will hit the target
-  and land in the second room). If it is nil (the default) an object
-  thrown at a target in another room will fall short and land in the
-  room from which it was thrown.
-- **autoGoTo**: if this is true (by default it takes is value from
-  <span class="code">contSpace</span>, but this may be readily
-  overridden), then an attempt to touch an object in a different room in
-  this SenseRegion will trigger an implicit GoTo action attempting to
-  move the actor to the location of the object to be touched. This is
-  probably best only set to true for SenseRegions representing a small
-  area (such as parts of the same room) and relatively straightforward
-  geography; while the mechanism should work in most cases it is not
-  absolutely guaranteed to work properly if, for example, there is also
-  a complex set of nested rooms and/or containers between the actor and
-  the target object. Note that travel will not be attempted if the
-  action that would have triggered it (e.g. trying to take a Fixture) is
-  ruled out at the verify stage. Note that the default behaviour of a
-  SenseRegion is to take the value of [fastGoTo](room.html#regionprops)
-  from <span class="code">autoGoTo</span> so that any implicit GoTo
-  action is not interrupted by the need to issue
-  [CONTINUE](pathfind.html) commands.
-- **contSpace**: flag, do we want to treat this SenseRegion as a
-  continuous space (such as a relatively small room in a house)? If this
-  is true (it's nil by default) then moving from one room to another
-  within the SenseRegion does not cause a LOOK AROUND to be performed
-  (and hence a description of the new room to be displayed). This may be
-  useful in situations where a SenseRegion is used to model a small
-  continuous space such a room in a house divided into subsections which
-  are modelled as the Rooms within the SenseRegion.
+<ul>
+  <li><strong>canSeeAcross</strong>: if this is true (the default) then it’s possible to
+see items in one room in this SenseRegion from the other rooms in this
+SenseRegion.</li>
+  <li><strong>canHearAcross</strong>: if this is true (the default) then it’s possible to
+hear items in one room in this SenseRegion from the other rooms in
+this SenseRegion.</li>
+  <li><strong>canSmellAcross</strong>: if this is true (the default) then it’s possible
+to smell items in one room in this SenseRegion from the other rooms in
+this SenseRegion.</li>
+  <li><strong>canTalkAcross</strong>: being able to hear from one room to another is a
+necessary but not sufficient condition of being able to conduct a
+conversation across rooms. Normally two actors need to be in the same
+room in order to be able to converse with each other, so this property
+is nil by default. If the SenseRegion represents a sufficiently small
+space, however, such as the two ends of the same room, then
+conversation between rooms can be enabled by setting this property to
+true.</li>
+  <li><strong>canThrowAcross</strong>: if this is true (not the default), an object can
+be thrown from one room to another in the SenseRegion (i.e. an object
+thrown from one room at a target in another room will hit the target
+and land in the second room). If it is nil (the default) an object
+thrown at a target in another room will fall short and land in the
+room from which it was thrown.</li>
+  <li><strong>autoGoTo</strong>: if this is true (by default it takes is value from
+<code class="language-plaintext highlighter-rouge">contSpace</code>, but this may be readily
+overridden), then an attempt to touch an object in a different room in
+this SenseRegion will trigger an implicit GoTo action attempting to
+move the actor to the location of the object to be touched. This is
+probably best only set to true for SenseRegions representing a small
+area (such as parts of the same room) and relatively straightforward
+geography; while the mechanism should work in most cases it is not
+absolutely guaranteed to work properly if, for example, there is also
+a complex set of nested rooms and/or containers between the actor and
+the target object. Note that travel will not be attempted if the
+action that would have triggered it (e.g. trying to take a Fixture) is
+ruled out at the verify stage. Note that the default behaviour of a
+SenseRegion is to take the value of <a href="room.html#regionprops">fastGoTo</a>
+from <code class="language-plaintext highlighter-rouge">autoGoTo</code> so that any implicit GoTo
+action is not interrupted by the need to issue
+<a href="pathfind.html">CONTINUE</a> commands.</li>
+  <li><strong>contSpace</strong>: flag, do we want to treat this SenseRegion as a
+continuous space (such as a relatively small room in a house)? If this
+is true (it’s nil by default) then moving from one room to another
+within the SenseRegion does not cause a LOOK AROUND to be performed
+(and hence a description of the new room to be displayed). This may be
+useful in situations where a SenseRegion is used to model a small
+continuous space such a room in a house divided into subsections which
+are modelled as the Rooms within the SenseRegion.</li>
+</ul>
 
-Note that it is perfectly legal for SenseRegions to overlap (the same
+<p>Note that it is perfectly legal for SenseRegions to overlap (the same
 Room can be in two or more SenseRegions), but that SenseRegions cannot
 normally be changed during the course of a game, since they are
 initialized by the library at the pre-init stage. If you need a
 SenseRegion that changes during the course of play, you can try using
-the [DynamicRegion](../../extensions/docs/dynregion.html) extension.
+the <a href="../../extensions/docs/dynregion.html">DynamicRegion</a> extension.</p>
 
-<span id="inoutprops"></span>
+<p><span id="inoutprops"></span></p>
 
-The properties listed above establish the sensory connections between
+<p>The properties listed above establish the sensory connections between
 rooms within SenseRegions for the duration of the game. If we want to
 change these sensory connections dynamically during the course of the
 game we can use the following set of methods defined on
-<span class="code">Room</span>. Note that the six methods listed below
+<code class="language-plaintext highlighter-rouge">Room</code>. Note that the six methods listed below
 take effect only if there would otherwise be a sensory connection
 between the rooms concerned thanks to their being in a common
-SenseRegion that allows this type of connection globally:
+SenseRegion that allows this type of connection globally:</p>
 
-- **canSeeInFrom(loc)**: Can we see into this room from *loc*?
-- **canSeeOutTo(loc)**: Can we see out of this room to *loc*?
-- **canHearInFrom(loc)**: Can we hear into this room from *loc* (i.e.
-  can an actor in *loc* hear something in this room?
-- **canHearOutTo(loc)**: Can we hear out from this room to *loc* (i.e.
-  can an actor in this room hear something in *loc*)?
-- **canSmellInFrom(loc)**: Can we smell into this room from *loc* (i.e.
-  can an actor in *loc* smell something in this room?
-- **canSmellOutTo(loc)**: Can we smell out from this room to *loc* (i.e.
-  can an actor in this room smell something in *loc*)?
+<ul>
+  <li><strong>canSeeInFrom(loc)</strong>: Can we see into this room from <em>loc</em>?</li>
+  <li><strong>canSeeOutTo(loc)</strong>: Can we see out of this room to <em>loc</em>?</li>
+  <li><strong>canHearInFrom(loc)</strong>: Can we hear into this room from <em>loc</em> (i.e.
+can an actor in <em>loc</em> hear something in this room?</li>
+  <li><strong>canHearOutTo(loc)</strong>: Can we hear out from this room to <em>loc</em> (i.e.
+can an actor in this room hear something in <em>loc</em>)?</li>
+  <li><strong>canSmellInFrom(loc)</strong>: Can we smell into this room from <em>loc</em> (i.e.
+can an actor in <em>loc</em> smell something in this room?</li>
+  <li><strong>canSmellOutTo(loc)</strong>: Can we smell out from this room to <em>loc</em> (i.e.
+can an actor in this room smell something in <em>loc</em>)?</li>
+</ul>
 
-By default all the canXXXOutTo methods simply return true, while all the
+<p>By default all the canXXXOutTo methods simply return true, while all the
 canXXXInFrom methods return the value of the corresponding canXXXOutFrom
-method. There's little need to override any of them unless a sensory
+method. There’s little need to override any of them unless a sensory
 connection can change according to some other factor, such as whether a
 door or window is open or closed. If a window between two rooms blocked
-sound and smell when it was closed you might define:
+sound and smell when it was closed you might define:</p>
 
-<div class="code">
-
-     hall: Room 'Hall'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     hall: Room 'Hall'
        "A window looks out to the east. "
        canHearOutTo(loc) { return window.isOpen; }
        canSmellOutTo(loc) { return window.isOpen; }
@@ -215,73 +212,72 @@ sound and smell when it was closed you might define:
     windowRegion: SenseRegion
     ;
      
+</code></pre></div></div>
 
-</div>
-
-Note that while a SenseRegion's <span class="code">familiar</span>
+<p>Note that while a SenseRegion’s <code class="language-plaintext highlighter-rouge">familiar</code>
 property has the same meaning as it does on an ordinary
-[Region](room.html#regionprops), the SenseRegion class overrides the
+<a href="room.html#regionprops">Region</a>, the SenseRegion class overrides the
 familiar property to make it work better with
-[pathfinding](pathfind.html#senseregion) once any of the rooms in the
+<a href="pathfind.html#senseregion">pathfinding</a> once any of the rooms in the
 SenseRegion has been visited. Nonetheless, if a SenseRegion starts out
 familiar to the Player Character in any case, its
-<span class="code">familiar</span> property can simply be overridden to
-<span class="code">true</span> in the normal way.
+<code class="language-plaintext highlighter-rouge">familiar</code> property can simply be overridden to
+<code class="language-plaintext highlighter-rouge">true</code> in the normal way.</p>
 
-  
+<h2 id="remote-sensing">Remote <span id="sensing">Sensing</span></h2>
 
-## Remote <span id="sensing">Sensing</span>
-
-Although the global possibility of seeing, hearing and smelling across
+<p>Although the global possibility of seeing, hearing and smelling across
 rooms is determined by the canSeeAcross, canHearAcross and
 canSmellAcross properties of the SenseRegion, the possibility of seeing,
 smelling and hearing individual objects in remote locations is further
-determined by their xxxSize and canXXXFrom(pov) properties.
+determined by their xxxSize and canXXXFrom(pov) properties.</p>
 
-When the senseRegion.t module is included, each Thing defines the
-following additional properties:
+<p>When the senseRegion.t module is included, each Thing defines the
+following additional properties:</p>
 
-- **isVisibleFrom(pov)**: determines whether this object is visible from
-  pov, where pov is the actor who is doing the looking. By default we
-  return true if the sightSize is not small.
-- **sightSize**: can be small, medium or large. If it is small then the
-  object can't be seen at all from a remote location. If it is medium
-  then it can be see (i.e. it will be shown in room listings and can be
-  referred to in commands) but attempting to examining it will cause a
-  response to the effect that it's too far away to make out any detail.
-  If it's large then it can be examined as normal (normally displaying
-  its desc property). If the object defines a remoteDesc(pov) method
-  then this will be used regardless of whether the object is medium or
-  large.
-- **isAudibleFrom(pov)**: determines whether this object is audible from
-  pov, where pov is the actor who is doing the listening. By default we
-  return true if the soundSize is not small.
-- **soundSize**: can be small, medium or large. If it is small then the
-  object can't be heard at all from a remote location. If it is large
-  then listening to the object will evoke either its listenDesc, or its
-  remoteListenDesc(pov) if the latter is defined. If it is medium then
-  either its remoteListenDesc will be reported, if one is defined, or
-  the object will be reported as being too far away to hear.
-- **isSmellableFrom(pov)**: determines whether this object is smellable
-  from pov, where pov is the actor who is doing the smelling. By default
-  we return true if the smellSize is not small.
-- **smellSize**: can be small, medium or large. If it is small then the
-  object can't be smelled at all from a remote location. If it is large
-  then smelling the object will evoke either its smellDesc, or its
-  remoteSmellDesc(pov) if the latter is defined. If it is medium then
-  either its remoteSmellDesc will be reported, if one is defined, or the
-  object will be reported as being too far away to smell.
-- **isReadableFrom(pov)**: just because an object is large it doesn't
-  necessarily mean that any writing on it is large enough to read from a
-  distance. To be able to read an object remotely both this method and
-  isVisibleFrom(pov) must return true.
+<ul>
+  <li><strong>isVisibleFrom(pov)</strong>: determines whether this object is visible from
+pov, where pov is the actor who is doing the looking. By default we
+return true if the sightSize is not small.</li>
+  <li><strong>sightSize</strong>: can be small, medium or large. If it is small then the
+object can’t be seen at all from a remote location. If it is medium
+then it can be see (i.e. it will be shown in room listings and can be
+referred to in commands) but attempting to examining it will cause a
+response to the effect that it’s too far away to make out any detail.
+If it’s large then it can be examined as normal (normally displaying
+its desc property). If the object defines a remoteDesc(pov) method
+then this will be used regardless of whether the object is medium or
+large.</li>
+  <li><strong>isAudibleFrom(pov)</strong>: determines whether this object is audible from
+pov, where pov is the actor who is doing the listening. By default we
+return true if the soundSize is not small.</li>
+  <li><strong>soundSize</strong>: can be small, medium or large. If it is small then the
+object can’t be heard at all from a remote location. If it is large
+then listening to the object will evoke either its listenDesc, or its
+remoteListenDesc(pov) if the latter is defined. If it is medium then
+either its remoteListenDesc will be reported, if one is defined, or
+the object will be reported as being too far away to hear.</li>
+  <li><strong>isSmellableFrom(pov)</strong>: determines whether this object is smellable
+from pov, where pov is the actor who is doing the smelling. By default
+we return true if the smellSize is not small.</li>
+  <li><strong>smellSize</strong>: can be small, medium or large. If it is small then the
+object can’t be smelled at all from a remote location. If it is large
+then smelling the object will evoke either its smellDesc, or its
+remoteSmellDesc(pov) if the latter is defined. If it is medium then
+either its remoteSmellDesc will be reported, if one is defined, or the
+object will be reported as being too far away to smell.</li>
+  <li><strong>isReadableFrom(pov)</strong>: just because an object is large it doesn’t
+necessarily mean that any writing on it is large enough to read from a
+distance. To be able to read an object remotely both this method and
+isVisibleFrom(pov) must return true.</li>
+</ul>
 
-At first sight it may appear that the medium soundSize and smellSize is
-virtually redundant, since it doesn't achieve anything that couldn't be
+<p>At first sight it may appear that the medium soundSize and smellSize is
+virtually redundant, since it doesn’t achieve anything that couldn’t be
 achieved by making the size either small (to rule out sensing the
 object) or large (to report its sound or smell). This is part follows
-from the fact that there's no auditory or olfactory equivalent of seeing
-something without making out any detail. It's hard to thing of
+from the fact that there’s no auditory or olfactory equivalent of seeing
+something without making out any detail. It’s hard to thing of
 situations in which you can hear or smell something without being able
 to say at all what kind of sound or smell it is, however faint. If you
 did want to model such a situation, however, you could do so by
@@ -300,35 +296,31 @@ or smellSize behaves just like one with a large size in the appropriate
 sense. That means that with the library default (medium) you just have
 to define the remoteListenDesc() or remoteSmellDesc() to report a remote
 sound or smell without having to worry about adjusting the soundSize or
-smellSize.
+smellSize.</p>
 
-Note that the sightSize property is quite independent of the bulk
+<p>Note that the sightSize property is quite independent of the bulk
 property (unless, of course, you choose to override it to define it in
-terms of bulk).
+terms of bulk).</p>
 
-  
+<h2 id="remote-descriptions">Remote <span id="descriptions">Descriptions</span></h2>
 
-## Remote <span id="descriptions">Descriptions</span>
-
-A further complication that's introduced when we allow the contents of
+<p>A further complication that’s introduced when we allow the contents of
 one room to be sensed from another is how the items in the remote
-location should be listed and described. At the very least, we'll almost
+location should be listed and described. At the very least, we’ll almost
 certainly want the room description listing to make it clear that the
 objects in question are in a remote location, and not to hand in the
-same place as the player character.
+same place as the player character.</p>
 
-If an object has a specialDesc or initSpecialDesc, we can additionally
-define the **remoteSpecialDesc(pov)** and **remoteInitSpecialDesc(pov)**
+<p>If an object has a specialDesc or initSpecialDesc, we can additionally
+define the <strong>remoteSpecialDesc(pov)</strong> and <strong>remoteInitSpecialDesc(pov)</strong>
 methods to show alternative specialDescs when the object is viewed
 remotely from pov (the pov object normally being the actor who is doing
 the viewing, typically the player character). If these methods are not
 overridden the usual specialDesc and/or initSpecialDesc will be used,
 but most of the time it will normally be appropriate to provide an
-alternative for remote viewing, for example:
+alternative for remote viewing, for example:</p>
 
-<div class="code">
-
-    + Fixture 'scarecrow; poor wretched straw; man sticks'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Fixture 'scarecrow; poor wretched straw; man sticks'
         "It's a poor wretched thing, little more than a couple of sticks stuffed
         with straw wearing a faded brown coat; a straw man if ever there was one! "
             
@@ -341,18 +333,15 @@ alternative for remote viewing, for example:
             "Off in the distance a scarecrow stands lonely guard over the field. ";
         }    
     ;
+</code></pre></div></div>
 
-</div>
-
-Where items don't have a specialDesc (or initSpecialDesc) they're
+<p>Where items don’t have a specialDesc (or initSpecialDesc) they’re
 generally listed among the miscellaneous items in the room description.
 The miscellaneous items in remote rooms are listed after those in the
-player character's immediate location, usually prefaced with 'in'
-followed by the name of the room, for example, suppose we had defined:
+player character’s immediate location, usually prefaced with ‘in’
+followed by the name of the room, for example, suppose we had defined:</p>
 
-<div class="code">
-
-    meadow: Room 'Meadow' 'meadow'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    meadow: Room 'Meadow' 'meadow'
         "Tall grass and wild flowers grow in profusion, forming an
         even carpet that slopes down towards a riverbank to what you instinctively
         think of as the east. To the south lies a thick band of trees, a large
@@ -379,12 +368,11 @@ followed by the name of the room, for example, suppose we had defined:
        
         regions = [countryside, meadowRegion]                                                
     ;
+</code></pre></div></div>
 
-</div>
-
-Now suppose we drop a couple of objects in the riverbank location and
+<p>Now suppose we drop a couple of objects in the riverbank location and
 then return to the meadow location to look around. We might see
-something like:
+something like:</p>
 
 <div class="cmdline">
 
@@ -395,7 +383,7 @@ something like:
 
     In the riverbank you see a blue ball, a red box, and a red ball.
 
-</div>
+
 
 The introductory "in the riverbank" at least warns the player that the
 objects being listed are in another location, but it's not very elegant.
@@ -404,8 +392,7 @@ To deal with this we'd probably override the riverbank's
 listing of miscellaneous items to be introduced when they're viewed
 remotely by the pov object. So, for example, we might define:
 
-<div class="code">
-
+```
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -419,8 +406,7 @@ remotely by the pov object. So, for example, we might define:
 
         inRoomName(pov) { return 'down by the riverbank'; }    
     ;
-
-</div>
+```
 
 This would then give us:
 
@@ -441,8 +427,7 @@ objects are listed in a remote location by using a
 attaching a CustomRoomLister to the remoteContentsLister property of the
 room to be viewed remotely. For example we could define:
 
-<div class="code">
-
+```
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -458,8 +443,7 @@ room to be viewed remotely. For example we could define:
             method(lst, pl, irName) 
             { "&lt;.p&gt;Lying close to the riverbank &lt;<if pl="">&gt;are&lt;<else>&gt;is&lt;<end>&gt; "; })  
     ;
-
-&lt;/div&gt;
+```
 
 And this would give us:
 
@@ -476,8 +460,7 @@ And this would give us:
 
 Or as another variation we might define:
 
-<div class="code">
-
+```
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -493,8 +476,7 @@ Or as another variation we might define:
             pl, irName) { " &lt;<if pl="">&gt;lie&lt;<else>&gt;lies&lt;<end>&gt; abandoned down by the
                 riverbank. "; })
     ;
-
-&lt;/div&gt;
+```
 
 And this would give us:
 
@@ -522,7 +504,7 @@ customize how its contents were listed; a listing that began "In the red
 box you see..." wouldn't make it very clear that the red box was in a
 remote location. For this purpose we can use the
 **remoteObjInName(pov)** method; by default this just returns
-<span class="code">objInName</span> (e.g. 'in the red box') but it can
+`objInName` (e.g. 'in the red box') but it can
 be customized as required (e.g. to return 'in the distant red box').
 
 We may well wish to customize the description of an object that's
@@ -543,8 +525,7 @@ soundSize and/or smellSize isn't small.
 
 So, for example, we might define:
 
-<div class="code">
-
+```
     + crows: Decoration 'crows; nasty big black; birds; them'
         "Nasty big black things. You never did like them, even since one scared you
         as a child. "
@@ -572,8 +553,7 @@ So, for example, we might define:
             only that way can you show the full extent of your contempt for the
             horrid things. '
     ;
-
-</div>
+```
 
   
 <span id="listorder"></span>
@@ -597,20 +577,18 @@ For example, if we want the ploughed field's contents to be listed after
 those of the meadow when viewed from the riverBank, we could define the
 following on the ploughedField Room:
 
-<div class="code">
-
+```
         remoteRoomListOrder(pov)
         {
             return pov == riverBank ? 200 : inherited(pov);
         }
-
-</div>
+```
 
   
 
 Alternatively, if we always wanted the contents of the ploughed field to
 be listed last, whichever room we're looking from, we could simply
-define <span class="code">listOrder = 200</span> on the ploughedField.
+define `listOrder = 200` on the ploughedField.
 
 <span id="specialscope"></span>
 
@@ -618,7 +596,7 @@ define <span class="code">listOrder = 200</span> on the ploughedField.
 
 Suppose that we have two adjacent rooms, a bedroom and a study say,
 belonging to the same SenseRegion but with
-<span class="code">canSeeAcross = nil</span> (because while you can hear
+`canSeeAcross = nil` (because while you can hear
 what's going on in one location from the other, you can't see from one
 to the other). Suppose then that the player character is in the bedroom
 when the player types the command EXAMINE DRAWERS (intending to refer to
@@ -639,11 +617,11 @@ In this kind of situation the following rules apply:
     [SensoryEvents](../../extensions/docs/sensory.html#events).
 3.  If the player command includes a vague plural (like 'DRAWERS' in the
     above example), then if the action requires the
-    <span class="code">objVisible</span> PreCondition, objects the
+    `objVisible` PreCondition, objects the
     player cannot see in remote locations will be removed from the list
     of matches if there any matching objects the player can see.
     Likewise, if the action requires the
-    <span class="code">touchObj</span> PreCondition then any objects in
+    `touchObj` PreCondition then any objects in
     remote locations will be removed from the list of matches if there
     any matching objects in the player's location. This should prevent
     vague plurals like DRAWERS from matching objects the player probably
@@ -667,17 +645,16 @@ the commLink. This may mean that when the player character tries to
 examine someone on a videophone that are told that "X is too far away to
 make out any detail", which probably isn't what is required.
 
-One solution may be to set <span class="code">sightSize = large</span>
+One solution may be to set `sightSize = large`
 on the remote actor, but this may not be the best solution if under
 other circumstances the same actor may be reviewed remotely at the far
 side of a big field, say. A more general solution would be to make use
-of the <span class="code">remoteDesc(pov)</span> method, which can be
+of the `remoteDesc(pov)` method, which can be
 used to provide a customized response, or else to make sightSize a
 method that returns medium or large depending on the viewing conditions,
 e.g.:
 
-<div class="code">
-
+```
     modify Actor
        sightSize()
        {
@@ -687,8 +664,7 @@ e.g.:
           return medium;
        }
     ;
-
-</div>
+```
 
 Similar considerations may apply to listening to a remote actor via a
 commLink.
@@ -717,7 +693,7 @@ presence at a distance.
 </div>
 
 &lt;/div&gt;
-</end></else></if></div></end></else></if></div></only></first></div></div>
+</end></else></if></end></else></if></div>
 
 </main>
 <footer>

@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](wheretogofromhere.html)   *
@@ -177,4 +177,4 @@ Wear         Thing dV          notWearableMsg
 [\[Main\]](index.html)  
 *[\[Previous\]](wheretogofromhere.html)   *
 
-</div>
+

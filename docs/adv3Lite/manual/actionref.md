@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Action Reference
 
@@ -541,7 +541,7 @@ off/on/blue/green/red/yellow</span>** [ExitsColour](#ExitsColour)
 
 dobj
 
-</div>
+
 
   
 **take** something **from/out of/off/off of** something

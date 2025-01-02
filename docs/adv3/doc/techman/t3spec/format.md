@@ -19,7 +19,7 @@ Encoding</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -1953,7 +1953,7 @@ implementation uses the same pattern for its saved-state files.)
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

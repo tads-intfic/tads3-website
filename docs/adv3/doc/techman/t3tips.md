@@ -18,7 +18,7 @@ Characters</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Tips: A Context-Sensitive Help System
 
@@ -193,7 +193,7 @@ showTipDesc() property, perhaps to something like this:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

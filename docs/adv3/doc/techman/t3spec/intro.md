@@ -19,7 +19,7 @@ Documentation</a>    
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -92,7 +92,7 @@ character flags embedded.
 Copyright © 2001, 2010 by Michael J. Roberts.  
 Revision: January, 2010
 
-</div>
+
 
 </div>
 

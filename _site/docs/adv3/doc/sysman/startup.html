@@ -39,59 +39,54 @@ Model</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="starting-up-the-main-program-entrypoint">Starting Up: The Main Program Entrypoint</h1>
 
-# Starting Up: The Main Program Entrypoint
-
-When a user launches your TADS 3 program, the interpreter starts things
+<p>When a user launches your TADS 3 program, the interpreter starts things
 running by calling a function in your program called main(). This
 function takes one parameter, which is a list of strings representing
-the command-line arguments that the user entered to start the program.
+the command-line arguments that the user entered to start the program.</p>
 
-Your definition of main() should look something like this:
+<p>Your definition of main() should look something like this:</p>
 
-<div class="code">
-
-    main(args)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    main(args)
     {
        // do something
     }
+</code></pre></div></div>
 
-</div>
-
-This function is important because it is, conceptually, your entire
+<p>This function is important because it is, conceptually, your entire
 program. This function is the first and only function the interpreter
 calls when your program starts running, and when the function returns
 (or terminates some other way, such as by throwing an exception), the
-program exits.
+program exits.</p>
 
-Now, in most cases, you won't *literally* put your entire program here
+<p>Now, in most cases, you won’t <em>literally</em> put your entire program here
 (although if the program is very small, you might very well). Usually
 this function contains the main flow of the program: it will do any
 initial set-up, then call some other functions to do the main work of
 the program, then do any final clean-up before returning. In the case of
 an adventure game, the main work of the program is probably an
 indefinite loop that reads commands from the player and carries them
-out.
+out.</p>
 
-Note that you won't have to define a main() function if you're using the
+<p>Note that you won’t have to define a main() function if you’re using the
 standard adventure library, adv3, since the library defines that for
-you. (This will probably be true of any alternative libraries as well.)
+you. (This will probably be true of any alternative libraries as well.)</p>
 
-## The command-line argument list
+<h2 id="the-command-line-argument-list">The command-line argument list</h2>
 
-The parameter to main() is a list of strings representing the
-command-line arguments to the program.
+<p>The parameter to main() is a list of strings representing the
+command-line arguments to the program.</p>
 
-If the user is running your program from within a traditional
+<p>If the user is running your program from within a traditional
 command-line shell, such as a Unix shell or a Windows command prompt (a
-"DOS box"), they might start your program with a command like this:
+“DOS box”), they might start your program with a command like this:</p>
 
 <div class="cmdline">
 
     t3run -s0 -cs us-ascii mygame.t3 hello world!
 
-</div>
+
 
 This command line is a little complicated by the fact that there are
 really *two* programs being activated here. First, there's the TADS 3
@@ -119,11 +114,9 @@ syntax you like for that part of the command line.
 
 In the example above, the argument list will look like this:
 
-<div class="code">
-
+```
     ['mygame.t3', 'hello', 'world!']
-
-</div>
+```
 
 Note that the first element of the list is the name of the .t3 file, as
 the user typed it. The second list element is the first command-line
@@ -161,18 +154,16 @@ file (for example) to launch it.
 In any case, when the user launches the interpreter using this option,
 the system *attempts* to call a program function named mainRestore():
 
-<div class="code">
-
+```
     mainRestore(args, restoreFile)
     {
     }
-
-</div>
+```
 
 This function is similar to main(), but takes an extra argument, which
 is a string giving the name of the saved-state file to be restored. The
 program is responsible for restoring the saved state, which it can do
-with the <span class="code">restoreGame()</span> function (see the
+with the `restoreGame()` function (see the
 [tads-gen](tadsgen.html) function set).
 
 If the program doesn't define a mainRestore() function, the system
@@ -181,7 +172,7 @@ support this option, and terminates the program.
 
 ## Low-level start-up
 
-The <span class="code">main()</span> function is actually defined in the
+The `main()` function is actually defined in the
 [system library](lib.html), not by the T3 VM itself. You'll almost always
 use the system library when working with TADS 3, so what's going on
 under the covers will probably be of no more than academic interest.
@@ -208,26 +199,26 @@ defined, otherwise displays an error and aborts.
 
 Both \_main() and \_mainRestore() perform the following steps before
 calling the appropriate program entrypoint (i.e.,
-<span class="code">main()</span> or
-<span class="code">mainRestore()</span>):
+`main()` or
+`mainRestore()`):
 
 - Establish a default display function
-  (<span class="code">\_default_display_fn()</span>, also implemented in
+  (`\_default_display_fn()`, also implemented in
   the system library)
 - Run pre-initialization if necessary by invoking each PreinitObject's
-  <span class="code">execute()</span> method. During the special
+  `execute()` method. During the special
   post-compilation pre-initialization step, the default start-up code
   stops here. If this is a normal execution, though, the library checks
   to see if pre-initialization has already been completed by checking
-  the <span class="code">mainGlobal.preinited\_</span> flag, and skips
+  the `mainGlobal.preinited\_` flag, and skips
   this step if this flag is set to true, which indicates that
   pre-initialization has already been performed.
 - Runs initialization if by invoking each InitObject's
-  <span class="code">execute()</span> method.
+  `execute()` method.
 
 All of this, along with the call to the program's main entrypoint, is
-done within a <span class="code">try</span> block. If any exceptions are
-caught at this level, the <span class="code">catch</span> block displays
+done within a `try` block. If any exceptions are
+caught at this level, the `catch` block displays
 the exception's error message and terminates the program.
 
 ## Notes for TADS 2 Users
@@ -236,7 +227,7 @@ In previous versions of TADS, there wasn't any such thing as a "main"
 entrypoint to the game. The interpreter's built-in parser took control
 from the start, and only called the game program to notify it of events.
 When the program started running, TADS called the game's
-<span class="code">init()</span> function to let the game carry out any
+`init()` function to let the game carry out any
 desired start-up processing. This function performed any needed
 initialization, then returned. At that point the system entered the main
 command loop, in which the interpreter prompted the user, read a command
@@ -251,7 +242,7 @@ That's better than having them built into the interpreter, since it
 gives you the ability to customize as much of the library
 implementations as you need to, or even replace them completely.
 
-TADS 3 doesn't use TADS 2's <span class="code">init()</span> function,
+TADS 3 doesn't use TADS 2's `init()` function,
 but it has a similar feature. Refer to [initialization](init.html) for
 information on how pre-initialization and run-time initialization work
 in TADS 3.

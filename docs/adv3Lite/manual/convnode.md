@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Conversation Nodes
 
@@ -442,6 +442,6 @@ if there is one.
     <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>
     </span>
 
-</div>
+
 
 </div>

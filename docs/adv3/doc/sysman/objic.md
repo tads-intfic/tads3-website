@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Object
 
@@ -63,7 +63,7 @@ be the list `\[C, A\]`. Note that class B is not
 included in the list, because it is not a direct superclass of myObj,
 but is a superclass only indirectly through class C.
 
-</div>
+
 
 `getPropList()`
 

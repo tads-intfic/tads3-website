@@ -18,7 +18,7 @@ Display Model</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # The Default Display Function
 
@@ -322,7 +322,7 @@ transformations above; the actual compiled representation is a lot more
 compact than this, since the T3 byte-code has dedicated instructions for
 displaying strings and expressions. The effect, however, is the same.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

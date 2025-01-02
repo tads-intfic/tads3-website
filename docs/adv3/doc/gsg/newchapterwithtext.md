@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *  [\[Next\]](generalintroduction.html)*
@@ -88,4 +88,4 @@ May 2012
 [\[Main\]](index.html)  
 *  [\[Next\]](generalintroduction.html)*
 
-</div>
+

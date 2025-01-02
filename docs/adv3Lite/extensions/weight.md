@@ -19,7 +19,7 @@ Extensions</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Weight
 
@@ -134,7 +134,7 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [weight.t](../weight.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -15,7 +15,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Part I: Opening Moves
 
@@ -28,7 +28,7 @@ This section introduces TADS, and provides a guide to using this manual.
 [Naming Conventions](naming.html)  
 [Hello, World!](hello.html)  
 
-</div>
+
 
 </div>
 

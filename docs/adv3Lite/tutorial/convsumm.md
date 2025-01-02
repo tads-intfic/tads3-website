@@ -19,7 +19,7 @@ Summary
 
 </div>
 
-<div class="main">
+
 
 # Summary
 
@@ -774,7 +774,7 @@ related to the Angela NPC as far as we have reached:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

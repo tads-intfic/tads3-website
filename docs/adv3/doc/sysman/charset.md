@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # CharacterSet
 
@@ -179,7 +179,7 @@ using TADS.
 
 Name(s)
 
-</div>
+
 
 Synonyms
 

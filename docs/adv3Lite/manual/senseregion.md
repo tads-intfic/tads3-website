@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # SenseRegion
 
@@ -367,7 +367,7 @@ something like:
 
     In the riverbank you see a blue ball, a red box, and a red ball.
 
-</div>
+
 
 The introductory "in the riverbank" at least warns the player that the
 objects being listed are in another location, but it's not very elegant.

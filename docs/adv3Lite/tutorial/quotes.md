@@ -19,7 +19,7 @@ Modification and Overriding</a>    
 
 </div>
 
-<div class="main">
+
 
 # Things in Quotes
 
@@ -267,7 +267,7 @@ and the adv3Lite library you'll probably find useful in your own work.
 Our next immediate task will be to revisit *The Adventures of Heidi* and
 make some improvements.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

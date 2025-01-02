@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # List
 
@@ -114,7 +114,7 @@ constructing a new list for the right operand of
 `+`, because it's not necessary to construct the
 intermediate list using `append()`.
 
-</div>
+
 
 `appendUnique(*lst*)`
 

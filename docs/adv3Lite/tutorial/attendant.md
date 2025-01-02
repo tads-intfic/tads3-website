@@ -18,7 +18,7 @@ Conversation</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # The Flight Attendant — Getting in a State
 
@@ -375,7 +375,7 @@ come to implement some conversation. In the meantime, if you'd like more
 information on [ActorStates](../manual/actorstate.html), see the
 *adv3Lite Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

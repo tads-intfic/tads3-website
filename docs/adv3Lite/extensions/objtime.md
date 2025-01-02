@@ -19,7 +19,7 @@ MobileCollectiveGroup</a>    
 
 </div>
 
-<div class="main">
+
 
 # Objective Time
 
@@ -697,7 +697,7 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [objtime.t](../objtime.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

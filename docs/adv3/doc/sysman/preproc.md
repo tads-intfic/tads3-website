@@ -18,7 +18,7 @@ Sets</a>    
 
 </div>
 
-<div class="main">
+
 
 # The Preprocessor
 
@@ -82,7 +82,7 @@ The syntax is:
 
     #charset "name"
 
-</div>
+
 
 where *name* is the character set name. You can use one of the built-in
 character sets ("us-ascii", "latin1") or any of the available mappings.

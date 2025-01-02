@@ -19,7 +19,7 @@ Show</a>    
 
 </div>
 
-<div class="main">
+
 
 # Queries and Suggestions
 
@@ -609,7 +609,7 @@ Topics](../manual/specialtopic.html) and [Topic
 Groups](../manual/topicgroup.html). We shall in any case be meeting many
 of these concepts again in the remainder of this chapter.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

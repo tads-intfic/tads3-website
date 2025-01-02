@@ -18,7 +18,7 @@ Actions
 
 </div>
 
-<div class="main">
+
 
 # Literal Actions
 
@@ -266,7 +266,7 @@ As with a LiteralTAction, a NumericTAction will always treat the
 physical object as the direct object, however the associated
 `VerbRule` grammar defined it.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

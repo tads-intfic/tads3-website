@@ -18,7 +18,7 @@ Datatypes
 
 </div>
 
-<div class="main">
+
 
 # Fundamental Datatypes
 
@@ -106,7 +106,7 @@ statement:
 
     enum symbol [ , ... ]  ;
 
-</div>
+
 
 For example,
 

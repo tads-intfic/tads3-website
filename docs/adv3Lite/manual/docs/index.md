@@ -9,7 +9,7 @@ Adv3Lite Bookshelf
 
 </div>
 
-<div class="main">
+
 
 # The Books ([Where should I start?](#wherestart))
 
@@ -140,7 +140,7 @@ HTML.)
 Change History</strong></a>. A chronological log of changes to Adv3Lite,
 the alternative TADS 3 Adventure Framework Library.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

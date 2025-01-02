@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # DynamicFunc
 
@@ -558,7 +558,7 @@ Returns a string containing the source code originally used to create
 the object via the `new DynamicFunc()`
 constructor.
 
-</div>
+
 
 ## Uses
 

@@ -39,63 +39,59 @@ Compilation</a>    
 
 </div>
 
-<div class="main">
+<h1 id="using-autohotkey-with-the-workbench-editor-windows">Using AutoHotKey with the Workbench Editor (Windows)</h1>
 
-# Using AutoHotKey with the Workbench Editor (Windows)
+<p><em>by Eric Eve</em></p>
 
-*by Eric Eve*
+<h2 id="introduction">Introduction</h2>
 
-## Introduction
-
-The editor incorporated into TADS 3 Workbench for Windows comes with
+<p>The editor incorporated into TADS 3 Workbench for Windows comes with
 many excellent features for creating and editing Interactive Fictions
 written in TADS 3, but one potentially useful feature it lacks is a way
 of creating macros to automate common programming tasks or ease the
 typing of fiddly but frequently used key combinations. This article
 outlines one way of adding this feature to the Workbench editor using
-third party software.
+third party software.</p>
 
-First, visit the AutoHotKey website at &lt;http://www.autohotkey.com/&gt; from
+<p>First, visit the AutoHotKey website at <a href="http://www.autohotkey.com/">http://www.autohotkey.com/</a> from
 where you can download the program and, as and when you need to, read
 the documentation. Go to the download page and download the installer to
 a convenient location (you have a choice of versions; in this article
-we'll only be looking at very basic features, so you could download the
+we’ll only be looking at very basic features, so you could download the
 basic version, but if you think you might like to explore more advanced
 features later on, by all means download the newer version,
 AutoHotKey_L). Once the file is downloaded, double-click on it to run
 the installer, and follow the instructions the installer should give
-you.
+you.</p>
 
-Next, use your favourite text editor (Notepad will do) to create a plain
+<p>Next, use your favourite text editor (Notepad will do) to create a plain
 text file, and then save it in a convenient location giving it a name
-with the extension ahk, for example "tads.ahk". You might find it
+with the extension ahk, for example “tads.ahk”. You might find it
 convenient to place it in your Startup Folder, then it will be
-automatically loaded at startup. When it's loaded you should see an icon
+automatically loaded at startup. When it’s loaded you should see an icon
 in the system tray that looks a white H on a green square. To load your
 script (ahk file) manually, you need to double-click on its icon (or
-name in a list) in Windows Explorer, but there's no point doing that
-until we've put something in the file. Once the system tray icon
+name in a list) in Windows Explorer, but there’s no point doing that
+until we’ve put something in the file. Once the system tray icon
 appears, you can right-click on it to bring up a menu of items that
 includes, for example, editing and reloading the script, as well as a
-Help option, but first we need to write a script.
+Help option, but first we need to write a script.</p>
 
-## Adding Some Basic Hotkeys
+<h2 id="adding-some-basic-hotkeys">Adding Some Basic Hotkeys</h2>
 
-Assuming you still have your .ahk file open in your text editor, try
-adding the following to the file and then saving it:
+<p>Assuming you still have your .ahk file open in your text editor, try
+adding the following to the file and then saving it:</p>
 
-<div class="code">
-
-    #ifWinActive ahk_class TADS_MDIFrame_Window
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #ifWinActive ahk_class TADS_MDIFrame_Window
     {
     #`::Send \'
     #Enter::Send &lt;.p&gt;
     #p::Send &lt;.p&gt;
-    #q::Send <q></q>{Left 4}
-    #i::Send <i></i>{Left 4}
+    #q::Send &lt;q&gt;&lt;/q&gt;{Left 4}
+    #i::Send &lt;i&gt;&lt;/i&gt;{Left 4}
     #r::Send &lt;.reveal &gt;{Left}
     #c::Send &lt;.convnode &gt;{Left}
-    #[::Send &#123;&#123;}{}}{Left}
+    #[::Send &amp;#123;&amp;#123;}{}}{Left}
     }  
      
 
@@ -103,10 +99,10 @@ adding the following to the file and then saving it:
     The definitions that follow all take the form of the hotkey combination to press, followed by a double colon (::) followed by what happens when the hotkey combination being defined is pressed. The hash sign (#) represents the Windows key, so here we’re defining a series of hotkey combinations that all involve pressing the Windows key plus one other key. The letter or symbol that follows is the key that must be pressed along with the Windows key to trigger the hotkey action, except that where it appears Enter refers to the Enter key.
     Thus the first hotkey combinate we’re defining, #`::Send \', is triggered by pressing the Windows Key together with the backquote key (`), which we’ll abbreviate to Win+`. The Send command that follows the double colon tells AutoHotKey to send the characters that follow to the active window, just as it they'd been typed at the keyboard, so the effect of hitting Win+` is simply to type \' (an escaped single-quote mark). Depending on your keyboard layout, you may or may not find this easier than simply typing \', but it illustrates the principle.
     The next two lines provide two different hotkey combinations, Win+p and Win+Enter, for inserting the &lt;.p&gt; paragraph-break tag into your TADS 3 source code. Here there almost certainly is at least some gain, since &lt;.p&gt; can be a little fiddly to type.
-    The fourth line, #q::Send <q></q>{Left 4}, is probably even more useful. This not only outputs the code for opening and closing smart quotes, but then moves the cursor back four spaces so that it ends up between the opening and closing quote markers, like this <q>|</q>, ready for you to type what you want to go between the quotes. Not only does this save quite a bit of typing, it also makes sure that the opening and closing smart quote tags end up matched, something it can be surprisingly easy to fail to do when typing them manually. Note that we use {Left 4} at the end of the line here to move the cursor four spaces to the left, so that it ends up where we want it.
-    The fifth line, #i::Send <i></i>{Left 4} uses exactly the same principle to give us a matched pair of opening and closing italicizing tags with the cursor placed between them, so that Win+i give us <i>|</i> (where | marks the position of the cursor). 
+    The fourth line, #q::Send &lt;q&gt;&lt;/q&gt;{Left 4}, is probably even more useful. This not only outputs the code for opening and closing smart quotes, but then moves the cursor back four spaces so that it ends up between the opening and closing quote markers, like this &lt;q&gt;|&lt;/q&gt;, ready for you to type what you want to go between the quotes. Not only does this save quite a bit of typing, it also makes sure that the opening and closing smart quote tags end up matched, something it can be surprisingly easy to fail to do when typing them manually. Note that we use {Left 4} at the end of the line here to move the cursor four spaces to the left, so that it ends up where we want it.
+    The fifth line, #i::Send &lt;i&gt;&lt;/i&gt;{Left 4} uses exactly the same principle to give us a matched pair of opening and closing italicizing tags with the cursor placed between them, so that Win+i give us &lt;i&gt;|&lt;/i&gt; (where | marks the position of the cursor). 
     The sixth and seventh lines make it a bit easier to enter reveal and convnode tags, converting Win+r into &lt;.reveal |&gt; and Win+c into &lt;.convnode |&gt; (where | once again denotes the position where the cursor ends up, not a literal vertical bar).
-    The final line, #[::Send &#123;&#123;}{}}{Left} causes Win+[ to output a matched pair of braces with the cursor placed between them, like this: {|}. We might use this to enter a parameter substitution string in our TADS source code. Note a small complication here. Since opening and closing braces (along with one or two other characters, such as +,^,!, and #) have a special meaning in a Send statement, we need to escape them by surrounding them with braces.
+    The final line, #[::Send &amp;#123;&amp;#123;}{}}{Left} causes Win+[ to output a matched pair of braces with the cursor placed between them, like this: {|}. We might use this to enter a parameter substitution string in our TADS source code. Note a small complication here. Since opening and closing braces (along with one or two other characters, such as +,^,!, and #) have a special meaning in a Send statement, we need to escape them by surrounding them with braces.
     The above examples all used the Win key as an element of the hotkey combination, but plenty of other keys can be defined for the purpose. For the full list consult the AutoHotKey help file or visit http://www.autohotkey.com/docs/Hotkeys.html
 
     Hotstrings
@@ -157,7 +153,7 @@ adding the following to the file and then saving it:
 
     :*:age#::
     Send {+} : AgendaItem{enter}isReady = true{enter}{enter}
-    Send invokeItem(){enter}&#123;&#123;}{enter}
+    Send invokeItem(){enter}&amp;#123;&amp;#123;}{enter}
     Send isDone = true;{enter}{}}{enter};{enter}{Up 8}{Home}{Right 2}
     return
      
@@ -221,10 +217,8 @@ adding the following to the file and then saving it:
     Prev: Understanding Separate Compilation     Next: Bibliographic Metadata - the GameInfo Format     
 
 
+</code></pre></div></div>
 
-</div>
-
-</div>
 
 </main>
 <footer>

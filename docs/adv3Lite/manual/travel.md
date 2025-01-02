@@ -17,7 +17,7 @@ and Barriers
 
 </div>
 
-<div class="main">
+
 
 # Travel Connectors and Barriers
 
@@ -312,7 +312,7 @@ Note how we've added a custom theName property to the two
 TravelConnectors so that smokeBarrier.explainTravelBarrier(actor,
 connector) can refer to them.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

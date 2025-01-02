@@ -19,7 +19,7 @@ Entrypoint</a>    
 
 </div>
 
-<div class="main">
+
 
 # The Object Inheritance Model
 
@@ -350,7 +350,7 @@ determine *in isolation* where its `inherited`
 calls will go - it all depends on the full class tree of the final
 object that's involved.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

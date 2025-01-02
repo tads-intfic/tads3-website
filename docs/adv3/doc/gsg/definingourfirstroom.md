@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](startinganewgame.html)
@@ -406,4 +406,4 @@ object on a single line.
 *[\[Previous\]](startinganewgame.html)
   [\[Next\]](addinganobjecttotheroom.html)*
 
-</div>
+

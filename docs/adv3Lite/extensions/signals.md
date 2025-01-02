@@ -18,7 +18,7 @@ Sensory
 
 </div>
 
-<div class="main">
+
 
 # Signals
 
@@ -458,7 +458,7 @@ statements:
      
 ```
 
-</div>
+
 
 Since onSignal and offSignal will be emitted by the switch in any case,
 the only other step is to handle them on the cellar light. If we know

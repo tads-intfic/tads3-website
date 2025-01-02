@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Part II: The Tools
 
@@ -31,7 +31,7 @@ TADS 3 programs: the compiler and the interpreter.
 [Stand-Alone Executables](aloneexe.html)  
 [Running Programs: The Interpreter](terp.html)  
 
-</div>
+
 
 </div>
 

@@ -37,78 +37,76 @@
 
 </div>
 
-<div class="main">
+<h1 id="scoring">Scoring</h1>
 
-# Scoring
+<p>The score.t implements a scoring system that is identical to that in the
+adv3 library (and uses exactly the same code). If your game doesn’t use
+scoring, exclude the score.t module from your build.</p>
 
-The score.t implements a scoring system that is identical to that in the
-adv3 library (and uses exactly the same code). If your game doesn't use
-scoring, exclude the score.t module from your build.
-
-The quick and dirty way to keep score is to use the
-**addToScore(*points*, *desc*)** function to add points to the player's
-total score along with a description of what you're awarding points for.
+<p>The quick and dirty way to keep score is to use the
+<strong>addToScore(<em>points</em>, <em>desc</em>)</strong> function to add points to the player’s
+total score along with a description of what you’re awarding points for.
 A cleaner and more secure way (secure, for example, in that it makes it
-easier to ensure you don't keep awarding point for the same deed) is to
-use **Achievement** objects.
+easier to ensure you don’t keep awarding point for the same deed) is to
+use <strong>Achievement</strong> objects.</p>
 
-An Achievement is an object used to award points in the score. For most
+<p>An Achievement is an object used to award points in the score. For most
 purposes, an achievement can be described simply by a string, but the
 Achievement object provides more flexibility in describing combined
-scores when a set of similar achievements are to be grouped.
+scores when a set of similar achievements are to be grouped.</p>
 
-There are two ways to use the scoring system.
+<p>There are two ways to use the scoring system.</p>
 
-You can use a mix of string names and Achievement objects for scoring
+<p>You can use a mix of string names and Achievement objects for scoring
 items; each time you award a scoring item, you call the function
-addToScore(*points*, *desc*) to specify the achievement (by name or by
+addToScore(<em>points</em>, <em>desc</em>) to specify the achievement (by name or by
 Achievement object) and the number of points to award. You can also call
 the method addToScoreOnce() on an Achievement object to award the
 scoring item, ensuring that the item is only awarded once in the entire
 game (saving you the trouble of checking to see if the event that
 triggered the scoring item has happened before already in the same
 game). If you do this, you MUST set the property gameMain.maxScore to
-reflect the maximum score possible in the game.
+reflect the maximum score possible in the game.</p>
 
-You can use EXCLUSIVELY Achievement objects to represents scoring items,
-and give each Achievement object a 'points' property indicating the
-number of points it's worth. To award a scoring item, you call the
+<p>You can use EXCLUSIVELY Achievement objects to represents scoring items,
+and give each Achievement object a ‘points’ property indicating the
+number of points it’s worth. To award a scoring item, you call the
 method awardPoints() on an Achievement object. If you use this style of
 scoring, the library AUTOMATICALLY computes the gameMain.maxScore value,
-by adding up the 'points' values of all of the Achievement objects in
+by adding up the ‘points’ values of all of the Achievement objects in
 the game. For this to work properly, you have to obey the following
-rules:
+rules:</p>
 
-use ONLY Achievement objects (never strings) to award points;
+<p>use ONLY Achievement objects (never strings) to award points;</p>
 
-set the 'points' property of each Achievement to its score;
+<p>set the ‘points’ property of each Achievement to its score;</p>
 
-define Achievement objects statically only (never use 'new' to create an
-Achievement dynamically)
+<p>define Achievement objects statically only (never use ‘new’ to create an
+Achievement dynamically)</p>
 
-if an Achievement can be awarded more than once, you must override its
-'maxPoints' property to reflect the total number of points it will be
-worth when it is awarded the maximum number of times;
+<p>if an Achievement can be awarded more than once, you must override its
+‘maxPoints’ property to reflect the total number of points it will be
+worth when it is awarded the maximum number of times;</p>
 
-always award an Achievement through its awardPoints() or
-awardPointsOnce() method;
+<p>always award an Achievement through its awardPoints() or
+awardPointsOnce() method;</p>
 
-there exists at least one solution of the game in which every
-Achievement object is awarded
+<p>there exists at least one solution of the game in which every
+Achievement object is awarded</p>
 
-If there is more than one route through your game, it may be a bit
+<p>If there is more than one route through your game, it may be a bit
 tricky using the second of these approaches. One possible workaround is
 to use method 2 for the main route through your game (which you count as
-the 'main' route may, of course, be an arbitrary choice: you could
+the ‘main’ route may, of course, be an arbitrary choice: you could
 choose the longest route, the shortest route, the most interesting route
 or anything else that makes sense to you). Then use Achievement objects
-for the other routes but call their **addToScoreOnce(*points*)** method
-instead of awardPoints() or awardPointsOnce() if they're not on the main
-route; and don't define their points property. That way the points from
-these additional off-the-main-route Achievements won't be included the
-calculation of the maximum available points.
+for the other routes but call their <strong>addToScoreOnce(<em>points</em>)</strong> method
+instead of awardPoints() or awardPointsOnce() if they’re not on the main
+route; and don’t define their points property. That way the points from
+these additional off-the-main-route Achievements won’t be included the
+calculation of the maximum available points.</p>
 
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -119,7 +117,7 @@ calculation of the maximum available points.
     <a href="senseregion.html" class="nav"><em>Next:</em> SenseRegion</a>
     </span>
 
-</div>
+
 
 </div>
 

@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](remap.html)   [\[Next\]](otherresponsestoactions.html)*
@@ -831,4 +831,4 @@ Default in Appendix A).
 [\[Main\]](index.html)  
 *[\[Previous\]](remap.html)   [\[Next\]](otherresponsestoactions.html)*
 
-</div>
+

@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](rewardingtheeffort.html)   [\[Next\]](verify.html)*
@@ -463,4 +463,4 @@ ground we're about to cover.
 [\[Main\]](index.html)  
 *[\[Previous\]](rewardingtheeffort.html)   [\[Next\]](verify.html)*
 
-</div>
+

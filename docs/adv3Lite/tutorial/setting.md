@@ -18,7 +18,7 @@ Need</a>    
 
 </div>
 
-<div class="main">
+
 
 # Setting it all up
 
@@ -195,7 +195,7 @@ directory. For instructions on how to go about it, see the section on
 the [System Manual](../manual/mingame.html#sysman) in the *Adv3Lite
 Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

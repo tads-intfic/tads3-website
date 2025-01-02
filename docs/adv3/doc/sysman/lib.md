@@ -18,7 +18,7 @@ Library
 
 </div>
 
-<div class="main">
+
 
 # Part V: The System Library
 
@@ -42,7 +42,7 @@ interest to most TADS 3 programmers, whether using adv3 or not.
 [Miscellaneous Library Definitions](libmisc.html)  
 [Replacing the System Library](nodef.html)  
 
-</div>
+
 
 </div>
 

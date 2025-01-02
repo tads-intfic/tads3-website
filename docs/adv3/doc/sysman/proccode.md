@@ -18,7 +18,7 @@ Parameters</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Procedural Code
 
@@ -110,7 +110,7 @@ A function definition has this form:
        functionBody
     }
 
-</div>
+
 
 Note that the parentheses for the parameter list are always required. If
 you want to define a function that doesn't take any parameters, just use

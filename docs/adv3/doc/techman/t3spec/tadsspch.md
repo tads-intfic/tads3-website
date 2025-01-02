@@ -17,7 +17,7 @@ State</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 ## TADS Special Characters
 
@@ -91,7 +91,7 @@ this character.
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

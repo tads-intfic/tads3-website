@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Doors and Locks
 
@@ -565,7 +565,7 @@ Library Manual*. As we continue to implement the Airport game in the
 next chapter, we shall be introducing some more as yet unfamiliar
 features of adv3Lite.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -19,7 +19,7 @@ with the Workbench Editor (Windows)</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Understanding Separate Compilation
 
@@ -507,7 +507,7 @@ part of the process. And there's absolutely no manual overhead as you
 shift your focus around the game, since the compiler automatically
 figures out what you've been changing and recompiles just those parts.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

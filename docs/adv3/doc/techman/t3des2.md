@@ -20,7 +20,7 @@ Programming Overview</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # IF Design: In Theory
 
@@ -223,7 +223,7 @@ which aren't handled in the simulation:
     >tear page out of book
     You can't tear the book.
 
-</div>
+
 
 The third variety is the "detail level" problem. Players sometimes
 misconstrue the nature of the command-line interface, thinking it's

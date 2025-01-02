@@ -17,8 +17,6 @@ layout: docs
 
 </div>
 
-<div class="main">
-
 # What More?
 
 ## What More Might Go in the Airport Game?
@@ -294,6 +292,6 @@ the one you want for your particular game).
     <a href="conclusion.html" class="nav"><em>Next:</em> Conclusion</a>
     </span>
 
-</div>
+
 
 </div>

@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # FileName
 
@@ -93,7 +93,7 @@ build.
 This creates a FileName object representing the working directory - the
 equivalent of "." on Unix or Windows.
 
-</div>
+
 
 `new FileName(*str*)`
 

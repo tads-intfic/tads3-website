@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Date
 
@@ -71,7 +71,7 @@ time you look at it; it simply records the fixed moment when the
 same `new` expression again will yield another
 Date object representing the then-current time.)
 
-</div>
+
 
 <span id="newDateStr"></span>
 

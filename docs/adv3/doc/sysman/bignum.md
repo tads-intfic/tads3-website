@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # BigNumber
 
@@ -104,7 +104,7 @@ Syntactically, that means one of these formats:
     [ digit ... ]  . ( digit ... )  [ ( E | e )  [ + | - ]  digit ...
     digit ... . [ ( E | e )  [ + | - ]  digit ... ] 
 
-</div>
+
 
 For example:
 

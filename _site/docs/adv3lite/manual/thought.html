@@ -37,20 +37,16 @@
 
 </div>
 
-<div class="main">
+<h1 id="thoughts">Thoughts</h1>
 
-# Thoughts
-
-The thoughts.t module provides a framework for responding to commands of
+<p>The thoughts.t module provides a framework for responding to commands of
 the form THINK ABOUT WHATEVER. It uses precisely the same TopicEntry
 mechanism as the Consultable/ConsultTopic classes, and can be used in
 almost precisely the same way. All you need to do is to define an object
-of the **ThoughtManager** class and then populate it with **Thought**
-objects, like so:
+of the <strong>ThoughtManager</strong> class and then populate it with <strong>Thought</strong>
+objects, like so:</p>
 
-<div class="code">
-
-    myThoughts: ThoughtManager
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myThoughts: ThoughtManager
     ;
 
     + Thought @george
@@ -66,18 +62,17 @@ objects, like so:
         "You find your thoughts start to wander; for some reason you can't
         concentrate on that topic right now. "
     ;
+</code></pre></div></div>
 
-</div>
-
-Thought inherits from [TopicEntry](topicentry.html), so you can use all
+<p>Thought inherits from <a href="topicentry.html">TopicEntry</a>, so you can use all
 the properties and methods of TopicEntry with it; Thought and
-DefaultThought work just like ConsultTopic and DefaultConsultTopic.
+DefaultThought work just like ConsultTopic and DefaultConsultTopic.</p>
 
-You can exclude thoughts.t if you don't want to implement a THINK ABOUT
-command (or you don't want to implement it this way), but if you include
-thoughts.t you must also include topicentry.t.
+<p>You can exclude thoughts.t if you don’t want to implement a THINK ABOUT
+command (or you don’t want to implement it this way), but if you include
+thoughts.t you must also include topicentry.t.</p>
 
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -88,7 +83,7 @@ thoughts.t you must also include topicentry.t.
     <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
 </span>
 
-</div>
+
 
 </div>
 

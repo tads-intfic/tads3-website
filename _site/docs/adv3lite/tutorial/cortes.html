@@ -38,65 +38,58 @@ Attendant</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="pablo-cortez--a-man-with-several-agendas">Pablo Cortez — A Man with Several Agendas</h1>
 
-# Pablo Cortez — A Man with Several Agendas
-
-The second NPC we'll implement is Pablo Cortez, El Diablo's right-hand
+<p>The second NPC we’ll implement is Pablo Cortez, El Diablo’s right-hand
 man and the man whose threatening presence obliges our protagonist to
 sneak off the plane pretending to be a cleaner. He only really needs to
 be present during one scene, but during that scene he does need to be
-something of a menacing presence.
+something of a menacing presence.</p>
 
-Cortez needs to be moved on-stage, to the front of the plane, at the
+<p>Cortez needs to be moved on-stage, to the front of the plane, at the
 start of the takeover scene, and moved off again when the takeover scene
-ends. During the takeover scene he'll make some remarks that the player
+ends. During the takeover scene he’ll make some remarks that the player
 character will overhear. If the player character attempts to enter the
 cockpit, or hangs around too long, while Cortez can see him, Cortez will
-shoot him.
+shoot him.</p>
 
-We start by defining the basic Actor object as before:
+<p>We start by defining the basic Actor object as before:</p>
 
-<div class="code">
-
-    cortez: Actor 'Pablo Cortez; evil latinate;man;him'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
         actually is. "
         
-        actorSpecialDesc = "Pablo Cortez&lt;<first time="">&gt;, El Diablo's right-hand man,
-            &lt;<only>&gt; is standing by the main exit, hurrying the passengers off the
+        actorSpecialDesc = "Pablo Cortez&lt;&lt;first time&gt;&gt;, El Diablo's right-hand man,
+            &lt;&lt;only&gt;&gt; is standing by the main exit, hurrying the passengers off the
             plane with the muzzle of his machine-pistol. "
         
         checkAttackMsg = 'You know better than to attempt it; he\'s known to be
             quite deadly with that gun. '
             
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
+<p>The only novelty here is the use of the &lt;&lt;first
+time&gt;&gt;…&lt;&lt;only&gt;&gt; construct to ensure that the explanation that
+Cortez is El Diablo’s right-hand man only appears the first time the
+actorSpecialDesc is displayed.</p>
 
-The only novelty here is the use of the \&lt;\&lt;first
-time\&gt;\&gt;...\&lt;\&lt;only\&gt;\&gt; construct to ensure that the explanation that
-Cortez is El Diablo's right-hand man only appears the first time the
-actorSpecialDesc is displayed.
-
-Since the actorSpecialDesc rather pointedly mentions the gun Cortez is
+<p>Since the actorSpecialDesc rather pointedly mentions the gun Cortez is
 holding, we should implement it as a separate object. To give an Actor
-possessions that they're notionally carrying, we simply locate the
+possessions that they’re notionally carrying, we simply locate the
 object or objects in question directly in the Actor object, and while
-we're at it we'll customize the message that's otherwise shown when the
-player character attempts to take another actor's possessions to
-something a bit less bland than the library default:
+we’re at it we’ll customize the message that’s otherwise shown when the
+player character attempts to take another actor’s possessions to
+something a bit less bland than the library default:</p>
 
-<div class="code">
-
-    cortez: Actor 'Pablo Cortez; evil latinate;man;him'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
         actually is. "
         
-        actorSpecialDesc = "Pablo Cortez&lt;<first time="">&gt;, El Diabo's right-hand man,
-            &lt;<only>&gt; is standing by the main exit, hurrying the passengers off the
+        actorSpecialDesc = "Pablo Cortez&lt;&lt;first time&gt;&gt;, El Diabo's right-hand man,
+            &lt;&lt;only&gt;&gt; is standing by the main exit, hurrying the passengers off the
             plane with muzzle of his machine-pistol. "
         
         checkAttackMsg = 'You know better than to attempt it; he\'s known to be
@@ -113,24 +106,21 @@ something a bit less bland than the library default:
         "It's a Beretta 93R, capable of firing at a rate of more than a thousand
         rounds per minute. "
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-To make Cortez shoot the player character if he tries to enter the
+<p>To make Cortez shoot the player character if he tries to enter the
 cockpit we can use a beforeTravel() notification on the Actor object.
-Although we could use the beforeTravel() method in this case, we'll use
-<span class="code">actorBeforeTravel()</span>, again for reasons that
-will become clearer when we come to look at ActorStates:
+Although we could use the beforeTravel() method in this case, we’ll use
+<code class="language-plaintext highlighter-rouge">actorBeforeTravel()</code>, again for reasons that
+will become clearer when we come to look at ActorStates:</p>
 
-<div class="code">
-
-    cortez: Actor 'Pablo Cortez; evil latinate;man;him'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
         actually is. "
         
-        actorSpecialDesc = "Pablo Cortez&lt;<first time="">&gt;, El Diabo's right-hand man,
-            &lt;<only>&gt; is standing by the main exit, hurrying the passengers off the
+        actorSpecialDesc = "Pablo Cortez&lt;&lt;first time&gt;&gt;, El Diabo's right-hand man,
+            &lt;&lt;only&gt;&gt; is standing by the main exit, hurrying the passengers off the
             plane with muzzle of his machine-pistol. "
         
         checkAttackMsg = 'You know better than to attempt it; he\'s known to be
@@ -147,7 +137,7 @@ will become clearer when we come to look at ActorStates:
             if(traveler == gPlayerChar &amp;&amp; connector == cockpitDoor)
             {
                 "Cortez looks round at you suspiciously as you head for the cockpit
-                door. <q>Hey, you, Pond!</q> he shouts. As you make a dash for the
+                door. &lt;q&gt;Hey, you, Pond!&lt;/q&gt; he shouts. As you make a dash for the
                 door he opens fire with his machine pistol, riddling your body with
                 bullets. ";
                 finishGameMsg(ftDeath, [finishOptionUndo]);
@@ -160,51 +150,48 @@ will become clearer when we come to look at ActorStates:
             }        
         }
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Note the use of the <span class="code">finishGameMsg(ftDeath,...)</span>
+<p>Note the use of the <code class="language-plaintext highlighter-rouge">finishGameMsg(ftDeath,...)</code>
 to kill the player character. We supply
-<span class="code">\[finishOptionUndo\]</span> as the second parameter
+<code class="language-plaintext highlighter-rouge">\[finishOptionUndo\]</code> as the second parameter
 to allow the player to undo the fatal move. Note too that since we
-defined the first part of the vocab property as 'Pablo Cortez', with
+defined the first part of the vocab property as ‘Pablo Cortez’, with
 every word starting with a capital letter, the library will recognize it
-as a proper name and so refer to the actor as 'Pablo Cortez' not 'the
-Pablo Cortez' or 'a Pablo Cortez'. Note also that we've taken the
+as a proper name and so refer to the actor as ‘Pablo Cortez’ not ‘the
+Pablo Cortez’ or ‘a Pablo Cortez’. Note also that we’ve taken the
 opportunity to prevent the player character retreating to the rear of
-the plane again once he's encountered Cortez; this will prevent
-potential problems with the AgendaItems we're about to define next.
+the plane again once he’s encountered Cortez; this will prevent
+potential problems with the AgendaItems we’re about to define next.</p>
 
-The <span class="code">cortez</span> Actor object is beginning to look a
+<p>The <code class="language-plaintext highlighter-rouge">cortez</code> Actor object is beginning to look a
 bit complicated, but this is as complicated as it needs to get. To
-implement the rest of Cortez's behaviour we'll use **AgendaItems**.
+implement the rest of Cortez’s behaviour we’ll use <strong>AgendaItems</strong>.</p>
 
-An AgendaItem is an object that can be used to define what an Actor does
+<p>An AgendaItem is an object that can be used to define what an Actor does
 when a certain condition is met. An AgendaItem is considered for
-execution when its <span class="code">isReady</span> property becomes
-true. When that happens, its <span class="code">invokeItem()</span>
+execution when its <code class="language-plaintext highlighter-rouge">isReady</code> property becomes
+true. When that happens, its <code class="language-plaintext highlighter-rouge">invokeItem()</code>
 method is called. Its invokeItem() method will continue to be executed
-every turn until the AgendaItem's <span class="code">isDone</span>
+every turn until the AgendaItem’s <code class="language-plaintext highlighter-rouge">isDone</code>
 property becomes true, so if you want an AgendaItem to execute only
-once, make sure that it sets <span class="code">isDone = true</span> in
-its <span class="code">invokeItem()</span> method. But to be considered
-for execution at all an AgendaItem must be in its actor's
-<span class="code">agendaList</span>. To put it there you can either
-call a<span class="code">ddToAgenda(*item*)</span> on the actor object,
-where *item* is the AgendaItem in question, or define
-<span class="code">initiallyActive = true</span> on the AgendaItem to
-have it included in the actor's agendaList at the start of the game.
+once, make sure that it sets <code class="language-plaintext highlighter-rouge">isDone = true</code> in
+its <code class="language-plaintext highlighter-rouge">invokeItem()</code> method. But to be considered
+for execution at all an AgendaItem must be in its actor’s
+<code class="language-plaintext highlighter-rouge">agendaList</code>. To put it there you can either
+call a<code class="language-plaintext highlighter-rouge">ddToAgenda(*item*)</code> on the actor object,
+where <em>item</em> is the AgendaItem in question, or define
+<code class="language-plaintext highlighter-rouge">initiallyActive = true</code> on the AgendaItem to
+have it included in the actor’s agendaList at the start of the game.</p>
 
-An AgendaItem is associated with its actor by being located in its
-actor, usually with the + syntax.
+<p>An AgendaItem is associated with its actor by being located in its
+actor, usually with the + syntax.</p>
 
-As a first example, we'll use an AgendaItem to move Pablo Cortez to the
+<p>As a first example, we’ll use an AgendaItem to move Pablo Cortez to the
 front of the plane when the takeover scene starts. The following code
-should be placed immediately after the definition of the gun object:
+should be placed immediately after the definition of the gun object:</p>
 
-<div class="code">
-
-    + cortezArrivalAgenda: AgendaItem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cortezArrivalAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
         
@@ -214,41 +201,38 @@ should be placed immediately after the definition of the gun object:
             getActor.moveInto(planeFront);
         }
     ;
+</code></pre></div></div>
 
-</div>
-
-Note the use of <span class="code">getActor</span> within the
-<span class="code">invokeItem()</span> method to get a reference to the
+<p>Note the use of <code class="language-plaintext highlighter-rouge">getActor</code> within the
+<code class="language-plaintext highlighter-rouge">invokeItem()</code> method to get a reference to the
 actor this AgendaItem belongs to. We could have written
-<span class="code">cortez.moveInto(planeFront)</span>, but it's better
-practice to use <span class="code">getActor</span> in case, for example,
+<code class="language-plaintext highlighter-rouge">cortez.moveInto(planeFront)</code>, but it’s better
+practice to use <code class="language-plaintext highlighter-rouge">getActor</code> in case, for example,
 you later decided to change the name of the cortez object. Note too the
-use of <span class="code">isDone = true</span> at the start of the
-<span class="code">invokeItem()</span> method (it could equally well
+use of <code class="language-plaintext highlighter-rouge">isDone = true</code> at the start of the
+<code class="language-plaintext highlighter-rouge">invokeItem()</code> method (it could equally well
 have come at the end, of course) to ensure this AgendaItem only fires
-once.
+once.</p>
 
-You may be thinking it would have been simpler to have moved the
-<span class="code">cortez</span> object to the front of the plane in the
-<span class="code">whenStarting()</span> method of the takeover scene.
+<p>You may be thinking it would have been simpler to have moved the
+<code class="language-plaintext highlighter-rouge">cortez</code> object to the front of the plane in the
+<code class="language-plaintext highlighter-rouge">whenStarting()</code> method of the takeover scene.
 We certainly could have done it that way, and it may even have been
-better. It's a matter of taste and opinion whether it's preferable to
+better. It’s a matter of taste and opinion whether it’s preferable to
 keep all the Scene-related code with the Scene, or all the Actor-related
-code with the Actor. Here we're doing it the latter way mainly to
-illustrate the use of AgendaItems.
+code with the Actor. Here we’re doing it the latter way mainly to
+illustrate the use of AgendaItems.</p>
 
-The next thing we want Cortez to do is to make some remarks in the
-player character's hearing. Again, we can use an AgendaItem to
+<p>The next thing we want Cortez to do is to make some remarks in the
+player character’s hearing. Again, we can use an AgendaItem to
 accomplish this, setting its isReady property to become true once the
-player is in the front of the plane. But we don't want this AgendaItem
+player is in the front of the plane. But we don’t want this AgendaItem
 to fire until Cortez is also in the front of the plane. There are
-several ways we could arrange this, but the one we'll use here is to
-hold off adding our second AgendaItem to Cortez's agendaList until the
-first one is invoked:
+several ways we could arrange this, but the one we’ll use here is to
+hold off adding our second AgendaItem to Cortez’s agendaList until the
+first one is invoked:</p>
 
-<div class="code">
-
-    + cortezArrivalAgenda: AgendaItem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cortezArrivalAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
         
@@ -266,42 +250,39 @@ first one is invoked:
         invokeItem()
         {
             isDone = true;
-            "<q>Hurry up! Get off this plane! El Diablo is not a patient man and he
-            needs it for important business!</q> you hear Cortez tell the
-            passengers. <q>If the plane is not cleared by the time our pilot arrives
-            I shall shoot any of you who are still aboard! Now, move, move!</q> ";
+            "&lt;q&gt;Hurry up! Get off this plane! El Diablo is not a patient man and he
+            needs it for important business!&lt;/q&gt; you hear Cortez tell the
+            passengers. &lt;q&gt;If the plane is not cleared by the time our pilot arrives
+            I shall shoot any of you who are still aboard! Now, move, move!&lt;/q&gt; ";
         }
     ;
+</code></pre></div></div>
 
-</div>
+<p>Note the use of
+<code class="language-plaintext highlighter-rouge">getActor.addToAgenda(cortezTalkingAgenda)</code> to
+add the cortezTalkingAgenda AgendaItem to Cortez’s agenda.</p>
 
-Note the use of
-<span class="code">getActor.addToAgenda(cortezTalkingAgenda)</span> to
-add the cortezTalkingAgenda AgendaItem to Cortez's agenda.
-
-Let's say that if the player character hangs around for more than
+<p>Let’s say that if the player character hangs around for more than
 another two turns, Cortez will spot him and instantly shoot him. For
 that we can use a special kind of AgendaItem called a
-**DelayedAgendaItem**. To set the delay of a DelayedAgendaItem we can
-add it to its actor's agenda and call its
-<span class="code">setDelay()</span> method at the same time as adding
-to its actor's agendaList with a statement like
-<span class="code">getActor.addToAgenda(*item*.setDelay(*turns*))</span>.
+<strong>DelayedAgendaItem</strong>. To set the delay of a DelayedAgendaItem we can
+add it to its actor’s agenda and call its
+<code class="language-plaintext highlighter-rouge">setDelay()</code> method at the same time as adding
+to its actor’s agendaList with a statement like
+<code class="language-plaintext highlighter-rouge">getActor.addToAgenda(*item*.setDelay(*turns*))</code>.
 In the case of this DelayedAgendaItem we must also make sure that the
-player is still around to be shot:
+player is still around to be shot:</p>
 
-<div class="code">
-
-    + cortezTalkingAgenda: AgendaItem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cortezTalkingAgenda: AgendaItem
         isReady = (me.isIn(planeFront))
         
         invokeItem()
         {
             isDone = true;
-            "<q>Hurry up! Get off this plane! El Diablo is not a patient man and he
-            needs it for important business!</q> you hear Cortez tell the
-            passengers. <q>If the plane is not cleared by the time our pilot arrives
-            I shall shoot any of you who are still aboard! Now, move, move!</q> ";
+            "&lt;q&gt;Hurry up! Get off this plane! El Diablo is not a patient man and he
+            needs it for important business!&lt;/q&gt; you hear Cortez tell the
+            passengers. &lt;q&gt;If the plane is not cleared by the time our pilot arrives
+            I shall shoot any of you who are still aboard! Now, move, move!&lt;/q&gt; ";
             
             getActor.addToAgenda(cortezShootingAgenda.setDelay(2));
         }
@@ -315,7 +296,7 @@ player is still around to be shot:
             {
                 "Cortez suddenly looks your way. For a split-second he seems frozen
                 with astonishment, but only for a split-second.\b
-                <q>Hey! You!</q> he cries. A moment later he raises his machine
+                &lt;q&gt;Hey! You!&lt;/q&gt; he cries. A moment later he raises his machine
                 pistol and fires into your belly at point-blank range. ";
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
@@ -323,37 +304,34 @@ player is still around to be shot:
                 getActor.moveInto(nil);                
         }
     ;
+</code></pre></div></div>
 
-</div>
-
-You may be wondering about that
-<span class="code">getActor.moveInto(nil)</span> in the
-<span class="code">else</span> clause of
-<span class="code">cortezShootingAgenda.invokeItem()</span>. Here we're
+<p>You may be wondering about that
+<code class="language-plaintext highlighter-rouge">getActor.moveInto(nil)</code> in the
+<code class="language-plaintext highlighter-rouge">else</code> clause of
+<code class="language-plaintext highlighter-rouge">cortezShootingAgenda.invokeItem()</code>. Here we’re
 simply saving ourselves the additional AgendaItem that would otherwise
 be needed to move Cortez off-stage again at the end of the takeover
-scene. If the player character isn't around to be shot when the
-cortezShootingAgenda is invoked, that must mean he's left the plane, and
-since he can't get back aboard the plane again until he's put on the
-pilot's uniform and so brought the takeover scene to an end, we might as
-well remove Cortez right away. Although we're moving him offstage
+scene. If the player character isn’t around to be shot when the
+cortezShootingAgenda is invoked, that must mean he’s left the plane, and
+since he can’t get back aboard the plane again until he’s put on the
+pilot’s uniform and so brought the takeover scene to an end, we might as
+well remove Cortez right away. Although we’re moving him offstage
 altogether, presumably he notionally moves to the rear of the plane to
-take a seat among his pals and buddies.
+take a seat among his pals and buddies.</p>
 
-You may also be wondering about the lack of an
-<span class="code">isReady</span> property on cortezShootingAgenda.
-That's because it's already defined on the DelayedAgendaClass; it's
+<p>You may also be wondering about the lack of an
+<code class="language-plaintext highlighter-rouge">isReady</code> property on cortezShootingAgenda.
+That’s because it’s already defined on the DelayedAgendaClass; it’s
 defined so that a DelayedAgendaItem becomes ready when the delay
-specified in its setDelay() method has passed.
+specified in its setDelay() method has passed.</p>
 
-We'll see some more examples of AgendaItems in our implementation of the
+<p>We’ll see some more examples of AgendaItems in our implementation of the
 flight attendant. In the meantime if you want the full story about
-[AgendaItems](../manual/agenda.html), you can read about them in the
-*adv3Lite Library Manual*.
+<a href="../manual/agenda.html">AgendaItems</a>, you can read about them in the
+<em>adv3Lite Library Manual</em>.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -366,7 +344,6 @@ Cortez
 Attendant</a>     </span>
 
 </div>
-</only></first></div></only></first></div></only></first></div></div>
 
 </main>
 <footer>

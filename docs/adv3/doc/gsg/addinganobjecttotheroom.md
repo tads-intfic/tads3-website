@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](definingourfirstroom.html)
@@ -469,4 +469,4 @@ objects.
 *[\[Previous\]](definingourfirstroom.html)
   [\[Next\]](tyingupsomeloosestrings.html)*
 
-</div>
+

@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Scoring
 
@@ -292,6 +292,6 @@ reader.
 <span class="navnp"><a href="starting.html" class="nav"><em>Prev:</em> Starting Out Right</a>
     <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span>
 
-</div>
+
 
 </div>

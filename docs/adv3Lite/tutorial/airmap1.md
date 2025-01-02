@@ -18,7 +18,7 @@ game</a>    
 
 </div>
 
-<div class="main">
+
 
 # Starting the Map
 
@@ -455,7 +455,7 @@ metal detector carrying the ID card, and find and wear the pilot's
 uniform. You can also experiment with using GO TO to move around. In the
 next section, we'll sketch in the rest of the airport map.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

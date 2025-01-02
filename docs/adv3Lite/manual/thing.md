@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Things
 
@@ -1859,6 +1859,6 @@ closed) according to whether it's open or closed:
 <a href="room.html" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
     </span>
 
-</div>
+
 
 </div>

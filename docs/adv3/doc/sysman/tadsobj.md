@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # TadsObject
 
@@ -59,7 +59,7 @@ a property of the original points to a Vector, the corresponding
 property of the clone points to the same Vector, not a copy of the
 Vector.
 
-</div>
+
 
 `createInstance(...)`
 

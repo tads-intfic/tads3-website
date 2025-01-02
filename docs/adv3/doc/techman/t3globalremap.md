@@ -19,7 +19,7 @@ Past Tense</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Global Command Remapping
 
@@ -481,7 +481,7 @@ we're done.
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

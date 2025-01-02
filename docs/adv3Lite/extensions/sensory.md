@@ -18,7 +18,7 @@ Sensory
 
 </div>
 
-<div class="main">
+
 
 # Sensory
 
@@ -262,7 +262,7 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [sensory.t](../sensory.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

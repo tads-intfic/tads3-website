@@ -19,7 +19,7 @@ Answers</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Hello and Goodbye
 
@@ -148,7 +148,7 @@ That covers most of what you need to know about Greeting Protocols in
 adv3Lite, but for the full story you can consult the section on [Hello
 and Goodbye](../manual/hello.html) in the *adv3Lite Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

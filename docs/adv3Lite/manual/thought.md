@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Thoughts
 
@@ -66,6 +66,6 @@ thoughts.t you must also include topicentry.t.
     <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
 </span>
 
-</div>
+
 
 </div>

@@ -19,7 +19,7 @@ Practice</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Tips on Designing your Game
 
@@ -44,7 +44,7 @@ IF: namely what makes an enjoyable adventure game.
 [IF Design: In Practice](t3des1.html)  
 [IF Design: In Theory](t3des2.html)  
 
-</div>
+
 
 </div>
 

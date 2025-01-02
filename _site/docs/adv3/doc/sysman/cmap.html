@@ -37,67 +37,62 @@ Messages</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="creating-a-character-mapping-file">Creating a Character-Mapping File</h1>
 
-# Creating a Character-Mapping File
-
-Because TADS 3 uses Unicode internally, TADS programs can work on
+<p>Because TADS 3 uses Unicode internally, TADS programs can work on
 practically any computer, in any national language, using any character
-set. Unicode is a "universal" character set that encodes almost every
-character from almost every written language in the world.
+set. Unicode is a “universal” character set that encodes almost every
+character from almost every written language in the world.</p>
 
-Sadly, most computers today do not use Unicode as their native character
+<p>Sadly, most computers today do not use Unicode as their native character
 sets. In order for TADS to work on non-Unicode computers, TADS must
 translate characters between Unicode and native encodings. To accomplish
 this without tying itself to any one type of computer, TADS uses
 character mapping files. A character mapping file describes the
-translation between a computer's native character set and Unicode.
+translation between a computer’s native character set and Unicode.</p>
 
-The Unicode consortium, which is the organization that defines the
+<p>The Unicode consortium, which is the organization that defines the
 Unicode standard, publishes files that describe the correspondence
 between Unicode and most native character sets that are in use today.
-TADS uses these files as a starting point.
+TADS uses these files as a starting point.</p>
 
-To create a new character mapping for use with TADS, follow these steps.
+<p>To create a new character mapping for use with TADS, follow these steps.</p>
 
-**Identify the character set you're using.** This is a function of the
-type of computer you're using and your computer's localization. For
+<p><strong>Identify the character set you’re using.</strong> This is a function of the
+type of computer you’re using and your computer’s localization. For
 example, Microsoft Windows systems localized for Eastern or Central
-Europe use Windows Code Page 1250.
+Europe use Windows Code Page 1250.</p>
 
-**Obtain a Unicode mapping file.** For most character sets in widespread
-use, there's a mapping available from the Unicode web site,
-[www.unicode.org](http://www.unicode.org). See below for a list of
+<p><strong>Obtain a Unicode mapping file.</strong> For most character sets in widespread
+use, there’s a mapping available from the Unicode web site,
+<a href="http://www.unicode.org">www.unicode.org</a>. See below for a list of
 common mappings and where to find them on the Unicode site. The
-character mapping files as provided on the Unicode ftp site are *almost*
+character mapping files as provided on the Unicode ftp site are <em>almost</em>
 in a format that you can directly feed into the TADS character map
 compiler, but you must make one small addition first. At the end of the
-file, add a line that looks like this:
+file, add a line that looks like this:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    default_display 0x81
+</code></pre></div></div>
 
-    default_display 0x81
-
-</div>
-
-For the "0x81", however, you should substitute the character that you
+<p>For the “0x81”, however, you should substitute the character that you
 want to use as the default display character. This defines the character
 that TADS will display when a Unicode character has no mapping in your
-native character set. Most native character sets include an "invalid"
+native character set. Most native character sets include an “invalid”
 character for just this purpose; this character looks like an empty
 rectangle in many fonts, but each character set varies. You should find
 an appropriate character in your native character set, and define it for
-the "default_display" character.
+the “default_display” character.</p>
 
-**Compile the mapping file.** Use the mkchrtab ("make character table")
+<p><strong>Compile the mapping file.</strong> Use the mkchrtab (“make character table”)
 utility, included with the TADS distribution, to compile the mapping
-file into the format that TADS uses:
+file into the format that TADS uses:</p>
 
 <div class="cmdline">
 
     mkchrtab cp1250.txt cp1250.tcm
 
-</div>
+
 
 The first argument is the source file that you downloaded from the
 Unicode site. The second argument is the name of the "tcm" file (TADS
@@ -157,8 +152,8 @@ original character can't be displayed on this system.
 
 In addition, some glyphs can be approximated visually by combining two
 or more glyphs from a more limited character set. For example, left and
-right arrows can be approximated by <span class="code">\&lt;-</span> and
-<span class="code">-\&gt;</span>.
+right arrows can be approximated by `\&lt;-` and
+`-\&gt;`.
 
 The TADS 3 character mapping system provides an optional mechanism for
 making these types of approximations. If you wish to provide
@@ -168,24 +163,20 @@ you obtain from mapping files found on the Unicode web site). After all
 of the local-to-Unicode mappings, add this line to your mapping source
 file:
 
-<div class="code">
-
+```
     display_mappings
-
-</div>
+```
 
 After this line, provide your approximation mappings. These mappings can
 take two forms, as shown in these examples:
 
-<div class="code">
-
+```
     &amp;mdash  '--'
     0x0141      'L'
-
-</div>
+```
 
 In the first form, you can specify an HTML entity name, written with a
-leading ampersand (<span class="code">&amp;</span>) as it is in HTML source
+leading ampersand (`&amp;`) as it is in HTML source
 code. In the second form, you use a number (the "0x" prefix indicates
 that the number is in hexadecimal; you can specify a decimal number by
 omitting the "0x" prefix, but the Unicode listings specify everything in
@@ -201,11 +192,9 @@ range 0 to 255). If you want to substitute any Unicode characters
 outside of the plain ASCII range, use numbers to specify the Unicode
 code points of the substitution:
 
-<div class="code">
-
+```
     &amp;mdash  0x2d 0x2d
-
-</div>
+```
 
 The numeric form eliminates any character set translation issues with
 respect to the character mapping source file itself (the last thing we

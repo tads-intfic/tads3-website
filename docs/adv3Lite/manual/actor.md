@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Part V: Actors
 
@@ -45,7 +45,7 @@ included in your game for the features described in this part to work.
 [NPC-Initiated Conversation](initiate.html)  
 [Changing the Player Character](changepc.html)  
 
-</div>
+
 
 </div>
 

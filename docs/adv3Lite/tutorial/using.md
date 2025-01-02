@@ -18,7 +18,7 @@ game</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Using the Tools
 
@@ -85,7 +85,7 @@ the programming tools and files we've just set up.
             bulk = 1
         ;
 
-    </div>
+    
 
     and:
 

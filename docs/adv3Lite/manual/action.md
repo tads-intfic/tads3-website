@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Part IV: Actions
 
@@ -39,7 +39,7 @@ and how to define your own actions.
 [Debugging Commands](debug.html)  
 [Action Reference](actionref.html)  
 
-</div>
+
 
 </div>
 

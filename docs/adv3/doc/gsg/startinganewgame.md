@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](makingtheitemsdosomething.html)
@@ -184,4 +184,4 @@ me: Actor
 *[\[Previous\]](makingtheitemsdosomething.html)
   [\[Next\]](definingourfirstroom.html)*
 
-</div>
+

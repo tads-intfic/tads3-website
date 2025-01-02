@@ -18,7 +18,7 @@ Barriers</a>    
 
 </div>
 
-<div class="main">
+
 
 # Keys
 
@@ -123,7 +123,7 @@ brassKey (although it wouldn't matter if you did both). If you like, you
 can mix defining keyLists on lockable objects and lockable objects in
 the actualLockLists of Keys.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

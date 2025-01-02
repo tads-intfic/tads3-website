@@ -16,7 +16,7 @@ game</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Chapter 7: Airport
 
@@ -31,7 +31,7 @@ the remainder of this tutorial.
 [Aboard the Plane](airmap3.html)  
 [Doors and Locks](doors.html)  
 
-</div>
+
 
 </div>
 

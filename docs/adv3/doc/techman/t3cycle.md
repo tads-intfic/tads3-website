@@ -19,7 +19,7 @@ Transcript</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # The Command Execution Cycle
 
@@ -906,7 +906,7 @@ this game. " On the other hand it's then up to you to look at the
 inScopeList of the ResolvedTopic object the parser creates and decide
 how you want to prioritize it.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

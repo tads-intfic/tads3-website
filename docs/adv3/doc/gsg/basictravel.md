@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](tyingupsomeloosestrings.html)
@@ -272,4 +272,4 @@ The game should now work as expected.
 *[\[Previous\]](tyingupsomeloosestrings.html)
   [\[Next\]](climbingthetree.html)*
 
-</div>
+

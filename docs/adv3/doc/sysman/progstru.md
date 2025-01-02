@@ -19,7 +19,7 @@ Sets</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Source Code Structure
 
@@ -303,7 +303,7 @@ it can do this because you presumably won't be giving a debug-mode
 program to anyone, and thus you wouldn't care about the resource
 bundling.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -18,7 +18,7 @@ When to Use Which</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Action Results
 
@@ -1044,7 +1044,7 @@ npcMessagesDirect. If you want to use this style for all of your actors,
 you can modify Actor to return npcMessagesDirect from
 getParserMessageObj() when isPlayerChar() returns nil.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

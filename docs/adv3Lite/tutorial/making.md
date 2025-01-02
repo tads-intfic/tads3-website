@@ -18,7 +18,7 @@ Game</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Making things happen
 
@@ -155,7 +155,7 @@ In the next section we'll start adding all sorts of little tweaks and
 improvements to this game, and introduce several new features of
 adv3Lite in the process.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

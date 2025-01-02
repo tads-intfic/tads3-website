@@ -18,7 +18,7 @@ Overloading
 
 </div>
 
-<div class="main">
+
 
 # Operator Overloading
 
@@ -536,7 +536,7 @@ largely free of overloaded operators out of just these concerns.) If
 you're writing an extension or library that other people will use, it's
 probably best to use this sort of overloading sparingly.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

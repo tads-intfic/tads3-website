@@ -19,7 +19,7 @@ Statements</a>    
 
 </div>
 
-<div class="main">
+
 
 # Inheritance, Modification and Overriding
 
@@ -318,7 +318,7 @@ the `modify` keyword on a class (or object) is
 to create a new version of that class (or object) that inherits from the
 old one.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -39,111 +39,96 @@ EventListItem</a>    
 
 </div>
 
-<div class="main">
+<h1 id="footnotes">Footnotes</h1>
 
-# Footnotes
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [footnote.t](../footnote.t) extension is to allow
+<p>The purpose of the <a href="../footnote.t">footnote.t</a> extension is to allow
 game authors to define footnotes in their story which players can then
 view using the FOOTNOTE command. A footnote is some explanatory text
 that may provide more background information about the story but which
-is not essential to playing it.
+is not essential to playing it.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Actions and Properties
+<h2 id="new-classes-actions-and-properties">New Classes, Actions and Properties</h2>
 
-In addition to a number of properties intended purely for internal use,
+<p>In addition to a number of properties intended purely for internal use,
 this extension defines the following new class and properties for the
-direct use of game authors:
+direct use of game authors:</p>
 
-- *New Class*: **Footnote**
-- *Properties/Methods*: <span class="code">desc</span>,
-  <span class="code">noteRef()</span>.
-- *Actions*: FootnoteAction, FootnotesFullAction, FootnotesMediumAction,
-  FootnoteOffAction, FootnotesStatus.
+<ul>
+  <li><em>New Class</em>: <strong>Footnote</strong></li>
+  <li><em>Properties/Methods</em>: <code class="language-plaintext highlighter-rouge">desc</code>,
+<code class="language-plaintext highlighter-rouge">noteRef()</code>.</li>
+  <li><em>Actions</em>: FootnoteAction, FootnotesFullAction, FootnotesMediumAction,
+FootnoteOffAction, FootnotesStatus.</li>
+</ul>
 
-  
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the footnotes.t file after the library files but before your
-game source files..
+<p>Include the footnotes.t file after the library files but before your
+game source files..</p>
 
-To define a footnote object, create an object of the Footnote class and
+<p>To define a footnote object, create an object of the Footnote class and
 define its desc property to hold the text you want it to display, for
-example:
+example:</p>
 
-<div class="code">
-
-    henryNote: Footnote
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    henryNote: Footnote
        desc = "King Henry II reigned from 1154 to 1189, when he was succeeded by Richard I. "
     ; 
      
+</code></pre></div></div>
 
-</div>
+<p>Or, if you like, you can take advantage of the Footnote template
+supplied in advlite.h to abbreviate this to:</p>
 
-Or, if you like, you can take advantage of the Footnote template
-supplied in advlite.h to abbreviate this to:
-
-<div class="code">
-
-    henryNote: Footnote "King Henry II reigned from 1154 to 1189, when he was succeeded by Richard I. "; 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    henryNote: Footnote "King Henry II reigned from 1154 to 1189, when he was succeeded by Richard I. "; 
      
+</code></pre></div></div>
 
-</div>
+<p>Then, when you want to display a footnote marker in your game text, you
+simply call your footnote’s <strong>noteRef()</strong> method, for example:</p>
 
-Then, when you want to display a footnote marker in your game text, you
-simply call your footnote's **noteRef()** method, for example:
-
-<div class="code">
-
-      henryNote.noteRef(); 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      henryNote.noteRef(); 
      
+</code></pre></div></div>
 
-</div>
+<p>The game will then assign a sequential footnote number and display it
+accordingly. For example, if you wrote:</p>
 
-The game will then assign a sequential footnote number and display it
-accordingly. For example, if you wrote:
-
-<div class="code">
-
-     oldCoin: Thing 'old coin'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     oldCoin: Thing 'old coin'
         "From the very worn inscription the head on the coin appears to be that of Henry II.&lt;&lt;henryNote.noteRef()&gt;&gt; "
      ; 
      
+</code></pre></div></div>
 
-</div>
+<p>You’d get an exchange like:</p>
 
-You'd get an exchange like:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;x old coin
+From the very worn inscription the head on the coin appears to be that of Henry II.[1]
+</code></pre></div></div>
 
-    &gt;x old coin
-    From the very worn inscription the head on the coin appears to be that of Henry II.[1]
-
-On a full HTML interpreter the footnote number <sup>\[1\]</sup> would be
+<p>On a full HTML interpreter the footnote number <sup>[1]</sup> would be
 hyperlinked so that the player could then click it to read the footnote.
 The footnote could also be read in response to the command NOTE 1 or
-FOOTNOTE 1.
+FOOTNOTE 1.</p>
 
-The extension also allows players to control the behaviour of footnotes
+<p>The extension also allows players to control the behaviour of footnotes
 via the commands FOOTNOTES FULL, FOOTNOTES MEDIUM and FOOTNOTES OFF, and
 to query the current behaviour status via the command FOOTNOTES. If the
 setting is OFF, footnote numbers are never displayed in the game text.
 If the setting is FULL then they always are. If the setting is MEDIUM
 (the default) then the footnote number is displayed in the game text
-each time that note's <span class="code">noteRef()</span> method is
-called until the note's text has been read via a FOOTNOTE command, but
-not thereafter.
+each time that note’s <code class="language-plaintext highlighter-rouge">noteRef()</code> method is
+called until the note’s text has been read via a FOOTNOTE command, but
+not thereafter.</p>
 
-This covers most of what you need to know to use this extension. For
+<p>This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
-[footnote.t](../footnote.t) file.
-
-</div>
+<a href="../footnote.t">footnote.t</a> file.</p>
 
 <hr />
 

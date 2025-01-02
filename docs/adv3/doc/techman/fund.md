@@ -16,7 +16,7 @@ Project</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Part I: Fundamentals
 
@@ -35,7 +35,7 @@ in everyday use of the system.
 [Using AutoHotKey with the Workbench Editor (Windows)](t3iautohot.html)  
 [Bibliographic Metadata - the GameInfo Format](gameinfo.html)  
 
-</div>
+
 
 </div>
 

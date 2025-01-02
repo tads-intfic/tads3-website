@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](addinganobjecttotheroom.html)
@@ -568,4 +568,4 @@ shall follow from now on.
 *[\[Previous\]](addinganobjecttotheroom.html)
   [\[Next\]](basictravel.html)*
 
-</div>
+

@@ -37,81 +37,79 @@ State</a>     </span>
 
 </div>
 
-<div class="main">
+<h2 id="tads-special-characters">TADS Special Characters</h2>
 
-## TADS Special Characters
-
-The TADS Host Environment for the T3 VM, when displaying character
+<p>The TADS Host Environment for the T3 VM, when displaying character
 strings, interprets certain characters as special control sequences.
 When one of these characters is encountered in an output stream, the
 TADS Host Environment does not render the character directly, but
-instead modifies the way subsequent characters are displayed.
+instead modifies the way subsequent characters are displayed.</p>
 
-The special characters are listed below. Compilers are free to choose
+<p>The special characters are listed below. Compilers are free to choose
 their own source-code representations for these characters, but are
 encouraged to use the encodings shown in the table to ensure
-source-level compatibility with other compilers.
+source-level compatibility with other compilers.</p>
 
-Note that the special characters below are special only to the TADS Host
+<p>Note that the special characters below are special only to the TADS Host
 Environment. The T3 VM itself attaches no special meanings to any of
-these.
+these.</p>
 
-Source
+<p>Source</p>
 
-Encoding
+<p>Encoding</p>
 
-Meaning
+<p>Meaning</p>
 
-\n
+<p>\n</p>
 
-0x000A
+<p>0x000A</p>
 
-New Line. Start a new line; has no effect at the start of a line (hence
+<p>New Line. Start a new line; has no effect at the start of a line (hence
 multiple New Line characters have the same effect as a single Newline
-character).
+character).</p>
 
-\b
+<p>\b</p>
 
-0x000B
+<p>0x000B</p>
 
-Blank Line. If at the start of a new line, skip one line. If not at the
-start of a new line, end the line, then skip another line.
+<p>Blank Line. If at the start of a new line, skip one line. If not at the
+start of a new line, end the line, then skip another line.</p>
 
-\t
+<p>\t</p>
 
-0x0009
+<p>0x0009</p>
 
-Tab. Skip ahead to the next tab stop. Character-mode renderers add an
+<p>Tab. Skip ahead to the next tab stop. Character-mode renderers add an
 appropriate number of spaces to reach the next tab stop; graphical
-renderers add whitespace to the next tab stop.
+renderers add whitespace to the next tab stop.</p>
 
-\\
+<p>\</p>
 
-0x000F
+<p>0x000F</p>
 
-Caps. Convert the next single character displayed to upper-case.
-Overrides an Uncaps sequence.
+<p>Caps. Convert the next single character displayed to upper-case.
+Overrides an Uncaps sequence.</p>
 
-\v
+<p>\v</p>
 
-0x000E
+<p>0x000E</p>
 
-Uncaps. Convert the next single character displayed to lower-case.
-Overrides a Caps sequence.
+<p>Uncaps. Convert the next single character displayed to lower-case.
+Overrides a Caps sequence.</p>
 
-\\ *(backslash-space)*
+<p>\ <em>(backslash-space)</em></p>
 
-0x0015
+<p>0x0015</p>
 
-Non-breaking Space. Render a space, but do not allow a line break at
-this character.
+<p>Non-breaking Space. Render a space, but do not allow a line break at
+this character.</p>
 
 <div class="t3spec_version">
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

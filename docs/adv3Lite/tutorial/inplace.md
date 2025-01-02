@@ -18,7 +18,7 @@ place
 
 </div>
 
-<div class="main">
+
 
 # Everything in its place
 
@@ -61,7 +61,7 @@ location on the first turn:
 
     You can see a tiny pebble here.
 
-</div>
+
 
 This is arguably both better and worse than just displaying "You see a
 small rock and a tiny pebble here." It's better insofar as the longer

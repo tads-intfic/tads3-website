@@ -19,7 +19,7 @@ with the Workbench Editor (Windows)</a>    
 
 </div>
 
-<div class="main">
+
 
 # Bibliographic Metadata: The GameInfo Format
 
@@ -163,7 +163,7 @@ GameInfo.txt file into your game:
 
     t3res mygame.t3 -add GameInfo.txt
 
-</div>
+
 
 (Optional) If you want to include cover art in your game, save your
 image as either a JPEG or PNG image. On the tadsrsc command line above,

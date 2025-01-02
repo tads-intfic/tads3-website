@@ -19,7 +19,7 @@ Book</a>    
 
 </div>
 
-<div class="main">
+
 
 # Acknowledgements and Explanations
 
@@ -77,7 +77,7 @@ My thanks to Mark Engelberg for many helpful suggestions that have been
 incorporated into adv3Lite, and to Jim Aikin for help with the
 instructions on using it on non-Windows systems.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

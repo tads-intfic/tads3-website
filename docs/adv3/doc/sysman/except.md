@@ -19,7 +19,7 @@ Error Handling
 
 </div>
 
-<div class="main">
+
 
 # Exceptions and Error Handling
 
@@ -338,7 +338,7 @@ error text for the error. You can inspect these properties directly, but
 if you just want to display the error message, you should call the
 `displayException()` method of the error object.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

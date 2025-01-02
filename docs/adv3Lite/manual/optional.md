@@ -17,7 +17,7 @@ Modules
 
 </div>
 
-<div class="main">
+
 
 # Part III: Optional Modules
 
@@ -49,7 +49,7 @@ later, when it will get a whole part to itself.
 [Topic Entries](topicentry.html)  
 [Thoughts](thought.html)  
 
-</div>
+
 
 </div>
 

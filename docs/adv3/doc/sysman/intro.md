@@ -17,7 +17,7 @@ Conventions</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Introduction
 
@@ -147,7 +147,7 @@ you'll forgive me for the oversight, and I thank you all.
 
 *September, 2006*
 
-</div>
+
 
 ------------------------------------------------------------------------
 

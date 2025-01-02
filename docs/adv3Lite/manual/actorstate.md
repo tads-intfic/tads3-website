@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Actor States
 
@@ -311,7 +311,7 @@ conversation ends. The use of HelloTopics and ByeTopics will be
 discussed in more detail when we come to look at [Greeting
 Protocols](hello.html) below.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

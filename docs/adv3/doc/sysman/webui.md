@@ -18,7 +18,7 @@ game</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # The Web UI
 
@@ -274,7 +274,7 @@ Here are some tips for creating a dual-mode game:
            special code for the console UI goes here
         #endif
 
-    </div>
+    
   - Alternatively, if you have extensive code for the two modes, it can
     be cleaner to separate the variant code into two separate source
     files. Create one file that's exclusively for the Web UI, and

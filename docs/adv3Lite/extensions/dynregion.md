@@ -18,7 +18,7 @@ EventListItem</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # DynamicRegion
 
@@ -234,7 +234,7 @@ impossible to provide for in library code, since it would become at best
 horribly cumbersome for library code to attempt to cater for all the
 possibilities that game authors might want.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

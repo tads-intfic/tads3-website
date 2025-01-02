@@ -19,7 +19,7 @@ Game</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Creating Your First TADS 3 Project
 
@@ -403,7 +403,7 @@ specialized than the adv3 library, so they come after it. If you were
 using any third-party library extensions, you'd probably put them after
 adv3 but before your own source files.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

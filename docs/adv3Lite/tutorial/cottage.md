@@ -19,7 +19,7 @@ Bird</a>    
 
 </div>
 
-<div class="main">
+
 
 # Entering the Cottage
 
@@ -35,7 +35,7 @@ this:
     >in
     You cant go that way. From here you could go east.
 
-</div>
+
 
 Since Heidi starts the game standing outside what may be her very own
 cottage, this hardly seems an appropriate response. We need to provide a

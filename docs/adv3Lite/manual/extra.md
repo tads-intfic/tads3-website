@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Extras
 
@@ -488,7 +488,7 @@ which has a door we should do this:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

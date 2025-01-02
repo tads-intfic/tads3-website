@@ -19,7 +19,7 @@ Set</a>    
 
 </div>
 
-<div class="main">
+
 
 # Network Safety in TADS
 
@@ -152,7 +152,7 @@ machine. This is beyond the scope of this chapter, so we'll have to
 refer you to the instruction manuals for your network boxes and/or your
 PC's firewall software.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

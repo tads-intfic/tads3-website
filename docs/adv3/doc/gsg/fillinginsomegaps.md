@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](handlingcashtransactions.html)
@@ -1240,4 +1240,4 @@ tells them about.
 *[\[Previous\]](handlingcashtransactions.html)
   [\[Next\]](countingthecash.html)*
 
-</div>
+

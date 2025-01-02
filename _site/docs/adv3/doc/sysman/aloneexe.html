@@ -38,103 +38,105 @@ Interpreter</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="stand-alone-executables">Stand-Alone Executables</h1>
 
-# Stand-Alone Executables
-
-For ease of distribution, you can create a "stand-alone executable"
+<p>For ease of distribution, you can create a “stand-alone executable”
 version of your game for some operating systems. A stand-alone
-executable combines a TADS 3 interpreter executable and your program's
+executable combines a TADS 3 interpreter executable and your program’s
 image (.t3) file into a single file, which is a native application
 executable file for the target operating system. This file contains
-everything a player needs - in particular, the player won't have to find
-or install the TADS interpreter.
+everything a player needs - in particular, the player won’t have to find
+or install the TADS interpreter.</p>
 
-Bundling your game as a stand-alone executable has some advantages and
-some disadvantages. The main advantages are:
+<p>Bundling your game as a stand-alone executable has some advantages and
+some disadvantages. The main advantages are:</p>
 
-- The total number of files you have to distribute is reduced, since the
-  interpreter and your game's image file are combined into a single
-  file.
-- Users don't have to worry about finding or downloading a TADS 3
-  interpreter program, so you don't have to worry about including one
-  with your game or telling users where to find one.
-- Users have fewer files to manage, so it's easier for a user to move
-  your game to a new directory or delete your game from their hard disk.
-- Most people feel that a stand-alone program has a more professional
-  and polished appearance than one that requires a separate interpreter
-  program.
+<ul>
+  <li>The total number of files you have to distribute is reduced, since the
+interpreter and your game’s image file are combined into a single
+file.</li>
+  <li>Users don’t have to worry about finding or downloading a TADS 3
+interpreter program, so you don’t have to worry about including one
+with your game or telling users where to find one.</li>
+  <li>Users have fewer files to manage, so it’s easier for a user to move
+your game to a new directory or delete your game from their hard disk.</li>
+  <li>Most people feel that a stand-alone program has a more professional
+and polished appearance than one that requires a separate interpreter
+program.</li>
+</ul>
 
-There are some disadvantages, however, that you should be aware of:
+<p>There are some disadvantages, however, that you should be aware of:</p>
 
-- If you're distributing your program via the internet, a stand-alone
-  executable version will be much larger than the .t3 version, because
-  the entire TADS 3 interpreter is included with your download.
-- If a player already has a TADS interpreter installed on his or her
-  machine, downloading the extra copy incorporated into a stand-alone
-  game would unnecessarily take additional download time and consume
-  additional space on the hard disk.
-- A stand-alone version of your game is not portable to different
-  operating systems or computer hardware. Users can only run a
-  stand-alone executable on the type of system supported by the bundled
-  interpreter. You must therefore either limit your game to a particular
-  set of platforms, or create a separate stand-alone executable for each
-  platform.
+<ul>
+  <li>If you’re distributing your program via the internet, a stand-alone
+executable version will be much larger than the .t3 version, because
+the entire TADS 3 interpreter is included with your download.</li>
+  <li>If a player already has a TADS interpreter installed on his or her
+machine, downloading the extra copy incorporated into a stand-alone
+game would unnecessarily take additional download time and consume
+additional space on the hard disk.</li>
+  <li>A stand-alone version of your game is not portable to different
+operating systems or computer hardware. Users can only run a
+stand-alone executable on the type of system supported by the bundled
+interpreter. You must therefore either limit your game to a particular
+set of platforms, or create a separate stand-alone executable for each
+platform.</li>
+</ul>
 
-Because of the trade-offs involved in distributing a stand-alone
+<p>Because of the trade-offs involved in distributing a stand-alone
 version, many game authors prefer to create stand-alone versions for a
 couple of platforms, and also distribute a .t3 version. This way, you
 can provide a stand-alone executable for those who want it, while still
 making it possible for users on other platforms to run the program, and
 still allowing people who already have a TADS 3 interpreter installed to
-bypass the redundant download and installation.
+bypass the redundant download and installation.</p>
 
-## Creating a Stand-Alone Executable
+<h2 id="creating-a-stand-alone-executable">Creating a Stand-Alone Executable</h2>
 
-The exact method you use to create a stand-alone executable varies by
-interpreter, and not all interpreters have this capability. If you don't
+<p>The exact method you use to create a stand-alone executable varies by
+interpreter, and not all interpreters have this capability. If you don’t
 see your platform listed below, refer to your platform-specific release
-notes.
+notes.</p>
 
-### Workbench for Windows
+<h3 id="workbench-for-windows">Workbench for Windows</h3>
 
-If you're using TADS 3 Workbench, creating a stand-alone executable is
-easy. First, go to your project's Build Settings (via the Settings item
-on the Build menu), and select the Output tab. Go to the "Executable
-(.EXE) file" field: this lets you specify the name of the generated .exe
+<p>If you’re using TADS 3 Workbench, creating a stand-alone executable is
+easy. First, go to your project’s Build Settings (via the Settings item
+on the Build menu), and select the Output tab. Go to the “Executable
+(.EXE) file” field: this lets you specify the name of the generated .exe
 file. When you create a project, Workbench picks a default for this
-setting based on the name of the project, so if you're happy with the
-default you can leave it as it is.
+setting based on the name of the project, so if you’re happy with the
+default you can leave it as it is.</p>
 
-Once you have the output .exe filename set up the way you want, you can
+<p>Once you have the output .exe filename set up the way you want, you can
 build the executable simply by selecting Compile Application (.EXE) from
 the Build menu. This will do a full build (that is, it will compile your
 source files to produce a .t3 file), then will automatically build the
 executable from the .t3 file. The final product will be a .exe file
 containing the HTML TADS interpreter plus your compiled game, all in one
-file.
+file.</p>
 
-### Windows 95/NT 4 (and later) - command-line
+<h3 id="windows-95nt-4-and-later---command-line">Windows 95/NT 4 (and later) - command-line</h3>
 
-Windows users can create a stand-alone executable from the command line
-(the "DOS box") using the maketrx32 program. This program reads a .t3
+<p>Windows users can create a stand-alone executable from the command line
+(the “DOS box”) using the maketrx32 program. This program reads a .t3
 file and creates a .exe file that contains your image file plus a TADS 3
 interpreter. So, before you build your executable, you first must
-compile your game with t3make the same way you always do.
+compile your game with t3make the same way you always do.</p>
 
-Once you've compiled your .t3 file, you can use the maketrx32 program to
+<p>Once you’ve compiled your .t3 file, you can use the maketrx32 program to
 create the executable version. You can create a text-only version, or
 graphical HTML version. A text-only version is built using the console
 (DOS box) version of the interpreter; an HTML version is built using the
-HTML TADS interpreter.
+HTML TADS interpreter.</p>
 
-You run maketrx32 like this:
+<p>You run maketrx32 like this:</p>
 
 <div class="cmdline">
 
     maketrx32 -t3 mygame.t3
 
-</div>
+
 
 This creates a new file called mygame.exe which combines your image file
 (mygame.t3) and the TADS 3 text-only interpreter (the "console mode"

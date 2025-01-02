@@ -17,7 +17,7 @@ Model
 
 </div>
 
-<div class="main">
+
 
 # Querying the World Model
 
@@ -399,7 +399,7 @@ already known to him or her, so you may need to define
 `familiar = true` on the remote actor for it to
 work.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

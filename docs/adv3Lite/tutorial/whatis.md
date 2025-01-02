@@ -18,7 +18,7 @@ This Book</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # What is adv3Lite?
 
@@ -105,7 +105,7 @@ and elegance of the language) appeal to you, but you have been put off
 by the complexity of the adv3 libary and the difficultly of learning it
 all, then adv3Lite might be just what you're looking for.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

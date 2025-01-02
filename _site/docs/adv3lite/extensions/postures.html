@@ -38,13 +38,11 @@ Postures
 
 </div>
 
-<div class="main">
+<h1 id="postures">Postures</h1>
 
-# Postures
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [postures.t](../postures.t) extension is to allow
+<p>The purpose of the <a href="../postures.t">postures.t</a> extension is to allow
 actors to adopt different postures (standing, sitting or lying) and to
 enforce a number of rules about what postures are permitted in what
 nested rooms, and what postures are adopted when entering or leaving a
@@ -52,128 +50,123 @@ nested room. One effect of this is that the commands STAND, SIT and LIE
 work differently with this extension from the way in which they work in
 the standard adv3Lite library. Instead of moving the actor to a new
 location (as they may in the standard library) they will try to make the
-actor adopt a new posture in the actor's current location (assuming the
+actor adopt a new posture in the actor’s current location (assuming the
 posture is allowed in that location). The commands STAND ON, SIT ON, LIE
-ON, STAND IN, SIT IN and LIE IN all change the actor's posture as well
+ON, STAND IN, SIT IN and LIE IN all change the actor’s posture as well
 as moving the actor to the location specified, while the commands BOARD
 (or GET ON), ENTER (or GET ON), GET OFF and GET OUT OF all change the
-actor's posture to the default posture for the new location as well as
-moving the actor there.
+actor’s posture to the default posture for the new location as well as
+moving the actor there.</p>
 
-The implementation of postures in this extension is a little simpler
+<p>The implementation of postures in this extension is a little simpler
 than that in the adv3 library, and hopefully a bit easier to use.
 Nonetheless, before adding it to your game, you may want to ask yourself
-if your game really needs it. In most games most players won't miss it
-if it isn't there, and if your only reason for wanting it is to force
+if your game really needs it. In most games most players won’t miss it
+if it isn’t there, and if your only reason for wanting it is to force
 the player to type STAND ON CHAIR rather than just GET ON CHAIR at one
 point in your game, you should probably think again. On the other hand,
 if there are several places in your game where postures are important,
 or you feel for artistic reasons that your game will gain from the added
 realism of keeping track of postures, then hopefully this extension will
-do the job for you. Of course it's your game, so ultimately your
+do the job for you. Of course it’s your game, so ultimately your
 decision, but do bear in mind that the great majority of IF seems to get
-on perfectly well without postures.
+on perfectly well without postures.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Objects and Properties
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
 
-In addition to a number of properties intended purely for internal use,
+<p>In addition to a number of properties intended purely for internal use,
 this extension defines the following new classes, objects and
-properties:
+properties:</p>
 
-- *Classes*: **Posture**, **Bed** and **Chair**
-- *Objects*: **standing**, **sitting** and **lying** (all Postures)
-- *Additional properties on Thing*:
-  <span class="code">canStandInMe</span>,
-  <span class="code">canSitInMe</span>,
-  <span class="code">canLieInMe</span>,
-  <span class="code">posture</span>,
-  <span class="code">defaultPosture</span>,
-  <span class="code">okayStandOnMsg</span>,
-  <span class="code">okaySitOnMsg</span>,
-  <span class="code">okayLieOnMsg</span>,
-  <span class="code">okayStandInMsg</span>,
-  <span class="code">okaySitInMsg</span>,
-  <span class="code">okayLieInMsg</span>,
-  <span class="code">cannotStandInMsg</span>,
-  <span class="code">cannotSitInMsg</span>,
-  <span class="code">cannotLieInMsg</span>,
-  <span class="code">tryMakingPosture(pos)</span>,
-  <span class="code">verifyEnterPosture(pos)</span>
+<ul>
+  <li><em>Classes</em>: <strong>Posture</strong>, <strong>Bed</strong> and <strong>Chair</strong></li>
+  <li><em>Objects</em>: <strong>standing</strong>, <strong>sitting</strong> and <strong>lying</strong> (all Postures)</li>
+  <li><em>Additional properties on Thing</em>:
+<code class="language-plaintext highlighter-rouge">canStandInMe</code>,
+<code class="language-plaintext highlighter-rouge">canSitInMe</code>,
+<code class="language-plaintext highlighter-rouge">canLieInMe</code>,
+<code class="language-plaintext highlighter-rouge">posture</code>,
+<code class="language-plaintext highlighter-rouge">defaultPosture</code>,
+<code class="language-plaintext highlighter-rouge">okayStandOnMsg</code>,
+<code class="language-plaintext highlighter-rouge">okaySitOnMsg</code>,
+<code class="language-plaintext highlighter-rouge">okayLieOnMsg</code>,
+<code class="language-plaintext highlighter-rouge">okayStandInMsg</code>,
+<code class="language-plaintext highlighter-rouge">okaySitInMsg</code>,
+<code class="language-plaintext highlighter-rouge">okayLieInMsg</code>,
+<code class="language-plaintext highlighter-rouge">cannotStandInMsg</code>,
+<code class="language-plaintext highlighter-rouge">cannotSitInMsg</code>,
+<code class="language-plaintext highlighter-rouge">cannotLieInMsg</code>,
+<code class="language-plaintext highlighter-rouge">tryMakingPosture(pos)</code>,
+<code class="language-plaintext highlighter-rouge">verifyEnterPosture(pos)</code></li>
+</ul>
 
-  
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the postures.t file after the library files but before your game
-source files.
+<p>Include the postures.t file after the library files but before your game
+source files.</p>
 
-You should now find that the player character can STAND, SIT and LIE
-DOWN, can STAND ON, SIT ON and LIE ON any Platform you've already
-defined in your game and STAND IN, SIT IN or LIE IN any Booth. You'll
-also find that the player character's posture changes to standing when
+<p>You should now find that the player character can STAND, SIT and LIE
+DOWN, can STAND ON, SIT ON and LIE ON any Platform you’ve already
+defined in your game and STAND IN, SIT IN or LIE IN any Booth. You’ll
+also find that the player character’s posture changes to standing when
 s/he gets off or out of something s/he was previously sitting or lying
-on back into the outermost room.
+on back into the outermost room.</p>
 
-You can customize this behaviour by use of the **canStandOn**,
-**canSitOn**, **canLieOn**, **canStandIn**, **canSitIn**, and
-**canLieOn** in properties, as well as **standOnScore**, **sitOnScore**
-and **lieOnScore**, which all work as they did before (for which see the
-discussion of [Pseudo-Postural
-Properties](../../docs/manual/thing.html#posture) on Thing). You can also
-give an object a **defaultPosture** property (which should be one of
-<span class="code">standing</span>, <span class="code">sitting</span> or
-<span class="code">lying</span>) to define the posture adopted by an
+<p>You can customize this behaviour by use of the <strong>canStandOn</strong>,
+<strong>canSitOn</strong>, <strong>canLieOn</strong>, <strong>canStandIn</strong>, <strong>canSitIn</strong>, and
+<strong>canLieOn</strong> in properties, as well as <strong>standOnScore</strong>, <strong>sitOnScore</strong>
+and <strong>lieOnScore</strong>, which all work as they did before (for which see the
+discussion of <a href="../../docs/manual/thing.html#posture">Pseudo-Postural
+Properties</a> on Thing). You can also
+give an object a <strong>defaultPosture</strong> property (which should be one of
+<code class="language-plaintext highlighter-rouge">standing</code>, <code class="language-plaintext highlighter-rouge">sitting</code> or
+<code class="language-plaintext highlighter-rouge">lying</code>) to define the posture adopted by an
 actor in response to a BOARD/GET ON or ENTER/GET IN command with this
 object (or in response to a GET OFF or GET OUT OF command that results
-in the actor being in/on this object)
+in the actor being in/on this object)</p>
 
-The new **Chair** and **Bed** classes can do some of this work for you,
+<p>The new <strong>Chair</strong> and <strong>Bed</strong> classes can do some of this work for you,
 by defining combinations of these properties that are typically suitable
-for chairs and beds. A <span class="code">Chair</span> is an object an
+for chairs and beds. A <code class="language-plaintext highlighter-rouge">Chair</code> is an object an
 actor can sit on or stand on (but not by default lie on), but for which
 sitting is the both the default and the preferred posture. (To make a
 chair you can also lie on, like a long settee, just override its
-<span class="code">canLieOn</span> property to true). A
-<span class="code">Bed</span> is something you can stand, lie or sit on,
+<code class="language-plaintext highlighter-rouge">canLieOn</code> property to true). A
+<code class="language-plaintext highlighter-rouge">Bed</code> is something you can stand, lie or sit on,
 but which has lying as its default posture. For the already existing
-<span class="code">Platform</span> class the default posture is
-standing, but you can also sit or lie on a Platform.
+<code class="language-plaintext highlighter-rouge">Platform</code> class the default posture is
+standing, but you can also sit or lie on a Platform.</p>
 
-An actor's (or the player character's) current posture is given in its
-**posture** property, which can be one of
-<span class="code">standing</span>, <span class="code">sitting</span> or
-<span class="code">lying</span>. To get at a textual description of an
-actor's current posture you can use the posture's **participle**
+<p>An actor’s (or the player character’s) current posture is given in its
+<strong>posture</strong> property, which can be one of
+<code class="language-plaintext highlighter-rouge">standing</code>, <code class="language-plaintext highlighter-rouge">sitting</code> or
+<code class="language-plaintext highlighter-rouge">lying</code>. To get at a textual description of an
+actor’s current posture you can use the posture’s <strong>participle</strong>
 property. You should always do this in a description that mentions the
-player character's posture, for example:
+player character’s posture, for example:</p>
 
-<div class="code">
-
-    startRoom: Room 'Outside Building'
-       "You are &lt;<gPlayerChar.posture.participle>&gt; outside a small brick building
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    startRoom: Room 'Outside Building'
+       "You are &lt;&lt;gPlayerChar.posture.participle&gt;&gt; outside a small brick building
         just to the north. "
     ;
      
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-If you don't do this, but simply write "You are standing outside...",
+<p>If you don’t do this, but simply write “You are standing outside…”,
 the player can instantly make you a liar by typing LIE DOWN or SIT
 (having to worry about this sort of thing is an example of the sort of
 additional busy-work you create for yourself by including this
-extension).
+extension).</p>
 
-This covers most of what you need to know to use this extension. For
+<p>This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
-[postures.t](../postures.t) file.
+<a href="../postures.t">postures.t</a> file.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -186,7 +179,6 @@ Postures
 </span>
 
 </div>
-</gPlayerChar.posture.participle></div></div>
 
 </main>
 <footer>

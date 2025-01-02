@@ -17,7 +17,7 @@ Cockpit</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Chapter 9: Cockpit Controls
 
@@ -31,7 +31,7 @@ player to take off and win the game.
 [Responding to Actions](responding.html)  
 [Taking Off](takeoff.html)  
 
-</div>
+
 
 </div>
 

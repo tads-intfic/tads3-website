@@ -18,7 +18,7 @@ Library</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Miscellaneous Library Definitions
 
@@ -45,7 +45,7 @@ of Actor:
     forEachInstance(Actor, {obj: obj.isAnimate = true});
 ```
 
-</div>
+
 
 `\_default_display_fn(*val*)`
 

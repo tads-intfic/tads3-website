@@ -19,7 +19,7 @@ Byte-Code Instruction Set
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -4080,7 +4080,7 @@ meaning of a byte code sequence.
 Copyright © 2001, 2009 by Michael J. Roberts.  
 Revision: December, 2009
 
-</div>
+
 
 </div>
 

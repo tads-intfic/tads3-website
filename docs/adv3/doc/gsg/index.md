@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Getting Started Guide Table of Contents
 
@@ -15,7 +15,7 @@ layout: docs
 
 <a href="newchapterwithtext.html" class="toc">Preface</a>
 
-</div>
+
 
 <div class="toc1">
 

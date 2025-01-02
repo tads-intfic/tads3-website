@@ -18,7 +18,7 @@ Need</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Chapter 2: Tools of the Trade
 
@@ -31,7 +31,7 @@ to write interactive fiction, and how to set everything up.
 [Setting it all up](setting.html)  
 [Using the Tools](setting.html)  
 
-</div>
+
 
 </div>
 

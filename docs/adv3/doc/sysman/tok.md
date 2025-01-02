@@ -19,7 +19,7 @@ Definitions</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Basic Tokenizer
 
@@ -233,7 +233,7 @@ tokenizer rather than the default tokenizer:
     tokList = CalcTokenizer.tokenize(str);
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

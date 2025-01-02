@@ -18,7 +18,7 @@ Tags</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Giving Orders to NPCs
 
@@ -234,7 +234,7 @@ of TopicEntry to make an actor react, you need to use
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

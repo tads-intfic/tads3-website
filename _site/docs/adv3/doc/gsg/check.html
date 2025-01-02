@@ -27,29 +27,26 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="verify.html">[Previous]</a>   <a href="action.html">[Next]</a></em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](verify.html)   [\[Next\]](action.html)*
+<h3 id="check">Check</h3>
 
-### Check
-
-The purpose of a `check()` routine is to veto an action that is
+<p>The purpose of a <code class="language-plaintext highlighter-rouge">check()</code> routine is to veto an action that is
 perfectly logical, but should not be carried out for some other reason.
-As with `verify()`, `check()` should not be used to change the game
-state. All that a `check()` routine should do is either allow an action
+As with <code class="language-plaintext highlighter-rouge">verify()</code>, <code class="language-plaintext highlighter-rouge">check()</code> should not be used to change the game
+state. All that a <code class="language-plaintext highlighter-rouge">check()</code> routine should do is either allow an action
 to go ahead, or else forbid it by displaying a message and using the
-`exit `macro.
+<code class="language-plaintext highlighter-rouge">exit </code>macro.</p>
 
-  
-For example, suppose we gave Heidi a dress. Removing the dress would be
+<p>For example, suppose we gave Heidi a dress. Removing the dress would be
 a perfectly logical action, and so the dress would be a good choice for
-an ambiguous Doff action,. We don't want to make removing the dress
+an ambiguous Doff action,. We don’t want to make removing the dress
 illogical, since it may well be what the player intends. On the other
 hand, having Heidi remove her dress in the course of her adventures may
 seem rather out of character, and it would serve no useful purpose in
 the game, so we probably want to prevent it. The best place to do this
-would be in a `check `routine:  
+would be in a <code class="language-plaintext highlighter-rouge">check </code>routine:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -65,18 +62,29 @@ would be in a `check `routine:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-dobjFor(Doff)  
-{  
-   check()  
-   {  
-       reportFailure('You can\\t wander around half naked! ');  
-       exit;  
-   }  
-}  
+<p>dobjFor(Doff)<br />
+{<br />
+   check()<br />
+   {<br />
+       reportFailure(‘You can\t wander around half naked! ’);<br />
+       exit;<br />
+   }<br />
+}</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -92,23 +100,34 @@ dobjFor(Doff)
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Note that here we have used the reportFailure macro; it's not strictly
+<p>Note that here we have used the reportFailure macro; it’s not strictly
 necessary to do so here: we could have used a double-quoted string to
 display the text, and it would have worked just as well. However, using
 reportFailure is a good habit to get into, since in other contexts
 (outside a check() routine) it can be used to signal that an action
 failed, which can sometimes produce better implicit action reports (e.g.
-'(first trying to open the door)' rather than '(first opening the door)'
-when the attempt to open the door fails).  
-  
-The use of reportFailure followed by exit is so common in
+‘(first trying to open the door)’ rather than ‘(first opening the door)’
+when the attempt to open the door fails).</p>
+
+<p>The use of reportFailure followed by exit is so common in
 check() routines that Thing defines a failCheck() method that combines
 them both into one statement. The foregoing example could then be
-written:  
+written:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -124,17 +143,28 @@ written:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-dobjFor(Doff)  
-{  
-   check()  
-   {  
-       failCheck('You can\\t wander around half naked! ');  
-   }  
-}  
+<p>dobjFor(Doff)<br />
+{<br />
+   check()<br />
+   {<br />
+       failCheck(‘You can\t wander around half naked! ’);<br />
+   }<br />
+}</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -150,12 +180,23 @@ dobjFor(Doff)
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-And our dress object (located immediately after the me object in the
-code) could then be defined as:  
+<p>And our dress object (located immediately after the me object in the
+code) could then be defined as:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -171,21 +212,32 @@ code) could then be defined as:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-+ Wearable 'plain pretty blue dress' 'blue dress'  
-  "It's quite plain, but you think it pretty enough. "  
-  wornBy = me  
-  dobjFor(Doff)  
-  {  
-     check()  
-     {  
-       failCheck('You can\\t wander around half naked! ');  
-     }  
-  }  
-;  
+<p>+ Wearable ’plain pretty blue dress’ ’blue dress’<br />
+  ”It’s quite plain, but you think it pretty enough. ”<br />
+  wornBy = me<br />
+  dobjFor(Doff)<br />
+  {<br />
+     check()<br />
+     {<br />
+       failCheck(‘You can\t wander around half naked! ’);<br />
+     }<br />
+  }<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -201,49 +253,61 @@ code) could then be defined as:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Of course, there's no reason why an action should not fail in the
+<p>Of course, there’s no reason why an action should not fail in the
 action() routine as well in check() - the failCheck() method would work
 perfectly well in action(), so you may wonder what real purpose check()
 actually performs, beyond making the code look a bit neater if failure
 is conditional. There are in fact three main reasons for separating
-check() from action():
+check() from action():</p>
 
-- As we have seen, a good deal of TADS 3 programming consists in
-  overriding the library's standard verb handling. It is often
-  convenient to override `check()` separately from `action()` if we want
-  to change only the conditions under which the action isn't allowed to
-  happen, or only what happens when the action does happen.
-- In a two-object command (such as **put bag on table**) the `action()`
-  routines are called on both the indirect object and the direct object.
-  Ruling out the action in `check()` ensures that the action is stopped
-  before either `action()` routine is called (otherwise we might find,
-  for example, that the indirect object's `action()` method carried out
-  the action before the direct object's `action()` method could stop
-  it).
-- From version 3.0.15.1 onwards the `check()` routines can be made to
-  run before action notifications such as `beforeAction()`. For this to
-  work you need to set `gameMain.beforeRunsBeforeCheck` to `nil`. We'll
-  explore this a bit further below.
+<ul>
+  <li>As we have seen, a good deal of TADS 3 programming consists in
+overriding the library’s standard verb handling. It is often
+convenient to override <code class="language-plaintext highlighter-rouge">check()</code> separately from <code class="language-plaintext highlighter-rouge">action()</code> if we want
+to change only the conditions under which the action isn’t allowed to
+happen, or only what happens when the action does happen.</li>
+  <li>In a two-object command (such as <strong>put bag on table</strong>) the <code class="language-plaintext highlighter-rouge">action()</code>
+routines are called on both the indirect object and the direct object.
+Ruling out the action in <code class="language-plaintext highlighter-rouge">check()</code> ensures that the action is stopped
+before either <code class="language-plaintext highlighter-rouge">action()</code> routine is called (otherwise we might find,
+for example, that the indirect object’s <code class="language-plaintext highlighter-rouge">action()</code> method carried out
+the action before the direct object’s <code class="language-plaintext highlighter-rouge">action()</code> method could stop
+it).</li>
+  <li>From version 3.0.15.1 onwards the <code class="language-plaintext highlighter-rouge">check()</code> routines can be made to
+run before action notifications such as <code class="language-plaintext highlighter-rouge">beforeAction()</code>. For this to
+work you need to set <code class="language-plaintext highlighter-rouge">gameMain.beforeRunsBeforeCheck</code> to <code class="language-plaintext highlighter-rouge">nil</code>. We’ll
+explore this a bit further below.</li>
+</ul>
 
-If an action is vetoed (either by check, verify or preCond) before it
+<p>If an action is vetoed (either by check, verify or preCond) before it
 reaches the action stage, no action notifications will be sent, and so
-nothing that might have reacted to the action in a `beforeAction()` or
-`afterAction()` method will in fact do so. But note, *`check()` only
-runs before `beforeAction()` if you have set
-`gameMain.beforeRunsBeforeCheck` to `nil`*. In some future release of
+nothing that might have reacted to the action in a <code class="language-plaintext highlighter-rouge">beforeAction()</code> or
+<code class="language-plaintext highlighter-rouge">afterAction()</code> method will in fact do so. But note, <em><code class="language-plaintext highlighter-rouge">check()</code> only
+runs before <code class="language-plaintext highlighter-rouge">beforeAction()</code> if you have set
+<code class="language-plaintext highlighter-rouge">gameMain.beforeRunsBeforeCheck</code> to <code class="language-plaintext highlighter-rouge">nil</code></em>. In some future release of
 TADS 3 (perhaps 3.1) this may become the default, but for now you have
 to set this option if you want it (this ensures compatibility with games
 written prior to version 3.0.15.1). This is what we did when we first
-defined the [gameMain](startinganewgame.html#gameMain) object, and we
-suggest you always do too.
+defined the <a href="startinganewgame.html#gameMain">gameMain</a> object, and we
+suggest you always do too.</p>
 
-  
-For example, suppose we went on to define an NPC who reacted to Heidi
-undressing herself in front of him, with something like:  
+<p>For example, suppose we went on to define an NPC who reacted to Heidi
+undressing herself in front of him, with something like:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -259,20 +323,31 @@ undressing herself in front of him, with something like:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-afterAction()  
-{  
-  if(gActionIs(Doff) &amp;&amp; gActor==gPlayerChar &amp;&amp; gDobj==dress)  
-     "\&lt;q\&gt;Hey! What do you think you're doing, young lady!\&lt;/q\&gt; cries  
-     the charcoal burner. ";  
-}  
-  
-If we had simply displayed the message about not wandering around
+<p>afterAction()<br />
+{<br />
+  if(gActionIs(Doff) &amp;&amp; gActor==gPlayerChar &amp;&amp; gDobj==dress)<br />
+     ”&lt;q&gt;Hey! What do you think you’re doing, young lady!&lt;/q&gt; cries<br />
+     the charcoal burner. ”;<br />
+}</p>
+
+<p>If we had simply displayed the message about not wandering around
 half-naked in the action() routine, we might end up with a transcript
-like this:  
+like this:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -288,29 +363,38 @@ like this:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-\&gt;**remove dress**  
-You can't wander around half naked!  
-  
-"Hey, what do you think you're doing, young lady!" cries the charcoal
-burner.  
-  
-By vetoing the **doff** action in the check() routine, we ensure that
-the charcoal burner never gets a chance to react, and so we won't get
+<p>&gt;<strong>remove dress</strong><br />
+You can’t wander around half naked!</p>
+
+<p>“Hey, what do you think you’re doing, young lady!” cries the charcoal
+burner.</p>
+
+<p>By vetoing the <strong>doff</strong> action in the check() routine, we ensure that
+the charcoal burner never gets a chance to react, and so we won’t get
 his inappropriate response to an action that is not, in fact, carried
-out.  
-  
+out.</p>
 
-------------------------------------------------------------------------
+<hr />
 
-*Getting Started in TADS 3*  
-[\[Main\]](index.html)  
-*[\[Previous\]](verify.html)   [\[Next\]](action.html)*
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="verify.html">[Previous]</a>   <a href="action.html">[Next]</a></em></p>
 
-</div>
 
 </main>
 <footer>

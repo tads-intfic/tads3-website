@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Chapter 8: Schemes and Devices
 
@@ -32,7 +32,7 @@ process.
 [Making a Scene](scene.html)  
 [Recapitulation](recap.html)  
 
-</div>
+
 
 </div>
 

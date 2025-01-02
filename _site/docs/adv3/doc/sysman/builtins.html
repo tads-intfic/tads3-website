@@ -37,21 +37,19 @@ Codes</a>    
 
 </div>
 
-<div class="main">
+<h1 id="part-iv-the-intrinsics">Part IV: The Intrinsics</h1>
 
-# Part IV: The Intrinsics
+<p>This part describes the “intrinsic” functions and classes, which are
+features built into the VM itself.</p>
 
-This part describes the "intrinsic" functions and classes, which are
-features built into the VM itself.
-
-Although the intrinsics are built into the VM, they look and behave much
+<p>Although the intrinsics are built into the VM, they look and behave much
 the same as ordinary functions and objects that you would define in your
 own program. You access their functionality the same way you would
 access ordinary functions and objects, using the standard function call
-syntax and the standard object and method syntax.
+syntax and the standard object and method syntax.</p>
 
-There are two main reasons that certain features are built into the VM,
-rather than provided as library code. The first is that the VM doesn't
+<p>There are two main reasons that certain features are built into the VM,
+rather than provided as library code. The first is that the VM doesn’t
 itself provide any access to the external operating system environment,
 so the only way to gain access to that environment is through these
 native-code extensions to the VM. Any features that require OS
@@ -61,7 +59,7 @@ they run much faster when implemented as native machine code rather than
 as interpreted VM byte-code. When an operation is both computationally
 intensive and common enough that many programs will benefit
 substantially from the speed improvement, an intrinsic implementation
-might be justified.
+might be justified.</p>
 
 <div class="sectoc">
 
@@ -101,7 +99,7 @@ might be justified.
 [Vector](vector.html)  
 [WeakRefLookupTable](wlookup.html)  
 
-</div>
+
 
 </div>
 

@@ -40,201 +40,199 @@ Programming Overview</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="if-design-in-theory">IF Design: In Theory</h1>
 
-# IF Design: In Theory
-
-*Author's note: This is an updated version of a chapter from the* TADS 2
-Author's Manual*. The updates reflect changes in my own thinking about
+<p><em>Author’s note: This is an updated version of a chapter from the</em> TADS 2
+Author’s Manual<em>. The updates reflect changes in my own thinking about
 some of these matters, as well as changes in fashion and audience
 expectations over the years. When I wrote the original chapter, IF was
 very much defined by the Infocom games; the format has changed somewhat
-in the intervening years, so I've tried to reflect some of those changes
-in this advice.*
+in the intervening years, so I’ve tried to reflect some of those changes
+in this advice.</em></p>
 
-This chapter is about the creative side of writing IF, about what
+<p>This chapter is about the creative side of writing IF, about what
 qualities define a good piece of IF. As with any writing, technical
-polish is important, but it's not enough by itself to make a work
-succeed. This section explores the *fiction* part of Interactive
+polish is important, but it’s not enough by itself to make a work
+succeed. This section explores the <em>fiction</em> part of Interactive
 Fiction, and tries to offer advice about how to create a work of IF that
-succeeds as both a piece of software and a work of fiction.
+succeeds as both a piece of software and a work of fiction.</p>
 
-## Technical polish counts
+<h2 id="technical-polish-counts">Technical polish counts</h2>
 
-Much of the advice in this article might seem squishy and subjective,
-but we can at least start out with something fairly sharp-edged.
+<p>Much of the advice in this article might seem squishy and subjective,
+but we can at least start out with something fairly sharp-edged.</p>
 
-I just finished saying that technical polish isn't the whole story, but
-don't take that as a license to ignore it: technical polish is a basic
-requirement. If you don't get the technical parts right, your audience
+<p>I just finished saying that technical polish isn’t the whole story, but
+don’t take that as a license to ignore it: technical polish is a basic
+requirement. If you don’t get the technical parts right, your audience
 is likely to dismiss your work as amateurish so quickly that they might
-not even notice any of your work's other qualities.
+not even notice any of your work’s other qualities.</p>
 
-In static fiction, the "technical" aspects are spelling, punctuation,
+<p>In static fiction, the “technical” aspects are spelling, punctuation,
 grammar, basic stylistic elements like parallel structure and avoiding
-word repetition, and correct usage of devices like metaphor and simile.
+word repetition, and correct usage of devices like metaphor and simile.</p>
 
-In IF, you have to get right all of those basics from static fiction,
-*plus* you have to write a working computer program. You have to make
-sure your program doesn't crash, burn, or otherwise malfunction. The
+<p>In IF, you have to get right all of those basics from static fiction,
+<em>plus</em> you have to write a working computer program. You have to make
+sure your program doesn’t crash, burn, or otherwise malfunction. The
 program has to produce a sensible reply to each command the user enters.
 The game has to keep its world model in a consistent state throughout
 play, with no objects mysteriously vanishing, reappearing, moving, or
 otherwise defying the laws of physics that you define within your game
-world.
+world.</p>
 
-If you don't consider yourself skilled at the technical aspects of
+<p>If you don’t consider yourself skilled at the technical aspects of
 regular English writing, there are lots of tools that can help. Keep a
-dictionary handy if you're not a strong speller, or run your game
-through a spell-checker frequently. If grammar's your weak point, find a
-self-help grammar book for writers. There's a huge selection of books
+dictionary handy if you’re not a strong speller, or run your game
+through a spell-checker frequently. If grammar’s your weak point, find a
+self-help grammar book for writers. There’s a huge selection of books
 available designed specifically to help aspiring writers improve their
-technical skills.
+technical skills.</p>
 
-Aside from working on your personal skill-set, the best way to improve
-your game's writing is by having someone proofread it for you. Find a
+<p>Aside from working on your personal skill-set, the best way to improve
+your game’s writing is by having someone proofread it for you. Find a
 friend or two who are good spellers and grammarians, and enlist them to
-play through your game and point out the writing errors they catch.
+play through your game and point out the writing errors they catch.</p>
 
-Testing is doubly important because it's virtually the only way to catch
+<p>Testing is doubly important because it’s virtually the only way to catch
 programming errors. You should spend as much time as you can doing your
 own testing - playing through the game, trying as many combinations of
 things as you can think of. Try to think like a player, as though you
-don't know the winning solution already - try the things a player would
-think to do, not only the things you know are correct. But you'll never
+don’t know the winning solution already - try the things a player would
+think to do, not only the things you know are correct. But you’ll never
 think of everything a player will - in fact, no one player will think of
-everything another player will. So after you've fixed all the problems
-you can find, ask a couple of friends to test it.
+everything another player will. So after you’ve fixed all the problems
+you can find, ask a couple of friends to test it.</p>
 
-Testing is inevitably a humbling experience. No one enjoys having their
-mistakes pointed out. It's extremely important, for your own sanity and
+<p>Testing is inevitably a humbling experience. No one enjoys having their
+mistakes pointed out. It’s extremely important, for your own sanity and
 for the health of your friendships with your testers, that you
 understand this going in. You have to accept that your testers are going
 to find errors - lots of errors, egregious, stupid errors that make you
-look like a complete moron. It's easy to become a little resentful, even
+look like a complete moron. It’s easy to become a little resentful, even
 outright angry, when a tester points out yet another stupid error. You
 have to force yourself to remember that the tester is just the
-messenger - *you* were the one who made the error, not the tester, and
+messenger - <em>you</em> were the one who made the error, not the tester, and
 the tester is just doing you a favor by pointing it out. A favor? you
-ask with a bitter laugh. A *favor*?! Yes, a favor: the tester is saving
-you the embarrassment of letting the *whole world* see the error. Thanks
-to them, you're going to get to fix the error before anyone else sees
-your game.
+ask with a bitter laugh. A <em>favor</em>?! Yes, a favor: the tester is saving
+you the embarrassment of letting the <em>whole world</em> see the error. Thanks
+to them, you’re going to get to fix the error before anyone else sees
+your game.</p>
 
-So be grateful to your testers. If you should feel that twinge of
+<p>So be grateful to your testers. If you should feel that twinge of
 annoyance or resentment or anger at a bug report, overcome it with your
-deeper understanding that the bug report is a good thing, that it's
+deeper understanding that the bug report is a good thing, that it’s
 going to make you look better in the long run. When you get a bug
-report, thank the tester for it.
+report, thank the tester for it.</p>
 
-One more thing about testing: keep in mind that you don't have accept
+<p>One more thing about testing: keep in mind that you don’t have accept
 every bit of advice a tester gives you. Sometimes testers make mistakes,
 too, and sometimes they just have different opinions from yours.
-Sometimes a tester will report a bug that isn't really a bug, because
-they misunderstood something; sometimes they'll report a typo that you
+Sometimes a tester will report a bug that isn’t really a bug, because
+they misunderstood something; sometimes they’ll report a typo that you
 put in intentionally for one reason or another. When you get this kind
-of report, whatever you do, don't complain to the tester about it or
+of report, whatever you do, don’t complain to the tester about it or
 accuse them or giving you bad bug reports - they gave you the report in
 good faith, and the last thing you want to do is discourage them from
 being frank with you as they continue testing. They told it like they
 saw it, and you want them to continue doing just that. Thank them for
-the bug report as always, and if you're sure it's really not a problem,
-just consider the case closed.
+the bug report as always, and if you’re sure it’s really not a problem,
+just consider the case closed.</p>
 
-When you do get a faulty bug report that's due to a tester's
+<p>When you do get a faulty bug report that’s due to a tester’s
 misunderstanding, you really should give it a little thought before you
-dismiss it. You should at least try to figure out *why* the tester
+dismiss it. You should at least try to figure out <em>why</em> the tester
 misunderstood the situation, because it might reveal a larger problem
-that you need to address. If the tester didn't understand that a "typo"
-was actually a phonetic rendering of a character's Texas drawl, for
+that you need to address. If the tester didn’t understand that a “typo”
+was actually a phonetic rendering of a character’s Texas drawl, for
 example, you might have failed to properly introduce the character or to
 establish the stylized spelling. If the tester reports a bug that a door
-apparently closed by itself, but you know that the door is *supposed* to
-close by itself because it's spring-loaded, maybe you need to make this
+apparently closed by itself, but you know that the door is <em>supposed</em> to
+close by itself because it’s spring-loaded, maybe you need to make this
 clearer in the description, or point out the resistance when the door is
-opened. If you outright don't understand why the player thought
-something was a bug, feel free to ask them to explain - you shouldn't
+opened. If you outright don’t understand why the player thought
+something was a bug, feel free to ask them to explain - you shouldn’t
 argue with them about whether something is a bug or not, but you
-definitely should ask for more information when you don't understand
-exactly what they reported or why.
+definitely should ask for more information when you don’t understand
+exactly what they reported or why.</p>
 
-## IF's inherent weaknesses
+<h2 id="ifs-inherent-weaknesses">IF’s inherent weaknesses</h2>
 
-IF has some inherent weaknesses. If you're writing IF, it's useful to
+<p>IF has some inherent weaknesses. If you’re writing IF, it’s useful to
 understand these weaknesses, because then you can at least work to
-minimize their negative effects on your work.
+minimize their negative effects on your work.</p>
 
-Ask IF enthusiasts what they like about IF, what differentiates it from
-other types of computer gaming, and you'll get a couple of types of
-replies.
+<p>Ask IF enthusiasts what they like about IF, what differentiates it from
+other types of computer gaming, and you’ll get a couple of types of
+replies.</p>
 
-Type 1 is the "homebrew" factor: IF is a medium in which an amateur
+<p>Type 1 is the “homebrew” factor: IF is a medium in which an amateur
 working alone in her spare time can actually hope to create a complete,
 original work. This is practically unique among modern computer games; a
 commercial game today is, with rare exceptions, the product of a cast of
-hundreds and a budget of millions. What's more, the lack of any
+hundreds and a budget of millions. What’s more, the lack of any
 commercial interest in IF ensures that people who work in the medium do
 so for their own reasons. The rest of the gaming industry is subject to
 the same economic forces that drive blandness, repetition, and imitation
-in the television and movie industries, but IF is immune to all that.
+in the television and movie industries, but IF is immune to all that.</p>
 
-The Type 1 replies are entirely valid, but they're primarily reasons
-that people like to *write* IF. They're not so much reasons people
-*play* IF.
+<p>The Type 1 replies are entirely valid, but they’re primarily reasons
+that people like to <em>write</em> IF. They’re not so much reasons people
+<em>play</em> IF.</p>
 
-The Type 2 answers are the reasons to play, and they largely boil down
-to this: IF has an "unlimited" feeling that no other type of computer
+<p>The Type 2 answers are the reasons to play, and they largely boil down
+to this: IF has an “unlimited” feeling that no other type of computer
 game can approach. In IF, you can type any command that you can think
-of; in other games, you're limited to a menu, or a joystick, or some
-other enumerated set of potential inputs.
+of; in other games, you’re limited to a menu, or a joystick, or some
+other enumerated set of potential inputs.</p>
 
-That "unlimited" feel of IF is at once its greatest strength and its
-greatest weakness.
+<p>That “unlimited” feel of IF is at once its greatest strength and its
+greatest weakness.</p>
 
-The strengths of the "unlimited" feel are clear enough. A command line
+<p>The strengths of the “unlimited” feel are clear enough. A command line
 gives players the freedom to try anything. It gives authors an obvious
-tool for creating inductive-reasoning puzzles, puzzles with "lateral
-thinking," where the solution requires analyzing a situation and
-realizing something that's implied but never stated. The player's very
+tool for creating inductive-reasoning puzzles, puzzles with “lateral
+thinking,” where the solution requires analyzing a situation and
+realizing something that’s implied but never stated. The player’s very
 ability to try anything makes it possible to create puzzles where trying
-just the right something is rewarded.
+just the right something is rewarded.</p>
 
-The weakness of the "unlimited" command line is that it's only *quote*
-unlimited *unquote*. Yes, the player can *type* anything. But if they
-don't type the right thing, all they get is an error message. If you've
-ever watched a novice player grappling with the "unlimited" command line
-and its promise that you can type "whatever you want" in "ordinary
-English," you know that the actual odds of a novice player typing a
+<p>The weakness of the “unlimited” command line is that it’s only <em>quote</em>
+unlimited <em>unquote</em>. Yes, the player can <em>type</em> anything. But if they
+don’t type the right thing, all they get is an error message. If you’ve
+ever watched a novice player grappling with the “unlimited” command line
+and its promise that you can type “whatever you want” in “ordinary
+English,” you know that the actual odds of a novice player typing a
 valid command are distressingly low - low enough to send most newcomers
-fleeing.
+fleeing.</p>
 
-The point is that the command line *isn't* unlimited. It only gives the
-*illusion* of being unlimited. In fact, it has limits just as real and
+<p>The point is that the command line <em>isn’t</em> unlimited. It only gives the
+<em>illusion</em> of being unlimited. In fact, it has limits just as real and
 just as unbending as the UI limits of a game with a joystick. The
-difference is that the joystick game's UI boundaries are plainly
+difference is that the joystick game’s UI boundaries are plainly
 visible, while the command-line hides its limits. The limits are there,
-but they're a big secret. The only way to find out if a command works is
-to try it. Does this work? No? How about this? No?
+but they’re a big secret. The only way to find out if a command works is
+to try it. Does this work? No? How about this? No?</p>
 
-## Strategies to mitigate the "unlimited" problems
+<h2 id="strategies-to-mitigate-the-unlimited-problems">Strategies to mitigate the “unlimited” problems</h2>
 
-The problems with the "unlimited" command line come in three main
-varieties.
+<p>The problems with the “unlimited” command line come in three main
+varieties.</p>
 
-The first variety is at the "syntax" level. Specifically, the parser's
+<p>The first variety is at the “syntax” level. Specifically, the parser’s
 ability to recognize words and phrases. This problem is on the surface
 straightforward enough to fix - you just add more words and phrases
-until the game understands everything! Sadly, that's harder than it
-seems - a *lot* harder; the problem of understanding natural language
+until the game understands everything! Sadly, that’s harder than it
+seems - a <em>lot</em> harder; the problem of understanding natural language
 input has stymied the best efforts of the best computer scientists for
-fifty years at least.
+fifty years at least.</p>
 
-The second variety is at the "simulation" level. This problem occurs
-when the player enters a command that would work in a *real-world*
-version situation that the game *claims* to describe, but nonetheless
-doesn't work *in the game*. We're not talking about parser failures
-here - we're talking about commands that the parser recognizes, but
-which aren't handled in the simulation:
+<p>The second variety is at the “simulation” level. This problem occurs
+when the player enters a command that would work in a <em>real-world</em>
+version situation that the game <em>claims</em> to describe, but nonetheless
+doesn’t work <em>in the game</em>. We’re not talking about parser failures
+here - we’re talking about commands that the parser recognizes, but
+which aren’t handled in the simulation:</p>
 
 <div class="cmdline">
 
@@ -243,7 +241,7 @@ which aren't handled in the simulation:
     &gt;tear page out of book
     You can't tear the book.
 
-</div>
+
 
 The third variety is the "detail level" problem. Players sometimes
 misconstrue the nature of the command-line interface, thinking it's

@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Hints
 
@@ -318,6 +318,6 @@ bother with modifying extraHintStyleTag at all.
     <a href="instruct.html" class="nav"><em>Next:</em> Instructions</a>
     </span>
 
-</div>
+
 
 </div>

@@ -17,7 +17,7 @@ Entrypoint</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Enumerators
 
@@ -103,7 +103,7 @@ keyword in the definition:
     enum token dictWord, unknownWord, punctuation;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -18,7 +18,7 @@ WeakRefLookupTable
 
 </div>
 
-<div class="main">
+
 
 # WeakRefLookupTable
 
@@ -45,7 +45,7 @@ though, so don't feel that you need to go out of your way to find places
 to use this intrinsic class. If you can't think of a reason to use this
 class, just ignore it and use the base LookupTable class.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

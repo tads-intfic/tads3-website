@@ -18,7 +18,7 @@ Symconn
 
 </div>
 
-<div class="main">
+
 
 # Symconn (Symmetrical Connectors)
 
@@ -744,7 +744,7 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [symconn.t](../symconn.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

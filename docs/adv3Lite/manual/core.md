@@ -17,7 +17,7 @@ Definition</a>    
 
 </div>
 
-<div class="main">
+
 
 # Part II: The Core Library
 
@@ -44,7 +44,7 @@ code will be dealt with in later sections.
 [Beginnings](beginning.html)  
 [Endings](ending.html)  
 
-</div>
+
 
 </div>
 

@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Aboard the Plane
 
@@ -348,7 +348,7 @@ evaluates to true.
 This would be a good point at which to try compiling and running the
 game again to ensure that everything works as expected.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

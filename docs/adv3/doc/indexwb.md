@@ -9,7 +9,7 @@ TADS 3 Bookshelf
 
 </div>
 
-<div class="main">
+
 
 # The Books
 
@@ -158,7 +158,7 @@ This is a log of changes to the HTML TADS user interface, which includes
 the HTML TADS Interpreter and the Workbench development environment on
 Windows.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

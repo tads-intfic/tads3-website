@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Beginnings
 
@@ -462,6 +462,6 @@ customized response to X ME.
 </span>
 ```
 
-</div>
+
 
 </div>

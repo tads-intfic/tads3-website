@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](controllingtheaction.html)   [\[Next\]](check.html)*
@@ -518,4 +518,4 @@ therefore use `check()` instead.
 [\[Main\]](index.html)  
 *[\[Previous\]](controllingtheaction.html)   [\[Next\]](check.html)*
 
-</div>
+

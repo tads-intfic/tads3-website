@@ -18,7 +18,7 @@ Scene
 
 </div>
 
-<div class="main">
+
 
 # Making a Scene
 
@@ -514,7 +514,7 @@ the meantime, this introduction to the use of scenes should hopefully
 have shown how useful they can be in controlling conditions at turning
 points in your story.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

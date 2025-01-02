@@ -19,7 +19,7 @@ Branch</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Adding the Bird and the Nest
 
@@ -165,7 +165,7 @@ player types EXAMINE BIRD or the equivalent:
     >x bird
     Too young to fly, the nestling tweets helplessly. 
 
-</div>
+
 
 The `vocab` property is a bit more complex,
 because it actually provides a way of defining several properties at

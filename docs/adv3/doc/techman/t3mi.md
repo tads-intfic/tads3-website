@@ -19,7 +19,7 @@ Staging Locations</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Multiple Inheritance
 
@@ -843,7 +843,7 @@ article on the [Object Inheritance Model](../sysman/inherit.html) in the
 *System Manual*, which takes a complementary approach to explaining it
 all.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

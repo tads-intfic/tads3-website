@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Iterator
 
@@ -49,7 +49,7 @@ of range") if the iteration has not been started yet (that is,
 `getNext()` has never been called on this
 Iterator) or has moved past the last item.
 
-</div>
+
 
 `getCurVal()`
 

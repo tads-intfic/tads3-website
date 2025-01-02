@@ -19,7 +19,7 @@ Issues
 
 </div>
 
-<div class="main">
+
 
 # Some Output and Input Issues
 
@@ -117,7 +117,7 @@ For example, consider the following exchange:
      
      >EAST
 
-</div>
+
 
   
 Is the player tellling the parser than s/he means the east wall, or is

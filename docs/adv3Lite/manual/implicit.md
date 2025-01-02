@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Implicit Actions
 
@@ -208,6 +208,6 @@ ball\]'. Note where the spaces need to occur in these textual fragments.
 <a href="react.html" class="nav"><em>Next:</em> Reacting to Actions</a>
     </span>
 
-</div>
+
 
 </div>

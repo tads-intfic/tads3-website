@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Pathfinding
 
@@ -466,6 +466,6 @@ way.
     <a href="scene.html" class="nav"><em>Next:</em> Scenes</a>    
 </span>
 
-</div>
+
 
 </div>

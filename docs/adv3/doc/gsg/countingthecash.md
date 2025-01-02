@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](fillinginsomegaps.html)
@@ -561,4 +561,4 @@ first argument to gTranscript.summarizeTranscript as
 *[\[Previous\]](fillinginsomegaps.html)
   [\[Next\]](lookingthroughthewindow.html)*
 
-</div>
+

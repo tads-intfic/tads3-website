@@ -17,7 +17,7 @@ Executables</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Universal Paths
 
@@ -120,7 +120,7 @@ place.
 | Classic Mac OS | Mac HD:games:deep.gam | /Mac HD:/games/deep.gam |
 | VMS | SYS\$DISK:\[USER.DOCS\]DEEP.GAM | /SYS\$DISK:/USER/DOCS/DEEP.GAM |
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Debugging Commands
 
@@ -123,7 +123,7 @@ example:
     >open front door
     You open the front door.
 
-</div>
+
 
 The final example of EVAL above illustrates that it is perfectly
 possible to use the EVAL command with an expression that changes the

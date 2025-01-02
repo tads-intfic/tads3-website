@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Gadgets
 
@@ -174,7 +174,7 @@ light sources zero, for example:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

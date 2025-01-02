@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](action.html)   [\[Next\]](remap.html)*
@@ -279,4 +279,4 @@ preconditions is to study the library file precond.t.
 [\[Main\]](index.html)  
 *[\[Previous\]](action.html)   [\[Next\]](remap.html)*
 
-</div>
+

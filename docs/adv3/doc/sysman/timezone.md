@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # TimeZone
 
@@ -68,7 +68,7 @@ environment variable specifies the settings. (For best results on Unix,
 you should set TZ to the zoneinfo key you wish to use; for example, for
 US Eastern Time, set TZ=America/New_York.)
 
-</div>
+
 
 `new TimeZone(*zoneinfoName*)`
 

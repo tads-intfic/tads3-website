@@ -18,7 +18,7 @@ API</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # NPC Travel
 
@@ -169,7 +169,7 @@ like.
 
 And whatever you do, **don't** use moveInto() for NPC travel.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

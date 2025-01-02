@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Chapter 6: Goldskull
 
@@ -31,7 +31,7 @@ In this chapter we implement another simple game.
 [Everything in its place](inplace.html)  
 [Retrospect](retro.html)  
 
-</div>
+
 
 </div>
 

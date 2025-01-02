@@ -18,7 +18,7 @@ NPCs</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Player Character and NPC Knowledge
 
@@ -364,7 +364,7 @@ why such keys must be regarded as occupying a global namespace within
 any given game (even if that weren't a good idea in any case to avoid
 confusion).
 
-</div>
+
 
 ------------------------------------------------------------------------
 

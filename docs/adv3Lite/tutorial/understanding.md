@@ -19,7 +19,7 @@ Locations</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Understanding the Source File
 
@@ -271,7 +271,7 @@ you feel you haven't completely grasped all there is to know about
 objects, classes and properties. We'll be saying a lot more about them
 in what follows.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

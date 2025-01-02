@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](theartofconversation.html)
@@ -408,4 +408,4 @@ introducing some further features of TADS 3.
 *[\[Previous\]](theartofconversation.html)
   [\[Next\]](doorsandwindows.html)*
 
-</div>
+

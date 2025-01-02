@@ -19,7 +19,7 @@ Documentation</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Workbench Project Starter Templates
 
@@ -216,7 +216,7 @@ and .tl files. Workbench automatically searches for .tdb-project-starter
 files in the Extensions folder tree (including sub-folders) and all of
 the folders in Library Paths list.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

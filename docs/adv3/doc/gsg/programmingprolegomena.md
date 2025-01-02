@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](creatingyourfirsttads3project.html)
@@ -739,4 +739,4 @@ use of anonymous nested objects is a powerful and common feature of TADS
 *[\[Previous\]](creatingyourfirsttads3project.html)
   [\[Next\]](furtherprogramming.html)*
 
-</div>
+

@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # EventList
 
@@ -197,7 +197,7 @@ likely to constitute a trap for even fairly experienced game authors.
 For the full story, consult the aforementioned chapter of the *TADS 3
 System Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

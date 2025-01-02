@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # HTTPServer
 
@@ -266,7 +266,7 @@ the same format originally specified in the constructor, which can be
 either a host name or a numeric IP address. Returns
 `nil` if no address is available.
 
-</div>
+
 
 `getIPAddress()`
 

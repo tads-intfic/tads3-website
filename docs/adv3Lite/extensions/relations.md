@@ -18,7 +18,7 @@ Relations
 
 </div>
 
-<div class="main">
+
 
 # Relations
 
@@ -386,7 +386,7 @@ with information about their type, e.g.:
     overlooking manyToMany: name = 'overlooks' reverseName = 'overlooked by'
     sibling (DerivedRelation) manyToMany: (reciprocal): name = 'sibling of'
 
-</div>
+
 
 REL, RELATION or RELATIONS followed by the name of a relation lists the
 items related via that relation, e.g.:

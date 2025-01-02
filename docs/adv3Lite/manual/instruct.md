@@ -18,7 +18,7 @@ Instructions
 
 </div>
 
-<div class="main">
+
 
 # Instructions
 
@@ -133,6 +133,6 @@ Instructions
     <a href="newbie.html" class="nav"><em>Next:</em> Newbie Help</a>    
 </span>
 
-</div>
+
 
 </div>

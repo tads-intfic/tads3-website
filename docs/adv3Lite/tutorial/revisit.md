@@ -16,7 +16,7 @@ Bird</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Chapter 5: Heidi Revisited
 
@@ -32,7 +32,7 @@ improvements.
 [Is the bird in the nest?](birdinnest.html)  
 [Summing Up](summing.html)  
 
-</div>
+
 
 </div>
 

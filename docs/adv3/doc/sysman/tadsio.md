@@ -18,7 +18,7 @@ Set</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # tads-io Function Set
 
@@ -67,7 +67,7 @@ Clears the banner's display. Removes all text from the banner, and moves
 the output position back to the upper left corner of the banner's
 window.
 
-</div>
+
 
 `bannerCreate(*parent*, *where*, *other*,
 *windowType*, *align*, *size*, *sizeUnits*, *style*)`

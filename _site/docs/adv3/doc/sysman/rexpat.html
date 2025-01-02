@@ -38,102 +38,91 @@
 
 </div>
 
-<div class="main">
+<h1 id="rexpattern">RexPattern</h1>
 
-# RexPattern
+<p>A RexPattern object stores the internal representation, known as the
+“compiled” version, of a regular expression pattern. The internal
+details of the compiled representation aren’t important, and the program
+can’t access the compiled data directly.</p>
 
-A RexPattern object stores the internal representation, known as the
-"compiled" version, of a regular expression pattern. The internal
-details of the compiled representation aren't important, and the program
-can't access the compiled data directly.
-
-Every time the program performs a search involving a regular expression
-(using the [<span class="code">rexMatch()</span>,
-<span class="code">rexSearch()</span>, or
-<span class="code">rexReplace()</span>
-functions](tadsgen.html#rexmatch)), the system must work with the
+<p>Every time the program performs a search involving a regular expression
+(using the <a href="tadsgen.html#rexmatch"><code class="language-plaintext highlighter-rouge">rexMatch()</code>,
+<code class="language-plaintext highlighter-rouge">rexSearch()</code>, or
+<code class="language-plaintext highlighter-rouge">rexReplace()</code>
+functions</a>), the system must work with the
 compiled form of the search pattern. The simplest way to call these
 functions is to pass them a string giving the search pattern, but when
 the program does this, the system must compile the string, which
 converts the string to the internal representation. This compilation
 process is relatively time-consuming; typically, compiling the pattern
 takes about half the time involved in performing a regular expression
-search.
+search.</p>
 
-The purpose of the RexPattern class is to let the program perform this
+<p>The purpose of the RexPattern class is to let the program perform this
 compilation work just once for a given pattern string, and then re-use
 the same compiled representation every time the program searches for the
 pattern. If a given pattern is used repeatedly, this can improve the
-program's efficiency by avoiding repeated compilation of the same
-pattern string.
+program’s efficiency by avoiding repeated compilation of the same
+pattern string.</p>
 
-## <span id="rexlit">Regular expression literals</span>
+<h2 id="regular-expression-literals"><span id="rexlit">Regular expression literals</span></h2>
 
-You can define a static RexPattern object using the regular expression
-literal syntax:
+<p>You can define a static RexPattern object using the regular expression
+literal syntax:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local r = R'%w+';
+</code></pre></div></div>
 
-    local r = R'%w+';
+<p>That defines a static RexPattern object that matches any series of one
+or more “word” characters.</p>
 
-</div>
-
-That defines a static RexPattern object that matches any series of one
-or more "word" characters.
-
-The regular expression literal syntax consists of a capital "R" followed
+<p>The regular expression literal syntax consists of a capital “R” followed
 immediately (with no intervening spaces) by an open quote. Single and
-double quotes are interchangeable for "R" strings - they have exactly
+double quotes are interchangeable for “R” strings - they have exactly
 the same meaning, but of course the ending quote must match the open
-quote. You can also use the triple-quote syntax with "R" strings:
+quote. You can also use the triple-quote syntax with “R” strings:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local r2 = R"""%w"%w""";
+</code></pre></div></div>
 
-    local r2 = R"""%w"%w""";
-
-</div>
-
-That creates a pattern that matches a word character followed by a
+<p>That creates a pattern that matches a word character followed by a
 double quote followed by a word character. (In this case the triple
-quotes aren't really necessary, in that it might have been easier to
+quotes aren’t really necessary, in that it might have been easier to
 just use single quotes to delimit the string:
-<span class="code">R'%w"%w'</span>.)
+<code class="language-plaintext highlighter-rouge">R'%w"%w'</code>.)</p>
 
-The embedding expression syntax, <span class="code">\&lt;\&lt; \&gt;\&gt;</span>,
-isn't allowed in regular expression literals.
+<p>The embedding expression syntax, <code class="language-plaintext highlighter-rouge">\&lt;\&lt; \&gt;\&gt;</code>,
+isn’t allowed in regular expression literals.</p>
 
-## RexPattern creation
+<h2 id="rexpattern-creation">RexPattern creation</h2>
 
-You can create a RexPattern object dynamically using the
-<span class="code">new</span> operator, giving the pattern string as the
-argument:
+<p>You can create a RexPattern object dynamically using the
+<code class="language-plaintext highlighter-rouge">new</code> operator, giving the pattern string as the
+argument:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local pat = new RexPattern('a.*b');
+</code></pre></div></div>
 
-    local pat = new RexPattern('a.*b');
-
-</div>
-
-This creates the pattern object and compiles the pattern string. You can
+<p>This creates the pattern object and compiles the pattern string. You can
 now use the object in the regular expression search and match functions
-(<span class="code">rexMatch()</span>, etc.) in place of the pattern
+(<code class="language-plaintext highlighter-rouge">rexMatch()</code>, etc.) in place of the pattern
 string. The functions will behave exactly as though you had used the
 original pattern string, except that they will run a little faster,
-because they won't need to compile the string.
+because they won’t need to compile the string.</p>
 
-## RexPattern methods
+<h2 id="rexpattern-methods">RexPattern methods</h2>
 
-The class provides the standard Object intrinsic class methods, plus the
-following:
+<p>The class provides the standard Object intrinsic class methods, plus the
+following:</p>
 
-<span class="code">getPatternString()</span>
+<p><code class="language-plaintext highlighter-rouge">getPatternString()</code></p>
 
 <div class="fdef">
 
 Returns the original string used to create the object (i.e., the string
 passed as the argument in the "new" expression that created the object).
 
-</div>
+
 
 </div>
 

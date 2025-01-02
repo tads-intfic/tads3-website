@@ -19,7 +19,7 @@ Nest</a>    
 
 </div>
 
-<div class="main">
+
 
 # Adding the Tree and the Branch
 
@@ -70,7 +70,7 @@ can pick up the tree and carry it around with her!
     >i
     You are carrying a tall sycamore tree.
 
-</div>
+
 
 We should fix this at once. We can do so by adding
 `isFixed = true` to the definition of the tree.

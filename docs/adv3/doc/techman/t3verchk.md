@@ -19,7 +19,7 @@ and When to Use Which
 
 </div>
 
-<div class="main">
+
 
 # Verify, Check, and When to Use Which
 
@@ -192,7 +192,7 @@ Say the player types:
 
     >turn fan on
 
-</div>
+
 
 We definitely want to exclude the hand-fan, since it's obvious that the
 hand-fan can't be turned on or off, so this exclusion goes in the

@@ -19,7 +19,7 @@ Extensions</a>    
 
 </div>
 
-<div class="main">
+
 
 # Exercises & Samples
 
@@ -80,7 +80,7 @@ of what is probably the most complex game of any of the examples here.
 illustration of EventLists, Menus, Hints and Scoring, although it also
 includes a couple of examples of simple Scenes.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

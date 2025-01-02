@@ -19,7 +19,7 @@ Undefined Methods</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Anonymous Functions
 
@@ -511,7 +511,7 @@ forth. Since `new` was only there in the first
 place for ease-of-use reasons, adding Javascript to the mix clearly tips
 the balance in favor of removing `new`.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

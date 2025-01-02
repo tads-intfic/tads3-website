@@ -19,7 +19,7 @@ List</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -237,7 +237,7 @@ mechanism and the state save/restore mechanism.
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

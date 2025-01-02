@@ -37,54 +37,54 @@ Modules</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="endings">Endings</h1>
 
-# Endings
-
-Most IF games need to have an ending somewhere (other than by the player
+<p>Most IF games need to have an ending somewhere (other than by the player
 issuing a QUIT command); many have multiple endings, some of which may
 count as more successful in others. In adv3Lite (as in adv3) the way to
 end the game once the player has either won, died, lost, or otherwise
-come to an ending is to use the **finishGameMsg(msg, \[extra\])**
-function.
+come to an ending is to use the <strong>finishGameMsg(msg, [extra])</strong>
+function.</p>
 
-The *msg* parameter can be either nil (in which case nothing is
-displayed), a single-quoted string, such as 'YOU HAVE REACHED THE END OF
-YOUR QUEST', or a FinishType object, which displays the message
-associated with that message, of which the library defines four:
+<p>The <em>msg</em> parameter can be either nil (in which case nothing is
+displayed), a single-quoted string, such as ‘YOU HAVE REACHED THE END OF
+YOUR QUEST’, or a FinishType object, which displays the message
+associated with that message, of which the library defines four:</p>
 
-- **ftVictory**: 'YOU HAVE WON'
-- **ftDeath**: 'YOU HAVE DIED'
-- **ftFailure**: 'YOU HAVE FAILED'
-- **ftGameOver**: 'GAME OVER'
+<ul>
+  <li><strong>ftVictory</strong>: ‘YOU HAVE WON’</li>
+  <li><strong>ftDeath</strong>: ‘YOU HAVE DIED’</li>
+  <li><strong>ftFailure</strong>: ‘YOU HAVE FAILED’</li>
+  <li><strong>ftGameOver</strong>: ‘GAME OVER’</li>
+</ul>
 
-Either way, the ending message is displayed surrounded by asterisks,
-e.g. \*\*\* YOU HAVE REACHED THE END OR YOUR QUEST \*\*\* or \*\*\* YOU
-HAVE DIED \*\*\*, following which the player is presented with a number
+<p>Either way, the ending message is displayed surrounded by asterisks,
+e.g. *** YOU HAVE REACHED THE END OR YOUR QUEST *** or *** YOU
+HAVE DIED ***, following which the player is presented with a number
 of options. These options always include QUIT, RESTART and RESTORE, but
-may also include any additional options you specify in the *extra*
+may also include any additional options you specify in the <em>extra</em>
 property, which is specified as a list that can contain any or all of
-the following options:
+the following options:</p>
 
-- **finishOptionUndo**: UNDO the last turn.
-- **finishOptionFullScore**: Show the full score (i.e. the total score
-  and the achievements that go to make up that score).
-- **finishOptionScore**: This is simply a flag that causes the final
-  score to be shown along with the other information at the end of the
-  game.
-- **finishOptionCredits**: Show the credits for the game.
-- **finishOptionAmusing**: Offer the player some amusing (or at least,
-  interesting) things to try.
+<ul>
+  <li><strong>finishOptionUndo</strong>: UNDO the last turn.</li>
+  <li><strong>finishOptionFullScore</strong>: Show the full score (i.e. the total score
+and the achievements that go to make up that score).</li>
+  <li><strong>finishOptionScore</strong>: This is simply a flag that causes the final
+score to be shown along with the other information at the end of the
+game.</li>
+  <li><strong>finishOptionCredits</strong>: Show the credits for the game.</li>
+  <li><strong>finishOptionAmusing</strong>: Offer the player some amusing (or at least,
+interesting) things to try.</li>
+</ul>
 
-For example, if the object of your game is to escape from a burning
+<p>For example, if the object of your game is to escape from a burning
 house and reach the safety of the road, you might end the game when the
 player character sets off down the drive from the front of the house.
 The definition of the drive location to achieve this might then look
-something like this:
+something like this:</p>
 
-<div class="code">
-
-    drive: Room 'Front Drive' 'front drive'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    drive: Room 'Front Drive' 'front drive'
         "The front drive sweeps round from the northwest and comes to an end just in
         front of the house, which stands directly to the east. A narrow path runs
         round the side of the house to the southeast. "
@@ -101,24 +101,21 @@ something like this:
         
         regions = outdoors
     ;
+</code></pre></div></div>
 
-</div>
-
-If your game offers the "Amusing" finish option you'll need to do a bit
+<p>If your game offers the “Amusing” finish option you’ll need to do a bit
 more work to define what it actually does. This can be as basic as
-offering a few suggestions like "Have you tried feeding the chile soup
+offering a few suggestions like “Have you tried feeding the chile soup
 to the pet tiger, or asking Mavis about her underwear, or turning the
-blender to 'superspin' when the chocolate sponge is in it?" to
-displaying a full-blown [menu](menu.html) with a whole range of options.
+blender to ‘superspin’ when the chocolate sponge is in it?” to
+displaying a full-blown <a href="menu.html">menu</a> with a whole range of options.
 Whatever you want to do you do it by modifying the finishOptionAmusing
 object to defining a doOption() method which should normally finish by
 returning true (to tell the library that the option has successfully
 completed and it should now show the list of options again). For
-example:
+example:</p>
 
-<div class="code">
-
-    modify finishOptionAmusing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify finishOptionAmusing
        doOption()
        {
            "Have you tried feeding the chile soup to the pet tiger?\n
@@ -128,14 +125,11 @@ example:
            return true;
        }
     ;   
+</code></pre></div></div>
 
-</div>
+<p>Or:</p>
 
-Or:
-
-<div class="code">
-
-    modify finishOptionAmusing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify finishOptionAmusing
        doOption()
        {
            amusingMenu.display();
@@ -144,10 +138,7 @@ Or:
            return true;
        }
     ;   
-
-</div>
-
-</div>
+</code></pre></div></div>
 
 <hr />
 

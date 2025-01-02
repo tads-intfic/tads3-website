@@ -39,26 +39,24 @@ Modification and Overriding</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="methods-functions-and-statements">Methods, Functions and Statements</h1>
 
-# Methods, Functions and Statements
+<h2 id="methods-and-functions">Methods and Functions</h2>
 
-## Methods and Functions
-
-Methods and functions are quite similar both in appearance and, if
-you'll pardon the pun, function. Methods and functions are both
-containers for blocks of code, that is, for a series of *statements*, or
+<p>Methods and functions are quite similar both in appearance and, if
+you’ll pardon the pun, function. Methods and functions are both
+containers for blocks of code, that is, for a series of <em>statements</em>, or
 instructions to the computer to carry out the commands the method or
 function defines. The principal difference between them is that a method
 belongs to an object, whereas a function is free-standing. For example,
 in the Heidi example we developed in the previous chapter,
-<span class="code">afterAction()</span> was a method of the
-<span class="code">branch</span> object, while
-<span class="code">finishGameMsg()</span> was a function defined in the
+<code class="language-plaintext highlighter-rouge">afterAction()</code> was a method of the
+<code class="language-plaintext highlighter-rouge">branch</code> object, while
+<code class="language-plaintext highlighter-rouge">finishGameMsg()</code> was a function defined in the
 adv3Lite library (in fact, in this particular instance, precisely the
-same function is defined in the adv3 library too).
+same function is defined in the adv3 library too).</p>
 
-The syntax for defining a function is:
+<p>The syntax for defining a function is:</p>
 
 <div class="syntax">
 
@@ -67,7 +65,7 @@ The syntax for defining a function is:
        functionBody
     }
 
-</div>
+
 
 This means that to define a function you start with the function name,
 then put an opening parenthesis, then a list of parameters the function
@@ -75,8 +73,7 @@ takes, then a closing parenthesis, following which you write the body of
 the function between opening and closing braces. To give a couple of
 more concrete examples:
 
-<div class="code">
-
+```
     sayHello()
     {
        "Hello World!";
@@ -86,19 +83,16 @@ more concrete examples:
     {
        return x * 2;
     }
+```
 
-</div>
-
-The <span class="code">sayHello()</span> function simply displays the
+The `sayHello()` function simply displays the
 text "Hello World!" when it is invoked. The
-<span class="code">double()</span> function accepts a single number as a
+`double()` function accepts a single number as a
 parameter and returns double that number. It could be used like this:
 
-<div class="code">
-
+```
       y = double(3);
-
-</div>
+```
 
 Which would result in y containing the value 6. (In this code fragment,
 y is a variable; we'll explain variables in the next subsection).
@@ -107,10 +101,10 @@ The sayHello() example incidentally shows that if you want to define a
 function (or method) that takes no parameters, you simply follow its
 name with a pair of parentheses. A parameter is simply a temporary
 storage area (just like a variable) that you can use to pass a value to
-a function or method. In the <span class="code">double()</span> example,
-calling <span class="code">double(3)</span> causes the x parameter to
-take the value 3, so that when <span class="code">double(3)</span>
-executes the statement <span class="code">return x \* 2;</span> it first
+a function or method. In the `double()` example,
+calling `double(3)` causes the x parameter to
+take the value 3, so that when `double(3)`
+executes the statement `return x \* 2;` it first
 multiplies 3 by 2 (since x now has the value 3) and then returns the
 result (i.e. 6) to the caller.
 
@@ -125,8 +119,7 @@ seldom matters, and if you refer to both parameters and arguments as
 A method is defined almost exactly like a function, except that its
 definition occurs within the body of an object or class. For example:
 
-<div class="code">
-
+```
     class Greeter: Thing
        greet()
        {
@@ -143,17 +136,16 @@ definition occurs within the body of an object or class. For example:
            &lt;&lt;x + y&gt;&gt;. ";
       }
     ;
-
-&lt;/div&gt;
+```
 
 In this somewhat contrived example, the
-<span class="code">Greeter</span> class defines a
-<span class="code">greet()</span> method, which the
-<span class="code">bob</span> object inherits (since it's of class
-<span class="code">Greeter</span>). Calling
-<span class="code">bob.greet()</span> would result in the display of
-"Bob says hello!" while calling <span class="code">bob.doSum(10,
-5)</span> would result in the display of '"Let me see," says Bob. "By my
+`Greeter` class defines a
+`greet()` method, which the
+`bob` object inherits (since it's of class
+`Greeter`). Calling
+`bob.greet()` would result in the display of
+"Bob says hello!" while calling `bob.doSum(10,
+5)` would result in the display of '"Let me see," says Bob. "By my
 reckoning 10 plus 5 is 15."'
 
 In this example bob gets its name property via the vocab property we
@@ -163,9 +155,9 @@ another important difference between a method and a function. A method
 can refer to other properties and methods of the object on which it's
 defined. A function can't do this because it isn't part of any object.
 Likewise a method can use the special keyword
-<span class="code">self</span> to refer to the object on which it's
+`self` to refer to the object on which it's
 defined; a function can't do this since there would be no object for
-<span class="code">self</span> to refer to, a function not being part of
+`self` to refer to, a function not being part of
 any object.
 
 By the way, these examples have all been of very simple methods and
@@ -180,34 +172,32 @@ the basic principles of defining functions and methods.
 
 A variable is simply a temporary container for a piece of information,
 such as a number, a piece of text, a list, a reference to an object, or
-a special value like <span class="code">true</span> or
-<span class="code">nil</span>. In TADS 3 all variables are *local*,
+a special value like `true` or
+`nil`. In TADS 3 all variables are *local*,
 which means that they can only exist within a function or method, and
 only keep their value for as long as that function or method is being
 executed. In fact, the lifetime of a TADS 3 variable may be even less
 than that, for a variable only persists for as long as the *block* in
 which it is defined is being executed, where a block is any set of
 statements enclosed in a matching pair of opening and closing braces
-(<span class="code">{}</span>). A method or function is simply the
+(`{}`). A method or function is simply the
 outermost possible kind of enclosing block.
 
 A variable must be *declared* before it can be used. A variable is
-declared using the keyword <span class="code">local</span>, followed by
+declared using the keyword `local`, followed by
 one or more variable names (separated by commas, if there's more than
 one). A variable may optionally be *initialized* at the same time it is
 declared by following it with an equals sign followed by whatever value
 you wish to give it. If a variable is declared but not initialized it
-will have the value <span class="code">nil</span> (i.e. nothing at all)
+will have the value `nil` (i.e. nothing at all)
 until it is assigned a value. The following are all examples of legal
 variable declarations:
 
-<div class="code">
-
+```
       local a;
       local numberOfEggs, weightOfFlour, quantityOfButter;
       local price = 10, weight, title = 'cake recipe';
-
-</div>
+```
 
 On the whole it's best to give your variables meaningful names as in the
 second and third examples above, since this will make your code easier
@@ -220,18 +210,17 @@ compiler (as well as you) and would probably lead to compilation errors.
 
 On the other hand, it's quite okay to use the same variable name in
 different functions and methods. If you define a local variable called
-<span class="code">title</span> in a function called
-<span class="code">showName()</span> and another local variable called
-<span class="code">title</span> in a method called
-<span class="code">mixCake()</span> the two
-<span class="code">title</span> variables will have no relation to each
+`title` in a function called
+`showName()` and another local variable called
+`title` in a method called
+`mixCake()` the two
+`title` variables will have no relation to each
 other at all, and no confusion will occur.
 
 As its name suggests, a variable is something whose value can vary as
 your code is executed. Consider the following code snippet:
 
-<div class="code">
-
+```
     someFunction()
     {
        local myVar = 2;
@@ -239,8 +228,7 @@ your code is executed. Consider the following code snippet:
        myVar = 'Hello';    // now myVar is 'Hello'
        myVar += ' World!'; // now myVar is 'Hello World!'   
     }
-
-</div>
+```
 
 ## Statements
 
@@ -283,34 +271,28 @@ they must be terminated with a semicolon.
 A declaration statement is one that declares a new local
 [variable](#variables), as we have already seen above. The following
 statement declares the local variable
-<span class="code">myNewVar</span>:
+`myNewVar`:
 
-<div class="code">
-
+```
     local myNewVar;
-
-</div>
+```
 
 As already noted, a local variable must be declared before it can be
 used, but a variable can be declared and assigned an initial value in
 the same statement, for example:
 
-<div class="code">
-
+```
     local myNewVar = 10;
     local someonesName = 'John Doe';
     local obj = bird;
     local bool = true;
-
-</div>
+```
 
 The above example could alternatively be written all as one statement:
 
-<div class="code">
-
+```
     local myNewVar = 10, someonesName = 'John Doe', obj = bird, bool = true;
-
-</div>
+```
 
 ### Assignment Statments
 
@@ -323,101 +305,89 @@ Where *lvalue* is the property or variable to which the value is being
 assigned, and *expression* is any valid TADS 3 expression. Examples of
 assignment statements include:
 
-<div class="code">
-
+```
       x = 2;
       x = x + 3;
       obj = bird;
       obj.name = 'parrot';
       str = 'Hello' + ' World';
       val = double(x + 1) / 3 + 18;  // val is now 22
-
-</div>
+```
 
 An *expression* can be any legal combination of variables, property
 names, function and/or method calls, and operators. *Operators* include
-the common arithmetic operators <span class="code">+ - / \*</span> (the
+the common arithmetic operators `+ - / \*` (the
 last two of which are used for division and multiplication), the string
-concatenation operator <span class="code">+</span>, the logical
-operators <span class="code">&amp;&amp; \|\| </span>and
-<span class="code">!</span> (and, or and not), and the comparison
-operators <span class="code">== != \&gt; \&lt; \&gt;=</span> and
-<span class="code">\&lt;=</span> (equals, not equals, less than, greater
+concatenation operator `+`, the logical
+operators `&amp;&amp; \|\| `and
+`!` (and, or and not), and the comparison
+operators `== != \&gt; \&lt; \&gt;=` and
+`\&lt;=` (equals, not equals, less than, greater
 than, greater than or equal to, and less than or equal to).
 
 NOTE. Just as in C (whose syntax TADS 3 borrows to a large extent) be
 very careful not to confuse the assignment operator
-<span class="code">=</span> with the test for equality operator
-<span class="code">==</span>. Consider the following:
+`=` with the test for equality operator
+`==`. Consider the following:
 
-<div class="code">
-
+```
       a = 3; // Assigns the value 3 to a.
       a == 3; // Tests whether a is 3 (and here evaluates to true), but doesn't do anything.
       
       if(a = 4)   // legal but doesn't do what you probably expect 
          say ('a is 4!')
+```
 
-</div>
-
-The statement <span class="code">a == 3</span> is a legal statement
+The statement `a == 3` is a legal statement
 because a statement can consist just of an expression, even if the
-expression doesn't do anything as here. The test <span class="code">if(a
-= 4)</span> is legal, because an assignment like <span class="code">a =
-4</span> is also an expression (it evaluates to 4). But since 4 is
+expression doesn't do anything as here. The test `if(a
+= 4)` is legal, because an assignment like `a =
+4` is also an expression (it evaluates to 4). But since 4 is
 considered a true value (being neither zero nor
-<span class="code">nil</span>), the test will be passed whatever the
+`nil`), the test will be passed whatever the
 initial value of a, causing 'a is 4!' to be displayed no matter what.
 
 There are also various short form assignment statements. Because it's so
 common to write statements like:
 
-<div class="code">
-
+```
       count = count + 2;
-
-</div>
+```
 
 This can be abbreviated to:
 
-<div class="code">
-
+```
       count += 2;
+```
 
-</div>
-
-And so on with similar operators like <span class="code">-= \*=</span>
-and <span class="code">/=</span>. Because adding or subtracting 1 from a
+And so on with similar operators like `-= \*=`
+and `/=`. Because adding or subtracting 1 from a
 number is so common, this can be abbreviated even further:
 
-<div class="code">
-
+```
       
       count++; // equivalent to count += 1;
       count--; // equivalent to count -= 1;  
       ++count; // equivalent to count += 1;
       --count; // equivalent to count -= 1;
+```
 
-</div>
-
-The difference between <span class="code">++count</span> and
-<span class="code">count++</span> is simply the point at which the
-incrementing of <span class="code">count</span> occurs. This can be
+The difference between `++count` and
+`count++` is simply the point at which the
+incrementing of `count` occurs. This can be
 illustrated briefly like this:
 
-<div class="code">
-
+```
       count = 0;
       a = count++; // a is now 0 and count is now 1, because count is incremented after its value is assigned to a
       b = ++count; // b and count are now both 2, because count is incremented before its value is assigned to b
-
-</div>
+```
 
 ### Method and Function Calls
 
 As we have seen, an expression by itself can constitute a perfectly
 valid statement. Often it would be a pointless statement; the expression
-<span class="code">count + 1;</span> is valid as a statement, but it
+`count + 1;` is valid as a statement, but it
 doesn't actually do anything (in particular, it doesn't increase the
 value of count by 1). But expressions that consist of method or function
 calls are often useful as statements, because of their so-called
@@ -425,12 +395,10 @@ side-effects. "Side-effect" is actually a slightly odd term here,
 because what we mean is what the method or function actually does.
 Examples we have actually seen include:
 
-<div class="code">
-
+```
       finishGameMsg(ftVictory, [finishOptionUndo]); // ends the game
       bird.moveInto(nest); // moves the bird into the nest
-
-</div>
+```
 
 As you come to write more TADS 3 code (whether in adv3Lite or adv3)
 you'll probably find yourself using this kind of statement a lot.
@@ -445,9 +413,9 @@ that's every bit as important when writing Interactive Fiction as it is
 for other kinds of application.
 
 One of the most common — and most important — statements is the
-<span class="code">if</span> statement. We have already met it (in the
-<span class="code">afterAction()</span> method of the
-<span class="code">branch</span> object) in the form:
+`if` statement. We have already met it (in the
+`afterAction()` method of the
+`branch` object) in the form:
 
 <div class="syntax">
 
@@ -462,8 +430,7 @@ that typically evaluates to either true or nil and
 block (enclosed by opening and closing braces) containing multiple
 statements. For example:
 
-<div class="code">
-
+```
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -477,10 +444,9 @@ statements. For example:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
+```
 
-</div>
-
-There's also a second form of the <span class="code">if</span> statement
+There's also a second form of the `if` statement
 that looks like this:
 
 <div class="syntax">
@@ -497,14 +463,13 @@ In this form of the if statement, both
 <span class="synPar">elsePart</span> may be either a single statement or
 a block of statements. If
 <span class="synPar">conditionExpression</span> evaluates to anything
-but <span class="code">nil</span> or <span class="code">0</span>, then
+but `nil` or `0`, then
 <span class="synPar">thenPart</span> is executed, but if
 <span class="synPar">conditionExpression</span> does evaluate to either
-<span class="code">nil</span> or <span class="code">0</span> then
+`nil` or `0` then
 <span class="synPar">elsePart</span> is executed. For example;
 
-<div class="code">
-
+```
      if(obj.weight &gt; 50)
      {
         "You can't budge it. ";
@@ -515,8 +480,7 @@ but <span class="code">nil</span> or <span class="code">0</span>, then
         "You push &lt;<obj.theName>&gt; over the edge, and it tumbles away out of sight. ";
      }
      
-
-&lt;/div&gt;
+```
 
 In this example, if obj had a weight of 51, say, then the player would
 see the "You can't budge it" message, but if it had a weight of 50, obj
@@ -524,7 +488,7 @@ would be moved into the crevasse and the player would see the message
 about it tumbling out of sight.
 
 Another common flow-control statement is the
-<span class="code">return</span> statement, which terminates the
+`return` statement, which terminates the
 execution of a function or method. This has two forms:
 
      return;
@@ -535,8 +499,7 @@ The first form simply terminates the function or method. The second
 terminates it and returns the value of
 <span class="synPar">expression</span> to the caller. For example:
 
-<div class="code">
-
+```
      
      absolute(x)
      {
@@ -563,17 +526,16 @@ terminates it and returns the value of
        a = absolute(-40) // a is now 40
        a = sayDivide(a, 20) // a is now nil
      
-
-&lt;/div&gt;
+```
 
 In the second case, although the player would see the message "40
 divided by 20 is 2", since the function returns no value,
-<span class="code">a</span> will end up as
-<span class="code">nil</span>.
+`a` will end up as
+`nil`.
 
 The third common type of flow-control statement is the loop statement,
 of which TADS 3 provides several. The most versatile (and hence common)
-of these is the <span class="code">for </span>statement, which can take
+of these is the `for `statement, which can take
 several forms:
 
 <div class="syntax">
@@ -594,17 +556,15 @@ expression, or a list of local variable declarations, or a mix of both:
 
 An example of this kind of for loop would be:
 
-<div class="code">
-
+```
       local count = 0;
       for(local i = 1; i &lt;= 10; i++)
          count += i;  
      
-
-</div>
+```
 
 This would sum the numbers from 1 to 10 and store the total (55) in
-<span class="code">count</span>.
+`count`.
 
 The second form of the for loop is:
 
@@ -621,13 +581,11 @@ For example, to calculate the total bulk of the items carried by Heidi
 (perhaps in a game where we didn't restrict her carrying capacity quite
 so much) we might use:
 
-<div class="code">
-
+```
     local totalBulk = 0;
     for(local item in heidi.contents)
        totalBulk += item.bulk;
-
-</div>
+```
 
 The third form of the for loop is:
 
@@ -640,32 +598,28 @@ The third form of the for loop is:
 
 Where *fromExpr*, *toExpr*, and the optional *stepExpr* are expressions
 that evaluate to integer values. If there's no
-<span class="code">step</span> clause, the default step value is 1. With
+`step` clause, the default step value is 1. With
 this form of the loop the first example (summing the numbers from 1 to
 10) could have been written as:
 
-<div class="code">
-
+```
     local count = 0;
     for(local i in 1..10)
       count += i;
      
-
-</div>
+```
 
 As an added bonus, we can combine these different forms of for loop into
 a single statement. For example, the following could be used to display
 an enumerated list of Heidi's possessions:
 
-<div class="code">
-
+```
     "Heidi is holding:\n";
 
     for(local item in heidi.contents, local i = 1 ;; i++)
        "&lt;<i>&gt;. &lt;<item.aName>&gt;\n";
      
-
-&lt;/div&gt;
+```
 
 These are not the only kind of loop (and other flow-control) statements
 that TADS 3 provides, but they are the ones that are most commonly used.
@@ -679,53 +633,43 @@ statement. This is simply an instruction to display some text to the
 player, and takes the form of placing the text between double quote
 marks, and ending the statement with a semicolon:
 
-<div class="code">
-
+```
      
     "This text will be displayed to the player. ";
-
-</div>
+```
 
 The same result can be achieved via a function call:
 
-<div class="code">
-
+```
     say('This text will be displayed to the player. ');
-
-</div>
+```
 
 But the double-quoted string statement form is often more convenient.
 Note that in this statement the text to be displayed can contain
 embedded expressions, that is expressions enclosed in double
 angle-brackets \&lt;\&lt;\&gt;\&gt;. So for example we could write:
 
-<div class="code">
-
+```
     "Heidi is carrying &lt;<heidi.contents.length>&gt; things right now. ";
-
-&lt;/div&gt;
+```
 
 The above example won't read too well if Heidi is carrying just one
 thing, and may not be ideal if she is completely empty handed, but we
 can also use embedded expressions to change what's displayed according
 to various conditions, for example:
 
-<div class="code">
-
+```
     local numItems = heidi.contents.length;
     "Heidi is &lt;&lt;if numItems == 0&gt;&gt; empty-handed&lt;&lt;else if numItems == 1&gt;&gt;carrying just one thing&lt;<else>&gt; carrying &lt;<numItems>&gt; things&lt;<end>&gt;. ";
-
-&lt;/div&gt;
+```
 
 Embedded expressions can also be used to vary what's displayed either
 randomly or sequentially, for example:
 
-<div class="code">
-
+```
     "Heidi is very&lt;<one of="">&gt;sad &lt;<or>&gt;happy &lt;<or>&gt;energetic &lt;<or>&gt;tired &lt;<shuffled>&gt; today. ";
     "Heidi is very&lt;<one of="">&gt;sad &lt;<or>&gt;happy &lt;<or>&gt;energetic &lt;<or>&gt;tired &lt;<stopping>&gt; today. "
-
-&lt;/div&gt;
+```
 
 The first statement will run through 'sad', 'happy', 'energetic' and
 'tired' in random order, then shuffle the order and repeat through again
@@ -769,7 +713,7 @@ Containment</a>    
 Modification and Overriding</a>     </span>
 
 </div>
-</stopping></or></or></or></one></shuffled></or></or></or></one></div></end></numItems></else></div></heidi.contents.length></div></item.aName></i></div></y></x></div></obj.theName></div></y></x></q></name></div></div>
+</stopping></or></or></or></one></shuffled></or></or></or></one></end></numItems></else></heidi.contents.length></item.aName></i></y></x></obj.theName></y></x></q></name></div>
 
 </main>
 <footer>

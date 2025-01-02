@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # TemporaryFile
 
@@ -128,7 +128,7 @@ around to it.
 
 This method has no arguments and no return value.
 
-</div>
+
 
 <span id="getFilename" <="" a=""></span>
 

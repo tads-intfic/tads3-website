@@ -17,7 +17,7 @@ Codes</a>    
 
 </div>
 
-<div class="main">
+
 
 # Part IV: The Intrinsics
 
@@ -81,7 +81,7 @@ might be justified.
 [Vector](vector.html)  
 [WeakRefLookupTable](wlookup.html)  
 
-</div>
+
 
 </div>
 

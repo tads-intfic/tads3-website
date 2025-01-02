@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](furtherprogramming.html)
@@ -47,4 +47,4 @@ target="_top">http://www.firthworks.com/roger/editors/index.html</a>.
 *[\[Previous\]](furtherprogramming.html)
   [\[Next\]](averysimplegame.html)*
 
-</div>
+

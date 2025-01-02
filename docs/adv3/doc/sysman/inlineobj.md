@@ -19,7 +19,7 @@ Overloading</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Inline Objects
 
@@ -242,7 +242,7 @@ problem, since you can specify whatever arguments are required for the
 base class constructor in the `inherited()`
 call.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

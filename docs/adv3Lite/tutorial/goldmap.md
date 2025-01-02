@@ -19,7 +19,7 @@ map
 
 </div>
 
-<div class="main">
+
 
 # Laying out the map
 
@@ -149,7 +149,7 @@ about it. In the next section we'll make a few more things happen, but
 for now it's probably worth trying out what you've got so far just to
 make sure it all works.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

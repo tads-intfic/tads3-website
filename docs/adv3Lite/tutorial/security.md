@@ -19,7 +19,7 @@ Room</a>    
 
 </div>
 
-<div class="main">
+
 
 # The Security Area
 
@@ -718,7 +718,7 @@ computer then looks like this:
 You might once again like to compile and run the game to ensure that all
 works as expected.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

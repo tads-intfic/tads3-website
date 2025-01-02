@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](messages.html)   [\[Next\]](settingthescene.html)*
@@ -352,4 +352,4 @@ Instead of:
 [\[Main\]](index.html)  
 *[\[Previous\]](messages.html)   [\[Next\]](settingthescene.html)*
 
-</div>
+

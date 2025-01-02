@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # String Literals
 
@@ -1528,7 +1528,7 @@ special meaning in a future version. The compiler doesn't complain about
 unknown \\ combinations, and simply leaves the entire sequence
 (including the \\ intact in the string.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

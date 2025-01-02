@@ -17,7 +17,7 @@ Character</a>    
 
 </div>
 
-<div class="main">
+
 
 # Part VI: Final Moves
 
@@ -36,7 +36,7 @@ This part deals with a few miscellaneous topics and wraps up the manual.
 [Change Log](changelog.html)  
 [Index](manual_idx.html)  
 
-</div>
+
 
 </div>
 

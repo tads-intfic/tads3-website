@@ -17,7 +17,7 @@ Room Parts
 
 </div>
 
-<div class="main">
+
 
 # Room Parts
 
@@ -117,7 +117,7 @@ then the link with the west wall is automatically broken (moving the
 portrait with actionMoveInto() automatically resets its roomPart
 property to nil).
 
-</div>
+
 
 ------------------------------------------------------------------------
 

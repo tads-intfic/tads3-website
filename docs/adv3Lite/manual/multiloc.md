@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # MultiLocs
 
@@ -284,7 +284,7 @@ other and don't try to use both. If you define both
 whatever you put in `locationList` will simply
 be ignored.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -19,7 +19,7 @@ Preconditions</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # How to Create Verbs
 
@@ -570,7 +570,7 @@ actions involve this pattern of moving one object in relation to another
 using a third object, and this pattern frequently lends itself to
 decomposition along these same lines.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

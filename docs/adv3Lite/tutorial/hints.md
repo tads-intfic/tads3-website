@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Hints
 
@@ -264,6 +264,6 @@ reader.
     <a href="whatmore.html" class="nav"><em>Next:</em> What More?</a>    
 </span>
 
-</div>
+
 
 </div>

@@ -18,7 +18,7 @@ Conversational Topics</a>    
 
 </div>
 
-<div class="main">
+
 
 # Special Topics
 
@@ -319,7 +319,7 @@ the following exchange as an example:
     >EXMINE DESK
     Fred does not respond.
 
-</div>
+
 
 Here the player probably meant to type EXAMINE DESK, but if the parser
 interprets it as an implicit SAY when the player characater is in

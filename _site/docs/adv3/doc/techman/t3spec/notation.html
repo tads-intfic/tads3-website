@@ -38,67 +38,62 @@ Notation and Conventions
 
 </div>
 
-<div class="main">
+<p><img src="t3logo.gif" alt="" /></p>
 
-![](t3logo.gif)
+<h2 id="notation-and-conventions">Notation and Conventions</h2>
 
-  
-  
-
-## Notation and Conventions
-
-**Specification vs. Implementation:** This document is meant as a
+<p><strong>Specification vs. Implementation:</strong> This document is meant as a
 functional specification for the T3 VM, but also contains numerous
 details of the reference implementation. The inclusion of these
 implementation details is not meant to imply that every implementation
 must use the same internal architecture, but is meant to clarify the
-specification.
+specification.</p>
 
-**Image File, Load Image, Program Image:** These terms refer to a file
+<p><strong>Image File, Load Image, Program Image:</strong> These terms refer to a file
 that contains a program that the VM can load and run. (Despite the
 terminology, no pictures or graphics are involved. We call the file an
-"image" because it contains a snapshot of memory for the initial state
-of the program; the file contains other information as well, so it's not
+“image” because it contains a snapshot of memory for the initial state
+of the program; the file contains other information as well, so it’s not
 truly a loadable image in the sense that it could be copied
-byte-for-byte into memory for execution.)
+byte-for-byte into memory for execution.)</p>
 
-**User Code, Byte Code:** These terms are used to refer to code written
+<p><strong>User Code, Byte Code:</strong> These terms are used to refer to code written
 in the VM instruction set and loaded from a program image file. The
 actual source code to this byte code may be prepared in any language for
-which a compiler that targets the T3 VM exists.
+which a compiler that targets the T3 VM exists.</p>
 
-**C Code, Native Code:** These terms are used to refer to the
+<p><strong>C Code, Native Code:</strong> These terms are used to refer to the
 fully-compiled code that comprises the interpreter. These terms are used
 interchangeably, and may actually refer to code written in C, C++,
 assembler, or sometimes even another language; however, whatever the
-source language, such code is compiled to machine ("native") code on
+source language, such code is compiled to machine (“native”) code on
 each platform where the interpreter runs, and hence the original source
-language is essentially irrelevant.
+language is essentially irrelevant.</p>
 
-**Host Application Environment:** The T3 VM is not a stand-alone system;
+<p><strong>Host Application Environment:</strong> The T3 VM is not a stand-alone system;
 instead, it is meant to be embedded in an application. Because of this,
 the VM does not provide a complete operating environment; for example,
 it does not provide any built-in mechanisms for performing input/output
 or interacting with a user. What the VM does specify is a set of
 interfaces that the containing application provides; the VM provides the
 user code with access to the operating environment through these
-interfaces.
+interfaces.</p>
 
-**Objects and TADS Objects:** The T3 VM has two types of "objects": a
+<p><strong>Objects and TADS Objects:</strong> The T3 VM has two types of “objects”: a
 generic internal object type, which is the basic unit of memory
-management in the VM; and the "TADS object," which is a particular class
+management in the VM; and the “TADS object,” which is a particular class
 of the generic internal object which implements inheritance and a
 property/value mechanism. We refer to instances of this subclass as
-"TADS objects" because this subclass directly implements the
+“TADS objects” because this subclass directly implements the
 functionality exposed through the object and class construct in the TADS
-language.
+language.</p>
 
 <div class="t3spec_version">
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

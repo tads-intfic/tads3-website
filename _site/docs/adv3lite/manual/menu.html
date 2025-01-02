@@ -36,41 +36,37 @@
 
 </div>
 
-<div class="main">
+<h1 id="menus">Menus</h1>
 
-# Menus
-
-The menusys.t module (which requires the menucon.t module) provides a
+<p>The menusys.t module (which requires the menucon.t module) provides a
 way of displaying menus from which the player can make choices. It is
-identical to the adv3 module of the same name. If your game doesn't need
+identical to the adv3 module of the same name. If your game doesn’t need
 any menus you can excluse menusys.t from your build, but you will need
-to include it if your game includes [hints.](hint.t)
+to include it if your game includes <a href="hint.t">hints.</a></p>
 
-Menus consist of **MenuItems**, **MenuTopicItems**, and
-**MenuLongTopicItems**.
+<p>Menus consist of <strong>MenuItems</strong>, <strong>MenuTopicItems</strong>, and
+<strong>MenuLongTopicItems</strong>.</p>
 
-**MenuItems** are the menu (and sub-menu) items that the player will
-select. Their **title** attribute is what will be shown in the menu, and
-the **heading** attribute is shown as the heading while the menu itself
-is active; by default, the heading simply uses the title.
+<p><strong>MenuItems</strong> are the menu (and sub-menu) items that the player will
+select. Their <strong>title</strong> attribute is what will be shown in the menu, and
+the <strong>heading</strong> attribute is shown as the heading while the menu itself
+is active; by default, the heading simply uses the title.</p>
 
-**MenuTopicItems** are for lists of topic strings that the player will
-be shown, like hints. **title** is what will be shown in the menu;
-**menuContents** is a list of either strings to be displayed, one at a
-time, or objects which each must return a string via a "menuContents"
-method.
+<p><strong>MenuTopicItems</strong> are for lists of topic strings that the player will
+be shown, like hints. <strong>title</strong> is what will be shown in the menu;
+<strong>menuContents</strong> is a list of either strings to be displayed, one at a
+time, or objects which each must return a string via a “menuContents”
+method.</p>
 
-**MenuLongTopicItems** are for longer discourses. **title** is what will
-be shown in the menu; **menuContents** is either a string to be printed
-or a routine to be called.
+<p><strong>MenuLongTopicItems</strong> are for longer discourses. <strong>title</strong> is what will
+be shown in the menu; <strong>menuContents</strong> is either a string to be printed
+or a routine to be called.</p>
 
-advLite.h contains templates for MenuItems, for your convenience.
+<p>advLite.h contains templates for MenuItems, for your convenience.</p>
 
-A simple example menu:
+<p>A simple example menu:</p>
 
-<div class="code">
-
-       FirstMenu: MenuItem 'Test menu';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       FirstMenu: MenuItem 'Test menu';
        + MenuItem 'Pets';
        ++ MenuItem 'Chinchillas';
        +++ MenuTopicItem 'About them'
@@ -87,31 +83,28 @@ A simple example menu:
        +++ MenuTopicItem 'Benefits'
          menuContents = ['They, uh, well...', 'Okay, I can\'t think of any.'];
      
+</code></pre></div></div>
 
-</div>
-
-To display the menu in the first place, call its **display()** method.
+<p>To display the menu in the first place, call its <strong>display()</strong> method.
 For example, to display the menu in the above example you would use the
-statement <span class="code">FirstMenu.display()</span>.
+statement <code class="language-plaintext highlighter-rouge">FirstMenu.display()</code>.</p>
 
-Note that some interpreters (e.g. text-only interpreters) cannot cope
+<p>Note that some interpreters (e.g. text-only interpreters) cannot cope
 with a menu that shows more than nine items at a time, so you may want
 to arrange your menus accordingly (for example, by dividing them up
 between sub-menus if the player might need to choose between more than
-nine items).
+nine items).</p>
 
-You might typically use a menu to give your players information about
+<p>You might typically use a menu to give your players information about
 your game at the beginning (in response to an ABOUT command, say), and
 maybe to show some options at the end (in response to an AMUSING
 command, say). To construct an ABOUT menu you would typically use a
 MenuItem for the top-level aboutMenu, with a number of
 MenuLongTopicItems to describe various aspects of your game; if you have
 a lot to say you might need to use another level of MenuItems to divide
-your information into sub-menus, e.g.:
+your information into sub-menus, e.g.:</p>
 
-<div class="code">
-
-       aboutMenu: MenuItem 'About';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       aboutMenu: MenuItem 'About';
        + MenuItem 'About Adventure';
        
        ++ MenuLongTopicItem 'About the Game'
@@ -134,13 +127,10 @@ your information into sub-menus, e.g.:
            menuContents = 'TADS games use a modified version of the ASK/TELL system...'
        ;
      
+</code></pre></div></div>
 
-</div>
-
-You could then call <span class="code">aboutMenu.display();</span> in
-the versionInfo.showAbout() method.
-
-</div>
+<p>You could then call <code class="language-plaintext highlighter-rouge">aboutMenu.display();</code> in
+the versionInfo.showAbout() method.</p>
 
 <hr />
 

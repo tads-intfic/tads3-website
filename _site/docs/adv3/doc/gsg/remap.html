@@ -27,17 +27,15 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="precond.html">[Previous]</a>   <a href="messages.html">[Next]</a></em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](precond.html)   [\[Next\]](messages.html)*
+<h3 id="remap">Remap</h3>
 
-### Remap
-
-We have already encountered remapping via the remapTo macro; it's used
+<p>We have already encountered remapping via the remapTo macro; it’s used
 when we want to remap a command on one object to a different command
 involving the same or maybe different objects (or even no objects at
-all). So, for example, on the tree object we earlier defined:
+all). So, for example, on the tree object we earlier defined:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -81,13 +79,24 @@ all). So, for example, on the tree object we earlier defined:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-What such code actually does is to make the appropriate remap property
+<p>What such code actually does is to make the appropriate remap property
 return a list containing the action followed by the objects involved in
-the action; the example above is in fact equivalent to:  
+the action; the example above is in fact equivalent to:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -131,11 +140,22 @@ the action; the example above is in fact equivalent to:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-A more complicated example was the cottage, where we defined:  
+<p>A more complicated example was the cottage, where we defined:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -179,11 +199,22 @@ A more complicated example was the cottage, where we defined:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-which is equivalent to:  
+<p>which is equivalent to:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -227,11 +258,22 @@ which is equivalent to:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Mostly, you can use the remapTo macro without worrying about the
+<p>Mostly, you can use the remapTo macro without worrying about the
 underlying code the compiler actually sees, but there are a couple of
 cases where understanding the underlying code can be important. The
 first thing to realize is that if there is a remap in operation (that is
@@ -242,31 +284,33 @@ and action for some verb on some object, but find that the object is
 doing something quite different from what you defined. The reason may
 very well be that your object has inherited a remap from one of its
 superclasses, and that this remap is taking precedence over your
-customizations of the other methods.  
-  
-For example, the library Room class remaps LookIn to Examine. Normally
+customizations of the other methods.</p>
+
+<p>For example, the library Room class remaps LookIn to Examine. Normally
 this is a perfectly sensible interpretation, but you might decided
-that's not what you want in your game. For example, you might feel that
-a player who typed **search room** or **look in room** is just being
+that’s not what you want in your game. For example, you might feel that
+a player who typed <strong>search room</strong> or <strong>look in room</strong> is just being
 lazy, and should be instructed to concentrate on the objects within the
-room instead. So you might write:  
+room instead. So you might write:</p>
 
-    modify Room  dobjFor(LookIn)  {    verify()    {     illogical('Try examining some of the objects in the room instead. ');    }  };
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify Room  dobjFor(LookIn)  {    verify()    {     illogical('Try examining some of the objects in the room instead. ');    }  };
+</code></pre></div></div>
 
-But you'd find that this didn't actually change anything; **look in
-room** and **search room** would still result in the room being
-examined, since the remap would still be in action. What you'd actually
-need to do is to reset the remap to nil:  
+<p>But you’d find that this didn’t actually change anything; <strong>look in
+room</strong> and <strong>search room</strong> would still result in the room being
+examined, since the remap would still be in action. What you’d actually
+need to do is to reset the remap to nil:</p>
 
-    modify Room  dobjFor(LookIn)  {    remap = nil    verify()    {     illogical('Try examining some of the objects in the room instead. ');    }  };
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify Room  dobjFor(LookIn)  {    remap = nil    verify()    {     illogical('Try examining some of the objects in the room instead. ');    }  };
+</code></pre></div></div>
 
-The second area where it can be useful to know how the underlying code
+<p>The second area where it can be useful to know how the underlying code
 works is with conditional remapping. The library defines a macro called
 maybeRemapTo(), which only remaps if a certain condition holds (that is,
 if its first parameter is true). For example, if you had a gate object,
-and you wanted **push gate** to be treated as **close gate** when the
+and you wanted <strong>push gate</strong> to be treated as <strong>close gate</strong> when the
 gate was open, but in the normal way when the gate was closed, you could
-define:  
+define:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -282,17 +326,26 @@ define:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-gate: Door 'gate'  'gate'  
-  dobjFor(Push) maybeRemapTo(isOpen, Close, self)  
-;  
+<p>gate: Door ’gate’  ’gate’<br />
+  dobjFor(Push) maybeRemapTo(isOpen, Close, self)<br />
+;</p>
 
-The underlying code here is in fact:   
-
-</div>
+<p>The underlying code here is in fact: </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>

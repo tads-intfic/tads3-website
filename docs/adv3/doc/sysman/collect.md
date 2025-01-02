@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Collection
 
@@ -57,7 +57,7 @@ changes to the contents of the collection after calling
 refer to a consistent, frozen snapshot of the collection as it was when
 the Iterator was created.
 
-</div>
+
 
 `createLiveIterator()`
 

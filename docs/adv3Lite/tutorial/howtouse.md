@@ -19,7 +19,7 @@ and Explanations</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # How to Use This Book
 
@@ -132,7 +132,7 @@ if you are a relative newcomer to IF and you're just starting out with
 adv3Lite, I would urge you to follow the advice just given if you want
 to get the most out of this book.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

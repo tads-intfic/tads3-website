@@ -18,7 +18,7 @@ Entries
 
 </div>
 
-<div class="main">
+
 
 # Topic Entries
 
@@ -174,6 +174,6 @@ Entries
     <a href="thought.html" class="nav"><em>Next:</em> Thoughts</a>    
 </span>
 
-</div>
+
 
 </div>

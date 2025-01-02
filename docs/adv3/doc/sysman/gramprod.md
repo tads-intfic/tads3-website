@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # GrammarProd
 
@@ -118,7 +118,7 @@ ordinary object or class definition, but with a few added elements:
       propsAndMethods
     ;
 
-</div>
+
 
 The optional *tag* is a symbol or number token enclosed in parentheses.
 This isn't required - but if it's present, it provides a way to

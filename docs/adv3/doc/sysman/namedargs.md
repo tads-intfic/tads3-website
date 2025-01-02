@@ -18,7 +18,7 @@ Handling</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 Named Arguments
 
@@ -829,7 +829,7 @@ cases be a net performance improvement:
   that's accessed 90% of the time will be faster as a regular argument,
   and that the big gray area in between "depends".
 
-</div>
+
 
 ------------------------------------------------------------------------
 

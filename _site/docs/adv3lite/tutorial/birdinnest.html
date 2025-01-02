@@ -39,23 +39,19 @@ the tree</a>    
 
 </div>
 
-<div class="main">
+<h1 id="is-the-bird-in-the-nest">Is the bird in the nest?</h1>
 
-# Is the bird in the nest?
-
-Despite all we have done so far in this chapter, the game still has one
+<p>Despite all we have done so far in this chapter, the game still has one
 rather obvious flaw: the intention is that the game should be won when
 Heidi restores both bird and nest to the branch with the bird in the
-nest, but if you try it as it is you'll see that all she has to do to
+nest, but if you try it as it is you’ll see that all she has to do to
 win the game is to put the nest on the branch; as things stands she can
-ignore the poor little bird altogether!
+ignore the poor little bird altogether!</p>
 
-Fortunately this is very easy to fix. All we need to do is to check that
-the nest is on the branch *and* that the bird is in the nest:
+<p>Fortunately this is very easy to fix. All we need to do is to check that
+the nest is on the branch <em>and</em> that the bird is in the nest:</p>
 
-<div class="code">
-
-    + branch: Thing 'wide firm bough; flat; branch'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
         iFixed = true
@@ -68,96 +64,87 @@ the nest is on the branch *and* that the bird is in the nest:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
+</code></pre></div></div>
 
-</div>
-
-We use the <span class="code">isIn()</span> method here to test for
-containment: <span class="code">obj1.isIn(obj2)</span> is true if obj1
+<p>We use the <code class="language-plaintext highlighter-rouge">isIn()</code> method here to test for
+containment: <code class="language-plaintext highlighter-rouge">obj1.isIn(obj2)</code> is true if obj1
 is either directly or indirectly contained in obj2. If you want to test
 for direct containment you could use
-<span class="code">isDirectlyIn()</span>, and that would have worked
-here, but it isn't actually needed.
+<code class="language-plaintext highlighter-rouge">isDirectlyIn()</code>, and that would have worked
+here, but it isn’t actually needed.</p>
 
-Perhaps of more significance is the use of <span class="code">&amp;&amp;</span>
-to join two conditions. The <span class="code">&amp;&amp;</span> operator is the
-TADS 3 way of joining two expressions together with a logical *and*. The
-compound expression <span class="code">expression1 &amp;&amp; expression2</span>
-is true if and only if *expression1* and *expression2* are both true,
+<p>Perhaps of more significance is the use of <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>
+to join two conditions. The <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> operator is the
+TADS 3 way of joining two expressions together with a logical <em>and</em>. The
+compound expression <code class="language-plaintext highlighter-rouge">expression1 &amp;&amp; expression2</code>
+is true if and only if <em>expression1</em> and <em>expression2</em> are both true,
 otherwise it is nil (i.e. false). Note that either or both of
-*expression1* and *expression2* can themselves be compound expressions,
+<em>expression1</em> and <em>expression2</em> can themselves be compound expressions,
 but if they are, it is normally as well to surround them with
 parentheses to make your meaning clear both to the compiler and
-yourself.
+yourself.</p>
 
-Remember that TADS 3 considers a value of 0 or nil to be false and
+<p>Remember that TADS 3 considers a value of 0 or nil to be false and
 anything else to be true. The value of the expression
-<span class="code">2 &amp;&amp; 4 </span>is therefore true, while the value of
-the expression <span class="code">bird &amp;&amp; nil</span> is nil.
+<code class="language-plaintext highlighter-rouge">2 &amp;&amp; 4 </code>is therefore true, while the value of
+the expression <code class="language-plaintext highlighter-rouge">bird &amp;&amp; nil</code> is nil.</p>
 
-TADS 3 also defines a logical or operator, which looks like this:
-<span class="code">\|\|</span>. The compound expression
-<span class="code">expression1 \|\| expression2</span> is true if either
-*expression1* or *expression2* is true (i.e. neither nil nor 0) and nil
-if both *expression1* and *expression2* are false (i.e. either nil or
-0).
+<p>TADS 3 also defines a logical or operator, which looks like this:
+<code class="language-plaintext highlighter-rouge">\|\|</code>. The compound expression
+<code class="language-plaintext highlighter-rouge">expression1 \|\| expression2</code> is true if either
+<em>expression1</em> or <em>expression2</em> is true (i.e. neither nil nor 0) and nil
+if both <em>expression1</em> and <em>expression2</em> are false (i.e. either nil or
+0).</p>
 
-TADS 3's third logical operator is the logical not, represented by an
-exclamation mark, <span class="code">!</span>. If
-<span class="code">expression</span> is true then
-<span class="code">!expression</span> is nil; if
-<span class="code">expression</span> is nil then
-<span class="code">!expression</span> is true.
+<p>TADS 3’s third logical operator is the logical not, represented by an
+exclamation mark, <code class="language-plaintext highlighter-rouge">!</code>. If
+<code class="language-plaintext highlighter-rouge">expression</code> is true then
+<code class="language-plaintext highlighter-rouge">!expression</code> is nil; if
+<code class="language-plaintext highlighter-rouge">expression</code> is nil then
+<code class="language-plaintext highlighter-rouge">!expression</code> is true.</p>
 
-For example:
+<p>For example:</p>
 
-<div class="code">
-
-    local a = 12, b = 6;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = 12, b = 6;
     (a == b * 2) || (b == 7) // true, because a is twice b
     (a == b * 2) &amp;&amp; (b == 7) // nil, because b is not 7
     (bird || nest) // true because bird is not nil
     'Hampster' &amp;&amp; 'forest' // true because neither string is nil
     (a &gt; b) &amp;&amp;  !bird.ofKind(Thing) // nil because bird does inherit from Thing
+</code></pre></div></div>
 
-</div>
+<p>Finally note that both <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> and
+<code class="language-plaintext highlighter-rouge">\|\|</code> are <em>short-circuit operators</em>. This means
+that in the expression <code class="language-plaintext highlighter-rouge">a &amp;&amp; b</code>,
+<code class="language-plaintext highlighter-rouge">b</code> is never even evaluated if
+<code class="language-plaintext highlighter-rouge">a</code> is nil (or 0) since unless
+<code class="language-plaintext highlighter-rouge">a</code> is true, the compound expression
+<code class="language-plaintext highlighter-rouge">a &amp;&amp; b</code> must be false. Conversely in the
+expression <code class="language-plaintext highlighter-rouge">a \|\| b</code>,
+<code class="language-plaintext highlighter-rouge">b</code> will never be evaluated if
+<code class="language-plaintext highlighter-rouge">a</code> turns out to be true, since if
+<code class="language-plaintext highlighter-rouge">a</code> is true then the entire compound expression
+<code class="language-plaintext highlighter-rouge">a \|\| b</code> must be true. That is why the
+<code class="language-plaintext highlighter-rouge">bird \|\| nest</code> example above was true simply
+because <code class="language-plaintext highlighter-rouge">bird</code> was neither nil nor 0; given that
+<code class="language-plaintext highlighter-rouge">bird</code> is not false, the entire expression must
+be true, regardless of the value of <code class="language-plaintext highlighter-rouge">nest</code>.</p>
 
-Finally note that both <span class="code">&amp;&amp;</span> and
-<span class="code">\|\|</span> are *short-circuit operators*. This means
-that in the expression <span class="code">a &amp;&amp; b</span>,
-<span class="code">b</span> is never even evaluated if
-<span class="code">a</span> is nil (or 0) since unless
-<span class="code">a</span> is true, the compound expression
-<span class="code">a &amp;&amp; b</span> must be false. Conversely in the
-expression <span class="code">a \|\| b</span>,
-<span class="code">b</span> will never be evaluated if
-<span class="code">a</span> turns out to be true, since if
-<span class="code">a</span> is true then the entire compound expression
-<span class="code">a \|\| b</span> must be true. That is why the
-<span class="code">bird \|\| nest</span> example above was true simply
-because <span class="code">bird</span> was neither nil nor 0; given that
-<span class="code">bird</span> is not false, the entire expression must
-be true, regardless of the value of <span class="code">nest</span>.
+<p>Besides saving time, this short-circuit evaluation makes it safe to
+write code like the following, even when <code class="language-plaintext highlighter-rouge">obj</code>
+might sometimes be nil:</p>
 
-Besides saving time, this short-circuit evaluation makes it safe to
-write code like the following, even when <span class="code">obj</span>
-might sometimes be nil:
-
-<div class="code">
-
-    if(obj &amp;&amp; obj.bulk &gt; 4)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if(obj &amp;&amp; obj.bulk &gt; 4)
        say "It's quite a bulky object. ";
+</code></pre></div></div>
 
-</div>
-
-In this example, if <span class="code">obj</span> is nil, the expression
-<span class="code">(obj.bulk \&gt; 4)</span> is never evaluated; we thus
+<p>In this example, if <code class="language-plaintext highlighter-rouge">obj</code> is nil, the expression
+<code class="language-plaintext highlighter-rouge">(obj.bulk \&gt; 4)</code> is never evaluated; we thus
 avoid the run-time error that would otherwise result from trying to
-evaluate a property of nil.
+evaluate a property of nil.</p>
 
-Now try compiling and running the game one last time to check that
-everything still behaves as you expect.
-
-</div>
+<p>Now try compiling and running the game one last time to check that
+everything still behaves as you expect.</p>
 
 <hr />
 

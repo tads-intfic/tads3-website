@@ -17,7 +17,7 @@ Basics
 
 </div>
 
-<div class="main">
+
 
 # Chapter 4: Reviewing the Basics
 
@@ -34,7 +34,7 @@ review some of these features in a slightly more organized fashion.
 [Inheritance, Modification and Overriding](inherit.html)  
 [Things in Quotes](quotes.html)  
 
-</div>
+
 
 </div>
 

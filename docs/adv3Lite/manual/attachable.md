@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Attachables
 
@@ -260,7 +260,7 @@ class and define its **needsExplicitSocket** property as nil, e.g.:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

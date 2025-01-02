@@ -18,7 +18,7 @@ Function Set
 
 </div>
 
-<div class="main">
+
 
 # tads-net Function Set
 
@@ -61,7 +61,7 @@ HTTPServer object and call this function as soon as possible after your
 program starts, since some clients might abort the connection attempt if
 they don't get any information back within a timeout limit.
 
-</div>
+
 
 <span id="getHostName"></span>
 

@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Topic Groups
 
@@ -74,7 +74,7 @@ been revealed. It also boosts their matchScore by 10 (which might help
 ensure, for example, that the QueryTopic is reached in preference to
 another when the player types a partial query like WHERE HEAR).
 
-</div>
+
 
 ------------------------------------------------------------------------
 

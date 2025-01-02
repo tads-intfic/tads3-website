@@ -19,7 +19,7 @@ Conventions
 
 </div>
 
-<div class="main">
+
 
 # Typographical Conventions
 
@@ -43,7 +43,7 @@ Example command lines are shown like this:
 
     copy c:\*.* d:\backup
 
-</div>
+
 
 When you see something like this, it's an example of something you'd
 type exactly as shown into your computer's command shell, or into some

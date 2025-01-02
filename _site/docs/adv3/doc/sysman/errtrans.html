@@ -39,114 +39,109 @@ Character-Mapping File</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="translating-error-messages">Translating Error Messages</h1>
 
-# Translating Error Messages
-
-The TADS 3 Compiler and Interpreter can display system error messages in
+<p>The TADS 3 Compiler and Interpreter can display system error messages in
 any language. By default, the programs use English messages, but this
-can be changed.
+can be changed.</p>
 
-The compiler and interpreter use external message files to provide
+<p>The compiler and interpreter use external message files to provide
 non-English messages. (The English messages are built in to the
 programs, so no external message file is required for the English
 messages. This ensures that a set of messages is always available, even
-when an external message file isn't installed.)
+when an external message file isn’t installed.)</p>
 
-To configure the programs to use non-English messages, you must put
+<p>To configure the programs to use non-English messages, you must put
 messages files into the directory containing the compiler and
-interpreter executables. These files always have the same names:
+interpreter executables. These files always have the same names:</p>
 
-Interpreter: T3_VM.msg  
-Compiler: t3make.msg
+<p>Interpreter: T3_VM.msg<br />
+Compiler: t3make.msg</p>
 
-When the interpreter starts running, it looks for a file called
-"T3_VM.msg"; the interpreter looks in the directory containing the
-interpreter's executable file (its "application" file). Similarly, the
-compiler looks for a file called "t3make.msg" in the directory
-containing its executable.
+<p>When the interpreter starts running, it looks for a file called
+“T3_VM.msg”; the interpreter looks in the directory containing the
+interpreter’s executable file (its “application” file). Similarly, the
+compiler looks for a file called “t3make.msg” in the directory
+containing its executable.</p>
 
-If the programs do not find their respective message files, they simply
+<p>If the programs do not find their respective message files, they simply
 use the built-in English messages. The programs do not display any error
 message when there is no external message file, since they assume that
-the user simply wishes to use the built-in English messages.
+the user simply wishes to use the built-in English messages.</p>
 
-## Creating a Message File
+<h2 id="creating-a-message-file">Creating a Message File</h2>
 
-TADS's author is not sufficiently multilingual to create error message
+<p>TADS’s author is not sufficiently multilingual to create error message
 files in all of the languages in which uses might be interested. So,
 instead of attempting to provide translations for the system messages,
 we have provided a tool that translators can use to create localized
-messages.
+messages.</p>
 
-To create a translated message file, you start with a message source
+<p>To create a translated message file, you start with a message source
 file, which uses a simple text format, and use a message compiler to
-create a ".msg" file that the TADS programs can load.
+create a “.msg” file that the TADS programs can load.</p>
 
-The format of the message source file is simple. For each message, you
+<p>The format of the message source file is simple. For each message, you
 list the message ID, which is a code number that the system uses
 internally to identify the message; a short message; and a long message.
 The short message is a brief, usually one-sentence version of the
 message, and the long message is a longer explanation. The two versions
 are provided to allow the user to select the level of message detail;
 for example, the compiler by default displays short messages, but the
-"-v" ("verbose") option lets the user select the long messages instead.
+“-v” (“verbose”) option lets the user select the long messages instead.</p>
 
-The message ID and the short message normally go on a single line, but
+<p>The message ID and the short message normally go on a single line, but
 you can put them on separate lines. The long message always starts on
 the next line after the short message, and goes on until the next blank
-line.
+line.</p>
 
-Messages are separated by one or more blank lines. Comments are lines
-starting with two slashes (<span class="code">//</span>), but comments
+<p>Messages are separated by one or more blank lines. Comments are lines
+starting with two slashes (<code class="language-plaintext highlighter-rouge">//</code>), but comments
 cannot appear in the middle of a message, so a comment must always be
-preceded by a blank line (or appear at the start of the file).
+preceded by a blank line (or appear at the start of the file).</p>
 
-Two special directives let you control compilation.
+<p>Two special directives let you control compilation.</p>
 
-The <span class="code">\#charset</span> directive lets you specify the
+<p>The <code class="language-plaintext highlighter-rouge">\#charset</code> directive lets you specify the
 character set that the message file uses. You must provide a
-<span class="code">\#charset</span> directive before the first message,
-because the message compiler must know what character set you're using.
+<code class="language-plaintext highlighter-rouge">\#charset</code> directive before the first message,
+because the message compiler must know what character set you’re using.
 The message file is stored in Unicode format, like everything else in
 TADS 3, so the compiler must know the source file character set in order
-to translate it properly. The line looks like this:
+to translate it properly. The line looks like this:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "cp437"
+</code></pre></div></div>
 
-    #charset "cp437"
-
-</div>
-
-The character set name is in the same format that the compiler and
-interpreter use. For Windows, this is always "cp" followed by the code
+<p>The character set name is in the same format that the compiler and
+interpreter use. For Windows, this is always “cp” followed by the code
 page number. For other platforms, check your release notes for details
-on local conventions.
+on local conventions.</p>
 
-The <span class="code">\#include</span> directive lets you include a
+<p>The <code class="language-plaintext highlighter-rouge">\#include</code> directive lets you include a
 header file. Unlike the TADS compiler itself, you can only include files
 from the main file (included files cannot themselves include other
-files). Furthermore, \#include files have only one purpose: they define
-symbolic message ID's. You should normally include the following file,
-depending on which type of message file you're creating:
+files). Furthermore, #include files have only one purpose: they define
+symbolic message ID’s. You should normally include the following file,
+depending on which type of message file you’re creating:</p>
 
-Interpreter: <span class="code">\#include "vmerrnum.h"</span>  
-Compiler: <span class="code">\#include "tcerrnum.h"</span>
+<p>Interpreter: <code class="language-plaintext highlighter-rouge">\#include "vmerrnum.h"</code><br />
+Compiler: <code class="language-plaintext highlighter-rouge">\#include "tcerrnum.h"</code></p>
 
-## Compiling
+<h2 id="compiling">Compiling</h2>
 
-To compile a message file, you use the t3msgc tool. If you're using a
+<p>To compile a message file, you use the t3msgc tool. If you’re using a
 command-line operating system, you run the t3msgc program with two
-arguments: the first is your source file, and the second is the ".msg"
+arguments: the first is your source file, and the second is the “.msg”
 file you wish to create. For example, suppose you created a source file
-called "vm_deu.txt" with German messages for the interpreter, and you
-wish to compile it to create vm_deu.msg. You'd use a command like this:
+called “vm_deu.txt” with German messages for the interpreter, and you
+wish to compile it to create vm_deu.msg. You’d use a command like this:</p>
 
 <div class="cmdline">
 
     t3msgc vm_deu.txt vm_deu.msg
 
-</div>
+
 
 The compiler has one option: -strict, which displays a warning for every
 defined symbolic message ID that has no message. You can use this option
@@ -172,8 +167,7 @@ Here's an example of a message file. This file only defines two
 messages, so a real message file would obviously be a lot longer, but
 this file has all of the essential elements and will compile properly.
 
-<div class="code">
-
+```
     #charset "cp1252"
     #include "vmerrnum.h"
 
@@ -186,8 +180,7 @@ this file has all of the essential elements and will compile properly.
     This image file has an incompatible method header format.
      This is an older image file version which this interpreter
      does not support.
-
-</div>
+```
 
 The first line specifies the character set, which in this case is
 Windows code page 1252 (the Windows US/Western Europe code page).

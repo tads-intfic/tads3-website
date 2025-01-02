@@ -17,7 +17,7 @@ place</a>    
 
 </div>
 
-<div class="main">
+
 
 # Retrospective
 
@@ -358,7 +358,7 @@ Goldskull with a complete listing of the game as it ended up.
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -19,7 +19,7 @@ Containment</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Object Definitions
 
@@ -519,7 +519,7 @@ probably quite enough for you to take in already. But if you do want a
 succinct summary of what we've just covered plus some more advanced
 information on objects, that's the place to go.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

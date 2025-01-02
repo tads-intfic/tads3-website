@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # String
 
@@ -102,7 +102,7 @@ won't be sorted in the correct linguistic order for a given language.
 Different languages use different collation rules, which usually don't
 match the Unicode character order.
 
-</div>
+
 
 <span id="compareIgnoreCase"></span>
 

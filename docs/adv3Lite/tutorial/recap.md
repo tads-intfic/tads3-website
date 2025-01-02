@@ -19,7 +19,7 @@ Recapitulation
 
 </div>
 
-<div class="main">
+
 
 # Recapitulation
 
@@ -661,7 +661,7 @@ feeling a little uncertain about any of them, now might be a good idea
 for following up the reading suggestions given just above before moving
 on to the new material to be introduced in the next chapter.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -39,29 +39,25 @@ Definitions</a>    
 
 </div>
 
-<div class="main">
+<h1 id="replacing-the-standard-library">Replacing the Standard Library</h1>
 
-# Replacing the Standard Library
-
-The standard startup module that defines \_main(), PreinitObject, and so
-on, is called \_main.t. By default, the compiler includes this in every
+<p>The standard startup module that defines _main(), PreinitObject, and so
+on, is called _main.t. By default, the compiler includes this in every
 build automatically. Most programs will have no reason to modify the
-default versions provided in \_main.t, which is why t3make includes the
+default versions provided in _main.t, which is why t3make includes the
 file in all builds by default. However, if you do need to replace this
 module, you can use the -nodef compiler option to tell the compiler not
-to include this default module. If you do this, you'll minimally need to
-define the \_main() and \_mainRestore() functions yourself.
+to include this default module. If you do this, you’ll minimally need to
+define the _main() and _mainRestore() functions yourself.</p>
 
-Most programs also explicitly include system.tl in their project files.
+<p>Most programs also explicitly include system.tl in their project files.
 This is the full system library, which includes definitions for required
-support classes for the [File](file.html) and [GrammarProd](gramprod.html)
-intrinsic classes, as well as the [Tokenizer](tok.html) class. You can
+support classes for the <a href="file.html">File</a> and <a href="gramprod.html">GrammarProd</a>
+intrinsic classes, as well as the <a href="tok.html">Tokenizer</a> class. You can
 eliminate this module from your build simply by removing system.tl from
-the list of files in your project. If you do this, you'll have to define
+the list of files in your project. If you do this, you’ll have to define
 your own versions of the support classes for File and GrammarProd, if
-you use those classes.
-
-</div>
+you use those classes.</p>
 
 <hr />
 

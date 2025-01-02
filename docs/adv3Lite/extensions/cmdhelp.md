@@ -19,7 +19,7 @@ Command Help
 
 </div>
 
-<div class="main">
+
 
 # Command Help
 
@@ -75,7 +75,7 @@ If the player then enters an empty command, the response will be:
     4. Manipulate something
     5. Talk to someone
 
-</div>
+
 
 Note that Option 5 will only be displayed if there is in fact someone
 available for the player character to talk to.

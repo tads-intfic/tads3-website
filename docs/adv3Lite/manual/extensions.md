@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Extensions
 
@@ -318,7 +318,7 @@ game and control for the weight capacity of actors and other objects in
 much the same way as the standard library handles bulk. For more details
 see the documentation on [weight.t](../extensions/weight.html).
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -18,7 +18,7 @@ Function</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # The Output Formatter
 
@@ -664,7 +664,7 @@ To summarize the differences from TADS 2:
   spacing in the multimedia interpreters, with suitable approximations
   in the text-only interpreters.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

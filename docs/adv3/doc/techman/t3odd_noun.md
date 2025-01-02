@@ -19,7 +19,7 @@ Remapping</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Handling Odd Noun Phrases
 
@@ -400,7 +400,7 @@ game, you can combine the calls to cmdTokenizer.insertRule() into a
 single PreinitObject, if you want. Just list the calls in sequence
 within the execute() method.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

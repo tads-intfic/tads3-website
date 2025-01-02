@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Topics
 
@@ -87,7 +87,7 @@ of the familiar property:
     tNecklace: Topic '() Aunt Maude\'s necklace' @nil;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](lettherebelight.html)   [\[Next\]](goingshopping.html)*
@@ -349,4 +349,4 @@ your boat.
 [\[Main\]](index.html)  
 *[\[Previous\]](lettherebelight.html)   [\[Next\]](goingshopping.html)*
 
-</div>
+

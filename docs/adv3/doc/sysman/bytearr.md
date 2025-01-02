@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # ByteArray
 
@@ -155,7 +155,7 @@ between overlapping regions of the same array, this routine is careful
 to move the bytes without overwriting any source bytes before they've
 been moved.
 
-</div>
+
 
 `digestMD5(*startIndex*?, *length*?)`
 

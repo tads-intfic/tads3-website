@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Menus
 
@@ -116,7 +116,7 @@ your information into sub-menus, e.g.:
 You could then call `aboutMenu.display();` in
 the versionInfo.showAbout() method.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

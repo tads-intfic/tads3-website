@@ -39,24 +39,22 @@ Containment</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="object-definitions">Object Definitions</h1>
 
-# Object Definitions
-
-As we've seen a large part of writing a game in adv3Lite (or indeed in
+<p>As we’ve seen a large part of writing a game in adv3Lite (or indeed in
 TADS 3) consists of defining objects. You will spend such a large
-proportion of your time doing this in your own games that it's worth
-going over the business of defining objects a little more thoroughly.
+proportion of your time doing this in your own games that it’s worth
+going over the business of defining objects a little more thoroughly.</p>
 
-## Physical Objects and Programming Objects
+<h2 id="physical-objects-and-programming-objects">Physical Objects and Programming Objects</h2>
 
-First, we need to bear in mind two different senses of the word
-*object*. First, there's the ordinary, every day sense of *physical
-object*, meaning something like a chair or a table or a rock or a ball
-or a house or a wall or a tree or... well, I'm sure you get the idea.
-Second there's the special sense of programming object, meaning an
-entity in your program that's a container or binder for a related bundle
-of code (i.e. programming instructions) and data. In this section we're
+<p>First, we need to bear in mind two different senses of the word
+<em>object</em>. First, there’s the ordinary, every day sense of <em>physical
+object</em>, meaning something like a chair or a table or a rock or a ball
+or a house or a wall or a tree or… well, I’m sure you get the idea.
+Second there’s the special sense of programming object, meaning an
+entity in your program that’s a container or binder for a related bundle
+of code (i.e. programming instructions) and data. In this section we’re
 concerned with objects in this second sense, but confusion is possible
 since in TADS 3 (as in several other IF languages) objects in this
 second, programming, sense are frequently used to represent objects in
@@ -64,73 +62,68 @@ the first sense, so for example if you have a red handbag in your game
 it might be represented in your adv3Lite code as a programming object
 called redHandbag. That said, you should be aware that in TADS 3
 programming objects are also used for other purposes than representing
-physical objects in your game world.
+physical objects in your game world.</p>
 
-## Objects and Classes
+<h2 id="objects-and-classes">Objects and Classes</h2>
 
-Every object belongs to one or more classes. In TADS 3 class definitions
+<p>Every object belongs to one or more classes. In TADS 3 class definitions
 and object definitions are actually very similar, but they perform
 different functions. An object represents a particular item; a class is
 like a mould or template for producing particular items. For example,
-your dog Fido and your neighbour's dog Rover might be particular
+your dog Fido and your neighbour’s dog Rover might be particular
 instantiations of the Dog class. Rather like the Platonic ideal of a
 Dog, the Dog class exists nowhere in the real world as a physical
 entity, but defines the properties and behaviour that are common to all
 dogs. Particular instantiations of the Dog class, the fido object and
-the rover object, say, can then customize or *override* the definitions
+the rover object, say, can then customize or <em>override</em> the definitions
 on the Dog class, or add additional methods and properties of their own,
 to mark out Fido and Rover as particular dogs with their individual
 differences (as well as the common canine behaviour they inherit from
-the Dog class).
+the Dog class).</p>
 
-Just as objects can belong to classes, so can classes. For example the
+<p>Just as objects can belong to classes, so can classes. For example the
 Labrador class might belong to the Dog class which in turn belongs to
 the Mammal class which in turn belongs to the Animal class. Labrador is
-then said to be a *subclass* of Dog or, more or less equivalently, to
-*inherit* from Dog, while Dog is the *superclass* or *parent class* of
+then said to be a <em>subclass</em> of Dog or, more or less equivalently, to
+<em>inherit</em> from Dog, while Dog is the <em>superclass</em> or <em>parent class</em> of
 Labrador. The inheritance relationship is transitive, so that Labrador
 is also a subclass of Mammal and Animal and inherits (indirectly, via
-Dog) from both.
+Dog) from both.</p>
 
-In TADS 3 all objects ultimately inherit from the
-<span class="code">object</span> class. All objects that represent
+<p>In TADS 3 all objects ultimately inherit from the
+<code class="language-plaintext highlighter-rouge">object</code> class. All objects that represent
 physical objects in your game also inherit from the Thing class (an
 indirect subclass of object), or else from a (direct or indirect)
 subclass of Thing. Every physical location in your game is represented
 by an object of the Room class (or a subclass of Room); the Room class
-is itself a subclass of Thing.
+is itself a subclass of Thing.</p>
 
-TADS 3, and hence adv3Lite, supports *multiple inheritance*, which means
+<p>TADS 3, and hence adv3Lite, supports <em>multiple inheritance</em>, which means
 that an object (or class) can inherit from more than one superclass.
-While you don't have to worry about this just yet, you will be
-encountering such *multiple inheritance* later on in this tutorial, and
-we'll saying a bit more about inheritance in general later in this
-chapter.
+While you don’t have to worry about this just yet, you will be
+encountering such <em>multiple inheritance</em> later on in this tutorial, and
+we’ll saying a bit more about inheritance in general later in this
+chapter.</p>
 
-## Defining Objects
+<h2 id="defining-objects">Defining Objects</h2>
 
-A typical object definition may be divided (for immediate purposes) into
-a *header* and a *body*. The header consists of the object name (that is
+<p>A typical object definition may be divided (for immediate purposes) into
+a <em>header</em> and a <em>body</em>. The header consists of the object name (that is
 the programmatic name of the object, the name by which it is identified
 and referred to in your program code) followed by a colon followed by
 the class to which it belongs, or by a list of the classes to which it
-belong, for example:
+belong, for example:</p>
 
-<div class="code">
-
-    redBall: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
 
     stoneAltar: Surface, Fixture
+</code></pre></div></div>
 
-</div>
-
-The body of the object definition then consists of zero or more property
+<p>The body of the object definition then consists of zero or more property
 definitions plus zero or more method definitions, either terminated by a
-semicolon or enclosed in curly braces. For example:
+semicolon or enclosed in curly braces. For example:</p>
 
-<div class="code">
-
-    redBall: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
        vocab = 'red ball;; round'
        desc = "It's just a round red ball. "
        
@@ -142,14 +135,11 @@ semicolon or enclosed in curly braces. For example:
           bounces = bounces + 1;
        }
     ;
+</code></pre></div></div>
 
-</div>
+<p>Or equivalently:</p>
 
-Or equivalently:
-
-<div class="code">
-
-    redBall: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
     {
        vocab = 'red ball;; round'
        desc = "It's just a round red ball. "
@@ -162,115 +152,101 @@ Or equivalently:
           bounces = bounces + 1;
        }
     }
+</code></pre></div></div>
 
-</div>
+<p>In what follows we shall normally use the first of these forms (with the
+terminating semicolon, rather than the enclosing braces), although we’ll
+eventually encounter a few cases where we have to use the second.</p>
 
-In what follows we shall normally use the first of these forms (with the
-terminating semicolon, rather than the enclosing braces), although we'll
-eventually encounter a few cases where we have to use the second.
-
-In both the examples above, <span class="code">vocab</span>,
-<span class="code">desc</span> and <span class="code">bounces</span> are
-all *properties*, while <span class="code">doBounce()</span> is a
-*method*. A *property* is a member of an object that holds a piece of
+<p>In both the examples above, <code class="language-plaintext highlighter-rouge">vocab</code>,
+<code class="language-plaintext highlighter-rouge">desc</code> and <code class="language-plaintext highlighter-rouge">bounces</code> are
+all <em>properties</em>, while <code class="language-plaintext highlighter-rouge">doBounce()</code> is a
+<em>method</em>. A <em>property</em> is a member of an object that holds a piece of
 data (such as a number, some text, or a reference to another object). As
 in the examples above it is defined using the property name, followed by
 an equals sign, followed by the value of the property (or, at least, the
 initial value of the property when the game begins, since the value of
-properties can change during the course of the game). A *method* is a
-block of code (i.e. a set of instructions) that's executed when the
+properties can change during the course of the game). A <em>method</em> is a
+block of code (i.e. a set of instructions) that’s executed when the
 method in question is invoked (or called — the two mean the same thing).
-We'll go into more detail about methods in a later section of this
-chapter. For now, note that we *don't* use an equals sign after a method
-name when defining (or overriding) a method on an object.
+We’ll go into more detail about methods in a later section of this
+chapter. For now, note that we <em>don’t</em> use an equals sign after a method
+name when defining (or overriding) a method on an object.</p>
 
-There is also a short-form method definition that looks like a property
-definition:
+<p>There is also a short-form method definition that looks like a property
+definition:</p>
 
-        property-name = (expression)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    property-name = (expression)
+</code></pre></div></div>
 
-For example:
+<p>For example:</p>
 
-<div class="code">
-
-        isListed = (!isFixed)    
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        isListed = (!isFixed)    
         
         momentum = (mass * velocity)
+</code></pre></div></div>
 
-</div>
+<p>These definitions are equivalent to:</p>
 
-These definitions are equivalent to:
-
-<div class="code">
-
-     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
       isListed()  { return !isFixed; }
 
       momentum()  { return mass * velocity; }  
+</code></pre></div></div>
 
-</div>
-
-Don't worry if you don't fully understand what these methods mean yet;
+<p>Don’t worry if you don’t fully understand what these methods mean yet;
 that will become clearer when we go into more detail on methods later in
 this chapter. The thing to note for now is simply that this is another
 (and arguably hybrid) way of defining a property that acts like a
-method, or rather a method that looks like a property.
+method, or rather a method that looks like a property.</p>
 
-The only parts of an object definition that are obligatory are the class
+<p>The only parts of an object definition that are obligatory are the class
 list and the terminating semi-colon (or braces). The following is a
 perfectly legal (though almost certainly pointless and useless) object
-definition:
+definition:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Thing;
+</code></pre></div></div>
 
-    Thing;
-
-</div>
-
-This creates an anonymous object of class
-<span class="code">Thing</span> with all the default methods and
-properties of the <span class="code">Thing</span> class and nothing
+<p>This creates an anonymous object of class
+<code class="language-plaintext highlighter-rouge">Thing</code> with all the default methods and
+properties of the <code class="language-plaintext highlighter-rouge">Thing</code> class and nothing
 else. Although this particular example would be completely pointless,
 there are other occasions on which anonymous objects can be useful.
-We'll encounter some of them in due course.
+We’ll encounter some of them in due course.</p>
 
-## Templates
+<h2 id="templates">Templates</h2>
 
-As we saw in the previous chapter, object definitions can be abbreviated
-via use of *templates*. A template is simply a way of allowing you to
+<p>As we saw in the previous chapter, object definitions can be abbreviated
+via use of <em>templates</em>. A template is simply a way of allowing you to
 define certain properties without explicitly naming which properties you
 mean, because the template instructs the compiler to expect certain
 kinds of value in a particular order. The two templates you will
 probably use most frequently when writing games with adv3Lite are those
 for Thing and Room, so these are the two you need to become totally
-familiar with. (Later on we'll be meeting a whole lot of templates for
-use with the conversation system, but we don't need to worry about that
-for now).
+familiar with. (Later on we’ll be meeting a whole lot of templates for
+use with the conversation system, but we don’t need to worry about that
+for now).</p>
 
-The template for the *Thing* class is basically:
+<p>The template for the <em>Thing</em> class is basically:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       'vocab' @location? "desc"?
+</code></pre></div></div>
 
-       'vocab' @location? "desc"?
-
-</div>
-
-The question-mark denotes an optional element. This means that when
-we're defining a Thing and we're using its template, the first property
+<p>The question-mark denotes an optional element. This means that when
+we’re defining a Thing and we’re using its template, the first property
 we must define is its vocab property, simply by supplying a
 single-quoted string. We can then, if we wish, define the starting
 location of the object by using an @ sign directly followed by the
-programmatic name of the Room or other object in which the Thing we're
+programmatic name of the Room or other object in which the Thing we’re
 defining starts out (but we can leave this part of the template out if
 we wish). We can then define the desc property of the Thing by writing
 it between double quote-marks (but we can leave this out too if we
 wish). Thus, using the Thing template we could define the redBall object
 used as an example above in any of the three following (functionally
-equivalent) ways:
+equivalent) ways:</p>
 
-<div class="code">
-
-    redBall: Thing'red ball;; round'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing'red ball;; round'
        "It's just a round red ball. "
        
        bounces = 0
@@ -281,14 +257,11 @@ equivalent) ways:
           bounces = bounces + 1;
        }
     ;
+</code></pre></div></div>
 
-</div>
+<p>Or equivalently:</p>
 
-Or equivalently:
-
-<div class="code">
-
-    redBall: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
     {
        'red ball;; round'
        "It's just a round red ball. "
@@ -301,14 +274,11 @@ Or equivalently:
           bounces = bounces + 1;
        }
     }
+</code></pre></div></div>
 
-</div>
+<p>Or equivalently:</p>
 
-Or equivalently:
-
-<div class="code">
-
-    redBall: Thing 'red ball;; round'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;; round'
      "It's just a round red ball. "
      {
        bounces = 0
@@ -319,96 +289,81 @@ Or equivalently:
           bounces = bounces + 1;
        }
     }
+</code></pre></div></div>
 
-</div>
-
-In other words, if we define an object using the brace notation along
+<p>In other words, if we define an object using the brace notation along
 with a template, we can either put the template properties immediately
 before the opening brace or immediately after it. In what follows,
 however, we shall mainly stick to the first of the three forms above
-(with the terminal semicolon in place of braces).
+(with the terminal semicolon in place of braces).</p>
 
-We've already met the Room template in the form:
+<p>We’ve already met the Room template in the form:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'roomTitle' "desc"?;
+</code></pre></div></div>
 
-    'roomTitle' "desc"?;
+<p>So for example, we can define the starting location of The Adventures of
+Heidi like this:</p>
 
-</div>
-
-So for example, we can define the starting location of The Adventures of
-Heidi like this:
-
-<div class="code">
-
-    beforeCottage: Room 'In front of a Cottage'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 'In front of a Cottage'
         "You stand outside a cottage. The forest stretches east. "
         
         east = forest
     ;
+</code></pre></div></div>
 
-</div>
+<p>Here, ‘In front of a Cottage’ is thus the
+<code class="language-plaintext highlighter-rouge">roomTitle</code> property of beforeCottage, and “You
+stand outside a cottage. The forest stretches east. “ is its desc
+property. There’s also a second form of the Room template which looks
+like this:</p>
 
-Here, 'In front of a Cottage' is thus the
-<span class="code">roomTitle</span> property of beforeCottage, and "You
-stand outside a cottage. The forest stretches east. " is its desc
-property. There's also a second form of the Room template which looks
-like this:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'roomTitle' 'vocab' "desc"?;
+</code></pre></div></div>
 
-<div class="code">
+<p>Which would allow us to define the vocab property of a Room as well, for
+example:</p>
 
-    'roomTitle' 'vocab' "desc"?;
-
-</div>
-
-Which would allow us to define the vocab property of a Room as well, for
-example:
-
-<div class="code">
-
-    beforeCottage: Room 'In front of a Cottage' 'front of the cottage'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeCottage: Room 'In front of a Cottage' 'front of the cottage'
         "You stand outside a cottage. The forest stretches east. "
         
         east = forest
     ;
+</code></pre></div></div>
 
-</div>
-
-This would give the beforeCottage room a display name (note, this is
+<p>This would give the beforeCottage room a display name (note, this is
 quite separate from the roomTitle that appears at the head of the room
-description) of 'front of the cottage' and would allow the player to
-refer to it as such. If that doesn't make too much sense right now,
-don't worry, because we'll be coming back to it in Chapter Seven (and
-not until then).
+description) of ‘front of the cottage’ and would allow the player to
+refer to it as such. If that doesn’t make too much sense right now,
+don’t worry, because we’ll be coming back to it in Chapter Seven (and
+not until then).</p>
 
-## Referring to Properties and Methods
+<h2 id="referring-to-properties-and-methods">Referring to Properties and Methods</h2>
 
-It's possible, and often extremely likely, that the same property or
+<p>It’s possible, and often extremely likely, that the same property or
 method name will be used on more than one object. For example if we also
 defined a blueBall, a greenBall and a yellowBall, they might all have
 vocab, desc and bounces properties, and they might all have their own
 version of a method call doBounce(). How then do we make sure the
 compiler knows which one we mean when we refer to a desc property or to
-the doBounce() method?
+the doBounce() method?</p>
 
-The answer is that we qualify the property or method name by using the
+<p>The answer is that we qualify the property or method name by using the
 dot notation. This means that to refer to the
-<span class="code">desc</span> property of
-<span class="code">redBall</span> we'd write
-<span class="code">redBall.desc</span>, while to refer to the
-<span class="code">doBounce()</span> method of
-<span class="code">yellowBall</span> we'd write
-<span class="code">yellowBall.doBounce()</span>.
+<code class="language-plaintext highlighter-rouge">desc</code> property of
+<code class="language-plaintext highlighter-rouge">redBall</code> we’d write
+<code class="language-plaintext highlighter-rouge">redBall.desc</code>, while to refer to the
+<code class="language-plaintext highlighter-rouge">doBounce()</code> method of
+<code class="language-plaintext highlighter-rouge">yellowBall</code> we’d write
+<code class="language-plaintext highlighter-rouge">yellowBall.doBounce()</code>.</p>
 
-The one exception to this is when we want to refer to a method or
+<p>The one exception to this is when we want to refer to a method or
 property of an object from a method or property of the same object. In
-that case, there's no need to qualify the method or property name, since
-the compiler will assume that we're talking about the same object.
-That's why we can write:
+that case, there’s no need to qualify the method or property name, since
+the compiler will assume that we’re talking about the same object.
+That’s why we can write:</p>
 
-<div class="code">
-
-    redBall: Thing 'red ball;; round'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;; round'
        "It's just a round red ball. "
        
        bounces = 0
@@ -419,14 +374,11 @@ That's why we can write:
           bounces = bounces + 1;
        }
     ;
+</code></pre></div></div>
 
-</div>
+<p>Rather than:</p>
 
-Rather than:
-
-<div class="code">
-
-    redBall: Thing 'red ball;; round'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;; round'
        "It's just a round red ball. "
        
        bounces = 0
@@ -437,19 +389,16 @@ Rather than:
           redBall.bounces = redBall.bounces + 1; //There's no need for this!
        }
     ;
+</code></pre></div></div>
 
-</div>
+<p>Indeed, in this kind of case, the second form is best avoided.</p>
 
-Indeed, in this kind of case, the second form is best avoided.
-
-In some cases, an object may need to refer to itself, in which case we
-should use the special keyword <span class="code">self</span>, for
+<p>In some cases, an object may need to refer to itself, in which case we
+should use the special keyword <code class="language-plaintext highlighter-rouge">self</code>, for
 example, if the nest needed to test whether the bird was inside it we
-might write:
+might write:</p>
 
-<div class="code">
-
-    + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
         "The nest is carefully woven of twigs and moss. "
         
         contType = In   
@@ -461,46 +410,40 @@ might write:
              /* do something appropriate here */
         }
     ;
+</code></pre></div></div>
 
-</div>
+<h2 id="class-definitions">Class Definitions</h2>
 
-## Class Definitions
-
-We noted above that defining a class is much like defining an object.
+<p>We noted above that defining a class is much like defining an object.
 The main difference is when defining a class, you begin the definition,
-surprisingly enough, with the word <span class="code">class</span>. It's
+surprisingly enough, with the word <code class="language-plaintext highlighter-rouge">class</code>. It’s
 also conventional (though not strictly necessary) to begin the name of a
-class with a capital letter.
+class with a capital letter.</p>
 
-For example, in the Heidi game we developed above, we had a nest you
-could put things *in* and a branch you could put things *on*. We
-implemented these as Things whose <span class="code">contType</span>
-properties were respectively <span class="code">In</span> and
-<span class="code">On</span>. If we had lots of things in our game we
+<p>For example, in the Heidi game we developed above, we had a nest you
+could put things <em>in</em> and a branch you could put things <em>on</em>. We
+implemented these as Things whose <code class="language-plaintext highlighter-rouge">contType</code>
+properties were respectively <code class="language-plaintext highlighter-rouge">In</code> and
+<code class="language-plaintext highlighter-rouge">On</code>. If we had lots of things in our game we
 wanted to put things in and on we could have created custom classes for
 the purpose (though in practice most class definitions would probably be
-more complex than this):
+more complex than this):</p>
 
-<div class="code">
-
-    class Surface: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Surface: Thing
        contType = On
     ;
 
     class Container: Thing
        contType = In
     ;   
+</code></pre></div></div>
 
-</div>
-
-This would make a Surface just like a Thing except that you could put
+<p>This would make a Surface just like a Thing except that you could put
 things on it, and a Container just like a Thing except that you could
 put things in it. We could then have defined the nest and the branch
-thus:
+thus:</p>
 
-<div class="code">
-
-     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
     + nest: Container 'bird\'s nest; carefully woven; moss twigs'
         "The nest is carefully woven of twigs and moss. "
                
@@ -521,23 +464,20 @@ thus:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;   
+</code></pre></div></div>
 
-</div>
-
-In fact, we could have done this anyway, since the adv3Lite already
-defines a <span class="code">Surface</span> class and a
-<span class="code">Container</span> class along these lines (we won't
-use them in the Heidi game though; instead we'll wait till Chapter 6).
-To give another example (which isn't in the library), we might have a
+<p>In fact, we could have done this anyway, since the adv3Lite already
+defines a <code class="language-plaintext highlighter-rouge">Surface</code> class and a
+<code class="language-plaintext highlighter-rouge">Container</code> class along these lines (we won’t
+use them in the Heidi game though; instead we’ll wait till Chapter 6).
+To give another example (which isn’t in the library), we might have a
 game with a lot of Surfaces that are also fixed in place (like the
 branch), since the kinds of things people put things on (such as desks
-and tables and shelves) often aren't portable. We might then feel it
+and tables and shelves) often aren’t portable. We might then feel it
 useful to define a FixedSurface class which we could define in a number
-of ways:
+of ways:</p>
 
-<div class="code">
-
-    class FixedSurface: Thing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class FixedSurface: Thing
        isFixed = true
        contType = On
     ;
@@ -552,34 +492,31 @@ of ways:
 
     class FixedSurface: Fixture, Surface
     ;
+</code></pre></div></div>
 
-</div>
-
-Of these, the last is probably the best (given that the adv3Lite library
-does in fact already define a <span class="code">Fixture</span> class),
+<p>Of these, the last is probably the best (given that the adv3Lite library
+does in fact already define a <code class="language-plaintext highlighter-rouge">Fixture</code> class),
 since it makes the relationships between the classes more explicit. In
 particular, if we want to test whether something is a
-<span class="code">Fixture</span> or a
-<span class="code">Surface</span>, defining
-<span class="code">FixedSurface</span> by the last method will ensure
-that we included FixedSurfaces among the things that count as such.
+<code class="language-plaintext highlighter-rouge">Fixture</code> or a
+<code class="language-plaintext highlighter-rouge">Surface</code>, defining
+<code class="language-plaintext highlighter-rouge">FixedSurface</code> by the last method will ensure
+that we included FixedSurfaces among the things that count as such.</p>
 
-## Further Reading
+<h2 id="further-reading">Further Reading</h2>
 
-We've covered quite a lot of ground in this section of the chapter, even
-if some of the concepts are ones we've met before. If you're not feeling
+<p>We’ve covered quite a lot of ground in this section of the chapter, even
+if some of the concepts are ones we’ve met before. If you’re not feeling
 entirely clear on it all, perhaps the first additional thing to read
-would be the article "Object-Oriented Programming Overview" in the *TADS
-3 Technical Manual*. For the full story on object definitions you could
-read the section on "Object Definitions" in the [TADS 3 System
-Manual](../sysman.html). You might not want to look at it right away,
-however, as there's rather more information there than you really need
-right now, and if you're new to this kind of programming there's
+would be the article “Object-Oriented Programming Overview” in the <em>TADS
+3 Technical Manual</em>. For the full story on object definitions you could
+read the section on “Object Definitions” in the <a href="../sysman.html">TADS 3 System
+Manual</a>. You might not want to look at it right away,
+however, as there’s rather more information there than you really need
+right now, and if you’re new to this kind of programming there’s
 probably quite enough for you to take in already. But if you do want a
-succinct summary of what we've just covered plus some more advanced
-information on objects, that's the place to go.
-
-</div>
+succinct summary of what we’ve just covered plus some more advanced
+information on objects, that’s the place to go.</p>
 
 <hr />
 

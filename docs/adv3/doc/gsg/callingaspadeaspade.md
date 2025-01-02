@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](buryingtheboots.html)   [\[Next\]](lettherebelight.html)*
@@ -418,4 +418,4 @@ chapter we'll add some more complications.
 [\[Main\]](index.html)  
 *[\[Previous\]](buryingtheboots.html)   [\[Next\]](lettherebelight.html)*
 
-</div>
+

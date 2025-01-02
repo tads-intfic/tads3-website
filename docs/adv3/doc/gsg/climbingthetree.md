@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](basictravel.html)
@@ -119,4 +119,4 @@ back so it reads:
 *[\[Previous\]](basictravel.html)
   [\[Next\]](makinglifemoreproblematic.html)*
 
-</div>
+

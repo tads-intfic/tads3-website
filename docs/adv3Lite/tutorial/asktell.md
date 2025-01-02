@@ -19,7 +19,7 @@ Suggestions</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Ask, Tell, Give, Show
 
@@ -454,7 +454,7 @@ Library Manual*, while for more on how knowledge of objects and
 see the section on [Player Character and NPC
 Knowledge](../manual/knowledge.html).
 
-</div>
+
 
 ------------------------------------------------------------------------
 

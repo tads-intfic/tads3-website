@@ -18,7 +18,7 @@ Messages</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Part VIII: Translating and Localizing TADS
 
@@ -31,7 +31,7 @@ sets and languages.
 [Translating Error Messages](errtrans.html)  
 [Creating a Character-Mapping File](cmap.html)  
 
-</div>
+
 
 </div>
 

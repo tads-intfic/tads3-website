@@ -37,99 +37,95 @@
 
 </div>
 
-<div class="main">
+<h1 id="temporaryfile">TemporaryFile</h1>
 
-# TemporaryFile
-
-A TemporaryFile object represents the name of a temporary file in the
+<p>A TemporaryFile object represents the name of a temporary file in the
 local file system. Since it represents a filename, you can use a
 TemporaryFile object in place of a filename string when calling the
-"open" methods of the [File](file.html) object.
+“open” methods of the <a href="file.html">File</a> object.</p>
 
-A temporary file is a file that only exists for as long as the program
+<p>A temporary file is a file that only exists for as long as the program
 is running. This is useful for things like storing data too large to fit
-conveniently in memory, or data that you don't need to access frequently
-but wish to keep around for reference purposes.
+conveniently in memory, or data that you don’t need to access frequently
+but wish to keep around for reference purposes.</p>
 
-A temporary file is mostly the same as an ordinary file, but has a few
-special properties:
+<p>A temporary file is mostly the same as an ordinary file, but has a few
+special properties:</p>
 
-- A temporary file is automatically deleted when the program exits.
-  (That's the reason it's called "temporary".)
-- The file's name is assigned by the system, not by your program or by
-  the user. When you create a TemporaryFile object, the system
-  automatically assigns the object a unique name that doesn't refer to
-  any existing file on the system.
-- The file's directory location is determined by the system, not by your
-  program or by the user. Most operating systems have special
-  directories designated to store temporary files. This lets the system
-  delete old temporary files from time to time in case the programs that
-  create them fail to clean them up themselves.
-- Temporary files bypass the file safety settings, so you can use
-  temporary files even when the safety level prohibits other access to
-  the file system.
+<ul>
+  <li>A temporary file is automatically deleted when the program exits.
+(That’s the reason it’s called “temporary”.)</li>
+  <li>The file’s name is assigned by the system, not by your program or by
+the user. When you create a TemporaryFile object, the system
+automatically assigns the object a unique name that doesn’t refer to
+any existing file on the system.</li>
+  <li>The file’s directory location is determined by the system, not by your
+program or by the user. Most operating systems have special
+directories designated to store temporary files. This lets the system
+delete old temporary files from time to time in case the programs that
+create them fail to clean them up themselves.</li>
+  <li>Temporary files bypass the file safety settings, so you can use
+temporary files even when the safety level prohibits other access to
+the file system.</li>
+</ul>
 
-To use the TemporaryFile class, you should \#include the system header
-file <span class="code">file.h</span> in your source files.
+<p>To use the TemporaryFile class, you should #include the system header
+file <code class="language-plaintext highlighter-rouge">file.h</code> in your source files.</p>
 
-TemporaryFile objects are always transient. This means that they're not
+<p>TemporaryFile objects are always transient. This means that they’re not
 saved or restored as part of saved game files. Saving a TemporaryFile
-would be meaningless because it represents a filename that's only valid
+would be meaningless because it represents a filename that’s only valid
 for as long as the program is running; restoring such a name from a
-saved session wouldn't be usable anyway, since the name only applied to
-that previous session.
+saved session wouldn’t be usable anyway, since the name only applied to
+that previous session.</p>
 
-## Creation
+<h2 id="creation">Creation</h2>
 
-To create a TemporaryFile object, use the <span class="code">new</span>
-operator:
+<p>To create a TemporaryFile object, use the <code class="language-plaintext highlighter-rouge">new</code>
+operator:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local temp = new TemporaryFile();
+</code></pre></div></div>
 
-    local temp = new TemporaryFile();
-
-</div>
-
-There are no arguments. The system automatically assigns the new object
+<p>There are no arguments. The system automatically assigns the new object
 a unique filename in the local file system directory designated by the
 operating system for temporary files. For example, on Linux systems,
-this will usually be the /tmp directory.
+this will usually be the /tmp directory.</p>
 
-## Accessing temporary files
+<h2 id="accessing-temporary-files">Accessing temporary files</h2>
 
-Creating a TemporaryFile object **doesn't** actually create a file on
+<p>Creating a TemporaryFile object <strong>doesn’t</strong> actually create a file on
 disk. It merely assigns a unique name that you can use to create a file.
-To create the file itself, you can use any of the "open" methods of the
-[File](file.html) object, passing the TemporaryFile in place of the
-filename:
+To create the file itself, you can use any of the “open” methods of the
+<a href="file.html">File</a> object, passing the TemporaryFile in place of the
+filename:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local f = File.openTextFile(temp, FileAccessWrite, 'ascii');
+</code></pre></div></div>
 
-    local f = File.openTextFile(temp, FileAccessWrite, 'ascii');
+<p>After you open a temporary file, you can use it just like an ordinary
+file.</p>
 
-</div>
+<p>You can also pass a TemporaryFile object in place of a filename string
+to the following built-in functions:</p>
 
-After you open a temporary file, you can use it just like an ordinary
-file.
+<ul>
+  <li><a href="tadsio.html#logConsoleCreate">logConsoleCreate()</a> (create a log file
+console)</li>
+  <li><a href="tadsio.html#setLogFile">setLogFile()</a> (set a transcript or command log
+file)</li>
+  <li><a href="tadsio.html#setScriptFile">setScriptFile()</a> (read commands from a
+command transcript)</li>
+  <li><a href="tadsgen.html#restoreGame">restoreGame()</a> (restore the game state from
+a file)</li>
+  <li><a href="tadsgen.html#saveGame">saveGame()</a> (save the game state to a file)</li>
+</ul>
 
-You can also pass a TemporaryFile object in place of a filename string
-to the following built-in functions:
+<h2 id="methods">Methods</h2>
 
-- [logConsoleCreate()](tadsio.html#logConsoleCreate) (create a log file
-  console)
-- [setLogFile()](tadsio.html#setLogFile) (set a transcript or command log
-  file)
-- [setScriptFile()](tadsio.html#setScriptFile) (read commands from a
-  command transcript)
-- [restoreGame()](tadsgen.html#restoreGame) (restore the game state from
-  a file)
-- [saveGame()](tadsgen.html#saveGame) (save the game state to a file)
+<p><span id="deleteFile"></span></p>
 
-## Methods
-
-<span id="deleteFile"></span>
-
-<span class="code">deleteFile()</span>
+<p><code class="language-plaintext highlighter-rouge">deleteFile()</code></p>
 
 <div class="fdef">
 
@@ -152,11 +148,11 @@ around to it.
 
 This method has no arguments and no return value.
 
-</div>
+
 
 &lt;span id="getFilename" &lt;="" a=""&gt;&lt;/span&gt;
 
-<span class="code">getFilename()</span>
+`getFilename()`
 
 <div class="fdef">
 
@@ -231,7 +227,7 @@ automatically when the program exits (if not sooner).
 
 This safety level override feature is the reason that you shouldn't
 attempt to use the string version of the filename (as returned by
-<span class="code">getFilename</span>) to open or delete the file. The
+`getFilename`) to open or delete the file. The
 File class grants the special exception only to the TemporaryFile object
 itself, not to the underlying filename.
 

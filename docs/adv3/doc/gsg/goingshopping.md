@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](rowmyboat.html)
@@ -1014,4 +1014,4 @@ the gSetKnown(tMurder) macro to set tMurder.isKnown = true.
 *[\[Previous\]](rowmyboat.html)
   [\[Next\]](handlingcashtransactions.html)*
 
-</div>
+

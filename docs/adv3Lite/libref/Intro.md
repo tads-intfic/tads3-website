@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 <div class="fdesc">
 
@@ -110,7 +110,7 @@ authorship notices be removed or modified.
 
 <a href="..\tutorial\index.html" target="_top">Tutorial</a>
 
-</div>
+
 
 <div class="ftr">
 

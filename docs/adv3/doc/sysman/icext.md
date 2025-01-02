@@ -19,7 +19,7 @@ Intrinsic Classes
 
 </div>
 
-<div class="main">
+
 
 # Extending Intrinsic Classes
 
@@ -41,7 +41,7 @@ exactly the same as it is for regular objects:
        method2 ...
     ;
 
-</div>
+
 
 When you modify an intrinsic class, the intrinsic class must be defined
 before the `modify` statement. In most cases,

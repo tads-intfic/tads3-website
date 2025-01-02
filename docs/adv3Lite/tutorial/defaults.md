@@ -19,7 +19,7 @@ Answers</a>    
 
 </div>
 
-<div class="main">
+
 
 # Diverse Defaults
 
@@ -304,7 +304,7 @@ overhear the conversation:
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

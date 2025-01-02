@@ -27,23 +27,21 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="makingtheitemsdosomething.html">[Previous]</a>
+  <a href="definingourfirstroom.html">[Next]</a></em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](makingtheitemsdosomething.html)
-  [\[Next\]](definingourfirstroom.html)*
+<h1 id="chapter-3---starting-out-again">Chapter 3 - Starting Out Again</h1>
 
-# Chapter 3 - Starting Out Again
+<h2 id="starting-a-new-game">Starting a New Game</h2>
 
-## Starting a New Game
-
-In the previous chapter we saw how to create a very simple TADS 3 game.
+<p>In the previous chapter we saw how to create a very simple TADS 3 game.
 In this chapter we shall start creating a somewhat more complex game,
 which will occupy us for the remainder of this guide. Although in the
 initial stages there will be some overlap with what has gone before, it
 is important to ensure that the foundations of understanding are
 securely laid, and in any case we shall shortly be introducing new ways
-of accomplishing seemingly familiar tasks.  
+of accomplishing seemingly familiar tasks.</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -59,23 +57,34 @@ of accomplishing seemingly familiar tasks.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-The basis for the game we shall be developing is once again the
-so-called 'advanced' starter game starta3.t, which should be located in
+<p>The basis for the game we shall be developing is once again the
+so-called ‘advanced’ starter game starta3.t, which should be located in
 the samples subdirectory of your TADS 3 directory. If you are using the
-TADS 3 Workbench, select New Project, choose the 'advanced' rather than
-the 'beginner' option, call the new file you are about to create
-'heidi.t' and locate it in whichever directory you want to work (it's
+TADS 3 Workbench, select New Project, choose the ‘advanced’ rather than
+the ‘beginner’ option, call the new file you are about to create
+‘heidi.t’ and locate it in whichever directory you want to work (it’s
 probably a good idea to create a new directory called Heidi for the
 purpose). Otherwise, if you are not using Workbench, copy starta3.t to
-your new Heidi directory and rename it heidi.t.  
-  
-Now open the file in your text editor of choice (either through
+your new Heidi directory and rename it heidi.t.</p>
+
+<p>Now open the file in your text editor of choice (either through
 Workbench or through the editor) and remove the definition of startroom,
-i.e. the lines that read:  
+i.e. the lines that read:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -91,42 +100,52 @@ i.e. the lines that read:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-startRoom: Room 'Start Room'  
-    "This is the starting room. "  
-;  
-  
-Next, change the line location = startRoom (after the comment
-/\* the initial location \*/) so that it reads
+<p>startRoom: Room ’Start Room’<br />
+    ”This is the starting room. ”<br />
+;</p>
+
+<p>Next, change the line location = startRoom (after the comment
+/* the initial location */) so that it reads
 location = outsideCottage. You might also like to fill in the other
 fields with something a bit more meaningful, so that the edited file
-looks something like:  
-  
-  
-\#charset "us-ascii"  
-\#include \&lt;adv3.h\&gt;  
-\#include \&lt;en_us.h\&gt;  
-  
-versionInfo: GameID  
-IFID = '573a8b18-1008-ca66-9580-9a156f82eefa'  
-    name = 'The Further Adventures of Heidi'  
-    byline = 'by An Author'  
-    htmlByline = 'by \&lt;a href="mailto:whatever@nospam.org"\&gt;  
-                  ERIC EVE\&lt;/a\&gt;'  
-    version = '1.0'  
-    authorEmail = 'ERIC EVE \&lt;whatever@nospam.org\&gt;'  
-    desc = 'This is an unexciting tutorial game based loosely on  
-       The Adventures of Heidi by Roger Firth and Sonja Kesserich.'  
-    htmlDesc = 'This is an unexciting tutorial game based loosely on  
-       \&lt;i\&gt;The Adventures of Heidi\&lt;/i\&gt; by Roger Firth and Sonja Kesserich.'  
-  
-    showCredit()  
-    {  
-        /\* show our credits \*/  
-        "The TADS 3 language and library were created by Michael J.   
+looks something like:</p>
+
+<p>#charset ”us-ascii”<br />
+#include &lt;adv3.h&gt;<br />
+#include &lt;en_us.h&gt;</p>
+
+<p>versionInfo: GameID<br />
+IFID = ’573a8b18-1008-ca66-9580-9a156f82eefa’<br />
+    name = ’The Further Adventures of Heidi’<br />
+    byline = ’by An Author’<br />
+    htmlByline = ’by &lt;a href=”mailto:whatever@nospam.org”&gt;<br />
+                  ERIC EVE&lt;/a&gt;’<br />
+    version = ’1.0’<br />
+    authorEmail = ’ERIC EVE &lt;whatever@nospam.org&gt;’<br />
+    desc = ’This is an unexciting tutorial game based loosely on<br />
+       The Adventures of Heidi by Roger Firth and Sonja Kesserich.’<br />
+    htmlDesc = ’This is an unexciting tutorial game based loosely on<br />
+       &lt;i&gt;The Adventures of Heidi&lt;/i&gt; by Roger Firth and Sonja Kesserich.’</p>
+
+<p>    showCredit()<br />
+    {<br />
+        /* show our credits */<br />
+        ”The TADS 3 language and library were created by Michael J. </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -142,11 +161,22 @@ IFID = '573a8b18-1008-ca66-9580-9a156f82eefa'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-        The original \&lt;i\&gt;Adventures of Heidi\&lt;/i\&gt; was a simple tutorial game   
+<p>        The original &lt;i&gt;Adventures of Heidi&lt;/i&gt; was a simple tutorial game </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -162,49 +192,57 @@ IFID = '573a8b18-1008-ca66-9580-9a156f82eefa'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-  
-        
-        "\b";  
-    }  
-    showAbout()  
-    {  
-        "\&lt;i\&gt;The Further Adventures of Heidi\&lt;/i\&gt;\&lt;.p\&gt;  
-        A Tutorial Game for TADS 3";  
-    }  
-;  
-  
-me: Actor  
-    /\* the initial location \*/  
-    location = outsideCottage  
-;  
-  
-<span id="gameMain">gameMain</span>: GameMainDef  
-     initialPlayerChar = me  
-     showIntro()  
-     {  
-       "Welcome to the Further Adventures of Heidi!\b";  
-     }  
-     showGoodbye()  
-     {  
-       "\&lt;.p\&gt;Thanks for playing!\b";  
-     }  
-     maxScore = 7       
-     beforeRunsBeforeCheck = nil       
-;  
-  
+<p>      <br />
+        ”\b”;<br />
+    }<br />
+    showAbout()<br />
+    {<br />
+        ”&lt;i&gt;The Further Adventures of Heidi&lt;/i&gt;&lt;.p&gt;<br />
+        A Tutorial Game for TADS 3”;<br />
+    }<br />
+;</p>
 
-------------------------------------------------------------------------
+<p>me: Actor<br />
+    /* the initial location */<br />
+    location = outsideCottage<br />
+;</p>
 
-*Getting Started in TADS 3*  
-[\[Main\]](index.html)  
-*[\[Previous\]](makingtheitemsdosomething.html)
-  [\[Next\]](definingourfirstroom.html)*
+<p><span id="gameMain">gameMain</span>: GameMainDef<br />
+     initialPlayerChar = me<br />
+     showIntro()<br />
+     {<br />
+       ”Welcome to the Further Adventures of Heidi!\b”;<br />
+     }<br />
+     showGoodbye()<br />
+     {<br />
+       ”&lt;.p&gt;Thanks for playing!\b”;<br />
+     }<br />
+     maxScore = 7     <br />
+     beforeRunsBeforeCheck = nil     <br />
+;</p>
 
-</div>
+<hr />
+
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="makingtheitemsdosomething.html">[Previous]</a>
+  <a href="definingourfirstroom.html">[Next]</a></em></p>
+
 
 </main>
 <footer>

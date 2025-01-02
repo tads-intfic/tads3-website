@@ -18,7 +18,7 @@ Actions
 
 </div>
 
-<div class="main">
+
 
 # Responding to Actions
 
@@ -454,7 +454,7 @@ We've now got the controls to the point where they can be operated, even
 if we can't yet fly the plane with them. In the next section we'll make
 it possible for the plane to take off.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

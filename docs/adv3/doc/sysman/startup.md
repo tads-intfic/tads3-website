@@ -19,7 +19,7 @@ Model</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Starting Up: The Main Program Entrypoint
 
@@ -69,7 +69,7 @@ command-line shell, such as a Unix shell or a Windows command prompt (a
 
     t3run -s0 -cs us-ascii mygame.t3 hello world!
 
-</div>
+
 
 This command line is a little complicated by the fact that there are
 really *two* programs being activated here. First, there's the TADS 3

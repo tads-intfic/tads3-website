@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](otherresponsestoactions.html)
@@ -291,4 +291,4 @@ by redirecting the action to the smoke emanating from the fire.
 *[\[Previous\]](otherresponsestoactions.html)
   [\[Next\]](abasicburner.html)*
 
-</div>
+

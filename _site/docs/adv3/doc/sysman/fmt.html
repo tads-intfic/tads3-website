@@ -38,46 +38,44 @@ Function</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="the-output-formatter">The Output Formatter</h1>
 
-# The Output Formatter
-
-TADS 3 is in many ways a general-purpose programming system, but it is
+<p>TADS 3 is in many ways a general-purpose programming system, but it is
 nonetheless designed above all else as a system for text-based
 interactive fiction. It might be tautological to say this, but one of
 the most important elements of text IF is the text. Any system for
 creating text-based IF had therefore better provide some good text
-formatting tools.
+formatting tools.</p>
 
-## HTML
+<h2 id="html">HTML</h2>
 
-The display language of TADS 3 is HTML. Nearly, anyway: the HTML used in
+<p>The display language of TADS 3 is HTML. Nearly, anyway: the HTML used in
 TADS is based on the official web standard for HTML 3.2, but a few
 features of HTML 3.2 are missing, a few things act differently than they
 do in regular HTML, and a number of extensions are available. The
 missing and modified features are mostly in areas where HTML features
-that were designed for web browsing just don't fit into text IF, or
-don't fit as they were designed in HTML. Where TADS adds new features to
-HTML, we've tried to follow later versions of the HTML standards
+that were designed for web browsing just don’t fit into text IF, or
+don’t fit as they were designed in HTML. Where TADS adds new features to
+HTML, we’ve tried to follow later versions of the HTML standards
 wherever possible, or at least to stay consistent with the style of
 similar HTML features. Full details on the special version of HTML that
 TADS 3 uses can be found in the HTML TADS documentation, which describes
-all of the deviations from standard HTML.
+all of the deviations from standard HTML.</p>
 
-HTML is used in all text output windows, including the main game window
-and all text banners. HTML is not used in "text-grid" banners, though.
+<p>HTML is used in all text output windows, including the main game window
+and all text banners. HTML is not used in “text-grid” banners, though.</p>
 
-## Word Wrapping/Line Breaking
+<h2 id="word-wrappingline-breaking">Word Wrapping/Line Breaking</h2>
 
-All of the interpreters perform automatic "word wrapping" on the output
+<p>All of the interpreters perform automatic “word wrapping” on the output
 text, which means that when the text output would overflow the right
 margin, the interpreter finds the nearest word boundary and breaks the
 line there. This allows the author to largely ignore the details of how
 wide the game window is and how the text is laid out on the screen; the
 game simply writes out its paragraphs of text, and the system
-automatically makes it look right.
+automatically makes it look right.</p>
 
-In some cases, though, it's desirable for the game to be able to control
+<p>In some cases, though, it’s desirable for the game to be able to control
 exactly how the system decides where to break lines. TADS 3 provides a
 sophisticated set of controls that give the game a great deal of
 detailed control over line breaking. Because of the substantial
@@ -86,118 +84,118 @@ the game to actually do the line breaking itself-there would be too many
 cases to deal with. Instead, TADS 3 lets the game control line breaking
 with special advisory sequences that can be placed into the text itself.
 The interpreter determines where to break lines by inspecting the text,
-taking into account the advisory sequences.
+taking into account the advisory sequences.</p>
 
-(Note that the GUI text-only interpreters do not currently support the
+<p>(Note that the GUI text-only interpreters do not currently support the
 different wrapping modes, and do not support the override controls.
 These interpreters support only the traditional word-wrapping mode, so
 games that depend on the custom line-breaking features might not produce
-acceptable results on these systems.)
+acceptable results on these systems.)</p>
 
-Word wrap and character wrap modes
+<p>Word wrap and character wrap modes</p>
 
-To start with, TADS 3's output formatter has two basic modes: word
-wrapping and character wrapping.
+<p>To start with, TADS 3’s output formatter has two basic modes: word
+wrapping and character wrapping.</p>
 
-In *word-wrapping* mode, the interpreter will only break a line between
+<p>In <em>word-wrapping</em> mode, the interpreter will only break a line between
 words. This is the default mode, and is the style that almost always
 applies to languages like English that use groups of letters to
-represent words. The formatter's rules for determining word boundaries
+represent words. The formatter’s rules for determining word boundaries
 are simple: a word boundary is a space, or a hyphen (but a break can
-occur only to the right of a hyphen, and only when the hyphen isn't
-followed by another hyphen).
+occur only to the right of a hyphen, and only when the hyphen isn’t
+followed by another hyphen).</p>
 
-In *character-wrapping* mode, the interpreter can break a line anywhere.
+<p>In <em>character-wrapping</em> mode, the interpreter can break a line anywhere.
 This mode is especially applicable to languages like Chinese in which
 each character represents an entire word. In Chinese, convention allows
 line breaks to occur almost anywhere; each glyph is a separate word, so
 there is no need to keep most pairs of adjacent glyphs together on one
-line.
+line.</p>
 
-The wrapping mode is selected using the
-<span class="code">\&lt;WRAP\&gt;</span> tag (which is a TADS extension, not a
-standard HTML tag). <span class="code">\&lt;WRAP WORD\&gt;</span> sets
-word-wrapping mode, and <span class="code">\&lt;WRAP CHAR\&gt;</span> sets
+<p>The wrapping mode is selected using the
+<code class="language-plaintext highlighter-rouge">\&lt;WRAP\&gt;</code> tag (which is a TADS extension, not a
+standard HTML tag). <code class="language-plaintext highlighter-rouge">\&lt;WRAP WORD\&gt;</code> sets
+word-wrapping mode, and <code class="language-plaintext highlighter-rouge">\&lt;WRAP CHAR\&gt;</code> sets
 character-wrapping mode. The interpreter always starts in word-wrapping
 mode. This tag is not a container, but simply an in-line mode switch, so
-there is no <span class="code">\&lt;/WRAP\&gt;</span> tag; to change out of
-the current mode, simply use another <span class="code">\&lt;WRAP\&gt;</span>
-tag with the new mode.
+there is no <code class="language-plaintext highlighter-rouge">\&lt;/WRAP\&gt;</code> tag; to change out of
+the current mode, simply use another <code class="language-plaintext highlighter-rouge">\&lt;WRAP\&gt;</code>
+tag with the new mode.</p>
 
-### Overriding the Default Breaking Rules
+<h3 id="overriding-the-default-breaking-rules">Overriding the Default Breaking Rules</h3>
 
-The default line-breaking rules - in both word-wrap and character-wrap
+<p>The default line-breaking rules - in both word-wrap and character-wrap
 modes - are very simple, but not adequate for every situation. For
 example, a game written in English might have some words that include
 hyphens that should always be kept together on one line, or a word that
 includes some other embedded punctuation that could serve as line-break
-points if needed. As another example, a game written in Chinese wouldn't
+points if needed. As another example, a game written in Chinese wouldn’t
 really want line breaks to occur just anywhere; the conventions for
 line-breaking in Chinese actually require that certain sequences of
 characters, such as certain groups of punctuation marks, be kept
-together, and don't allow line breaks to occur just before or after
-certain types of punctuation.
+together, and don’t allow line breaks to occur just before or after
+certain types of punctuation.</p>
 
-It would be impossible to anticipate every possible line-breaking rule
-for every language and every game, so the interpreter doesn't even try;
+<p>It would be impossible to anticipate every possible line-breaking rule
+for every language and every game, so the interpreter doesn’t even try;
 instead, the interpreter uses the rather simple set of rules outlined
 above by default, but provides a set of special control sequences that
 allow the game to override the default behavior whenever it wants. These
-special controls are described below.
+special controls are described below.</p>
 
-#### The Zero-Width Non-Breaking Space
+<h4 id="the-zero-width-non-breaking-space">The Zero-Width Non-Breaking Space</h4>
 
-The control that prevents a line break is called the "zero-width
-non-breaking space." This is a special character, defined in the Unicode
-standard, that can be written in TADS as "\uFEFF" (that "\u" is the TADS
+<p>The control that prevents a line break is called the “zero-width
+non-breaking space.” This is a special character, defined in the Unicode
+standard, that can be written in TADS as “\uFEFF” (that “\u” is the TADS
 way of entering a specific Unicode character code as a hexadecimal
 number); it can also be written with an HTML markup,
-<span class="code">&zwnbsp;</span>. It's a "zero-width" character, which
-means that it doesn't show up on the display: it's simply invisible as
-far as the user is concerned. The "non-breaking" part is the special
+<code class="language-plaintext highlighter-rouge">&amp;zwnbsp;</code>. It’s a “zero-width” character, which
+means that it doesn’t show up on the display: it’s simply invisible as
+far as the user is concerned. The “non-breaking” part is the special
 feature: this tells the interpreter that it cannot break the line here,
-even if it otherwise could.
+even if it otherwise could.</p>
 
-To be more specific, the zero-width non-breaking space prevents a line
+<p>To be more specific, the zero-width non-breaking space prevents a line
 break from occurring between the two characters adjacent to it.
 Essentially, this control is a bit of glue that sticks so strongly to
-the characters on both sides that the line breaking rules can't tear
-them apart.
+the characters on both sides that the line breaking rules can’t tear
+them apart.</p>
 
-Note that the glue only sticks to one side of each adjacent character.
-So, if you put a \uFEFF character just before a space, and you're in
+<p>Note that the glue only sticks to one side of each adjacent character.
+So, if you put a \uFEFF character just before a space, and you’re in
 word-wrapping mode, the formatter can still break the line after the
 space. If you want to prevent the space from being a line break at all,
 you have to put a \uFEFF character on both sides of the space-one before
-and one after.
+and one after.</p>
 
-#### The Zero-Width Space
+<h4 id="the-zero-width-space">The Zero-Width Space</h4>
 
-The other main control is the "zero-width space," and it does
+<p>The other main control is the “zero-width space,” and it does
 essentially the opposite of the zero-width non-breaking space: this
 character enables a line break where the rules would otherwise not allow
 it. This is another standard Unicode character, written in TADS as
-"\u200B" or with the HTML markup <span class="code">&zwsp;</span>. Like
-\uFEFF, this is a zero-width character, so it's invisible on the
+“\u200B” or with the HTML markup <code class="language-plaintext highlighter-rouge">&amp;zwsp;</code>. Like
+\uFEFF, this is a zero-width character, so it’s invisible on the
 display. Otherwise, though, it counts as a space-which means that the
 formatter, even in word-wrap mode, is free to break the line between the
 two adjacent characters, as though they were separated by an ordinary
-space.
+space.</p>
 
-You can use a zero-width space to add your own rules about where lines
+<p>You can use a zero-width space to add your own rules about where lines
 can be broken. For example, suppose your game has a bunch of words where
-you're using an equals sign as though it were a hyphen, and you want the
+you’re using an equals sign as though it were a hyphen, and you want the
 formatter to be able to break to the right of these equals signs just
 like it would for hyphens. To do this, you would simply insert a \u200B
 character immediately after each of these equals signs; this would tell
 the interpreter that it can break the line just after the hyphen if
-necessary.
+necessary.</p>
 
-#### The Non-Breaking Space
+<h4 id="the-non-breaking-space">The Non-Breaking Space</h4>
 
-In addition to the zero-width non-breaking space, Unicode defines a
-regular-width non-breaking space. This is written as "\u00A0", or with
-the HTML markup <span class="code">&nbsp;</span>. This type of space
+<p>In addition to the zero-width non-breaking space, Unicode defines a
+regular-width non-breaking space. This is written as “\u00A0”, or with
+the HTML markup <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code>. This type of space
 looks exactly the same as an ordinary space (the kind you get by
 pressing the space bar on the keyboard), but it behaves as though it
 were a non-space character: the formatter never breaks a line at a
@@ -205,162 +203,162 @@ non-breaking space (thus the name), it never combines a non-breaking
 space with adjacent ordinary spaces, and it never trims non-breaking
 spaces from the beginning or end of a line. For line-breaking purposes,
 the non-breaking space behaves as though it were an alphabetic
-character.
+character.</p>
 
-Apart from the obvious difference in visual size, the non-breaking space
+<p>Apart from the obvious difference in visual size, the non-breaking space
 differs from the zero-width non-breaking space in that the zero-width
 version is like glue-it prevents a line break from being inserted
 between the adjacent characters. The ordinary non-breaking space,
 however, merely acts like a non-space character; if the line-breaking
 rules allow it, the formatter can break the line immediately before or
-after an ordinary non-breaking space.
+after an ordinary non-breaking space.</p>
 
-#### The Soft Hyphen
+<h4 id="the-soft-hyphen">The Soft Hyphen</h4>
 
-Another special control, the "soft hyphen," lets the game tell the
+<p>Another special control, the “soft hyphen,” lets the game tell the
 interpreter that it can break a word with hyphenation at a particular
-point, but that it doesn't have to. The soft hyphen is another standard
-Unicode character, "\u00AD", or equivalently in HTML,
-<span class="code">&shy;</span>.
+point, but that it doesn’t have to. The soft hyphen is another standard
+Unicode character, “\u00AD”, or equivalently in HTML,
+<code class="language-plaintext highlighter-rouge">&amp;shy;</code>.</p>
 
-Soft hyphens are normally invisible, so you can freely insert them into
+<p>Soft hyphens are normally invisible, so you can freely insert them into
 words without adding visual clutter. When the formatter decides to take
 advantage of a soft hyphen to break a line, though, the soft hyphen is
-displayed as a normal hyphen at the end of the line.
+displayed as a normal hyphen at the end of the line.</p>
 
-## Whitespace Combining
+<h2 id="whitespace-combining">Whitespace Combining</h2>
 
-The output formatter automatically combines runs of space characters.
+<p>The output formatter automatically combines runs of space characters.
 Any time a series of consecutive space characters appear together, the
-formatter combines them all into a single space.
+formatter combines them all into a single space.</p>
 
-This feature is useful because it frees the game of concerns about too
+<p>This feature is useful because it frees the game of concerns about too
 much or too little space when generating text. IF games often generate
 text in pieces, stringing together a series of pre-written sentences and
-phrases. Sometimes, it's difficult to know in advance how a particular
+phrases. Sometimes, it’s difficult to know in advance how a particular
 fragment will be combined with other fragments, which makes it hard to
 anticipate exactly how many spaces there will end up being when
-everything is put together. The formatter's automatic combination of
+everything is put together. The formatter’s automatic combination of
 consecutive spaces simplifies this process greatly by allowing the
-author to throw in excess spaces wherever there's any uncertainty about
+author to throw in excess spaces wherever there’s any uncertainty about
 the need for extra spaces; since the formatter will automatically get
-rid of any extra spaces that aren't actually needed, the text as finally
-displayed will look right in any case.
+rid of any extra spaces that aren’t actually needed, the text as finally
+displayed will look right in any case.</p>
 
-The formatter does not combine any of the typographical spaces with one
+<p>The formatter does not combine any of the typographical spaces with one
 another, because the game is asking for a specific amount of spacing
 when it uses these characters. However, when an ordinary space (the kind
 you get by pressing the space bar on the keyboard)-or a run of ordinary
 spaces-is adjacent to a typographical space, the formatter removes the
 ordinary space or spaces and keeps only the typographical space. For
-example, if the game writes the string " \u2002 \u2003 " (three ordinary
+example, if the game writes the string “ \u2002 \u2003 “ (three ordinary
 spaces, an en space, two more ordinary spaces, an em space, and three
 more ordinary spaces), TADS will display only an en space followed by an
-em space: all of the runs of ordinary space are removed, since they're
-all adjacent to typographical spaces.
+em space: all of the runs of ordinary space are removed, since they’re
+all adjacent to typographical spaces.</p>
 
-## Newline Combining
+<h2 id="newline-combining">Newline Combining</h2>
 
-Just as the formatter combines each run of ordinary spaces into a single
-space, it combines each run of newline ("\n") sequences into one line
+<p>Just as the formatter combines each run of ordinary spaces into a single
+space, it combines each run of newline (“\n”) sequences into one line
 break. This feature is similar in purpose to whitespace combining, in
-that it allows the game to display "\n" sequences wherever it wants a
+that it allows the game to display “\n” sequences wherever it wants a
 line break, without worrying about whether some other piece of code just
-displayed another line break or is about to display another one.
+displayed another line break or is about to display another one.</p>
 
-Because "\n" sequences are combined, it's not possible to use "\n" to
-display an entirely blank line. To display a blank line, use the "\b"
-sequence: this ends any current line, just like "\n", but then displays
-a blank line. The formatter does not combine "\b" sequences: if you want
-two blank lines, just write out "\b\b".
+<p>Because “\n” sequences are combined, it’s not possible to use “\n” to
+display an entirely blank line. To display a blank line, use the “\b”
+sequence: this ends any current line, just like “\n”, but then displays
+a blank line. The formatter does not combine “\b” sequences: if you want
+two blank lines, just write out “\b\b”.</p>
 
-## Whitespace Trimming
+<h2 id="whitespace-trimming">Whitespace Trimming</h2>
 
-Just as the output formatter consolidates each run of ordinary spaces
+<p>Just as the output formatter consolidates each run of ordinary spaces
 down to a single ordinary space, the formatter completely eliminates (or
-"trims") spaces at the beginning and end of a line of text.
+“trims”) spaces at the beginning and end of a line of text.</p>
 
-At the start of a line, the formatter trims only ordinary spaces.
+<p>At the start of a line, the formatter trims only ordinary spaces.
 Typographical spaces at the start of a line are preserved exactly as
-given.
+given.</p>
 
-Note that during line breaking, the formatter always breaks at the
+<p>Note that during line breaking, the formatter always breaks at the
 rightmost edge of a run of spaces (ordinary or typographical). This
 means that line breaking always results in trailing spaces (spaces at
 the end of a line), never leading spaces (spaces at the start of the
 next line). The only way to put spaces at the start of a line is to put
-them after an explicit line break (such as a "\n" or "\b" character, or
-a  
-markup).
+them after an explicit line break (such as a “\n” or “\b” character, or
+a<br />
+markup).</p>
 
-At the end of a line, the formatter trims all trailing spaces, including
+<p>At the end of a line, the formatter trims all trailing spaces, including
 typographical spaces. However, the formatter does not trim any trailing
 spaces that precede any sort of non-breaking space (zero-width or
 ordinary). If you want trailing spaces to appear, simply put a
 zero-width non-breaking space after the last space you want to preserve
-as a trailing space. (In most cases, it simply doesn't matter whether or
+as a trailing space. (In most cases, it simply doesn’t matter whether or
 not trailing spaces are trimmed, because spaces at the end of a line are
-usually invisible-they're just extra blank pixels, after all. However,
+usually invisible-they’re just extra blank pixels, after all. However,
 trailing spaces can be visible under certain conditions, such as when
 the text is underlined or has a background color different from the
-window's prevailing background color.)
+window’s prevailing background color.)</p>
 
-## TAB Alignment
+<h2 id="tab-alignment">TAB Alignment</h2>
 
-The character-mode text-only interpreters and the multimedia
+<p>The character-mode text-only interpreters and the multimedia
 interpreters provide support for the HTML 3.0
-<span class="code">\&lt;TAB\&gt;</span> tag. This can be used for fairly
+<code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> tag. This can be used for fairly
 complex alignment effects, including centering text or aligning it at
 the right edge of the window, and simple data tables. Refer to the HTML
 TADS documentation for full details on how to use
-<span class="code">\&lt;TAB\&gt;</span>.
+<code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code>.</p>
 
-Since the <span class="code">\&lt;TAB\&gt;</span> tag is usable on both
-character-mode and multimedia interpreters, it's usually preferable to
-use <span class="code">\&lt;TAB\&gt;</span> instead of
-<span class="code">\&lt;TABLE\&gt;</span> for simple alignment.
-<span class="code">\&lt;TABLE\&gt;</span> is considerably more powerful, since
+<p>Since the <code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> tag is usable on both
+character-mode and multimedia interpreters, it’s usually preferable to
+use <code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> instead of
+<code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code> for simple alignment.
+<code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code> is considerably more powerful, since
 it provides both horizontal and vertical alignment capabilities, and
 does a great deal of complex layout work automatically; but
-<span class="code">\&lt;TABLE\&gt;</span> is only available on the multimedia
-interpreters, so using it can hurt a game's usability on other
-interpreters. If you must use <span class="code">\&lt;TABLE\&gt;</span> (and
+<code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code> is only available on the multimedia
+interpreters, so using it can hurt a game’s usability on other
+interpreters. If you must use <code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code> (and
 there often is no substitute), you should consider providing an
-alternative format for character-mode platforms.
+alternative format for character-mode platforms.</p>
 
-The GUI text-only interpreters do not support either
-<span class="code">\&lt;TAB\&gt;</span> or
-<span class="code">\&lt;TABLE\&gt;</span>; it's not possible to create any
+<p>The GUI text-only interpreters do not support either
+<code class="language-plaintext highlighter-rouge">\&lt;TAB\&gt;</code> or
+<code class="language-plaintext highlighter-rouge">\&lt;TABLE\&gt;</code>; it’s not possible to create any
 sort of text alignment effects on these interpreters. This is due to the
 use of proportional type without full HTML support; eventually, these
 interpreters should be superseded by full HTML versions, so this should
-be a short-term limitation.
+be a short-term limitation.</p>
 
-## Typographical Spaces
+<h2 id="typographical-spaces">Typographical Spaces</h2>
 
-In most computer text applications, there's just one kind of "space"
+<p>In most computer text applications, there’s just one kind of “space”
 character: the kind you get when you press the space bar on the
 keyboard. This ordinary space character is the one-size-fits-all visual
 separator to fill in the spaces between words, sentences, and everything
-else.
+else.</p>
 
-In traditional typography, printers (the people, not the computer
+<p>In traditional typography, printers (the people, not the computer
 peripherals) use a whole range of spacing sizes, with spaces of
 particular sizes for particular situations. The differences in space
 sizes tend to be pretty subtle, so the one-size-fits-all world of simple
 computer typography is a good enough approximation for most people and
 for most informal material. However, the finer gradations of spaces used
 in traditional typography are often indispensable for fine-tuning a
-layout or for creating special effects that aren't possible with
-ordinary space-bar spaces.
+layout or for creating special effects that aren’t possible with
+ordinary space-bar spaces.</p>
 
-In addition to the ordinary space character (the kind you get when you
-press the space bar on your computer's keyboard), the Unicode standard
+<p>In addition to the ordinary space character (the kind you get when you
+press the space bar on your computer’s keyboard), the Unicode standard
 defines a number of special space characters for these sorts of
-typographical effects, and TADS 3 supports many of these.
+typographical effects, and TADS 3 supports many of these.</p>
 
-Naturally, character-mode platforms can't display spaces at arbitrary
-sizes; they're stuck with just one kind of space. TADS 3 accommodates
+<p>Naturally, character-mode platforms can’t display spaces at arbitrary
+sizes; they’re stuck with just one kind of space. TADS 3 accommodates
 character-mode by approximating the typographical spaces as a number of
 ordinary spaces. The wide spaces turn into two or three ordinary spaces,
 the thinner spaces turn into one space, and the very thin spaces turn
@@ -368,223 +366,228 @@ into zero spaces. The approximation is meant to provide results that
 look natural for character-mode renditions; fortunately, this sort of
 mapping is long established thanks to typewriters and early computer
 printers, so TADS 3 simply tries to use the same conventions that people
-have long been using for typewritten text.
+have long been using for typewritten text.</p>
 
-The GUI text-only interpreters could in principle provide true
+<p>The GUI text-only interpreters could in principle provide true
 proportional renditions of the typographical spaces, but at the moment
-they don't; they simply use the same approximations as the
+they don’t; they simply use the same approximations as the
 character-mode interpreters. (If these interpreters come back into
 widespread use at some point, then someone might become motivated to
 enhance them proper support for typographical spaces; at the moment,
-this doesn't seem likely.)
+this doesn’t seem likely.)</p>
 
-The table below shows the supported typographical space characters and
-how they're displayed on the different interpreters.
+<p>The table below shows the supported typographical space characters and
+how they’re displayed on the different interpreters.</p>
 
-Name
+<p>Name</p>
 
-Unicode
+<p>Unicode</p>
 
-HTML
+<p>HTML</p>
 
-Multimedia Appearance
+<p>Multimedia Appearance</p>
 
-Text-Only/Fixed-Pitch Appearance
+<p>Text-Only/Fixed-Pitch Appearance</p>
 
-Comments
+<p>Comments</p>
 
-en space
+<p>en space</p>
 
-\u2002
+<p>\u2002</p>
 
-<span class="code">&ensp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;ensp;</code></p>
 
-Half an em space
+<p>Half an em space</p>
 
-Two spaces
+<p>Two spaces</p>
 
-This amount of space is sometimes used after sentence-ending punctuation
-(such as a period or question mark).
+<p>This amount of space is sometimes used after sentence-ending punctuation
+(such as a period or question mark).</p>
 
-Em space
+<p>Em space</p>
 
-\u2003
+<p>\u2003</p>
 
-<span class="code">&emsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;emsp;</code></p>
 
-Depends on the font; usually equal to the font's point size in width
+<p>Depends on the font; usually equal to the font’s point size in width</p>
 
-Three spaces
+<p>Three spaces</p>
 
-Three-per-em space
+<p>Three-per-em space</p>
 
-\u2004
+<p>\u2004</p>
 
-<span class="code">&tpmsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;tpmsp;</code></p>
 
-One-third the width of an em space
+<p>One-third the width of an em space</p>
 
-Two spaces
+<p>Two spaces</p>
 
-Four-per-em space
+<p>Four-per-em space</p>
 
-\u2005
+<p>\u2005</p>
 
-<span class="code">&fpmsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;fpmsp;</code></p>
 
-A quarter of an em space
+<p>A quarter of an em space</p>
 
-One space
+<p>One space</p>
 
-In most fonts, the ordinary space is about this size.
+<p>In most fonts, the ordinary space is about this size.</p>
 
-Six-per-em space
+<p>Six-per-em space</p>
 
-\u2006
+<p>\u2006</p>
 
-<span class="code">&spmsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;spmsp;</code></p>
 
-One-sixth of an em space
+<p>One-sixth of an em space</p>
 
-One space
+<p>One space</p>
 
-Figure space
+<p>Figure space</p>
 
-\u2007
+<p>\u2007</p>
 
-<span class="code">&figsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;figsp;</code></p>
 
-Equal in width to a digit zero ("0")
+<p>Equal in width to a digit zero (“0”)</p>
 
-One space
+<p>One space</p>
 
-Punctuation space
+<p>Punctuation space</p>
 
-\u2008
+<p>\u2008</p>
 
-<span class="code">&puncsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;puncsp;</code></p>
 
-Equal in width to a period (".")
+<p>Equal in width to a period (“.”)</p>
 
-None (zero spaces)
+<p>None (zero spaces)</p>
 
-Thin space
+<p>Thin space</p>
 
-\u2009
+<p>\u2009</p>
 
-<span class="code">&thinsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;thinsp;</code></p>
 
-One-fifth of an em space
+<p>One-fifth of an em space</p>
 
-One space
+<p>One space</p>
 
-Hair space
+<p>Hair space</p>
 
-\u200A
+<p>\u200A</p>
 
-<span class="code">&hairsp;</span>
+<p><code class="language-plaintext highlighter-rouge">&amp;hairsp;</code></p>
 
-One-eighth of an em space
+<p>One-eighth of an em space</p>
 
-None (zero spaces)
+<p>None (zero spaces)</p>
 
-This can be used to separate punctuation marks that would otherwise run
-together, such as a double quote from a nested single quote.
+<p>This can be used to separate punctuation marks that would otherwise run
+together, such as a double quote from a nested single quote.</p>
 
-Quoted space
+<p>Quoted space</p>
 
-"\\ "
+<p>”\ “</p>
 
-<span class="code"></span>
+<p>``</p>
 
-Same as ordinary space
+<p>Same as ordinary space</p>
 
-Same as ordinary space
+<p>Same as ordinary space</p>
 
-Note that the "text-only" appearance described in the table applies to
+<p>Note that the “text-only” appearance described in the table applies to
 both text-only interpreters and fixed-pitch fonts in multimedia
 interpreters. The multimedia interpreters use the text-only version of
 the spacing for fixed-pitch fonts to preserve the fixed-pitch nature of
 the fonts; using true proportional spacing for fixed-pitch type would
-throw off the uniform character alignment of these fonts.
+throw off the uniform character alignment of these fonts.</p>
 
-## Interpreter Classes
+<h2 id="interpreter-classes">Interpreter Classes</h2>
 
-There are three different main types, or "classes," of interpreter. You
-can use any interpreter to run any game, so there's no need to compile
+<p>There are three different main types, or “classes,” of interpreter. You
+can use any interpreter to run any game, so there’s no need to compile
 your game specially for different interpreters; the different types of
 interpreters do have some differences in the way they display output,
-though.
+though.</p>
 
-The interpreter classes are:
+<p>The interpreter classes are:</p>
 
-- Multimedia (also known as HTML, although this is misleading because it
-  suggests that the other classes of interpreters don't recognize any
-  HTML, when in fact they all do understand HTML; but only the
-  Multimedia interpreters can handle the full complement of HTML
-  features). This class of interpreters includes HTML TADS on Windows
-  and HyperTADS on Macintosh. Multimedia interpreters run on graphical
-  operating systems, and can display the full range of HTML effects,
-  including graphics, sounds, and all text formatting effects.
-- Character-mode Text-only. This class includes every interpreter that
-  runs on a character-mode system, such as DOS (or within a DOS command
-  prompt on Windows); a few GUI systems, such as Amiga, also fit this
-  class. The character-mode interpreters can display only one
-  fixed-pitch typeface for the entire application; they cannot display
-  most text effects (such as italics, underlines, or the like), although
-  many can display colored text and some sort of highlighting (using a
-  brighter color or a boldface appearance in most cases); they can't
-  display graphics or sounds. These interpreters only support the
-  text-only subset of HTML, detailed in the HTML TADS documentation;
-  however, they accept all valid HTML, and simply ignore markups that
-  are outside the text-only subset. Most of these interpreters support
-  the banner API, although with some limits on the available window
-  styles (they don't provide scrollbars on banner windows, for example).
-- GUI Text-only. This class includes only a few interpreters, and in all
-  likelihood, the full Multimedia interpreters will eventually supersede
-  this class entirely; so, while we mention these interpreters for the
-  sake of completeness, we don't think it's worth spending a lot of time
-  worrying about ensuring compatibility with these systems. (In fact,
-  the main existing GUI Text-only interpreters are MacTADS and MaxTADS
-  on the Macintosh, and WinTADS on Windows; since Multimedia
-  interpreters are available for both of these platforms, it seems
-  unlikely that these GUI text-only interpreters will be widely used or
-  vigorously maintained.) The GUI Text-only interpreters are similar in
-  capabilities to the Character-mode Text-only interpreters; the main
-  difference is that they can display the text-only data using
-  proportionally-spaced typefaces. This is a mixed blessing; it makes
-  them look prettier and more "native" for their respective operating
-  systems, but it also limits their capabilities relative to the
-  character-mode interpreters. For example, the proportional text makes
-  it impossible to rely on fixed character spacing for alignment
-  effects. The GUI text-only interpreters have the following limits
-  relative to the character-mode interpreters:
-  - The GUI text-only interpreters don't support the markup for text
-    alignment.
-  - They don't support any of the line-breaking control sequences or
-    <span class="code">\&lt;WRAP CHAR\&gt;</span> mode.
-  - They don't support the typographical spaces.
-  - None of these interpreters currently support the banner API (unlike
-    the previous items, it's technically possible for these interpreters
-    to support the banner API; but with their current minimal
-    maintenance attention, it's unlikely that this will ever be
-    implemented)
+<ul>
+  <li>Multimedia (also known as HTML, although this is misleading because it
+suggests that the other classes of interpreters don’t recognize any
+HTML, when in fact they all do understand HTML; but only the
+Multimedia interpreters can handle the full complement of HTML
+features). This class of interpreters includes HTML TADS on Windows
+and HyperTADS on Macintosh. Multimedia interpreters run on graphical
+operating systems, and can display the full range of HTML effects,
+including graphics, sounds, and all text formatting effects.</li>
+  <li>Character-mode Text-only. This class includes every interpreter that
+runs on a character-mode system, such as DOS (or within a DOS command
+prompt on Windows); a few GUI systems, such as Amiga, also fit this
+class. The character-mode interpreters can display only one
+fixed-pitch typeface for the entire application; they cannot display
+most text effects (such as italics, underlines, or the like), although
+many can display colored text and some sort of highlighting (using a
+brighter color or a boldface appearance in most cases); they can’t
+display graphics or sounds. These interpreters only support the
+text-only subset of HTML, detailed in the HTML TADS documentation;
+however, they accept all valid HTML, and simply ignore markups that
+are outside the text-only subset. Most of these interpreters support
+the banner API, although with some limits on the available window
+styles (they don’t provide scrollbars on banner windows, for example).</li>
+  <li>GUI Text-only. This class includes only a few interpreters, and in all
+likelihood, the full Multimedia interpreters will eventually supersede
+this class entirely; so, while we mention these interpreters for the
+sake of completeness, we don’t think it’s worth spending a lot of time
+worrying about ensuring compatibility with these systems. (In fact,
+the main existing GUI Text-only interpreters are MacTADS and MaxTADS
+on the Macintosh, and WinTADS on Windows; since Multimedia
+interpreters are available for both of these platforms, it seems
+unlikely that these GUI text-only interpreters will be widely used or
+vigorously maintained.) The GUI Text-only interpreters are similar in
+capabilities to the Character-mode Text-only interpreters; the main
+difference is that they can display the text-only data using
+proportionally-spaced typefaces. This is a mixed blessing; it makes
+them look prettier and more “native” for their respective operating
+systems, but it also limits their capabilities relative to the
+character-mode interpreters. For example, the proportional text makes
+it impossible to rely on fixed character spacing for alignment
+effects. The GUI text-only interpreters have the following limits
+relative to the character-mode interpreters:
+    <ul>
+      <li>The GUI text-only interpreters don’t support the markup for text
+alignment.</li>
+      <li>They don’t support any of the line-breaking control sequences or
+<code class="language-plaintext highlighter-rouge">\&lt;WRAP CHAR\&gt;</code> mode.</li>
+      <li>They don’t support the typographical spaces.</li>
+      <li>None of these interpreters currently support the banner API (unlike
+the previous items, it’s technically possible for these interpreters
+to support the banner API; but with their current minimal
+maintenance attention, it’s unlikely that this will ever be
+implemented)</li>
+    </ul>
+  </li>
+</ul>
 
-Despite the differences, most games can be written without any special
+<p>Despite the differences, most games can be written without any special
 code to handle the different interpreter types. This is possible because
 all of the interpreters understand HTML; the text-only interpreters,
 which only handle a subset of HTML, silently ignore any HTML markups
-that they can't use. Ignoring HTML markups is often not as bad as it
+that they can’t use. Ignoring HTML markups is often not as bad as it
 might at first appear. In many text-based IF games, the more advanced
 HTML features, while very useful to create the particular appearance the
 author wants, are to some extent window dressing; so when the game is
 run on a text-only interpreter, some of the visual appeal of the game
 might be lost, but the essence is preserved and the game remains fully
 playable. Some people even prefer the purer, most subdued appearance of
-the text-only display style.
+the text-only display style.</p>
 
-In some cases, though, a game uses HTML for more than just fancy text
-effects, and can't afford to have the HTML ignored. In these cases, the
+<p>In some cases, though, a game uses HTML for more than just fancy text
+effects, and can’t afford to have the HTML ignored. In these cases, the
 game can check at run-time to determine the capabilities of the
 interpreter, and use an alternative display style when running on a
 text-only interpreter. This approach is a little more work than coding a
@@ -594,101 +597,95 @@ available, while still providing a working game for text-only platforms.
 For example, a game might want to use a set of hyperlinks to implement a
 menu when running on an multimedia interpreter, so that players can
 click on links to select actions; but because the text-only systems
-don't support hyperlinks, the game could check the interpreter class and
+don’t support hyperlinks, the game could check the interpreter class and
 provide a numbered list of options when running on a text-only system.
 Or, a game might want to use pictures or sound effects to convey some
 key information in the story; when running on a text-only system, where
-these can't be displayed, the game could instead provide the information
-with some added text that doesn't appear when the game is played with a
-multimedia interpreter.
+these can’t be displayed, the game could instead provide the information
+with some added text that doesn’t appear when the game is played with a
+multimedia interpreter.</p>
 
-To determine the interpreter class, a game can call
-<span class="code">systemInfo(SysInfoInterpClass)</span>. This returns
-<span class="code">SysInfoIClassText</span> for a character-mode
-text-only system, <span class="code">SysInfoIClassTextGUI</span> for a
-GUI text-only system, and <span class="code">SysInfoIClassHTML</span>
-for a full multimedia interpreter. (See the [tads-io](tadsio.html)
-function set for details.)
+<p>To determine the interpreter class, a game can call
+<code class="language-plaintext highlighter-rouge">systemInfo(SysInfoInterpClass)</code>. This returns
+<code class="language-plaintext highlighter-rouge">SysInfoIClassText</code> for a character-mode
+text-only system, <code class="language-plaintext highlighter-rouge">SysInfoIClassTextGUI</code> for a
+GUI text-only system, and <code class="language-plaintext highlighter-rouge">SysInfoIClassHTML</code>
+for a full multimedia interpreter. (See the <a href="tadsio.html">tads-io</a>
+function set for details.)</p>
 
-## Caps/no-caps flags
+<h2 id="capsno-caps-flags">Caps/no-caps flags</h2>
 
-There are two special string sequences that let you control
+<p>There are two special string sequences that let you control
 capitalization of the next character displayed. These are handy in
-situations where you want to write "boilerplate" text that plugs in
-substitution parameters. If you're writing a message that plugs in a
-value at the start of a sentence, for example, you'll want to make sure
-the first character of the substituted text is capitalized.
+situations where you want to write “boilerplate” text that plugs in
+substitution parameters. If you’re writing a message that plugs in a
+value at the start of a sentence, for example, you’ll want to make sure
+the first character of the substituted text is capitalized.</p>
 
-The <span class="code">\\</span> sequence is the "caps flag." When you
+<p>The <code class="language-plaintext highlighter-rouge">\\</code> sequence is the “caps flag.” When you
 display this in a text window, it causes the next character displayed to
-be converted to upper-case.
+be converted to upper-case.</p>
 
-The <span class="code">\v</span> sequence is the "no-caps flag." When
+<p>The <code class="language-plaintext highlighter-rouge">\v</code> sequence is the “no-caps flag.” When
 you display this in a text window, it causes the next character
-displayed to be converted to lower-case.
+displayed to be converted to lower-case.</p>
 
-The output formatter tries to handle the "caps" and "no-caps" flags
+<p>The output formatter tries to handle the “caps” and “no-caps” flags
 smoothly when combined with HTML markups. In particular, the output
-formatter watches for <span class="code">\&lt;...\&gt;</span> and
-<span class="code">&amp;...;</span> sequences in the output stream, and wait
-to apply a caps or no-caps flag until *after* any markups have been
-passed. For example, if you display this:
+formatter watches for <code class="language-plaintext highlighter-rouge">\&lt;...\&gt;</code> and
+<code class="language-plaintext highlighter-rouge">&amp;...;</code> sequences in the output stream, and wait
+to apply a caps or no-caps flag until <em>after</em> any markups have been
+passed. For example, if you display this:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "\^&lt;a href='testing'&gt;&lt;i&gt;hello&lt;/i&gt;&lt;/a&gt;\n";
+</code></pre></div></div>
 
-    "\^<a href="testing"><i>hello</i></a>\n";
+<p>then the effect of the caps flag on the output stream will be as
+follows:</p>
 
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;a href='testing'&gt;&lt;i&gt;Hello&lt;/i&gt;&lt;/a&gt;\n
+</code></pre></div></div>
 
-then the effect of the caps flag on the output stream will be as
-follows:
-
-<div class="code">
-
-    <a href="testing"><i>Hello</i></a>\n
-
-</div>
-
-Note how the output formatter waits to apply the caps flag until after
+<p>Note how the output formatter waits to apply the caps flag until after
 all of the intervening markups. This is desirable, since the caps flag
-would have effectively been "lost" if it had applied to the first
-alphabetic character after the flag - that would have been the "a" in
-the <span class="code">\&lt;a\&gt;</span> tag, and there would have been no
-point in capitalizing that character, as it's just the name of a tag.
+would have effectively been “lost” if it had applied to the first
+alphabetic character after the flag - that would have been the “a” in
+the <code class="language-plaintext highlighter-rouge">\&lt;a\&gt;</code> tag, and there would have been no
+point in capitalizing that character, as it’s just the name of a tag.</p>
 
-This behavior ensures that caps and nocaps flags won't be lost if the
+<p>This behavior ensures that caps and nocaps flags won’t be lost if the
 substituted parameter happens to contain some markup text. The flag will
-apply to the actual text displayed, not to HTML codes.
+apply to the actual text displayed, not to HTML codes.</p>
 
-## Notes for TADS 2 users
+<h2 id="notes-for-tads-2-users">Notes for TADS 2 users</h2>
 
-The display system in TADS 3 is essentially the same system that was
+<p>The display system in TADS 3 is essentially the same system that was
 used in TADS 2, but it has been substantially improved in a few areas.
-To summarize the differences from TADS 2:
+To summarize the differences from TADS 2:</p>
 
-- Unlike in TADS 2, the TADS 3 output system always interprets output as
-  HTML; there's no mode switching, and there's no need to worry about
-  whether the game will be played on an interpreter with HTML support or
-  not. Every TADS 3 interpreter supports HTML, and HTML parsing is
-  always in effect. (As in TADS 2, though, there are some differences in
-  the capabilities of the different interpreter classes. The text-only
-  interpreters generally support only a small subset of HTML, and
-  silently ignore what they don't understand.)
-- TADS 3 has a new "character-wrapping" mode, suitable for East Asian
-  languages and also potentially useful in Western languages for
-  situations where custom line-breaking is needed.
-- The line-breaking rules have been simplified by the elimination of the
-  rule that spaces before hyphens can't serve as break points, and by
-  the elimination of automatic double-spacing after sentence-ending
-  punctuation.
-- A set of control sequences givesthe game complete control over line
-  breaking, by allowing the game to specify places where breaks are
-  allowed or prohibited even when the default rules say otherwise.
-- A set of typographical spaces gives the game fine control over visual
-  spacing in the multimedia interpreters, with suitable approximations
-  in the text-only interpreters.
-
-</div>
+<ul>
+  <li>Unlike in TADS 2, the TADS 3 output system always interprets output as
+HTML; there’s no mode switching, and there’s no need to worry about
+whether the game will be played on an interpreter with HTML support or
+not. Every TADS 3 interpreter supports HTML, and HTML parsing is
+always in effect. (As in TADS 2, though, there are some differences in
+the capabilities of the different interpreter classes. The text-only
+interpreters generally support only a small subset of HTML, and
+silently ignore what they don’t understand.)</li>
+  <li>TADS 3 has a new “character-wrapping” mode, suitable for East Asian
+languages and also potentially useful in Western languages for
+situations where custom line-breaking is needed.</li>
+  <li>The line-breaking rules have been simplified by the elimination of the
+rule that spaces before hyphens can’t serve as break points, and by
+the elimination of automatic double-spacing after sentence-ending
+punctuation.</li>
+  <li>A set of control sequences givesthe game complete control over line
+breaking, by allowing the game to specify places where breaks are
+allowed or prohibited even when the default rules say otherwise.</li>
+  <li>A set of typographical spaces gives the game fine control over visual
+spacing in the multimedia interpreters, with suitable approximations
+in the text-only interpreters.</li>
+</ul>
 
 <hr />
 

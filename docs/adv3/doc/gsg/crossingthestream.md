@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](doorsandwindows.html)   [\[Next\]](buryingtheboots.html)*
@@ -558,4 +558,4 @@ boots. The next job is to hide the boots in a less obvious place.
 [\[Main\]](index.html)  
 *[\[Previous\]](doorsandwindows.html)   [\[Next\]](buryingtheboots.html)*
 
-</div>
+

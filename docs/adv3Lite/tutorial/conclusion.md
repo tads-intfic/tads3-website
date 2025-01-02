@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Conclusion
 
@@ -83,6 +83,6 @@ February 2013*
 <span class="navnp"><a href="whatmore.html" class="nav"><em>Prev:</em> What More?</a>
 </span>
 
-</div>
+
 
 </div>

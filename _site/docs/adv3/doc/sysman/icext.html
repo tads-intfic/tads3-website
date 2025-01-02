@@ -39,20 +39,18 @@ Intrinsic Classes
 
 </div>
 
-<div class="main">
+<h1 id="extending-intrinsic-classes">Extending Intrinsic Classes</h1>
 
-# Extending Intrinsic Classes
-
-You can extend an intrinsic class's programmatic interface by adding new
+<p>You can extend an intrinsic class’s programmatic interface by adding new
 methods and static (class-level) properties. This capability allows you
 to add new functionality to an intrinsic class, and then access the new
 functionality using the same syntax that you would use to access native
-features of the class.
+features of the class.</p>
 
-To add a method to an intrinsic class, use the
-<span class="code">modify</span> statement. The
-<span class="code">modify</span> syntax for intrinsic classes is almost
-exactly the same as it is for regular objects:
+<p>To add a method to an intrinsic class, use the
+<code class="language-plaintext highlighter-rouge">modify</code> statement. The
+<code class="language-plaintext highlighter-rouge">modify</code> syntax for intrinsic classes is almost
+exactly the same as it is for regular objects:</p>
 
 <div class="syntax">
 
@@ -61,19 +59,18 @@ exactly the same as it is for regular objects:
        method2 ...
     ;
 
-</div>
+
 
 When you modify an intrinsic class, the intrinsic class must be defined
-before the <span class="code">modify</span> statement. In most cases,
-this simply means that you must <span class="code">\#include</span> the
+before the `modify` statement. In most cases,
+this simply means that you must `\#include` the
 system header file that defines the intrinsic class before the
-<span class="code">modify</span> statement in the same compilation unit.
+`modify` statement in the same compilation unit.
 
 The following example adds a base-2 logarithm function to the BigNumber
 intrinsic class.
 
-<div class="code">
-
+```
     #include <bignum.h>
 
     modify BigNumber
@@ -103,24 +100,23 @@ intrinsic class.
       // our caches ln(2) value  we don't have any value initially
       cacheLn2_ = nil
     ;
-
-&lt;/div&gt;
+```
 
 This example illustrates several aspects of intrinsic class extensions.
 
-First, note that we can refer to <span class="code">self</span> within
+First, note that we can refer to `self` within
 the method we add to the class. We're modifying BigNumber, so
-<span class="code">self</span> is always a BigNumber object; we can thus
-refer to its methods, such as <span class="code">getPrecision()</span>
-and <span class="code">setPrecision()</span>, and we can also use the
+`self` is always a BigNumber object; we can thus
+refer to its methods, such as `getPrecision()`
+and `setPrecision()`, and we can also use the
 value in arithmetic.
 
 Second, note that we can add a data property to the class. In the
-example, we add a property called <span class="code">cacheLn2</span>,
+example, we add a property called `cacheLn2`,
 which contains a cached value of the natural logarithm of 2. (In the
 example, we have chosen to cache the value rather than recalculate it
-each time we call the <span class="code">ln2()</span> method as a
-performance optimization; calculating <span class="code">ln(2)</span> is
+each time we call the `ln2()` method as a
+performance optimization; calculating `ln(2)` is
 fairly expensive, so it makes sense to save the value when we first
 calculate it, and re-use the same value rather than calculating it on
 each new call to the method.)
@@ -131,11 +127,9 @@ property to BigNumber itself, not to each individual BigNumber value.
 So, we cannot write something like this within an intrinsic class
 extension method:
 
-<div class="code">
-
+```
     self.val1 = 5;  // ILLEGAL!
-
-</div>
+```
 
 The statement above is illegal in an intrinsic class extension method
 because it attempts to store a property value with the object itself,
@@ -150,7 +144,7 @@ There are some restrictions on modifying intrinsic classes:
 - You cannot modify an intrinsic method of an intrinsic class, whether
   defined directly on the class or inherited from its intrinsic
   superclass
-- You cannot use <span class="code">replace</span> with an intrinsic
+- You cannot use `replace` with an intrinsic
   class.
 - You cannot subclass an intrinsic class.
 
@@ -183,30 +177,27 @@ aggregation.
 To create a complex number class using aggregation, we'd start with
 something like this:
 
-<div class="code">
-
+```
     class Complex: object
       construct(r, i) { r_ = r; i_ = i; }
       r_ = nil // the real part
       i_ = nil // the imaginary part
     ;
+```
 
-</div>
-
-Here, the properties <span class="code">r\_</span> and
-<span class="code">i\_</span> are simply BigNumber values. We have thus
+Here, the properties `r\_` and
+`i\_` are simply BigNumber values. We have thus
 aggregated two BigNumber values into this new class that we call
 Complex.
 
 Starting in TADS 3.1, you can use take this idea further using [operator
 overloading](opoverload.html), which lets you define mathematical
-operators (such as <span class="code">+</span> and
-<span class="code">\*</span>) on a custom class. This makes it possible
+operators (such as `+` and
+`\*`) on a custom class. This makes it possible
 to define a Complex class that you can use as though it were a built-in
 numeric type.
 
-<div class="code">
-
+```
       // adding to the Complex class definition...
       operator+(v) { return new Complex(r_ + v.r_, i_ + v.i_); }
       operator-(v) { return new Complex(r_ - v.r_, i_ - v.i_); }
@@ -220,8 +211,7 @@ numeric type.
       b = new Complex(-3.1, -2.0);
       c = a + b;
     }
-
-</div>
+```
 
 With a little more work, we could add the other standard math operators
 to round out the class. Note that a really robust Complex class would
@@ -245,7 +235,7 @@ Intrinsic Classes
     </span>
 
 </div>
-</bignum.h></div></div>
+</bignum.h></div>
 
 </main>
 <footer>

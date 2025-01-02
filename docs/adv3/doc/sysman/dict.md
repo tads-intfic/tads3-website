@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Dictionary
 
@@ -132,7 +132,7 @@ couple of properties that the algorithm should have:
   object, you can find information on how to write a good hash function
   in practically any textbook on computer algorithms.
 
-</div>
+
 
 `matchValues(*inputStr*, *dictStr*)`
 

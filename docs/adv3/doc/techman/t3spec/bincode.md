@@ -19,7 +19,7 @@ Portable Binary Encoding
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -360,7 +360,7 @@ Data holder for any primitive type
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

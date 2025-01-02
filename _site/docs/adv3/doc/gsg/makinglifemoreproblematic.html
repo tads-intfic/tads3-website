@@ -27,24 +27,22 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="climbingthetree.html">[Previous]</a>
+  <a href="rewardingtheeffort.html">[Next]</a></em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](climbingthetree.html)
-  [\[Next\]](rewardingtheeffort.html)*
+<h2 id="making-life-more-problematic">Making Life More Problematic</h2>
 
-## Making Life More Problematic
-
-So far the game allows the player to walk from the cottage to the
+<p>So far the game allows the player to walk from the cottage to the
 clearing and then climb the tree, but this is not particularly
-challenging. The time has come to add a puzzle: let's suppose that in
+challenging. The time has come to add a puzzle: let’s suppose that in
 order to climb the tree, Heidi first needs to fetch a chair and stand on
 it. To make this a puzzle we must first prevent Heidi climbing the tree
-when she's standing on the ground. To do this we must change the
-definition of `clearing.up`. As a first attempt, we'll use a close
-relative (in fact the parent) of the `FakeConnector`, namely the
-`NoTravelMessage`. Modify the clearing object so that its `up `property
-is now defined as follows:
+when she’s standing on the ground. To do this we must change the
+definition of <code class="language-plaintext highlighter-rouge">clearing.up</code>. As a first attempt, we’ll use a close
+relative (in fact the parent) of the <code class="language-plaintext highlighter-rouge">FakeConnector</code>, namely the
+<code class="language-plaintext highlighter-rouge">NoTravelMessage</code>. Modify the clearing object so that its <code class="language-plaintext highlighter-rouge">up </code>property
+is now defined as follows:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -60,12 +58,23 @@ is now defined as follows:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-up : NoTravelMessage {"The lowest bough is just too high for   
-   you to reach. "}  
+<p>up : NoTravelMessage {“The lowest bough is just too high for <br />
+   you to reach. ”}</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -81,21 +90,32 @@ up : NoTravelMessage {"The lowest bough is just too high for 
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Now recompile the game and try both going up from the clearing and
+<p>Now recompile the game and try both going up from the clearing and
 climbing the tree. Both attempts should be foiled in exactlty the same
-way. If we had remapped **climb tree** to `TravelVia, topOfTree` instead
-of `Up` this would not have worked; the player could have bypassed our
-puzzle by typing **climb tree** instead of **up**.  
-  
-That was the easy part. The tricky part is creating a chair object that
+way. If we had remapped <strong>climb tree</strong> to <code class="language-plaintext highlighter-rouge">TravelVia, topOfTree</code> instead
+of <code class="language-plaintext highlighter-rouge">Up</code> this would not have worked; the player could have bypassed our
+puzzle by typing <strong>climb tree</strong> instead of <strong>up</strong>.</p>
+
+<p>That was the easy part. The tricky part is creating a chair object that
 will enable Heidi to climb the tree. The first thing we need is
-somewhere to put it; the most likely place you'd find a chair is
-probably inside the cottage. For the moment we'll define the inside of
-the cottage as:  
+somewhere to put it; the most likely place you’d find a chair is
+probably inside the cottage. For the moment we’ll define the inside of
+the cottage as:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -111,16 +131,27 @@ the cottage as:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-insideCottage : Room 'Inside Cottage'  
-  "You are in the front parlour of the little cottage. The door out  
-    is to the east. "    
-   out = outsideCottage  
-   east asExit(out)  
-;  
+<p>insideCottage : Room ’Inside Cottage’<br />
+  ”You are in the front parlour of the little cottage. The door out<br />
+    is to the east. ”  <br />
+   out = outsideCottage<br />
+   east asExit(out)<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -136,24 +167,35 @@ insideCottage : Room 'Inside Cottage'
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-The only new element here is the `asExit `macro. The cottage lies to the
+<p>The only new element here is the <code class="language-plaintext highlighter-rouge">asExit </code>macro. The cottage lies to the
 west of the starting postion, so to get from inside the cottage back
-outside the player might type either **out** or **east**. The `asExit`()
-macro make going **east** the same as going **out**, but without having
-**east** listed as a separate exit (either in the status line or in
+outside the player might type either <strong>out</strong> or <strong>east</strong>. The <code class="language-plaintext highlighter-rouge">asExit</code>()
+macro make going <strong>east</strong> the same as going <strong>out</strong>, but without having
+<strong>east</strong> listed as a separate exit (either in the status line or in
 response to an exits command). This allows us to make two directions
 lead to the same destination without misleading the player into
 supposing that they are two separate exits, instead of two synonyms for
-the same exit.  
-  
-Note too that since insideCottage is an indoor room, we have defined it
+the same exit.</p>
+
+<p>Note too that since insideCottage is an indoor room, we have defined it
 to be of class Room rather than class OutsideRoom. To make this room
 accessible at all we should add the following to the definition of
-outsideCottage:  
+outsideCottage:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -211,17 +253,28 @@ outsideCottage:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Now recompile the game and you should be able to get inside the cottage
-by typing either **enter** or **in** or **west** (or **w**). But one
-thing the player might equally well try, namely **enter cottage** won't
-work.  
-  
-The obvious way to fix this on the basis of what we've done before is to
-add the following to the definition of cottage:  
+<p>Now recompile the game and you should be able to get inside the cottage
+by typing either <strong>enter</strong> or <strong>in</strong> or <strong>west</strong> (or <strong>w</strong>). But one
+thing the player might equally well try, namely <strong>enter cottage</strong> won’t
+work.</p>
+
+<p>The obvious way to fix this on the basis of what we’ve done before is to
+add the following to the definition of cottage:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -265,14 +318,25 @@ add the following to the definition of cottage:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-And this will certainly act just as expected. However, it's more work
+<p>And this will certainly act just as expected. However, it’s more work
 than we need, since the TADS 3 library provides an Enterable class to
 handle just this kind of situation. All we need do, in fact, is to
-change the definition of cottage to:  
+change the definition of cottage to:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -288,15 +352,26 @@ change the definition of cottage to:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-+ Enterable -\&gt;insideCottage 'pretty little  
-   cottage/house/building' 'pretty little cottage'    
-   "It's just the sort of pretty little cottage that townspeople dream of living in,   
-     with roses round the door and a neat little window frame freshly painted in green. "        
-;  
+<p>+ Enterable -&gt;insideCottage ’pretty little<br />
+   cottage/house/building’ ’pretty little cottage’  <br />
+   ”It’s just the sort of pretty little cottage that townspeople dream of living in, <br />
+     with roses round the door and a neat little window frame freshly painted in green. ”      <br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -312,19 +387,30 @@ change the definition of cottage to:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-This introduces a new template element: `-&gt;insideCottage`. In this
-instance the `-&gt;` points to the `TravelConnector `that is traversed when
+<p>This introduces a new template element: <code class="language-plaintext highlighter-rouge">-&gt;insideCottage</code>. In this
+instance the <code class="language-plaintext highlighter-rouge">-&gt;</code> points to the <code class="language-plaintext highlighter-rouge">TravelConnector </code>that is traversed when
 the Enterable is entered. Remember that a room is a kind of
-`TravelConnector`, and that travelling via a room is the same as
+<code class="language-plaintext highlighter-rouge">TravelConnector</code>, and that travelling via a room is the same as
 travelling to a room, so for now the command enter cottage will take
-Heidi to the inside of the cottage (we'll be changing that later when we
+Heidi to the inside of the cottage (we’ll be changing that later when we
 give the cottage a locked front door). An alternative to using the
-`-&gt;connector` syntax would have been to define the connector property
-explicitly with:  
+<code class="language-plaintext highlighter-rouge">-&gt;connector</code> syntax would have been to define the connector property
+explicitly with:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -368,19 +454,30 @@ explicitly with:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Whether you prefer this as being more readable is up to you.  
-  
-Now that we have somewhere to put the chair, we can start defining it.
+<p>Whether you prefer this as being more readable is up to you.</p>
+
+<p>Now that we have somewhere to put the chair, we can start defining it.
 What we need is something that we can carry around and stand on (but not
 both at the same time!). So it must be something that can contain an
 actor while appearing as an object inside a room. In TADS 3 this kind of
-object is called a `NestedRoom`. The TADS 3 library includes a subclass
-of `NestedRoom `called `Chair `that does just the job (a `Chair `is
-something you can sit on or stand on but not lie on):  
+object is called a <code class="language-plaintext highlighter-rouge">NestedRoom</code>. The TADS 3 library includes a subclass
+of <code class="language-plaintext highlighter-rouge">NestedRoom </code>called <code class="language-plaintext highlighter-rouge">Chair </code>that does just the job (a <code class="language-plaintext highlighter-rouge">Chair </code>is
+something you can sit on or stand on but not lie on):</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -396,13 +493,24 @@ something you can sit on or stand on but not lie on):
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-+ chair : Chair 'wooden chair' 'wooden chair'  
-  "It's a plain wooden chair. "  
-;  
+<p>+ chair : Chair ’wooden chair’ ’wooden chair’<br />
+  ”It’s a plain wooden chair. ”<br />
+;</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -418,15 +526,26 @@ something you can sit on or stand on but not lie on):
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-There's one way we can improve the behaviour of this chair before we
+<p>There’s one way we can improve the behaviour of this chair before we
 even think about using it to climb the tree. When Heidi is sent into the
-cottage, the game displays the plain vanilla default message "You see a
-wooden chair here." We can improve on this by adding the following
-property definition to the chair object:  
+cottage, the game displays the plain vanilla default message “You see a
+wooden chair here.” We can improve on this by adding the following
+property definition to the chair object:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -442,11 +561,22 @@ property definition to the chair object:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-initSpecialDesc = "A plain wooden chair sits in the corner. "  
+<p>initSpecialDesc = ”A plain wooden chair sits in the corner. ”</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -462,29 +592,40 @@ initSpecialDesc = "A plain wooden chair sits in the corner. "
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-The initSpecialDesc property defines how the object will be described in
+<p>The initSpecialDesc property defines how the object will be described in
 a room description before the object has been moved (if we wanted to, we
 could override the conditions under which initSpecialDesc was displayed,
-but that's a complication we won't tangle with for now).  
-  
-Now try compiling and rerunning the game. You should find that the chair
+but that’s a complication we won’t tangle with for now).</p>
+
+<p>Now try compiling and rerunning the game. You should find that the chair
 now behaves just as one would expect: you can sit or stand on it (but
-not lie on it), you can also take it, but you can't take it while you're
-sitting or standing on it, and you can't sit or stand on it while you're
-carrying it.  
-  
-But, as you will discover, the chair still doesn't help Heidi climb the
+not lie on it), you can also take it, but you can’t take it while you’re
+sitting or standing on it, and you can’t sit or stand on it while you’re
+carrying it.</p>
+
+<p>But, as you will discover, the chair still doesn’t help Heidi climb the
 tree. The problem is that we defined the connector on clearing.up as a
 NoTravelMessage, which blocks travel under all circumstances. What we
 need is a connector that allows Heidi to pass only when the chair is at
 the foot of the tree, i.e. in the clearing. One type of connector
 appropriate to this task is a OneWayRoomConnector, since this possesses
 methods to control the conditions under which travel is permitted. We
-could define it thus:  
+could define it thus:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -556,12 +697,23 @@ could define it thus:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-           explainTravelBarrier(traveler)   
-            { "The lowest bough is just too high for   
+<p>           explainTravelBarrier(traveler) <br />
+            { ”The lowest bough is just too high for </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -577,9 +729,20 @@ could define it thus:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -609,20 +772,31 @@ could define it thus:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-The canTravelerPass() method allows travel if and only if it returns
+<p>The canTravelerPass() method allows travel if and only if it returns
 true, which in this case will happen if and only if the chair is in the
 clearing. If travel is disallowed, the method explainTravelBarrier() is
 called to explain why not. In this case we just display a suitable
-message.  
-  
-Before we carry on with refining this, let's digress to another matter.
-The connector we've just defined is defined on the up property of
+message.</p>
+
+<p>Before we carry on with refining this, let’s digress to another matter.
+The connector we’ve just defined is defined on the up property of
 clearing. This might lead us to suppose that we could have defined a
-slightly more general version of it by defining:  
+slightly more general version of it by defining:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -694,12 +868,23 @@ slightly more general version of it by defining:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-           explainTravelBarrier(traveler)   
-            { "The lowest bough is just too high for   
+<p>           explainTravelBarrier(traveler) <br />
+            { ”The lowest bough is just too high for </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -715,9 +900,20 @@ slightly more general version of it by defining:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -747,20 +943,31 @@ slightly more general version of it by defining:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-Here we have simply changed `chair.isIn(clearing)` to
-`chair.isIn(self)`, on the assumption that it will effectively mean the
-same thing. But it won't, since in the context in which we've defined
-it, `self `refers not to the clearing, but to the nested
-`OneWayRoomConnector `we've just defined on one of its properties. This
+<p>Here we have simply changed <code class="language-plaintext highlighter-rouge">chair.isIn(clearing)</code> to
+<code class="language-plaintext highlighter-rouge">chair.isIn(self)</code>, on the assumption that it will effectively mean the
+same thing. But it won’t, since in the context in which we’ve defined
+it, <code class="language-plaintext highlighter-rouge">self </code>refers not to the clearing, but to the nested
+<code class="language-plaintext highlighter-rouge">OneWayRoomConnector </code>we’ve just defined on one of its properties. This
 is a fatally easy easy mistake to make, and raises the question whether
 there is a right way for a nested object like the anonymous
-`OneWayRoomConnector `in this example to refer to its host object. There
-is: what we actually need is `lexicalParent`. We could correctly write
-the previous example as:  
+<code class="language-plaintext highlighter-rouge">OneWayRoomConnector </code>in this example to refer to its host object. There
+is: what we actually need is <code class="language-plaintext highlighter-rouge">lexicalParent</code>. We could correctly write
+the previous example as:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -832,12 +1039,23 @@ the previous example as:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-           explainTravelBarrier(traveler)   
-            { "The lowest bough is just too high for   
+<p>           explainTravelBarrier(traveler) <br />
+            { ”The lowest bough is just too high for </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -853,9 +1071,20 @@ the previous example as:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -899,27 +1128,38 @@ the previous example as:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-This is now equivalent to writing chair.isIn(clearing), but using
+<p>This is now equivalent to writing chair.isIn(clearing), but using
 lexicalParent makes it immediately obvious what the intention is (as
-opposed to having to check that chair refers to the enclosing object).  
-  
-If you now recompile the game and try it again, you'll find that it now
-works after a fashion, but that it's less than ideal. There are still
-several things we should tidy up.  
-  
-One thing we might like to do is to display a suitable message when the
+opposed to having to check that chair refers to the enclosing object).</p>
+
+<p>If you now recompile the game and try it again, you’ll find that it now
+works after a fashion, but that it’s less than ideal. There are still
+several things we should tidy up.</p>
+
+<p>One thing we might like to do is to display a suitable message when the
 player character climbs off the chair and up the tree, rather than just
 have Heidi suddenly transported from the chair to the top. There is a
-`TravelMessage` class that allows a message to be displayed while
+<code class="language-plaintext highlighter-rouge">TravelMessage</code> class that allows a message to be displayed while
 traveling, but we have already defined the connector to be a
-`OneWayRoomConnector`. Since, however, the `TravelMessage` class
+<code class="language-plaintext highlighter-rouge">OneWayRoomConnector</code>. Since, however, the <code class="language-plaintext highlighter-rouge">TravelMessage</code> class
 inherits all the methods we have already used, we can simply change
-`OneWayRoomConnector` to `TravelMessage` and add the following
-property:  
+<code class="language-plaintext highlighter-rouge">OneWayRoomConnector</code> to <code class="language-plaintext highlighter-rouge">TravelMessage</code> and add the following
+property:</p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -935,12 +1175,23 @@ property:
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-travelDesc =  "By standing on the chair you just manage to reach the lowest   
-  bough and haul yourself up the tree.\&lt;.p\&gt;"           
+<p>travelDesc =  ”By standing on the chair you just manage to reach the lowest <br />
+  bough and haul yourself up the tree.&lt;.p&gt;“         </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -956,13 +1207,10 @@ travelDesc =  "By standing on the chair you just manage to reach th
 </tbody>
 </table>
 
-  
-The `&lt;.p&gt;` just adds a paragraph break (blank line) after the message.
-We could do the same with `\b`, except that using `&lt;.p&gt;` ensures we
-don't get multiple blank lines should the next message start with
-`&lt;.p&gt;`. The connector should now look like this:   
-
-</div>
+<p>The <code class="language-plaintext highlighter-rouge">&lt;.p&gt;</code> just adds a paragraph break (blank line) after the message.
+We could do the same with <code class="language-plaintext highlighter-rouge">\b</code>, except that using <code class="language-plaintext highlighter-rouge">&lt;.p&gt;</code> ensures we
+don’t get multiple blank lines should the next message start with
+<code class="language-plaintext highlighter-rouge">&lt;.p&gt;</code>. The connector should now look like this: </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>

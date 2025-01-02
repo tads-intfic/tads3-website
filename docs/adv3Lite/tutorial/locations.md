@@ -19,7 +19,7 @@ Nest</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Defining the Game's Locations
 
@@ -185,7 +185,7 @@ should be more than enough for most games) then it is possible to define
 custom directions of your own, but that goes beyond what we cover in
 this tutorial.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

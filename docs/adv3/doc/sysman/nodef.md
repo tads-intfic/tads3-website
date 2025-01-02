@@ -19,7 +19,7 @@ Definitions</a>    
 
 </div>
 
-<div class="main">
+
 
 # Replacing the Standard Library
 
@@ -41,7 +41,7 @@ the list of files in your project. If you do this, you'll have to define
 your own versions of the support classes for File and GrammarProd, if
 you use those classes.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
   
   
@@ -21,7 +21,7 @@ layout: docs
 
 <a href="begin.html" class="toc">Part I: Opening Moves</a>
 
-</div>
+
 
 <div class="toc2">
 

@@ -19,7 +19,7 @@ Parameters
 
 </div>
 
-<div class="main">
+
 
 # Optional Parameters
 
@@ -369,7 +369,7 @@ many parameters are present using `argcount`,
 and you access the unnamed parameters beyond the "..." using
 `getArg()`.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -17,7 +17,7 @@ Structure</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Part III: The Language
 
@@ -51,7 +51,7 @@ This part provides detailed coverage of the TADS 3 language.
 [Exporting Symbols](export.html)  
 [VM Run-Time Error Codes](errmsg.html)  
 
-</div>
+
 
 </div>
 

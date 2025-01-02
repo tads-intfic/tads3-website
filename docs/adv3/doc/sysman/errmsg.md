@@ -18,7 +18,7 @@ Codes
 
 </div>
 
-<div class="main">
+
 
 # VM Run-Time Error Codes
 
@@ -36,7 +36,7 @@ VM error condition via the error code `errno\_`.
 Error reading file. The file might be corrupted or a media error might
 have occurred.
 
-</div>
+
 
 <span class="errid">102: error writing file</span>
 

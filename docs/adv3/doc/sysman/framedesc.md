@@ -18,7 +18,7 @@ StackFrameDesc
 
 </div>
 
-<div class="main">
+
 
 # StackFrameDesc
 
@@ -197,7 +197,7 @@ inherited from superclasses, this might not be the same as the
 `self` object in the frame. If the level refers
 to an ordinary function rather than a method, returns nil.
 
-</div>
+
 
 `getInvokee()`
 

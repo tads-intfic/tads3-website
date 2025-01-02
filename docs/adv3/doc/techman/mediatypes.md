@@ -19,7 +19,7 @@ Project Starter Templates</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Internet Media Types for TADS
 
@@ -54,7 +54,7 @@ select one from the following list:
 
 Background: Media Type Syntax
 
-</div>
+
 
 While media or MIME types were originally introduced by RFC 1341 their
 current incarnation is defined by a set of five core RFCs, some of which

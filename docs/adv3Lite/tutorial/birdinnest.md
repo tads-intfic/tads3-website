@@ -19,7 +19,7 @@ the tree</a>    
 
 </div>
 
-<div class="main">
+
 
 # Is the bird in the nest?
 
@@ -131,7 +131,7 @@ evaluate a property of nil.
 Now try compiling and running the game one last time to check that
 everything still behaves as you expect.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

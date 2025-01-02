@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Action Results
 
@@ -568,7 +568,7 @@ interaction on them:
     >put red ball in blue box
     Done.
 
-</div>
+
 
 It would be much better if the parser just went ahead and carried out
 the obvious actions of taking the red ball and opening the blue box

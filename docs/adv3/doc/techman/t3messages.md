@@ -18,7 +18,7 @@ Come From
 
 </div>
 
-<div class="main">
+
 
 # Where Messages Come From
 
@@ -1951,7 +1951,7 @@ This farewell message is produced by the showGoodbye() method on
         suggests. "
     ;
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -19,7 +19,7 @@ Character-Mapping File</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Translating Error Messages
 
@@ -124,7 +124,7 @@ wish to compile it to create vm_deu.msg. You'd use a command like this:
 
     t3msgc vm_deu.txt vm_deu.msg
 
-</div>
+
 
 The compiler has one option: -strict, which displays a warning for every
 defined symbolic message ID that has no message. You can use this option

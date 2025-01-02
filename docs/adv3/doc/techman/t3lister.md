@@ -18,7 +18,7 @@ Context-Sensitive Help System</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Lists and Listers
 
@@ -912,7 +912,7 @@ more convenient to use the table below:
 
 Lister Property
 
-</div>
+
 
 Container
 

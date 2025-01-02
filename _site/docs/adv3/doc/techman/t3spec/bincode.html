@@ -39,62 +39,57 @@ Portable Binary Encoding
 
 </div>
 
-<div class="main">
+<p><img src="t3logo.gif" alt="" /></p>
 
-![](t3logo.gif)
+<h2 id="t3-portable-binary-encoding">T3 Portable Binary Encoding</h2>
 
-  
-  
-
-## T3 Portable Binary Encoding
-
-All T3 binary files are encoded in a portable format that allows a
+<p>All T3 binary files are encoded in a portable format that allows a
 binary file created on one type of computer to be used without any
 changes with T3 implementations on other types of computers. To achieve
 this binary portability, T3 binary files use a portable encoding that
 represents datatypes in a standard format. Each T3 implementation
 translates between the standard format and the local representation of
-the datatype when reading and writing files.
+the datatype when reading and writing files.</p>
 
-### Datatypes
+<h3 id="datatypes">Datatypes</h3>
 
-The following are the portable datatypes and their encoding:
+<p>The following are the portable datatypes and their encoding:</p>
 
-#### UTF-8 Text
+<h4 id="utf-8-text">UTF-8 Text</h4>
 
-Unicode text is encoded in UTF-8. This encoding represents each 16-bit
-Unicode character with one, two, or three bytes:
+<p>Unicode text is encoded in UTF-8. This encoding represents each 16-bit
+Unicode character with one, two, or three bytes:</p>
 
-From
+<p>From</p>
 
-To
+<p>To</p>
 
-Binary Encoding
+<p>Binary Encoding</p>
 
-0x0000
+<p>0x0000</p>
 
-0x007f
+<p>0x007f</p>
 
-0bbbbbbb
+<p>0bbbbbbb</p>
 
-0x0080
+<p>0x0080</p>
 
-0x07ff
+<p>0x07ff</p>
 
-110bbbbb 10bbbbbb
+<p>110bbbbb 10bbbbbb</p>
 
-0x0800
+<p>0x0800</p>
 
-0xffff
+<p>0xffff</p>
 
-1110bbbb 10bbbbbb 10bbbbbb
+<p>1110bbbb 10bbbbbb 10bbbbbb</p>
 
-The bits of the 16-bit value are encoded into the **b**'s in the table
+<p>The bits of the 16-bit value are encoded into the <strong>b</strong>’s in the table
 above with the most significant group of bits in the first byte. So:
 0x571 has the 16-bit Unicode binary pattern 0000011001110001, and is
-encoded in UTF-8 as 11011001 10110001.
+encoded in UTF-8 as 11011001 10110001.</p>
 
-Note that UTF-8 encodes the most significant bits in the first bytes;
+<p>Note that UTF-8 encodes the most significant bits in the first bytes;
 this is different from the byte ordering used for other types (such as
 integers), which are all stored in little-endian format
 (least-significant byte first). The reason for this disparity is that
@@ -104,283 +99,283 @@ especially useful, since it does not produce correct results for a
 localized sorting order, but it at least produces a uniform sorting
 order based on the Unicode code points stored in the string and hence
 may be useful in certain cases for building internal indices and
-tables.)
+tables.)</p>
 
-#### Integer values
+<h4 id="integer-values">Integer values</h4>
 
-Integer values are stored in little-endian format (i.e.,
+<p>Integer values are stored in little-endian format (i.e.,
 least-significant byte first) in fixed-size byte arrays. These values
 are not aligned on any particular boundary in the file. These values can
 be interpreted as signed or unsigned. Signed values are encoded in
-2's-complement notation.
+2’s-complement notation.</p>
 
-**16-bit integers** are stored as 2-byte arrays. The first byte has the
-low-order 8 bits, the second byte has the high-order 8 bits.
+<p><strong>16-bit integers</strong> are stored as 2-byte arrays. The first byte has the
+low-order 8 bits, the second byte has the high-order 8 bits.</p>
 
-**32-bit integers** are stored as 4-byte arrays. The first byte has the
+<p><strong>32-bit integers</strong> are stored as 4-byte arrays. The first byte has the
 low-order 8 bits, the second byte has the next more significant 8 bits,
 the third byte has the next more significant 8 bits, and the fourth byte
-has the most significant 8 bits.
+has the most significant 8 bits.</p>
 
-### Data Holders
+<h3 id="data-holders">Data Holders</h3>
 
-The T3 VM uses run-time typing, which allows certain types of variables
+<p>The T3 VM uses run-time typing, which allows certain types of variables
 to hold any type of value; this type of value is tagged with its type,
-so that the VM can interpret the value correctly whenever it is used.
+so that the VM can interpret the value correctly whenever it is used.</p>
 
-In order to store these "variant" types, the VM defines a composite type
+<p>In order to store these “variant” types, the VM defines a composite type
 called a data holder. This composite contains the type information along
-with the value.
+with the value.</p>
 
-To store a data holder portably, we store a 5-byte array. The first byte
+<p>To store a data holder portably, we store a 5-byte array. The first byte
 contains the type ID value. The remaining 4 bytes encode the value using
 the standard primitive type encodings; the table below shows the
-correspondence between the primitive types and their encodings.
+correspondence between the primitive types and their encodings.</p>
 
-When an encoding does not take up the full 4 bytes, the value is packed
+<p>When an encoding does not take up the full 4 bytes, the value is packed
 into the earlier bytes, and the later bytes have arbitrary values. For
-example, a property ID is encoded in a data holder as follows:
+example, a property ID is encoded in a data holder as follows:</p>
 
-Byte Index
+<p>Byte Index</p>
 
-Value
+<p>Value</p>
 
-0
+<p>0</p>
 
-6 (the type code for VM_PROP)
+<p>6 (the type code for VM_PROP)</p>
 
-1
+<p>1</p>
 
-low-order 8 bits of property ID value
+<p>low-order 8 bits of property ID value</p>
 
-2
+<p>2</p>
 
-high-order 8 bits of property ID value
+<p>high-order 8 bits of property ID value</p>
 
-3
+<p>3</p>
 
-arbitrary
+<p>arbitrary</p>
 
-4
+<p>4</p>
 
-arbitrary
+<p>arbitrary</p>
 
-### Type ID's
+<h3 id="type-ids">Type ID’s</h3>
 
-The table below shows the assigned ID values for the primitive types.
+<p>The table below shows the assigned ID values for the primitive types.
 (The types shown in italics are reserved for internal use by
 implementations and will never appear in portable files; we list them
-for the sake of completeness, but they'll never be stored persistently
-and thus are not relevant to the portable file format.)
+for the sake of completeness, but they’ll never be stored persistently
+and thus are not relevant to the portable file format.)</p>
 
-Type Name
+<p>Type Name</p>
 
-Type ID
+<p>Type ID</p>
 
-Description
+<p>Description</p>
 
-Value Encoding
+<p>Value Encoding</p>
 
-VM_NIL
+<p>VM_NIL</p>
 
-1
+<p>1</p>
 
-nil (boolean "false" or null pointer)
+<p>nil (boolean “false” or null pointer)</p>
 
-none
+<p>none</p>
 
-VM_TRUE
+<p>VM_TRUE</p>
 
-2
+<p>2</p>
 
-boolean "true"
+<p>boolean “true”</p>
 
-none
+<p>none</p>
 
-*VM_STACK*
+<p><em>VM_STACK</em></p>
 
-3
+<p>3</p>
 
-*Reserved for implementation use for storing native machine pointers to
-stack frames (see note below)*
+<p><em>Reserved for implementation use for storing native machine pointers to
+stack frames (see note below)</em></p>
 
-none
+<p>none</p>
 
-*VM_CODEPTR*
+<p><em>VM_CODEPTR</em></p>
 
-4
+<p>4</p>
 
-*Reserved for implementation use for storing native machine pointers to
-code (see note below)*
+<p><em>Reserved for implementation use for storing native machine pointers to
+code (see note below)</em></p>
 
-none
+<p>none</p>
 
-VM_OBJ
+<p>VM_OBJ</p>
 
-5
+<p>5</p>
 
-object reference as a 32-bit unsigned object ID number
+<p>object reference as a 32-bit unsigned object ID number</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_PROP
+<p>VM_PROP</p>
 
-6
+<p>6</p>
 
-property ID as a 16-bit unsigned number
+<p>property ID as a 16-bit unsigned number</p>
 
-UINT2
+<p>UINT2</p>
 
-VM_INT
+<p>VM_INT</p>
 
-7
+<p>7</p>
 
-integer as a 32-bit signed number
+<p>integer as a 32-bit signed number</p>
 
-INT4
+<p>INT4</p>
 
-VM_SSTRING
+<p>VM_SSTRING</p>
 
-8
+<p>8</p>
 
-single-quoted string; 32-bit unsigned constant pool offset
+<p>single-quoted string; 32-bit unsigned constant pool offset</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_DSTRING
+<p>VM_DSTRING</p>
 
-9
+<p>9</p>
 
-double-quoted string; 32-bit unsigned constant pool offset
+<p>double-quoted string; 32-bit unsigned constant pool offset</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_LIST
+<p>VM_LIST</p>
 
-10
+<p>10</p>
 
-list constant; 32-bit unsigned constant pool offset
+<p>list constant; 32-bit unsigned constant pool offset</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_CODEOFS
+<p>VM_CODEOFS</p>
 
-11
+<p>11</p>
 
-code offset; 32-bit unsigned code pool offset
+<p>code offset; 32-bit unsigned code pool offset</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_FUNCPTR
+<p>VM_FUNCPTR</p>
 
-12
+<p>12</p>
 
-function pointer; 32-bit unsigned code pool offset
+<p>function pointer; 32-bit unsigned code pool offset</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_EMPTY
+<p>VM_EMPTY</p>
 
-13
+<p>13</p>
 
-no value (this is useful in some cases to represent an explicitly unused
-data slot, such as a slot that has never been initialized)
+<p>no value (this is useful in some cases to represent an explicitly unused
+data slot, such as a slot that has never been initialized)</p>
 
-none
+<p>none</p>
 
-*VM_NATIVE_CODE*
+<p><em>VM_NATIVE_CODE</em></p>
 
-14
+<p>14</p>
 
-*Reserved for implementation use for storing native machine pointers to
-native code (see note below)*
+<p><em>Reserved for implementation use for storing native machine pointers to
+native code (see note below)</em></p>
 
-none
+<p>none</p>
 
-VM_ENUM
+<p>VM_ENUM</p>
 
-15
+<p>15</p>
 
-enumerated constant; 32-bit integer
+<p>enumerated constant; 32-bit integer</p>
 
-UINT4
+<p>UINT4</p>
 
-VM_BIFPTR
+<p>VM_BIFPTR</p>
 
-16
+<p>16</p>
 
-built-in function pointer; 32-bit integer, encoding the function set
-dependency table index in the high-order 16 bits, and the function's
-index within its set in the low-order 16 bits.
+<p>built-in function pointer; 32-bit integer, encoding the function set
+dependency table index in the high-order 16 bits, and the function’s
+index within its set in the low-order 16 bits.</p>
 
-UINT4
+<p>UINT4</p>
 
-*VM_OBJX*
+<p><em>VM_OBJX</em></p>
 
-17
+<p>17</p>
 
-*Reserved for implementation use for an executable object, as a 32-bit
-object ID number (see note below)*
+<p><em>Reserved for implementation use for an executable object, as a 32-bit
+object ID number (see note below)</em></p>
 
-UINT4
+<p>UINT4</p>
 
-Note that types 3 (VM_STACK), 4 (VM_CODEPTR), 14 (VM_NATIVE_CODE), and
-17 (VM_OBJX) are reserved for implementation use. These will **never**
+<p>Note that types 3 (VM_STACK), 4 (VM_CODEPTR), 14 (VM_NATIVE_CODE), and
+17 (VM_OBJX) are reserved for implementation use. These will <strong>never</strong>
 appear in a portable binary file; we list them here only for
 completeness. These types are intended to allow implementations to store
 native datatypes (such as native machine pointers) for which there is no
 meaningful portable representation. Implementations are free to use
 these types for any purposes of their own; the names and descriptions in
-the table are for mnemonic value only and shouldn't be taken to imply a
-required use for these types.
+the table are for mnemonic value only and shouldn’t be taken to imply a
+required use for these types.</p>
 
-### Type Names
+<h3 id="type-names">Type Names</h3>
 
-The file format specifications use the following names to refer to the
-portable datatypes:
+<p>The file format specifications use the following names to refer to the
+portable datatypes:</p>
 
-Name
+<p>Name</p>
 
-Description
+<p>Description</p>
 
-SBYTE
+<p>SBYTE</p>
 
-Signed 8-bit byte
+<p>Signed 8-bit byte</p>
 
-UBYTE
+<p>UBYTE</p>
 
-Unsigned 8-bit byte
+<p>Unsigned 8-bit byte</p>
 
-UTF8
+<p>UTF8</p>
 
-Unicode text encoded as UTF-8
+<p>Unicode text encoded as UTF-8</p>
 
-INT2
+<p>INT2</p>
 
-Signed 16-bit (2-byte) integer
+<p>Signed 16-bit (2-byte) integer</p>
 
-UINT2
+<p>UINT2</p>
 
-Unsigned 16-bit (2-byte) integer
+<p>Unsigned 16-bit (2-byte) integer</p>
 
-INT4
+<p>INT4</p>
 
-Signed 32-bit (4-byte) integer
+<p>Signed 32-bit (4-byte) integer</p>
 
-UINT4
+<p>UINT4</p>
 
-Unsigned 32-bit (4-byte) integer
+<p>Unsigned 32-bit (4-byte) integer</p>
 
-DATA_HOLDER
+<p>DATA_HOLDER</p>
 
-Data holder for any primitive type
+<p>Data holder for any primitive type</p>
 
 <div class="t3spec_version">
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

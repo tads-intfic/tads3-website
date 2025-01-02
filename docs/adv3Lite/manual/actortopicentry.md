@@ -17,7 +17,7 @@ Conversational Topics</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # The ActorTopicEntry Class
 
@@ -358,7 +358,7 @@ sub-topics, like this:
     You could ask Bob when the tower was built, or why the tower is scary, or tell him
     about your visit, or say you think he's exaggerating.
 
-</div>
+
 
 Just how you'd go about that is discussed in the section on
 [suggesting](suggest.html) topics.

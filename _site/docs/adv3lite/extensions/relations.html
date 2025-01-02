@@ -38,104 +38,93 @@ Relations
 
 </div>
 
-<div class="main">
+<h1 id="relations">Relations</h1>
 
-# Relations
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [relations.t](../relations.t) extension is to allow
+<p>The purpose of the <a href="../relations.t">relations.t</a> extension is to allow
 game code to set up and then test relations between objects (or other
 entities). This could be used, for example, to model social
 relationships between the NPCs in your game. The extension also enables
-pathfinding through any relation you define.
+pathfinding through any relation you define.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Objects and Properties
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
 
-In addition to a number of items intended purely for internal use, this
-extension defines the following new classes and functions:
+<p>In addition to a number of items intended purely for internal use, this
+extension defines the following new classes and functions:</p>
 
-- *Classes*: **Relation**, **DerivedRelation**
-- *functions*: <span class="code">relate()</span>,
-  <span class="code">related()</span>,
-  <span class="code">unrelate()</span> and
-  <span class="code">relationPath()</span>.
+<ul>
+  <li><em>Classes</em>: <strong>Relation</strong>, <strong>DerivedRelation</strong></li>
+  <li><em>functions</em>: <code class="language-plaintext highlighter-rouge">relate()</code>,
+<code class="language-plaintext highlighter-rouge">related()</code>,
+<code class="language-plaintext highlighter-rouge">unrelate()</code> and
+<code class="language-plaintext highlighter-rouge">relationPath()</code>.</li>
+</ul>
 
-  
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the relations.t file after the library files but before your
-game source files.
+<p>Include the relations.t file after the library files but before your
+game source files.</p>
 
-## Defining Relations
+<h2 id="defining-relations">Defining Relations</h2>
 
-You define a relation by defining a Relation object. The properties you
-need to define on Relation are **name**, **reverseName**,
-**relationType** and **reciprocal**. For example:
+<p>You define a relation by defining a Relation object. The properties you
+need to define on Relation are <strong>name</strong>, <strong>reverseName</strong>,
+<strong>relationType</strong> and <strong>reciprocal</strong>. For example:</p>
 
-<div class="code">
-
-     loving: Relation 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     loving: Relation 
         name = 'loves'
         reverseName = 'loved by'
         relationType = manyToOne 
      ;
      
+</code></pre></div></div>
 
-</div>
+<p>This can be abbreviated via the Relation template (defined in advlite.h)
+to:</p>
 
-This can be abbreviated via the Relation template (defined in advlite.h)
-to:
-
-<div class="code">
-
-     loving: Relation 'loves' 'loved by' manyToOne;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     loving: Relation 'loves' 'loved by' manyToOne;
      
+</code></pre></div></div>
 
-</div>
-
-The <span class="code">name</span> property can be uses to describe the
+<p>The <code class="language-plaintext highlighter-rouge">name</code> property can be uses to describe the
 relationship as a verb (e.g. John loves Mary). The
-<span class="code">reverseName</span> is the name to use when we want to
+<code class="language-plaintext highlighter-rouge">reverseName</code> is the name to use when we want to
 describe the relationship the other way round (if John loves Mary then
 Mary is loved by John); we could have defined the
-<span class="code">reverseName</span> as 'is loved by', but that's a bit
-more typing. The <span class="code">relationType</span> defines how many
-parties can appear on each side of the relationship. Here we've defined
-the loving relationship (in the sense of 'is in love with') to be
-**manyToOne**, meaning that each person can love at most one other
+<code class="language-plaintext highlighter-rouge">reverseName</code> as ‘is loved by’, but that’s a bit
+more typing. The <code class="language-plaintext highlighter-rouge">relationType</code> defines how many
+parties can appear on each side of the relationship. Here we’ve defined
+the loving relationship (in the sense of ‘is in love with’) to be
+<strong>manyToOne</strong>, meaning that each person can love at most one other
 person, but can be loved by several other people. (Jack and Jim may both
-Jill, but they can't simultaneously love anyone else - at least, not as
+Jill, but they can’t simultaneously love anyone else - at least, not as
 we have defined the loving relationship). The other possible values of
-the relationType property are **oneToOne** (e.g. the marriage
-relationship) **oneToMany** (e.g. the father relationship) or
-**manyToMany** (e.g. the sibling relationship). Relations that are
+the relationType property are <strong>oneToOne</strong> (e.g. the marriage
+relationship) <strong>oneToMany</strong> (e.g. the father relationship) or
+<strong>manyToMany</strong> (e.g. the sibling relationship). Relations that are
 oneToOne or manyToMany can also be reciprocal (just define
-<span class="code">reciprocal = true</span> on the Relationship object
-in question), as indeed the marriage and sibling relationships would be.
+<code class="language-plaintext highlighter-rouge">reciprocal = true</code> on the Relationship object
+in question), as indeed the marriage and sibling relationships would be.</p>
 
-  
-<span id="making"></span>
+<p><span id="making"></span></p>
 
-## Making, Breaking and Testing Relations
+<h2 id="making-breaking-and-testing-relations">Making, Breaking and Testing Relations</h2>
 
-Relationships are normally manipulated through the **relate()**,
-**related()** and **unrelate()** functions. To set up a relationship
-between a and b you call the function <span class="code">relate(a
-*relation* b)</span>. To cancel the relation between a and b you call
-<span class="code">unrelate(a *relation* b)</span>. To test whether a
-and b are related you use <span class="code">related(a *relation*
-b)</span> and to get a list of items related to a via relation you use
-<span class="code">related(a *relation*)</span>. For example:
+<p>Relationships are normally manipulated through the <strong>relate()</strong>,
+<strong>related()</strong> and <strong>unrelate()</strong> functions. To set up a relationship
+between a and b you call the function <code class="language-plaintext highlighter-rouge">relate(a
+*relation* b)</code>. To cancel the relation between a and b you call
+<code class="language-plaintext highlighter-rouge">unrelate(a *relation* b)</code>. To test whether a
+and b are related you use <code class="language-plaintext highlighter-rouge">related(a *relation*
+b)</code> and to get a list of items related to a via relation you use
+<code class="language-plaintext highlighter-rouge">related(a *relation*)</code>. For example:</p>
 
-<div class="code">
-
-     relate(jack, loving, jill); // makes Jack love Jill
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     relate(jack, loving, jill); // makes Jack love Jill
      relate(jack, 'loves', jill); // another way of doing the same thing.
      relate(jill, 'loved by', jim) // makes Jill loved by Jim (another of making Jim love Jill)
      related(jack, loves', jim) // tests whether Jack loves Jim; in this case the answer would be nil
@@ -144,55 +133,48 @@ b)</span> and to get a list of items related to a via relation you use
      related(jim, loving) // returns a list of the people Jim loves; in this case [Jill]
      
      
+</code></pre></div></div>
 
-</div>
-
-It will be observed that when you specify the relationship in the
+<p>It will be observed that when you specify the relationship in the
 forward direction (x loves y) you can use either the Relation object
-name (e.g. <span class="code">loving</span>) or its name property (e.g.
-'loves'), but when specifying it in reverse (x loved by y) you have to
-use the string defined on the <span class="code">reverseName</span>
-property.
+name (e.g. <code class="language-plaintext highlighter-rouge">loving</code>) or its name property (e.g.
+‘loves’), but when specifying it in reverse (x loved by y) you have to
+use the string defined on the <code class="language-plaintext highlighter-rouge">reverseName</code>
+property.</p>
 
-Breaking relations can be done in much the same way using the
-**unrelate()** function. If Jim no longer loves Jill you just call
-<span class="code">unrelate(jim, 'loves', jill)</span>.
+<p>Breaking relations can be done in much the same way using the
+<strong>unrelate()</strong> function. If Jim no longer loves Jill you just call
+<code class="language-plaintext highlighter-rouge">unrelate(jim, 'loves', jill)</code>.</p>
 
-To break all relations someone has, you can call
-<span class="code">relate()</span> with nil as the third parameter; e.g.
+<p>To break all relations someone has, you can call
+<code class="language-plaintext highlighter-rouge">relate()</code> with nil as the third parameter; e.g.</p>
 
-<div class="code">
-
-      relate(jim, 'loves', nil); // now Jim loves no one.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      relate(jim, 'loves', nil); // now Jim loves no one.
       relate(jill, 'loved by', nil); // now Jill isn't loved by anyone.  
       
+</code></pre></div></div>
 
-</div>
-
-If you have defined a relation as reciprocal (by setting its
-<span class="code">reciprocal</span> property to true), there's no need
+<p>If you have defined a relation as reciprocal (by setting its
+<code class="language-plaintext highlighter-rouge">reciprocal</code> property to true), there’s no need
 to define each related pair both ways round. For example if
-<span class="code">sibling</span> is a reciprocal relationship then you
-don't need to use both <span class="code">relate(jack sibling
-jill)</span> and <span class="code">relate(jill sibling jack)</span>,
-since the libary knows that the one implies the other. Likewise there's
-no need to define the <span class="code">reverseName</span> property for
-a reciprocal relationship, since <span class="code">related(jack sibling
-jill)</span> and <span class="code">related(jill sibling jack)</span>
+<code class="language-plaintext highlighter-rouge">sibling</code> is a reciprocal relationship then you
+don’t need to use both <code class="language-plaintext highlighter-rouge">relate(jack sibling
+jill)</code> and <code class="language-plaintext highlighter-rouge">relate(jill sibling jack)</code>,
+since the libary knows that the one implies the other. Likewise there’s
+no need to define the <code class="language-plaintext highlighter-rouge">reverseName</code> property for
+a reciprocal relationship, since <code class="language-plaintext highlighter-rouge">related(jack sibling
+jill)</code> and <code class="language-plaintext highlighter-rouge">related(jill sibling jack)</code>
 mean exactly the same thing. A reciprocal relationship is already its
-own reverse.
+own reverse.</p>
 
-  
-<span id="derived"></span>
+<p><span id="derived"></span></p>
 
-## Derived Relations
+<h2 id="derived-relations">Derived Relations</h2>
 
-A good example of a many-to-many reciprocal relation might be a sibling
-relationship, which could be defined as:
+<p>A good example of a many-to-many reciprocal relation might be a sibling
+relationship, which could be defined as:</p>
 
-<div class="code">
-
-      sibling: Relation 'sibling of' @manyToMany +true;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      sibling: Relation 'sibling of' @manyToMany +true;
       
       InitObject
         execute()
@@ -202,22 +184,19 @@ relationship, which could be defined as:
             relate(mary, sibling, luke);  
         } 
       
+</code></pre></div></div>
 
-</div>
-
-Here the + property at the end of template defines the **reciprocal**
-property, so we're saying that sibling is a reciprocal relationship.
+<p>Here the + property at the end of template defines the <strong>reciprocal</strong>
+property, so we’re saying that sibling is a reciprocal relationship.
 Because of this the Relation class knows that if John is the sibling of
-Mary, then Mary must be the sibling of John (so we don't need to define
-it both ways round). Also, there's no need to define the inverseName
-property on a reciprocal Relation, since the inverse of 'sibling of' is
-simply 'sibling of'. But suppose we were also to define a fatherOf
-relationship, and that James was the father of John, Mary and Luke. We'd
-then end up doing something like this:
+Mary, then Mary must be the sibling of John (so we don’t need to define
+it both ways round). Also, there’s no need to define the inverseName
+property on a reciprocal Relation, since the inverse of ‘sibling of’ is
+simply ‘sibling of’. But suppose we were also to define a fatherOf
+relationship, and that James was the father of John, Mary and Luke. We’d
+then end up doing something like this:</p>
 
-<div class="code">
-
-      sibling: Relation 'sibling of' @manyToMany +true;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      sibling: Relation 'sibling of' @manyToMany +true;
       fatherOf: Relation 'father of' 'child of' @oneToMany;
       
       InitObject
@@ -231,22 +210,19 @@ then end up doing something like this:
             relate(james, fatherOf, john);
         } 
       
+</code></pre></div></div>
 
-</div>
-
-At this point there seems to be some redundancy, since if James is the
+<p>At this point there seems to be some redundancy, since if James is the
 father of Mary, Luke and John, then Mary, Luke and John must be siblings
 of one another, so it seems a bit of a chore to have to state this
-explicitly. The solution is to use a **DerivedRelation**, which is a
+explicitly. The solution is to use a <strong>DerivedRelation</strong>, which is a
 special kind of Relation that instead of storing any data of its own,
 works out what is related to what according to the custom
-**relatedTo()** and **inverselyRelatedTo()** methods you define, both of
+<strong>relatedTo()</strong> and <strong>inverselyRelatedTo()</strong> methods you define, both of
 which should return a list of objects to which their argument is
-related; for example:
+related; for example:</p>
 
-<div class="code">
-
-     sibling: DerivedRelation 'sibling of' @manyToMany +true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     sibling: DerivedRelation 'sibling of' @manyToMany +true
        relatedTo(a) 
        {
             local parent = related(a, 'child of');
@@ -259,111 +235,102 @@ related; for example:
        }
     ; 
      
+</code></pre></div></div>
 
-</div>
-
-Here, in the <span class="code">relatedTo(a)</span> method, we first
-find the father (or parent) of <span class="code">a</span> by using the
-inverse of the fatherOf relationship ('child of') to get the person of
-whom *a* is the child. We then return a list of the children of this
-parent, less *a*, since *a* is not his or her own sibling. The method
-thus returns a list of *a*'s siblings without the sibling Relation
+<p>Here, in the <code class="language-plaintext highlighter-rouge">relatedTo(a)</code> method, we first
+find the father (or parent) of <code class="language-plaintext highlighter-rouge">a</code> by using the
+inverse of the fatherOf relationship (‘child of’) to get the person of
+whom <em>a</em> is the child. We then return a list of the children of this
+parent, less <em>a</em>, since <em>a</em> is not his or her own sibling. The method
+thus returns a list of <em>a</em>’s siblings without the sibling Relation
 having to store any data of its own and without game code having to
-define explicitly who is the sibling of whom.
+define explicitly who is the sibling of whom.</p>
 
-By default a DerivedRelation will complain if you try to use it to set a
-relation directly, e.g. <span class="code">(john, sibling, mary)</span>,
+<p>By default a DerivedRelation will complain if you try to use it to set a
+relation directly, e.g. <code class="language-plaintext highlighter-rouge">(john, sibling, mary)</code>,
 since in general this may make no sense when the relationship in
 question depends on another one. In principle you could override the
-sibling's **addRelation()** method so that
-<span class="code">sibling.addRelation(\[a, b\])</span> tried to give
-*a* and <span class="code">b</span> a common father, but in general this
-is probably not a good idea. What, if *a* and *b* start out with
+sibling’s <strong>addRelation()</strong> method so that
+<code class="language-plaintext highlighter-rouge">sibling.addRelation(\[a, b\])</code> tried to give
+<em>a</em> and <code class="language-plaintext highlighter-rouge">b</code> a common father, but in general this
+is probably not a good idea. What, if <em>a</em> and <em>b</em> start out with
 different fathers, for example? It would be an even worse idea to
-override a DeriveRelation's <span class="code">removeRelation()</span>
-method to allow the use of, say, <span class="code">unrelate(mary,
-sibling, john)</span>, since if two people have a common father, for
+override a DeriveRelation’s <code class="language-plaintext highlighter-rouge">removeRelation()</code>
+method to allow the use of, say, <code class="language-plaintext highlighter-rouge">unrelate(mary,
+sibling, john)</code>, since if two people have a common father, for
 example, what would it mean for them to cease to be siblings? Thus, once
 a DerivedRelation has been defined, you should stick to using it through
-the <span class="code">related()</span> function or the
-<span class="code">relationPath()</span> function discussed immediately
-below.
+the <code class="language-plaintext highlighter-rouge">related()</code> function or the
+<code class="language-plaintext highlighter-rouge">relationPath()</code> function discussed immediately
+below.</p>
 
-  
-<span id="pathfinding"></span>
+<p><span id="pathfinding"></span></p>
 
-## Relation Pathfinding
+<h2 id="relation-pathfinding">Relation Pathfinding</h2>
 
-Relation pathfinding allows us to find the shortest path from *a* to *b*
+<p>Relation pathfinding allows us to find the shortest path from <em>a</em> to <em>b</em>
 via any given relation (assuming that any such path exists). In general,
-the function **relationPath(a, rel, b)** returns a list giving the
-shortest path from *a* to *b* via *rel* (if there is one) or
-<span class="code">nil</span> if no such path exists. For example,
+the function <strong>relationPath(a, rel, b)</strong> returns a list giving the
+shortest path from <em>a</em> to <em>b</em> via <em>rel</em> (if there is one) or
+<code class="language-plaintext highlighter-rouge">nil</code> if no such path exists. For example,
 suppose that in addition to defining James as the father of John, we
 defined Andrew as the father of James, and John as the father of Mark.
-Then <span class="code">relationPath(andrew, fatherOf, mark)</span>
-would return the list <span class="code">\[andrew, james, john,
-mark\]</span>, while <span class="code">relationPath(mark, 'child of',
-andrew)</span> would return the list <span class="code">\[mark, john,
-james, andrew\]</span>. On the other hand
-<span class="code">relationPath(mary, fatherOf, mark)</span> would
-return <span class="code">nil</span>, since there's no path from Mary to
-Mark through the fatherOf relation.
+Then <code class="language-plaintext highlighter-rouge">relationPath(andrew, fatherOf, mark)</code>
+would return the list <code class="language-plaintext highlighter-rouge">\[andrew, james, john,
+mark\]</code>, while <code class="language-plaintext highlighter-rouge">relationPath(mark, 'child of',
+andrew)</code> would return the list <code class="language-plaintext highlighter-rouge">\[mark, john,
+james, andrew\]</code>. On the other hand
+<code class="language-plaintext highlighter-rouge">relationPath(mary, fatherOf, mark)</code> would
+return <code class="language-plaintext highlighter-rouge">nil</code>, since there’s no path from Mary to
+Mark through the fatherOf relation.</p>
 
-A potentially more interesting variant of this allows you to pass a list
+<p>A potentially more interesting variant of this allows you to pass a list
 of relations as the second parameter. The function will then try to find
-a path from *a* to <span class="code">b</span> via any of the relations
+a path from <em>a</em> to <code class="language-plaintext highlighter-rouge">b</code> via any of the relations
 listed, and if it finds a path it then returns a list of two-element
-lists showing the steps it took to get from *a* to *b*. For example, if
+lists showing the steps it took to get from <em>a</em> to <em>b</em>. For example, if
 we also made Simon the father of Aaron, then
-<span class="code">relationPath(mark, \[fatherOf, sibling, 'childOf'\],
-aaron)</span> would return the list <span class="code">\[\[nil, mark\],
+<code class="language-plaintext highlighter-rouge">relationPath(mark, \[fatherOf, sibling, 'childOf'\],
+aaron)</code> would return the list <code class="language-plaintext highlighter-rouge">\[\[nil, mark\],
 \['child of', john\], \['child of', james\], \['sibling of', simon\],
-\['father of', aaron\]\]</span>, which means that Mark is the child of
+\['father of', aaron\]\]</code>, which means that Mark is the child of
 John who is the child of James who is the sibling of Simon who is the
 father of Aaron. By such means you could in principle trace the shortest
 relationship path through a family tree of any complexity, or of any
-other relationship network you wished to devise.
+other relationship network you wished to devise.</p>
 
-  
+<h2 id="a-note-on-syntax">A Note on Syntax</h2>
 
-## A Note on Syntax
-
-The Relations extension makes use of a number of functions of the form
-<span class="code">relxxx(a, rel, b)</span> or
-<span class="code">relxxx(a, b)</span> since in the main this seems the
+<p>The Relations extension makes use of a number of functions of the form
+<code class="language-plaintext highlighter-rouge">relxxx(a, rel, b)</code> or
+<code class="language-plaintext highlighter-rouge">relxxx(a, b)</code> since in the main this seems the
 most intuitive way of setting up, describing and testing relations,
 rather than through method calls on the underlying objects. In some
 cases, though, you may find it more convenient to use other forms of
-syntax.
+syntax.</p>
 
-In particular, if a game starts out with a number of items or people
+<p>In particular, if a game starts out with a number of items or people
 already related via a relation, you may find it more convenient to
-define these starting relations on the **relTab** property of the
+define these starting relations on the <strong>relTab</strong> property of the
 relevant Relation object rather than running code to call a whole lot of
-<span class="code">relate()</span> functions. For this you purpose you
+<code class="language-plaintext highlighter-rouge">relate()</code> functions. For this you purpose you
 would probably use the shortcut syntax for setting up the initial values
 of a LookupTable (which is what the relTab property should contain) like
-this:
+this:</p>
 
-<div class="code">
-
-     someRelation: Relation
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     someRelation: Relation
        relTab = [
            obj1 -&gt; [a, b]
            obj2 -&gt; [c]
        ]
      ;  
      
+</code></pre></div></div>
 
-</div>
+<p>So, for example, instead of initializing the values of the fatherOf
+relation like so:</p>
 
-So, for example, instead of initializing the values of the fatherOf
-relation like so:
-
-<div class="code">
-
-     InitObject
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     InitObject
         execute()
         {
             relate(james, fatherOf, mary);
@@ -375,14 +342,11 @@ relation like so:
         }
     ; 
       
+</code></pre></div></div>
 
-</div>
+<p>You could just do this:</p>
 
-You could just do this:
-
-<div class="code">
-
-     fatherOf: Relation 'father of' 'child of' @oneToMany
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     fatherOf: Relation 'father of' 'child of' @oneToMany
         relTab = [
             james -&gt; [mary, luke, john],
             andrew -&gt; [james, simon],
@@ -390,32 +354,32 @@ You could just do this:
         ]
     ;
      
+</code></pre></div></div>
 
-</div>
-
-There are two other abbreviated forms of syntax you can use if you
-really want to (although they're probably less clear than their slightly
+<p>There are two other abbreviated forms of syntax you can use if you
+really want to (although they’re probably less clear than their slightly
 more verbose equivalents, and the way they read is potentially a little
-counter-intuitive):
+counter-intuitive):</p>
 
-- **relation\[a\] = b** is equivalent to <span class="code">relate(a,
-  relation, b)</span>; e.g. <span class="code">fatherOf\[john\] =
-  luke</span> does the same as <span class="code">relate(john, fatherOf,
-  luke)</span>
-- **relation\[obj\]** is equivalent to <span class="code">related(obj,
-  relation)</span>; e.g. <span class="code">fatherOf\[john\]</span> does
-  the same as <span class="code">related(john, fatherOf)</span>.
+<ul>
+  <li><strong>relation[a] = b</strong> is equivalent to <code class="language-plaintext highlighter-rouge">relate(a,
+relation, b)</code>; e.g. <code class="language-plaintext highlighter-rouge">fatherOf\[john\] =
+luke</code> does the same as <code class="language-plaintext highlighter-rouge">relate(john, fatherOf,
+luke)</code></li>
+  <li><strong>relation[obj]</strong> is equivalent to <code class="language-plaintext highlighter-rouge">related(obj,
+relation)</code>; e.g. <code class="language-plaintext highlighter-rouge">fatherOf\[john\]</code> does
+the same as <code class="language-plaintext highlighter-rouge">related(john, fatherOf)</code>.</li>
+</ul>
 
-  
-<span id="debugging"></span>
+<p><span id="debugging"></span></p>
 
-## Debugging Commands
+<h2 id="debugging-commands">Debugging Commands</h2>
 
-When a game is compiled for debugging, the following commands are
-available to query and test relations:
+<p>When a game is compiled for debugging, the following commands are
+available to query and test relations:</p>
 
-The **relations** command lists all the relations defined in the game,
-with information about their type, e.g.:
+<p>The <strong>relations</strong> command lists all the relations defined in the game,
+with information about their type, e.g.:</p>
 
 <div class="cmdline">
 
@@ -426,7 +390,7 @@ with information about their type, e.g.:
     overlooking manyToMany: name = 'overlooks' reverseName = 'overlooked by'
     sibling (DerivedRelation) manyToMany: (reciprocal): name = 'sibling of'
 
-</div>
+
 
 REL, RELATION or RELATIONS followed by the name of a relation lists the
 items related via that relation, e.g.:

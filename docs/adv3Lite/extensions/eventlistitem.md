@@ -18,7 +18,7 @@ EventListIem
 
 </div>
 
-<div class="main">
+
 
 # EventListItem
 
@@ -236,7 +236,7 @@ additional information see the source code and comments in the
 
   
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -37,78 +37,72 @@ ActorTopicEntry</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="basic-asktell">Basic Ask/Tell</h1>
 
-# Basic Ask/Tell
-
-The adv3Lite libary is capable of some quite sophisticated
+<p>The adv3Lite libary is capable of some quite sophisticated
 conversational effects, but it is also scalable, so that if all your
 game needs is a basic ASK/TELL conversation system it can be implemented
 quite simply (and in a manner very similar to that in the adv3 library).
 In any case, it probably makes sense to try to understand how to
 implement the basic ASK/TELL system before going on to try the more
-sophisticated conversational features the adv3Lite library has to offer.
+sophisticated conversational features the adv3Lite library has to offer.</p>
 
-By basic ASK/TELL we mean a conversational system that allows an NPC to
+<p>By basic ASK/TELL we mean a conversational system that allows an NPC to
 respond to conversational commands of the form ASK BOB ABOUT TOWER or
 TELL BOB ABOUT VISIT in a relatively stateless kind of way (stateless in
 the sense that the conversation has no particular thread or direction to
-it; it's simply driven by what the player chooses to talk about at any
-particular moment in time).
+it; it’s simply driven by what the player chooses to talk about at any
+particular moment in time).</p>
 
-Implementing a basic ask/tell conversation system in adv3Lite is quite
-similar to the way one defines a [Consultable](topicentry.html), namely
+<p>Implementing a basic ask/tell conversation system in adv3Lite is quite
+similar to the way one defines a <a href="topicentry.html">Consultable</a>, namely
 by defining the conversational responses on the apprpropriate kinds of
-TopicEntry, either an **AskTopic** (to respond to ASK X ABOUT Y) or a
-**TellTopic** (to respond to TELL X ABOUT Y). There's also an
-**AskTellTopic** that responds to either. To use one of these
+TopicEntry, either an <strong>AskTopic</strong> (to respond to ASK X ABOUT Y) or a
+<strong>TellTopic</strong> (to respond to TELL X ABOUT Y). There’s also an
+<strong>AskTellTopic</strong> that responds to either. To use one of these
 conversational TopicEntry types we define the object or Topic it
 matches, or the list of objects and/or topics it matches, on its
 matchObj property, and the resultant conversational exchange on the
 topicResponse property, all of which we can do succinctly via the
 TopicEntry templates. The AskTopic, TellTopic or AskTellTopic is then
-located either in the appropriate actor, or in one of the actor's
+located either in the appropriate actor, or in one of the actor’s
 ActorStates. TopicEntries located in an ActorState are only reachable
 when the actor is in that ActorState, when they take priority over any
-TopicEntries located directly in the actor.
+TopicEntries located directly in the actor.</p>
 
-To give a simple example:
+<p>To give a simple example:</p>
 
-<div class="code">
-
-    bob: Actor 'Bob; short; man; him'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob; short; man; him'
        "He's a short man, with a permanently worried-looking expression. "
     ;
 
     + AskTopic @darkTower
-       "<q>What do you know about the dark tower?</q> you ask.\b
-        <q>You don't want to go there,</q> he tells you with a little shudder,
-        <q>you really don't.</q> "
+       "&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
+        &lt;q&gt;You don't want to go there,&lt;/q&gt; he tells you with a little shudder,
+        &lt;q&gt;you really don't.&lt;/q&gt; "
     ;
 
     + TellTopic [tVisit, darkTower]
-       "<q>I visited the dark tower earlier today,</q> you announce.
+       "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
        Bob shakes his head and looks distinctively uncomfortable.\b
-       <q>You shouldn't have done that,</q> he chides you. <q>But at least
-        you didn't go at night. You <i>really</i> don't want to go there
-        at night!</q> "
+       &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
+        you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
+        at night!&lt;/q&gt; "
     ;
 
     + AskTellTopic @tWeather
-       "<q>Nice weather we're having, don't you think?</q> you ask.\b
-       <q>Not bad,</q> he concurs. "
+       "&lt;q&gt;Nice weather we're having, don't you think?&lt;/q&gt; you ask.\b
+       &lt;q&gt;Not bad,&lt;/q&gt; he concurs. "
     ;
+</code></pre></div></div>
 
-</div>
+<p><span id="varying"></span></p>
 
-  
-<span id="varying"></span>
+<h2 id="varying-the-response">Varying the Response</h2>
 
-## Varying the Response
-
-Although the previous example might do for a game in which Bob is little
+<p>Although the previous example might do for a game in which Bob is little
 more than a device for dishing out information about the dark tower, it
-doesn't make him very life-like. If he's repeatedly asked the same
+doesn’t make him very life-like. If he’s repeatedly asked the same
 question he will repeatedly give the same answer, like a robot or a
 talking book. One way of making an actor seem just a litte more
 life-like is to vary the responses given to the same question, even if
@@ -116,151 +110,137 @@ only a little. The easiest way to do that is to mix a TopicEntry class
 in with an EventList class, and then use the eventList property to give
 a list of different responses, each of which can be used in turn. Once
 again the TopicEntry template makes it possible to do this in a succinct
-way, for example:
+way, for example:</p>
 
-<div class="code">
-
-     + AskTopic, StopEventList @darkTower
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + AskTopic, StopEventList @darkTower
        [
-          '<q>What do you know about the dark tower?</q> you ask.\b
-          <q>You really don\'t want to go there,</q> he tells you with a little shudder,
-          <q>you really don't.</q>',
+          '&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
+          &lt;q&gt;You really don\'t want to go there,&lt;/q&gt; he tells you with a little shudder,
+          &lt;q&gt;you really don't.&lt;/q&gt;',
           
-          '<q>What\'s so bad about the dark tower?</q> you want to know.\b
-           <q>It all goes back to -- no, it\'s best not to talk about it,</q> he breaks
+          '&lt;q&gt;What\'s so bad about the dark tower?&lt;/q&gt; you want to know.\b
+           &lt;q&gt;It all goes back to -- no, it\'s best not to talk about it,&lt;/q&gt; he breaks
            off. ',
            
-          '<q>Why don\'t you want to talk about the dark tower?</q> you ask.\b
+          '&lt;q&gt;Why don\'t you want to talk about the dark tower?&lt;/q&gt; you ask.\b
            In reply Bob merely shakes his head and mutters something inaudible. '
           
        ]
     ;
      
+</code></pre></div></div>
 
-</div>
+<p>A TopicEntry can be mixed-in with any EventList class like this, but for
+this type of situation a StopEventList is usually the most appropriate.</p>
 
-A TopicEntry can be mixed-in with any EventList class like this, but for
-this type of situation a StopEventList is usually the most appropriate.
+<p><span id="conditional"></span></p>
 
-  
-<span id="conditional"></span>
+<h2 id="conditional-responses">Conditional Responses</h2>
 
-## Conditional Responses
-
-Even with a basic ask/tell system there are probably occasions when you
+<p>Even with a basic ask/tell system there are probably occasions when you
 want to vary the response according to some condition. For example, you
 might want the player character to say something quite different about
-his visit to the dark tower depending on whether or not he's actually
+his visit to the dark tower depending on whether or not he’s actually
 seen it yet. You could do this by writing a topicResponse() method with
 lots of if statements in it, but the adv3Lite library offers a better
 way: defining multiple TopicEntries that match the same objects but
 using a combination of there matchScore and isActive properties to
-determine which one is chosen. For example:
+determine which one is chosen. For example:</p>
 
-<div class="code">
-
-    + TellTopic [tVisit, darkTower]
-       "<q>I'm thinking of making a visit to the dark tower later today,</q> you
-        announce. <q>I've heard so much about it, I want to see it for myself.</q>\b
-        <q>No you don't,</q> he warns you. <q>Curiosity killed the cat, and there
-        are some things worse than death -- <i>much</i> worse. If you value your
-        immortal soul you won't go anywhere near that evil place!</q>"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic [tVisit, darkTower]
+       "&lt;q&gt;I'm thinking of making a visit to the dark tower later today,&lt;/q&gt; you
+        announce. &lt;q&gt;I've heard so much about it, I want to see it for myself.&lt;/q&gt;\b
+        &lt;q&gt;No you don't,&lt;/q&gt; he warns you. &lt;q&gt;Curiosity killed the cat, and there
+        are some things worse than death -- &lt;i&gt;much&lt;/i&gt; worse. If you value your
+        immortal soul you won't go anywhere near that evil place!&lt;/q&gt;"
     ;
 
 
     + TellTopic +110 [tVisit, darkTower]
-       "<q>I visited the dark tower earlier today,</q> you announce.
+       "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
        Bob shakes his head and looks distinctively uncomfortable.\b
-       <q>You shouldn't have done that,</q> he chides you. <q>But at least
-        you didn't go at night. You <i>really</i> don't want to go there
-        at night!</q> "
+       &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
+        you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
+        at night!&lt;/q&gt; "
         
         isActive = (gPlayerChar.hasSeen(darkTower))
     ;
+</code></pre></div></div>
 
-</div>
-
-In this above example, if the player types TELL BOB ABOUT VISIT or T
+<p>In this above example, if the player types TELL BOB ABOUT VISIT or T
 TOWER before the player character has seen the dark tower, the first
-response ("I'm thinking of visiting...") will be displayed, since the
+response (“I’m thinking of visiting…”) will be displayed, since the
 isActive property of the second one will be false. But if the player
 types T VISIT or TELL BOB ABOUT TOWER after the player character has
 seen the dark tower, then the isActive property of the second response
-("I visited the dark tower...") will be true, and since it has the
+(“I visited the dark tower…”) will be true, and since it has the
 higher matchScore, it will be the one chosen. The
-<span class="code">+110</span> in the template gives the second
+<code class="language-plaintext highlighter-rouge">+110</code> in the template gives the second
 TellTopic a matchScore of 110, which is higher than the default value of
-100.
+100.</p>
 
-You can of course simply make a TopicEntry unreachable until its
+<p>You can of course simply make a TopicEntry unreachable until its
 isActive property becomes true, without providing an alternative
 TopicEntry that matches the same topic or topics; indeed, this is
 probably a common situation. But it then raises the problem of what to
 do instead; i.e. how to cope with the situation where the player types
-ASK BOB ABOUT X or TELL BOB ABOUT Y and we haven't defined a response
+ASK BOB ABOUT X or TELL BOB ABOUT Y and we haven’t defined a response
 (or at least a currently available response) for X or Y. The best way to
 cope with that is by the use of DefaultTopics, which is what we shall
-look at next.
+look at next.</p>
 
-  
-<span id="default"></span>
+<p><span id="default"></span></p>
 
-## Default Responses
+<h2 id="default-responses">Default Responses</h2>
 
-However many AskTopics and TellTopics you define for each NPC in your
+<p>However many AskTopics and TellTopics you define for each NPC in your
 game, the people playing your game will inevitably try to ask or tell
-your NPCs about topics you haven't covered. In that case, you need to
-make your NPCs respond in a way that doesn't too blatantly declare "I
-have not been programmed to respond in this area", while also making it
-clear to the player that the topic enquired about isn't worth pursuing.
-For this purpose you can define a **DefaultAskTopic** and a
-**DefaultTellTopic** to respond to attempts to ask or tell the NPC about
-topics you haven't specifically allowed for. You can also define a
-**DefaultAskTellTopic** to cover both.
+your NPCs about topics you haven’t covered. In that case, you need to
+make your NPCs respond in a way that doesn’t too blatantly declare “I
+have not been programmed to respond in this area”, while also making it
+clear to the player that the topic enquired about isn’t worth pursuing.
+For this purpose you can define a <strong>DefaultAskTopic</strong> and a
+<strong>DefaultTellTopic</strong> to respond to attempts to ask or tell the NPC about
+topics you haven’t specifically allowed for. You can also define a
+<strong>DefaultAskTellTopic</strong> to cover both.</p>
 
-How much effort you need to put into this depends on how important your
+<p>How much effort you need to put into this depends on how important your
 NPC is to your game. For a minor NPC or a game which in primarily
 puzzle-driven as opposed to character-driven (say) it might suffice to
-do this:
+do this:</p>
 
-<div class="code">
-
-    + DefaultAskTellTopic
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAskTellTopic
         "Bob merely shrugs and shakes his head. "
     ;
+</code></pre></div></div>
 
-</div>
-
-In a game where the characters are more important, and you want to give
-them a bit more personality and make them a bit more lifelike, you'll
+<p>In a game where the characters are more important, and you want to give
+them a bit more personality and make them a bit more lifelike, you’ll
 probably want to define a separate DefaultAskTopic and DefaultTellTopic
-for at least each of the major NPCs, and you'll probably want to vary
+for at least each of the major NPCs, and you’ll probably want to vary
 the response they give by mixing in the DefaultTopic class with an
 EventList class, ShuffledEventList probably being the best for this
 situation. You may also want to use these DefaultTopics to add to the
-characterization of your NPCs.
+characterization of your NPCs.</p>
 
-Writing the DefaultTellTopic is probably easier, since here you can have
-the NPC apparently react to what the player character supposedly says:
+<p>Writing the DefaultTellTopic is probably easier, since here you can have
+the NPC apparently react to what the player character supposedly says:</p>
 
-<div class="code">
-
-    + DefaultTellTopic, ShuffledEventList
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultTellTopic, ShuffledEventList
       [
-         '<q>Fascinating!</q> Bob declares. ',
-         '<q>Well I never!</q> says Bob. ',
-         '<q>How interesting!</q> Bob remarks. ',
+         '&lt;q&gt;Fascinating!&lt;/q&gt; Bob declares. ',
+         '&lt;q&gt;Well I never!&lt;/q&gt; says Bob. ',
+         '&lt;q&gt;How interesting!&lt;/q&gt; Bob remarks. ',
          'Bob listens intently to your every word. ',
-         '<q>Yes, indeed!</q>, says Bob. '
+         '&lt;q&gt;Yes, indeed!&lt;/q&gt;, says Bob. '
       ]
     ;
+</code></pre></div></div>
 
-</div>
-
-Defining the DefaultAskTopic follows the same principles, but can be a
+<p>Defining the DefaultAskTopic follows the same principles, but can be a
 little trickier, since you have to give the NPC a plausible reason for
-refusing to answer, but you can't have him plead ignorance, otherwise
-you might end up with exchanges like the following:
+refusing to answer, but you can’t have him plead ignorance, otherwise
+you might end up with exchanges like the following:</p>
 
 <div class="cmdline">
 
@@ -273,12 +253,11 @@ you might end up with exchanges like the following:
     &gt;ask bob about the weather
     "I don't know anything about it," he insists.
 
-</div>
+
 
 A DefaultAskTopic might look like this:
 
-<div class="code">
-
+```
     + DefaultAskTopic
        [
           '<q>Let\'s change the subject,</q> he suggests with a wry smile. ',
@@ -291,8 +270,7 @@ A DefaultAskTopic might look like this:
           
        ]
     ;
-
-</div>
+```
 
 You may still get some incongruous responses, that's almost impossible
 to avoid given that the player is free to type absolutely anything, but

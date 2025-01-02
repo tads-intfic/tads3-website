@@ -18,7 +18,7 @@ Set</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # t3vm Function Set
 
@@ -35,7 +35,7 @@ used by any object in the program. Note that property IDs are a somewhat
 limited resource: only about 65,000 can be allocated, including those
 defined statically in the program.
 
-</div>
+
 
 `t3DebugTrace(*mode*, ...)`
 

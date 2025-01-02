@@ -38,27 +38,23 @@ place
 
 </div>
 
-<div class="main">
+<h1 id="everything-in-its-place">Everything in its place</h1>
 
-# Everything in its place
+<h2 id="starting-out-right">Starting Out Right</h2>
 
-## Starting Out Right
-
-In the original version of the Goldskull game, which we began by
+<p>In the original version of the Goldskull game, which we began by
 reproducing, the rock starts out inside the cave, conveniently waiting
-to be placed on a pedestal. In a real game you probably wouldn't want to
+to be placed on a pedestal. In a real game you probably wouldn’t want to
 make the solution to the problem quite so obvious. In this two-room game
 the only other place to put the rock (unless we want to hide it
-somewhere, which we won't attempt here) is in the starting location.
-While we're at it we may as well move the pebble there too. We'll also
-introduce a new property, the <span class="code">initSpecialDesc</span>.
+somewhere, which we won’t attempt here) is in the starting location.
+While we’re at it we may as well move the pebble there too. We’ll also
+introduce a new property, the <code class="language-plaintext highlighter-rouge">initSpecialDesc</code>.
 This determines the way an item is first described in a room listing,
 until the item is moved. Try moving the rock and the pebble into
-startroom and adding an initSpecialDesc to the rock like this:
+startroom and adding an initSpecialDesc to the rock like this:</p>
 
-<div class="code">
-
-    + smallRock: Thing 'small rock; round solid'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
         
         initSpecialDesc = "A small rock lies on the ground near the mouth of the
@@ -66,12 +62,11 @@ startroom and adding an initSpecialDesc to the rock like this:
         
         weight = 10
     ;
+</code></pre></div></div>
 
-</div>
-
-Once you've made these changes, try recompiling and running the game.
+<p>Once you’ve made these changes, try recompiling and running the game.
 You should now see the following as the description of the starting
-location on the first turn:
+location on the first turn:</p>
 
 <div class="cmdline">
 
@@ -83,7 +78,7 @@ location on the first turn:
 
     You can see a tiny pebble here.
 
-</div>
+
 
 This is arguably both better and worse than just displaying "You see a
 small rock and a tiny pebble here." It's better insofar as the longer
@@ -93,8 +88,7 @@ incongruous. What would we be even better would be if we could combine
 the mention of both objects into a single sentence. Here's one way we
 can do it:
 
-<div class="code">
-
+```
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
         
@@ -104,23 +98,22 @@ can do it:
         
         weight = 10
     ;
-
-&lt;/div&gt;
+```
 
 Let's look at how this works. The smallRock will use its initSpecialDesc
 until it has been moved. When a Thing is moved (via a call to
-<span class="code">actionMoveInto()</span>, which is generally used in
+`actionMoveInto()`, which is generally used in
 the handling of any player command that causes an object to be moved)
-its <span class="code">moved</span> property is set to true. We can thus
-use <span class="code">pebble.moved</span> to test whether the pebble
+its `moved` property is set to true. We can thus
+use `pebble.moved` to test whether the pebble
 has been moved or whether it's still resting by the mouth of the cave
 next to the rock. If the pebble has been moved, then
-<span class="code">smallRock.initSpecialDesc</span> just describes the
+`smallRock.initSpecialDesc` just describes the
 rock as lying there, but if the pebble hasn't been moved yet it mentions
 the pebble as well.
 
 The subtle touch is using the embedded expression
-<span class="code">\&lt;\&lt;mention a pebble\&gt;\&gt;</span> to display the text
+`\&lt;\&lt;mention a pebble\&gt;\&gt;` to display the text
 'a pebble' in the course of this description. What this does is not only
 to tell the game to provide the name of the pebble with the indefinite
 article ('a pebble') but also to note that the pebble has already been
@@ -171,17 +164,17 @@ following transcript illustrates:
 You may find this combination of techniques useful for getting your room
 descriptions starting out just the way you want.
 
-<span class="code">initSpecialDesc</span> has a close relative called
-<span class="code">specialDesc</span>, the difference being that
+`initSpecialDesc` has a close relative called
+`specialDesc`, the difference being that
 specialDesc displays all the time (whether the object it has been
 defined on has been moved or not — actually that's not strictly true
-since you can control when both <span class="code">specialDesc</span>
-and <span class="code">initSpecialDesc</span> are used, but that's a
+since you can control when both `specialDesc`
+and `initSpecialDesc` are used, but that's a
 complication we'll leave aside for now). Both initSpecialDesc and
 specialDesc are used regardless of the value of
-<span class="code">isFixed</span> or <span class="code">isListed</span>
+`isFixed` or `isListed`
 on the item in question, so a common use of
-<span class="code">specialDesc</span> is to provide a separate
+`specialDesc` is to provide a separate
 description of a fixed object not otherwise mentioned in the main room
 description (particularly when we want to call attention to the object
 rather than letting it merge into the overall description of the room).
@@ -206,10 +199,9 @@ if nothing were resting on the pedestal, it wouldn't be mentioned at all
 the player, but it still doesn't seem quite right in principle). Of
 course we could simply add a mention of the object to the main room
 description, but this seems quite a good opportunity to illustrate the
-use of <span class="code">specialDesc</span>:
+use of `specialDesc`:
 
-<div class="code">
-
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -230,8 +222,7 @@ use of <span class="code">specialDesc</span>:
             }
         }
     ;
-
-</div>
+```
 
 The room description then becomes:
 
@@ -250,16 +241,15 @@ This is probably an improvement. At least the text makes sense, and at
 least the stone pedestal will get a mention even if there's nothing on
 it, but it would be neater if the paragraph about the skull could be
 combined with the paragraph about the pedestal. We could try to do with
-some combination of <span class="code">\&lt;\&lt;if
-goldSkull.location==pedestal\&gt;\&gt;</span> and
-<span class="code">\&lt;\&lt;mention a goldSkull\&gt;\&gt;</span>, but since in
+some combination of `\&lt;\&lt;if
+goldSkull.location==pedestal\&gt;\&gt;` and
+`\&lt;\&lt;mention a goldSkull\&gt;\&gt;`, but since in
 principle all sorts of objects could end up on top of the pedestal, this
 approach would pretty soon become quite unwieldy. What we need is some
 means of listing all the objects currently on the pedestal, whatever
 they happen to be. The following should do the trick:
 
-<div class="code">
-
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -281,19 +271,18 @@ they happen to be. The following should do the trick:
             }
         }
     ;
+```
 
-&lt;/div&gt;
-
-We use <span class="code">listableContents</span> rather than just
-<span class="code">contents</span> to exclude any fixtures or components
+We use `listableContents` rather than just
+`contents` to exclude any fixtures or components
 that are attached to the pedestal rather than just resting on top of it
 (see next subsection). If there are any items in the
-<span class="code">listableContents</span> list (which we can test by
+`listableContents` list (which we can test by
 seeing whether its length is greater than 0) then we append a list of
 what they are, in a suitably-worded clause. The embedded expression
-<span class="code">\&lt;\&lt;list of listableContents\&gt;\&gt;</span> both produces
+`\&lt;\&lt;list of listableContents\&gt;\&gt;` both produces
 a properly formatted list of whatever's in
-<span class="code">listableContents</span>, it also marks everything in
+`listableContents`, it also marks everything in
 the list as having been mentioned so it won't appear in the room
 contents listing again. With this definition the room description
 becomes:
@@ -332,8 +321,7 @@ call attention to rows of suspicious-looking holes in the walls of the
 cave. But what we'll actually do here is provide the pedestal with a
 warning inscription:
 
-<div class="code">
-
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day, picking out the inscription carved into its front. "
@@ -355,24 +343,23 @@ warning inscription:
             pedestal. '
         
     ; 
-
-</div>
+```
 
 For the sake of brevity we've omitted repeating the rest of the
 definition of the pedestal. Note that we don't need to give the
 inscription object a programmatic name, since no code ever needs to
 refer to it; it's only one step up from a decoration. We do define a
-custom <span class="code">cannotTakeMsg</span>, however, since it seems
+custom `cannotTakeMsg`, however, since it seems
 better to say that the inscription is part of the pedestal than to say
 merely that it's fixed in place (customizing message properties like
 this is a good way to give your game some character and to show that
 you've taken trouble with it; if all players see is lots of default
 messages they probably won't think much of your efforts). We define
-<span class="code">weight = 0</span> because we don't want the
+`weight = 0` because we don't want the
 inscription to contribute to the weight of objects resting on the
 pedestal, as it otherwise would. Note that since we took the trouble to
-use <span class="code">listableContents</span> rather than
-<span class="code">contents</span> above to list what's on the pedestal,
+use `listableContents` rather than
+`contents` above to list what's on the pedestal,
 we've averted the danger of the inscription showing up as one of the
 things resting on the pedestal (as it otherwise would). It might have
 been easier to make the inscription a completely separate object, not
@@ -390,12 +377,12 @@ component would be hidden away out of sight inside the Container. We'll
 return to this issue in a later chapter.
 
 \&lt;q\&gt; and \&lt;/q\&gt; just give a pair of matching typographical quotes (“
-and ”). Of more note is the <span class="code">readDesc</span> property,
+and ”). Of more note is the `readDesc` property,
 which we haven't met before. If defined on an object, this gives a
 response to the command READ WHATEVER (in this case READ INSCRIPTION),
 which in general is different from the response to EXAMINE WHATEVER. If
 you did want the two to be the same you could just define
-<span class="code">readDesc = (desc)</span>.
+`readDesc = (desc)`.
 
 ## Pointing the Way
 
@@ -404,8 +391,7 @@ game. You may remember above we said that the way we'd set up the
 PathPassage notionally leading back to the camp was something of a
 horrible hack. Now we'll see how it should be done:
 
-<div class="code">
-
+```
     startroom: Room 'Outside Cave'
         desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
@@ -437,16 +423,15 @@ horrible hack. Now we'll see how it should be done:
             finishGameMsg(ftVictory, [finishOptionUndo]);
         }    
     ;
-
-</div>
+```
 
 If you think there's something vaguely familiar about this, then you're
 right. For one thing, much of the code on the
-<span class="code">pathBack</span> object was previously what was
+`pathBack` object was previously what was
 defined on the southeast() method of
-<span class="code">startroom</span>. For another, pointing a direction
+`startroom`. For another, pointing a direction
 property to an object and then defining the
-<span class="code">travelDesc</span> property/method on that object is
+`travelDesc` property/method on that object is
 something we've done before, when we made the tree object in the Heidi
 game a StairwayUp. PathPassage and StairwayUp both inherit from the
 TravelConnector class (along with the Thing class), and that's why we're
@@ -454,33 +439,33 @@ seeing a similarity. You can read all about TravelConnectors in the
 section on [Travel Connectors and Barriers](../manual/travel.html) in the
 adv3Lite manual, if you like, but you can glean most of what you need to
 know about them from these two examples (the tree and the path). The
-<span class="code">canTravelerPass(traveler)</span> method determines
+`canTravelerPass(traveler)` method determines
 whether *traveler* is allowed to pass through this TravelConnector; in
 this case we allow it if the traveler (which in this game can only be
 the player character) is directly or indirectly carrying the gold skull
 (he'd be carrying it indirectly if he put the skull in the knapsack and
 then carried the knapsack, but using
-<span class="code">isIn(traveler)</span> allows for this possibility
+`isIn(traveler)` allows for this possibility
 too). If we disallow travel, the
-<span class="code">explainTravelBarrier(travel)</span> method is used to
-explain why. Finally, the <span class="code">travelDesc()</span> method
+`explainTravelBarrier(travel)` method is used to
+explain why. Finally, the `travelDesc()` method
 can be used to define the side-effects of travel, in this case
 displaying a message and then ending the game in victory.
 
 Can you notice anything that seems to be missing from this new version
-of the <span class="code">pathBack</span> object? You may remember that
+of the `pathBack` object? You may remember that
 on the tree object in the Heidi game we defined
-<span class="code">destination = topOfTree</span> to control where the
+`destination = topOfTree` to control where the
 player character went when the tree was climbed. Ordinarily we'd do the
 same here, but since the game is ended before the player character can
 actually end up anywhere else, there's no point, so we can leave the
 destination of pathBack as nil. If we actually wanted to continue the
 game instead of ending it when the player retrieves the gold skull we'd
-have defined something like <span class="code">destination = camp</span>
+have defined something like `destination = camp`
 on the pathBack object.
 
 It so happens that whereas the earlier scheme of defining a method on
-<span class="code">startroom.southeast</span> resembles the TADS 2 way
+`startroom.southeast` resembles the TADS 2 way
 of doing things, this second scheme of pointing the southeast property
 to a PathPassage object and then defining various methods of the
 PathPassage closely resembles the adv3 way. The first way is often more
@@ -489,10 +474,10 @@ more robust when you need something like a PathPassage or a StairwayUp
 to represent a physical connection between locations. The more abstract
 TravelConnector class, when not used to represent a physical object, can
 also be useful in controlling conditional travel (through its
-<span class="code">canTravelerPass()</span> and
-<span class="code">explainTravelBarrier()</span> methods) or carrying
+`canTravelerPass()` and
+`explainTravelBarrier()` methods) or carrying
 out the side-effects of travel (through its
-<span class="code">traveLDesc</span> method). We shall meet more
+`traveLDesc` method). We shall meet more
 examples of this in due course.
 
 &lt;/div&gt;
@@ -510,7 +495,7 @@ place
 </span>
 
 </div>
-</end></list></if></div></end></mention></else></if></div></div>
+</end></list></if></end></mention></else></if></div>
 
 </main>
 <footer>

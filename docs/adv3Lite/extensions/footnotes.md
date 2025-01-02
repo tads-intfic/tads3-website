@@ -19,7 +19,7 @@ EventListItem</a>    
 
 </div>
 
-<div class="main">
+
 
 # Footnotes
 
@@ -115,7 +115,7 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [footnote.t](../footnote.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

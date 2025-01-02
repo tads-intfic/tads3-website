@@ -19,7 +19,7 @@ Structure</a>    
 
 </div>
 
-<div class="main">
+
 
 # Source File Character Sets
 
@@ -82,7 +82,7 @@ Central/Eastern Europe), you'd use this command:
 
     t3make -cs cp1250 mygame.t
 
-</div>
+
 
 If the TADS 3 distribution doesn't include a mapping file for the
 character set you're using, you can [build your own mapping

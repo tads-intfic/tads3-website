@@ -38,92 +38,90 @@ nest?</a>    
 
 </div>
 
-<div class="main">
+<h1 id="summing-up">Summing Up</h1>
 
-# Summing Up
-
-There's doubtless a great deal more that could be done to improve even
+<p>There’s doubtless a great deal more that could be done to improve even
 this simple little game, but that can be left as an exercise for the
-interested reader. We have taken *The Adventures of Heidi* as far as we
-need to for the purposes of this tutorial, and in the next chapter we'll
-move on to pastures new.
+interested reader. We have taken <em>The Adventures of Heidi</em> as far as we
+need to for the purposes of this tutorial, and in the next chapter we’ll
+move on to pastures new.</p>
 
-In the course of this chapter we've encountered several new features of
-the TADS 3 language and the adv3Lite library. In particular:
+<p>In the course of this chapter we’ve encountered several new features of
+the TADS 3 language and the adv3Lite library. In particular:</p>
 
-- The use of listenDesc, smellDesc, feelDesc and tasteDesc to provide
-  responses to LISTEN, SMELL, FEEL and TASTE commands.
-- Attaching a string to the direction property of a Room instead of
-  another Room, to display a message to the player instead of moving the
-  player character.
-- Pointing a direction property to a TravelConnector object (in this
-  case a StairwayUp) instead of another Room (or string).
-- Going beyond implementing everything as either a Room or a Thing to
-  take advantage of the behaviour already defined on a special class (in
-  this case StairwayUp).
-- The use of message properties such as cannotTakeMsg and cannotEnterMsg
-  to customize the responses to actions that are disallowed.
-- The use of cannotGoThatWayMsg and of the cannotGoThatWay(dir) method
-  to customize the response to an attempt to travel in a direction
-  that's not allowed.
-- The use of the logical operators <span class="code">&amp;&amp;</span>,
-  <span class="code">\|\|</span> and <span class="code">!</span>
-- The use of Doer objects as a means of interrupting the normal course
-  of a command and making it do something different.
-- A quick foretaste of the dobjFor() mechanism for customizing action
-  responses.
-- The use of the roomBeforeAction() method of Rooms to intercept actions
-  performed there.
-- The use of <span class="code">exit</span> and
-  <span class="code">abort</span> to stop an action in its tracks.
-- An introduction to the use of message parameter substitutions to make
-  textual output more flexible and appropriate to its context.
+<ul>
+  <li>The use of listenDesc, smellDesc, feelDesc and tasteDesc to provide
+responses to LISTEN, SMELL, FEEL and TASTE commands.</li>
+  <li>Attaching a string to the direction property of a Room instead of
+another Room, to display a message to the player instead of moving the
+player character.</li>
+  <li>Pointing a direction property to a TravelConnector object (in this
+case a StairwayUp) instead of another Room (or string).</li>
+  <li>Going beyond implementing everything as either a Room or a Thing to
+take advantage of the behaviour already defined on a special class (in
+this case StairwayUp).</li>
+  <li>The use of message properties such as cannotTakeMsg and cannotEnterMsg
+to customize the responses to actions that are disallowed.</li>
+  <li>The use of cannotGoThatWayMsg and of the cannotGoThatWay(dir) method
+to customize the response to an attempt to travel in a direction
+that’s not allowed.</li>
+  <li>The use of the logical operators <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>,
+<code class="language-plaintext highlighter-rouge">\|\|</code> and <code class="language-plaintext highlighter-rouge">!</code></li>
+  <li>The use of Doer objects as a means of interrupting the normal course
+of a command and making it do something different.</li>
+  <li>A quick foretaste of the dobjFor() mechanism for customizing action
+responses.</li>
+  <li>The use of the roomBeforeAction() method of Rooms to intercept actions
+performed there.</li>
+  <li>The use of <code class="language-plaintext highlighter-rouge">exit</code> and
+<code class="language-plaintext highlighter-rouge">abort</code> to stop an action in its tracks.</li>
+  <li>An introduction to the use of message parameter substitutions to make
+textual output more flexible and appropriate to its context.</li>
+</ul>
 
-This certainly isn't everything you need to know to become a master of
-adv3Lite, but we've come a long way. If you've mastered all the material
-we've covered so far, you now have all the basic skills you need to
+<p>This certainly isn’t everything you need to know to become a master of
+adv3Lite, but we’ve come a long way. If you’ve mastered all the material
+we’ve covered so far, you now have all the basic skills you need to
 write Interactive Fiction with adv3Lite, and if you wanted to make a
-start on implementing your own masterpiece, you'd now be in a position
+start on implementing your own masterpiece, you’d now be in a position
 to do so. At the very least you could start laying out your map,
 implementing some of the standard objects within it, and coding a few
-non-standard responses, although you'd need to resume this tutorial
-before you tried anything *very* advanced. On the other hand, if you'd
+non-standard responses, although you’d need to resume this tutorial
+before you tried anything <em>very</em> advanced. On the other hand, if you’d
 rather just carry straight on with this tutorial, that would be good
-too.
+too.</p>
 
-It's said that a non-Jew once approached Rabbi Shammai and told the
+<p>It’s said that a non-Jew once approached Rabbi Shammai and told the
 rabbi he would convert to Judaism if the rabbi managed to teach him the
 entire torah (the Jewish law) while he (the gentile) stood on one leg.
 Apparently Shammai drove him away with a measuring-rod. The gentile then
-approached Shammai's rival Rabbi Hillel with the same offer. Hillel
-replied "Whatever you would hate people to do to you, don't do to
-others; the rest is commentary, go and learn." A latter-day Rabbi Hillel
-asked a similar question about adv3Lite might have said, "It's all about
+approached Shammai’s rival Rabbi Hillel with the same offer. Hillel
+replied “Whatever you would hate people to do to you, don’t do to
+others; the rest is commentary, go and learn.” A latter-day Rabbi Hillel
+asked a similar question about adv3Lite might have said, “It’s all about
 defining objects, properties and methods; the rest is detail, go and
-learn." You've now learned the basics of defining objects; in the
-chapters that follow we'll continue to explore some of the detail.
+learn.” You’ve now learned the basics of defining objects; in the
+chapters that follow we’ll continue to explore some of the detail.</p>
 
-Finally, here's the complete listing of *The Adventures of Heidi* as
-we've now left it:
+<p>Finally, here’s the complete listing of <em>The Adventures of Heidi</em> as
+we’ve now left it:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-    #charset "us-ascii"
-
-    #include <tads.h>
+    #include &lt;tads.h&gt;
     #include "advlite.h"
 
     versionInfo: GameID
         IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
         name = 'The Adventures of Heidi'
         byline = 'by A.N. Author'
-        htmlByline = 'by <a href="mailto:an.author@somemail.com">
-                      A.N. Author</a>'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
         version = '1'
         authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
         desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
             Firth and Sonja Kesserich.'
-        htmlDesc = 'A simple game borrowed from the <i>Inform Beginner\'s Guide</i>
+        htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
             by Roger Firth and Sonja Kesserich.'    
         
     ;
@@ -208,8 +206,8 @@ we've now left it:
         
         destination = topOfTree
         
-        travelDesc = "You &lt;<one of="">&gt; manage to scramble all the way up &lt;<or>&gt; once 
-            again climb &lt;<stopping>&gt; to the top of the tree. "
+        travelDesc = "You &lt;&lt;one of&gt;&gt; manage to scramble all the way up &lt;&lt;or&gt;&gt; once 
+            again climb &lt;&lt;stopping&gt;&gt; to the top of the tree. "
     ;
 
     topOfTree: Room 'At the top of the tree'
@@ -260,12 +258,9 @@ we've now left it:
         
         direction = [portDir, starboardDir, foreDir, aftDir]
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -278,7 +273,6 @@ nest?</a>    
 </span>
 
 </div>
-</stopping></or></one></tads.h></div></div>
 
 </main>
 <footer>

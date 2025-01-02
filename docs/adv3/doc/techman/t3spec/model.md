@@ -19,7 +19,7 @@ Conventions</a>    
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -2378,7 +2378,7 @@ information is not meaningful in the context of the restored state.
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

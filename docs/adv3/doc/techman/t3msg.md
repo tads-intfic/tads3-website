@@ -19,7 +19,7 @@ Reports</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Message Parameter Substitutions
 
@@ -1287,7 +1287,7 @@ automatically installs a substitution filter on the main output stream
 during initialization, so all strings displayed on the main game console
 will be processed before actually being written to the display.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

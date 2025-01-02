@@ -18,7 +18,7 @@ Input/Output Issues</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Object-Oriented Programming Overview
 
@@ -234,7 +234,7 @@ basic need of IF programs, the TADS language caters to it with numerous
 convenience features that make it less work to set up these pre-defined
 objects.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

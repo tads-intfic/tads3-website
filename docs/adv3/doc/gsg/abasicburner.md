@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](settingthescene.html)   [\[Next\]](endingthegame.html)*
@@ -294,4 +294,4 @@ games.
 [\[Main\]](index.html)  
 *[\[Previous\]](settingthescene.html)   [\[Next\]](endingthegame.html)*
 
-</div>
+

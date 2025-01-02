@@ -19,7 +19,7 @@ Character</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # NPC-Initiated Conversation
 
@@ -209,7 +209,7 @@ conversational agenda, so that instead of seeing something like:
     >ask bob about his mother.
     Bob mutters something inaudible in reply.
 
-</div>
+
 
 We got:
 

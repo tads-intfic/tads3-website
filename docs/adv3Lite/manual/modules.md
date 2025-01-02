@@ -19,7 +19,7 @@ Definition</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Core and Optional Modules
 
@@ -255,7 +255,7 @@ guidance on this), but specify the adv3Liter library instead
 (` -lib adv3Liter`) and include the option
 ` -D LANGUAGE = english` on the command line.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

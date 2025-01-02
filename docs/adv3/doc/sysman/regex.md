@@ -19,7 +19,7 @@ Set</a>    
 
 </div>
 
-<div class="main">
+
 
 # Regular Expressions
 
@@ -1797,7 +1797,7 @@ problems, because it allows for starting with a decimal, ending with a
 decimal, or containing an embedded decimal, but there must always be one
 or more digits on one side or the other of the decimal.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

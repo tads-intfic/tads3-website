@@ -38,58 +38,54 @@
 
 </div>
 
-<div class="main">
+<h1 id="extending-the-map">Extending the Map</h1>
 
-# Extending the Map
-
-Our next job is to sketch out the other half of the airport terminal
-building. There won't be much here that's new for now, apart from one
-thing. We're going to take advantage of *separate compilation* to put
-the next section of the map in a new source file. Both *The Adventures
-of Heidi* and *Goldskull* were such small games that their source code
-could easily be fitted into a single file. *Airport* is rather a larger
-game, so it's worth splitting over several. There are two main
-advantages: (1) It's easier to keep track of where everything is and
+<p>Our next job is to sketch out the other half of the airport terminal
+building. There won’t be much here that’s new for now, apart from one
+thing. We’re going to take advantage of <em>separate compilation</em> to put
+the next section of the map in a new source file. Both <em>The Adventures
+of Heidi</em> and <em>Goldskull</em> were such small games that their source code
+could easily be fitted into a single file. <em>Airport</em> is rather a larger
+game, so it’s worth splitting over several. There are two main
+advantages: (1) It’s easier to keep track of where everything is and
 keep things manageable if we split our source over several reasonably
 sized files rather than lumping it all together into one gargantuan one;
 (2) each time a TADS 3 game is recompiled it only has to recompile the
 source files that have changed, so that if we make changes to one file,
-we don't have to recompile all the rest (TADS 3 in any case takes
-advantage of this so it doesn't have to keep recompiling the library
+we don’t have to recompile all the rest (TADS 3 in any case takes
+advantage of this so it doesn’t have to keep recompiling the library
 files each time). If you want more information on separate compilation
-you can read the article "Understanding Separate Compilation" in Part I
-of the *TADS 3 Technical Manual*.
+you can read the article “Understanding Separate Compilation” in Part I
+of the <em>TADS 3 Technical Manual</em>.</p>
 
-So let's create a new source file now. If you're using Workbench, select
-File -\&gt; New from the menu (or type Ctrl-N, or click on the new file
+<p>So let’s create a new source file now. If you’re using Workbench, select
+File -&gt; New from the menu (or type Ctrl-N, or click on the new file
 icon in the task bar, the third icon along from the left-hand end,
-representing an empty page). Select 'TADS Source file' from the dialogue
-that follows and then click 'Open'. Then select File -\&gt; Save from the
+representing an empty page). Select ‘TADS Source file’ from the dialogue
+that follows and then click ‘Open’. Then select File -&gt; Save from the
 menu (or press Ctrl-S, or click the file save icon in the task bar).
-When prompted for a file name type "gatearea" (without the quotation
-marks). You should see a dialogue box asking "Would you like to add
-gatearea.t to the Project file list?" Click Yes. If you're not using
+When prompted for a file name type “gatearea” (without the quotation
+marks). You should see a dialogue box asking “Would you like to add
+gatearea.t to the Project file list?” Click Yes. If you’re not using
 Workbench use your text editor to create a new blank file called
-"gatearea.t", then edit your copy of airport.t3m to add the following
-line at the end:
+“gatearea.t”, then edit your copy of airport.t3m to add the following
+line at the end:</p>
 
 <div class="cmdline">
 
     -source gatearea
 
-</div>
+
 
 Whichever way you used to create the new file, the next step is to make
 sure it starts with the following three lines:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-
-&lt;/div&gt;
+```
 
 The easiest way to do that is probably to copy these lines from start.t
 and paste them into gatearea.t. Once you've done that, you're good to
@@ -98,8 +94,7 @@ go.
 There's not much new about the first version of this area of the map, so
 we'll just go straight away and list it:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -191,13 +186,12 @@ we'll just go straight away and list it:
     //    east = planeFront
         
     ;
+```
 
-&lt;/div&gt;
-
-Note that we've commented out the line <span class="code">east =
-planeFront</span> on the jetway, since the planeFront room hasn't been
+Note that we've commented out the line `east =
+planeFront` on the jetway, since the planeFront room hasn't been
 implemented yet. At this stage you should *uncomment* the line
-<span class="code">north = gateArea</span> on the concourse room,
+`north = gateArea` on the concourse room,
 otherwise this new section of map won't have a connection from the old
 one.
 
@@ -220,7 +214,7 @@ Let's think a moment more about this Distant display board. As things
 stand the player can EXAMINE it, and that's all, but you may think that
 players should equally well be able to READ it and get the same response
 as they do for examining. But if you try adding
-<span class="code">dobjFor(Read) asDobjFor(Examine)</span> to the
+`dobjFor(Read) asDobjFor(Examine)` to the
 definition of the display board you'll find that nothing has changed.
 That's because the handling for all actions apart from Examine is
 carried out by dobjFor(Default) before any more specific action-handling
@@ -232,8 +226,7 @@ board will respond to specifically, instead of simply using the
 dobjFor(Default) handling (which displays the "too far away" message).
 The display board should then look like this:
 
-<div class="code">
-
+```
     + Distant 'display board; departure'
         "The display imparts the following information:\b
         TI 179 to Buenos Aires <FONT COLOR="GREEN">BOARDING GATE 3</FONT>\n
@@ -245,8 +238,7 @@ The display board should then look like this:
         
         readDesc = desc
     ;
-
-</div>
+```
 
 We have included GoTo in the list of decorationActions because a player
 might reasonably issue the command GO TO DISPLAY BOARD from another
@@ -275,8 +267,7 @@ urgency to the proceedings). To do this we'll define a special object
 just to provide the announcements; this can be put right at the end of
 the gatearea.t file:
 
-<div class="code">
-
+```
     announcementObj: ShuffledEventList
         eventList =
         [
@@ -332,8 +323,7 @@ the gatearea.t file:
         
         prefix = 'An announcement comes over the public address system: '
     ;
-
-&lt;/div&gt;
+```
 
 Okay, so let's explain this one step at a time.
 
@@ -341,8 +331,8 @@ First off, we've created an object of the **ShuffledEventList** class.
 This is one of a number of [EventList](../manual/eventlist.html) classes
 that you can read about in more detail in the *adv3Lite Library Manual*.
 In brief, an EventList is an object which steps through each item in its
-<span class="code">eventList</span> property in turn when its
-<span class="code">doScript()</span> method is called. A ShuffledEvent
+`eventList` property in turn when its
+`doScript()` method is called. A ShuffledEvent
 list steps through its items in random order, then shuffles the list
 into a new random order when it gets to the end before repeating the
 process. If an item in the eventList property is a single-quoted string,
@@ -350,67 +340,67 @@ it is simply displayed.
 
 To prevent these messages from becoming too tedious through
 over-exposure we can control how often they're displayed. The
-<span class="code">eventPercent</span> property determines the frequency
+`eventPercent` property determines the frequency
 of turns (as a percentage) on which an item will be displayed. Here
 we've chosen a value of 67, meaning we'll see a message on roughly
-two-thirds of turns. The <span class="code">eventReduceTo</span>
+two-thirds of turns. The `eventReduceTo`
 property is the frequency of occurrence this will eventually drop to,
 here 33 (i.e. roughly one third of the time). The
-<span class="code">eventReduceAfter</span> property determines when this
+`eventReduceAfter` property determines when this
 reduction in frequency takes place. Here we've defined it to take place
 after every item in the eventList has been displayed once. The
-expression <span class="code">eventList.length()</span> gives the number
-of items in the list. The <span class="code">static</span> keyword
+expression `eventList.length()` gives the number
+of items in the list. The `static` keyword
 preceding it means that this number is calculated at compile time and
 then stored in the compiled game file.
 
 Second, we need some way of driving this ShuffledEventList, and to that
 end we use a **Daemon** to keep calling its
-<span class="code">doScript()</span> method each turn. You can read all
+`doScript()` method each turn. You can read all
 about Daemons and Fuses in the [Events](../manual/event.html) section of
 the *adv3Lite Library Manual*. In brief, a Daemon is a special kind of
 object that calls a specified method on a specified object at a
-specified interval. The definition above, <span class="code">new
-Daemon(self, &amp;announce, 1)</span> creates a new Daemon that calls the
-<span class="code">announce</span> method of the
-<span class="code">self</span> object (i.e. announcementObj) every turn
+specified interval. The definition above, `new
+Daemon(self, &amp;announce, 1)` creates a new Daemon that calls the
+`announce` method of the
+`self` object (i.e. announcementObj) every turn
 (i.e. with an interval of 1). We store a reference to this Daemon in the
-<span class="code">daemonID</span> property both so that the
-<span class="code">start()</span> method can be prevented from creating
+`daemonID` property both so that the
+`start()` method can be prevented from creating
 another new Daemon if it has already created one that's still running,
-and so that the <span class="code">stopDaemon()</span> method can call
-the Daemon's <span class="code">removeEvent()</span> method if and when
-we want to stop it running. The <span class="code">stopDaemon()</span>
-method also checks that <span class="code">daemonID</span> is not nil
-before trying to call its <span class="code">removeEvent()</span> method
+and so that the `stopDaemon()` method can call
+the Daemon's `removeEvent()` method if and when
+we want to stop it running. The `stopDaemon()`
+method also checks that `daemonID` is not nil
+before trying to call its `removeEvent()` method
 (so that it doesn't try to stop a non-existent Daemon) and finally
-resets <span class="code">daemonID</span> to nil in case either
-<span class="code">stopDaemon()</span> or
-<span class="code">start()</span> is called again. \[Note: in earlier
-versions of this Tutorial the <span class="code">stopDaemon()</span>
-method was simply called <span class="code">stop()</span>, but from
-version 1.4 of adv3Lite onwards <span class="code">stop</span> has
+resets `daemonID` to nil in case either
+`stopDaemon()` or
+`start()` is called again. \[Note: in earlier
+versions of this Tutorial the `stopDaemon()`
+method was simply called `stop()`, but from
+version 1.4 of adv3Lite onwards `stop` has
 another meaning as a macro, so it can no longer be used as a method
 name\].
 
 Note how the second parameter of the call to new Daemon() is specified
-as <span class="code">&amp;announce</span> and not just
-<span class="code">announce</span>. Placing the ampersand (&amp;) in front
+as `&amp;announce` and not just
+`announce`. Placing the ampersand (&amp;) in front
 of the property/method name makes it a *property pointer*. We use a
 property pointer in a context like this when what we want to pass to a
 method isn't the value of a property, but a reference to the property.
 Here, we're telling Daemon to call the
-<span class="code">announce()</span> method each turn, so we need to
-pass a pointer to <span class="code">announce()</span> so it knows which
+`announce()` method each turn, so we need to
+pass a pointer to `announce()` so it knows which
 method to call. You may be wondering why we couldn't simply have passed
-<span class="code">&amp;doScript</span>, since all the
-<span class="code">announce()</span> method does is to call
-<span class="code">doScript()</span>. The answer is that we could
+`&amp;doScript`, since all the
+`announce()` method does is to call
+`doScript()`. The answer is that we could
 perfectly well have done here, but that we'll shortly be tweaking the
-<span class="code">announce()</span> method in the next section.
+`announce()` method in the next section.
 
-The <span class="code">prefix</span> property simply defines some text
-we can use in each element of the <span class="code">eventList</span>
+The `prefix` property simply defines some text
+we can use in each element of the `eventList`
 without having to type it out in full each time. Note the use of various
 HTML entities (e.g. &agrave; for à or &ocir; for ô) for accented letters
 that might otherwise be hard to display or for the compiler to deal with
@@ -423,10 +413,9 @@ free to correct them.
 Finally, we need some means of starting this Daemon. A convenient point
 at which to do so might be when the player character passes through the
 metal detector, so we'll make a small adjustment to the method's
-<span class="code">travelDesc</span> method to make this happen:
+`travelDesc` method to make this happen:
 
-<div class="code">
-
+```
     + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
@@ -455,12 +444,11 @@ metal detector, so we'll make a small adjustment to the method's
             announcementObj.start();
         }
     ;
-
-</div>
+```
 
 The fact that the player character may pass through the metal detector
 several times doesn't really matter, since once the Daemon is running,
-<span class="code">announcementObj.start()</span> doesn't actually do
+`announcementObj.start()` doesn't actually do
 anything. In the next section we'll set about laying out the plane.
 
 Once you've made all the necessary changes to your versions of start.t
@@ -482,7 +470,7 @@ round the now extended map to make sure everything works as it should.
     </span>
 
 </div>
-</prefix></prefix></prefix></prefix></prefix></prefix></div></tads.h></div></tads.h></div></div>
+</prefix></prefix></prefix></prefix></prefix></prefix></tads.h></tads.h></div>
 
 </main>
 <footer>

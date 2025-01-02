@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Reacting to Actions
 
@@ -270,6 +270,6 @@ and by the room.
 <a href="define.html" class="nav"><em>Next:</em> Defining New Actions</a>
     </span>
 
-</div>
+
 
 </div>

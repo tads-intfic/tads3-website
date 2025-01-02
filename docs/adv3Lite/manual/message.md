@@ -16,7 +16,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Messages
 
@@ -129,7 +129,7 @@ The basic format in which these macros are used is:
     DMsg(key, msg[, params...])
     BMsg(key, msg[, params...])
 
-</div>
+
 
 Where <span class="synPar">key</span> is an arbitrary (or rather,
 user-defined) key to identify the message,

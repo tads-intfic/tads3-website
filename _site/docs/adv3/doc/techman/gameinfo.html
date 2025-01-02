@@ -39,62 +39,60 @@ with the Workbench Editor (Windows)</a>    
 
 </div>
 
-<div class="main">
+<h1 id="bibliographic-metadata-the-gameinfo-format">Bibliographic Metadata: The GameInfo Format</h1>
 
-# Bibliographic Metadata: The GameInfo Format
-
-TADS has a mechanism that lets you include bibliographic information -
+<p>TADS has a mechanism that lets you include bibliographic information -
 title, author, release date, etc. - directly in your compiled game file.
-The information is essentially a "card catalog" entry for your game.
-This system is called the "GameInfo" format, and it's what's known as a
-"metadata" system.
+The information is essentially a “card catalog” entry for your game.
+This system is called the “GameInfo” format, and it’s what’s known as a
+“metadata” system.</p>
 
-What's the point of this, you might wonder? After all, most games
+<p>What’s the point of this, you might wonder? After all, most games
 already display their title and author and so on when they start up; so
 why go to the additional trouble of filling in this card catalog entry?
 Well, consider the plight of someone who has a few dozen TADS .gam files
 sitting on their hard disk, and they want to find a particular one, but
-they don't remember its filename. If they had to rely on the game's own
-title screen, they'd have to run each game in turn, maybe clicking
+they don’t remember its filename. If they had to rely on the game’s own
+title screen, they’d have to run each game in turn, maybe clicking
 through a few initial screens and hunting through a few paragraphs of
 text, before they found the right one. Now consider the problem for the
-maintainers of the IF Archive, who have several *hundred* TADS games to
-keep track of - along with hundreds of games from other systems. It's a
+maintainers of the IF Archive, who have several <em>hundred</em> TADS games to
+keep track of - along with hundreds of games from other systems. It’s a
 huge job to track all of that information manually; it would be a big
-help if even some of it could be automated.
+help if even some of it could be automated.</p>
 
-The point of the GameInfo data, then, is that it lets you get at the
+<p>The point of the GameInfo data, then, is that it lets you get at the
 bibliographic data for a game without having to run the game and read
-the title screen. What's more, it puts the information in a standard,
+the title screen. What’s more, it puts the information in a standard,
 structured format that lets automated tools unambiguously identify
-particular *parts* of the information. For example, a tool that wants to
-present you a list of games sorted by the author's name could find that
-information using the GameInfo data.
+particular <em>parts</em> of the information. For example, a tool that wants to
+present you a list of games sorted by the author’s name could find that
+information using the GameInfo data.</p>
 
-For full details on how GameInfo works internally, you can read the full
-[GameInfo Specification](http://www.tads.org/howto/gameinfo.html) on the
-&lt;a href="http://www.tads.org" data-&lt;="" data-a=""&gt;tads.org&lt;/a&gt; site.
-This article just gives you some quick "recipe" information about how to
-put GameInfo data in your project.
+<p>For full details on how GameInfo works internally, you can read the full
+<a href="http://www.tads.org/howto/gameinfo.html">GameInfo Specification</a> on the
+&lt;a href=”http://www.tads.org” data-&lt;=”” data-a=”“&gt;tads.org&lt;/a&gt; site.
+This article just gives you some quick “recipe” information about how to
+put GameInfo data in your project.</p>
 
-## <span id="ifids">IFIDs</span>
+<h2 id="ifids"><span id="ifids">IFIDs</span></h2>
 
-The first thing you need to do is assign an "IFID" for your game.
+<p>The first thing you need to do is assign an “IFID” for your game.</p>
 
-An IFID is a unique identifier that the IF Archive and others can use to
+<p>An IFID is a unique identifier that the IF Archive and others can use to
 index your game, and to tie together different release versions of it.
 IFIDs are simply very long random numbers - to be exact, 32 random hex
-digits.
+digits.</p>
 
-If you use TADS Workbench to create your game, the system will select an
-IFID for you and automatically set it up properly in your source.
+<p>If you use TADS Workbench to create your game, the system will select an
+IFID for you and automatically set it up properly in your source.</p>
 
-If you're creating your game manually, you'll have to select an IFID
-yourself. The easiest way to do this is to use the [on-line IFID
-generator](http://www.tads.org/ifidgen/ifidgen) on tads.org.
+<p>If you’re creating your game manually, you’ll have to select an IFID
+yourself. The easiest way to do this is to use the <a href="http://www.tads.org/ifidgen/ifidgen">on-line IFID
+generator</a> on tads.org.</p>
 
-You can find a lot more information about IFIDs in the full [GameInfo
-specification](http://www.tads.org/howto/gameinfo.html). In brief, an
+<p>You can find a lot more information about IFIDs in the full <a href="http://www.tads.org/howto/gameinfo.html">GameInfo
+specification</a>. In brief, an
 IFID is an industry-standard UUID, which is a random 128-bit number
 written out in hexadecimal in the format
 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. Every game should have a unique
@@ -105,87 +103,84 @@ same one are vanishingly small.) Each game should use the same IFID
 throughout its entire lifecycle, meaning that you should use the same
 IFID each time you release an updated version of your game; this ensures
 that the Archive will be able to tie together the different incarnations
-of your game and realize that they comprise a single work.
+of your game and realize that they comprise a single work.</p>
 
-## <span id="tads3">Steps for adding the information</span>
+<h2 id="steps-for-adding-the-information"><span id="tads3">Steps for adding the information</span></h2>
 
-The procedure we outline here lets you generate the GameInfo.txt file
+<p>The procedure we outline here lets you generate the GameInfo.txt file
 automatically whenever you compile your game for release, which is nice
 because it means that you can use the same dynamic information you have
-in your game's source code to generate your GameInfo.txt data. This
+in your game’s source code to generate your GameInfo.txt data. This
 approach will also save you the trouble of finding a text editor that
 can handle UTF-8, because TADS 3 is perfectly happy to do the character
-set conversion work for you automatically.
+set conversion work for you automatically.</p>
 
-If you would prefer to create your GameInfo.txt file manually, see
-[above](#manual).
+<p>If you would prefer to create your GameInfo.txt file manually, see
+<a href="#manual">above</a>.</p>
 
-Note: this procedure assumes you're using the Adv3 library, since it
-depends on some classes defined in the library.
+<p>Note: this procedure assumes you’re using the Adv3 library, since it
+depends on some classes defined in the library.</p>
 
-**Step 1 - for users of TADS Workbench for Windows only**. (If you're
+<p><strong>Step 1 - for users of TADS Workbench for Windows only</strong>. (If you’re
 not using TADS Workbench on Windows, you can skip this step. If you
-created your project using Workbench's "New Project" command, you can
+created your project using Workbench’s “New Project” command, you can
 also skip this step, because Workbench will have already done it for
-you.) Open your project in Workbench, and right-click on "Resource
-Files" in the project window; this will open a standard Windows file
+you.) Open your project in Workbench, and right-click on “Resource
+Files” in the project window; this will open a standard Windows file
 selector dialog. Make sure the file selector is showing the directory
 containing your project (your .t3m file) - if not, navigate to your
-project directory. Type "GameInfo.txt" into the filename box and click
-the Open button. (It doesn't matter if this file doesn't exist; your
-game will create it automatically during pre-initialization.)
+project directory. Type “GameInfo.txt” into the filename box and click
+the Open button. (It doesn’t matter if this file doesn’t exist; your
+game will create it automatically during pre-initialization.)</p>
 
-(Optional) If you want to include cover art, save your cover art image
+<p>(Optional) If you want to include cover art, save your cover art image
 as either a JPEG or a PNG file. Go to the Project window, open the
 Special Files section, and find the item labeled Cover Art. Right-click
-this item, then select "Set File..." from the pop-up menu. This will
-bring up a file selection dialog; simply select your image file.
+this item, then select “Set File…” from the pop-up menu. This will
+bring up a file selection dialog; simply select your image file.</p>
 
-**Step 2.** Create an object of class GameID to describe your game. The
+<p><strong>Step 2.</strong> Create an object of class GameID to describe your game. The
 GameID class is described in detail in the TADS 3 library file modid.t;
 the quick summary is that this class lets you define some descriptive
 information for your game, which the library uses to generate the
 GameInfo file automatically. The library also uses the GameID
-information for other purposes, such as the VERSION command. If you're
-using Workbench for Windows, and you used the "New Project" command to
+information for other purposes, such as the VERSION command. If you’re
+using Workbench for Windows, and you used the “New Project” command to
 create your game, Workbench will already have created a placeholder for
-this object in your game's main source file, so you merely need to find
-the placeholder object and edit its property values. Here's an example
-of how this object should look:
+this object in your game’s main source file, so you merely need to find
+the placeholder object and edit its property values. Here’s an example
+of how this object should look:</p>
 
-<div class="code">
-
-    versionInfo: GameID
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    versionInfo: GameID
       IFID = '64d2c120-c80b-11da-a94d-0800200c9a66'
       name = 'My Test Game'
       version = '1.0'
       byline = 'by Bob I.\ Fiction'
-      htmlByline = 'by <a href="mailto:bob@if.com">Bob I.\ Fiction</a>'
+      htmlByline = 'by &lt;a href="mailto:bob@if.com"&gt;Bob I.\ Fiction&lt;/a&gt;'
       authorEmail = 'Bob I. Fiction &lt;bob@if.com&gt;'
       desc = 'My simple test game, just to demonstrate how
           to write GameInfo data.'
-      htmlDesc = 'My simple <b>test game</b>, just to demonstrate
-          how to write <i>GameInfo</i> data.'
+      htmlDesc = 'My simple &lt;b&gt;test game&lt;/b&gt;, just to demonstrate
+          how to write &lt;i&gt;GameInfo&lt;/i&gt; data.'
     ;
+</code></pre></div></div>
 
-</div>
-
-**Step 3.** Compile your game. You must compile for release (not for
+<p><strong>Step 3.</strong> Compile your game. You must compile for release (not for
 debugging) in order for preinitialization to run during compilation - if
-you compile for debugging, the GameInfo.txt file won't be created until
-you actually run your game.
+you compile for debugging, the GameInfo.txt file won’t be created until
+you actually run your game.</p>
 
-**Step 4 - for command-line compiler users only.** (If you're using
+<p><strong>Step 4 - for command-line compiler users only.</strong> (If you’re using
 Workbench for Windows, you can skip this - Workbench will perform this
 step for you automatically because of the way you set things up back in
 Step 1.) Run the T3 Resource Compiler (t3res) and bind the generated
-GameInfo.txt file into your game:
+GameInfo.txt file into your game:</p>
 
 <div class="cmdline">
 
     t3res mygame.t3 -add GameInfo.txt
 
-</div>
+
 
 (Optional) If you want to include cover art in your game, save your
 image as either a JPEG or PNG image. On the tadsrsc command line above,

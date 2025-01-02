@@ -37,85 +37,81 @@ Room Parts
 
 </div>
 
-<div class="main">
+<h1 id="room-parts">Room Parts</h1>
 
-# Room Parts
+<h2 id="overview">Overview</h2>
 
-## Overview
-
-The purpose of the [roomparts.t](../roomparts.t) extension is to provide
+<p>The purpose of the <a href="../roomparts.t">roomparts.t</a> extension is to provide
 walls and a ceiling for every indoor room and a sky for every outdoor
 room. The parts that appear in any particular room can be customized. It
 is also possible to associate particular objects in a room with a
 particular room part, such that examining the room part causes mention
-of any associated objects.
+of any associated objects.</p>
 
-  
-<span id="classes"></span>
+<p><span id="classes"></span></p>
 
-## New Classes, Objects and Properties
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
 
-In addition to a number of properties intended purely for internal use,
+<p>In addition to a number of properties intended purely for internal use,
 this extension defines the following new classes, objects and
-properties:
+properties:</p>
 
-- *Classes*: **OutdoorRoom**, **RoomPart**, **DefaultWall** and
-  **Ceiling**.
-- *Objects*: defaultNorthWall, defaultEastWall, defaultSouthWall,
-  defaultWestWall, defaultCeiling and defaultSky.
-- *Additional properties on Room (and OutdoorRoom)*:
-  <span class="code">ceilingObj</span> and
-  <span class="code">wallObjs</span>.
-- *Additional properties on Thing*: <span class="code">roomPart</span>
-  and <span class="code">roomPartDesc</span>.
+<ul>
+  <li><em>Classes</em>: <strong>OutdoorRoom</strong>, <strong>RoomPart</strong>, <strong>DefaultWall</strong> and
+<strong>Ceiling</strong>.</li>
+  <li><em>Objects</em>: defaultNorthWall, defaultEastWall, defaultSouthWall,
+defaultWestWall, defaultCeiling and defaultSky.</li>
+  <li><em>Additional properties on Room (and OutdoorRoom)</em>:
+<code class="language-plaintext highlighter-rouge">ceilingObj</code> and
+<code class="language-plaintext highlighter-rouge">wallObjs</code>.</li>
+  <li><em>Additional properties on Thing</em>: <code class="language-plaintext highlighter-rouge">roomPart</code>
+and <code class="language-plaintext highlighter-rouge">roomPartDesc</code>.</li>
+</ul>
 
-  
-<span id="usage"></span>
+<p><span id="usage"></span></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-Include the roomparts.t file after the library files but before your
-game source files.
+<p>Include the roomparts.t file after the library files but before your
+game source files.</p>
 
-By default, the extension will add four walls and a ceiling to every
+<p>By default, the extension will add four walls and a ceiling to every
 Room in the game (note that the adv3Lite already adds a floor to every
 Room in the game). Obviously, if you have any rooms that are meant to be
-outdoors, this won't be appropriate; for that reason the extension
-defines an **OutdoorRoom** class that can be used for outdoor locations.
+outdoors, this won’t be appropriate; for that reason the extension
+defines an <strong>OutdoorRoom</strong> class that can be used for outdoor locations.
 And OutdoorRoom comes only with a sky (in addition to the defaultFloor
-already provided by adv3Lite).
+already provided by adv3Lite).</p>
 
-You can customize which room parts an individual Room has by overriding
-its **ceilingObj** and **wallsObjs** properties (as well as its floorObj
-property, of course). The <span class="code">ceilingObj</span> property
+<p>You can customize which room parts an individual Room has by overriding
+its <strong>ceilingObj</strong> and <strong>wallsObjs</strong> properties (as well as its floorObj
+property, of course). The <code class="language-plaintext highlighter-rouge">ceilingObj</code> property
 defines the object (defaultCeiling or defaultSky) that acts as the
-room's ceiling. The <span class="code">wallObjs</span> property contains
-a list of the rooms walls (normally \[defaultNorthWall, defaultEastWall,
-defaultSouthWall, defaultWestWall\]. These properties can be overridden
-as needed to remove unwanted room parts or substitute custom ones.
+room’s ceiling. The <code class="language-plaintext highlighter-rouge">wallObjs</code> property contains
+a list of the rooms walls (normally [defaultNorthWall, defaultEastWall,
+defaultSouthWall, defaultWestWall]. These properties can be overridden
+as needed to remove unwanted room parts or substitute custom ones.</p>
 
-The defaultSky and defaultCeiling objects all descend from the
-<span class="code">Ceiling</span> class. The four default wall objects
-are all of the <span class="code">DefaultWall</span> class. In turn the
+<p>The defaultSky and defaultCeiling objects all descend from the
+<code class="language-plaintext highlighter-rouge">Ceiling</code> class. The four default wall objects
+are all of the <code class="language-plaintext highlighter-rouge">DefaultWall</code> class. In turn the
 Ceiling and DefaultWall classes are both subclasses of
-<span class="code">RoomPart</span>, which itself is a subclass of
-<span class="code">MultiLoc</span> and
-<span class="code">Decoration</span>. It follows that if you want to
+<code class="language-plaintext highlighter-rouge">RoomPart</code>, which itself is a subclass of
+<code class="language-plaintext highlighter-rouge">MultiLoc</code> and
+<code class="language-plaintext highlighter-rouge">Decoration</code>. It follows that if you want to
 move any room parts around dynamically during a game (e.g. to remove a
-wall that's just been demolished) you can do so using the standard
-[MultiLoc](../../manual/multiloc#movingmulti) methods such as
-moveIntoAdd(loc) or moveOutOf(loc).
+wall that’s just been demolished) you can do so using the standard
+<a href="../../manual/multiloc#movingmulti">MultiLoc</a> methods such as
+moveIntoAdd(loc) or moveOutOf(loc).</p>
 
-You can also associate any item directly in a room with one of its room
-parts via that item's **roomPart** property, and then define a
-**roomPartDesc** that will be displayed when the associated room part is
+<p>You can also associate any item directly in a room with one of its room
+parts via that item’s <strong>roomPart</strong> property, and then define a
+<strong>roomPartDesc</strong> that will be displayed when the associated room part is
 examined. Note that the item should then be located directly in the
 room, not the room part. For example, to implement a portrait that
-starts out hanging on a wall you might do something like this:
+starts out hanging on a wall you might do something like this:</p>
 
-<div class="code">
-
-     hall: Room 'Grand Hall'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     hall: Room 'Grand Hall'
        "This great hall is almost so grand that it's just about over the top. "
      ;
      
@@ -129,17 +125,14 @@ starts out hanging on a wall you might do something like this:
          roomPartDesc = initSpecialDesc
      ; 
      
+</code></pre></div></div>
 
-</div>
-
-With this definition, the command EXAMINE WEST WALL will be met with the
-response "An old portrait hangs on the west wall." Note, however, that
+<p>With this definition, the command EXAMINE WEST WALL will be met with the
+response “An old portrait hangs on the west wall.” Note, however, that
 since the portrait is portable the player could take it; if s/he does so
 then the link with the west wall is automatically broken (moving the
 portrait with actionMoveInto() automatically resets its roomPart
-property to nil).
-
-</div>
+property to nil).</p>
 
 <hr />
 

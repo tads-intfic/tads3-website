@@ -20,7 +20,7 @@ Bookshelf</a>
 
 </div>
 
-<div class="main">
+
 
 # Introduction to HTML TADS
 
@@ -286,4 +286,4 @@ Competition entry *Arrival*, for their pioneering work with this
 software, as well as their long-standing generosity in sharing their
 TADS expertise with other game authors.
 
-</div>
+

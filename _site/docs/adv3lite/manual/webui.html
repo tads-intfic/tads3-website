@@ -37,301 +37,313 @@
 
 </div>
 
-<div class="main">
+<h1 id="the-web-ui">The Web UI</h1>
 
-# The Web UI
-
-As in adv3, so in adv3Lite, you can choose between the traditional TADS
+<p>As in adv3, so in adv3Lite, you can choose between the traditional TADS
 user interface or the new Web UI. The method for configuring this is
 almost identical to that used for the standard adv3 library, apart from
-one or two file-names. For the full details, see the section on "Playing
-on the Web" in the *TADS 3 System Manual*. In the present section we
-reproduce part of that material, duly adapted for use with adv3Lite.
+one or two file-names. For the full details, see the section on “Playing
+on the Web” in the <em>TADS 3 System Manual</em>. In the present section we
+reproduce part of that material, duly adapted for use with adv3Lite.</p>
 
-In the traditional UI, the user installs a TADS interpreter on his or
+<p>In the traditional UI, the user installs a TADS interpreter on his or
 her machine, and the interpreter displays the user interface using the
 native features of the operating system — opening a window on the Mac,
 for example, or writing to the terminal window on Unix. With the Web UI,
-the user interface isn't part of the TADS interpreter at all, but
+the user interface isn’t part of the TADS interpreter at all, but
 instead runs in a standard Web browser. The game still runs in the TADS
-interpreter, but the interpreter doesn't show any UI windows; instead,
+interpreter, but the interpreter doesn’t show any UI windows; instead,
 the game sends everything to the Web browser for display, via a network
-connection.
+connection.</p>
 
-The Web UI configuration offers several big new capabilities beyond
-what's possible with the traditional TADS user interface:
+<p>The Web UI configuration offers several big new capabilities beyond
+what’s possible with the traditional TADS user interface:</p>
 
-- **Web-based play.** You can set things up so that users can play your
-  game directly in a browser, without installing your game or any TADS
-  software on their machines. Users simply point their browser to a URL,
-  and the game runs in the browser window. There's nothing for players
-  to download or install — not even a plug-in, since the UI is built
-  entirely on standard Web technologies that are native to all modern
-  browsers (HTML, CSS, Javascript, and AJAX). Your game and the TADS
-  interpreter run on a separate Web server machine; the user only needs
-  to know the URL to the server, which you can easily supply via a
-  hyperlink on your own Web page.
-- **Full support for Javascript, CSS, and HTML DOM.** The traditional
-  HTML TADS user interface uses an "extended subset" of the older HTML
-  3.2 standard, and has no support for CSS, Javascript, or HTML DOM
-  access. With the Web UI, you have access to all of those technologies,
-  plus full standard HTML, because the UI runs in an actual browser.
-  HTML TADS is certainly more optimized for the traditional text game UI
-  than a browser is, but the trade-off is that it's narrowly focused on
-  that one type of UI. Web browsers are much more flexible and powerful
-  as UI platforms.
-- **Multiuser gaming.** A key TADS feature that makes the Web UI
-  possible is a network server capability. The network capability goes
-  beyond just talking to the browser, though: it's really a
-  full-featured networking layer that lets a game communicate with
-  multiple clients, opening up numerous possibilities for collaborative
-  and multi-user games. Although the Adv3Lite library is only designed
-  for a single player character, its new Web UI support does allow
-  multiple people to connect to the same session and play the game
-  collaboratively.
+<ul>
+  <li><strong>Web-based play.</strong> You can set things up so that users can play your
+game directly in a browser, without installing your game or any TADS
+software on their machines. Users simply point their browser to a URL,
+and the game runs in the browser window. There’s nothing for players
+to download or install — not even a plug-in, since the UI is built
+entirely on standard Web technologies that are native to all modern
+browsers (HTML, CSS, Javascript, and AJAX). Your game and the TADS
+interpreter run on a separate Web server machine; the user only needs
+to know the URL to the server, which you can easily supply via a
+hyperlink on your own Web page.</li>
+  <li><strong>Full support for Javascript, CSS, and HTML DOM.</strong> The traditional
+HTML TADS user interface uses an “extended subset” of the older HTML
+3.2 standard, and has no support for CSS, Javascript, or HTML DOM
+access. With the Web UI, you have access to all of those technologies,
+plus full standard HTML, because the UI runs in an actual browser.
+HTML TADS is certainly more optimized for the traditional text game UI
+than a browser is, but the trade-off is that it’s narrowly focused on
+that one type of UI. Web browsers are much more flexible and powerful
+as UI platforms.</li>
+  <li><strong>Multiuser gaming.</strong> A key TADS feature that makes the Web UI
+possible is a network server capability. The network capability goes
+beyond just talking to the browser, though: it’s really a
+full-featured networking layer that lets a game communicate with
+multiple clients, opening up numerous possibilities for collaborative
+and multi-user games. Although the Adv3Lite library is only designed
+for a single player character, its new Web UI support does allow
+multiple people to connect to the same session and play the game
+collaboratively.</li>
+</ul>
 
-<span id="choosing"></span>
+<p><span id="choosing"></span></p>
 
-## Choosing between the regular UI and the Web UI
+<h2 id="choosing-between-the-regular-ui-and-the-web-ui">Choosing between the regular UI and the Web UI</h2>
 
-The Web UI is a whole separate output layer from the traditional user
+<p>The Web UI is a whole separate output layer from the traditional user
 interface, with its own set of functions. This is good news and bad
-news.
+news.</p>
 
-The good news is that the Web UI gives you vastly more control and power
+<p>The good news is that the Web UI gives you vastly more control and power
 than the traditional console UI offers. For one thing, all of the
-networking features are directly available - they're not hidden inside
+networking features are directly available - they’re not hidden inside
 the interpreter, but are readily accessible and controllable from your
 program. For another, you have direct access to all of the browser-side
 coding: you can write your own HTML, CSS, Javascript, and AJAX code to
 run in the browser, so you can customize virtually every aspect of the
-user interface. There's absolutely nothing about the Web UI that's built
-into the interpreter; everything that's predefined is simply part of the
-library, so it's readily accessible and customizable. Your game's UI can
+user interface. There’s absolutely nothing about the Web UI that’s built
+into the interpreter; everything that’s predefined is simply part of the
+library, so it’s readily accessible and customizable. Your game’s UI can
 do anything that a Web site can do - drag-and-drop, animation, dynamic
-pop-up lists, layered objects, menus, and on and on.
+pop-up lists, layered objects, menus, and on and on.</p>
 
-The bad news is that **you must choose in advance** whether your game
+<p>The bad news is that <strong>you must choose in advance</strong> whether your game
 will use the Web UI or the traditional UI. If you stick to the basic
 command-line user interface, the only difference is in compiler options,
-so you can actually compile the same game both ways — so you'd have a
-single set of source files, but you'd compile it twice, once into a .t3
+so you can actually compile the same game both ways — so you’d have a
+single set of source files, but you’d compile it twice, once into a .t3
 file for conventional play, and again into a separate .t3 for Web play.
 On the other hand, if you decide to take advantage of the more advanced
 features of the conventional UI (such as sound playback or the Banner
 API), or if you want to customize the Javascript front end of the Web
-UI, your game will be tied to the UI that you choose.
+UI, your game will be tied to the UI that you choose.</p>
 
-If you have an existing game that you created with a previous TADS 3
+<p>If you have an existing game that you created with a previous TADS 3
 version, you can port it to the Web UI. If you were careful to use only
 Adv3Lite functions for input and output, rather than calling built-in
 interpreter functions directly, porting your game to the Web UI should
 be a simple matter of recompiling with the Web UI compiler settings. If
 you made use of more advanced UI features, though, porting requires
-somewhat more work:
+somewhat more work:</p>
 
-- the banner API
-- sound playback
-- non-standard TADS HTML tags
+<ul>
+  <li>the banner API</li>
+  <li>sound playback</li>
+  <li>non-standard TADS HTML tags</li>
+</ul>
 
-<span id="creating"></span>
+<p><span id="creating"></span></p>
 
-### Creating a new Web UI game from scratch
+<h3 id="creating-a-new-web-ui-game-from-scratch">Creating a new Web UI game from scratch</h3>
 
-The first step in creating a Web UI game is to set up your build
-instructions (your project's .t3m file) to include the networking
-functions and the Web UI version of the Adv3Lite library.
+<p>The first step in creating a Web UI game is to set up your build
+instructions (your project’s .t3m file) to include the networking
+functions and the Web UI version of the Adv3Lite library.</p>
 
-*If you're using Workbench on Windows:* Select the Create New Project
-command. The "wizard" dialog will ask you which type of user interface
-to use; select the "Adv3Lite - Web UI" option from the list of project
-types.
+<p><em>If you’re using Workbench on Windows:</em> Select the Create New Project
+command. The “wizard” dialog will ask you which type of user interface
+to use; select the “Adv3Lite - Web UI” option from the list of project
+types.</p>
 
-*If you're creating your project file manually:* Follow the standard
+<p><em>If you’re creating your project file manually:</em> Follow the standard
 procedure for creating a .t3m file for a regular Adv3Lite game. Once
-you've set up the basic .t3m file, follow the instructions
-[below](#manual_port) for changing a .t3m file from a conventional game
-to the Web UI. <span id="porting"></span>
+you’ve set up the basic .t3m file, follow the instructions
+<a href="#manual_port">below</a> for changing a .t3m file from a conventional game
+to the Web UI. <span id="porting"></span></p>
 
-### Porting an existing game
+<h3 id="porting-an-existing-game">Porting an existing game</h3>
 
-To port an existing game based on the traditional console user interface
+<p>To port an existing game based on the traditional console user interface
 (including HTML TADS games), the first step is to switch to the Web UI
-libraries. This requires a few changes to your project's .t3m file.
+libraries. This requires a few changes to your project’s .t3m file.</p>
 
-Attention Workbench users on Windows: It's possible to make the
+<p>Attention Workbench users on Windows: It’s possible to make the
 necessary changes using Workbench, but the procedure is actually a bit
 easier if you edit the .t3m file manually, so the explanation below
-assumes you're going that route. *Close Workbench* before proceeding,
-and use a different editor, such as Notepad. *Don't* attempt to edit the
-.t3m file using Workbench or while it's open in Workbench, since
+assumes you’re going that route. <em>Close Workbench</em> before proceeding,
+and use a different editor, such as Notepad. <em>Don’t</em> attempt to edit the
+.t3m file using Workbench or while it’s open in Workbench, since
 Workbench will overwrite any changes you make as long as Workbench has
-it open.
+it open.</p>
 
-<span id="manual_port">Here's the procedure to update your .t3m file to
-use the Web UI:</span>
+<p><span id="manual_port">Here’s the procedure to update your .t3m file to
+use the Web UI:</span></p>
 
-- Open your project's .t3m file in a **non-Workbench** editor (e.g.,
-  Notepad on Windows)
-- At the start of the file (after any comments, but before the first
-  source file is listed), add **-D TADS_INCLUDE_NET**
-- Change the line **-lib adv3Lite** to **-lib adv3LiteWeb**
-- Add the following lines immediately after the **-lib adv3LiteWeb**
-  line we just updated (but after any **-x** lines that happen to follow
-  it):
-  - **-lib webui**
-  - **-source tadsnet**
+<ul>
+  <li>Open your project’s .t3m file in a <strong>non-Workbench</strong> editor (e.g.,
+Notepad on Windows)</li>
+  <li>At the start of the file (after any comments, but before the first
+source file is listed), add <strong>-D TADS_INCLUDE_NET</strong></li>
+  <li>Change the line <strong>-lib adv3Lite</strong> to <strong>-lib adv3LiteWeb</strong></li>
+  <li>Add the following lines immediately after the <strong>-lib adv3LiteWeb</strong>
+line we just updated (but after any <strong>-x</strong> lines that happen to follow
+it):
+    <ul>
+      <li><strong>-lib webui</strong></li>
+      <li><strong>-source tadsnet</strong></li>
+    </ul>
+  </li>
+</ul>
 
-The first item, **-D TADS_INCLUDE_NET**, tells the compiler to include
-the network-related built-in functions. These interfaces aren't included
-by default because they're not universally supported on all
-interpreters, and a game that includes them won't run on an interpreter
-that doesn't support them. This makes it better to omit them unless you
-actually make use of them, which of course you must for a Web UI game.
+<p>The first item, <strong>-D TADS_INCLUDE_NET</strong>, tells the compiler to include
+the network-related built-in functions. These interfaces aren’t included
+by default because they’re not universally supported on all
+interpreters, and a game that includes them won’t run on an interpreter
+that doesn’t support them. This makes it better to omit them unless you
+actually make use of them, which of course you must for a Web UI game.</p>
 
-The second item, **-lib adv3LiteWeb**, selects the Web version of the
+<p>The second item, <strong>-lib adv3LiteWeb</strong>, selects the Web version of the
 Adv3Lite library. Adv3LiteWeb emulates all of the programming interfaces
 from Adv3Lite related to basic command-line interactions, such as
 displaying text or HTML output, reading command lines, reading
 keystrokes, and so on. This lets you write a Web UI game as though it
-were a standard console-based game.
+were a standard console-based game.</p>
 
-The third item, **-lib webui -source tadsnet**, adds the TADS Web UI
+<p>The third item, <strong>-lib webui -source tadsnet</strong>, adds the TADS Web UI
 library to the build, along with some helper classes for the networking
 interfaces. The Web UI library is a separate component from Adv3LiteWeb.
-Adv3LiteWeb doesn't actually implement the Web interface, but rather
+Adv3LiteWeb doesn’t actually implement the Web interface, but rather
 implements an emulation of the traditional Adv3Lite input and output
 functions on top of the Web UI library. The Web UI library is a whole
 separate subsystem that consists of a Javascript library that runs in
-the user's Web browser, and a TADS library that runs on the server
+the user’s Web browser, and a TADS library that runs on the server
 machine hosting the game. The TADS and Javascript portions communicate
-with each other using the TADS networking system.
+with each other using the TADS networking system.</p>
 
-The Web UI library is analogous to the traditional input/output
+<p>The Web UI library is analogous to the traditional input/output
 functions built into the interpreter. With traditional console-based
 games, you always had the option to bypass the Adv3Lite library and work
 directly with the interpreter built-ins. For Web-based games, you
 similarly have the option to bypass the Adv3LiteWeb library and work
 directly with the Web UI library. If you do so, of course, your game
-will be inextricably tied to the Web UI - you won't be able to easily
+will be inextricably tied to the Web UI - you won’t be able to easily
 port it back to the console UI later. But the trade-off is that you can
-exploit the full power of Javascript in the browser.
+exploit the full power of Javascript in the browser.</p>
 
-Depending on how much custom UI work you use in your existing game, the
+<p>Depending on how much custom UI work you use in your existing game, the
 library additions above might be all you have to do. The Adv3LiteWeb
 library emulates the input and output functions in Adv3Lite, so you
-won't have to change anything related to displaying text or reading
+won’t have to change anything related to displaying text or reading
 input as long as you used Adv3Lite functions for I/O rather than calling
-the interpreter built-ins directly.
+the interpreter built-ins directly.</p>
 
-If you use any HTML image or audio files, such as JPEG images, there's
-an extra step. See [resource files](#resfiles) below.
+<p>If you use any HTML image or audio files, such as JPEG images, there’s
+an extra step. See <a href="#resfiles">resource files</a> below.</p>
 
-To test your game in Web UI mode, recompile with the .t3m changes above.
-If it compiles successfully, try running it. If you're using Windows,
+<p>To test your game in Web UI mode, recompile with the .t3m changes above.
+If it compiles successfully, try running it. If you’re using Windows,
 HTML TADS will run a Web UI game locally as though it were a standard
-game - so you don't have to set up a Web server to test Web UI mode.
+game - so you don’t have to set up a Web server to test Web UI mode.</p>
 
-If you encounter any compiler errors building your game after making the
-.t3m changes, you must have used a part of Adv3Lite that isn't supported
+<p>If you encounter any compiler errors building your game after making the
+.t3m changes, you must have used a part of Adv3Lite that isn’t supported
 in the Web version. The most likely missing piece is the banner API -
-Adv3LiteWeb doesn't support it. The Javascript front end has analogous
-capabilities, but the specifics are different enough that there's no
-Adv3LiteWeb emulation for the console-mode banners.
+Adv3LiteWeb doesn’t support it. The Javascript front end has analogous
+capabilities, but the specifics are different enough that there’s no
+Adv3LiteWeb emulation for the console-mode banners.</p>
 
-If the game compiles successfully, but doesn't work correctly when you
+<p>If the game compiles successfully, but doesn’t work correctly when you
 run it, your game probably calls built-in functions in the interpreter
-rather than using the Adv3Lite equivalents. You'll have to examine your
-code and eliminate calls to built-ins. <span id="buildingboth"></span>
+rather than using the Adv3Lite equivalents. You’ll have to examine your
+code and eliminate calls to built-ins. <span id="buildingboth"></span></p>
 
-### Building the same game both ways
+<h3 id="building-the-same-game-both-ways">Building the same game both ways</h3>
 
-If you stick to the basic command-line user interface, and you're
+<p>If you stick to the basic command-line user interface, and you’re
 careful to use Adv3Lite library methods for all of your input/output
 operations, porting from the console UI to the Web UI is usually just a
-matter of changing your .t3m file as described above.
+matter of changing your .t3m file as described above.</p>
 
-An interesting implication is that you can easily create both UI
+<p>An interesting implication is that you can easily create both UI
 versions of your game from the same set of source files. If you create
 two copies of your .t3m file - one for the console UI, and another for
 the Web UI - creating the two versions is just a matter of compiling the
-game with each .t3m file.
+game with each .t3m file.</p>
 
-Why would you want to do this? The main reason is to accommodate
-different users' preferences. Playing on the Web has a number of
+<p>Why would you want to do this? The main reason is to accommodate
+different users’ preferences. Playing on the Web has a number of
 advantages (greater portability, no need to install anything, the
 ability to resume a saved game on different machines, multi-user
 collaboration), but the traditional console UI has some advantages of
 its own (faster response time, no need to be connected to the Internet
 while playing). Offering both versions of your game lets users pick the
-mode that works better for them.
+mode that works better for them.</p>
 
-Here are some tips for creating a dual-mode game:
+<p>Here are some tips for creating a dual-mode game:</p>
 
-- When you create your two .t3m files, give the final .t3 file
-  (specified with the "-o" option) a different name for each version.
-  For example, use "-o mygame.t3" for the console version, and "-o
-  mygameWeb.t3" for the Web UI version.
-- When you're ready to build the two versions, be sure to do a *full*
-  build of each version, so that all of the intermediate files are
-  rebuilt from scratch. If you're compiling from the command line, use
-  the -a option (<span class="code">t3make -a -f mygame</span>). If
-  you're compiling with Workbench on Windows, use the "Full Recompile
-  for Debugging" command (note that "Compile for Release" always does a
-  full build, so you can use that command as well).
-- If you follow the [Adv3LiteWeb usage tips](#Adv3WebUsageTips) we'll
-  see later in this chapter, all of your source code should work equally
-  well in both modes. However, you might decide that you want to create
-  some special effects that require calling the built-in I/O functions
-  and/or the Javascript UI directly. If you do, you'll have to write a
-  different version of that special code for each UI mode. There are two
-  ways to isolate code that works only in one or the other UI mode:
-  - You can use <span class="code">\#ifdef TADS_INCLUDE_NET</span> to
-    mark off sections that apply only to one or the other mode. Recall
-    that we added this symbol to the .t3m file for the Web UI only, so
-    if this symbol is defined, you know you're compiling the Web UI
-    version.
-    <div class="code">
+<ul>
+  <li>When you create your two .t3m files, give the final .t3 file
+(specified with the “-o” option) a different name for each version.
+For example, use “-o mygame.t3” for the console version, and “-o
+mygameWeb.t3” for the Web UI version.</li>
+  <li>When you’re ready to build the two versions, be sure to do a <em>full</em>
+build of each version, so that all of the intermediate files are
+rebuilt from scratch. If you’re compiling from the command line, use
+the -a option (<code class="language-plaintext highlighter-rouge">t3make -a -f mygame</code>). If
+you’re compiling with Workbench on Windows, use the “Full Recompile
+for Debugging” command (note that “Compile for Release” always does a
+full build, so you can use that command as well).</li>
+  <li>If you follow the <a href="#Adv3WebUsageTips">Adv3LiteWeb usage tips</a> we’ll
+see later in this chapter, all of your source code should work equally
+well in both modes. However, you might decide that you want to create
+some special effects that require calling the built-in I/O functions
+and/or the Javascript UI directly. If you do, you’ll have to write a
+different version of that special code for each UI mode. There are two
+ways to isolate code that works only in one or the other UI mode:
+    <ul>
+      <li>
+        <p>You can use <code class="language-plaintext highlighter-rouge">\#ifdef TADS_INCLUDE_NET</code> to
+mark off sections that apply only to one or the other mode. Recall
+that we added this symbol to the .t3m file for the Web UI only, so
+if this symbol is defined, you know you’re compiling the Web UI
+version.
+```
+    #ifdef TADS_INCLUDE_NET
+       special code for the Web UI goes here
+    #else
+       special code for the console UI goes here
+    #endif</p>
+      </li>
+      <li>
+        <p>Alternatively, if you have extensive code for the two modes, it can
+be cleaner to separate the variant code into two separate source
+files. Create one file that’s exclusively for the Web UI, and
+another that’s exclusively for the console UI. In your .t3m files,
+include a <code class="language-plaintext highlighter-rouge">-source</code> line for the appropriate
+source file for each build. This ensures that the Web UI source file
+is only included in the Web UI build, and the console source file is
+only in the console build. Adv3Lite itself uses this approach - it
+has a file called console.t that’s only included in the traditional
+Adv3Lite library source list, and another called browser.t that’s
+only included in the Adv3LiteWeb source list.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-        #ifdef TADS_INCLUDE_NET
-           special code for the Web UI goes here
-        #else
-           special code for the console UI goes here
-        #endif
+<h2 id="resource-files"><span id="resfiles">Resource files</span></h2>
 
-    </div>
-  - Alternatively, if you have extensive code for the two modes, it can
-    be cleaner to separate the variant code into two separate source
-    files. Create one file that's exclusively for the Web UI, and
-    another that's exclusively for the console UI. In your .t3m files,
-    include a <span class="code">-source</span> line for the appropriate
-    source file for each build. This ensures that the Web UI source file
-    is only included in the Web UI build, and the console source file is
-    only in the console build. Adv3Lite itself uses this approach - it
-    has a file called console.t that's only included in the traditional
-    Adv3Lite library source list, and another called browser.t that's
-    only included in the Adv3LiteWeb source list.
+<p>If you use HTML resources such as images or audio files (JPEGs, PNGs,
+MP3s, etc), there’s an extra detail to tend to: you have to tell the
+library that it’s okay for client browsers to download those files. The
+library is cautious about network security, so by default it doesn’t let
+clients download anything without your say-so.</p>
 
-## <span id="resfiles">Resource files</span>
-
-If you use HTML resources such as images or audio files (JPEGs, PNGs,
-MP3s, etc), there's an extra detail to tend to: you have to tell the
-library that it's okay for client browsers to download those files. The
-library is cautious about network security, so by default it doesn't let
-clients download anything without your say-so.
-
-It's fairly easy to specify resource download permissions. First, you
+<p>It’s fairly easy to specify resource download permissions. First, you
 should group your resources into one or more folders - that is,
 subdirectories of your main project folder for the game. Second, for
-each folder, add an object definition like this to your game:
+each folder, add an object definition like this to your game:</p>
 
 <div class="code">
 
     WebResourceResFile
        vpath = static new RexPattern('/foldername/')
     ;
-
-</div>
+```
 
 That tells the library to treat anything in the "foldername"
 subdirectory of the game folder as an HTML resource, allowing the client
@@ -347,7 +359,7 @@ definition will allow files in subfolders of 'foldername'.)
 In the traditional console UI, the way the game program terminates is
 fairly straightforward. When the player types QUIT, the Adv3Lite command
 loop exits, which unwinds the call stack until the
-<span class="code">main()</span> function returns. This terminates the
+`main()` function returns. This terminates the
 game program, at which point the interpreter program exits to the
 operating system. Alternatively, on GUI versions (such as QTads or HTML
 TADS), the player can end the program by closing the main window. This
@@ -474,34 +486,32 @@ should do to make sure your game works correctly.
 
 ### Use aHref() for command links
 
-In HTML TADS games, you can use <span class="code">\&lt;A HREF=xxx\&gt;</span>
+In HTML TADS games, you can use `\&lt;A HREF=xxx\&gt;`
 to create clickable command links. With the Web UI, all HTML is
-displayed by a standard Web browser, so the <span class="code">\&lt;A
-HREF\&gt;</span> tag has its standard meaning, which is to create a
+displayed by a standard Web browser, so the `\&lt;A
+HREF\&gt;` tag has its standard meaning, which is to create a
 hyperlink to a separate Web page.
 
 To create a command link, use the Adv3LiteWeb function
-<span class="code">aHref()</span>:
+`aHref()`:
 
-<div class="code">
-
+```
     "To save the game, type &lt;&lt;aHref('SAVE')&gt;&gt;. "
+```
 
-</div>
-
-You should continue to use <span class="code">\&lt;A HREF\&gt;</span> for
+You should continue to use `\&lt;A HREF\&gt;` for
 actual hyperlinks, where the link navigates to another Web page rather
 than entering a command, as well as for special links such as
-<span class="code">mailto:</span> links.
+`mailto:` links.
 
-### Don't use <span class="code">\&lt;TAB\&gt;</span>
+### Don't use `\&lt;TAB\&gt;`
 
-The <span class="code">\&lt;TAB\&gt;</span> tag is an HTML TADS extension that
+The `\&lt;TAB\&gt;` tag is an HTML TADS extension that
 isn't in standard HTML. Standard Web browsers don't support it.
 Unfortunately, standard HTML doesn't have a simple equivalent of
-<span class="code">\&lt;TAB\&gt;</span>, but you can usually achieve similar
-effects using <span class="code">\&lt;SPAN\&gt;</span> or
-<span class="code">\&lt;DIV\&gt;</span> tags with CSS styling to control
+`\&lt;TAB\&gt;`, but you can usually achieve similar
+effects using `\&lt;SPAN\&gt;` or
+`\&lt;DIV\&gt;` tags with CSS styling to control
 spacing.
 
 ### <span id="inputmanager">Use inputManager methods for input</span>
@@ -526,27 +536,27 @@ Instead of the interpreter built-ins, always use the
 
 The *promptFunc* parameter can be supplied either as an anonymous
 function that displays a prompt or simply as a single-quoted string. For
-<span class="code">getInputLine()</span> and
-<span class="code">getKey()</span> (or their macro equivalents) this
+`getInputLine()` and
+`getKey()` (or their macro equivalents) this
 parameter can be omitted altogether; you can simply display a prompt
 string before calling the method.
 
 For the most common cases you can use the following macros:
 
 - **more** expands to
-  <span class="code">inputManager.pauseForMore()</span>
+  `inputManager.pauseForMore()`
 - **input(x)** expands to
-  <span class="code">inputManager.getInputLine(x)</span>
+  `inputManager.getInputLine(x)`
 - **waitKey(x)** expands to
-  <span class="code">inputManager.getKey(x)</span>
+  `inputManager.getKey(x)`
 
 <span id="cls"></span>
 
-### Use <span class="code">cls()</span> instead of <span class="code">clearScreen()</span>
+### Use `cls()` instead of `clearScreen()`
 
 You shouldn't use the built-in function
-<span class="code">clearScreen()</span>, just as you shouldn't use any
-other built-in I/O functions. Use <span class="code">cls()</span>
+`clearScreen()`, just as you shouldn't use any
+other built-in I/O functions. Use `cls()`
 instead - this will work correctly in both Adv3 and Adv3web.
 <span id="nobanner"></span>
 
@@ -574,7 +584,7 @@ the banner API. <span id="sound"></span>
 
 ### Sound playback
 
-The <span class="code">\&lt;SOUND\&gt;</span> tag is an HTML TADS extension
+The `\&lt;SOUND\&gt;` tag is an HTML TADS extension
 that's not in standard HTML, so you can't use it for sound playback in
 Web UI games.
 
@@ -583,14 +593,14 @@ Mike Roberts plans to add this in the future. For the moment, if you
 need sound playback, you'll have to resort to direct Javascript
 programming. <span id="aboutbox"></span>
 
-### <span class="code">\&lt;ABOUTBOX\&gt;</span>
+### `\&lt;ABOUTBOX\&gt;`
 
-The <span class="code">\&lt;ABOUTBOX\&gt;\&gt;</span> tag is an HTML TADS
+The `\&lt;ABOUTBOX\&gt;\&gt;` tag is an HTML TADS
 extension, not part of standard HTML. You shouldn't use this tag.
 There's currently no equivalent in the Web UI. However, note that the
 Adv3Lite library only calls
-<span class="code">gameMain.setAboutBox()</span> when running in console
-mode, so it's fine to write your <span class="code">\&lt;ABOUTBOX\&gt;</span>
+`gameMain.setAboutBox()` when running in console
+mode, so it's fine to write your `\&lt;ABOUTBOX\&gt;`
 code as usual in that method.
 
 </div>

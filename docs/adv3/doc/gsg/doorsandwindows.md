@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](whatsinaname.html)   [\[Next\]](crossingthestream.html)*
@@ -635,4 +635,4 @@ till later.
 [\[Main\]](index.html)  
 *[\[Previous\]](whatsinaname.html)   [\[Next\]](crossingthestream.html)*
 
-</div>
+

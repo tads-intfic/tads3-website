@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Change Log
 
@@ -1542,7 +1542,7 @@ indirect object) say. For example:
      You unlock the red door with the key.
      
 
-</div>
+
 
 The code that asks the player to supply a missing object now prevents
 the parser from re-resolving existing objects so that this sort of thing

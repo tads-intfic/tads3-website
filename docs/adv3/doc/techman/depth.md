@@ -17,7 +17,7 @@ From</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Part II: TADS 3 In Depth
 
@@ -40,7 +40,7 @@ or another.
 [NPC Travel](t3npcTravel.html)  
 [Using the Banner API](t3banner.html)  
 
-</div>
+
 
 </div>
 

@@ -18,7 +18,7 @@ Library</a>    
 
 </div>
 
-<div class="main">
+
 
 # Part VI: The User Interface
 
@@ -34,7 +34,7 @@ GUI-style interaction on platforms that support these features.
 [The Default Display Function](dispfn.html)  
 [The Banner Window Display Model](banners.html)  
 
-</div>
+
 
 </div>
 

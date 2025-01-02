@@ -17,7 +17,7 @@ Barriers</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Doors
 
@@ -149,6 +149,6 @@ explicitly include the symconn extension in your build.
     <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
 Barriers</a>     </span>
 
-</div>
+
 
 </div>

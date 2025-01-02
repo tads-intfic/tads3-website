@@ -19,7 +19,7 @@ Finalization</a>    
 
 </div>
 
-<div class="main">
+
 
 # Expressions and Operators
 
@@ -270,7 +270,7 @@ instance of a class dynamically. The syntax is:
 
     new className [ argumentList ] 
 
-</div>
+
 
 If the argument list is omitted entirely, it's equivalent to using an
 empty argument list - so the following two lines are equivalent:

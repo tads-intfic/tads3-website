@@ -18,7 +18,7 @@ Project Starter Templates</a>    
 
 </div>
 
-<div class="main">
+
 
 # Part IV: T3 Virtual Machine Technical Documentation
 
@@ -55,7 +55,7 @@ the machine.
 [Saving and Restoring State](t3spec/save.html)  
 [TADS Special Characters](t3spec/tadsspch.html)  
 
-</div>
+
 
 </div>
 

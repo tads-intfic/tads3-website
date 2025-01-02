@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](chapter2.html)   [\[Next\]](addingitemstothegame.html)*
@@ -581,4 +581,4 @@ interact with one another.
 [\[Main\]](index.html)  
 *[\[Previous\]](chapter2.html)   [\[Next\]](addingitemstothegame.html)*
 
-</div>
+

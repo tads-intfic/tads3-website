@@ -19,7 +19,7 @@ Executables</a>    
 
 </div>
 
-<div class="main">
+
 
 # Running Programs: The Interpreter
 
@@ -47,7 +47,7 @@ For command-line systems, the interpreter accepts this command syntax:
 
     t3run options imageName imageParams
 
-</div>
+
 
 The options, if present, let you modify the interpreter's default
 behavior. You don't have to specify any options, and options you do

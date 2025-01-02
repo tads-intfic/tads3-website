@@ -19,7 +19,7 @@ Angela Wants Answers
 
 </div>
 
-<div class="main">
+
 
 # Angela Wants Answers
 
@@ -583,7 +583,7 @@ as possible in how you use Conversation Nodes in your own game. For a
 complete account, see the section on [Conversation
 Nodes](../manual/convnode.html) in the *adv3Lite Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

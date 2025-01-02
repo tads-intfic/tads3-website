@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Utility Functions
 
@@ -271,7 +271,7 @@ World!'. This will principally be useful when we want to iterate over
 some variable (or property) that may contain either a collection (List
 or Vector) or a singleton value.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

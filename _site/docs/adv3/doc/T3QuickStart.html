@@ -135,15 +135,15 @@ non-Windows systems with a little adaptation):
     convenience, give the .t3m file the same name as the project,
     perhaps MyGame.t3m. Copy the following text into your new .t3m file
     and save the file to the project folder:
-
-                                            -D LANGUAGE=en_us
-                                            -D MESSAGESTYLE=neu
-                                            -Fy obj -Fo obj
-                                            -o MyGame.t3
-                                            -lib system
-                                            -lib adv3/adv3
-                                            -source MyGame
-                                    
+```
+-D LANGUAGE=en_us
+-D MESSAGESTYLE=neu
+-Fy obj -Fo obj
+-o MyGame.t3
+-lib system
+-lib adv3/adv3
+-source MyGame
+```
 
     Replace "MyGame" in the code above with the name of your actual
     game, if it's different.  
@@ -157,30 +157,30 @@ non-Windows systems with a little adaptation):
 6.  Create a starter game file, again as a text file, and save it to the
     MyGame directory. Your starter game should look more or less like
     this:
+```
+#include <adv3.h>
+#include <en_us.h>
 
-                                            #include <adv3.h>
-                                            #include <en_us.h>
+gameMain: GameMainDef
+initialPlayerChar = me
+;
 
-                                            gameMain: GameMainDef
-                                            initialPlayerChar = me
-                                            ;
+versionInfo: GameID
+name = 'My First Game'
+byline = 'by Bob Author'
+authorEmail = 'Bob Author &lt;bob@myisp.com&gt;'
+desc = 'This is an example of how to start a new game project. '
+version = '1'
+IFID = 'b8563851-6257-77c3-04ee-278ceaeb48ac'
+;
 
-                                            versionInfo: GameID
-                                            name = 'My First Game'
-                                            byline = 'by Bob Author'
-                                            authorEmail = 'Bob Author &lt;bob@myisp.com&gt;'
-                                            desc = 'This is an example of how to start a new game project. '
-                                            version = '1'
-                                            IFID = 'b8563851-6257-77c3-04ee-278ceaeb48ac'
-                                            ;
+firstRoom: Room 'Starting Room'
+"This is the boring starting room."
+;
 
-                                            firstRoom: Room 'Starting Room'
-                                            "This is the boring starting room."
-                                            ;
-
-                                            +me: Actor
-                                            ;
-                                    
++me: Actor
+;
+```                   
 
     Fill in those quoted parts under the line reading
     "<span class="code">versionInfo:GameID</span>" with your own
@@ -205,8 +205,8 @@ non-Windows systems with a little adaptation):
 8.  While the Terminal is logged into this directory, you can compile
     your game using this command:
 
-                                        t3make -d -f MyGame
-                                    
+`t3make -d -f MyGame`
+    
 
     If all goes well, you should see a string of messages in the
     Terminal window, and a new file (MyGame.t3) will appear in the
@@ -232,8 +232,8 @@ non-Windows systems with a little adaptation):
     before, to the directory where your .command file is located, and
     type this into the Terminal:
 
-                                        chmod +x MyGame.command
-                                    
+        chmod +x MyGame.command
+    
 
     Again, substitute the name of your actual .command file. The chmod
     instruction with a +x flag will make the .command file executable.
@@ -244,9 +244,9 @@ non-Windows systems with a little adaptation):
     .command file looks something like this (substituting the name of
     your directory and game file):
 
-                                        cd Documents/TADS/MyGame
-                                        t3make -d -f MyGame
-                                    
+        cd Documents/TADS/MyGame
+        t3make -d -f MyGame
+    
 
 ### 1c. Running Your Game
 
@@ -497,91 +497,91 @@ The plot of the game (such as it is) consists of the player character
 entering a house, stealing the Orb of Ultimate Satisfaction, and then
 escaping with it. We start with an absolutely basic bare bones
 implementation.
+```
+#charset "us-ascii"
+#include <adv3.h>
+#include <en_us.h>
 
-                                #charset "us-ascii"
-                                #include <adv3.h>
-                                #include <en_us.h>
+/* The header, shown above, tells TADS to include some essential files. */
 
-                                /* The header, shown above, tells TADS to include some essential files. */
+versionInfo: GameID
+IFID = '558c20af-6559-477a-9f98-b7b4274cd304'
+name = 'The Best Burglar'
+byline = 'by Eric Eve'
+htmlByline = 'by <a href="mailto:eric.eve@hmc.ox.ac.uk">
+Eric Eve</a>'
+version = '1'
+authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
+desc = 'You are the world\'s best burglar faced with the greatest challenge of your felonious career.'
+htmlDesc = 'You are the world\'s best burglar faced with the greatest challenge of your felonious career.'
+;
 
-                                versionInfo: GameID
-                                IFID = '558c20af-6559-477a-9f98-b7b4274cd304'
-                                name = 'The Best Burglar'
-                                byline = 'by Eric Eve'
-                                htmlByline = 'by <a href="mailto:eric.eve@hmc.ox.ac.uk">
-                                Eric Eve</a>'
-                                version = '1'
-                                authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
-                                desc = 'You are the world\'s best burglar faced with the greatest challenge of your felonious career.'
-                                htmlDesc = 'You are the world\'s best burglar faced with the greatest challenge of your felonious career.'
-                                ;
+/* Notice that each object definition, including versionInfo, ends with a semicolon. */
 
-                                /* Notice that each object definition, including versionInfo, ends with a semicolon. */
+gameMain: GameMainDef
+/* The initial player character is an object called 'me', which will be defined shortly. */
+initialPlayerChar = me
+;
 
-                                gameMain: GameMainDef
-                                /* The initial player character is an object called 'me', which will be defined shortly. */
-                                initialPlayerChar = me
-                                ;
+/* Objects in the game are created by giving the object a name that can be referred to in
+your game code, then by stating what class the object is (in the case below, it's an
+OutdoorRoom), and then giving it a name that will be displayed when the game is running. */
 
-                                /* Objects in the game are created by giving the object a name that can be referred to in
-                                your game code, then by stating what class the object is (in the case below, it's an
-                                OutdoorRoom), and then giving it a name that will be displayed when the game is running. */
+startRoom: OutdoorRoom 'Driveway'
+"The great house stands before you to the north. "
+north = hallway
 
-                                startRoom: OutdoorRoom 'Driveway'
-                                "The great house stands before you to the north. "
-                                north = hallway
+roomAfterAction()
+{
+if(orb.isIn(me))
+{
+"Congratulations! You have just got away with the Orb of Ultimate Satisfaction! ";
+finishGameMsg(ftVictory, [finishOptionUndo]);
+}
+}
+;
 
-                                roomAfterAction()
-                                {
-                                if(orb.isIn(me))
-                                {
-                                "Congratulations! You have just got away with the Orb of Ultimate Satisfaction! ";
-                                finishGameMsg(ftVictory, [finishOptionUndo]);
-                                }
-                                }
-                                ;
+/* The plus sign on the first line of an object declaration tells TADS that this object
+will be located inside of the previous object. */
 
-                                /* The plus sign on the first line of an object declaration tells TADS that this object
-                                will be located inside of the previous object. */
++ me: Actor
+;
 
-                                + me: Actor
-                                ;
+/* Another room. Notice how the exits from the room are listed. The text in
+double-quotes is the description of the room, and will be displayed when the player
+enters the room or types 'look'. Notice also that text in TADS generally ends with
+a space after the final period and before the closing quotation mark. */
 
-                                /* Another room. Notice how the exits from the room are listed. The text in
-                                double-quotes is the description of the room, and will be displayed when the player
-                                enters the room or types 'look'. Notice also that text in TADS generally ends with
-                                a space after the final period and before the closing quotation mark. */
+hallway: Room 'Hallway'
+"This hall is pretty bare, but there are exits to west and south. "
+south = startRoom
+west = study
+;
 
-                                hallway: Room 'Hallway'
-                                "This hall is pretty bare, but there are exits to west and south. "
-                                south = startRoom
-                                west = study
-                                ;
+study: Room 'Study'
+"This study is much as you would expect. A desk stands in the middle of the
+room. The way out is to the east. "
+east = hallway
+;
 
-                                study: Room 'Study'
-                                "This study is much as you would expect. A desk stands in the middle of the
-                                room. The way out is to the east. "
-                                east = hallway
-                                ;
+/* The desk object has two single-quoted strings in its declaration. The first creates
+some vocabulary words that the player can use to refer to the desk. The second is how
+the game will refer to it when assembling text to show to the player. */
 
-                                /* The desk object has two single-quoted strings in its declaration. The first creates
-                                some vocabulary words that the player can use to refer to the desk. The second is how
-                                the game will refer to it when assembling text to show to the player. */
++ desk: Heavy, Platform 'plain wooden desk' 'desk'
+"It's a plain wooden desk; nothing fancy, just a horizontal surface on legs
+but no drawers or anything like that. "
+;
 
-                                + desk: Heavy, Platform 'plain wooden desk' 'desk'
-                                "It's a plain wooden desk; nothing fancy, just a horizontal surface on legs
-                                but no drawers or anything like that. "
-                                ;
+/* Notice that the orb is defined starting with TWO + signs. This will cause it to show
+up on the desk.
+*/
 
-                                /* Notice that the orb is defined starting with TWO + signs. This will cause it to show
-                                up on the desk.
-                                */
-
-                                ++ orb: Thing 'ultimate orb/satisfaction' 'Orb of Ultimate Satisfaction'
-                                "It's -- well how can you describe such a thing? -- it's simply the most
-                                valuable and desirable object in the known universe!"
-                                ;
-                        
+++ orb: Thing 'ultimate orb/satisfaction' 'Orb of Ultimate Satisfaction'
+"It's -- well how can you describe such a thing? -- it's simply the most
+valuable and desirable object in the known universe!"
+;
+```
 
 The particular points to note here are the way rooms and other objects
 are defined, and the way the + sign is used to locate some objects
@@ -615,246 +615,246 @@ experienced with programming, especially in another IF authoring system,
 you may be able to work out at least some of what's going on in the code
 below, but if it totally baffles you it may be time to start reaching
 for the manuals!
+```
+#charset "us-ascii"
+#include <adv3.h>
+#include <en_us.h>
 
-                                #charset "us-ascii"
-                                #include <adv3.h>
-                                #include <en_us.h>
+versionInfo: GameID
+IFID = '558c20af-6559-477a-9f98-b7b4274cd304'
+name = 'The Best Burglar'
+byline = 'by Eric Eve'
+htmlByline = 'by <a href="mailto:eric.eve@hmc.ox.ac.uk">
+Eric Eve</a>'
+version = '2'
+authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
+desc = 'You are the world\'s best burglar faced with the greatest challenge
+of your felonious career.'
+htmlDesc = 'You are the world\'s best burglar faced with the greatest
+challenge of your felonious career.'
+;
 
-                                versionInfo: GameID
-                                IFID = '558c20af-6559-477a-9f98-b7b4274cd304'
-                                name = 'The Best Burglar'
-                                byline = 'by Eric Eve'
-                                htmlByline = 'by <a href="mailto:eric.eve@hmc.ox.ac.uk">
-                                Eric Eve</a>'
-                                version = '2'
-                                authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
-                                desc = 'You are the world\'s best burglar faced with the greatest challenge
-                                of your felonious career.'
-                                htmlDesc = 'You are the world\'s best burglar faced with the greatest
-                                challenge of your felonious career.'
-                                ;
+gameMain: GameMainDef
+/* the initial player character is 'me' */
+initialPlayerChar = me
 
-                                gameMain: GameMainDef
-                                /* the initial player character is 'me' */
-                                initialPlayerChar = me
+showIntro()
+{
+"<b>The Best Burglar</b>\nWell, you've got this far. Now it's just a
+quick nip inside the house and out again carrying the Orb of Ultimate
+Satisfaction, an object that no burglar has ever managed to steal
+before. If you can pull it off you're sure to win the Burglar of the
+Year Award, putting you at the pinnacle of your profession.\b";
+}
+;
 
-                                showIntro()
-                                {
-                                "<b>The Best Burglar</b>\nWell, you've got this far. Now it's just a
-                                quick nip inside the house and out again carrying the Orb of Ultimate
-                                Satisfaction, an object that no burglar has ever managed to steal
-                                before. If you can pull it off you're sure to win the Burglar of the
-                                Year Award, putting you at the pinnacle of your profession.\b";
-                                }
-                                ;
+/* The asExit line in the room below will cause TADS to interpet the command 'in' exactly
+as if the player had typed 'north'. */
 
-                                /* The asExit line in the room below will cause TADS to interpet the command 'in' exactly
-                                as if the player had typed 'north'. */
+startRoom: OutdoorRoom 'Driveway'
+"Here you are in the drive of Number 305 Erehwon Avenue, with the great
+house you've come to burgle standing just before you to the north. The
+drive back to the road where you left your getaway vehicle runs off
+to the southwest. "
+north = frontDoor
+in asExit(north)
+southwest = drive
+;
 
-                                startRoom: OutdoorRoom 'Driveway'
-                                "Here you are in the drive of Number 305 Erehwon Avenue, with the great
-                                house you've come to burgle standing just before you to the north. The
-                                drive back to the road where you left your getaway vehicle runs off
-                                to the southwest. "
-                                north = frontDoor
-                                in asExit(north)
-                                southwest = drive
-                                ;
++ me: Actor
+pcDesc = "You're Alexis Lightfinger, burglar extraordinaire, the most
+professional thief in the known universe; but you're on a job now, so
+you don't have time for the narcissistic indulgence of admiring your own
+appearance. You're far too professional not to have come fully prepared,
+so there's no practical need to look yourself over again. "
+;
 
-                                + me: Actor
-                                pcDesc = "You're Alexis Lightfinger, burglar extraordinaire, the most
-                                professional thief in the known universe; but you're on a job now, so
-                                you don't have time for the narcissistic indulgence of admiring your own
-                                appearance. You're far too professional not to have come fully prepared,
-                                so there's no practical need to look yourself over again. "
-                                ;
+++ Container 'large white swag bag*bags' 'swag bag'
+"It's a large white bag with <q>SWAG</q> printed on it in very large
+letters. Everyone knows that no real burglar would ever carry such a thing,
+so by carrying it you know no one will take you for a real burglar. Cunning,
+eh? "
+;
 
-                                ++ Container 'large white swag bag*bags' 'swag bag'
-                                "It's a large white bag with <q>SWAG</q> printed on it in very large
-                                letters. Everyone knows that no real burglar would ever carry such a thing,
-                                so by carrying it you know no one will take you for a real burglar. Cunning,
-                                eh? "
-                                ;
+/* The frontDoor object is in the same location as me and the brassKey. TADS understands
+that doors are usually scenery, so no special effort is needed to prevent the game from
+reporting, "You can see a front door here." */
 
-                                /* The frontDoor object is in the same location as me and the brassKey. TADS understands
-                                that doors are usually scenery, so no special effort is needed to prevent the game from
-                                reporting, "You can see a front door here." */
++ frontDoor: LockableWithKey, Door 'front door*doors' 'front door'
+keyList = [brassKey]
+;
 
-                                + frontDoor: LockableWithKey, Door 'front door*doors' 'front door'
-                                keyList = [brassKey]
-                                ;
++ brassKey: Key 'small brass key*keys' 'small brass key'
+"It's an ordinary enough small brass key. "
+initSpecialDesc = "A small brass key lies on the ground near the door. "
+;
 
-                                + brassKey: Key 'small brass key*keys' 'small brass key'
-                                "It's an ordinary enough small brass key. "
-                                initSpecialDesc = "A small brass key lies on the ground near the door. "
-                                ;
+/* The next object is an anonymous object. That is, it has no in-code name of its own,
+because the game code never needs to refer to it. The arrow pointing to frontDoor
+tells TADS where to send the player if he should type 'enter the house'. As you can
+see from the description, this object is the exterior of the house. */
 
-                                /* The next object is an anonymous object. That is, it has no in-code name of its own,
-                                because the game code never needs to refer to it. The arrow pointing to frontDoor
-                                tells TADS where to send the player if he should type 'enter the house'. As you can
-                                see from the description, this object is the exterior of the house. */
++ Enterable -&gt; frontDoor 'large tudor house/mansion*houses*buildings' 'house'
+"It's a large Tudor house with mullioned windows. "
+;
 
-                                + Enterable -&gt; frontDoor 'large tudor house/mansion*houses*buildings' 'house'
-                                "It's a large Tudor house with mullioned windows. "
-                                ;
++ drive: PathPassage 'drive/path' 'drive'
+"The drive leading back to the road runs off to the southwest. "
 
-                                + drive: PathPassage 'drive/path' 'drive'
-                                "The drive leading back to the road runs off to the southwest. "
+dobjFor(TravelVia)
+{
+action()
+{
+"You retrace your steps back to the road, where your trusty unmarked
+burglarmobile is still parked, ready for your quick getaway. ";
 
-                                dobjFor(TravelVia)
-                                {
-                                action()
-                                {
-                                "You retrace your steps back to the road, where your trusty unmarked
-                                burglarmobile is still parked, ready for your quick getaway. ";
+if(orb.isIn(me))
+{
+"Congratulations! You have got away with the Orb of Ultimate
+Satisfaction, a feat never before performed. As you slip the orb
+onto the back seat of your car and climb into the driver's seat
+you tell yourself that you're now absolutely certain to win
+the Burglar of the Year Award!\b";
 
-                                if(orb.isIn(me))
-                                {
-                                "Congratulations! You have got away with the Orb of Ultimate
-                                Satisfaction, a feat never before performed. As you slip the orb
-                                onto the back seat of your car and climb into the driver's seat
-                                you tell yourself that you're now absolutely certain to win
-                                the Burglar of the Year Award!\b";
+finishGameMsg(ftVictory, [finishOptionUndo]);
+}
+else
+{
+"It's a shame you didn't manage to steal the orb, though.
+Without it you'll never win the Burglar of the Year Award
+now.\b";
 
-                                finishGameMsg(ftVictory, [finishOptionUndo]);
-                                }
-                                else
-                                {
-                                "It's a shame you didn't manage to steal the orb, though.
-                                Without it you'll never win the Burglar of the Year Award
-                                now.\b";
+finishGameMsg(ftFailure, [finishOptionUndo]);
+}
+}
+}
+;
 
-                                finishGameMsg(ftFailure, [finishOptionUndo]);
-                                }
-                                }
-                                }
-                                ;
+hallway: Room 'Hallway'
+"This hall is or grand proportions but pretty bare. The front door lies to
+the south and other exits lead east, north and west. "
 
-                                hallway: Room 'Hallway'
-                                "This hall is or grand proportions but pretty bare. The front door lies to
-                                the south and other exits lead east, north and west. "
+south = hallDoor
+out asExit(south)
+west = study
+north: FakeConnector { "You're pretty sure that only leads to the kitchen,
+and you haven't come here to cook a meal. " }
 
-                                south = hallDoor
-                                out asExit(south)
-                                west = study
-                                north: FakeConnector { "You're pretty sure that only leads to the kitchen,
-                                and you haven't come here to cook a meal. " }
+east: DeadEndConnector { 'the living room' "You &lt;<one of="">&gt;walk through the
+doorway and find yourself in&lt;<or>&gt;return to&lt;<stopping>&gt; the living room
+where you take &lt;<one of="">&gt; a &lt;<or>&gt;another&lt;<stopping>&gt; quick look around,
+but &lt;<one of="">&gt;&lt;<or>&gt; once again&lt;<stopping>&gt; failing to find anything of
+interest you quickly return to the hall. "}
+;
 
-                                east: DeadEndConnector { 'the living room' "You &lt;<one of="">&gt;walk through the
-                                doorway and find yourself in&lt;<or>&gt;return to&lt;<stopping>&gt; the living room
-                                where you take &lt;<one of="">&gt; a &lt;<or>&gt;another&lt;<stopping>&gt; quick look around,
-                                but &lt;<one of="">&gt;&lt;<or>&gt; once again&lt;<stopping>&gt; failing to find anything of
-                                interest you quickly return to the hall. "}
-                                ;
++ hallDoor: Lockable, Door -&gt; frontDoor 'front door*doors' 'front door'
+;
 
-                                + hallDoor: Lockable, Door -&gt; frontDoor 'front door*doors' 'front door'
-                                ;
++ table: Surface 'small wooden mahogany side table/legs*tables' 'small table'
+"It's a small mahogany table standing on four thin legs. "
+initSpecialDesc = "A small table rests by the east wall. "
+;
 
-                                + table: Surface 'small wooden mahogany side table/legs*tables' 'small table'
-                                "It's a small mahogany table standing on four thin legs. "
-                                initSpecialDesc = "A small table rests by the east wall. "
-                                ;
+++ vase: Container 'cheap china floral vase/pattern' 'vase'
+"It's only a cheap thing, made of china but painted in a tasteless floral
+pattern using far too many primary colours. "
+;
 
-                                ++ vase: Container 'cheap china floral vase/pattern' 'vase'
-                                "It's only a cheap thing, made of china but painted in a tasteless floral
-                                pattern using far too many primary colours. "
-                                ;
+/* An object of the Hidden class will show up only when the player thinks to search its
+container. */
 
-                                /* An object of the Hidden class will show up only when the player thinks to search its
-                                container. */
++++ silverKey: Hidden, Key 'small silver key*keys' 'small silver key'
+;
 
-                                +++ silverKey: Hidden, Key 'small silver key*keys' 'small silver key'
-                                ;
+study: Room 'Study'
+"This study is much as you would expect: somewhat spartan. A desk stands in
+the middle of the room with a chair placed just behind it. The way out is to
+the east. "
+east = hallway
+out asExit(east)
+;
 
-                                study: Room 'Study'
-                                "This study is much as you would expect: somewhat spartan. A desk stands in
-                                the middle of the room with a chair placed just behind it. The way out is to
-                                the east. "
-                                east = hallway
-                                out asExit(east)
-                                ;
++ desk: Heavy, Platform 'plain wooden desk' 'desk'
+"It's a plain wooden desk with a single drawer. "
+;
 
-                                + desk: Heavy, Platform 'plain wooden desk' 'desk'
-                                "It's a plain wooden desk with a single drawer. "
-                                ;
+++ drawer: KeyedContainer, Component '(desk) drawer*drawers' 'drawer'
+"It's an ordinary desk drawer with a small silver lock. "
+keyList = [silverKey]
+;
 
-                                ++ drawer: KeyedContainer, Component '(desk) drawer*drawers' 'drawer'
-                                "It's an ordinary desk drawer with a small silver lock. "
-                                keyList = [silverKey]
-                                ;
+/* The notebook object needs some special code for the command 'open notebook'. The
+dobjFor macro creates some code for the Open action, and the asDobjFor(Read) code
+causes 'open notebook' to have the same result as 'read notebook. */
 
-                                /* The notebook object needs some special code for the command 'open notebook'. The
-                                dobjFor macro creates some code for the Open action, and the asDobjFor(Read) code
-                                causes 'open notebook' to have the same result as 'read notebook. */
++++ notebook: Readable 'small bright red notebook/book/cover/pages'
+'small red notebook'
+"It's a small notebook with a bright red cover. "
 
-                                +++ notebook: Readable 'small bright red notebook/book/cover/pages'
-                                'small red notebook'
-                                "It's a small notebook with a bright red cover. "
+readDesc = "You open the notebook and flick through its pages. The only
+thing you find of any interest is a page with 1589 scrawled across it.
+After satisfying yourself that the notebook contains nothing else of
+any potential relevance you snap it shut again. "
 
-                                readDesc = "You open the notebook and flick through its pages. The only
-                                thing you find of any interest is a page with 1589 scrawled across it.
-                                After satisfying yourself that the notebook contains nothing else of
-                                any potential relevance you snap it shut again. "
+dobjFor(Open) asDobjFor(Read)
+cannotCloseMsg = 'It\'s already closed. '
+;
 
-                                dobjFor(Open) asDobjFor(Read)
-                                cannotCloseMsg = 'It\'s already closed. '
-                                ;
++ CustomImmovable, Chair 'red office swivel chair' 'chair'
+"It's a typical office swivel chair, covered in red fabric. "
+cannotTakeMsg = 'You see no reason to burden yourself with such a useless
+object; that would be quite unprofessional. '
+;
 
-                                + CustomImmovable, Chair 'red office swivel chair' 'chair'
-                                "It's a typical office swivel chair, covered in red fabric. "
-                                cannotTakeMsg = 'You see no reason to burden yourself with such a useless
-                                object; that would be quite unprofessional. '
-                                ;
++ safe: CustomFixture, IndirectLockable, OpenableContainer
+'sturdy steel safe' 'safe'
+"It's a sturdy steel safe with a single dial on its door. "
+specialDesc = "A safe is built into one wall. "
+cannotTakeMsg = 'It's firmly built into the wall; you can't budge it. '
+;
 
-                                + safe: CustomFixture, IndirectLockable, OpenableContainer
-                                'sturdy steel safe' 'safe'
-                                "It's a sturdy steel safe with a single dial on its door. "
-                                specialDesc = "A safe is built into one wall. "
-                                cannotTakeMsg = 'It's firmly built into the wall; you can't budge it. '
-                                ;
+++ orb: Thing 'ultimate battered dull metal orb/sphere/ball/satisfaction'
+'Orb of Ultimate Satisfaction'
+"It doesn't look much be honest, just a battered sphere made of some dull
+metal, but you've been told it's the most valuable and desirable object
+in the known universe! "
 
-                                ++ orb: Thing 'ultimate battered dull metal orb/sphere/ball/satisfaction'
-                                'Orb of Ultimate Satisfaction'
-                                "It doesn't look much be honest, just a battered sphere made of some dull
-                                metal, but you've been told it's the most valuable and desirable object
-                                in the known universe! "
+aName = (theName)
+;
 
-                                aName = (theName)
-                                ;
+/* Notice how the double angle brackets are used to let the description of the safe
+refer to the properties of the object. This is an extremely common and useful
+technique in TADS. */
 
-                                /* Notice how the double angle brackets are used to let the description of the safe
-                                refer to the properties of the object. This is an extremely common and useful
-                                technique in TADS. */
++ safeDial: NumberedDial, CustomFixture 'dial*dials' 'dial'
+"The dial can be turned to any number between &lt;<minSetting>&gt; and
+&lt;<maxSetting>&gt;. It's currently at &lt;<curSetting>&gt;. "
 
-                                + safeDial: NumberedDial, CustomFixture 'dial*dials' 'dial'
-                                "The dial can be turned to any number between &lt;<minSetting>&gt; and
-                                &lt;<maxSetting>&gt;. It's currently at &lt;<curSetting>&gt;. "
+minSetting = 0
+maxSetting = 99
+curSetting = '35'
 
-                                minSetting = 0
-                                maxSetting = 99
-                                curSetting = '35'
+num1 = 0
+num2 = 0
+correctCombination = 1589
 
-                                num1 = 0
-                                num2 = 0
-                                correctCombination = 1589
+makeSetting(val)
+{
+inherited(val);
+num2 = num1;
+num1 = toInteger(val);
+if(100 * num2 + num1 == correctCombination)
+{
+"You hear a slight <i>click</i> come from the safe door. ";
+safe.makeLocked(nil);
+}
+else if(!safe.isOpen)
+safe.makeLocked(true);
+}
 
-                                makeSetting(val)
-                                {
-                                inherited(val);
-                                num2 = num1;
-                                num1 = toInteger(val);
-                                if(100 * num2 + num1 == correctCombination)
-                                {
-                                "You hear a slight <i>click</i> come from the safe door. ";
-                                safe.makeLocked(nil);
-                                }
-                                else if(!safe.isOpen)
-                                safe.makeLocked(true);
-                                }
-
-                                cannotTakeMsg = 'It's firmly attached to the safe. '
-                                ;
-                        
+cannotTakeMsg = 'It's firmly attached to the safe. '
+;
+```    
 
 There are too many new features to discuss in detail here, but one or
 two of them are worth briefly pointing out. Note how the front door to
@@ -895,567 +895,567 @@ obviously bigger inside something obviously smaller, and, for example,
 by preventing the player picking up the hall table when there's
 something still on it. Finally, we'll add some scoring and hints to the
 game.
-
-                                #charset "us-ascii"
-                                #include <adv3.h>
-                                #include <en_us.h>
-
-                                versionInfo: GameID
-                                IFID = '558c20af-6559-477a-9f98-b7b4274cd304'
-                                name = 'The Best Burglar'
-                                byline = 'by Eric Eve'
-                                htmlByline = 'by <a href="mailto:eric.eve@hmc.ox.ac.uk">
-                                Eric Eve</a>'
-                                version = '3'
-                                authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
-                                desc = 'You are the world\'s best burglar faced with the greatest challenge
-                                of your felonious career.'
-                                htmlDesc = 'You are the world\'s best burglar faced with the greatest
-                                challenge of your felonious career.'
-                                ;
-
-                                gameMain: GameMainDef
-                                /* the initial player character is 'me' */
-                                initialPlayerChar = me
-
-                                showIntro()
-                                {
-                                "<b>The Best Burglar</b>\nWell, you've got this far. Now it's just a
-                                quick nip inside the house and out again carrying the Orb of Ultimate
-                                Satisfaction, an object that no burglar has ever managed to steal
-                                before. If you can pull it off you're sure to win the Burglar of the
-                                Year Award, putting you at the pinnacle of your profession.\b";
-                                }
-
-                                showGoodbye()
-                                {
-                                "Thanks for playing! ";
-                                }
-                                ;
-
-                                startRoom: OutdoorRoom 'Driveway'
-                                "The large red-brick Tudor house stands immediately to the north of this end
-                                of the driveway, while the drive back to the road where you left your
-                                getaway vehicle runs off though a belt of trees to the southwest."
-
-                                roomFirstDesc = "Here you are in the drive of Number 305 Erehwon Avenue,
-                                with the great house you've come to burgle standing just before you to
-                                the north. The drive back to the road where you left your getaway
-                                vehicle runs off though a belt of trees to the southwest."
-
-                                north = frontDoor
-                                in asExit(north)
-                                southwest = drive
-                                ;
-
-                                + me: Actor
-                                pcDesc = "You're Alexis Lightfinger, burglar extraordinaire, the most
-                                professional thief in the known universe; but you're on a job now, so
-                                you don't have time for the narcissistic indulgence of admiring your own
-                                appearance. You're far too professional not to have come fully prepared,
-                                so there's no practical need to look yourself over again. "
-                                ;
-
-                                ++ Container 'large white swag bag*bags' 'swag bag'
-                                "It's a large white bag with <q>SWAG</q> printed on it in very large
-                                letters. Everyone knows that no real burglar would ever carry such a thing,
-                                so by carrying it you know no one will take you for a real burglar. Cunning,
-                                eh? "
-                                ;
-
-                                + frontDoor: LockableWithKey, Door 'solid oak front door*doors' 'front door'
-                                "The lintel above the front door is carved with the date 1589, presumably
-                                the date the house was built. The door itself is made of solid oak. "
-                                keyList = [brassKey]
-
-                                makeOpen(stat)
-                                {
-                                inherited(stat);
-                                if(stat)
-                                achievement.awardPointsOnce();
-                                }
-
-                                achievement: Achievement { +10 "opening the front door" }
-
-                                ;
-
-                                + flowerPot: ComplexContainer 'terracotta small flower flowerpot/pot*pots'
-                                'flower pot'
-                                "It's a perfectly ordinary small terracota pot, though it looks like no
-                                one's got round to putting a plant in it yet. "
-                                subContainer: ComplexComponent, Container { bulkCapacity = 3}
-                                subUnderside: ComplexComponent, Underside { }
-
-                                initSpecialDesc = "A small flower pot rests on the ground not far from the
-                                front door. "
-
-                                bulk = 3
-                                bulkCapacity = 3
-                                ;
-
-                                ++ brassKey: Hidden, Key 'small brass key*keys' 'small brass key'
-                                "It's an ordinary enough small brass key. "
-                                subLocation = &amp;subUnderside
-                                ;
-
-                                + Enterable -&gt; frontDoor 'large red red-brick tudor house/mansion/front
-                                *houses*buildings' 'house'
-                                "It's a large red-brick Tudor house with mullioned windows, climbing
-                                creepers and the date 1589 carved over the door. "
-                                ;
-
-                                ++ Component '(door) carved lintel' 'lintel'
-                                "Its most noteworthy feature is the date 1589 carved into it. "
-                                ;
-
-                                + Decoration 'mullioned windows' 'windows'
-                                "They're architecturally attractive, no doubt, but not especially helpful to
-                                burglars. "
-
-                                notImportantMsg = 'It\'s a matter of professional pride with you never to
-                                mess with windows. '
-                                isPlural = true
-                                ;
-
-                                + Decoration 'green climbing ivy/creepers/creeper' 'creepers'
-                                "The front of the house is festooned with green creepers -- ivy, perhaps,
-                                but botany was never your strong point since in the main plants aren't
-                                worth burgling. "
-
-                                notImportantMsg = 'The creepers can\'t help you burgle the house -- they\'re
-                                certainly not strong enough to climb and they\'re certainly not worth
-                                stealing -- so you may as well leave them alone. '
-                                isPlural = true
-                                ;
-
-                                + drive: PathPassage 'drive/path/avenue' 'drive'
-                                "The drive leading back to the road runs off through a belt of trees to the
-                                southwest. "
-
-                                dobjFor(TravelVia)
-                                {
-                                action()
-                                {
-                                "You retrace your steps back to the road, where your trusty unmarked
-                                burglarmobile is still parked, ready for your quick getaway. ";
-
-                                if(orb.isIn(me))
-                                {
-                                "Congratulations! You have got away with the Orb of Ultimate
-                                Satisfaction, a feat never before performed. As you slip the orb
-                                onto the back seat of your car and climb into the driver's seat
-                                you tell yourself that you're now absolutely certain to win
-                                the Burglar of the Year Award!\b";
-
-                                achievement.awardPointsOnce();
-
-                                finishGameMsg(ftVictory, [finishOptionUndo,
-                                finishOptionFullScore]);
-                                }
-                                else
-                                {
-                                "It's a shame you didn't manage to steal the orb, though.
-                                Without it you'll never win the Burglar of the Year Award
-                                now.\b";
-
-                                finishGameMsg(ftFailure, [finishOptionUndo]);
-                                }
-                                }
-                                }
-
-                                okayRubMsg = 'What -- all of it? That may take a while! '
-                                achievement: Achievement { +10 "getting away with the orb" }
-                                ;
-
-                                + Decoration 'belt/trees' 'trees'
-                                "The trees are in full leaf, which is good, because they hide what you're
-                                doing from the road. "
-
-                                notImportantMsg = 'The trees are doing a good job of hiding you from the
-                                road, so you may as well leave them alone. It\'s not as if they\'re
-                                something you could steal, after all. '
-                                ;
-
-                                hallway: Room 'Hallway'
-                                "This hall is or grand proportions but pretty bare. The front door lies to
-                                the south and other exits lead east, north and west. "
-
-                                south = hallDoor
-                                out asExit(south)
-                                west = study
-                                north: FakeConnector { "You're pretty sure that only leads to the kitchen,
-                                and you haven't come here to cook a meal. " }
-
-                                east: DeadEndConnector { 'the living room' "You &lt;<one of="">&gt;walk through the
-                                doorway and find yourself in&lt;<or>&gt;return to&lt;<stopping>&gt; the living room
-                                where you take &lt;<one of="">&gt; a &lt;<or>&gt;another&lt;<stopping>&gt; quick look around,
-                                but &lt;<one of="">&gt;&lt;<or>&gt; once again&lt;<stopping>&gt; failing to find anything of
-                                interest you quickly return to the hall. "}
-                                ;
-
-                                + hallDoor: Lockable, Door -&gt; frontDoor 'front door*doors' 'front door'
-                                ;
-
-                                + table:Surface 'small wooden mahogany side table/legs*tables' 'small table'
-                                "It's a small mahogany table standing on four thin legs. "
-                                initSpecialDesc = "A small table rests by the east wall. "
-                                bulk = 5
-
-                                dobjFor(Take)
-                                {
-                                check()
-                                {
-                                if(contents.length &gt; 0)
-                                failCheck('It\'s probably not a very good idea to try picking
-                                up the table while &lt;&lt;contents[1].nameIs&gt;&gt; still on it. ');
-                                }
-                                }
-                                ;
-
-                                ++ vase: Container 'cheap china floral vase/pattern' 'vase'
-                                "It's only a cheap thing, made of china but painted in a tasteless floral
-                                pattern using far too many primary colours. "
-
-                                bulk = 3
-                                bulkCapacity = 3
-                                ;
-
-                                +++ silverKey: Hidden, Key 'small silver key*keys' 'small silver key'
-                                ;
-
-                                study: Room 'Study'
-                                "This study is much as you would expect: somewhat spartan. A desk stands in
-                                the middle of the room with a chair placed just behind it. A &lt;<if picture.moved="">&gt;safe is built into &lt;<else>&gt; rather bland painting hangs on
-                                &lt;<end>&gt; the west wall. The way out is to the east. "
-                                east = hallway
-                                out asExit(east)
-                                ;
-
-                                + desk: Heavy, Platform 'plain wooden desk' 'desk'
-                                "It's a plain wooden desk with a single drawer. "
-                                dobjFor(Open) remapTo(Open, drawer)
-                                dobjFor(Close) remapTo(Close, drawer)
-                                dobjFor(LookIn) remapTo(LookIn, drawer)
-                                dobjFor(UnlockWith) remapTo(UnlockWith, drawer, IndirectObject)
-                                dobjFor(LockWith) remapTo(LockWith, drawer, IndirectObject)
-                                dobjFor(Lock) remapTo(Lock, drawer)
-                                dobjFor(Unlock) remapTo(Unlock, drawer)
-                                ;
-
-                                ++ drawer: KeyedContainer, Component '(desk) drawer*drawers' 'drawer'
-                                "It's an ordinary desk drawer with a small silver lock. "
-                                keyList = [silverKey]
-                                ;
-
-                                +++ notebook: Readable 'small bright red notebook/book/cover/pages'
-                                'small red notebook'
-                                "It's a small notebook with a bright red cover. "
-
-                                readDesc = "You open the notebook and flick through its pages. The only
-                                thing you find of any interest is a page with <q>SAFE DATE</q> scrawled
-                                across it. After satisfying yourself that the notebook contains nothing
-                                else of any potential relevance you snap it shut again. &lt;.reveal
-                                safe-date&gt;"
-
-                                dobjFor(Open) asDobjFor(Read)
-                                dobjFor(LookIn) asDobjFor(Read)
-
-                                dobjFor(Read)
-                                {
-                                action()
-                                {
-                                inherited;
-                                achievement.awardPointsOnce();
-                                }
-                                }
-
-                                cannotCloseMsg = 'It\'s already closed. '
-                                achievement: Achievement { +5 "reading the notebook" }
-                                ;
-
-                                + CustomImmovable, Chair 'red office swivel chair' 'chair'
-                                "It's a typical office swivel chair, covered in red fabric. "
-
-                                cannotTakeMsg = 'You see no reason to burden yourself with such a useless
-                                object; that would be quite unprofessional. '
-
-                                ;
-
-                                + picture: RoomPartItem, Thing 'rather bland picture/painting/landscape'
-                                'picture'
-                                "It's a landscape, pleasantly executed enough, but of no great distinction
-                                and definitely not worth the bother of stealing. "
-
-                                initNominalRoomPartLocation = defaultWestWall
-                                initSpecialDesc = "A rather bland painting hangs on the west wall. "
-                                isListed = (moved)
-
-                                bulk = 8
-
-                                dobjFor(LookBehind)
-                                {
-                                action()
-                                {
-                                if(moved)
-                                inherited;
-                                else
-                                {
-                                safe.discover();
-                                "Behind the picture is a safe built into the wall. ";
-                                }
-                                }
-                                }
-
-                                moveInto(newDest)
-                                {
-                                if(!safe.discovered)
-                                {
-                                "Removing the painting from the wall reveals a safe behind. ";
-                                safe.discover();
-                                }
-                                inherited(newDest);
-                                }
-                                ;
-
-                                + safe: RoomPartItem, Hidden, CustomFixture, ComplexContainer
-                                'sturdy steel safe' 'safe'
-                                "It's a sturdy steel safe with a single dial on its door. "
-
-                                subContainer: ComplexComponent, IndirectLockable, OpenableContainer
-                                {
-                                bulkCapacity = 5
-                                makeOpen(stat)
-                                {
-                                inherited(stat);
-                                if(stat)
-                                achievement.awardPointsOnce();
-                                }
-
-                                achievement: Achievement { +10 "opening the safe" }
-                                }
-
-                                specialDesc = "A safe is built into the west wall. "
-                                specialNominalRoomPartLocation = defaultWestWall
-                                cannotTakeMsg = 'It's firmly built into the wall; you can't budge it. '
-
-                                discover()
-                                {
-                                if(!discovered)
-                                {
-                                foreach(local cur in allContents)
-                                cur.discover();
-
-                                achievement.awardPointsOnce();
-                                }
-                                inherited();
-                                }
-
-                                achievement: Achievement { +5 "finding the safe" }
-                                ;
-
-                                ++ safeDoor:  Hidden, ContainerDoor '(safe) door' 'safe door'
-                                "It has a circular dial attached to its centre. "
-                                ;
-
-                                +++ safeDial: Hidden, Component,  NumberedDial 'circular dial*dials' 'dial'
-                                "The dial can be turned to any number between &lt;<minSetting>&gt; and
-                                &lt;<maxSetting>&gt;. It's currently at &lt;<curSetting>&gt;. "
-
-                                minSetting = 0
-                                maxSetting = 99
-                                curSetting = '35'
-
-                                num1 = 0
-                                num2 = 0
-                                correctCombination = 1589
-
-                                makeSetting(val)
-                                {
-                                inherited(val);
-                                num2 = num1;
-                                num1 = toInteger(val);
-                                if(100 * num2 + num1 == correctCombination)
-                                {
-                                "You hear a slight <i>click</i> come from the safe door. ";
-                                safe.makeLocked(nil);
-                                }
-                                else if(!safe.isOpen)
-                                safe.makeLocked(true);
-                                }
-                                ;
-
-                                ++ orb: Thing 'ultimate battered dull metal orb/sphere/ball/satisfaction'
-                                'Orb of Ultimate Satisfaction'
-                                "It doesn't look much be honest, just a battered sphere made of some dull
-                                metal, but you've been told it's the most valuable and desirable object
-                                in the known universe! "
-
-                                aName = (theName)
-
-                                subLocation = &amp;subContainer
-
-                                okayRubMsg = 'As {you/he} rub{s} {the dobj/him} a shimmering djiin suddenly
-                                appears in the air before you!\b
-                                <q>Hello, you have reached the automated holographic answering service
-                                of Jeannie the Genie,</q> she announces. <q>I\'m sorry I\'m not
-                                available to respond to your rub in person right now, but my hours of
-                                activity have been heavily curtailed by the European Working Time
-                                Directive. Before making a wish, please make sure that you have
-                                conducted a full risk assessment in line with the latest Health and
-                                Safety Guidelines. Also, please note that before any wish can be granted
-                                you must sign a Form P45/PDQ/LOL indemnifying this wish-granting agency
-                                against any consequential loss or damage arising from the fulfilment of
-                                your desires. Thank you for rubbing. Have a nice day!</q>\b
-                                Her message complete, the holographic djiin fades away into
-                                non-existence. '
-
-                                moveInto(dest)
-                                {
-                                inherited(dest);
-                                if(dest.isOrIsIn(me))
-                                achievement.awardPointsOnce();
-                                }
-
-                                achievement: Achievement { +10 "taking the orb" }
-                                ;
-
-                                //------------------------------------------------------------------------------
-
-                                /* DEFINE A NEW VERB */
-
-                                DefineTAction(Rub)
-                                ;
-
-                                VerbRule(Rub)
-                                'rub' dobjList
-                                : RubAction
-                                verbPhrase = 'rub/rubbing (what)'
-                                ;
-
-                                /* When creating a new verb, you'll want to modify the Thing class so as to provide
-                                default handling for the command. The defaults specified here will be used except
-                                on objects for which you define explicit handling of the command. */
-
-                                modify Thing
-                                dobjFor(Rub)
-                                {
-                                preCond = [touchObj]
-                                action() { mainReport(okayRubMsg); }
-                                }
-
-                                okayRubMsg = '{You/he} rub{s} {the dobj/him} but not much happens as a
-                                result. '
-
-                                shouldNotBreakMsg = 'Only amateurs go round breaking things unnecessarily. '
-                                ;
-
-                                //------------------------------------------------------------------------------
-
-                                /* HINTS */
-
-                                TopHintMenu;
-
-                                + Goal -&gt; (frontDoor.achievement)
-                                'How do I get into the house?'
-                                [
-                                'Well, the windows don\'t seem a good way in. ',
-                                'So perhaps you\'d better try the front door. ',
-                                'Could someone have left a key around somewhere? ',
-                                'Is there anything lying around where someone could have hidden a key? ',
-                                'What about that flowerpot? ',
-                                'Try looking under the flowerpot. '
-                                ]
-
-                                goalState = OpenGoal
-                                ;
-
-                                /* The closeWhenSeen property of the following Goal object is an example of how to
-                                make your hint menu respond dynamically to the player's current situation. */
-
-                                + Goal 'Where can I find the orb? '
-                                [
-                                'Something like that is bound to be kept safe. ',
-                                'So it\'s probably inside the house. '
-                                ]
-
-                                goalState = OpenGoal
-                                closeWhenSeen = hallway
-                                ;
-
-                                + Goal 'Where can I find the orb?'
-                                [
-                                'It\'s sure to be kept somewhere safe. ',
-                                'You\'d better hunt around. ',
-                                'Somewhere in the study seems the most likely place. ',
-                                deskHint,
-                                'But it should be safely locked in a safe ',
-                                'Where might someone hide a safe in this study? ',
-                                'What could be behind that picture on the wall? ',
-                                'Try looking behind the picture (or simply taking the picture). '
-                                ]
-
-                                openWhenSeen = hallway
-                                closeWhenSeen = orb
-                                ;
-
-                                ++ deskHint: Hint 'Have you tried looking in the desk drawer? '
-                                [deskGoal]
-                                ;
-
-                                + deskGoal: Goal 'How do I get the desk drawer open?'
-                                [
-                                'Have you examined the drawer? ',
-                                'What might you need to unlock it? ',
-                                'Where might you find such a thing? ',
-                                'What have you seen that a small key might be hidden in? ',
-                                'How carefully have you searched the hall? ',
-                                'What is (or was) on the hall table? ',
-                                'What might that vase be for? ',
-                                'Try looking in the vase. '
-                                ]
-                                closeWhenSeen = notebook
-                                ;
-
-                                + Goal 'How do I get the safe open?'
-                                [
-                                'How carefully have you examined the safe? ',
-                                'Where might someone leave a clue to the combination? ',
-                                deskHint,
-                                'Make sure you read the notebook. ',
-                                'Once you\'ve found the combination you need to use the dial. ',
-                                'If the combination is a number larger than 99 you\'ll need to enter it
-                                in stages. ',
-                                'For example, if the combination were 1234 you\'d first need to turn the
-                                dial to 12 and then turn it to 34. '
-                                ]
-
-                                openWhenSeen = safe
-                                closeWhenAchieved = (safe.subContainer.achievement)
-                                ;
-
-                                + Goal 'What does the clue in the notebook mean?'
-                                [
-                                'Well, <q>SAFE</q> might refer to something you want to open. ',
-                                'Have you seen a date round here? ',
-                                'When was this house built? ',
-                                'Where might you find the year in which this house was built? ',
-                                'How carefully have you looked at the front of the house? ',
-                                'Did you examine the door? '
-                                ]
-
-                                openWhenRevealed = 'safe-date'
-                                closeWhenAchieved = (safe.subContainer.achievement)
-                                ;
-
-
-                                + Goal 'What do I do with the orb now I\'ve got it?'
-                                [
-                                'Well, you could try rubbing it. ',
-                                'But the main thing to do now is to escape with it. '
-                                ]
-                                openWhenSeen = orb
-                                ;
-                        
+```
+#charset "us-ascii"
+#include <adv3.h>
+#include <en_us.h>
+
+versionInfo: GameID
+IFID = '558c20af-6559-477a-9f98-b7b4274cd304'
+name = 'The Best Burglar'
+byline = 'by Eric Eve'
+htmlByline = 'by <a href="mailto:eric.eve@hmc.ox.ac.uk">
+Eric Eve</a>'
+version = '3'
+authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
+desc = 'You are the world\'s best burglar faced with the greatest challenge
+of your felonious career.'
+htmlDesc = 'You are the world\'s best burglar faced with the greatest
+challenge of your felonious career.'
+;
+
+gameMain: GameMainDef
+/* the initial player character is 'me' */
+initialPlayerChar = me
+
+showIntro()
+{
+"<b>The Best Burglar</b>\nWell, you've got this far. Now it's just a
+quick nip inside the house and out again carrying the Orb of Ultimate
+Satisfaction, an object that no burglar has ever managed to steal
+before. If you can pull it off you're sure to win the Burglar of the
+Year Award, putting you at the pinnacle of your profession.\b";
+}
+
+showGoodbye()
+{
+"Thanks for playing! ";
+}
+;
+
+startRoom: OutdoorRoom 'Driveway'
+"The large red-brick Tudor house stands immediately to the north of this end
+of the driveway, while the drive back to the road where you left your
+getaway vehicle runs off though a belt of trees to the southwest."
+
+roomFirstDesc = "Here you are in the drive of Number 305 Erehwon Avenue,
+with the great house you've come to burgle standing just before you to
+the north. The drive back to the road where you left your getaway
+vehicle runs off though a belt of trees to the southwest."
+
+north = frontDoor
+in asExit(north)
+southwest = drive
+;
+
++ me: Actor
+pcDesc = "You're Alexis Lightfinger, burglar extraordinaire, the most
+professional thief in the known universe; but you're on a job now, so
+you don't have time for the narcissistic indulgence of admiring your own
+appearance. You're far too professional not to have come fully prepared,
+so there's no practical need to look yourself over again. "
+;
+
+++ Container 'large white swag bag*bags' 'swag bag'
+"It's a large white bag with <q>SWAG</q> printed on it in very large
+letters. Everyone knows that no real burglar would ever carry such a thing,
+so by carrying it you know no one will take you for a real burglar. Cunning,
+eh? "
+;
+
++ frontDoor: LockableWithKey, Door 'solid oak front door*doors' 'front door'
+"The lintel above the front door is carved with the date 1589, presumably
+the date the house was built. The door itself is made of solid oak. "
+keyList = [brassKey]
+
+makeOpen(stat)
+{
+inherited(stat);
+if(stat)
+achievement.awardPointsOnce();
+}
+
+achievement: Achievement { +10 "opening the front door" }
+
+;
+
++ flowerPot: ComplexContainer 'terracotta small flower flowerpot/pot*pots'
+'flower pot'
+"It's a perfectly ordinary small terracota pot, though it looks like no
+one's got round to putting a plant in it yet. "
+subContainer: ComplexComponent, Container { bulkCapacity = 3}
+subUnderside: ComplexComponent, Underside { }
+
+initSpecialDesc = "A small flower pot rests on the ground not far from the
+front door. "
+
+bulk = 3
+bulkCapacity = 3
+;
+
+++ brassKey: Hidden, Key 'small brass key*keys' 'small brass key'
+"It's an ordinary enough small brass key. "
+subLocation = &amp;subUnderside
+;
+
++ Enterable -&gt; frontDoor 'large red red-brick tudor house/mansion/front
+*houses*buildings' 'house'
+"It's a large red-brick Tudor house with mullioned windows, climbing
+creepers and the date 1589 carved over the door. "
+;
+
+++ Component '(door) carved lintel' 'lintel'
+"Its most noteworthy feature is the date 1589 carved into it. "
+;
+
++ Decoration 'mullioned windows' 'windows'
+"They're architecturally attractive, no doubt, but not especially helpful to
+burglars. "
+
+notImportantMsg = 'It\'s a matter of professional pride with you never to
+mess with windows. '
+isPlural = true
+;
+
++ Decoration 'green climbing ivy/creepers/creeper' 'creepers'
+"The front of the house is festooned with green creepers -- ivy, perhaps,
+but botany was never your strong point since in the main plants aren't
+worth burgling. "
+
+notImportantMsg = 'The creepers can\'t help you burgle the house -- they\'re
+certainly not strong enough to climb and they\'re certainly not worth
+stealing -- so you may as well leave them alone. '
+isPlural = true
+;
+
++ drive: PathPassage 'drive/path/avenue' 'drive'
+"The drive leading back to the road runs off through a belt of trees to the
+southwest. "
+
+dobjFor(TravelVia)
+{
+action()
+{
+"You retrace your steps back to the road, where your trusty unmarked
+burglarmobile is still parked, ready for your quick getaway. ";
+
+if(orb.isIn(me))
+{
+"Congratulations! You have got away with the Orb of Ultimate
+Satisfaction, a feat never before performed. As you slip the orb
+onto the back seat of your car and climb into the driver's seat
+you tell yourself that you're now absolutely certain to win
+the Burglar of the Year Award!\b";
+
+achievement.awardPointsOnce();
+
+finishGameMsg(ftVictory, [finishOptionUndo,
+finishOptionFullScore]);
+}
+else
+{
+"It's a shame you didn't manage to steal the orb, though.
+Without it you'll never win the Burglar of the Year Award
+now.\b";
+
+finishGameMsg(ftFailure, [finishOptionUndo]);
+}
+}
+}
+
+okayRubMsg = 'What -- all of it? That may take a while! '
+achievement: Achievement { +10 "getting away with the orb" }
+;
+
++ Decoration 'belt/trees' 'trees'
+"The trees are in full leaf, which is good, because they hide what you're
+doing from the road. "
+
+notImportantMsg = 'The trees are doing a good job of hiding you from the
+road, so you may as well leave them alone. It\'s not as if they\'re
+something you could steal, after all. '
+;
+
+hallway: Room 'Hallway'
+"This hall is or grand proportions but pretty bare. The front door lies to
+the south and other exits lead east, north and west. "
+
+south = hallDoor
+out asExit(south)
+west = study
+north: FakeConnector { "You're pretty sure that only leads to the kitchen,
+and you haven't come here to cook a meal. " }
+
+east: DeadEndConnector { 'the living room' "You &lt;<one of="">&gt;walk through the
+doorway and find yourself in&lt;<or>&gt;return to&lt;<stopping>&gt; the living room
+where you take &lt;<one of="">&gt; a &lt;<or>&gt;another&lt;<stopping>&gt; quick look around,
+but &lt;<one of="">&gt;&lt;<or>&gt; once again&lt;<stopping>&gt; failing to find anything of
+interest you quickly return to the hall. "}
+;
+
++ hallDoor: Lockable, Door -&gt; frontDoor 'front door*doors' 'front door'
+;
+
++ table:Surface 'small wooden mahogany side table/legs*tables' 'small table'
+"It's a small mahogany table standing on four thin legs. "
+initSpecialDesc = "A small table rests by the east wall. "
+bulk = 5
+
+dobjFor(Take)
+{
+check()
+{
+if(contents.length &gt; 0)
+failCheck('It\'s probably not a very good idea to try picking
+up the table while &lt;&lt;contents[1].nameIs&gt;&gt; still on it. ');
+}
+}
+;
+
+++ vase: Container 'cheap china floral vase/pattern' 'vase'
+"It's only a cheap thing, made of china but painted in a tasteless floral
+pattern using far too many primary colours. "
+
+bulk = 3
+bulkCapacity = 3
+;
+
++++ silverKey: Hidden, Key 'small silver key*keys' 'small silver key'
+;
+
+study: Room 'Study'
+"This study is much as you would expect: somewhat spartan. A desk stands in
+the middle of the room with a chair placed just behind it. A &lt;<if picture.moved="">&gt;safe is built into &lt;<else>&gt; rather bland painting hangs on
+&lt;<end>&gt; the west wall. The way out is to the east. "
+east = hallway
+out asExit(east)
+;
+
++ desk: Heavy, Platform 'plain wooden desk' 'desk'
+"It's a plain wooden desk with a single drawer. "
+dobjFor(Open) remapTo(Open, drawer)
+dobjFor(Close) remapTo(Close, drawer)
+dobjFor(LookIn) remapTo(LookIn, drawer)
+dobjFor(UnlockWith) remapTo(UnlockWith, drawer, IndirectObject)
+dobjFor(LockWith) remapTo(LockWith, drawer, IndirectObject)
+dobjFor(Lock) remapTo(Lock, drawer)
+dobjFor(Unlock) remapTo(Unlock, drawer)
+;
+
+++ drawer: KeyedContainer, Component '(desk) drawer*drawers' 'drawer'
+"It's an ordinary desk drawer with a small silver lock. "
+keyList = [silverKey]
+;
+
++++ notebook: Readable 'small bright red notebook/book/cover/pages'
+'small red notebook'
+"It's a small notebook with a bright red cover. "
+
+readDesc = "You open the notebook and flick through its pages. The only
+thing you find of any interest is a page with <q>SAFE DATE</q> scrawled
+across it. After satisfying yourself that the notebook contains nothing
+else of any potential relevance you snap it shut again. &lt;.reveal
+safe-date&gt;"
+
+dobjFor(Open) asDobjFor(Read)
+dobjFor(LookIn) asDobjFor(Read)
+
+dobjFor(Read)
+{
+action()
+{
+inherited;
+achievement.awardPointsOnce();
+}
+}
+
+cannotCloseMsg = 'It\'s already closed. '
+achievement: Achievement { +5 "reading the notebook" }
+;
+
++ CustomImmovable, Chair 'red office swivel chair' 'chair'
+"It's a typical office swivel chair, covered in red fabric. "
+
+cannotTakeMsg = 'You see no reason to burden yourself with such a useless
+object; that would be quite unprofessional. '
+
+;
+
++ picture: RoomPartItem, Thing 'rather bland picture/painting/landscape'
+'picture'
+"It's a landscape, pleasantly executed enough, but of no great distinction
+and definitely not worth the bother of stealing. "
+
+initNominalRoomPartLocation = defaultWestWall
+initSpecialDesc = "A rather bland painting hangs on the west wall. "
+isListed = (moved)
+
+bulk = 8
+
+dobjFor(LookBehind)
+{
+action()
+{
+if(moved)
+inherited;
+else
+{
+safe.discover();
+"Behind the picture is a safe built into the wall. ";
+}
+}
+}
+
+moveInto(newDest)
+{
+if(!safe.discovered)
+{
+"Removing the painting from the wall reveals a safe behind. ";
+safe.discover();
+}
+inherited(newDest);
+}
+;
+
++ safe: RoomPartItem, Hidden, CustomFixture, ComplexContainer
+'sturdy steel safe' 'safe'
+"It's a sturdy steel safe with a single dial on its door. "
+
+subContainer: ComplexComponent, IndirectLockable, OpenableContainer
+{
+bulkCapacity = 5
+makeOpen(stat)
+{
+inherited(stat);
+if(stat)
+achievement.awardPointsOnce();
+}
+
+achievement: Achievement { +10 "opening the safe" }
+}
+
+specialDesc = "A safe is built into the west wall. "
+specialNominalRoomPartLocation = defaultWestWall
+cannotTakeMsg = 'It's firmly built into the wall; you can't budge it. '
+
+discover()
+{
+if(!discovered)
+{
+foreach(local cur in allContents)
+cur.discover();
+
+achievement.awardPointsOnce();
+}
+inherited();
+}
+
+achievement: Achievement { +5 "finding the safe" }
+;
+
+++ safeDoor:  Hidden, ContainerDoor '(safe) door' 'safe door'
+"It has a circular dial attached to its centre. "
+;
+
++++ safeDial: Hidden, Component,  NumberedDial 'circular dial*dials' 'dial'
+"The dial can be turned to any number between &lt;<minSetting>&gt; and
+&lt;<maxSetting>&gt;. It's currently at &lt;<curSetting>&gt;. "
+
+minSetting = 0
+maxSetting = 99
+curSetting = '35'
+
+num1 = 0
+num2 = 0
+correctCombination = 1589
+
+makeSetting(val)
+{
+inherited(val);
+num2 = num1;
+num1 = toInteger(val);
+if(100 * num2 + num1 == correctCombination)
+{
+"You hear a slight <i>click</i> come from the safe door. ";
+safe.makeLocked(nil);
+}
+else if(!safe.isOpen)
+safe.makeLocked(true);
+}
+;
+
+++ orb: Thing 'ultimate battered dull metal orb/sphere/ball/satisfaction'
+'Orb of Ultimate Satisfaction'
+"It doesn't look much be honest, just a battered sphere made of some dull
+metal, but you've been told it's the most valuable and desirable object
+in the known universe! "
+
+aName = (theName)
+
+subLocation = &amp;subContainer
+
+okayRubMsg = 'As {you/he} rub{s} {the dobj/him} a shimmering djiin suddenly
+appears in the air before you!\b
+<q>Hello, you have reached the automated holographic answering service
+of Jeannie the Genie,</q> she announces. <q>I\'m sorry I\'m not
+available to respond to your rub in person right now, but my hours of
+activity have been heavily curtailed by the European Working Time
+Directive. Before making a wish, please make sure that you have
+conducted a full risk assessment in line with the latest Health and
+Safety Guidelines. Also, please note that before any wish can be granted
+you must sign a Form P45/PDQ/LOL indemnifying this wish-granting agency
+against any consequential loss or damage arising from the fulfilment of
+your desires. Thank you for rubbing. Have a nice day!</q>\b
+Her message complete, the holographic djiin fades away into
+non-existence. '
+
+moveInto(dest)
+{
+inherited(dest);
+if(dest.isOrIsIn(me))
+achievement.awardPointsOnce();
+}
+
+achievement: Achievement { +10 "taking the orb" }
+;
+
+//------------------------------------------------------------------------------
+
+/* DEFINE A NEW VERB */
+
+DefineTAction(Rub)
+;
+
+VerbRule(Rub)
+'rub' dobjList
+: RubAction
+verbPhrase = 'rub/rubbing (what)'
+;
+
+/* When creating a new verb, you'll want to modify the Thing class so as to provide
+default handling for the command. The defaults specified here will be used except
+on objects for which you define explicit handling of the command. */
+
+modify Thing
+dobjFor(Rub)
+{
+preCond = [touchObj]
+action() { mainReport(okayRubMsg); }
+}
+
+okayRubMsg = '{You/he} rub{s} {the dobj/him} but not much happens as a
+result. '
+
+shouldNotBreakMsg = 'Only amateurs go round breaking things unnecessarily. '
+;
+
+//------------------------------------------------------------------------------
+
+/* HINTS */
+
+TopHintMenu;
+
++ Goal -&gt; (frontDoor.achievement)
+'How do I get into the house?'
+[
+'Well, the windows don\'t seem a good way in. ',
+'So perhaps you\'d better try the front door. ',
+'Could someone have left a key around somewhere? ',
+'Is there anything lying around where someone could have hidden a key? ',
+'What about that flowerpot? ',
+'Try looking under the flowerpot. '
+]
+
+goalState = OpenGoal
+;
+
+/* The closeWhenSeen property of the following Goal object is an example of how to
+make your hint menu respond dynamically to the player's current situation. */
+
++ Goal 'Where can I find the orb? '
+[
+'Something like that is bound to be kept safe. ',
+'So it\'s probably inside the house. '
+]
+
+goalState = OpenGoal
+closeWhenSeen = hallway
+;
+
++ Goal 'Where can I find the orb?'
+[
+'It\'s sure to be kept somewhere safe. ',
+'You\'d better hunt around. ',
+'Somewhere in the study seems the most likely place. ',
+deskHint,
+'But it should be safely locked in a safe ',
+'Where might someone hide a safe in this study? ',
+'What could be behind that picture on the wall? ',
+'Try looking behind the picture (or simply taking the picture). '
+]
+
+openWhenSeen = hallway
+closeWhenSeen = orb
+;
+
+++ deskHint: Hint 'Have you tried looking in the desk drawer? '
+[deskGoal]
+;
+
++ deskGoal: Goal 'How do I get the desk drawer open?'
+[
+'Have you examined the drawer? ',
+'What might you need to unlock it? ',
+'Where might you find such a thing? ',
+'What have you seen that a small key might be hidden in? ',
+'How carefully have you searched the hall? ',
+'What is (or was) on the hall table? ',
+'What might that vase be for? ',
+'Try looking in the vase. '
+]
+closeWhenSeen = notebook
+;
+
++ Goal 'How do I get the safe open?'
+[
+'How carefully have you examined the safe? ',
+'Where might someone leave a clue to the combination? ',
+deskHint,
+'Make sure you read the notebook. ',
+'Once you\'ve found the combination you need to use the dial. ',
+'If the combination is a number larger than 99 you\'ll need to enter it
+in stages. ',
+'For example, if the combination were 1234 you\'d first need to turn the
+dial to 12 and then turn it to 34. '
+]
+
+openWhenSeen = safe
+closeWhenAchieved = (safe.subContainer.achievement)
+;
+
++ Goal 'What does the clue in the notebook mean?'
+[
+'Well, <q>SAFE</q> might refer to something you want to open. ',
+'Have you seen a date round here? ',
+'When was this house built? ',
+'Where might you find the year in which this house was built? ',
+'How carefully have you looked at the front of the house? ',
+'Did you examine the door? '
+]
+
+openWhenRevealed = 'safe-date'
+closeWhenAchieved = (safe.subContainer.achievement)
+;
+
+
++ Goal 'What do I do with the orb now I\'ve got it?'
+[
+'Well, you could try rubbing it. ',
+'But the main thing to do now is to escape with it. '
+]
+openWhenSeen = orb
+;
+```             
 
 Doubtless there a great many more things that could be done to improve
 this game, but it has now served its purpose.

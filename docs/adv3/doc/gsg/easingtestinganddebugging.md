@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](lookingthroughthewindow.html)
@@ -576,4 +576,4 @@ scope" approach may not be what you want.
 *[\[Previous\]](lookingthroughthewindow.html)
   [\[Next\]](wheretogofromhere.html)*
 
-</div>
+

@@ -37,96 +37,96 @@
 
 </div>
 
-<div class="main">
+<h1 id="file">File</h1>
 
-# File
-
-The File intrinsic class provides access to create, read, and write
+<p>The File intrinsic class provides access to create, read, and write
 files. Almost all modern operating systems organize disk storage into
 files. A file is essentially a block of bytes on disk, labeled with a
 name that users and programs can use to refer to it. Most systems also
-keep additional "metadata" about each file, such as the date it was
+keep additional “metadata” about each file, such as the date it was
 created, the user who created it, and who else has permission to access
-it.
+it.</p>
 
-In addition to reading and writing ordinary operating system files, the
-File class can be used to read TADS "[resources](build.html#resources)."
+<p>In addition to reading and writing ordinary operating system files, the
+File class can be used to read TADS “<a href="build.html#resources">resources</a>.”
 Resources are most often used for multimedia objects, such as JPEG
 images or Ogg audio tracks, but you can also use them as ordinary
 external data files. A TADS resource is similar to a file in most
 respects, but has three important differences. First, resource names use
 a URL-style syntax instead of the local operating system path naming
-syntax. This makes it easier to write portable code, since you don't
+syntax. This makes it easier to write portable code, since you don’t
 have to worry about varying path naming rules when accessing resource
-files. Second, you can embed a resource file into the program's image
+files. Second, you can embed a resource file into the program’s image
 (.t3) file, or into an external resource bundle file. The benefit of
 embedding resources is that it simplifies packaging by reducing the
 number of separate files you have to distribute. Third, resources are
-read-only. You can't change the data in a resource file at run-time.
+read-only. You can’t change the data in a resource file at run-time.</p>
 
-To use File objects, you must <span class="code">\#include
-\&lt;file.h\&gt;</span> in your source files.
+<p>To use File objects, you must <code class="language-plaintext highlighter-rouge">\#include
+\&lt;file.h\&gt;</code> in your source files.</p>
 
-## File Formats
+<h2 id="file-formats">File Formats</h2>
 
-TADS 3 provides access to files using three basic "formats." A file's
-format is simply the way the file's data are arranged; each format is
-useful in different situations. The basic formats are:
+<p>TADS 3 provides access to files using three basic “formats.” A file’s
+format is simply the way the file’s data are arranged; each format is
+useful in different situations. The basic formats are:</p>
 
-- Text. A file in text format stores a sequence of ordinary characters
-  (letters, numbers, punctuation), organized into "lines." A line of
-  text is simply a sequence of characters ending with a special
-  "newline" character or character sequence. Text format files are
-  useful when you want to read or write data intended for direct viewing
-  or editing by a person, and because of their simple format can be
-  interchanged among many different application programs. When you use a
-  text format file, TADS automatically converts between the Unicode
-  characters that TADS uses internally and the local character set used
-  by the file, and TADS also automatically translates newline sequences
-  in the file according to local conventions, which vary among
-  platforms.
-- Data. A file in "data" format can store integers, enums, strings,
-  ByteArray values, BigNumber values, and "true" values. Data format
-  files use a private data format that only TADS can read and write, so
-  this format is not useful for files that must be interchanged with
-  other application programs. When you wish to create a file for use
-  only by your program or other TADS programs, though, this format is
-  convenient because it allows you to read and write all of the
-  datatypes listed above directly - TADS automatically converts the
-  values to and from an appropriate representation in the file. This
-  format is also convenient because the format is portable to all TADS
-  platforms - a "data" format file is binary-compatible across all
-  platforms where TADS runs, with no conversions of any kind necessary
-  when you copy a file from one type of system to another.
-- Raw. A file in raw format simply stores bytes, and gives your program
-  direct access to the bytes with no automatic translations. This gives
-  you total flexibility to read and write file formats defined by other
-  applications or Internet standards, such as JPEG images or word
-  processing documents. The easiest way to work with a raw file is via
-  the [byte packing](pack.html) methods, [packBytes](#packBytes) and
-  [unpackBytes](#unpackBytes). You can also use the
-  [readBytes](readBytes) and [writeBytes](writeBytes) methods to work
-  directly at the byte level, via [ByteArray](bytearr.html) objects.
+<ul>
+  <li>Text. A file in text format stores a sequence of ordinary characters
+(letters, numbers, punctuation), organized into “lines.” A line of
+text is simply a sequence of characters ending with a special
+“newline” character or character sequence. Text format files are
+useful when you want to read or write data intended for direct viewing
+or editing by a person, and because of their simple format can be
+interchanged among many different application programs. When you use a
+text format file, TADS automatically converts between the Unicode
+characters that TADS uses internally and the local character set used
+by the file, and TADS also automatically translates newline sequences
+in the file according to local conventions, which vary among
+platforms.</li>
+  <li>Data. A file in “data” format can store integers, enums, strings,
+ByteArray values, BigNumber values, and “true” values. Data format
+files use a private data format that only TADS can read and write, so
+this format is not useful for files that must be interchanged with
+other application programs. When you wish to create a file for use
+only by your program or other TADS programs, though, this format is
+convenient because it allows you to read and write all of the
+datatypes listed above directly - TADS automatically converts the
+values to and from an appropriate representation in the file. This
+format is also convenient because the format is portable to all TADS
+platforms - a “data” format file is binary-compatible across all
+platforms where TADS runs, with no conversions of any kind necessary
+when you copy a file from one type of system to another.</li>
+  <li>Raw. A file in raw format simply stores bytes, and gives your program
+direct access to the bytes with no automatic translations. This gives
+you total flexibility to read and write file formats defined by other
+applications or Internet standards, such as JPEG images or word
+processing documents. The easiest way to work with a raw file is via
+the <a href="pack.html">byte packing</a> methods, <a href="#packBytes">packBytes</a> and
+<a href="#unpackBytes">unpackBytes</a>. You can also use the
+<a href="readBytes">readBytes</a> and <a href="writeBytes">writeBytes</a> methods to work
+directly at the byte level, via <a href="bytearr.html">ByteArray</a> objects.</li>
+</ul>
 
-Resources can be read using the Text and Raw formats.
+<p>Resources can be read using the Text and Raw formats.</p>
 
-## Creating a File object
+<h2 id="creating-a-file-object">Creating a File object</h2>
 
-A File object gives you working access to a file on disk. The File
+<p>A File object gives you working access to a file on disk. The File
 object keeps track of all of the information involved with your access
-to the file: the format you're using to read and write the file, the
+to the file: the format you’re using to read and write the file, the
 type of access you have to the file, and the current position in the
-file where you're reading or writing.
+file where you’re reading or writing.</p>
 
-File objects aren't created with <span class="code">new</span>. Instead,
-you use one of the "open" methods of the File class itself. The "open"
+<p>File objects aren’t created with <code class="language-plaintext highlighter-rouge">new</code>. Instead,
+you use one of the “open” methods of the File class itself. The “open”
 methods come in two main varities: files and resources. They also
-differentiate which type of format you're using to access the file.
+differentiate which type of format you’re using to access the file.</p>
 
-<span class="code">File.openTextFile(*filename*, *access*,
-*charset*?)</span>  
-<span class="code">File.openDataFile(*filename*, *access*)</span>  
-<span class="code">File.openRawFile(*filename*, *access*)</span>
+<p><code class="language-plaintext highlighter-rouge">File.openTextFile(*filename*, *access*,
+*charset*?)</code><br />
+<code class="language-plaintext highlighter-rouge">File.openDataFile(*filename*, *access*)</code><br />
+<code class="language-plaintext highlighter-rouge">File.openRawFile(*filename*, *access*)</code></p>
 
 <div class="fdef">
 
@@ -146,48 +146,48 @@ The *access* argument gives the type of access you want to the file, and
 determines whether an existing file is to be used or a new file is to be
 created. The *access* value can be one of the following constants:
 
-- <span class="code">FileAccessRead</span> - the file is to be opened
+- `FileAccessRead` - the file is to be opened
   for reading. The file must exist, or the method will throw a
-  <span class="code">FileNotFoundException</span>.
-- <span class="code">FileAccessWrite</span> - the file is to be opened
+  `FileNotFoundException`.
+- `FileAccessWrite` - the file is to be opened
   for writing. If no file of the given name exists, a new file is
   created. If a file with the same name already exists, the existing
   file is replaced with the new file, and any contents of the existing
   file are discarded. If the file cannot be created, a
-  <span class="code">FileCreationException</span> is thrown.
-- <span class="code">FileAccessReadWriteKeep</span> - the file is to be
+  `FileCreationException` is thrown.
+- `FileAccessReadWriteKeep` - the file is to be
   opened for both reading and writing. If the file already exists, the
   existing file is opened, otherwise a new file is created. If the file
-  cannot be opened, a <span class="code">FileOpenException</span> is
+  cannot be opened, a `FileOpenException` is
   thrown.
-- <span class="code">FileAccessReadWriteTrunc</span> - the file is to be
+- `FileAccessReadWriteTrunc` - the file is to be
   opened for both reading and writing. If the file already exists, its
   existing contents are discarded (the file is truncated to zero
   length); if the file doesn't exist, a new file is created. If the file
   cannot be opened, a FileOpenException is thrown.
 
-<span class="code">File.openTextFile(*filename*, *access*,
-*charset*?)</span> opens a file in text format. Any access mode may be
+`File.openTextFile(*filename*, *access*,
+*charset*?)` opens a file in text format. Any access mode may be
 used with this method. If the *charset* argument is present and not
-<span class="code">nil</span>, it must be an object of the CharacterSet
+`nil`, it must be an object of the CharacterSet
 intrinsic class giving the character set to be used to translate between
 the file's character set and the internal TADS Unicode character set,
 *or* a string giving the name of a character set. If this argument is
-missing or <span class="code">nil</span>, the system's default character
+missing or `nil`, the system's default character
 set for file contents is used; this is the character set that
-[<span class="code">getLocalCharSet</span>](tadsio.html#getLocalCharSet)<span class="code">(CharsetFileCont)</span>
+[`getLocalCharSet`](tadsio.html#getLocalCharSet)`(CharsetFileCont)`
 returns.
 
-<span class="code">File.openDataFile(*filename*, *access*)</span> opens
+`File.openDataFile(*filename*, *access*)` opens
 a file in "data" format. Any access mode may be used with this method.
 
-<span class="code">File.openRawFile(*filename*, *access*)</span> opens a
+`File.openRawFile(*filename*, *access*)` opens a
 file in "raw" format. Any access mode may be used with this method.
 
 All of the "open" methods check the [file safety](terp.html#file-safety)
 level settings to ensure that the file access is allowed. If the file
 safety level is too restrictive for a requested operation, the method
-throws a <span class="code">FileSafetyException</span>. The file safety
+throws a `FileSafetyException`. The file safety
 level is a setting that the user specifies in a manner that varies by
 interpreter; it allows the user to restrict the operations that a
 program running under the interpreter can perform, to protect the user's
@@ -195,21 +195,21 @@ computer against malicious programs.
 
 On success, these methods return a new File object that can be used for
 subsequent input/output operations on the file. On failure, these
-methods will throw a <span class="code">FileException</span> subclass
+methods will throw a `FileException` subclass
 indicating which type of error occurred:
 
-- <span class="code">FileNotFoundException</span> - indicates that the
+- `FileNotFoundException` - indicates that the
   requested file doesn't exist. This is thrown when the access mode
   requires an existing file but the named file does not exist.
-- <span class="code">FileCreationException</span> - indicates that the
+- `FileCreationException` - indicates that the
   requested file could not be created. This is thrown when the access
   mode requires creating a new file but the named file cannot be
   created.
-- <span class="code">FileOpenException</span> - indicates that the
+- `FileOpenException` - indicates that the
   requested file could not be opened. This is thrown when the access
   mode allows either an existing file to be opened or a new file to be
   created, but neither could be accomplished.
-- <span class="code">FileSafetyException</span> - the requested access
+- `FileSafetyException` - the requested access
   mode is not allowed for the given file due to the current file safety
   level set by the user. Users can set the file safety level (through
   command-line switches or other preference mechanisms which vary by
@@ -219,10 +219,10 @@ indicating which type of error occurred:
   set a safety level that is too restrictive for the requested
   operation.
 
-</div>
 
-<span class="code">openTextResource(*resName*, *charset*?)</span>  
-<span class="code">openRawResource(*resName*)</span>
+
+`openTextResource(*resName*, *charset*?)`  
+`openRawResource(*resName*)`
 
 <div class="fdef">
 
@@ -243,12 +243,12 @@ simply use the standard URL format, and the File object will
 automatically adapt to the platform at run-time.
 
 The *charset* argument has the same meaning as it does for
-<span class="code">openTextFile()</span>.
+`openTextFile()`.
 
 The open-resource methods don't have an argument specifying the access
 mode, as the open-file methods do, because resource files can only be
 opened for reading. Since it's not possible to open a resource in any
-mode other than <span class="code">FileAccessRead</span>, there's no
+mode other than `FileAccessRead`, there's no
 need for a separate access mode argument.
 
 You can open bundled resources even when the [file
@@ -272,7 +272,7 @@ and testing, but you must always explicitly bundle resources into the
 
 On success, these methods return a new File object that can be used
 subsequently to read from the resource. On failure, they throw the same
-types of exceptions as the <span class="code">openFileXxx()</span>
+types of exceptions as the `openFileXxx()`
 methods.
 
 </div>
@@ -298,8 +298,8 @@ maximize portability is to use a least common denominator approach:
 
 - Avoid most punctuation marks in file names. To be completely safe, use
   only letters and digits; but you'll be safe on Windows, Mac OS, and
-  Linux if you avoid these: <span class="code">\* + ? = \[ \] / \\ &amp; \|
-  " : \&lt; \&gt;</span>
+  Linux if you avoid these: `\* + ? = \[ \] / \\ &amp; \|
+  " : \&lt; \&gt;`
 
 - Stick to ASCII characters - avoid accented letters, for example. Most
   modern systems allow Latin-1 or Unicode characters in file names, but
@@ -341,17 +341,17 @@ for the file, given its purpose, based on local conventions.
 
 To open a special file, you simply pass in the special file identifier
 (defined in file.h) in place of the *filename* argument to one of the
-<span class="code">openFileXxx()</span> methods. Here are the special
+`openFileXxx()` methods. Here are the special
 files currently defined:
 
-- <span class="code">LibraryDefaultsFile</span> - this file stores
+- `LibraryDefaultsFile` - this file stores
   global default values for library preference settings. A game library
   (e.g., Adv3) can use this file as a repository of default option
   settings. The settings file is shared across games, so that a user's
   preference settings automatically transfer to each new game played.
   The interpreter determines the directory location where this file is
   stored.
-- <span class="code">WebUIPrefsFile</span> - this file stores the
+- `WebUIPrefsFile` - this file stores the
   display style settings for the Web UI. This file is shared across
   games, so that a user's display customizations are preserved when
   starting a new game. This file is stored in the same location as the
@@ -381,12 +381,10 @@ access to the file. Once you've created a TemporaryFile object
 representing a filename, you can pass the TemporaryFile to any of the
 File "open" methods to open the file for read or write access:
 
-<div class="code">
-
+```
     local temp = new TemporaryFile();
     local f = File.openTextFile(temp, FileAccessWrite, 'ascii');
-
-</div>
+```
 
 Temporary files have two major benefits. First, the system automatically
 ensures that they're deleted by the time the program exits, so you don't
@@ -449,12 +447,12 @@ In concrete terms, a File Spec is really pretty simple. It's just a
 [TadsObject](tadsobj.html) object that has one required method and one
 optional method:
 
-- <span class="code">getFilename()</span> returns a system file
+- `getFilename()` returns a system file
   identifier: either a string containing a filename, or a TemporaryFile
   object. When the system wants to open the underlying disk file, it
   calls this method to find out where on disk to read or write the data.
   This method is required.
-- <span class="code">closeFile()</span> is optional. When the system
+- `closeFile()` is optional. When the system
   closes the underlying disk file, it calls this method to let you know.
   This gives you a chance to perform any desired post-processing on the
   file.
@@ -479,16 +477,16 @@ display a file selector dialog asking for a file for saving the game.
 With client-side files, the library instead just creates a custom object
 with the File Spec methods, and creates a TemporaryFile object to go
 with it. The library uses this special object to call
-<span class="code">saveGame()</span>. When
-<span class="code">saveGame()</span> opens the file, it calls
-<span class="code">getFilename()</span> on the File Spec object, which
+`saveGame()`. When
+`saveGame()` opens the file, it calls
+`getFilename()` on the File Spec object, which
 returns the TemporaryFile; this means that
-<span class="code">saveGame()</span> ends up saving the current game
+`saveGame()` ends up saving the current game
 state to the temporary file on the server machine. When the save is
-finished, <span class="code">saveGame()</span> closes the file, which
-calls the <span class="code">closeFile()</span> method on the File Spec
+finished, `saveGame()` closes the file, which
+calls the `closeFile()` method on the File Spec
 object. The File Spec object's implementation of
-<span class="code">closeFile()</span> finishes the operation by sending
+`closeFile()` finishes the operation by sending
 information about the newly available file to the Web UI client, which
 responds by offering the user a chance to download and save the file.
 The result from the user's perspective is the SAVE command offers a
@@ -497,7 +495,7 @@ in the traditional stand-alone interpreter.
 
 ## File methods
 
-<span class="code">closeFile()</span>
+`closeFile()`
 
 <div class="fdef">
 
@@ -518,12 +516,12 @@ close files explicitly as soon as you know you're done with them.
 
 After closing a file, no further operations can be performed on the
 closed File object. Any subsequent operations on the File object will
-throw a <span class="code">FileClosedException</span>. (This doesn't
+throw a `FileClosedException`. (This doesn't
 mean that you can't do more work on the underlying operating system
 file - it simply means that you have to open it again with a new File
 object.)
 
-Note that <span class="code">closeFile()</span> can throw an error. The
+Note that `closeFile()` can throw an error. The
 only situation where an error can usually occur on close is when the
 file was opened for writing, and you've made updates. In this case, the
 system might have buffered (delayed) some of the physical updates to the
@@ -540,7 +538,7 @@ loss right away.
 
 </div>
 
-<span class="code">deleteFile(*filename*)</span>
+`deleteFile(*filename*)`
 
 <div class="fdef">
 
@@ -549,11 +547,9 @@ or other media. *filename* is a string giving the name of the file, or
 one of the special file identifiers. This is a static function that you
 call directly on the File object:
 
-<div class="code">
-
+```
     File.deleteFile('myfile.txt');
-
-</div>
+```
 
 The function will succeed only if the [file
 safety](terp.html#file-safety) level would allow you to open the file
@@ -569,13 +565,13 @@ file manipulation functions.
 
 </div>
 
-<span class="code">digestMD5(*length*?)</span>
+`digestMD5(*length*?)`
 
 <div class="fdef">
 
 Calculates the MD5 digest of the contents of the file, starting at the
 current seek location and including *length* bytes from the file. If
-*length* is omitted or <span class="code">nil</span>, the entire rest of
+*length* is omitted or `nil`, the entire rest of
 the file (from the current seek position to the end of the file) is
 included in the digest.
 
@@ -585,7 +581,7 @@ seek position is set to the next byte after the bytes digested.
 
 </div>
 
-<span class="code">getCharacterSet()</span>
+`getCharacterSet()`
 
 <div class="fdef">
 
@@ -594,23 +590,23 @@ translations. This is useful only with files in text format.
 
 </div>
 
-<span class="code">getFileMode()</span>
+`getFileMode()`
 
 <div class="fdef">
 
 Returns the file's current data mode. The return value is one of the
 following constants:
 
-- <span class="code">FileModeText</span> - text mode
-  (<span class="code">openTextFile()</span>)
-- <span class="code">FileModeData</span> - data mode
-  (<span class="code">openDataFile()</span>)
-- <span class="code">FileModeRaw</span> - raw (binary) mode
-  (<span class="code">openRawFile()</span>)
+- `FileModeText` - text mode
+  (`openTextFile()`)
+- `FileModeData` - data mode
+  (`openDataFile()`)
+- `FileModeRaw` - raw (binary) mode
+  (`openRawFile()`)
 
 </div>
 
-<span class="code">getFileSize()</span>
+`getFileSize()`
 
 <div class="fdef">
 
@@ -623,7 +619,7 @@ representation differ somewhat from the binary representation on disk.
 
 </div>
 
-<span class="code">getPos()</span>
+`getPos()`
 
 <div class="fdef">
 
@@ -637,7 +633,7 @@ file, which is at offset zero.
 
 <span id="getRootName"></span>
 
-<span class="code">getRootName(*filename*)</span>
+`getRootName(*filename*)`
 
 <div class="fdef">
 
@@ -652,20 +648,18 @@ name of a file in the local file system.
 
 This is a static method, so you call it on the File object itself:
 
-<div class="code">
-
+```
     local root = File.getRootName(filename);
-
-</div>
+```
 
 The root name of a file, also called the base name, is the portion of
 the filename string excluding any directory location or folder path. The
 directory path syntax varies by operating system; this method parses the
 name according to the syntax rules for the local host at run-time. For
 example, when running on a Windows machine,
-<span class="code">File.getRootName('a\\b\\c.txt')</span> returns
-<span class="code">'c.txt'</span>. The same program running on a Linux
-machine will return <span class="code">'a\\b\\c.txt'</span> for the same
+`File.getRootName('a\\b\\c.txt')` returns
+`'c.txt'`. The same program running on a Linux
+machine will return `'a\\b\\c.txt'` for the same
 function, because the backslash isn't a path separator character on
 Linux.
 
@@ -676,13 +670,13 @@ Note that you should never hard-code a filename with a path into your
 program, precisely because of the varying naming rules on different
 systems. However, you might from time to time still encounter a filename
 string containing a path, from sources such as
-<span class="code">inputFile()</span> or the program startup arguments.
+`inputFile()` or the program startup arguments.
 
 </div>
 
 <span id="packBytes"></span>
 
-<span class="code">packBytes(*format*, ...)</span>
+`packBytes(*format*, ...)`
 
 <div class="fdef">
 
@@ -705,7 +699,7 @@ See [Byte Packing](pack.html) for full details.
 
 <span id="readBytes"></span>
 
-<span class="code">readBytes(*byteArr*, *start*?, *cnt*?)</span>
+`readBytes(*byteArr*, *start*?, *cnt*?)`
 
 <div class="fdef">
 
@@ -728,7 +722,7 @@ will be thrown.
 
 </div>
 
-<span class="code">readFile()</span>
+`readFile()`
 
 <div class="fdef">
 
@@ -768,15 +762,15 @@ according to the file's format:
   FileModeException is thrown if this is attempted on a raw file).
 
 In any case, when the end of the file is reached, the function returns
-<span class="code">nil</span>. If any error occurs reading the file, the
-method throws a <span class="code">FileIOException</span>.
+`nil`. If any error occurs reading the file, the
+method throws a `FileIOException`.
 
 Note that if the file is open for write-only access, a
-<span class="code">FileModeException</span> will be thrown.
+`FileModeException` will be thrown.
 
 </div>
 
-<span class="code">setCharacterSet(*charset*)</span>
+`setCharacterSet(*charset*)`
 
 <div class="fdef">
 
@@ -786,28 +780,28 @@ translations. *charset* can be one of the following:
 - A [CharacterSet](charset.html) object.
 - A string giving a character mapping name. A CharacterSet object is
   automatically created for the mapping name.
-- <span class="code">nil</span>. This selects the local system's default
+- `nil`. This selects the local system's default
   character set for text files.
 
 </div>
 
-<span class="code">setFileMode(*mode*, *charset*?)</span>
+`setFileMode(*mode*, *charset*?)`
 
 <div class="fdef">
 
 Change the file mode. *mode* is a FileModeXxx value giving the desired
-new file mode (<span class="code">FileModeText</span>,
-<span class="code">FileModeData</span>,
-<span class="code">FileModeRaw</span>).
+new file mode (`FileModeText`,
+`FileModeData`,
+`FileModeRaw`).
 
-If the *mode* value is <span class="code">FileModeText</span>, *charset*
+If the *mode* value is `FileModeText`, *charset*
 specifies the character set for the file's contents. Any text you write
 to the file will be mapped to this character set, and any text you read
 from the file will be converted from this character set. The character
 set can be specified as a
-[<span class="code">CharacterSet</span>](charset.html) object, or as a
+[`CharacterSet`](charset.html) object, or as a
 string giving the name of a character set. If *charset* is
-<span class="code">nil</span> or the argument is omitted entirely, the
+`nil` or the argument is omitted entirely, the
 local system's default character set for file contents is used.
 
 After you switch modes, subsequent read and write operations will
@@ -815,7 +809,7 @@ interpret the file's contents according to the new mode.
 
 </div>
 
-<span class="code">setPos(*pos*)</span>
+`setPos(*pos*)`
 
 <div class="fdef">
 
@@ -826,7 +820,7 @@ offset zero.
 For text and data format files, this function should be used with
 caution. In particular, you should only use this function to set a file
 position that was previously returned from a call to
-<span class="code">getPos()</span>. Text and data format files have data
+`getPos()`. Text and data format files have data
 structures that span multiple bytes in the file, so setting the file to
 an arbitrary byte position could cause the next read or write to occur
 in the middle of one of these multi-byte structures, which could corrupt
@@ -840,7 +834,7 @@ position only to the proper boundaries within your own structures.
 
 </div>
 
-<span class="code">setPosEnd()</span>
+`setPosEnd()`
 
 <div class="fdef">
 
@@ -849,25 +843,25 @@ subsequent writing to the file will place new bytes after the last
 existing byte in the file. This function is useful if you want to add
 new data after all of the existing data in a file, and is also useful to
 determine the size of a file (which you can do by seeking to the end of
-the file and then using <span class="code">getPos()</span> to determine
+the file and then using `getPos()` to determine
 the new position in the file).
 
-Note that the warnings mentioned in <span class="code">setPos()</span>
+Note that the warnings mentioned in `setPos()`
 regarding valid positions generally don't apply to
-<span class="code">setPosEnd()</span>. It is usually safe to go to the
+`setPosEnd()`. It is usually safe to go to the
 end of a file, because whatever multi-byte data structures occur in the
 file should be complete units, hence moving to the end of the file
 should set the position to the end of the last structure.
 
 </div>
 
-<span class="code">sha256(*length*?)</span>
+`sha256(*length*?)`
 
 <div class="fdef">
 
 Calculates the 256-bit SHA-2 hash of the contents of the file, starting
 at the current seek location and hashing *length* bytes from the file.
-If *length* is omitted or <span class="code">nil</span>, the entire rest
+If *length* is omitted or `nil`, the entire rest
 of the file (from the current seek position to the end of the file) is
 hashed.
 
@@ -879,7 +873,7 @@ return the seek position is set to the next byte after the bytes hashed.
 
 <span id="unpackBytes"></span>
 
-<span class="code">unpackBytes(*format*)</span>
+`unpackBytes(*format*)`
 
 <div class="fdef">
 
@@ -900,7 +894,7 @@ See [Byte Packing](pack.html) for full details.
 
 <span id="writeBytes"></span>
 
-<span class="code">writeBytes(*source*, *start*?, *cnt*?)</span>
+`writeBytes(*source*, *start*?, *cnt*?)`
 
 <div class="fdef">
 
@@ -908,34 +902,34 @@ This function, which is used only for raw files, writes a range of bytes
 to the file from the given *source* object. *source* must be one of the
 following object types:
 
-- <span class="code">ByteArray</span>: the specified range of bytes from
+- `ByteArray`: the specified range of bytes from
   the byte array is written to the file. *start* is the index within the
   byte array of the first byte of the range to copy to the file; if
   omitted, the default index is 1 (i.e., the first byte of the array).
   *cnt* is the number of bytes to write; if omitted, all bytes from the
   starting index to the end of the array are copied.
-- <span class="code">File</span>: bytes are read from the *source* file
+- `File`: bytes are read from the *source* file
   and written to the target file. The source file must be open with read
   access, and it must be in "raw" mode, since this function reads
   individual bytes from the file without any character set or data type
   translation. *start* is a seek location within the source file; if
   it's omitted, the default is the current seek position in the file
-  (the location that <span class="code">getPos()</span> returns). *cnt*
+  (the location that `getPos()` returns). *cnt*
   is the number of bytes to copy; if omitted, the file's entire contents
   from the starting seek position to the end of the file are copied.
 
 This function has no return value; if any error occurs writing the
-bytes, a <span class="code">FileIOException</span> is thrown. If the
-source object is a <span class="code">File</span>, a
-<span class="code">FileIOException</span> can also result if any errors
+bytes, a `FileIOException` is thrown. If the
+source object is a `File`, a
+`FileIOException` can also result if any errors
 occur reading the source object.
 
 Note that if the file is open for read-only access, a
-<span class="code">FileModeException</span> will be thrown.
+`FileModeException` will be thrown.
 
 </div>
 
-<span class="code">writeFile(*val*)</span>
+`writeFile(*val*)`
 
 <div class="fdef">
 
@@ -949,7 +943,7 @@ the file's format:
   local character set through the currently active character set object
   for the file.
 - Data format: the value can be an integer, string, enum, BigNumber,
-  ByteArray, or <span class="code">true</span> value. The value is
+  ByteArray, or `true` value. The value is
   written in the private TADS data-file format so that it can be read
   back later with the readFile() method.
 - Raw format: this function is not allowed for raw files (a
@@ -959,8 +953,8 @@ Writing an enumerator value to a data format file ties the file to the
 particular version of your program that wrote the file. When you compile
 your program, the compiler assigns an arbitrary internal identifier
 value to each enumerator, and it is this arbitrary internal value that
-the <span class="code">writeFile()</span> function stores in the file.
-When you use <span class="code">readFile()</span> to read an enumerator
+the `writeFile()` function stores in the file.
+When you use `readFile()` to read an enumerator
 value, the system uses the current internal enumerator value assignments
 made by the compiler. Because these values are arbitrary, they can vary
 from one compilation to the next, so it is not guaranteed that a file
@@ -976,16 +970,16 @@ integers, strings, or other values that you define and can therefore
 keep stable as you modify your program.
 
 If any error occurs writing the data, such as running out of disk space,
-the method throws a <span class="code">FileIOException</span>. If the
+the method throws a `FileIOException`. If the
 file is open for read-only access, a
-<span class="code">FileModeException</span> is thrown.
+`FileModeException` is thrown.
 
 </div>
 
 ## Interaction with save/restore, undo, and restart
 
 File objects are inherently transient; all instances returned from the
-creation methods (<span class="code">openTextFile()</span>, etc.) are
+creation methods (`openTextFile()`, etc.) are
 transient and thus not affected by save, restore, restart, or undo.
 
 If a File instance is part of the program when pre-initialization
@@ -998,7 +992,7 @@ File object becomes unsynchronized, it will no longer allow any
 operation that could be affected by the inconsistency. In particular,
 the file cannot be read or written once it is unsynchronized. To enforce
 this, the File object throws a
-<span class="code">FileSyncException</span> if any of these operations
+`FileSyncException` if any of these operations
 are attempted on an unsynchronized file.
 
 </div>

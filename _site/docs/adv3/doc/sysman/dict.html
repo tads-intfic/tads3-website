@@ -37,56 +37,54 @@
 
 </div>
 
-<div class="main">
+<h1 id="dictionary">Dictionary</h1>
 
-# Dictionary
-
-To facilitate command parsing, TADS 3 provides an intrinsic class called
+<p>To facilitate command parsing, TADS 3 provides an intrinsic class called
 Dictionary. A Dictionary is a specialized type of lookup table designed
-specifically to work with the [GrammarProd](gramprod.html) intrinsic
+specifically to work with the <a href="gramprod.html">GrammarProd</a> intrinsic
 class, which is used to create parsers. A Dictionary stores the
 vocabulary for a grammar; more generically speaking, it stores
 associations between keys and objects, and can be efficiently searched
-for a key to yield all of the objects associated with the key.
+for a key to yield all of the objects associated with the key.</p>
 
-A "key" is a combination of a string and a property ID. The Dictionary
+<p>A “key” is a combination of a string and a property ID. The Dictionary
 class includes a property ID with each key so that object associations
 can be differentiated by type; each property is a type of association.
 In practical terms, the property used in a Dictionary key will usually
-be a vocabulary property, such as <span class="code">noun</span> or
-<span class="code">adjective</span>. A given word might be used with
+be a vocabulary property, such as <code class="language-plaintext highlighter-rouge">noun</code> or
+<code class="language-plaintext highlighter-rouge">adjective</code>. A given word might be used with
 some objects as a noun, but with other objects as an adjective; for
-example, "card" might be used as a noun with an "ID Card" object, but as
-an adjective with a "card slot" object. The Dictionary class
+example, “card” might be used as a noun with an “ID Card” object, but as
+an adjective with a “card slot” object. The Dictionary class
 differentiates by property ID to allow for searching a Dictionary object
-for the objects matching a word in a particular usage context.
+for the objects matching a word in a particular usage context.</p>
 
-To use the Dictionary class, you should <span class="code">\#include
-\&lt;dict.h\&gt;</span>. If you're using the adv3 library, the library headers
-will do this for you automatically.
+<p>To use the Dictionary class, you should <code class="language-plaintext highlighter-rouge">\#include
+\&lt;dict.h\&gt;</code>. If you’re using the adv3 library, the library headers
+will do this for you automatically.</p>
 
-## Comparators
+<h2 id="comparators">Comparators</h2>
 
-The Dictionary class allows the program to customize the way input
+<p>The Dictionary class allows the program to customize the way input
 strings are matched to dictionary strings. This customization is handled
-through a "comparator" object; this is simply an object that provides a
+through a “comparator” object; this is simply an object that provides a
 specific set of methods, which the Dictionary calls to perform its
-comparisons.
+comparisons.</p>
 
-You can set a Dictionary object's comparator at any time by calling the
-Dictionary's <span class="code">setComparator()</span> method. This
+<p>You can set a Dictionary object’s comparator at any time by calling the
+Dictionary’s <code class="language-plaintext highlighter-rouge">setComparator()</code> method. This
 method takes the comparator object as an argument. When you set the
 comparator, subsequent look-up operations are performed using the
-matching rules contained in the new comparator.
+matching rules contained in the new comparator.</p>
 
-The intrinsic class [StringComparator](strcomp.html) provides a
+<p>The intrinsic class <a href="strcomp.html">StringComparator</a> provides a
 customizable comparator implementation, compatible with the Dictionary
-requirements, that's very fast (since it's implemented as native code in
-the interpreter). When the StringComparator class doesn't provide enough
+requirements, that’s very fast (since it’s implemented as native code in
+the interpreter). When the StringComparator class doesn’t provide enough
 flexibility, you can define your own completely custom comparator by
-implementing the set of required methods.
+implementing the set of required methods.</p>
 
-The Dictionary class assumes that comparator objects are immutable. That
+<p>The Dictionary class assumes that comparator objects are immutable. That
 is, once a comparator is installed in a dictionary, the dictionary
 assumes that the return values from the required methods, for a given
 set of argument values, will never change. This is important because it
@@ -94,11 +92,11 @@ allows the dictionary to assume it will never need to rebuild its
 internal tables except when a new comparator is installed. If you want
 to change the comparison rules, you must create and install a new
 comparator object; never attempt to change the comparison rules by
-modifying the comparator itself.
+modifying the comparator itself.</p>
 
-A comparator object must define the following methods:
+<p>A comparator object must define the following methods:</p>
 
-<span class="code">calcHash(*str*)</span>
+<p><code class="language-plaintext highlighter-rouge">calcHash(*str*)</code></p>
 
 <div class="fdef">
 
@@ -125,11 +123,11 @@ there is one absolute requirement that the method must obey, and a
 couple of properties that the algorithm should have:
 
 - The absolute requirement is that, for any two strings *s1* and *s2*,
-  if <span class="code">matchValues(s1, s2)</span> indicates a match
+  if `matchValues(s1, s2)` indicates a match
   (i.e., it returns anything other than zero or
-  <span class="code">nil</span>), then
-  <span class="code">calcHash(s1)</span> must equal
-  <span class="code">calcHash(s2)</span>. (This does **not** imply that
+  `nil`), then
+  `calcHash(s1)` must equal
+  `calcHash(s2)`. (This does **not** imply that
   the hash values for two non-matching strings must be different: hash
   "collisions," in which two strings do not match but happen to have the
   same hash value, are specifically allowed.
@@ -152,14 +150,14 @@ couple of properties that the algorithm should have:
   object, you can find information on how to write a good hash function
   in practically any textbook on computer algorithms.
 
-</div>
 
-<span class="code">matchValues(*inputStr*, *dictStr*)</span>
+
+`matchValues(*inputStr*, *dictStr*)`
 
 <div class="fdef">
 
 Match the input string *inputStr* to the dictionary string *dictStr*.
-Returns zero or <span class="code">nil</span> if the values do not
+Returns zero or `nil` if the values do not
 match, or any other value if they do match. Because any non-zero and
 non-nil value indicates a match, this routine is free to encode
 additional information about the match in the return value; typically,
@@ -184,17 +182,17 @@ The TADS 3 compiler has built-in support for the Dictionary intrinsic
 class. (This built-in support is part of the compiler, not the
 interpreter; as far as the interpreter is concerned, a Dictionary object
 is the same as any other kind of object.) The compiler support is
-provided by the statements <span class="code">dictionary</span> and
-<span class="code">dictionary property</span>, and by recognition of
+provided by the statements `dictionary` and
+`dictionary property`, and by recognition of
 dictionary properties when defined in object property lists.
 
-The <span class="code">dictionary</span> statement has two purposes.
+The `dictionary` statement has two purposes.
 First, it defines a new object instance of class Dictionary, if the name
 has not been previously defined. Second, it establishes the active
 dictionary, which is the dictionary into which the compiler will insert
 each dictionary word defined with an object.
 
-The <span class="code">dictionary property</span> statement tells the
+The `dictionary property` statement tells the
 compiler that a given property is henceforth a "dictionary property."
 This means that, whenever the property is subsequently used in an object
 definition, the property defines dictionary words for the object. The
@@ -203,8 +201,7 @@ under the given property.
 
 Here's some sample code that demonstrates how these statements work.
 
-<div class="code">
-
+```
     // create a new dictionary and make it active
     dictionary myDict;
 
@@ -216,8 +213,7 @@ Here's some sample code that demonstrates how these statements work.
         noun = 'book' 'booklet'
         adjective = 'red'
     ;
-
-</div>
+```
 
 Note that dictionary properties use a special "implied list" syntax:
 there's no need to enclose a vocabulary property's string list in square
@@ -227,7 +223,7 @@ for dictionary properties - you *must* use the implied list format.
 ## <span id="spellingCorrection">Spelling correction</span>
 
 The Dictionary class provides support for spelling correction through
-the <span class="code">correctSpelling()</span> method, which generates
+the `correctSpelling()` method, which generates
 a list of possible corrections for a misspelled word. This method by
 itself doesn't constitute a complete spelling corrector, but it makes it
 a lot easier to write a spelling corrector, since it does a lot of the
@@ -243,7 +239,7 @@ Dictionary class's domain.
 
 You might wonder, then, why the Dictionary class would involve itself in
 spelling correction at all. The equivalent functionality of
-<span class="code">correctSpelling()</span> could be implemented
+`correctSpelling()` could be implemented
 separately from the Dictionary class, and in fact extension libraries
 that do this are already available. If the rest of the spelling
 corrector has to be implemented externally, why not this part as well?
@@ -278,7 +274,7 @@ naturally.
 
 ## Dictionary methods
 
-<span class="code">addWord(*obj*, *str*, *vocabProp*)</span>
+`addWord(*obj*, *str*, *vocabProp*)`
 
 <div class="fdef">
 
@@ -286,17 +282,17 @@ Add an object to the dictionary with the given string and property key.
 *str* can be a string value, or can be a list (or Vector or other
 [list-like object](opoverload.html#listlike)) containing strings. If
 *str* is a list of strings, the result is the same as calling
-<span class="code">addWord()</span> once for each string in the list. If
+`addWord()` once for each string in the list. If
 the word association to be added is already defined (i.e., another entry
 with the same string, object, and property already exists), the new
 association is simply ignored. *obj* is the object to associate with the
 given vocabulary word or words, and *vocabProp* is the dictionary
-property ID (<span class="code">&amp;noun</span>,
-<span class="code">&amp;adjective</span>, etc) to use for the association.
+property ID (`&amp;noun`,
+`&amp;adjective`, etc) to use for the association.
 
 </div>
 
-<span class="code">correctSpelling(*str*, *maxEditDistance*)</span>
+`correctSpelling(*str*, *maxEditDistance*)`
 
 <div class="fdef">
 
@@ -384,32 +380,30 @@ distance limit for these words.
 
 </div>
 
-<span class="code">findWord(*str*, *vocabProp*?)</span>
+`findWord(*str*, *vocabProp*?)`
 
 <div class="fdef">
 
 Search the dictionary for the given string and property ID. Returns a
 list giving all of the matching objects; if there are no objects,
 returns an empty list. If *vocabProp* is omitted or is
-<span class="code">nil</span>, the method returns all of the objects
+`nil`, the method returns all of the objects
 that match the string with *any* property.
 
 The returned list consists of two elements for each matching object. The
 first element of each pair is the matching object; the second element is
 the return value from the current comparator's
-<span class="code">matchValues()</span> method for the match. For
+`matchValues()` method for the match. For
 example, suppose that the comparator simply returns
-<span class="code">nil</span> for no match or
-<span class="code">true</span> for a match; the result list might then
+`nil` for no match or
+`true` for a match; the result list might then
 look like this:
 
-<div class="code">
-
+```
     [blueBook, true, booklet, true, matchbook, true]
+```
 
-</div>
-
-The <span class="code">matchValues()</span> result is included because
+The `matchValues()` result is included because
 some comparators use the result to supply additional information about
 the match. For example, StringComparator encodes information on case
 folding, truncation, and equivalence mappings. The caller could use this
@@ -417,32 +411,32 @@ information to choose some matches over others, for example.
 
 </div>
 
-<span class="code">forEachWord(*func*)</span>
+`forEachWord(*func*)`
 
 <div class="fdef">
 
 Invokes the callback function *func* on each word association in the
-dictionary. *func* is invoked as <span class="code">(*func*)(*obj*,
-*str*, *vocabProp*)</span>, where *obj*, *str*, and *vocabProp* have the
-same meanings they do in <span class="code">addWord()</span>. Note that
+dictionary. *func* is invoked as `(*func*)(*obj*,
+*str*, *vocabProp*)`, where *obj*, *str*, and *vocabProp* have the
+same meanings they do in `addWord()`. Note that
 a given string can appear many times in a dictionary, so *func* can be
 invoked with the same *str* value multiple times, once for each
 string/object/property association.
 
 </div>
 
-<span class="code">isWordDefined(*str*)</span>
+`isWordDefined(*str*)`
 
 <div class="fdef">
 
 Searches the dictionary for the given string and determines if it's
 associated with any objects. If the word occurs in the dictionary at
-all, this function returns <span class="code">true</span>; otherwise, it
-returns <span class="code">nil</span>.
+all, this function returns `true`; otherwise, it
+returns `nil`.
 
 </div>
 
-<span class="code">removeWord(*obj*, *str*, *vocabProp*)</span>
+`removeWord(*obj*, *str*, *vocabProp*)`
 
 <div class="fdef">
 
@@ -455,19 +449,19 @@ associated with different objects, those object associations are not
 removed. *str* can be a string value, or it can be a list (or Vector or
 other [list-like object](opoverload.html#listlike)) containing strings.
 If it's a list of strings, the result is the same as calling
-<span class="code">removeWord()</span> separately for each string in the
+`removeWord()` separately for each string in the
 list. If the word association to be removed is not defined, the
 operation is simply ignored.
 
 </div>
 
-<span class="code">setComparator(*compObj*)</span>
+`setComparator(*compObj*)`
 
 <div class="fdef">
 
 Set the comparator object. All subsequent dictionary operations are
 performed with the new comparator object. If *compObj* is
-<span class="code">nil</span>, the dictionary simply matches input
+`nil`, the dictionary simply matches input
 strings to dictionary strings exactly.
 
 Once installed, the dictionary considers a comparator object to be
@@ -517,13 +511,12 @@ when their objects are no longer needed, so that the objects can be
 deleted.
 
 **Creating dictionaries dynamically:** You can create a dictionary
-object at run-time using the <span class="code">new</span> operator.
+object at run-time using the `new` operator.
 Note that, when doing this, you should be sure to
-<span class="code">\#include \&lt;dict.h\&gt;</span> in your source file to
+`\#include \&lt;dict.h\&gt;` in your source file to
 ensure that the compiler knows about the Dictionary class.
 
-<div class="code">
-
+```
     // include the system header defining the Dictionary class
     #include <dict.h>
 
@@ -537,23 +530,22 @@ ensure that the compiler knows about the Dictionary class.
       dict.addWord(redBook, 'red', &amp;adjective);
       dict.addWord(redBook, 'book', &amp;noun);
     }
-
-&lt;/div&gt;
+```
 
 **Using multiple dictionaries in the compiler:** You can use multiple
 dictionaries at compile-time simply by using a new
-<span class="code">dictionary</span> statement for each dictionary. You
+`dictionary` statement for each dictionary. You
 can switch back to an existing dictionary with another
-<span class="code">dictionary</span> statement naming the original
-dictionary. The <span class="code">dictionary</span> statement
+`dictionary` statement naming the original
+dictionary. The `dictionary` statement
 establishes the active dictionary, which remains in effect until the
-next <span class="code">dictionary</span> statement. Multiple
+next `dictionary` statement. Multiple
 dictionaries might be useful in certain situations, such as when you
 want to create different parsing modes, each having their own separate
 vocabulary words.
 
 **Dynamic object creation and dictionaries:** When you create a new
-simulation object with operator <span class="code">new</span>, the
+simulation object with operator `new`, the
 interpreter will **not** automatically add any vocabulary to any
 dictionary for the object. While this might seem a deficiency, remember
 that the interpreter doesn't think of Dictionary objects as anything
@@ -570,8 +562,7 @@ If you're defining your own library, you'll probably want to put
 something like this in the constructors for your simulation object base
 classes:
 
-<div class="code">
-
+```
     class Thing: object
       construct()
       {
@@ -581,8 +572,7 @@ classes:
         libDict.addWord(self, plural, &amp;plural);
       }
     ;
-
-</div>
+```
 
 As long as each class derived from Thing (or from subclasses of Thing)
 properly inherits its superclass constructor from its own constructor,
@@ -611,17 +601,17 @@ Even though code that defines vocabulary words for an object looks
 similar to the way it did in TADS 2, though, there are some important
 differences:
 
-- First, the <span class="code">noun</span> and
-  <span class="code">adjective</span> properties behave at run-time like
+- First, the `noun` and
+  `adjective` properties behave at run-time like
   ordinary properties: the compiler sets the values of these properties
   to simple string lists containing the strings actually defined, plus
   any strings inherited from superclasses. You can use and modify these
   properties during program execution just like any other, but since
   they're nothing special to the interpreter, changing them has no
   effect on the dictionary. Updating the dictionary requires explicitly
-  using Dictionary methods (<span class="code">addWord()</span>, etc).
+  using Dictionary methods (`addWord()`, etc).
 - Second, the Dictionary object created by the
-  <span class="code">dictionary</span> statement is a full-fledged
+  `dictionary` statement is a full-fledged
   object at run-time. This means that you can call Dictionary methods on
   this object in your program, to look up words and modify the
   dictionary dynamically. There was no equivalent object in TADS 2.
@@ -640,7 +630,7 @@ differences:
 </span>
 
 </div>
-</dict.h></div></div>
+</dict.h></div>
 
 </main>
 <footer>

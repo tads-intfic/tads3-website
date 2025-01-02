@@ -17,7 +17,7 @@ Source File</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Chapter 3: Heidi: our first adv3Lite game
 
@@ -51,7 +51,7 @@ attempt (there’s time later for more advanced stuff).
 [Adding the Tree and the Branch](tree.html)  
 [Finishing Touches](finishing.html)  
 
-</div>
+
 
 </div>
 

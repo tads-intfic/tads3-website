@@ -19,7 +19,7 @@ Debug Records
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -270,7 +270,7 @@ the equivalent of the following VM instructions can be executed:
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

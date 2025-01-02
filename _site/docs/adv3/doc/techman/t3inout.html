@@ -39,57 +39,53 @@ Configurations</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="some-common-inputoutput-issues">Some Common Input/Output Issues</h1>
 
-# Some Common Input/Output Issues
+<p><em>by Eric Eve</em></p>
 
-*by Eric Eve*
+<h2 id="introduction">Introduction</h2>
 
-## Introduction
-
-For the most part, input and output in TADS 3 is pretty straightforward.
+<p>For the most part, input and output in TADS 3 is pretty straightforward.
 The player types commands at the command prompt and presses the RETURN
 or ENTER key, and your game responds. You output text to the screen
-using a string in double-quotes such as <span class="code">"this will be
-shown on screen"</span> or else by using the
-<span class="code">say()</span> function, and the library contributes to
+using a string in double-quotes such as <code class="language-plaintext highlighter-rouge">"this will be
+shown on screen"</code> or else by using the
+<code class="language-plaintext highlighter-rouge">say()</code> function, and the library contributes to
 the output with its own standard messages and responses. For many games
-this is enough, and there's no need to complicate matters any further.
+this is enough, and there’s no need to complicate matters any further.</p>
 
-Some games, however, may occasionally need to do more, such as pausing
+<p>Some games, however, may occasionally need to do more, such as pausing
 the output for dramatic effect, clearing the screen, waiting for a
 keypress, or asking the player to input something other than a command
 at the regular command prompt. TADS 3 provides a set of i/o functions to
-handle this, which the *System Manual* documents in the section on the
-[tads-io Function Set](../sysman/tadsio.html). If you've tried to use
-some of these functions, however, you may have found that they don't
+handle this, which the <em>System Manual</em> documents in the section on the
+<a href="../sysman/tadsio.html">tads-io Function Set</a>. If you’ve tried to use
+some of these functions, however, you may have found that they don’t
 work in quite the way you expected. In fact, they may not be the best
 tools to get the job done (and if you want to compile your game for the
-[Web UI](../sysman/webui.html) they won't work at all). This article will
-briefly explore some of the alternatives.
+<a href="../sysman/webui.html">Web UI</a> they won’t work at all). This article will
+briefly explore some of the alternatives.</p>
 
-## The inputManager
+<h2 id="the-inputmanager">The inputManager</h2>
 
-The tads-io function set includes the functions
-<span class="code">morePrompt()</span>, which displays a MORE prompt and
+<p>The tads-io function set includes the functions
+<code class="language-plaintext highlighter-rouge">morePrompt()</code>, which displays a MORE prompt and
 waits for the player to press a key;
-<span class="code">inputKey()</span>, which waits for the player to
+<code class="language-plaintext highlighter-rouge">inputKey()</code>, which waits for the player to
 press a key and returns the key pressed, and
-<span class="code">inputLine()</span>, which reads a whole line of text
+<code class="language-plaintext highlighter-rouge">inputLine()</code>, which reads a whole line of text
 from the player (up to the point the player presses the ENTER or RETURN
-key) and then returns the string entered.
+key) and then returns the string entered.</p>
 
-The trouble is, as you will soon discover if you've tried to use them,
-that these functions don't entirely work as you want them to. For
-example you may try placing <span class="code">morePrompt()</span> in a
+<p>The trouble is, as you will soon discover if you’ve tried to use them,
+that these functions don’t entirely work as you want them to. For
+example you may try placing <code class="language-plaintext highlighter-rouge">morePrompt()</code> in a
 the middle of some text to create a dramatic pause, but what actually
 happens is that all your text is displayed, and only then the does the
 more prompt appear, at the end, and not in the middle where you actually
-wanted it. E.g. you might write code like:
+wanted it. E.g. you might write code like:</p>
 
-<div class="code">
-
-    "The evil baby-eating villain points his splat-gun at you, pulls the trigger and...";  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "The evil baby-eating villain points his splat-gun at you, pulls the trigger and...";  
     morePrompt();   
     "... suffers a sudden fatal heart attack! ";  
      
@@ -171,16 +167,16 @@ wanted it. E.g. you might write code like:
     function set includea a clearscreen() function for this purpose, and
     you may well have been tempted to use it.
 
-    You may also have come across the <ABOUTBOX> tag than can be used to create an about
+    You may also have come across the &lt;ABOUTBOX&gt; tag than can be used to create an about
     box that displays when a player selects Help|About from an interpreter window. For example, 
     the following would create a fairly general purpose plain-vanilla about box:
 
 
-    "<ABOUTBOX>
-     <CENTER>
+    "&lt;ABOUTBOX&gt;
+     &lt;CENTER&gt;
      &lt;&lt;versionInfo.name.toUpper()&gt;&gt;\b
-     &lt;<versionInfo.byline>&gt;\b
-     Version &lt;<versionInfo.version>&gt;\b       
+     &lt;&lt;versionInfo.byline&gt;&gt;\b
+     Version &lt;&lt;versionInfo.version&gt;&gt;\b       
      &lt;/CENTER&gt;
      &lt;/ABOUTBOX&gt;";
 
@@ -202,11 +198,11 @@ wanted it. E.g. you might write code like:
 
         setAboutBox()
         {
-          "<ABOUTBOX>
-           <CENTER>
+          "&lt;ABOUTBOX&gt;
+           &lt;CENTER&gt;
            &lt;&lt;versionInfo.name.toUpper()&gt;&gt;\b
-           &lt;<versionInfo.byline>&gt;\b
-           Version &lt;<versionInfo.version>&gt;\b       
+           &lt;&lt;versionInfo.byline&gt;&gt;\b
+           Version &lt;&lt;versionInfo.version&gt;&gt;\b       
            &lt;/CENTER&gt;
            &lt;/ABOUTBOX&gt;";
         }
@@ -218,7 +214,7 @@ wanted it. E.g. you might write code like:
     flushes the transcript before clearing the screen, ensuring that any buffered reports
     don't appear on the screen after it's been cleared.
 
-    Finally, if you are intending to compile your game for the Web UI you must use cls() rather than clearscreen(), since clearscreen() is another tads-io function that won't work with the Web UI. Neither, for that matter, will <ABOUTBOX>.
+    Finally, if you are intending to compile your game for the Web UI you must use cls() rather than clearscreen(), since clearscreen() is another tads-io function that won't work with the Web UI. Neither, for that matter, will &lt;ABOUTBOX&gt;.
 
     The mainOutputStream
 
@@ -350,7 +346,7 @@ wanted it. E.g. you might write code like:
            switch(dataType(val))   
            {   
              case TypeSString:   
-             case TypeInt: "&lt;<val>&gt;&lt;.p&gt;"; break;   
+             case TypeInt: "&lt;&lt;val&gt;&gt;&lt;.p&gt;"; break;   
              case TypeTrue: "True&lt;.p&gt;"; break;   
              default: "Nothing to report. ";              
            }     
@@ -398,12 +394,12 @@ wanted it. E.g. you might write code like:
        532 
 
 Although in this case we could have tested for
-<span class="code">dataType(val)</span> being of kind
-<span class="code">TypeDString</span>, that wouldn't work in the more
-general case in which <span class="code">specialMessage</span> was a
+`dataType(val)` being of kind
+`TypeDString`, that wouldn't work in the more
+general case in which `specialMessage` was a
 routine that may or may not display something, e.g:
 
-<div class="code">
+&lt;div class="code"&gt;
 
      specialBall: SpecialThing 'ball' 'ball'   
         specialMessage   
@@ -418,138 +414,130 @@ routine that may or may not display something, e.g:
          }   
         fooVal = 4   
      ;  
+</code></pre></div></div>
 
-</div>
-
-In this highly artificial example,
-<span class="code">specialBall.specialMessage</span> always returns
-'It\\s a moderately special ball. ' but may also display a different
+<p>In this highly artificial example,
+<code class="language-plaintext highlighter-rouge">specialBall.specialMessage</code> always returns
+‘It\s a moderately special ball. ‘ but may also display a different
 string as well depending on the value of
-<span class="code">specialBall.fooVal</span>. Calling
-<span class="code">specialBall.showSpecialMessage</span> will cause
-'It\\s a moderately special ball. ' to be displayed if and only if
-<span class="code">fooVal</span> is between 3 and 9 inclusive; otherwise
-one of the other messages will be displayed instead.
+<code class="language-plaintext highlighter-rouge">specialBall.fooVal</code>. Calling
+<code class="language-plaintext highlighter-rouge">specialBall.showSpecialMessage</code> will cause
+‘It\s a moderately special ball. ‘ to be displayed if and only if
+<code class="language-plaintext highlighter-rouge">fooVal</code> is between 3 and 9 inclusive; otherwise
+one of the other messages will be displayed instead.</p>
 
-### Output Filters
+<h3 id="output-filters">Output Filters</h3>
 
-If you look up the <span class="code">OutputManager</span> class in the
-*Library Reference Manual* (or in output.t), you'll see that it has a
+<p>If you look up the <code class="language-plaintext highlighter-rouge">OutputManager</code> class in the
+<em>Library Reference Manual</em> (or in output.t), you’ll see that it has a
 number of methods for adding and removing Output Filters:
-<span class="code">addOutputFilter(filter), addOutputFilterBelow
-(newFilter, existingFilter),</span> and
-<span class="code">removeOutputFilter(filter)</span>. An OutputFilter is
-simply an object that defines a <span class="code">filterText()</span>
+<code class="language-plaintext highlighter-rouge">addOutputFilter(filter), addOutputFilterBelow
+(newFilter, existingFilter),</code> and
+<code class="language-plaintext highlighter-rouge">removeOutputFilter(filter)</code>. An OutputFilter is
+simply an object that defines a <code class="language-plaintext highlighter-rouge">filterText()</code>
 method that can process any string passed to it and then pass it on to
 the next filter (or, finally, to the display). Both
-<span class="code">captureOutput()</span> and
-<span class="code">watchForOutput()</span> work by temporarily
-installing an OutputFilter and then removing it again when it's done its
+<code class="language-plaintext highlighter-rouge">captureOutput()</code> and
+<code class="language-plaintext highlighter-rouge">watchForOutput()</code> work by temporarily
+installing an OutputFilter and then removing it again when it’s done its
 job. The library also installs a number of OutputFilters to carry out
 tasks such as managing the transcript and interpreting style tags. For
 the most part you can leave the TADS 3 library to employ the
 OutputFilters it uses automatically, and you may write dozens of TADS 3
-games without ever worrying about this mechanism.
+games without ever worrying about this mechanism.</p>
 
-It may, however, be useful to know that it's there, just in case the
+<p>It may, however, be useful to know that it’s there, just in case the
 time should come when you want to manipulate the output in ways that go
 beyond what the normal display mechanism offers (e.g. to summarize a
 series of action reports into one summary report). This is not something
 we shall attempt to go into here; the point is just to note that
-OutputFilters *may* turn out to be something you could use sometime in
-the future. <span id="typo"></span>
+OutputFilters <em>may</em> turn out to be something you could use sometime in
+the future. <span id="typo"></span></p>
 
-There is, however, one further OuputFilter you might find useful
-straight away: this is the <span class="code">cquoteOutputFilter</span>
-provided by Stephen Granade's very useful cquotes.t extension. (The
-source file is in the *lib/extensions* folder in the standard TADS 3
+<p>There is, however, one further OuputFilter you might find useful
+straight away: this is the <code class="language-plaintext highlighter-rouge">cquoteOutputFilter</code>
+provided by Stephen Granade’s very useful cquotes.t extension. (The
+source file is in the <em>lib/extensions</em> folder in the standard TADS 3
 distributions.) Its function is simply to change straight quotes into
 typographic (curly) ones. Since many of the library messages use
-typographic quotes, and output from code you've written using
-<span class="code">\&lt;q\&gt;</span> and <span class="code">\&lt;/q\&gt;</span>
-tags will also use them, but since it's a huge effort to use
-<span class="code">&rsquo;</span> for every apostrophe in your own text,
-you can all too easily end up with a ugly mixture of quote styles like:
+typographic quotes, and output from code you’ve written using
+<code class="language-plaintext highlighter-rouge">\&lt;q\&gt;</code> and <code class="language-plaintext highlighter-rouge">\&lt;/q\&gt;</code>
+tags will also use them, but since it’s a huge effort to use
+<code class="language-plaintext highlighter-rouge">&amp;rsquo;</code> for every apostrophe in your own text,
+you can all too easily end up with a ugly mixture of quote styles like:</p>
 
-“Let's get going – I'm starving!” Bob insists.
+<p>“Let’s get going – I’m starving!” Bob insists.</p>
 
-When it would look so much better to have:
+<p>When it would look so much better to have:</p>
 
-“Let’s get going – I’m starving!” Bob insists.
+<p>“Let’s get going – I’m starving!” Bob insists.</p>
 
-The cquotes.t extension makes this easy by installing an OutputFilter
-that converts all your straight apostrophes (') into typographical ones
+<p>The cquotes.t extension makes this easy by installing an OutputFilter
+that converts all your straight apostrophes (‘) into typographical ones
 (’), without your having to go to the trouble of typing
-<span class="code">&rsquo;</span> for each and every apostrophe in your
-game. It's both an extension well worth using, and a neat illustration
-of the potential usefulness of OutputFilters.
+<code class="language-plaintext highlighter-rouge">&amp;rsquo;</code> for each and every apostrophe in your
+game. It’s both an extension well worth using, and a neat illustration
+of the potential usefulness of OutputFilters.</p>
 
-### Displaying ASCII Diagrams
+<h3 id="displaying-ascii-diagrams">Displaying ASCII Diagrams</h3>
 
-Sometimes in a game it's useful to be able to dispay a diagram or
+<p>Sometimes in a game it’s useful to be able to dispay a diagram or
 picture made up from ordinary text characters, perhaps as a crude map,
-along the lines of:
+along the lines of:</p>
 
-    +---   -----------
-    |    *         +  \
-    |    *     |   |   \
-    +-------------------
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+---   -----------
+|    *         +  \
+|    *     |   |   \
++-------------------
+</code></pre></div></div>
 
-If we try to do this in TADS 3, however, we that find the normally
+<p>If we try to do this in TADS 3, however, we that find the normally
 helpful output formatting, designed to produce good-looking textual
 output, will do its best to defeat us. In particular, runs of
 consecutive dashes will be converted to m-dashes or n-dashes, and runs
-of consecutive spaces will be converted to a single space.
+of consecutive spaces will be converted to a single space.</p>
 
-The conversion of consecutive dashes into m-dashes and n-dashes is
+<p>The conversion of consecutive dashes into m-dashes and n-dashes is
 carried out by an OutputFilter called the typograhicalOutputFilter.
 Perhaps the neatest way to solve this part of our ASCII art problem is
 to tweak the typographicalOutputFilter so we can turn it off when we
-don't want it (i.e. when we're about to output our diagram) and turn it
-back on again when we do (i.e. when we've finished with our diagram and
-we're ready to display ordinary text again):
+don’t want it (i.e. when we’re about to output our diagram) and turn it
+back on again when we do (i.e. when we’ve finished with our diagram and
+we’re ready to display ordinary text again):</p>
 
-<div class="code">
-
-    modify typographicalOutputFilter
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify typographicalOutputFilter
         isActive = true
         activate() { isActive = true; }
         deactivate { isActive = nil; }
         filterText(ostr, val) { return isActive ? inherited(ostr, val) : val; }
     ;  
+</code></pre></div></div>
 
-</div>
-
-Next, we can define a special function for displaying diagrams; this can
+<p>Next, we can define a special function for displaying diagrams; this can
 deactive and reactive the typographicalOutputFilter and also convert
-ordinary spaces to quoted spaces so that consecutive spaces won't be
-reduced to single spaces. It's probably convenient if the function
+ordinary spaces to quoted spaces so that consecutive spaces won’t be
+reduced to single spaces. It’s probably convenient if the function
 accepts a list of strings and inserts a newline after each one, and also
 if it sets and unsets the use of a fixed-spacing font. Our custom
-function could thus look something like this:
+function could thus look something like this:</p>
 
-<div class="code">
-
-    showDiag(lst)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showDiag(lst)
     {    
         typographicalOutputFilter.deactivate();
-        "<pre>";
+        "&lt;pre&gt;";
         foreach(local txt in lst)
         {
            txt = txt.findReplace(' ', '\ ', ReplaceAll);
-           "&lt;<txt>&gt;\n";
+           "&lt;&lt;txt&gt;&gt;\n";
         }
         "&lt;/pre&gt;";
         typographicalOutputFilter.activate();
     } 
+</code></pre></div></div>
 
-&lt;/div&gt;
+<p>We could then use the following code to display our ASCII diagram:</p>
 
-We could then use the following code to display our ASCII diagram:
-
-<div class="code">
-
-    local diag = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local diag = [
         '+---   -----------',
         '|    *         +  \',
         '|    *     |   |   \',
@@ -557,12 +545,9 @@ We could then use the following code to display our ASCII diagram:
       ];
      
     showDiag(diag);
+</code></pre></div></div>
 
-</div>
-
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -577,8 +562,7 @@ Configurations</a>     </span>
 
 </div>
 
-&lt;/div&gt;
-</txt></pre></div></val></ABOUTBOX></versionInfo.version></versionInfo.byline></CENTER></ABOUTBOX></versionInfo.version></versionInfo.byline></CENTER></ABOUTBOX></ABOUTBOX></div></div>
+<p>&lt;/div&gt;</p>
 
 </main>
 <footer>

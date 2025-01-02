@@ -38,86 +38,84 @@
 
 </div>
 
-<div class="main">
+<h1 id="debugging-commands">Debugging Commands</h1>
 
-# Debugging Commands
-
-When testing and debugging a work of interactive fiction it is sometimes
+<p>When testing and debugging a work of interactive fiction it is sometimes
 useful to be able to make use of a set of speoial commands not available
 to normal players of your game. These special commands are known as
-*debugging commands* and should only be included in the debug build of
+<em>debugging commands</em> and should only be included in the debug build of
 your game, not the release build. This section describes the built-in
-debugging commands and briefly discusses how you might add your own.
+debugging commands and briefly discusses how you might add your own.</p>
 
-<span id="built-in"></span>
+<p><span id="built-in"></span></p>
 
-## Built-In Debugging Commands
+<h2 id="built-in-debugging-commands">Built-In Debugging Commands</h2>
 
-The following debugging commands are included in the adv3Lite library.
+<p>The following debugging commands are included in the adv3Lite library.
 They are only included in your game when you compile for debugging, and
-not when you compile for release.
+not when you compile for release.</p>
 
-**PURLOIN**: The command PURLOIN FOO (which can be abbreviated to PN
-FOO) can be used to add any object to the player's inventory; e.g.
+<p><strong>PURLOIN</strong>: The command PURLOIN FOO (which can be abbreviated to PN
+FOO) can be used to add any object to the player’s inventory; e.g.
 PURLOIN BRASS KEY causes the brass key to jump magically into the
-player's possession from wherever the brass key is in the game world.
+player’s possession from wherever the brass key is in the game world.
 The PURLOIN command does impose certain sanity checks, so that, for
-example, you can't purloin yourself, or a room, or anything that
+example, you can’t purloin yourself, or a room, or anything that
 currently contains the player character, but you can purloin things that
-would normally be fixed in place.
+would normally be fixed in place.</p>
 
-**GONEAR**: The command GONEAR FOO (which can be abbreviated to GN FOO
+<p><strong>GONEAR</strong>: The command GONEAR FOO (which can be abbreviated to GN FOO
 or spelt as GO NEAR FOO) teleports the player character to FOO. If FOO
 is a room the player character is taken to that room, otherwise the
 player character is taken to the Room that encloses FOO. If FOO is
 off-stage (i.e. if its location is nil) the command is not allowed to go
 ahead. If FOO is a multiloc the destination the player character is
-taken to may not be well defined.
+taken to may not be well defined.</p>
 
-**FIAT LUX**: The command FIAT LUX (or alternatively LET THERE BE LIGHT)
+<p><strong>FIAT LUX</strong>: The command FIAT LUX (or alternatively LET THERE BE LIGHT)
 causes the player character to light up so s/he can see in an otherwise
-dark place. Repeating the command toggles the illumination off again.
+dark place. Repeating the command toggles the illumination off again.</p>
 
-**DEBUG**: The command DEBUG simply breaks into the debugger.
+<p><strong>DEBUG</strong>: The command DEBUG simply breaks into the debugger.</p>
 
-**DEBUG ACTIONS**: The command DEBUG ACTIONS toggles the display of
+<p><strong>DEBUG ACTIONS</strong>: The command DEBUG ACTIONS toggles the display of
 debugging information about actions on and off. The information
 displayed is simply the name of the action (e.g. PutOn) followed by the
 names of any objects, topics or literals involved in the action,
 separated by colons. The information is displayed at the start of the
-action execution cycle.
+action execution cycle.</p>
 
-**DEBUG DOERS**: The command DEBUG DOERS toggles the display of
+<p><strong>DEBUG DOERS</strong>: The command DEBUG DOERS toggles the display of
 debugging information about doers on and off. The information displayed
-is simply the cmd string of the Doer (e.g. 'put Thing in casket') . The
-information is displayed just before Doer.exec() is called.
+is simply the cmd string of the Doer (e.g. ‘put Thing in casket’) . The
+information is displayed just before Doer.exec() is called.</p>
 
-**DEBUG MESSAGES**: The command DEBUG MESSAGES toggles the display of
+<p><strong>DEBUG MESSAGES</strong>: The command DEBUG MESSAGES toggles the display of
 debugging information about messages on and off. The information
 displayed is the id and pre-processed string of any
-[messages](message.html) output via DMsg() or BMsg() that have a
+<a href="message.html">messages</a> output via DMsg() or BMsg() that have a
 non-empty id. This may be helpful in identifying where the library is
-getting many of its default messages from.
+getting many of its default messages from.</p>
 
-**DEBUG SPELLING**: The command DEBUG SPELLING simply toggles the
+<p><strong>DEBUG SPELLING</strong>: The command DEBUG SPELLING simply toggles the
 display of information about how long the spelling corrector took to
-make a correction.
+make a correction.</p>
 
-**DEBUG STOP** or **DEBUG OFF**: These commands are synonymous and
+<p><strong>DEBUG STOP</strong> or <strong>DEBUG OFF</strong>: These commands are synonymous and
 simply turn all the other debugging options (the three above) off at
-once.
+once.</p>
 
-**DEBUG STATUS**: the command DEBUG STATUS lists whether the various
-debugging options are currently on or off.
+<p><strong>DEBUG STATUS</strong>: the command DEBUG STATUS lists whether the various
+debugging options are currently on or off.</p>
 
-**TEST *XXX***: the TEST command can be used to run test scripts, on
-which see further [below](#tests).
+<p><strong>TEST <em>XXX</em></strong>: the TEST command can be used to run test scripts, on
+which see further <a href="#tests">below</a>.</p>
 
-**EVAL**: The command EVAL *expression* (where *expression* is any valid
+<p><strong>EVAL</strong>: The command EVAL <em>expression</em> (where <em>expression</em> is any valid
 TADS 3 expression) evaluates the expression and displays the result. If
 the expression evaluates to an object EVAL diplays the name property of
 the object (if it has one) together with its superclass list. For
-example:
+example:</p>
 
 <div class="cmdline">
 
@@ -143,7 +141,7 @@ example:
     &gt;open front door
     You open the front door.
 
-</div>
+
 
 The final example of EVAL above illustrates that it is perfectly
 possible to use the EVAL command with an expression that changes the
@@ -158,8 +156,8 @@ If you want to define additional debugging commands for your particular
 game, you can do so using the same means as described in the section on
 [Defining New Actions](define.html) above, with a couple of extra steps:
 
-1.  Enclose the complete definition between <span class="code">\#ifdef
-    \_\_DEBUG</span> and <span class="code">\#endif</span> preprocessor
+1.  Enclose the complete definition between `\#ifdef
+    \_\_DEBUG` and `\#endif` preprocessor
     commands to ensure that your custom debugging commands are included
     only when you compiple for debugging.
 2.  Ensure your action definition allows for universal scope if it needs
@@ -172,8 +170,7 @@ have a SUMMON command which can summon any object into the player
 character's presence (i.e. the same room as the player character) we
 could do it like this:
 
-<div class="code">
-
+```
      
     #ifdef __DEBUG
 
@@ -213,8 +210,7 @@ could do it like this:
         }
     ;
     #endif
-
-&lt;/div&gt;
+```
 
 Note that since we probably don't want our debugging action to count as
 normal turn we override beforeAction(), afterAction() and turnSequence()
@@ -236,26 +232,22 @@ an object of the Test class (it can be an anonymous object). Use the
 referred to with a TEST command. Then define the list of commands to be
 performed by the test script in the **testList** property. For example:
 
-<div class="code">
-
+```
      Test 
         testName = 'foo'
         testList = ['x me', 'i', 'look']
      ; 
      
-
-</div>
+```
 
 With this definition in place you can use the command TEST FOO to carry
 out X ME followed by I followed by LOOK. You can also abbreviate the
 definition of the Test object by using the built-in template, so:
 
-<div class="code">
-
+```
      
      Test 'foo' ['x me', 'i', 'look'];
-
-</div>
+```
 
 For some scripts to work as required it may be necessary for the actor
 to be in a particular location, or to have particular items in his/her
@@ -269,26 +261,22 @@ conditions by using gonear and purloin commands in the script, but we
 can also do so using the **location** and **testHolding** properties of
 our Test object, thus:
 
-<div class="code">
-
+```
     Test 
        testName = 'queen'
        testList = ['unlock golden door with diamond key', 'n', 'x queen', 'give yellow rose to queen']
        location = tulipPassage
        testHolding = [diamondKey, yellowRose]   
     ;
-
-</div>
+```
 
 Again, this may be abbreviated via use of the template to:
 
-<div class="code">
-
+```
     Test 'queen' ['unlock golden door with diamond key', 'n', 'x queen', 'give yellow rose to queen']
       @tulipPassage [diamondKey, yellowRose]
     ;
-
-</div>
+```
 
 The command TEST QUEEN will then move the player character to
 tulipPassage, move the diamondKey and the yellowRose into his inventory,
@@ -307,12 +295,11 @@ the list of commands associated with each test name.
 
 Finally, the TEST class and its associated actions are only defined in a
 debug build, so you need to make sure that you surround any TEST
-definitions with <span class="code">\#ifdef \_DEBUG</span> and
-<span class="code">\#endif</span> so that they don't cause compilation
+definitions with `\#ifdef \_DEBUG` and
+`\#endif` so that they don't cause compilation
 errors in a release build; for example:
 
-<div class="code">
-
+```
     #ifdef __DEBUG
 
     Test 'foo' ['x me', 'i', 'look'];
@@ -323,8 +310,7 @@ errors in a release build; for example:
      
     #endif 
      
-
-</div>
+```
 
   
 <span id="additional"></span>
@@ -377,7 +363,7 @@ To change how comments should be prefixed, see the discussion of the
     </span>
 
 </div>
-</gActionListStr></div></div>
+</gActionListStr></div>
 
 </main>
 <footer>

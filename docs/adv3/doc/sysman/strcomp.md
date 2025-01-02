@@ -18,7 +18,7 @@ StringComparator
 
 </div>
 
-<div class="main">
+
 
 # StringComparator
 
@@ -235,7 +235,7 @@ s2)` indicates a match, then
 `calcHash(s1)` will equal
 `calcHash(s2)`.
 
-</div>
+
 
 `matchValues(*inputStr*, *refStr*)`
 

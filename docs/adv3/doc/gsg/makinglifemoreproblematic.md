@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](climbingthetree.html)
@@ -942,7 +942,7 @@ We could do the same with `\b`, except that using `<.p>` ensures we
 don't get multiple blank lines should the next message start with
 `<.p>`. The connector should now look like this:   
 
-</div>
+
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>

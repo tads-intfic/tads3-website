@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](easingtestinganddebugging.html)
@@ -156,4 +156,4 @@ rest is up to you.
 *[\[Previous\]](easingtestinganddebugging.html)
   [\[Next\]](appendixa-actionmessagepropert.html)*
 
-</div>
+

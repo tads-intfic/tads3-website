@@ -19,7 +19,7 @@ Game
 
 </div>
 
-<div class="main">
+
 
 # Improving the Game
 
@@ -285,7 +285,7 @@ This may not save us a lot of typing, but it perhaps makes it easier to
 see at a glance what kind of thing the pedestal is. We'll make some more
 substantial changes to the pedestal in the next section.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

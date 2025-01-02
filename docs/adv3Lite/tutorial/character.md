@@ -17,7 +17,7 @@ Building
 
 </div>
 
-<div class="main">
+
 
 # Chapter 10: Character Building
 
@@ -30,7 +30,7 @@ In this chapter we start implementing some Non-Player Characters.
 [Pablo Cortes — A Man with Several Agendas](cortes.html)  
 [The Flight Attendant — Getting in a State](attendant.html)  
 
-</div>
+
 
 </div>
 

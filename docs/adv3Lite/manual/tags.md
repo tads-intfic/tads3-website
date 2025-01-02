@@ -19,7 +19,7 @@ Conversation</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # String Tags and Object Tags
 
@@ -149,7 +149,7 @@ next turn. In fact, this would be the way to do it even if we weren't
 using any conversation tags, since we'd probably want to make Bob the
 current interlocutor after such an interjection.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

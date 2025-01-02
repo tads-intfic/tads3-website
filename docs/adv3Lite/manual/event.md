@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Events
 
@@ -178,7 +178,7 @@ and Daemons may not be executed if the turn cycle is interrupted (by an
 `abort` statement, for example), PromptDaemons
 are always executed.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

@@ -18,7 +18,7 @@ Classes</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Reflection
 
@@ -269,7 +269,7 @@ a project file, just add it to your t3make command line:
 
     t3make myProg.t reflect.t
 
-</div>
+
 
 Note that, by default, reflect.t does not include support for the
 BigNumber intrinsic class. However, you can enable BigNumber support by

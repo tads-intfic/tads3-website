@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # RexPattern
 
@@ -107,7 +107,7 @@ following:
 Returns the original string used to create the object (i.e., the string
 passed as the argument in the "new" expression that created the object).
 
-</div>
+
 
 </div>
 

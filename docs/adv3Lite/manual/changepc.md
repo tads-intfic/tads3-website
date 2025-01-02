@@ -19,7 +19,7 @@ Conversation</a>    
 
 </div>
 
-<div class="main">
+
 
 # Changing the Player Character
 
@@ -155,7 +155,7 @@ might look like this:
 In practice, you'd probably want to vary the two descriptions by more
 than this.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

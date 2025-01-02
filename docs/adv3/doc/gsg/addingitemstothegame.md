@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](averysimplegame.html)
@@ -328,4 +328,4 @@ Surface and a Container.
 *[\[Previous\]](averysimplegame.html)
   [\[Next\]](makingtheitemsdosomething.html)*
 
-</div>
+

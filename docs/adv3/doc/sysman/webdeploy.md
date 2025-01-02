@@ -18,7 +18,7 @@ TADS Web server</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Deploying your Web UI game
 
@@ -260,7 +260,7 @@ temporary storage only, you can use [TemporaryFile](tempfile.html)
 objects to create server-side temporary files without any user
 interaction.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

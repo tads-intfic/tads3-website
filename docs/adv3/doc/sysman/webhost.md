@@ -19,7 +19,7 @@ Localizing TADS</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Setting up a custom TADS Web server
 
@@ -147,7 +147,7 @@ Here are the key things to check in your Apache configuration file
          SetHandler application/x-httpd-php
       </FilesMatch>
 
-  </div>
+  
 - Ensure that .htaccess files can override allow/deny settings. This
   might require adding `AllowOverride All` in
   the section for the directory tree where you're placing the TADS php

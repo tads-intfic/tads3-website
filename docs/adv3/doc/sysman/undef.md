@@ -18,7 +18,7 @@ Undefined Methods
 
 </div>
 
-<div class="main">
+
 
 # Capturing Calls to Undefined Properties
 
@@ -146,7 +146,7 @@ easy to implement.
     ;
 ```
 
-</div>
+
 
 ------------------------------------------------------------------------
 

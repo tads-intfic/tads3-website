@@ -27,177 +27,172 @@
 
 </div>
 
-<div class="main">
+<p><a href="index.html">[Main]</a><br />
+<em><a href="wheretogofromhere.html">[Previous]</a>   </em></p>
 
-[\[Main\]](index.html)  
-*[\[Previous\]](wheretogofromhere.html)   *
+<h1 id="appendix-a---action-message-properties">Appendix A - Action Message Properties</h1>
 
-# Appendix A - Action Message Properties
+<p>d = dObjFor i = iObjFor A=Action C=Check V=Verify</p>
 
-d = dObjFor i = iObjFor A=Action C=Check V=Verify  
-  
-AskAbout     Thing dV          notAddressableMsg  
-AskFor       Thing dV          notAddressableMsg  
-AttachTo     Thing dV          cannotAttachMsg  
-             Thing iV          cannotAttachToMsg  
-Attack       Thing dA          uselessToAttackMsg  
-AttackWith   Thing dA          uselessToAttackMsg  
-             Thing iV          notAWeaponMsg  
-Board        Thing dV          cannotBoardMsg  
-Break        Thing dV          shouldNotBreakMsg  
-BurnWith     Thing dV          cannotBurnMsg  
-             Thing iV          cannotBurnWithMsg  
-Clean        Thing dV          cannotCleanMsg  
-CleanWith    Thing dV          cannotCleanMsg  
-             Thing iV          cannotCleanWithMsg  
-Climb        Thing dV          cannotClimbMsg  
-ClimbDown    Thing dV          cannotClimbMsg  
-ClimbUp      Thing dV          cannotClimbMsg  
-Close        Thing dV          cannotCloseMsg  
-Consult      Thing dV          cannotConsultMsg  
-ConsultAbout Thing dV          cannotConsultMsg  
-CutWith      Thing dA          cutNoEffectMsg  
-             Thing iV          cannotCutWithMsg  
-Default      Decoration diV    notImportantMsg  
-             Distant diV       tooDistantMsg(self)  
-             Intangible diV    notWithIntangibleMsg  
-             Unthing diV       notHereMsg  
-Detach       Thing dV          cannotDetachMsg  
-DetachFrom   Thing dV          cannotDetachMsg  
-             Thing iV          cannotDetachFromMsg  
-DigWith      Thing dV          cannotDigMsg  
-             Thing iV          cannotDigWithMsg  
-Drink        Thing dV          cannotDrinkMsg  
-Drop         Immovable dA      cannotMoveMsg  
-Doff         Thing dV          notDoffableMsg  
-Eat          Thing dV          cannotEatMsg  
-Enter        Thing dV          cannotEnterMsg  
-EnterOn      Thing dV          cannotEnterOnMsg  
-Extinguish   Thing dV          cannotExtinguishMsg  
-Fasten       Thing dV          cannotFastenMsg  
-FastenTo     Thing dV          cannotFastenMsg  
-             Thing iV          cannotFastenToMsg  
-Flip         Thing dV          cannotFlipMsg  
-Feel         Thing dA          feelDesc ""  
-Follow       Thing dV          notFollowableMsg  
-GetOffOf     Thing dV          cannotGetOffOfMsg  
-GetOutOf     Thing dV          cannotUnboardMsg  
-GoThrough    Thing dV          cannotGoThroughMsg  
-GiveTo       Thing iV          notInterestedMsg  
-JumpOff      Thing dV          cannotJumpOffMsg  
-JumpOver     Thing dV          cannotJumpOverMsg  
-Kiss         Thing dV          cannotKissMsg  
-             Actor dA          cannotKissActorMsg  
-LieOn        Thing dV          cannotLieOnMsg  
-Listen       Thing dA         (soundDesc "" )  
-Light        Thing             asDobjFor(Burn)  
-Lock         Thing dV          cannotLockMsg  
-         IndirectLockable dC   cannotLockMsg  
-LockWith     Thing dV          cannotLockMsg  
-             Thing iV          cannotLockWithMsg  
-             Lockable dV       noKeyNeededMsg  
-         IndirectLockable dC   cannotLockMsg  
-LookBehind   Thing dA          nothingBehindMsg  
-LookIn       Thing dA          lookInDesc ""  
-LookThrough  Thing dA          nothingThroughMsg  
-LookUnder    Thing dA          nothingUnderMsg  
-Move         Thing dA          moveNoEffectMsg  
-             Fixture dV        cannotMoveMsg  
-             Immovable dA      cannotMoveMsg  
-MoveTo       Thing dA          moveToNoEffectMsg  
-             Fixture dV        cannotMoveMsg  
-             Immovable dC      cannotMoveMsg  
-MoveWith     Thing dA          moveNoEffectMsg  
-             Thing iV          cannotMoveWithMsg  
-             Immovable dC      cannotMoveMsg  
-             Fixture dV        cannotMoveMsg  
-Open         Thing dV          cannotOpenMsg  
-PlugIn       Thing dV          cannotPlugInMsg  
-PlugInto     Thing dV          cannotPlugInMsg  
-             Thing iV          cannotPlugInToMsg  
-Pour         Thing dV          cannotPourMsg  
-PourInto     Thing dV          cannotPourMsg  
-             Thing iV          cannotPourIntoMsg  
-PourOnto     Thing dV          cannotPourMsg  
-             Thing iV          cannotPourOntoMsg  
-Pull         Thing dA          pullNoEffectMsg  
-             Fixture dV        cannotMoveMsg  
-             Immovable dA      cannotMoveMsg  
-Push         Thing dA          pushNoEffectMsg  
-             Fixture dV        cannotMoveMsg  
-             Immovable dA      cannotMoveMsg  
-PushTravel   Thing dV          cannotPushTravelMsg  
-             Fixture dV        cannotMoveMsg  
-             Immovable dA      cannotMoveMsg  
-PutBehind    Thing iV          cannotPutBehindMsg  
-             Fixture dV        cannotPutMsg  
-             Component dV      cannotPutComponentMsg(location)  
-             Immovable dC      cannotPutMsg  
-PutIn        Thing iV          notAContainerMsg  
-             Fixture dV        cannotPutMsg  
-             Component dV      cannotPutComponentMsg(location)  
-             Immovable dC      cannotPutMsg  
-PutOn        Thing iV          notASurfaceMsg  
-             Fixture dV        cannotPutMsg  
-             Component dV      cannotPutComponentMsg(location)  
-             Immovable dC      cannotPutMsg  
-PutUnder     Thing iV          cannotPutUnderMsg  
-             Fixture dV        cannotPutMsg  
-             Component dV      cannotPutComponentMsg(location)  
-             Immovable dC      cannotPutMsg  
-Screw        Thing dV          cannotScrewMsg  
-ScrewWith    Thing dV          cannotScrewMsg  
-             Thing iV          cannotScrewWithMsg  
-Search       Thing dA          as LookIn  
-SitOn        Thing dV          cannotSitOnMsg  
-ShowTo       Thing iV          notInterestedMsg  
-Smell        Thing dA         (smellDesc "" )  
-StandOn      Thing dV          cannotStandOnMsg  
-Switch       Thing dV          cannotSwitchMsg  
-Take         Fixture dV        cannotTakeMsg  
-             Component dV      cannotTakeComponentMsg(location)  
-             Immovable dA      cannotTakeMsg  
-TakeFrom     Fixture dV        cannotTakeMsg  
-             Component dV      cannotTakeComponentMsg(location)  
-             Immovable dC      cannotTakeMsg  
-TellAbout    Thing dV          notAddressableMsg  
-TalkTo       Thing dV          notAddressableMsg  
-Taste        Thing dA          tasteDesc ""  
-Turn         Thing dV          cannotTurnMsg  
-             Immovable dA      cannotMoveMsg  
-TurnOff      Thing dV          cannotTurnOffMsg  
-TurnOn       Thing dV          cannotTurnOnMsg  
-TurnTo       Thing dV          cannotTurnMsg  
-TurnWith     Thing dV          cannotTurnMsg  
-             Thing iV          cannotTurnWithMsg  
-ThrowDir     Thing dA          dontThrowDirMsg *or* ShouldNotThrowAtFloorMsg  
-ThrowTo      Thing dV          willNotCatchMsg(self)  
-TypeLiteralOn Thing dV         cannotTypeOnMsg  
-Unfasten     Thing dV          cannotUnfastenMsg  
-             Thing iV          cannotUnfastenFromMsg  
-UnPlug       Thing dV          cannotUnplugMsg  
-UnPlugFrom   Thing dV          cannotUnplugMsg  
-             Thing iV          cannotUnplugFromMsg  
-Unlock       Thing dV          cannotUnlockMsg  
-         IndirectLockable dC   cannotUnlockMsg  
-UnlockWith   Thing dV          cannotUnlockMsg  
-             Thing iV          cannotUnlockWithMsg  
-             Lockable dV       noKeyNeededMsg  
-         IndirectLockable dC   cannotUnlockMsg  
-Unscrew      Thing dV          cannotUnscrewMsg  
-UnscrewWith  Thing dV          cannotUnscrewMsg  
-             Thing iV          cannotUnscrewMsg  
-Wear         Thing dV          notWearableMsg  
-  
-  
+<p>AskAbout     Thing dV          notAddressableMsg<br />
+AskFor       Thing dV          notAddressableMsg<br />
+AttachTo     Thing dV          cannotAttachMsg<br />
+             Thing iV          cannotAttachToMsg<br />
+Attack       Thing dA          uselessToAttackMsg<br />
+AttackWith   Thing dA          uselessToAttackMsg<br />
+             Thing iV          notAWeaponMsg<br />
+Board        Thing dV          cannotBoardMsg<br />
+Break        Thing dV          shouldNotBreakMsg<br />
+BurnWith     Thing dV          cannotBurnMsg<br />
+             Thing iV          cannotBurnWithMsg<br />
+Clean        Thing dV          cannotCleanMsg<br />
+CleanWith    Thing dV          cannotCleanMsg<br />
+             Thing iV          cannotCleanWithMsg<br />
+Climb        Thing dV          cannotClimbMsg<br />
+ClimbDown    Thing dV          cannotClimbMsg<br />
+ClimbUp      Thing dV          cannotClimbMsg<br />
+Close        Thing dV          cannotCloseMsg<br />
+Consult      Thing dV          cannotConsultMsg<br />
+ConsultAbout Thing dV          cannotConsultMsg<br />
+CutWith      Thing dA          cutNoEffectMsg<br />
+             Thing iV          cannotCutWithMsg<br />
+Default      Decoration diV    notImportantMsg<br />
+             Distant diV       tooDistantMsg(self)<br />
+             Intangible diV    notWithIntangibleMsg<br />
+             Unthing diV       notHereMsg<br />
+Detach       Thing dV          cannotDetachMsg<br />
+DetachFrom   Thing dV          cannotDetachMsg<br />
+             Thing iV          cannotDetachFromMsg<br />
+DigWith      Thing dV          cannotDigMsg<br />
+             Thing iV          cannotDigWithMsg<br />
+Drink        Thing dV          cannotDrinkMsg<br />
+Drop         Immovable dA      cannotMoveMsg<br />
+Doff         Thing dV          notDoffableMsg<br />
+Eat          Thing dV          cannotEatMsg<br />
+Enter        Thing dV          cannotEnterMsg<br />
+EnterOn      Thing dV          cannotEnterOnMsg<br />
+Extinguish   Thing dV          cannotExtinguishMsg<br />
+Fasten       Thing dV          cannotFastenMsg<br />
+FastenTo     Thing dV          cannotFastenMsg<br />
+             Thing iV          cannotFastenToMsg<br />
+Flip         Thing dV          cannotFlipMsg<br />
+Feel         Thing dA          feelDesc ””<br />
+Follow       Thing dV          notFollowableMsg<br />
+GetOffOf     Thing dV          cannotGetOffOfMsg<br />
+GetOutOf     Thing dV          cannotUnboardMsg<br />
+GoThrough    Thing dV          cannotGoThroughMsg<br />
+GiveTo       Thing iV          notInterestedMsg<br />
+JumpOff      Thing dV          cannotJumpOffMsg<br />
+JumpOver     Thing dV          cannotJumpOverMsg<br />
+Kiss         Thing dV          cannotKissMsg<br />
+             Actor dA          cannotKissActorMsg<br />
+LieOn        Thing dV          cannotLieOnMsg<br />
+Listen       Thing dA         (soundDesc ”“ )<br />
+Light        Thing             asDobjFor(Burn)<br />
+Lock         Thing dV          cannotLockMsg<br />
+         IndirectLockable dC   cannotLockMsg<br />
+LockWith     Thing dV          cannotLockMsg<br />
+             Thing iV          cannotLockWithMsg<br />
+             Lockable dV       noKeyNeededMsg<br />
+         IndirectLockable dC   cannotLockMsg<br />
+LookBehind   Thing dA          nothingBehindMsg<br />
+LookIn       Thing dA          lookInDesc ””<br />
+LookThrough  Thing dA          nothingThroughMsg<br />
+LookUnder    Thing dA          nothingUnderMsg<br />
+Move         Thing dA          moveNoEffectMsg<br />
+             Fixture dV        cannotMoveMsg<br />
+             Immovable dA      cannotMoveMsg<br />
+MoveTo       Thing dA          moveToNoEffectMsg<br />
+             Fixture dV        cannotMoveMsg<br />
+             Immovable dC      cannotMoveMsg<br />
+MoveWith     Thing dA          moveNoEffectMsg<br />
+             Thing iV          cannotMoveWithMsg<br />
+             Immovable dC      cannotMoveMsg<br />
+             Fixture dV        cannotMoveMsg<br />
+Open         Thing dV          cannotOpenMsg<br />
+PlugIn       Thing dV          cannotPlugInMsg<br />
+PlugInto     Thing dV          cannotPlugInMsg<br />
+             Thing iV          cannotPlugInToMsg<br />
+Pour         Thing dV          cannotPourMsg<br />
+PourInto     Thing dV          cannotPourMsg<br />
+             Thing iV          cannotPourIntoMsg<br />
+PourOnto     Thing dV          cannotPourMsg<br />
+             Thing iV          cannotPourOntoMsg<br />
+Pull         Thing dA          pullNoEffectMsg<br />
+             Fixture dV        cannotMoveMsg<br />
+             Immovable dA      cannotMoveMsg<br />
+Push         Thing dA          pushNoEffectMsg<br />
+             Fixture dV        cannotMoveMsg<br />
+             Immovable dA      cannotMoveMsg<br />
+PushTravel   Thing dV          cannotPushTravelMsg<br />
+             Fixture dV        cannotMoveMsg<br />
+             Immovable dA      cannotMoveMsg<br />
+PutBehind    Thing iV          cannotPutBehindMsg<br />
+             Fixture dV        cannotPutMsg<br />
+             Component dV      cannotPutComponentMsg(location)<br />
+             Immovable dC      cannotPutMsg<br />
+PutIn        Thing iV          notAContainerMsg<br />
+             Fixture dV        cannotPutMsg<br />
+             Component dV      cannotPutComponentMsg(location)<br />
+             Immovable dC      cannotPutMsg<br />
+PutOn        Thing iV          notASurfaceMsg<br />
+             Fixture dV        cannotPutMsg<br />
+             Component dV      cannotPutComponentMsg(location)<br />
+             Immovable dC      cannotPutMsg<br />
+PutUnder     Thing iV          cannotPutUnderMsg<br />
+             Fixture dV        cannotPutMsg<br />
+             Component dV      cannotPutComponentMsg(location)<br />
+             Immovable dC      cannotPutMsg<br />
+Screw        Thing dV          cannotScrewMsg<br />
+ScrewWith    Thing dV          cannotScrewMsg<br />
+             Thing iV          cannotScrewWithMsg<br />
+Search       Thing dA          as LookIn<br />
+SitOn        Thing dV          cannotSitOnMsg<br />
+ShowTo       Thing iV          notInterestedMsg<br />
+Smell        Thing dA         (smellDesc ”“ )<br />
+StandOn      Thing dV          cannotStandOnMsg<br />
+Switch       Thing dV          cannotSwitchMsg<br />
+Take         Fixture dV        cannotTakeMsg<br />
+             Component dV      cannotTakeComponentMsg(location)<br />
+             Immovable dA      cannotTakeMsg<br />
+TakeFrom     Fixture dV        cannotTakeMsg<br />
+             Component dV      cannotTakeComponentMsg(location)<br />
+             Immovable dC      cannotTakeMsg<br />
+TellAbout    Thing dV          notAddressableMsg<br />
+TalkTo       Thing dV          notAddressableMsg<br />
+Taste        Thing dA          tasteDesc ””<br />
+Turn         Thing dV          cannotTurnMsg<br />
+             Immovable dA      cannotMoveMsg<br />
+TurnOff      Thing dV          cannotTurnOffMsg<br />
+TurnOn       Thing dV          cannotTurnOnMsg<br />
+TurnTo       Thing dV          cannotTurnMsg<br />
+TurnWith     Thing dV          cannotTurnMsg<br />
+             Thing iV          cannotTurnWithMsg<br />
+ThrowDir     Thing dA          dontThrowDirMsg <em>or</em> ShouldNotThrowAtFloorMsg<br />
+ThrowTo      Thing dV          willNotCatchMsg(self)<br />
+TypeLiteralOn Thing dV         cannotTypeOnMsg<br />
+Unfasten     Thing dV          cannotUnfastenMsg<br />
+             Thing iV          cannotUnfastenFromMsg<br />
+UnPlug       Thing dV          cannotUnplugMsg<br />
+UnPlugFrom   Thing dV          cannotUnplugMsg<br />
+             Thing iV          cannotUnplugFromMsg<br />
+Unlock       Thing dV          cannotUnlockMsg<br />
+         IndirectLockable dC   cannotUnlockMsg<br />
+UnlockWith   Thing dV          cannotUnlockMsg<br />
+             Thing iV          cannotUnlockWithMsg<br />
+             Lockable dV       noKeyNeededMsg<br />
+         IndirectLockable dC   cannotUnlockMsg<br />
+Unscrew      Thing dV          cannotUnscrewMsg<br />
+UnscrewWith  Thing dV          cannotUnscrewMsg<br />
+             Thing iV          cannotUnscrewMsg<br />
+Wear         Thing dV          notWearableMsg</p>
 
-------------------------------------------------------------------------
+<hr />
 
-*Getting Started in TADS 3*  
-[\[Main\]](index.html)  
-*[\[Previous\]](wheretogofromhere.html)   *
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="wheretogofromhere.html">[Previous]</a>   </em></p>
 
-</div>
 
 </main>
 <footer>

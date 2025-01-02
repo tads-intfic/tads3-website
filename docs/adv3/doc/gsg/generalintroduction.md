@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](newchapterwithtext.html)
@@ -149,4 +149,4 @@ confusion you may want to postpone them for a while.
 *[\[Previous\]](newchapterwithtext.html)
   [\[Next\]](creatingyourfirsttads3project.html)*
 
-</div>
+

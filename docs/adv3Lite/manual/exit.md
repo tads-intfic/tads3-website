@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Exits
 
@@ -77,7 +77,7 @@ player character ends up) always counts as visited (unless it's dark),
 from then on the corresponding exit will be shown as leading to a
 visited location.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

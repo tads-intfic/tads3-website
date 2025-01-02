@@ -19,7 +19,7 @@ Characters</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -376,7 +376,7 @@ value for the saved state data stream.
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 

@@ -18,7 +18,7 @@ Attendant</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Pablo Cortez — A Man with Several Agendas
 
@@ -319,7 +319,7 @@ flight attendant. In the meantime if you want the full story about
 [AgendaItems](../manual/agenda.html), you can read about them in the
 *adv3Lite Library Manual*.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

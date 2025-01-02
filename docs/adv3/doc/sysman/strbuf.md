@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # StringBuffer
 
@@ -233,7 +233,7 @@ if possible. Integers, BigNumber values, and and
 `true` and `nil` values
 can all be converted automatically.
 
-</div>
+
 
 `charAt(*idx*)`
 

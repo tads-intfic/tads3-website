@@ -39,52 +39,48 @@ map
 
 </div>
 
-<div class="main">
+<h1 id="laying-out-the-map">Laying out the map</h1>
 
-# Laying out the map
+<p>In this chapter we’ll implement another very simple game, one that’s
+initially even simpler than <em>The Adventures of Heidi</em>, though as we
+progress we’ll improve it in ways that introduce several new features of
+the adv3Lite library.</p>
 
-In this chapter we'll implement another very simple game, one that's
-initially even simpler than *The Adventures of Heidi*, though as we
-progress we'll improve it in ways that introduce several new features of
-the adv3Lite library.
-
-The plot of the game could hardly be simpler. An explorer arrives
+<p>The plot of the game could hardly be simpler. An explorer arrives
 outside the entrance to a cave. Inside he finds a priceless gold skull
 resting on a stone pedestal. If he takes the skull, however, he springs
 a trap that kills him instantly. The solution is to place a rock on the
 pedestal before removing the skull, so that the weight of the rock
 prevents the springing of the trap. The game is won when the player
-character heads back to his camp carrying the gold skull.
+character heads back to his camp carrying the gold skull.</p>
 
-To start implementing this game you need to carry out the steps listed
-for creating a new adv3Lite game back in [Chapter 2](setting.html),
-substituting 'goldskull' for 'heidi' throughout. Create a new
+<p>To start implementing this game you need to carry out the steps listed
+for creating a new adv3Lite game back in <a href="setting.html">Chapter 2</a>,
+substituting ‘goldskull’ for ‘heidi’ throughout. Create a new
 directory/folder for the goldskull project, copy the template files into
 it, and then rename those with adv3Ltemplate in their name appropriately
 (i.e. to goldskull but with the same file extension). Then open the
 source file start.t in the goldskull directory, either using the
-Workbench editor (in Windows) or some other text editor. Or, if you're
+Workbench editor (in Windows) or some other text editor. Or, if you’re
 using Windows Workbench, simply use the New Project wizard to create a
-new adv3Lite project called "goldskull".
+new adv3Lite project called “goldskull”.</p>
 
-To lay out the map we simply need to create an additional room to
+<p>To lay out the map we simply need to create an additional room to
 represent the cave, and three objects: the pedestal, the skull and the
-rock. There's very little that's new here; this is what the code should
-look like:
+rock. There’s very little that’s new here; this is what the code should
+look like:</p>
 
-<div class="code">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
 
-    #charset "us-ascii"
-
-    #include <tads.h>
+    #include &lt;tads.h&gt;
     #include "advlite.h"
 
     versionInfo: GameID
         IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
         name = 'Goldskull'
         byline = 'by A.N. Author'
-        htmlByline = 'by <a href="mailto:an.author@somemail.com">
-                      A.N. Author</a>'
+        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                      A.N. Author&lt;/a&gt;'
         version = '1'
         authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
         desc = 'Your blurb here.'
@@ -146,34 +142,31 @@ look like:
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Changes to the boiler-plate code already provided are marked in bold to
-make them easier to see. There's just a couple of things to note here.
-First, we've added a description to the me object so that there's a
+<p>Changes to the boiler-plate code already provided are marked in bold to
+make them easier to see. There’s just a couple of things to note here.
+First, we’ve added a description to the me object so that there’s a
 meaningful non-default response to EXAMINE ME. Just to show that it can
-be done, we've defined the player character using the Player class
-instead of the Thing class, though we needn't have made this change;
+be done, we’ve defined the player character using the Player class
+instead of the Thing class, though we needn’t have made this change;
 defining the player character as a Thing and setting its essential
 properties as in the Heidi example would have had exactly the same
 effect. Note in particular the two + signs in front of the
-<span class="code">goldSkull</span> object, to indicate that it's
+<code class="language-plaintext highlighter-rouge">goldSkull</code> object, to indicate that it’s
 located on the pedestal, which is itself located in the cave. Note also
-that since the <span class="code">smallRock</span> object has only one
-plus sign, it's in the cave, not on the pedestal. Finally, recall that
-defining <span class="code">contType = On</span> on the pedestal makes
-it something its contents rest *on* (rather than in, under or behind).
+that since the <code class="language-plaintext highlighter-rouge">smallRock</code> object has only one
+plus sign, it’s in the cave, not on the pedestal. Finally, recall that
+defining <code class="language-plaintext highlighter-rouge">contType = On</code> on the pedestal makes
+it something its contents rest <em>on</em> (rather than in, under or behind).</p>
 
-If you try compiling and running the game now you should be able to move
-between the two rooms and move the skull and the rock around, but that's
-about it. In the next section we'll make a few more things happen, but
-for now it's probably worth trying out what you've got so far just to
-make sure it all works.
+<p>If you try compiling and running the game now you should be able to move
+between the two rooms and move the skull and the rock around, but that’s
+about it. In the next section we’ll make a few more things happen, but
+for now it’s probably worth trying out what you’ve got so far just to
+make sure it all works.</p>
 
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -187,7 +180,6 @@ map
     </span>
 
 </div>
-</tads.h></div></div>
 
 </main>
 <footer>

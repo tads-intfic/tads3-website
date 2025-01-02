@@ -18,7 +18,7 @@ Book</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Who Should Read This Book?
 
@@ -79,7 +79,7 @@ following it closely, say, when you reach Chapter 7 and we start working
 on a more advanced game. That's entirely up to you. In the next section
 I'll say a little more about the various ways you can use this book.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

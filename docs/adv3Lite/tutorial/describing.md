@@ -18,7 +18,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Describing the game
 
@@ -163,7 +163,7 @@ get our teeth into, and should offer ample opportunity both to practice
 what we've learned in previous chapters and introduce further features
 of the adv3Lite library.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

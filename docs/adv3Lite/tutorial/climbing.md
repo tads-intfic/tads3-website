@@ -19,7 +19,7 @@ the tree</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Climbing the tree
 
@@ -50,7 +50,7 @@ Here's the next problem the player may encounter:
     >climb tree
     The tall sycamore tree is not something you can climb. 
 
-</div>
+
 
 It should hardly need spelling out why this won't do. Not only is CLIMB
 TREE a perfectly natural thing to try in any case, but the description

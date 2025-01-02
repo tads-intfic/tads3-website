@@ -15,7 +15,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Chapter I: Introduction
 
@@ -29,7 +29,7 @@ the tutorial.
 [How To Use This Book](howtouse.html)  
 [Acknowledgements and Explanations](acknowledge.html)  
 
-</div>
+
 
 </div>
 

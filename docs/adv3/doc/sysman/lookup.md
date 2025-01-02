@@ -17,7 +17,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # LookupTable
 
@@ -216,7 +216,7 @@ all of the values in the table according to the given function. The keys
 are not changed. The entries are visited in arbitrary order. No return
 value.
 
-</div>
+
 
 `forEach(*func*)`
 

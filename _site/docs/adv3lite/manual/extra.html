@@ -37,11 +37,9 @@
 
 </div>
 
-<div class="main">
+<h1 id="extras">Extras</h1>
 
-# Extras
-
-The adv3Lite library has been devised to minimize the number of classes
+<p>The adv3Lite library has been devised to minimize the number of classes
 a game author has to remember, so that a huge number of game objects can
 simply be defined as belonging to the Thing class. That may suit some
 game authors but not all. Authors used to the adv3 library may prefer to
@@ -49,66 +47,68 @@ use the classes they are familiar with from there. Also, while using a
 greater number of classes means you have to remember more initially, it
 may make your code more readable in the long term, since assigning an
 object to an appropriate class may make it more immediately obvious what
-its function is.
+its function is.</p>
 
-To give game authors the choice of using a larger array of classes if
+<p>To give game authors the choice of using a larger array of classes if
 they so wish, the extras.t module defines a number of classes that work
 more or less the same as the similarly named classes in adv3. Note that
-the 'shallow' classes add little or no real functionality to the
+the ‘shallow’ classes add little or no real functionality to the
 adv3Lite library, however, since in most cases they simply define one or
 two properties that game authors could equally well define for
 themselves on Thing. There are, however, one or two classes in the
 extras.t module that do a little more than that (particularly the
 TravelConnector-derived classes), and it will usually prove better to
-make use of these 'deeper' classes than attempting to roll your own on
-Thing if you want their full functionality.
+make use of these ‘deeper’ classes than attempting to roll your own on
+Thing if you want their full functionality.</p>
 
-<span id="shallow"></span>
+<p><span id="shallow"></span></p>
 
-## Shallow Equivalents to adv3 Classes
+<h2 id="shallow-equivalents-to-adv3-classes">Shallow Equivalents to adv3 Classes</h2>
 
-We start with the 'shallow' classes that simply define one or two
+<p>We start with the ‘shallow’ classes that simply define one or two
 properties on Thing (well, actually one or two of them do a bit more
-than that, but this will do as a first approximation):
+than that, but this will do as a first approximation):</p>
 
-- **Container**: Subclass of Thing with contType = In and isOpen = true.
-- **OpenableContainer**: Subclass of Container with isOpen = nil and
-  isOpenable = true.
-- **LockableContainer**: Subclass of OpenableContainer with lockability
-  = lockableWithoutKey.
-- **KeyedContainer**: Subclass of OpenableContainer with lockability =
-  lockableWithKey.
-- **Surface**: Subclass of Thing with contType = On. Surface also
-  defines specialized handling for the Search action, which reports
-  what's ON a Surface (as well as anything in its hiddenIn list),
-  whereas on the Thing class SEARCH simply redirects to LOOK IN.
-- **Platform**: Subclass of Surface with isBoardable = true.
-- **Booth**: Subclass of Container with isEnterable = true.
-- **Underside**: Subclass of Thing with contType = Under.
-- **RearContainer**: Subclass of Thing with contType = Behind.
-- **Wearable**: Subclass of Thing with isWearable = true.
-- **Food**: Subclass of Thing with isEdible = true.
-- **Fixture**: Subclass of Thing with isFixed = true.
-- **Decoration** Subclass of Thing with isDecoration = true. See note
-  below on hideFromAll(action)
-- **Distant**: Subclass of Decoration with a notImportantMsg that says
-  the object is too far away. The Distant class also has a destination
-  property for use with [pathfinding](pathfind.html#distant).
-- **Component**: Subclass of Fixture with a cannotTakeMsg that says the
-  object can't be taken as it's part of its location.
-- **Heavy**: Subclass of Fixture with a cannotTakeMsg that says the
-  object is too heavy.
-- **Switch**: Subclass of Thing with isSwitchable = true.
-- **Enterable**: Subclass of Fixture that can be used to represent the
-  outside of a building or the like. The connector property can be used
-  to define the connector (typically a Door) that the player character
-  should travel through when the Enterable is entered, or the
-  destination property can be used to define the room the player
-  character is taken to on entering the Enterable.To avoid certain
-  problems with the GO TO pathfinding command, Enterable also descends
-  from the [ProxyDest](pathfind.html#proxy) class.
+<ul>
+  <li><strong>Container</strong>: Subclass of Thing with contType = In and isOpen = true.</li>
+  <li><strong>OpenableContainer</strong>: Subclass of Container with isOpen = nil and
+isOpenable = true.</li>
+  <li><strong>LockableContainer</strong>: Subclass of OpenableContainer with lockability
+= lockableWithoutKey.</li>
+  <li><strong>KeyedContainer</strong>: Subclass of OpenableContainer with lockability =
+lockableWithKey.</li>
+  <li><strong>Surface</strong>: Subclass of Thing with contType = On. Surface also
+defines specialized handling for the Search action, which reports
+what’s ON a Surface (as well as anything in its hiddenIn list),
+whereas on the Thing class SEARCH simply redirects to LOOK IN.</li>
+  <li><strong>Platform</strong>: Subclass of Surface with isBoardable = true.</li>
+  <li><strong>Booth</strong>: Subclass of Container with isEnterable = true.</li>
+  <li><strong>Underside</strong>: Subclass of Thing with contType = Under.</li>
+  <li><strong>RearContainer</strong>: Subclass of Thing with contType = Behind.</li>
+  <li><strong>Wearable</strong>: Subclass of Thing with isWearable = true.</li>
+  <li><strong>Food</strong>: Subclass of Thing with isEdible = true.</li>
+  <li><strong>Fixture</strong>: Subclass of Thing with isFixed = true.</li>
+  <li><strong>Decoration</strong> Subclass of Thing with isDecoration = true. See note
+below on hideFromAll(action)</li>
+  <li><strong>Distant</strong>: Subclass of Decoration with a notImportantMsg that says
+the object is too far away. The Distant class also has a destination
+property for use with <a href="pathfind.html#distant">pathfinding</a>.</li>
+  <li><strong>Component</strong>: Subclass of Fixture with a cannotTakeMsg that says the
+object can’t be taken as it’s part of its location.</li>
+  <li><strong>Heavy</strong>: Subclass of Fixture with a cannotTakeMsg that says the
+object is too heavy.</li>
+  <li><strong>Switch</strong>: Subclass of Thing with isSwitchable = true.</li>
+  <li><strong>Enterable</strong>: Subclass of Fixture that can be used to represent the
+outside of a building or the like. The connector property can be used
+to define the connector (typically a Door) that the player character
+should travel through when the Enterable is entered, or the
+destination property can be used to define the room the player
+character is taken to on entering the Enterable.To avoid certain
+problems with the GO TO pathfinding command, Enterable also descends
+from the <a href="pathfind.html#proxy">ProxyDest</a> class.</li>
+</ul>
 
-Remember, you can use as many or as few of these classes as you wish. In
+<p>Remember, you can use as many or as few of these classes as you wish. In
 practice, using these clases probably makes game code more readable, as
 well as providing the ability to write code that iteratees over objects
 of a given class or modifies one of these classes to customize it to the
@@ -116,52 +116,49 @@ requirements of a particular game.For example, some game authors may
 wish to exclude all Decorations from any command applied to ALL (such as
 X ALL or FEEL ALL), since in a location with several decorations.
 players may find it needlessly distracting, or at least cluttered, to
-read several messages along the lines of 'X is not important' in
+read several messages along the lines of ‘X is not important’ in
 response to such commands. So a commonly useful modification to the
-Decoration class might be:
+Decoration class might be:</p>
 
-<div class="code">
-
-    modify Decoration
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Decoration
         hideFromAll(action) { return true; }
     ;
+</code></pre></div></div>
 
-</div>
-
-This particular modification may be less useful in games that in any
-case define <span class="code">gameMain.allVerbsAllowAll = nil</span>,
+<p>This particular modification may be less useful in games that in any
+case define <code class="language-plaintext highlighter-rouge">gameMain.allVerbsAllowAll = nil</code>,
 but it illustrates the principle. It might nevertheless have been a good
 default to define in the library, but changing it in the library now
-would compromise backward compatibility.
+would compromise backward compatibility.</p>
 
-<span id="travelconn"></span>
+<p><span id="travelconn"></span></p>
 
-## TravelConnector Classes
+<h2 id="travelconnector-classes">TravelConnector Classes</h2>
 
-The following classes implement one or two TravelConnector objects that
-are also present as physical objects in the game world:
+<p>The following classes implement one or two TravelConnector objects that
+are also present as physical objects in the game world:</p>
 
-- **StairwayUp**: Can be used for anything the player character might
-  climb or climb up, typically a flight of stairs leading up, but could
-  be used for a tree, mast, ladder or hillside.
-- **StairwayDown** Can be used for anything the player character might
-  climb down.
-- **Passage**: Can be used for anything the player character might enter
-  or go through to reach another destination.
-- **PathPassage**: Like a Passage, except that following it also
-  traverses it.
+<ul>
+  <li><strong>StairwayUp</strong>: Can be used for anything the player character might
+climb or climb up, typically a flight of stairs leading up, but could
+be used for a tree, mast, ladder or hillside.</li>
+  <li><strong>StairwayDown</strong> Can be used for anything the player character might
+climb down.</li>
+  <li><strong>Passage</strong>: Can be used for anything the player character might enter
+or go through to reach another destination.</li>
+  <li><strong>PathPassage</strong>: Like a Passage, except that following it also
+traverses it.</li>
+</ul>
 
-These classes work just a little differently from their adv3
-equivalents, in that you don't have to use them in pairs. To use one of
+<p>These classes work just a little differently from their adv3
+equivalents, in that you don’t have to use them in pairs. To use one of
 the above classes, put an instance in the appropriate room, set its
 destination property to the room you want it to lead to, and set the
 appropriate direction property of the room to point to it. For example,
 to implement a flight of stairs leading up from the hall to the landing
-you might write:
+you might write:</p>
 
-<div class="code">
-
-    hall: Room 'Hall'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    hall: Room 'Hall'
         "A broad flight of stairs leads up to the landing above. "
         up = hallStairs
     ;
@@ -169,28 +166,25 @@ you might write:
     + hallStairs 'flight[n] of stairs; broad; steps staircase'
          destination = landing
     ;
+</code></pre></div></div>
 
-</div>
+<h2 id="sensory-emanation-classes"><span id="emanation">Sensory Emanation Classes</span></h2>
 
-## <span id="emanation">Sensory Emanation Classes</span>
-
-The adv3Lite library defines the classes **Noise** and **Odor** to
+<p>The adv3Lite library defines the classes <strong>Noise</strong> and <strong>Odor</strong> to
 represent a sound and a smell respectively. Users familiar with adv3
 should note that these classes are much simpler than the adv3 classes
 with the same name (and are more like the adv3 SimpleNoise and
 SimpleOdor classes). They are simply Decoration objects that can be
 either listened to (for a Noise) or smelled (for an Odor), either of
 which is treated as the same as examining them. For anything else they
-respond with 'You can't do that to a noise\|smell. ' Since they don't by
-default define smellDesc or listenDesc they won't normally respond to an
+respond with ‘You can’t do that to a noise|smell. ‘ Since they don’t by
+default define smellDesc or listenDesc they won’t normally respond to an
 intransitive SMELL or LISTEN command. They can, however, be used to
 provide simple implementations of any smells or sounds whose existence
 is suggested by smelling or listening to other objects, or by issuing an
-intransitive SMELL or LISTEN command. For example:
+intransitive SMELL or LISTEN command. For example:</p>
 
-<div class="code">
-
-    + cooker: Thing 'cooker;blackened;oven stove top'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
         
@@ -205,100 +199,90 @@ intransitive SMELL or LISTEN command. For example:
     + Odor 'smell of burning; acrid distinct'
         "It smells quite acrid. "   
     ;
+</code></pre></div></div>
 
-</div>
-
-As of Version 1.61, SensoryEmanations are hidden from any actions
+<p>As of Version 1.61, SensoryEmanations are hidden from any actions
 applied to ALL that are not relevant to the SensoryEmanation in questio
-(i.e. EXAMINE and either SMELL or LISTEN TO).
+(i.e. EXAMINE and either SMELL or LISTEN TO).</p>
 
-If your game needs a more sophisticated handling of sounds and smells
+<p>If your game needs a more sophisticated handling of sounds and smells
 than these rather simple classes offer, you may want to consider
-including the [Sensory](../../extensions/docs/sensory.html) extension.
+including the <a href="../../extensions/docs/sensory.html">Sensory</a> extension.</p>
 
-  
-<span id="misc"></span>
+<p><span id="misc"></span></p>
 
-## Other Miscellaneous Classes
+<h2 id="other-miscellaneous-classes">Other Miscellaneous Classes</h2>
 
-The **Flashlight** is a subclass of Switch that lights up when its
+<p>The <strong>Flashlight</strong> is a subclass of Switch that lights up when its
 switched on, and goes out when its switched off. It can also be switched
-on and off with LIGHT and EXTINGUISH.
+on and off with LIGHT and EXTINGUISH.</p>
 
-An **Immovable** is like a Fixture, except that taking it is blocked in
+<p>An <strong>Immovable</strong> is like a Fixture, except that taking it is blocked in
 check() rather than verify(). What this is means is that although it
-can't be taken, this doesn't affect the parser's choice of it as the
+can’t be taken, this doesn’t affect the parser’s choice of it as the
 target of a TAKE command. This could be used for anything that looks
 like it might be possible to take, but turns out not to be takeable
-(perhaps because it's heavier than it looks, or it's fastened in place
-but not obviously so). <span id="unthing"></span>
+(perhaps because it’s heavier than it looks, or it’s fastened in place
+but not obviously so). <span id="unthing"></span></p>
 
-An **Unthing** is an object that used to represent the *absence* of
+<p>An <strong>Unthing</strong> is an object that used to represent the <em>absence</em> of
 something that a player might assume to be present. The purpose of an
 Unthing is simply to provide a message explaining why the thing in
-question isn't there. For example, if the player drops a key down a
+question isn’t there. For example, if the player drops a key down a
 drain, you could then add an Unthing to the location to remind the
-player why the key is no longer available:
+player why the key is no longer available:</p>
 
-<div class="code">
-
-    unKey: Unthing 'small silver key'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    unKey: Unthing 'small silver key'
        'Unfortunately, you dropped the silver key down the drain. '
     ;   
+</code></pre></div></div>
 
-</div>
-
-Note that the second property we're defining with the template here is
-not the description but the **notHereMsg**, and that this must be a
+<p>Note that the second property we’re defining with the template here is
+not the description but the <strong>notHereMsg</strong>, and that this must be a
 single-quoted string. Any attempt to perform any action with an Unthing
-will result in the display of its notHereMsg.
+will result in the display of its notHereMsg.</p>
 
-When choosing objects the parser will always prefer any other object to
+<p>When choosing objects the parser will always prefer any other object to
 an Unthing. So, in the previous example, if the unKey was in scope at
 the same time as a large brass key, say, the parser will always choose
-the large brass key in respond to commands that just refer to a 'key',
-e.g. X KEY, TAKE KEY or UNLOCK DOOR WITH KEY.
+the large brass key in respond to commands that just refer to a ‘key’,
+e.g. X KEY, TAKE KEY or UNLOCK DOOR WITH KEY.</p>
 
-The Unthing class inherits from Decoration. You can make selected
+<p>The Unthing class inherits from Decoration. You can make selected
 actions work with an Unthing by overriding is decorationActions
-property. E.g. if you'd defined a RETRIEVE command which you wanted to
+property. E.g. if you’d defined a RETRIEVE command which you wanted to
 work on the UnKey (to make the player character try to fish the real
-silver key out of the drain, maybe), you could define your unKey thus:
+silver key out of the drain, maybe), you could define your unKey thus:</p>
 
-<div class="code">
-
-    unKey: Unthing 'small silver key'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    unKey: Unthing 'small silver key'
        'Unfortunately, you dropped the silver key down the drain. '
        
        decorationActions = [Retrieve]
     ;   
+</code></pre></div></div>
 
-</div>
-
-A <span id="minoritem"></span>**MinorItem** is an unobtrusive and
-possibly unimportant portable object that's worth implementing in the
+<p>A <span id="minoritem"></span><strong>MinorItem</strong> is an unobtrusive and
+possibly unimportant portable object that’s worth implementing in the
 game but sufficiently minor as to be not worth mentioning in response to
-X or FOO ALL unless it's either directly held by the player character or
-directly in the enclosing room or directly in the actor's location. Its
-**includeTakeFromPutAll** (which is true by default) determines whether
+X or FOO ALL unless it’s either directly held by the player character or
+directly in the enclosing room or directly in the actor’s location. Its
+<strong>includeTakeFromPutAll</strong> (which is true by default) determines whether
 it will be included in TAKE ALL FROM X or PUT ALL IN/ON/UNDER/BEHIND X
-when it's not directly held or directly in the enclosing room or actor's
-location.
+when it’s not directly held or directly in the enclosing room or actor’s
+location.</p>
 
-A <span id="collective"></span>**CollectiveGroup** can be used to
-represent a collection of objects for certain actions. It's normally
-best used as a Fixture representing other Fixtures (see [below](#mobile)
+<p>A <span id="collective"></span><strong>CollectiveGroup</strong> can be used to
+represent a collection of objects for certain actions. It’s normally
+best used as a Fixture representing other Fixtures (see <a href="#mobile">below</a>
 if you need it to work with mobile objects). To use a CollectiveGroup
 define an object of the CollectiveGroup class in a particular location,
 and then the objects the CollectiveGroup represents in the same
-location, defining the **collectiveGroups** property of each of those
+location, defining the <strong>collectiveGroups</strong> property of each of those
 other objects to point to the CollectiveGroup. For example, suppose we
 have a bank of switches comprising a red switch, a blue switch and a
-green switch; in outline we might do something like this:
+green switch; in outline we might do something like this:</p>
 
-<div class="code">
-
-    + switchBank: CollectiveGroup 'switches; of[prep]; row bank; them'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + switchBank: CollectiveGroup 'switches; of[prep]; row bank; them'
        "The bank comprises a row of three switches: one red, one blue, one green. "
        collectiveActions = [Examine, Take]
     ;
@@ -317,70 +301,66 @@ green switch; in outline we might do something like this:
         isFixed = true
         collectiveGroups = [switchBank]
     ;
+</code></pre></div></div>
 
-</div>
-
-With this in place the command X SWITCHES will give the description of
+<p>With this in place the command X SWITCHES will give the description of
 the bank of switches, rather than of each individual switch, and TAKE
-SWITCHES will yield the message "The switches are fixed in place" rather
+SWITCHES will yield the message “The switches are fixed in place” rather
 than three messages to that effect, one for each switch. On the other
 hand the command FLIP SWITCHES will act on each of the individual
-switches in turn, since it's not one of the **collectiveActions**
-defined for the <span class="code">switchBank</span>
-<span class="code">CollectiveGroup</span>.
+switches in turn, since it’s not one of the <strong>collectiveActions</strong>
+defined for the <code class="language-plaintext highlighter-rouge">switchBank</code>
+<code class="language-plaintext highlighter-rouge">CollectiveGroup</code>.</p>
 
-Note the use of the <span class="code">collectiveActions</span> property
+<p>Note the use of the <code class="language-plaintext highlighter-rouge">collectiveActions</code> property
 to define which actions will be handled by the CollectiveGroup rather
 than by each of its members. By default,
-<span class="code">collectiveActions</span> is simply
-<span class="code">\[Examine\]</span>, but, as here, we can override it
-to contain other actions instead or as well.
+<code class="language-plaintext highlighter-rouge">collectiveActions</code> is simply
+<code class="language-plaintext highlighter-rouge">\[Examine\]</code>, but, as here, we can override it
+to contain other actions instead or as well.</p>
 
-For this to work properly, the name section of the CollectiveGroup
+<p>For this to work properly, the name section of the CollectiveGroup
 object should simply be the plural of the name common to each of its
-members (here 'switches' corresponding to 'switch').
+members (here ‘switches’ corresponding to ‘switch’).</p>
 
-If the <span class="code">desc</span> property of a CollectiveGroup is
+<p>If the <code class="language-plaintext highlighter-rouge">desc</code> property of a CollectiveGroup is
 not explicitly defined, it defaults to a list of those of its members
-that are in scope.
+that are in scope.</p>
 
-For some situations the <span class="code">Collective</span> class (or
-its <span class="code">DispensingCollective</span> subclass) defined in
-the [Collective](../../extensions/docs/collective.html) extension, may be
-a better bet than CollectiveGroup. The kind of situation where you'd
+<p>For some situations the <code class="language-plaintext highlighter-rouge">Collective</code> class (or
+its <code class="language-plaintext highlighter-rouge">DispensingCollective</code> subclass) defined in
+the <a href="../../extensions/docs/collective.html">Collective</a> extension, may be
+a better bet than CollectiveGroup. The kind of situation where you’d
 want to use a Collective of DispensingCollective is where you have a
 group item (e.g. a bunch of grapes or stack of cans) from which you want
-to draw one or more individual items (e.g. grapes or cans).
+to draw one or more individual items (e.g. grapes or cans).</p>
 
-<span id="mobile"></span>
+<p><span id="mobile"></span></p>
 
-If you need a CollectiveGroup to represent items that are not fixed in
+<p>If you need a CollectiveGroup to represent items that are not fixed in
 place, but might be moved around (a collection of short portable cables,
 for example), you can instead use the
-<span class="code">MobileCollectiveGroup</span> class defined in the
-[MobileCollectiveGroup](../../extensions/docs/mobilecollectivegroup.html)
-extension.
+<code class="language-plaintext highlighter-rouge">MobileCollectiveGroup</code> class defined in the
+<a href="../../extensions/docs/mobilecollectivegroup.html">MobileCollectiveGroup</a>
+extension.</p>
 
-  
-
-A **<span id="secretdoor">SecretDoor</span>** is a Door that only acts
-like a Door when it's open. When it's closed it's either totally
+<p>A <strong><span id="secretdoor">SecretDoor</span></strong> is a Door that only acts
+like a Door when it’s open. When it’s closed it’s either totally
 invisible, or it appears to be something else, such as a bookcase or a
-panel.
+panel.</p>
 
-To use a SecretDoor, define it just like a [Door](door.html), but
+<p>To use a SecretDoor, define it just like a <a href="door.html">Door</a>, but
 (assuming it starts out closed) define its
-<span class="code">vocab</span> property to be whatever's suitable for
-its closed state, and a separate **vocabWhenOpen** property to define
-the name and other vocab to use when it's open. For example:
+<code class="language-plaintext highlighter-rouge">vocab</code> property to be whatever’s suitable for
+its closed state, and a separate <strong>vocabWhenOpen</strong> property to define
+the name and other vocab to use when it’s open. For example:</p>
 
-<div class="code">
-
-    cellar: Room 'Cellar' 'cellar'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cellar: Room 'Cellar' 'cellar'
         "It's not a pleasant place at the best of times, dark, dank and smelly, with
         piles of old junk strewn all over the place waiting for you to find time to
-        sort them out (which you probably never will). A wine rack stands &lt;<unless wineRack.isOpen="">&gt; empty against the east wall&lt;<else>&gt;open to the east,
-        revealing a passage beyond&lt;<end>&gt;. "
+        sort them out (which you probably never will). A wine rack stands &lt;&lt;unless
+          wineRack.isOpen&gt;&gt; empty against the east wall&lt;&lt;else&gt;&gt;open to the east,
+        revealing a passage beyond&lt;&lt;end&gt;&gt;. "
         
         isLit = nil
         darkName = 'Cellar (in the dark)'
@@ -393,8 +373,8 @@ the name and other vocab to use when it's open. For example:
     ;
 
     + wineRack: SecretDoor 'wine rack; empty'
-        "It's empty; you never got round to restocking it. &lt;<if isOpen="">&gt;It's also
-        open, revealing a dark passage behind.&lt;<end>&gt; "
+        "It's empty; you never got round to restocking it. &lt;&lt;if isOpen&gt;&gt;It's also
+        open, revealing a dark passage behind.&lt;&lt;end&gt;&gt; "
         
         afterAction()
         {
@@ -410,30 +390,27 @@ the name and other vocab to use when it's open. For example:
         
         vocabWhenOpen = 'dark passage; empty wine; rack'
     ;
+</code></pre></div></div>
 
-&lt;/div&gt;
-
-Note that the OPEN command won't work on a
-<span class="code">SecretDoor</span> when it's closed, but the CLOSE
-command will work on a <span class="code">SecretDoor</span> when it's
+<p>Note that the OPEN command won’t work on a
+<code class="language-plaintext highlighter-rouge">SecretDoor</code> when it’s closed, but the CLOSE
+command will work on a <code class="language-plaintext highlighter-rouge">SecretDoor</code> when it’s
 open (unless you override the isOpenable property to make it do
 otherwise). The default assumption is that a
-<span class="code">SecretDoor</span> has to be opened by some
-non-standard and probably non-obvious means.
+<code class="language-plaintext highlighter-rouge">SecretDoor</code> has to be opened by some
+non-standard and probably non-obvious means.</p>
 
-If (exceptionally) a SecretDoor starts out open you can define its
-**vocabWhenClosed** property to specify the name and vocab to use for it
-when it's closed.
+<p>If (exceptionally) a SecretDoor starts out open you can define its
+<strong>vocabWhenClosed</strong> property to specify the name and vocab to use for it
+when it’s closed.</p>
 
-If you want a SecretDoor to be effectively invisible when it's closed,
+<p>If you want a SecretDoor to be effectively invisible when it’s closed,
 you could give it a vocab property comprising an empty string and make
-sure nothing else mentions it when it's closed, but it's probably easier
-just to make it a Door and define <span class="code">isHidden =
-!isOpen</span>, for example:
+sure nothing else mentions it when it’s closed, but it’s probably easier
+just to make it a Door and define <code class="language-plaintext highlighter-rouge">isHidden =
+!isOpen</code>, for example:</p>
 
-<div class="code">
-
-    loft: Room 'Hay Loft' 'hay loft'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    loft: Room 'Hay Loft' 'hay loft'
         "There's not much up here, apart from a few stray strands of straw
         scattered across the bare boards. A ladder leads back down to the
         main part of the barn below. "
@@ -491,43 +468,37 @@ just to make it a Door and define <span class="code">isHidden =
     + compartmentDoor: Door 'small door'
         otherSide = loftDoor
     ;
+</code></pre></div></div>
 
-</div>
-
-Note that in both these example, the <span class="code">west</span> exit
+<p>Note that in both these example, the <code class="language-plaintext highlighter-rouge">west</code> exit
 will only be displayed in the exit lister when the corresponding
 SecretDoor is open. When a SecretDoor is closed then, for travel
-purposes, it behaves as if there's no exit through it, even though it's
-attached to an exit property like a standard Door.
+purposes, it behaves as if there’s no exit through it, even though it’s
+attached to an exit property like a standard Door.</p>
 
-A <span id="containerdoor"></span>**ContainerDoor**, on the other hand,
-isn't really a door at all, but it can be used to represent the door of
+<p>A <span id="containerdoor"></span><strong>ContainerDoor</strong>, on the other hand,
+isn’t really a door at all, but it can be used to represent the door of
 an openable container, such that opening, closing, locking and unlocking
 the ContainerDoor has the same effect as opening, closing, locking and
 unlocking the container. To use a ContainerDoor we must locate it in
 multipy-containing Thing that has an OpenableContainer defined on its
-<span class="code">remapIn</span> property; we can't define a
+<code class="language-plaintext highlighter-rouge">remapIn</code> property; we can’t define a
 ContainerDoor directly as part of an openable container since the door
-would then be hidden inside the container when it was closed.
+would then be hidden inside the container when it was closed.</p>
 
-So, for example, to define a cooker/oven we can put things in or on and
-which has a door we should do this:
+<p>So, for example, to define a cooker/oven we can put things in or on and
+which has a door we should do this:</p>
 
-<div class="code">
-
-    cooker: Fixture 'cooker;; oven stove'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cooker: Fixture 'cooker;; oven stove'
        remapIn: SubComponent { isOpenable = true }
        remapOn: SubComponent { }
     ;
 
     + cookerDoor: ContainerDoor 'cooker door; oven stove'
     ;
+</code></pre></div></div>
 
-</div>
-
-&lt;/div&gt;
-
-------------------------------------------------------------------------
+<hr />
 
 <div class="navb">
 
@@ -539,7 +510,6 @@ which has a door we should do this:
 </span>
 
 </div>
-</end></if></end></else></unless></div></div>
 
 </main>
 <footer>

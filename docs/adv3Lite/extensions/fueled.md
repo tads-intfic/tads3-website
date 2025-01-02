@@ -18,7 +18,7 @@ MobileCollectiveGroup</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 # Fueled Light Source
 
@@ -168,7 +168,7 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [fueled.t](../fueled.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

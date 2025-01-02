@@ -19,7 +19,7 @@ Cycle</a>    
 
 </div>
 
-<div class="main">
+
 
 # Manipulating the Transcript
 
@@ -1834,7 +1834,7 @@ transcript contains at that point. That should help you work out either
 what you need to do to get the effect you're after, or else what's going
 wrong with your latest attempt.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

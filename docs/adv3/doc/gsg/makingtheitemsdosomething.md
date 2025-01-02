@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](addingitemstothegame.html)
@@ -825,4 +825,4 @@ puzzles of increasing complexity.
 *[\[Previous\]](addingitemstothegame.html)
   [\[Next\]](startinganewgame.html)*
 
-</div>
+

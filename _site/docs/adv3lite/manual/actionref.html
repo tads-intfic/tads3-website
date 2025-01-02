@@ -36,532 +36,528 @@
 
 </div>
 
-<div class="main">
+<h1 id="action-reference">Action Reference</h1>
 
-# Action Reference
+<h2 id="how-to-use-this-reference">How To Use This Reference</h2>
 
-## How To Use This Reference
-
-This reference section is designed to fulfil two purposes: (1) to make
+<p>This reference section is designed to fulfil two purposes: (1) to make
 it easy for you to find the name of the Action you want if you only know
 the grammar (the form of the command) that leads to it (e.g. KILL FRED);
 and (2) to provide basic information to help with the customizing of
 action responses (for fuller information you may need to consult the
-library source code).
+library source code).</p>
 
-If you know the name of the action you're looking for, you can go
-straight to the [Action List](#actionlist) below to find it (and follow
-the directions there). If you don't, you can use the [Grammar
-List](#grammar) immediately below to find it. For example, to find what
+<p>If you know the name of the action you’re looking for, you can go
+straight to the <a href="#actionlist">Action List</a> below to find it (and follow
+the directions there). If you don’t, you can use the <a href="#grammar">Grammar
+List</a> immediately below to find it. For example, to find what
 action would be triggered by KILL FRED, click on K in the list of
 letters at the start of the Grammar List, and find the line that reads
-'**kill** something'. At the end of the line you'll see the hyperlinked
-action name <span class="code">Attack</span>. Clicking on the link will
+‘<strong>kill</strong> something’. At the end of the line you’ll see the hyperlinked
+action name <code class="language-plaintext highlighter-rouge">Attack</code>. Clicking on the link will
 take you to further information about the Attack action in the Action
-List.
+List.</p>
 
-## <span id="grammar">Grammar List</span>
+<h2 id="grammar-list"><span id="grammar">Grammar List</span></h2>
 
-[A](#A) [B](#B) [C](#C) [D](#D) [E](#E) [F](#F) [G](#G) [H](#H) [I](#I)
-[J](#J) [K](#K) [L](#L) [M](#M) [N](#N) [O](#O) [P](#P) [Q](#Q) [R](#R)
-[S](#S) [T](#T) [U](#U) [V](#V) [W](#W) [X](#X) [Y](#Y) [Z](#Z)
+<p><a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> <a href="#F">F</a> <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a>
+<a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> <a href="#N">N</a> <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a>
+<a href="#S">S</a> <a href="#T">T</a> <a href="#U">U</a> <a href="#V">V</a> <a href="#W">W</a> <a href="#X">X</a> <a href="#Y">Y</a> <a href="#Z">Z</a></p>
 
-### <span id="A">A</span>
+<h3 id="a"><span id="A">A</span></h3>
 
-**a** topic [AskAboutImplicit](#AskAboutImplicit)  
-**a** someone **about** topic [AskAbout](#AskAbout)  
-**a** someone **for** topic [AskFor](#AskFor)  
-**a** someone **how/if/when/where/whether/who** topic
-[QueryAbout](#QueryAbout)  
-**a for** topic [AskForImplicit](#AskForImplicit)  
-**a for** topic **from** someone [AskFor](#AskFor)  
-**a how/if/what/when/where/whether/who** [QueryVague](#QueryVague)  
-**a how/if/when/where/whether/who** topic [Query](#Query)  
-**<span class="system">about</span>** [About](#About)  
-**activate** something [SwitchOn](#SwitchOn)  
-**aft** [Travel](#Travel)  
-**again** [Again](#Again)  
-**affirmative** [SayYes](#SayYes)  
-**are** topic [Query](#Query)  
-**ask** topic [AskAboutImplicit](#AskAboutImplicit)  
-**ask** someone **about** topic [AskAbout](#AskAbout)  
-**ask** someone **for** topic [AskFor](#AskFor)  
-**ask** someone **how/if/when/where/whether/who** topic
-[QueryAbout](#QueryAbout)  
-**ask about** topic [AskAboutImplicit](#AskAboutImplicit)  
-**ask for** topic [AskForImplicit](#AskForImplicit)  
-**ask for** topic **from** someone [AskFor](#AskFor)  
-**ask how/if/what/when/where/whether/who** [QueryVague](#QueryVague)  
-**ask how/if/what/when/where/whether/who** topic [Query](#Query)  
-**attach** something [Attach](#Attach)  
-**attach** something **to** something [AttachTo](#AttachTo)  
-**attack** something [Attack](#Attack)  
-**attack** something **with** something [AttackWith](#AttackWith)  
+<p><strong>a</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br />
+<strong>a</strong> someone <strong>about</strong> topic <a href="#AskAbout">AskAbout</a><br />
+<strong>a</strong> someone <strong>for</strong> topic <a href="#AskFor">AskFor</a><br />
+<strong>a</strong> someone <strong>how/if/when/where/whether/who</strong> topic
+<a href="#QueryAbout">QueryAbout</a><br />
+<strong>a for</strong> topic <a href="#AskForImplicit">AskForImplicit</a><br />
+<strong>a for</strong> topic <strong>from</strong> someone <a href="#AskFor">AskFor</a><br />
+<strong>a how/if/what/when/where/whether/who</strong> <a href="#QueryVague">QueryVague</a><br />
+<strong>a how/if/when/where/whether/who</strong> topic <a href="#Query">Query</a><br />
+<strong><span class="system">about</span></strong> <a href="#About">About</a><br />
+<strong>activate</strong> something <a href="#SwitchOn">SwitchOn</a><br />
+<strong>aft</strong> <a href="#Travel">Travel</a><br />
+<strong>again</strong> <a href="#Again">Again</a><br />
+<strong>affirmative</strong> <a href="#SayYes">SayYes</a><br />
+<strong>are</strong> topic <a href="#Query">Query</a><br />
+<strong>ask</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br />
+<strong>ask</strong> someone <strong>about</strong> topic <a href="#AskAbout">AskAbout</a><br />
+<strong>ask</strong> someone <strong>for</strong> topic <a href="#AskFor">AskFor</a><br />
+<strong>ask</strong> someone <strong>how/if/when/where/whether/who</strong> topic
+<a href="#QueryAbout">QueryAbout</a><br />
+<strong>ask about</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br />
+<strong>ask for</strong> topic <a href="#AskForImplicit">AskForImplicit</a><br />
+<strong>ask for</strong> topic <strong>from</strong> someone <a href="#AskFor">AskFor</a><br />
+<strong>ask how/if/what/when/where/whether/who</strong> <a href="#QueryVague">QueryVague</a><br />
+<strong>ask how/if/what/when/where/whether/who</strong> topic <a href="#Query">Query</a><br />
+<strong>attach</strong> something <a href="#Attach">Attach</a><br />
+<strong>attach</strong> something <strong>to</strong> something <a href="#AttachTo">AttachTo</a><br />
+<strong>attack</strong> something <a href="#Attack">Attack</a><br />
+<strong>attack</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a></p>
 
-### <span id="B">B</span>
+<h3 id="b"><span id="B">B</span></h3>
 
-**back** [GoBack](#GoBack)  
-**blow** something **out** [Extinguish](#Extinguish)  
-**blow out** something [Extinguish](#Extinguish)  
-**board** something [Board](#Board)  
-**break** something [Break](#Break)  
-**<span class="system">brief</span>** [Brief](#Brief)  
-**bye** [Goodbye](#Goodbye)  
-**buckle \[up\]** something [Fasten](#Fasten)  
-**buckle** something **to** something [FastenTo](#FastenTo)  
-**burn** something [Burn](#Burn)  
-**burn** something **with** something [BurnWith](#BurnWith)  
+<p><strong>back</strong> <a href="#GoBack">GoBack</a><br />
+<strong>blow</strong> something <strong>out</strong> <a href="#Extinguish">Extinguish</a><br />
+<strong>blow out</strong> something <a href="#Extinguish">Extinguish</a><br />
+<strong>board</strong> something <a href="#Board">Board</a><br />
+<strong>break</strong> something <a href="#Break">Break</a><br />
+<strong><span class="system">brief</span></strong> <a href="#Brief">Brief</a><br />
+<strong>bye</strong> <a href="#Goodbye">Goodbye</a><br />
+<strong>buckle [up]</strong> something <a href="#Fasten">Fasten</a><br />
+<strong>buckle</strong> something <strong>to</strong> something <a href="#FastenTo">FastenTo</a><br />
+<strong>burn</strong> something <a href="#Burn">Burn</a><br />
+<strong>burn</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a></p>
 
-### <span id="C">C</span>
+<h3 id="c"><span id="C">C</span></h3>
 
-**c** [Continue](#GoTo)  
-**can** topic [Query](#Query)  
-**clean** something [Clean](#Clean)  
-**clean** something **with** something [CleanWith](#CleanWith)  
-**climb** something [Climb](#Climb)  
-**climb down** [ClimbDownVague](#ClimbDownVague)  
-**climb down** something [ClimbDown](#ClimbDown)  
-**climb in/inside/in to/into** something [Enter](#Enter)  
-**climb on/on to/onto** something [Board](#Board)  
-**climb out** [GetOut](#GetOff)  
-**climb out of** something [GetOutOf](#GetOutOf)  
-**climb up** [ClimbUpVague](#ClimbUpVague)  
-**climb up** something [ClimbUp](#ClimbUp)  
-**close** something [Close](#Close)  
-**cogitate** [Think](#Think)  
-**cogitate about** topic [ThinkAbout](#ThinkAbout)  
-**consult** something **about/on** topic [ConsultAbout](#ConsultAbout)  
-**connect** something [Attach](#Attach)  
-**connect** something **to** something [AttachTo](#AttachTo)  
-**consume** something [Eat](#Eat)  
-**continue** [Continue](#GoTo)  
-**could** topic [Query](#Query)  
-**<span class="system">credits</span>** [Credits](#Credits)  
+<p><strong>c</strong> <a href="#GoTo">Continue</a><br />
+<strong>can</strong> topic <a href="#Query">Query</a><br />
+<strong>clean</strong> something <a href="#Clean">Clean</a><br />
+<strong>clean</strong> something <strong>with</strong> something <a href="#CleanWith">CleanWith</a><br />
+<strong>climb</strong> something <a href="#Climb">Climb</a><br />
+<strong>climb down</strong> <a href="#ClimbDownVague">ClimbDownVague</a><br />
+<strong>climb down</strong> something <a href="#ClimbDown">ClimbDown</a><br />
+<strong>climb in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br />
+<strong>climb on/on to/onto</strong> something <a href="#Board">Board</a><br />
+<strong>climb out</strong> <a href="#GetOff">GetOut</a><br />
+<strong>climb out of</strong> something <a href="#GetOutOf">GetOutOf</a><br />
+<strong>climb up</strong> <a href="#ClimbUpVague">ClimbUpVague</a><br />
+<strong>climb up</strong> something <a href="#ClimbUp">ClimbUp</a><br />
+<strong>close</strong> something <a href="#Close">Close</a><br />
+<strong>cogitate</strong> <a href="#Think">Think</a><br />
+<strong>cogitate about</strong> topic <a href="#ThinkAbout">ThinkAbout</a><br />
+<strong>consult</strong> something <strong>about/on</strong> topic <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>connect</strong> something <a href="#Attach">Attach</a><br />
+<strong>connect</strong> something <strong>to</strong> something <a href="#AttachTo">AttachTo</a><br />
+<strong>consume</strong> something <a href="#Eat">Eat</a><br />
+<strong>continue</strong> <a href="#GoTo">Continue</a><br />
+<strong>could</strong> topic <a href="#Query">Query</a><br />
+<strong><span class="system">credits</span></strong> <a href="#Credits">Credits</a></p>
 
-### <span id="D">D</span>
+<h3 id="d"><span id="D">D</span></h3>
 
-**d** [Travel](#Travel)  
-**<span class="debug">debug</span>** [DebugI](#DebugI)  
-**<span class="debug">debug
-actions/doers/messages/spelling/status/stop/off</span>**
-[Debug](#Debug)  
-**deactivate** something [SwitchOff](#SwitchOff)  
-**destroy** something [Break](#Break)  
-**detach** something [Detach](#Detach)  
-**detach** something **from** something [DetachFrom](#DetachFrom)  
-**dig** something [Dig](#Dig)  
-**dig** something **with** something [DigWith](#DigWith)  
-**disconnect** something [Detach](#Detach)  
-**disconnect** something **from** something [DetachFrom](#DetachFrom)  
-**disembark** [GetOut](#GetOff)  
-**do/does** topic [Query](#Query)  
-**doff** something [Doff](#Doff)  
-**don** something [Wear](#Wear)  
-**douse** something [Extinguish](#Extinguish)  
-**down** [Travel](#Travel)  
-**drag** something direction [PushTravelDir](#PushTravelDir)  
-**drag** something **down** something
-[PushTravelClimbDown](#PushTravelClimbDown)  
-**drag** something **in/in to/into** something
-[PushTravelEnter](#PushTravelEnter)  
-**drag** something **out/out** of something
-[PushTravelGetOutOf](#PushTravelGetOutOf)  
-**drag** something **through/thru something**
-[PushTravelThrough](#PushTravelThrough)  
-**drag** something **up** something
-[PushTravelClimbUp](#PushTravelClimbUp)  
-**drink** something [Drink](#Drink)  
-**drop** something [Drop](#Drop)  
-**drop** something **on/onto/on to/upon** something [PutOn](#PutOn)  
+<p><strong>d</strong> <a href="#Travel">Travel</a><br />
+<strong><span class="debug">debug</span></strong> <a href="#DebugI">DebugI</a><br />
+<strong><span class="debug">debug
+actions/doers/messages/spelling/status/stop/off</span></strong>
+<a href="#Debug">Debug</a><br />
+<strong>deactivate</strong> something <a href="#SwitchOff">SwitchOff</a><br />
+<strong>destroy</strong> something <a href="#Break">Break</a><br />
+<strong>detach</strong> something <a href="#Detach">Detach</a><br />
+<strong>detach</strong> something <strong>from</strong> something <a href="#DetachFrom">DetachFrom</a><br />
+<strong>dig</strong> something <a href="#Dig">Dig</a><br />
+<strong>dig</strong> something <strong>with</strong> something <a href="#DigWith">DigWith</a><br />
+<strong>disconnect</strong> something <a href="#Detach">Detach</a><br />
+<strong>disconnect</strong> something <strong>from</strong> something <a href="#DetachFrom">DetachFrom</a><br />
+<strong>disembark</strong> <a href="#GetOff">GetOut</a><br />
+<strong>do/does</strong> topic <a href="#Query">Query</a><br />
+<strong>doff</strong> something <a href="#Doff">Doff</a><br />
+<strong>don</strong> something <a href="#Wear">Wear</a><br />
+<strong>douse</strong> something <a href="#Extinguish">Extinguish</a><br />
+<strong>down</strong> <a href="#Travel">Travel</a><br />
+<strong>drag</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br />
+<strong>drag</strong> something <strong>down</strong> something
+<a href="#PushTravelClimbDown">PushTravelClimbDown</a><br />
+<strong>drag</strong> something <strong>in/in to/into</strong> something
+<a href="#PushTravelEnter">PushTravelEnter</a><br />
+<strong>drag</strong> something <strong>out/out</strong> of something
+<a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br />
+<strong>drag</strong> something <strong>through/thru something</strong>
+<a href="#PushTravelThrough">PushTravelThrough</a><br />
+<strong>drag</strong> something <strong>up</strong> something
+<a href="#PushTravelClimbUp">PushTravelClimbUp</a><br />
+<strong>drink</strong> something <a href="#Drink">Drink</a><br />
+<strong>drop</strong> something <a href="#Drop">Drop</a><br />
+<strong>drop</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a></p>
 
-### <span id="E">E</span>
+<h3 id="e"><span id="E">E</span></h3>
 
-**e** [Travel](#Travel)  
-**east** [Travel](#Travel)  
-**eat** something [Eat](#Eat)  
-**enter** [GoIn](#GoIn)  
-**enter** something [Enter](#Enter)  
-**enter** literal **in/in to/into/on/with** something
-[EnterOn](#EnterOn)  
-**<span class="debug">eval</span>** literal [Evaluate](#Evaluate)  
-**examine** something [Examine](#Examine)  
-**extinguish** something [Extinguish](#Extinguish)  
-**exit** [GoOut](#GoOut)  
-**exit** something [GetOutOf](#GetOutOf)  
-**<span class="system">exit colo\[u\]r
-off/on/blue/green/red/yellow</span>** [ExitsColour](#ExitsColour)  
-**<span class="system">exits</span>** [Exits](#Exits)  
-**<span class="system">exits all</span>** [ExitsMode](#ExitsMode)  
-**<span class="system">exits colo\[u\]r
-off/on/blue/green/red/yellow</span>** [ExitsColour](#ExitsColour)  
-**<span class="system">exits look</span>** [ExitsMode](#ExitsMode)  
-**<span class="system">exits none</span>** [ExitsMode](#ExitsMode)  
-**<span class="system">exits off/on</span>** [ExitsMode](#ExitsMode)  
-**<span class="system">exits status/status line/statusline</span>**
-[ExitsMode](#ExitsMode)  
+<p><strong>e</strong> <a href="#Travel">Travel</a><br />
+<strong>east</strong> <a href="#Travel">Travel</a><br />
+<strong>eat</strong> something <a href="#Eat">Eat</a><br />
+<strong>enter</strong> <a href="#GoIn">GoIn</a><br />
+<strong>enter</strong> something <a href="#Enter">Enter</a><br />
+<strong>enter</strong> literal <strong>in/in to/into/on/with</strong> something
+<a href="#EnterOn">EnterOn</a><br />
+<strong><span class="debug">eval</span></strong> literal <a href="#Evaluate">Evaluate</a><br />
+<strong>examine</strong> something <a href="#Examine">Examine</a><br />
+<strong>extinguish</strong> something <a href="#Extinguish">Extinguish</a><br />
+<strong>exit</strong> <a href="#GoOut">GoOut</a><br />
+<strong>exit</strong> something <a href="#GetOutOf">GetOutOf</a><br />
+<strong><span class="system">exit colo[u]r
+off/on/blue/green/red/yellow</span></strong> <a href="#ExitsColour">ExitsColour</a><br />
+<strong><span class="system">exits</span></strong> <a href="#Exits">Exits</a><br />
+<strong><span class="system">exits all</span></strong> <a href="#ExitsMode">ExitsMode</a><br />
+<strong><span class="system">exits colo[u]r
+off/on/blue/green/red/yellow</span></strong> <a href="#ExitsColour">ExitsColour</a><br />
+<strong><span class="system">exits look</span></strong> <a href="#ExitsMode">ExitsMode</a><br />
+<strong><span class="system">exits none</span></strong> <a href="#ExitsMode">ExitsMode</a><br />
+<strong><span class="system">exits off/on</span></strong> <a href="#ExitsMode">ExitsMode</a><br />
+<strong><span class="system">exits status/status line/statusline</span></strong>
+<a href="#ExitsMode">ExitsMode</a></p>
 
-### <span id="F">F</span>
+<h3 id="f"><span id="F">F</span></h3>
 
-**f** [Travel](#Travel)  
-**fasten** something [Fasten](#Fasten)  
-**fasten** something **to** something [FastenTo](#FastenTo)  
-**feel** something [Feel](#Feel)  
-**<span class="debug">fiat lux</span>** [FiatLux](#FiatLux)  
-**find** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**find** topic **in/on** something [ConsultAbout](#ConsultAbout)  
-**flip** something [Flip](#Flip)  
-**follow** something [Follow](#Follow)  
-**fore** [Travel](#Travel)  
-**<span class="system">full/full score/fullscore</span>**
-[FullScore](#FullScore)  
+<p><strong>f</strong> <a href="#Travel">Travel</a><br />
+<strong>fasten</strong> something <a href="#Fasten">Fasten</a><br />
+<strong>fasten</strong> something <strong>to</strong> something <a href="#FastenTo">FastenTo</a><br />
+<strong>feel</strong> something <a href="#Feel">Feel</a><br />
+<strong><span class="debug">fiat lux</span></strong> <a href="#FiatLux">FiatLux</a><br />
+<strong>find</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>find</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>flip</strong> something <a href="#Flip">Flip</a><br />
+<strong>follow</strong> something <a href="#Follow">Follow</a><br />
+<strong>fore</strong> <a href="#Travel">Travel</a><br />
+<strong><span class="system">full/full score/fullscore</span></strong>
+<a href="#FullScore">FullScore</a></p>
 
-### <span id="G">G</span>
+<h3 id="g"><span id="G">G</span></h3>
 
-**g** [Again](#Again)  
-**get** something [Take](#Take)  
-**get** something **from/out of/off/off of** something
-[TakeFrom](#TakeFrom)  
-**get down** [GetOut](#GetOff)  
-**get down from** something [GetOff](#GetOff)  
-**get in/inside/in to/into** something [Enter](#Enter)  
-**get off** [GetOut](#GetOff)  
-**get off/off of** something [GetOff](#GetOff)  
-**get on/on to/onto** something [Board](#Board)  
-**get out** [GetOut](#GetOff)  
-**get out of** something [GetOutOf](#GetOutOf)  
-**get up** [Stand](#Stand)  
-**give** something [GiveToImplicit](#GiveToImplicit)  
-**give** someone something [GiveTo](#GiveTo)  
-**give** something **to** someone [GiveTo](#GiveTo)  
-**<span class="debug">gn</span>** something [GoNear](#GoNear)  
-**goodbye/good-bye/good bye** [Goodbye](#Goodbye)  
-**go** [VagueTravel](#VagueTravel)  
-**go** direction [Travel](#Travel)  
-**go back** [GoBack](#GoBack)  
-**go down** [ClimbDownVague](#ClimbDownVague)  
-**go down** something [ClimbDown](#ClimbDown)  
-**go in/inside/in to/into** something [Enter](#Enter)  
-**<span class="debug">go near</span>** something [GoNear](#GoNear)  
-**go through/thru** something [GoThrough](#GoThrough)  
-**go to\|to the** direction [Travel](#Travel)  
-**go to** somewhere [GoTo](#GoTo)  
-**go up** [ClimbUpVague](#ClimbUpVague)  
-**go up** something [ClimbUp](#ClimbUp)  
-**<span class="debug">gonear</span>** something [GoNear](#GoNear)  
-**greet** someone [TalkTo](#TalkTo)  
+<p><strong>g</strong> <a href="#Again">Again</a><br />
+<strong>get</strong> something <a href="#Take">Take</a><br />
+<strong>get</strong> something <strong>from/out of/off/off of</strong> something
+<a href="#TakeFrom">TakeFrom</a><br />
+<strong>get down</strong> <a href="#GetOff">GetOut</a><br />
+<strong>get down from</strong> something <a href="#GetOff">GetOff</a><br />
+<strong>get in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br />
+<strong>get off</strong> <a href="#GetOff">GetOut</a><br />
+<strong>get off/off of</strong> something <a href="#GetOff">GetOff</a><br />
+<strong>get on/on to/onto</strong> something <a href="#Board">Board</a><br />
+<strong>get out</strong> <a href="#GetOff">GetOut</a><br />
+<strong>get out of</strong> something <a href="#GetOutOf">GetOutOf</a><br />
+<strong>get up</strong> <a href="#Stand">Stand</a><br />
+<strong>give</strong> something <a href="#GiveToImplicit">GiveToImplicit</a><br />
+<strong>give</strong> someone something <a href="#GiveTo">GiveTo</a><br />
+<strong>give</strong> something <strong>to</strong> someone <a href="#GiveTo">GiveTo</a><br />
+<strong><span class="debug">gn</span></strong> something <a href="#GoNear">GoNear</a><br />
+<strong>goodbye/good-bye/good bye</strong> <a href="#Goodbye">Goodbye</a><br />
+<strong>go</strong> <a href="#VagueTravel">VagueTravel</a><br />
+<strong>go</strong> direction <a href="#Travel">Travel</a><br />
+<strong>go back</strong> <a href="#GoBack">GoBack</a><br />
+<strong>go down</strong> <a href="#ClimbDownVague">ClimbDownVague</a><br />
+<strong>go down</strong> something <a href="#ClimbDown">ClimbDown</a><br />
+<strong>go in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br />
+<strong><span class="debug">go near</span></strong> something <a href="#GoNear">GoNear</a><br />
+<strong>go through/thru</strong> something <a href="#GoThrough">GoThrough</a><br />
+<strong>go to|to the</strong> direction <a href="#Travel">Travel</a><br />
+<strong>go to</strong> somewhere <a href="#GoTo">GoTo</a><br />
+<strong>go up</strong> <a href="#ClimbUpVague">ClimbUpVague</a><br />
+<strong>go up</strong> something <a href="#ClimbUp">ClimbUp</a><br />
+<strong><span class="debug">gonear</span></strong> something <a href="#GoNear">GoNear</a><br />
+<strong>greet</strong> someone <a href="#TalkTo">TalkTo</a></p>
 
-### <span id="H">H</span>
+<h3 id="h"><span id="H">H</span></h3>
 
-**hallo** [Hello](#Hello)  
-**have/has** topic [Query](#Query)  
-**hello** [Hello](#Hello)  
-**hi** [Hello](#Hello)  
-**hit** something [Attack](#Attack)  
-**hit** something **with** something [AttackWith](#AttackWith)  
-**<span class="system">hint</span>** [Hints](#Hints)  
-**<span class="system">hints</span>** [Hints](#Hints)  
-**<span class="system">hints off</span>** [HintsOff](#HintsOff)  
-**holler** [Yell](#Yell)  
-**how** topic [Query](#Query)  
+<p><strong>hallo</strong> <a href="#Hello">Hello</a><br />
+<strong>have/has</strong> topic <a href="#Query">Query</a><br />
+<strong>hello</strong> <a href="#Hello">Hello</a><br />
+<strong>hi</strong> <a href="#Hello">Hello</a><br />
+<strong>hit</strong> something <a href="#Attack">Attack</a><br />
+<strong>hit</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br />
+<strong><span class="system">hint</span></strong> <a href="#Hints">Hints</a><br />
+<strong><span class="system">hints</span></strong> <a href="#Hints">Hints</a><br />
+<strong><span class="system">hints off</span></strong> <a href="#HintsOff">HintsOff</a><br />
+<strong>holler</strong> <a href="#Yell">Yell</a><br />
+<strong>how</strong> topic <a href="#Query">Query</a></p>
 
-### <span id="I">I</span>
+<h3 id="i"><span id="I">I</span></h3>
 
-**i** [Inventory](#Inventory)  
-**if** topic [Query](#Query)  
-**ignite** something [Burn](#Burn)  
-**ignite** something **with** something [BurnWith](#BurnWith)  
-**imbibe** something [Drink](#Drink)  
-**in** [Travel](#Travel)  
-**insert** something **in/into/in to/inside/inside of** something
-[PutIn](#PutIn)  
-**inspect** something [Examine](#Examine)  
-**inv** [Inventory](#Inventory)  
-**inventory** [Inventory](#Inventory)  
-**is** topic [Query](#Query)  
+<p><strong>i</strong> <a href="#Inventory">Inventory</a><br />
+<strong>if</strong> topic <a href="#Query">Query</a><br />
+<strong>ignite</strong> something <a href="#Burn">Burn</a><br />
+<strong>ignite</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br />
+<strong>imbibe</strong> something <a href="#Drink">Drink</a><br />
+<strong>in</strong> <a href="#Travel">Travel</a><br />
+<strong>insert</strong> something <strong>in/into/in to/inside/inside of</strong> something
+<a href="#PutIn">PutIn</a><br />
+<strong>inspect</strong> something <a href="#Examine">Examine</a><br />
+<strong>inv</strong> <a href="#Inventory">Inventory</a><br />
+<strong>inventory</strong> <a href="#Inventory">Inventory</a><br />
+<strong>is</strong> topic <a href="#Query">Query</a></p>
 
-### <span id="I">J</span>
+<h3 id="j"><span id="I">J</span></h3>
 
-**jump** [Jump](#Jump)  
-**jump** something [JumpOver](#JumpOver)  
-**jump off** [JumpOffIntransitive](#JumpOffIntransitive)  
-**jump off** something [JumpOff](#JumpOff)  
-**jump over** something [JumpOver](#JumpOver)  
+<p><strong>jump</strong> <a href="#Jump">Jump</a><br />
+<strong>jump</strong> something <a href="#JumpOver">JumpOver</a><br />
+<strong>jump off</strong> <a href="#JumpOffIntransitive">JumpOffIntransitive</a><br />
+<strong>jump off</strong> something <a href="#JumpOff">JumpOff</a><br />
+<strong>jump over</strong> something <a href="#JumpOver">JumpOver</a></p>
 
-### <span id="K">K</span>
+<h3 id="k"><span id="K">K</span></h3>
 
-**kick** something [Attack](#Attack)  
-**kill** something [Attack](#Attack)  
-**kill** something **with** something [AttackWith](#AttackWith)  
-**kiss** something [Kiss](#Kiss)  
+<p><strong>kick</strong> something <a href="#Attack">Attack</a><br />
+<strong>kill</strong> something <a href="#Attack">Attack</a><br />
+<strong>kill</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br />
+<strong>kiss</strong> something <a href="#Kiss">Kiss</a></p>
 
-### <span id="L">L</span>
+<h3 id="l"><span id="L">L</span></h3>
 
-**l** [Look](#Look)  
-**l** something [Examine](#Examine)  
-**l** topic **up** [ConsultWhatAbout](#ConsultWhatAbout)  
-**l** topic **up in/on** something [ConsultAbout](#ConsultAbout)  
-**l around** [Look](#Look)  
-**l at** something [Examine](#Examine)  
-**l behind** something [LookBehind](#LookBehind)  
-**l for** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**l for** topic **in/on** something [ConsultAbout](#ConsultAbout)  
-**l in/inside** something [LookIn](#LookIn)  
-**l tests** (/fully) [ListTests](#ListTests)  
-**l through/thru** something [LookThrough](#LookThrough)  
-**l under** something [LookUnder](#LookUnder)  
-**l up** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**l up** topic **in/on** something [ConsultAbout](#ConsultAbout)  
-**leave** [GoOut](#GoOut)  
-**leave** something [GetOutOf](#GetOutOf)  
-**<span class="debug">let there be light</span>** [FiatLux](#FiatLux)  
-**lie down** [Lie](#Lie)  
-**lie down in** something [LieIn](#LieIn)  
-**lie down on** something [LieOn](#LieOn)  
-**lie in** something [LieIn](#LieIn)  
-**lie on** something [LieOn](#LieOn)  
-**light** something [Light](#Light)  
-**light** something **with** something [BurnWith](#BurnWith)  
-**list tests** (/fully) [ListTests](#ListTests)  
-**listen** [Listen](#Listen)  
-**listen to** something [ListenTo](#ListenTo)  
-**lock** something [Lock](#Lock)  
-**lock** something **with** something [LockWith](#LockWith)  
-**look** [Look](#Look)  
-**look** something [Examine](#Examine)  
-**look** topic **up** [ConsultWhatAbout](#ConsultWhatAbout)  
-**look** topic **up in/on** something [ConsultAbout](#ConsultAbout)  
-**look around** [Look](#Look)  
-**look at** something [Examine](#Examine)  
-**look behind** something [LookBehind](#LookBehind)  
-**look for** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**look for** topic **in/on** something [ConsultAbout](#ConsultAbout)  
-**look in/inside** something [LookIn](#LookIn)  
-**look through/thru** something [LookThrough](#LookThrough)  
-**look under** something [LookUnder](#LookUnder)  
-**look up** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**look up** topic **in/on** something [ConsultAbout](#ConsultAbout)  
+<p><strong>l</strong> <a href="#Look">Look</a><br />
+<strong>l</strong> something <a href="#Examine">Examine</a><br />
+<strong>l</strong> topic <strong>up</strong> <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>l</strong> topic <strong>up in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>l around</strong> <a href="#Look">Look</a><br />
+<strong>l at</strong> something <a href="#Examine">Examine</a><br />
+<strong>l behind</strong> something <a href="#LookBehind">LookBehind</a><br />
+<strong>l for</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>l for</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>l in/inside</strong> something <a href="#LookIn">LookIn</a><br />
+<strong>l tests</strong> (/fully) <a href="#ListTests">ListTests</a><br />
+<strong>l through/thru</strong> something <a href="#LookThrough">LookThrough</a><br />
+<strong>l under</strong> something <a href="#LookUnder">LookUnder</a><br />
+<strong>l up</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>l up</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>leave</strong> <a href="#GoOut">GoOut</a><br />
+<strong>leave</strong> something <a href="#GetOutOf">GetOutOf</a><br />
+<strong><span class="debug">let there be light</span></strong> <a href="#FiatLux">FiatLux</a><br />
+<strong>lie down</strong> <a href="#Lie">Lie</a><br />
+<strong>lie down in</strong> something <a href="#LieIn">LieIn</a><br />
+<strong>lie down on</strong> something <a href="#LieOn">LieOn</a><br />
+<strong>lie in</strong> something <a href="#LieIn">LieIn</a><br />
+<strong>lie on</strong> something <a href="#LieOn">LieOn</a><br />
+<strong>light</strong> something <a href="#Light">Light</a><br />
+<strong>light</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br />
+<strong>list tests</strong> (/fully) <a href="#ListTests">ListTests</a><br />
+<strong>listen</strong> <a href="#Listen">Listen</a><br />
+<strong>listen to</strong> something <a href="#ListenTo">ListenTo</a><br />
+<strong>lock</strong> something <a href="#Lock">Lock</a><br />
+<strong>lock</strong> something <strong>with</strong> something <a href="#LockWith">LockWith</a><br />
+<strong>look</strong> <a href="#Look">Look</a><br />
+<strong>look</strong> something <a href="#Examine">Examine</a><br />
+<strong>look</strong> topic <strong>up</strong> <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>look</strong> topic <strong>up in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>look around</strong> <a href="#Look">Look</a><br />
+<strong>look at</strong> something <a href="#Examine">Examine</a><br />
+<strong>look behind</strong> something <a href="#LookBehind">LookBehind</a><br />
+<strong>look for</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>look for</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>look in/inside</strong> something <a href="#LookIn">LookIn</a><br />
+<strong>look through/thru</strong> something <a href="#LookThrough">LookThrough</a><br />
+<strong>look under</strong> something <a href="#LookUnder">LookUnder</a><br />
+<strong>look up</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>look up</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a></p>
 
-### <span id="M">M</span>
+<h3 id="m"><span id="M">M</span></h3>
 
-**move** something [Move](#Move)  
-**move** something direction [PushTravelDir](#PushTravelDir)  
-**move** something **down** something
-[PushTravelClimbDown](#PushTravelClimbDown)  
-**move** something **in/in to/into** something
-[PushTravelEnter](#PushTravelEnter)  
-**move** something **out/out** of something
-[PushTravelGetOutOf](#PushTravelGetOutOf)  
-**move** something **to/under** something [MoveTo](#MoveTo)  
-**move** something **through/thru something**
-[PushTravelThrough](#PushTravelThrough)  
-**move** something **up** something
-[PushTravelClimbUp](#PushTravelClimbUp)  
-**move** something **with** something [MoveWith](#MoveWith)  
+<p><strong>move</strong> something <a href="#Move">Move</a><br />
+<strong>move</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br />
+<strong>move</strong> something <strong>down</strong> something
+<a href="#PushTravelClimbDown">PushTravelClimbDown</a><br />
+<strong>move</strong> something <strong>in/in to/into</strong> something
+<a href="#PushTravelEnter">PushTravelEnter</a><br />
+<strong>move</strong> something <strong>out/out</strong> of something
+<a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br />
+<strong>move</strong> something <strong>to/under</strong> something <a href="#MoveTo">MoveTo</a><br />
+<strong>move</strong> something <strong>through/thru something</strong>
+<a href="#PushTravelThrough">PushTravelThrough</a><br />
+<strong>move</strong> something <strong>up</strong> something
+<a href="#PushTravelClimbUp">PushTravelClimbUp</a><br />
+<strong>move</strong> something <strong>with</strong> something <a href="#MoveWith">MoveWith</a></p>
 
-### <span id="N">N</span>
+<h3 id="n"><span id="N">N</span></h3>
 
-**n** [Travel](#Travel)  
-**ne** [Travel](#Travel)  
-**negative** [SayNo](#SayNo)  
-**no** [No](#No)  
-**north** [Travel](#Travel)  
-**northeast** [Travel](#Travel)  
-**<span class="system">notify</span>** [Notify](#Notify)  
-**<span class="system">notify off</span>** [NotifyOff](#NotifyOff)  
-**<span class="system">notify on</span>** [NotifyOn](#NotifyOn)  
+<p><strong>n</strong> <a href="#Travel">Travel</a><br />
+<strong>ne</strong> <a href="#Travel">Travel</a><br />
+<strong>negative</strong> <a href="#SayNo">SayNo</a><br />
+<strong>no</strong> <a href="#No">No</a><br />
+<strong>north</strong> <a href="#Travel">Travel</a><br />
+<strong>northeast</strong> <a href="#Travel">Travel</a><br />
+<strong><span class="system">notify</span></strong> <a href="#Notify">Notify</a><br />
+<strong><span class="system">notify off</span></strong> <a href="#NotifyOff">NotifyOff</a><br />
+<strong><span class="system">notify on</span></strong> <a href="#NotifyOn">NotifyOn</a></p>
 
-### <span id="O">O</span>
+<h3 id="o"><span id="O">O</span></h3>
 
-**offer** something [GiveToImplicit](#GiveToImplicit)  
-**offer** someone something [GiveTo](#GiveTo)  
-**offer** something **to** someone [GiveTo](#GiveTo)  
-**open** something [Open](#Open)  
-**out** [Travel](#Travel)  
-**out of** something [GetOutOf](#GetOutOf)  
+<p><strong>offer</strong> something <a href="#GiveToImplicit">GiveToImplicit</a><br />
+<strong>offer</strong> someone something <a href="#GiveTo">GiveTo</a><br />
+<strong>offer</strong> something <strong>to</strong> someone <a href="#GiveTo">GiveTo</a><br />
+<strong>open</strong> something <a href="#Open">Open</a><br />
+<strong>out</strong> <a href="#Travel">Travel</a><br />
+<strong>out of</strong> something <a href="#GetOutOf">GetOutOf</a></p>
 
-### <span id="P">P</span>
+<h3 id="p"><span id="P">P</span></h3>
 
-**p** [Travel](#Travel)  
-**peer through/thru** something [LookThrough](#LookThough)  
-**pick** something **up** [Take](#Take)  
-**pick up** something [Take](#Take)  
-**place** something **behind** something [PutBehind](#PutBehind)  
-**place** something **in/into/in to/inside/inside of** something
-[PutIn](#PutIn)  
-**place** something **on/onto/on to/upon** something [PutOn](#PutOn)  
-**place** something **under** something [PutUnder](#PutUnder)  
-**plug** something **in** [PlugIn](#PlugIn)  
-**plug** something **in/in to/into** something [PlugInto](#PlugInto)  
-**plug in** something [PlugIn](#PlugIn)  
-**<span class="debug">pn</span>** something [Purloin](#Purloin)  
-**ponder** [Think](#Think)  
-**ponder about** topic [ThinkAbout](#ThinkAbout)  
-**port** [Travel](#Travel)  
-**pour** something [Pour](#Pour)  
-**pour** something **in/in to/into** something [PourInto](#PourInto)  
-**pour** something **on/on to/onto** something [PourOnto](#PourOnto)  
-**press** something [Push](#Push)  
-**pull** something [Pull](#Pull)  
-**pull** something direction [PushTravelDir](#PushTravelDir)  
-**pull** something **down** something
-[PushTravelClimbDown](#PushTravelClimbDown)  
-**pull** something **in/in to/into** something
-[PushTravelEnter](#PushTravelEnter)  
-**pull** something **out/out** of something
-[PushTravelGetOutOf](#PushTravelGetOutOf)  
-**pull** something **through/thru something**
-[PushTravelThrough](#PushTravelThrough)  
-**pull** something **up** something
-[PushTravelClimbUp](#PushTravelClimbUp)  
-**punch** something [Attack](#Attack)  
-**<span class="debug">purloin</span>** something [Purloin](#Purloin)  
-**push** something [Push](#Push)  
-**push** something direction [PushTravelDir](#PushTravelDir)  
-**push** something **down** something
-[PushTravelClimbDown](#PushTravelClimbDown)  
-**push** something **in/in to/into** something
-[PushTravelEnter](#PushTravelEnter)  
-**push** something **out/out** of something
-[PushTravelGetOutOf](#PushTravelGetOutOf)  
-**push** something **to/under** something [MoveTo](#MoveTo)  
-**push** something **through/thru something**
-[PushTravelThrough](#PushTravelThrough)  
-**push** something **up** something
-[PushTravelClimbUp](#PushTravelClimbUp)  
-**put** something **down** [Drop](#Drop)  
-**put** something **behind** something [PutBehind](#PutBehind)  
-**put** something **in/into/in to/inside/inside of** something
-[PutIn](#PutIn)  
-**put** something **on** [Wear](#Wear)  
-**put** something **on/onto/on to/upon** something [PutOn](#PutOn)  
-**put** something **out** [Extinguish](#Extinguish)  
-**put** something **under** something [PutUnder](#PutUnder)  
-**put down** something [Drop](#Drop)  
-**put on** something [Wear](#Wear)  
-**put out** something [Extinguish](#Extinguish)  
+<p><strong>p</strong> <a href="#Travel">Travel</a><br />
+<strong>peer through/thru</strong> something <a href="#LookThough">LookThrough</a><br />
+<strong>pick</strong> something <strong>up</strong> <a href="#Take">Take</a><br />
+<strong>pick up</strong> something <a href="#Take">Take</a><br />
+<strong>place</strong> something <strong>behind</strong> something <a href="#PutBehind">PutBehind</a><br />
+<strong>place</strong> something <strong>in/into/in to/inside/inside of</strong> something
+<a href="#PutIn">PutIn</a><br />
+<strong>place</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br />
+<strong>place</strong> something <strong>under</strong> something <a href="#PutUnder">PutUnder</a><br />
+<strong>plug</strong> something <strong>in</strong> <a href="#PlugIn">PlugIn</a><br />
+<strong>plug</strong> something <strong>in/in to/into</strong> something <a href="#PlugInto">PlugInto</a><br />
+<strong>plug in</strong> something <a href="#PlugIn">PlugIn</a><br />
+<strong><span class="debug">pn</span></strong> something <a href="#Purloin">Purloin</a><br />
+<strong>ponder</strong> <a href="#Think">Think</a><br />
+<strong>ponder about</strong> topic <a href="#ThinkAbout">ThinkAbout</a><br />
+<strong>port</strong> <a href="#Travel">Travel</a><br />
+<strong>pour</strong> something <a href="#Pour">Pour</a><br />
+<strong>pour</strong> something <strong>in/in to/into</strong> something <a href="#PourInto">PourInto</a><br />
+<strong>pour</strong> something <strong>on/on to/onto</strong> something <a href="#PourOnto">PourOnto</a><br />
+<strong>press</strong> something <a href="#Push">Push</a><br />
+<strong>pull</strong> something <a href="#Pull">Pull</a><br />
+<strong>pull</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br />
+<strong>pull</strong> something <strong>down</strong> something
+<a href="#PushTravelClimbDown">PushTravelClimbDown</a><br />
+<strong>pull</strong> something <strong>in/in to/into</strong> something
+<a href="#PushTravelEnter">PushTravelEnter</a><br />
+<strong>pull</strong> something <strong>out/out</strong> of something
+<a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br />
+<strong>pull</strong> something <strong>through/thru something</strong>
+<a href="#PushTravelThrough">PushTravelThrough</a><br />
+<strong>pull</strong> something <strong>up</strong> something
+<a href="#PushTravelClimbUp">PushTravelClimbUp</a><br />
+<strong>punch</strong> something <a href="#Attack">Attack</a><br />
+<strong><span class="debug">purloin</span></strong> something <a href="#Purloin">Purloin</a><br />
+<strong>push</strong> something <a href="#Push">Push</a><br />
+<strong>push</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br />
+<strong>push</strong> something <strong>down</strong> something
+<a href="#PushTravelClimbDown">PushTravelClimbDown</a><br />
+<strong>push</strong> something <strong>in/in to/into</strong> something
+<a href="#PushTravelEnter">PushTravelEnter</a><br />
+<strong>push</strong> something <strong>out/out</strong> of something
+<a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br />
+<strong>push</strong> something <strong>to/under</strong> something <a href="#MoveTo">MoveTo</a><br />
+<strong>push</strong> something <strong>through/thru something</strong>
+<a href="#PushTravelThrough">PushTravelThrough</a><br />
+<strong>push</strong> something <strong>up</strong> something
+<a href="#PushTravelClimbUp">PushTravelClimbUp</a><br />
+<strong>put</strong> something <strong>down</strong> <a href="#Drop">Drop</a><br />
+<strong>put</strong> something <strong>behind</strong> something <a href="#PutBehind">PutBehind</a><br />
+<strong>put</strong> something <strong>in/into/in to/inside/inside of</strong> something
+<a href="#PutIn">PutIn</a><br />
+<strong>put</strong> something <strong>on</strong> <a href="#Wear">Wear</a><br />
+<strong>put</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br />
+<strong>put</strong> something <strong>out</strong> <a href="#Extinguish">Extinguish</a><br />
+<strong>put</strong> something <strong>under</strong> something <a href="#PutUnder">PutUnder</a><br />
+<strong>put down</strong> something <a href="#Drop">Drop</a><br />
+<strong>put on</strong> something <a href="#Wear">Wear</a><br />
+<strong>put out</strong> something <a href="#Extinguish">Extinguish</a></p>
 
-### <span id="Q">Q</span>
+<h3 id="q"><span id="Q">Q</span></h3>
 
-**<span class="system">q</span>** [Quit](#Quit)  
-**quaff** something [Drink](#Drink)  
-**<span class="system">quit</span>** [Quit](#Quit)  
+<p><strong><span class="system">q</span></strong> <a href="#Quit">Quit</a><br />
+<strong>quaff</strong> something <a href="#Drink">Drink</a><br />
+<strong><span class="system">quit</span></strong> <a href="#Quit">Quit</a></p>
 
-### <span id="R">R</span>
+<h3 id="r"><span id="R">R</span></h3>
 
-**read** something [Read](#Read)  
-**read about** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**read about** topic **in/on** something [ConsultAbout](#ConsultAbout)  
-**<span class="system">record</span>** \[filename\]
-[RecordOn](#RecordOn)  
-**<span class="system">record events</span>** \[filename\]
-[RecordEvents](#RecordEvents)  
-**<span class="system">record events on</span>**
-[RecordEvents](#RecordOn)  
-**<span class="system">record off</span>** [RecordOff](#RecordOff)  
-**<span class="system">record on</span>** [RecordOn](#RecordOn)  
-**remove** something [Remove](#Remove)  
-**remove** something **from** something [TakeFrom](#TakeFrom)  
-**<span class="system">replay</span>** \[filename\] [Replay](#Replay)  
-**<span class="system">replay nonstop/quiet</span>** \[filename\]
-[Replay](#Replay)  
-**<span class="system">restart</span>** [Restart](#Restart)  
-**<span class="system">restore</span>** \[filename\]
-[Restore](#Restore)  
-**return** [GoBack](#GoBack)  
-**rotate** something [Turn](#Turn)  
-**rotate** something **to** literal [TurnTo](#TurnTo)  
-**rotate** something **with** something [TurnWith](#TurnWith)  
-**<span class="system">rq</span>** \[filename\] [Replay](#Replay)  
-**ruin** something [Break](#Break)  
-**run** [VagueTravel](#VagueTravel)  
-**run** direction [Travel](#Travel)  
+<p><strong>read</strong> something <a href="#Read">Read</a><br />
+<strong>read about</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>read about</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong><span class="system">record</span></strong> [filename]
+<a href="#RecordOn">RecordOn</a><br />
+<strong><span class="system">record events</span></strong> [filename]
+<a href="#RecordEvents">RecordEvents</a><br />
+<strong><span class="system">record events on</span></strong>
+<a href="#RecordOn">RecordEvents</a><br />
+<strong><span class="system">record off</span></strong> <a href="#RecordOff">RecordOff</a><br />
+<strong><span class="system">record on</span></strong> <a href="#RecordOn">RecordOn</a><br />
+<strong>remove</strong> something <a href="#Remove">Remove</a><br />
+<strong>remove</strong> something <strong>from</strong> something <a href="#TakeFrom">TakeFrom</a><br />
+<strong><span class="system">replay</span></strong> [filename] <a href="#Replay">Replay</a><br />
+<strong><span class="system">replay nonstop/quiet</span></strong> [filename]
+<a href="#Replay">Replay</a><br />
+<strong><span class="system">restart</span></strong> <a href="#Restart">Restart</a><br />
+<strong><span class="system">restore</span></strong> [filename]
+<a href="#Restore">Restore</a><br />
+<strong>return</strong> <a href="#GoBack">GoBack</a><br />
+<strong>rotate</strong> something <a href="#Turn">Turn</a><br />
+<strong>rotate</strong> something <strong>to</strong> literal <a href="#TurnTo">TurnTo</a><br />
+<strong>rotate</strong> something <strong>with</strong> something <a href="#TurnWith">TurnWith</a><br />
+<strong><span class="system">rq</span></strong> [filename] <a href="#Replay">Replay</a><br />
+<strong>ruin</strong> something <a href="#Break">Break</a><br />
+<strong>run</strong> <a href="#VagueTravel">VagueTravel</a><br />
+<strong>run</strong> direction <a href="#Travel">Travel</a></p>
 
-### <span id="S">S</span>
+<h3 id="s"><span id="S">S</span></h3>
 
-**s** [Travel](#Travel)  
-**<span class="system">save</span>** \[filename\] [Save](#Save)  
-**say** topic [Say](#Say)  
-**say** topic **to** someone [SayTo](#SayTo)  
-**say bye/goodbye/good-bye/good bye** [Goodbye](#Goodbye)  
-**say hallo/hello/hi** [Hello](#Hello)  
-**say hello to** someone [TalkTo](#TalkTo)  
-**say no** [SayNo](#SayNo)  
-**say that** topic [Say](#Say)  
-**say that** topic **to** someone [SayTo](#SayTo)  
-**say yes** [SayYes](#SayYes)  
-**sb** [Travel](#Travel)  
-**screw** something [Screw](#Screw)  
-**screw** something **with** something [ScrewWith](#ScrewWith)  
-**<span class="system">score</span>** [Score](#Score)  
-**scream** [Yell](#Yell)  
-**<span class="system">script</span>** \[filename\]
-[ScriptOn](#ScriptOn)  
-**<span class="system">script off</span>** [ScriptOff](#ScriptOff)  
-**<span class="system">script on</span>** [ScriptOn](#ScriptOn)  
-**se** [Travel](#Travel)  
-**search** something [Search](#Search)  
-**search** something **for** topic [ConsultAbout](#ConsultAbout)  
-**search for** topic [ConsultWhatAbout](#ConsultWhatAbout)  
-**search for** topic **in/on** something [ConsultAbout](#ConsultAbout)  
-**set** something [Set](#Set)  
-**set** something **down** [Drop](#Drop)  
-**set** something **behind** something [PutBehind](#PutBehind)  
-**set** something **in/into/in to/inside/inside of** something
-[PutIn](#PutIn)  
-**set** something **on/onto/on to/upon** something [PutOn](#PutOn)  
-**set** something **to** literal [SetTo](#SetTo)  
-**set** something **under** something [PutUnder](#PutUnder)  
-**set down** something [Drop](#Drop)  
-**set fire to** something [Burn](#Burn)  
-**set fire to** something **with** something [BurnWith](#BurnWith)  
-**sit** [Sit](#Sit)  
-**sit down** [Sit](#Sit)  
-**sit down in** something [SitIn](#SitIn)  
-**sit down on** something [SitOn](#SitOn)  
-**sit in** something [SitIn](#SitIn)  
-**sit on** something [SitOn](#SitOn)  
-**sleep** [Sleep](#Sleep)  
-**smash** something [Break](#Break)  
-**should** topic [Query](#Query)  
-**shout** [Yell](#Yell)  
-**show** something [ShowToImplicit](#ShowToImplicit)  
-**show** someone something [ShowTo](#ShowTo)  
-**show** something **to** someone [ShowTo](#ShowTo)  
-**shut** something [Close](#Close)  
-**smell** [Smell](#Smell)  
-**smell** something [SmellSomething](#SmellSomething)  
-**sniff** [Smell](#Sniff)  
-**sniff** something [SmellSomething](#SmellSomething)  
-**south** [Travel](#Travel)  
-**southeast** [Travel](#Travel)  
-**southwest** [Travel](#Travel)  
-**<span class="system">status</span>** [Score](#Score)  
-**stand** [Stand](#Stand)  
-**stand in\|in to\|into** something [StandIn](#StandIn)  
-**stand on\|on to\|onto** something [StandOn](#StandOn)  
-**stand up** [Stand](#Stand)  
-**starboard** [Travel](#Travel)  
-**strike** something **with** something [AttackWith](#AttackWith)  
-**sw** [Travel](#Travel)  
-**switch** something [SwitchVague](#SwitchVague)  
-**switch** something **off** [SwitchOff](#SwitchOff)  
-**switch** something **on** [SwitchOn](#SwitchOn)  
-**switch off** something [SwitchOff](#SwitchOff)  
-**switch on** something [SwitchOn](#SwitchOn)  
+<p><strong>s</strong> <a href="#Travel">Travel</a><br />
+<strong><span class="system">save</span></strong> [filename] <a href="#Save">Save</a><br />
+<strong>say</strong> topic <a href="#Say">Say</a><br />
+<strong>say</strong> topic <strong>to</strong> someone <a href="#SayTo">SayTo</a><br />
+<strong>say bye/goodbye/good-bye/good bye</strong> <a href="#Goodbye">Goodbye</a><br />
+<strong>say hallo/hello/hi</strong> <a href="#Hello">Hello</a><br />
+<strong>say hello to</strong> someone <a href="#TalkTo">TalkTo</a><br />
+<strong>say no</strong> <a href="#SayNo">SayNo</a><br />
+<strong>say that</strong> topic <a href="#Say">Say</a><br />
+<strong>say that</strong> topic <strong>to</strong> someone <a href="#SayTo">SayTo</a><br />
+<strong>say yes</strong> <a href="#SayYes">SayYes</a><br />
+<strong>sb</strong> <a href="#Travel">Travel</a><br />
+<strong>screw</strong> something <a href="#Screw">Screw</a><br />
+<strong>screw</strong> something <strong>with</strong> something <a href="#ScrewWith">ScrewWith</a><br />
+<strong><span class="system">score</span></strong> <a href="#Score">Score</a><br />
+<strong>scream</strong> <a href="#Yell">Yell</a><br />
+<strong><span class="system">script</span></strong> [filename]
+<a href="#ScriptOn">ScriptOn</a><br />
+<strong><span class="system">script off</span></strong> <a href="#ScriptOff">ScriptOff</a><br />
+<strong><span class="system">script on</span></strong> <a href="#ScriptOn">ScriptOn</a><br />
+<strong>se</strong> <a href="#Travel">Travel</a><br />
+<strong>search</strong> something <a href="#Search">Search</a><br />
+<strong>search</strong> something <strong>for</strong> topic <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>search for</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br />
+<strong>search for</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br />
+<strong>set</strong> something <a href="#Set">Set</a><br />
+<strong>set</strong> something <strong>down</strong> <a href="#Drop">Drop</a><br />
+<strong>set</strong> something <strong>behind</strong> something <a href="#PutBehind">PutBehind</a><br />
+<strong>set</strong> something <strong>in/into/in to/inside/inside of</strong> something
+<a href="#PutIn">PutIn</a><br />
+<strong>set</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br />
+<strong>set</strong> something <strong>to</strong> literal <a href="#SetTo">SetTo</a><br />
+<strong>set</strong> something <strong>under</strong> something <a href="#PutUnder">PutUnder</a><br />
+<strong>set down</strong> something <a href="#Drop">Drop</a><br />
+<strong>set fire to</strong> something <a href="#Burn">Burn</a><br />
+<strong>set fire to</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br />
+<strong>sit</strong> <a href="#Sit">Sit</a><br />
+<strong>sit down</strong> <a href="#Sit">Sit</a><br />
+<strong>sit down in</strong> something <a href="#SitIn">SitIn</a><br />
+<strong>sit down on</strong> something <a href="#SitOn">SitOn</a><br />
+<strong>sit in</strong> something <a href="#SitIn">SitIn</a><br />
+<strong>sit on</strong> something <a href="#SitOn">SitOn</a><br />
+<strong>sleep</strong> <a href="#Sleep">Sleep</a><br />
+<strong>smash</strong> something <a href="#Break">Break</a><br />
+<strong>should</strong> topic <a href="#Query">Query</a><br />
+<strong>shout</strong> <a href="#Yell">Yell</a><br />
+<strong>show</strong> something <a href="#ShowToImplicit">ShowToImplicit</a><br />
+<strong>show</strong> someone something <a href="#ShowTo">ShowTo</a><br />
+<strong>show</strong> something <strong>to</strong> someone <a href="#ShowTo">ShowTo</a><br />
+<strong>shut</strong> something <a href="#Close">Close</a><br />
+<strong>smell</strong> <a href="#Smell">Smell</a><br />
+<strong>smell</strong> something <a href="#SmellSomething">SmellSomething</a><br />
+<strong>sniff</strong> <a href="#Sniff">Smell</a><br />
+<strong>sniff</strong> something <a href="#SmellSomething">SmellSomething</a><br />
+<strong>south</strong> <a href="#Travel">Travel</a><br />
+<strong>southeast</strong> <a href="#Travel">Travel</a><br />
+<strong>southwest</strong> <a href="#Travel">Travel</a><br />
+<strong><span class="system">status</span></strong> <a href="#Score">Score</a><br />
+<strong>stand</strong> <a href="#Stand">Stand</a><br />
+<strong>stand in|in to|into</strong> something <a href="#StandIn">StandIn</a><br />
+<strong>stand on|on to|onto</strong> something <a href="#StandOn">StandOn</a><br />
+<strong>stand up</strong> <a href="#Stand">Stand</a><br />
+<strong>starboard</strong> <a href="#Travel">Travel</a><br />
+<strong>strike</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br />
+<strong>sw</strong> <a href="#Travel">Travel</a><br />
+<strong>switch</strong> something <a href="#SwitchVague">SwitchVague</a><br />
+<strong>switch</strong> something <strong>off</strong> <a href="#SwitchOff">SwitchOff</a><br />
+<strong>switch</strong> something <strong>on</strong> <a href="#SwitchOn">SwitchOn</a><br />
+<strong>switch off</strong> something <a href="#SwitchOff">SwitchOff</a><br />
+<strong>switch on</strong> something <a href="#SwitchOn">SwitchOn</a></p>
 
-### <span id="T">T</span>
+<h3 id="t"><span id="T">T</span></h3>
 
-**t** topic [TellAboutImplicit](#TellAboutImplicit)  
-**t** someone **about** topic [TellAbout](#TellAbout)  
-**talk about** topic [TalkAboutImplicit](#TalkAboutImplicit)  
-**talk to** someone [TalkTo](#TalkTo)  
-**talk to** someone **about** topic [TalkAbout](#TalkAbout)  
-**take** something [Take](#Take)  
-**take** something off [Doff](#Doff)
+<p><strong>t</strong> topic <a href="#TellAboutImplicit">TellAboutImplicit</a><br />
+<strong>t</strong> someone <strong>about</strong> topic <a href="#TellAbout">TellAbout</a><br />
+<strong>talk about</strong> topic <a href="#TalkAboutImplicit">TalkAboutImplicit</a><br />
+<strong>talk to</strong> someone <a href="#TalkTo">TalkTo</a><br />
+<strong>talk to</strong> someone <strong>about</strong> topic <a href="#TalkAbout">TalkAbout</a><br />
+<strong>take</strong> something <a href="#Take">Take</a><br />
+<strong>take</strong> something off <a href="#Doff">Doff</a></p>
 
-dobj
-
-</div>
+<p>dobj</p>
 
 <p><strong>take</strong> something <strong>from/out of/off/off of</strong> something
 <a href="#TakeFrom">TakeFrom</a><br />
@@ -695,12 +691,12 @@ action handling is defined on the Thing class. The <strong>Verify
 Property/Condition</strong> column holds the name of the basic property that
 must be true for the action to go ahead with that object, together with
 the default value of that property in the form
-<span class="code">propName = val</span>. For example, the basic
+<code class="language-plaintext highlighter-rouge">propName = val</code>. For example, the basic
 property determining whether something can be opened is
-<span class="code">isOpenable</span>, which is nil by default on Thing,
-so it appears as <span class="code">isOpenable = nil</span>. Sometimes
+<code class="language-plaintext highlighter-rouge">isOpenable</code>, which is nil by default on Thing,
+so it appears as <code class="language-plaintext highlighter-rouge">isOpenable = nil</code>. Sometimes
 this property depends on the value of another property, e.g.
-<span class="code">isTakeable = !isFixed</span>, meaning a Thing is
+<code class="language-plaintext highlighter-rouge">isTakeable = !isFixed</code>, meaning a Thing is
 takeable if it is not fixed in place. Occasionally this colummn just
 holds the value nil, which means that the verfy routine on Thing fails
 the action unconditionally (as is mainly the case with conversational
@@ -710,8 +706,8 @@ actions).</p>
 defines the message to be displayed if the action fails on account of
 not meeting the Verify Property/Condition requirement. For example, if
 the player attempts to OPEN an object whose
-<span class="code">isOpenable</span> property is nil, the object’s
-<span class="code">cannotOpenMsg</span> property is displayed. Knowing
+<code class="language-plaintext highlighter-rouge">isOpenable</code> property is nil, the object’s
+<code class="language-plaintext highlighter-rouge">cannotOpenMsg</code> property is displayed. Knowing
 this property name makes it easy for game authors to customize the
 failure messages on particular objects or classes of object.</p>
 
@@ -719,8 +715,8 @@ failure messages on particular objects or classes of object.</p>
 the action if it is allowed to proceed. Note that actions may have
 additional side effects not shown in the table. Where an entry is blank,
 no action results are defined for that action on Thing. Where the action
-column contains an entry like <span class="code">report { DMsg (so and
-so) }</span>, this means that the action method does nothing, but the
+column contains an entry like <code class="language-plaintext highlighter-rouge">report { DMsg (so and
+so) }</code>, this means that the action method does nothing, but the
 report phase displays the report indicated. Occasionally there is a link
 to another class name, such as Key; this means that more significant
 handling for the action is defined on the class in question and that
@@ -752,7 +748,7 @@ for the very simplest cases. In particular, the properties listed in the
 whether an action can succeed on an object because of the type of object
 it is. For example, there is no prospect of an OPEN command operating on
 an object unless that object is openable (isOpenable = true), but while
-<span class="code">isOpenable = true</span> is a necessary condition for
+<code class="language-plaintext highlighter-rouge">isOpenable = true</code> is a necessary condition for
 the OPEN command to work, it may not be sufficient. An OPEN command will
 also fail, for example, if the object in question is already open, or if
 it is locked. In some cases the presence of further such information is

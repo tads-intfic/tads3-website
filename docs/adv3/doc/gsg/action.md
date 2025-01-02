@@ -7,7 +7,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 [\[Main\]](index.html)  
 *[\[Previous\]](check.html)   [\[Next\]](precond.html)*
@@ -36,4 +36,4 @@ involved in a two-object command, but not both.
 [\[Main\]](index.html)  
 *[\[Previous\]](check.html)   [\[Next\]](precond.html)*
 
-</div>
+

@@ -18,7 +18,7 @@ Building</a>    
 
 </div>
 
-<div class="main">
+
 
 # Overview
 
@@ -76,7 +76,7 @@ every NPC, but more complex NPCs are likely to make use of all these
 kinds of object. In this chapter we'll look at Actors, ActorStates and
 AgendaItems, and leave conversation and TopicEntries to Chapter 11.
 
-</div>
+
 
 ------------------------------------------------------------------------
 

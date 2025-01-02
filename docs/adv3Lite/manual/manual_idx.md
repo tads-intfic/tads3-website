@@ -15,7 +15,7 @@ layout: docs
 
 </div>
 
-<div class="main">
+
 
 # Adv3Lite Manual Index
 
@@ -2164,7 +2164,7 @@ regular UI and the Web UI)
 [{s/d}](message.html#regular-idx) (Conjugations and Tenses)  
 [{s/ed}](message.html#regular-idx) (Conjugations and Tenses)  
 
-</div>
+
 
 ------------------------------------------------------------------------
 

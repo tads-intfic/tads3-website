@@ -18,7 +18,7 @@ State</a>     </span>
 
 </div>
 
-<div class="main">
+
 
 ![](t3logo.gif)
 
@@ -85,7 +85,7 @@ system to interoperate with existing compilers and other tools.
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
-</div>
+
 
 </div>
 
